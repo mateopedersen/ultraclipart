@@ -1,0 +1,755 @@
+{
+  "wave": "wave_031",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 10,
+  "resumed": 9,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "ghost-puppy-and-ball",
+      "title": "Ghost Puppy with a Ball",
+      "alt": "A ghost puppy with floppy ears and a wavy white body reaches for a striped ball.",
+      "description": "A ghost puppy with floppy ears and a wavy white body reaches for a striped ball. Use this illustration for pet-themed Halloween activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-puppy-and-ball.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "9ec515d59beea8f56d73f4a73ad109e98e0b74ff71ad2c00c9657e65b7e1718c",
+      "inputSignature": "5d74d2c0a3ce2cc7b349a345943f71e5426d557ce980b6e1ca7488df87a50c51",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 593489,
+        "weightedCmykRmse": 0.831476
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1056059,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 593489,
+          "weightedCmykRmse": 0.831476
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        66,
+        180,
+        1184,
+        1088
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-puppy-and-ball.pdf",
+          "bytes": 593489,
+          "sha256": "1ee826158a2ed5265070b3157dfc704a4d5cfcf050c30102aa2ab92bc9782a91"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-puppy-and-ball.webp",
+          "bytes": 551422,
+          "sha256": "f1a5862097b9e6ba06a0e902817d26328f50e40e5dc0bd61794bb05650e65efe"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-puppy-and-ball-thumb.webp",
+          "bytes": 40690,
+          "sha256": "0c26946b705539b37bb2a416b353c26872f5a172802e627b895606468a2ded75"
+        }
+      },
+      "proofSha256": "2e48b1157458c285a6b3361133112ddc8a1141f8886e1804ea85796fa60310d3",
+      "pairMeanRgbDifference": 1.46577
+    },
+    {
+      "id": "ghost-kitten-and-yarn",
+      "title": "Ghost Kitten with Yarn",
+      "alt": "A white ghost kitten with pointed ears plays with a purple ball of yarn.",
+      "description": "A white ghost kitten with pointed ears plays with a purple ball of yarn. Use this illustration for playful animal story prompts.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-kitten-and-yarn.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e56af08bab363552bca337280df2ada4c1defd1a0c478f2e129493846d40966a",
+      "inputSignature": "da815afa2bccca8ed9abf4d0ad4701c3e0c5a256f400ff30f5bb031c758ac862",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 757680,
+        "weightedCmykRmse": 0.858333
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1099182,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 757680,
+          "weightedCmykRmse": 0.858333
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        172,
+        48,
+        1065,
+        1216
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-kitten-and-yarn.pdf",
+          "bytes": 757680,
+          "sha256": "2026a3d7c088894c0ca5a76e8bbb30fe4a322ad48c4c65558cc815bc7f52eb38"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-kitten-and-yarn.webp",
+          "bytes": 538016,
+          "sha256": "64c19cea20a46b54b576c6e5278ac1b6ac4dd0c7a3cbe1c2dc819cdba1b332c5"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-kitten-and-yarn-thumb.webp",
+          "bytes": 46334,
+          "sha256": "118d1ecb32129a84587e61f1a0deabe03a1d010f3edf7abebbb5dd9b4db840a5"
+        }
+      },
+      "proofSha256": "777df46d64783df58aa0ed68effac39c38e43c2cfa16208ada38249aec6b233a",
+      "pairMeanRgbDifference": 1.95721
+    },
+    {
+      "id": "ghost-bunny-and-carrot",
+      "title": "Ghost Bunny with a Carrot",
+      "alt": "A ghost bunny with long ears hugs an orange carrot with leafy green tops.",
+      "description": "A ghost bunny with long ears hugs an orange carrot with leafy green tops. Use this illustration for friendly woodland fantasy cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-bunny-and-carrot.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "499d67b1a24c2bfd86a0e9422bb9339852750f7251faefc6825b081244c7a33e",
+      "inputSignature": "3a0c6d9767b1ad99afdce516697637f0e091c56b1cb05917358d93c62c236165",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 683779,
+        "weightedCmykRmse": 0.775916
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1187835,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 683779,
+          "weightedCmykRmse": 0.775916
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        41,
+        71,
+        1222,
+        1133
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-bunny-and-carrot.pdf",
+          "bytes": 683779,
+          "sha256": "988e2bdb5a19615732cb7b39e6cc19a534b5c5075af941454dcad01cd0a445e2"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-bunny-and-carrot.webp",
+          "bytes": 689668,
+          "sha256": "c5f2a7f8c2c2136d82f7e17fb1af3e2431024ec973263a2a85ef3b3850476c92"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-bunny-and-carrot-thumb.webp",
+          "bytes": 48640,
+          "sha256": "8a90455e2e7963cb2b59a46f08b94fbc60a0a1b5279731544872ab510b70f2fd"
+        }
+      },
+      "proofSha256": "db0ac22e1b697c5c70ea8957346561316c439bd502044a3642a0602ee8dd8711",
+      "pairMeanRgbDifference": 2.16044
+    },
+    {
+      "id": "ghost-owl-satchel",
+      "title": "Ghost Owl with a School Satchel",
+      "alt": "A wide-eyed ghost owl carries a brown satchel with school supplies inside.",
+      "description": "A wide-eyed ghost owl carries a brown satchel with school supplies inside. Use this illustration for classroom welcome cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-owl-satchel.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "0079794e5f86f65b2109b24e85aef1a5dc9d318f104666941ccb0f1287838f9e",
+      "inputSignature": "646798526c12d3eb84878320662d9cf12500e71011ec6ecd68a81ed2f2dfef17",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 702108,
+        "weightedCmykRmse": 0.796758
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1256730,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 702108,
+          "weightedCmykRmse": 0.796758
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        78,
+        63,
+        1176,
+        1180
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-owl-satchel.pdf",
+          "bytes": 702108,
+          "sha256": "854cdcd23dacd295dd87bb68438b7abf9bf7cfbfac07cb09e2721a506101f64f"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-owl-satchel.webp",
+          "bytes": 702048,
+          "sha256": "db34c1a50cc53443af8683b23d12805c97f8b2825ebc24c70e384c12ff1b1347"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-owl-satchel-thumb.webp",
+          "bytes": 44776,
+          "sha256": "c0a9870d58bdacb1385398199fb6285fb81a5808d06e79eaadad29544ba06de9"
+        }
+      },
+      "proofSha256": "a7bf28849f17b47cf1313449c96f84a67d684a95c789f31312d57bd6f62d9d79",
+      "pairMeanRgbDifference": 1.68114
+    },
+    {
+      "id": "ghost-tiny-dragon",
+      "title": "Friendly Ghost Dragon",
+      "alt": "A small ghost dragon with rounded horns and wings holds a golden acorn.",
+      "description": "A small ghost dragon with rounded horns and wings holds a golden acorn. Use this illustration for gentle fantasy storytelling.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-tiny-dragon-v2.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "5df2d4e421ab162bf27a011fa950d6b280966263450e0c94db3c5968a70c02bf",
+      "inputSignature": "a098a0788c862bcfd61238a61aab01e90d0fb1b46d2b5cd77a14ecc3bc9603d3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 815122,
+        "weightedCmykRmse": 0.780821
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1372803,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 815122,
+          "weightedCmykRmse": 0.780821
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        51,
+        40,
+        1219,
+        1215
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-tiny-dragon.pdf",
+          "bytes": 815122,
+          "sha256": "4600b2c01dcf3efaac34dae83808566c1adfda686b11ba22659254dd28bd7349"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-tiny-dragon.webp",
+          "bytes": 737952,
+          "sha256": "2ec43f3affd6a8be10b7860ee74b864324da9b766f19dbeef98a1cb457779efe"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-tiny-dragon-thumb.webp",
+          "bytes": 56248,
+          "sha256": "15ce4c5cbbf4533f1943fb0bae655ebd2e4fb06025dc6f31e147c8451e2fe5a2"
+        }
+      },
+      "proofSha256": "6cfc8d154d98a8901afb316cdc8d278aecce9d246e18ea0c66898df975e2c336",
+      "pairMeanRgbDifference": 1.85687
+    },
+    {
+      "id": "ghost-dance-partners",
+      "title": "Two Ghosts Dancing Together",
+      "alt": "Two white ghosts with different silhouettes hold hands and dance together.",
+      "description": "Two white ghosts with different silhouettes hold hands and dance together. Use this illustration for friendship activity sheets.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-dance-partners.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "8772501d276abdcc8eaeecd680e2d924a482b2c2c91fbc76547925d057ebf649",
+      "inputSignature": "64e9fa515ac25a0f85ac06672986da1b73c929ca015e9fc1f824f9f892cf3cbd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 940052,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 940052,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        62,
+        85,
+        1220,
+        1166
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-dance-partners.pdf",
+          "bytes": 940052,
+          "sha256": "597adb1e7e92b74ac679d5d8d5dbe33afa00260fc5a257246147b6d687856c1e"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-dance-partners.webp",
+          "bytes": 477434,
+          "sha256": "3504b766912c7beb6646fb5c8cb85a8d29a162a4c7941167b7898653c366269f"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-dance-partners-thumb.webp",
+          "bytes": 39778,
+          "sha256": "b4a5d03cb8f840e579f0376277dbdcaa906178f5a090622194a57c3f2de55abe"
+        }
+      },
+      "proofSha256": "0d11d9419fee99d9f70c0d6b29a07d0bb2062f6e270ad903be0baaacef154dae",
+      "pairMeanRgbDifference": 1.18225
+    },
+    {
+      "id": "ghost-family-stroll",
+      "title": "Ghost Family Holding Hands",
+      "alt": "Three friendly white ghosts of different sizes hold hands on a family stroll.",
+      "description": "Three friendly white ghosts of different sizes hold hands on a family stroll. Use this illustration for family-themed seasonal cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-family-stroll.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c6680d89c677fb0cd8dc5e8bccca3dc1b1821028d67b3a3de45b7c05f88c558b",
+      "inputSignature": "cf2cb1b0b0f91987a1bb43de7a2f69fa2596aa9ced739449e5386146b38aaa1c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 973371,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 973371,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        16,
+        115,
+        1240,
+        1065
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-family-stroll.pdf",
+          "bytes": 973371,
+          "sha256": "e3a73506d3307fad98877e79444aa0f245dfbf7a140677b24246d5afcd5c2bcf"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-family-stroll.webp",
+          "bytes": 489430,
+          "sha256": "7ae230f4207173d1406e63b5ee682cce8ea2812f2d70065817fbb370c6a37f2d"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-family-stroll-thumb.webp",
+          "bytes": 38080,
+          "sha256": "d6d0d7811fcdc90582c51eb738ecb1b02df442159babd5493ffb6741f82fa675"
+        }
+      },
+      "proofSha256": "695730ea68d250b5e8477f8188a7a1a96c3dfdb7f0d55cda8f04a99336168291",
+      "pairMeanRgbDifference": 1.16451
+    },
+    {
+      "id": "ghost-seesaw-friends",
+      "title": "Ghost Friends on a Seesaw",
+      "alt": "Two smiling white ghosts play together on a wooden seesaw.",
+      "description": "Two smiling white ghosts play together on a wooden seesaw. Use this illustration for cooperation storytelling cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-seesaw-friends.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "2bc1df24477c83d3663fa5ebedc7987e0be907d8ee7b1978edf71c11ab20f8b9",
+      "inputSignature": "ebb0eb0b404659778e3796d14f63e8a1e371f8b39f713e752c5a3ec23b641b84",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 903462,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 903462,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        35,
+        148,
+        1232,
+        1013
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-seesaw-friends.pdf",
+          "bytes": 903462,
+          "sha256": "1dda7dfd31eee0bdcecdd582b501a25611cc08eb6e42782fbe91a0d9d7be7366"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-seesaw-friends.webp",
+          "bytes": 475648,
+          "sha256": "bac56dbb532dd7331c1b69f9ec66f27add494b056c1970fe074b56b5a106d104"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-seesaw-friends-thumb.webp",
+          "bytes": 34834,
+          "sha256": "8691aa3363ef8f7fc8a18a6bde077c053f92f1a679cf65279cc1628ce87eca34"
+        }
+      },
+      "proofSha256": "f0c845c8fe2527506aa1961ce335566f9d8de076efe061d619a56ece4fc165f8",
+      "pairMeanRgbDifference": 1.14533
+    },
+    {
+      "id": "ghost-tree-swing",
+      "title": "Ghost on an Autumn Swing",
+      "alt": "A smiling white ghost sits on a wooden swing hanging from an autumn branch.",
+      "description": "A smiling white ghost sits on a wooden swing hanging from an autumn branch. Use this illustration for autumn playground storytelling.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-tree-swing.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "7aa70315bafb474be1a5c76bdaa6ac352ce5c3265bfc4b31697793579f883981",
+      "inputSignature": "bd15d19a59406d6386089f5203e3fd75381d92291a67f924f7ca3db3540bc34b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 909854,
+        "weightedCmykRmse": 1.248582
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1479059,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1081172,
+          "weightedCmykRmse": 0.844421
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 991466,
+          "weightedCmykRmse": 0.99152
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 909854,
+          "weightedCmykRmse": 1.248582
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        33,
+        14,
+        1222,
+        1192
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-tree-swing.pdf",
+          "bytes": 909854,
+          "sha256": "ecec7edc05dd66e4e49bb15b9dec7075c73fe62e0e4fb8018f60b3c915892b5e"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-tree-swing.webp",
+          "bytes": 679712,
+          "sha256": "9a68497538cfc9735fd1293f4c9ecaaef5a2aa2172c4b308ae95aacf0d2a4c45"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-tree-swing-thumb.webp",
+          "bytes": 60886,
+          "sha256": "6baf833f2d50912b96d4c04247b876c60944b740f3268220f052ea5c72816f2e"
+        }
+      },
+      "proofSha256": "639703069684d6e3fc19602cceded0f8cff81caa9259b2d190104d4469605e96",
+      "pairMeanRgbDifference": 2.01608
+    },
+    {
+      "id": "ghost-pancake-flip",
+      "title": "Ghost Flipping a Pancake",
+      "alt": "A white ghost in an orange apron flips a pancake while holding a plate of pancakes.",
+      "description": "A white ghost in an orange apron flips a pancake while holding a plate of pancakes. Use this illustration for family breakfast activity cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_031/source/ghost-pancake-flip.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ed8f0f2970d8f8c4e70cc492a4c8822349c7947dcf2651a3c272d4c29762d0f1",
+      "inputSignature": "8d3448ebbf2457949a43d62a1182e8d126bbea199382924e46cc5927b0dc42b5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 972312,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 972312,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        70,
+        65,
+        1217,
+        1186
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_031/exports/ghost-pancake-flip.pdf",
+          "bytes": 972312,
+          "sha256": "fcb9326f03c21bea88badd2062fc83fd0d6136d6a2e9d3aa486723d562f332f6"
+        },
+        "webp": {
+          "path": "work/production/wave_031/exports/ghost-pancake-flip.webp",
+          "bytes": 530322,
+          "sha256": "600f7a6c82f1513c75a9848dcfba48c1208437d6ce34098a2a861633627a3d34"
+        },
+        "thumb": {
+          "path": "work/production/wave_031/exports/ghost-pancake-flip-thumb.webp",
+          "bytes": 39468,
+          "sha256": "8b83166361a0b19f96b7cf37ab2a0fb898d82c0b529fa47c741a9dfd3751053d"
+        }
+      },
+      "proofSha256": "c9a55652cdb327cac66d11e8eb3e5f91cecd077baf2e8a0b8eb539fda2069db8",
+      "pairMeanRgbDifference": 1.42001
+    }
+  ],
+  "deferred": [],
+  "reviewedAt": "2026-10-23T19:57:14.498830+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "All ten Poppler proofs reviewed. Dragon source revised to an unmistakable floating ghost body; revised actual PDF proof inspected. Other nine complete compositions coherent and distinct.",
+  "createdAt": "2026-10-23T20:07:18.327Z"
+}

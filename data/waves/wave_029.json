@@ -1,0 +1,761 @@
+{
+  "wave": "wave_029",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 10,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "ghost-rainy-umbrella",
+      "title": "Ghost with a Rain Umbrella",
+      "alt": "A smiling white ghost holds a yellow umbrella as blue raindrops fall around its flowing hem.",
+      "description": "A smiling white ghost holds a yellow umbrella as blue raindrops fall around its flowing hem. Use this illustration for seasonal weather cards.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-rainy-umbrella.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "3d1e4807c698309423cbf31b2b656c1fcdcada03d2e4f3cef084f70f1c18bb26",
+      "inputSignature": "28cb206ff7c0defdc17d154ae00f2232b0e58a8c678cdac67fe3505c6f11b027",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 655083,
+        "weightedCmykRmse": 0.810039
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1118504,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 655083,
+          "weightedCmykRmse": 0.810039
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        149,
+        68,
+        1205,
+        1187
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-rainy-umbrella.pdf",
+          "bytes": 655083,
+          "sha256": "7164ed1fda556a472a4dbe7a5077374ffd1c4af26d977d585704ad7b9998ebe2"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-rainy-umbrella.webp",
+          "bytes": 609566,
+          "sha256": "8cc4e47e4c5446cb7396dd65e5ed0ef95d50f10140a3266c96e0f241a4618fee"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-rainy-umbrella-thumb.webp",
+          "bytes": 45310,
+          "sha256": "162d84c367c7de91241b9c25e143fe45e8a779bbca6b49048d2b5b9c125b0a6f"
+        }
+      },
+      "proofSha256": "372dbb7d5b25cb586ed6ae3e84fe9fc06dd579ee7ef66752e3830a5dbe4a6603",
+      "pairMeanRgbDifference": 1.40776
+    },
+    {
+      "id": "ghost-firefly-jar",
+      "title": "Ghost Carrying a Firefly Jar",
+      "alt": "A curious white ghost holds a glass jar with three glowing fireflies and a cork lid tied to the rim.",
+      "description": "A curious white ghost holds a glass jar with three glowing fireflies and a cork lid tied to the rim. Use this illustration for nighttime storytelling.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-firefly-jar.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c4a92a59a64d2c7f457a9dbdca13e558a12c1afc22e2da7a93e754ef091ddf2b",
+      "inputSignature": "bf093cad7ba721a778cc54097b7fd69dc456195a53c38ca403a5ea8dc2ee4138",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 962073,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 962073,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        215,
+        48,
+        1049,
+        1206
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-firefly-jar.pdf",
+          "bytes": 962073,
+          "sha256": "34aab04a2c158717fa4dd2eb6c2a89e4d562432c5b6aacda3d4296491089c18f"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-firefly-jar.webp",
+          "bytes": 546042,
+          "sha256": "d7cb2e4306ac749a51f06cd3f49c8c58c22a1bd53b68de179752358df26d276d"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-firefly-jar-thumb.webp",
+          "bytes": 33758,
+          "sha256": "2e0b5b4d885bc22419b842db7c7ec4340b3cad8cfbadc40e98a863f7334d0b0f"
+        }
+      },
+      "proofSha256": "88f5d4b458a79c4839a597a5ce226224baa69d5f9a0b7815485823ad6472e9e6",
+      "pairMeanRgbDifference": 1.28007
+    },
+    {
+      "id": "ghost-painting-easel",
+      "title": "Ghost Painting at an Easel",
+      "alt": "A ghost wearing a blue beret paints an orange leaf on an easel beside two pots of brushes.",
+      "description": "A ghost wearing a blue beret paints an orange leaf on an easel beside two pots of brushes. Use this illustration for classroom art invitations.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-painting-easel.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a3f75f46c683a495165cc58dcb4180cacae84e96445be7c9fad0ca77a3dcb8aa",
+      "inputSignature": "6185f61fa52de35e92f76ea002a63c5d72ec4f2bf3ba9f44b770ceb4026481e2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 921046,
+        "weightedCmykRmse": 0.791498
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1518595,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 921046,
+          "weightedCmykRmse": 0.791498
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        45,
+        77,
+        1213,
+        1151
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-painting-easel.pdf",
+          "bytes": 921046,
+          "sha256": "e905c39da47f810973a29451270f6562f4756a5e66b5df3b6307d179df22b9fa"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-painting-easel.webp",
+          "bytes": 869106,
+          "sha256": "c5a94b3b7272087ed76db1d5446ea961b2e16db5c04a9d7fc68d2f2bd29183cf"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-painting-easel-thumb.webp",
+          "bytes": 55384,
+          "sha256": "827f34364fcfafb81964ab92b611207a962936beb662ee7e63f829d01d21cac0"
+        }
+      },
+      "proofSha256": "2ac65d522e6fb6dca6f907b9a76d3af4ca197619d3b429afafb4f89802ecb0d8",
+      "pairMeanRgbDifference": 2.07857
+    },
+    {
+      "id": "ghost-ukulele-song",
+      "title": "Ghost Playing a Ukulele",
+      "alt": "A happy white ghost plays a brown ukulele with three colorful musical notes floating around it.",
+      "description": "A happy white ghost plays a brown ukulele with three colorful musical notes floating around it. Use this illustration for music activity cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-ukulele-song.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "96320d7d58bc82e8d7d0b6efe862688b60cdabff08a51217fbf9a74e04c727e4",
+      "inputSignature": "c5d7df430c65244a826c638633d12022f91585847b9b3bba7e58f9943295f9ad",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 632236,
+        "weightedCmykRmse": 0.827746
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1107339,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 632236,
+          "weightedCmykRmse": 0.827746
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        134,
+        77,
+        1174,
+        1181
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-ukulele-song.pdf",
+          "bytes": 632236,
+          "sha256": "1a6952f73fadf2d73590ceaeaed35c53520691c6ec47621aa837791044150da3"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-ukulele-song.webp",
+          "bytes": 566372,
+          "sha256": "dfc276fb9b238d562d974a4835c0dd6a9ebe482d873967dd28927b3cf2d2b3c6"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-ukulele-song-thumb.webp",
+          "bytes": 40778,
+          "sha256": "8e3e2b1aef8753143b818b3fd7b180992ba55d298aab999eed7dcaef3259ac0a"
+        }
+      },
+      "proofSha256": "0548c5db6554a935981e46a20f2dec6d54b5b5d31e32e7a1192ed95f0ee4d65b",
+      "pairMeanRgbDifference": 1.54188
+    },
+    {
+      "id": "ghost-crescent-nap",
+      "title": "Ghost Napping on a Crescent Moon",
+      "alt": "A sleeping ghost in a striped nightcap hugs a star pillow while resting on a golden crescent moon.",
+      "description": "A sleeping ghost in a striped nightcap hugs a star pillow while resting on a golden crescent moon. Use this illustration for bedtime reward cards.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-crescent-nap.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "7221547c9a97458764d824ac4aacd6df73583d923cd0afffa34502662103a131",
+      "inputSignature": "7fd17c9fafba5afe1aaa279fc906568b16ad7a116f10c23f6e8912e448a51434",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 712295,
+        "weightedCmykRmse": 0.748519
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1298663,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 712295,
+          "weightedCmykRmse": 0.748519
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        68,
+        66,
+        1201,
+        1206
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-crescent-nap.pdf",
+          "bytes": 712295,
+          "sha256": "d79e142237c7117664932eb63afb31a28c93ab3e113b68ba6d789701925bb686"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-crescent-nap.webp",
+          "bytes": 759672,
+          "sha256": "09e715ee83a157389cc3cc0ecc2d646d8d30925890cfaf7206667fa7ee881f0a"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-crescent-nap-thumb.webp",
+          "bytes": 49636,
+          "sha256": "07c9776f61b8b92818beecac03e755d0a2a29a0fd42dcb89398651988f5fc30c"
+        }
+      },
+      "proofSha256": "1c431237f704ae03c049c622b84c9691b6b9336742bfc63f59d30a096c2ed323",
+      "pairMeanRgbDifference": 1.89213
+    },
+    {
+      "id": "ghost-paper-boat-sailor",
+      "title": "Ghost Sailing a Paper Boat",
+      "alt": "A ghost wearing a sailor hat and collar rides a blue paper boat with a red flag above curling waves.",
+      "description": "A ghost wearing a sailor hat and collar rides a blue paper boat with a red flag above curling waves. Use this illustration for imaginative voyage stories.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-paper-boat-sailor.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "36476ed55232ab3034ca1f9a49d217d6739b8b0932d948302d0aa22384babe76",
+      "inputSignature": "58b237ad300ba10d4a5b0bd82a45c4b37dbd50732ef13a53c3f4bb9ba8ed29fc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 806367,
+        "weightedCmykRmse": 0.812425
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1292338,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 806367,
+          "weightedCmykRmse": 0.812425
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        78,
+        116,
+        1194,
+        1145
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-paper-boat-sailor.pdf",
+          "bytes": 806367,
+          "sha256": "909c3405af4576cf7ae96bdf8fdd7e7280cf54acb0b82baf33831a45a82165e8"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-paper-boat-sailor.webp",
+          "bytes": 698580,
+          "sha256": "316d54ca04d5af77afbfe4465fff2c75970a3dc401a5d027c68ac5d8f5b6e664"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-paper-boat-sailor-thumb.webp",
+          "bytes": 50894,
+          "sha256": "2c1fd1c494a5a356469b8048864613849f4f5a39711ba449c86626b133c3efcd"
+        }
+      },
+      "proofSha256": "551b97f45a7701b532c698e79de70303e71d254598e2621a69c150d99499f9a9",
+      "pairMeanRgbDifference": 2.19576
+    },
+    {
+      "id": "ghost-cupcake-baker",
+      "title": "Ghost Baker with a Cupcake Tray",
+      "alt": "A ghost in a chef hat and heart-trimmed apron holds a tray of three colorful cupcakes.",
+      "description": "A ghost in a chef hat and heart-trimmed apron holds a tray of three colorful cupcakes. Use this illustration for family baking invitations.",
+      "color": "Pink",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-cupcake-baker.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "9a1c2bf950e8c97ba233207a796f7a705dc9d5d928bb2f87f9194692f39dd19f",
+      "inputSignature": "081e22d78c8ed55ab1f8801608b6e23c97bdc67450cd631cd8f4d42625883763",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 851443,
+        "weightedCmykRmse": 0.792024
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1391511,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 851443,
+          "weightedCmykRmse": 0.792024
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        74,
+        23,
+        1208,
+        1235
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-cupcake-baker.pdf",
+          "bytes": 851443,
+          "sha256": "9acc58bcd78cd8d36b46b6761668c020d59aba7bb88fc2f5655228128031411e"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-cupcake-baker.webp",
+          "bytes": 778962,
+          "sha256": "773ddb2ba54c30757f67fb46c074e5c0e5efc5556b04f18d49cae0d4514a73c0"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-cupcake-baker-thumb.webp",
+          "bytes": 52074,
+          "sha256": "c92b1502d51a48a0ab074403ab25dde448ab0fcc47e31cfe0de65a94323b5288"
+        }
+      },
+      "proofSha256": "895588a9b5f85f308a97f885eb2f509c744d72aa766e808bc4eedb9b4f726b87",
+      "pairMeanRgbDifference": 1.9637
+    },
+    {
+      "id": "ghost-mail-delivery",
+      "title": "Ghost Delivering a Letter",
+      "alt": "A floating white ghost with a red postal bag offers a sealed cream envelope.",
+      "description": "A floating white ghost with a red postal bag offers a sealed cream envelope. Use this illustration for friendly letter-writing activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-mail-delivery.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "3dd656f580251fd1b75dcded7ab4a0719aaea0eac8ddfd07e5374d3abe5c99e3",
+      "inputSignature": "766268d3b846990a535ac47092d0bf08ea178dd6478cbbe984907fb3f8943a82",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 971620,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 971620,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        67,
+        52,
+        1147,
+        1209
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-mail-delivery.pdf",
+          "bytes": 971620,
+          "sha256": "a5829e6e34c9dcceb78d7f68d6340f08f6a6d8ab63c4726f25d8c29cf0e1a5d3"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-mail-delivery.webp",
+          "bytes": 523952,
+          "sha256": "2684c72ff9ff52c799d74bbce89df2e9dd1ba0617ff3fe1452ce25bc3f90ed9f"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-mail-delivery-thumb.webp",
+          "bytes": 36082,
+          "sha256": "a2ff2e948bd1a267f68caefbf8c6209d576378327c3d7af5a89221f2eba09e75"
+        }
+      },
+      "proofSha256": "ce938aee874e5cbd13c4b9e4575fc49cfce26b4df05b7375b3115cbb35867859",
+      "pairMeanRgbDifference": 1.23717
+    },
+    {
+      "id": "ghost-autumn-bouquet",
+      "title": "Ghost Holding Autumn Flowers",
+      "alt": "A shy white ghost holds golden flowers, autumn leaves and berries tied with twine.",
+      "description": "A shy white ghost holds golden flowers, autumn leaves and berries tied with twine. Use this illustration for personal thank-you cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-autumn-bouquet.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d4550dccd5f252367fc40cca8e13d7fcbb799dfe656da1254f299eceb76d40e2",
+      "inputSignature": "39493f3632beca434449705f82a88ff5e13c79e52433e5f6b7c16dccbe7967bf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 893861,
+        "weightedCmykRmse": 0.945723
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1513274,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 990113,
+          "weightedCmykRmse": 0.808165
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 893861,
+          "weightedCmykRmse": 0.945723
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        173,
+        74,
+        1126,
+        1198
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-autumn-bouquet.pdf",
+          "bytes": 893861,
+          "sha256": "4b656bf7aab8d77fb3b1dc060396fa760f4138c3633fca2f1ff38ce734a1547a"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-autumn-bouquet.webp",
+          "bytes": 854312,
+          "sha256": "0a3d7c3755d82f16c7f79e3dbda1279ad1e060073579ed33de1bc4b732d7bb5a"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-autumn-bouquet-thumb.webp",
+          "bytes": 55584,
+          "sha256": "e37b678d1badaf0205070f325cf534b886ae3ae768befa17df25d14fb18d8f69"
+        }
+      },
+      "proofSha256": "1261026fec339e0d1813c909909aeb9f2d95bdcc76b17791115b2c500256ab4c",
+      "pairMeanRgbDifference": 1.9969
+    },
+    {
+      "id": "ghost-scarf-and-cocoa",
+      "title": "Ghost with a Scarf and Cocoa",
+      "alt": "A seated white ghost wearing a teal scarf holds an orange mug of cocoa topped with marshmallows.",
+      "description": "A seated white ghost wearing a teal scarf holds an orange mug of cocoa topped with marshmallows. Use this illustration for cozy seasonal bookmarks.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_029/source/ghost-scarf-and-cocoa.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "785bcbef1345879e004db29345f17bf34e158da5a584679bd42684e240a9ab85",
+      "inputSignature": "bffbabb15df9dcfcb7023e362a0ed3c4f5b3244f37953e2648caf249c1a62af8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 630339,
+        "weightedCmykRmse": 0.813678
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1174469,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 630339,
+          "weightedCmykRmse": 0.813678
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        100,
+        97,
+        1200,
+        1151
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_029/exports/ghost-scarf-and-cocoa.pdf",
+          "bytes": 630339,
+          "sha256": "aa7c50ef4ff90c26144421064c9adff30f50437780b9fdcbf38b3a0232de33a1"
+        },
+        "webp": {
+          "path": "work/production/wave_029/exports/ghost-scarf-and-cocoa.webp",
+          "bytes": 620704,
+          "sha256": "ca2e02ef11dbc5309278995679275e1d091e0f85c32fc1d936ad2983b801887e"
+        },
+        "thumb": {
+          "path": "work/production/wave_029/exports/ghost-scarf-and-cocoa-thumb.webp",
+          "bytes": 39528,
+          "sha256": "eaf7e62860c31eec88c7ffae35c538d4e044046d2324556c4cb5e73f50159248"
+        }
+      },
+      "proofSha256": "0bc8ef2767d5248eddb491bdc0b8799bde3d650980bf18af10b90858fc03d9d0",
+      "pairMeanRgbDifference": 1.41501
+    }
+  ],
+  "deferred": [],
+  "reviewedAt": "2026-10-23T19:38:29.443150+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "All ten actual Poppler PDF proofs reviewed: complete unclipped compositions, coherent props, distinct poses and activities, source matches. Source originals inspected for umbrella, firefly jar, easel and ukulele details. English alt descriptions reflect visible artwork.",
+  "createdAt": "2026-10-23T20:07:17.430Z"
+}

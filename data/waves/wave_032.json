@@ -1,0 +1,773 @@
+{
+  "wave": "wave_032",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 10,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "ghost-garden-wheelbarrow",
+      "title": "Ghost with a Garden Wheelbarrow",
+      "alt": "A white ghost in a straw hat pushes a wheelbarrow filled with flower pots and gardening tools.",
+      "description": "A white ghost in a straw hat pushes a wheelbarrow filled with flower pots and gardening tools. Use this illustration for seasonal gardening activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-garden-wheelbarrow.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "40b8e3fc777931ac6443eb384d202c2dcf346786776129ff607c856d43b506ea",
+      "inputSignature": "b90835b69ec3c8723d86df6d2300b8d671cd4152f2a6569870586807eb8b92e3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 944355,
+        "weightedCmykRmse": 0.820746
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1486736,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 944355,
+          "weightedCmykRmse": 0.820746
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        69,
+        67,
+        1212,
+        1213
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-garden-wheelbarrow.pdf",
+          "bytes": 944355,
+          "sha256": "89d299ac96ff9b657a3923e5a9b6941a9e2884944f6a13ac09823c4c0e65b85d"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-garden-wheelbarrow.webp",
+          "bytes": 782218,
+          "sha256": "9dd7e0cc70b8eec936bf8bd32e403a06d73b5e0c62920e5958e466fcb0a356f3"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-garden-wheelbarrow-thumb.webp",
+          "bytes": 53000,
+          "sha256": "34dc090de485f48e91811325c6a66c4b99bdb326e5d497fd7e31392fab7659ea"
+        }
+      },
+      "proofSha256": "1c7f9b91a70078a74b277b7e9621b2cecd41a4f945e793d47d3f6a245896f0ba",
+      "pairMeanRgbDifference": 1.95938
+    },
+    {
+      "id": "ghost-leaf-investigator",
+      "title": "Ghost Examining a Leaf",
+      "alt": "A ghost wearing glasses studies a red maple leaf through a magnifying glass.",
+      "description": "A ghost wearing glasses studies a red maple leaf through a magnifying glass. Use this illustration for classroom observation prompts.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-leaf-investigator.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "fe79b4faac58a19116173a776c19d52b67c7b6f72d41e87fa9a501ad5cbca837",
+      "inputSignature": "b4cedd0920bfe48445f0e95fef84503026a3bca55953c811d4ff768991fcbc25",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 713758,
+        "weightedCmykRmse": 0.810206
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1214710,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 713758,
+          "weightedCmykRmse": 0.810206
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        44,
+        125,
+        1231,
+        1132
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-leaf-investigator.pdf",
+          "bytes": 713758,
+          "sha256": "ae426cd90cabbf7faafccf9da3f7da7d4edf3f5311425bc0128f13efe00c4179"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-leaf-investigator.webp",
+          "bytes": 715360,
+          "sha256": "20d18e21445dfab8ce74744ac421db64cbf595d0bc135df5c4d9f34699a3d1bf"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-leaf-investigator-thumb.webp",
+          "bytes": 45126,
+          "sha256": "20f0b6643b74cbec75a4c3e077122ce6a2c655a994b183adcb8dadb1b0832b6b"
+        }
+      },
+      "proofSha256": "efc8ea638820cd948dca4e884ffcc187c8f4408b7126bf3cbcbade37f485401e",
+      "pairMeanRgbDifference": 2.1252
+    },
+    {
+      "id": "ghost-music-conductor",
+      "title": "Ghost Conducting Music",
+      "alt": "A white ghost wearing a bow tie conducts music beside a wooden music stand.",
+      "description": "A white ghost wearing a bow tie conducts music beside a wooden music stand. Use this illustration for classroom rhythm games.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-music-conductor.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "0aed9a7deab55160a4128621abf9e969a85437f76e19d415b40253653ad987d3",
+      "inputSignature": "7e32a4366ddf8fb3d600bee3a6420c95c8e7aa5fa8bddb407a923a40a32a6736",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 657590,
+        "weightedCmykRmse": 0.834349
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1097697,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 657590,
+          "weightedCmykRmse": 0.834349
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        155,
+        17,
+        1140,
+        1231
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-music-conductor.pdf",
+          "bytes": 657590,
+          "sha256": "94773563dca4e7e66c3ec88ea095440e4a9f98f43d1692eed3ca7a9612b85166"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-music-conductor.webp",
+          "bytes": 578986,
+          "sha256": "04b4e2b209bd10e31aece8bdeafb322eb283e0d3080ce33eecb0402be5b27bc0"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-music-conductor-thumb.webp",
+          "bytes": 49388,
+          "sha256": "6b32eac7c28f421bcf7920b6b9c8aa7bd54fafae4227758412eb16a9add19900"
+        }
+      },
+      "proofSha256": "1f0769ec7075eff70d5ae1e714f40c09ba67fd7a53dd4b964c584894c2785b67",
+      "pairMeanRgbDifference": 1.42065
+    },
+    {
+      "id": "ghost-tripod-camera",
+      "title": "Ghost with a Vintage Camera",
+      "alt": "A curious white ghost stands beside a vintage bellows camera on a wooden tripod.",
+      "description": "A curious white ghost stands beside a vintage bellows camera on a wooden tripod. Use this illustration for personal photo-album decorations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-tripod-camera.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "b27be35752e78a41972e4c29d77ab5d4c73d25f47c3289b499da3d2f07b7762e",
+      "inputSignature": "98b50566183f308fdf1e6efd0d3417257a798215624c34bf8b9a9be2c53a33cb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 841347,
+        "weightedCmykRmse": 0.858573
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1316153,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 841347,
+          "weightedCmykRmse": 0.858573
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        133,
+        84,
+        1120,
+        1171
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-tripod-camera.pdf",
+          "bytes": 841347,
+          "sha256": "4a56245d361fc92653ec24ca5b4eee56ac3056f7da26745fc65087bb64aca1a0"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-tripod-camera.webp",
+          "bytes": 618464,
+          "sha256": "5fe44ad8b5ab32a1163b79b38dcf2c4b9231c4d76464d5a05bddcae482de8818"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-tripod-camera-thumb.webp",
+          "bytes": 45392,
+          "sha256": "46bf6d972e301b5c323f5b7b4330f622844c57fc1fb0dac175437f7cae480c07"
+        }
+      },
+      "proofSha256": "8cd1851ae9b65e71ee747e16301f0f71fa4c87886ea88ffc52fb9fbae4120a58",
+      "pairMeanRgbDifference": 1.72846
+    },
+    {
+      "id": "ghost-knitting-project",
+      "title": "Ghost Knitting a Scarf",
+      "alt": "A seated white ghost knits an orange scarf with wooden needles beside a blue yarn ball.",
+      "description": "A seated white ghost knits an orange scarf with wooden needles beside a blue yarn ball. Use this illustration for personal knitting journal cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-knitting-project.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "08678edf8c65a0b001f1bf8ff69c787330534bcd6c269553f75dea6b45b75b41",
+      "inputSignature": "4aafc614d06fbb9ca9dc2484735b7c19b1216915465702eda8fc2afd27e236e2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 797530,
+        "weightedCmykRmse": 0.815156
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1297754,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 797530,
+          "weightedCmykRmse": 0.815156
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        64,
+        74,
+        1195,
+        1205
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-knitting-project.pdf",
+          "bytes": 797530,
+          "sha256": "93cf39ca9b1e2819090b6cca275d8404442d2a75a5fe670cdff91783242d3db5"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-knitting-project.webp",
+          "bytes": 775640,
+          "sha256": "3c3b0a685089b73aa23c3da35fe26ed9b4075b4bd149c5f2fc8556afd36e7b20"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-knitting-project-thumb.webp",
+          "bytes": 52236,
+          "sha256": "93a887ba022564fe87c578d1ada1f00525734e85900f83ed0f38e767e74c1def"
+        }
+      },
+      "proofSha256": "a87104d7bf6d413361233c385742559eea2798c3d247c3b0e5ed010984957997",
+      "pairMeanRgbDifference": 2.1041
+    },
+    {
+      "id": "ghost-basket-nap",
+      "title": "Ghost Sleeping in a Basket",
+      "alt": "A small sleeping ghost curls inside a wicker basket lined with a blue blanket.",
+      "description": "A small sleeping ghost curls inside a wicker basket lined with a blue blanket. Use this illustration for cozy seasonal nursery crafts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-basket-nap.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ea810f39bf8c841f9a560a3982c8b3c4851120a308e1c58b2b6fa72d9e63a6ec",
+      "inputSignature": "3110c86e4901da8ccefa7875c410b36574a47ad6dfc2bfaa35b26209dbacd91e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 731071,
+        "weightedCmykRmse": 0.864976
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1239053,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 731071,
+          "weightedCmykRmse": 0.864976
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        43,
+        288,
+        1213,
+        1008
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-basket-nap.pdf",
+          "bytes": 731071,
+          "sha256": "bab572c0d21ca930c912bb3e42eb274eb19118beb9c2df039d2b0c6e2b335862"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-basket-nap.webp",
+          "bytes": 706014,
+          "sha256": "a6231b76459270d75bc3f0b22931aa1926a7f54cc719d8a6d8fdb376d05d2a26"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-basket-nap-thumb.webp",
+          "bytes": 44510,
+          "sha256": "10c9ee8566845b28641b7b269eacd8fc5661dff0a49e4da81f8fd2d709d32a73"
+        }
+      },
+      "proofSha256": "34a858f6a6f374fd2c214ed512d5ef605c20d70ff2e30d522f9c8aaff66d4285",
+      "pairMeanRgbDifference": 1.57699
+    },
+    {
+      "id": "ghost-doorway-peek",
+      "title": "Ghost Peeking Through a Door",
+      "alt": "A shy white ghost peeks around a partly open teal arched door.",
+      "description": "A shy white ghost peeks around a partly open teal arched door. Use this illustration for peekaboo story sequencing.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-doorway-peek.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "817456c8f670958eb3340c53f395464d2833553c615fbbd90a49ecc78e963d53",
+      "inputSignature": "48e33081a69c46a7d2b00b50166f35ff34caa994c327e9edd50297c0910b3a7c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 961310,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 961310,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        352,
+        49,
+        970,
+        1192
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-doorway-peek.pdf",
+          "bytes": 961310,
+          "sha256": "30fa514d0a57f4047e0ff4dfd16f2913c1475ef9b232c4b3a39b22be7f0884c1"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-doorway-peek.webp",
+          "bytes": 453952,
+          "sha256": "39696b581a93f0cd101fc3d8e9d82437a09b9a2923eba2c5dd28825a90cfdd57"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-doorway-peek-thumb.webp",
+          "bytes": 25690,
+          "sha256": "30e2164d6379c7e16cc96423578aee9613ad8b055014535bbd69327dd06f8223"
+        }
+      },
+      "proofSha256": "e73fc05ff3eb29131d154576d5263a83f2f2d1b64028c6b988834d0c51d4d92a",
+      "pairMeanRgbDifference": 1.01823
+    },
+    {
+      "id": "ghost-window-box",
+      "title": "Ghost at a Flower-Box Window",
+      "alt": "A smiling white ghost leans from a wooden window above a flower box of autumn daisies.",
+      "description": "A smiling white ghost leans from a wooden window above a flower box of autumn daisies. Use this illustration for storybook house decorations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-window-box.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a4c27022880a2fad22447aeb1b84bff92bac037fe8b7833cfafeb670e978f62c",
+      "inputSignature": "38abee04fed719ed19c499b93b0a5074ce54e6177bc35916e00c55d99818759a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 961138,
+        "weightedCmykRmse": 1.325848
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1972601,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1347205,
+          "weightedCmykRmse": 0.774989
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1223936,
+          "weightedCmykRmse": 0.89798
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1086098,
+          "weightedCmykRmse": 1.068459
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 961138,
+          "weightedCmykRmse": 1.325848
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        103,
+        121,
+        1152,
+        1183
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-window-box.pdf",
+          "bytes": 961138,
+          "sha256": "57e44454d6c974d13e17aab16ebc9425cb5589f8eac1a06f48ace58a414680a2"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-window-box.webp",
+          "bytes": 1056844,
+          "sha256": "cf6cbd94082c0f2caa1b4cf494182dad34bafa050a15500c62347d07cbfc58b7"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-window-box-thumb.webp",
+          "bytes": 64932,
+          "sha256": "0205ae79aa034d17c2616fc19996eb0affe8ffd8df0aaa1cbaaffb7a5b701ede"
+        }
+      },
+      "proofSha256": "207301e8a6df694c75dbe4871e72962a0001802ead7157b09b05af2fabb0a6ea",
+      "pairMeanRgbDifference": 2.74991
+    },
+    {
+      "id": "ghost-paper-lantern",
+      "title": "Hanging Ghost Paper Lantern",
+      "alt": "A white paper lantern with a friendly ghost face hangs from a wire handle and orange ribbon.",
+      "description": "A white paper lantern with a friendly ghost face hangs from a wire handle and orange ribbon. Use this illustration for personal seasonal party decorations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-paper-lantern.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "6d8d6161b9ce1a5147a228aee13b481646b6cffd3bbd03d0f38262f87f761abf",
+      "inputSignature": "5c5da78ec24d91ec742aa5dc6c2faa824e0d6bad0d08bc58fb6f5e0a1bd39be0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 804559,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 804559,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        204,
+        16,
+        1049,
+        1178
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-paper-lantern.pdf",
+          "bytes": 804559,
+          "sha256": "2f7225bdf59ba86f2f60392912d0227cda5460f0bd2a094b4d7fc8b19200254b"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-paper-lantern.webp",
+          "bytes": 441708,
+          "sha256": "11cd114b2f83f71f0738480c5222ed5876dd3a3bca506610f5be1540025e4d0f"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-paper-lantern-thumb.webp",
+          "bytes": 29610,
+          "sha256": "f5060e9eee41c381991721319946a1079f663cff6bc6a705c01a5b05b24f27a3"
+        }
+      },
+      "proofSha256": "37f3325375731421932101ec3aa8a8c924cea8e3409e98448648c3f04bbbc048",
+      "pairMeanRgbDifference": 0.9215
+    },
+    {
+      "id": "ghost-ceramic-candle-holder",
+      "title": "Ceramic Ghost Candle Holder",
+      "alt": "A white ceramic ghost candle holder has a warm candle glowing through a star-shaped opening.",
+      "description": "A white ceramic ghost candle holder has a warm candle glowing through a star-shaped opening. Use this illustration for autumn home-craft inspiration.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_032/source/ghost-ceramic-candle-holder.png",
+      "topic": "ghost",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "7b1264be4d1084e1b6c06f3a3bbe87cb832f10a1c8aa04ece9c6cdb9d1408393",
+      "inputSignature": "95c32958af2a8be9b1db4662d2a855f1acaac1217fd0af52ef73184b80214bb4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 486846,
+        "weightedCmykRmse": 0.786799
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1105920,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 486846,
+          "weightedCmykRmse": 0.786799
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        104,
+        86,
+        1171,
+        1165
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_032/exports/ghost-ceramic-candle-holder.pdf",
+          "bytes": 486846,
+          "sha256": "fdc51418a38f408343f88ec3d45b482dfd15251c03a725a201f46d609b3b45cc"
+        },
+        "webp": {
+          "path": "work/production/wave_032/exports/ghost-ceramic-candle-holder.webp",
+          "bytes": 671880,
+          "sha256": "e4ac689dbb5b18e468af02ba9894372c83d6ef06060ff7937672ab6556e472e7"
+        },
+        "thumb": {
+          "path": "work/production/wave_032/exports/ghost-ceramic-candle-holder-thumb.webp",
+          "bytes": 33412,
+          "sha256": "91c6530a59dd838574caf32a769b99b8b28439ff447f0e17c6cdc4bb0003ea77"
+        }
+      },
+      "proofSha256": "18ec5f02b73146275f6fef7414c164f6d90d3f026ec1f86860af26d8a76ec9ec",
+      "pairMeanRgbDifference": 1.38459
+    }
+  ],
+  "deferred": [],
+  "reviewedAt": "2026-10-23T19:57:14.499762+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "All ten Poppler PDF proofs inspected: all props complete, native aspect retained, clear negative space, correct source pairing. Knitting source full size checked: orange active thread; separate blue yarn ball is not connected to orange stitches.",
+  "createdAt": "2026-10-23T20:07:18.743Z"
+}
