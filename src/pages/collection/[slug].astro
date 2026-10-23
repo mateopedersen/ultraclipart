@@ -1,12 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import { art, topics, clusters, slugify } from '../../lib/catalog';
+import { art, availableTopics, availableClusters, slugify } from '../../lib/catalog';
 export function getStaticPaths() {
-  return clusters.map((c) => ({ params: { slug: slugify(c) }, props: { cluster: c } }));
+  return availableClusters.map((c) => ({ params: { slug: slugify(c) }, props: { cluster: c } }));
 }
 const { cluster } = Astro.props;
-const ts = topics.filter((t) => t.cluster === cluster);
+const ts = availableTopics.filter((t) => t.cluster === cluster);
 const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
 ---
 
@@ -16,7 +16,7 @@ const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
     <h1>{cluster}</h1>
     <p class="lead">A collection of moments worth making.</p>
     <p>
-      {items.length} pilot illustrations available · {ts.length} topics planned.
+      {items.length} pilot illustrations available · {ts.length} available topics.
     </p>
     <div class="chips" aria-label="Topics in this collection">
       {ts.map((t) => (

@@ -1,0 +1,87 @@
+---
+import Guide from '../../layouts/Guide.astro';
+import { art } from '../../lib/catalog';
+const pumpkin = art.find((item) => item.id === 'pumpkin-curly-vine')!;
+---
+
+<Guide slug="turn-clipart-into-a-coloring-activity">
+  <figure class="guide-figure">
+    <img src={pumpkin.svg} alt={pumpkin.alt} width="800" height="800" />
+    <figcaption>
+      Start with Pumpkin with a Curly Vine. Its body, leaf, vine, and surface details can be edited
+      separately.
+    </figcaption>
+  </figure>
+  <h2>Give the activity a clear purpose</h2>
+  <p>
+    A coloring page needs space to work. This project uses one pumpkin as a focal point instead of
+    filling the sheet with small decorations. A child can choose a palette, add a caption, or
+    compare the curved body with the pointed leaf. This is a creative activity suggestion, not a
+    tested lesson plan or a claim about learning outcomes.
+  </p>
+  <p>
+    The main decision is how much detail to keep. The curled vine is distinctive, but fine surface
+    accents can compete with the broad shapes when reduced to a small print. The editor lets you
+    hide those layers and compare the result without changing the original download.
+  </p>
+  <h2>1. Start with the real drawing</h2>
+  <p>
+    <a href="/edit/pumpkin-curly-vine/">Open the pumpkin in the editor</a>. Choose{' '}
+    <strong>Layers</strong> and inspect the named pieces. Hide decorative surface details one at a
+    time if you want a simpler activity. Keep the main silhouette, stem, leaf, and vine so the
+    subject remains recognizable. Save your project before trying a different direction.
+  </p>
+  <h2>2. Compare grayscale with outlines</h2>
+  <p>
+    Grayscale removes color but retains dark filled areas. Outline mode changes the treatment of
+    shapes so there is more open space to color. Open <strong>Print / B&amp;W</strong> and compare{' '}
+    <strong>Grayscale</strong> with <strong>Outline only</strong>. They solve different problems:
+    grayscale is useful for a monochrome illustration, while a coloring activity usually benefits
+    from open interiors.
+  </p>
+  <p>
+    Do not assume a single preset makes every drawing suitable. Look where the leaf overlaps the
+    body and where the vine approaches the stem. If small contours become confusing, hide the
+    relevant accent layer or increase the print size. Use Undo if you remove a line that helps
+    explain the shape. The original colored file remains available on the{' '}
+    <a href="/art/pumpkin-curly-vine/">artwork page</a>.
+  </p>
+  <h2>3. Add a short prompt with room to answer</h2>
+  <p>
+    Open <strong>Text</strong>, add a caption such as “My autumn colors,” and position it away from
+    the vine. Keep a broad blank area around the pumpkin if the activity includes writing or
+    drawing. A caption should not cover the subject or make a child color around tiny letters.
+  </p>
+  <p>
+    For a digital worksheet, export a transparent WebP and arrange it in your worksheet application.
+    Place the instructions as real text in that document where possible. A single flattened image
+    containing all the instructions is harder to adapt and does not provide the same accessibility
+    as selectable document text.
+  </p>
+  <h2>4. Check the whole printed page</h2>
+  <p>
+    For a direct print, open <strong>Print setup</strong>, choose US Letter or A4, and start with
+    half-inch margins and <strong>Fit entire artwork</strong>. Enable the paper preview. Fit keeps
+    the complete composition inside the available area; Fill page can cut off the vine or leaf.
+    Export PDF and open the downloaded file before printing.
+  </p>
+  <p>
+    The PDF uses CMYK vector shapes, but a printer's “black and white” option may interpret gray or
+    colored elements differently. If ink use matters, inspect the page and print a single proof. We
+    have not physically tested this activity on every printer or paper. Avoid promising a particular
+    ink saving based only on the on-screen preview.
+  </p>
+  <h2>Make the second version meaningfully different</h2>
+  <p>
+    Try a large single pumpkin for free coloring, then a smaller version with more blank space for
+    an original drawing. These are adaptations of the same artwork, not two newly authored catalog
+    illustrations. Keep the project files if you want to change the layout again. Personal and
+    educational adaptations are permitted; resale of the artwork or commercial use is not.
+  </p>
+  <p>
+    For help choosing an export, read{' '}
+    <a href="/guides/webp-pdf-and-editable-projects/">Which file should you download?</a>. If the
+    printed lines look soft, compare the original vector PDF with a screenshot: the screenshot has a
+    fixed pixel count and can lose detail when enlarged.
+  </p>
+</Guide>

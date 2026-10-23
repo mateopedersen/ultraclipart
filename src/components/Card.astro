@@ -1,4 +1,5 @@
 ---
+import Icon from './Icon.astro';
 const { item } = Astro.props;
 ---
 
@@ -22,10 +23,12 @@ const { item } = Astro.props;
     </div>
     <div class="card-actions">
       <a class="button" href={`/edit/${item.id}/`}>
-        ✎ Edit
+        <Icon name="edit" size={16} />
+        <span>Edit</span>
       </a>
       <a class="button primary" href={`/art/${item.id}/`}>
-        ↓ Download
+        <Icon name="download" size={16} />
+        <span>Download</span>
       </a>
     </div>
   </div>

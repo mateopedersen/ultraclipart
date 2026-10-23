@@ -2,11 +2,16 @@
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import Icon from '../../components/Icon.astro';
+import notes from '../../../data/artwork-notes.json';
 import { art, topics } from '../../lib/catalog';
 export function getStaticPaths() {
   return art.map((a) => ({ params: { id: a.id }, props: { item: a } }));
 }
 const { item } = Astro.props;
+const note = notes[item.id as keyof typeof notes];
+if (!note) throw new Error(`Missing original usage notes for ${item.id}`);
+const layers = note.layers;
 const topic = topics.find((t) => t.slug === item.topic)!;
 ---
 
@@ -101,14 +106,17 @@ const topic = topics.find((t) => t.slug === item.topic)!;
       </div>
       <div class="detail-actions">
         <a class="button primary" href={`/edit/${item.id}/`}>
-          ✎ Edit Clipart
+          <Icon name="edit" size={18} />
+          <span>Edit Clipart</span>
         </a>
         <a class="button" href={item.webp} download>
-          ↓ Download WebP
+          <Icon name="download" size={18} />
+          <span>Download WebP</span>
         </a>
         {item.pdf && (
           <a class="button" href={item.pdf} download>
-            ↓ Download PDF
+            <Icon name="download" size={18} />
+            <span>Download PDF</span>
           </a>
         )}
       </div>
@@ -127,6 +135,52 @@ const topic = topics.find((t) => t.slug === item.topic)!;
       </p>
     </section>
   </div>
+  <section class="artwork-guide" aria-labelledby="artwork-use-heading">
+    <div class="prose">
+      <p class="eyebrow">Working with this drawing</p>
+      <h2 id="artwork-use-heading">{note.heading}</h2>
+      <p>{note.use}</p>
+      <h3>Make a considered edit</h3>
+      <p>{note.edit}</p>
+      <h3>Check before using it</h3>
+      <p>{note.check}</p>
+      <p>
+        <a href={`/guides/${note.guide}/`}>Follow a related project guide →</a>
+      </p>
+    </div>
+    <aside class="asset-facts">
+      <h2>Inside this download</h2>
+      <dl>
+        <dt>Editable source</dt>
+        <dd>{layers.length} named layers</dd>
+        <dt>WebP</dt>
+        <dd>
+          {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} pixels ·{' '}
+          {item.files.webp.bytes.toLocaleString('en-US')} bytes
+        </dd>
+        <dt>PDF</dt>
+        <dd>
+          {item.pdfPage} · {item.pdfColorSpace} · {item.files.pdf.bytes.toLocaleString('en-US')}{' '}
+          bytes
+        </dd>
+        <dt>Print conversion</dt>
+        <dd>{item.printProfile}</dd>
+      </dl>
+      <details>
+        <summary>See the editable layers</summary>
+        <ul>
+          {layers.map((layer) => (
+            <li>{layer}</li>
+          ))}
+        </ul>
+      </details>
+      <p>
+        <a href="/print-size/">Check a raster print size</a> or{' '}
+        <a href="/guides/webp-pdf-and-editable-projects/">compare the file formats</a>. A physical
+        print proof is still recommended.
+      </p>
+    </aside>
+  </section>
   <div class="section-head">
     <h2>A little more inspiration</h2>
     <a href="/new/">Explore all →</a>

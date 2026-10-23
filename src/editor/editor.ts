@@ -1309,7 +1309,13 @@ function init(root: HTMLElement) {
     try {
       if (creator) original = blankDocument(id);
       else {
-        const response = await fetch(root.dataset.source!);
+        // A prior cross-origin <img> can leave a no-CORS cache entry for this SVG.
+        // Revalidate over the network so editable bytes receive the CORS headers.
+        const response = await fetch(root.dataset.source!, {
+          mode: 'cors',
+          credentials: 'omit',
+          cache: 'reload',
+        });
         if (!response.ok)
           throw new Error('The editable source could not be loaded. Refresh the page to retry.');
         original = fromSvg(await response.text(), id);

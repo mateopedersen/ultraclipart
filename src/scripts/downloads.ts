@@ -11,7 +11,14 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
   status.hidden = false;
   status.textContent = 'Preparing your download…';
   try {
-    const response = await fetch(link.href, { signal: controller.signal, credentials: 'omit' });
+    // Ordinary image previews may have populated the HTTP cache without CORS
+    // headers. Fetch readable bytes again rather than reuse that opaque entry.
+    const response = await fetch(link.href, {
+      signal: controller.signal,
+      credentials: 'omit',
+      mode: 'cors',
+      cache: 'reload',
+    });
     if (!response.ok || new URL(response.url).origin !== 'https://assets.ultraclipart.com')
       throw new Error('Unavailable download');
     const type = response.headers.get('content-type')?.split(';')[0].trim().toLowerCase() ?? '';

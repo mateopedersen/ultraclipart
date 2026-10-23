@@ -1,3 +1,4 @@
+import { guides } from './guides.ts';
 const SITE = 'https://ultraclipart.com/';
 const XML = '<?xml version="1.0" encoding="UTF-8"?>';
 const NS = 'http://www.sitemaps.org/schemas/sitemap/0.9';
@@ -28,6 +29,9 @@ export function pageSitemap(art: Artwork[], topics: Topic[]): string {
     'categories/',
     'collections/',
     'create/',
+    'guides/',
+    'print-size/',
+    ...guides.map((guide) => `guides/${guide.slug}/`),
     'about/',
     'license/',
     'contact/',

@@ -109,9 +109,15 @@ test(
       );
     };
     noindex('/search/');
-    for (const topic of topics)
-      if (!art.some((item) => item.topic === topic.slug && item.indexable))
-        noindex(`/clipart/${topic.slug}/`);
+    for (const topic of topics) {
+      const items = art.filter((item) => item.topic === topic.slug);
+      if (!items.length) {
+        assert.ok(
+          !existsSync(join(dist, `clipart/${topic.slug}/index.html`)),
+          `empty topic must not be published: ${topic.slug}`,
+        );
+      } else if (!items.some((item) => item.indexable)) noindex(`/clipart/${topic.slug}/`);
+    }
     for (const item of art) if (!item.indexable) noindex(`/art/${item.id}/`);
   },
 );

@@ -1,4 +1,4 @@
-import { art, topics } from './catalog';
+import { art, topics, availableTopics } from './catalog';
 import { buildSearchIndex, type SearchBuild } from './search-index.ts';
 let cached: Promise<SearchBuild> | undefined;
 export function getSearchBuild(): Promise<SearchBuild> {
@@ -17,7 +17,7 @@ export function getSearchBuild(): Promise<SearchBuild> {
     )
       .join('')
       .slice(0, 16);
-    const build = buildSearchIndex(data, topics, version);
+    const build = buildSearchIndex(data, availableTopics, version);
     // Includes artwork/editor pages, all topics and 200 shell/runtime files.
     // Media must be served from R2 at scale, not duplicated in Pages output.
     if (build.files.size + data.length * 2 + topics.length + 200 > 20000)

@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { guides } from '../../lib/guides';
+import { art } from '../../lib/catalog';
+const displayGuides = guides.map((guide) =>
+  guide.slug === 'turn-clipart-into-a-coloring-activity'
+    ? {
+        ...guide,
+        image: art.find((item) => item.id === 'pumpkin-curly-vine')!.svg,
+        alt: art.find((item) => item.id === 'pumpkin-curly-vine')!.alt,
+      }
+    : guide,
+);
+---
+
+<Layout
+  title="Clipart Project Guides"
+  description="Make a readable classroom label, prepare a coloring activity, choose the right file format, and calculate a practical print size with UltraClipart."
+>
+  <section class="hero">
+    <p class="eyebrow">A little guidance goes a long way</p>
+    <h1>Make something useful.</h1>
+    <p class="lead">Small projects, real files, and clear steps from first edit to final print.</p>
+    <p>
+      Each guide starts with something you can open here. Follow the steps, adjust the design for
+      your own project, and check the result before sharing or printing.
+    </p>
+  </section>
+  <div class="guide-grid">
+    {displayGuides.map((guide) => (
+      <article class="guide-card">
+        <a href={`/guides/${guide.slug}/`}>
+          <img src={guide.image} alt={guide.alt} width="800" height="600" loading="lazy" />
+          <div>
+            <p class="eyebrow">{guide.category}</p>
+            <h2>{guide.title}</h2>
+            <p>{guide.description}</p>
+            <span class="guide-link">Follow the guide →</span>
+          </div>
+        </a>
+      </article>
+    ))}
+  </div>
+  <section class="guide-callout">
+    <div>
+      <p class="eyebrow">Before you print</p>
+      <h2>How big can this image be?</h2>
+      <p>
+        Check the relationship between pixels and inches, compare a design with your paper's usable
+        area, and avoid stretching it out of proportion.
+      </p>
+    </div>
+    <a class="button primary" href="/print-size/">
+      Open print size calculator
+    </a>
+  </section>
+  <section class="prose">
+    <h2>Choose your next step</h2>
+    <p>
+      Already have an idea? <a href="/create/">Start with a blank canvas</a>. Prefer an existing
+      drawing? <a href="/new/">Browse the available illustrations</a>. Our artwork and starter
+      templates are free for personal and educational projects under the{' '}
+      <a href="/license/">usage license</a>; commercial use is not permitted.
+    </p>
+  </section>
+</Layout>

@@ -118,3 +118,7 @@ The owner approved **free personal and educational use**; commercial use and res
 Remaining work includes the 5,490 undrawn designs, review and production publication gates, source-informed cultural/religious artwork review, physical print proofing, and any browser/device or live-account checks not backed by saved evidence. No Search Console verification, traffic, ranking, artist credential, review, or storage total is fabricated.
 
 Further implementation decisions and official-source research: [requirements](docs/requirements.md), [research](docs/research.md).
+
+## Content readiness
+
+The 110-subject production plan remains intact. Public topic and collection routes now require actual artwork; planned subjects in the directory are opt-in labels without empty destinations. Three practical guides, a browser-local print-size calculator, and composition-specific artwork notes help visitors finish real projects. The notes' layer metadata is tested against source SVGs. See `docs/CONTENT-READINESS.txt` for official Google sources, implemented controls, and pending owner/human editorial review. No AdSense approval, minimum content count, or advertising integration is claimed.

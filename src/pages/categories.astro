@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { topics, clusters, art, slugify } from '../lib/catalog';
+import { topics, availableTopics, availableClusters, art, slugify } from '../lib/catalog';
 const sortedTopics = [...topics].sort((a, b) => a.keyword.localeCompare(b.keyword, 'en'));
 const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpperCase()))].sort();
 ---
@@ -9,21 +9,24 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
   <section class="hero category-hero">
     <p class="eyebrow">The subject directory</p>
     <h1>Find a little inspiration.</h1>
-    <p class="lead">Seasonal collections and everyday moments, all in one place.</p>
-    <label for="topic-filter">Search all {topics.length} planned topics</label>
+    <p class="lead">Choose a subject with editable artwork, or explore the future subject list.</p>
+    <label for="topic-filter">Find a subject</label>
     <input
       id="topic-filter"
       type="search"
-      placeholder="Try pumpkin, flowers or winter"
+      placeholder="Try pumpkin, ghost or snowman"
       aria-controls="topic-directory"
     />
+    <label class="print-check">
+      <input id="include-planned" type="checkbox" /> Include planned subjects without artwork
+    </label>
   </section>
   <div class="section-head">
     <h2>Explore the collections</h2>
     <a href="/new/">See available artwork →</a>
   </div>
   <div class="category-grid">
-    {clusters.map((cluster) => {
+    {availableClusters.map((cluster) => {
       const members = topics.filter((topic) => topic.cluster === cluster);
       const available = art.filter((item) => members.some((topic) => topic.slug === item.topic));
       const first = available[0];
@@ -73,12 +76,12 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
     <div class="section-head">
       <h2 id="topic-directory-heading">Every topic, A–Z</h2>
       <p id="topic-result-count" role="status" aria-live="polite">
-        {topics.length} topics
+        {availableTopics.length} available topics
       </p>
     </div>
     <p class="directory-intro">
-      Browse the complete subject list. Topic pages show the artwork available now and clearly mark
-      subjects still in preparation.
+      The complete subject plan is listed here. Only subjects with downloadable artwork have a link;
+      planned subjects are clearly labeled.
     </p>
     <div class="az-nav" role="group" aria-label="Filter topics by first letter">
       <button data-letter="" aria-pressed="true">
@@ -99,18 +102,26 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
         <section
           class="topic-letter-group"
           data-topic-group={letter}
+          hidden={!availableTopics.some((topic) => topic.keyword[0].toUpperCase() === letter)}
           aria-labelledby={`letter-${letter}`}
         >
           <h3 id={`letter-${letter}`}>{letter}</h3>
           <div class="topic-links">
             {sortedTopics
               .filter((topic) => topic.keyword[0].toUpperCase() === letter)
-              .map((topic) => (
-                <a data-topic={topic.keyword.toLowerCase()} href={`/clipart/${topic.slug}/`}>
-                  <span>{topic.keyword}</span>
-                  <span aria-hidden="true">→</span>
-                </a>
-              ))}
+              .map((topic) =>
+                art.some((item) => item.topic === topic.slug) ? (
+                  <a data-topic={topic.keyword.toLowerCase()} href={`/clipart/${topic.slug}/`}>
+                    <span>{topic.keyword}</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                ) : (
+                  <span hidden class="topic-planned" data-topic={topic.keyword.toLowerCase()}>
+                    <span>{topic.keyword}</span>
+                    <small>Planned</small>
+                  </span>
+                ),
+              )}
           </div>
         </section>
       ))}
@@ -123,6 +134,7 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
   </section>
   <script>
     const input = document.querySelector<HTMLInputElement>('#topic-filter')!;
+    const planned = document.querySelector<HTMLInputElement>('#include-planned')!;
     const buttons = document.querySelectorAll<HTMLButtonElement>('[data-letter]');
     let letter = '';
     function filter() {
@@ -131,6 +143,7 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
       document.querySelectorAll<HTMLElement>('[data-topic]').forEach((link) => {
         const subject = link.dataset.topic!;
         link.hidden = !(
+          (planned.checked || !link.classList.contains('topic-planned')) &&
           subject.includes(query) &&
           (!letter || subject.startsWith(letter.toLowerCase()))
         );
@@ -146,6 +159,10 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
       document.querySelector<HTMLElement>('#topic-result-count')!.textContent =
         `${count} topic${count === 1 ? '' : 's'}`;
     }
+    planned.addEventListener('change', () => {
+      letter = '';
+      filter();
+    });
     input.addEventListener('input', filter);
     buttons.forEach((button) =>
       button.addEventListener('click', () => {
@@ -153,6 +170,7 @@ const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpper
         filter();
       }),
     );
+    filter();
     document.querySelector('#clear-topic-filter')!.addEventListener('click', () => {
       input.value = '';
       letter = '';

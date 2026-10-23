@@ -133,8 +133,8 @@ const pages: Record<string, { title: string; description: string; sections: [str
           'Screens emit light, while paper reflects ink. CMYK conversion uses a print condition and may change colors outside the printable range. Ask your printer whether its workflow matches the stated profile; a PDF is not a guarantee of an exact physical color match.',
         ],
         [
-          'Why are some topics empty?',
-          'The 110-topic plan is larger than the current pilot. We show honest availability and keep unfinished topics out of the search sitemap. We do not count recolors or rotations as new illustrations.',
+          'Why are some subjects marked Planned?',
+          'The 110-topic plan is larger than the current pilot. Planned subjects are listed without links to empty pages. A public topic page is added when downloadable artwork exists; indexing requires a separate quality review. We do not count recolors or rotations as new illustrations.',
         ],
         [
           'What is saved?',
@@ -250,6 +250,18 @@ const page = pages[Astro.params.info!];
         <p>{body}</p>
       </section>
     ))}
+    {(Astro.params.info === 'for-teachers' || Astro.params.info === 'faq') && (
+      <section>
+        <h2>Try a complete project</h2>
+        <p>
+          <a href="/guides/make-a-classroom-label/">Make a readable classroom label</a>,{' '}
+          <a href="/guides/turn-clipart-into-a-coloring-activity/">prepare a coloring activity</a>,
+          or <a href="/guides/webp-pdf-and-editable-projects/">compare download formats</a>. The{' '}
+          <a href="/print-size/">print size calculator</a> helps you choose image dimensions before
+          printing.
+        </p>
+      </section>
+    )}
     <p>
       <a href="mailto:ultraclipart@gmail.com">Email ultraclipart@gmail.com</a>
     </p>

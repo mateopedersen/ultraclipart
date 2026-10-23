@@ -1,4 +1,5 @@
 import type { SearchCard } from '../lib/search-index';
+import { actionIcons } from '../lib/action-icons';
 export function renderCard(item: SearchCard): HTMLElement {
   const article = document.createElement('article');
   article.className = 'art-card';
@@ -35,9 +36,40 @@ export function renderCard(item: SearchCard): HTMLElement {
     }
   const actions = document.createElement('div');
   actions.className = 'card-actions';
+  const action = (
+    kind: keyof typeof actionIcons,
+    label: string,
+    href: string,
+    className: string,
+  ) => {
+    const a = link('', href, className);
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    for (const [name, value] of Object.entries({
+      width: '16',
+      height: '16',
+      viewBox: '0 0 24 24',
+      fill: 'none',
+      stroke: 'currentColor',
+      'stroke-width': '1.7',
+      'stroke-linecap': 'round',
+      'stroke-linejoin': 'round',
+      'aria-hidden': 'true',
+      focusable: 'false',
+    }))
+      svg.setAttribute(name, value);
+    for (const d of actionIcons[kind]) {
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d);
+      svg.append(path);
+    }
+    const text = document.createElement('span');
+    text.textContent = label;
+    a.append(svg, text);
+    return a;
+  };
   actions.append(
-    link('✎ Edit', `/edit/${item.id}/`, 'button'),
-    link('↓ Download', detail, 'button primary'),
+    action('edit', 'Edit', `/edit/${item.id}/`, 'button'),
+    action('download', 'Download', detail, 'button primary'),
   );
   body.append(formats, actions);
   article.append(picture, body);

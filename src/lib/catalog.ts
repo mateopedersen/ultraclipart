@@ -21,3 +21,11 @@ export const slugify = (s: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 export const topicArt = (slug: string) => art.filter((a) => a.topic === slug);
+
+// Planned keywords remain in the production queue; public navigation only links to real artwork.
+export const availableTopics = topics.filter((topic) =>
+  art.some((item) => item.topic === topic.slug),
+);
+export const availableClusters = clusters.filter((cluster) =>
+  availableTopics.some((topic) => topic.cluster === cluster),
+);

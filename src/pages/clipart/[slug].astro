@@ -2,14 +2,14 @@
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import { topics, topicArt, slugify } from '../../lib/catalog';
+import { availableTopics, topicArt, slugify } from '../../lib/catalog';
 export function getStaticPaths() {
-  return topics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
+  return availableTopics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
 }
 const { topic } = Astro.props;
 const items = topicArt(topic.slug);
 const topicReady = items.length === 50 && items.every((item) => item.indexable && item.published);
-const related = topics
+const related = availableTopics
   .filter((t) => t.cluster === topic.cluster && t.slug !== topic.slug)
   .slice(0, 8);
 const title = topic.keyword.replace('clipart', 'Clipart');

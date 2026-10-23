@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Search from '../components/Search.astro';
 import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
-import { art, topics, clusters, slugify } from '../lib/catalog';
-const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift', 'heart'];
+import { art, topics, availableClusters, slugify } from '../lib/catalog';
+const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift', 'snowman'];
 ---
 
 <Layout>
@@ -15,8 +15,8 @@ const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift',
       <p class="lead">For school, crafts and your next bright idea.</p>
       <Search />
       <div class="popular chips">
-        <span>Popular searches:</span>
-        {['pumpkin', 'ghost', 'fall', 'christmas'].map((t) => (
+        <span>Try a subject:</span>
+        {['pumpkin', 'ghost', 'fall', 'gift'].map((t) => (
           <a href={`/search/?q=${t}`}>{t}</a>
         ))}
       </div>
@@ -31,7 +31,7 @@ const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift',
   </section>
   <div class="section-head">
     <h2>Find your inspiration</h2>
-    <a href="/categories/">Browse all 110 topics →</a>
+    <a href="/categories/">Browse subjects →</a>
   </div>
   <div class="topic-row">
     {picks.map((t) => {
@@ -77,13 +77,26 @@ const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift',
     ))}
   </div>
   <CreateInvitation />
+  <section class="guide-callout">
+    <div>
+      <p class="eyebrow">From a drawing to a finished project</p>
+      <h2>A little help with the next step.</h2>
+      <p>
+        Make a readable classroom label, simplify a coloring activity, or check a print size before
+        using your paper and ink.
+      </p>
+    </div>
+    <a class="button primary" href="/guides/">
+      Explore project guides
+    </a>
+  </section>
   <section>
     <div class="section-head">
       <h2>Made for the season</h2>
       <a href="/collections/">All collections →</a>
     </div>
     <div class="collection-grid">
-      {clusters
+      {availableClusters
         .filter((c) =>
           ['Halloween', 'Thanksgiving & Autumn', 'Christmas & Winter', "Valentine's Day"].includes(
             c,

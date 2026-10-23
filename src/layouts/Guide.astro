@@ -1,0 +1,43 @@
+---
+import Layout from './Layout.astro';
+import { structuredData, breadcrumbs } from '../lib/structured-data';
+import { guides } from '../lib/guides';
+const { slug } = Astro.props;
+const guide = guides.find((item) => item.slug === slug)!;
+---
+
+<Layout title={guide.title} description={guide.description}>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={structuredData(
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Project guides', path: '/guides/' },
+        { name: guide.title, path: `/guides/${slug}/` },
+      ]),
+    )}
+  />
+  <article class="guide-page">
+    <div class="breadcrumb">
+      <a href="/guides/">Project guides</a> / {guide.category}
+    </div>
+    <div class="guide-heading">
+      <p class="eyebrow">{guide.category}</p>
+      <h1>{guide.title}</h1>
+      <p class="lead">{guide.description}</p>
+    </div>
+    <div class="guide-body">
+      <slot />
+    </div>
+    <aside class="guide-record">
+      <h2>About this guide</h2>
+      <p>
+        Published by UltraClipart on October 23, 2026. Prepared with AI assistance using this site's
+        actual editor and file formats. No outside expert review or classroom trial is claimed.{' '}
+        <a href="/editorial-process/">Read our process</a>, or{' '}
+        <a href="/contact/">report a correction</a>.
+      </p>
+    </aside>
+  </article>
+</Layout>

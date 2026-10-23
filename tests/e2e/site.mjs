@@ -66,6 +66,8 @@ const states = [
     },
   },
   { name: '04-topic', url: '/clipart/pumpkin/' },
+  // Keep this sequence: the detail preview warms the SVG cache before the editor
+  // fetches the same asset with CORS, covering cached image-to-fetch regressions.
   { name: '05-art-detail', url: '/art/pumpkin-curly-vine/' },
   { name: '06-editor', url: editor, prepare: readyEditor },
   {
@@ -167,6 +169,7 @@ try {
     .click();
   assert.ok(page.url().includes('/categories/'));
   report.checks.push('mobile navigation');
+  await page.locator('#include-planned').check();
   await page.locator('[data-letter=K]').click();
   assert.equal(await page.locator('[data-letter=K]').getAttribute('aria-pressed'), 'true');
   for (const value of await page.locator('[data-topic]:not([hidden])').allTextContents())
@@ -177,6 +180,9 @@ try {
   await page.reload();
   assert.equal(await page.locator('[data-favorite]').getAttribute('aria-pressed'), 'true');
   await page.goto(`${base}/favorites/`);
+  await page.waitForFunction(
+    () => document.querySelector('#favorites')?.getAttribute('aria-busy') === 'false',
+  );
   assert.equal(await page.locator('#favorites .art-card:not([hidden])').count(), 1);
   report.checks.push('favorite persistence');
   await page.goto(`${base}/art/pumpkin-curly-vine/`);

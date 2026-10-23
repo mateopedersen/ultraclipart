@@ -1,0 +1,43 @@
+UltraClipart content and monetization readiness
+Updated: 2026-10-23
+
+Context
+The owner clarified that UltraClipart has not been rejected by AdSense. This is preventive work informed by rejections on other sites. There is no UltraClipart rejection notice to diagnose. No AdSense application, ad code, publisher identifier, ads.txt authorization, or paid service was added.
+
+No approval guarantee
+Google decides site approval. PageSpeed scores, word counts, article counts, domain age, or a particular number of illustrations are not approval certificates. The internal checks below enforce product integrity; they are not a Google score or a substitute for publisher review.
+
+Official sources checked
+1. https://support.google.com/adsense/answer/81904?hl=en
+Google may review all site pages, identifies insufficient text, under-construction pages, content quality, and navigation as possible issues.
+2. https://support.google.com/adsense/answer/7299563?hl=en
+Original relevant content and clear navigation are central to readiness.
+3. https://support.google.com/publisherpolicies/answer/11112688?hl=en
+No Google-served ads on low-value/no-content/under-construction or navigation-only screens. Automatically generated content needs manual review or curation.
+4. https://support.google.com/adsense/answer/12176698?hl=en
+Reachability, unique content, user experience, and policy compliance are part of site review.
+5. https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+Useful original work, accurate information and transparent provenance matter. Search guidance is not an AdSense approval rubric.
+6. https://developers.google.com/search/docs/essentials/spam-policies
+Publishing many unoriginal pages primarily to manipulate rankings can violate scaled content policies. This applies regardless of how the content is produced.
+
+Implemented preventive changes
+- Preserve all 110 exact keyword records in the production plan. Stop building empty topic routes; generate a public topic only if artwork exists. The directory clearly distinguishes planned subjects without linking to empty destinations.
+- Stop building empty collection routes and remove empty collection promotion.
+- Search topic suggestions only reference available subjects; no broken destination for a planned keyword.
+- Add individual, composition-specific usage/editing/print notes for every existing illustration. Show actual bytes and named layers, with tests against source SVGs.
+- Add three distinct guides tied to actual editor workflows: classroom label, coloring activity, and file-format decisions. Disclose AI assistance and avoid claiming a human expert review or physical classroom trial.
+- Add a browser-local print-size calculator that preserves aspect ratio, checks both paper dimensions and margins, handles inches/millimeters, and rejects invalid values. Explain the difference between image ppi and printer dpi and the limits of the calculation.
+- Keep the publisher contact, rights, privacy, correction process, local storage behavior, and file-format limitations visible.
+- Keep unreviewed catalog assets out of indexing/sitemaps. Noindex is a Search instruction, NOT an AdSense policy exemption.
+- Keep all advertising disabled. Utility/editor/favorites/search/404 screens must receive a separate placement assessment before any advertising integration. Never put an ad where a visitor expects Edit or Download, or gate a download behind an ad click.
+
+Remaining publisher decisions and review
+- The current artwork catalog is a 10-design pilot across nine topics. The goal remains 5,500 genuinely distinct designs; 5,490 are not produced. Six studio starters are counted separately.
+- Owner/human editorial review of artwork, guide accuracy and the resulting user experience is still pending. Agent visual review and automated technical checks are recorded separately and must not be relabeled human approval.
+- Do not apply merely because code tests pass. Assess whether the library and practical resources serve a complete, coherent audience need and whether the public pages have meaningful content. No invented minimum count is used.
+- Before a future ad launch: verify the actual account/site eligibility and policy center, configure only the real supplied publisher ID, review privacy disclosures and applicable consent requirements for the audience, and assess placement on every page type. Do not add fictional ads.txt entries or claims of Google approval.
+- Physical printer proofs remain a separate task. CMYK vector validity and a sub-1,000,000-byte PDF do not guarantee a press match or PDF/X conformance.
+
+Ongoing release checks
+Tests enforce exact layer metadata, original note coverage, no empty public topics, no broken internal links, no advertising code before integration review, truthful sitemaps, calculator arithmetic and invalid input behavior. Browser tests cover the real guide workflow, responsive layouts, keyboard operation and automated accessibility scans. Passing these tests measures those behaviors only.

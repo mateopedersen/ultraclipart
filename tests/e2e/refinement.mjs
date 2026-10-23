@@ -44,7 +44,9 @@ try {
     await page.setViewportSize({ width, height: width >= 768 ? 1000 : 844 });
     for (const route of routes) {
       const response = await page.goto(base + route);
-      assert.equal(response.status(), 200, route);
+      // Firefox may report a successful conditional navigation as HTTP 304.
+      // Keep HTTP status strict otherwise; the DOM/asset checks below validate the cached page.
+      assert.ok([200, 304].includes(response.status()), `${route}: HTTP ${response.status()}`);
       // The development-only toolbar is absent from production and is excluded from evidence.
       if (base.includes('127.0.0.1') || base.includes('localhost'))
         await page.addStyleTag({ content: 'astro-dev-toolbar{display:none!important}' });
@@ -115,7 +117,8 @@ try {
     .locator('[data-topic]')
     .evaluateAll((links) => links.map((link) => link.dataset.topic).sort());
   assert.deepEqual(actual, expected);
-  report.checks.push('All 110 exact topic labels and unique links preserved');
+  report.checks.push('All 110 exact topic labels preserved; only available topics have links');
+  await page.locator('#include-planned').check();
   await page.locator('[data-letter=K]').click();
   assert.equal(await page.locator('[data-letter=K]').getAttribute('aria-pressed'), 'true');
   assert.ok(
