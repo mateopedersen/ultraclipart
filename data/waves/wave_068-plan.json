@@ -1,0 +1,35 @@
+{
+  "wave": "wave_068",
+  "topic": "pumpkin",
+  "method": "builtin-image-generation",
+  "research": "data/research/pumpkin-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pumpkin-storybook-cottage",
+      "title": "Pumpkin Storybook Cottage",
+      "alt": "An orange pumpkin cottage with a round wooden door, arched windows and a green leaf awning.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An orange pumpkin cottage with a round wooden door, arched windows and a green leaf awning. Use this storybook illustration for personal fairy-tale crafts, classroom storytelling and seasonal activity sheets.",
+      "source": "work/production/wave_068/source/pumpkin-storybook-cottage.png"
+    },
+    {
+      "id": "pumpkin-mouse-home",
+      "title": "Mouse in a Pumpkin Home",
+      "alt": "A brown mouse in a blue knitted scarf peeks from a pumpkin home beside two mushrooms.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "A brown mouse in a blue knitted scarf peeks from a pumpkin home beside two mushrooms. Use this storybook illustration for personal fairy-tale crafts, classroom storytelling and seasonal activity sheets.",
+      "source": "work/production/wave_068/source/pumpkin-mouse-home.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-fairy-carriage",
+      "reason": "Quality/size gate and minimal side margin; held for redraw."
+    }
+  ]
+}

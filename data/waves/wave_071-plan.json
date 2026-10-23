@@ -1,0 +1,35 @@
+{
+  "wave": "wave_071",
+  "topic": "pumpkin",
+  "method": "builtin-image-generation",
+  "research": "data/research/pumpkin-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pumpkin-roasted-wedges",
+      "title": "Roasted Pumpkin Wedges",
+      "alt": "Three roasted pumpkin wedges on a wooden board with sage leaves and a few pale seeds.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "Three roasted pumpkin wedges on a wooden board with sage leaves and a few pale seeds. Use this illustration for personal autumn journals, classroom activities and seasonal crafts.",
+      "source": "work/production/wave_071/source/pumpkin-roasted-wedges.png"
+    },
+    {
+      "id": "pumpkin-patchwork-pumpkin",
+      "title": "Patchwork Fabric Pumpkin",
+      "alt": "A stuffed pumpkin sewn from rust, cream and blue fabric panels with a felt leaf and twig stem.",
+      "color": "Blue",
+      "style": "Color",
+      "description": "A stuffed pumpkin sewn from rust, cream and blue fabric panels with a felt leaf and twig stem. Use this illustration for personal autumn journals, classroom activities and seasonal crafts.",
+      "source": "work/production/wave_071/source/pumpkin-patchwork-pumpkin.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-dried-flower-pumpkin",
+      "reason": "Native quality floor cannot meet PDF byte cap; redraw with thoughtfully spaced surface decorations."
+    }
+  ]
+}

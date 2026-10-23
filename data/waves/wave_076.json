@@ -1,0 +1,90 @@
+{
+  "wave": "wave_076",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-fairy-carriage",
+      "title": "Pumpkin Fairy Carriage",
+      "alt": "A coral-orange pumpkin carriage with curved green wheels, an open door and a leaf canopy.",
+      "description": "A fairy-tale pumpkin carriage with bold curved shapes and an open doorway. Use this illustration for personal story cards, classroom sequencing and imaginative autumn crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_076/source/pumpkin-fairy-carriage.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "68726da1d1edcb2da36ee19947e6a56964901f04da85700ec0626bdd104e9354",
+      "inputSignature": "5f7093f0f4af9b3a525c35ceddd33a82c657ec9575fd3e2709304724f9c25b38",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 930647,
+        "weightedCmykRmse": 0.795576
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1425755,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 930647,
+          "weightedCmykRmse": 0.795576
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [62, 53, 1187, 1165],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_076/exports/pumpkin-fairy-carriage.pdf",
+          "bytes": 930647,
+          "sha256": "41be94586a68ab746e404a0e618bc8176732b326cc61151a9e74e63c5b43044b"
+        },
+        "webp": {
+          "path": "work/production/wave_076/exports/pumpkin-fairy-carriage.webp",
+          "bytes": 726012,
+          "sha256": "53fd25ef6e6a22c573401adc86da86c04b1d78052773706143017260c7e902f8"
+        },
+        "thumb": {
+          "path": "work/production/wave_076/exports/pumpkin-fairy-carriage-thumb.webp",
+          "bytes": 64254,
+          "sha256": "78ec5a196e0719089fc0f748cec5fe29b700f416cfb2cbfc4e8584b2f9dd7a34"
+        }
+      },
+      "proofSha256": "3758b892e75756d9ff144c450c87dc4d01dd3b17e4c824d6301709e6c4a36baa",
+      "pairMeanRgbDifference": 1.61886
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Source, dark-background composite and CMYK proof reviewed: coherent carriage frame and wheels, full margins, clear windows. Near-white hidden edge pixels all alpha<=16; actual dark composite is clean. Four-channel native PDF paired correctly.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:58:13.644Z",
+  "cdnVerifiedAt": "2026-10-23T23:08:21.532Z"
+}

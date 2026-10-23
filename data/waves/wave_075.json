@@ -1,0 +1,198 @@
+{
+  "wave": "wave_075",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-door-wreath",
+      "title": "Pumpkin Door Wreath",
+      "alt": "An open grapevine wreath with three small pumpkins, maple leaves and a rust-colored ribbon.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An open grapevine wreath with three small pumpkins, maple leaves and a rust-colored ribbon. Use this illustration for personal autumn cards, classroom activities and seasonal craft projects.",
+      "source": "work/production/wave_075/source/pumpkin-door-wreath.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "36afbbb0b9f4aeb7c50964430b3fd8dc3c46dcaabbaed720489030642d816240",
+      "inputSignature": "85901584c2298d7f687ac511ff65005d89c08c3c793d65e6d2468274462603f7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 972551,
+        "weightedCmykRmse": 1.420938
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1491059,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1150127,
+          "weightedCmykRmse": 0.93698
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1055109,
+          "weightedCmykRmse": 1.108138
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 972551,
+          "weightedCmykRmse": 1.420938
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [116, 145, 1159, 1142],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_075/exports/pumpkin-door-wreath.pdf",
+          "bytes": 972551,
+          "sha256": "586bf0c4138c0eee3e6cb38e2352d44d17a481d87b608967feb5e1e55ddee48c"
+        },
+        "webp": {
+          "path": "work/production/wave_075/exports/pumpkin-door-wreath.webp",
+          "bytes": 738112,
+          "sha256": "cacdd8ccfd1b1b042cfc9ef1cb6b4cb9c2c71ead48c3e00fb86189a9affa6e79"
+        },
+        "thumb": {
+          "path": "work/production/wave_075/exports/pumpkin-door-wreath-thumb.webp",
+          "bytes": 57264,
+          "sha256": "02f608a8319be7f6c893fd398909654dfc3aebfb33a69d8073c5b88b8b851148"
+        }
+      },
+      "proofSha256": "795c114e63c3e563b9c83137b6d762890be467d75b58e7a9bf2efb9a253d7cf7",
+      "pairMeanRgbDifference": 1.96651
+    },
+    {
+      "id": "pumpkin-bicycle-basket",
+      "title": "Bicycle Basket of Pumpkins",
+      "alt": "A teal bicycle with a small pumpkin and autumn flowers in its front basket.",
+      "color": "Blue",
+      "style": "Color",
+      "description": "A teal bicycle with a small pumpkin and autumn flowers in its front basket. Use this illustration for personal autumn cards, classroom activities and seasonal craft projects.",
+      "source": "work/production/wave_075/source/pumpkin-bicycle-basket.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "25ca1e8f741a6a55bf5dec2d486f4558aa88e357b4f7a48ac4315db2816c3e45",
+      "inputSignature": "abacd40163dcd1138c72f30e995d7c6ab565d22f3ec8607d8dd32d2e89aa4247",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 929573,
+        "weightedCmykRmse": 1.640324
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1500292,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1165195,
+          "weightedCmykRmse": 0.909944
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1078079,
+          "weightedCmykRmse": 1.075987
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 999123,
+          "weightedCmykRmse": 1.380948
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 929573,
+          "weightedCmykRmse": 1.640324
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [17, 226, 1243, 1028],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_075/exports/pumpkin-bicycle-basket.pdf",
+          "bytes": 929573,
+          "sha256": "c95518d81cf8632221300be68af4d9c09048deac073357ec3f1c0a866e46fe76"
+        },
+        "webp": {
+          "path": "work/production/wave_075/exports/pumpkin-bicycle-basket.webp",
+          "bytes": 631560,
+          "sha256": "7d4768d65e312c162be5605edf2eea5759cdc74f59687e302b839196598f435b"
+        },
+        "thumb": {
+          "path": "work/production/wave_075/exports/pumpkin-bicycle-basket-thumb.webp",
+          "bytes": 64142,
+          "sha256": "0693e7548699c241822fd2d2a2982a0e7c295f635a5b2ff2738a217fa0559495"
+        }
+      },
+      "proofSha256": "88d5296ddf09b16f92e3b7d2f87fcc1c8e2b90955063a44b2743ca75474e8d4e",
+      "pairMeanRgbDifference": 1.76726
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Source and CMYK proof reviewed: open wreath center and three pumpkin cluster, complete ribbon; bicycle has coherent two-wheel frame, opposite pedals, basket and two daisies. No clipped edges and transparent negative spaces.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:55:47.025Z",
+  "cdnVerifiedAt": "2026-10-23T23:08:21.532Z"
+}

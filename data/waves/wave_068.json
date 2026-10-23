@@ -1,0 +1,196 @@
+{
+  "wave": "wave_068",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-storybook-cottage",
+      "title": "Pumpkin Storybook Cottage",
+      "alt": "An orange pumpkin cottage with a round wooden door, arched windows and a green leaf awning.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An orange pumpkin cottage with a round wooden door, arched windows and a green leaf awning. Use this storybook illustration for personal fairy-tale crafts, classroom storytelling and seasonal activity sheets.",
+      "source": "work/production/wave_068/source/pumpkin-storybook-cottage.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c77774c45d7de111460e6ca9acc7c1bb9347277485fb6e08a4d2b202d6e2a8ca",
+      "inputSignature": "3ba1aae023e661b4d21841e33eaf2e991c9ba97531c12c606848d703082b7ccf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 971137,
+        "weightedCmykRmse": 0.954466
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1604442,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1077387,
+          "weightedCmykRmse": 0.815066
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 971137,
+          "weightedCmykRmse": 0.954466
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [98, 38, 1159, 1172],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_068/exports/pumpkin-storybook-cottage.pdf",
+          "bytes": 971137,
+          "sha256": "708f8bfcd0732250386ed22d495e34c2ca2eb8c99bcfbf15c54e2d0ef2843b59"
+        },
+        "webp": {
+          "path": "work/production/wave_068/exports/pumpkin-storybook-cottage.webp",
+          "bytes": 1000848,
+          "sha256": "27bb98c0679e7ccc9f9929ced74aa4dc07616658f9ddafac3c5bf0472e977819"
+        },
+        "thumb": {
+          "path": "work/production/wave_068/exports/pumpkin-storybook-cottage-thumb.webp",
+          "bytes": 57630,
+          "sha256": "f0c4f0cf137719cf69d5cd208de62a2fc5e8b165c4533f0555b7287b9ff6e40e"
+        }
+      },
+      "proofSha256": "46c312fe792f5bf381deffedf957314ad89bfbaa382fe9e0567e6ef3b72dba93",
+      "pairMeanRgbDifference": 3.44993
+    },
+    {
+      "id": "pumpkin-mouse-home",
+      "title": "Mouse in a Pumpkin Home",
+      "alt": "A brown mouse in a blue knitted scarf peeks from a pumpkin home beside two mushrooms.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "A brown mouse in a blue knitted scarf peeks from a pumpkin home beside two mushrooms. Use this storybook illustration for personal fairy-tale crafts, classroom storytelling and seasonal activity sheets.",
+      "source": "work/production/wave_068/source/pumpkin-mouse-home.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c61fb8d8f4fcc2ec17f0a1c96bd9689b3a7436b4d480e9453b96bdd7668c1ae2",
+      "inputSignature": "9fcb0b3ad11a5f71d2033fda8f94f42db425a69505ac36a4aea74cdeb839bde0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 913220,
+        "weightedCmykRmse": 1.375658
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1821505,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1257272,
+          "weightedCmykRmse": 0.776756
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1147709,
+          "weightedCmykRmse": 0.899264
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1030267,
+          "weightedCmykRmse": 1.094045
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 913220,
+          "weightedCmykRmse": 1.375658
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [122, 33, 1119, 1207],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_068/exports/pumpkin-mouse-home.pdf",
+          "bytes": 913220,
+          "sha256": "3cb808e82afbb0d5917ada52fd840b76f5f29f208fa9f87dc86b6d8c4d4b0f48"
+        },
+        "webp": {
+          "path": "work/production/wave_068/exports/pumpkin-mouse-home.webp",
+          "bytes": 1201610,
+          "sha256": "71b43d020419a5d1548106a77fa570835b10fbac973be9021f5cef58d2d4d7fd"
+        },
+        "thumb": {
+          "path": "work/production/wave_068/exports/pumpkin-mouse-home-thumb.webp",
+          "bytes": 72050,
+          "sha256": "407bdf6b3e1904e61a570af34f7dbe3efbed43939fb6237bab615f99588af502"
+        }
+      },
+      "proofSha256": "7bf03d298b076779baa3976d283322e4cc15dbae009e707ce698bde28d0d445d",
+      "pairMeanRgbDifference": 3.98049
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-fairy-carriage",
+      "reason": "Quality/size gate and minimal side margin; held for redraw."
+    }
+  ],
+  "screenReviewNotes": "Native source and rendered PDF reviewed for the cottage and mouse house: coherent doors, windows, limbs and stems; clear different silhouettes and full margins. Carriage excluded.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:36:29.367Z",
+  "cdnVerifiedAt": "2026-10-23T23:08:21.525Z"
+}

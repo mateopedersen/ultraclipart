@@ -1,0 +1,31 @@
+{
+  "wave": "wave_073",
+  "topic": "pumpkin",
+  "method": "builtin-image-generation",
+  "research": "data/research/pumpkin-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pumpkin-outline-botanical",
+      "title": "Pumpkin Botanical Coloring Illustration",
+      "alt": "An outlined irregular pumpkin with a bent stem, two lobed leaves at its base and a curling tendril.",
+      "color": "Black",
+      "style": "Outline",
+      "printSeparation": "black-only",
+      "description": "An outlined irregular pumpkin with a bent stem, two lobed leaves at its base and a curling tendril. Use this illustration for personal autumn cards, classroom activity sheets and seasonal crafts.",
+      "source": "work/production/wave_073/source/pumpkin-outline-botanical.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-door-wreath",
+      "reason": "PDF byte cap at unchanged native quality floor; redraw needed."
+    },
+    {
+      "id": "pumpkin-bicycle-basket",
+      "reason": "Native quality floor cannot meet PDF byte cap; held."
+    }
+  ]
+}

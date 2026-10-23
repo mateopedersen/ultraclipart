@@ -1,0 +1,35 @@
+{
+  "wave": "wave_074",
+  "topic": "pumpkin",
+  "method": "builtin-image-generation",
+  "research": "data/research/pumpkin-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pumpkin-floral-arrangement",
+      "title": "Pumpkin Floral Arrangement",
+      "alt": "A cream pumpkin vase with burgundy dahlias, golden daisies and eucalyptus leaves.",
+      "color": "White",
+      "style": "Color",
+      "description": "A cream pumpkin vase with burgundy dahlias, golden daisies and eucalyptus leaves. Use this illustration for personal autumn cards, seasonal craft projects and classroom story activities.",
+      "source": "work/production/wave_074/source/pumpkin-floral-arrangement.png"
+    },
+    {
+      "id": "pumpkin-dried-flower-pumpkin",
+      "title": "Pumpkin with Pressed Flowers",
+      "alt": "A cream pumpkin decorated with two fern fronds and three small pressed flowers.",
+      "color": "White",
+      "style": "Color",
+      "description": "A cream pumpkin decorated with two fern fronds and three small pressed flowers. Use this illustration for personal autumn cards, seasonal craft projects and classroom story activities.",
+      "source": "work/production/wave_074/source/pumpkin-dried-flower-pumpkin.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-fairy-carriage",
+      "reason": "Native quality floor cannot meet PDF byte cap; held."
+    }
+  ]
+}

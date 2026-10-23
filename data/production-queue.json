@@ -15,16 +15,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 186,
+  "generatedArtworkCount": 202,
   "suppliedArtworkCount": 2642,
-  "originalTopicArtworkCount": 334,
+  "originalTopicArtworkCount": 350,
   "supplementalArtworkCount": 2500,
-  "qualityApprovedArtworkCount": 334,
+  "qualityApprovedArtworkCount": 350,
   "supplementalApprovedArtworkCount": 2500,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 2834,
-  "remainingToDraw": 5166,
+  "availableArtworkCount": 2850,
+  "remainingToDraw": 5150,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -45,11 +45,11 @@
       "keyword": "Pumpkin clipart",
       "wave": "W1",
       "target": 50,
-      "generated": 34,
+      "generated": 50,
       "supplied": 0,
-      "available": 34,
-      "approved": 34,
-      "remainingToDraw": 16,
+      "available": 50,
+      "approved": 50,
+      "remainingToDraw": 0,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/pumpkin.json"
     },
@@ -76,8 +76,8 @@
       "available": 0,
       "approved": 0,
       "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/witch.json"
     },
     {
       "topic": "skeleton",
@@ -32632,6 +32632,182 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "191e39945dfe551df46c7e66494066380a9d6d2dd03422c7ef2e87c61c8e16e0"
+    },
+    {
+      "id": "pumpkin-storybook-cottage",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "27bb98c0679e7ccc9f9929ced74aa4dc07616658f9ddafac3c5bf0472e977819"
+    },
+    {
+      "id": "pumpkin-mouse-home",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "71b43d020419a5d1548106a77fa570835b10fbac973be9021f5cef58d2d4d7fd"
+    },
+    {
+      "id": "pumpkin-wooden-wheelbarrow",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "f5cfb30afaf88ce310617c3661fa4dc928f521341d60f93246f9a1108c4cea55"
+    },
+    {
+      "id": "pumpkin-watering-can",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "697e7d8da07cda82122a373be6f207f7e7b987e16813cd4217605b4404cc4871"
+    },
+    {
+      "id": "pumpkin-patch-crate",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "ee193c8b30d67d1906cd312fc172a877c63141d4da8b521f05933ab5063dfde3"
+    },
+    {
+      "id": "pumpkin-roasted-wedges",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "37b77715b4baf43b747fcbfe426765b0c4ebe6984fc0f08a251438fc018edcef"
+    },
+    {
+      "id": "pumpkin-patchwork-pumpkin",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "c8e5bff6b119e7d6a57ee88c43e6063431a2f4900c66b136c68ec7a5876c335e"
+    },
+    {
+      "id": "pumpkin-squirrel-seeds",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "6c3abe531fb7b1a7355082eb5b228193c3721b68e423b80158e7a2e69054bd99"
+    },
+    {
+      "id": "pumpkin-owl-perch",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "0df11853eaf163a6c17d85f21143bd35dc30a4cf01239eb2b2998c2cebef6b6d"
+    },
+    {
+      "id": "pumpkin-child-picking",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "accd862af29333992fdee453950ed3cf27fab8cbafdab40c3169f65c2152bcdb"
+    },
+    {
+      "id": "pumpkin-outline-botanical",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "177edcf71221a236deabf14bce39890344bc49c669fcc96c7d85ffb723c62b71"
+    },
+    {
+      "id": "pumpkin-floral-arrangement",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "73bd7465657eb2dc3203860708ed547c700a1787c381bcd19528cd8a4beb584f"
+    },
+    {
+      "id": "pumpkin-dried-flower-pumpkin",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "50467fda1aa36bac66f8989f8a38653eec3fc12ccc8223319748bc8c5f702dd9"
+    },
+    {
+      "id": "pumpkin-door-wreath",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "cacdd8ccfd1b1b042cfc9ef1cb6b4cb9c2c71ead48c3e00fb86189a9affa6e79"
+    },
+    {
+      "id": "pumpkin-bicycle-basket",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "7d4768d65e312c162be5605edf2eea5759cdc74f59687e302b839196598f435b"
+    },
+    {
+      "id": "pumpkin-fairy-carriage",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "53fd25ef6e6a22c573401adc86da86c04b1d78052773706143017260c7e902f8"
     }
   ]
 }

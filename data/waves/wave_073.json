@@ -1,0 +1,93 @@
+{
+  "wave": "wave_073",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-outline-botanical",
+      "title": "Pumpkin Botanical Coloring Illustration",
+      "alt": "An outlined irregular pumpkin with a bent stem, two lobed leaves at its base and a curling tendril.",
+      "color": "Black",
+      "style": "Outline",
+      "printSeparation": "black-only",
+      "description": "An outlined irregular pumpkin with a bent stem, two lobed leaves at its base and a curling tendril. Use this illustration for personal autumn cards, classroom activity sheets and seasonal crafts.",
+      "source": "work/production/wave_073/source/pumpkin-outline-botanical.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "4be1590d64fee004f4fec6246ec936e06e2e204f9363952cefbf8163c4606a19",
+      "inputSignature": "b22d69719595eaa1249514972ad5db8f59e223c9b431289b82e7add8ed45c2eb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 452153,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 452153,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [100, 74, 1169, 1207],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_073/exports/pumpkin-outline-botanical.pdf",
+          "bytes": 452153,
+          "sha256": "a8e494afdda90eb78bb957b37ef8eece78930b956af1d2883159d470b42482c7"
+        },
+        "webp": {
+          "path": "work/production/wave_073/exports/pumpkin-outline-botanical.webp",
+          "bytes": 595142,
+          "sha256": "177edcf71221a236deabf14bce39890344bc49c669fcc96c7d85ffb723c62b71"
+        },
+        "thumb": {
+          "path": "work/production/wave_073/exports/pumpkin-outline-botanical-thumb.webp",
+          "bytes": 47810,
+          "sha256": "921df804c7b62e3a9400ab128fa613686030d5b7b7ca1a3cfd4cb12b2b6a2250"
+        }
+      },
+      "proofSha256": "b4596cbe3d63d970a758b2aff91dd60c3d5b13292263aef5b6d07be62cab389a",
+      "pairMeanRgbDifference": 3.49731
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-door-wreath",
+      "reason": "PDF byte cap at unchanged native quality floor; redraw needed."
+    },
+    {
+      "id": "pumpkin-bicycle-basket",
+      "reason": "Native quality floor cannot meet PDF byte cap; held."
+    }
+  ],
+  "screenReviewNotes": "Source and CMYK proof reviewed: distinctive tall outlined pumpkin, two basal leaves, clean open coloring regions and neutral four-channel K-only separation.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:51:58.450Z",
+  "cdnVerifiedAt": "2026-10-23T23:08:21.531Z"
+}
