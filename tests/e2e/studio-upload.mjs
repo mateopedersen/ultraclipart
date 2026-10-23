@@ -58,7 +58,7 @@ try {
   assert.match(data.localSources[0].data, /^data:image\/webp;base64,/);
   assert.equal(data.layers[0].sourceSha256, art.files.webp.sha256);
   assert.equal(data.layers[0].regions.length, 1);
-  const before = await page.locator('.uc-canvas image').getAttribute('href');
+  const before = await page.locator('.uc-canvas [data-layer] image').getAttribute('href');
   await page.close();
   page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, acceptDownloads: true });
   track(page);
@@ -70,7 +70,7 @@ try {
     timeout: 45000,
   });
   await settle();
-  assert.equal(await page.locator('.uc-canvas image').getAttribute('href'), before);
+  assert.equal(await page.locator('.uc-canvas [data-layer] image').getAttribute('href'), before);
   await page.locator('[data-panel=print]').click();
   await page.locator('[data-print=scale]').selectOption('native');
   for (const format of ['webp', 'pdf']) {
@@ -82,13 +82,11 @@ try {
   }
   await page.locator('[data-panel=studio]').click();
   await page.locator('[data-studio-tool]').selectOption('composer');
-  await page
-    .locator('[data-local-clipart]')
-    .setInputFiles({
-      name: 'bad.png',
-      mimeType: 'image/png',
-      buffer: Buffer.from('<svg onload="alert(1)"/>'),
-    });
+  await page.locator('[data-local-clipart]').setInputFiles({
+    name: 'bad.png',
+    mimeType: 'image/png',
+    buffer: Buffer.from('<svg onload="alert(1)"/>'),
+  });
   await expect(page.locator('[data-status]')).toHaveAttribute('data-error', 'true');
   assert.deepEqual(errors, []);
   assert.deepEqual(posts, []);
