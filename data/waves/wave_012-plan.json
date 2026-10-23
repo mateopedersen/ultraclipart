@@ -1,0 +1,88 @@
+{
+  "wave": "wave_012",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-ghost-reading",
+      "title": "Ghost Reading by Lantern",
+      "alt": "A smiling white ghost holds an open purple book and a glowing orange lantern.",
+      "description": "A smiling white ghost holds an open purple book and a glowing orange lantern. Use this illustration for classroom reading rewards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-ghost-reading.png"
+    },
+    {
+      "id": "halloween-cat-cauldron",
+      "title": "Black Cat Stirring a Cauldron",
+      "alt": "A black cat in a purple witch hat stirs glowing violet liquid in an ornate black cauldron.",
+      "description": "A black cat in a purple witch hat stirs glowing violet liquid in an ornate black cauldron. Use this illustration for personal party invitations.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-cat-cauldron.png"
+    },
+    {
+      "id": "halloween-bats-crescent",
+      "title": "Bats Around a Crescent Moon",
+      "alt": "Three expressive purple bats fly around a golden crescent moon and small stars.",
+      "description": "Three expressive purple bats fly around a golden crescent moon and small stars. Use this illustration for seasonal classroom displays.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-bats-crescent.png"
+    },
+    {
+      "id": "halloween-child-fox-costume",
+      "title": "Child in a Fox Costume",
+      "alt": "A smiling child in an orange fox costume walks while carrying a pumpkin-shaped treat pail.",
+      "description": "A smiling child in an orange fox costume walks while carrying a pumpkin-shaped treat pail. Use this illustration for costume vocabulary cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-child-fox-costume.png"
+    },
+    {
+      "id": "halloween-monster-cupcake",
+      "title": "Friendly Monster Baking",
+      "alt": "A friendly green three-eyed monster wearing a purple apron holds a tray with a decorated cupcake.",
+      "description": "A friendly green three-eyed monster wearing a purple apron holds a tray with a decorated cupcake. Use this illustration for classroom creative writing.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-monster-cupcake.png"
+    },
+    {
+      "id": "halloween-treat-pail",
+      "title": "Pumpkin Treat Pail",
+      "alt": "An orange pumpkin-shaped treat pail with a black handle holds wrapped sweets and a spiral lollipop.",
+      "description": "An orange pumpkin-shaped treat pail with a black handle holds wrapped sweets and a spiral lollipop. Use this illustration for personal treat labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-treat-pail.png"
+    },
+    {
+      "id": "halloween-melting-candles",
+      "title": "Three Halloween Candles",
+      "alt": "Three ivory candles of different heights burn on an ornate dark tray tied with a purple ribbon.",
+      "description": "Three ivory candles of different heights burn on an ornate dark tray tied with a purple ribbon. Use this illustration for personal party menu decoration.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-melting-candles.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-crooked-cottage",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-owl-wizard-hat",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-floral-skull",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

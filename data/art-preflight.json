@@ -1,18 +1,18 @@
 {
   "status": "PASS",
-  "generatedCount": 20,
-  "originalTopicArtworkCount": 70,
+  "generatedCount": 40,
+  "originalTopicArtworkCount": 90,
   "suppliedCount": 150,
-  "availableCount": 170,
+  "availableCount": 190,
   "supplementalCount": 100,
-  "topicCount": 4,
+  "topicCount": 5,
   "targetCount": 5500,
   "completedTopicCount": 1,
-  "publishedApprovedCount": 170,
-  "totalLocalAssetBytes": 278941088,
+  "publishedApprovedCount": 190,
+  "totalLocalAssetBytes": 314376887,
   "r2MeasuredBytes": null,
   "maxPdfBytes": 998269,
-  "p95PdfBytes": 990735,
+  "p95PdfBytes": 989363,
   "pdfOverCapCount": 0,
   "maliciousSvgVectorsRejected": 6,
   "exactDuplicateSvgCount": 0,
@@ -10055,6 +10055,1206 @@
             {
               "width": 1024,
               "height": 1536,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-ghost-reading",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1186,
+          "height": 1327,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            42,
+            1154,
+            1289
+          ]
+        },
+        "thumb": {
+          "width": 393,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            15,
+            31,
+            384,
+            427
+          ]
+        },
+        "pdf": {
+          "bytes": 722554,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.953 \u00d7 4.423 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1186,
+              "height": 1327,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-cat-cauldron",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1226,
+          "height": 1283,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            25,
+            17,
+            1223,
+            1283
+          ]
+        },
+        "thumb": {
+          "width": 420,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            16,
+            9,
+            388,
+            435
+          ]
+        },
+        "pdf": {
+          "bytes": 877717,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.087 \u00d7 4.277 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1226,
+              "height": 1283,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-bats-crescent",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            33,
+            21,
+            1360,
+            1121
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            9,
+            434,
+            347
+          ]
+        },
+        "pdf": {
+          "bytes": 948966,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-child-fox-costume",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1145,
+          "height": 1374,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            33,
+            32,
+            1126,
+            1348
+          ]
+        },
+        "thumb": {
+          "width": 367,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            22,
+            9,
+            354,
+            433
+          ]
+        },
+        "pdf": {
+          "bytes": 710594,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.817 \u00d7 4.580 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1145,
+              "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-monster-cupcake",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1223,
+          "height": 1286,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            38,
+            1177,
+            1286
+          ]
+        },
+        "thumb": {
+          "width": 418,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            13,
+            392,
+            435
+          ]
+        },
+        "pdf": {
+          "bytes": 975210,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.077 \u00d7 4.287 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1223,
+              "height": 1286,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-treat-pail",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            57,
+            48,
+            1288,
+            1173
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            52,
+            15,
+            388,
+            385
+          ]
+        },
+        "pdf": {
+          "bytes": 804513,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-melting-candles",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1230,
+          "height": 1278,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            42,
+            36,
+            1187,
+            1278
+          ]
+        },
+        "thumb": {
+          "width": 423,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            11,
+            410,
+            435
+          ]
+        },
+        "pdf": {
+          "bytes": 795158,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.100 \u00d7 4.260 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1230,
+              "height": 1278,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-caramel-apple",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1300,
+          "height": 1209,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            41,
+            23,
+            1282,
+            1209
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 409,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            55,
+            11,
+            413,
+            393
+          ]
+        },
+        "pdf": {
+          "bytes": 813906,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.333 \u00d7 4.030 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1300,
+              "height": 1209,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-webbed-witch-hat",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1227,
+          "height": 1282,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            39,
+            23,
+            1206,
+            1282
+          ]
+        },
+        "thumb": {
+          "width": 421,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            16,
+            33,
+            408,
+            440
+          ]
+        },
+        "pdf": {
+          "bytes": 762195,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.090 \u00d7 4.273 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1227,
+              "height": 1282,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-dancing-mummy",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1214,
+          "height": 1295,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            120,
+            33,
+            1174,
+            1279
+          ]
+        },
+        "thumb": {
+          "width": 412,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            40,
+            22,
+            397,
+            422
+          ]
+        },
+        "pdf": {
+          "bytes": 923512,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.047 \u00d7 4.317 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1214,
+              "height": 1295,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-witch-broom-flight",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            39,
+            25,
+            1360,
+            1121
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            6,
+            431,
+            359
+          ]
+        },
+        "pdf": {
+          "bytes": 934231,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-ghost-tea-party",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            35,
+            20,
+            1520,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            53,
+            6,
+            387,
+            275
+          ]
+        },
+        "pdf": {
+          "bytes": 885607,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-raven-key",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            41,
+            33,
+            1354,
+            1145
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            20,
+            418,
+            346
+          ]
+        },
+        "pdf": {
+          "bytes": 926716,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-potion-book",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            19,
+            1522,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            30,
+            11,
+            411,
+            285
+          ]
+        },
+        "pdf": {
+          "bytes": 942718,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-crystal-ball",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1278,
+          "height": 1230,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            17,
+            1248,
+            1230
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 423,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            10,
+            6,
+            364,
+            408
+          ]
+        },
+        "pdf": {
+          "bytes": 660022,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.260 \u00d7 4.100 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1278,
+              "height": 1230,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-dog-dragon-costume",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            15,
+            1283,
+            1152
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            5,
+            432,
+            388
+          ]
+        },
+        "pdf": {
+          "bytes": 902508,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-witch-boots-umbrella",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1145,
+          "height": 1374,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            33,
+            23,
+            1109,
+            1374
+          ]
+        },
+        "thumb": {
+          "width": 367,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            17,
+            8,
+            345,
+            410
+          ]
+        },
+        "pdf": {
+          "bytes": 955314,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.817 \u00d7 4.580 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1145,
+              "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-moon-moth",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            25,
+            1358,
+            1145
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            4,
+            8,
+            437,
+            361
+          ]
+        },
+        "pdf": {
+          "bytes": 965981,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-pumpkin-balloon",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1024,
+          "height": 1536,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            41,
+            9,
+            1020,
+            1536
+          ]
+        },
+        "thumb": {
+          "width": 293,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            14,
+            15,
+            280,
+            426
+          ]
+        },
+        "pdf": {
+          "bytes": 925876,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.413 \u00d7 5.120 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1024,
+              "height": 1536,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-werewolf-sweater",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1183,
+          "height": 1329,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            19,
+            1169,
+            1329
+          ]
+        },
+        "thumb": {
+          "width": 392,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            21,
+            386,
+            430
+          ]
+        },
+        "pdf": {
+          "bytes": 876877,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.943 \u00d7 4.430 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1183,
+              "height": 1329,
               "components": 4,
               "alphaMask": true,
               "profile": "GRACoL2006_Coated1v2 (registered output intent)",

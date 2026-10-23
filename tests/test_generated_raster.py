@@ -10,6 +10,16 @@ spec=importlib.util.spec_from_file_location('producer',ROOT/'scripts/produce-ras
 producer=importlib.util.module_from_spec(spec);spec.loader.exec_module(producer)
 
 class GeneratedRasterContract(unittest.TestCase):
+    def test_resume_survives_an_unrelated_deferred_item(self):
+        plan={'wave':'wave_999','topic':'winter','method':'builtin-image-generation','research':'research.json','maxPdfBytes':980000,'minimumJpxQualityDb':48,'maximumWeightedCmykRmse':1.8,'items':[{'id':'one'},{'id':'two'}]}
+        item={'id':'one','title':'Original title','source':'source.png'}
+        before=producer.export_signature(plan,item,b'encoder-profile-research')
+        plan['items']=[{'id':'one'}];plan['deferred']=[{'id':'two','reason':'quality gate'}]
+        self.assertEqual(before,producer.export_signature(plan,item,b'encoder-profile-research'))
+        for key,value in [('maxPdfBytes',970000),('minimumJpxQualityDb',50),('maximumWeightedCmykRmse',1.5),('research','different.json')]:
+            self.assertNotEqual(before,producer.export_signature({**plan,key:value},item,b'encoder-profile-research'))
+        self.assertNotEqual(before,producer.export_signature(plan,{**item,'title':'Changed title'},b'encoder-profile-research'))
+        self.assertNotEqual(before,producer.export_signature(plan,item,b'changed-encoder-profile-research'))
     def test_near_opaque_native_alpha_is_preserved_without_normalizing(self):
         alpha=Image.new('L',(3,1));alpha.putdata([0,127,254]);before=alpha.tobytes()
         producer.validate_native_alpha(alpha)

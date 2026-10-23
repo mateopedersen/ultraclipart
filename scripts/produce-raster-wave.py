@@ -18,6 +18,12 @@ PROFILE=ROOT/'public/color/print.icc'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def atomic_json(path, data):
     temp=path.with_suffix('.tmp');temp.write_text(json.dumps(data,indent=2)+'\n');temp.replace(path)
+def export_signature(plan, item, dependencies):
+    # A deferred neighbor must not invalidate verified artwork. Every export-affecting
+    # policy, this item's metadata, and encoder/profile/research bytes still bind reuse.
+    policy={key:plan[key] for key in ('wave','topic','method','research','maxPdfBytes','minimumJpxQualityDb','maximumWeightedCmykRmse')}
+    contract=json.dumps({'schema':2,'policy':policy,'item':item},sort_keys=True,separators=(',',':')).encode()
+    return sha(contract+dependencies)
 def validate_native_alpha(alpha):
     low,high=alpha.getextrema()
     assert low==0 and high>=250, 'Source needs transparent surroundings and near-opaque artwork'
@@ -60,11 +66,12 @@ def main():
     research=json.loads((ROOT/plan['research']).read_text());assert research['topic']==plan['topic'] and research['sourceImageReuse'] is False
     binary=os.environ.get('PDFTOPPM_BIN') or shutil.which('pdftoppm');assert binary,'Poppler required'
     transform=ImageCms.buildTransformFromOpenProfiles(ImageCms.createProfile('sRGB'),ImageCms.getOpenProfile(str(PROFILE)),'RGB','CMYK',renderingIntent=ImageCms.Intent.RELATIVE_COLORIMETRIC,flags=ImageCms.Flags.BLACKPOINTCOMPENSATION)
-    signature=sha(plan_path.read_bytes()+Path(__file__).read_bytes()+PROFILE.read_bytes()+(ROOT/'scripts/raster_source.py').read_bytes())
+    dependencies=Path(__file__).read_bytes()+PROFILE.read_bytes()+(ROOT/'scripts/raster_source.py').read_bytes()+(ROOT/plan['research']).read_bytes()
     journal_path=stage/'raster-journal.json';journal=json.loads(journal_path.read_text()) if journal_path.exists() else {}
     files_dir=stage/'exports';files_dir.mkdir(exist_ok=True);proof_dir=stage/'proofs';proof_dir.mkdir(exist_ok=True)
     rows=[];resumed=0
     for meta in plan['items']:
+        signature=export_signature(plan,meta,dependencies)
         art_id=meta['id'];assert re.fullmatch(r'[a-z0-9-]+',art_id)
         source=(ROOT/meta['source']).resolve();assert source.is_relative_to(stage/'source')
         source_sha=sha(source.read_bytes());prior=journal.get(art_id)

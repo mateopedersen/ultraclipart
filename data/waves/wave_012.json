@@ -1,0 +1,572 @@
+{
+  "wave": "wave_012",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 7,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-ghost-reading",
+      "title": "Ghost Reading by Lantern",
+      "alt": "A smiling white ghost holds an open purple book and a glowing orange lantern.",
+      "description": "A smiling white ghost holds an open purple book and a glowing orange lantern. Use this illustration for classroom reading rewards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-ghost-reading.png",
+      "topic": "halloween",
+      "width": 1186,
+      "height": 1327,
+      "sourceType": "raster",
+      "sourceSha256": "f31a9c6165f5a33a4541a7b91a05f4d19b10557ba3e47b1a3559c4f1084c993e",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 722554,
+        "weightedCmykRmse": 0.846878
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1233912,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 722554,
+          "weightedCmykRmse": 0.846878
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        54,
+        102,
+        1150,
+        1213
+      ],
+      "image": {
+        "width": 1186,
+        "height": 1327,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-ghost-reading.pdf",
+          "bytes": 722554,
+          "sha256": "f0751d5919a874a6e547422976d8a6a17d47051872bd1119c6e7ae8dd44f393c"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-ghost-reading.webp",
+          "bytes": 736678,
+          "sha256": "18d584feede26a01996daec030550d5c7ad9a566bf89f31984d0241e62e81cb6"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-ghost-reading-thumb.webp",
+          "bytes": 42428,
+          "sha256": "c06d84a6be145530ef75be9c4fc3eea8ef2075a16152e923ddbb31daa6aa657c"
+        }
+      },
+      "proofSha256": "09a94d2a0fac37b19448fa440f932d270e187bee6bfbb4ba19f84defbb94b2ec",
+      "pairMeanRgbDifference": 1.49958
+    },
+    {
+      "id": "halloween-cat-cauldron",
+      "title": "Black Cat Stirring a Cauldron",
+      "alt": "A black cat in a purple witch hat stirs glowing violet liquid in an ornate black cauldron.",
+      "description": "A black cat in a purple witch hat stirs glowing violet liquid in an ornate black cauldron. Use this illustration for personal party invitations.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-cat-cauldron.png",
+      "topic": "halloween",
+      "width": 1226,
+      "height": 1283,
+      "sourceType": "raster",
+      "sourceSha256": "f1213f1e5935d2b1f5da82f10aecac2148410f13733134392880593b9a7efebd",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 877717,
+        "weightedCmykRmse": 1.527518
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1735857,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1246476,
+          "weightedCmykRmse": 0.863009
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1133740,
+          "weightedCmykRmse": 0.997195
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1007073,
+          "weightedCmykRmse": 1.220646
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 877717,
+          "weightedCmykRmse": 1.527518
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        169,
+        34,
+        1070,
+        1230
+      ],
+      "image": {
+        "width": 1226,
+        "height": 1283,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-cat-cauldron.pdf",
+          "bytes": 877717,
+          "sha256": "dd1b1246cd38c9423fe26b19d3d609c7bda96db252731b5e85a5a5cf5e45ac84"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-cat-cauldron.webp",
+          "bytes": 841804,
+          "sha256": "c62aa2ae04b4860feb6ee5c08594829fa03aa394a531ad5b37086b8d6d29eb7e"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-cat-cauldron-thumb.webp",
+          "bytes": 55098,
+          "sha256": "175626985a2764558f553d84d5ba3c90583c66c18100350ee2abdefe334b902f"
+        }
+      },
+      "proofSha256": "55ce5c4536314f38daef69421ffbe40b129965afa80a25b0dc25088ac53adcda",
+      "pairMeanRgbDifference": 2.46465
+    },
+    {
+      "id": "halloween-bats-crescent",
+      "title": "Bats Around a Crescent Moon",
+      "alt": "Three expressive purple bats fly around a golden crescent moon and small stars.",
+      "description": "Three expressive purple bats fly around a golden crescent moon and small stars. Use this illustration for seasonal classroom displays.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-bats-crescent.png",
+      "topic": "halloween",
+      "width": 1374,
+      "height": 1145,
+      "sourceType": "raster",
+      "sourceSha256": "8e6322c4edf5c081f58a3d2fc8b5e4e1416bd5ba98c8f233129a29789b451ad7",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 948966,
+        "weightedCmykRmse": 0.948014
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1321950,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 948966,
+          "weightedCmykRmse": 0.948014
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        86,
+        37,
+        1289,
+        1080
+      ],
+      "image": {
+        "width": 1374,
+        "height": 1145,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-bats-crescent.pdf",
+          "bytes": 948966,
+          "sha256": "68571e3514028b941c9107b7c2d40a5a1c1205544a926eb4020b15c2ff381ddc"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-bats-crescent.webp",
+          "bytes": 593056,
+          "sha256": "4fd70e7ec1eebf51c204c929974bc78aeadd64176ef02269c266ffd7094fd3d6"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-bats-crescent-thumb.webp",
+          "bytes": 42068,
+          "sha256": "d9154252bbebbaf3dba1f0282f2c02bd08dbad679d1499d55c239af3605ed04b"
+        }
+      },
+      "proofSha256": "3751480cdfe20f11be24553f973437acee75c803eae7804f747efa417088f0be",
+      "pairMeanRgbDifference": 1.0324
+    },
+    {
+      "id": "halloween-child-fox-costume",
+      "title": "Child in a Fox Costume",
+      "alt": "A smiling child in an orange fox costume walks while carrying a pumpkin-shaped treat pail.",
+      "description": "A smiling child in an orange fox costume walks while carrying a pumpkin-shaped treat pail. Use this illustration for costume vocabulary cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-child-fox-costume.png",
+      "topic": "halloween",
+      "width": 1145,
+      "height": 1374,
+      "sourceType": "raster",
+      "sourceSha256": "ba45cfdec0a37288756631d4a4d4f282082b2f0b917306954226ad184a509784",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 710594,
+        "weightedCmykRmse": 0.884508
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1137819,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 710594,
+          "weightedCmykRmse": 0.884508
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        170,
+        35,
+        982,
+        1345
+      ],
+      "image": {
+        "width": 1145,
+        "height": 1374,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-child-fox-costume.pdf",
+          "bytes": 710594,
+          "sha256": "3fe8e58e5f824cfbab0c5b7921bacdd3aa0d25bfefd09e2a1949b98bc3f53d4a"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-child-fox-costume.webp",
+          "bytes": 704056,
+          "sha256": "8a06c8ba4addeb623d95db55c8009d29b318ccaccf02f3134d68bbf93b0adc9e"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-child-fox-costume-thumb.webp",
+          "bytes": 39138,
+          "sha256": "e739104a2d172a0fab9ef51ab123568df4ee6364d3576dc268b31d822ea71a7d"
+        }
+      },
+      "proofSha256": "73faf5cb80daa94d4b48698258a59f8ee67779b0f4b6f1df1d608979c2a60324",
+      "pairMeanRgbDifference": 1.82171
+    },
+    {
+      "id": "halloween-monster-cupcake",
+      "title": "Friendly Monster Baking",
+      "alt": "A friendly green three-eyed monster wearing a purple apron holds a tray with a decorated cupcake.",
+      "description": "A friendly green three-eyed monster wearing a purple apron holds a tray with a decorated cupcake. Use this illustration for classroom creative writing.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-monster-cupcake.png",
+      "topic": "halloween",
+      "width": 1223,
+      "height": 1286,
+      "sourceType": "raster",
+      "sourceSha256": "983a35304f1b788c51d60e36ae09231974bd3ed1965362985718ed0237eb07ae",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 975210,
+        "weightedCmykRmse": 0.812605
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1393673,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 975210,
+          "weightedCmykRmse": 0.812605
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        163,
+        45,
+        1111,
+        1250
+      ],
+      "image": {
+        "width": 1223,
+        "height": 1286,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-monster-cupcake.pdf",
+          "bytes": 975210,
+          "sha256": "e49d5a6762a796ed7367097e8397707aba0f8b7f4eb4d9d52f139f45a976cb29"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-monster-cupcake.webp",
+          "bytes": 790570,
+          "sha256": "38f365fdf2402e43e80bba7025cbaa0a180738386506366e43fd8184ef60981a"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-monster-cupcake-thumb.webp",
+          "bytes": 53714,
+          "sha256": "b3c4f5bc0cb8418355a459eeb1fb1747d20f23a6827131f633b9071e62529e38"
+        }
+      },
+      "proofSha256": "f3103359f1e8ee68c2b9e581d41961d5cbec58cf9876997cfb24d10334377a54",
+      "pairMeanRgbDifference": 2.53026
+    },
+    {
+      "id": "halloween-treat-pail",
+      "title": "Pumpkin Treat Pail",
+      "alt": "An orange pumpkin-shaped treat pail with a black handle holds wrapped sweets and a spiral lollipop.",
+      "description": "An orange pumpkin-shaped treat pail with a black handle holds wrapped sweets and a spiral lollipop. Use this illustration for personal treat labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-treat-pail.png",
+      "topic": "halloween",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "5702912bcfcc86c2db44ee90396e7064ec86e052f637296dc00489e3c54945ba",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 804513,
+        "weightedCmykRmse": 0.759272
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1281248,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 804513,
+          "weightedCmykRmse": 0.759272
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        162,
+        51,
+        1148,
+        1138
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-treat-pail.pdf",
+          "bytes": 804513,
+          "sha256": "4d76f4d60e5b76cd66768bc3a398f0553fc9f3c2f8de8698282472a3e03c84de"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-treat-pail.webp",
+          "bytes": 843840,
+          "sha256": "f7036895404bb902a3265fa6292289e4cd9280efaeff774e8744317509ad0a73"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-treat-pail-thumb.webp",
+          "bytes": 49898,
+          "sha256": "1a3d61f82dfd79c1d639c0349b211e67f8f84066f57e035e706283b6182c85b6"
+        }
+      },
+      "proofSha256": "be89cc67e79d5deacfe0d71426ab62fc1c226359d4e8191e87ff9293de93c6ba",
+      "pairMeanRgbDifference": 4.25956
+    },
+    {
+      "id": "halloween-melting-candles",
+      "title": "Three Halloween Candles",
+      "alt": "Three ivory candles of different heights burn on an ornate dark tray tied with a purple ribbon.",
+      "description": "Three ivory candles of different heights burn on an ornate dark tray tied with a purple ribbon. Use this illustration for personal party menu decoration.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_012/source/halloween-melting-candles.png",
+      "topic": "halloween",
+      "width": 1230,
+      "height": 1278,
+      "sourceType": "raster",
+      "sourceSha256": "a7527fd2a832cab2ce2236ad9b35acf8122a84a173f81ffea6f76af7576c443f",
+      "inputSignature": "b388e6f6c6455b488b3797f376585b4decc00eb7226314e71cd8a2db00bce679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 795158,
+        "weightedCmykRmse": 0.885331
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1257640,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 795158,
+          "weightedCmykRmse": 0.885331
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        45,
+        39,
+        1184,
+        1165
+      ],
+      "image": {
+        "width": 1230,
+        "height": 1278,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_012/exports/halloween-melting-candles.pdf",
+          "bytes": 795158,
+          "sha256": "6d88344e05b35cef7756a59daa01376f6a6e65af1255e8211fa011f186279782"
+        },
+        "webp": {
+          "path": "work/production/wave_012/exports/halloween-melting-candles.webp",
+          "bytes": 710314,
+          "sha256": "551169cac2ea2d809d2801a804124f64be76e43c5f703d06fa688e6898aa6c6c"
+        },
+        "thumb": {
+          "path": "work/production/wave_012/exports/halloween-melting-candles-thumb.webp",
+          "bytes": 45376,
+          "sha256": "b08043cdd4be51778c9c434681c999f0c2953231b68625e709508339daf3a90f"
+        }
+      },
+      "proofSha256": "25e64703add67a3d77e64126231ff3b556c0a4c9d5ac8841bd4f5e47e03473f3",
+      "pairMeanRgbDifference": 1.17251
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-crooked-cottage",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-owl-wizard-hat",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-floral-skull",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T14:36:29.388Z",
+  "allAccountR2Bytes": 305475406
+}

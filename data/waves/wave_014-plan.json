@@ -1,0 +1,83 @@
+{
+  "wave": "wave_014",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-crystal-ball",
+      "title": "Crystal Ball on Clawed Stand",
+      "alt": "A luminous violet crystal ball with swirling highlights rests on an ornate bronze stand.",
+      "description": "A luminous violet crystal ball with swirling highlights rests on an ornate bronze stand. Use this illustration for personal mystical party invitations.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_014/source/halloween-crystal-ball.png"
+    },
+    {
+      "id": "halloween-dog-dragon-costume",
+      "title": "Dog in a Dragon Costume",
+      "alt": "A smiling corgi sits in a green dragon costume with soft wings, horns and a curved padded tail.",
+      "description": "A smiling corgi sits in a green dragon costume with soft wings, horns and a curved padded tail. Use this illustration for pet costume storytelling.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_014/source/halloween-dog-dragon-costume.png"
+    },
+    {
+      "id": "halloween-witch-boots-umbrella",
+      "title": "Striped Stockings and Witch Boots",
+      "alt": "A pair of purple pointed witch boots with striped stockings stands beside a folded bat-wing umbrella.",
+      "description": "A pair of purple pointed witch boots with striped stockings stands beside a folded bat-wing umbrella. Use this illustration for costume accessories matching.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_014/source/halloween-witch-boots-umbrella.png"
+    },
+    {
+      "id": "halloween-moon-moth",
+      "title": "Moth with Moon Markings",
+      "alt": "A symmetrical plum-colored moth spreads scalloped wings decorated with gold crescent moons and small stars.",
+      "description": "A symmetrical plum-colored moth spreads scalloped wings decorated with gold crescent moons and small stars. Use this illustration for night-nature craft projects.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_014/source/halloween-moon-moth.png"
+    },
+    {
+      "id": "halloween-pumpkin-balloon",
+      "title": "Pumpkin Hot-Air Balloon",
+      "alt": "A smiling pumpkin-shaped hot-air balloon with green leaf garlands carries a small woven basket on ropes.",
+      "description": "A smiling pumpkin-shaped hot-air balloon with green leaf garlands carries a small woven basket on ropes. Use this illustration for fantasy travel story cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_014/source/halloween-pumpkin-balloon.png"
+    },
+    {
+      "id": "halloween-werewolf-sweater",
+      "title": "Werewolf in a Cozy Sweater",
+      "alt": "A friendly brown werewolf in a rust-colored sweater carries a plain cream treat sack.",
+      "description": "A friendly brown werewolf in a rust-colored sweater carries a plain cream treat sack. Use this illustration for costume character cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_014/source/halloween-werewolf-sweater.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-spider-gift",
+      "reason": "Visible subject touches canvas edge; source retained for repair."
+    },
+    {
+      "id": "halloween-scarecrow-violin",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-graveyard-lantern",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-skeleton-gardening",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

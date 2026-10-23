@@ -62,18 +62,26 @@ const data = [...arts, ...fixtures].map((item) => ({
   ...item,
   cluster: topics.find((topic) => topic.slug === item.topic).cluster,
 }));
-const pumpkinCount = data.filter(
-  (item) =>
-    item.topic === 'pumpkin' ||
-    ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(item.id),
-).length;
 const search = (patch) => searchArtwork(data, { ...defaults, ...patch });
+const fixtureSearch = (patch) =>
+  searchArtwork(
+    fixtures.map((item) => ({
+      ...item,
+      cluster: topics.find((topic) => topic.slug === item.topic).cluster,
+    })),
+    { ...defaults, ...patch },
+  );
+const identities = (result) => result.items.map((item) => item.id).sort();
 
 test('query normalization handles punctuation, accents, plurals and controlled synonyms', () => {
   assert.deepEqual(normalizeQuery('  PÚMPKINS, free clipart!  '), ['pumpkin']);
   assert.deepEqual(normalizeQuery('Presents and leaves'), ['gift', 'leaf']);
-  assert.equal(search({ q: 'pumpkins clipart' }).total, pumpkinCount);
-  const gifts = search({ q: 'present' }).items;
+  assert.equal(fixtureSearch({ q: 'pumpkins clipart' }).total, 1);
+  assert.deepEqual(
+    identities(search({ q: 'pumpkins clipart', size: 10000 })),
+    identities(search({ q: 'pumpkin', size: 10000 })),
+  );
+  const gifts = fixtureSearch({ q: 'present' }).items;
   assert.ok(gifts.some((x) => x.id === 'gift-ribbon-keepsake'));
   assert.ok(gifts.some((x) => x.id === 'gift-kraft-parcel-twine'));
   assert.ok(gifts.slice(0, 2).every((x) => x.topic === 'gift'));
@@ -86,7 +94,7 @@ test('black-and-white queries return true outlines, not black-colored artwork', 
     'pumpkin outline',
     'pumpkin coloring page',
   ]) {
-    const result = search({ q });
+    const result = fixtureSearch({ q });
     assert.equal(result.total, 1, q);
     assert.equal(result.items[0].id, 'pumpkin-botanical-outline');
   }
@@ -99,7 +107,7 @@ test('black-and-white queries return true outlines, not black-colored artwork', 
       (item) => item.id === 'spider-thread-and-bow',
     ),
   );
-  assert.equal(search({ q: 'outline spider' }).total, 0);
+  assert.equal(fixtureSearch({ q: 'outline spider' }).total, 0);
 });
 test('all explicit facets combine and match actual file metadata', () => {
   assert.equal(
@@ -111,15 +119,13 @@ test('all explicit facets combine and match actual file metadata', () => {
       orientation: 'square',
       background: 'transparent',
     }).total,
-    data.filter(
+    search({ q: 'pumpkin', size: 10000 }).items.filter(
       (x) =>
-        (x.topic === 'pumpkin' ||
-          ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(
-            x.id,
-          )) &&
         x.style === 'Color' &&
         x.color === 'Orange' &&
-        x.orientation === 'Square',
+        x.orientation === 'Square' &&
+        x.formats.includes('PDF') &&
+        x.alpha === true,
     ).length,
   );
   assert.equal(
@@ -131,11 +137,24 @@ test('all explicit facets combine and match actual file metadata', () => {
   assert.equal(searchArtwork(withoutPdf, { ...defaults, format: 'pdf' }).total, 0);
 });
 test('search ranks subject matches, allows a single typo on long words and refuses short fuzzy substitutions', () => {
-  const typo = search({ q: 'pumkin' });
-  assert.equal(typo.total, pumpkinCount);
+  const typo = fixtureSearch({ q: 'pumkin' });
+  assert.equal(typo.total, 1);
+  assert.equal(typo.items[0].id, 'pumpkin-botanical-outline');
   assert.equal(typo.hasFuzzyMatches, true);
-  assert.equal(search({ q: 'cat' }).total, 0);
-  assert.equal(search({ q: 'unicorn' }).total, 0);
+  const batOnly = [
+    {
+      ...fixtures[0],
+      id: 'bat-fixture',
+      topic: 'bat',
+      title: 'Bat',
+      description: 'Bat',
+      alt: 'Bat',
+      cluster: '',
+    },
+  ];
+  assert.equal(searchArtwork(batOnly, { ...defaults, q: 'bat' }).total, 1);
+  assert.equal(searchArtwork(batOnly, { ...defaults, q: 'cat' }).total, 0);
+  assert.equal(fixtureSearch({ q: 'unicorn' }).total, 0);
   assert.ok(search({ q: 'Halloween' }).total >= 2, 'topic cluster is searchable');
 });
 test('pagination clamps invalid pages and never duplicates result identities', () => {

@@ -1,0 +1,620 @@
+{
+  "wave": "wave_013",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 7,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-caramel-apple",
+      "title": "Caramel Apple with Candy Sprinkles",
+      "alt": "A red apple on a wooden stick is coated with caramel and colorful sprinkles, with a wrapped sweet beside it.",
+      "description": "A red apple on a wooden stick is coated with caramel and colorful sprinkles, with a wrapped sweet beside it. Use this illustration for seasonal recipe cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-caramel-apple.png",
+      "topic": "halloween",
+      "width": 1300,
+      "height": 1209,
+      "sourceType": "raster",
+      "sourceSha256": "d24ec9f7c3086c9123d4575e71fdb405d3fbf2110d218fb2a34d54769c9968b7",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 813906,
+        "weightedCmykRmse": 0.85392
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1261475,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 813906,
+          "weightedCmykRmse": 0.85392
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        169,
+        39,
+        1211,
+        1154
+      ],
+      "image": {
+        "width": 1300,
+        "height": 1209,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-caramel-apple.pdf",
+          "bytes": 813906,
+          "sha256": "43070ea7a7dabe48aba60b134606419fcc519eac87eb1139579ccef58da2f646"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-caramel-apple.webp",
+          "bytes": 862878,
+          "sha256": "ed5d92ba80b4f4679accfeed60fb7cdbfd6a1fff5dc7f0d6004302060f603e9b"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-caramel-apple-thumb.webp",
+          "bytes": 47212,
+          "sha256": "344c42c0cffffda6487703a44b181d8bbc9b2ffdf78d5a65c66cbfec4ee6a6c7"
+        }
+      },
+      "proofSha256": "49a2f0100214d3a655230b0db9621a5a18398c98a57c1c047c21a80bcc09d1f3",
+      "pairMeanRgbDifference": 4.25515
+    },
+    {
+      "id": "halloween-webbed-witch-hat",
+      "title": "Witch Hat with a Small Spider",
+      "alt": "A tall curled black witch hat with a copper buckle has a small friendly spider hanging from its tip.",
+      "description": "A tall curled black witch hat with a copper buckle has a small friendly spider hanging from its tip. Use this illustration for costume matching activities.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-webbed-witch-hat.png",
+      "topic": "halloween",
+      "width": 1227,
+      "height": 1282,
+      "sourceType": "raster",
+      "sourceSha256": "2f833661ea1979ea74f99d84bd839df927d14f0958786f412a97c5722a8865ff",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 762195,
+        "weightedCmykRmse": 0.959693
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1222336,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 762195,
+          "weightedCmykRmse": 0.959693
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        58,
+        105,
+        1181,
+        1158
+      ],
+      "image": {
+        "width": 1227,
+        "height": 1282,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-webbed-witch-hat.pdf",
+          "bytes": 762195,
+          "sha256": "d1aebb20f5a52a7083c5ffa7940db0a3aa340d9ba7efb00fcbc68d8cacee396f"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-webbed-witch-hat.webp",
+          "bytes": 542042,
+          "sha256": "7132cedee1fcbb6a964e6a8a1fa4e92947adf6606a95879a3142c377927d617a"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-webbed-witch-hat-thumb.webp",
+          "bytes": 33706,
+          "sha256": "d6b09ec573a79a27239650909b14e869ed6d0b6d2509b453eeaeaffbafffe5de"
+        }
+      },
+      "proofSha256": "f3c6903ea63db0bdc9ef367a69e678b7a3b16150a3d25231a6f04faeb8db7605",
+      "pairMeanRgbDifference": 1.02277
+    },
+    {
+      "id": "halloween-dancing-mummy",
+      "title": "Dancing Friendly Mummy",
+      "alt": "A smiling mummy dances with one knee raised, both arms spread and loose bandage ends curling around it.",
+      "description": "A smiling mummy dances with one knee raised, both arms spread and loose bandage ends curling around it. Use this illustration for movement activity cards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-dancing-mummy.png",
+      "topic": "halloween",
+      "width": 1214,
+      "height": 1295,
+      "sourceType": "raster",
+      "sourceSha256": "9c686ee53bb251f269f9183215751d5e1bf54ec543804568169fca7167823e5f",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 923512,
+        "weightedCmykRmse": 1.03368
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1450912,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1016343,
+          "weightedCmykRmse": 0.876551
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 923512,
+          "weightedCmykRmse": 1.03368
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        124,
+        71,
+        1154,
+        1236
+      ],
+      "image": {
+        "width": 1214,
+        "height": 1295,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-dancing-mummy.pdf",
+          "bytes": 923512,
+          "sha256": "5073d7562a754359d8dd0c58a14a5b96424cd86a1d27131a4ac74b6796a9de89"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-dancing-mummy.webp",
+          "bytes": 819490,
+          "sha256": "af02651654b4d62328eed349fcae482850446c7f197522300313870846550f02"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-dancing-mummy-thumb.webp",
+          "bytes": 59140,
+          "sha256": "ad703c26b0dc10e88f3df990e80c07dbe59aef4f72f80d71c696659bef753475"
+        }
+      },
+      "proofSha256": "fae344999fe75f5090be1ebff5d0b6313539d7b863a5b94fa3f4d33371eced66",
+      "pairMeanRgbDifference": 1.69843
+    },
+    {
+      "id": "halloween-witch-broom-flight",
+      "title": "Witch Flying on a Broom",
+      "alt": "A smiling silver-haired witch in a teal cloak and pointed hat flies on a straw broom.",
+      "description": "A smiling silver-haired witch in a teal cloak and pointed hat flies on a straw broom. Use this illustration for fantasy story prompts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-witch-broom-flight.png",
+      "topic": "halloween",
+      "width": 1374,
+      "height": 1145,
+      "sourceType": "raster",
+      "sourceSha256": "de1afd8bc50d9f5892b74b4e6ddc2617ba6b17493832b7a1fa2f224b12185632",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 934231,
+        "weightedCmykRmse": 1.573242
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1771482,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1291039,
+          "weightedCmykRmse": 0.880948
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1182435,
+          "weightedCmykRmse": 1.018876
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1060909,
+          "weightedCmykRmse": 1.253907
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 934231,
+          "weightedCmykRmse": 1.573242
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        43,
+        28,
+        1333,
+        1092
+      ],
+      "image": {
+        "width": 1374,
+        "height": 1145,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-witch-broom-flight.pdf",
+          "bytes": 934231,
+          "sha256": "ce49b75c378d64cb93a850030ef1b650e848b52b234a871677092c1c26732428"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-witch-broom-flight.webp",
+          "bytes": 911974,
+          "sha256": "62e9de5876b567bb23920d25f1d33d96fd76f2ac3d45165ad3ffc76a98d4eaac"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-witch-broom-flight-thumb.webp",
+          "bytes": 51834,
+          "sha256": "ecbb0903598cdb6b227b5f8eaeb506e9968541d11dd7d763c6c98f3ad7be98ca"
+        }
+      },
+      "proofSha256": "e4b830582cfe18cf427257820dc532a54f470c7f2d75d51bc88b388d5b93904f",
+      "pairMeanRgbDifference": 1.2443
+    },
+    {
+      "id": "halloween-ghost-tea-party",
+      "title": "Two Ghosts Sharing Tea",
+      "alt": "Two friendly ghosts wearing little hats share tea across a purple-covered table with a pumpkin centerpiece.",
+      "description": "Two friendly ghosts wearing little hats share tea across a purple-covered table with a pumpkin centerpiece. Use this illustration for friendship storytelling cards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-ghost-tea-party.png",
+      "topic": "halloween",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "1f5a00134349e23402fbb33104e47859d21f6c5d0dc4ebcbce3cf2b01e5c2bb6",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 885607,
+        "weightedCmykRmse": 1.001998
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1462285,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 984737,
+          "weightedCmykRmse": 0.850743
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 885607,
+          "weightedCmykRmse": 1.001998
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        195,
+        74,
+        1342,
+        952
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-ghost-tea-party.pdf",
+          "bytes": 885607,
+          "sha256": "aa837547a8ef37ba39bb39f0f0592aad84b91eb39bb4c36042e1d17bd5fdf31e"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-ghost-tea-party.webp",
+          "bytes": 1123574,
+          "sha256": "cca56ce5cf979eb4bfe4d9d6fee777b43a0f0708bbf02bb1873a82d21814843e"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-ghost-tea-party-thumb.webp",
+          "bytes": 43838,
+          "sha256": "7b7659e408ba411eadb422082c8c8faed5f0f06801ab95e55d98097695d8d4d9"
+        }
+      },
+      "proofSha256": "62dad4196a8182d1342e7c30a2d2f571ee2bbe0a0ae5e1ce1eacd94e9acf6ac2",
+      "pairMeanRgbDifference": 1.90705
+    },
+    {
+      "id": "halloween-raven-key",
+      "title": "Raven Holding an Antique Key",
+      "alt": "A black raven perches on a weathered branch while holding a brass key in its beak.",
+      "description": "A black raven perches on a weathered branch while holding a brass key in its beak. Use this illustration for mystery story prompts.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-raven-key.png",
+      "topic": "halloween",
+      "width": 1374,
+      "height": 1145,
+      "sourceType": "raster",
+      "sourceSha256": "9f094e4806b68c0b5db7db8fc95923dacc80fd3e24401575f908d40af23c62a9",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 926716,
+        "weightedCmykRmse": 1.723129
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1654887,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1242627,
+          "weightedCmykRmse": 0.914751
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1138647,
+          "weightedCmykRmse": 1.081394
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038800,
+          "weightedCmykRmse": 1.360586
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 926716,
+          "weightedCmykRmse": 1.723129
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        92,
+        71,
+        1299,
+        1072
+      ],
+      "image": {
+        "width": 1374,
+        "height": 1145,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-raven-key.pdf",
+          "bytes": 926716,
+          "sha256": "b17f7567b64cd917e3b03281c74b12d59c3dc792b12a3c186a0ab6a8389bbf96"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-raven-key.webp",
+          "bytes": 762960,
+          "sha256": "0cf13b2f2b7531b5b6786c8cd1a85485b685817aba8a8533315e67be6c314894"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-raven-key-thumb.webp",
+          "bytes": 45898,
+          "sha256": "cb8110cb2b03f312297034300548f544004b2e227cc8be72ba471271c0afafe1"
+        }
+      },
+      "proofSha256": "8ad9c118e6ab0236d5493440685d981131102ef74857a35ea0cb7304a3b0df7a",
+      "pairMeanRgbDifference": 1.23671
+    },
+    {
+      "id": "halloween-potion-book",
+      "title": "Open Potion Book",
+      "alt": "An open antique book with decorative symbols supports a violet potion bottle and an autumn leaf.",
+      "description": "An open antique book with decorative symbols supports a violet potion bottle and an autumn leaf. Use this illustration for fantasy journal decoration.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-potion-book.png",
+      "topic": "halloween",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "7f8d51ed2625861af2c16d9023c0f082fbef8bd6c5dbaa60aec3448238a949b3",
+      "inputSignature": "0d152a0701b41e903dbeb8ad5dd0f971d680fcb1ef158c2d5512e8c41614665e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 942718,
+        "weightedCmykRmse": 1.531135
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1743821,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1282260,
+          "weightedCmykRmse": 0.838364
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1175650,
+          "weightedCmykRmse": 0.994452
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1063519,
+          "weightedCmykRmse": 1.222793
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 942718,
+          "weightedCmykRmse": 1.531135
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        115,
+        47,
+        1427,
+        987
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_013/exports/halloween-potion-book.pdf",
+          "bytes": 942718,
+          "sha256": "5287d7757511f993318eeefd5992ec4cc6fbca572299e441d625d972ca7c07c5"
+        },
+        "webp": {
+          "path": "work/production/wave_013/exports/halloween-potion-book.webp",
+          "bytes": 1379428,
+          "sha256": "4373cc8026d3b363509e1fb5643a9945456fd18f12c45b72b95bbc48c9cc6ebf"
+        },
+        "thumb": {
+          "path": "work/production/wave_013/exports/halloween-potion-book-thumb.webp",
+          "bytes": 44138,
+          "sha256": "286c1dafa3adfdbe28435ac69f1ca8771a946472af3daa5209f7839471499bd5"
+        }
+      },
+      "proofSha256": "5ca8463a8bb5e997c65d7d3b6d4143319c9f3d54f96b6f634e4646a3ede03942",
+      "pairMeanRgbDifference": 2.24108
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-vampire-puppet",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-cat-pumpkin-wagon",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-spooky-doorway",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T14:48:47.547Z",
+  "allAccountR2Bytes": 318392403
+}

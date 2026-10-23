@@ -1,0 +1,88 @@
+{
+  "wave": "wave_013",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-caramel-apple",
+      "title": "Caramel Apple with Candy Sprinkles",
+      "alt": "A red apple on a wooden stick is coated with caramel and colorful sprinkles, with a wrapped sweet beside it.",
+      "description": "A red apple on a wooden stick is coated with caramel and colorful sprinkles, with a wrapped sweet beside it. Use this illustration for seasonal recipe cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-caramel-apple.png"
+    },
+    {
+      "id": "halloween-webbed-witch-hat",
+      "title": "Witch Hat with a Small Spider",
+      "alt": "A tall curled black witch hat with a copper buckle has a small friendly spider hanging from its tip.",
+      "description": "A tall curled black witch hat with a copper buckle has a small friendly spider hanging from its tip. Use this illustration for costume matching activities.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-webbed-witch-hat.png"
+    },
+    {
+      "id": "halloween-dancing-mummy",
+      "title": "Dancing Friendly Mummy",
+      "alt": "A smiling mummy dances with one knee raised, both arms spread and loose bandage ends curling around it.",
+      "description": "A smiling mummy dances with one knee raised, both arms spread and loose bandage ends curling around it. Use this illustration for movement activity cards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-dancing-mummy.png"
+    },
+    {
+      "id": "halloween-witch-broom-flight",
+      "title": "Witch Flying on a Broom",
+      "alt": "A smiling silver-haired witch in a teal cloak and pointed hat flies on a straw broom.",
+      "description": "A smiling silver-haired witch in a teal cloak and pointed hat flies on a straw broom. Use this illustration for fantasy story prompts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-witch-broom-flight.png"
+    },
+    {
+      "id": "halloween-ghost-tea-party",
+      "title": "Two Ghosts Sharing Tea",
+      "alt": "Two friendly ghosts wearing little hats share tea across a purple-covered table with a pumpkin centerpiece.",
+      "description": "Two friendly ghosts wearing little hats share tea across a purple-covered table with a pumpkin centerpiece. Use this illustration for friendship storytelling cards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-ghost-tea-party.png"
+    },
+    {
+      "id": "halloween-raven-key",
+      "title": "Raven Holding an Antique Key",
+      "alt": "A black raven perches on a weathered branch while holding a brass key in its beak.",
+      "description": "A black raven perches on a weathered branch while holding a brass key in its beak. Use this illustration for mystery story prompts.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-raven-key.png"
+    },
+    {
+      "id": "halloween-potion-book",
+      "title": "Open Potion Book",
+      "alt": "An open antique book with decorative symbols supports a violet potion bottle and an autumn leaf.",
+      "description": "An open antique book with decorative symbols supports a violet potion bottle and an autumn leaf. Use this illustration for fantasy journal decoration.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_013/source/halloween-potion-book.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-vampire-puppet",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-cat-pumpkin-wagon",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-spooky-doorway",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}
