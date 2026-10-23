@@ -89,10 +89,7 @@ test('every artwork has its declared real, correctly typed, paired and hashed re
   const svgHashes = new Set();
   for (const art of arts) {
     for (const kind of representationKinds(art)) {
-      assert.ok(
-        /^\/(?:pilot|catalog\/(?:wave_\d{3}|volleyball))\//.test(art[kind]) &&
-          !art[kind].includes('..'),
-      );
+      assert.ok(/^\/(?:pilot|catalog\/[a-z0-9_-]+)\//.test(art[kind]) && !art[kind].includes('..'));
       assert.ok(art[kind].includes(art.id), `cross-wired ${kind}: ${art.id}`);
       assert.ok(!paths.has(art[kind]), `shared file: ${art[kind]}`);
       paths.add(art[kind]);

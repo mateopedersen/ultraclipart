@@ -8,7 +8,11 @@ def inspect_raster(art, files):
     assert art.get('svg') is None and 'svg' not in art['files']
     checks['hashes']=all(hashlib.sha256(p.read_bytes()).hexdigest()==art['files'][k]['sha256'] and p.stat().st_size==art['files'][k]['bytes'] for k,p in files.items())
     assert checks['hashes']
-    for kind,size in [('webp',(art['width'],art['height'])),('thumb',(440,440))]:
+    width,height=art['width'],art['height']
+    assert all(isinstance(n,int) and 0<n<=4096 for n in (width,height))
+    factor=min(1,440/max(width,height))
+    thumb_size=(max(1,round(width*factor)),max(1,round(height*factor)))
+    for kind,size in [('webp',(width,height)),('thumb',thumb_size)]:
         with Image.open(files[kind]) as image:
             image.load();assert image.format=='WEBP' and image.size==size and image.mode=='RGBA'
             alpha=image.getchannel('A');low,high=alpha.getextrema()
@@ -16,7 +20,14 @@ def inspect_raster(art, files):
             assert low==0 and (high==255 if kind=='webp' else high>=250)
             checks[kind]={'width':size[0],'height':size[1],'alpha':True,'alphaRange':[low,high],'bounds':alpha.getbbox()}
     reader=PdfReader(files['pdf'],strict=True);assert len(reader.pages)==1
-    page=reader.pages[0];assert abs(float(page.mediabox.width)-331.68)<.01 and abs(float(page.mediabox.height)-331.68)<.01
+    root=reader.trailer['/Root']
+    assert not any(key in root for key in ('/OpenAction','/AA','/AcroForm'))
+    assert '/JavaScript' not in root.get('/Names',{})
+    page=reader.pages[0]
+    pw,ph=map(float,(page.mediabox.width,page.mediabox.height))
+    assert pw>0 and ph>0 and abs(pw/ph-width/height)<.0001, 'PDF must match the image canvas aspect ratio'
+    assert list(page.mediabox.lower_left)==[0,0] and list(page.cropbox)==list(page.mediabox)
+    assert page.get('/Rotate',0)==0 and not page.get('/Annots') and not page.get('/AA')
     images=[]
     for ref in page['/Resources'].get('/XObject',{}).values():
         image=ref.get_object()

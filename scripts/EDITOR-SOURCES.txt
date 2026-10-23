@@ -1,0 +1,34 @@
+Catalog editing contract
+
+Every artwork in data/art.json receives an /edit/<id>/ route and Edit controls in
+cards, search results and artwork detail pages. There is no per-topic opt-in.
+
+src/lib/artwork-source.ts is the shared source contract used by both the build
+and publication pipeline. Unsupported types, missing source representations,
+invalid dimensions, absent hashes and files above editor limits fail the release.
+Default layered sources require SVG, WebP, PDF and thumbnail. Explicit raster
+sources require WebP, CMYK PDF and thumbnail, with no invented SVG or named layers.
+
+New raster collections may use any safe /catalog/<collection>/ source directory.
+Use the existing immutable, content-addressed R2 publication pipeline. Supply a
+transparent WebP and a paired single-page ICC-based CMYK PDF with the same canvas
+aspect ratio, no rotation, page annotations or active content. Source dimensions
+must be at most 4096 pixels per side; standard PDFs must be at most 1,000,000 bytes.
+Run scripts/raster-preflight.py via the catalog preflight before publication and
+inspect rendered PDF/WebP pairing. A matching aspect ratio alone does not prove
+that the pictures match. Keep review evidence tied to original file SHA-256 values.
+
+The image adapter verifies the fetched bytes and decoded size. Projects store a
+compact artwork ID and source hash. Saved projects cannot supply arbitrary URLs.
+Images are editable as image layers; their internal painted objects are not
+fabricated as vector layers. New text, shapes and strokes are independent layers.
+PDF composition reuses the original CMYK PDF image/profile/alpha data and embeds
+added vectors in stacking order. Duplicate image layers reuse the same PDF form.
+The exporter rejects an over-limit PDF instead of reducing original image quality.
+
+Validation: tests/editor-sources.mjs checks every generated editor route and source
+pair. tests/e2e/raster-editor.mjs exports every raster source in Chromium CI and
+representative sources in Firefox/WebKit. ALL_RASTER=1 also runs full coverage
+locally. scripts/check-raster-editor-exports.py independently verifies source
+CMYK/ICC/alpha preservation and renders PDFs against corresponding WebP exports.
+Existing vector editor and creation-studio interaction suites remain required.

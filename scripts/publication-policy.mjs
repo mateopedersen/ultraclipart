@@ -1,7 +1,11 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, realpathSync } from 'node:fs';
 import { basename, join, posix } from 'node:path';
-import { sourceTypeOf, representationKinds } from './asset-representations.mjs';
+import {
+  sourceTypeOf,
+  representationKinds,
+  validateEditorSource,
+} from './asset-representations.mjs';
 
 export const ASSET_ORIGIN = 'https://assets.ultraclipart.com';
 export const SITE_ORIGIN = 'https://ultraclipart.com';
@@ -132,7 +136,7 @@ export function catalogFiles(catalog) {
     if (!/^[a-z0-9][a-z0-9-]+$/.test(item.id ?? '') || ids.has(item.id))
       throw new Error('Invalid or duplicate catalog artwork ID');
     ids.add(item.id);
-    const sourceType = sourceTypeOf(item);
+    const sourceType = validateEditorSource(item);
     if (sourceType === 'raster' && (item.svg != null || item.files?.svg != null))
       throw new Error('Raster artwork must not advertise a fabricated SVG source');
     return representationKinds(item).map((kind) => {

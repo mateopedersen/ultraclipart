@@ -14,7 +14,7 @@ const related = availableTopics
   .slice(0, 8);
 const title = topic.keyword.replace('clipart', 'Clipart');
 const isVolleyball = topic.slug === 'volleyball';
-const hasEditable = items.some((item) => item.editable);
+const hasEditable = items.some((item) => item.layered);
 const description = isVolleyball
   ? 'Download 50 volleyball illustrations: players, beach scenes, balls, team celebrations and black-and-white designs. Transparent WebP and CMYK PDF files.'
   : `Explore ${items.length} ${topic.keyword.toLowerCase()} illustrations for personal and educational projects. Download WebP and PDF files${hasEditable ? ' or customize layered artwork' : ''}.`;

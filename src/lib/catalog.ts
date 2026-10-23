@@ -1,13 +1,15 @@
 import source from '../../data/topics.json';
 import illustrations from '../../data/art.json';
 import extraTopics from '../../data/extra-topics.json';
+import { validateEditorSource } from './artwork-source';
 export const topics = [...source.topics, ...extraTopics];
 type AssetKind = 'svg' | 'webp' | 'pdf' | 'thumb';
 type PublishedAssets = Record<string, Record<AssetKind, string>>;
 const publishedAssets = import.meta.env.PUBLIC_ASSET_URLS as PublishedAssets | null;
 export const art = illustrations.map((item) => ({
   ...item,
-  editable: (item as { sourceType?: string }).sourceType !== 'raster',
+  editable: true,
+  layered: validateEditorSource(item) === 'layered',
   ...Object.fromEntries(
     (['svg', 'webp', 'pdf', 'thumb'] as const).map((kind) => {
       if (kind === 'svg' && (item as { sourceType?: string }).sourceType === 'raster')

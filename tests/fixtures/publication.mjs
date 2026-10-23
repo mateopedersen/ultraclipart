@@ -9,7 +9,7 @@ import { JURISDICTIONS, SCOPE_VERSION, endpointFor } from '../../scripts/r2/inve
 export const digest = (body) => createHash('sha256').update(body).digest('hex');
 export const date = '2026-10-23T00:00:00Z';
 export function artwork(id, bodies) {
-  const item = { id, files: {} };
+  const item = { id, width: 800, height: 800, files: {} };
   for (const kind of ASSET_KINDS) {
     const name = `${id}${kind === 'thumb' ? '-thumb' : ''}.${kind === 'thumb' ? 'webp' : kind}`,
       path = `/pilot/${name}`,

@@ -25,6 +25,7 @@ import {
   validateProjectMarkup,
 } from './svg';
 import { paperLayout, exportPdf } from './pdf';
+import { openRaster, type RasterAsset } from './raster';
 import {
   blankDocument,
   shapeMarkup,
@@ -45,6 +46,10 @@ function init(root: HTMLElement) {
     canvas = q('.uc-canvas'),
     dialog = q<HTMLDialogElement>('[data-export-dialog]');
   const creator = root.dataset.creator === 'true';
+  const compositionTools = root.dataset.composition === 'true';
+  const rasterSource = root.dataset.rasterSource
+    ? (JSON.parse(root.dataset.rasterSource) as RasterAsset)
+    : undefined;
   const id = root.dataset.artId!,
     storageKey = `ultraclipart:editor:v1:${id}`;
   let original: EditorDocument,
@@ -283,7 +288,7 @@ function init(root: HTMLElement) {
     q<HTMLOutputElement>('[data-zoom]').value = `${Math.round(zoom * 100)}%`;
     q<HTMLButtonElement>('[data-action=undo]').disabled = !history.canUndo;
     q<HTMLButtonElement>('[data-action=redo]').disabled = !history.canRedo;
-    if (creator) {
+    if (compositionTools) {
       q<HTMLInputElement>('[data-canvas-width]').value = String(doc().width);
       q<HTMLInputElement>('[data-canvas-height]').value = String(doc().height);
       q<HTMLButtonElement>('[data-action=paint-selection]').disabled = !selected.some((id) =>
@@ -321,6 +326,15 @@ function init(root: HTMLElement) {
         return o;
       }),
     );
+    q('[data-raster-color-hint]').hidden = l?.kind !== 'raster';
+    for (const control of qa<HTMLInputElement | HTMLButtonElement>(
+      '[data-color],[data-hex],[data-matching],[data-action=apply-color],[data-stroke]',
+    ))
+      control.disabled = !l || l.locked || l.kind === 'raster';
+    for (const control of qa<HTMLButtonElement>('[data-preset],[data-action=contrast]'))
+      control.disabled = !doc().layers.some(
+        (layer) => layer.visible && !layer.locked && layer.kind !== 'raster',
+      );
     const colors = l ? layerColors(l) : [];
     if (!matchedColor || !colors.includes(matchedColor)) matchedColor = colors[0];
     q('[data-colors]').replaceChildren(
@@ -449,7 +463,7 @@ function init(root: HTMLElement) {
     };
   }
   function addShape(kind: ShapeKind) {
-    if (!creator) return;
+    if (!compositionTools) return;
     setDrawing(false);
     const width = Number(q<HTMLInputElement>('[data-shape-width]').value),
       height = Number(q<HTMLInputElement>('[data-shape-height]').value);
@@ -475,7 +489,7 @@ function init(root: HTMLElement) {
   }
   function replaceCanvas(next: EditorDocument, message: string) {
     cancelInteraction();
-    if (creator) setDrawing(false);
+    if (compositionTools) setDrawing(false);
     printPreview = false;
     q<HTMLInputElement>('[data-print-preview]').checked = false;
     zoom = 1;
@@ -555,7 +569,7 @@ function init(root: HTMLElement) {
           }),
       mode === 'original'
         ? 'Original colors restored. Your positions and background are unchanged.'
-        : `${mode[0].toUpperCase() + mode.slice(1)} style applied to all visible, unlocked layers.`,
+        : `${mode[0].toUpperCase() + mode.slice(1)} style applied to visible, unlocked text and shape layers.`,
     );
   }
   function center() {
@@ -623,7 +637,7 @@ function init(root: HTMLElement) {
   }).observe(stage);
   const actions: Record<string, () => void | Promise<void>> = {
     pan: () => {
-      if (creator && drawing) setDrawing(false);
+      if (compositionTools && drawing) setDrawing(false);
       panMode = !panMode;
       q('[data-action=pan]').setAttribute('aria-pressed', String(panMode));
       stage.style.cursor = panMode ? 'grab' : '';
@@ -830,7 +844,7 @@ function init(root: HTMLElement) {
       }
     },
     blank: () => {
-      if (!creator) return;
+      if (!compositionTools) return;
       templateRequest?.abort();
       replaceCanvas(
         blankDocument(id),
@@ -1060,7 +1074,7 @@ function init(root: HTMLElement) {
   };
   stage.addEventListener('pointerdown', (event) => {
     if (!history || event.button !== 0) return;
-    if (drawing && creator) {
+    if (drawing && compositionTools) {
       if (stroke) return;
       try {
         if (doc().layers.length >= 500)
@@ -1242,7 +1256,7 @@ function init(root: HTMLElement) {
     const target = event.target as Element;
     if (event.key === 'Escape' && (drawing || drag || stroke)) {
       event.preventDefault();
-      if (creator) setDrawing(false);
+      if (compositionTools) setDrawing(false);
       else {
         cancelInteraction();
         render();
@@ -1315,6 +1329,7 @@ function init(root: HTMLElement) {
   void (async () => {
     try {
       if (creator) original = blankDocument(id);
+      else if (rasterSource) original = await openRaster(rasterSource);
       else {
         // A prior cross-origin <img> can leave a no-CORS cache entry for this SVG.
         // Revalidate over the network so editable bytes receive the CORS headers.
@@ -1354,7 +1369,9 @@ function init(root: HTMLElement) {
           ? 'Your last local editing session was restored. Changes stay on this device.'
           : creator
             ? 'Your blank canvas is ready. Add a shape, draw, or choose a starter. Changes are saved on this device.'
-            : `${original.layers.length} editable layers loaded. Changes are saved locally on this device.`,
+            : rasterSource
+              ? 'Your image layer is ready. Add text and shapes, or select the image to move, resize and crop. Changes are saved on this device.'
+              : `${original.layers.length} editable layers loaded. Changes are saved locally on this device.`,
       );
     } catch (error) {
       status(error instanceof Error ? error.message : 'The artwork could not be opened.', true);

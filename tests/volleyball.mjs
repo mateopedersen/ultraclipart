@@ -26,7 +26,7 @@ test('50 supplied pairs retain their inspected original bytes and CMYK profile e
   }
 });
 test('volleyball searches include every design and distinguish monochrome, outlines and watercolor', async () => {
-  const data = art.map((a) => ({ ...a, editable: a.sourceType !== 'raster' }));
+  const data = art.map((a) => ({ ...a, editable: true }));
   const build = buildSearchIndex(
     data,
     [{ slug: 'volleyball', keyword: 'Volleyball clipart' }],
@@ -51,14 +51,14 @@ test('volleyball searches include every design and distinguish monochrome, outli
       loaded.items.map((a) => a.id),
       result.items.map((a) => a.id),
     );
-    assert.ok(loaded.items.every((a) => a.editable === false));
+    assert.ok(loaded.items.every((a) => a.editable !== false));
   }
   assert.equal(searchArtwork(data, { ...defaults, q: 'volleyball' }).total, 50);
   assert.equal(searchArtwork(data, { ...defaults, q: 'black and white volleyball' }).total, 10);
   assert.equal(searchArtwork(data, { ...defaults, q: 'volleyball outline' }).total, 3);
 });
 test(
-  'volleyball pages expose real downloads and image SEO without invented editor routes',
+  'volleyball pages expose real downloads and image SEO with image editing and accurate image SEO',
   { skip: !existsSync(new URL('../dist/clipart/volleyball/index.html', import.meta.url)) },
   () => {
     const topic = read('dist/clipart/volleyball/index.html');
@@ -77,7 +77,7 @@ test(
       assert.match(html, /ICC-based CMYK/);
       assert.ok(images.includes(`/art/${a.id}/`));
       assert.doesNotMatch(html, /named layers|Editable layered vector/);
-      assert.equal(existsSync(new URL(`../dist/edit/${a.id}/index.html`, import.meta.url)), false);
+      assert.equal(existsSync(new URL(`../dist/edit/${a.id}/index.html`, import.meta.url)), true);
     }
   },
 );

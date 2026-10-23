@@ -8,6 +8,7 @@ import {
   type StylePreset,
 } from './model';
 import { parsePath } from './pdf-math';
+import { rasterPreview, requireRaster } from './raster';
 export const NS = 'http://www.w3.org/2000/svg';
 const tags = new Set([
   'svg',
@@ -323,6 +324,10 @@ export function fromCreationSvg(source: string, artId: string): EditorDocument {
 export function validateProjectMarkup(doc: EditorDocument): void {
   let nodes = 0;
   for (const layer of doc.layers) {
+    if (layer.kind === 'raster') {
+      requireRaster(layer);
+      continue;
+    }
     if (layer.kind !== 'vector') continue;
     const svg = sanitizeSvg(`<svg xmlns="${NS}">${layer.markup}</svg>`);
     nodes += svg.querySelectorAll('*').length;
@@ -339,7 +344,15 @@ export function nodeForLayer(layer: Layer): SVGGElement {
   g.setAttribute('data-layer', layer.id);
   g.setAttribute('transform', transformString(layer));
   if (layer.kind === 'vector') g.innerHTML = layer.markup;
-  else {
+  else if (layer.kind === 'raster') {
+    const image = document.createElementNS(NS, 'image');
+    image.setAttribute('href', rasterPreview(layer));
+    image.setAttribute('width', String(layer.width));
+    image.setAttribute('height', String(layer.height));
+    image.setAttribute('preserveAspectRatio', 'none');
+    image.setAttribute('opacity', String(layer.opacity));
+    g.append(image);
+  } else {
     const text = document.createElementNS(NS, 'text');
     text.setAttribute('data-caption', layer.text);
     for (const [index, line] of layer.text.split('\n').entries()) {
@@ -405,6 +418,7 @@ export function colorHex(color: string): string | null {
   );
 }
 export function layerColors(layer: Layer): string[] {
+  if (layer.kind === 'raster') return [];
   if (layer.kind === 'text') return [layer.color];
   const svg = sanitizeSvg(`<svg xmlns="${NS}">${layer.markup}</svg>`);
   return [
@@ -417,6 +431,7 @@ export function layerColors(layer: Layer): string[] {
   ];
 }
 export function recolor(layer: Layer, color: string, matching?: string, strokeOnly = false): void {
+  if (layer.kind === 'raster') return;
   if (!isColor(color)) throw new Error('Enter a six-digit hex color, such as #2865D2.');
   if (layer.kind === 'text') {
     layer.color = color;
@@ -440,6 +455,7 @@ export function strokeWidth(layer: Layer, width: number): void {
   layer.markup = svg.innerHTML;
 }
 export function preset(layer: Layer, mode: StylePreset, contrast = 1): void {
+  if (layer.kind === 'raster') return;
   if (mode === 'original') return;
   const map = (hex: string) => {
     const rgb = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16));

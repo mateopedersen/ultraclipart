@@ -44,6 +44,48 @@ const doc = () => ({
     },
   ],
 });
+test('raster projects bind a compact image reference to the current artwork and reject foreign or invalid sources', () => {
+  const value = doc();
+  value.layers = [
+    {
+      id: 'original-image',
+      label: 'Original image',
+      kind: 'raster',
+      assetId: 'test',
+      sourceSha256: 'a'.repeat(64),
+      width: 1382,
+      height: 1382,
+      visible: true,
+      locked: false,
+      opacity: 1,
+      ...identity(),
+    },
+  ];
+  assert.ok(validateDocument(value, 'test'));
+  assert.ok(JSON.stringify(value).length < 1000);
+  for (const patch of [
+    { assetId: 'foreign-artwork' },
+    { sourceSha256: 'https://attacker.invalid/image.webp' },
+    { width: Infinity },
+    { height: 0 },
+    { width: 4097 },
+  ]) {
+    assert.equal(
+      validateDocument({ ...value, layers: [{ ...value.layers[0], ...patch }] }, 'test'),
+      false,
+    );
+  }
+  const h = new History(value);
+  h.commit(
+    changeLayers(h.current, ['original-image'], (layer) => {
+      layer.x = 37;
+      layer.angle = 14;
+      layer.opacity = 0.6;
+    }),
+  );
+  assert.equal(h.current.layers[0].sourceSha256, value.layers[0].sourceSha256);
+  assert.deepEqual(h.undo(), value);
+});
 test('mixed edit history restores exact documents; a new edit invalidates redo', () => {
   const original = doc(),
     h = new History(original);

@@ -77,11 +77,11 @@ try {
   for (const a of catalog) {
     const card = page.locator(`.art-card[data-id="${a.id}"]`);
     await expect(card.locator('img')).toHaveAttribute('alt', a.alt);
-    await expect(card.getByRole('link', { name: 'View', exact: true })).toHaveAttribute(
+    await expect(card.getByRole('link', { name: 'Edit', exact: true })).toHaveAttribute(
       'href',
-      `/art/${a.id}/`,
+      `/edit/${a.id}/`,
     );
-    assert.equal(await card.locator('a[href^="/edit/"]').count(), 0);
+    assert.equal(await card.locator('a[href^="/edit/"]').count(), 1);
     for (const kind of ['webp', 'pdf'])
       assert.equal(
         await card.locator(`a[download="${a.id}.${kind}"]`).evaluate((a) => a.href),
@@ -91,7 +91,7 @@ try {
   }
   await page.goto(base + '/search/?q=volleyball');
   await expect(page.locator('#result-count')).toHaveText('50 illustrations for “volleyball”');
-  await expect(page.locator('#search-results .card-actions').first()).toContainText('View');
+  await expect(page.locator('#search-results .card-actions').first()).toContainText('Edit');
   await page.selectOption('#filter-style', 'watercolor');
   await expect(page.locator('#search-results .art-card')).toHaveCount(3);
   await page.selectOption('#filter-style', 'black & white');

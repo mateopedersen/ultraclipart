@@ -69,6 +69,13 @@ async function colorResources() {
   return colorPromise;
 }
 export async function exportPdf(doc: EditorDocument): Promise<Blob> {
+  if (doc.layers.some((layer) => layer.kind === 'raster')) {
+    const { exportRasterPdf } = await import('./raster-pdf');
+    return exportRasterPdf(doc, exportVectorPdf);
+  }
+  return exportVectorPdf(doc);
+}
+async function exportVectorPdf(doc: EditorDocument): Promise<Blob> {
   const [{ jsPDF: PDF }, { lut }] = await Promise.all([import('jspdf'), colorResources()]);
   const p = paperLayout(doc),
     pdf = new PDF({

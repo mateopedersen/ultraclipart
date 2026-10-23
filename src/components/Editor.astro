@@ -3,15 +3,39 @@ import Icon from './Icon.astro';
 import { shapeMarkup, shapeNames } from '../editor/creation';
 interface Props {
   creator?: boolean;
-  art: { id: string; title: string; svg: string; [key: string]: unknown };
+  art: {
+    id: string;
+    title: string;
+    svg?: string | null;
+    sourceType?: string;
+    width?: number;
+    height?: number;
+    webp?: string;
+    pdf?: string;
+    files?: { webp: { bytes: number; sha256: string }; pdf: { bytes: number; sha256: string } };
+    [key: string]: unknown;
+  };
 }
 const { art, creator = false } = Astro.props;
+const raster = art.sourceType === 'raster';
+const compositionTools = creator || raster;
+const rasterSource = raster
+  ? {
+      id: art.id,
+      width: art.width,
+      height: art.height,
+      webp: { url: art.webp, ...art.files!.webp },
+      pdf: { url: art.pdf, ...art.files!.pdf },
+    }
+  : undefined;
 ---
 
 <section
   class="uc-editor"
   data-art-id={art.id}
-  data-source={art.svg}
+  data-source={art.svg ?? undefined}
+  data-raster-source={rasterSource ? JSON.stringify(rasterSource) : undefined}
+  data-composition={compositionTools ? 'true' : undefined}
   data-creator={creator ? 'true' : undefined}
   aria-label={creator ? 'Clipart creation studio' : 'Clipart editor'}
   aria-busy="true"
@@ -47,12 +71,14 @@ const { art, creator = false } = Astro.props;
   <div class="uc-notice" role="status" aria-live="polite" data-status>
     {creator
       ? 'Your blank canvas is ready. Add a shape, draw, or choose a starter. Changes are saved on this device.'
-      : 'Loading editable vector artwork…'}
+      : raster
+        ? 'Loading your image workspace…'
+        : 'Loading editable vector artwork…'}
   </div>
   <div class="uc-workspace" inert>
     <nav class="uc-tools" aria-label="Editing tools">
       {[
-        ...(creator
+        ...(compositionTools
           ? [
               ['create', 'image', 'Create'],
               ['canvas', 'crop', 'Canvas'],
@@ -117,13 +143,14 @@ const { art, creator = false } = Astro.props;
       <p class="uc-selection" data-selection>
         Select a layer to begin
       </p>
-      {creator && (
+      {compositionTools && (
         <>
           <div
             id="uc-pane-create"
             role="region"
             aria-labelledby="uc-tool-create"
             data-pane="create"
+            hidden={!creator}
           >
             <p class="uc-hint">
               Choose a shape to add an editable layer. Adjust its size and colors below before
@@ -302,6 +329,10 @@ const { art, creator = false } = Astro.props;
         <label>
           Selected layer<select data-layer-picker aria-label="Selected layer"></select>
         </label>
+        <p data-raster-color-hint class="uc-hint" hidden>
+          Select an added text or shape layer to change its colors. The image layer can be moved,
+          resized, cropped and faded.
+        </p>
         <div data-colors class="uc-swatches" aria-label="Layer colors"></div>
         <label>
           Color
@@ -332,8 +363,8 @@ const { art, creator = false } = Astro.props;
           <button data-preset="bright">Bright</button>
         </div>
         <p class="uc-hint">
-          Presets change every unlocked, visible layer. Preserve the traditional colors of cultural
-          symbols when appropriate.
+          Presets change unlocked, visible text and shape layers. Preserve the traditional colors of
+          cultural symbols when appropriate.
         </p>
       </div>
       <div
@@ -419,8 +450,11 @@ const { art, creator = false } = Astro.props;
           <input type="checkbox" data-print-preview /> Show paper preview
         </label>
         <p class="uc-hint">
-          Vector artwork stays sharp at any size. CMYK colors may differ slightly from the screen;
-          request a proof for color-critical printing.
+          {raster
+            ? `The original image is ${art.width?.toLocaleString('en-US')} × ${art.height?.toLocaleString('en-US')} pixels. Its CMYK image and profile are preserved in PDF exports.`
+            : 'Vector artwork stays sharp at any size.'}{' '}
+          CMYK colors may differ slightly from the screen; request a proof for color-critical
+          printing.
         </p>
       </div>
       <div id="uc-pane-crop" role="region" aria-labelledby="uc-tool-crop" data-pane="crop" hidden>
@@ -550,10 +584,12 @@ const { art, creator = false } = Astro.props;
             Image width
             <select data-size>
               <option value="1024">1024 pixels</option>
-              <option value="2048" selected>
+              <option value="2048" selected={!raster}>
                 2048 pixels
               </option>
-              <option value="original">Original canvas width</option>
+              <option value="original" selected={raster}>
+                Original canvas width
+              </option>
             </select>
           </label>
           <label>
@@ -562,9 +598,11 @@ const { art, creator = false } = Astro.props;
           </label>
         </div>
         <p data-pdf-options hidden>
-          Uses your Print setup: paper, orientation, margins and placement. Colors are converted
-          through the GRACoL print profile. The PDF references the GRACoL output condition; the full
-          ICC profile is not embedded. A maximum of 1,000,000 bytes is enforced after export.
+          Uses your Print setup: paper, orientation, margins and placement.{' '}
+          {raster
+            ? 'The source image keeps its embedded CMYK profile. Added text and shapes use the GRACoL output condition.'
+            : 'Colors are converted through the GRACoL print profile. The PDF references the GRACoL output condition; the full ICC profile is not embedded.'}{' '}
+          A maximum of 1,000,000 bytes is enforced after export.
         </p>
         <label>
           Filename
@@ -1255,24 +1293,24 @@ const { art, creator = false } = Astro.props;
     padding: 4px 8px;
     border-radius: 5px;
   }
-  .uc-editor[data-creator] .uc-properties {
+  .uc-editor[data-composition] .uc-properties {
     max-height: 1080px;
   }
-  .uc-editor[data-creator] .uc-properties [data-pane='create'] > button {
+  .uc-editor[data-composition] .uc-properties [data-pane='create'] > button {
     width: 100%;
     margin-top: 8px;
   }
-  .uc-editor[data-creator] .uc-properties [data-pane='canvas'] > button {
+  .uc-editor[data-composition] .uc-properties [data-pane='canvas'] > button {
     margin: 5px 0;
   }
   .uc-editor[data-drawing='true'] .uc-stage {
     cursor: crosshair;
   }
   @media (max-width: 800px) {
-    .uc-editor[data-creator] .uc-properties {
+    .uc-editor[data-composition] .uc-properties {
       max-height: none;
     }
-    .uc-editor[data-creator] .uc-tools {
+    .uc-editor[data-composition] .uc-tools {
       grid-template-columns: repeat(5, minmax(0, 1fr));
     }
     .uc-shape-grid {
@@ -1287,7 +1325,7 @@ const { art, creator = false } = Astro.props;
     }
   }
   @media (max-width: 400px) {
-    .uc-editor[data-creator] .uc-tools {
+    .uc-editor[data-composition] .uc-tools {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .uc-shape-grid {
@@ -1297,11 +1335,11 @@ const { art, creator = false } = Astro.props;
 </style>
 
 <style is:global>
-  .uc-editor[data-creator] .uc-notice {
+  .uc-editor[data-composition] .uc-notice {
     min-height: 56px;
   }
   @media (max-width: 800px) {
-    .uc-editor[data-creator] .uc-notice {
+    .uc-editor[data-composition] .uc-notice {
       min-height: 74px;
     }
   }

@@ -26,7 +26,14 @@ export interface TextLayer extends LayerBase {
   bold: boolean;
   align: 'start' | 'middle' | 'end';
 }
-export type Layer = VectorLayer | TextLayer;
+export interface RasterLayer extends LayerBase {
+  kind: 'raster';
+  assetId: string;
+  sourceSha256: string;
+  width: number;
+  height: number;
+}
+export type Layer = VectorLayer | TextLayer | RasterLayer;
 export interface EditorDocument {
   version: 1;
   artId: string;
@@ -140,15 +147,24 @@ export function validateDocument(value: unknown, artId: string): value is Editor
         l.scaleY <= 100 &&
         (l.kind === 'vector'
           ? typeof l.markup === 'string' && l.markup.length < 1000000
-          : l.kind === 'text' &&
-            typeof l.text === 'string' &&
-            l.text.length <= 500 &&
-            Number.isFinite(l.size) &&
-            l.size > 0 &&
-            l.size <= 500 &&
-            isColor(l.color) &&
-            typeof l.bold === 'boolean' &&
-            ['start', 'middle', 'end'].includes(l.align)),
+          : l.kind === 'raster'
+            ? l.assetId === doc.artId &&
+              /^[a-f0-9]{64}$/.test(l.sourceSha256) &&
+              Number.isFinite(l.width) &&
+              l.width > 0 &&
+              l.width <= 4096 &&
+              Number.isFinite(l.height) &&
+              l.height > 0 &&
+              l.height <= 4096
+            : l.kind === 'text' &&
+              typeof l.text === 'string' &&
+              l.text.length <= 500 &&
+              Number.isFinite(l.size) &&
+              l.size > 0 &&
+              l.size <= 500 &&
+              isColor(l.color) &&
+              typeof l.bold === 'boolean' &&
+              ['start', 'middle', 'end'].includes(l.align)),
     ) &&
     !!doc.print &&
     ['letter', 'a4'].includes(doc.print.paper) &&
