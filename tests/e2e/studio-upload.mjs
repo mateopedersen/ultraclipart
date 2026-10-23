@@ -98,13 +98,11 @@ try {
     ctx.fillRect(20, 20, 60, 40);
     return c.toDataURL('image/png').split(',')[1];
   });
-  await page
-    .locator('[data-local-clipart]')
-    .setInputFiles({
-      name: 'local-shape.png',
-      mimeType: 'image/png',
-      buffer: Buffer.from(png, 'base64'),
-    });
+  await page.locator('[data-local-clipart]').setInputFiles({
+    name: 'local-shape.png',
+    mimeType: 'image/png',
+    buffer: Buffer.from(png, 'base64'),
+  });
   await expect(page.locator('[data-status]')).toContainText('Your clipart is ready');
   await expect(page.locator('.uc-canvas [data-layer] image')).toHaveCount(2);
   assert.deepEqual(errors, []);
