@@ -60,6 +60,8 @@ jobs:
             exit 1
           fi
           for engine in ${{ matrix.engine }}; do
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
@@ -75,8 +77,6 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" ALL_RASTER="$RASTER_COVERAGE" node tests/e2e/raster-editor.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/editor node scripts/test-editor-browser.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
-            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
-            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
           done
           if [ '${{ matrix.engine }}' = chromium ]; then
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs

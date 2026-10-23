@@ -73,6 +73,10 @@ const draw = async (cancel = false) => {
 try {
   await page.goto(`${base}/create/`);
   await expect(page.locator('[data-status]')).toContainText('blank canvas is ready');
+  await expect(page.locator('button[data-work-mode=advanced]')).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  );
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('[data-empty-canvas]')).toBeVisible();
   await expect(page.locator('.uc-editor [inert]')).toHaveCount(0);

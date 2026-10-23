@@ -1504,6 +1504,7 @@ function init(root: HTMLElement) {
       render();
       if (creator) {
         root.dataset.workMode = 'advanced';
+        smart.render();
         panel('create');
       } else if (rasterSource) panel('region');
       root.removeAttribute('aria-busy');
