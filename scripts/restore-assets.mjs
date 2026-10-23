@@ -10,8 +10,66 @@ import {
 import { resolve, join, dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { createHash } from 'node:crypto';
+import { setTimeout as delay } from 'node:timers/promises';
 import { validateManifest, catalogFiles, assetIdentity } from './publication-policy.mjs';
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
+
+class TransientDownloadError extends Error {}
+
+/** Retry transport failures only; content-integrity failures must stop the build. */
+export async function downloadAsset(file, fetcher = fetch, pause = delay) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const response = await fetcher(file.url, {
+        redirect: 'error',
+        signal: AbortSignal.timeout(30000),
+      });
+      if ([408, 429].includes(response.status) || response.status >= 500) {
+        await response.body?.cancel();
+        throw new TransientDownloadError(`HTTP ${response.status}`);
+      }
+      if (
+        !response.ok ||
+        response.headers.get('content-type')?.split(';')[0] !== file.contentType ||
+        !response.body
+      ) {
+        await response.body?.cancel();
+        throw new Error(`Asset download failed: ${file.assetId}/${file.kind}`);
+      }
+      const chunks = [];
+      let size = 0;
+      const reader = response.body.getReader();
+      try {
+        while (true) {
+          const { value, done } = await reader.read();
+          if (done) break;
+          size += value.byteLength;
+          if (size > file.bytes) {
+            await reader.cancel();
+            throw new Error('Asset exceeds verified byte count');
+          }
+          chunks.push(Buffer.from(value));
+        }
+      } finally {
+        reader.releaseLock();
+      }
+      const bytes = Buffer.concat(chunks, size);
+      if (size !== file.bytes || sha(bytes) !== file.sha256)
+        throw new Error('Asset checksum mismatch');
+      return bytes;
+    } catch (error) {
+      const transient =
+        error instanceof TransientDownloadError ||
+        error instanceof TypeError ||
+        ['TimeoutError', 'AbortError'].includes(error?.name);
+      if (!transient || attempt === 2)
+        throw new Error(`Cannot restore ${file.assetId}/${file.kind}: ${error.message}`, {
+          cause: error,
+        });
+      await pause(250 * 4 ** attempt);
+    }
+  }
+}
 
 /** Restore only hash-pinned catalog bytes from the approved public CDN.
  * Art binaries stay out of Git. A clean checkout needs no account credentials. */
@@ -49,36 +107,7 @@ export async function restoreAssets({ root, catalog, manifest, fetcher = fetch }
         }
         throw new Error(`Local asset changed: ${file.path}; preserve edits before restoring`);
       }
-      const response = await fetcher(published.url, {
-        redirect: 'error',
-        signal: AbortSignal.timeout(30000),
-      });
-      if (
-        !response.ok ||
-        response.headers.get('content-type')?.split(';')[0] !== published.contentType ||
-        !response.body
-      )
-        throw new Error(`Asset download failed: ${file.assetId}/${file.kind}`);
-      const chunks = [];
-      let size = 0;
-      const reader = response.body.getReader();
-      try {
-        while (true) {
-          const { value, done } = await reader.read();
-          if (done) break;
-          size += value.byteLength;
-          if (size > file.bytes) {
-            await reader.cancel();
-            throw new Error('Asset exceeds verified byte count');
-          }
-          chunks.push(Buffer.from(value));
-        }
-      } finally {
-        reader.releaseLock();
-      }
-      const bytes = Buffer.concat(chunks, size);
-      if (size !== file.bytes || sha(bytes) !== file.sha256)
-        throw new Error('Asset checksum mismatch');
+      const bytes = await downloadAsset(published, fetcher);
       const temp = `${target}.${process.pid}.tmp`;
       try {
         writeFileSync(temp, bytes, { flag: 'wx' });

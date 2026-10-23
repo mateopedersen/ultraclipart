@@ -12,7 +12,7 @@ import {
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { artwork, manifestFor } from './fixtures/publication.mjs';
-import { restoreAssets } from '../scripts/restore-assets.mjs';
+import { restoreAssets, downloadAsset } from '../scripts/restore-assets.mjs';
 function fixture() {
   const root = mkdtempSync(join(tmpdir(), 'uc-restore-')),
     bodies = new Map();
@@ -21,6 +21,91 @@ function fixture() {
     manifest = manifestFor(catalog);
   return { root, catalog, manifest, bodies };
 }
+test('transient downloads restart with empty buffers and preserve the verified bytes', async () => {
+  const f = fixture(),
+    file = f.manifest.files[0],
+    body = f.bodies.get(file.path),
+    pauses = [],
+    signals = [];
+  let requests = 0;
+  try {
+    const bytes = await downloadAsset(
+      file,
+      async (_url, options) => {
+        signals.push(options.signal);
+        assert.equal(options.redirect, 'error');
+        requests++;
+        if (requests === 1) return new Response('unavailable', { status: 503 });
+        if (requests === 2) {
+          let pulled = false;
+          return new Response(
+            new ReadableStream({
+              pull(controller) {
+                if (pulled) controller.error(new DOMException('Timed out', 'TimeoutError'));
+                else {
+                  pulled = true;
+                  controller.enqueue(body.subarray(0, 3));
+                }
+              },
+            }),
+            { headers: { 'Content-Type': file.contentType } },
+          );
+        }
+        return new Response(body, { headers: { 'Content-Type': file.contentType } });
+      },
+      async (ms) => pauses.push(ms),
+    );
+    assert.deepEqual(bytes, body);
+    assert.equal(requests, 3);
+    assert.equal(new Set(signals).size, 3);
+    assert.deepEqual(pauses, [250, 1000]);
+  } finally {
+    rmSync(f.root, { recursive: true, force: true });
+  }
+});
+test('persistent network failures stop after three attempts; invalid content never retries', async () => {
+  const f = fixture(),
+    file = f.manifest.files[0];
+  try {
+    let requests = 0;
+    await assert.rejects(
+      downloadAsset(
+        file,
+        async () => {
+          requests++;
+          throw new TypeError('fetch failed');
+        },
+        async () => {},
+      ),
+      /Cannot restore.*fetch failed/,
+    );
+    assert.equal(requests, 3);
+    for (const response of [
+      () => new Response('missing', { status: 404 }),
+      () => new Response('incorrect', { headers: { 'Content-Type': file.contentType } }),
+      () => new Response('incorrect', { headers: { 'Content-Type': 'text/html' } }),
+      () =>
+        new Response(Buffer.alloc(file.bytes + 1), {
+          headers: { 'Content-Type': file.contentType },
+        }),
+    ]) {
+      requests = 0;
+      await assert.rejects(
+        downloadAsset(
+          file,
+          async () => {
+            requests++;
+            return response();
+          },
+          async () => assert.fail('Integrity failures must not retry'),
+        ),
+      );
+      assert.equal(requests, 1);
+    }
+  } finally {
+    rmSync(f.root, { recursive: true, force: true });
+  }
+});
 test('clean checkout restores exact CDN bytes, then reuses verified local files without network', async () => {
   const f = fixture();
   let requests = 0;
