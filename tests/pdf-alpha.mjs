@@ -48,3 +48,34 @@ test('near-cap source gains headroom without touching its CMYK stream; compactio
   await compactSoftMasks(doc);
   assert.equal(size(), after);
 });
+
+test('near-cap ICC source benefits from PNG filter zero with byte-identical alpha and CMYK', async () => {
+  const doc = await PDFDocument.load(
+    readFileSync(
+      new URL('../public/catalog/koala/koala-looking-up-low-poly-clipart.pdf', import.meta.url),
+    ),
+  );
+  const image = doc.context
+    .enumerateIndirectObjects()
+    .map(([, object]) => object)
+    .find((object) => object instanceof PDFRawStream && object.dict.has(PDFName.of('SMask')));
+  const beforeMask = image.dict.lookup(PDFName.of('SMask'));
+  const width = Number(String(beforeMask.dict.get(PDFName.of('Width'))));
+  const height = Number(String(beforeMask.dict.get(PDFName.of('Height'))));
+  const alpha = inflateAlpha(beforeMask.getContents(), width * height);
+  const cmyk = image.getContents().slice();
+  await compactSoftMasks(doc);
+  const afterMask = image.dict.lookup(PDFName.of('SMask'));
+  assert.ok(beforeMask.getContents().length - afterMask.getContents().length > 1500);
+  const filtered = inflateAlpha(afterMask.getContents(), (width + 1) * height);
+  const decoded = new Uint8Array(width * height);
+  for (let y = 0; y < height; y++) {
+    assert.equal(filtered[y * (width + 1)], 0);
+    decoded.set(filtered.subarray(y * (width + 1) + 1, (y + 1) * (width + 1)), y * width);
+  }
+  assert.deepEqual(decoded, alpha);
+  assert.deepEqual(image.getContents(), cmyk);
+  const compacted = afterMask.getContents().slice();
+  await compactSoftMasks(doc);
+  assert.deepEqual(image.dict.lookup(PDFName.of('SMask')).getContents(), compacted);
+});

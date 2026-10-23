@@ -144,3 +144,98 @@ test('changed artwork requires its new complete upload journal and refreshes onl
       prior.files.find((x) => x.kind === kind).url,
     );
 });
+
+test('transient CDN failures retry at most three fresh reads and preserve byte verification', async () => {
+  for (const failure of ['network', 'timeout', 'http', 'stream']) {
+    const bodies = new Map(),
+      a = artwork('drawing-one', bodies),
+      e = environment([a], bodies, waveFor([a])),
+      fetcher = e.options.fetcher,
+      attempts = new Map(),
+      delays = [];
+    const result = await preparePublication({
+      prior: null,
+      ...e.options,
+      retryWait: async (ms) => delays.push(ms),
+      fetcher: async (url, options) => {
+        const attempt = (attempts.get(url) ?? 0) + 1;
+        attempts.set(url, attempt);
+        const response = await fetcher(url, options);
+        if (attempt === 3) return response;
+        if (failure === 'network') throw new TypeError('fetch failed');
+        if (failure === 'timeout') throw new DOMException('timed out', 'TimeoutError');
+        if (failure === 'http') return new Response(null, { status: attempt === 1 ? 503 : 429 });
+        const body = new Uint8Array(await response.arrayBuffer());
+        let first = true;
+        return new Response(
+          new ReadableStream({
+            pull(controller) {
+              if (first) {
+                first = false;
+                controller.enqueue(body.slice(0, Math.max(1, Math.floor(body.length / 2))));
+              } else controller.error(new TypeError('terminated'));
+            },
+          }),
+          { headers: response.headers },
+        );
+      },
+    });
+    assert.equal(e.calls.length, 12, failure);
+    assert.deepEqual([...attempts.values()], [3, 3, 3, 3], failure);
+    assert.deepEqual(
+      delays.sort((a, b) => a - b),
+      [250, 250, 250, 250, 1000, 1000, 1000, 1000],
+    );
+    assert.equal(validatePublication(result, [a], (path) => bodies.get(path)).files, 4);
+  }
+});
+
+test('persistent transport failures stop after the third attempt', async () => {
+  const bodies = new Map(),
+    a = artwork('drawing-one', bodies),
+    e = environment([a], bodies, waveFor([a])),
+    fetcher = e.options.fetcher;
+  await assert.rejects(
+    preparePublication({
+      prior: null,
+      ...e.options,
+      retryWait: async () => {},
+      fetcher: async (url, options) => {
+        await fetcher(url, options);
+        throw new TypeError('fetch failed');
+      },
+    }),
+    /CDN verification could not fetch/,
+  );
+  assert.equal(e.calls.length, 12);
+});
+
+test('integrity, MIME, CORS, missing files and redirects fail without retries', async () => {
+  for (const overrides of [
+    { headers: { 'content-type': 'text/plain' } },
+    { headers: { 'access-control-allow-origin': 'https://wrong.example' } },
+    { status: 404 },
+    { body: Buffer.from('same-size-corruption') },
+    { redirect: true },
+  ]) {
+    const bodies = new Map(),
+      a = artwork('drawing-one', bodies),
+      e = environment([a], bodies, waveFor([a]), overrides),
+      fetcher = e.options.fetcher;
+    await assert.rejects(
+      preparePublication({
+        prior: null,
+        ...e.options,
+        retryWait: async () => assert.fail('Integrity failures cannot be retried'),
+        fetcher: async (url, options) => {
+          const response = await fetcher(url, options);
+          if (overrides.redirect)
+            throw new TypeError('fetch failed', { cause: new Error('unexpected redirect') });
+          return response;
+        },
+      }),
+      /CDN/,
+    );
+    assert.equal(e.calls.length, 4);
+  }
+});

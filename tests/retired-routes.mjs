@@ -2,8 +2,20 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { retirementPolicy, createRetiredHandler } from '../scripts/retired-routes.mjs';
-const topics = JSON.parse(readFileSync(new URL('../data/topics.json', import.meta.url))).topics;
+const topics = [
+  ...JSON.parse(readFileSync(new URL('../data/topics.json', import.meta.url))).topics,
+  ...JSON.parse(readFileSync(new URL('../data/extra-topics.json', import.meta.url))),
+];
 const art = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url)));
+const matches = (pattern, path) =>
+  new RegExp(
+    '^' +
+      pattern
+        .split('*')
+        .map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+        .join('.*') +
+      '$',
+  ).test(path);
 test('only unavailable subjects get an edge policy within the Pages Free route limit', () => {
   for (let count = 0; count <= topics.length; count++) {
     const available = topics.slice(0, count).map((topic) => ({ topic: topic.slug }));
@@ -82,8 +94,6 @@ test('withdrawn artwork and media cannot reappear through cached public routes',
   const policy = retirementPolicy(topics, art, withdrawn);
   assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 100);
   const handler = createRetiredHandler(policy.retired);
-  const matches = (pattern, path) =>
-    pattern.endsWith('*') ? path.startsWith(pattern.slice(0, -1)) : path === pattern;
   for (const path of [
     ...withdrawn.artworkIds.flatMap((id) => [`/art/${id}/`, `/edit/${id}/`]),
     ...withdrawn.assetPaths,
@@ -107,4 +117,56 @@ test('withdrawn artwork and media cannot reappear through cached public routes',
     withdrawn,
   );
   assert.ok(!republished.retired.includes(`/art/${withdrawn.artworkIds[0]}/`));
+});
+
+test('every current artwork, editor and media URL remains static while withdrawals stay blocked', () => {
+  const withdrawn = JSON.parse(
+    readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
+  );
+  const guides = [
+    '/guides/make-a-classroom-label/',
+    '/guides/turn-clipart-into-a-coloring-activity/',
+  ];
+  const policy = retirementPolicy(topics, art, withdrawn, guides);
+  const invokes = (path) =>
+    policy.routes.include.some((pattern) => matches(pattern, path)) &&
+    !policy.routes.exclude.some((pattern) => matches(pattern, path));
+  assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 100);
+  for (const item of art)
+    for (const path of [
+      `/art/${item.id}/`,
+      `/edit/${item.id}/`,
+      item.pdf,
+      item.webp,
+      item.thumb,
+    ].filter(Boolean))
+      assert.equal(invokes(path), false, path);
+  for (const path of guides) assert.equal(invokes(path), false, path);
+  for (const id of withdrawn.artworkIds)
+    for (const route of ['art', 'edit'])
+      for (const suffix of ['', '/']) assert.equal(invokes(`/${route}/${id}${suffix}`), true);
+});
+
+test('adding subjects keeps withdrawals protected without routing current pages through Functions', () => {
+  const withdrawn = JSON.parse(
+      readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
+    ),
+    missing = topics.filter((topic) => !art.some((item) => item.topic === topic.slug));
+  // These intermediate growth states exceeded 100 rules with separate folder
+  // covers. Safe artwork patterns must protect the same static/withdrawn paths.
+  for (const count of [6, 20, 38, 65, missing.length]) {
+    const future = missing.slice(0, count).map((topic) => ({
+      id: `${topic.slug}-future-artwork`,
+      topic: topic.slug,
+    }));
+    const policy = retirementPolicy(topics, [...art, ...future], withdrawn);
+    assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 100);
+    const invokes = (path) =>
+      policy.routes.include.some((pattern) => matches(pattern, path)) &&
+      !policy.routes.exclude.some((pattern) => matches(pattern, path));
+    for (const item of [...art, ...future])
+      for (const path of [`/clipart/${item.topic}/`, `/art/${item.id}/`, `/edit/${item.id}/`])
+        assert.equal(invokes(path), false, path);
+    for (const path of policy.retired) assert.equal(invokes(path), true, path);
+  }
 });

@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { parseEndpoint } from './inventory.mjs';
+import { setTimeout as delay } from 'node:timers/promises';
 
 const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 /** Credentials stay in memory; neither configuration nor API errors print them. */
@@ -50,26 +51,42 @@ export function cloudflareTransport({
     return i < 0 ? undefined : args[i + 1];
   };
   async function request(path, jurisdiction, options = {}) {
-    let response;
-    try {
-      response = await fetcher(base + path, {
-        ...options,
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'cf-r2-jurisdiction': jurisdiction,
-          ...options.headers,
-        },
-        redirect: 'error',
-        signal: AbortSignal.timeout(30000),
-      });
-    } catch {
-      throw new Error('Cloudflare R2 request failed; credential-bearing output suppressed');
+    const readOnly = !options.method || ['GET', 'HEAD'].includes(options.method);
+    for (let attempt = 0; attempt < 3; attempt++) {
+      let response;
+      try {
+        response = await fetcher(base + path, {
+          ...options,
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'cf-r2-jurisdiction': jurisdiction,
+            ...options.headers,
+          },
+          redirect: 'error',
+          signal: AbortSignal.timeout(30000),
+        });
+      } catch {
+        if (readOnly && attempt < 2) {
+          await delay(250 * 4 ** attempt);
+          continue;
+        }
+        throw new Error('Cloudflare R2 request failed; credential-bearing output suppressed');
+      }
+      if (
+        readOnly &&
+        ([408, 429].includes(response.status) || response.status >= 500) &&
+        attempt < 2
+      ) {
+        await response.body?.cancel();
+        await delay(250 * 4 ** attempt);
+        continue;
+      }
+      if (!response.ok)
+        throw new Error(
+          `Cloudflare R2 request failed (HTTP ${response.status}); occupancy or upload is unverified`,
+        );
+      return response;
     }
-    if (!response.ok)
-      throw new Error(
-        `Cloudflare R2 request failed (HTTP ${response.status}); occupancy or upload is unverified`,
-      );
-    return response;
   }
   async function json(path, jurisdiction, options) {
     const response = await request(path, jurisdiction, options);
@@ -180,32 +197,45 @@ export function cloudflareTransport({
           return {};
         }
       }
-      const response = await request(path, jurisdiction);
-      if (!response.body || Number(response.headers.get('Content-Length')) > 16_000_000)
-        throw new Error('R2 verification object exceeds the allowed bound or is empty');
-      const reader = response.body.getReader(),
-        chunks = [];
-      let size = 0;
-      try {
-        while (true) {
-          const { value: chunk, done } = await reader.read();
-          if (done) break;
-          size += chunk.byteLength;
-          if (size > 16_000_000) {
-            await reader.cancel();
-            throw new Error('R2 verification object exceeds the allowed bound');
+      let response, bytes;
+      for (let attempt = 0; attempt < 3; attempt++) {
+        response = await request(path, jurisdiction);
+        if (!response.body || Number(response.headers.get('Content-Length')) > 16_000_000)
+          throw new Error('R2 verification object exceeds the allowed bound or is empty');
+        const reader = response.body.getReader(),
+          chunks = [];
+        let size = 0;
+        try {
+          while (true) {
+            const { value: chunk, done } = await reader.read();
+            if (done) break;
+            size += chunk.byteLength;
+            if (size > 16_000_000) {
+              await reader.cancel();
+              throw new Error('R2 verification object exceeds the allowed bound');
+            }
+            chunks.push(Buffer.from(chunk));
           }
-          chunks.push(Buffer.from(chunk));
+        } catch (error) {
+          if (
+            (error instanceof TypeError || ['TimeoutError', 'AbortError'].includes(error?.name)) &&
+            attempt < 2
+          ) {
+            await delay(250 * 4 ** attempt);
+            continue;
+          }
+          throw error;
+        } finally {
+          reader.releaseLock();
         }
-      } finally {
-        reader.releaseLock();
+        bytes = Buffer.concat(chunks, size);
+        break;
       }
-      const bytes = Buffer.concat(chunks, size);
       const sha256 = digest(bytes),
-        observedVersion = version(etag(response.headers.get('ETag')), size);
+        observedVersion = version(etag(response.headers.get('ETag')), bytes.length);
       if (observedVersion) {
         cachedBytes -= verifiedVersions.get(identity)?.bytes?.length ?? 0;
-        const reusable = cachedBytes + bytes.length <= 16_000_000 ? bytes : null;
+        const reusable = cachedBytes + bytes.length <= 64_000_000 ? bytes : null;
         cachedBytes += reusable?.length ?? 0;
         verifiedVersions.set(identity, { version: observedVersion, sha256, bytes: reusable });
       }

@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { art } from '../lib/catalog';
 const printable = [
-  ...art.filter((a) => !a.editable && a.color === 'Black'),
-  ...art.filter((a) => a.editable),
+  ...art.filter((a) => !a.layered && ['Outline', 'Black & White'].includes(a.style)),
+  ...art.filter((a) => a.layered),
 ];
 ---
 
@@ -20,20 +20,13 @@ const printable = [
   </section>
   <div class="gallery print-gallery">
     {printable.slice(0, 32).map((a) => (
-      <a class="art-card" href={a.editable ? `/edit/${a.id}/?mode=outline` : `/art/${a.id}/`}>
+      <a class="art-card" href={a.layered ? `/edit/${a.id}/?mode=outline` : `/art/${a.id}/`}>
         <div class="art-picture">
-          <img
-            src={a.thumb}
-            alt={a.alt}
-            width="400"
-            height="400"
-            loading="lazy"
-            style="filter:grayscale(1)"
-          />
+          <img src={a.thumb} alt={a.alt} width="400" height="400" loading="lazy" />
         </div>
         <div class="card-body">
           <h3 class="card-title">{a.title}</h3>
-          <p>{a.editable ? 'Open print studio →' : 'View downloads →'}</p>
+          <p>{a.layered ? 'Open print studio →' : 'View downloads →'}</p>
         </div>
       </a>
     ))}

@@ -18,6 +18,40 @@ const envelope = (result, result_info) => ({
   result,
   ...(result_info ? { result_info } : {}),
 });
+test('transient body interruption retries a GET and never caches a partial representation', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'uc-read-retry-'));
+  let calls = 0;
+  const expected = Buffer.from('complete verified representation');
+  const rest = cloudflareTransport({
+    accountId,
+    token,
+    fetcher: async () => {
+      calls++;
+      if (calls === 1)
+        return new Response(
+          new ReadableStream({
+            start(controller) {
+              controller.enqueue(new Uint8Array([1, 2, 3]));
+              controller.error(new DOMException('interrupted', 'TimeoutError'));
+            },
+          }),
+        );
+      return new Response(expected, { headers: { ETag: '"complete"' } });
+    },
+  });
+  try {
+    const target = join(dir, 'download');
+    await rest.aws(
+      'get-object',
+      ['--bucket', 'ultraclipart-media', '--key', 'art/file.pdf', target],
+      endpoint,
+    );
+    assert.equal(calls, 2);
+    assert.deepEqual(readFileSync(target), expected);
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
 test('readback reuses exact verified bytes, but a fresh deletion invalidates that reuse', async () => {
   const dir = mkdtempSync(join(tmpdir(), 'uc-byte-cache-'));
   let deleted = false,

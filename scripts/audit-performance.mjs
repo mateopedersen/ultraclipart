@@ -4,7 +4,17 @@ import { resolve, relative, extname } from 'node:path';
 import { gzipSync } from 'node:zlib';
 const root = resolve(import.meta.dirname, '..'),
   base = process.env.BASE_URL ?? 'http://127.0.0.1:4322';
-const paths = ['/', '/search/?q=pumpkin', '/art/ghost-teacup/', '/edit/sunflower-garden-stem/'];
+const catalog = JSON.parse(readFileSync(resolve(root, 'data/art.json'), 'utf8')),
+  sample = catalog.find((item) => item.published && item.indexable);
+if (!sample) throw new Error('A published artwork is required for the performance audit');
+const paths = process.env.PERFORMANCE_ROUTES?.split(',') ?? [
+  '/',
+  `/clipart/${sample.topic}/`,
+  `/art/${sample.id}/`,
+  `/edit/${sample.id}/`,
+];
+if (paths.some((path) => !path.startsWith('/') || path.startsWith('//')))
+  throw new Error('Performance routes must be relative to the audited website');
 const report = {
   date: new Date().toISOString(),
   base,

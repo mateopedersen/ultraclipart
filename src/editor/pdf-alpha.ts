@@ -8,7 +8,7 @@ export function predictAlpha(
   raw: Uint8Array,
   width: number,
   height: number,
-  strategy: 'adaptive' | 'sub' = 'adaptive',
+  strategy: 'adaptive' | 'sub' | 'none' = 'adaptive',
 ): Uint8Array {
   if (
     !Number.isInteger(width) ||
@@ -23,6 +23,19 @@ export function predictAlpha(
   const output = new Uint8Array((width + 1) * height);
   const candidates = Array.from({ length: 5 }, () => new Uint8Array(width));
   for (let y = 0; y < height; y++) {
+    const row = y * (width + 1);
+    if (strategy === 'none') {
+      output.set(raw.subarray(y * width, (y + 1) * width), row + 1);
+      continue;
+    }
+    if (strategy === 'sub') {
+      output[row] = 1;
+      for (let x = 0; x < width; x++) {
+        const offset = y * width + x;
+        output[row + 1 + x] = (raw[offset] - (x ? raw[offset - 1] : 0)) & 255;
+      }
+      continue;
+    }
     const scores = [0, 0, 0, 0, 0];
     for (let x = 0; x < width; x++) {
       const offset = y * width + x,
@@ -42,8 +55,7 @@ export function predictAlpha(
         scores[filter] += Math.min(delta, 256 - delta);
       }
     }
-    const best = strategy === 'sub' ? 1 : scores.indexOf(Math.min(...scores)),
-      row = y * (width + 1);
+    const best = scores.indexOf(Math.min(...scores));
     output[row] = best;
     output.set(candidates[best], row + 1);
   }
@@ -82,8 +94,8 @@ export async function compactSoftMasks(document: PDFDocument): Promise<void> {
       throw new Error('Invalid source mask dimensions');
     // Fixed output bound prevents a compressed mask from allocating arbitrary memory.
     const raw = inflateAlpha(mask.getContents(), width * height);
-    const candidates = ['adaptive', 'sub'].map((strategy) =>
-      deflate(predictAlpha(raw, width, height, strategy as 'adaptive' | 'sub'), { level: 9 }),
+    const candidates = (['adaptive', 'sub', 'none'] as const).map((strategy) =>
+      deflate(predictAlpha(raw, width, height, strategy), { level: 9 }),
     );
     const encoded = candidates.reduce((best, candidate) =>
       candidate.length < best.length ? candidate : best,
