@@ -1,0 +1,83 @@
+{
+  "wave": "wave_016",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-ghost-kite",
+      "title": "Child Flying a Ghost Kite",
+      "alt": "A child in an orange jacket runs while flying a smiling ghost-shaped kite with a long ribbon tail.",
+      "description": "A child in an orange jacket runs while flying a smiling ghost-shaped kite with a long ribbon tail. Use this illustration for autumn outdoor play cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_016/source/halloween-ghost-kite.png"
+    },
+    {
+      "id": "halloween-bat-music",
+      "title": "Bat Playing a Small Drum",
+      "alt": "A cheerful gray bat stands with a red marching drum and holds a drumstick in each small hand.",
+      "description": "A cheerful gray bat stands with a red marching drum and holds a drumstick in each small hand. Use this illustration for classroom rhythm activities.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_016/source/halloween-bat-music.png"
+    },
+    {
+      "id": "halloween-pumpkin-fairy",
+      "title": "Pumpkin Fairy with Leaf Wings",
+      "alt": "A small fairy in an orange petal dress hovers on translucent leaf-shaped wings while holding an acorn lantern.",
+      "description": "A small fairy in an orange petal dress hovers on translucent leaf-shaped wings while holding an acorn lantern. Use this illustration for fantasy autumn storytelling.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_016/source/halloween-pumpkin-fairy.png"
+    },
+    {
+      "id": "halloween-toy-train",
+      "title": "Tiny Halloween Toy Train",
+      "alt": "A wooden toy locomotive pulls one connected wagon carrying a smiling ghost and a pumpkin.",
+      "description": "A wooden toy locomotive pulls one connected wagon carrying a smiling ghost and a pumpkin. Use this illustration for classroom counting activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_016/source/halloween-toy-train.png"
+    },
+    {
+      "id": "halloween-witch-sewing",
+      "title": "Witch Sewing a Cape",
+      "alt": "A kindly witch wearing spectacles sits beside a sewing basket and stitches a star onto a purple cape.",
+      "description": "A kindly witch wearing spectacles sits beside a sewing basket and stitches a star onto a purple cape. Use this illustration for craft-process sequencing.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_016/source/halloween-witch-sewing.png"
+    },
+    {
+      "id": "halloween-ghost-garden",
+      "title": "Ghost Watering a Pumpkin Vine",
+      "alt": "A friendly ghost waters a pumpkin vine with a blue watering can.",
+      "description": "A friendly ghost waters a pumpkin vine with a blue watering can. Use this illustration for kindness and gardening stories.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_016/source/halloween-ghost-garden.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-witch-bicycle",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-cat-bookshelf",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-candy-shop-cart",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-treehouse",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

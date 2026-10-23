@@ -1,0 +1,93 @@
+{
+  "wave": "wave_015",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-stitched-monster-kite",
+      "title": "Stitched Monster Flying a Kite",
+      "alt": "A cheerful stitched green monster in patched overalls runs while flying a small bat-shaped kite.",
+      "description": "A cheerful stitched green monster in patched overalls runs while flying a small bat-shaped kite. Use this illustration for movement and story prompts.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-stitched-monster-kite.png"
+    },
+    {
+      "id": "halloween-bunting-garland",
+      "title": "Halloween Fabric Bunting",
+      "alt": "Five Halloween fabric pennants display a pumpkin, crescent moon, star, bat and ghost along a curved cord.",
+      "description": "Five Halloween fabric pennants display a pumpkin, crescent moon, star, bat and ghost along a curved cord. Use this illustration for personal party layouts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-bunting-garland.png"
+    },
+    {
+      "id": "halloween-frog-wizard",
+      "title": "Frog Wizard with a Tiny Staff",
+      "alt": "A green frog in a navy wizard hat and cape sits on a red mushroom while holding a wooden staff.",
+      "description": "A green frog in a navy wizard hat and cape sits on a red mushroom while holding a wooden staff. Use this illustration for fantasy classroom storytelling.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-frog-wizard.png"
+    },
+    {
+      "id": "halloween-bone-cookies",
+      "title": "Plate of Bone-Shaped Cookies",
+      "alt": "A cream plate holds bone-shaped iced cookies and small star cookies with colorful Halloween decorations.",
+      "description": "A cream plate holds bone-shaped iced cookies and small star cookies with colorful Halloween decorations. Use this illustration for personal recipe cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-bone-cookies.png"
+    },
+    {
+      "id": "halloween-cottage-mailbox",
+      "title": "Halloween Cottage Mailbox",
+      "alt": "A purple mailbox on a wooden post is wrapped in pumpkin vines and has a small hanging bat ornament.",
+      "description": "A purple mailbox on a wooden post is wrapped in pumpkin vines and has a small hanging bat ornament. Use this illustration for classroom letter-writing prompts.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-cottage-mailbox.png"
+    },
+    {
+      "id": "halloween-owl-lantern-flight",
+      "title": "Barn Owl Carrying a Lantern",
+      "alt": "A pale barn owl glides with broad wings while carrying a small golden lantern in its talons.",
+      "description": "A pale barn owl glides with broad wings while carrying a small golden lantern in its talons. Use this illustration for night adventure story cards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-owl-lantern-flight.png"
+    },
+    {
+      "id": "halloween-haunted-snow-globe",
+      "title": "Haunted House Snow Globe",
+      "alt": "A clear globe on an ornate purple base contains a crooked house, a crescent moon, pumpkins and star confetti.",
+      "description": "A clear globe on an ornate purple base contains a crooked house, a crescent moon, pumpkins and star confetti. Use this illustration for personal seasonal gift cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-haunted-snow-globe.png"
+    },
+    {
+      "id": "halloween-pumpkin-soup",
+      "title": "Pumpkin Soup in a Pumpkin Bowl",
+      "alt": "A pumpkin bowl holds orange soup with a cream swirl, with its lid and a wooden spoon beside it.",
+      "description": "A pumpkin bowl holds orange soup with a cream swirl, with its lid and a wooden spoon beside it. Use this illustration for seasonal cooking activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_015/source/halloween-pumpkin-soup.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-hat-wreath",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-coffin-flowers",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "wave": "wave_017",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-burgundy-knitted-hat",
+      "title": "Burgundy Pom-Pom Beanie",
+      "alt": "A burgundy knitted beanie has a rolled ribbed cuff, a full wool pom-pom and a small blank label.",
+      "description": "A burgundy knitted beanie has a rolled ribbed cuff, a full wool pom-pom and a small blank label. Use this illustration for cold-weather clothing worksheets.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_017/source/winter-burgundy-knitted-hat.png"
+    },
+    {
+      "id": "winter-blue-knitted-earmuffs",
+      "title": "Patterned Fleece Earmuffs",
+      "alt": "Blue and cream patterned earmuffs have a padded headband and two soft cream fleece ear cups.",
+      "description": "Blue and cream patterned earmuffs have a padded headband and two soft cream fleece ear cups. Use this illustration for winter accessory sorting games.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_017/source/winter-blue-knitted-earmuffs.png"
+    },
+    {
+      "id": "winter-tan-insulated-boot",
+      "title": "Tan Fleece-Lined Snow Boot",
+      "alt": "A tan lace-up winter boot has a cream fleece collar, stitched leather panels and a thick treaded sole.",
+      "description": "A tan lace-up winter boot has a cream fleece collar, stitched leather panels and a thick treaded sole. Use this illustration for winter dressing sequence cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_017/source/winter-tan-insulated-boot.png"
+    },
+    {
+      "id": "winter-thermos-and-cup",
+      "title": "Green Thermos and Steaming Cup",
+      "alt": "A dark green thermos with a metal neck stands beside a matching cup filled with a steaming drink.",
+      "description": "A dark green thermos with a metal neck stands beside a matching cup filled with a steaming drink. Use this illustration for personal winter picnic invitations.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_017/source/winter-thermos-and-cup.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-knitted-mittens-on-cord",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-folded-tartan-scarf",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-cozy-pair-of-socks",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-alpine-skis-and-poles",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-child-sledding",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-candle-lantern",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}
