@@ -215,6 +215,7 @@ function init(root: HTMLElement) {
     const d = doc(),
       svg = printPreview ? paperSvg(d) : documentSvg(d);
     svg.setAttribute('aria-label', 'Editable layered artwork');
+    svg.setAttribute('data-artwork-canvas', '');
     canvas.replaceChildren(svg);
     const b = d.crop || d,
       p = paperLayout(d);

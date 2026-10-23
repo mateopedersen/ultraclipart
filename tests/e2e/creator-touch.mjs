@@ -28,7 +28,7 @@ try {
   const session = await context.newCDPSession(page);
   const draw = async (cancel) => {
     await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
-    const box = await page.locator('.uc-canvas>svg').boundingBox();
+    const box = await page.locator('[data-artwork-canvas]').boundingBox();
     const x = box.x + box.width * 0.2,
       y = box.y + box.height * 0.3;
     await session.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y }] });

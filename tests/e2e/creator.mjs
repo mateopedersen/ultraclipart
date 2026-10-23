@@ -60,7 +60,7 @@ const exporting = async (format, name) => {
 };
 const draw = async (cancel = false) => {
   await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
-  const box = await page.locator('.uc-canvas>svg').boundingBox();
+  const box = await page.locator('[data-artwork-canvas]').boundingBox();
   const x = box.x + box.width * 0.15,
     y = box.y + box.height * 0.3;
   await page.mouse.move(x, y);
@@ -122,7 +122,7 @@ try {
   await expect(action('draw')).toHaveAttribute('aria-pressed', 'false');
   checks.push('smooth cubic freehand stroke; Escape cancels without history mutation');
   await action('draw').click();
-  const box = await page.locator('.uc-canvas>svg').boundingBox();
+  const box = await page.locator('[data-artwork-canvas]').boundingBox();
   await page.mouse.move(box.x + 60, box.y + 60);
   await page.mouse.down();
   await page.mouse.move(box.x + 160, box.y + 120);
