@@ -237,17 +237,21 @@ function init(root: HTMLElement) {
     if (!selectedBounds) return;
     // Editing handles can extend beyond the artwork or crop. Keep them on a
     // separate overlay so the clipped artwork never makes a handle unreachable.
-    const overlay = document.createElementNS(NS, 'svg');
-    overlay.setAttribute('viewBox', svg.getAttribute('viewBox')!);
-    overlay.setAttribute('class', 'uc-selection-overlay');
+    const overlay = document.createElement('div');
+    overlay.className = 'uc-selection-overlay';
     overlay.setAttribute('aria-hidden', 'true');
     canvas.append(overlay);
     const { x, y, width, height } = selectedBounds;
-    const size = Math.max(d.width / 100, 6) / zoom;
-    const frame = document.createElementNS(NS, 'rect');
-    for (const [key, value] of Object.entries(selectedBounds))
-      frame.setAttribute(key, String(value));
-    frame.setAttribute('class', 'uc-selection-box');
+    const viewport = d.crop ?? { x: 0, y: 0, width: d.width, height: d.height };
+    const position = (element: HTMLElement, px: number, py: number) => {
+      element.style.left = `${((px - viewport.x) / viewport.width) * 100}%`;
+      element.style.top = `${((py - viewport.y) / viewport.height) * 100}%`;
+    };
+    const frame = document.createElement('div');
+    position(frame, x, y);
+    frame.style.width = `${(width / viewport.width) * 100}%`;
+    frame.style.height = `${(height / viewport.height) * 100}%`;
+    frame.className = 'uc-selection-box';
     overlay.append(frame);
     const positions = [
       ['nw', x, y],
@@ -260,20 +264,15 @@ function init(root: HTMLElement) {
       ['w', x, y + height / 2],
     ] as const;
     positions.forEach(([name, hx, hy]) => {
-      const handle = document.createElementNS(NS, 'rect');
-      handle.setAttribute('x', String(hx - size / 2));
-      handle.setAttribute('y', String(hy - size / 2));
-      handle.setAttribute('width', String(size));
-      handle.setAttribute('height', String(size));
-      handle.setAttribute('class', 'uc-handle');
+      const handle = document.createElement('div');
+      position(handle, hx, hy);
+      handle.className = 'uc-handle';
       handle.setAttribute('data-handle', name);
       overlay.append(handle);
     });
-    const rotate = document.createElementNS(NS, 'circle');
-    rotate.setAttribute('cx', String(x + width / 2));
-    rotate.setAttribute('cy', String(y - size * 3));
-    rotate.setAttribute('r', String(size * 0.6));
-    rotate.setAttribute('class', 'uc-handle uc-rotate-handle');
+    const rotate = document.createElement('div');
+    position(rotate, x + width / 2, y);
+    rotate.className = 'uc-handle uc-rotate-handle';
     rotate.setAttribute('data-handle', 'rotate');
     overlay.append(rotate);
   }

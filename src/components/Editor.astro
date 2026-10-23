@@ -768,20 +768,22 @@ const { art, creator = false } = Astro.props;
     cursor: not-allowed;
   }
   .uc-canvas .uc-selection-box {
-    fill: none;
-    stroke: #2865d2;
-    stroke-width: 1.5;
-    vector-effect: non-scaling-stroke;
+    position: absolute;
+    border: 1.5px solid #2865d2;
     pointer-events: none;
   }
   .uc-canvas .uc-handle {
-    fill: #fff;
-    stroke: #2865d2;
-    stroke-width: 1.5;
-    vector-effect: non-scaling-stroke;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border: 1.5px solid #2865d2;
     cursor: nwse-resize;
   }
   .uc-canvas .uc-rotate-handle {
+    margin-top: -24px;
+    border-radius: 50%;
     cursor: crosshair;
   }
   .uc-stage-toolbar {
