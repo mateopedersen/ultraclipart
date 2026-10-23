@@ -1,5 +1,4 @@
 allowBuilds:
-  core-js: set this to true or false
+  core-js: false
   esbuild: true
   workerd: true
-  core-js: false

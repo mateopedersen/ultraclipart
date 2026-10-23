@@ -1,6 +1,6 @@
 # UltraClipart
 
-An English-language, static-first Astro 7.4.2 clipart catalog with a layered SVG browser editor, transparent WebP downloads, and process-CMYK vector PDF exports. TypeScript, small browser modules, Inter, and Cloudflare Workers Static Assets keep the application lightweight.
+An English-language, static-first Astro 7.4.2 clipart catalog with a layered SVG browser editor, transparent WebP downloads, and process-CMYK vector PDF exports. TypeScript, small browser modules, Inter, and Cloudflare Pages keep the application lightweight.
 
 **This checkout contains an honest pilot: 10 original illustrations across 9 topics.** The supplied taxonomy includes all 110 topics. The production target is 50 distinct, reviewed illustrations per topic: 5,500 total, with **5,490 still undrawn** and no completed 50-art topic. Planning rows and recolor presets are never counted as drawings. Pilot catalog pages remain separate from approved production content and are not submitted for indexing as a completed library.
 
@@ -74,14 +74,28 @@ node scripts/r2/ingest.mjs work/r2-batch.json --apply
 
 The first command only writes a local batch; the second reads remote inventory without uploading. `--pilot` explicitly selects unapproved preview assets and does not grant publication approval. The uploader verifies remote SHA-256 values, checkpoints completed file groups, resumes the same batch, and enforces the aggregate 8 GB ingestion stop. It cannot cap externally generated request charges or coordinate unrelated uploaders. Never commit credentials or journals.
 
-After a passing build and authenticated, authorized Cloudflare setup:
+Connect this repository to a new Cloudflare Pages project named `ultraclipart`, using the repository root and production branch `main`. Set the build command to `pnpm check && pnpm build && pnpm test` and the output directory to `dist`. Pages publishes the successful build automatically; its Git integration does not need a separate deploy command or a new account-wide API token.
+
+Set build variables `NODE_VERSION=24`, `PNPM_VERSION=11.25.0`, and `ASTRO_TELEMETRY_DISABLED=1`. Set `PUBLIC_ASSET_BASE` to the verified HTTPS R2 asset prefix for production; omit it for local and CI checks against the bundled pilot. Keep build-time values in the Pages build settings. No Pages Functions or runtime R2/D1 bindings are required.
+
+For an optional manual deployment using an already authorized local Cloudflare session:
 
 ```sh
 pnpm build
 pnpm deploy
 ```
 
-`wrangler.jsonc` configures Workers Static Assets from `dist/`. GitHub-to-Cloudflare automation also needs account integration or correctly scoped deployment secrets. Custom-domain DNS, R2 activation, account metrics, and live smoke-test evidence must be verified in the actual accounts; configuration files and this README are not proof of a successful deployment. Current verified deployment status belongs in the delivery report.
+`wrangler.jsonc` declares the Pages project and `pages_build_output_dir: "./dist"`. The build generates the exact inline-script CSP hashes in `dist/_headers`, and `dist/404.html` provides the missing-page response. Custom-domain DNS, R2 activation, account metrics, and live smoke-test evidence must be verified in the actual accounts; configuration files and this README are not proof of a successful deployment. Current verified deployment status belongs in the delivery report. See the official [Astro deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/), [Pages configuration](https://developers.cloudflare.com/pages/functions/wrangler-configuration/), and [build version settings](https://developers.cloudflare.com/pages/configuration/build-image/).
+
+After deployment, read-only smoke checks compare all built routes and their resources with the live site, and the complete pilot CDN files with the verified local hashes. Substitute the actual asset prefix:
+
+```sh
+BASE_URL=https://ultraclipart.com node scripts/smoke-live.mjs
+ASSET_BASE=https://assets.ultraclipart.com/PREFIX/ node scripts/smoke-cdn.mjs
+BASE_URL=https://ultraclipart.com node tests/e2e/site.mjs
+```
+
+HTTP and CDN results are saved in `reports/live/`. A passing HTTP check does not replace browser execution under the deployed security policy. `scripts/audit-performance.mjs` records lab LCP/CLS, build sizes and configured versus observed headers; it does not measure field Core Web Vitals or claim INP.
 
 ## Rights, review, and remaining work
 

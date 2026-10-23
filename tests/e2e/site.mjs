@@ -1,16 +1,17 @@
 import { chromium, firefox, webkit } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 
 const base=process.env.BASE_URL??'http://127.0.0.1:4321';
 const browserName=process.env.TEST_BROWSER??'chromium';
 const launcher={chromium,firefox,webkit}[browserName];
 if(!launcher)throw new Error('TEST_BROWSER must be chromium, firefox or webkit');
-const browser=await launcher.launch({headless:true,...(process.env.BROWSER_BIN?{executablePath:process.env.BROWSER_BIN}:{})});
 const dir=resolve('reports/site',browserName);mkdirSync(dir,{recursive:true});
-const context=await browser.newContext();
+const browser=await launcher.launch({headless:true,timeout:15000,...(process.env.BROWSER_BIN?{executablePath:process.env.BROWSER_BIN}:{})}).catch(error=>{writeFileSync(resolve(dir,'launch-report.json'),JSON.stringify({status:'blocked',browser:browserName,date:new Date().toISOString(),reason:error.message,testedPages:0},null,2)+'\n');throw error;});
+const context=await browser.newContext({acceptDownloads:true});
 const page=await context.newPage();
 const pageErrors=[];page.on('pageerror',error=>pageErrors.push(error.message));
 const report={base,browser:browserName,browserVersion:browser.version(),date:new Date().toISOString(),status:'running',failure:'',states:[],checks:[],pageErrors};
@@ -49,10 +50,17 @@ try{
   for(const value of await page.locator('[data-topic]:not([hidden])').allTextContents())assert.ok(value.toLowerCase().startsWith('k'));report.checks.push('category A-Z filtering');
   await page.goto(`${base}/art/pumpkin-curly-vine/`);await page.locator('[data-favorite]').click();await page.reload();assert.equal(await page.locator('[data-favorite]').getAttribute('aria-pressed'),'true');
   await page.goto(`${base}/favorites/`);assert.equal(await page.locator('#favorites .art-card:not([hidden])').count(),1);report.checks.push('favorite persistence');
+  await page.goto(`${base}/art/pumpkin-curly-vine/`);
+  const original=JSON.parse(readFileSync(new URL('../../data/art.json',import.meta.url),'utf8')).find(item=>item.id==='pumpkin-curly-vine');
+  for(const format of ['webp','pdf']){const pending=page.waitForEvent('download');await page.getByRole('link',{name:new RegExp(`Download ${format}`,'i')}).click();const download=await pending;const path=resolve(dir,`original-pumpkin.${format}`);await download.saveAs(path);const bytes=readFileSync(path);assert.equal(bytes.length,original.files[format].bytes);assert.equal(createHash('sha256').update(bytes).digest('hex'),original.files[format].sha256);}
+  report.checks.push('original WebP and PDF browser downloads match verified hashes');
   await page.goto(`${base}${editor}`);await readyEditor();await page.locator('[data-action=export]').click();
   for(let i=0;i<15;i++){await page.keyboard.press('Tab');assert.equal(await page.evaluate(()=>document.querySelector('[data-export-dialog]').contains(document.activeElement)),true,'dialog focus must remain contained');}
   await page.keyboard.press('Escape');assert.equal(await page.locator('[data-export-dialog]').isVisible(),false);await page.waitForFunction(()=>document.querySelector('[data-action=export]')===document.activeElement,{},{timeout:5000});report.checks.push('dialog keyboard containment and focus return');
-  await page.goto(`${base}/`);await page.keyboard.press('Tab');assert.equal(await page.locator('.skip').evaluate(el=>el===document.activeElement),true);report.checks.push('keyboard skip link');
+  // Safari on macOS uses Option-Tab for links unless its full keyboard-navigation preference is enabled.
+  // https://support.apple.com/guide/safari/keyboard-shortcuts-and-gestures-cpsh003/mac
+  const linkTraversal=browserName==='webkit'&&process.platform==='darwin'?'Alt+Tab':'Tab';
+  await page.goto(`${base}/`);await page.keyboard.press(linkTraversal);assert.equal(await page.locator('.skip').evaluate(el=>el===document.activeElement),true);report.checks.push(`keyboard skip link (${linkTraversal})`);
   for(const url of ['/about/','/contact/','/license/','/terms/','/privacy/','/faq/','/accessibility/','/copyright/','/for-teachers/','/editorial-process/','/black-and-white/','/collections/']){
     const response=await page.goto(base+url);assert.ok([200,304].includes(response.status()),`${url} HTTP status ${response.status()}`);assert.equal(await page.locator('h1').count(),1,url);
     const scan=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();report.states.push({state:url,viewport:'mobile',width:390,url,overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),violations:scan.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))});

@@ -16,7 +16,7 @@ async function colorResources(){if(!colorPromise)colorPromise=(async()=>{const [
 export async function exportPdf(doc:EditorDocument):Promise<Blob>{
  const [{jsPDF:PDF},{lut}]=await Promise.all([import('jspdf'),colorResources()]);
  const p=paperLayout(doc),pdf=new PDF({unit:'pt',format:[p.pageWidth,p.pageHeight],orientation:doc.print.orientation,compress:true,putOnlyUsedFonts:true,floatPrecision:5});(pdf as unknown as {__private__:{setPdfVersion:(version:string)=>void}}).__private__.setPdfVersion('1.7');pdf.setProperties({title:'UltraClipart edited artwork',subject:'ICC-converted process CMYK vector artwork',creator:'UltraClipart editor'});registerOutputCondition(pdf,lut.profileName||'CMYK print profile');
- const svg=documentSvg(doc);svg.style.position='fixed';svg.style.left='-20000px';svg.style.top='0';svg.style.pointerEvents='none';document.body.append(svg);
+ const svg=documentSvg(doc);if(svg.querySelector('defs,clipPath,linearGradient,radialGradient,[clip-path]')||[...svg.querySelectorAll('g[opacity]')].some(g=>Number(g.getAttribute('opacity'))!==1))throw new Error('This project uses a vector effect that has not been validated for PDF. Export WebP or restore the original artwork.');svg.style.position='fixed';svg.style.left='-20000px';svg.style.top='0';svg.style.pointerEvents='none';document.body.append(svg);
  try {pdf.advancedAPI(()=>{
   pdf.saveGraphicsState();pdf.rect(p.margin,p.margin,p.pageWidth-2*p.margin,p.pageHeight-2*p.margin,null);pdf.clip();pdf.discardPath();
   // Clip to the edited canvas as well as paper margins. Hidden material never leaks into a PDF.
