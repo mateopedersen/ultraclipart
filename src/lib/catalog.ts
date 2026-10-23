@@ -1,19 +1,24 @@
 import source from '../../data/topics.json';
 import illustrations from '../../data/art.json';
-export const topics = source.topics;
+import extraTopics from '../../data/extra-topics.json';
+export const topics = [...source.topics, ...extraTopics];
 type AssetKind = 'svg' | 'webp' | 'pdf' | 'thumb';
 type PublishedAssets = Record<string, Record<AssetKind, string>>;
 const publishedAssets = import.meta.env.PUBLIC_ASSET_URLS as PublishedAssets | null;
 export const art = illustrations.map((item) => ({
   ...item,
+  editable: (item as { sourceType?: string }).sourceType !== 'raster',
   ...Object.fromEntries(
     (['svg', 'webp', 'pdf', 'thumb'] as const).map((kind) => {
+      if (kind === 'svg' && (item as { sourceType?: string }).sourceType === 'raster')
+        return [kind, null];
       if (publishedAssets && !publishedAssets[item.id]?.[kind])
         throw new Error(`Missing published asset: ${item.id}/${kind}`);
       return [kind, publishedAssets?.[item.id]?.[kind] ?? item[kind]];
     }),
   ),
 }));
+export const newestArt = [...art].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
 export const clusters = [...new Set(topics.map((t) => t.cluster))];
 export const slugify = (s: string) =>
   s

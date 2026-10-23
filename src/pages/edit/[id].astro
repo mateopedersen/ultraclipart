@@ -3,7 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import Editor from '../../components/Editor.astro';
 import { art } from '../../lib/catalog';
 export function getStaticPaths() {
-  return art.map((a) => ({ params: { id: a.id }, props: { item: a } }));
+  return art
+    .filter((a) => a.editable)
+    .map((a) => ({ params: { id: a.id }, props: { item: { ...a, svg: a.svg! } } }));
 }
 const { item } = Astro.props;
 ---

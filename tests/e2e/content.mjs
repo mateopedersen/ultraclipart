@@ -87,7 +87,10 @@ try {
   const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8'));
   const topicCount = new Set(catalog.map((item) => item.topic)).size;
   await expect(page.locator('a[data-topic]')).toHaveCount(topicCount);
-  await expect(page.locator('.topic-planned')).toHaveCount(110 - topicCount);
+  const allTopicCount =
+    JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics.length +
+    JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))).length;
+  await expect(page.locator('.topic-planned')).toHaveCount(allTopicCount - topicCount);
   await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(topicCount);
   await page.locator('#include-planned').check();
   await page.locator('#topic-filter').fill('heart');

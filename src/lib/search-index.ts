@@ -7,6 +7,7 @@ export interface SearchCard {
   thumb: string;
   webp: string;
   pdf?: string;
+  editable?: boolean;
 }
 export interface SearchTopic {
   slug: string;
@@ -47,6 +48,7 @@ export function cardMetadata(item: SearchArtwork & SearchCard): SearchCard {
     thumb: item.thumb,
     webp: item.webp,
     ...(item.pdf ? { pdf: item.pdf } : {}),
+    ...(item.editable === false ? { editable: false } : {}),
   };
 }
 export function buildSearchIndex(
@@ -87,6 +89,8 @@ export function buildSearchIndex(
     }
     for (const key of ['style', 'color', 'orientation'] as const)
       addFacet(`${key}/${item[key].toLowerCase()}`, ordinal);
+    if (['outline', 'black & white'].includes(item.style.toLowerCase()))
+      addFacet('print/monochrome', ordinal);
     for (const format of new Set(item.formats?.map((value) => value.toLowerCase()) ?? []))
       addFacet(`format/${format}`, ordinal);
     if (typeof item.alpha === 'boolean')

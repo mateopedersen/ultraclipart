@@ -86,7 +86,7 @@ export function parseState(params: URLSearchParams): SearchState {
     allowed.includes(params.get(key) ?? '') ? params.get(key)! : fallback;
   return {
     q: (params.get('q') ?? '').trim().slice(0, 160),
-    style: choices('style', ['color', 'outline']),
+    style: choices('style', ['color', 'outline', 'watercolor', 'black & white']),
     color: choices('color', [
       'orange',
       'white',
@@ -132,20 +132,23 @@ export function oneEditAway(a: string, b: string): boolean {
   return edits + (i < a.length || j < b.length ? 1 : 0) <= 1;
 }
 export function queryTerms(query: string) {
-  const outlinePhrase =
-    /\b(?:black[\s-]*(?:and[\s-]*|&[\s-]*)?white|b\s*&\s*w|outline|coloring(?:\s+pages?)?)\b/gi;
+  const monochromePhrase = /\b(?:black[\s-]*(?:and[\s-]*|&[\s-]*)?white|b\s*&\s*w)\b/gi;
+  const outlinePhrase = /\b(?:outline|coloring(?:\s+pages?)?)\b/gi;
   const wantsOutline = outlinePhrase.test(query);
-  const tokens = normalizeQuery(query.replace(outlinePhrase, ' '));
-  return { wantsOutline, tokens };
+  const wantsMonochrome = monochromePhrase.test(query);
+  const tokens = normalizeQuery(query.replace(outlinePhrase, ' ').replace(monochromePhrase, ' '));
+  return { wantsOutline, wantsMonochrome, tokens };
 }
 export function searchArtwork<T extends SearchArtwork>(artwork: T[], state: SearchState) {
-  const { wantsOutline, tokens } = queryTerms(state.q);
+  const { wantsOutline, wantsMonochrome, tokens } = queryTerms(state.q);
   const seen = new Set<string>();
   const ranked: { item: T; score: number; fuzzy: boolean }[] = [];
   for (const item of artwork) {
     if (seen.has(item.id)) continue;
     seen.add(item.id);
     const outline = item.style.toLowerCase() === 'outline';
+    if (wantsMonochrome && !['outline', 'black & white'].includes(item.style.toLowerCase()))
+      continue;
     if ((wantsOutline && !outline) || (state.style && item.style.toLowerCase() !== state.style))
       continue;
     if (state.color && item.color.toLowerCase() !== state.color) continue;

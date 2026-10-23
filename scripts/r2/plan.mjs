@@ -5,6 +5,7 @@ import {
   objectIdentity,
   validateInventoryScope,
 } from './inventory.mjs';
+import { sourceTypeOf, representationKinds } from '../asset-representations.mjs';
 export const HARD_CAP = 8_000_000_000;
 export const PDF_CAP = 1_000_000;
 const representations = ['pdf', 'svg', 'thumbnail', 'webp'];
@@ -39,13 +40,20 @@ export function validateBatch(batch) {
     const identity = objectIdentity(object);
     if (keys.has(identity)) throw new Error('Duplicate object key');
     keys.add(identity);
-    const group = groups.get(object.assetId) ?? [];
-    group.push(object.kind);
+    const sourceType = sourceTypeOf(object);
+    const group = groups.get(object.assetId) ?? { sourceType, kinds: [] };
+    if (sourceType !== group.sourceType) throw new Error('Mixed artwork source types');
+    group.kinds.push(object.kind);
     groups.set(object.assetId, group);
   }
-  for (const [id, kinds] of groups) {
-    if (kinds.sort().join(',') !== representations.join(','))
-      throw new Error(`Artwork ${id} requires exactly PDF, SVG, thumbnail and WebP`);
+  for (const [id, group] of groups) {
+    const required = representationKinds(group).map((kind) =>
+      kind === 'thumb' ? 'thumbnail' : kind,
+    );
+    if (group.kinds.sort().join(',') !== required.sort().join(','))
+      throw new Error(
+        `Artwork ${id} requires exactly its declared representations (PDF, WebP, thumbnail and SVG for layered artwork)`,
+      );
   }
   return batch;
 }

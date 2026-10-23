@@ -11,6 +11,7 @@ const seed = {
   items: initial.items.map(cardMetadata),
 };
 const colors = [...new Set(art.map((item) => item.color))].sort();
+const styles = [...new Set(art.map((item) => item.style))].sort();
 ---
 
 <Layout
@@ -60,8 +61,11 @@ const colors = [...new Set(art.map((item) => item.color))].sort();
         <label for="filter-style">Style</label>
         <select id="filter-style" data-filter="style">
           <option value="">All styles</option>
-          <option value="color">Color</option>
-          <option value="outline">Black & white outline</option>
+          {styles.map((style) => (
+            <option value={style.toLowerCase()}>
+              {style === 'Outline' ? 'Black & white outline' : style}
+            </option>
+          ))}
         </select>
       </div>
       <div>

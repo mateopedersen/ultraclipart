@@ -125,11 +125,12 @@ export class SearchRepository {
   }
   async search(state: SearchState, signal?: AbortSignal): Promise<RemoteResults> {
     const manifest = await this.manifest(signal),
-      { tokens, wantsOutline } = queryTerms(state.q);
+      { tokens, wantsOutline, wantsMonochrome } = queryTerms(state.q);
     const facetNames = (['style', 'color', 'format', 'orientation', 'background'] as const)
       .filter((key) => state[key])
       .map((key) => `${key}/${state[key]}`);
     if (wantsOutline && !facetNames.includes('style/outline')) facetNames.push('style/outline');
+    if (wantsMonochrome) facetNames.push('print/monochrome');
     const pagination = (total: number) => {
       const pages = Math.max(1, Math.ceil(total / state.size));
       return { total, pages, page: Math.min(pages, Math.max(1, state.page)) };

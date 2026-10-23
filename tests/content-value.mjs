@@ -9,10 +9,11 @@ const notes = JSON.parse(read('data/artwork-notes.json'));
 const topics = JSON.parse(read('data/topics.json')).topics;
 const dist = new URL('../dist/', import.meta.url);
 test('usage notes cover actual illustrations and expose the exact named source layers', () => {
-  assert.deepEqual(Object.keys(notes).sort(), art.map((item) => item.id).sort());
-  assert.equal(new Set(Object.values(notes).map((note) => note.use)).size, art.length);
-  assert.equal(new Set(Object.values(notes).map((note) => note.edit)).size, art.length);
-  for (const item of art) {
+  const editable = art.filter((item) => item.sourceType !== 'raster');
+  assert.deepEqual(Object.keys(notes).sort(), editable.map((item) => item.id).sort());
+  assert.equal(new Set(Object.values(notes).map((note) => note.use)).size, editable.length);
+  assert.equal(new Set(Object.values(notes).map((note) => note.edit)).size, editable.length);
+  for (const item of editable) {
     const layers = [...read('public' + item.svg).matchAll(/data-label="([^"]+)"/g)].map(
       (match) => match[1],
     );
@@ -73,7 +74,7 @@ test(
     for (const file of walk(fileURLToPath(dist)).filter((path) => path.endsWith('.html')))
       assert.doesNotMatch(
         readFileSync(file, 'utf8'),
-        /AI-assisted|AI assistance|code-drawn|visual quality review|Visual review is ongoing|Working with this drawing|Original pilot illustration/i,
+        /AI-assisted|AI assistance|code-drawn|visual quality review|Visual review is ongoing|Working with this drawing|Original pilot illustration|Collection in progress\. Our goal/i,
         file,
       );
   },

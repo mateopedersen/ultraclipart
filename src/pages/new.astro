@@ -1,17 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { art } from '../lib/catalog';
+import { art, newestArt } from '../lib/catalog';
 ---
 
 <Layout title="New Clipart" noindex={true}>
   <section class="hero">
     <p class="eyebrow">The growing collection</p>
     <h1>Fresh from the sketchbook.</h1>
-    <p>{art.length} original illustrations to try, edit and make your own.</p>
+    <p>{art.length} illustrations for your next personal or classroom project.</p>
   </section>
   <div class="gallery">
-    {art.slice(0, 32).map((item) => (
+    {newestArt.slice(0, 32).map((item) => (
       <Card item={item} />
     ))}
   </div>

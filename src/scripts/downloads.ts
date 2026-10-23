@@ -65,7 +65,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
     const url = URL.createObjectURL(new Blob(chunks, { type }));
     const save = document.createElement('a');
     save.href = url;
-    save.download = new URL(link.href).pathname.split('/').pop()!;
+    save.download = link.download || new URL(link.href).pathname.split('/').pop()!;
     document.body.append(save);
     save.click();
     save.remove();

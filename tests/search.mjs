@@ -9,12 +9,17 @@ import {
   stateParams,
 } from '../src/lib/search.ts';
 const arts = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url)));
-const topics = JSON.parse(readFileSync(new URL('../data/topics.json', import.meta.url))).topics;
+const topics = [
+  ...JSON.parse(readFileSync(new URL('../data/topics.json', import.meta.url))).topics,
+  ...JSON.parse(readFileSync(new URL('../data/extra-topics.json', import.meta.url))),
+];
 const data = arts.map((item) => ({
   ...item,
   cluster: topics.find((topic) => topic.slug === item.topic).cluster,
 }));
-const pumpkinCount = data.filter((item) => item.topic === 'pumpkin').length;
+const pumpkinCount = data.filter(
+  (item) => item.topic === 'pumpkin' || item.id === 'volleyball-halloween-pumpkin-clipart',
+).length;
 const search = (patch) => searchArtwork(data, { ...defaults, ...patch });
 
 test('query normalization handles punctuation, accents, plurals and controlled synonyms', () => {
@@ -38,7 +43,10 @@ test('black-and-white queries return true outlines, not black-colored artwork', 
     assert.equal(result.total, 1, q);
     assert.equal(result.items[0].id, 'pumpkin-botanical-outline');
   }
-  assert.equal(search({ style: 'outline', color: 'black' }).total, 1);
+  assert.equal(
+    search({ style: 'outline', color: 'black' }).total,
+    data.filter((a) => a.style === 'Outline' && a.color === 'Black').length,
+  );
   assert.equal(search({ style: 'color', color: 'black' }).items[0].id, 'spider-thread-and-bow');
   assert.equal(search({ q: 'outline spider' }).total, 0);
 });
@@ -52,7 +60,12 @@ test('all explicit facets combine and match actual file metadata', () => {
       orientation: 'square',
       background: 'transparent',
     }).total,
-    data.filter((x) => x.topic === 'pumpkin' && x.style === 'Color' && x.color === 'Orange').length,
+    data.filter(
+      (x) =>
+        (x.topic === 'pumpkin' || x.id === 'volleyball-halloween-pumpkin-clipart') &&
+        x.style === 'Color' &&
+        x.color === 'Orange',
+    ).length,
   );
   assert.equal(search({ orientation: 'portrait' }).total, 0);
   assert.equal(search({ background: 'opaque' }).total, 0);

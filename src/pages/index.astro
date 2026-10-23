@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Search from '../components/Search.astro';
 import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
-import { art, topics, availableClusters, slugify } from '../lib/catalog';
-const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift', 'snowman'];
+import { art, newestArt, topics, availableClusters, slugify } from '../lib/catalog';
+const picks = ['volleyball', 'pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'gift', 'snowman'];
 ---
 
 <Layout>
@@ -16,7 +16,7 @@ const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift',
       <Search />
       <div class="popular chips">
         <span>Try a subject:</span>
-        {['pumpkin', 'ghost', 'fall', 'gift'].map((t) => (
+        {['volleyball', 'pumpkin', 'ghost', 'gift'].map((t) => (
           <a href={`/search/?q=${t}`}>{t}</a>
         ))}
       </div>
@@ -67,12 +67,9 @@ const picks = ['pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'acorn', 'gift',
     <h2>Fresh from the sketchbook</h2>
     <a href="/new/">Explore the collection →</a>
   </div>
-  <p class="notice">
-    Our first collection is taking shape. Explore {art.length} original illustrations, try the
-    editor, and tell us what you think. More subjects are in preparation.
-  </p>
+  <p>Explore {art.length} illustrations for school, crafts and personal projects.</p>
   <div class="gallery">
-    {art.slice(0, 12).map((item) => (
+    {newestArt.slice(0, 12).map((item) => (
       <Card item={item} />
     ))}
   </div>

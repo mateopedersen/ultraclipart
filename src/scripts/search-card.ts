@@ -31,7 +31,7 @@ export function renderCard(item: SearchCard): HTMLElement {
   ])
     if (url) {
       const a = link(name!, url, name!.toLowerCase());
-      a.download = '';
+      a.download = `${item.id}.${name!.toLowerCase()}`;
       formats.append(a);
     }
   const actions = document.createElement('div');
@@ -68,7 +68,9 @@ export function renderCard(item: SearchCard): HTMLElement {
     return a;
   };
   actions.append(
-    action('edit', 'Edit', `/edit/${item.id}/`, 'button'),
+    item.editable === false
+      ? action('view', 'View', detail, 'button')
+      : action('edit', 'Edit', `/edit/${item.id}/`, 'button'),
     action('download', 'Download', detail, 'button primary'),
   );
   body.append(formats, actions);

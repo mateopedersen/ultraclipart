@@ -19,7 +19,7 @@ try {
   await page.goto(
     `${process.env.UC_BASE_URL || 'http://127.0.0.1:4321'}/__editor-export-test.html`,
   );
-  for (const item of art) {
+  for (const item of art.filter((item) => item.sourceType !== 'raster')) {
     for (const format of ['pdf', 'webp']) {
       console.log('export', item.id, format);
       const result = await page.evaluate(
@@ -58,7 +58,7 @@ try {
   console.log(
     JSON.stringify({
       passed: report.length,
-      subjects: art.length,
+      subjects: art.filter((item) => item.sourceType !== 'raster').length,
       maxPdfBytes: Math.max(...report.filter((r) => r.format === 'pdf').map((r) => r.bytes)),
     }),
   );

@@ -4,6 +4,8 @@ An English-language, static-first Astro 7.4.2 clipart catalog with a layered SVG
 
 **31 original illustrations across 23 topics are available in this release.** This includes the ten initial designs and 21 independently composed drawings in the first production wave. The supplied taxonomy retains all 110 topics and a target of 5,500 distinct drawings: **5,469 remain undrawn**; no topic is complete at 50. Review records distinguish AI screen review from human approval. Production and review notes are kept in repository records, not displayed on the website or inside the illustrations.
 
+The owner-supplied Volleyball collection adds **50 designs**, bringing the public catalog to **81 illustrations across 24 populated topics**. Its original transparent 1,382px WebPs and embedded-profile CMYK PDFs are preserved byte for byte. They are raster downloads, so their cards offer View and Download and do not invent layered editor sources. Volleyball is a supplemental topic; these files do not reduce the original 5,500-drawing target. The intake evidence records all 50 independently rendered PDF/WebP matches, original checksums and four-channel ICC profiles. Standard PDFs stay below 1,000,000 bytes.
+
 ## Run locally
 
 Use Node.js 24 and pnpm 11.25.0. The package's minimum Node version is 22.23.4.

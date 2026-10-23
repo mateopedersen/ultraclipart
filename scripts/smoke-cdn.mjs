@@ -3,6 +3,7 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { resolve, basename } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
+import { representationKinds } from './asset-representations.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const base = process.env.ASSET_BASE;
@@ -13,7 +14,7 @@ const art = JSON.parse(readFileSync(resolve(root, 'data/art.json'), 'utf8'));
 const output = resolve(process.env.REPORT_DIR ?? resolve(root, 'reports/live'));
 mkdirSync(output, { recursive: true });
 const queue = art.flatMap((item) =>
-  ['svg', 'webp', 'pdf', 'thumb'].map((kind) => ({
+  representationKinds(item).map((kind) => ({
     id: item.id,
     kind,
     url: base

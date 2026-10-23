@@ -106,7 +106,10 @@ test('the checked release covers every catalog representation with verified sour
   const manifest = JSON.parse(
     readFileSync(new URL('../data/publication.json', import.meta.url), 'utf8'),
   );
-  assert.equal(result.files, catalog.length * 4);
+  assert.equal(
+    result.files,
+    catalog.reduce((count, item) => count + (item.sourceType === 'raster' ? 3 : 4), 0),
+  );
   assert.equal(new Set(result.urls).size, result.files);
   assert.deepEqual(
     result.urls,

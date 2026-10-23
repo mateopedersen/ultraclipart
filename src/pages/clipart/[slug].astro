@@ -13,11 +13,18 @@ const related = availableTopics
   .filter((t) => t.cluster === topic.cluster && t.slug !== topic.slug)
   .slice(0, 8);
 const title = topic.keyword.replace('clipart', 'Clipart');
+const isVolleyball = topic.slug === 'volleyball';
+const hasEditable = items.some((item) => item.editable);
+const description = isVolleyball
+  ? 'Download 50 volleyball illustrations: players, beach scenes, balls, team celebrations and black-and-white designs. Transparent WebP and CMYK PDF files.'
+  : `Explore ${items.length} ${topic.keyword.toLowerCase()} illustrations for personal and educational projects. Download WebP and PDF files${hasEditable ? ' or customize layered artwork' : ''}.`;
 ---
 
 <Layout
-  title={title}
-  description={`Explore ${topic.keyword.toLowerCase()} and related ${topic.cluster.toLowerCase()} subjects. ${items.length ? `${items.length} original illustration${items.length === 1 ? '' : 's'} available for editing.` : 'Artwork is in preparation.'}`}
+  title={isVolleyball ? 'Volleyball Clipart: 50 Free WebP & PDF Downloads' : title}
+  description={description}
+  image={isVolleyball ? items[0].webp : undefined}
+  imageAlt={isVolleyball ? items[0].alt : undefined}
   noindex={!topicReady}
 >
   <script
@@ -31,23 +38,71 @@ const title = topic.keyword.replace('clipart', 'Clipart');
       ]),
     )}
   />
+  {isVolleyball && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={structuredData({
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        name: title,
+        url: 'https://ultraclipart.com/clipart/volleyball/',
+        description,
+        mainEntity: {
+          '@type': 'ItemList',
+          numberOfItems: items.length,
+          itemListElement: items.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            url: `https://ultraclipart.com/art/${item.id}/`,
+            name: item.title,
+            item: {
+              '@type': 'ImageObject',
+              name: item.title,
+              description: item.alt,
+              contentUrl: new URL(item.webp, 'https://ultraclipart.com').href,
+              thumbnailUrl: new URL(item.thumb, 'https://ultraclipart.com').href,
+              encodingFormat: 'image/webp',
+              width: item.width,
+              height: item.height,
+              license: 'https://ultraclipart.com/license/',
+              acquireLicensePage: 'https://ultraclipart.com/license/',
+              creditText: 'UltraClipart',
+            },
+          })),
+        },
+      })}
+    />
+  )}
   <section class="hero">
     <div class="breadcrumb">
       <a href="/">Home</a> / <a href="/categories/">Categories</a> /{' '}
       <a href={`/collection/${slugify(topic.cluster)}/`}>{topic.cluster}</a>
     </div>
     <h1>{title}</h1>
-    <p class="lead">Little details for your next creative project.</p>
-    <p>
-      {items.length
-        ? items
-            .slice(0, 3)
-            .map((a) => a.description)
-            .join(' ')
-        : `Our ${topic.keyword.toLowerCase()} collection is in preparation. Explore the related subjects below while original illustrations are developed and checked.`}
+    <p class="lead">
+      {isVolleyball
+        ? 'A little team spirit for your next project.'
+        : 'Little details for your next creative project.'}
     </p>
-    {topic.focus_note && <p>{topic.focus_note}.</p>}
+    <p>
+      {isVolleyball
+        ? 'Explore 50 volleyball illustrations, from beach-side rallies and player poses to cheerful mascots, trophies and black-and-white drawings. Choose a design for personal team journals, PE worksheets, classroom activities or sports-themed crafts.'
+        : items.length
+          ? items
+              .slice(0, 3)
+              .map((a) => a.description)
+              .join(' ')
+          : `Our ${topic.keyword.toLowerCase()} collection is in preparation. Explore the related subjects below while original illustrations are developed and checked.`}
+    </p>
     <div class="chips">
+      {isVolleyball && (
+        <>
+          <a href="/search/?q=volleyball+player">Players & teamwork</a>
+          <a href="/search/?q=beach+volleyball">Beach volleyball</a>
+          <a href="/search/?q=volleyball&color=black">Black & white</a>
+        </>
+      )}
       {related.map((t) => (
         <a href={`/clipart/${t.slug}/`}>{t.keyword}</a>
       ))}
@@ -74,17 +129,39 @@ const title = topic.keyword.replace('clipart', 'Clipart');
       </a>
     </div>
   )}
-  <div class="notice">
-    Collection in progress. Our goal is 50 distinct illustrations per topic; that is a production
-    target, not the number currently available.
-  </div>
   <section class="prose">
+    {isVolleyball && (
+      <>
+        <h2>Choose a volleyball illustration for your project</h2>
+        <p>
+          For a PE worksheet, start with a clear player pose: serving, setting, passing, blocking or
+          making a save. Leave room beside the player for a question or a practice goal. A simple
+          isolated volleyball works well on small labels, while a court or beach scene makes a more
+          detailed page header.
+        </p>
+        <p>
+          For personal cards and journals, try the floral wreath, folded heart, knitted ball or
+          watercolor design. Team huddles and high fives work well with messages about cooperation.
+          The open outline drawings offer more space for coloring than the shaded charcoal, stippled
+          and engraved designs.
+        </p>
+      </>
+    )}
     <h2>From screen to paper</h2>
     <p>
-      Use WebP for transparent digital layouts. Open an illustration in the editor to change its
-      colors, add a caption or make an outline version. Standard PDF downloads are prepared for
-      printing. Review your printer's settings and print at the intended paper size.
+      {isVolleyball
+        ? 'Each design has a transparent 1,382 × 1,382 WebP for digital layouts and a matching CMYK PDF. Select View to see a larger preview, then choose the download format you need. The PDF page is approximately 4.61 inches square, giving the image 300 pixels per inch at its native size. Print at actual size for that scale, or use your printer’s placement settings to position it on a larger sheet.'
+        : 'Use WebP for transparent digital layouts. Layered illustrations can be opened in the editor to change colors, add a caption or make an outline version. Standard PDF downloads are prepared for printing. Review your printer’s settings and print at the intended paper size.'}
     </p>
+    {isVolleyball && (
+      <p>
+        Keep the transparent WebP over a light or colored background when arranging a digital page.
+        For printing, check the actual size and contrast before making multiple copies. Our{' '}
+        <a href="/print-size/">print size calculator</a> helps you choose a suitable raster size;
+        the <a href="/guides/webp-pdf-and-editable-projects/">file format guide</a> explains when to
+        use WebP or PDF.
+      </p>
+    )}
     <h2>Keep creating</h2>
     <p>
       Personal and educational projects are welcome. Commercial use and resale as clipart are not

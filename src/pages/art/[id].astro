@@ -10,8 +10,8 @@ export function getStaticPaths() {
 }
 const { item } = Astro.props;
 const note = notes[item.id as keyof typeof notes];
-if (!note) throw new Error(`Missing original usage notes for ${item.id}`);
-const layers = note.layers;
+if (item.editable && !note) throw new Error(`Missing source layers for ${item.id}`);
+const layers = note?.layers ?? [];
 const topic = topics.find((t) => t.slug === item.topic)!;
 ---
 
@@ -60,7 +60,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
     <div>
       <div class="preview" id="art-preview">
         <img
-          src={item.svg}
+          src={item.editable ? item.svg! : item.webp}
           alt={item.alt}
           width={item.width}
           height={item.height}
@@ -84,7 +84,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
       </div>
     </div>
     <section>
-      <p class="eyebrow">Original illustration</p>
+      <p class="eyebrow">{item.editable ? 'Original illustration' : 'Volleyball collection'}</p>
       <h1>{item.title}</h1>
       <p>{item.description}</p>
       <div class="metadata">
@@ -101,20 +101,27 @@ const topic = topics.find((t) => t.slug === item.topic)!;
           {item.width} × {item.height}
         </div>
         <div>
-          <small>Source</small>Editable layered vector
+          <small>{item.editable ? 'Source' : 'Downloads'}</small>
+          {item.editable ? 'Editable layered vector' : 'Transparent WebP & CMYK PDF'}
         </div>
       </div>
       <div class="detail-actions">
-        <a class="button primary" href={`/edit/${item.id}/`}>
-          <Icon name="edit" size={18} />
-          <span>Edit Clipart</span>
-        </a>
-        <a class="button" href={item.webp} download>
+        {item.editable && (
+          <a class="button primary" href={`/edit/${item.id}/`}>
+            <Icon name="edit" size={18} />
+            <span>Edit Clipart</span>
+          </a>
+        )}
+        <a
+          class:list={['button', { primary: !item.editable }]}
+          href={item.webp}
+          download={`${item.id}.webp`}
+        >
           <Icon name="download" size={18} />
           <span>Download WebP</span>
         </a>
         {item.pdf && (
-          <a class="button" href={item.pdf} download>
+          <a class="button" href={item.pdf} download={`${item.id}.pdf`}>
             <Icon name="download" size={18} />
             <span>Download PDF</span>
           </a>
@@ -128,17 +135,23 @@ const topic = topics.find((t) => t.slug === item.topic)!;
         Free for personal and educational use. No commercial use or resale as clipart.{' '}
         <a href="/license/">License details →</a>
       </p>
-      <p class="notice">
-        Changing the preview background does not change the original download; use the editor to
-        export your changes.
-      </p>
+      {item.editable && (
+        <p class="notice">
+          Changing the preview background does not change the original download; use the editor to
+          export your changes.
+        </p>
+      )}
     </section>
   </div>
   <section class="asset-facts" aria-label="Download details">
     <h2>Inside this download</h2>
     <dl>
-      <dt>Editable source</dt>
-      <dd>{layers.length} named layers</dd>
+      {item.editable && (
+        <>
+          <dt>Editable source</dt>
+          <dd>{layers.length} named layers</dd>
+        </>
+      )}
       <dt>WebP</dt>
       <dd>
         {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} pixels ·{' '}
@@ -151,14 +164,16 @@ const topic = topics.find((t) => t.slug === item.topic)!;
       <dt>Print conversion</dt>
       <dd>{item.printProfile}</dd>
     </dl>
-    <details>
-      <summary>See the editable layers</summary>
-      <ul>
-        {layers.map((layer) => (
-          <li>{layer}</li>
-        ))}
-      </ul>
-    </details>
+    {item.editable && (
+      <details>
+        <summary>See the editable layers</summary>
+        <ul>
+          {layers.map((layer) => (
+            <li>{layer}</li>
+          ))}
+        </ul>
+      </details>
+    )}
     <p>
       <a href="/print-size/">Check a raster print size</a> or{' '}
       <a href="/guides/webp-pdf-and-editable-projects/">compare the file formats</a>.
@@ -171,6 +186,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
   <div class="gallery">
     {art
       .filter((a) => a.id !== item.id)
+      .sort((a, b) => Number(b.topic === item.topic) - Number(a.topic === item.topic))
       .slice(0, 5)
       .map((item) => (
         <Card item={item} />

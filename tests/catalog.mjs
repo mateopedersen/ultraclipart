@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, statSync, readdirSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { createHash } from 'node:crypto';
+import { representationKinds } from '../scripts/asset-representations.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const topics = JSON.parse(readFileSync(join(root, 'data/topics.json'))).topics;
@@ -64,7 +65,8 @@ test('all 110 keyword records exactly match CSV identities and have collision-fr
 
 test('art identities, topic assignment, provenance and review states remain honest', () => {
   assert.equal(new Set(arts.map((a) => a.id)).size, arts.length);
-  const validTopics = new Set(topics.map((t) => t.slug));
+  const extras = JSON.parse(readFileSync(join(root, 'data/extra-topics.json')));
+  const validTopics = new Set([...topics, ...extras].map((t) => t.slug));
   for (const art of arts) {
     assert.ok(validTopics.has(art.topic), `unauthorized topic: ${art.topic}`);
     assert.match(art.id, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
@@ -82,12 +84,15 @@ test('art identities, topic assignment, provenance and review states remain hone
     assert.ok(arts.filter((a) => a.topic === topic.slug && a.published).length <= 50);
 });
 
-test('every generated artwork has four real, correctly typed, paired and hashed representations', () => {
+test('every artwork has its declared real, correctly typed, paired and hashed representations', () => {
   const paths = new Set();
   const svgHashes = new Set();
   for (const art of arts) {
-    for (const kind of ['svg', 'webp', 'pdf', 'thumb']) {
-      assert.ok(/^\/(?:pilot|catalog\/wave_\d{3})\//.test(art[kind]) && !art[kind].includes('..'));
+    for (const kind of representationKinds(art)) {
+      assert.ok(
+        /^\/(?:pilot|catalog\/(?:wave_\d{3}|volleyball))\//.test(art[kind]) &&
+          !art[kind].includes('..'),
+      );
       assert.ok(art[kind].includes(art.id), `cross-wired ${kind}: ${art.id}`);
       assert.ok(!paths.has(art[kind]), `shared file: ${art[kind]}`);
       paths.add(art[kind]);

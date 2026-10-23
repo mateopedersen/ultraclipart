@@ -108,10 +108,11 @@ try {
     }
   }
   await page.goto(base + '/categories/');
-  const expected = JSON.parse(
-    readFileSync(new URL('../../data/topics.json', import.meta.url), 'utf8'),
-  )
-    .topics.map((topic) => topic.keyword.toLowerCase())
+  const expected = [
+    ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url), 'utf8')).topics,
+    ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url), 'utf8')),
+  ]
+    .map((topic) => topic.keyword.toLowerCase())
     .sort();
   const actual = await page
     .locator('[data-topic]')

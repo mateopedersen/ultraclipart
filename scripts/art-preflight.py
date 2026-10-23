@@ -6,13 +6,16 @@ from PIL import Image
 from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('export',ROOT/'scripts/art-export.py');ex=importlib.util.module_from_spec(spec);spec.loader.exec_module(ex)
+rspec=importlib.util.spec_from_file_location('raster_check',ROOT/'scripts/raster-preflight.py');raster=importlib.util.module_from_spec(rspec);rspec.loader.exec_module(raster)
 ART=json.loads((ROOT/'data/art.json').read_text())
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def preflight():
  rows=[];errors=[];shapes=[]
  for a in ART:
-  checks={};files={k:ROOT/'public'/a[k].lstrip('/') for k in ('svg','webp','thumb','pdf')}
+  checks={};files={k:ROOT/'public'/a[k].lstrip('/') for k in (('webp','thumb','pdf') if a.get('sourceType')=='raster' else ('svg','webp','thumb','pdf'))}
   try:
+   if a.get('sourceType')=='raster':
+    checks=raster.inspect_raster(a,files);rows.append({'id':a['id'],'checks':checks});continue
    svg=ex.validate_svg(files['svg'].read_text());groups=[e.get('id') for e in svg if e.tag.endswith('g')]
    checks['namedLayers']=len(groups);assert len(groups)>=4
    checks['hashes']=all(digest(p)==a['files'][k]['sha256'] and p.stat().st_size==a['files'][k]['bytes'] for k,p in files.items());assert checks['hashes']
@@ -50,6 +53,8 @@ def preflight():
   try:ex.validate_svg(payload);security.append(False);errors.append('Malicious SVG accepted: '+str(i))
   except Exception:security.append(True)
  sizes=sorted(a['files']['pdf']['bytes'] for a in ART);total=sum(v['bytes'] for a in ART for v in a['files'].values())
- report={'status':'PASS' if not errors else 'FAIL','generatedCount':len(ART),'topicCount':len(set(a['topic'] for a in ART)),'targetCount':5500,'completedTopicCount':0,'publishedApprovedCount':sum(a['published'] for a in ART),'totalLocalAssetBytes':total,'r2MeasuredBytes':None,'maxPdfBytes':max(sizes),'p95PdfBytes':sizes[math.ceil(.95*len(sizes))-1],'pdfOverCapCount':sum(n>1_000_000 for n in sizes),'maliciousSvgVectorsRejected':sum(security),'exactDuplicateSvgCount':len(ART)-len(set(a['files']['svg']['sha256'] for a in ART)),'silhouetteReviewFlags':duplicates,'rows':rows,'errors':errors,'limitations':['No PDF/X compliance claim. Registered GRACoL output condition is referenced; full ICC not embedded due 1 MB cap.','Physical print proof and owner visual signoff are pending. Automated checks do not prove artistic originality.','R2 counters are unknown until authenticated remote inventory is obtained.']}
+ original_topics={t['slug'] for t in json.loads((ROOT/'data/topics.json').read_text())['topics']}
+ original_art=[a for a in ART if a['topic'] in original_topics]
+ report={'status':'PASS' if not errors else 'FAIL','generatedCount':len(original_art),'availableCount':len(ART),'supplementalCount':len(ART)-len(original_art),'topicCount':len(set(a['topic'] for a in ART)),'targetCount':5500,'completedTopicCount':sum(sum(a['topic']==topic and a['published'] for a in ART)==50 for topic in original_topics),'publishedApprovedCount':sum(a['published'] for a in ART),'totalLocalAssetBytes':total,'r2MeasuredBytes':None,'maxPdfBytes':max(sizes),'p95PdfBytes':sizes[math.ceil(.95*len(sizes))-1],'pdfOverCapCount':sum(n>1_000_000 for n in sizes),'maliciousSvgVectorsRejected':sum(security),'exactDuplicateSvgCount':sum('svg'in a['files']for a in ART)-len(set(a['files']['svg']['sha256'] for a in ART if 'svg'in a['files'])),'silhouetteReviewFlags':duplicates,'rows':rows,'errors':errors,'limitations':['No PDF/X compliance claim. Layered vectors reference GRACoL without an embedded ICC; supplied volleyball raster PDFs embed a four-channel SWOP profile.','Physical print proof and owner visual signoff are pending. Automated checks do not prove artistic originality.','R2 counters are unknown until authenticated remote inventory is obtained.']}
  (ROOT/'data/art-preflight.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k not in ('rows','silhouetteReviewFlags')},indent=2));return report
 if __name__=='__main__':raise SystemExit(0 if preflight()['status']=='PASS' else 1)

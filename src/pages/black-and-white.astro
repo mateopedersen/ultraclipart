@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { art } from '../lib/catalog';
+const printable = [
+  ...art.filter((a) => !a.editable && a.color === 'Black'),
+  ...art.filter((a) => a.editable),
+];
 ---
 
 <Layout title="Black & White Clipart and Print Studio" noindex={true}>
@@ -11,12 +15,12 @@ import { art } from '../lib/catalog';
       <br />A blank page of possibilities.
     </h1>
     <p class="lead">
-      Choose an illustration, then make an outline or grayscale version in the editor.
+      Download a black-and-white drawing, or open layered artwork in the print studio.
     </p>
   </section>
   <div class="gallery print-gallery">
-    {art.slice(0, 32).map((a) => (
-      <a class="art-card" href={`/edit/${a.id}/?mode=outline`}>
+    {printable.slice(0, 32).map((a) => (
+      <a class="art-card" href={a.editable ? `/edit/${a.id}/?mode=outline` : `/art/${a.id}/`}>
         <div class="art-picture">
           <img
             src={a.thumb}
@@ -29,20 +33,20 @@ import { art } from '../lib/catalog';
         </div>
         <div class="card-body">
           <h3 class="card-title">{a.title}</h3>
-          <p>Open print studio →</p>
+          <p>{a.editable ? 'Open print studio →' : 'View downloads →'}</p>
         </div>
       </a>
     ))}
   </div>
   <p class="notice">
-    Thumbnails show a grayscale preview. The editor creates an actual outline from the vector shapes
-    and includes paper size and margin settings.
+    Layered artwork opens in the print studio for outline and grayscale adjustments. Black-and-white
+    downloads open on their illustration page.
   </p>
   <div class="browse-more">
     <p>
-      {art.length > 32
-        ? `Showing 32 of ${art.length} illustrations. Every illustration can be opened in the editor.`
-        : 'Every illustration includes editable layers and print settings.'}
+      {printable.length > 32
+        ? `Showing 32 of ${printable.length} illustrations for print projects.`
+        : 'Choose a drawing for your next print project.'}
     </p>
     <a class="button primary" href="/search/">
       Browse all clipart →

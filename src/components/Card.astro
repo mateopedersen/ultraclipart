@@ -12,19 +12,19 @@ const { item } = Astro.props;
       {item.title}
     </a>
     <div class="formats">
-      <a href={item.webp} download class="webp">
+      <a href={item.webp} download={`${item.id}.webp`} class="webp">
         WEBP
       </a>
       {item.pdf && (
-        <a href={item.pdf} download class="pdf">
+        <a href={item.pdf} download={`${item.id}.pdf`} class="pdf">
           PDF
         </a>
       )}
     </div>
     <div class="card-actions">
-      <a class="button" href={`/edit/${item.id}/`}>
-        <Icon name="edit" size={16} />
-        <span>Edit</span>
+      <a class="button" href={item.editable === false ? `/art/${item.id}/` : `/edit/${item.id}/`}>
+        <Icon name={item.editable === false ? 'view' : 'edit'} size={16} />
+        <span>{item.editable === false ? 'View' : 'Edit'}</span>
       </a>
       <a class="button primary" href={`/art/${item.id}/`}>
         <Icon name="download" size={16} />

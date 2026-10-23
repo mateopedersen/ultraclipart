@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { readFileSync, realpathSync } from 'node:fs';
 import { basename, join, posix } from 'node:path';
+import { sourceTypeOf, representationKinds } from './asset-representations.mjs';
 
 export const ASSET_ORIGIN = 'https://assets.ultraclipart.com';
 export const SITE_ORIGIN = 'https://ultraclipart.com';
@@ -105,9 +106,17 @@ export function validateManifest(manifest) {
     paths.add(file.path);
     urls.add(file.url);
     bytes += file.bytes;
-    groups.set(file.assetId, (groups.get(file.assetId) ?? 0) + 1);
+    const sourceType = sourceTypeOf(file);
+    const group = groups.get(file.assetId) ?? { sourceType, kinds: [] };
+    if (group.sourceType !== sourceType) throw new Error('Mixed source types within artwork');
+    group.kinds.push(file.kind);
+    groups.set(file.assetId, group);
   }
-  if ([...groups.values()].some((count) => count !== ASSET_KINDS.length))
+  if (
+    [...groups.values()].some(
+      (group) => [...group.kinds].sort().join(',') !== representationKinds(group).sort().join(','),
+    )
+  )
     throw new Error('Publication contains an incomplete artwork');
   if (!Number.isSafeInteger(bytes) || manifest.bytes !== bytes)
     throw new Error('Publication byte total differs');
@@ -123,7 +132,10 @@ export function catalogFiles(catalog) {
     if (!/^[a-z0-9][a-z0-9-]+$/.test(item.id ?? '') || ids.has(item.id))
       throw new Error('Invalid or duplicate catalog artwork ID');
     ids.add(item.id);
-    return ASSET_KINDS.map((kind) => {
+    const sourceType = sourceTypeOf(item);
+    if (sourceType === 'raster' && (item.svg != null || item.files?.svg != null))
+      throw new Error('Raster artwork must not advertise a fabricated SVG source');
+    return representationKinds(item).map((kind) => {
       const path = validateLocalAssetPath(item[kind]),
         metadata = item.files?.[kind];
       if (paths.has(path)) throw new Error('Catalog representations must have unique source paths');
@@ -137,6 +149,7 @@ export function catalogFiles(catalog) {
         throw new Error('Missing catalog asset metadata');
       return {
         assetId: item.id,
+        ...(sourceType === 'raster' ? { sourceType } : {}),
         kind,
         path,
         name: basename(path),
@@ -158,6 +171,7 @@ export function validatePublication(manifest, catalog, readAsset) {
     const file = files.get(assetIdentity(asset.assetId, asset.kind));
     if (
       !file ||
+      sourceTypeOf(file) !== sourceTypeOf(asset) ||
       file.path !== asset.path ||
       file.name !== asset.name ||
       file.bytes !== asset.bytes ||

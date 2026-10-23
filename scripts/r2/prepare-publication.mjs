@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, mkdirSync, renameSync, realpathSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { sourceTypeOf } from '../asset-representations.mjs';
 import { validateBatch, HARD_CAP } from './plan.mjs';
 import { objectIdentity, validateInventoryScope } from './inventory.mjs';
 import {
@@ -131,7 +132,13 @@ export async function preparePublication({
   for (const object of batch) {
     const id = assetIdentity(object.assetId, kindOf(object.kind)),
       file = expectedById.get(id);
-    if (!file || object.bytes !== file.bytes || object.sha256 !== file.sha256 || uploaded.has(id))
+    if (
+      !file ||
+      sourceTypeOf(object) !== sourceTypeOf(file) ||
+      object.bytes !== file.bytes ||
+      object.sha256 !== file.sha256 ||
+      uploaded.has(id)
+    )
       throw new Error('Batch contains an unknown or mismatched catalog representation');
     uploaded.set(id, object);
   }
@@ -144,6 +151,7 @@ export async function preparePublication({
       old = previous.get(id);
     if (
       old &&
+      sourceTypeOf(old) === sourceTypeOf(file) &&
       old.path === file.path &&
       old.name === file.name &&
       old.bytes === file.bytes &&
@@ -228,7 +236,7 @@ async function main() {
         output: options.output,
         files: manifest.files.length,
         bytes: manifest.bytes,
-        artworks: manifest.files.length / 4,
+        artworks: new Set(manifest.files.map((file) => file.assetId)).size,
         remoteWrites: 0,
         editorialApproval: 'unchanged; requires separate review',
       },
