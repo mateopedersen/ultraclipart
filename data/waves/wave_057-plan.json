@@ -1,0 +1,29 @@
+{
+  "wave": "wave_057",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-candy-shop-cart",
+      "title": "Halloween Candy Cart",
+      "alt": "A two-wheeled candy cart with a purple canopy, three sweet jars and a pumpkin.",
+      "color": "Purple",
+      "style": "Color",
+      "description": "A two-wheeled candy cart with a purple canopy, three sweet jars and a pumpkin. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_057/source/halloween-candy-shop-cart.png"
+    },
+    {
+      "id": "halloween-skeleton-gardening",
+      "title": "Skeleton Tending a Flowerpot",
+      "alt": "A friendly skeleton kneeling beside orange flowers and watering their soil.",
+      "color": "White",
+      "style": "Color",
+      "description": "A friendly skeleton kneeling beside orange flowers and watering their soil. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_057/source/halloween-skeleton-gardening.png"
+    }
+  ]
+}

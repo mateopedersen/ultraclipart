@@ -1,0 +1,186 @@
+{
+  "wave": "wave_060",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-scarecrow-violin",
+      "title": "Scarecrow Playing a Violin",
+      "alt": "A cheerful patchwork scarecrow seated on a hay bale and playing a violin.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A cheerful patchwork scarecrow seated on a hay bale and playing a violin. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_060/source/halloween-scarecrow-violin.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e8e8f1eadadc57722d10bd036465cad60f3bc662603f63f0716dc3c12e74b6d3",
+      "inputSignature": "6daebd74aaaf646fe6580d7a2b41d9f8659224e846f6d92c3c93af0a1d3446da",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 906691,
+        "weightedCmykRmse": 1.200137
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1612729,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1093467,
+          "weightedCmykRmse": 0.824847
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 993398,
+          "weightedCmykRmse": 0.965286
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 906691,
+          "weightedCmykRmse": 1.200137
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        194,
+        37,
+        1158,
+        1205
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_060/exports/halloween-scarecrow-violin.pdf",
+          "bytes": 906691,
+          "sha256": "194646e2d765a5ca0ef5d14b1b1f97df6cff79afe985c976aa4a555a201ad190"
+        },
+        "webp": {
+          "path": "work/production/wave_060/exports/halloween-scarecrow-violin.webp",
+          "bytes": 879050,
+          "sha256": "7048e4dfcf9d5508c68f6a8b501a67a09ce736d5f8cd3365a19b6033182ef38f"
+        },
+        "thumb": {
+          "path": "work/production/wave_060/exports/halloween-scarecrow-violin-thumb.webp",
+          "bytes": 61662,
+          "sha256": "2c7d3588add81da15931ec97eecb24a7dec07a5d5c8094bfe639803423996e37"
+        }
+      },
+      "proofSha256": "1db9631bf489fdf9f5ead2c67905c22ec67387d9cfac9970dda47b3f56585436",
+      "pairMeanRgbDifference": 2.17669
+    },
+    {
+      "id": "halloween-treehouse",
+      "title": "Halloween Treehouse",
+      "alt": "A small crooked treehouse with a rope ladder and pumpkin lantern in a gnarled tree.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A small crooked treehouse with a rope ladder and pumpkin lantern in a gnarled tree. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_060/source/halloween-treehouse.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "df7885c96aab22464c7824e2af140605dd9fc479b362bb4d3ae3dda58bab594b",
+      "inputSignature": "4207b35d3631fb3ffa4461979747521c54dd72ece6bf98b7e8b49b1f8ad1a260",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 773238,
+        "weightedCmykRmse": 0.995913
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1133539,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 773238,
+          "weightedCmykRmse": 0.995913
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        191,
+        144,
+        1098,
+        1107
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_060/exports/halloween-treehouse.pdf",
+          "bytes": 773238,
+          "sha256": "82f42e7b519d58446c542e4decffe78a4ce277197b6997f5e32d1d77510b761b"
+        },
+        "webp": {
+          "path": "work/production/wave_060/exports/halloween-treehouse.webp",
+          "bytes": 511710,
+          "sha256": "10547155b9441c10b317637b92794816a3bd80dd069e014ed17e9615648a5886"
+        },
+        "thumb": {
+          "path": "work/production/wave_060/exports/halloween-treehouse-thumb.webp",
+          "bytes": 42904,
+          "sha256": "9895bdfc60582b71be262b709bfa4ac14edc114ad83b4a691132e6b1debe0610"
+        }
+      },
+      "proofSha256": "7655a2b111225a6728b4d8971449ef99e42a851652219cf86793738fd896cfb5",
+      "pairMeanRgbDifference": 1.58614
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:11:55.846Z",
+  "cdnVerifiedAt": "2026-10-23T22:24:03.090Z"
+}

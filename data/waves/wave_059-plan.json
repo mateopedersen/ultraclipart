@@ -1,0 +1,29 @@
+{
+  "wave": "wave_059",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-hat-wreath",
+      "title": "Witch Hat Autumn Wreath",
+      "alt": "An open autumn wreath of orange leaves, purple berries and a small witch hat.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An open autumn wreath of orange leaves, purple berries and a small witch hat. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_059/source/halloween-hat-wreath.png"
+    },
+    {
+      "id": "halloween-crooked-cottage",
+      "title": "Crooked Halloween Cottage",
+      "alt": "A small purple cottage with a crooked tower, warm windows and a low fence.",
+      "color": "Purple",
+      "style": "Color",
+      "description": "A small purple cottage with a crooked tower, warm windows and a low fence. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_059/source/halloween-crooked-cottage.png"
+    }
+  ]
+}

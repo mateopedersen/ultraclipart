@@ -1,0 +1,178 @@
+{
+  "wave": "wave_066",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-flowering-vine",
+      "title": "Flowering Pumpkin Vine",
+      "alt": "A spreading pumpkin vine with a young green fruit, yellow flower, closed bud and curling tendrils.",
+      "color": "Green",
+      "style": "Color",
+      "description": "A spreading pumpkin vine with a young green fruit, yellow flower, closed bud and curling tendrils. Use this illustration for personal autumn stationery, seasonal classroom projects and harvest activities.",
+      "source": "work/production/wave_066/source/pumpkin-flowering-vine.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ec15ea6aedaa49fbe329c0c1d35221f0cdb73580586608fea53f7d2b1d9d5d29",
+      "inputSignature": "2d2bd4cff75ba48213e0d63c5c02e3fbe9611c0dfa0cda0e5e250d5bb103f3ed",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 899581,
+        "weightedCmykRmse": 0.916792
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1223266,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 899581,
+          "weightedCmykRmse": 0.916792
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        33,
+        239,
+        1221,
+        1014
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_066/exports/pumpkin-flowering-vine.pdf",
+          "bytes": 899581,
+          "sha256": "c1703dc66381d5cc714b84a6c848c136accf1d4add3a251438ce0ba3be9ab238"
+        },
+        "webp": {
+          "path": "work/production/wave_066/exports/pumpkin-flowering-vine.webp",
+          "bytes": 561244,
+          "sha256": "ddfd6e52552aa39a07461bdec89809e95223f2ef6a3c5fc88d88dd28e815e1b7"
+        },
+        "thumb": {
+          "path": "work/production/wave_066/exports/pumpkin-flowering-vine-thumb.webp",
+          "bytes": 50454,
+          "sha256": "3f19485b8cb1489492e3b76fd79e35b78f40ddca7946208fe1656c1a9b399270"
+        }
+      },
+      "proofSha256": "82fcee89876b59d6e157498f895fe3fd717746612568fc16e234ef6e4b1b5f42",
+      "pairMeanRgbDifference": 1.73389
+    },
+    {
+      "id": "pumpkin-harvest-basket",
+      "title": "Pumpkin Harvest Basket",
+      "alt": "An oval woven basket holding orange, cream and green pumpkins with a leafy vine over its rim.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An oval woven basket holding orange, cream and green pumpkins with a leafy vine over its rim. Use this illustration for personal autumn stationery, seasonal classroom projects and harvest activities.",
+      "source": "work/production/wave_066/source/pumpkin-harvest-basket.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "bfaefe2df59d6a7964c57fb457efe3d02cd1e65ce99cbecbc791c3a3b3ffd5c8",
+      "inputSignature": "3e88878a1e4f7baa01372fbce536df620ed3ce959b4d762bfe7047b5750049fa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 935532,
+        "weightedCmykRmse": 0.886629
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1363559,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 935532,
+          "weightedCmykRmse": 0.886629
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        69,
+        231,
+        1185,
+        988
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_066/exports/pumpkin-harvest-basket.pdf",
+          "bytes": 935532,
+          "sha256": "0a3ad9db54d02f4e0eea98ffd8c98c71c4850836e7e889c5991836d02add8ed0"
+        },
+        "webp": {
+          "path": "work/production/wave_066/exports/pumpkin-harvest-basket.webp",
+          "bytes": 720662,
+          "sha256": "191e39945dfe551df46c7e66494066380a9d6d2dd03422c7ef2e87c61c8e16e0"
+        },
+        "thumb": {
+          "path": "work/production/wave_066/exports/pumpkin-harvest-basket-thumb.webp",
+          "bytes": 47054,
+          "sha256": "643f6267f156d769804445dd41fa172787a27e82bef5e22ea29f2ec266ea1725"
+        }
+      },
+      "proofSha256": "8a96f87a4a4b68940fa4fa05c8273c75e2a891a862dce4844d1af87f47fce41d",
+      "pairMeanRgbDifference": 1.88703
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-floral-arrangement",
+      "reason": "PDF byte budget at unchanged quality floor; not imported."
+    }
+  ],
+  "screenReviewNotes": "Two source images and CMYK proof reviewed. Complete vine silhouette with uncut leaves and a bud; basket holds three distinct pumpkins with coherent woven support. Floral vase held separately; not counted.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:30:25.520Z",
+  "cdnVerifiedAt": "2026-10-23T22:33:08.593Z"
+}

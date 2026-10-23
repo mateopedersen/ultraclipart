@@ -1,0 +1,26 @@
+{
+  "wave": "wave_056",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-spooky-doorway",
+      "title": "Welcoming Halloween Doorway",
+      "alt": "An arched wooden doorway with a bat wreath, pumpkins and a warm lantern.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "An arched wooden doorway with a bat wreath, pumpkins and a warm lantern. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_056/source/halloween-spooky-doorway.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-scarecrow-violin",
+      "reason": "Native CMYK byte cap; quality floor retained"
+    }
+  ]
+}

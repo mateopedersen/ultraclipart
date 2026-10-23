@@ -1,0 +1,21 @@
+{
+  "wave": "wave_063",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-witch-bicycle",
+      "title": "Witch Riding a Bicycle Coloring Illustration",
+      "alt": "A smiling witch pedals a bicycle with a pumpkin in the front basket and a broom on the rear rack, drawn in black outlines.",
+      "description": "A friendly cycling witch with clear open shapes for Halloween coloring sheets, classroom story prompts and personal seasonal crafts.",
+      "color": "Black",
+      "style": "Outline",
+      "printSeparation": "black-only",
+      "source": "work/production/wave_063/source/halloween-witch-bicycle.png"
+    }
+  ]
+}

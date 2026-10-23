@@ -1,0 +1,35 @@
+{
+  "wave": "wave_066",
+  "topic": "pumpkin",
+  "method": "builtin-image-generation",
+  "research": "data/research/pumpkin-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pumpkin-flowering-vine",
+      "title": "Flowering Pumpkin Vine",
+      "alt": "A spreading pumpkin vine with a young green fruit, yellow flower, closed bud and curling tendrils.",
+      "color": "Green",
+      "style": "Color",
+      "description": "A spreading pumpkin vine with a young green fruit, yellow flower, closed bud and curling tendrils. Use this illustration for personal autumn stationery, seasonal classroom projects and harvest activities.",
+      "source": "work/production/wave_066/source/pumpkin-flowering-vine.png"
+    },
+    {
+      "id": "pumpkin-harvest-basket",
+      "title": "Pumpkin Harvest Basket",
+      "alt": "An oval woven basket holding orange, cream and green pumpkins with a leafy vine over its rim.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An oval woven basket holding orange, cream and green pumpkins with a leafy vine over its rim. Use this illustration for personal autumn stationery, seasonal classroom projects and harvest activities.",
+      "source": "work/production/wave_066/source/pumpkin-harvest-basket.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-floral-arrangement",
+      "reason": "PDF byte budget at unchanged quality floor; not imported."
+    }
+  ]
+}

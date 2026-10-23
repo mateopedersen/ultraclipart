@@ -1,0 +1,120 @@
+{
+  "wave": "wave_056",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-spooky-doorway",
+      "title": "Welcoming Halloween Doorway",
+      "alt": "An arched wooden doorway with a bat wreath, pumpkins and a warm lantern.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "An arched wooden doorway with a bat wreath, pumpkins and a warm lantern. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_056/source/halloween-spooky-doorway.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ed0024e684b1b21b11d5dd77579600780bf9101b717d6a844b5cf5f5436a1be7",
+      "inputSignature": "94fabdda75ef9dddb97448a172204b8c5429b65a9b55a80f043934823a925bec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 886275,
+        "weightedCmykRmse": 1.461356
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1821084,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1270324,
+          "weightedCmykRmse": 0.824442
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1152039,
+          "weightedCmykRmse": 0.972072
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1015613,
+          "weightedCmykRmse": 1.17667
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 886275,
+          "weightedCmykRmse": 1.461356
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        234,
+        14,
+        1024,
+        1226
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_056/exports/halloween-spooky-doorway.pdf",
+          "bytes": 886275,
+          "sha256": "96dda88cfbd8d8a7b3949b2942d4fd7de6509a756a724b236029d8e38950d305"
+        },
+        "webp": {
+          "path": "work/production/wave_056/exports/halloween-spooky-doorway.webp",
+          "bytes": 1002890,
+          "sha256": "04d152f67442c345fbac60100327cbba705411edbbfd4880ec1e4e401b5c653b"
+        },
+        "thumb": {
+          "path": "work/production/wave_056/exports/halloween-spooky-doorway-thumb.webp",
+          "bytes": 48792,
+          "sha256": "9eae92f8e893e5fa083f17e7b92f6c089cd36231c771aedcf955e8f8c41a2609"
+        }
+      },
+      "proofSha256": "3c4f0dd6712139b5b46b17e24cd41497987cfe8616dfcdb4f65d4119bc41e069",
+      "pairMeanRgbDifference": 1.54452
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-scarecrow-violin",
+      "reason": "Native CMYK byte cap; quality floor retained"
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:58:51.807Z",
+  "cdnVerifiedAt": "2026-10-23T22:24:03.085Z"
+}

@@ -1,0 +1,265 @@
+{
+  "wave": "wave_065",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-sleeping-fox",
+      "title": "Sleeping Fox with a Pumpkin",
+      "alt": "A sleeping red fox curls its white-tipped tail around a small pumpkin beside a maple leaf.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "A sleeping red fox curls its white-tipped tail around a small pumpkin beside a maple leaf. Use this character illustration for autumn story cards, classroom activities and personal seasonal crafts.",
+      "source": "work/production/wave_065/source/pumpkin-sleeping-fox.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "adbcaab11ddb28cb402035f8f2a973fc89fd76d0eb30a51779d7c7c658b0a415",
+      "inputSignature": "53a89e62e3376498cf782608111678f180ab1aed84710505abbab986a43e27e1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 755534,
+        "weightedCmykRmse": 0.812199
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1332109,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 755534,
+          "weightedCmykRmse": 0.812199
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        20,
+        143,
+        1239,
+        1094
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_065/exports/pumpkin-sleeping-fox.pdf",
+          "bytes": 755534,
+          "sha256": "c45ffcc57a667a224485cc75fa6b5c2a1db3bf92ab0d636d5f9d4de11e40cdfe"
+        },
+        "webp": {
+          "path": "work/production/wave_065/exports/pumpkin-sleeping-fox.webp",
+          "bytes": 835670,
+          "sha256": "3d225526ea655ac1f236a8b8cf69d46e0f30d7fe316a7b7bd0ce7fa11741e687"
+        },
+        "thumb": {
+          "path": "work/production/wave_065/exports/pumpkin-sleeping-fox-thumb.webp",
+          "bytes": 47648,
+          "sha256": "deaa459cf92a3f98322499ab46b752c4d2931af70870db2b352cbdc128bf3d22"
+        }
+      },
+      "proofSha256": "92e15f88221027b938b26bfd2a06cddbcf984ec965e8f0fd7115f257901bd6d9",
+      "pairMeanRgbDifference": 2.30183
+    },
+    {
+      "id": "pumpkin-hedgehog-harvest",
+      "title": "Hedgehog Carrying a Pumpkin",
+      "alt": "A small hedgehog wearing a green scarf holds an orange pumpkin against its belly.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A small hedgehog wearing a green scarf holds an orange pumpkin against its belly. Use this character illustration for autumn story cards, classroom activities and personal seasonal crafts.",
+      "source": "work/production/wave_065/source/pumpkin-hedgehog-harvest.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1ffb8ac7ef491af0cecc65c4fc96be556cd7c32ef4fdbfa9103c5fb09b2d970a",
+      "inputSignature": "6d5bcc055dc702c9ad5b9c273e029a0d2f096a3031ba0373447c883afd9ac0bc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 928915,
+        "weightedCmykRmse": 1.208045
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1647067,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1141313,
+          "weightedCmykRmse": 0.839936
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1033876,
+          "weightedCmykRmse": 0.982206
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 928915,
+          "weightedCmykRmse": 1.208045
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        240,
+        49,
+        1081,
+        1181
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_065/exports/pumpkin-hedgehog-harvest.pdf",
+          "bytes": 928915,
+          "sha256": "3b88b5aea78aab2bc39572cc9a49155cb6a8cf71229a8141f48fdfbeb67ac347"
+        },
+        "webp": {
+          "path": "work/production/wave_065/exports/pumpkin-hedgehog-harvest.webp",
+          "bytes": 909590,
+          "sha256": "ded99c6cc3f0ca22bd8be84cba536d8f276ed1f049849cdda8fa4824cc89aa53"
+        },
+        "thumb": {
+          "path": "work/production/wave_065/exports/pumpkin-hedgehog-harvest-thumb.webp",
+          "bytes": 57620,
+          "sha256": "9ffa1885fcaee4e125f5bc88e5aa0da6dde71b2b9be900c122139c2645bc7c8a"
+        }
+      },
+      "proofSha256": "c7db2645fcf03348d97357a40ad8753e38c476b9fc6b3a911d52534cd6fc4549",
+      "pairMeanRgbDifference": 2.15582
+    },
+    {
+      "id": "pumpkin-rabbit-inspecting",
+      "title": "Rabbit Inspecting a Pumpkin",
+      "alt": "A white-and-gray rabbit stands beside a broad pumpkin and sniffs its curled stem.",
+      "color": "White",
+      "style": "Color",
+      "description": "A white-and-gray rabbit stands beside a broad pumpkin and sniffs its curled stem. Use this character illustration for autumn story cards, classroom activities and personal seasonal crafts.",
+      "source": "work/production/wave_065/source/pumpkin-rabbit-inspecting.png",
+      "topic": "pumpkin",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ff2949244308f617b887e32c8416fca981118fe2388015449f74659ea6838386",
+      "inputSignature": "8605e72983c25dba9e5bd12ecb9357a3339580a93b5f9577c5b1a0eace5292f0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 853548,
+        "weightedCmykRmse": 0.762542
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1385463,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 853548,
+          "weightedCmykRmse": 0.762542
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        70,
+        42,
+        1190,
+        1152
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_065/exports/pumpkin-rabbit-inspecting.pdf",
+          "bytes": 853548,
+          "sha256": "bdc33f31dc013f4f9832d8725bcc593988c7cb51dbf16c7e12bf5eb05af0861d"
+        },
+        "webp": {
+          "path": "work/production/wave_065/exports/pumpkin-rabbit-inspecting.webp",
+          "bytes": 797748,
+          "sha256": "70c40476cbeb31843164cedcba70bd64d8addd31547d11deefd0854c81be1b70"
+        },
+        "thumb": {
+          "path": "work/production/wave_065/exports/pumpkin-rabbit-inspecting-thumb.webp",
+          "bytes": 54392,
+          "sha256": "54419c087fa986f858d97893be73049c067d06a8306c03792627f439d4b9d430"
+        }
+      },
+      "proofSha256": "b9eb3a68b8b104313cec066eedf20de7d30a5d88974539edab9a57fa5d7608b0",
+      "pairMeanRgbDifference": 2.97678
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Native sources and CMYK contact proof reviewed: three distinct animal interactions, coherent paws, ears and tails, full silhouettes. Low alpha (<9) detached anti-alias pixels are not visible in the proof; no source alteration.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:26:30.862Z",
+  "cdnVerifiedAt": "2026-10-23T22:33:08.591Z"
+}

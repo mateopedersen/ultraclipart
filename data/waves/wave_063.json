@@ -1,0 +1,89 @@
+{
+  "wave": "wave_063",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-witch-bicycle",
+      "title": "Witch Riding a Bicycle Coloring Illustration",
+      "alt": "A smiling witch pedals a bicycle with a pumpkin in the front basket and a broom on the rear rack, drawn in black outlines.",
+      "description": "A friendly cycling witch with clear open shapes for Halloween coloring sheets, classroom story prompts and personal seasonal crafts.",
+      "color": "Black",
+      "style": "Outline",
+      "printSeparation": "black-only",
+      "source": "work/production/wave_063/source/halloween-witch-bicycle.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "241a6bedba3c742dc138d02c942309a0271542f805ddf073151de39381233623",
+      "inputSignature": "18ff5bc96d7f10055e36883160d0396c2edeedb269779b33227bb928aa64681c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 594520,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 594520,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        35,
+        56,
+        1238,
+        1190
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_063/exports/halloween-witch-bicycle.pdf",
+          "bytes": 594520,
+          "sha256": "e809ef08ee20834efdf4403ffa4932f6d0466ec6022ff09c20181c068731d06f"
+        },
+        "webp": {
+          "path": "work/production/wave_063/exports/halloween-witch-bicycle.webp",
+          "bytes": 698570,
+          "sha256": "e045b5f54f73a238b081a64c0e397dcc82d0cb8c9d0b9120170ac4d137942047"
+        },
+        "thumb": {
+          "path": "work/production/wave_063/exports/halloween-witch-bicycle-thumb.webp",
+          "bytes": 74776,
+          "sha256": "32c050e986d66a373e94b7a2dfdd37d0874ccd42d90c14b7735bb575802c6a8e"
+        }
+      },
+      "proofSha256": "e1057e7ab9a8d91fe0acdcf1e4d597568890711444057234fc8ce837c7a1329b",
+      "pairMeanRgbDifference": 4.9779
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Source and rendered CMYK reviewed: coherent witch anatomy, connected bicycle and two pedals, complete silhouette and transparent gaps. Explicit neutral outline with four-channel K-only CMYK.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:21:36.325Z",
+  "cdnVerifiedAt": "2026-10-23T22:24:03.091Z"
+}

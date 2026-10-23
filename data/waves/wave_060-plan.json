@@ -1,0 +1,29 @@
+{
+  "wave": "wave_060",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-scarecrow-violin",
+      "title": "Scarecrow Playing a Violin",
+      "alt": "A cheerful patchwork scarecrow seated on a hay bale and playing a violin.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A cheerful patchwork scarecrow seated on a hay bale and playing a violin. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_060/source/halloween-scarecrow-violin.png"
+    },
+    {
+      "id": "halloween-treehouse",
+      "title": "Halloween Treehouse",
+      "alt": "A small crooked treehouse with a rope ladder and pumpkin lantern in a gnarled tree.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A small crooked treehouse with a rope ladder and pumpkin lantern in a gnarled tree. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_060/source/halloween-treehouse.png"
+    }
+  ]
+}

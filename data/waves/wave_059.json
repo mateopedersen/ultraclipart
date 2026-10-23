@@ -1,0 +1,179 @@
+{
+  "wave": "wave_059",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-hat-wreath",
+      "title": "Witch Hat Autumn Wreath",
+      "alt": "An open autumn wreath of orange leaves, purple berries and a small witch hat.",
+      "color": "Orange",
+      "style": "Color",
+      "description": "An open autumn wreath of orange leaves, purple berries and a small witch hat. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_059/source/halloween-hat-wreath.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "30b303680143c2a98ae67e921b7bf066239cf731e54f911383ed4e221f8f9362",
+      "inputSignature": "9717ee4c0ea8c47ebf602ed23559ad3baee1a73dd9d63efc0d24d963e1a82f31",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 953960,
+        "weightedCmykRmse": 1.012258
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1324775,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1028142,
+          "weightedCmykRmse": 0.825381
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 953960,
+          "weightedCmykRmse": 1.012258
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        39,
+        52,
+        1217,
+        1206
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_059/exports/halloween-hat-wreath.pdf",
+          "bytes": 953960,
+          "sha256": "3c28bce2354cab752d575d1ecdcb9656f23ad045f2a08f46f8a82bb8a591fcb9"
+        },
+        "webp": {
+          "path": "work/production/wave_059/exports/halloween-hat-wreath.webp",
+          "bytes": 551290,
+          "sha256": "483a79d5c7f6344e1c78cef6926b7dd2b98d475ef517e151570a20c0c91dd84e"
+        },
+        "thumb": {
+          "path": "work/production/wave_059/exports/halloween-hat-wreath-thumb.webp",
+          "bytes": 54902,
+          "sha256": "d50f6270af05b7c48603c3b58eab19f6ac708620701085b2423264abead85597"
+        }
+      },
+      "proofSha256": "80bc522c930075c5e1555642051a663fe0342471d16095a00a1a35ebaaf36857",
+      "pairMeanRgbDifference": 2.58525
+    },
+    {
+      "id": "halloween-crooked-cottage",
+      "title": "Crooked Halloween Cottage",
+      "alt": "A small purple cottage with a crooked tower, warm windows and a low fence.",
+      "color": "Purple",
+      "style": "Color",
+      "description": "A small purple cottage with a crooked tower, warm windows and a low fence. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_059/source/halloween-crooked-cottage.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "b654911a681927dd2e510e57f39cce9c149a5cfd0d1f90344a6b8ec1b6a049c5",
+      "inputSignature": "96d26c1b70b64572dca0a6ff84f4370a88f70bdad9c46f7a5f728800928f7bf3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 606899,
+        "weightedCmykRmse": 0.894216
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1071279,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 606899,
+          "weightedCmykRmse": 0.894216
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        139,
+        67,
+        1122,
+        1169
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_059/exports/halloween-crooked-cottage.pdf",
+          "bytes": 606899,
+          "sha256": "d878fdf9d3dacf1de90054853c9f5b2da1305f0bd944139e7b25e70ea5944f36"
+        },
+        "webp": {
+          "path": "work/production/wave_059/exports/halloween-crooked-cottage.webp",
+          "bytes": 495500,
+          "sha256": "82ff577630602cac8cc2cc53507243250564a7e120a92db514837f9a81fd0da7"
+        },
+        "thumb": {
+          "path": "work/production/wave_059/exports/halloween-crooked-cottage-thumb.webp",
+          "bytes": 35348,
+          "sha256": "725c9a3312f712f0b75017778010945dc51bb2a4c9f54cc3135ec4cd4dd2650e"
+        }
+      },
+      "proofSha256": "78474da88281ebbe30a20ea4d9e6a07395923c042533091dddc13ced8ff11558",
+      "pairMeanRgbDifference": 1.8124
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T22:08:27.936Z",
+  "cdnVerifiedAt": "2026-10-23T22:24:03.088Z"
+}
