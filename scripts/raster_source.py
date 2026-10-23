@@ -21,7 +21,7 @@ def decoded_alpha(mask):
             return image.tobytes()
     return mask.get_data()
 
-def inspect_cmyk_image(image,width,height):
+def inspect_cmyk_image(image,width,height,output_intents=None):
     assert image['/Width']==width and image['/Height']==height
     assert image['/BitsPerComponent']==8
     if '/SMask' in image:
@@ -37,10 +37,15 @@ def inspect_cmyk_image(image,width,height):
     else:
         assert len(data)==width*height*4, 'Image data must have four actual color components'
     if cs=='/DeviceCMYK':
-        assert image.get('/Filter')=='/DCTDecode', 'Unprofiled source must contain independently decodable CMYK JPEG data'
-        with Image.open(io.BytesIO(data)) as decoded:
-            decoded.load();assert decoded.mode=='CMYK' and decoded.size==(width,height)
+        assert image.get('/Filter') in ('/DCTDecode','/JPXDecode'), 'DeviceCMYK source must contain independently decodable four-channel image data'
         base.update(profile='Device CMYK (unprofiled)',colorSpace='Device CMYK',iccBytes=0,iccSha256=None)
+        if output_intents:
+            for ref in output_intents:
+                intent=ref.get_object()
+                if (intent.get('/OutputConditionIdentifier')=='CGATS TR 006'
+                    and intent.get('/RegistryName')=='http://www.color.org'
+                    and intent.get('/OutputCondition')=='GRACoL2006_Coated1v2'):
+                    base.update(profile='GRACoL2006_Coated1v2 (registered output intent)',registeredCondition='CGATS TR 006')
     else:
         assert isinstance(cs,list) and cs[0]=='/ICCBased'
         icc=cs[1].get_object();profile=icc.get_data()

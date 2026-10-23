@@ -33,7 +33,7 @@ def inspect_raster(art, files):
     for ref in page['/Resources'].get('/XObject',{}).values():
         image=ref.get_object()
         if image.get('/Subtype')!='/Image':continue
-        info=inspect_cmyk_image(image,width,height)
+        info=inspect_cmyk_image(image,width,height,root.get('/OutputIntents'))
         assert info['profile']==art['printProfile'] and info['colorSpace']==art['pdfColorSpace']
         images.append(info)
     assert images and files['pdf'].stat().st_size<=1_000_000

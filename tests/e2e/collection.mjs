@@ -41,7 +41,7 @@ try {
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(base + `/clipart/${topic}/`);
-    await expect(page.locator('.art-card')).toHaveCount(50);
+    await expect(page.locator('.art-card')).toHaveCount(catalog.length);
     await page.evaluate(() => document.fonts.ready);
     const audit = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
@@ -100,7 +100,16 @@ try {
   }
   await page.goto(base + `/search/?q=${topic}`);
   const all = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
-  const expected = (style = '') => searchArtwork(all, { ...defaults, q: topic, style }).total;
+  const topics = [
+    ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics,
+    ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
+  ];
+  const searchable = all.map((item) => ({
+    ...item,
+    cluster: topics.find((entry) => entry.slug === item.topic)?.cluster ?? '',
+  }));
+  const expected = (style = '') =>
+    searchArtwork(searchable, { ...defaults, q: topic, style }).total;
   await expect(page.locator('#result-count')).toHaveText(
     `${expected()} illustrations for “${topic}”`,
   );
@@ -115,9 +124,15 @@ try {
     process.env.ALL_DOWNLOADS === '1'
       ? catalog
       : [
-          catalog[0],
-          catalog.find((a) => a.style === 'Outline'),
-          catalog.find((a) => a.style === 'Watercolor'),
+          ...new Map(
+            [
+              catalog[0],
+              catalog.find((a) => a.style === 'Outline'),
+              catalog.find((a) => a.style === 'Watercolor'),
+            ]
+              .filter(Boolean)
+              .map((item) => [item.id, item]),
+          ).values(),
         ];
   for (const a of downloads) {
     // Isolate each artwork's native downloads from Chromium's per-tab burst limit.
@@ -149,7 +164,7 @@ try {
   const staticContext = await browser.newContext({ javaScriptEnabled: false });
   const staticPage = await staticContext.newPage();
   await staticPage.goto(base + `/clipart/${topic}/`);
-  await expect(staticPage.locator('.art-card')).toHaveCount(50);
+  await expect(staticPage.locator('.art-card')).toHaveCount(catalog.length);
   await staticContext.close();
   assert.deepEqual(report.errors, []);
   report.status = 'passed';

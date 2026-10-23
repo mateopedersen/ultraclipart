@@ -1,0 +1,57 @@
+{
+  "wave": "wave_003",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-arctic-fox-resting",
+      "title": "Resting Arctic Fox",
+      "alt": "A white arctic fox curls its fluffy tail around its body and looks forward.",
+      "description": "A white arctic fox curls its fluffy tail around its body and looks forward. Use the resting fox on winter wildlife cards or beside observations in a personal nature journal.",
+      "color": "White",
+      "style": "Watercolor",
+      "source": "work/production/wave_003/source/winter-arctic-fox-resting.png"
+    },
+    {
+      "id": "winter-red-cardinal-holly",
+      "title": "Red Cardinal on Snowy Holly",
+      "alt": "A red northern cardinal perches on a snowy holly branch with green leaves and red berries.",
+      "description": "A red northern cardinal perches on a snowy holly branch with green leaves and red berries. Add the perching bird to a winter birdwatching worksheet or a personal seasonal greeting card.",
+      "color": "Red",
+      "style": "Watercolor",
+      "source": "work/production/wave_003/source/winter-red-cardinal-holly.png"
+    },
+    {
+      "id": "winter-penguin-cocoa",
+      "title": "Cozy Penguin with Hot Cocoa",
+      "alt": "A smiling penguin in a red winter hat and mustard scarf holds a steaming mug of cocoa.",
+      "description": "A smiling penguin in a red winter hat and mustard scarf holds a steaming mug of cocoa. Place the cozy penguin beside a winter reading prompt or on a personal journal page.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_003/source/winter-penguin-cocoa.png"
+    },
+    {
+      "id": "winter-child-building-snowman",
+      "title": "Child Building a Snowman",
+      "alt": "A child in a coral coat kneels beside a snowman and adds its carrot nose.",
+      "description": "A child in a coral coat kneels beside a snowman and adds its carrot nose. Use this winter activity scene for storytelling, sequencing tasks or a classroom display.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_003/source/winter-child-building-snowman.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-timber-cabin",
+      "reason": "Native-resolution CMYK export does not yet fit the PDF limit at the current quality floor."
+    },
+    {
+      "id": "winter-frozen-pond-cabin",
+      "reason": "Native-resolution CMYK export does not yet fit the PDF limit at the current quality floor."
+    }
+  ]
+}

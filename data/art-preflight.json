@@ -1,14 +1,15 @@
 {
   "status": "PASS",
-  "generatedCount": 39,
+  "generatedCount": 43,
+  "originalTopicArtworkCount": 93,
   "suppliedCount": 150,
-  "availableCount": 189,
+  "availableCount": 193,
   "supplementalCount": 100,
   "topicCount": 26,
   "targetCount": 5500,
   "completedTopicCount": 1,
-  "publishedApprovedCount": 179,
-  "totalLocalAssetBytes": 242782189,
+  "publishedApprovedCount": 183,
+  "totalLocalAssetBytes": 251221647,
   "r2MeasuredBytes": null,
   "maxPdfBytes": 998269,
   "p95PdfBytes": 989363,
@@ -10388,6 +10389,246 @@
         },
         "pass": true
       }
+    },
+    {
+      "id": "winter-arctic-fox-resting",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1254,
+          "height": 1254,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1240,
+            1254
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            12,
+            17,
+            424,
+            437
+          ]
+        },
+        "pdf": {
+          "bytes": 920307,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.180 \u00d7 4.180 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-red-cardinal-holly",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1254,
+          "height": 1254,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            53,
+            36,
+            1236,
+            1254
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            19,
+            17,
+            421,
+            433
+          ]
+        },
+        "pdf": {
+          "bytes": 966029,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.180 \u00d7 4.180 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-penguin-cocoa",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            57,
+            29,
+            1298,
+            1163
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            45,
+            9,
+            415,
+            390
+          ]
+        },
+        "pdf": {
+          "bytes": 934955,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-child-building-snowman",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            1,
+            1294,
+            1199
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            434,
+            398
+          ]
+        },
+        "pdf": {
+          "bytes": 887909,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
     }
   ],
   "errors": [],
@@ -10395,6 +10636,5 @@
     "No PDF/X compliance claim. Layered vectors reference GRACoL without an embedded ICC; Supplied raster PDFs use either a verified embedded four-channel ICC profile or independently decoded DeviceCMYK image data; no profile is invented for unprofiled sources.",
     "Physical print proof and owner visual signoff are pending. Automated checks do not prove artistic originality.",
     "R2 counters are unknown until authenticated remote inventory is obtained."
-  ],
-  "originalTopicArtworkCount": 89
+  ]
 }

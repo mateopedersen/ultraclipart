@@ -15,16 +15,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 39,
+  "generatedArtworkCount": 43,
   "suppliedArtworkCount": 150,
-  "originalTopicArtworkCount": 89,
+  "originalTopicArtworkCount": 93,
   "supplementalArtworkCount": 100,
-  "qualityApprovedArtworkCount": 79,
+  "qualityApprovedArtworkCount": 83,
   "supplementalApprovedArtworkCount": 100,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 189,
-  "remainingToDraw": 5411,
+  "availableArtworkCount": 193,
+  "remainingToDraw": 5407,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -1215,11 +1215,11 @@
       "keyword": "Winter clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 9,
+      "generated": 13,
       "supplied": 0,
-      "available": 9,
-      "approved": 9,
-      "remainingToDraw": 41,
+      "available": 13,
+      "approved": 13,
+      "remainingToDraw": 37,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/winter.json"
     },
@@ -3537,6 +3537,50 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "60d92af3af0fcbef72f5da4d369f483366430ba0abe04cf49ad114a127fade2b"
+    },
+    {
+      "id": "winter-arctic-fox-resting",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "bcd9ea9b093fb409709b96c91019c3ec92e46e1bdf20ed29d6149473e5a4af4f"
+    },
+    {
+      "id": "winter-red-cardinal-holly",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "7241607acb2e46d8cfb5d787df112154e173b34c0f0744b39c7c79470d5dfc70"
+    },
+    {
+      "id": "winter-penguin-cocoa",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "685de19707a166fef6cb234c3556d67846d038e699383b5a3463eba825b86f98"
+    },
+    {
+      "id": "winter-child-building-snowman",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "b0f40ada95f68e32c47a32e816d261136488a7812c5aba7b0bdf06978e35b889"
     }
   ]
 }

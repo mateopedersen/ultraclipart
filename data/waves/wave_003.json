@@ -1,0 +1,391 @@
+{
+  "wave": "wave_003",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-arctic-fox-resting",
+      "title": "Resting Arctic Fox",
+      "alt": "A white arctic fox curls its fluffy tail around its body and looks forward.",
+      "description": "A white arctic fox curls its fluffy tail around its body and looks forward. Use the resting fox on winter wildlife cards or beside observations in a personal nature journal.",
+      "color": "White",
+      "style": "Watercolor",
+      "source": "work/production/wave_003/source/winter-arctic-fox-resting.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "11d07686d6e0863f44b38bac750a18bcd5b3dcf589cd6f4a96649aa9040dfa60",
+      "inputSignature": "bb7c8248265399901c8a0649c18e38e68439eaa46e3aa31c42923c4ebfcb8cd7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 920307,
+        "weightedCmykRmse": 1.36381
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1780317,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1279456,
+          "weightedCmykRmse": 0.754544
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1163454,
+          "weightedCmykRmse": 0.892472
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1039632,
+          "weightedCmykRmse": 1.087387
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 920307,
+          "weightedCmykRmse": 1.36381
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        60,
+        131,
+        1200,
+        1150
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_003/exports/winter-arctic-fox-resting.pdf",
+          "bytes": 920307,
+          "sha256": "c7c3acb371cc04d36398ab43cb381620380233bca8997a6e6c1b2cd151cbf871"
+        },
+        "webp": {
+          "path": "work/production/wave_003/exports/winter-arctic-fox-resting.webp",
+          "bytes": 1256660,
+          "sha256": "bcd9ea9b093fb409709b96c91019c3ec92e46e1bdf20ed29d6149473e5a4af4f"
+        },
+        "thumb": {
+          "path": "work/production/wave_003/exports/winter-arctic-fox-resting-thumb.webp",
+          "bytes": 62644,
+          "sha256": "dbe40de4137e4177e1f2663ad219ec37279cdaf065e4d46957e63b2e2c0b6cc5"
+        }
+      },
+      "proofSha256": "e2316b6d28563c2af623f334bcdc97ebb58c94985ca4a19d369e5076238b9b92",
+      "pairMeanRgbDifference": 0.61226
+    },
+    {
+      "id": "winter-red-cardinal-holly",
+      "title": "Red Cardinal on Snowy Holly",
+      "alt": "A red northern cardinal perches on a snowy holly branch with green leaves and red berries.",
+      "description": "A red northern cardinal perches on a snowy holly branch with green leaves and red berries. Add the perching bird to a winter birdwatching worksheet or a personal seasonal greeting card.",
+      "color": "Red",
+      "style": "Watercolor",
+      "source": "work/production/wave_003/source/winter-red-cardinal-holly.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "4a402591feb112c10287630291615496e84f2a0d17ace927524a68f95f6a0523",
+      "inputSignature": "bb7c8248265399901c8a0649c18e38e68439eaa46e3aa31c42923c4ebfcb8cd7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 966029,
+        "weightedCmykRmse": 1.724567
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1603287,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1237718,
+          "weightedCmykRmse": 0.908242
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1135157,
+          "weightedCmykRmse": 1.094181
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055071,
+          "weightedCmykRmse": 1.382915
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 966029,
+          "weightedCmykRmse": 1.724567
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        59,
+        51,
+        1194,
+        1170
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_003/exports/winter-red-cardinal-holly.pdf",
+          "bytes": 966029,
+          "sha256": "8bf9de816165e0f58015d1958115ca53306e821702c4d56592700319bacc59e6"
+        },
+        "webp": {
+          "path": "work/production/wave_003/exports/winter-red-cardinal-holly.webp",
+          "bytes": 911704,
+          "sha256": "7241607acb2e46d8cfb5d787df112154e173b34c0f0744b39c7c79470d5dfc70"
+        },
+        "thumb": {
+          "path": "work/production/wave_003/exports/winter-red-cardinal-holly-thumb.webp",
+          "bytes": 62236,
+          "sha256": "c3a583ad0977f58c1e72a3c506ec4297717b5fa449d60dad33d08af6be3fd77b"
+        }
+      },
+      "proofSha256": "63e3787ce676670c8d13522aca36b069d8c53081abbd2a7d91dcc3349e14ed43",
+      "pairMeanRgbDifference": 1.62495
+    },
+    {
+      "id": "winter-penguin-cocoa",
+      "title": "Cozy Penguin with Hot Cocoa",
+      "alt": "A smiling penguin in a red winter hat and mustard scarf holds a steaming mug of cocoa.",
+      "description": "A smiling penguin in a red winter hat and mustard scarf holds a steaming mug of cocoa. Place the cozy penguin beside a winter reading prompt or on a personal journal page.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_003/source/winter-penguin-cocoa.png",
+      "topic": "winter",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "0ac43df5e989f8d81502a8002fa4d6e94a76ba7bd8f3f71e5f8f4854bef8c18f",
+      "inputSignature": "bb7c8248265399901c8a0649c18e38e68439eaa46e3aa31c42923c4ebfcb8cd7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 934955,
+        "weightedCmykRmse": 1.171951
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1688695,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1159960,
+          "weightedCmykRmse": 0.815589
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1050745,
+          "weightedCmykRmse": 0.956748
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 934955,
+          "weightedCmykRmse": 1.171951
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        142,
+        34,
+        1180,
+        1157
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_003/exports/winter-penguin-cocoa.pdf",
+          "bytes": 934955,
+          "sha256": "0b8140b00ab60ced2b5566dd9fd00b3c738f3018fb5de7bb0d961b12c4b94222"
+        },
+        "webp": {
+          "path": "work/production/wave_003/exports/winter-penguin-cocoa.webp",
+          "bytes": 1065492,
+          "sha256": "685de19707a166fef6cb234c3556d67846d038e699383b5a3463eba825b86f98"
+        },
+        "thumb": {
+          "path": "work/production/wave_003/exports/winter-penguin-cocoa-thumb.webp",
+          "bytes": 59444,
+          "sha256": "342a3e9d75d0a156b287f9d42a1f754ff2c29ad7c09024177b5ded8593dbec12"
+        }
+      },
+      "proofSha256": "0bae1b9251598de0fd71404d7fcaf56a49254ba75d8f46aba55d6178c437603a",
+      "pairMeanRgbDifference": 2.01698
+    },
+    {
+      "id": "winter-child-building-snowman",
+      "title": "Child Building a Snowman",
+      "alt": "A child in a coral coat kneels beside a snowman and adds its carrot nose.",
+      "description": "A child in a coral coat kneels beside a snowman and adds its carrot nose. Use this winter activity scene for storytelling, sequencing tasks or a classroom display.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_003/source/winter-child-building-snowman.png",
+      "topic": "winter",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "554c685b01c31d5fc0155cc3d2f0a6fa6b5f3fdc8985753bb2d318b5c988f66e",
+      "inputSignature": "bb7c8248265399901c8a0649c18e38e68439eaa46e3aa31c42923c4ebfcb8cd7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 887909,
+        "weightedCmykRmse": 1.363489
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1835266,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1258352,
+          "weightedCmykRmse": 0.77308
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141749,
+          "weightedCmykRmse": 0.905579
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1015382,
+          "weightedCmykRmse": 1.095519
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 887909,
+          "weightedCmykRmse": 1.363489
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        26,
+        15,
+        1286,
+        1172
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_003/exports/winter-child-building-snowman.pdf",
+          "bytes": 887909,
+          "sha256": "7e86b6e95c3ffea99e79f2c760b7ec4db1483c6e250b8ce74d3e98084856d299"
+        },
+        "webp": {
+          "path": "work/production/wave_003/exports/winter-child-building-snowman.webp",
+          "bytes": 1243038,
+          "sha256": "b0f40ada95f68e32c47a32e816d261136488a7812c5aba7b0bdf06978e35b889"
+        },
+        "thumb": {
+          "path": "work/production/wave_003/exports/winter-child-building-snowman-thumb.webp",
+          "bytes": 69040,
+          "sha256": "f0237b0da68e11f10bb56b0bb68f385412ffb19f4e47142caef625bac287e252"
+        }
+      },
+      "proofSha256": "d58ed3faa5d7c6149577b4511670f2f156f89f1980b112ff5983eee4722c2c06",
+      "pairMeanRgbDifference": 1.96779
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-timber-cabin",
+      "reason": "Native-resolution CMYK export does not yet fit the PDF limit at the current quality floor."
+    },
+    {
+      "id": "winter-frozen-pond-cabin",
+      "reason": "Native-resolution CMYK export does not yet fit the PDF limit at the current quality floor."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T12:41:13.096Z",
+  "allAccountR2Bytes": 253032235
+}

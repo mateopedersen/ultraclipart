@@ -8,8 +8,11 @@ export function getStaticPaths() {
   return availableTopics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
 }
 const { topic } = Astro.props;
-const items = topicArt(topic.slug);
 const copy = collectionCopy[topic.slug as keyof typeof collectionCopy];
+const featured = new Map(copy?.featured.map((id, index) => [id, index]));
+const items = topicArt(topic.slug).sort(
+  (a, b) => (featured.get(a.id) ?? 999) - (featured.get(b.id) ?? 999),
+);
 const topicReady = items.length === 50 && items.every((item) => item.indexable && item.published);
 const related = availableTopics
   .filter(

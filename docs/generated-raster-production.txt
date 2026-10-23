@@ -1,0 +1,20 @@
+Generated raster production
+
+Before beginning a new topic, search its exact keyword from data/topics.json in Google Images. Inspect the result grid for subject diversity, visual styles and useful applications. Save dated observations under data/research. Search results are not measured demand and do not grant reproduction rights. The user requested original art informed by research, not copies of reference illustrations.
+
+Use the built-in image tool, one independently composed asset per call. Save native transparent PNGs in work/production/WAVE/source and the final prompts in data/waves. Do not post per-image previews to chat. Produce detailed natural illustrations, polished characters, activity scenes and scenic cutouts as appropriate; do not substitute low-detail geometric recipes for finished artwork. An image's visual sub-parts are not independently editable vectors. It uses the same move/scale/rotate/crop/opacity image layer contract as the supplied collections, with separate added text and shapes.
+
+Create a reviewed, at-most-50-item data/waves/WAVE-plan.json with unique IDs from the topic's fifty-composition brief. The native source is retained. The export command is:
+  PDFTOPPM_BIN=/path/to/pdftoppm python scripts/produce-raster-wave.py --wave WAVE
+
+The exporter locks its wave, binds resume evidence to source/exporter/profile hashes, verifies all export and proof bytes before reuse, and regenerates damaged or changed outputs. It never uploads or edits the live catalog. Original WebP must decode to exactly the source RGBA pixels. Only thumbnails are resized. CMYK conversion uses the checked-in licensed GRACoL2006 profile, relative colorimetric intent and black-point compensation. Color is zeroed only where alpha is exactly zero, which cannot change any visible composite. The complete 8-bit alpha mask remains lossless.
+
+Try native-resolution lossless JPEG2000 CMYK first, followed by high-fidelity candidates of at least 48 dB encoder target and at most 1.8 alpha-weighted CMYK channel RMSE. These lossy candidates are explicitly recorded as lossy; do not claim byte-exact or lossless CMYK. Independently decode actual four-channel data, verify dimensions and alpha, render with Poppler and the GRACoL profile, cross-match every PDF against all wave WebPs, and inspect actual rendered pages. Metrics are gates, not a substitute for visual review or a guarantee of physical print quality. No PDF/X certification is claimed. The full 2.75 MB ICC cannot fit the standard limit, so the PDF references the registered CGATS TR 006 output condition without embedding it.
+
+The standard publication budget is 980,000 bytes, reserving room below the user's 1,000,000-byte hard cap for editor additions. If no native-resolution candidate meets both quality and size gates, hold that illustration; do not lower the quality floor, resize its original, replace it with a low-detail stand-in, or count it as a published design. Keep the full source for further work.
+
+After actual screen review, set screenReview PASS on the matching raster-report and run:
+  node scripts/import-generated-wave.mjs WAVE
+This builds a candidate catalog and the three-file R2 batch. Follow the existing fresh all-account 8 GB inventory guard, bounded upload, byte readback and CDN verification pipeline. Promote catalog/publication atomically only after verified upload. Run full catalog preflight, unit tests, Astro check/build, the topic gallery tests and actual edited PDF/WebP exports. Independently verify the editor retained the source image/alpha stream. Push only this repository; verify Cloudflare revision, live routes, downloads, search and editor before marking the ledger CDN_VERIFIED.
+
+Progress counts come from actual catalog records. Supplied Baby and Volleyball are supplemental; they do not reduce the original 110-topic / 5,500 target. Keep production notes, prompts, QA metrics and provenance separate from site UI and image pixels. Do not invent artists, approvals, demand metrics or completed artwork. No paid API was authorized. No recurring automation is active; do not recreate one without a separate explicit scheduling request.
