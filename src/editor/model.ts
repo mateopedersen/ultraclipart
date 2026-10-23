@@ -42,7 +42,12 @@ export type Layer = VectorLayer | TextLayer | RasterLayer;
 export interface EditorDocument {
   version: 1 | 2;
   selection?: { layerId: string; mask: import('./smart/types').MaskData };
-  exportPreferences?: { width: number; quality: number; allowLargePdf: boolean };
+  exportPreferences?: {
+    width: number;
+    quality: number;
+    allowLargePdf: boolean;
+    size?: 'original' | 'custom';
+  };
   artId: string;
   width: number;
   height: number;
@@ -139,7 +144,9 @@ export function validateDocument(value: unknown, artId: string): value is Editor
         Number.isFinite(doc.exportPreferences.quality) &&
         doc.exportPreferences.quality >= 0.8 &&
         doc.exportPreferences.quality <= 1 &&
-        typeof doc.exportPreferences.allowLargePdf === 'boolean')) &&
+        typeof doc.exportPreferences.allowLargePdf === 'boolean' &&
+        (!doc.exportPreferences.size ||
+          ['original', 'custom'].includes(doc.exportPreferences.size)))) &&
     doc.artId === artId &&
     Number.isFinite(doc.width) &&
     doc.width >= 1 &&

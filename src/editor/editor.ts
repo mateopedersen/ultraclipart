@@ -647,6 +647,30 @@ function init(root: HTMLElement) {
     exportFocus = q<HTMLElement>('[data-action=export]');
     await prepareDocument(history.current);
     q('[data-export-preview]').replaceChildren(documentSvg(history.current));
+    const preferences = history.current.exportPreferences,
+      size = q<HTMLSelectElement>('[data-size]'),
+      nativeWidth = history.current.crop?.width || history.current.width;
+    const originalOption = size.querySelector<HTMLOptionElement>('option[value=original]')!;
+    originalOption.textContent = `Original canvas width (${Math.round(nativeWidth)} pixels)`;
+    if (preferences) {
+      const chosen =
+        preferences.size === 'original' || (!preferences.size && preferences.width === nativeWidth)
+          ? 'original'
+          : String(preferences.width);
+      if (![...size.options].some((o) => o.value === chosen)) {
+        const option = document.createElement('option');
+        option.value = chosen;
+        option.textContent = `${chosen} pixels (saved)`;
+        size.append(option);
+      }
+      size.value = chosen;
+      q<HTMLInputElement>('[data-quality]').value = String(preferences.quality * 100);
+      q<HTMLInputElement>('[data-allow-large-pdf]').checked = preferences.allowLargePdf;
+    } else {
+      size.value = history.current.layers.some((l) => l.kind === 'raster') ? 'original' : '2048';
+      q<HTMLInputElement>('[data-quality]').value = '95';
+      q<HTMLInputElement>('[data-allow-large-pdf]').checked = false;
+    }
     q('[data-export-status]').textContent = '';
     dialog.showModal();
   }
@@ -662,7 +686,11 @@ function init(root: HTMLElement) {
       const format = q<HTMLInputElement>('[data-format]:checked').value;
       const savedExport = clone(history.current);
       savedExport.exportPreferences = {
-        width: Number(q<HTMLSelectElement>('[data-size]').value) || savedExport.width,
+        width:
+          Number(q<HTMLSelectElement>('[data-size]').value) ||
+          savedExport.crop?.width ||
+          savedExport.width,
+        size: q<HTMLSelectElement>('[data-size]').value === 'original' ? 'original' : 'custom',
         quality: Number(q<HTMLInputElement>('[data-quality]').value) / 100,
         allowLargePdf: q<HTMLInputElement>('[data-allow-large-pdf]').checked,
       };

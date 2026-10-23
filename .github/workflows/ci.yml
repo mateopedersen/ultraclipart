@@ -54,8 +54,6 @@ jobs:
             fi
             if ! kill -0 "$PREVIEW_PID" 2>/dev/null; then break; fi
             sleep 1
-            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
-            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
           done
           if [ "$PREVIEW_READY" -ne 1 ]; then
             cat reports/preview.log

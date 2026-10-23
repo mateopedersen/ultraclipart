@@ -76,6 +76,7 @@ try {
   for (const format of ['webp', 'pdf']) {
     await page.locator('[data-action=export]').click();
     await page.locator(`[data-format][value=${format}]`).check();
+    await expect(page.locator('[data-size]')).toHaveValue('original');
     if (format === 'pdf') await page.locator('[data-allow-large-pdf]').check();
     await download('[data-action=download]', `local-edited.${format}`);
     await page.locator('[data-action=close-export]').click();
@@ -88,6 +89,24 @@ try {
     buffer: Buffer.from('<svg onload="alert(1)"/>'),
   });
   await expect(page.locator('[data-status]')).toHaveAttribute('data-error', 'true');
+  const png = await page.evaluate(() => {
+    const c = document.createElement('canvas');
+    c.width = 128;
+    c.height = 96;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#326acb';
+    ctx.fillRect(20, 20, 60, 40);
+    return c.toDataURL('image/png').split(',')[1];
+  });
+  await page
+    .locator('[data-local-clipart]')
+    .setInputFiles({
+      name: 'local-shape.png',
+      mimeType: 'image/png',
+      buffer: Buffer.from(png, 'base64'),
+    });
+  await expect(page.locator('[data-status]')).toContainText('Your clipart is ready');
+  await expect(page.locator('.uc-canvas [data-layer] image')).toHaveCount(2);
   assert.deepEqual(errors, []);
   assert.deepEqual(posts, []);
   writeFileSync(
@@ -99,7 +118,7 @@ try {
           'Arbitrary local WebP imported privately, selected and recolored at native size.',
           'Original local source embedded once in saved project; fresh browser context reopens identical pixels.',
           'Edited local image exports real CMYK PDF and WebP.',
-          'Disguised SVG rejected; no POST or image upload request.',
+          'Real PNG and WebP decoded; disguised SVG rejected; no POST or image upload request.',
         ],
         errors,
         posts,
