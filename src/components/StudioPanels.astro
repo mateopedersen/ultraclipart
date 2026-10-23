@@ -1,0 +1,535 @@
+---
+const sliders = [
+  ['hue', 'Hue', -180, 180, 0],
+  ['saturation', 'Saturation', -100, 100, 0],
+  ['brightness', 'Brightness', -100, 100, 0],
+  ['contrast', 'Contrast', -100, 100, 0],
+  ['intensity', 'Color intensity', 0, 100, 100],
+  ['opacity', 'Adjustment opacity', 0, 100, 100],
+];
+---
+
+<div
+  data-pane="region"
+  id="uc-pane-region"
+  role="region"
+  aria-label="Smart Selection Engine"
+  hidden
+>
+  <p class="uc-hint" data-region-tutorial>
+    Click the part you want to recolor. Refine the selection, choose a color, then download your
+    clipart.
+  </p>
+  <label>
+    Image to edit<select data-smart-source aria-label="Image to edit"></select>
+  </label>
+  <label>
+    Selection tool
+    <select data-smart-tool>
+      <option value="smart">Smart Select</option>
+      <option value="wand">Magic Wand</option>
+      <option value="lasso">Freehand lasso</option>
+      <option value="polygon">Polygon lasso</option>
+      <option value="brush">Selection brush</option>
+      <option value="erase">Precision eraser</option>
+      <option value="restore">Restore source brush</option>
+      <option value="clone">Clone stamp</option>
+      <option value="repair">Local repair</option>
+    </select>
+  </label>
+  <p data-smart-help class="uc-hint">
+    Click a connected color region. Smart Select uses local color and edges; refine the mask when
+    neighboring parts are similar.
+  </p>
+  <hr />
+  <label>
+    Region name
+    <input data-region-name maxlength="100" value="Selected region" />
+  </label>
+  <div class="uc-row">
+    <label>
+      Color
+      <input data-region-color type="color" value="#326acb" />
+    </label>
+    <label>
+      Method
+      <select data-region-mode>
+        <option value="replace">Replace color</option>
+        <option value="tint">Tint region</option>
+        <option value="adjust">Adjust only</option>
+      </select>
+    </label>
+  </div>
+  <details>
+    <summary>Color adjustments</summary>
+    {sliders.map(([key, label, min, max, value]) => (
+      <label>
+        {label}
+        <input
+          data-adjust={key}
+          aria-label={String(label)}
+          type="range"
+          min={min}
+          max={max}
+          value={value}
+        />
+      </label>
+    ))}
+    <label class="uc-check">
+      <input data-region-grayscale type="checkbox" /> Grayscale region
+    </label>
+  </details>
+  <div class="uc-row">
+    <button data-smart-action="apply" class="uc-primary">
+      Save region
+    </button>
+    <button data-smart-action="compare" aria-pressed="false">
+      Before / after
+    </button>
+  </div>
+  <button data-smart-action="reset-region">Reset adjustment</button>
+  <div class="uc-row">
+    <label>
+      Mode
+      <select data-mask-mode>
+        <option value="replace">New selection</option>
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+      </select>
+    </label>
+    <label>
+      Show overlay
+      <input data-mask-overlay type="checkbox" checked />
+    </label>
+  </div>
+  <div data-wand-controls>
+    <label>
+      Tolerance <output data-tolerance-value>24</output>
+      <input type="range" min="1" max="100" value="24" data-tolerance />
+    </label>
+    <label class="uc-check">
+      <input data-contiguous type="checkbox" checked /> Contiguous region
+    </label>
+    <div class="uc-row">
+      <label>
+        Color distance
+        <select data-distance>
+          <option value="perceptual">Perceptual (OKLab)</option>
+          <option value="rgb">RGB</option>
+        </select>
+      </label>
+      <label>
+        Connectivity
+        <select data-connectivity>
+          <option value="4">4 neighbors</option>
+          <option value="8">8 neighbors</option>
+        </select>
+      </label>
+    </div>
+  </div>
+  <div data-brush-controls hidden>
+    <label>
+      Brush size (source pixels)
+      <input data-brush-size type="range" min="1" max="256" value="30" />
+    </label>
+    <label>
+      Hardness
+      <input data-brush-hardness type="range" min="0" max="100" value="70" />
+    </label>
+    <p class="uc-hint">
+      Size follows the original image, including when zoomed. Pen pressure adjusts coverage.
+    </p>
+  </div>
+  <div data-clone-controls hidden>
+    <p class="uc-hint">
+      Alt-click a clean source point, then paint the destination. Repair also matches nearby
+      brightness; check the result closely.
+    </p>
+    <div class="uc-row">
+      <label>
+        Sample X<input data-sample-x type="number" min="0" value="0" />
+      </label>
+      <label>
+        Sample Y<input data-sample-y type="number" min="0" value="0" />
+      </label>
+    </div>
+  </div>
+  <div class="uc-row">
+    <button data-smart-action="finish-polygon">Finish polygon</button>
+    <button data-smart-action="clear">Clear selection</button>
+  </div>
+  <details data-advanced-selection>
+    <summary>Precision &amp; edge refinement</summary>
+    <div class="uc-row">
+      <label>
+        Radius (px)
+        <input data-refine-radius type="number" min="1" max="64" value="2" />
+      </label>
+      <label>
+        Operation
+        <select data-refine-kind>
+          <option value="grow">Expand</option>
+          <option value="shrink">Contract</option>
+          <option value="holes">Fill holes</option>
+          <option value="smooth">Smooth</option>
+          <option value="feather">Feather</option>
+          <option value="edge">Remove edge spill</option>
+        </select>
+      </label>
+    </div>
+    <button data-smart-action="refine">Refine mask</button>
+    <div class="uc-row">
+      <label>
+        Selection X<input data-point-x type="number" min="0" value="0" />
+      </label>
+      <label>
+        Selection Y<input data-point-y type="number" min="0" value="0" />
+      </label>
+    </div>
+    <button data-smart-action="select-point">Select at coordinates</button>
+    <button data-smart-action="all">Select opaque artwork</button>
+    <p class="uc-hint">
+      On the canvas, arrow keys position the selection cursor, Enter selects, +/− zoom, and Escape
+      cancels a gesture.
+    </p>
+  </details>
+  <h3>Saved regions</h3>
+  <p class="uc-hint">
+    Masks adjust pixels inside their source image. They move with that image; they are not separate
+    cut-out objects.
+  </p>
+  <div data-regions class="uc-region-list"></div>
+  <button data-smart-action="new-region">New region</button>
+</div>
+<div data-pane="studio" id="uc-pane-studio" role="region" aria-label="Studio Pro tools" hidden>
+  <label>
+    Creative tool
+    <select data-studio-tool>
+      <option value="sticker">Sticker Maker</option>
+      <option value="coloring">Coloring Page Maker</option>
+      <option value="composer">Multi-Clipart Composer</option>
+      <option value="patterns">Pattern &amp; Texture</option>
+      <option value="effects">Effects Studio</option>
+      <option value="typography">Advanced Typography</option>
+      <option value="palette">Color Palettes</option>
+      <option value="templates">Printable Templates</option>
+      <option value="variants">Multi-Variant Export</option>
+      <option value="quality">Quality Inspector</option>
+      <option value="trace">Monochrome SVG Trace</option>
+    </select>
+  </label>
+  <div data-studio-pane="sticker">
+    <h3>Follow the artwork silhouette</h3>
+    <p class="uc-hint">
+      Select an image layer. Border and shadow remain editable. The canvas expands to keep their
+      edges intact.
+    </p>
+    <label>
+      Border width (px)
+      <input data-sticker-width type="range" min="1" max="64" value="16" />
+    </label>
+    <label>
+      Border color
+      <input data-sticker-color type="color" value="#ffffff" />
+    </label>
+    <label>
+      Corner softness
+      <input data-sticker-smooth type="range" min="0" max="12" value="2" />
+    </label>
+    <label>
+      Shadow strength
+      <input data-sticker-shadow type="range" min="0" max="100" value="35" />
+    </label>
+    <label class="uc-check">
+      <input data-sticker-cut type="checkbox" /> Include visible cut guide
+    </label>
+    <button data-smart-action="sticker">Apply sticker border</button>
+    <button data-smart-action="cut-contour">Download cut contour SVG</button>
+    <p class="uc-hint">
+      The SVG follows the outer silhouette for print cutting. Verify scale and blade settings in
+      your cutting software.
+    </p>
+  </div>
+  <div data-studio-pane="coloring" hidden>
+    <h3>Make a coloring page</h3>
+    <label>
+      Detail
+      <select data-coloring-detail>
+        <option value="0.65">Simple</option>
+        <option value="0.3" selected>
+          Medium
+        </option>
+        <option value="0.08">Detailed</option>
+      </select>
+    </label>
+    <label>
+      Line thickness
+      <input data-coloring-width type="range" min="0" max="6" value="1" />
+    </label>
+    <label>
+      Noise cleanup
+      <input data-coloring-smooth type="range" min="0" max="8" value="2" />
+    </label>
+    <button data-smart-action="coloring">Create coloring page</button>
+    <button data-smart-action="correction">Correct with brush / eraser</button>
+    <p class="uc-hint">
+      Detailed photographs and overlapping textures need manual cleanup. Use drawing for missing
+      outlines, or erase unwanted marks.
+    </p>
+  </div>
+  <div data-studio-pane="composer" hidden>
+    <h3>Add your clipart</h3>
+    <label>
+      Open PNG or WebP
+      <input data-local-clipart type="file" accept="image/png,image/webp,.png,.webp" />
+    </label>
+    <p class="uc-hint">
+      Processed privately on this device. Still images up to 4 MB / 4096 px per side. Saved projects
+      include your original image.
+    </p>
+    <h3>Add catalogue artwork</h3>
+    <label>
+      Find clipart
+      <input data-composer-search type="search" placeholder="Baby, volleyball, Halloween…" />
+    </label>
+    <label>
+      Artwork<select data-composer-list></select>
+    </label>
+    <button data-smart-action="add-clipart">Add to composition</button>
+    <p class="uc-hint">
+      Every added image has its own transform, masks and effects. Link images in Layers to move them
+      together. Up to 12 image layers / 40 million source pixels.
+    </p>
+  </div>
+  <div data-studio-pane="patterns" hidden>
+    <p class="uc-hint">
+      Select or open a saved region first. The pattern follows that editable mask.
+    </p>
+    <label>
+      Pattern
+      <select data-pattern-kind>
+        <option value="dots">Polka dots</option>
+        <option value="stripes">Stripes</option>
+        <option value="plaid">Plaid</option>
+        <option value="diamonds">Diamonds</option>
+        <option value="texture">Fine texture</option>
+        <option value="gradient">Repeating gradient</option>
+        <option value="none">None</option>
+      </select>
+    </label>
+    <div class="uc-row">
+      <label>
+        First color
+        <input type="color" data-pattern-color value="#326acb" />
+      </label>
+      <label>
+        Second color
+        <input type="color" data-pattern-secondary value="#ffffff" />
+      </label>
+    </div>
+    <label>
+      Scale (px)
+      <input data-pattern-scale type="range" min="2" max="300" value="40" />
+    </label>
+    <label>
+      Angle
+      <input data-pattern-angle type="range" min="-180" max="180" value="0" />
+    </label>
+    <label>
+      Opacity
+      <input data-pattern-opacity type="range" min="0" max="100" value="60" />
+    </label>
+    <label>
+      Blend
+      <select data-pattern-blend>
+        <option value="multiply">Multiply (retain shading)</option>
+        <option value="normal">Normal</option>
+        <option value="screen">Screen</option>
+      </select>
+    </label>
+    <button data-smart-action="pattern">Apply pattern</button>
+  </div>
+  <div data-studio-pane="effects" hidden>
+    <label>
+      Effect
+      <select data-effect-kind>
+        <option value="outline">Outer outline</option>
+        <option value="shadow">Drop shadow</option>
+        <option value="inner-shadow">Inner shadow</option>
+        <option value="glow">Glow</option>
+        <option value="blur">Blur</option>
+        <option value="sharpen">Sharpen</option>
+        <option value="balance">Color balance</option>
+        <option value="emboss">Subtle emboss</option>
+      </select>
+    </label>
+    <label>
+      Amount
+      <input data-effect-amount type="range" min="0" max="100" value="60" />
+    </label>
+    <label>
+      Radius
+      <input data-effect-radius type="range" min="0" max="64" value="8" />
+    </label>
+    <label>
+      Color
+      <input type="color" data-effect-color value="#15233b" />
+    </label>
+    <div class="uc-row">
+      <label>
+        Offset X<input type="number" data-effect-x min="-128" max="128" value="8" />
+      </label>
+      <label>
+        Offset Y<input type="number" data-effect-y min="-128" max="128" value="8" />
+      </label>
+    </div>
+    <button data-smart-action="effect">Add / update effect</button>
+  </div>
+  <div data-studio-pane="typography" hidden>
+    <p class="uc-hint">
+      Add a caption with Text, then select it here. Letters stay editable in your saved project.
+    </p>
+    <label>
+      Layout
+      <select data-type-layout>
+        <option value="straight">Straight</option>
+        <option value="arc">Arc</option>
+        <option value="circle">Circle</option>
+      </select>
+    </label>
+    <label>
+      Font family
+      <select data-type-font>
+        <option value="sans">Sans serif</option>
+        <option value="serif">System serif</option>
+        <option value="mono">System monospace</option>
+      </select>
+    </label>
+    <label>
+      Curve radius
+      <input data-type-radius type="number" min="20" max="4000" value="200" />
+    </label>
+    <label>
+      Letter spacing
+      <input data-type-spacing type="number" min="-20" max="100" value="2" />
+    </label>
+    <label>
+      Line height
+      <input data-type-line-height type="number" min="0.5" max="3" step="0.1" value="1.2" />
+    </label>
+    <div class="uc-row">
+      <label>
+        Outline color
+        <input data-type-stroke type="color" value="#ffffff" />
+      </label>
+      <label>
+        Outline width
+        <input data-type-stroke-width type="number" min="0" max="20" value="0" />
+      </label>
+    </div>
+    <label class="uc-check">
+      <input data-type-shadow type="checkbox" /> Text shadow
+    </label>
+    <button data-smart-action="typography">Apply typography</button>
+  </div>
+  <div data-studio-pane="palette" hidden>
+    <button data-smart-action="extract-palette">Find artwork palette</button>
+    <div data-palette class="uc-swatches"></div>
+    <label>
+      Saved palette
+      <input
+        data-palette-colors
+        value="#326acb,#a482d0,#e895ac"
+        aria-label="Comma separated hex colors"
+      />
+    </label>
+    <button data-smart-action="save-palette">Save palette on this device</button>
+    <label>
+      Palette scope
+      <select data-palette-scope>
+        <option value="region">Selected region</option>
+        <option value="composition">Whole composition</option>
+      </select>
+    </label>
+    <button data-smart-action="apply-palette">Apply palette colors</button>
+    <button data-smart-action="original-palette">Restore original palette</button>
+  </div>
+  <div data-studio-pane="templates" hidden>
+    <label>
+      Template
+      <select data-template>
+        <option value="stickers">Sticker sheet</option>
+        <option value="labels">Classroom labels</option>
+        <option value="card">Greeting card</option>
+        <option value="invitation">Invitation</option>
+        <option value="name-tags">Name tags</option>
+        <option value="worksheet">Coloring worksheet</option>
+      </select>
+    </label>
+    <label>
+      Paper
+      <select data-template-paper>
+        <option value="letter">US Letter</option>
+        <option value="a4">A4</option>
+      </select>
+    </label>
+    <label>
+      Margin (in)
+      <input data-template-margin type="number" min="0.25" max="1.5" step="0.05" value="0.5" />
+    </label>
+    <label class="uc-check">
+      <input data-template-guides type="checkbox" checked /> Add cut / fold guides
+    </label>
+    <button data-smart-action="template">Create template from selection</button>
+    <p class="uc-hint">
+      Creates an editable layout with your selected layers. Save a project copy first; Undo restores
+      the previous layout. Print PDFs at 100% / Actual size.
+    </p>
+  </div>
+  <div data-studio-pane="variants" hidden>
+    <label>
+      Variation colors (3–6 hex colors)
+      <input data-variant-colors value="#326acb,#a482d0,#d76d91" />
+    </label>
+    <label>
+      Apply variations to
+      <select data-variant-scope>
+        <option value="region">Selected region</option>
+        <option value="composition">All visible artwork</option>
+      </select>
+    </label>
+    <button data-smart-action="variants">Export WebP + CMYK PDF ZIP</button>
+    <button data-smart-action="cancel-batch" hidden>
+      Cancel export
+    </button>
+    <p class="uc-hint">
+      Each variant is validated before the ZIP is saved. A size-limit failure stops the batch; your
+      project stays unchanged.
+    </p>
+  </div>
+  <div data-studio-pane="quality" hidden>
+    <button data-smart-action="quality">Inspect selected image</button>
+    <div data-quality-report role="status"></div>
+    <p class="uc-hint">
+      Checks estimate edge noise, empty margins and effective print resolution. Color spill is
+      reviewed using the mask overlay and before/after view; image analysis cannot infer your
+      intended object boundary.
+    </p>
+  </div>
+  <div data-studio-pane="trace" hidden>
+    <h3>Trace simple line art</h3>
+    <p class="uc-hint">
+      For clean black-and-white drawings. This creates black vector paths on transparency. Colored
+      artwork and complex gray shading are rejected; use Coloring Page Maker and refine first.
+    </p>
+    <label>
+      Ink threshold
+      <input data-trace-threshold type="range" min="32" max="224" value="128" />
+    </label>
+    <button data-smart-action="trace">Check &amp; download SVG trace</button>
+    <p data-trace-report role="status"></p>
+  </div>
+  <h3 data-effects-title>Image effects</h3>
+  <div data-effects-list class="uc-region-list"></div>
+  <p data-studio-status role="status" aria-live="polite" class="uc-hint"></p>
+</div>

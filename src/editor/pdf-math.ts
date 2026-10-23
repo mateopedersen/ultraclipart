@@ -30,11 +30,13 @@ export function paperLayout(doc: EditorDocument) {
   const sx = (pageWidth - 2 * margin) / b.width,
     sy = (pageHeight - 2 * margin) / b.height;
   const scale =
-    doc.print.scale === 'actual'
-      ? 0.75
-      : doc.print.scale === 'fill'
-        ? Math.max(sx, sy)
-        : Math.min(sx, sy);
+    doc.print.scale === 'native'
+      ? 72 / 600
+      : doc.print.scale === 'actual'
+        ? 0.75
+        : doc.print.scale === 'fill'
+          ? Math.max(sx, sy)
+          : Math.min(sx, sy);
   const width = b.width * scale,
     height = b.height * scale;
   return {

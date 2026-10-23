@@ -1,3 +1,4 @@
+import type { Region, RasterEffect, Typography } from './smart/types';
 export type StylePreset = 'original' | 'pastel' | 'grayscale' | 'vintage' | 'bright' | 'outline';
 export interface Transform {
   x: number;
@@ -13,6 +14,7 @@ interface LayerBase extends Transform {
   locked: boolean;
   opacity: number;
   group?: string;
+  paletteOriginal?: string;
 }
 export interface VectorLayer extends LayerBase {
   kind: 'vector';
@@ -25,17 +27,22 @@ export interface TextLayer extends LayerBase {
   color: string;
   bold: boolean;
   align: 'start' | 'middle' | 'end';
+  typography?: Typography;
 }
 export interface RasterLayer extends LayerBase {
   kind: 'raster';
   assetId: string;
   sourceSha256: string;
+  regions?: Region[];
+  effects?: RasterEffect[];
   width: number;
   height: number;
 }
 export type Layer = VectorLayer | TextLayer | RasterLayer;
 export interface EditorDocument {
-  version: 1;
+  version: 1 | 2;
+  selection?: { layerId: string; mask: import('./smart/types').MaskData };
+  exportPreferences?: { width: number; quality: number; allowLargePdf: boolean };
   artId: string;
   width: number;
   height: number;
@@ -46,7 +53,7 @@ export interface EditorDocument {
     paper: 'letter' | 'a4';
     orientation: 'portrait' | 'landscape';
     margin: number;
-    scale: 'fit' | 'fill' | 'actual';
+    scale: 'fit' | 'fill' | 'actual' | 'native';
   };
 }
 export const identity = (): Transform => ({ x: 0, y: 0, scaleX: 1, scaleY: 1, angle: 0 });
@@ -70,6 +77,8 @@ export function changeLayers(
 export class History<T> {
   private past: T[] = [];
   private future: T[] = [];
+  private sizes: number[] = [];
+  private bytes = 0;
   public current: T;
   constructor(
     initial: T,
@@ -85,14 +94,21 @@ export class History<T> {
   }
   commit(next: T) {
     if (JSON.stringify(this.current) === JSON.stringify(next)) return false;
+    const size = JSON.stringify(this.current).length * 2;
     this.past.push(clone(this.current));
-    if (this.past.length > this.limit) this.past.shift();
+    this.sizes.push(size);
+    this.bytes += size;
+    while (this.past.length > this.limit || (this.bytes > 32000000 && this.past.length > 1)) {
+      this.past.shift();
+      this.bytes -= this.sizes.shift()!;
+    }
     this.current = clone(next);
     this.future = [];
     return true;
   }
   undo() {
     const prev = this.past.pop();
+    this.bytes -= this.sizes.pop() || 0;
     if (prev !== undefined) {
       this.future.push(clone(this.current));
       this.current = prev;
@@ -102,7 +118,10 @@ export class History<T> {
   redo() {
     const next = this.future.pop();
     if (next !== undefined) {
+      const size = JSON.stringify(this.current).length * 2;
       this.past.push(clone(this.current));
+      this.sizes.push(size);
+      this.bytes += size;
       this.current = next;
     }
     return this.current;
@@ -112,7 +131,15 @@ export function validateDocument(value: unknown, artId: string): value is Editor
   if (!value || typeof value !== 'object') return false;
   const doc = value as EditorDocument;
   return (
-    doc.version === 1 &&
+    (doc.version === 1 || doc.version === 2) &&
+    (!doc.exportPreferences ||
+      (Number.isFinite(doc.exportPreferences.width) &&
+        doc.exportPreferences.width >= 1 &&
+        doc.exportPreferences.width <= 10000 &&
+        Number.isFinite(doc.exportPreferences.quality) &&
+        doc.exportPreferences.quality >= 0.8 &&
+        doc.exportPreferences.quality <= 1 &&
+        typeof doc.exportPreferences.allowLargePdf === 'boolean')) &&
     doc.artId === artId &&
     Number.isFinite(doc.width) &&
     doc.width >= 1 &&
@@ -124,6 +151,24 @@ export function validateDocument(value: unknown, artId: string): value is Editor
     Array.isArray(doc.layers) &&
     doc.layers.length <= 500 &&
     new Set(doc.layers.map((l) => l?.id)).size === doc.layers.length &&
+    (!doc.selection ||
+      (validMask(doc.selection.mask) &&
+        doc.layers.some(
+          (l) =>
+            l?.kind === 'raster' &&
+            l.id === doc.selection!.layerId &&
+            l.width === doc.selection!.mask.width &&
+            l.height === doc.selection!.mask.height,
+        ))) &&
+    new Set(doc.layers.filter((l) => l?.kind === 'raster').map((l) => (l as RasterLayer).assetId))
+      .size <= 12 &&
+    [
+      ...new Map(
+        doc.layers
+          .filter((l) => l?.kind === 'raster')
+          .map((l) => [(l as RasterLayer).assetId, l as RasterLayer]),
+      ).values(),
+    ].reduce((n, l) => n + l.width * l.height, 0) <= 40000000 &&
     doc.layers.every(
       (l) =>
         !!l &&
@@ -135,6 +180,8 @@ export function validateDocument(value: unknown, artId: string): value is Editor
         (l.group === undefined || (typeof l.group === 'string' && l.group.length <= 100)) &&
         typeof l.visible === 'boolean' &&
         typeof l.locked === 'boolean' &&
+        (l.paletteOriginal === undefined ||
+          (typeof l.paletteOriginal === 'string' && l.paletteOriginal.length < 1000000)) &&
         [l.x, l.y, l.scaleX, l.scaleY, l.angle, l.opacity].every(Number.isFinite) &&
         l.opacity >= 0 &&
         l.opacity <= 1 &&
@@ -148,12 +195,15 @@ export function validateDocument(value: unknown, artId: string): value is Editor
         (l.kind === 'vector'
           ? typeof l.markup === 'string' && l.markup.length < 1000000
           : l.kind === 'raster'
-            ? l.assetId === doc.artId &&
+            ? (doc.version === 2
+                ? /^[a-z0-9-]{1,160}$/.test(l.assetId)
+                : l.assetId === doc.artId) &&
+              validRegions(l) &&
               /^[a-f0-9]{64}$/.test(l.sourceSha256) &&
-              Number.isFinite(l.width) &&
+              Number.isInteger(l.width) &&
               l.width > 0 &&
               l.width <= 4096 &&
-              Number.isFinite(l.height) &&
+              Number.isInteger(l.height) &&
               l.height > 0 &&
               l.height <= 4096
             : l.kind === 'text' &&
@@ -163,6 +213,7 @@ export function validateDocument(value: unknown, artId: string): value is Editor
               l.size > 0 &&
               l.size <= 500 &&
               isColor(l.color) &&
+              validTypography(l.typography) &&
               typeof l.bold === 'boolean' &&
               ['start', 'middle', 'end'].includes(l.align)),
     ) &&
@@ -172,7 +223,7 @@ export function validateDocument(value: unknown, artId: string): value is Editor
     Number.isFinite(doc.print.margin) &&
     doc.print.margin >= 0 &&
     doc.print.margin <= 2 &&
-    ['fit', 'fill', 'actual'].includes(doc.print.scale) &&
+    ['fit', 'fill', 'actual', 'native'].includes(doc.print.scale) &&
     (doc.crop === null ||
       (!!doc.crop &&
         [doc.crop.x, doc.crop.y, doc.crop.width, doc.crop.height].every(Number.isFinite) &&
@@ -182,5 +233,181 @@ export function validateDocument(value: unknown, artId: string): value is Editor
         doc.crop.width <= 10000 &&
         doc.crop.height >= 1 &&
         doc.crop.height <= 10000))
+  );
+}
+
+/** Version 1 remains readable. Version 2 adds hash-bound sources and compact region masks. */
+export function migrateDocument(value: EditorDocument): EditorDocument {
+  return { ...clone(value), version: 2 };
+}
+function validMask(mask: unknown): boolean {
+  if (!mask || typeof mask !== 'object') return false;
+  const m = mask as import('./smart/types').MaskData;
+  if (
+    m.encoding !== 'rle8' ||
+    ![m.width, m.height].every((v) => Number.isInteger(v) && v > 0 && v <= 4096) ||
+    typeof m.data !== 'string' ||
+    m.data.length > 24000000 ||
+    !/^[A-Za-z0-9+/]*={0,2}$/.test(m.data)
+  )
+    return false;
+  try {
+    const bytes = atob(m.data);
+    let i = 0,
+      size = 0;
+    while (i < bytes.length) {
+      let n = 0,
+        shift = 0,
+        b;
+      do {
+        if (i >= bytes.length || shift > 21) return false;
+        b = bytes.charCodeAt(i++);
+        n += (b & 127) * 2 ** shift;
+        shift += 7;
+      } while (b & 128);
+      if (n < 1 || i >= bytes.length) return false;
+      i++;
+      size += n;
+      if (size > m.width * m.height) return false;
+    }
+    return size === m.width * m.height;
+  } catch {
+    return false;
+  }
+}
+function validRegions(layer: RasterLayer): boolean {
+  if (
+    layer.regions &&
+    (!Array.isArray(layer.regions) ||
+      layer.regions.length > 100 ||
+      new Set(layer.regions.map((r) => r?.id)).size !== layer.regions.length ||
+      !layer.regions.every((r) => {
+        if (
+          !r ||
+          typeof r.id !== 'string' ||
+          !/^[a-zA-Z0-9_-]{1,100}$/.test(r.id) ||
+          typeof r.name !== 'string' ||
+          r.name.length > 100 ||
+          typeof r.visible !== 'boolean' ||
+          typeof r.locked !== 'boolean' ||
+          !validMask(r.mask) ||
+          r.mask.width !== layer.width ||
+          r.mask.height !== layer.height
+        )
+          return false;
+        if (
+          !validAdjustment(r.adjustment) ||
+          (r.paletteAdjustment && !validAdjustment(r.paletteAdjustment))
+        )
+          return false;
+        if (
+          r.palette &&
+          (!Array.isArray(r.palette.source) ||
+            !Array.isArray(r.palette.target) ||
+            !r.palette.source.length ||
+            r.palette.source.length > 6 ||
+            !r.palette.target.length ||
+            r.palette.target.length > 6 ||
+            ![...r.palette.source, ...r.palette.target].every(isColor))
+        )
+          return false;
+        if (r.stage && !['before-effects', 'after-effects'].includes(r.stage)) return false;
+        if (r.operation && !['color', 'erase', 'restore', 'clone', 'repair'].includes(r.operation))
+          return false;
+        if (
+          r.offset &&
+          ![r.offset.x, r.offset.y].every((v) => Number.isFinite(v) && Math.abs(v) <= 4096)
+        )
+          return false;
+        const p = r.pattern;
+        return (
+          !p ||
+          (['none', 'dots', 'stripes', 'plaid', 'diamonds', 'texture', 'gradient'].includes(
+            p.kind,
+          ) &&
+            ['normal', 'multiply', 'screen'].includes(p.blend) &&
+            isColor(p.color) &&
+            isColor(p.secondary) &&
+            Number.isFinite(p.scale) &&
+            p.scale >= 2 &&
+            p.scale <= 1000 &&
+            Number.isFinite(p.angle) &&
+            Math.abs(p.angle) <= 360 &&
+            Number.isFinite(p.opacity) &&
+            p.opacity >= 0 &&
+            p.opacity <= 1)
+        );
+      }))
+  )
+    return false;
+  return (
+    !layer.effects ||
+    (Array.isArray(layer.effects) &&
+      layer.effects.length <= 24 &&
+      layer.effects.every(
+        (e) =>
+          e &&
+          typeof e.id === 'string' &&
+          /^[a-zA-Z0-9_-]{1,100}$/.test(e.id) &&
+          typeof e.enabled === 'boolean' &&
+          [
+            'sticker',
+            'coloring',
+            'outline',
+            'shadow',
+            'inner-shadow',
+            'glow',
+            'blur',
+            'sharpen',
+            'balance',
+            'emboss',
+          ].includes(e.kind) &&
+          [e.amount, e.detail].every((v) => Number.isFinite(v) && v >= 0 && v <= 1) &&
+          Number.isFinite(e.radius) &&
+          e.radius >= 0 &&
+          e.radius <= 64 &&
+          Number.isFinite(e.smooth) &&
+          e.smooth >= 0 &&
+          e.smooth <= 12 &&
+          [e.x, e.y].every((v) => Number.isFinite(v) && Math.abs(v) <= 128) &&
+          isColor(e.color) &&
+          typeof e.cut === 'boolean',
+      ))
+  );
+}
+function validTypography(t: Typography | undefined): boolean {
+  return (
+    !t ||
+    (['straight', 'arc', 'circle'].includes(t.layout) &&
+      ['sans', 'serif', 'mono'].includes(t.font) &&
+      Number.isFinite(t.radius) &&
+      t.radius >= 20 &&
+      t.radius <= 4000 &&
+      Number.isFinite(t.spacing) &&
+      t.spacing >= -20 &&
+      t.spacing <= 100 &&
+      Number.isFinite(t.lineHeight) &&
+      t.lineHeight >= 0.5 &&
+      t.lineHeight <= 3 &&
+      isColor(t.stroke) &&
+      Number.isFinite(t.strokeWidth) &&
+      t.strokeWidth >= 0 &&
+      t.strokeWidth <= 20 &&
+      typeof t.shadow === 'boolean')
+  );
+}
+
+function validAdjustment(a: import('./smart/types').Adjustment): boolean {
+  return !(
+    !a ||
+    !['replace', 'tint', 'adjust'].includes(a.mode) ||
+    !isColor(a.color) ||
+    ![a.intensity, a.opacity].every((v) => Number.isFinite(v) && v >= 0 && v <= 1) ||
+    !Number.isFinite(a.hue) ||
+    Math.abs(a.hue) > 180 ||
+    ![a.saturation, a.brightness, a.contrast].every(
+      (v) => Number.isFinite(v) && v >= -100 && v <= 100,
+    ) ||
+    typeof a.grayscale !== 'boolean'
   );
 }

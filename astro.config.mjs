@@ -10,6 +10,7 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   vite: {
+    worker: { format: 'es' },
     define: {
       'import.meta.env.PUBLIC_RELEASE_REVISION': JSON.stringify(
         process.env.CF_PAGES_COMMIT_SHA ?? 'local',
