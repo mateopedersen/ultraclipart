@@ -1,4 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';import Card from '../components/Card.astro';import {art} from '../lib/catalog';
+import Layout from '../layouts/Layout.astro';
 ---
-<Layout title="Your Favorites" noindex={true}><section class="hero"><h1>Your little collection.</h1><p>Saved on this browser, just for you.</p></section><div class="gallery" id="favorites">{art.map(item=><Card item={item}/>)}</div><div id="favorites-empty" class="empty" hidden><h2>Nothing saved yet.</h2><p>Tap “Add to Favorites” on any illustration to keep it here.</p><a href="/new/">Find your first favorite →</a></div><script>let ids:string[]=[];try{ids=JSON.parse(localStorage.getItem('ultraclipart-favorites')||'[]');}catch{}let n=0;document.querySelectorAll<HTMLElement>('#favorites [data-id]').forEach(el=>{el.hidden=!ids.includes(el.dataset.id!);if(!el.hidden)n++;});document.querySelector<HTMLElement>('#favorites-empty')!.hidden=n>0;</script></Layout>
+
+<Layout title="Your Favorites" noindex={true}>
+  <section class="hero">
+    <h1>Your little collection.</h1>
+    <p>Saved on this browser, just for you.</p>
+  </section>
+  <p id="favorites-count" role="status" aria-live="polite" aria-atomic="true">
+    Opening your saved illustrations…
+  </p>
+  <div class="gallery" id="favorites" aria-busy="true"></div>
+  <div id="favorites-empty" class="empty" hidden>
+    <h2>Nothing saved yet.</h2>
+    <p>Tap “Add to Favorites” on any illustration to keep it here.</p>
+    <a href="/new/">Find your first favorite →</a>
+  </div>
+  <div id="favorites-error" class="notice" hidden>
+    <p>Please check your connection and try again. Your saved list is still in this browser.</p>
+    <button id="favorites-retry" type="button">
+      Try again
+    </button>
+  </div>
+  <p id="favorites-missing" class="notice" hidden>
+    Some saved illustrations are no longer available. The rest of your collection is shown here.
+  </p>
+  <nav id="favorites-pagination" class="pagination" aria-label="Favorite pages" hidden>
+    <button id="favorites-previous" type="button">
+      ← Previous
+    </button>
+    <span id="favorites-position" aria-live="polite"></span>
+    <button id="favorites-next" type="button">
+      Next →
+    </button>
+  </nav>
+  <noscript>
+    <p class="notice">
+      JavaScript is needed to open favorites saved in this browser. You can browse the{' '}
+      <a href="/categories/">topic directory</a> without it.
+    </p>
+  </noscript>
+</Layout>
+<script>
+  import { initFavorites } from '../scripts/favorites-client';
+  initFavorites();
+</script>
+<style>
+  #favorites-pagination[hidden],
+  #favorites[hidden] {
+    display: none !important;
+  }
+  button:disabled {
+    cursor: default;
+    opacity: 0.45;
+  }
+</style>

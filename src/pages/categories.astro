@@ -1,4 +1,163 @@
 ---
-import Layout from '../layouts/Layout.astro';import {topics,clusters,art,slugify} from '../lib/catalog';
+import Layout from '../layouts/Layout.astro';
+import { topics, clusters, art, slugify } from '../lib/catalog';
+const sortedTopics = [...topics].sort((a, b) => a.keyword.localeCompare(b.keyword, 'en'));
+const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpperCase()))].sort();
 ---
-<Layout title="Browse Clipart Categories"><section class="hero"><h1>Find a little inspiration.</h1><p class="lead">Seasonal collections and everyday moments, all in one place.</p><label for="topic-filter">Search 110 planned topics</label><input id="topic-filter" type="search" placeholder="Try pumpkin, flowers or winter" style="display:block;width:100%;margin-top:10px"/></section><div class="category-grid">{clusters.map(c=>{const ts=topics.filter(t=>t.cluster===c);const a=art.find(a=>ts.some(t=>t.slug===a.topic));return <a class="category-card" href={`/collection/${slugify(c)}/`}><div class="category-visual">{a?<img src={a.thumb} alt="" width="200" height="155"/>:<span>{c.charAt(0)}</span>}</div><div><h3>{c} →</h3><p>{ts.length} topics · {a?'Explore pilot artwork':'Artwork in preparation'}</p></div></a>})}</div><div class="section-head"><h2>Browse A–Z</h2></div><div class="az-nav"><button data-letter="">All</button>{'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.split('').map(c=><button data-letter={c}>{c}</button>)}</div><div class="topic-links">{topics.map(t=><a data-topic={t.keyword.toLowerCase()} href={`/clipart/${t.slug}/`}>{t.keyword} →</a>)}</div><p id="no-topics" hidden>No topics match. Try another letter or search.</p><script>const input=document.querySelector<HTMLInputElement>('#topic-filter')!;let letter='';const filter=()=>{let n=0;document.querySelectorAll<HTMLElement>('[data-topic]').forEach(el=>{const s=el.dataset.topic!;el.hidden=!(s.includes(input.value.toLowerCase())&&(!letter||s.startsWith(letter.toLowerCase())));if(!el.hidden)n++;});document.querySelector<HTMLElement>('#no-topics')!.hidden=n>0;};input.addEventListener('input',filter);document.querySelectorAll<HTMLButtonElement>('[data-letter]').forEach(b=>b.addEventListener('click',()=>{letter=b.dataset.letter!;document.querySelectorAll('[data-letter]').forEach(el=>el.setAttribute('aria-pressed',String(el===b)));filter();}));</script></Layout>
+
+<Layout title="Browse Clipart Categories">
+  <section class="hero category-hero">
+    <p class="eyebrow">The subject directory</p>
+    <h1>Find a little inspiration.</h1>
+    <p class="lead">Seasonal collections and everyday moments, all in one place.</p>
+    <label for="topic-filter">Search all {topics.length} planned topics</label>
+    <input
+      id="topic-filter"
+      type="search"
+      placeholder="Try pumpkin, flowers or winter"
+      aria-controls="topic-directory"
+    />
+  </section>
+  <div class="section-head">
+    <h2>Explore the collections</h2>
+    <a href="/new/">See available artwork →</a>
+  </div>
+  <div class="category-grid">
+    {clusters.map((cluster) => {
+      const members = topics.filter((topic) => topic.cluster === cluster);
+      const available = art.filter((item) => members.some((topic) => topic.slug === item.topic));
+      const first = available[0];
+      return (
+        <a class="category-card" href={`/collection/${slugify(cluster)}/`}>
+          <div class:list={['category-visual', { 'category-planned': !first }]}>
+            {first ? (
+              <img src={first.thumb} alt="" width="200" height="155" loading="lazy" />
+            ) : (
+              <>
+                <svg
+                  class="category-symbol"
+                  viewBox="0 0 64 64"
+                  width="64"
+                  height="64"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M10 18a5 5 0 0 1 5-5h13l6 7h15a5 5 0 0 1 5 5v23a5 5 0 0 1-5 5H15a5 5 0 0 1-5-5Z" />
+                  <path d="M10 27h44M25 40h14M32 33v14" />
+                </svg>
+                <span class="planned-label">In preparation</span>
+              </>
+            )}
+          </div>
+          <div class="category-copy">
+            <h3>
+              {cluster}
+              <span aria-hidden="true">↗</span>
+            </h3>
+            <p>
+              {members.length} topics ·{' '}
+              {available.length
+                ? `${available.length} pilot illustration${available.length === 1 ? '' : 's'}`
+                : 'Artwork coming later'}
+            </p>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+  <section id="topic-directory" class="topic-directory" aria-labelledby="topic-directory-heading">
+    <div class="section-head">
+      <h2 id="topic-directory-heading">Every topic, A–Z</h2>
+      <p id="topic-result-count" role="status" aria-live="polite">
+        {topics.length} topics
+      </p>
+    </div>
+    <p class="directory-intro">
+      Browse the complete subject list. Topic pages show the artwork available now and clearly mark
+      subjects still in preparation.
+    </p>
+    <div class="az-nav" role="group" aria-label="Filter topics by first letter">
+      <button data-letter="" aria-pressed="true">
+        All
+      </button>
+      {letters.map((letter) => (
+        <button
+          data-letter={letter}
+          aria-pressed="false"
+          aria-label={`Topics beginning with ${letter}`}
+        >
+          {letter}
+        </button>
+      ))}
+    </div>
+    <div class="topic-groups">
+      {letters.map((letter) => (
+        <section
+          class="topic-letter-group"
+          data-topic-group={letter}
+          aria-labelledby={`letter-${letter}`}
+        >
+          <h3 id={`letter-${letter}`}>{letter}</h3>
+          <div class="topic-links">
+            {sortedTopics
+              .filter((topic) => topic.keyword[0].toUpperCase() === letter)
+              .map((topic) => (
+                <a data-topic={topic.keyword.toLowerCase()} href={`/clipart/${topic.slug}/`}>
+                  <span>{topic.keyword}</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+              ))}
+          </div>
+        </section>
+      ))}
+    </div>
+    <div id="no-topics" class="empty" hidden>
+      <h3>No matching topics yet</h3>
+      <p>Try a shorter search or choose another letter.</p>
+      <button id="clear-topic-filter">Show all topics</button>
+    </div>
+  </section>
+  <script>
+    const input = document.querySelector<HTMLInputElement>('#topic-filter')!;
+    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-letter]');
+    let letter = '';
+    function filter() {
+      const query = input.value.normalize('NFKC').trim().toLowerCase();
+      let count = 0;
+      document.querySelectorAll<HTMLElement>('[data-topic]').forEach((link) => {
+        const subject = link.dataset.topic!;
+        link.hidden = !(
+          subject.includes(query) &&
+          (!letter || subject.startsWith(letter.toLowerCase()))
+        );
+        if (!link.hidden) count++;
+      });
+      document.querySelectorAll<HTMLElement>('[data-topic-group]').forEach((group) => {
+        group.hidden = !group.querySelector('[data-topic]:not([hidden])');
+      });
+      buttons.forEach((button) =>
+        button.setAttribute('aria-pressed', String(button.dataset.letter === letter)),
+      );
+      document.querySelector<HTMLElement>('#no-topics')!.hidden = count > 0;
+      document.querySelector<HTMLElement>('#topic-result-count')!.textContent =
+        `${count} topic${count === 1 ? '' : 's'}`;
+    }
+    input.addEventListener('input', filter);
+    buttons.forEach((button) =>
+      button.addEventListener('click', () => {
+        letter = button.dataset.letter!;
+        filter();
+      }),
+    );
+    document.querySelector('#clear-topic-filter')!.addEventListener('click', () => {
+      input.value = '';
+      letter = '';
+      filter();
+      input.focus();
+    });
+  </script>
+</Layout>

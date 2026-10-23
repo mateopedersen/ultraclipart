@@ -1,18 +1,263 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const pages:Record<string,{title:string,description:string,sections:[string,string][]}>={
-'about':{title:'A little art for everyday creativity.',description:'About UltraClipart and its original editable illustration pilot.',sections:[['Made to be made your own','UltraClipart is an independent collection of original, editable clipart for personal and educational projects. Start with a seasonal illustration, change its colors and layers, add a caption, then take it into your next project.'],['A collection in progress','The current pilot contains 10 original illustrations across 9 topics. Our longer-term plan covers 110 subjects and 50 distinct illustrations per subject. Planned artwork is not counted as finished or available.'],['How the artwork is made','These illustrations are AI-assisted original vector drawings created specifically for UltraClipart. We do not invent artist biographies or use stock art disguised as original work. Each source contains named, editable shapes. Technical checks and visual review are recorded separately.']]},
-'license':{title:'Simple, clear usage terms.',description:'Free personal and educational use. Commercial use and resale as clipart are prohibited.',sections:[['What you may do','You may download, edit, print and use UltraClipart illustrations in your personal and educational projects without paying. Examples include classroom worksheets, student assignments, personal greeting cards and noncommercial crafts.'],['What is not permitted','Commercial use is not permitted. You may not sell an illustration, an edited version, or a collection of these illustrations as clipart. Editing the artwork does not remove these restrictions. No public-domain or unrestricted redistribution rights are granted.'],['Questions about a use','If a proposed use falls outside personal or educational projects, ask ultraclipart@gmail.com before using the artwork. This license applies to the original UltraClipart artwork, not to third-party software or fonts, which retain their own licenses.'],['Policy record','The site owner approved this personal-and-educational-use policy on October 23, 2026. Artwork supplied in the pilot is identified as AI-assisted original vector work.']]},
-'contact':{title:'Let’s make it better.',description:'Contact UltraClipart for questions, corrections, copyright concerns or accessibility feedback.',sections:[['Say hello','Email ultraclipart@gmail.com for questions, feedback or corrections. Include the page address and a short description of what you need.'],['Report a problem','For a broken download or editor issue, include the artwork name, browser and the steps that caused the problem. Please avoid sending passwords, payment information or private student data.'],['Copyright and accessibility','Use the same email for copyright concerns and accessibility help. For a copyright report, identify the artwork and explain the rights you believe are affected. We do not promise a specific response time.']]},
-'privacy':{title:'Your creativity stays yours.',description:'How UltraClipart handles local editor data, favorites, downloads and contact email.',sections:[['Local editor and favorites','The editor processes artwork in your browser. Favorites and recoverable editing sessions are stored on your device when local storage is available. Your edits are not automatically uploaded to us. Clearing browser site data removes this local information.'],['Hosting and requests','Loading pages and downloading files sends ordinary request information, such as your IP address and browser details, to our hosting provider. Cloudflare processes these requests to deliver and protect the site. This pilot does not add advertising trackers or third-party analytics.'],['Email','If you email us, your email provider and ours process the message. We use the information you send to handle your request. Ask us at ultraclipart@gmail.com if you want to discuss deletion of correspondence.'],['Control and questions','You can clear this site’s local storage in your browser settings. Downloaded files remain on your device until you delete them. Contact ultraclipart@gmail.com for privacy questions.']]},
- 'terms':{title:'Terms of use.',description:'UltraClipart service terms and artwork usage policy.',sections:[['Using the site','UltraClipart provides editable illustrations and local creative tools for personal and educational projects. Use the site lawfully and do not interfere with its operation, attempt unauthorized access or bypass resource limits.'],['Artwork rights','Our artwork license permits free personal and educational use. Commercial use and resale as clipart are prohibited. Refer to the License page for the scope of permission. Third-party software and font licenses remain separate.'],['Pilot availability','This is an evolving pilot. Features, files and availability may change. Check the exported artwork and print settings before relying on them for a project. We do not guarantee search rankings, universal printer compatibility or uninterrupted availability.'],['Get in touch','Questions and corrections can be sent to ultraclipart@gmail.com.']]},
-'faq':{title:'A few helpful answers.',description:'Learn how to edit, download and print UltraClipart illustrations.',sections:[['Is it free?','Yes, downloads and the editor are free for personal and educational projects. No account is required. Commercial use and resale as clipart are prohibited.'],['Which format should I choose?','WebP is an RGB image format with transparency, useful for digital layouts. Standard PDFs contain compact CMYK vector artwork prepared using the documented print conversion profile. Vector artwork stays sharp as it is scaled.'],['Can I change just one part?','Yes. Open Edit Clipart and select a named layer. Change its color, move or rotate it, adjust the outline or hide it. Use undo if you want to step back. The export uses your current edited document.'],['Why can print colors look different?','Screens emit light, while paper reflects ink. CMYK conversion uses a print condition and may change colors outside the printable range. Ask your printer whether its workflow matches the stated profile; a PDF is not a guarantee of an exact physical color match.'],['Why are some topics empty?','The 110-topic plan is larger than the current pilot. We show honest availability and keep unfinished topics out of the search sitemap. We do not count recolors or rotations as new illustrations.'],['What is saved?','Favorites and editor recovery data stay in your browser. Use Save project to keep an editable project file, and download WebP or PDF for a finished image.']]},
-'for-teachers':{title:'Little illustrations. Big ideas.',description:'Use editable seasonal clipart in personal and educational classroom projects.',sections:[['Make a worksheet feel inviting','Choose a clear illustration that supports your lesson. Keep plenty of space around instructions and avoid decorative art that makes text harder to read. You can recolor a layer to fit your worksheet palette.'],['Create an outline activity','Open the Black & White studio and choose a real illustration. Use outline mode for a coloring activity, then choose US Letter or A4 and appropriate margins. Check the preview before printing.'],['Build a seasonal display','Combine a few distinct motifs in your own layout rather than repeating the same image everywhere. The pilot includes pumpkins, a friendly ghost, autumn botanicals and other seasonal subjects.'],['Respect privacy and permissions','The browser editor works locally. Do not include student names or private information in feedback emails. Classroom and educational use is permitted under our license; commercial use is not.']]},
-'accessibility':{title:'Creativity should be accessible.',description:'UltraClipart accessibility goals, supported controls and feedback contact.',sections:[['Our goal','We aim for WCAG 2.2 AA and test keyboard access, visible focus, labels, contrast and responsive layouts. An automated scan alone does not establish full conformance. This pilot has not received an independent accessibility certification.'],['Using the editor','Use labeled controls and the layer list to select objects. Numeric controls provide alternatives to dragging. Undo and redo are available as buttons. The export dialog can be closed with Escape.'],['Need help?','Email ultraclipart@gmail.com with the page, browser or assistive technology and the task you are trying to complete. We welcome specific reports.']]},
-'copyright':{title:'Copyright and corrections.',description:'Report artwork rights concerns and factual errors to UltraClipart.',sections:[['Original work and provenance','Pilot illustrations are AI-assisted original vector drawings. Their metadata records the production method; no named human artist is implied. We do not use third-party stock art or licensed character artwork in the pilot.'],['Report a concern','Email ultraclipart@gmail.com with the artwork URL, a description of the concern and any relevant evidence. If you represent a rights holder, explain your relationship to the work. Please do not send sensitive identification documents unless specifically needed and agreed.'],['Factual corrections','Cultural and religious subjects require additional care. If you notice a factual error, identify the image and explain the correction, with a reliable source where possible.']]},
-'editorial-process':{title:'From first sketch to useful artwork.',description:'How UltraClipart creates and checks original editable vector illustrations.',sections:[['One idea, one original','A new design needs a distinct visual concept and composition. Color changes, flips and crops are editing options, not additional original designs. The pilot is code-drawn with AI assistance and uses meaningful vector layers.'],['Technical preflight','We inspect SVG structure, exported image dimensions and transparency, PDF process colors and exact file sizes. Standard PDFs must stay at or below 1,000,000 bytes. A failed file stays outside the approved publication queue.'],['Review is separate from rendering','A file that opens successfully is not automatically good artwork. Legibility, shape quality, visual differences and cultural accuracy require their own review. We distinguish agent review from human approval and show the pilot status honestly.'],['Incremental growth','The production queue records unfinished designs. New batches should pass checks before publication. We do not fabricate completed counts, artist credentials or user reviews.']]}
-};
-export function getStaticPaths(){return ['about','license','contact','privacy','terms','faq','for-teachers','accessibility','copyright','editorial-process'].map(info=>({params:{info}}));}
-const page=pages[Astro.params.info!];
+const pages: Record<string, { title: string; description: string; sections: [string, string][] }> =
+  {
+    about: {
+      title: 'A little art for everyday creativity.',
+      description: 'About UltraClipart and its original editable illustration pilot.',
+      sections: [
+        [
+          'Made to be made your own',
+          'UltraClipart is an independent collection of original, editable clipart for personal and educational projects. Start with a seasonal illustration, change its colors and layers, add a caption, then take it into your next project.',
+        ],
+        [
+          'A collection in progress',
+          'The current pilot contains 10 original illustrations across 9 topics. Our longer-term plan covers 110 subjects and 50 distinct illustrations per subject. Planned artwork is not counted as finished or available.',
+        ],
+        [
+          'How the artwork is made',
+          'These illustrations are AI-assisted original vector drawings created specifically for UltraClipart. We do not invent artist biographies or use stock art disguised as original work. Each source contains named, editable shapes. Technical checks and visual review are recorded separately.',
+        ],
+      ],
+    },
+    license: {
+      title: 'Simple, clear usage terms.',
+      description:
+        'Free personal and educational use. Commercial use and resale as clipart are prohibited.',
+      sections: [
+        [
+          'What you may do',
+          'You may download, edit, print and use UltraClipart illustrations in your personal and educational projects without paying. Examples include classroom worksheets, student assignments, personal greeting cards and noncommercial crafts.',
+        ],
+        [
+          'What is not permitted',
+          'Commercial use is not permitted. You may not sell an illustration, an edited version, or a collection of these illustrations as clipart. Editing the artwork does not remove these restrictions. No public-domain or unrestricted redistribution rights are granted.',
+        ],
+        [
+          'Questions about a use',
+          'If a proposed use falls outside personal or educational projects, ask ultraclipart@gmail.com before using the artwork. This license applies to the original UltraClipart artwork, not to third-party software or fonts, which retain their own licenses.',
+        ],
+        [
+          'Your own studio work',
+          'UltraClipart does not claim ownership of original work you create on a blank canvas. These artwork restrictions apply when you use UltraClipart illustrations or starter templates, including edited versions. Imported material keeps its existing rights and restrictions.',
+        ],
+        [
+          'Policy record',
+          'The site owner approved this personal-and-educational-use policy on October 23, 2026. Artwork supplied in the pilot is identified as AI-assisted original vector work.',
+        ],
+      ],
+    },
+    contact: {
+      title: 'Let’s make it better.',
+      description:
+        'Contact UltraClipart for questions, corrections, copyright concerns or accessibility feedback.',
+      sections: [
+        [
+          'Say hello',
+          'Email ultraclipart@gmail.com for questions, feedback or corrections. Include the page address and a short description of what you need.',
+        ],
+        [
+          'Report a problem',
+          'For a broken download or editor issue, include the artwork name, browser and the steps that caused the problem. Please avoid sending passwords, payment information or private student data.',
+        ],
+        [
+          'Copyright and accessibility',
+          'Use the same email for copyright concerns and accessibility help. For a copyright report, identify the artwork and explain the rights you believe are affected. We do not promise a specific response time.',
+        ],
+      ],
+    },
+    privacy: {
+      title: 'Your creativity stays yours.',
+      description:
+        'How UltraClipart handles local editor data, favorites, downloads and contact email.',
+      sections: [
+        [
+          'Local editor and favorites',
+          'The editor processes artwork in your browser. Favorites and recoverable editing sessions are stored on your device when local storage is available. Drawings, imported SVGs, project files and edits are processed locally and are not uploaded to UltraClipart. Clearing browser site data removes this local information.',
+        ],
+        [
+          'Hosting and requests',
+          'Loading pages and downloading files sends ordinary request information, such as your IP address and browser details, to our hosting provider. Cloudflare processes these requests to deliver and protect the site. This pilot does not add advertising trackers or third-party analytics.',
+        ],
+        [
+          'Email',
+          'If you email us, your email provider and ours process the message. We use the information you send to handle your request. Ask us at ultraclipart@gmail.com if you want to discuss deletion of correspondence.',
+        ],
+        [
+          'Control and questions',
+          'You can clear this site’s local storage in your browser settings. Downloaded files remain on your device until you delete them. Contact ultraclipart@gmail.com for privacy questions.',
+        ],
+      ],
+    },
+    terms: {
+      title: 'Terms of use.',
+      description: 'UltraClipart service terms and artwork usage policy.',
+      sections: [
+        [
+          'Using the site',
+          'UltraClipart provides editable illustrations and local creative tools for personal and educational projects. Use the site lawfully and do not interfere with its operation, attempt unauthorized access or bypass resource limits.',
+        ],
+        [
+          'Artwork rights',
+          'Our artwork license permits free personal and educational use. Commercial use and resale as clipart are prohibited. Refer to the License page for the scope of permission. Third-party software and font licenses remain separate.',
+        ],
+        [
+          'Pilot availability',
+          'This is an evolving pilot. Features, files and availability may change. Check the exported artwork and print settings before relying on them for a project. We do not guarantee search rankings, universal printer compatibility or uninterrupted availability.',
+        ],
+        ['Get in touch', 'Questions and corrections can be sent to ultraclipart@gmail.com.'],
+      ],
+    },
+    faq: {
+      title: 'A few helpful answers.',
+      description: 'Learn how to edit, download and print UltraClipart illustrations.',
+      sections: [
+        [
+          'Is it free?',
+          'Yes, downloads and the editor are free for personal and educational projects. No account is required. Commercial use and resale as clipart are prohibited.',
+        ],
+        [
+          'Can I create something from scratch?',
+          'Yes. Choose Create in the main navigation to open the Creative Studio. Start blank or choose an editable starter, then draw, add shapes and text, arrange layers, and export WebP or CMYK PDF. Save project keeps an editable copy. Starter templates follow the same personal and educational use license as the catalog.',
+        ],
+        [
+          'Which format should I choose?',
+          'WebP is an RGB image format with transparency, useful for digital layouts. Standard PDFs contain compact CMYK vector artwork prepared using the documented print conversion profile. Vector artwork stays sharp as it is scaled.',
+        ],
+        [
+          'Can I change just one part?',
+          'Yes. Open Edit Clipart and select a named layer. Change its color, move or rotate it, adjust the outline or hide it. Use undo if you want to step back. The export uses your current edited document.',
+        ],
+        [
+          'Why can print colors look different?',
+          'Screens emit light, while paper reflects ink. CMYK conversion uses a print condition and may change colors outside the printable range. Ask your printer whether its workflow matches the stated profile; a PDF is not a guarantee of an exact physical color match.',
+        ],
+        [
+          'Why are some topics empty?',
+          'The 110-topic plan is larger than the current pilot. We show honest availability and keep unfinished topics out of the search sitemap. We do not count recolors or rotations as new illustrations.',
+        ],
+        [
+          'What is saved?',
+          'Favorites and editor recovery data stay in your browser. Use Save project to keep an editable project file, and download WebP or PDF for a finished image.',
+        ],
+      ],
+    },
+    'for-teachers': {
+      title: 'Little illustrations. Big ideas.',
+      description: 'Use editable seasonal clipart in personal and educational classroom projects.',
+      sections: [
+        [
+          'Make a worksheet feel inviting',
+          'Choose a clear illustration that supports your lesson. Keep plenty of space around instructions and avoid decorative art that makes text harder to read. You can recolor a layer to fit your worksheet palette.',
+        ],
+        [
+          'Create an outline activity',
+          'Open the Black & White studio and choose a real illustration. Use outline mode for a coloring activity, then choose US Letter or A4 and appropriate margins. Check the preview before printing.',
+        ],
+        [
+          'Build a seasonal display',
+          'Combine a few distinct motifs in your own layout rather than repeating the same image everywhere. The pilot includes pumpkins, a friendly ghost, autumn botanicals and other seasonal subjects.',
+        ],
+        [
+          'Respect privacy and permissions',
+          'The browser editor works locally. Do not include student names or private information in feedback emails. Classroom and educational use is permitted under our license; commercial use is not.',
+        ],
+      ],
+    },
+    accessibility: {
+      title: 'Creativity should be accessible.',
+      description: 'UltraClipart accessibility goals, supported controls and feedback contact.',
+      sections: [
+        [
+          'Our goal',
+          'We aim for WCAG 2.2 AA and test keyboard access, visible focus, labels, contrast and responsive layouts. An automated scan alone does not establish full conformance. This pilot has not received an independent accessibility certification.',
+        ],
+        [
+          'Using the editor',
+          'Use labeled controls and the layer list to select objects. Numeric controls provide alternatives to dragging. Undo and redo are available as buttons. The export dialog can be closed with Escape.',
+        ],
+        [
+          'Need help?',
+          'Email ultraclipart@gmail.com with the page, browser or assistive technology and the task you are trying to complete. We welcome specific reports.',
+        ],
+      ],
+    },
+    copyright: {
+      title: 'Copyright and corrections.',
+      description: 'Report artwork rights concerns and factual errors to UltraClipart.',
+      sections: [
+        [
+          'Original work and provenance',
+          'Pilot illustrations are AI-assisted original vector drawings. Their metadata records the production method; no named human artist is implied. We do not use third-party stock art or licensed character artwork in the pilot.',
+        ],
+        [
+          'Report a concern',
+          'Email ultraclipart@gmail.com with the artwork URL, a description of the concern and any relevant evidence. If you represent a rights holder, explain your relationship to the work. Please do not send sensitive identification documents unless specifically needed and agreed.',
+        ],
+        [
+          'Factual corrections',
+          'Cultural and religious subjects require additional care. If you notice a factual error, identify the image and explain the correction, with a reliable source where possible.',
+        ],
+      ],
+    },
+    'editorial-process': {
+      title: 'From first sketch to useful artwork.',
+      description: 'How UltraClipart creates and checks original editable vector illustrations.',
+      sections: [
+        [
+          'One idea, one original',
+          'A new design needs a distinct visual concept and composition. Color changes, flips and crops are editing options, not additional original designs. The pilot is code-drawn with AI assistance and uses meaningful vector layers.',
+        ],
+        [
+          'Technical preflight',
+          'We inspect SVG structure, exported image dimensions and transparency, PDF process colors and exact file sizes. Standard PDFs must stay at or below 1,000,000 bytes. A failed file stays outside the approved publication queue.',
+        ],
+        [
+          'Review is separate from rendering',
+          'A file that opens successfully is not automatically good artwork. Legibility, shape quality, visual differences and cultural accuracy require their own review. We distinguish agent review from human approval and show the pilot status honestly.',
+        ],
+        [
+          'Incremental growth',
+          'The production queue records unfinished designs. New batches should pass checks before publication. We do not fabricate completed counts, artist credentials or user reviews.',
+        ],
+      ],
+    },
+  };
+export function getStaticPaths() {
+  return [
+    'about',
+    'license',
+    'contact',
+    'privacy',
+    'terms',
+    'faq',
+    'for-teachers',
+    'accessibility',
+    'copyright',
+    'editorial-process',
+  ].map((info) => ({ params: { info } }));
+}
+const page = pages[Astro.params.info!];
 ---
-<Layout title={page.title} description={page.description}><article class="prose"><p class="eyebrow">UltraClipart · Information</p><h1>{page.title}</h1>{page.sections.map(([heading,body])=><section><h2>{heading}</h2><p>{body}</p></section>)}<p><a href="mailto:ultraclipart@gmail.com">Email ultraclipart@gmail.com</a></p><div class="chips"><a href="/license/">License</a><a href="/privacy/">Privacy</a><a href="/contact/">Contact</a><a href="/editorial-process/">Our process</a></div></article></Layout>
+
+<Layout title={page.title} description={page.description}>
+  <article class="prose">
+    <p class="eyebrow">UltraClipart · Information</p>
+    <h1>{page.title}</h1>
+    {page.sections.map(([heading, body]) => (
+      <section>
+        <h2>{heading}</h2>
+        <p>{body}</p>
+      </section>
+    ))}
+    <p>
+      <a href="mailto:ultraclipart@gmail.com">Email ultraclipart@gmail.com</a>
+    </p>
+    <div class="chips">
+      <a href="/license/">License</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="/contact/">Contact</a>
+      <a href="/editorial-process/">Our process</a>
+    </div>
+  </article>
+</Layout>

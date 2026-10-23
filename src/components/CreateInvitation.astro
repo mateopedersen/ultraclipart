@@ -1,0 +1,113 @@
+<section class="create-invitation" aria-labelledby="create-invitation-title">
+  <div class="create-mark" aria-hidden="true">
+    <svg viewBox="0 0 120 100" fill="none">
+      <rect x="20" y="17" width="75" height="68" rx="10" fill="#fff" stroke="#bdcce8" />
+      <path
+        d="m46 61 5-19 31-27 13 15-32 27-17 4Z"
+        fill="#f9c96b"
+        stroke="#142442"
+        stroke-width="2"
+      />
+      <path d="m51 42 12 15m19-42 13 15M46 61l11-3-8-10-3 13Z" fill="#142442" />
+      <path d="M29 72c13-11 16 11 34 0" stroke="#2360e8" stroke-width="3" stroke-linecap="round" />
+      <circle cx="20" cy="21" r="7" fill="#b7cdb9" />
+      <path d="m101 62 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z" fill="#709bd4" />
+    </svg>
+  </div>
+  <div>
+    <p class="eyebrow">Your idea. Your canvas.</p>
+    <h2 id="create-invitation-title">Make something that is completely yours.</h2>
+    <p>Build with shapes, draw your own lines and give every little detail a personal touch.</p>
+  </div>
+  <div class="create-invitation-action">
+    <a class="button primary" href="/create/">
+      Open the Clipart Studio <span aria-hidden="true">→</span>
+    </a>
+    <small>No account needed. Your edits stay on this device.</small>
+  </div>
+</section>
+
+<style>
+  .create-invitation {
+    display: grid;
+    grid-template-columns: 110px 1fr auto;
+    gap: 26px;
+    align-items: center;
+    margin: 42px 0;
+    padding: 30px;
+    border: 1px solid #d6e3f4;
+    border-radius: 18px;
+    background: #f5f8ff;
+  }
+  .create-mark svg {
+    display: block;
+    width: 110px;
+    max-width: 100%;
+  }
+  .create-invitation .eyebrow {
+    margin: 0 0 10px;
+  }
+  .create-invitation h2 {
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 0 10px;
+  }
+  .create-invitation p:last-child {
+    margin: 0;
+    max-width: 520px;
+    font-size: 15px;
+  }
+  .create-invitation-action {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+  }
+  .create-invitation-action small {
+    max-width: 235px;
+    text-align: center;
+    color: #52617a;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .create-invitation .button {
+    white-space: nowrap;
+    min-height: 48px;
+  }
+  @media (max-width: 1000px) {
+    .create-invitation {
+      grid-template-columns: 85px 1fr;
+    }
+    .create-invitation-action {
+      grid-column: 2;
+      justify-items: start;
+    }
+    .create-invitation-action small {
+      text-align: left;
+      max-width: none;
+    }
+  }
+  @media (max-width: 580px) {
+    .create-invitation {
+      grid-template-columns: 1fr;
+      padding: 24px;
+      gap: 18px;
+    }
+    .create-mark {
+      width: 85px;
+    }
+    .create-invitation-action {
+      grid-column: auto;
+      justify-items: stretch;
+    }
+    .create-invitation-action small {
+      text-align: center;
+    }
+    .create-invitation h2 {
+      font-size: 23px;
+    }
+    .create-invitation .button {
+      white-space: normal;
+      text-align: center;
+    }
+  }
+</style>

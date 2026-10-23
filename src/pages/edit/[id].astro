@@ -1,5 +1,13 @@
 ---
-import Layout from '../../layouts/Layout.astro';import Editor from '../../components/Editor.astro';import {art} from '../../lib/catalog';
-export function getStaticPaths(){return art.map(a=>({params:{id:a.id},props:{item:a}}));}const {item}=Astro.props;
+import Layout from '../../layouts/Layout.astro';
+import Editor from '../../components/Editor.astro';
+import { art } from '../../lib/catalog';
+export function getStaticPaths() {
+  return art.map((a) => ({ params: { id: a.id }, props: { item: a } }));
+}
+const { item } = Astro.props;
 ---
-<Layout title={`Edit ${item.title}`} noindex={true} wide={true}><Editor art={item}/></Layout>
+
+<Layout title={`Edit ${item.title}`} noindex={true} wide={true}>
+  <Editor art={item} />
+</Layout>

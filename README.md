@@ -21,7 +21,7 @@ Open the local URL printed by Astro. Main commands:
 pnpm check
 pnpm build
 pnpm test
-pnpm preview
+pnpm exec astro preview
 ```
 
 `pnpm test` checks keyword parity, real file signatures and hashes, search, editor document behavior, SEO output, and R2 budgeting/ingestion logic. Build before running tests that inspect generated HTML. Browser checks are separate from unit checks:
@@ -31,15 +31,28 @@ pnpm exec playwright install chromium
 # With the development or preview server running:
 BASE_URL=http://127.0.0.1:4321 node tests/e2e/search.mjs
 BASE_URL=http://127.0.0.1:4321 node tests/e2e/site.mjs
+BASE_URL=http://127.0.0.1:4321 node tests/e2e/refinement.mjs
 ```
 
 Set `BASE_URL` to the actual server address. Browser evidence is generated under `reports/`. A local passing result does not prove a deployed domain works.
 
-The full-site browser suite checks all ten reference workflows at desktop, tablet and mobile sizes, accessibility scans, category filtering, favorites, dialog keyboard behavior and informational routes. It defaults to Chromium; set `TEST_BROWSER=firefox` or `TEST_BROWSER=webkit` after installing that Playwright browser. `.github/workflows/ci.yml` runs locked installation, type checks, build, tests and Chromium browser checks on pull requests and pushes to `main`.
+The full-site browser suite checks all ten reference workflows at desktop, tablet and mobile sizes, accessibility scans, category filtering, favorites, dialog keyboard behavior and informational routes. It defaults to Chromium; set `TEST_BROWSER=firefox` or `TEST_BROWSER=webkit` after installing that Playwright browser. `.github/workflows/ci.yml` runs locked installation, type checks, build, tests and Chromium, Firefox and WebKit browser/editor checks on pull requests and pushes to `main`.
+
+## Creative Studio
+
+`/create/` is a local browser workspace. It starts from a blank canvas or one of six editable studio templates. The templates are separate from catalog production counts. Users can combine eight parameterized shapes, draw smooth vector strokes, add text, resize the canvas, import supported SVGs, manage named layers, save an editable project, and export transparent WebP or process-CMYK vector PDF. Existing transform, grouping, crop, print-layout and undo tools share the same document model as the catalog editor.
+
+SVG imports use an explicit vector-element and attribute allowlist, finite geometry limits, and document/layer/path bounds. External resources, scripts and unsupported rendering features are rejected. Project recovery stays in browser storage; users should save a project file for a separate copy. The site does not upload user artwork or call a paid image API. Original user work remains theirs; UltraClipart starter templates follow the site's personal and educational use license.
+
+The creator suite exercises blank and template workflows, drawing cancellation, shape controls, imports, undo, exports and responsive accessibility:
+
+```sh
+UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/creator.mjs
+```
 
 ## Art production and resuming
 
-The ten pilot illustrations are original AI-assisted, code-drawn vectors with named editable groups. There is no stock artwork or screenshot tracing. The checked-in small pilot is for development and review; a full catalog belongs in R2, not Git.
+The ten pilot illustrations are original AI-assisted, code-drawn vectors with named editable groups. There is no stock artwork or screenshot tracing. The checked-in small pilot is for development and review; a full catalog belongs in R2, not Git. Revision 2 improves all ten existing works without inflating the drawing count: 107 named editable layers, with composition and material details recorded in `data/art-revision-history.json`.
 
 Install Python 3.12+, create a virtual environment, and install the pinned art dependencies. Poppler's `pdftoppm` is needed only for screen proofs.
 
@@ -59,11 +72,11 @@ See [the reproducible art pipeline](scripts/ART-PIPELINE.txt) for optional execu
 
 Original downloads use lossless 2048 × 2048 WebP with alpha. PDFs contain actual CMYK vector painting operations. LittleCMS converts sRGB to GRACoL2006_Coated1v2; exact neutral colors preserve pure K. PDFs identify the registered print condition, while the full ICC profile is referenced rather than embedded because its size exceeds the 1,000,000-byte PDF cap. The licensed profile and terms are in `public/color/`. No PDF/X certification or universal printer/paper color match is claimed. Browser edited exports use the same sampled color transform, subject to their recorded fidelity tests.
 
-Latest original pilot preflight: 40 representations totaling 734,901 local bytes; maximum/P95 PDF 4,007 bytes; zero PDFs above the cap. These are local measurements, not R2 usage.
+Latest original pilot preflight: 40 representations totaling 1,013,178 local bytes; maximum/P95 PDF 6,349 bytes; zero PDFs above the cap. These are local measurements, not R2 usage.
 
 ## R2 and deployment
 
-[scripts/r2](scripts/r2/) is the only supported R2 ingestion path. Read the [R2 runbook](docs/r2-ingestion.md) before use. It requires an owner-authorized, activated R2 Standard account, an existing bucket, AWS CLI, privately supplied credentials, and full-account inventory access. It does not activate subscriptions or configure billing.
+[scripts/r2](scripts/r2/) is the supported automated R2 ingestion path. The small initial pilot and its revised immutable snapshot were uploaded through the authorized Cloudflare dashboard and then checked byte-for-byte through the public CDN; automated waves must use the guarded uploader. Read the [R2 runbook](docs/r2-ingestion.md) before use. It requires an owner-authorized, activated R2 Standard account, an existing bucket, AWS CLI, privately supplied credentials, and full-account inventory access. It does not activate subscriptions or configure billing.
 
 ```sh
 node scripts/r2/make-batch.mjs BUCKET --pilot --output work/r2-batch.json
@@ -76,22 +89,23 @@ The first command only writes a local batch; the second reads remote inventory w
 
 Connect this repository to a new Cloudflare Pages project named `ultraclipart`, using the repository root and production branch `main`. Set the build command to `pnpm check && pnpm build && pnpm test` and the output directory to `dist`. Pages publishes the successful build automatically; its Git integration does not need a separate deploy command or a new account-wide API token.
 
-Set build variables `NODE_VERSION=24`, `PNPM_VERSION=11.25.0`, and `ASTRO_TELEMETRY_DISABLED=1`. Set `PUBLIC_ASSET_BASE` to the verified HTTPS R2 asset prefix for production; omit it for local and CI checks against the bundled pilot. Keep build-time values in the Pages build settings. No Pages Functions or runtime R2/D1 bindings are required.
+Set build variables `NODE_VERSION=24.19.0`, `PNPM_VERSION=11.25.0`, and `ASTRO_TELEMETRY_DISABLED=1`. Cloudflare sets `CF_PAGES=1`: production then reads `data/publication.json`, checks every catalog file against the verified CDN snapshot and compiles each verified immutable file URL into HTML and search data. A missing, incomplete or changed release fails the build. A dashboard `PUBLIC_ASSET_BASE` cannot override this release record. Local and CI builds use the bundled pilot. No Pages Functions or runtime R2/D1 bindings are required.
 
-For an optional manual deployment using an already authorized local Cloudflare session:
+For an optional manual deployment using an already authorized local Cloudflare session (the command rebuilds in production mode and requires publication, type, build and unit-test gates before uploading):
 
 ```sh
-pnpm build
 pnpm deploy
 ```
 
+Production output excludes duplicate pilot files only after confirming that every reference uses the verified CDN. Content-addressed search shards receive immutable cache headers; the small manifest revalidates. An exact post-build file-count guard enforces the 20,000-file Pages Free limit. The 5,500-item synthetic search fixture currently projects 17,720 files and downloads 9,589 bytes of JSON for a cold eight-result browse; this is a scale test, not a claim that 5,500 drawings exist. See [search architecture](docs/SEARCH-ARCHITECTURE.txt).
+
 `wrangler.jsonc` declares the Pages project and `pages_build_output_dir: "./dist"`. The build generates the exact inline-script CSP hashes in `dist/_headers`, and `dist/404.html` provides the missing-page response. Custom-domain DNS, R2 activation, account metrics, and live smoke-test evidence must be verified in the actual accounts; configuration files and this README are not proof of a successful deployment. Current verified deployment status belongs in the delivery report. See the official [Astro deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/), [Pages configuration](https://developers.cloudflare.com/pages/functions/wrangler-configuration/), and [build version settings](https://developers.cloudflare.com/pages/configuration/build-image/).
 
-After deployment, read-only smoke checks compare all built routes and their resources with the live site, and the complete pilot CDN files with the verified local hashes. Substitute the actual asset prefix:
+After deployment, read-only smoke checks compare all built routes and their resources with the live site, and the complete pilot CDN files with the verified local hashes. The CDN check reads the verified per-file publication map:
 
 ```sh
 BASE_URL=https://ultraclipart.com node scripts/smoke-live.mjs
-ASSET_BASE=https://assets.ultraclipart.com/PREFIX/ node scripts/smoke-cdn.mjs
+node scripts/smoke-cdn.mjs
 BASE_URL=https://ultraclipart.com node tests/e2e/site.mjs
 ```
 

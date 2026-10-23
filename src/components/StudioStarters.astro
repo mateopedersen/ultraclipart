@@ -1,0 +1,37 @@
+---
+import { studioTemplates } from '../lib/studio-templates';
+---
+
+<section class="studio-starters" aria-labelledby="starter-heading">
+  <div class="studio-section-heading">
+    <div>
+      <p class="studio-kicker">A place to begin</p>
+      <h2 id="starter-heading">A blank canvas. Or a little inspiration.</h2>
+    </div>
+    <button class="studio-blank-button" data-creator-template="blank">
+      <span aria-hidden="true">＋</span> Start blank
+    </button>
+  </div>
+  <div class="studio-starter-grid">
+    {studioTemplates.map((template) => (
+      <button
+        class:list={['studio-starter', `studio-tone-${template.tone}`]}
+        data-creator-template={template.id}
+        data-template-source={template.src}
+        aria-label={`Start with ${template.title}: ${template.description}`}
+      >
+        <span class="studio-starter-picture">
+          <img src={template.src} alt="" width="800" height="600" decoding="async" />
+        </span>
+        <span class="studio-starter-caption">
+          <strong>{template.title}</strong>
+          <span aria-hidden="true">↗</span>
+        </span>
+      </button>
+    ))}
+  </div>
+  <p class="studio-starter-note">
+    <span class="studio-starter-scroll-hint">Scroll to explore all six starters. </span>
+    Every piece is editable. Starting again can be undone in the workspace.
+  </p>
+</section>

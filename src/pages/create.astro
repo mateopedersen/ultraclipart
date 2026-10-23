@@ -1,0 +1,180 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Editor from '../components/Editor.astro';
+import StudioStarters from '../components/StudioStarters.astro';
+import { structuredData, breadcrumbs } from '../lib/structured-data';
+import '../styles/creator.css';
+
+const workspace = { id: 'my-clipart', title: 'Your clipart workspace', svg: '' };
+---
+
+<Layout
+  title="Create Your Own Clipart"
+  description="Create original clipart in your browser. Draw, combine editable shapes, add text, and export transparent WebP or CMYK PDF. Start blank or customize a studio template."
+  wide={true}
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={structuredData(
+        breadcrumbs([
+          { name: 'Home', path: '/' },
+          { name: 'Create your own clipart', path: '/create/' },
+        ]),
+      )}
+    />
+    <script
+      type="application/ld+json"
+      set:html={structuredData({
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        name: 'UltraClipart Creative Studio',
+        url: 'https://ultraclipart.com/create/',
+        applicationCategory: 'DesignApplication',
+        operatingSystem: 'Web browser',
+        browserRequirements: 'Requires JavaScript and a modern browser.',
+        description:
+          'A local browser workspace for drawing and editing layered vector clipart, with WebP and CMYK PDF export.',
+        inLanguage: 'en-US',
+      })}
+    />
+  </Fragment>
+  <div class="creator-page">
+    <section class="studio-intro" aria-labelledby="studio-title">
+      <div class="studio-intro-copy">
+        <p class="studio-kicker">
+          <span class="studio-dot" aria-hidden="true"></span> Your creative corner
+        </p>
+        <h1 id="studio-title">
+          Create <span>your own</span> clipart.
+        </h1>
+        <p>
+          One small shape can become something wonderful. Draw, layer, color, and make it yours.
+        </p>
+        <div class="studio-intro-meta">
+          <span>No account needed</span>
+          <span>Made in your browser</span>
+          <a href="#studio-guide">
+            A quick tour <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="studio-intro-art" aria-hidden="true">
+        <span class="studio-scribble studio-scribble-one"></span>
+        <span class="studio-mini-card studio-mini-botanical">
+          <img src="/studio/botanical-sprig.svg" alt="" width="800" height="600" />
+        </span>
+        <span class="studio-mini-card studio-mini-badge">
+          <img src="/studio/sunny-badge.svg" alt="" width="800" height="600" />
+        </span>
+        <span class="studio-mini-label">A little more you.</span>
+        <span class="studio-spark" aria-hidden="true">
+          ✧
+        </span>
+      </div>
+    </section>
+
+    <StudioStarters />
+
+    <section id="studio-workspace" class="studio-workspace-shell" aria-label="Creative workspace">
+      <div class="studio-workspace-label">
+        <span>
+          <span class="studio-dot" aria-hidden="true"></span> The creative studio
+        </span>
+        <a href="#studio-privacy">
+          Your work stays on this device <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <Editor creator art={workspace} />
+    </section>
+
+    <section id="studio-guide" class="studio-guide" aria-labelledby="guide-heading">
+      <div class="studio-section-heading">
+        <div>
+          <p class="studio-kicker">Small steps, something yours</p>
+          <h2 id="guide-heading">From first shape to final flourish.</h2>
+        </div>
+        <a href="#studio-workspace">
+          Back to the canvas <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+      <div class="studio-guide-grid">
+        <article>
+          <span class="studio-step-number">01</span>
+          <div class="studio-guide-icon studio-guide-build" aria-hidden="true">
+            <span></span>
+            <i></i>
+            <b></b>
+          </div>
+          <h3>Give your idea a shape.</h3>
+          <p>
+            Start with a circle, a star, or a freehand line. Combine a few pieces, or make a starter
+            template your own.
+          </p>
+          <p class="studio-tip">
+            Try this: build a flower from a circle and a few duplicated petals.
+          </p>
+        </article>
+        <article>
+          <span class="studio-step-number">02</span>
+          <div class="studio-guide-icon studio-guide-color" aria-hidden="true">
+            <span></span>
+            <i></i>
+            <b></b>
+          </div>
+          <h3>Find your finishing touch.</h3>
+          <p>
+            Choose a palette, turn a shape, and add a caption. Open Layers to rename, hide, reorder,
+            or select individual pieces.
+          </p>
+          <p class="studio-tip">Try this: use two main colors and one bright accent.</p>
+        </article>
+        <article>
+          <span class="studio-step-number">03</span>
+          <div class="studio-guide-icon studio-guide-export" aria-hidden="true">
+            <span>WEBP</span>
+            <i>PDF</i>
+          </div>
+          <h3>Take it into your world.</h3>
+          <p>
+            Export WebP for a transparent digital image or CMYK PDF for printing. Save your project
+            to keep every layer editable.
+          </p>
+          <p class="studio-tip">Check Print setup for paper size, orientation, and margins.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="studio-notes" aria-label="Saving, privacy, and usage information">
+      <div id="studio-privacy">
+        <p class="studio-kicker">A little peace of mind</p>
+        <h2>Your canvas. On your device.</h2>
+        <p>
+          Drawing and editing happen in your browser. Imported files and your artwork are not
+          uploaded to UltraClipart. Browser recovery can help you continue here; use{' '}
+          <strong>Save project</strong> to keep a separate editable copy. Clearing site data removes
+          local recovery.
+        </p>
+      </div>
+      <div>
+        <p class="studio-kicker">Create with care</p>
+        <h2>A note on artwork and permissions.</h2>
+        <p>
+          Your own original work remains yours. UltraClipart artwork and starter templates follow
+          our <a href="/license/">personal and educational use license</a>. Only import files you
+          have permission to use.
+        </p>
+        <p class="studio-small-print">
+          The starter compositions were created with AI assistance. Imported SVG files must use
+          supported vector shapes; external images, scripts, and unsupported effects are rejected.
+        </p>
+      </div>
+    </section>
+    <noscript>
+      <p class="notice">
+        The creative studio needs JavaScript to draw, edit, and export. You can still{' '}
+        <a href="/new/">browse and download the existing clipart</a>.
+      </p>
+    </noscript>
+  </div>
+</Layout>

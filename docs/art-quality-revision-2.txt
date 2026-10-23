@@ -1,0 +1,41 @@
+UltraClipart pilot illustration quality — revision 2
+
+Revision 1 passed technical readability, integrity and export checks. A later
+reference comparison identified that its illustration finish was materially
+simpler than the supplied examples. That earlier technical pass must not be
+presented as a premium art-quality approval.
+
+Revision 2 replaces all 10 artwork IDs rather than adding catalog counts.
+Major drawing changes: dimensional pumpkin lobes and leaf/stem detail; apple
+surface light, dimple and realistic peeled slice edge/core; a three-quarter
+perspective gift with folded ribbon; a ghost visibly holding its mug; and a
+new two-pumpkin harvest basket coloring composition. The other five received
+independent editable surface, contour and material-detail layers.
+
+The ten masters now have 107 named editable groups in total. All shading uses
+supported solid vector geometry. No stock art, photograph, traced screenshot,
+raster filter, paid generator or color-variant count inflation was introduced.
+
+Technical gate: 40 files, 1,013,178 local bytes, maximum/P95 PDF 6,349 bytes.
+All original PDF files contain process CMYK vector operations and no raster
+artwork. The coloring PDF additionally passes a pure-K check. Ten PDF screen
+proofs were rendered at 300 dpi. Dark-silhouette overlap of rendered source and
+PDF is 0.9859–0.9996 after page normalization (not a physical color-match test).
+The duplicate-silhouette scan now has zero flags at the existing 0.88 threshold.
+The previous pumpkin pair is compositionally distinct after the basket redraw.
+
+AI-agent visual gate: reviewed at contact-sheet, enlarged and 128px scales,
+on light/dark/checkerboard backgrounds, and in screen print proofs. A separate
+QA agent also inspected all ten contact-sheet images and found no obvious
+blocking drawing defect. Minor note: the ghost hand/mug contour is relatively
+dense at thumbnail size. Dark spider legs still read best on a light backdrop.
+
+Quality status: substantially improved friendly outlined vector pilot. The
+references include richer texture and greater stylistic range; exact parity
+or final premium/human art approval is not claimed. Owner art signoff remains
+pending. No physical press proof was performed and no cultural/religious pilot
+was added. See data/art-visual-review.json for evidence and per-design notes.
+
+Release: regenerate hash-verified R2 batch and upload new immutable keys; do
+not overwrite old keys or count both revisions as separate artworks. Verify
+all edited exports, final CDN bytes and live UI after manifest replacement.

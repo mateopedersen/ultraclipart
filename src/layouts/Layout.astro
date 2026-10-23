@@ -1,18 +1,170 @@
 ---
 import '../styles/global.css';
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/600.css';
-import '@fontsource/inter/700.css';
-const {title='Clipart made simple.',description='Explore original seasonal clipart. Edit colors and layers, then download WebP and printable PDF files.',noindex=false,wide=false}=Astro.props;
-const nav=[['Explore','/'],['Categories','/categories/'],['Collections','/collections/'],['New','/new/'],['Black & White','/black-and-white/'],['For Teachers','/for-teachers/'],['About','/about/']];
-const canonical=new URL(Astro.url.pathname,'https://ultraclipart.com').href;
+import { structuredData } from '../lib/structured-data';
+import regularFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import boldFont from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
+const {
+  title = 'Clipart made simple.',
+  description = 'Explore original seasonal clipart. Edit colors and layers, then download WebP and printable PDF files.',
+  noindex = false,
+  wide = false,
+  image = '',
+  imageAlt = title,
+} = Astro.props;
+const nav = [
+  ['Explore', '/'],
+  ['Categories', '/categories/'],
+  ['Collections', '/collections/'],
+  ['New', '/new/'],
+  ['Black & White', '/black-and-white/'],
+  ['Create', '/create/'],
+  ['For Teachers', '/for-teachers/'],
+  ['About', '/about/'],
+];
+const canonical = new URL(Astro.url.pathname, 'https://ultraclipart.com').href;
+const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REVISION ?? '')
+  ? import.meta.env.PUBLIC_RELEASE_REVISION
+  : 'local';
 ---
-<!doctype html><html lang="en-US"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title} | UltraClipart</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><meta name="robots" content={noindex?'noindex,follow':'index,follow'}/><meta property="og:title" content={title+' | UltraClipart'}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="theme-color" content="#2865D2"/><link rel="icon" href="/logo.svg" type="image/svg+xml"/><script type="application/ld+json" set:html={JSON.stringify({'@context':'https://schema.org','@type':'WebSite',name:'UltraClipart',url:'https://ultraclipart.com/',inLanguage:'en-US'})}/><slot name="head"/></head><body>
-<a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/" aria-label="UltraClipart home"><img src="/logo.svg" width="38" height="42" alt=""/>UltraClipart</a><button class="menu-button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" aria-label="Main navigation">{nav.map(([label,url])=><a href={url} aria-current={Astro.url.pathname===url?'page':undefined}>{label}</a>)}</nav><a class="favorites-link" href="/favorites/">♡ <span>Favorites</span></a></header>
-<main id="main" class:list={['container',{wide}]}><slot/></main>
-<footer><div class="footer-inner"><div><a class="brand" href="/"><img src="/logo.svg" width="38" height="42" alt=""/>UltraClipart</a><p>A little inspiration.<br/>A world of possibilities.</p><small>Original vector pilot · Growing thoughtfully.</small></div><div><strong>Explore</strong><a href="/categories/">All topics</a><a href="/collections/">Collections</a><a href="/new/">New clipart</a><a href="/black-and-white/">Black & White</a></div><div><strong>Help & information</strong><a href="/faq/">FAQ</a><a href="/license/">License</a><a href="/terms/">Terms of use</a><a href="/privacy/">Privacy</a><a href="/accessibility/">Accessibility</a></div><div><strong>Let's make it better</strong><a href="/contact/">Contact us</a><a href="/copyright/">Copyright & corrections</a><a href="/editorial-process/">Our creative process</a><p>© {new Date().getFullYear()} UltraClipart</p></div></div></footer>
-<script>document.querySelector('.menu-button')?.addEventListener('click',e=>{const b=e.currentTarget as HTMLButtonElement;const on=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(on));document.querySelector('header')?.classList.toggle('menu-open',on);});</script>
-<script>
-document.addEventListener('click',async event=>{const link=(event.target as Element)?.closest<HTMLAnchorElement>('a[download]');if(!link||new URL(link.href).origin===location.origin)return;event.preventDefault();const old=link.textContent;link.textContent='Downloading…';try{const response=await fetch(link.href);if(!response.ok)throw new Error('Download unavailable');const blob=await response.blob();const url=URL.createObjectURL(blob);const save=document.createElement('a');save.href=url;save.download=new URL(link.href).pathname.split('/').pop()!;save.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}catch{alert('The download could not finish. Please check your connection and try again.');}finally{link.textContent=old;}});
-</script></body></html>
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preload" href={regularFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={boldFont} as="font" type="font/woff2" crossorigin />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="build-revision" content={releaseRevision} />
+    <title>{title} | UltraClipart</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'} />
+    <meta property="og:title" content={title + ' | UltraClipart'} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    {image && (
+      <>
+        <meta property="og:image" content={new URL(image, 'https://ultraclipart.com').href} />
+        <meta property="og:image:alt" content={imageAlt} />
+        <meta name="twitter:image" content={new URL(image, 'https://ultraclipart.com').href} />
+        <meta name="twitter:image:alt" content={imageAlt} />
+      </>
+    )}
+    <meta name="theme-color" content="#2865D2" />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <script
+      type="application/ld+json"
+      set:html={structuredData({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'UltraClipart',
+        url: 'https://ultraclipart.com/',
+        inLanguage: 'en-US',
+      })}
+    />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header>
+      <a class="brand" href="/" aria-label="UltraClipart home">
+        <img src="/logo.svg" width="38" height="42" alt="" />
+        UltraClipart
+      </a>
+      <button class="menu-button" aria-expanded="false" aria-controls="navigation">
+        Menu
+      </button>
+      <nav id="navigation" aria-label="Main navigation">
+        {nav.map(([label, url]) => (
+          <a href={url} aria-current={Astro.url.pathname === url ? 'page' : undefined}>
+            {label}
+          </a>
+        ))}
+      </nav>
+      <a class="favorites-link" href="/favorites/" aria-label="Favorites">
+        ♡ <span>Favorites</span>
+      </a>
+    </header>
+    <main id="main" class:list={['container', { wide }]}>
+      <slot />
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <a class="brand" href="/">
+            <img src="/logo.svg" width="38" height="42" alt="" />
+            UltraClipart
+          </a>
+          <p>
+            A little inspiration.
+            <br />A world of possibilities.
+          </p>
+          <small>Original vector pilot · Growing thoughtfully.</small>
+        </div>
+        <div>
+          <strong>Explore</strong>
+          <a href="/categories/">All topics</a>
+          <a href="/collections/">Collections</a>
+          <a href="/new/">New clipart</a>
+          <a href="/create/">Create your own</a>
+          <a href="/black-and-white/">Black & White</a>
+        </div>
+        <div>
+          <strong>Help & information</strong>
+          <a href="/faq/">FAQ</a>
+          <a href="/license/">License</a>
+          <a href="/terms/">Terms of use</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/accessibility/">Accessibility</a>
+        </div>
+        <div>
+          <strong>Let's make it better</strong>
+          <a href="/contact/">Contact us</a>
+          <a href="/copyright/">Copyright & corrections</a>
+          <a href="/editorial-process/">Our creative process</a>
+          <p>© {new Date().getFullYear()} UltraClipart</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelector('.menu-button')?.addEventListener('click', (e) => {
+        const b = e.currentTarget as HTMLButtonElement;
+        const on = b.getAttribute('aria-expanded') !== 'true';
+        b.setAttribute('aria-expanded', String(on));
+        document.querySelector('header')?.classList.toggle('menu-open', on);
+      });
+    </script>
+    <p id="download-status" class="download-status" role="status" aria-live="polite" hidden></p>
+    <script>
+      import '../scripts/downloads';
+    </script>
+  </body>
+</html>
+<style>
+  .download-status {
+    position: fixed;
+    inset: auto 18px 18px auto;
+    z-index: 100;
+    max-width: min(420px, calc(100vw - 36px));
+    padding: 14px 18px;
+    margin: 0;
+    border: 1px solid #bacce5;
+    border-radius: 12px;
+    background: #fff;
+    color: #142442;
+    box-shadow: 0 5px 24px #14244224;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .download-status[hidden] {
+    display: none;
+  }
+  :global(a[download][aria-busy='true']) {
+    cursor: progress;
+    opacity: 0.7;
+  }
+</style>

@@ -1,0 +1,59 @@
+UltraClipart static search architecture
+
+The browser does not import data/art.json or render the complete art library.
+Search HTML contains the first eight title-ordered cards and a small JSON seed.
+Favorites HTML contains no artwork cards. Both create subsequent cards with DOM
+text nodes, preserving the existing download-handler delegation and semantics.
+
+At build time, /search-data/manifest.json points to a content-hashed version:
+- items/{art-id}.json: only card fields, requested for visible results or saved IDs
+- ranked/{title|newest}/{page}.json: 32 IDs per browse page
+- ids/{page}.json: 32 IDs resolving numeric search matches to artwork identities
+- tokens/{00..ff}.json: 256 bounded buckets of token postings
+- lexicon/{word-length}.json: vocabulary needed for one-character typo matching
+- facets/{facet}/{value}.json: sorted numeric matches, including topic partitions
+- order/newest.json: compact order for filtered newest queries only
+
+Numeric identities follow title order. Each token posting is one integer storing
+identity plus its subject/title (5) or descriptive (2) relevance weight. A fuzzy
+match scores 1 only when the same artwork has no exact token match. Multiple
+query words intersect; facets intersect with those results. This preserves the
+original pure scorer, controlled aliases and genuine-outline phrase handling.
+The unfiltered browse path bypasses vocabulary, postings and full-order loads.
+Related-topic suggestions use 110 compact manifest topic names, not art records.
+
+Search transfers at most the visible page's rich metadata. Requests run with
+at most eight simultaneous JSON fetches, 48 cached JSON responses and 128 cached
+cards. Failed or aborted responses do not enter cache. AbortController limits
+wasted work, and a sequence guard prevents a late response or late failure from
+changing a newer query or browser-Back state. Retry clears cached index state
+and reloads the manifest, also recovering from a deployment/version transition.
+
+Initial query pages mark themselves before first paint with a small inline
+script covered by the generated CSP hash. Incorrect default cards are hidden
+until the query resolves. A reserved results region retains height while loading
+or displaying a network error. Screen-reader status, aria-busy, empty results,
+retry, URL state and keyboard-operable controls remain available. No-JavaScript
+visitors see eight initial illustrations and a link to the full topic directory.
+
+Favorites read and validate the locally saved identities, paginate eight at a
+time and request only that page's saved artwork metadata. A removed identity is
+reported without deleting the stored list. An empty list makes no index request.
+Changes from another tab update the list through the storage event.
+
+Free-plan deployment budget
+The build estimates all search files + two HTML pages per illustration + topic
+pages + 200 shell/runtime files, failing if the estimate exceeds 20,000. The
+5,500-item scale test separately verifies this budget. The repository's actual
+built-output preflight remains authoritative. Artwork media must be hosted on
+R2 at scale; duplicating all four media representations into Pages would exceed
+the free-plan file limit. Root deployment tooling handles verified media pruning.
+
+Verification
+- tests/search.mjs: pure ranking and existing facets/aliases
+- tests/search-scale.mjs: 5,500 synthetic records, all 110 topic queries, facets,
+  ranking, pagination, transfer bounds, file budget, request ordering and retry
+- tests/e2e/search.mjs: generated-site browser controls, network failure/retry,
+  obsolete requests, favorite-only fetches, 320/390/1440 accessibility and
+  cold delayed-query CLS (where the engine exposes Layout Instability metrics)
+The synthetic catalog is only a test fixture, never generated-artwork inventory.

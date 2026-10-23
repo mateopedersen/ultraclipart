@@ -1,45 +1,1297 @@
 ---
-interface Props { art: { id: string; title: string; svg: string; [key: string]: unknown } }
-const { art } = Astro.props;
+import Icon from './Icon.astro';
+import { shapeMarkup, shapeNames } from '../editor/creation';
+interface Props {
+  creator?: boolean;
+  art: { id: string; title: string; svg: string; [key: string]: unknown };
+}
+const { art, creator = false } = Astro.props;
 ---
-<section class="uc-editor" data-art-id={art.id} data-source={art.svg} aria-label="Clipart editor">
- <div class="uc-command"><div><a href={`/art/${art.id}/`}>← Back to artwork</a><h1>{art.title}</h1></div><div class="uc-command-buttons"><button data-action="undo" disabled>↶ Undo</button><button data-action="redo" disabled>↷ Redo</button><button data-action="reset">Reset</button><button data-action="save">Save project</button><button class="uc-primary" data-action="export">↓ Export</button></div></div>
- <div class="uc-notice" role="status" aria-live="polite" data-status>Loading editable vector artwork…</div>
- <div class="uc-workspace">
-  <nav class="uc-tools" aria-label="Editing tools">
-   <button data-panel="transform" aria-pressed="true"><span>↖</span>Select</button><button data-panel="color" aria-pressed="false"><span>◉</span>Recolor</button><button data-panel="background" aria-pressed="false"><span>▨</span>Background</button><button data-panel="print" aria-pressed="false"><span>◐</span>Print / B&amp;W</button><button data-panel="crop" aria-pressed="false"><span>⌗</span>Crop</button><button data-panel="layers" aria-pressed="false"><span>▱</span>Layers</button><button data-panel="text" aria-pressed="false"><span>T</span>Text</button>
-  </nav>
-  <div class="uc-canvas-column"><div class="uc-stage" tabindex="0" role="application" aria-label="Artwork canvas. Select layers with the Layers tool. Arrow keys move the selection. Shift plus arrow moves ten units. Delete removes selection. Control or Command Z undoes changes."><div class="uc-canvas"></div></div><div class="uc-stage-toolbar"><button data-action="zoom-out" aria-label="Zoom out">−</button><output data-zoom>100%</output><button data-action="zoom-in" aria-label="Zoom in">+</button><button data-action="fit">Fit view</button><button data-action="pan" aria-pressed="false">Pan</button><button data-action="center">Center</button><button data-action="duplicate">Duplicate</button></div><p class="uc-hint">Select a shape or layer. Shift-click adds to your selection. Drag the corner handles to resize. Use Pan to move around a zoomed canvas.</p></div>
-  <aside class="uc-properties" aria-label="Artwork properties">
-   <h2 data-panel-title>Edit clipart</h2><p class="uc-selection" data-selection>Select a layer to begin</p>
-   <div data-pane="transform">
-    <div class="uc-row"><label>X position<input data-prop="x" type="number" step="1" /></label><label>Y position<input data-prop="y" type="number" step="1" /></label></div>
-    <div class="uc-row"><label>Width scale %<input data-prop="scaleX" type="number" min="1" max="10000" /></label><label>Height scale %<input data-prop="scaleY" type="number" min="1" max="10000" /></label></div>
-    <label>Rotation °<input data-prop="angle" type="number" min="-360" max="360" /></label><label class="uc-check"><input type="checkbox" data-lock-ratio checked/> Keep proportions</label><label class="uc-check"><input type="checkbox" data-snap checked/> Snap movement to 5-unit grid</label>
-    <div class="uc-row"><button data-action="select-all">Select all</button><button data-action="center">Center</button></div><div class="uc-row"><button data-action="duplicate">Duplicate</button><button data-action="delete">Delete</button></div>
-   </div>
-   <div data-pane="color" hidden>
-    <label>Selected layer<select data-layer-picker aria-label="Selected layer"></select></label><div data-colors class="uc-swatches" aria-label="Layer colors"></div>
-    <label>Color<input type="color" value="#2865d2" data-color /></label><label>Hex value<input data-hex value="#2865d2" pattern="#[a-fA-F0-9]{6}" maxlength="7" /></label><label class="uc-check"><input type="checkbox" data-matching checked /> Change only the selected color</label><button data-action="apply-color">Apply color</button>
-    <label>Shape opacity <output data-opacity-output>100%</output><input data-prop="opacity" type="range" min="0" max="100" value="100" /></label><label>Stroke width<input data-stroke type="number" min="0" max="40" step=".5" value="3" /></label>
-    <h3>Style presets</h3><div class="uc-presets"><button data-preset="original">Original</button><button data-preset="pastel">Pastel</button><button data-preset="grayscale">Grayscale</button><button data-preset="vintage">Vintage</button><button data-preset="bright">Bright</button></div><p class="uc-hint">Presets change every unlocked, visible layer. Preserve the traditional colors of cultural symbols when appropriate.</p>
-   </div>
-   <div data-pane="background" hidden><h3>Canvas background</h3><div class="uc-backgrounds"><button data-bg="transparent" class="uc-checker">Transparent</button><button data-bg="#ffffff">White</button><button data-bg="#e8f1fa" style="background:#e8f1fa">Soft blue</button><button data-bg="#edf1e7" style="background:#edf1e7">Sage</button></div><label>Custom color<input data-bg-color type="color" value="#f4f6f8" /></label><p class="uc-hint">The checkerboard shows transparency. It is never included in your download. PDF paper is white wherever artwork is transparent.</p><button data-action="remove-bg">Remove background</button></div>
-   <div data-pane="print" hidden><h3>Black &amp; white</h3><div class="uc-row"><button data-preset="outline">Outline only</button><button data-preset="grayscale">Grayscale</button></div><button data-preset="original">Restore original colors</button><label>Outline width<input data-outline-width type="number" value="3" min=".5" max="40" step=".5" /></label><label>Grayscale contrast<input data-contrast type="range" min="50" max="200" value="100" /></label><button data-action="contrast">Apply grayscale contrast</button><h3>Print setup</h3><label>Paper size<select data-print="paper"><option value="letter">US Letter (8.5 × 11 in)</option><option value="a4">A4 (210 × 297 mm)</option></select></label><label>Orientation<select data-print="orientation"><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></label><label>Safe margins (inches)<input data-print="margin" type="number" value="0.5" min="0" max="2" step="0.1" /></label><label>Placement<select data-print="scale"><option value="fit">Fit entire artwork</option><option value="fill">Fill page (may crop edges)</option><option value="actual">Actual size (96 px per inch)</option></select></label><label class="uc-check"><input type="checkbox" data-print-preview /> Show paper preview</label><p class="uc-hint">Vector artwork stays sharp at any size. CMYK colors may differ slightly from the screen; request a proof for color-critical printing.</p></div>
-   <div data-pane="crop" hidden><p>Set a precise crop in artwork units. Cropping is non-destructive and applies to both download formats.</p><div class="uc-row"><label>Left<input data-crop="x" type="number" value="0" /></label><label>Top<input data-crop="y" type="number" value="0" /></label></div><div class="uc-row"><label>Width<input data-crop="width" type="number" min="1" /></label><label>Height<input data-crop="height" type="number" min="1" /></label></div><button data-action="crop">Apply crop</button><button data-action="uncrop">Reset crop</button></div>
-   <div data-pane="layers" hidden><p class="uc-hint">Top rows appear in front. Select multiple with Shift. Locked layers cannot be edited.</p><div data-layers class="uc-layer-list"></div><label>Layer name<input data-layer-name maxlength="80" /></label><div class="uc-row"><button data-action="layer-up">Bring forward</button><button data-action="layer-down">Send backward</button></div><div class="uc-row"><button data-action="group">Link selection</button><button data-action="ungroup">Unlink</button></div><div class="uc-row"><button data-action="duplicate">Duplicate</button><button data-action="delete">Delete</button></div><button data-action="load">Open saved project</button><input hidden data-load type="file" accept=".json,application/json" /></div>
-   <div data-pane="text" hidden><label>Caption<textarea data-text rows="3" maxlength="500" placeholder="Make it your own"></textarea></label><div class="uc-row"><label>Font size<input data-text-size type="number" min="8" max="300" value="48" /></label><label>Text color<input data-text-color type="color" value="#1b293c" /></label></div><label class="uc-check"><input data-text-bold type="checkbox" /> Bold</label><label>Alignment<select data-text-align><option value="start">Left</option><option value="middle">Center</option><option value="end">Right</option></select></label><button data-action="text">Add / update caption</button><p class="uc-hint">Text uses the browser's Arial-compatible sans serif. PDF export supports Latin text in Helvetica. Check your print proof for minor font differences.</p></div>
-  </aside>
- </div>
- <dialog data-export-dialog aria-labelledby="uc-export-title"><div class="uc-modal-top"><h2 id="uc-export-title">Export your clipart</h2><button data-action="close-export" aria-label="Close export">×</button></div><p>Download your current artwork, including your edits.</p><div class="uc-export-layout"><div data-export-preview class="uc-export-preview uc-checker"></div><div><label>File format<select data-format><option value="webp">WEBP — transparent image</option><option value="pdf">PDF — CMYK print</option></select></label><div data-webp-options><label>Image width<select data-size><option value="1024">1024 pixels</option><option value="2048" selected>2048 pixels</option><option value="original">Original canvas width</option></select></label><label>Quality<input data-quality type="range" min="80" max="100" value="95" /></label></div><p data-pdf-options hidden>Uses your Print setup: paper, orientation, margins and placement. Colors are converted through the GRACoL print profile. The PDF references the GRACoL output condition; the full ICC profile is not embedded. A maximum of 1,000,000 bytes is enforced after export.</p><label>Filename<input data-filename value={art.id} maxlength="100" /></label><p class="uc-hint">WebP uses RGB. PDF uses process CMYK; transparent areas print as paper. All edits stay in this browser.</p></div></div><p data-export-status role="status" aria-live="polite"></p><button class="uc-primary uc-download" data-action="download">↓ Download WEBP</button></dialog>
+
+<section
+  class="uc-editor"
+  data-art-id={art.id}
+  data-source={art.svg}
+  data-creator={creator ? 'true' : undefined}
+  aria-label={creator ? 'Clipart creation studio' : 'Clipart editor'}
+  aria-busy="true"
+>
+  <div class="uc-command">
+    <div>
+      {creator ? (
+        <>
+          <span class="uc-studio-label">YOUR LOCAL WORKSPACE</span>
+          <h2>{art.title}</h2>
+        </>
+      ) : (
+        <>
+          <a href={`/art/${art.id}/`}>← Back to artwork</a>
+          <h1>{art.title}</h1>
+        </>
+      )}
+    </div>
+    <div class="uc-command-buttons" inert>
+      <button data-action="undo" disabled>
+        <Icon name="undo" size={18} /> Undo
+      </button>
+      <button data-action="redo" disabled>
+        <Icon name="redo" size={18} /> Redo
+      </button>
+      <button data-action="reset">Reset</button>
+      <button data-action="save">Save project</button>
+      <button class="uc-primary" data-action="export">
+        <Icon name="download" size={18} /> Export
+      </button>
+    </div>
+  </div>
+  <div class="uc-notice" role="status" aria-live="polite" data-status>
+    {creator
+      ? 'Your blank canvas is ready. Add a shape, draw, or choose a starter. Changes are saved on this device.'
+      : 'Loading editable vector artwork…'}
+  </div>
+  <div class="uc-workspace" inert>
+    <nav class="uc-tools" aria-label="Editing tools">
+      {[
+        ...(creator
+          ? [
+              ['create', 'image', 'Create'],
+              ['canvas', 'crop', 'Canvas'],
+            ]
+          : []),
+        ['transform', 'select', 'Select'],
+        ['color', 'color', 'Recolor'],
+        ['background', 'background', 'Background'],
+        ['print', 'print', 'Print / B&W'],
+        ['crop', 'crop', 'Crop'],
+        ['layers', 'layers', 'Layers'],
+        ['text', 'text', 'Text'],
+      ].map(([panel, icon, label]) => (
+        <button
+          id={`uc-tool-${panel}`}
+          data-panel={panel}
+          aria-pressed={panel === (creator ? 'create' : 'transform')}
+          aria-controls={`uc-pane-${panel}`}
+        >
+          <Icon name={icon} />
+          <span>{label}</span>
+        </button>
+      ))}
+    </nav>
+    <div class="uc-canvas-column">
+      <div
+        class="uc-stage"
+        tabindex="0"
+        role="application"
+        aria-label="Artwork canvas. Select layers with the Layers tool. Arrow keys move the selection. Shift plus arrow moves ten units. Delete removes selection. Control or Command Z undoes changes."
+      >
+        <div class="uc-canvas"></div>
+        {creator && (
+          <div class="uc-empty-canvas" data-empty-canvas>
+            <strong>A little idea starts here.</strong>
+            <span>Add a shape, draw a line, or pick a starter.</span>
+          </div>
+        )}
+      </div>
+      <div class="uc-stage-toolbar">
+        <button data-action="zoom-out" aria-label="Zoom out">
+          −
+        </button>
+        <output data-zoom>100%</output>
+        <button data-action="zoom-in" aria-label="Zoom in">
+          +
+        </button>
+        <button data-action="fit">Fit view</button>
+        <button data-action="pan" aria-pressed="false">
+          Pan
+        </button>
+        <button data-action="center">Center</button>
+        <button data-action="duplicate">Duplicate</button>
+      </div>
+      <p class="uc-hint">
+        Select a shape or layer. Shift-click adds to your selection. Drag the corner handles to
+        resize. Use Pan to move around a zoomed canvas.
+      </p>
+    </div>
+    <aside class="uc-properties" aria-label="Artwork properties">
+      <h2 data-panel-title>{creator ? 'Make something yours' : 'Edit clipart'}</h2>
+      <p class="uc-selection" data-selection>
+        Select a layer to begin
+      </p>
+      {creator && (
+        <>
+          <div
+            id="uc-pane-create"
+            role="region"
+            aria-labelledby="uc-tool-create"
+            data-pane="create"
+          >
+            <p class="uc-hint">
+              Choose a shape to add an editable layer. Adjust its size and colors below before
+              adding.
+            </p>
+            <div class="uc-shape-grid">
+              {Object.entries(shapeNames).map(([kind, label]) => (
+                <button data-shape={kind} aria-label={`Add ${label.toLowerCase()}`}>
+                  <svg
+                    viewBox="-5 -5 80 60"
+                    width="62"
+                    height="46"
+                    aria-hidden="true"
+                    set:html={shapeMarkup(kind as keyof typeof shapeNames, {
+                      width: 70,
+                      height: 50,
+                      sides: 5,
+                      rounding: 20,
+                      fill: '#c5d5b8',
+                      stroke: '#1b293c',
+                      strokeWidth: 2,
+                    })}
+                  />
+                  <span>{label}</span>
+                </button>
+              ))}
+            </div>
+            <div class="uc-row">
+              <label>
+                Shape width
+                <input data-shape-width type="number" min="4" max="4096" value="240" />
+              </label>
+              <label>
+                Shape height
+                <input data-shape-height type="number" min="4" max="4096" value="180" />
+              </label>
+            </div>
+            <div class="uc-row">
+              <label>
+                Points / sides
+                <input data-shape-sides type="number" min="3" max="12" value="5" />
+              </label>
+              <label>
+                Corner roundness %
+                <input data-shape-rounding type="number" min="0" max="50" value="20" />
+              </label>
+            </div>
+            <div class="uc-row">
+              <label>
+                Fill
+                <input type="color" data-create-fill value="#b7cba5" />
+              </label>
+              <label>
+                Stroke
+                <input type="color" data-create-stroke value="#1b293c" />
+              </label>
+            </div>
+            <div class="uc-row">
+              <label class="uc-check">
+                <input data-create-no-fill type="checkbox" /> No fill
+              </label>
+              <label class="uc-check">
+                <input data-create-no-stroke type="checkbox" /> No stroke
+              </label>
+            </div>
+            <label>
+              Stroke width
+              <input data-create-width type="number" min="0" max="100" value="5" step="0.5" />
+            </label>
+            <button data-action="paint-selection">Apply fill &amp; stroke to selection</button>
+            <h3>Draw by hand</h3>
+            <p class="uc-hint">
+              Draw with a mouse, pen or touch. Uses the stroke color and width above. Each stroke
+              stays a separate vector layer.
+            </p>
+            <button data-action="draw" aria-pressed="false">
+              Start drawing
+            </button>
+            <button data-action="cancel-draw" hidden>
+              Cancel current stroke
+            </button>
+            <p data-draw-hint class="uc-hint" hidden>
+              Drawing is on. Drag on the canvas. Escape cancels a stroke and returns to selection.
+            </p>
+          </div>
+          <div
+            id="uc-pane-canvas"
+            role="region"
+            aria-labelledby="uc-tool-canvas"
+            data-pane="canvas"
+            hidden
+          >
+            <h3>Canvas size</h3>
+            <div class="uc-row">
+              <label>
+                Width (px)
+                <input data-canvas-width type="number" min="64" max="4096" value="800" />
+              </label>
+              <label>
+                Height (px)
+                <input data-canvas-height type="number" min="64" max="4096" value="800" />
+              </label>
+            </div>
+            <button data-action="resize-canvas">Resize canvas</button>
+            <p class="uc-hint">
+              64–4,096 pixels per side. Resizing keeps your shapes at their current size and clears
+              the crop. Undo restores the previous canvas.
+            </p>
+            <h3>Bring your own vectors</h3>
+            <button data-action="import-svg">Import SVG</button>
+            <input hidden data-import-svg type="file" accept=".svg,image/svg+xml" />
+            <p class="uc-hint">
+              Opens an SVG as editable layers, replacing this canvas. Undo brings it back. Maximum 1
+              MB and 500 layers. Supports solid colors and basic vector paths; images, fonts,
+              effects, scripts and external resources are rejected.
+            </p>
+            <button data-action="load">Open saved project</button>
+            <button data-action="blank">New blank canvas</button>
+            <p class="uc-hint">
+              Save a project to keep an editable copy on your device. Your SVG or project is read in
+              this browser and is not uploaded.
+            </p>
+          </div>
+        </>
+      )}
+      <div
+        id="uc-pane-transform"
+        role="region"
+        aria-labelledby="uc-tool-transform"
+        data-pane="transform"
+        hidden={creator}
+      >
+        <div class="uc-row">
+          <label>
+            X position
+            <input data-prop="x" type="number" step="1" />
+          </label>
+          <label>
+            Y position
+            <input data-prop="y" type="number" step="1" />
+          </label>
+        </div>
+        <div class="uc-row">
+          <label>
+            Width scale %<input data-prop="scaleX" type="number" min="1" max="10000" />
+          </label>
+          <label>
+            Height scale %<input data-prop="scaleY" type="number" min="1" max="10000" />
+          </label>
+        </div>
+        <label>
+          Rotation °<input data-prop="angle" type="number" min="-360" max="360" />
+        </label>
+        <label class="uc-check">
+          <input type="checkbox" data-lock-ratio checked /> Keep proportions
+        </label>
+        <label class="uc-check">
+          <input type="checkbox" data-snap checked /> Snap movement to 5-unit grid
+        </label>
+        <div class="uc-row">
+          <button data-action="select-all">Select all</button>
+          <button data-action="center">Center</button>
+        </div>
+        <div class="uc-row">
+          <button data-action="duplicate">Duplicate</button>
+          <button data-action="delete">Delete</button>
+        </div>
+      </div>
+      <div
+        id="uc-pane-color"
+        role="region"
+        aria-labelledby="uc-tool-color"
+        data-pane="color"
+        hidden
+      >
+        <label>
+          Selected layer<select data-layer-picker aria-label="Selected layer"></select>
+        </label>
+        <div data-colors class="uc-swatches" aria-label="Layer colors"></div>
+        <label>
+          Color
+          <input type="color" value="#2865d2" data-color />
+        </label>
+        <label>
+          Hex value
+          <input data-hex value="#2865d2" pattern="#[a-fA-F0-9]{6}" maxlength="7" />
+        </label>
+        <label class="uc-check">
+          <input type="checkbox" data-matching checked /> Change only the selected color
+        </label>
+        <button data-action="apply-color">Apply color</button>
+        <label>
+          Shape opacity <output data-opacity-output>100%</output>
+          <input data-prop="opacity" type="range" min="0" max="100" value="100" />
+        </label>
+        <label>
+          Stroke width
+          <input data-stroke type="number" min="0" max="40" step=".5" value="3" />
+        </label>
+        <h3>Style presets</h3>
+        <div class="uc-presets">
+          {!creator && <button data-preset="original">Original</button>}
+          <button data-preset="pastel">Pastel</button>
+          <button data-preset="grayscale">Grayscale</button>
+          <button data-preset="vintage">Vintage</button>
+          <button data-preset="bright">Bright</button>
+        </div>
+        <p class="uc-hint">
+          Presets change every unlocked, visible layer. Preserve the traditional colors of cultural
+          symbols when appropriate.
+        </p>
+      </div>
+      <div
+        id="uc-pane-background"
+        role="region"
+        aria-labelledby="uc-tool-background"
+        data-pane="background"
+        hidden
+      >
+        <h3>Canvas background</h3>
+        <div class="uc-backgrounds">
+          <button data-bg="transparent" class="uc-checker">
+            Transparent
+          </button>
+          <button data-bg="#ffffff">White</button>
+          <button data-bg="#e8f1fa" style="background:#e8f1fa">
+            Soft blue
+          </button>
+          <button data-bg="#edf1e7" style="background:#edf1e7">
+            Sage
+          </button>
+        </div>
+        <label>
+          Custom color
+          <input data-bg-color type="color" value="#f4f6f8" />
+        </label>
+        <p class="uc-hint">
+          The checkerboard shows transparency. It is never included in your download. PDF paper is
+          white wherever artwork is transparent.
+        </p>
+        <button data-action="remove-bg">Remove background</button>
+      </div>
+      <div
+        id="uc-pane-print"
+        role="region"
+        aria-labelledby="uc-tool-print"
+        data-pane="print"
+        hidden
+      >
+        <h3>Black &amp; white</h3>
+        <div class="uc-row">
+          <button data-preset="outline">Outline only</button>
+          <button data-preset="grayscale">Grayscale</button>
+        </div>
+        {!creator && <button data-preset="original">Restore original colors</button>}
+        <label>
+          Outline width
+          <input data-outline-width type="number" value="3" min=".5" max="40" step=".5" />
+        </label>
+        <label>
+          Grayscale contrast
+          <input data-contrast type="range" min="50" max="200" value="100" />
+        </label>
+        <button data-action="contrast">Apply grayscale contrast</button>
+        <h3>Print setup</h3>
+        <label>
+          Paper size
+          <select data-print="paper">
+            <option value="letter">US Letter (8.5 × 11 in)</option>
+            <option value="a4">A4 (210 × 297 mm)</option>
+          </select>
+        </label>
+        <label>
+          Orientation
+          <select data-print="orientation">
+            <option value="portrait">Portrait</option>
+            <option value="landscape">Landscape</option>
+          </select>
+        </label>
+        <label>
+          Safe margins (inches)
+          <input data-print="margin" type="number" value="0.5" min="0" max="2" step="0.1" />
+        </label>
+        <label>
+          Placement
+          <select data-print="scale">
+            <option value="fit">Fit entire artwork</option>
+            <option value="fill">Fill page (may crop edges)</option>
+            <option value="actual">Actual size (96 px per inch)</option>
+          </select>
+        </label>
+        <label class="uc-check">
+          <input type="checkbox" data-print-preview /> Show paper preview
+        </label>
+        <p class="uc-hint">
+          Vector artwork stays sharp at any size. CMYK colors may differ slightly from the screen;
+          request a proof for color-critical printing.
+        </p>
+      </div>
+      <div id="uc-pane-crop" role="region" aria-labelledby="uc-tool-crop" data-pane="crop" hidden>
+        <p>
+          Set a precise crop in artwork units. Cropping is non-destructive and applies to both
+          download formats.
+        </p>
+        <div class="uc-row">
+          <label>
+            Left
+            <input data-crop="x" type="number" value="0" />
+          </label>
+          <label>
+            Top
+            <input data-crop="y" type="number" value="0" />
+          </label>
+        </div>
+        <div class="uc-row">
+          <label>
+            Width
+            <input data-crop="width" type="number" min="1" />
+          </label>
+          <label>
+            Height
+            <input data-crop="height" type="number" min="1" />
+          </label>
+        </div>
+        <button data-action="crop">Apply crop</button>
+        <button data-action="uncrop">Reset crop</button>
+      </div>
+      <div
+        id="uc-pane-layers"
+        role="region"
+        aria-labelledby="uc-tool-layers"
+        data-pane="layers"
+        hidden
+      >
+        <p class="uc-hint">
+          Top rows appear in front. Select multiple with Shift. Locked layers cannot be edited.
+        </p>
+        <div data-layers class="uc-layer-list"></div>
+        <label>
+          Layer name
+          <input data-layer-name maxlength="80" />
+        </label>
+        <div class="uc-row">
+          <button data-action="layer-up">Bring forward</button>
+          <button data-action="layer-down">Send backward</button>
+        </div>
+        <div class="uc-row">
+          <button data-action="group">Link selection</button>
+          <button data-action="ungroup">Unlink</button>
+        </div>
+        <div class="uc-row">
+          <button data-action="duplicate">Duplicate</button>
+          <button data-action="delete">Delete</button>
+        </div>
+        <button data-action="load">Open saved project</button>
+        <input hidden data-load type="file" accept=".json,application/json" />
+      </div>
+      <div id="uc-pane-text" role="region" aria-labelledby="uc-tool-text" data-pane="text" hidden>
+        <label>
+          Caption
+          <textarea data-text rows="3" maxlength="500" placeholder="Make it your own"></textarea>
+        </label>
+        <div class="uc-row">
+          <label>
+            Font size
+            <input data-text-size type="number" min="8" max="300" value="48" />
+          </label>
+          <label>
+            Text color
+            <input data-text-color type="color" value="#1b293c" />
+          </label>
+        </div>
+        <label class="uc-check">
+          <input data-text-bold type="checkbox" /> Bold
+        </label>
+        <label>
+          Alignment
+          <select data-text-align>
+            <option value="start">Left</option>
+            <option value="middle">Center</option>
+            <option value="end">Right</option>
+          </select>
+        </label>
+        <button data-action="text">Add / update caption</button>
+        <p class="uc-hint">
+          Text uses the browser's Arial-compatible sans serif. PDF export supports Latin text in
+          Helvetica. Check your print proof for minor font differences.
+        </p>
+      </div>
+    </aside>
+  </div>
+  <dialog data-export-dialog aria-labelledby="uc-export-title">
+    <div class="uc-modal-top">
+      <h2 id="uc-export-title">Export your clipart</h2>
+      <button data-action="close-export" aria-label="Close export">
+        ×
+      </button>
+    </div>
+    <p>Download your current artwork, including your edits.</p>
+    <div class="uc-export-layout">
+      <div data-export-preview class="uc-export-preview uc-checker"></div>
+      <div>
+        <fieldset class="uc-format-choices">
+          <legend>File format</legend>
+          <label>
+            <input type="radio" name="uc-format" data-format value="webp" checked />
+            <span>
+              <Icon name="image" />
+              <strong>WebP</strong>
+              <small>Transparent image</small>
+            </span>
+          </label>
+          <label>
+            <input type="radio" name="uc-format" data-format value="pdf" />
+            <span>
+              <Icon name="document" />
+              <strong>PDF</strong>
+              <small>CMYK print</small>
+            </span>
+          </label>
+        </fieldset>
+        <div data-webp-options>
+          <label>
+            Image width
+            <select data-size>
+              <option value="1024">1024 pixels</option>
+              <option value="2048" selected>
+                2048 pixels
+              </option>
+              <option value="original">Original canvas width</option>
+            </select>
+          </label>
+          <label>
+            Quality
+            <input data-quality type="range" min="80" max="100" value="95" />
+          </label>
+        </div>
+        <p data-pdf-options hidden>
+          Uses your Print setup: paper, orientation, margins and placement. Colors are converted
+          through the GRACoL print profile. The PDF references the GRACoL output condition; the full
+          ICC profile is not embedded. A maximum of 1,000,000 bytes is enforced after export.
+        </p>
+        <label>
+          Filename
+          <input data-filename value={art.id} maxlength="100" />
+        </label>
+        <p class="uc-hint">
+          WebP uses RGB. PDF uses process CMYK; transparent areas print as paper. All edits stay in
+          this browser.
+        </p>
+      </div>
+    </div>
+    <p data-export-status role="status" aria-live="polite"></p>
+    <button class="uc-primary uc-download" data-action="download">
+      ↓ Download WEBP
+    </button>
+  </dialog>
 </section>
 <script>
- import { initializeEditors } from '../editor/editor';
- initializeEditors();
+  import { initializeEditors } from '../editor/editor';
+  initializeEditors();
 </script>
 <style is:global>
-.uc-editor{--uc-navy:#1b293c;--uc-blue:#2865d2;--uc-line:#d9e2ee;color:var(--uc-navy);max-width:1500px;margin:0 auto;padding:24px 20px;background:#f2f6fa;font-size:14px}.uc-editor *{box-sizing:border-box}.uc-editor button,.uc-editor input,.uc-editor select,.uc-editor textarea{font:inherit}.uc-editor button{min-height:42px;border:1px solid var(--uc-line);border-radius:8px;color:var(--uc-navy);background:white;padding:8px 12px;cursor:pointer;font-weight:600}.uc-editor button:hover{border-color:var(--uc-blue);background:#f2f7ff}.uc-editor button:disabled{opacity:.4;cursor:default}.uc-editor :focus-visible{outline:3px solid #2865d2;outline-offset:3px}.uc-editor button.uc-primary{background:var(--uc-blue);color:white;border-color:var(--uc-blue)}.uc-editor button[aria-pressed=true]{background:#e9f1ff;color:var(--uc-blue);border-color:var(--uc-blue)}.uc-command{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:14px}.uc-command a{font-size:13px;color:#3f5c80;text-decoration:none}.uc-command h1{font-size:clamp(19px,2.5vw,28px);margin:8px 0;letter-spacing:-.7px}.uc-command-buttons{display:flex;flex-wrap:wrap;gap:8px}.uc-notice{background:#edf1e7;padding:10px 14px;border-radius:8px;margin-bottom:14px;font-size:13px;min-height:38px}.uc-notice[data-error=true]{background:#fff0e9;color:#792300}.uc-workspace{display:grid;grid-template-columns:94px minmax(200px,1fr) 292px;gap:14px;align-items:start}.uc-tools,.uc-properties,.uc-canvas-column{background:white;border:1px solid var(--uc-line);border-radius:12px}.uc-tools{padding:8px;display:grid;gap:5px;order:0;width:auto}.uc-tools button{border-color:transparent;display:grid;justify-items:center;gap:5px;font-size:12px;min-height:76px;padding:8px 3px}.uc-tools button span{font-size:26px;line-height:1.2}.uc-canvas-column{padding:12px;min-width:0}.uc-stage{height:min(66vw,670px);min-height:360px;overflow:auto;position:relative;background:#edf0f4;touch-action:none;display:flex;align-items:safe center;justify-content:safe center;border-radius:6px}.uc-canvas{width:100%;aspect-ratio:1;position:relative;flex-shrink:0;background-color:#fff;background-image:linear-gradient(45deg,#e8ebef 25%,transparent 25%),linear-gradient(-45deg,#e8ebef 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8ebef 75%),linear-gradient(-45deg,transparent 75%,#e8ebef 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}.uc-canvas>svg{width:100%;height:100%;display:block;overflow:hidden}.uc-canvas [data-layer]{cursor:move}.uc-canvas [data-locked=true]{cursor:not-allowed}.uc-canvas .uc-selection-box{fill:none;stroke:#2865d2;stroke-width:1.5;vector-effect:non-scaling-stroke;pointer-events:none}.uc-canvas .uc-handle{fill:#fff;stroke:#2865d2;stroke-width:1.5;vector-effect:non-scaling-stroke;cursor:nwse-resize}.uc-canvas .uc-rotate-handle{cursor:crosshair}.uc-stage-toolbar{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px;margin-top:12px}.uc-stage-toolbar output{min-width:50px;text-align:center}.uc-hint{color:#52637a;font-size:12px;line-height:1.6}.uc-canvas-column>.uc-hint{text-align:center;margin:10px 0 0}.uc-properties{padding:20px;max-height:850px;overflow:auto}.uc-properties h2{font-size:21px;letter-spacing:-.5px;margin:0 0 10px}.uc-properties h3{font-size:14px;margin:24px 0 10px}.uc-selection{background:#f2f6fa;border-radius:6px;padding:8px;margin-bottom:20px;overflow-wrap:anywhere}.uc-editor label{display:flex;flex-direction:column;gap:7px;font-weight:600;margin:14px 0}.uc-editor label input:not([type=checkbox]):not([type=range]):not([type=color]),.uc-editor select,.uc-editor textarea{background:white;border:1px solid var(--uc-line);border-radius:7px;color:var(--uc-navy);width:100%;padding:10px;min-height:42px}.uc-editor input[type=color]{border:1px solid var(--uc-line);border-radius:5px;min-width:50px;width:100%;height:42px;padding:3px;background:white}.uc-editor input[type=range]{accent-color:var(--uc-blue);width:100%}.uc-editor label.uc-check{flex-direction:row;align-items:flex-start;font-size:12px;font-weight:500;line-height:1.5}.uc-check input{accent-color:var(--uc-blue);width:18px;height:18px;flex-shrink:0}.uc-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.uc-row label{min-width:0}.uc-swatches{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.uc-swatches button{border-radius:50%;width:30px;min-height:30px;padding:0;border:2px solid #d9e2ee}.uc-presets,.uc-backgrounds{display:grid;grid-template-columns:1fr 1fr;gap:7px}.uc-backgrounds button{min-height:65px;font-size:11px}.uc-checker{background-color:#fff!important;background-image:linear-gradient(45deg,#e8ebef 25%,transparent 25%),linear-gradient(-45deg,#e8ebef 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e8ebef 75%),linear-gradient(-45deg,transparent 75%,#e8ebef 75%)!important;background-size:20px 20px!important;background-position:0 0,0 10px,10px -10px,-10px 0!important}.uc-layer-list{display:grid;gap:6px;max-height:340px;overflow:auto}.uc-layer{display:grid;grid-template-columns:minmax(0,1fr) 35px 35px;gap:3px}.uc-layer button{font-size:12px;min-height:39px;padding:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.uc-layer button:first-child{text-align:left}.uc-editor dialog{border:1px solid var(--uc-line);padding:28px;border-radius:16px;width:min(730px,calc(100% - 24px));max-height:90vh;overflow:auto;color:var(--uc-navy);box-shadow:0 20px 100px #182b4b44}.uc-editor dialog::backdrop{background:#14233e88;backdrop-filter:blur(2px)}.uc-modal-top{display:flex;justify-content:space-between;align-items:center;gap:15px}.uc-modal-top h2{font-size:28px;letter-spacing:-1px;margin:0}.uc-modal-top button{font-size:25px;padding:0;width:42px;flex-shrink:0}.uc-export-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:20px 0}.uc-export-preview{display:flex;align-items:center;border-radius:8px;overflow:hidden;min-width:0}.uc-export-preview>svg{width:100%;height:auto;max-height:350px}.uc-download{width:100%;min-height:50px!important}.uc-editor [hidden]{display:none!important}.uc-stage.uc-paper-mode{background:#e5ebf2}.uc-stage.uc-paper-mode .uc-canvas{background:#fff;box-shadow:0 2px 15px #1b293c22}.uc-paper-margin{fill:none;stroke:#9aabc1;stroke-dasharray:5 5;vector-effect:non-scaling-stroke;pointer-events:none}
-@media(max-width:1100px){.uc-workspace{grid-template-columns:75px minmax(160px,1fr) 255px;gap:9px}.uc-properties{padding:15px}.uc-editor{padding:18px 12px}.uc-command-buttons{gap:5px}.uc-command-buttons button{padding:8px}}
-@media(max-width:800px){.uc-command{align-items:flex-start;flex-direction:column;gap:8px}.uc-workspace{grid-template-columns:1fr}.uc-tools{display:flex;overflow:auto;gap:4px;position:relative;flex-wrap:nowrap}.uc-tools button{min-width:77px;min-height:63px;flex:1}.uc-tools button span{font-size:22px}.uc-canvas-column{padding:8px}.uc-stage{height:70vw;min-height:300px;max-height:580px}.uc-properties{max-height:none;min-height:240px}.uc-properties>div{max-width:550px;margin:auto}.uc-stage-toolbar button{font-size:12px}.uc-editor dialog{padding:20px}.uc-export-layout{gap:15px}.uc-command-buttons{width:100%}.uc-command-buttons button{flex:1;white-space:nowrap;font-size:12px}.uc-hint{font-size:12px}}
-@media(max-width:400px){.uc-editor{padding:15px 8px}.uc-command-buttons{flex-wrap:wrap}.uc-command-buttons button{min-width:60px}.uc-stage{min-height:260px}.uc-stage-toolbar{gap:4px}.uc-stage-toolbar button{padding:6px 8px}.uc-export-layout{grid-template-columns:1fr}.uc-export-preview{max-height:200px}.uc-export-preview>svg{max-height:200px}}
+  .uc-editor {
+    --uc-navy: var(--ink, #142442);
+    --uc-blue: var(--blue, #2360e8);
+    --uc-line: #d9e2ee;
+    color: var(--uc-navy);
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    background: #f2f6fa;
+    font-size: 14px;
+  }
+  .uc-editor * {
+    box-sizing: border-box;
+  }
+  .uc-editor button,
+  .uc-editor input,
+  .uc-editor select,
+  .uc-editor textarea {
+    font: inherit;
+  }
+  .uc-editor button {
+    min-height: 42px;
+    border: 1px solid var(--uc-line);
+    border-radius: 8px;
+    color: var(--uc-navy);
+    background: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .uc-editor button:hover {
+    border-color: var(--uc-blue);
+    background: #f2f7ff;
+  }
+  .uc-editor button:disabled {
+    opacity: 0.4;
+    cursor: default;
+  }
+  .uc-editor :focus-visible {
+    outline: 3px solid #2865d2;
+    outline-offset: 3px;
+  }
+  .uc-editor button.uc-primary {
+    background: var(--uc-blue);
+    color: white;
+    border-color: var(--uc-blue);
+  }
+  .uc-editor button[aria-pressed='true'] {
+    background: #e9f1ff;
+    color: var(--uc-blue);
+    border-color: var(--uc-blue);
+  }
+  .uc-command {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .uc-command a {
+    font-size: 13px;
+    color: #3f5c80;
+    text-decoration: none;
+  }
+  .uc-command h1,
+  .uc-command h2 {
+    font-size: clamp(19px, 2.5vw, 28px);
+    margin: 8px 0;
+    letter-spacing: -0.7px;
+  }
+  .uc-command-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .uc-notice {
+    background: #edf1e7;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    min-height: 38px;
+  }
+  .uc-notice[data-error='true'] {
+    background: #fff0e9;
+    color: #792300;
+  }
+  .uc-workspace {
+    display: grid;
+    grid-template-columns: 94px minmax(200px, 1fr) 292px;
+    gap: 14px;
+    align-items: start;
+  }
+  .uc-tools,
+  .uc-properties,
+  .uc-canvas-column {
+    background: white;
+    border: 1px solid var(--uc-line);
+    border-radius: 12px;
+  }
+  .uc-tools {
+    padding: 8px;
+    display: grid;
+    gap: 5px;
+    order: 0;
+    width: auto;
+  }
+  .uc-tools button {
+    border-color: transparent;
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    font-size: 12px;
+    min-height: 76px;
+    padding: 8px 3px;
+  }
+  .uc-tools button span {
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .uc-tools button svg {
+    width: 25px;
+    height: 25px;
+  }
+  .uc-canvas-column {
+    padding: 12px;
+    min-width: 0;
+  }
+  .uc-stage {
+    position: relative;
+    height: min(66vw, 670px);
+    min-height: 360px;
+    overflow: auto;
+    position: relative;
+    background: #edf0f4;
+    touch-action: none;
+    display: flex;
+    align-items: safe center;
+    justify-content: safe center;
+    border-radius: 6px;
+  }
+  .uc-canvas {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    flex-shrink: 0;
+    background-color: #fff;
+    background-image:
+      linear-gradient(45deg, #e8ebef 25%, transparent 25%),
+      linear-gradient(-45deg, #e8ebef 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e8ebef 75%),
+      linear-gradient(-45deg, transparent 75%, #e8ebef 75%);
+    background-size: 24px 24px;
+    background-position:
+      0 0,
+      0 12px,
+      12px -12px,
+      -12px 0;
+  }
+  .uc-canvas > svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+  }
+  .uc-canvas [data-layer] {
+    cursor: move;
+  }
+  .uc-canvas [data-locked='true'] {
+    cursor: not-allowed;
+  }
+  .uc-canvas .uc-selection-box {
+    fill: none;
+    stroke: #2865d2;
+    stroke-width: 1.5;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+  .uc-canvas .uc-handle {
+    fill: #fff;
+    stroke: #2865d2;
+    stroke-width: 1.5;
+    vector-effect: non-scaling-stroke;
+    cursor: nwse-resize;
+  }
+  .uc-canvas .uc-rotate-handle {
+    cursor: crosshair;
+  }
+  .uc-stage-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .uc-stage-toolbar output {
+    min-width: 50px;
+    text-align: center;
+  }
+  .uc-hint {
+    color: #52637a;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .uc-canvas-column > .uc-hint {
+    text-align: center;
+    margin: 10px 0 0;
+  }
+  .uc-properties {
+    padding: 20px;
+    max-height: 850px;
+    overflow: auto;
+  }
+  .uc-properties h2 {
+    font-size: 21px;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px;
+  }
+  .uc-properties h3 {
+    font-size: 14px;
+    margin: 24px 0 10px;
+  }
+  .uc-selection {
+    background: #f2f6fa;
+    border-radius: 6px;
+    padding: 8px;
+    margin-bottom: 20px;
+    overflow-wrap: anywhere;
+  }
+  .uc-editor label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-weight: 600;
+    margin: 14px 0;
+  }
+  .uc-editor
+    label
+    input:not([type='checkbox']):not([type='range']):not([type='color']):not([type='radio']),
+  .uc-editor select,
+  .uc-editor textarea {
+    background: white;
+    border: 1px solid var(--uc-line);
+    border-radius: 7px;
+    color: var(--uc-navy);
+    width: 100%;
+    padding: 10px;
+    min-height: 42px;
+  }
+  .uc-editor input[type='color'] {
+    border: 1px solid var(--uc-line);
+    border-radius: 5px;
+    min-width: 50px;
+    width: 100%;
+    height: 42px;
+    padding: 3px;
+    background: white;
+  }
+  .uc-editor input[type='range'] {
+    accent-color: var(--uc-blue);
+    width: 100%;
+  }
+  .uc-editor label.uc-check {
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+  .uc-check input {
+    accent-color: var(--uc-blue);
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+  .uc-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 8px 0;
+  }
+  .uc-row label {
+    min-width: 0;
+  }
+  .uc-swatches {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 14px 0;
+  }
+  .uc-swatches button {
+    border-radius: 50%;
+    width: 30px;
+    min-height: 30px;
+    padding: 0;
+    border: 2px solid #d9e2ee;
+  }
+  .uc-presets,
+  .uc-backgrounds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px;
+  }
+  .uc-backgrounds button {
+    min-height: 65px;
+    font-size: 11px;
+  }
+  .uc-checker {
+    background-color: #fff !important;
+    background-image:
+      linear-gradient(45deg, #e8ebef 25%, transparent 25%),
+      linear-gradient(-45deg, #e8ebef 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #e8ebef 75%),
+      linear-gradient(-45deg, transparent 75%, #e8ebef 75%) !important;
+    background-size: 20px 20px !important;
+    background-position:
+      0 0,
+      0 10px,
+      10px -10px,
+      -10px 0 !important;
+  }
+  .uc-layer-list {
+    display: grid;
+    gap: 6px;
+    max-height: 340px;
+    overflow: auto;
+  }
+  .uc-layer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 35px 35px;
+    gap: 3px;
+  }
+  .uc-layer button {
+    font-size: 12px;
+    min-height: 39px;
+    padding: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .uc-layer button:first-child {
+    text-align: left;
+  }
+  .uc-editor dialog {
+    border: 1px solid var(--uc-line);
+    padding: 28px;
+    border-radius: 16px;
+    width: min(730px, calc(100% - 24px));
+    max-height: 90vh;
+    overflow: auto;
+    color: var(--uc-navy);
+    box-shadow: 0 20px 100px #182b4b44;
+  }
+  .uc-editor dialog::backdrop {
+    background: #14233e88;
+    backdrop-filter: blur(2px);
+  }
+  .uc-modal-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  .uc-modal-top h2 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin: 0;
+  }
+  .uc-modal-top button {
+    font-size: 25px;
+    padding: 0;
+    width: 42px;
+    flex-shrink: 0;
+  }
+  .uc-export-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 20px 0;
+  }
+  .uc-export-preview {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 0;
+  }
+  .uc-export-preview > svg {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+  }
+  .uc-download {
+    width: 100%;
+    min-height: 50px !important;
+  }
+  .uc-editor [hidden] {
+    display: none !important;
+  }
+  .uc-stage.uc-paper-mode {
+    background: #e5ebf2;
+  }
+  .uc-stage.uc-paper-mode .uc-canvas {
+    background: #fff;
+    box-shadow: 0 2px 15px #1b293c22;
+  }
+  .uc-paper-margin {
+    fill: none;
+    stroke: #9aabc1;
+    stroke-dasharray: 5 5;
+    vector-effect: non-scaling-stroke;
+    pointer-events: none;
+  }
+  @media (max-width: 1100px) {
+    .uc-workspace {
+      grid-template-columns: 75px minmax(160px, 1fr) 255px;
+      gap: 9px;
+    }
+    .uc-properties {
+      padding: 15px;
+    }
+    .uc-editor {
+      padding: 18px 12px;
+    }
+    .uc-command-buttons {
+      gap: 5px;
+    }
+    .uc-command-buttons button {
+      padding: 8px;
+    }
+  }
+  @media (max-width: 800px) {
+    .uc-command {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .uc-workspace {
+      grid-template-columns: 1fr;
+    }
+    .uc-tools {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 4px;
+      overflow: visible;
+    }
+    .uc-tools button {
+      min-width: 0;
+      min-height: 66px;
+      padding: 8px 2px;
+    }
+    .uc-tools button span {
+      font-size: 11px;
+    }
+    .uc-tools button svg {
+      width: 23px;
+      height: 23px;
+    }
+    .uc-canvas-column {
+      padding: 8px;
+    }
+    .uc-stage {
+      height: 70vw;
+      min-height: 300px;
+      max-height: 580px;
+    }
+    .uc-properties {
+      max-height: none;
+      min-height: 240px;
+    }
+    .uc-properties > div {
+      max-width: 550px;
+      margin: auto;
+    }
+    .uc-stage-toolbar button {
+      font-size: 12px;
+    }
+    .uc-editor dialog {
+      padding: 20px;
+    }
+    .uc-export-layout {
+      gap: 15px;
+    }
+    .uc-command-buttons {
+      width: 100%;
+    }
+    .uc-command-buttons button {
+      flex: 1;
+      white-space: nowrap;
+      font-size: 12px;
+    }
+    .uc-hint {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 400px) {
+    .uc-editor {
+      padding: 15px 8px;
+    }
+    .uc-command-buttons {
+      flex-wrap: wrap;
+    }
+    .uc-command-buttons button {
+      min-width: 60px;
+    }
+    .uc-stage {
+      min-height: 260px;
+    }
+    .uc-stage-toolbar {
+      gap: 4px;
+    }
+    .uc-stage-toolbar button {
+      padding: 6px 8px;
+    }
+    .uc-export-layout {
+      grid-template-columns: 1fr;
+    }
+    .uc-export-preview {
+      max-height: 200px;
+    }
+    .uc-export-preview > svg {
+      max-height: 200px;
+    }
+  }
+  .uc-format-choices {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .uc-format-choices legend {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .uc-editor .uc-format-choices label {
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+  }
+  .uc-format-choices input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .uc-format-choices label > span {
+    display: grid;
+    justify-items: center;
+    gap: 6px;
+    padding: 14px 8px;
+    border: 1px solid var(--uc-line);
+    border-radius: 10px;
+    background: #fff;
+    transition:
+      background 0.15s,
+      border-color 0.15s;
+  }
+  .uc-format-choices strong {
+    font-size: 15px;
+  }
+  .uc-format-choices small {
+    font-size: 11px;
+    font-weight: 400;
+  }
+  .uc-format-choices input:checked + span {
+    border-color: var(--uc-blue);
+    background: #edf3ff;
+    color: var(--uc-blue);
+    box-shadow: inset 0 0 0 1px var(--uc-blue);
+  }
+  .uc-format-choices input:focus-visible + span {
+    outline: 3px solid var(--uc-blue);
+    outline-offset: 3px;
+  }
+  .uc-editor button {
+    transition:
+      background 0.15s,
+      border-color 0.15s,
+      box-shadow 0.15s;
+  }
+  .uc-editor button:active:not(:disabled) {
+    box-shadow: inset 0 1px 3px #14244220;
+  }
+  .uc-editor .uc-tools button[aria-pressed='true'] {
+    box-shadow: inset 3px 0 var(--uc-blue);
+  }
+  .uc-editor .uc-command-buttons button {
+    min-height: 44px;
+  }
+  .uc-editor .uc-download[aria-busy='true'] {
+    cursor: progress;
+  }
+  .uc-editor .uc-notice {
+    background: #eaf2fc;
+  }
+  .uc-properties {
+    scrollbar-gutter: stable;
+  }
+</style>
+
+<style is:global>
+  .uc-studio-label {
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 1.7px;
+    color: #52634c;
+  }
+  .uc-shape-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin: 16px 0;
+  }
+  .uc-shape-grid button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 10px 4px;
+    min-height: 82px;
+  }
+  .uc-shape-grid button span {
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  .uc-shape-grid button svg {
+    flex-shrink: 0;
+  }
+  .uc-empty-canvas {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px;
+    text-align: center;
+    pointer-events: none;
+    color: #52637a;
+  }
+  .uc-empty-canvas strong {
+    font-size: clamp(16px, 2vw, 24px);
+    color: #1b293c;
+    background: #ffffffed;
+    padding: 6px 10px;
+    border-radius: 7px;
+  }
+  .uc-empty-canvas span {
+    font-size: 12px;
+    background: #ffffffed;
+    padding: 4px 8px;
+    border-radius: 5px;
+  }
+  .uc-editor[data-creator] .uc-properties {
+    max-height: 1080px;
+  }
+  .uc-editor[data-creator] .uc-properties [data-pane='create'] > button {
+    width: 100%;
+    margin-top: 8px;
+  }
+  .uc-editor[data-creator] .uc-properties [data-pane='canvas'] > button {
+    margin: 5px 0;
+  }
+  .uc-editor[data-drawing='true'] .uc-stage {
+    cursor: crosshair;
+  }
+  @media (max-width: 800px) {
+    .uc-editor[data-creator] .uc-properties {
+      max-height: none;
+    }
+    .uc-editor[data-creator] .uc-tools {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    .uc-shape-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .uc-shape-grid button svg {
+      width: 48px;
+      height: 38px;
+    }
+    .uc-shape-grid button {
+      min-height: 72px;
+    }
+  }
+  @media (max-width: 400px) {
+    .uc-editor[data-creator] .uc-tools {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .uc-shape-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
+
+<style is:global>
+  .uc-editor[data-creator] .uc-notice {
+    min-height: 56px;
+  }
+  @media (max-width: 800px) {
+    .uc-editor[data-creator] .uc-notice {
+      min-height: 74px;
+    }
+  }
 </style>

@@ -1,5 +1,94 @@
 ---
-import Layout from '../../layouts/Layout.astro';import Card from '../../components/Card.astro';import {topics,topicArt,slugify} from '../../lib/catalog';
-export function getStaticPaths(){return topics.map(t=>({params:{slug:t.slug},props:{topic:t}}));}const {topic}=Astro.props;const items=topicArt(topic.slug);const related=topics.filter(t=>t.cluster===topic.cluster&&t.slug!==topic.slug).slice(0,8);const title=topic.keyword.replace('clipart','Clipart');
+import { structuredData, breadcrumbs } from '../../lib/structured-data';
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { topics, topicArt, slugify } from '../../lib/catalog';
+export function getStaticPaths() {
+  return topics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
+}
+const { topic } = Astro.props;
+const items = topicArt(topic.slug);
+const topicReady = items.length === 50 && items.every((item) => item.indexable && item.published);
+const related = topics
+  .filter((t) => t.cluster === topic.cluster && t.slug !== topic.slug)
+  .slice(0, 8);
+const title = topic.keyword.replace('clipart', 'Clipart');
 ---
-<Layout title={title} description={`Explore ${topic.keyword.toLowerCase()} and related ${topic.cluster.toLowerCase()} subjects. ${items.length?`${items.length} original pilot illustration available for editing.`:'Artwork is in preparation.'}`} noindex={true}><section class="hero"><div class="breadcrumb"><a href="/">Home</a> / <a href="/categories/">Categories</a> / <a href={`/collection/${slugify(topic.cluster)}/`}>{topic.cluster}</a></div><h1>{title}</h1><p class="lead">Little details for your next creative project.</p><p>{items.length?items.map(a=>a.description).join(' '):`Our ${topic.keyword.toLowerCase()} collection is in preparation. Explore the related subjects below while original illustrations are developed and checked.`}</p>{topic.focus_note&&<p>{topic.focus_note}.</p>}<div class="chips">{related.map(t=><a href={`/clipart/${t.slug}/`}>{t.keyword}</a>)}</div></section><div class="section-head"><h2>{items.length} pilot {items.length===1?'illustration':'illustrations'}</h2><a href="/license/">Personal & educational use</a></div>{items.length?<div class="gallery">{items.map(item=><Card item={item}/>)}</div>:<div class="empty"><h2>Good things take a little drawing.</h2><p>No artwork has been released for this topic yet.</p><a class="button primary" href="/new/">Explore available pilot artwork</a></div>}<div class="notice">Collection in progress. Our goal is 50 distinct illustrations per topic; that is a production target, not the number currently available.</div><section class="prose"><h2>From screen to paper</h2><p>Use WebP for transparent digital layouts. Open an illustration in the editor to change its colors, add a caption or make an outline version. Standard PDF downloads are prepared for printing. Review your printer's settings and print at the intended paper size.</p><h2>Keep creating</h2><p>Personal and educational projects are welcome. Commercial use and resale as clipart are not permitted. <a href="/license/">Read the usage license</a>.</p></section></Layout>
+
+<Layout
+  title={title}
+  description={`Explore ${topic.keyword.toLowerCase()} and related ${topic.cluster.toLowerCase()} subjects. ${items.length ? `${items.length} original ${topicReady ? '' : 'pilot '}illustration${items.length === 1 ? '' : 's'} available for editing.` : 'Artwork is in preparation.'}`}
+  noindex={!topicReady}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={structuredData(
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Categories', path: '/categories/' },
+        { name: title, path: `/clipart/${topic.slug}/` },
+      ]),
+    )}
+  />
+  <section class="hero">
+    <div class="breadcrumb">
+      <a href="/">Home</a> / <a href="/categories/">Categories</a> /{' '}
+      <a href={`/collection/${slugify(topic.cluster)}/`}>{topic.cluster}</a>
+    </div>
+    <h1>{title}</h1>
+    <p class="lead">Little details for your next creative project.</p>
+    <p>
+      {items.length
+        ? items
+            .slice(0, 3)
+            .map((a) => a.description)
+            .join(' ')
+        : `Our ${topic.keyword.toLowerCase()} collection is in preparation. Explore the related subjects below while original illustrations are developed and checked.`}
+    </p>
+    {topic.focus_note && <p>{topic.focus_note}.</p>}
+    <div class="chips">
+      {related.map((t) => (
+        <a href={`/clipart/${t.slug}/`}>{t.keyword}</a>
+      ))}
+    </div>
+  </section>
+  <div class="section-head">
+    <h2>
+      {items.length} pilot {items.length === 1 ? 'illustration' : 'illustrations'}
+    </h2>
+    <a href="/license/">Personal & educational use</a>
+  </div>
+  {items.length ? (
+    <div class="gallery">
+      {items.map((item) => (
+        <Card item={item} />
+      ))}
+    </div>
+  ) : (
+    <div class="empty">
+      <h2>Good things take a little drawing.</h2>
+      <p>No artwork has been released for this topic yet.</p>
+      <a class="button primary" href="/new/">
+        Explore available pilot artwork
+      </a>
+    </div>
+  )}
+  <div class="notice">
+    Collection in progress. Our goal is 50 distinct illustrations per topic; that is a production
+    target, not the number currently available.
+  </div>
+  <section class="prose">
+    <h2>From screen to paper</h2>
+    <p>
+      Use WebP for transparent digital layouts. Open an illustration in the editor to change its
+      colors, add a caption or make an outline version. Standard PDF downloads are prepared for
+      printing. Review your printer's settings and print at the intended paper size.
+    </p>
+    <h2>Keep creating</h2>
+    <p>
+      Personal and educational projects are welcome. Commercial use and resale as clipart are not
+      permitted. <a href="/license/">Read the usage license</a>.
+    </p>
+  </section>
+</Layout>

@@ -29,6 +29,10 @@ def preflight():
    assert not re.search(rb'\s(?:rg|RG)(?:\s|$)',stream),'RGB paint operation in PDF'
    assert not p.images,'Unexpected raster image in vector PDF'
    intent=reader.trailer['/Root'].get('/OutputIntents');assert intent
+   if a['style']=='Outline':
+    cmyk_paints=re.findall(rb'([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+([\d.]+)\s+[kK](?:\s|$)',stream)
+    assert all(float(p[0])==float(p[1])==float(p[2])==0 for p in cmyk_paints), 'Outline PDF uses chromatic process inks'
+    checks['outlinePureK']=True
    checks['pdf']={'bytes':files['pdf'].stat().st_size,'underCap':files['pdf'].stat().st_size<=1_000_000,'colorSpace':'DeviceCMYK','rasterImages':len(p.images),'page':'US Letter','registeredCondition':str(intent[0].get_object()['/OutputConditionIdentifier']),'profileEmbedded':False}
    assert checks['pdf']['underCap']
    checks['pass']=True

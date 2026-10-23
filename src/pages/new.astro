@@ -1,4 +1,30 @@
 ---
-import Layout from '../layouts/Layout.astro';import Card from '../components/Card.astro';import {art} from '../lib/catalog';
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { art } from '../lib/catalog';
 ---
-<Layout title="New Clipart" noindex={true}><section class="hero"><p class="eyebrow">The pilot collection</p><h1>Fresh from the sketchbook.</h1><p>{art.length} original illustrations to try, edit and make your own. Visual review is ongoing.</p></section><div class="gallery">{art.map(item=><Card item={item}/>)}</div></Layout>
+
+<Layout title="New Clipart" noindex={true}>
+  <section class="hero">
+    <p class="eyebrow">The pilot collection</p>
+    <h1>Fresh from the sketchbook.</h1>
+    <p>
+      {art.length} original illustrations to try, edit and make your own. Visual review is ongoing.
+    </p>
+  </section>
+  <div class="gallery">
+    {art.slice(0, 32).map((item) => (
+      <Card item={item} />
+    ))}
+  </div>
+  <div class="browse-more">
+    <p>
+      {art.length > 32
+        ? `Showing 32 of ${art.length} illustrations. Use search to explore the full collection.`
+        : 'Find the right subject, color or style for your next project.'}
+    </p>
+    <a class="button primary" href="/search/?sort=newest">
+      Explore all clipart →
+    </a>
+  </div>
+</Layout>

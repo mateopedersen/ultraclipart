@@ -12,7 +12,7 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
@@ -22,14 +22,15 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '24.19.0'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
       - run: pnpm check
       - run: pnpm build
       - run: pnpm test
       - name: Install browser test dependencies
-        run: pnpm exec playwright install --with-deps chromium
+        run: pnpm exec playwright install --with-deps chromium firefox webkit
       - name: Desktop, tablet, mobile and accessibility
         run: |
           mkdir -p reports
@@ -49,8 +50,16 @@ jobs:
             cat reports/preview.log
             exit 1
           fi
-          BASE_URL=http://127.0.0.1:4321 node tests/e2e/search.mjs
-          BASE_URL=http://127.0.0.1:4321 node tests/e2e/site.mjs
+          for engine in chromium firefox webkit; do
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
+            BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
+            BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
+            UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/editor node scripts/test-editor-browser.mjs
+            UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
+          done
+          UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
+      - name: Validate production CDN mapping and headers
+        run: CF_PAGES=1 pnpm build
       - name: Keep browser evidence and preview log
         if: always()
         uses: actions/upload-artifact@v4

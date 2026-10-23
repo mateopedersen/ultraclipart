@@ -2,6 +2,7 @@
 """Rebuild the ten original pilot vector masters. No remote artwork or raster tracing."""
 from pathlib import Path
 import json, html, math
+from art_refinements import revise
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'assets/masters'; OUT.mkdir(parents=True,exist_ok=True)
 INK='#29354B'
@@ -13,11 +14,18 @@ def group(name,body,**kw):return '<g id="'+name.lower().replace(' ','-')+'" data
 def spark(x,y,s=12,c='#F6C75D'):return path(f'M{x} {y-s} Q{x+2} {y-2} {x+s} {y} Q{x+2} {y+2} {x} {y+s} Q{x-2} {y+2} {x-s} {y} Q{x-2} {y-2} {x} {y-s} Z',c,'none',0)
 arts=[]
 def art(id,title,topic,desc,alt,color,groups,style='Color',orientation='Square'):
+ groups=revise(id,groups,dict(path=path,ellipse=ellipse,circle=circle,group=group,spark=spark))
+ if id == 'acorn-oak-companions':
+  alt='Brown acorn with overlapping cap scales resting in front of a green oak leaf.'
+ if id == 'pumpkin-botanical-outline':
+  title='Pumpkin Harvest Basket Coloring Page'
+  desc='Two differently shaped pumpkins, an oak leaf and a fallen acorn arranged in a woven harvest basket; spacious outlines for coloring.'
+  alt='Black outline of a round pumpkin and a tall pumpkin in a woven harvest basket with an oak leaf and acorn.'
  svg=f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-labelledby="{id}-title" stroke-linecap="round" stroke-linejoin="round"><title id="{id}-title">{html.escape(title)}</title>'+''.join(groups)+'</svg>'
- if style == 'Outline': svg=svg.replace(INK,'#202020')
+ if style == 'Outline': svg=svg.replace(INK,'#202020').replace('#263347','#202020')
  (OUT/f'{id}.svg').write_text(svg)
  (ROOT/'public/pilot'/f'{id}.svg').write_text(svg)
- arts.append(dict(id=id,title=title,topic=topic,description=desc,alt=alt,style=style,color=color,orientation=orientation,svg=f'/pilot/{id}.svg',webp=f'/pilot/{id}.webp',pdf=f'/pilot/{id}.pdf',thumb=f'/pilot/{id}-thumb.webp',width=2048,height=2048,provenance='Original code-drawn vector illustration, AI-assisted; no stock artwork or tracing.',productionMethod='original-code-drawn-ai-assisted',licenseStatus='OWNER_APPROVED_PERSONAL_EDUCATIONAL_ONLY',license='Free personal and educational use. Commercial use and resale as clipart are prohibited.',licenseApprovedAt='2026-10-23',reviewStatus='PILOT_REVIEW_REQUIRED',published=False,indexable=False,createdAt='2026-10-23'))
+ arts.append(dict(id=id,title=title,topic=topic,description=desc,alt=alt,style=style,color=color,orientation=orientation,svg=f'/pilot/{id}.svg',webp=f'/pilot/{id}.webp',pdf=f'/pilot/{id}.pdf',thumb=f'/pilot/{id}-thumb.webp',width=2048,height=2048,provenance='Original code-drawn vector illustration, AI-assisted; no stock artwork or tracing.',productionMethod='original-code-drawn-ai-assisted',licenseStatus='OWNER_APPROVED_PERSONAL_EDUCATIONAL_ONLY',license='Free personal and educational use. Commercial use and resale as clipart are prohibited.',licenseApprovedAt='2026-10-23',reviewStatus='PILOT_REVIEW_REQUIRED',published=False,indexable=False,createdAt='2026-10-23',revision=2,revisionNote='Original composition and vector surface refinement; replaces the earlier pilot under the same artwork ID, not an additional design.'))
 art('pumpkin-curly-vine','Pumpkin with a Curly Vine','pumpkin','A plump harvest pumpkin, a sweeping vine and a folded green leaf. Each painted shape is editable.','Round orange pumpkin with a curved stem, green leaf and curling vine.','Orange',[
  group('Curly vine',path('M285 172 C345 110 440 146 419 210 C407 248 367 229 383 203 C392 189 412 194 407 206','none','#5B8142',9)),
  group('Stem',path('M235 176 C225 149 238 102 251 79 L280 91 C260 120 258 145 273 176 Z','#77904A')),

@@ -5,36 +5,29 @@
   "targetCount": 5500,
   "completedTopicCount": 0,
   "publishedApprovedCount": 0,
-  "totalLocalAssetBytes": 734901,
+  "totalLocalAssetBytes": 1013178,
   "r2MeasuredBytes": null,
-  "maxPdfBytes": 4007,
-  "p95PdfBytes": 4007,
+  "maxPdfBytes": 6349,
+  "p95PdfBytes": 6349,
   "pdfOverCapCount": 0,
   "maliciousSvgVectorsRejected": 6,
   "exactDuplicateSvgCount": 0,
-  "silhouetteReviewFlags": [
-    {
-      "a": "pumpkin-curly-vine",
-      "b": "pumpkin-botanical-outline",
-      "silhouetteIoU": 0.8876,
-      "status": "REVIEW_REQUIRED"
-    }
-  ],
+  "silhouetteReviewFlags": [],
   "rows": [
     {
       "id": "pumpkin-curly-vine",
       "checks": {
-        "namedLayers": 7,
+        "namedLayers": 9,
         "hashes": true,
         "webp": {
           "width": 2048,
           "height": 2048,
           "alpha": true,
           "bounds": [
-            265,
-            302,
-            1795,
-            1736
+            240,
+            261,
+            1792,
+            1749
           ]
         },
         "thumb": {
@@ -42,14 +35,14 @@
           "height": 440,
           "alpha": true,
           "bounds": [
-            57,
-            64,
-            386,
-            373
+            51,
+            56,
+            385,
+            376
           ]
         },
         "pdf": {
-          "bytes": 2645,
+          "bytes": 3607,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -63,17 +56,17 @@
     {
       "id": "ghost-teacup",
       "checks": {
-        "namedLayers": 9,
+        "namedLayers": 12,
         "hashes": true,
         "webp": {
           "width": 2048,
           "height": 2048,
           "alpha": true,
           "bounds": [
-            372,
-            273,
-            1680,
-            1743
+            400,
+            279,
+            1616,
+            1739
           ]
         },
         "thumb": {
@@ -81,14 +74,14 @@
           "height": 440,
           "alpha": true,
           "bounds": [
-            80,
-            58,
-            361,
-            375
+            85,
+            59,
+            348,
+            374
           ]
         },
         "pdf": {
-          "bytes": 3063,
+          "bytes": 3956,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -102,7 +95,7 @@
     {
       "id": "bat-crescent-flight",
       "checks": {
-        "namedLayers": 8,
+        "namedLayers": 12,
         "hashes": true,
         "webp": {
           "width": 2048,
@@ -112,7 +105,7 @@
             226,
             250,
             1822,
-            1574
+            1598
           ]
         },
         "thumb": {
@@ -123,11 +116,11 @@
             48,
             53,
             392,
-            339
+            344
           ]
         },
         "pdf": {
-          "bytes": 3019,
+          "bytes": 3471,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -141,7 +134,7 @@
     {
       "id": "spider-thread-and-bow",
       "checks": {
-        "namedLayers": 8,
+        "namedLayers": 10,
         "hashes": true,
         "webp": {
           "width": 2048,
@@ -166,7 +159,7 @@
           ]
         },
         "pdf": {
-          "bytes": 2966,
+          "bytes": 3325,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -180,17 +173,17 @@
     {
       "id": "apple-orchard-cutaway",
       "checks": {
-        "namedLayers": 7,
+        "namedLayers": 11,
         "hashes": true,
         "webp": {
           "width": 2048,
           "height": 2048,
           "alpha": true,
           "bounds": [
-            403,
-            342,
-            1734,
-            1754
+            397,
+            354,
+            1735,
+            1763
           ]
         },
         "thumb": {
@@ -198,14 +191,14 @@
           "height": 440,
           "alpha": true,
           "bounds": [
-            86,
-            73,
+            85,
+            76,
             373,
-            377
+            379
           ]
         },
         "pdf": {
-          "bytes": 2660,
+          "bytes": 3510,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -219,7 +212,7 @@
     {
       "id": "sunflower-garden-stem",
       "checks": {
-        "namedLayers": 6,
+        "namedLayers": 8,
         "hashes": true,
         "webp": {
           "width": 2048,
@@ -227,8 +220,8 @@
           "alpha": true,
           "bounds": [
             478,
-            238,
-            1546,
+            232,
+            1552,
             1802
           ]
         },
@@ -238,13 +231,13 @@
           "alpha": true,
           "bounds": [
             102,
-            51,
-            333,
+            49,
+            334,
             388
           ]
         },
         "pdf": {
-          "bytes": 4007,
+          "bytes": 6349,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -258,14 +251,14 @@
     {
       "id": "acorn-oak-companions",
       "checks": {
-        "namedLayers": 6,
+        "namedLayers": 9,
         "hashes": true,
         "webp": {
           "width": 2048,
           "height": 2048,
           "alpha": true,
           "bounds": [
-            502,
+            506,
             362,
             1802,
             1694
@@ -276,14 +269,14 @@
           "height": 440,
           "alpha": true,
           "bounds": [
-            107,
+            108,
             77,
             388,
             364
           ]
         },
         "pdf": {
-          "bytes": 2569,
+          "bytes": 3209,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -297,17 +290,17 @@
     {
       "id": "gift-ribbon-keepsake",
       "checks": {
-        "namedLayers": 9,
+        "namedLayers": 13,
         "hashes": true,
         "webp": {
           "width": 2048,
           "height": 2048,
           "alpha": true,
           "bounds": [
-            308,
-            300,
-            1740,
-            1678
+            324,
+            408,
+            1764,
+            1791
           ]
         },
         "thumb": {
@@ -315,14 +308,14 @@
           "height": 440,
           "alpha": true,
           "bounds": [
-            66,
-            64,
-            374,
-            361
+            69,
+            87,
+            379,
+            385
           ]
         },
         "pdf": {
-          "bytes": 2820,
+          "bytes": 3454,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -336,7 +329,7 @@
     {
       "id": "snowman-knitted-scarf",
       "checks": {
-        "namedLayers": 10,
+        "namedLayers": 13,
         "hashes": true,
         "webp": {
           "width": 2048,
@@ -361,7 +354,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3430,
+          "bytes": 3789,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -375,17 +368,17 @@
     {
       "id": "pumpkin-botanical-outline",
       "checks": {
-        "namedLayers": 6,
+        "namedLayers": 10,
         "hashes": true,
         "webp": {
           "width": 2048,
           "height": 2048,
           "alpha": true,
           "bounds": [
-            280,
-            274,
-            1762,
-            1721
+            293,
+            406,
+            1689,
+            1795
           ]
         },
         "thumb": {
@@ -393,14 +386,15 @@
           "height": 440,
           "alpha": true,
           "bounds": [
-            60,
-            58,
-            379,
-            370
+            62,
+            87,
+            363,
+            386
           ]
         },
+        "outlinePureK": true,
         "pdf": {
-          "bytes": 2471,
+          "bytes": 3024,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,

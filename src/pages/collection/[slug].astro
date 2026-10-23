@@ -1,5 +1,50 @@
 ---
-import Layout from '../../layouts/Layout.astro';import Card from '../../components/Card.astro';import {art,topics,clusters,slugify} from '../../lib/catalog';
-export function getStaticPaths(){return clusters.map(c=>({params:{slug:slugify(c)},props:{cluster:c}}));}const {cluster}=Astro.props;const ts=topics.filter(t=>t.cluster===cluster);const items=art.filter(a=>ts.some(t=>t.slug===a.topic));
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { art, topics, clusters, slugify } from '../../lib/catalog';
+export function getStaticPaths() {
+  return clusters.map((c) => ({ params: { slug: slugify(c) }, props: { cluster: c } }));
+}
+const { cluster } = Astro.props;
+const ts = topics.filter((t) => t.cluster === cluster);
+const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
 ---
-<Layout title={cluster+' Clipart Collection'} noindex={true}><section class="hero"><p class="eyebrow">Seasonal sketchbook</p><h1>{cluster}</h1><p class="lead">A collection of moments worth making.</p><p>{items.length} pilot illustrations available · {ts.length} topics planned.</p><div class="chips">{ts.map(t=><a href={`/clipart/${t.slug}/`}>{t.keyword}</a>)}</div></section>{items.length?<div class="gallery">{items.map(item=><Card item={item}/>)}</div>:<div class="empty"><h2>In preparation</h2><p>Original artwork for this collection is still being developed.</p><a href="/new/">Explore available artwork →</a></div>}</Layout>
+
+<Layout title={cluster + ' Clipart Collection'} noindex={true}>
+  <section class="hero">
+    <p class="eyebrow">Seasonal sketchbook</p>
+    <h1>{cluster}</h1>
+    <p class="lead">A collection of moments worth making.</p>
+    <p>
+      {items.length} pilot illustrations available · {ts.length} topics planned.
+    </p>
+    <div class="chips" aria-label="Topics in this collection">
+      {ts.map((t) => (
+        <a href={`/clipart/${t.slug}/`}>{t.keyword}</a>
+      ))}
+    </div>
+  </section>
+  {items.length ? (
+    <div class="gallery">
+      {items.slice(0, 32).map((item) => (
+        <Card item={item} />
+      ))}
+    </div>
+  ) : (
+    <div class="empty">
+      <h2>In preparation</h2>
+      <p>Original artwork for this collection is still being developed.</p>
+      <a href="/new/">Explore available artwork →</a>
+    </div>
+  )}
+  <div class="browse-more">
+    <p>
+      {items.length > 32
+        ? `Showing 32 of ${items.length} illustrations. Choose a topic above to explore more.`
+        : 'Explore related subjects above, or find your next idea in the full collection.'}
+    </p>
+    <a class="button primary" href="/search/">
+      Search all clipart →
+    </a>
+  </div>
+</Layout>

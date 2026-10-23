@@ -1,4 +1,51 @@
 ---
-import Layout from '../layouts/Layout.astro';import {art} from '../lib/catalog';
+import Layout from '../layouts/Layout.astro';
+import { art } from '../lib/catalog';
 ---
-<Layout title="Black & White Clipart and Print Studio" noindex={true}><section class="hero"><h1>A fresh outline.<br/>A blank page of possibilities.</h1><p class="lead">Choose an illustration, then make an outline or grayscale version in the editor.</p></section><div class="gallery">{art.map(a=><a class="art-card" href={`/edit/${a.id}/?mode=outline`}><div class="art-picture"><img src={a.thumb} alt={a.alt} width="400" height="400" style="filter:grayscale(1)"/></div><div class="card-body"><h3>{a.title}</h3><p>Open print studio →</p></div></a>)}</div><p class="notice">Thumbnails show a grayscale preview. The editor creates an actual outline from the vector shapes and includes paper size and margin settings.</p></Layout>
+
+<Layout title="Black & White Clipart and Print Studio" noindex={true}>
+  <section class="hero">
+    <p class="eyebrow">The print studio</p>
+    <h1>
+      A fresh outline.
+      <br />A blank page of possibilities.
+    </h1>
+    <p class="lead">
+      Choose an illustration, then make an outline or grayscale version in the editor.
+    </p>
+  </section>
+  <div class="gallery print-gallery">
+    {art.slice(0, 32).map((a) => (
+      <a class="art-card" href={`/edit/${a.id}/?mode=outline`}>
+        <div class="art-picture">
+          <img
+            src={a.thumb}
+            alt={a.alt}
+            width="400"
+            height="400"
+            loading="lazy"
+            style="filter:grayscale(1)"
+          />
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">{a.title}</h3>
+          <p>Open print studio →</p>
+        </div>
+      </a>
+    ))}
+  </div>
+  <p class="notice">
+    Thumbnails show a grayscale preview. The editor creates an actual outline from the vector shapes
+    and includes paper size and margin settings.
+  </p>
+  <div class="browse-more">
+    <p>
+      {art.length > 32
+        ? `Showing 32 of ${art.length} illustrations. Every illustration can be opened in the editor.`
+        : 'Every illustration includes editable layers and print settings.'}
+    </p>
+    <a class="button primary" href="/search/">
+      Browse all clipart →
+    </a>
+  </div>
+</Layout>

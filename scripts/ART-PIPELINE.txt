@@ -65,3 +65,12 @@ resale as clipart prohibited. A license decision is not art-quality approval.
 No cultural/religious pilot was created; those topics require source-informed
 review before production. No remote R2 usage or upload success is inferred
 from local files or dry-runs.
+
+Revision 2
+scripts/art_refinements.py supplies original drawing refinements for the same
+10 artwork IDs. It adds editable solid-path light/shadow/material layers and
+redraws the former single-pumpkin outline as a two-pumpkin harvest basket.
+This replaces prior pilot artwork; it does not add 10 designs or multiply the
+catalog count. Rebuild all four formats and hashes together before publishing
+new immutable R2 keys. Previous revision proof/quality records are historical.
+The technical preflight now explicitly requires pure-K color for Outline PDFs.

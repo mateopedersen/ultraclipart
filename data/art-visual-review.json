@@ -2,92 +2,103 @@
   "reviewer": "Codex art-pipeline agent",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "reviewDate": "2026-10-23",
-  "scope": "Screen-based visual inspection of contact sheet for all 10 items; 128px white/navy/checkerboard proofs; enlarged ghost, bat, sunflower and outline WebPs; rendered original US Letter PDFs.",
-  "result": "PILOT_SCREEN_REVIEW_PASS_WITH_NOTES",
+  "revision": 2,
+  "scope": "Reference 01/04/05 comparison; all 10 contact-sheet and 128px alpha-background views; enlarged pumpkin, ghost, gift and basket; 300-dpi screen renders of all original PDFs.",
+  "result": "REVISED_PILOT_SCREEN_REVIEW_PASS_WITH_NOTES",
+  "referenceFinishAssessment": "Substantially improved dimensional vector finish; exact reference art-style parity and final premium approval are not claimed.",
   "ownerArtApproval": "PENDING",
   "productionPublicationApproval": false,
   "physicalPrintProof": "NOT_PERFORMED",
-  "corrections": [
-    "Moved ghost steam away from smile.",
-    "Changed outline pumpkin contour from navy to neutral black; original PDF preserves neutral colors in pure K."
-  ],
+  "independentAgentReview": {
+    "reviewer": "Codex research_qa agent",
+    "scope": "All ten illustrations at contact-sheet scale",
+    "finding": "Clear improvement in volume, highlights and silhouettes. Gift perspective, apple slice and basket read clearly; no obvious drawing defects. Ghost cup/hand contour is slightly crowded at thumbnail scale. References remain richer/more varied in texture; do not claim exact style parity.",
+    "reviewerType": "AI_AGENT_NOT_HUMAN"
+  },
   "duplicateReview": {
-    "pair": [
-      "pumpkin-curly-vine",
-      "pumpkin-botanical-outline"
-    ],
-    "automatedSilhouetteIoU": 0.8876,
-    "agentFinding": "Similar expected pumpkin silhouette, but separately drawn source paths, different leaves/tendrils, rib arrangement and coloring-page treatment. Retain owner concept review before counting as production-approved originals."
+    "exactDuplicateMasters": 0,
+    "silhouetteFlags": [],
+    "formerPumpkinPair": "Outline now uses a substantially distinct basket composition; former single-pumpkin overlap was eliminated."
   },
   "items": [
     {
       "id": "pumpkin-curly-vine",
-      "sourceSha256": "3e9f9c3dc9a1ec03d39d1641eadaf832b247001e2f7c313c173a0df59b4e7ab6",
-      "note": "Clear plump silhouette, contained stroke and warm highlights. Vine extends behind leaf and pumpkin; no clipped canvas edge.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "0de4933c35b6a0946b7f0ddbf5a3df637e9090b6c828d0c7d9ad2ff9170d596c",
+      "previousSourceSha256": "3e9f9c3dc9a1ec03d39d1641eadaf832b247001e2f7c313c173a0df59b4e7ab6",
+      "note": "Redrawn scalloped lobes; separate shadow surfaces, warm face planes, tapering contour details, folded leaf and modelled stem. Greater dimensional form than revision 1.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "ghost-teacup",
-      "sourceSha256": "990e9d8a9ab61ae83e78da92efcae899fec7440edd9b634aa871956aee0a4c50",
-      "note": "Inspected enlarged WebP and revised steam so it no longer crosses the smile. Cup, folds and cheeks remain legible at 128px.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "a0d75f7c7413a20c2b94d50e4b82cc39453b24f6e16537f30d72d815d9c36c1c",
+      "previousSourceSha256": "990e9d8a9ab61ae83e78da92efcae899fec7440edd9b634aa871956aee0a4c50",
+      "note": "Redrawn robe; two visible hands cup the tea mug, with a visible drink surface, ceramic shading and separate holding-hand layers. Hand/cup contours remain dense at small thumbnail sizes.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "bat-crescent-flight",
-      "sourceSha256": "b0932db3c8db07686f60f971e3200f030d539ebf88352fd9cba5bdad266788bb",
-      "note": "Inspected enlarged WebP: distinct wing membranes, two ears, small teeth, continuous contour and clean separation from moon.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "3da69299a8e12db1cd17f514e649e41479937b64368a42e6a068060c5dd70f2a",
+      "previousSourceSha256": "b0932db3c8db07686f60f971e3200f030d539ebf88352fd9cba5bdad266788bb",
+      "note": "Added wing membrane planes, fur highlights, side shadows and tiny feet while retaining the original friendly flying composition.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "spider-thread-and-bow",
-      "sourceSha256": "1715bbc0e01ae80f6068514c8491183babeb6dc26f8e2f2324a2b123aeb80932",
-      "note": "Eight legs visually counted, symmetric friendly face, fine thread intact. Dark legs have lower contrast on navy; light backgrounds give best legibility.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "f03801297a908f9dd93f70b1f1785c9abde9f2f8b202565680fb01ebecd377de",
+      "previousSourceSha256": "1715bbc0e01ae80f6068514c8491183babeb6dc26f8e2f2324a2b123aeb80932",
+      "note": "Added body shading and reflected light on all eight legs; eight legs remain distinct. Very dark preview backgrounds still reduce contrast.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "apple-orchard-cutaway",
-      "sourceSha256": "92d08aaf9f9061a2d415dc8d35cb84f84885ad1fef3a559cacbf50e9c2db1b08",
-      "note": "Apple and foreground slice read separately; seeds and edge band stay legible. Stylized food illustration, no scientific anatomy claim.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "92581dddf031424f0e688c3df4ceeb273f57a973103e7b53da44a5618955a93e",
+      "previousSourceSha256": "92d08aaf9f9061a2d415dc8d35cb84f84885ad1fef3a559cacbf50e9c2db1b08",
+      "note": "Redrawn brighter organic apple surface with dimple, warm light and deep edge shadow. Slice now has red peel, flesh depth, core and two modelled seeds.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "sunflower-garden-stem",
-      "sourceSha256": "0a8e53f20ba1958d17b1224e2a6e02a391d478c708f17e6ed0670f0adba083a3",
-      "note": "Inspected enlarged WebP: petal overlaps render correctly, seeds are clear, leaves connect to stem and no clipping is visible.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "1eed2a54ea45771362f7dd8487077b66ea24033522bc2ac24bda2eb7788dad51",
+      "previousSourceSha256": "0a8e53f20ba1958d17b1224e2a6e02a391d478c708f17e6ed0670f0adba083a3",
+      "note": "Petals have individually varied geometry and separate light planes. Layered seed disk and fine rim texture improve material depth.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "acorn-oak-companions",
-      "sourceSha256": "1aace03c1838213c57febcbb9c0701f0fcb013b98e6a9df9b9fce207342376e0",
-      "note": "Cap pattern and nut silhouette are distinct; stylized oak leaf is legible. Not a botanical species identification diagram.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "c5f193675f12d84a84c6a8becdcc6342400179b52b13aed68f2f195cc57e3cda",
+      "previousSourceSha256": "1aace03c1838213c57febcbb9c0701f0fcb013b98e6a9df9b9fce207342376e0",
+      "note": "Cap has overlapping vector scales and a defined rim, replacing the previous zigzag decoration. Shell has reflected warm light and directional shading.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "gift-ribbon-keepsake",
-      "sourceSha256": "a97de12806089b2a28c85a7c443e2bae697d60b1e3d69330ce14e947e0211177",
-      "note": "Bow, lid, ribbon and hanging tag separate cleanly. No text or branded mark is present.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "77f3b813eaf74a5449a358abbc667556d4c6e87491c2111c0330647c10222c85",
+      "previousSourceSha256": "a97de12806089b2a28c85a7c443e2bae697d60b1e3d69330ce14e947e0211177",
+      "note": "Rebuilt as a coherent three-quarter box with visible lid thickness, top/front/side ribbon and curled bow surfaces with ribbon tails.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "snowman-knitted-scarf",
-      "sourceSha256": "90d5884eb8d39ed3773e187c72b8ed2cc18d473fc1e4fd10ec478168ec972991",
-      "note": "Hat and scarf separate from body, twig arms extend without clipping; face remains clear on white and dark backgrounds.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "1708d071967a4effd4fd25903559a3ee95202d3b65559ca3537c209ca8058f4c",
+      "previousSourceSha256": "90d5884eb8d39ed3773e187c72b8ed2cc18d473fc1e4fd10ec478168ec972991",
+      "note": "Added snow volume, hat light planes, knitted scarf marks and fringe details while preserving the friendly silhouette.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     },
     {
       "id": "pumpkin-botanical-outline",
-      "sourceSha256": "4b5cebf6735ca46f8a04f7353a850a4f41b5f8ff8eb9ec8c1df2ef103be5cb4e",
-      "note": "Inspected enlarged WebP and changed navy contour to neutral black. Source has distinct leaf geometry, vine paths and rib drawing from color pumpkin; meaningful coloring regions.",
-      "agentScreenReview": "PASS",
+      "sourceSha256": "ee2116f0f23efd15854b868e4288d23a2759acba321928f53ea3a638113b5211",
+      "previousSourceSha256": "4b5cebf6735ca46f8a04f7353a850a4f41b5f8ff8eb9ec8c1df2ef103be5cb4e",
+      "note": "Completely redrawn as two differently shaped pumpkins in a woven harvest basket with a fallen acorn and oak leaf. Independent composition, not a line-only version of the other pumpkin. All print marks use pure K.",
+      "agentScreenReview": "PASS_WITH_NOTES",
       "ownerReview": "PENDING"
     }
   ],
@@ -110,7 +121,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9957,
+        "sourceToPdfDarkSilhouetteIoU": 0.9956,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -120,7 +131,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9993,
+        "sourceToPdfDarkSilhouetteIoU": 0.9992,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -130,7 +141,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9971,
+        "sourceToPdfDarkSilhouetteIoU": 0.9972,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -140,7 +151,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9995,
+        "sourceToPdfDarkSilhouetteIoU": 0.9996,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -150,7 +161,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9994,
+        "sourceToPdfDarkSilhouetteIoU": 0.9991,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -160,7 +171,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9996,
+        "sourceToPdfDarkSilhouetteIoU": 0.9995,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -170,7 +181,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9998,
+        "sourceToPdfDarkSilhouetteIoU": 0.9995,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -180,7 +191,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9967,
+        "sourceToPdfDarkSilhouetteIoU": 0.9968,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       },
       {
@@ -190,7 +201,7 @@
           3300
         ],
         "rasterProofDpi": 300,
-        "sourceToPdfDarkSilhouetteIoU": 0.9922,
+        "sourceToPdfDarkSilhouetteIoU": 0.9859,
         "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
       }
     ],
@@ -198,8 +209,8 @@
   },
   "limitations": [
     "No human art reviewer is claimed.",
-    "No physical printer/press, proofing instrument or PDF/X validator was used.",
-    "No religious/cultural symbol pilot was made; that acceptance matrix remains incomplete.",
-    "Screen print proofs do not certify a match for every printer or paper stock."
+    "No physical print, calibrated press proof or PDF/X validation performed.",
+    "Cultural/religious pilot coverage remains unimplemented.",
+    "The website/editor and newly uploaded files require regression tests after revision 2 deployment."
   ]
 }

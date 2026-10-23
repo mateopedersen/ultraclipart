@@ -1,2 +1,8 @@
-import type {APIRoute} from 'astro';
-export const GET:APIRoute=()=>new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${['','categories/','collections/','about/','license/','contact/','privacy/','terms/','faq/','for-teachers/','accessibility/','copyright/','editorial-process/'].map(p=>`<url><loc>https://ultraclipart.com/${p}</loc></url>`).join('')}</urlset>`,{headers:{'Content-Type':'application/xml'}});
+import type { APIRoute } from 'astro';
+import { art } from '../lib/catalog';
+import { sitemapIndex } from '../lib/sitemaps';
+
+export const GET: APIRoute = () =>
+  new Response(sitemapIndex(art), {
+    headers: { 'Content-Type': 'application/xml; charset=utf-8' },
+  });

@@ -3,6 +3,8 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: DENY
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=31536000
+  Cross-Origin-Opener-Policy: same-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' https://assets.ultraclipart.com data: blob:; font-src 'self'; connect-src 'self' https://assets.ultraclipart.com; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self' mailto:
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
