@@ -120,7 +120,12 @@ try {
     [900, 1000],
   ]) {
     const p = (y * 1226 + x) * 4;
-    assert.deepEqual(bow.slice(p, p + 4), original.slice(p, p + 4));
+    // Browser PNG round-tripping can quantize premultiplied RGB by one step,
+    // even where the worker kept the raw RGBA values exactly unchanged.
+    // Keep alpha exact and a tight RGB bound here; unit tests check raw pixels exactly.
+    assert.equal(bow[p + 3], original[p + 3]);
+    for (let channel = 0; channel < 3; channel++)
+      assert.ok(Math.abs(bow[p + channel] - original[p + channel]) <= 1);
   }
   await action('new-region');
   // Separate garment pieces, avoiding neck, arms, hands and legs.
