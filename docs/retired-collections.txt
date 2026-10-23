@@ -1,0 +1,30 @@
+Unavailable collection routing
+
+Cloudflare continued returning cached HTML for previously deployed empty
+collections after the files were removed. Zone-wide and URL/hostname purges
+did not make the observed old URLs return 404. A random missing URL was an
+insufficient deployment test; smoke-live now checks all unavailable subjects.
+
+The build generates a minimal advanced Pages worker and _routes.json policy
+from the real catalog. Only unavailable collection/topic URLs receive the
+current 404 page with HTTP 404, no-store and noindex. The response gets the same
+security policy as static HTML. HEAD has no body; other methods get 405. Asset
+binding failures return 503 instead of a false successful page.
+
+Available topics/collections are excluded from function invocation. Normal
+content, images, scripts and the editor remain static. The policy switches
+between prefix exclusions and explicit missing URLs as content grows, and is
+checked against the 100-rule platform limit across all 111 availability states.
+When the last planned topic has artwork, the retirement worker is removed.
+
+This uses the existing Workers Free plan (verified in the account dashboard).
+It does not enable a paid subscription. Requests that invoke Functions count
+toward the shared 100,000/day free allowance; static requests remain unlimited.
+No live account fail-open/closed preference is changed by this code. Review
+that preference and the shared allowance if unavailable URLs attract traffic.
+
+References:
+https://developers.cloudflare.com/pages/functions/advanced-mode/
+https://developers.cloudflare.com/pages/functions/routing/
+https://developers.cloudflare.com/pages/functions/pricing/
+https://developers.cloudflare.com/pages/configuration/serving-pages/

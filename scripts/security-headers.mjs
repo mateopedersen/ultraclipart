@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
+import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = join(root, 'dist');
@@ -62,6 +63,28 @@ if (process.env.CF_PAGES === '1') {
   // assets remain intact, including the independent blank creation studio.
   for (const path of publication.localPaths) rmSync(join(dist, path.slice(1)), { force: true });
   console.log(`CDN release: ${publication.files} verified files, ${publication.bytes} bytes.`);
+}
+const retirement = retirementPolicy(
+  JSON.parse(readFileSync(join(root, 'data/topics.json'), 'utf8')).topics,
+  JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
+);
+if (retirement) {
+  const responseHeaders = Object.fromEntries(
+    [...csp.split('/_astro/*')[0].matchAll(/^  ([\w-]+): (.+)$/gm)].map((match) => [
+      match[1],
+      match[2],
+    ]),
+  );
+  writeFileSync(join(dist, '_routes.json'), JSON.stringify(retirement.routes));
+  writeFileSync(
+    join(dist, '_worker.js'),
+    `export default (${createRetiredHandler.toString()})(${JSON.stringify(retirement.retired)}, ${JSON.stringify(responseHeaders)});\n`,
+  );
+  console.log(
+    `Unavailable routes: ${retirement.retired.length}; live collections/assets bypass the 404 function.`,
+  );
+} else {
+  for (const name of ['_routes.json', '_worker.js']) rmSync(join(dist, name), { force: true });
 }
 const count = files(dist).length;
 if (process.env.CF_PAGES === '1' && count > 20_000)

@@ -147,7 +147,14 @@ try {
   await action('select-all').click();
   const beforeResize = (await state()).layers[0].scaleX;
   const handle = page.locator('[data-handle=se]');
+  await handle.scrollIntoViewIfNeeded();
   const box = await handle.boundingBox();
+  expect(
+    await page.evaluate(
+      ({ x, y }) => document.elementFromPoint(x, y)?.getAttribute('data-handle'),
+      { x: box.x + box.width / 2, y: box.y + box.height / 2 },
+    ),
+  ).toBe('se');
   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
   await page.mouse.down();
   await page.mouse.move(box.x + box.width / 2 - 45, box.y + box.height / 2 - 45, { steps: 5 });

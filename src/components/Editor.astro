@@ -752,6 +752,15 @@ const { art, creator = false } = Astro.props;
     display: block;
     overflow: hidden;
   }
+  .uc-canvas > .uc-selection-overlay {
+    position: absolute;
+    inset: 0;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .uc-selection-overlay .uc-handle {
+    pointer-events: all;
+  }
   .uc-canvas [data-layer] {
     cursor: move;
   }

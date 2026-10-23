@@ -234,13 +234,20 @@ function init(root: HTMLElement) {
     if (printPreview) return;
     const selectedBounds = bounds();
     if (!selectedBounds) return;
+    // Editing handles can extend beyond the artwork or crop. Keep them on a
+    // separate overlay so the clipped artwork never makes a handle unreachable.
+    const overlay = document.createElementNS(NS, 'svg');
+    overlay.setAttribute('viewBox', svg.getAttribute('viewBox')!);
+    overlay.setAttribute('class', 'uc-selection-overlay');
+    overlay.setAttribute('aria-hidden', 'true');
+    canvas.append(overlay);
     const { x, y, width, height } = selectedBounds;
     const size = Math.max(d.width / 100, 6) / zoom;
     const frame = document.createElementNS(NS, 'rect');
     for (const [key, value] of Object.entries(selectedBounds))
       frame.setAttribute(key, String(value));
     frame.setAttribute('class', 'uc-selection-box');
-    svg.append(frame);
+    overlay.append(frame);
     const positions = [
       ['nw', x, y],
       ['n', x + width / 2, y],
@@ -259,7 +266,7 @@ function init(root: HTMLElement) {
       handle.setAttribute('height', String(size));
       handle.setAttribute('class', 'uc-handle');
       handle.setAttribute('data-handle', name);
-      svg.append(handle);
+      overlay.append(handle);
     });
     const rotate = document.createElementNS(NS, 'circle');
     rotate.setAttribute('cx', String(x + width / 2));
@@ -267,7 +274,7 @@ function init(root: HTMLElement) {
     rotate.setAttribute('r', String(size * 0.6));
     rotate.setAttribute('class', 'uc-handle uc-rotate-handle');
     rotate.setAttribute('data-handle', 'rotate');
-    svg.append(rotate);
+    overlay.append(rotate);
   }
   function render() {
     if (!history) return;
