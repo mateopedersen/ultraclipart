@@ -80,6 +80,8 @@ try {
           i.src = img.getAttribute('href');
         }),
     );
+    await page.locator('[data-work-mode=advanced]').click();
+    await page.locator('[data-panel=transform]').click();
     await commitInput('[data-prop=scaleX]', 70);
     await commitInput('[data-prop=scaleY]', 70);
     await commitInput('[data-prop=x]', 150);

@@ -60,6 +60,8 @@ jobs:
             exit 1
           fi
           for engine in ${{ matrix.engine }}; do
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
@@ -79,6 +81,8 @@ jobs:
           if [ '${{ matrix.engine }}' = chromium ]; then
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
+            BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
+            BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
           fi
       - name: Validate production CDN mapping and headers
         run: CF_PAGES=1 pnpm build

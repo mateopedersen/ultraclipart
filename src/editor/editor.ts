@@ -25,7 +25,16 @@ import {
   validateProjectMarkup,
 } from './svg';
 import { paperLayout, exportPdf } from './pdf';
-import { openRaster, type RasterAsset } from './raster';
+import {
+  openRaster,
+  prepareProjectSources,
+  serializeProject,
+  withoutEmbeddedSources,
+  type RasterAsset,
+} from './raster';
+import { SmartController } from './smart/controller';
+import { prepareDocument, rasterKey } from './smart/render';
+import { saveLocal, loadLocal, deleteLocal } from './smart/storage';
 import {
   blankDocument,
   shapeMarkup,
@@ -52,6 +61,9 @@ function init(root: HTMLElement) {
     : undefined;
   const id = root.dataset.artId!,
     storageKey = `ultraclipart:editor:v1:${id}`;
+  let smart: SmartController | undefined;
+  let rasterRenderKey = '';
+  let persistTimer: ReturnType<typeof setTimeout> | undefined;
   let original: EditorDocument,
     history: History<EditorDocument>,
     selected: string[] = [],
@@ -85,13 +97,28 @@ function init(root: HTMLElement) {
   const doc = () => live || history.current;
   const currentLayer = () => doc().layers.find((l) => selected.includes(l.id));
   function persist() {
+    clearTimeout(persistTimer);
     try {
-      localStorage.setItem(storageKey, JSON.stringify(history.current));
-    } catch {
-      status(
-        'Your changes work normally, but browser storage is unavailable. Save a project file to keep your edits.',
+      const raw = JSON.stringify(serializeProject(history.current));
+      if (raw.length <= 2000000) localStorage.setItem(storageKey, raw);
+      else localStorage.removeItem(storageKey);
+    } catch {}
+    persistTimer = setTimeout(() => {
+      const saved = serializeProject(history.current);
+      void saveLocal(storageKey, saved).catch(() =>
+        status(
+          'Browser recovery storage is full or unavailable. Save a project file to keep these edits.',
+          true,
+        ),
       );
-    }
+      try {
+        const json = JSON.stringify(saved);
+        if (json.length <= 2000000) localStorage.setItem(storageKey, json);
+        else localStorage.removeItem(storageKey);
+      } catch {
+        /* IndexedDB is the primary store for mask projects. */
+      }
+    }, 150);
   }
   function cancelSource() {
     if (templateRequest) {
@@ -103,9 +130,15 @@ function init(root: HTMLElement) {
   function commit(next: EditorDocument, message?: string) {
     cancelSource();
     live = undefined;
-    if (next.layers.length > 500 || JSON.stringify(next).length > 2000000) {
+    next.version = 2;
+    if (
+      next.selection &&
+      !next.layers.some((l) => l.id === next.selection!.layerId && l.kind === 'raster')
+    )
+      delete next.selection;
+    if (next.layers.length > 500 || JSON.stringify(next).length > 16000000) {
       status(
-        'This project reached the 500-layer or 2 MB editing limit. Save a copy, then simplify some layers to continue.',
+        'This project reached the 500-layer or 16 MB editing limit. Save a copy, then simplify some layers to continue.',
         true,
       );
       render();
@@ -129,10 +162,8 @@ function init(root: HTMLElement) {
       render();
       return;
     }
-    if (history.commit(next)) {
-      persist();
-      if (message) status(message);
-    }
+    if (history.commit(next)) persist();
+    if (message) status(message);
     render();
   }
   function modify(fn: (next: EditorDocument) => void, message?: string) {
@@ -217,8 +248,29 @@ function init(root: HTMLElement) {
     return svg;
   }
   function renderCanvas() {
-    const d = doc(),
-      svg = printPreview ? paperSvg(d) : documentSvg(d);
+    const d = doc();
+    const renderKey = d.layers
+      .filter((l) => l.kind === 'raster')
+      .map((l) => (l.kind === 'raster' ? l.id + rasterKey(l) : ''))
+      .join('|');
+    if (renderKey !== rasterRenderKey) {
+      rasterRenderKey = renderKey;
+      root.dataset.processing = 'true';
+      void prepareDocument(d)
+        .then(() => {
+          if (renderKey === rasterRenderKey) {
+            root.dataset.processing = 'false';
+            renderCanvas();
+          }
+        })
+        .catch((error) => {
+          if (renderKey === rasterRenderKey) {
+            root.dataset.processing = 'false';
+            status(error.message, true);
+          }
+        });
+    }
+    const svg = printPreview ? paperSvg(d) : documentSvg(d);
     svg.setAttribute('aria-label', 'Editable layered artwork');
     svg.setAttribute('data-artwork-canvas', '');
     canvas.replaceChildren(svg);
@@ -238,6 +290,7 @@ function init(root: HTMLElement) {
       .querySelector<HTMLElement>('[data-empty-canvas]')
       ?.toggleAttribute('hidden', d.layers.some((l) => l.visible) || printPreview || drawing);
     if (printPreview) return;
+    smart?.drawOverlay();
     const selectedBounds = bounds();
     if (!selectedBounds) return;
     // Editing handles can extend beyond the artwork or crop. Keep them on a
@@ -295,6 +348,7 @@ function init(root: HTMLElement) {
         doc().layers.some((l) => l.id === id && !l.locked && l.visible && l.kind === 'vector'),
       );
     }
+    smart?.render();
     const l = currentLayer();
     q('[data-selection]').textContent =
       selected.length > 1
@@ -412,6 +466,8 @@ function init(root: HTMLElement) {
     );
     q('[data-panel-title]').textContent = (
       {
+        region: 'Select & recolor a region',
+        studio: 'Studio Pro',
         create: 'Make something yours',
         canvas: 'Your canvas',
         transform: 'Edit clipart',
@@ -423,8 +479,10 @@ function init(root: HTMLElement) {
         text: 'Add a caption',
       } as Record<string, string>
     )[name];
+    smart?.onPanel(name);
   }
   function cancelInteraction() {
+    smart?.cancel();
     const pointer = stroke?.pointer ?? drag?.pointer;
     if (pointer !== undefined && stage.hasPointerCapture(pointer))
       stage.releasePointerCapture(pointer);
@@ -437,6 +495,7 @@ function init(root: HTMLElement) {
     cancelInteraction();
     drawing = enabled;
     if (enabled) {
+      smart?.onPanel('');
       panMode = false;
       printPreview = false;
       q<HTMLInputElement>('[data-print-preview]').checked = false;
@@ -582,11 +641,36 @@ function init(root: HTMLElement) {
       l.y += c.y + c.height / 2 - b.y - b.height / 2;
     });
   }
-  function exportOpen() {
+  async function exportOpen() {
     cancelSource();
     exportGeneration++;
     exportFocus = q<HTMLElement>('[data-action=export]');
+    await prepareDocument(history.current);
     q('[data-export-preview]').replaceChildren(documentSvg(history.current));
+    const preferences = history.current.exportPreferences,
+      size = q<HTMLSelectElement>('[data-size]'),
+      nativeWidth = history.current.crop?.width || history.current.width;
+    const originalOption = size.querySelector<HTMLOptionElement>('option[value=original]')!;
+    originalOption.textContent = `Original canvas width (${Math.round(nativeWidth)} pixels)`;
+    if (preferences) {
+      const chosen =
+        preferences.size === 'original' || (!preferences.size && preferences.width === nativeWidth)
+          ? 'original'
+          : String(preferences.width);
+      if (![...size.options].some((o) => o.value === chosen)) {
+        const option = document.createElement('option');
+        option.value = chosen;
+        option.textContent = `${chosen} pixels (saved)`;
+        size.append(option);
+      }
+      size.value = chosen;
+      q<HTMLInputElement>('[data-quality]').value = String(preferences.quality * 100);
+      q<HTMLInputElement>('[data-allow-large-pdf]').checked = preferences.allowLargePdf;
+    } else {
+      size.value = history.current.layers.some((l) => l.kind === 'raster') ? 'original' : '2048';
+      q<HTMLInputElement>('[data-quality]').value = '95';
+      q<HTMLInputElement>('[data-allow-large-pdf]').checked = false;
+    }
     q('[data-export-status]').textContent = '';
     dialog.showModal();
   }
@@ -600,12 +684,24 @@ function init(root: HTMLElement) {
     q('[data-export-status]').textContent = 'Preparing your edited artwork…';
     try {
       const format = q<HTMLInputElement>('[data-format]:checked').value;
+      const savedExport = clone(history.current);
+      savedExport.exportPreferences = {
+        width:
+          Number(q<HTMLSelectElement>('[data-size]').value) ||
+          savedExport.crop?.width ||
+          savedExport.width,
+        size: q<HTMLSelectElement>('[data-size]').value === 'original' ? 'original' : 'custom',
+        quality: Number(q<HTMLInputElement>('[data-quality]').value) / 100,
+        allowLargePdf: q<HTMLInputElement>('[data-allow-large-pdf]').checked,
+      };
+      history.current.exportPreferences = savedExport.exportPreferences;
+      persist();
       const name =
         q<HTMLInputElement>('[data-filename]')
           .value.replace(/[^a-zA-Z0-9-_]+/g, '-')
           .slice(0, 100) || id;
       let blob: Blob;
-      if (format === 'pdf') blob = await exportPdf(history.current);
+      if (format === 'pdf') blob = await exportPdf(savedExport);
       else {
         const requested = q<HTMLSelectElement>('[data-size]').value;
         blob = await renderWebp(
@@ -638,6 +734,7 @@ function init(root: HTMLElement) {
   const actions: Record<string, () => void | Promise<void>> = {
     pan: () => {
       if (compositionTools && drawing) setDrawing(false);
+      smart?.onPanel('');
       panMode = !panMode;
       q('[data-action=pan]').setAttribute('aria-pressed', String(panMode));
       stage.style.cursor = panMode ? 'grab' : '';
@@ -670,11 +767,11 @@ function init(root: HTMLElement) {
       );
     },
     'zoom-in': () => {
-      zoom = clamp(zoom + 0.25, 0.25, 4);
+      zoom = clamp(zoom + 0.25, 0.25, 12);
       render();
     },
     'zoom-out': () => {
-      zoom = clamp(zoom - 0.25, 0.25, 4);
+      zoom = clamp(zoom - 0.25, 0.25, 12);
       render();
     },
     fit: () => {
@@ -906,9 +1003,19 @@ function init(root: HTMLElement) {
         l.markup = svg.innerHTML;
       }, 'Fill and stroke applied to the selected vector layers.');
     },
+    'delete-recovery': async () => {
+      clearTimeout(persistTimer);
+      await deleteLocal(storageKey);
+      localStorage.removeItem(storageKey);
+      status(
+        'Local recovery copy deleted. Your open canvas is unchanged; the next edit creates a new recovery copy.',
+      );
+    },
     save: () => {
       download(
-        new Blob([JSON.stringify(history.current, null, 2)], { type: 'application/json' }),
+        new Blob([JSON.stringify(serializeProject(history.current), null, 2)], {
+          type: 'application/json',
+        }),
         `${id}-project.json`,
       );
       status('Editable project saved. Open it from the Layers panel to continue.');
@@ -924,8 +1031,10 @@ function init(root: HTMLElement) {
     if (!target) return;
     try {
       if (target.dataset.shape) addShape(target.dataset.shape as ShapeKind);
-      else if (target.dataset.action) void actions[target.dataset.action]?.();
-      else if (target.dataset.panel) panel(target.dataset.panel);
+      else if (target.dataset.action) {
+        const result = actions[target.dataset.action]?.();
+        if (result instanceof Promise) void result.catch((error) => status(error.message, true));
+      } else if (target.dataset.panel) panel(target.dataset.panel);
       else if (target.dataset.select) select(target.dataset.select, (event as MouseEvent).shiftKey);
       else if (target.dataset.visibility)
         modify((d) => {
@@ -1045,7 +1154,7 @@ function init(root: HTMLElement) {
         const file = target.files?.[0];
         target.value = '';
         if (!file) return;
-        if (file.size > 2000000) throw new Error('This project file is too large.');
+        if (file.size > 16000000) throw new Error('This project file is too large.');
         templateRequest?.abort();
         const request = new AbortController();
         templateRequest = request;
@@ -1056,9 +1165,11 @@ function init(root: HTMLElement) {
         if (creator && value && typeof value === 'object' && 'artId' in value) value.artId = id;
         if (!validateDocument(value, id))
           throw new Error('This file is not a valid project for this artwork.');
+        await prepareProjectSources(value);
+        if (request.signal.aborted) return;
         validateProjectMarkup(value);
         templateRequest = undefined;
-        replaceCanvas(value, 'Saved project opened.');
+        replaceCanvas(withoutEmbeddedSources(value), 'Saved project opened.');
         target.value = '';
       }
     } catch (error) {
@@ -1244,7 +1355,7 @@ function init(root: HTMLElement) {
         rect = stage.getBoundingClientRect(),
         x = event.clientX - rect.left + stage.scrollLeft,
         y = event.clientY - rect.top + stage.scrollTop;
-      zoom = clamp(zoom * (event.deltaY > 0 ? 0.9 : 1.1), 0.25, 4);
+      zoom = clamp(zoom * (event.deltaY > 0 ? 0.9 : 1.1), 0.25, 12);
       render();
       stage.scrollLeft = (x * zoom) / before - (event.clientX - rect.left);
       stage.scrollTop = (y * zoom) / before - (event.clientY - rect.top);
@@ -1345,12 +1456,19 @@ function init(root: HTMLElement) {
       history = new History(original);
       let recovered = false;
       try {
+        let saved: unknown;
         const raw = localStorage.getItem(storageKey);
-        if (raw) {
-          const saved: unknown = JSON.parse(raw);
+        if (raw) saved = JSON.parse(raw);
+        if (!saved) {
+          try {
+            saved = await loadLocal(storageKey);
+          } catch {}
+        }
+        if (saved) {
           if (validateDocument(saved, id)) {
+            await prepareProjectSources(saved);
             validateProjectMarkup(saved);
-            history = new History(saved);
+            history = new History(withoutEmbeddedSources(saved));
             recovered = true;
           }
         }
@@ -1360,8 +1478,35 @@ function init(root: HTMLElement) {
       selected = doc()
         .layers.filter((l) => l.visible && !l.locked)
         .map((l) => l.id);
+      smart = new SmartController({
+        root,
+        stage,
+        canvas,
+        doc,
+        committed: () => history.current,
+        selected: () => selected,
+        commit,
+        preview: (next) => {
+          live = next;
+          rasterRenderKey = '';
+          renderCanvas();
+        },
+        select,
+        panel,
+        render,
+        status,
+        zoom: (factor) => {
+          zoom = clamp(zoom * factor, 0.25, 12);
+          renderCanvas();
+        },
+      });
+      await prepareDocument(history.current);
       render();
-      if (creator) panel('create');
+      if (creator) {
+        root.dataset.workMode = 'advanced';
+        smart.render();
+        panel('create');
+      } else if (rasterSource) panel('region');
       root.removeAttribute('aria-busy');
       qa('[inert]').forEach((el) => el.removeAttribute('inert'));
       status(
@@ -1370,12 +1515,18 @@ function init(root: HTMLElement) {
           : creator
             ? 'Your blank canvas is ready. Add a shape, draw, or choose a starter. Changes are saved on this device.'
             : rasterSource
-              ? 'Your image layer is ready. Add text and shapes, or select the image to move, resize and crop. Changes are saved on this device.'
+              ? 'Click a part of the image to select it, choose a new color, then download. Your original image is preserved; edits stay on this device.'
               : `${original.layers.length} editable layers loaded. Changes are saved locally on this device.`,
       );
     } catch (error) {
       status(error instanceof Error ? error.message : 'The artwork could not be opened.', true);
       qa<HTMLButtonElement>('button').forEach((b) => (b.disabled = true));
+      root.removeAttribute('aria-busy');
+      const retry = document.createElement('button');
+      retry.textContent = 'Retry loading artwork';
+      retry.className = 'uc-primary';
+      retry.addEventListener('click', () => location.reload());
+      q('[data-status]').after(retry);
     }
   })();
 }

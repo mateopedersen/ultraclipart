@@ -1,5 +1,7 @@
 import type { EditorDocument } from './model';
 import { colorHex, documentSvg } from './svg';
+import { hasRasterEdits } from './smart/render';
+import { rasterPdf, isLocalRaster } from './raster';
 import type { jsPDF } from 'jspdf';
 import {
   paperLayout,
@@ -71,7 +73,14 @@ async function colorResources() {
 export async function exportPdf(doc: EditorDocument): Promise<Blob> {
   if (doc.layers.some((layer) => layer.kind === 'raster')) {
     const { exportRasterPdf } = await import('./raster-pdf');
-    return exportRasterPdf(doc, exportVectorPdf);
+    return exportRasterPdf(doc, exportVectorPdf, async (layer) => {
+      if (!hasRasterEdits(layer) && !isLocalRaster(layer)) return rasterPdf(layer);
+      const [{ editedRasterPdf }, { lut }] = await Promise.all([
+        import('./smart/edited-pdf'),
+        colorResources(),
+      ]);
+      return editedRasterPdf(layer, lut);
+    });
   }
   return exportVectorPdf(doc);
 }
@@ -229,10 +238,18 @@ async function exportVectorPdf(doc: EditorDocument): Promise<Blob> {
               'PDF text currently supports Latin characters. Export WebP for this caption, or use a Latin caption.',
             );
           if (fill) pdf.setTextColor(...lookupCmyk(fill, lut));
-          pdf.setFont('helvetica', Number(style.fontWeight) >= 600 ? 'bold' : 'normal');
+          pdf.setFont(
+            style.fontFamily.includes('Courier')
+              ? 'courier'
+              : style.fontFamily.includes('Georgia')
+                ? 'times'
+                : 'helvetica',
+            Number(style.fontWeight) >= 600 ? 'bold' : 'normal',
+          );
           pdf.setFontSize(parseFloat(style.fontSize) || 48);
           pdf.text(text, a('x'), a('y'), {
             lineHeightFactor: 1.2,
+            renderingMode: stroke ? 'fillThenStroke' : 'fill',
             align:
               style.textAnchor === 'middle'
                 ? 'center'
@@ -259,7 +276,7 @@ async function exportVectorPdf(doc: EditorDocument): Promise<Blob> {
       pdf.restoreGraphicsState();
     });
     const blob = pdf.output('blob');
-    if (blob.size > 1000000)
+    if (blob.size > 1000000 && !doc.exportPreferences?.allowLargePdf)
       throw new Error(
         `This edited PDF is ${blob.size.toLocaleString()} bytes, above the 1,000,000-byte limit. Remove duplicate layers or lengthy captions and try again. Your artwork has not been degraded.`,
       );

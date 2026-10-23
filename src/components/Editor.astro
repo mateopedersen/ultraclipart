@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import StudioPanels from './StudioPanels.astro';
 import { shapeMarkup, shapeNames } from '../editor/creation';
 interface Props {
   creator?: boolean;
@@ -68,6 +69,17 @@ const rasterSource = raster
       </button>
     </div>
   </div>
+  <div class="uc-modes" role="group" aria-label="Studio work mode">
+    <button data-work-mode="quick" aria-pressed="true">
+      Quick Edit
+    </button>
+    <button data-work-mode="advanced" aria-pressed="false">
+      Advanced Edit
+    </button>
+    <button data-work-mode="print" aria-pressed="false">
+      Print &amp; Create
+    </button>
+  </div>
   <div class="uc-notice" role="status" aria-live="polite" data-status>
     {creator
       ? 'Your blank canvas is ready. Add a shape, draw, or choose a starter. Changes are saved on this device.'
@@ -84,7 +96,9 @@ const rasterSource = raster
               ['canvas', 'crop', 'Canvas'],
             ]
           : []),
-        ['transform', 'select', 'Select'],
+        ['region', 'select', 'Smart Select'],
+        ['studio', 'image', 'Studio Pro'],
+        ['transform', 'select', 'Transform'],
         ['color', 'color', 'Recolor'],
         ['background', 'background', 'Background'],
         ['print', 'print', 'Print / B&W'],
@@ -140,9 +154,13 @@ const rasterSource = raster
     </div>
     <aside class="uc-properties" aria-label="Artwork properties">
       <h2 data-panel-title>{creator ? 'Make something yours' : 'Edit clipart'}</h2>
+      <button data-smart-action="collapse-properties" class="uc-mobile-properties">
+        Show / hide controls
+      </button>
       <p class="uc-selection" data-selection>
         Select a layer to begin
       </p>
+      <StudioPanels />
       {compositionTools && (
         <>
           <div
@@ -330,8 +348,8 @@ const rasterSource = raster
           Selected layer<select data-layer-picker aria-label="Selected layer"></select>
         </label>
         <p data-raster-color-hint class="uc-hint" hidden>
-          Select an added text or shape layer to change its colors. The image layer can be moved,
-          resized, cropped and faded.
+          Use Smart Select to recolor a part of this image. Added text and vector shapes use the
+          color controls here.
         </p>
         <div data-colors class="uc-swatches" aria-label="Layer colors"></div>
         <label>
@@ -444,6 +462,7 @@ const rasterSource = raster
             <option value="fit">Fit entire artwork</option>
             <option value="fill">Fill page (may crop edges)</option>
             <option value="actual">Actual size (96 px per inch)</option>
+            <option value="native">Native print (600 pixels per inch)</option>
           </select>
         </label>
         <label class="uc-check">
@@ -451,7 +470,7 @@ const rasterSource = raster
         </label>
         <p class="uc-hint">
           {raster
-            ? `The original image is ${art.width?.toLocaleString('en-US')} × ${art.height?.toLocaleString('en-US')} pixels. Its CMYK image and profile are preserved in PDF exports.`
+            ? `The original image is ${art.width?.toLocaleString('en-US')} × ${art.height?.toLocaleString('en-US')} pixels. Unchanged images preserve their source CMYK data. Region edits are converted to the GRACoL print condition without reducing resolution.`
             : 'Vector artwork stays sharp at any size.'}{' '}
           CMYK colors may differ slightly from the screen; request a proof for color-critical
           printing.
@@ -513,6 +532,7 @@ const rasterSource = raster
           <button data-action="delete">Delete</button>
         </div>
         <button data-action="load">Open saved project</button>
+        <button data-action="delete-recovery">Delete local recovery copy</button>
         <input hidden data-load type="file" accept=".json,application/json" />
       </div>
       <div id="uc-pane-text" role="region" aria-labelledby="uc-tool-text" data-pane="text" hidden>
@@ -600,10 +620,15 @@ const rasterSource = raster
         <p data-pdf-options hidden>
           Uses your Print setup: paper, orientation, margins and placement.{' '}
           {raster
-            ? 'The source image keeps its embedded CMYK profile. Added text and shapes use the GRACoL output condition.'
+            ? 'Unchanged images keep their original CMYK data and any source profile. Edited pixels, text and shapes use the GRACoL output condition (referenced, not embedded).'
             : 'Colors are converted through the GRACoL print profile. The PDF references the GRACoL output condition; the full ICC profile is not embedded.'}{' '}
-          A maximum of 1,000,000 bytes is enforced after export.
+          The default limit is 1,000,000 bytes. A larger lossless file requires the explicit option
+          below.
         </p>
+        <label class="uc-check">
+          <input data-allow-large-pdf type="checkbox" /> Allow a larger lossless PDF if the 1 MB
+          limit is exceeded
+        </label>
         <label>
           Filename
           <input data-filename value={art.id} maxlength="100" />
@@ -625,6 +650,87 @@ const rasterSource = raster
   initializeEditors();
 </script>
 <style is:global>
+  .uc-mobile-properties {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    .uc-mobile-properties {
+      display: block;
+    }
+    .uc-editor[data-properties-collapsed='true'] [data-pane] {
+      display: none;
+    }
+  }
+  .uc-modes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .uc-region-list {
+    display: grid;
+    gap: 6px;
+    margin: 12px 0;
+  }
+  .uc-region-row {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    border: 1px solid #d9e2ee;
+    border-radius: 8px;
+    padding: 6px;
+  }
+  .uc-region-row button {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  .uc-region-row button:first-child {
+    flex: 1;
+    text-align: left;
+  }
+  .uc-mask-overlay {
+    pointer-events: none;
+  }
+  .uc-editor[data-smart-active='true'] .uc-stage {
+    touch-action: none;
+    cursor: crosshair;
+  }
+  .uc-editor[data-smart-active='true'] .uc-selection-overlay {
+    display: none;
+  }
+  .uc-editor details {
+    margin: 12px 0;
+  }
+  .uc-editor summary {
+    cursor: pointer;
+    padding: 8px 0;
+    font-weight: 600;
+  }
+  .uc-editor[data-work-mode='quick'] [data-panel='studio'],
+  .uc-editor[data-work-mode='quick'] [data-panel='create'],
+  .uc-editor[data-work-mode='quick'] [data-panel='canvas'],
+  .uc-editor[data-work-mode='quick'] [data-panel='layers'],
+  .uc-editor[data-work-mode='quick'] [data-panel='print'] {
+    display: none;
+  }
+  .uc-editor[data-work-mode='quick'] [data-wand-controls] .uc-row,
+  .uc-editor[data-work-mode='quick'] [data-wand-controls] .uc-check,
+  .uc-editor[data-work-mode='quick'] [data-advanced-selection] {
+    display: none;
+  }
+  @media (max-width: 700px) {
+    .uc-editor button {
+      min-height: 44px;
+    }
+    .uc-modes button {
+      flex: 1;
+      padding: 8px 5px;
+    }
+    .uc-properties {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+  }
   .uc-editor {
     --uc-navy: var(--ink, #142442);
     --uc-blue: var(--blue, #2360e8);
@@ -1341,6 +1447,28 @@ const rasterSource = raster
   @media (max-width: 800px) {
     .uc-editor[data-composition] .uc-notice {
       min-height: 74px;
+    }
+  }
+</style>
+
+<style is:global>
+  .uc-editor .uc-properties,
+  .uc-editor[data-composition] .uc-properties {
+    max-height: min(76vh, 900px);
+    overflow-y: auto;
+    align-self: start;
+  }
+  @media (max-width: 800px) {
+    .uc-editor .uc-properties,
+    .uc-editor[data-composition] .uc-properties {
+      max-height: 65vh;
+    }
+    .uc-editor .uc-tools {
+      display: flex;
+      overflow-x: auto;
+    }
+    .uc-editor .uc-tools button {
+      min-width: 76px;
     }
   }
 </style>

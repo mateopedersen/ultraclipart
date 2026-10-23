@@ -14,6 +14,7 @@ import type { EditorDocument, Layer, RasterLayer } from './model';
 import { paperLayout } from './pdf-math';
 import { rasterPlacement } from './raster-placement';
 import { rasterPdf } from './raster';
+import { effectBounds } from './smart/padding';
 import { compactSoftMasks } from './pdf-alpha';
 
 /** Compose existing CMYK image streams with independently rendered vector runs.
@@ -69,16 +70,32 @@ export async function exportRasterPdf(
       continue;
     }
     await flushVectors();
-    let image = embedded.get(layer.assetId);
+    const key = JSON.stringify([layer.assetId, layer.regions, layer.effects]);
+    let image = embedded.get(key);
     if (!image) {
       const source = await PDFDocument.load(await sourcePdf(layer), { updateMetadata: false });
       await compactSoftMasks(source);
       [image] = await output.embedPages([source.getPage(0)]);
-      embedded.set(layer.assetId, image);
+      embedded.set(key, image);
     }
+    const bounds = effectBounds(layer),
+      angle = (layer.angle * Math.PI) / 180;
+    const placed = {
+      ...layer,
+      width: bounds.width,
+      height: bounds.height,
+      x:
+        layer.x +
+        Math.cos(angle) * bounds.x * layer.scaleX -
+        Math.sin(angle) * bounds.y * layer.scaleY,
+      y:
+        layer.y +
+        Math.sin(angle) * bounds.x * layer.scaleX +
+        Math.cos(angle) * bounds.y * layer.scaleY,
+    };
     page.pushOperators(
       pushGraphicsState(),
-      concatTransformationMatrix(...rasterPlacement(doc, layer, image.width, image.height)),
+      concatTransformationMatrix(...rasterPlacement(doc, placed, image.width, image.height)),
     );
     page.drawPage(image, {
       x: 0,
@@ -92,9 +109,9 @@ export async function exportRasterPdf(
   await flushVectors();
   page.pushOperators(popGraphicsState());
   const bytes = await output.save({ useObjectStreams: true });
-  if (bytes.length > 1_000_000)
+  if (bytes.length > 1_000_000 && !doc.exportPreferences?.allowLargePdf)
     throw new Error(
-      `This edited PDF is ${bytes.length.toLocaleString()} bytes, above the 1,000,000-byte limit. Simplify added layers and try again. The original image has not been reduced in quality.`,
+      `This edited PDF is ${bytes.length.toLocaleString()} bytes, above the 1,000,000-byte limit. No pixels were downsampled. Choose WebP, simplify the composition, or explicitly allow a larger lossless PDF in export settings.`,
     );
   return new Blob([new Uint8Array(bytes)], { type: 'application/pdf' });
 }

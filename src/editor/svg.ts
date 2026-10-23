@@ -8,7 +8,9 @@ import {
   type StylePreset,
 } from './model';
 import { parsePath } from './pdf-math';
-import { rasterPreview, requireRaster } from './raster';
+import { requireRaster } from './raster';
+import { processedPreview, processedBounds, prepareDocument } from './smart/render';
+import { textNodes } from './smart/typography';
 export const NS = 'http://www.w3.org/2000/svg';
 const tags = new Set([
   'svg',
@@ -346,28 +348,15 @@ export function nodeForLayer(layer: Layer): SVGGElement {
   if (layer.kind === 'vector') g.innerHTML = layer.markup;
   else if (layer.kind === 'raster') {
     const image = document.createElementNS(NS, 'image');
-    image.setAttribute('href', rasterPreview(layer));
-    image.setAttribute('width', String(layer.width));
-    image.setAttribute('height', String(layer.height));
+    image.setAttribute('href', processedPreview(layer));
+    const bounds = processedBounds(layer);
+    for (const key of ['x', 'y', 'width', 'height'] as const)
+      image.setAttribute(key, String(bounds[key]));
     image.setAttribute('preserveAspectRatio', 'none');
     image.setAttribute('opacity', String(layer.opacity));
     g.append(image);
   } else {
-    const text = document.createElementNS(NS, 'text');
-    text.setAttribute('data-caption', layer.text);
-    for (const [index, line] of layer.text.split('\n').entries()) {
-      const span = document.createElementNS(NS, 'tspan');
-      span.textContent = line;
-      span.setAttribute('x', '0');
-      span.setAttribute('dy', index === 0 ? '0' : '1.2em');
-      text.append(span);
-    }
-    text.setAttribute('font-family', 'UltraEditorText, Arial, sans-serif');
-    text.setAttribute('font-size', String(layer.size));
-    text.setAttribute('font-weight', layer.bold ? '700' : '400');
-    text.setAttribute('text-anchor', layer.align);
-    text.setAttribute('fill', layer.color);
-    g.append(text);
+    g.append(...textNodes(layer));
   }
   for (const shape of g.querySelectorAll('path,rect,circle,ellipse,line,polyline,polygon,text'))
     shape.setAttribute(
@@ -511,6 +500,7 @@ export async function renderWebp(
   size: number,
   quality: number,
 ): Promise<Blob> {
+  await prepareDocument(doc);
   const svg = documentSvg(doc);
   const box = doc.crop || doc;
   const width = Math.round(size),

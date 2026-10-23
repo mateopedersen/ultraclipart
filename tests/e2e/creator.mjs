@@ -73,6 +73,10 @@ const draw = async (cancel = false) => {
 try {
   await page.goto(`${base}/create/`);
   await expect(page.locator('[data-status]')).toContainText('blank canvas is ready');
+  await expect(page.locator('button[data-work-mode=advanced]')).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  );
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('[data-empty-canvas]')).toBeVisible();
   await expect(page.locator('.uc-editor [inert]')).toHaveCount(0);
@@ -143,7 +147,7 @@ try {
   await action('ungroup').click();
   expect((await state()).layers.every((l) => !l.group)).toBe(true);
   const project = await saved('created-project.json');
-  const exact = JSON.stringify(await state());
+  let exact = JSON.stringify(await state());
   await page.reload();
   await expect(page.locator('[data-status]')).toContainText('restored');
   expect(JSON.stringify(await state())).toBe(exact);
@@ -156,6 +160,7 @@ try {
   checks.push('text, linked groups, local recovery, project save/open exact roundtrip');
   await exporting('webp', 'created-art.webp');
   await exporting('pdf', 'created-art.pdf');
+  exact = JSON.stringify(await state());
   await page.screenshot({ path: path.join(out, 'created-desktop.png'), fullPage: true });
   // A real imported SVG uses root inheritance, translated viewBox and a root transform.
   const safe =
@@ -164,13 +169,14 @@ try {
     .locator('[data-import-svg]')
     .setInputFiles({ name: 'safe.svg', mimeType: 'image/svg+xml', buffer: Buffer.from(safe) });
   await expect(page.locator('[data-status]')).toContainText('2 editable SVG layers imported');
-  const imported = await state();
+  let imported = await state();
   expect(imported.width).toBe(640);
   expect(imported.layers[0].label).toBe('Imported leaf');
   expect(imported.layers[0].markup).toContain('fill-opacity="0.7"');
   expect(imported.layers[0].markup).toContain('translate(3 4)');
   await exporting('webp', 'imported.webp');
   await exporting('pdf', 'imported.pdf');
+  imported = await state();
   checks.push('safe import keeps layers, canvas, viewBox origin, root transform and paint opacity');
   const malicious = [
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><script>alert(1)</script></svg>',

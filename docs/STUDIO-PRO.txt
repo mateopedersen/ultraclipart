@@ -1,0 +1,112 @@
+ULTRACLIPART STUDIO PRO — IMPLEMENTATION AND ACCEPTANCE
+
+Scope
+The existing Astro 7 / TypeScript editor and Cloudflare hosting remain in place.
+All 244 published raster artworks use the same image-coordinate selection engine.
+New catalogue entries receive the engine and verified studio manifest on the next build.
+Users can also open their own still PNG/WebP locally (4 MB; each side <=4096 px).
+No image upload endpoint, paid API, account, external model download or new server is used.
+
+Editing model
+Native SVG objects and captions remain independently editable source layers. Flattened
+images remain immutable raster sources with editable RLE8 coverage masks, adjustments,
+brush operations and ordered effects. A region does not claim to be a movable recovered
+object. Whole image layers can transform/group using the existing editor.
+
+Smart Select uses OKLab chroma/hue, alpha, local color/edge constraints and connectivity.
+It proposes a selection, not semantic object recognition. Wand adds RGB/OKLab distance,
+contiguous/global mode and 4/8 neighbors. Lasso, polygon, source-coordinate brush,
+add/subtract, grow/shrink, hole fill, smoothing, feather and edge cleanup refine masks.
+Color replacement/tint preserves local luminance variation. All adjustments blend inside
+the mask and keep source alpha; erase/restore are explicitly separate operations.
+The bow acceptance example uses several clicks plus manual polygon refinement. The dress
+uses manual polygons and the iris uses a small brush. No one-click-perfect claim is made.
+
+Creative tools
+- Sticker outline, configurable color/softness/shadow and native-scale cut-contour SVG.
+  Effect padding extends the canvas when there is no explicit crop. Source pixels are
+  not resampled. An existing crop remains intentional and is called out in the status.
+- Coloring pages: three detail levels, line width, cleanup, editable effects; eraser,
+  restore and repair run after line generation so corrections do not create new edges.
+- Catalogue and local-file composer: independent image layers, transforms and grouping.
+- Precision erase, source restoration, clone stamp and local brightness-matched repair.
+  Local repair is deterministic sampling, not semantic/generative inpainting.
+- Dots, stripes, plaid, diamonds, procedural texture and gradient; scale/angle/opacity and
+  normal/multiply/screen blends stay editable inside the mask.
+- Outline, shadow, inner shadow, glow, blur, sharpening, color balance and subtle emboss.
+  Controls adapt to the selected effect; each effect can be edited, hidden or removed.
+- Straight/arc/circle captions, letter spacing, line height, outlines and shadows. Text
+  remains text in the project. Existing bundled text font and system serif/mono families
+  avoid unlicensed downloadable font assets.
+- Frequency palette extraction, multiple-color tone mapping, local palette saving,
+  original-palette restore and 3–6 separately exported color variations.
+- Letter/A4 sticker sheets, labels, folded cards, invitations, name tags and worksheets.
+  Layouts use measured 96-unit/inch geometry, actual-size PDF placement and optional guides.
+- ZIP containing matched WebP and actual CMYK PDF pairs. Every PDF must pass 1,000,000
+  bytes; a failed pair stops the batch and reports the reason. No silent reduction.
+- Quality panel reports transparency, empty bounds, isolated edge pixels and effective
+  print PPI. Object-boundary intent/color spill still requires overlay/before-after review.
+- Conservative monochrome SVG trace exports actual filled paths, including holes. It
+  checks chromatic pixels, monochrome approximation error and contour complexity. Colored,
+  heavily shaded or overcomplex art is rejected. Antialiasing becomes vector edges;
+  the trace is an approximation and is not the original vector source. Cut contours are
+  separately labelled guides, never presented as a vector copy of full-color artwork.
+
+Architecture
+src/editor/model.ts: versioned document/region/effect validation; source references;
+  75-state history capped to about 32 MB of serialized history state.
+src/editor/raster.ts + pages/studio-catalog.json.ts: catalogue checksum/CORS policy,
+  dimension validation and bounded local PNG/WebP decoding. Imported project URLs never
+  override the allowlist. Local sources are embedded only when serializing a project;
+  bitmap source strings are not copied into every history entry.
+src/editor/smart/pixels.ts: masks, morphology, OKLab recoloring, patterns and brush ops.
+src/editor/smart/effects.ts, padding.ts, typography.ts, trace.ts: creative processing.
+src/editor/smart/processor.ts / worker.ts / render.ts: two leased source workers, obsolete
+  selection generation guards, shared bitmap cache for repeated copies and page cleanup.
+  CPU fallback is lazy. Without Worker support heavy operations can take longer; no GPU
+  dependency or false all-devices timing promise. Worker results transfer pixel buffers.
+src/editor/smart/controller.ts / studio.ts and components/StudioPanels.astro: integrated
+  controls and modes. Quick, Advanced and Print & Create share one document/history.
+src/editor/smart/storage.ts: IndexedDB recovery with immediate small-project localStorage
+  mirror; downloadable self-contained project for local image sources. Recovery deletion
+  is explicit. Storage failure asks the user to save their project file.
+src/editor/smart/cmyk.ts / predict.ts / edited-pdf.ts: true ICC-LUT RGB→CMYK conversion,
+  reversible adaptive PNG predictors, lossless Flate streams and exact alpha soft masks.
+  Original catalogue PDFs retain their source streams through the existing compositor.
+
+Limits and export honesty
+12 composed images / 40 million source pixels, 16 MB project files, <=100 regions per
+image, <=24 effects. Template copies share processed source bitmaps. PDF keeps all native
+pixels; native print scale is 600 PPI, while Fit/Fill can intentionally lower effective PPI.
+The quality panel reports that difference. Detailed edited PDFs can exceed 1 MB: individual
+export requires the explicit larger-lossless checkbox; batch export keeps the strict limit.
+Edited CMYK uses the existing GRACoL LUT and references its output condition; it does not
+embed the multi-megabyte ICC profile or claim certified PDF/X compliance. Monitor RGB and
+print CMYK may differ. The original downloadable catalogue files are never overwritten.
+
+Research decisions
+SlimSAM was evaluated for package/license/deployment suitability, not claimed as a proven
+quality upgrade. The published Xenova ONNX package is Apache-2.0; quantized encoder 8.88 MB
+and decoder 4.9 MB (about 13.78 MB before runtime/working memory). No device-quality and
+memory acceptance suite for that model was established, so no AI button/model dependency
+ships. Functional CPU/Worker selection remains the baseline.
+https://huggingface.co/Xenova/slimsam-77-uniform/tree/main/onnx
+https://huggingface.co/docs/transformers.js/en/index
+ImageTracer.js offers browser tracing under the Unlicense; rather than promising broad
+raster reconstruction, this release uses a bounded in-house monochrome contour tracer.
+https://github.com/jankovicsandras/imagetracerjs
+OffscreenCanvas was considered; numeric image operations execute in workers and only the
+preview conversion stays on the canvas thread for consistent browser support. Large
+transferred buffers and shared source previews avoid full snapshot bitmaps per history.
+https://developer.mozilla.org/en-US/docs/Web/API/OffscreenCanvas
+
+Reproducible checks
+pnpm format:check; pnpm check; pnpm build; pnpm test
+BASE_URL=<preview> UC_BROWSER=<chromium|firefox|webkit> node tests/e2e/studio-pro.mjs
+BASE_URL=<preview> UC_BROWSER=<engine> node tests/e2e/studio-tools.mjs
+BASE_URL=<preview> node tests/e2e/studio-input.mjs
+BASE_URL=<preview> node tests/e2e/studio-upload.mjs
+python scripts/check-studio-exports.py reports/studio-pro/chromium reports/studio-tools/chromium/three-variants.zip
+CF_PAGES=1 pnpm build
+The CI matrix includes the existing site/search/creator/raster tests and the new suites.
+Per-run reports and before/after images are emitted under reports/ and retained as CI artifacts.
