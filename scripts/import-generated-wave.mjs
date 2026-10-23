@@ -3,6 +3,7 @@ import { resolve, join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { validateEditorSource } from '../src/lib/artwork-source.ts';
 import { validateBatch } from './r2/plan.mjs';
+import { replacementFor, mergeGeneratedWave } from './replacement-contract.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const wave = process.argv[2];
@@ -23,6 +24,7 @@ if (
 )
   throw new Error('A complete rendered and visually reviewed wave is required');
 const hash = (body) => createHash('sha256').update(body).digest('hex');
+const replacementReview = plan.replacementReview ? await read(plan.replacementReview) : null;
 const createdAt = new Date().toISOString();
 const batch = [],
   imported = [];
@@ -41,6 +43,18 @@ for (const row of report.artworks) {
     throw new Error('Incomplete source verification');
   if (hash(await readFile(join(root, meta.source))) !== row.sourceSha256)
     throw new Error('Master image changed after preflight');
+  for (const [key, value] of Object.entries(meta))
+    if (JSON.stringify(row[key]) !== JSON.stringify(value))
+      throw new Error(`Artwork metadata changed after preflight: ${row.id}/${key}`);
+  if ([...catalog, ...imported].some((item) => item.files.webp.sha256 === row.files.webp.sha256))
+    throw new Error(`Repeated artwork download rejected: ${row.id}`);
+  const prior = replacementFor(plan, meta, catalog, replacementReview);
+  if (
+    prior &&
+    (row.files.webp.sha256 === prior.files.webp.sha256 ||
+      row.files.pdf.sha256 === prior.files.pdf.sha256)
+  )
+    throw new Error('Replacement must contain a new composition');
   const item = {
     id: row.id,
     topic: plan.topic,
@@ -67,7 +81,18 @@ for (const row of report.artworks) {
     published: true,
     indexable: true,
     createdAt,
-    revision: 1,
+    revision: prior ? prior.revision + 1 : 1,
+    ...(prior
+      ? {
+          replacesArtwork: {
+            sourceCollection: prior.sourceCollection,
+            revision: prior.revision,
+            webpSha256: prior.files.webp.sha256,
+            pdfSha256: prior.files.pdf.sha256,
+            reason: 'REPLACE_NEAR_COMPOSITION',
+          },
+        }
+      : {}),
     formats: ['WEBP', 'PDF'],
     printProfile: row.image.profile,
     pdfColorSpace: row.image.colorSpace,
@@ -100,8 +125,7 @@ for (const row of report.artworks) {
   validateEditorSource(item);
   imported.push(item);
 }
-const next = [...catalog, ...imported];
-if (new Set(next.map((item) => item.id)).size !== next.length) throw new Error('Catalog collision');
+const next = mergeGeneratedWave(catalog, imported, Boolean(plan.replacementReview));
 validateBatch(batch);
 await writeFile(join(root, `work/art.${wave}.next.json`), JSON.stringify(next, null, 2) + '\n');
 await writeFile(join(root, `work/${wave}.r2-batch.json`), JSON.stringify(batch, null, 2) + '\n');

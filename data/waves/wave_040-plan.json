@@ -1,0 +1,22 @@
+{
+  "wave": "wave_040",
+  "topic": "flamingo",
+  "method": "builtin-image-generation",
+  "research": "data/research/flamingo-replacement-2026-10-23.json",
+  "replacementReview": "data/artwork-replacements.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "flamingo-stipple-dotwork-black-and-white-clipart",
+      "title": "Flamingo Settling on a Mud Nest",
+      "alt": "Black-and-white flamingo sitting on a mud nest beside an egg.",
+      "description": "Black-and-white flamingo sitting on a mud nest beside an egg. Use this original animal illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_040/source/flamingo-stipple-dotwork-black-and-white-clipart.png",
+      "replacesRevision": 1
+    }
+  ]
+}

@@ -10,7 +10,11 @@ const engine = process.env.UC_BROWSER ?? 'chromium';
 const output = resolve(process.env.EVIDENCE_DIR ?? 'reports/animal-gallery', engine);
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const catalog = read('../../data/art.json');
-const items = catalog.filter((art) => art.sourceCollection === 'owner-animal-2026-10-23');
+const items = catalog.filter(
+  (art) =>
+    art.sourceCollection === 'owner-animal-2026-10-23' ||
+    art.replacesArtwork?.sourceCollection === 'owner-animal-2026-10-23',
+);
 const topics = [...new Set(items.map((art) => art.topic))].sort();
 const manifest = read('../../data/publication.json');
 const files = new Map(manifest.files.map((file) => [`${file.assetId}:${file.kind}`, file]));

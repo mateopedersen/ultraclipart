@@ -1,0 +1,117 @@
+{
+  "wave": "wave_035",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-child-sledding",
+      "title": "Child Riding a Wooden Sled",
+      "alt": "A smiling child in a yellow hat and red coat holds the rope of a wooden sled gliding through snow.",
+      "description": "A smiling child in a yellow hat and red coat holds the rope of a wooden sled gliding through snow. Use this illustration for winter storytelling and outdoor activity cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_035/source/winter-child-sledding.png",
+      "jpeg2000Resolutions": 5,
+      "topic": "winter",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "045ef2d11e753169c06129a90a241d5da4165f878bfa481f7bb438bfba507bd0",
+      "inputSignature": "d54f8a6521312b552a2570b98044a3583657886dd871372e516625ab1b3031ae",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 5,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979336,
+        "weightedCmykRmse": 1.484729
+      },
+      "trials": [
+        {
+          "numResolutions": 5,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1822350,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 5,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1310471,
+          "weightedCmykRmse": 0.826999
+        },
+        {
+          "numResolutions": 5,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1202101,
+          "weightedCmykRmse": 0.964047
+        },
+        {
+          "numResolutions": 5,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1091376,
+          "weightedCmykRmse": 1.1786
+        },
+        {
+          "numResolutions": 5,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979336,
+          "weightedCmykRmse": 1.484729
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        17,
+        14,
+        1295,
+        1165
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_035/exports/winter-child-sledding.pdf",
+          "bytes": 979336,
+          "sha256": "0974a46307857997a69999bb32fe7c618ea7fa12cfcd2a4b650f10f37707104b"
+        },
+        "webp": {
+          "path": "work/production/wave_035/exports/winter-child-sledding.webp",
+          "bytes": 1112422,
+          "sha256": "673c2026d3cbf227c21b3647f60eda5a8d4ebef8f13fe6bf67d10a5a846e019e"
+        },
+        "thumb": {
+          "path": "work/production/wave_035/exports/winter-child-sledding-thumb.webp",
+          "bytes": 70776,
+          "sha256": "c57175a4a121b805a839fb0f0c47690993d1e44db1e56e34d60687c85ad42424"
+        }
+      },
+      "proofSha256": "213914a34d6f6c779a0544b80c5791ba6c82e833585865a71a9b83816e9aabcc",
+      "pairMeanRgbDifference": 1.91952
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Inspected full actual PDF proof against original source: coherent seated child, two mittened hands on rope, boots on wooden sled, no clipping; native resolution and alpha exact, 48dB floor unchanged.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T20:26:49.926Z",
+  "cdnVerifiedAt": "2026-10-23"
+}

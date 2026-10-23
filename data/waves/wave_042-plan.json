@@ -1,0 +1,32 @@
+{
+  "wave": "wave_042",
+  "topic": "chicken",
+  "method": "builtin-image-generation",
+  "research": "data/research/chicken-replacement-2026-10-23.json",
+  "replacementReview": "data/artwork-replacements.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "chicken-dotwork-black-and-white-clipart",
+      "title": "Hen Taking a Dust Bath",
+      "alt": "Black-and-white hen dust bathing with an outstretched wing and fluffed feathers.",
+      "description": "Black-and-white hen dust bathing with an outstretched wing and fluffed feathers. Use this original animal illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_042/source/chicken-dotwork-black-and-white-clipart.png",
+      "replacesRevision": 1
+    },
+    {
+      "id": "chicken-vintage-engraving-black-and-white-clipart",
+      "title": "Hen Climbing a Coop Ramp",
+      "alt": "Black-and-white hen stepping up a wooden ramp toward a straw-filled nesting box.",
+      "description": "Black-and-white hen stepping up a wooden ramp toward a straw-filled nesting box. Use this original animal illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_042/source/chicken-vintage-engraving-black-and-white-clipart.png",
+      "replacesRevision": 1
+    }
+  ]
+}

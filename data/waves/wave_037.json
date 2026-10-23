@@ -1,0 +1,96 @@
+{
+  "wave": "wave_037",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "squirrel-dotwork-black-and-white-clipart",
+      "title": "Squirrel Carrying a Nesting Twig",
+      "alt": "Black-and-white squirrel carrying a forked twig while moving along a branch.",
+      "description": "Black-and-white squirrel carrying a forked twig while moving along a branch. Use this illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_037/source/squirrel-dotwork-black-and-white-clipart-v3.png",
+      "replacesRevision": 1,
+      "topic": "squirrel",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "0a52612bbad19ee15ac317c2dcf7db0d430d68648b630bdfa9fbee9d833d6aa1",
+      "inputSignature": "f76c00e16b006510871abc5bdaae5b42d653a996600e1f86752ab8036f0b26c8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 696723,
+        "weightedCmykRmse": 0.771535
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1146467,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 696723,
+          "weightedCmykRmse": 0.771535
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        49,
+        18,
+        1517,
+        1014
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_037/exports/squirrel-dotwork-black-and-white-clipart.pdf",
+          "bytes": 696723,
+          "sha256": "d9a8c28acf49622f1372a8a53ef59d87070784f1ded17f235d549078b7bbb3c9"
+        },
+        "webp": {
+          "path": "work/production/wave_037/exports/squirrel-dotwork-black-and-white-clipart.webp",
+          "bytes": 842910,
+          "sha256": "102261d344bbb7d575c8555373a029729ffb657a8a3bc5d629d790f635d19b86"
+        },
+        "thumb": {
+          "path": "work/production/wave_037/exports/squirrel-dotwork-black-and-white-clipart-thumb.webp",
+          "bytes": 30874,
+          "sha256": "f1bb26e23ec1ddc2fb89fa3797da75ba37536c45873ff254f647c963fc98a88b"
+        }
+      },
+      "proofSha256": "f103dbe36da83f7089373a3bec57507328ff59c66ef00fc70ed216720eda0410",
+      "pairMeanRgbDifference": 1.83612
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Actual PDF render reviewed: twig-bearing squirrel on branch, four coherent paws, clean silhouette, no copied prior standing pose.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:01:03.818Z",
+  "cdnVerifiedAt": "2026-10-23"
+}

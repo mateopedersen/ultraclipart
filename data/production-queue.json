@@ -15,16 +15,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 144,
-  "suppliedArtworkCount": 2650,
-  "originalTopicArtworkCount": 294,
+  "generatedArtworkCount": 153,
+  "suppliedArtworkCount": 2642,
+  "originalTopicArtworkCount": 301,
   "supplementalArtworkCount": 2500,
-  "qualityApprovedArtworkCount": 294,
+  "qualityApprovedArtworkCount": 301,
   "supplementalApprovedArtworkCount": 2500,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 2794,
-  "remainingToDraw": 5206,
+  "availableArtworkCount": 2801,
+  "remainingToDraw": 5199,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -344,8 +344,8 @@
       "keyword": "Squirrel clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "supplied": 50,
+      "generated": 1,
+      "supplied": 49,
       "available": 50,
       "approved": 50,
       "remainingToDraw": 0,
@@ -1202,8 +1202,8 @@
       "keyword": "Penguin clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "supplied": 50,
+      "generated": 1,
+      "supplied": 49,
       "available": 50,
       "approved": 50,
       "remainingToDraw": 0,
@@ -1215,11 +1215,11 @@
       "keyword": "Winter clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 31,
+      "generated": 38,
       "supplied": 0,
-      "available": 31,
-      "approved": 31,
-      "remainingToDraw": 19,
+      "available": 38,
+      "approved": 38,
+      "remainingToDraw": 12,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/winter.json"
     },
@@ -7584,7 +7584,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "348e4c976e78e42baafbde57b118808597df52e5c6e1b0f1ff571af7f9d47218"
+      "sha256": "2bd5c8f1ac00dccf9609f136c2266ed5582304f65dfedafc1ed77eaf9c37d75d"
     },
     {
       "id": "chicken-dynamic-action-comic-clipart",
@@ -7958,7 +7958,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "b4c08f63c0c1efc2e9f4ef9419b9c1d05ee0cf0ac6d921d9a58b93145a176253"
+      "sha256": "5f55a6aa04ceacb0828aad157cc62a7689ff2c3568171b3543ad2c79d31585f4"
     },
     {
       "id": "chicken-walking-side-profile-colored-pencil-clipart",
@@ -10895,7 +10895,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "e5c15c3652e8ab9b4f2936b4d36a71cf0fee59ba0053b42f17ca76655864de08"
+      "sha256": "a1a6b09800b16c1da684808dee5cef53c7e94bd11582ab55eae906d312042d58"
     },
     {
       "id": "dolphin-dynamic-action-comic-clipart",
@@ -13403,7 +13403,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "fd51f6491ad6a5349d4e411b370632febc0f47626c07bed19807285d2adef602"
+      "sha256": "0c0dcaf9b454d0d3850370ee67ff57fe60b386f02276a015120fe89506ff2213"
     },
     {
       "id": "flamingo-tropical-leaves-paper-cut-clipart",
@@ -17836,7 +17836,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "4af21bb39fb6a4510a460137140a3104476e0a3f25f27d0e3eede08b28ef1520"
+      "sha256": "ecfced0f8abca239e7fa391d826795c428286dbf1ddb14a24514bef9693c5a98"
     },
     {
       "id": "kangaroo-sunglasses-beach-ball-clipart",
@@ -24139,7 +24139,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "3181058ef1f5052e8c1beeb094f9998630c1c96644cfd4ae55a2a003a43bbf40"
+      "sha256": "e8660aa3f75e6de013a1aa2726e4de6a2405e6fd554c820f04f9f76613621013"
     },
     {
       "id": "penguin-enamel-emblem-clipart",
@@ -28506,7 +28506,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "8ae98605610efdff2551cb68573bc619a13277f505636dc7cf511534ccef838b"
+      "sha256": "102261d344bbb7d575c8555373a029729ffb657a8a3bc5d629d790f635d19b86"
     },
     {
       "id": "squirrel-enamel-emblem-clipart",
@@ -30717,7 +30717,7 @@
       "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
-      "sha256": "f5a6c00dfa36fd5bcb8e31c88681f649a5e7d2bbb1e4685ee32d27d518fb09ca"
+      "sha256": "f3d5ff040b0618718672d1210374d094f3f499404b5e5f96c41c324176d35c1d"
     },
     {
       "id": "wolf-drinking-water-gouache-clipart",
@@ -32192,6 +32192,83 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "bfaeb23bacd33333fd3ca5d9691b68ad48a4b43481f4f81c20a6cf3609d6984c"
+    },
+    {
+      "id": "winter-knitted-mittens-on-cord",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "f9cc3e044ae4e837eaa04e4d659957db183b784a45d8d17d03af7fbd123a883d"
+    },
+    {
+      "id": "winter-candle-lantern",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "39bb81e34ab8951bc74f1feee1da8a6cb32d497d4b9f019c98c7aaf34eb905fb"
+    },
+    {
+      "id": "winter-frosted-window",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e0a5c1ada68eafeea7ab9ae0b1c54f83c8afcba997f9437dec0f3733326cdd47"
+    },
+    {
+      "id": "winter-child-sledding",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "673c2026d3cbf227c21b3647f60eda5a8d4ebef8f13fe6bf67d10a5a846e019e"
+    },
+    {
+      "id": "winter-robin-bare-branch",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "93f87e1a5a6415db7fc890e8ece68cf8cca9f0637499f4f3036e921cdcffe27e"
+    },
+    {
+      "id": "winter-hiking-pack",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "0bfccf83e94819a096229fdd6d6ab8d799e0f388d108ce249f34dd48a3436a11"
+    },
+    {
+      "id": "winter-birch-log",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "59738dd415d0dbdd30f6908f4ff45bd55b27ada9d49b68f99c206973405d66d3"
     }
   ]
 }

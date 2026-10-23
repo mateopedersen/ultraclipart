@@ -1,0 +1,22 @@
+{
+  "wave": "wave_041",
+  "topic": "dolphin",
+  "method": "builtin-image-generation",
+  "research": "data/research/dolphin-replacement-2026-10-23.json",
+  "replacementReview": "data/artwork-replacements.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "dolphin-dotwork-black-and-white-clipart",
+      "title": "Dolphin Turning Underwater",
+      "alt": "Black-and-white dolphin curving downward with raised tail flukes and three bubbles.",
+      "description": "Black-and-white dolphin curving downward with raised tail flukes and three bubbles. Use this original animal illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_041/source/dolphin-dotwork-black-and-white-clipart.png",
+      "replacesRevision": 1
+    }
+  ]
+}

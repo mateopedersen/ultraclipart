@@ -1,0 +1,26 @@
+{
+  "wave": "wave_044",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-birch-log",
+      "title": "Birch Log in Snow",
+      "alt": "A fallen birch log with peeling white bark and a visible cut end resting in snow.",
+      "description": "A fallen birch log with peeling white bark and a visible cut end resting in snow. Use this illustration for personal winter projects and classroom activities.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_044/source/winter-birch-log.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "PDF byte cap at unchanged quality floor"
+    }
+  ]
+}

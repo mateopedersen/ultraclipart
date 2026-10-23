@@ -60,13 +60,30 @@ def main():
     stage=ROOT/'work/production'/args.wave;stage.mkdir(parents=True,exist_ok=True)
     lock=(stage/'.export.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     ids=[a['id']for a in plan['items']];assert len(set(ids))==len(ids)
-    briefs=json.loads((ROOT/f'data/briefs/{plan["topic"]}.json').read_text())
-    assert len(briefs['rows'])==50 and all(row['briefReview']=='REVIEWED_FOR_DISTINCT_COMPOSITION' for row in briefs['rows'])
-    assert set(ids)<=set(row['artId']for row in briefs['rows'])
+    replacement_bytes=b''
+    if plan.get('replacementReview'):
+        replacement_path=(ROOT/plan['replacementReview']).resolve()
+        assert replacement_path.is_relative_to(ROOT/'data'), 'Replacement review must be a project ledger'
+        replacement_bytes=replacement_path.read_bytes()
+        decisions=json.loads(replacement_bytes)['decisions']
+        catalog={row['id']:row for row in json.loads((ROOT/'data/art.json').read_text())}
+        for meta in plan['items']:
+            matches=[row for row in decisions if row['replaceId']==meta['id']]
+            assert len(matches)==1 and meta['id'] in catalog, 'Replacement must have one reviewed existing target'
+            prior=catalog[meta['id']];decision=matches[0]
+            assert decision['decision']=='REPLACE_NEAR_COMPOSITION'
+            assert decision['topic']==prior['topic']==plan['topic']
+            assert decision['priorWebpSha256']==prior['files']['webp']['sha256']
+            assert decision['priorPdfSha256']==prior['files']['pdf']['sha256']
+            assert meta['replacesRevision']==prior['revision'], 'Stale replacement revision'
+    else:
+        briefs=json.loads((ROOT/f'data/briefs/{plan["topic"]}.json').read_text())
+        assert len(briefs['rows'])==50 and all(row['briefReview']=='REVIEWED_FOR_DISTINCT_COMPOSITION' for row in briefs['rows'])
+        assert set(ids)<=set(row['artId']for row in briefs['rows'])
     research=json.loads((ROOT/plan['research']).read_text());assert research['topic']==plan['topic'] and research['sourceImageReuse'] is False
     binary=os.environ.get('PDFTOPPM_BIN') or shutil.which('pdftoppm');assert binary,'Poppler required'
     transform=ImageCms.buildTransformFromOpenProfiles(ImageCms.createProfile('sRGB'),ImageCms.getOpenProfile(str(PROFILE)),'RGB','CMYK',renderingIntent=ImageCms.Intent.RELATIVE_COLORIMETRIC,flags=ImageCms.Flags.BLACKPOINTCOMPENSATION)
-    dependencies=Path(__file__).read_bytes()+PROFILE.read_bytes()+(ROOT/'scripts/raster_source.py').read_bytes()+(ROOT/plan['research']).read_bytes()
+    dependencies=Path(__file__).read_bytes()+PROFILE.read_bytes()+(ROOT/'scripts/raster_source.py').read_bytes()+(ROOT/plan['research']).read_bytes()+replacement_bytes
     journal_path=stage/'raster-journal.json';journal=json.loads(journal_path.read_text()) if journal_path.exists() else {}
     files_dir=stage/'exports';files_dir.mkdir(exist_ok=True);proof_dir=stage/'proofs';proof_dir.mkdir(exist_ok=True)
     rows=[];resumed=0
@@ -91,16 +108,19 @@ def main():
         raw=np.array(ImageCms.applyTransform(image.convert('RGB'),transform));weights=np.array(alpha,dtype=np.float64)
         # Fully transparent color cannot affect any composite. Keep all visible samples intact.
         raw[weights==0]=0;cmyk=Image.fromarray(raw,'CMYK');trials=[];selected=None
+        # Wavelet decomposition changes packing, never native pixel dimensions or the quality floor.
+        resolutions=meta.get('jpeg2000Resolutions',6)
+        assert type(resolutions) is int and 4<=resolutions<=6, 'Unsupported JPEG2000 decomposition count'
         for quality in [None,54,52,50,48]:
             if quality and quality<plan['minimumJpxQualityDb']:continue
-            out=io.BytesIO();cmyk.save(out,'JPEG2000',irreversible=quality is not None,**({'quality_mode':'dB','quality_layers':[quality]}if quality else {}))
+            out=io.BytesIO();cmyk.save(out,'JPEG2000',num_resolutions=resolutions,irreversible=quality is not None,**({'quality_mode':'dB','quality_layers':[quality]}if quality else {}))
             with Image.open(io.BytesIO(out.getvalue())) as decoded:
                 decoded.load();assert decoded.mode=='CMYK' and decoded.size==image.size
                 delta=raw.astype(np.float64)-np.array(decoded,dtype=np.float64)
             rmse=float(np.sqrt(np.sum(delta*delta*weights[:,:,None])/(4*np.sum(weights))))
             if quality is None:assert rmse==0
             pdf=pdf_bytes(out.getvalue(),alpha,meta['title'])
-            trials.append({'qualityDb':quality,'losslessCmyk':quality is None,'bytes':len(pdf),'weightedCmykRmse':round(rmse,6)})
+            trials.append({'numResolutions':resolutions,'qualityDb':quality,'losslessCmyk':quality is None,'bytes':len(pdf),'weightedCmykRmse':round(rmse,6)})
             if len(pdf)<=plan['maxPdfBytes'] and rmse<=plan['maximumWeightedCmykRmse']:
                 selected=trials[-1];break
         if selected is None:

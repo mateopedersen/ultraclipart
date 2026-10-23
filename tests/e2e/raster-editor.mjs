@@ -10,6 +10,7 @@ mkdirSync(out, { recursive: true });
 const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url))).filter(
   (a) =>
     a.sourceType === 'raster' &&
+    (process.env.RASTER_REPLACEMENTS !== '1' || Boolean(a.replacesArtwork)) &&
     (!process.env.RASTER_TOPICS || process.env.RASTER_TOPICS.split(',').includes(a.topic)),
 );
 const targets = [

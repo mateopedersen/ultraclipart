@@ -5,7 +5,11 @@ import { createHash } from 'node:crypto';
 import { defaults, searchArtwork } from '../src/lib/search.ts';
 const read = (path) => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const art = read('data/art.json');
-const items = art.filter((item) => item.sourceCollection === 'owner-animal-2026-10-23');
+const items = art.filter(
+  (item) =>
+    item.sourceCollection === 'owner-animal-2026-10-23' ||
+    item.replacesArtwork?.sourceCollection === 'owner-animal-2026-10-23',
+);
 const hasPackage = items.length > 0;
 test(
   'supplied animal package rejects held designs and preserves every verified source pair',
@@ -32,8 +36,28 @@ test(
       assert.equal(proof.pdfAlphaExact, true);
       assert.equal(proof.ppi, 300);
       assert.ok(item.files.pdf.bytes <= 1_000_000);
-      assert.equal(item.files.pdf.sha256, proof.hashes.pdf);
-      assert.equal(item.files.webp.sha256, proof.hashes.webp);
+      if (item.replacesArtwork) {
+        const lineage = item.replacesArtwork;
+        assert.equal(lineage.pdfSha256, proof.hashes.pdf);
+        assert.equal(lineage.webpSha256, proof.hashes.webp);
+        assert.equal(item.revision, lineage.revision + 1);
+        assert.equal(item.productionMethod, 'generated-raster');
+        const wave = read(`data/waves/${item.sourceCollection}.json`);
+        const replacement = wave.artworks.find((row) => row.id === item.id);
+        assert.equal(wave.screenReview, 'PASS');
+        assert.equal(replacement.webpExactRgba, true);
+        assert.equal(replacement.pdfAlphaExact, true);
+        assert.equal(replacement.nativeResolutionPreserved, true);
+        assert.equal(replacement.image.colorSpace, 'Device CMYK');
+        assert.equal(replacement.image.components, 4);
+        for (const kind of ['pdf', 'webp', 'thumb'])
+          assert.equal(replacement.files[kind].sha256, item.files[kind].sha256);
+        assert.notEqual(item.files.webp.sha256, lineage.webpSha256);
+        assert.notEqual(item.files.pdf.sha256, lineage.pdfSha256);
+      } else {
+        assert.equal(item.files.pdf.sha256, proof.hashes.pdf);
+        assert.equal(item.files.webp.sha256, proof.hashes.webp);
+      }
       assert.doesNotMatch(
         item.alt,
         /described below|CMYK|no words|no digits|review copy|\b(?:with|and)\./i,
@@ -67,8 +91,19 @@ test('animal topic counts and source-specific search stay honest', { skip: !hasP
     for (const id of copy[topic].featured) assert.ok(group.some((item) => item.id === id));
   }
   const queue = read('data/production-queue.json');
-  assert.equal(queue.topics.find((item) => item.topic === 'penguin').supplied, 50);
-  assert.equal(queue.topics.find((item) => item.topic === 'squirrel').supplied, 50);
+  for (const topic of ['penguin', 'squirrel']) {
+    const expected = items.filter((item) => item.topic === topic);
+    const actual = queue.topics.find((item) => item.topic === topic);
+    assert.equal(actual.available, 50);
+    assert.equal(
+      actual.supplied,
+      expected.filter((item) => item.productionMethod === 'owner-supplied').length,
+    );
+    assert.equal(
+      actual.generated,
+      expected.filter((item) => item.productionMethod === 'generated-raster').length,
+    );
+  }
 });
 test(
   'all animal detail pages expose their matching download and editor; held routes are absent',

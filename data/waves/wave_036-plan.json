@@ -1,0 +1,47 @@
+{
+  "wave": "wave_036",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-robin-bare-branch",
+      "title": "Robin on a Snowy Branch",
+      "alt": "Orange-breasted robin perched on a curved bare branch with small patches of snow.",
+      "description": "Orange-breasted robin perched on a curved bare branch with small patches of snow. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_036/source/winter-robin-bare-branch.png"
+    },
+    {
+      "id": "winter-hiking-pack",
+      "title": "Winter Hiking Backpack",
+      "alt": "Rust-orange hiking backpack with a blue water bottle in its side pocket and a rolled teal blanket secured underneath.",
+      "description": "Rust-orange hiking backpack with a blue water bottle in its side pocket and a rolled teal blanket secured underneath. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_036/source/winter-hiking-pack.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowdrops-emerging",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    },
+    {
+      "id": "winter-rosehip-twig",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    },
+    {
+      "id": "winter-hedgehog-nest",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    },
+    {
+      "id": "winter-wooden-snowshoe",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    }
+  ]
+}

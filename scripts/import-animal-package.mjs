@@ -35,6 +35,10 @@ const held = new Set([...initialHeld].filter((id) => !resolution.acceptedIds.inc
 const reviews = read(join(stage, 'screen-review.json'));
 const mapping = read(join(stage, 'topic-map.json'));
 const existing = read(join(root, 'data/art.json'));
+if (existing.some((item) => item.replacesArtwork?.sourceCollection === 'owner-animal-2026-10-23'))
+  throw new Error(
+    'This intake has reviewed replacements; a refresh must explicitly preserve their revision history',
+  );
 if (
   existing.some((item) => item.sourceCollection === 'owner-animal-2026-10-23') &&
   !process.argv.includes('--refresh-prepared-intake')

@@ -1,0 +1,211 @@
+{
+  "wave": "wave_036",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-robin-bare-branch",
+      "title": "Robin on a Snowy Branch",
+      "alt": "Orange-breasted robin perched on a curved bare branch with small patches of snow.",
+      "description": "Orange-breasted robin perched on a curved bare branch with small patches of snow. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_036/source/winter-robin-bare-branch.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "addea9f7af58de95fb08230933ef5ab23feb7e0f824a3927a569c77985a4f0a6",
+      "inputSignature": "0170f2a5cb7b141fbb96b5ae2f31f695234b3c14bef2ef88dcd25c017d01fcc2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 979872,
+        "weightedCmykRmse": 0.927956
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1338250,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 979872,
+          "weightedCmykRmse": 0.927956
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        53,
+        138,
+        1199,
+        1155
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_036/exports/winter-robin-bare-branch.pdf",
+          "bytes": 979872,
+          "sha256": "90093324813992a278dbe13f24d4950f55c4a37e4e2e124b42d097611ea9fb6e"
+        },
+        "webp": {
+          "path": "work/production/wave_036/exports/winter-robin-bare-branch.webp",
+          "bytes": 712700,
+          "sha256": "93f87e1a5a6415db7fc890e8ece68cf8cca9f0637499f4f3036e921cdcffe27e"
+        },
+        "thumb": {
+          "path": "work/production/wave_036/exports/winter-robin-bare-branch-thumb.webp",
+          "bytes": 47718,
+          "sha256": "a6f08574753b5caf748918c639c0448da7ce41bfd2e487bf9f59537d5b8561f6"
+        }
+      },
+      "proofSha256": "0e80911cc8708ba398f8515cb87585705d42d6380b08441d6c30a6f07401d844",
+      "pairMeanRgbDifference": 0.95202
+    },
+    {
+      "id": "winter-hiking-pack",
+      "title": "Winter Hiking Backpack",
+      "alt": "Rust-orange hiking backpack with a blue water bottle in its side pocket and a rolled teal blanket secured underneath.",
+      "description": "Rust-orange hiking backpack with a blue water bottle in its side pocket and a rolled teal blanket secured underneath. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_036/source/winter-hiking-pack.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "329e0570fbe00c8ee95959044097ef752d38afbd08e40790dfb359d550a38729",
+      "inputSignature": "9e737bc0d7122804292176d3d22004ec7601714a225d6be44b7f3d58987aa32f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 955605,
+        "weightedCmykRmse": 1.385185
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1976089,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1345408,
+          "weightedCmykRmse": 0.796652
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1220530,
+          "weightedCmykRmse": 0.933938
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1082831,
+          "weightedCmykRmse": 1.117406
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 955605,
+          "weightedCmykRmse": 1.385185
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        142,
+        26,
+        1132,
+        1205
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_036/exports/winter-hiking-pack.pdf",
+          "bytes": 955605,
+          "sha256": "d9951e3f03076a453dd105517e9de3d7d9fdbcc965f8250280ef29393c8e3656"
+        },
+        "webp": {
+          "path": "work/production/wave_036/exports/winter-hiking-pack.webp",
+          "bytes": 1096908,
+          "sha256": "0bfccf83e94819a096229fdd6d6ab8d799e0f388d108ce249f34dd48a3436a11"
+        },
+        "thumb": {
+          "path": "work/production/wave_036/exports/winter-hiking-pack-thumb.webp",
+          "bytes": 60612,
+          "sha256": "9f63eb3effd5c4de466191a7952bfcb8cdfea4d92e76334dc4d1a4d1061722d7"
+        }
+      },
+      "proofSha256": "0cdc6daec37ca4ab46fcddd54e380bf727f2a014ecefc108eb61117e766664c0",
+      "pairMeanRgbDifference": 2.23534
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowdrops-emerging",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    },
+    {
+      "id": "winter-rosehip-twig",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    },
+    {
+      "id": "winter-hedgehog-nest",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    },
+    {
+      "id": "winter-wooden-snowshoe",
+      "reason": "PDF exceeds byte cap at unchanged quality floor"
+    }
+  ],
+  "screenReviewNotes": "Both actual PDF renders inspected: robin anatomy and branch, backpack straps, bottle and rolled blanket are coherent; clean visible contours and matching source colors.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T20:53:34.901Z",
+  "cdnVerifiedAt": "2026-10-23"
+}

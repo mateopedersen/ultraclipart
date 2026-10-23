@@ -1,0 +1,96 @@
+{
+  "wave": "wave_043",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wolf-dotwork-black-and-white-clipart",
+      "title": "Wolf Stretching in a Play Bow",
+      "alt": "Gray wolf stretching with its forelegs extended, chest lowered and hindquarters raised.",
+      "description": "Gray wolf stretching with its forelegs extended, chest lowered and hindquarters raised. Use this original animal illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_043/source/wolf-dotwork-black-and-white-clipart.png",
+      "replacesRevision": 1,
+      "topic": "wolf",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "068db5f4e7ee57ea691a407c43d6b6af260f2ab78b50b2f8ef8d738990eecacc",
+      "inputSignature": "a788173653d9bd50fa91e09c9f2ec25690d5d438867db67f18efc01019ad3b06",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 817151,
+        "weightedCmykRmse": 0.851541
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1310316,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 817151,
+          "weightedCmykRmse": 0.851541
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        43,
+        24,
+        1519,
+        993
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_043/exports/wolf-dotwork-black-and-white-clipart.pdf",
+          "bytes": 817151,
+          "sha256": "00a0836611b3f0aedd05ce9bfdf0e575d6c5d4a105aa686291b915a4afaf4bf8"
+        },
+        "webp": {
+          "path": "work/production/wave_043/exports/wolf-dotwork-black-and-white-clipart.webp",
+          "bytes": 924898,
+          "sha256": "f3d5ff040b0618718672d1210374d094f3f499404b5e5f96c41c324176d35c1d"
+        },
+        "thumb": {
+          "path": "work/production/wave_043/exports/wolf-dotwork-black-and-white-clipart-thumb.webp",
+          "bytes": 33772,
+          "sha256": "a73ef79804a2622da5b12bf390fd76aef39f51666a6cfe2becdf3fd0d29f498b"
+        }
+      },
+      "proofSha256": "18ca6f4dc6e8a8fbcea7d88559a2885bb5b1d1ca1f3235992288772fc0be36e0",
+      "pairMeanRgbDifference": 1.45772
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Actual PDF renders and source cutouts inspected. Distinct movement or nesting scenes, coherent anatomy and prop connections, matching monochrome output.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:01:04.813Z",
+  "cdnVerifiedAt": "2026-10-23"
+}

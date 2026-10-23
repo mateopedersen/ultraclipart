@@ -1,0 +1,22 @@
+{
+  "wave": "wave_043",
+  "topic": "wolf",
+  "method": "builtin-image-generation",
+  "research": "data/research/wolf-replacement-2026-10-23.json",
+  "replacementReview": "data/artwork-replacements.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "wolf-dotwork-black-and-white-clipart",
+      "title": "Wolf Stretching in a Play Bow",
+      "alt": "Gray wolf stretching with its forelegs extended, chest lowered and hindquarters raised.",
+      "description": "Gray wolf stretching with its forelegs extended, chest lowered and hindquarters raised. Use this original animal illustration in personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_043/source/wolf-dotwork-black-and-white-clipart.png",
+      "replacesRevision": 1
+    }
+  ]
+}
