@@ -2,6 +2,8 @@ import { chromium, firefox, webkit, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { loadTypescript } from '../helpers/typescript.mjs';
+const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const base = process.env.BASE_URL || 'http://127.0.0.1:4350',
   engine = process.env.UC_BROWSER || 'chromium',
   out = resolve(process.env.EVIDENCE_DIR || 'reports/studio-pro', engine);
@@ -129,6 +131,8 @@ try {
     'Hair bow: multi-click color selection plus manual polygon refinement; original face and dress retained.',
   );
   const bow = await imageBytes();
+  const bowMask = decodeMask(project.layers[0].regions[0].mask);
+  report.browserColorDelta = 0;
   for (const [x, y] of [
     [650, 400],
     [600, 500],
@@ -136,7 +140,15 @@ try {
     [900, 1000],
   ]) {
     const p = (y * 1226 + x) * 4;
-    assert.deepEqual(bow.slice(p, p + 4), original.slice(p, p + 4));
+    assert.equal(bowMask[y * 1226 + x], 0, 'Unrelated face/dress point entered the mask');
+    assert.equal(bow[p + 3], original[p + 3], 'Outside alpha changed');
+    // Linux Firefox can differ by 2/255 after PNG premultiplication/readback.
+    // Raw worker pixels remain subject to exact equality in the unit suite.
+    for (let channel = 0; channel < 3; channel++) {
+      const delta = Math.abs(bow[p + channel] - original[p + channel]);
+      report.browserColorDelta = Math.max(report.browserColorDelta, delta);
+      assert.ok(delta <= 2, `Outside RGB changed by ${delta} at ${x},${y}`);
+    }
   }
   await action('new-region');
   // Separate garment pieces, avoiding neck, arms, hands and legs.
