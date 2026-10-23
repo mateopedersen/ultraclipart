@@ -1,0 +1,63 @@
+{
+  "wave": "wave_026",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-floral-skull",
+      "title": "Skull with Autumn Flowers",
+      "alt": "A cream decorative skull with painted floral motifs is surrounded by orange marigolds and burgundy leaves.",
+      "description": "A cream decorative skull with painted floral motifs is surrounded by orange marigolds and burgundy leaves. Use this illustration for personal autumn craft collages.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_026/source/halloween-floral-skull.png"
+    },
+    {
+      "id": "halloween-cat-pumpkin-wagon",
+      "title": "Cat Pulling a Pumpkin Wagon",
+      "alt": "A black cat wearing a purple scarf pulls a small wooden wagon carrying pumpkins and trailing vines.",
+      "description": "A black cat wearing a purple scarf pulls a small wooden wagon carrying pumpkins and trailing vines. Use this illustration for sequencing activities.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_026/source/halloween-cat-pumpkin-wagon.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-vampire-puppet",
+      "reason": "Source generation rejected by image tool; no new source or completed drawing claimed."
+    },
+    {
+      "id": "halloween-crooked-cottage",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-owl-wizard-hat",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-spooky-doorway",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-scarecrow-violin",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-spider-gift",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-graveyard-lantern",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "halloween-skeleton-gardening",
+      "reason": "Visible subject touches the native canvas edge; source retained and publication blocked."
+    }
+  ]
+}

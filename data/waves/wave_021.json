@@ -1,0 +1,555 @@
+{
+  "wave": "wave_021",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 7,
+  "resumed": 7,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-rain-boots",
+      "title": "Pumpkins in Rain Boots",
+      "alt": "Two blue polka-dot rain boots stand beside vine leaves, with a small pumpkin tucked into one boot.",
+      "description": "Two blue polka-dot rain boots stand beside vine leaves, with a small pumpkin tucked into one boot. Use this illustration for playful autumn craft collages.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-rain-boots.png",
+      "topic": "pumpkin",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "1abc626e42e87655714e690422e128ce35ce171adf4f9925cc5b752a66dde270",
+      "inputSignature": "4c166eb8288ee5933fbe01cbfe044ac815a8a4bb347d77022b773a074c7be840",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 940846,
+        "weightedCmykRmse": 0.788519
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1594190,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 940846,
+          "weightedCmykRmse": 0.788519
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        16,
+        5,
+        1305,
+        1158
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-rain-boots.pdf",
+          "bytes": 940846,
+          "sha256": "501cbfa163c93401802a6778072337c8d2eaf84632336e09fdb2c72e437e25d5"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-rain-boots.webp",
+          "bytes": 968714,
+          "sha256": "f45032e747a8fba21d46c0ec760ef87d651e6292ac4e430f5dcfa0534e7bd5a1"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-rain-boots-thumb.webp",
+          "bytes": 61194,
+          "sha256": "71d85fe96e5ba643cc97ea0c7c27956637826b829181f30f7f6458237da37a0a"
+        }
+      },
+      "proofSha256": "4313a3ea630dc8066ca2a93b59511d4e03d0b16b742b1d1681b65efd675d9faf",
+      "pairMeanRgbDifference": 3.1079
+    },
+    {
+      "id": "pumpkin-wooden-wagon",
+      "title": "Pumpkin Harvest Wagon",
+      "alt": "A little red wooden wagon with a raised handle carries three orange pumpkins.",
+      "description": "A little red wooden wagon with a raised handle carries three orange pumpkins. Use this illustration for farm counting activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-wooden-wagon.png",
+      "topic": "pumpkin",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "393f2e56977075ea2053acc8ed1c5f3799ac02fae3d23d79171d704485a32183",
+      "inputSignature": "3a05a21f2d5df6e9ad24a6e3ff0a63ec7745c6bf6f118e6f24b4b692e2f241b0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 765652,
+        "weightedCmykRmse": 0.83874
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1293961,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 765652,
+          "weightedCmykRmse": 0.83874
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        147,
+        79,
+        1476,
+        964
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-wooden-wagon.pdf",
+          "bytes": 765652,
+          "sha256": "cc99de55bd72ef99a5294f32a7210017ed3c42369fc446ccbb7990ebd9b1b38f"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-wooden-wagon.webp",
+          "bytes": 1090936,
+          "sha256": "acb97818a7104c5c95330a9c775a9bf9a379de85bd377cec3a5ca53f83e25b6f"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-wooden-wagon-thumb.webp",
+          "bytes": 38804,
+          "sha256": "75f2bda8c19037b61fae2a0f2bc89d3708c8343b580531a98ec53f4ef6eebaeb"
+        }
+      },
+      "proofSha256": "1cd9c382b29b6971181c51efd33f8a7bef30f20f49c0007598bc40691cd6aa32",
+      "pairMeanRgbDifference": 2.78366
+    },
+    {
+      "id": "pumpkin-market-scale",
+      "title": "Pumpkin on a Market Scale",
+      "alt": "A tall orange pumpkin sits on a green vintage market scale with an unnumbered round dial.",
+      "description": "A tall orange pumpkin sits on a green vintage market scale with an unnumbered round dial. Use this illustration for harvest weight comparison worksheets.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-market-scale.png",
+      "topic": "pumpkin",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "raster",
+      "sourceSha256": "5ff674524863c3274ecafe9d3a2010d712aef69f2f6028ed0f7ef6d859eec332",
+      "inputSignature": "3bc570bda76f9283e8ae0bd063d0ce523f9a4a26f2a550acee5ed6acbcea5679",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 765754,
+        "weightedCmykRmse": 0.810877
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1258448,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 765754,
+          "weightedCmykRmse": 0.810877
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        127,
+        28,
+        893,
+        1508
+      ],
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-market-scale.pdf",
+          "bytes": 765754,
+          "sha256": "0ebab4d207755ca10ce5753929efcce67e3eeb6d11a05ec9e361a57a1bbc571a"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-market-scale.webp",
+          "bytes": 1124186,
+          "sha256": "abb469ea68eb29aa141f608f281e3f2ee93c81231cfa4c19fc0ec8a63df583c0"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-market-scale-thumb.webp",
+          "bytes": 34674,
+          "sha256": "a78fa2c9958c192753ead4f67b523ed2d5d0f45c20b1c2fdb2b0a52b5cc44c69"
+        }
+      },
+      "proofSha256": "9dc4c479dcdefa0e65bcba1d0af5d67d64677b289c5a44a1d76335d151e7fbc0",
+      "pairMeanRgbDifference": 2.81043
+    },
+    {
+      "id": "pumpkin-soup-tureen",
+      "title": "Pumpkin Soup in a Pumpkin Bowl",
+      "alt": "A hollow pumpkin bowl holds orange soup with a cream swirl, with a wooden spoon and stemmed lid beside it.",
+      "description": "A hollow pumpkin bowl holds orange soup with a cream swirl, with a wooden spoon and stemmed lid beside it. Use this illustration for seasonal recipe cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-soup-tureen.png",
+      "topic": "pumpkin",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "154272d5d6756038eb20f1a3caa884548ad8e1eee8fdb7718621b7f16dbfa13f",
+      "inputSignature": "b691696092df21a3b61dbe06eff192c14ea9003df8bb507aab2fd996d9ae43a6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 720713,
+        "weightedCmykRmse": 0.759489
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1308555,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 720713,
+          "weightedCmykRmse": 0.759489
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        74,
+        34,
+        1486,
+        960
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-soup-tureen.pdf",
+          "bytes": 720713,
+          "sha256": "8490f99f0790116f55c382619e25cf8274119c9888bcbe84ee842bc08ab7b927"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-soup-tureen.webp",
+          "bytes": 1321936,
+          "sha256": "c1928c1a361e3add7089c774813a44e70d8f76028c20b22433b73235969b3ed3"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-soup-tureen-thumb.webp",
+          "bytes": 42078,
+          "sha256": "d0bfed1f731bca22e3f89f1e7d768e380a693fd33082a10bdca9682b1068214b"
+        }
+      },
+      "proofSha256": "92dc33a000cd9d187a1d0b390d9eed963cff9299031542951c68629fd38153ae",
+      "pairMeanRgbDifference": 4.35828
+    },
+    {
+      "id": "pumpkin-pie-and-pumpkin",
+      "title": "Pumpkin Pie Slice and Mini Pumpkin",
+      "alt": "A slice of pumpkin pie topped with whipped cream sits on a white plate beside a miniature pumpkin.",
+      "description": "A slice of pumpkin pie topped with whipped cream sits on a white plate beside a miniature pumpkin. Use this illustration for personal recipe journal illustrations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-pie-and-pumpkin.png",
+      "topic": "pumpkin",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "51ae542bf72a39d3c3d11c6c5134c06d61a6acf1abd661b96c829401abb6bb8e",
+      "inputSignature": "5fd7b8a2482a809ba3c4de6dc1d4e9c5e4cacbe434eb1dddb6129b53ad0daaba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 813227,
+        "weightedCmykRmse": 0.787127
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1371972,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 813227,
+          "weightedCmykRmse": 0.787127
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        68,
+        109,
+        1478,
+        948
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-pie-and-pumpkin.pdf",
+          "bytes": 813227,
+          "sha256": "2b0acde1a164993dbf532b815ef1814d44cb70160d3965df9f3df32afdd1c2ad"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-pie-and-pumpkin.webp",
+          "bytes": 1299760,
+          "sha256": "61d923f0ddb6c32a4721ffb99ef56e76f9584a48e6302eaba8f0c76fa814f6ff"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-pie-and-pumpkin-thumb.webp",
+          "bytes": 42584,
+          "sha256": "14960cf47584f83978fd48f1e35de4e36a4da6073601116938343c7736f0e4cc"
+        }
+      },
+      "proofSha256": "4d6c8c12ea80edb0b82b8b565790a41caf6ba8e430439d48920c4ac0c7a3fb99",
+      "pairMeanRgbDifference": 3.24597
+    },
+    {
+      "id": "pumpkin-seed-scoop",
+      "title": "Pumpkin and Wooden Seed Scoop",
+      "alt": "A wooden spoon lifts pale seeds from an open pumpkin beside a small empty wooden bowl.",
+      "description": "A wooden spoon lifts pale seeds from an open pumpkin beside a small empty wooden bowl. Use this illustration for pumpkin preparation sequence cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-seed-scoop.png",
+      "topic": "pumpkin",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "b8a27fb26a1f4196a0d84ab79d88764f589a95d367eef3fc62acd983b3ea644f",
+      "inputSignature": "b0b87f7384462c5df86eaf01cecc9c098e73fa79c78c99c98e339881a8846465",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 821804,
+        "weightedCmykRmse": 0.74501
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1504074,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 821804,
+          "weightedCmykRmse": 0.74501
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        55,
+        14,
+        1485,
+        995
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-seed-scoop.pdf",
+          "bytes": 821804,
+          "sha256": "e0b27d45818b71d3df010b3bb27c5af54eccd60855038ed906348d503e42d47b"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-seed-scoop.webp",
+          "bytes": 1404920,
+          "sha256": "c26b4e0ed5dce46b288d36eefcdbb207c71f077ce60d8035ae4f432dcc8af786"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-seed-scoop-thumb.webp",
+          "bytes": 47136,
+          "sha256": "f52284d49c189cfdf904e97047f48408482c3ee429f324f8aaa0617a81c06dba"
+        }
+      },
+      "proofSha256": "d09ee5ebe88db7ed2f9f49477b8d75df7ee60145b600d4ae64de96de819a29cc",
+      "pairMeanRgbDifference": 4.07998
+    },
+    {
+      "id": "pumpkin-ceramic-lantern",
+      "title": "Ceramic Pumpkin Lantern",
+      "alt": "A cream ceramic pumpkin lantern has leaf-shaped openings and a lit candle inside.",
+      "description": "A cream ceramic pumpkin lantern has leaf-shaped openings and a lit candle inside. Use this illustration for autumn home craft mood boards.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_021/source/pumpkin-ceramic-lantern.png",
+      "topic": "pumpkin",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "9617288a899544d7e860737f8deb362a5f25482fff39f5ad32cfb55f631aacf7",
+      "inputSignature": "bfa5f5adae4ff6efea70b56f6226cadcebadc210152587beddeffea7ab4d9025",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 880247,
+        "weightedCmykRmse": 0.750234
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1592386,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 880247,
+          "weightedCmykRmse": 0.750234
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        23,
+        19,
+        1290,
+        1176
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_021/exports/pumpkin-ceramic-lantern.pdf",
+          "bytes": 880247,
+          "sha256": "2859198a8572402944da6be37198f20dc5136b07d0b26989e172cddc7dd46e0c"
+        },
+        "webp": {
+          "path": "work/production/wave_021/exports/pumpkin-ceramic-lantern.webp",
+          "bytes": 1081996,
+          "sha256": "58841adcabac5eab4d91aca315cecf687ec1ebe522e61972088d2a53198350d5"
+        },
+        "thumb": {
+          "path": "work/production/wave_021/exports/pumpkin-ceramic-lantern-thumb.webp",
+          "bytes": 57694,
+          "sha256": "97566a4ac8ef21275995d29f2d7ec7abd5164fe329747a62a501c278fb725d90"
+        }
+      },
+      "proofSha256": "f2adab5ff83ba71cd752f25d83219c022529d3cb51609ba76354f22c7974a270",
+      "pairMeanRgbDifference": 1.79581
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-bicycle-basket",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-roasted-wedges",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-patchwork-pumpkin",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T16:10:56.285Z",
+  "allAccountR2Bytes": 434037941,
+  "publicationBatch": "wave_021_028"
+}

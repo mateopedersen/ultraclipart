@@ -1,0 +1,384 @@
+{
+  "wave": "wave_024",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-snowy-pine-grove",
+      "title": "Snowy Pine Grove",
+      "alt": "Three differently sized evergreen trees stand close together with snow resting on their layered branches.",
+      "description": "Three differently sized evergreen trees stand close together with snow resting on their layered branches. Use this illustration for winter landscape collage pieces.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_024/source/winter-snowy-pine-grove.png",
+      "topic": "winter",
+      "width": 1374,
+      "height": 1145,
+      "sourceType": "raster",
+      "sourceSha256": "3f112f0fdfa501ec0f9f521356e0cf0c7685e2e5516859c497205e7c844db152",
+      "inputSignature": "471afb5a098df92ce3f70293a6bda5c5cba3c4478df2a9b93f61c7f7ccdb4fc2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 896215,
+        "weightedCmykRmse": 1.462086
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1692788,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1188863,
+          "weightedCmykRmse": 0.820657
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1082412,
+          "weightedCmykRmse": 0.960919
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 990409,
+          "weightedCmykRmse": 1.18555
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 896215,
+          "weightedCmykRmse": 1.462086
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        58,
+        37,
+        1317,
+        1089
+      ],
+      "image": {
+        "width": 1374,
+        "height": 1145,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_024/exports/winter-snowy-pine-grove.pdf",
+          "bytes": 896215,
+          "sha256": "9c9f2afa19845fba24b7879d23effb33fbaceea90373d2e685d1a9f2ca0c6a6b"
+        },
+        "webp": {
+          "path": "work/production/wave_024/exports/winter-snowy-pine-grove.webp",
+          "bytes": 994450,
+          "sha256": "0c008006525014a5404aedf3cb4b33a33b7a8e7f11f36a24d1e47dab17af3d61"
+        },
+        "thumb": {
+          "path": "work/production/wave_024/exports/winter-snowy-pine-grove-thumb.webp",
+          "bytes": 58218,
+          "sha256": "0c3f2167405c37f087dcdb337664205d2b32eb1a15929fdd99e11baff033202e"
+        }
+      },
+      "proofSha256": "9d8878928a9a4678f8ea9c01413830a337e98ec8e50752ce78c2b35f322393c7",
+      "pairMeanRgbDifference": 1.8925
+    },
+    {
+      "id": "winter-snowy-owl-stump",
+      "title": "Snowy Owl on a Stump",
+      "alt": "A white snowy owl with golden eyes and brown feather markings stands on a snow-capped stump.",
+      "description": "A white snowy owl with golden eyes and brown feather markings stands on a snow-capped stump. Use this illustration for arctic wildlife classroom displays.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_024/source/winter-snowy-owl-stump.png",
+      "topic": "winter",
+      "width": 1145,
+      "height": 1374,
+      "sourceType": "raster",
+      "sourceSha256": "34d11433ce683347288d33529ba20d3b4bddd9d7c0d36f79b50c4547b7f8778b",
+      "inputSignature": "fd073aa35ae10ba70bbd1e250396b9416bdee03dfa48cf24aaba95aab4afa1fd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 963613,
+        "weightedCmykRmse": 1.165964
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1717203,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1181690,
+          "weightedCmykRmse": 0.81711
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1073005,
+          "weightedCmykRmse": 0.957086
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 963613,
+          "weightedCmykRmse": 1.165964
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        257,
+        17,
+        956,
+        1360
+      ],
+      "image": {
+        "width": 1145,
+        "height": 1374,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_024/exports/winter-snowy-owl-stump.pdf",
+          "bytes": 963613,
+          "sha256": "482879ecd09614e7df58786ebddd14bf5e55de5878afad2f946021787e79d960"
+        },
+        "webp": {
+          "path": "work/production/wave_024/exports/winter-snowy-owl-stump.webp",
+          "bytes": 1019078,
+          "sha256": "4f418c0dc0596f2577496d8d80bfd38efe2df78ec03f9d0d55f7defa044a80df"
+        },
+        "thumb": {
+          "path": "work/production/wave_024/exports/winter-snowy-owl-stump-thumb.webp",
+          "bytes": 56660,
+          "sha256": "4eb5ec7dee6e132b8bff16d5d279b86f79fe27943cc049352125f33388b6be50"
+        }
+      },
+      "proofSha256": "7445b2c8da3eb75b139a88889381d1892f6c009aedf1b65abbea0e671cb646b5",
+      "pairMeanRgbDifference": 1.46106
+    },
+    {
+      "id": "winter-polar-bear-cub",
+      "title": "Polar Bear Cub Walking",
+      "alt": "A fluffy white polar bear cub walks forward with one front paw lifted and its head turned slightly.",
+      "description": "A fluffy white polar bear cub walks forward with one front paw lifted and its head turned slightly. Use this illustration for polar habitat worksheets.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_024/source/winter-polar-bear-cub.png",
+      "topic": "winter",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "2db50e8dfae49a6b1e3c227009e2551fa1e45defc1b1c916657e1c5601478381",
+      "inputSignature": "b1f514af56e0e0171f7f412efdea87e50730ad360d5ef7de3e6e79b3942997e6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 487597,
+        "weightedCmykRmse": 0.801188
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1100621,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 487597,
+          "weightedCmykRmse": 0.801188
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        157,
+        32,
+        1377,
+        987
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_024/exports/winter-polar-bear-cub.pdf",
+          "bytes": 487597,
+          "sha256": "f0274470be167eb12c4636e3ed20d651ae3bcf94da6c9b162fa16bf15c35c12e"
+        },
+        "webp": {
+          "path": "work/production/wave_024/exports/winter-polar-bear-cub.webp",
+          "bytes": 988946,
+          "sha256": "83d148011ee15bbd0f6bbb059aeaeb0ed4ca14442c6e8ef3d758ad6506fec8fd"
+        },
+        "thumb": {
+          "path": "work/production/wave_024/exports/winter-polar-bear-cub-thumb.webp",
+          "bytes": 31506,
+          "sha256": "22bd763d9544a83f405290a3a9fb509e2bd85579a7ad84029370c5c93497933e"
+        }
+      },
+      "proofSha256": "fab62349f63d57532e13cb4f4097ce8128c7e1a3103141dad9066c5ecb0bfffe",
+      "pairMeanRgbDifference": 0.83531
+    },
+    {
+      "id": "winter-squirrel-hazelnut",
+      "title": "Squirrel with a Hazelnut",
+      "alt": "A cheerful red squirrel holds a hazelnut between its front paws beneath a tall curling tail.",
+      "description": "A cheerful red squirrel holds a hazelnut between its front paws beneath a tall curling tail. Use this illustration for winter food-storage activity sheets.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_024/source/winter-squirrel-hazelnut.png",
+      "topic": "winter",
+      "width": 1310,
+      "height": 1201,
+      "sourceType": "raster",
+      "sourceSha256": "8b50a43f832427d34321ef3d3bec10b917e09122aa68e3167d660b491bf06071",
+      "inputSignature": "327825a5a09761b3ad45679ff7cd639d2fe18cca1a77b48b30c6d4c322d83dcb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 928690,
+        "weightedCmykRmse": 1.083667
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1827454,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1158729,
+          "weightedCmykRmse": 0.78661
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1044908,
+          "weightedCmykRmse": 0.903306
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 928690,
+          "weightedCmykRmse": 1.083667
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        80,
+        12,
+        1230,
+        1174
+      ],
+      "image": {
+        "width": 1310,
+        "height": 1201,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_024/exports/winter-squirrel-hazelnut.pdf",
+          "bytes": 928690,
+          "sha256": "9d76185225f392c50cfb36c1facd351341621010dde2642af3fd996e2c63ec0d"
+        },
+        "webp": {
+          "path": "work/production/wave_024/exports/winter-squirrel-hazelnut.webp",
+          "bytes": 1099876,
+          "sha256": "ddde5bd0fd03b627f08d503da57982b31cb425ff83a638ab34295f3034adf131"
+        },
+        "thumb": {
+          "path": "work/production/wave_024/exports/winter-squirrel-hazelnut-thumb.webp",
+          "bytes": 64642,
+          "sha256": "09157e5a1d8450a0f9bcbf920aaae77816c101b47c82d3f3fb14bf327b8673c9"
+        }
+      },
+      "proofSha256": "5eedff01cdbccf175368b26f23b3d043931ccdf4bc00377c6c68ed951130a6cc",
+      "pairMeanRgbDifference": 2.50641
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-wooden-snowshoe",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-hedgehog-nest",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-sparrow-feeder",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-child-sledding",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-rosehip-twig",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-birch-log",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T16:10:56.758Z",
+  "allAccountR2Bytes": 434037941,
+  "publicationBatch": "wave_021_028"
+}

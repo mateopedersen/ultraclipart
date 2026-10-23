@@ -1,0 +1,68 @@
+{
+  "wave": "wave_023",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-folded-tartan-scarf",
+      "title": "Plaid Fringed Scarf",
+      "alt": "A red and cream tartan scarf loops around itself, with two fringed ends hanging at different lengths.",
+      "description": "A red and cream tartan scarf loops around itself, with two fringed ends hanging at different lengths. Use this illustration for cozy journal labels and seasonal displays.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_023/source/winter-folded-tartan-scarf.png"
+    },
+    {
+      "id": "winter-alpine-skis-and-poles",
+      "title": "Crossed Skis and Poles",
+      "alt": "Two blue skis with snowy mountain patterns cross between a pair of matching ski poles.",
+      "description": "Two blue skis with snowy mountain patterns cross between a pair of matching ski poles. Use this illustration for winter sports matching games.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_023/source/winter-alpine-skis-and-poles.png"
+    },
+    {
+      "id": "winter-knitting-basket",
+      "title": "Basket of Winter Knitting",
+      "alt": "A wicker basket holds blue and cream yarn, two wooden knitting needles and a partly knitted cream panel.",
+      "description": "A wicker basket holds blue and cream yarn, two wooden knitting needles and a partly knitted cream panel. Use this illustration for craft-club personal invitations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_023/source/winter-knitting-basket.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-knitted-mittens-on-cord",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-cozy-pair-of-socks",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-snowy-timber-cabin",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-candle-lantern",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-frosted-window",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-stacked-firewood",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-robin-bare-branch",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

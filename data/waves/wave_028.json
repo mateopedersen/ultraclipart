@@ -1,0 +1,92 @@
+{
+  "wave": "wave_028",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-vampire-puppet",
+      "title": "Friendly Vampire Marionette",
+      "alt": "A smiling wooden marionette wears a purple cape and red bow tie beneath a wooden control crossbar.",
+      "description": "A smiling wooden marionette wears a purple cape and red bow tie beneath a wooden control crossbar. Use this illustration for Halloween puppet-theater activities.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_028/source/halloween-vampire-puppet.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "0f25b26748168b555d3c44925e6cf141fac44ca328483109f14479e88da11c22",
+      "inputSignature": "f9203702c7e395e576a5e97b71dfc6f0db45cc86cbc7384da9fc91b1c1c5eadb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 947954,
+        "weightedCmykRmse": 0.908082
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1303412,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 947954,
+          "weightedCmykRmse": 0.908082
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        202,
+        14,
+        1051,
+        1240
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_028/exports/halloween-vampire-puppet.pdf",
+          "bytes": 947954,
+          "sha256": "5812e27ac2634a3756989c5c47858e5fe061b15c0c149430955e4eb541b7f6e7"
+        },
+        "webp": {
+          "path": "work/production/wave_028/exports/halloween-vampire-puppet.webp",
+          "bytes": 569240,
+          "sha256": "9d979effe42363e9084c804ee2da617e1b99d154459a322d8fcf3895f2ba3a30"
+        },
+        "thumb": {
+          "path": "work/production/wave_028/exports/halloween-vampire-puppet-thumb.webp",
+          "bytes": 49414,
+          "sha256": "9a76f8abcfc144dd6a3b05466702fb41c6cd8407c5c65bf0a21a510fafa3172e"
+        }
+      },
+      "proofSha256": "04896d2d05945877435b11a0e9967ee6227470b4bd80418932af2c5736e65cdb",
+      "pairMeanRgbDifference": 1.80801
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T16:10:56.959Z",
+  "allAccountR2Bytes": 434037941,
+  "publicationBatch": "wave_021_028"
+}

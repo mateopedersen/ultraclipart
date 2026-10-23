@@ -1,0 +1,68 @@
+{
+  "wave": "wave_018",
+  "topic": "pumpkin",
+  "method": "builtin-image-generation",
+  "research": "data/research/pumpkin-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pumpkin-cutaway-seeds",
+      "title": "Pumpkin Half with Seeds",
+      "alt": "A pumpkin half reveals pale seeds and fibrous orange strands, with a cut wedge resting beside it.",
+      "description": "A pumpkin half reveals pale seeds and fibrous orange strands, with a cut wedge resting beside it. Use this illustration for pumpkin anatomy lessons.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_018/source/pumpkin-cutaway-seeds.png"
+    },
+    {
+      "id": "pumpkin-rooted-seed",
+      "title": "Sprouting Pumpkin Seed",
+      "alt": "A sprouting pale pumpkin seed has two open green seed leaves and branching ivory roots.",
+      "description": "A sprouting pale pumpkin seed has two open green seed leaves and branching ivory roots. Use this illustration for germination sequence worksheets.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_018/source/pumpkin-rooted-seed.png"
+    },
+    {
+      "id": "pumpkin-carved-crescent",
+      "title": "Moon and Stars Carved Pumpkin",
+      "alt": "An orange pumpkin lantern glows through crescent-moon and star cutouts with its stemmed lid resting beside it.",
+      "description": "An orange pumpkin lantern glows through crescent-moon and star cutouts with its stemmed lid resting beside it. Use this illustration for seasonal craft inspiration.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_018/source/pumpkin-carved-crescent.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-curled-stem",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-flowering-vine",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-seedling-pot",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-blossom-bee",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-harvest-basket",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-wooden-wheelbarrow",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-floral-arrangement",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

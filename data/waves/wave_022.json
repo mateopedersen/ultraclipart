@@ -1,0 +1,644 @@
+{
+  "wave": "wave_022",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 8,
+  "resumed": 8,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pumpkin-knitted-pumpkin",
+      "title": "Knitted Pumpkin Pincushion",
+      "alt": "An orange cable-knit pumpkin pincushion has a fabric stem and three round-headed pins.",
+      "description": "An orange cable-knit pumpkin pincushion has a fabric stem and three round-headed pins. Use this illustration for personal sewing labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-knitted-pumpkin.png",
+      "topic": "pumpkin",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "0f301f34e5c395d0c736865920e24718294c4d718adb325abeeafaaf162173d9",
+      "inputSignature": "6b51684beba55959a049712e5b485c9ab403ed483915b1fd1c9e4e168baa7d0e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 976018,
+        "weightedCmykRmse": 1.115523
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1808772,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1235181,
+          "weightedCmykRmse": 0.778007
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1110067,
+          "weightedCmykRmse": 0.91975
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 976018,
+          "weightedCmykRmse": 1.115523
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        62,
+        79,
+        1252,
+        1122
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-knitted-pumpkin.pdf",
+          "bytes": 976018,
+          "sha256": "55dc64a67c7b96c13f505e1e93e1d4648c25e4f75f862904cf85d038c7d03776"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-knitted-pumpkin.webp",
+          "bytes": 1215132,
+          "sha256": "ba35e5a835e2a75ab87a6fe41c6eb1c9f4dee67aee9e749feca5f8e25c520230"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-knitted-pumpkin-thumb.webp",
+          "bytes": 65632,
+          "sha256": "6d81e4cd7686e9c4552aecf940fedf5e304d25222a46f1804174c37f4ee3600a"
+        }
+      },
+      "proofSha256": "c63582ba5af458273ff83e1c98872b92ca00708d8a1d6aa0dc5ac71b7f1fd5be",
+      "pairMeanRgbDifference": 4.27457
+    },
+    {
+      "id": "pumpkin-wooden-pumpkin",
+      "title": "Carved Wooden Pumpkin Ornament",
+      "alt": "A carved wooden pumpkin ornament has curved rib panels, a twisting stem and a loose jute loop.",
+      "description": "A carved wooden pumpkin ornament has curved rib panels, a twisting stem and a loose jute loop. Use this illustration for rustic fall craft inspiration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-wooden-pumpkin.png",
+      "topic": "pumpkin",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "390389efccc1e77e078ef4a639677cb527bbd4b4f27e89cb2979e31195a294b2",
+      "inputSignature": "c20c1d1cbdf9c270c7b1025807a33b2d181390aa0fe2727bd85959201c484ddd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 962768,
+        "weightedCmykRmse": 0.786971
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1604567,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 962768,
+          "weightedCmykRmse": 0.786971
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        67,
+        50,
+        1279,
+        1147
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-wooden-pumpkin.pdf",
+          "bytes": 962768,
+          "sha256": "6cd6363b5a789caf3ecd3efe26eef96425a72a65b7642484d495f1e4fbc7c1dc"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-wooden-pumpkin.webp",
+          "bytes": 986832,
+          "sha256": "7b75d661100724987c901bad2a341a203d318ec74da45cdcd0986ab8099bac68"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-wooden-pumpkin-thumb.webp",
+          "bytes": 56258,
+          "sha256": "db3bb0b2833d64f5fd9eb925a4f042c31c3cebe5401802b268f07ac422c6269d"
+        }
+      },
+      "proofSha256": "1647b944c2b22302d322719e5ea23ada9d5c4f1988b0473608aadeedc689e3c9",
+      "pairMeanRgbDifference": 2.6873
+    },
+    {
+      "id": "pumpkin-lantern-smile",
+      "title": "Smiling Jack-o-Lantern",
+      "alt": "A friendly jack-o-lantern has raised eyebrows, a broad toothy smile and a bent woody stem.",
+      "description": "A friendly jack-o-lantern has raised eyebrows, a broad toothy smile and a bent woody stem. Use this illustration for family pumpkin-carving invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-lantern-smile.png",
+      "topic": "pumpkin",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "3a47f660083d4aa50fd1acda3736e702a052950efde13c1dc1ce1946ed036ab9",
+      "inputSignature": "ccef385d636a68b30fd7a2f9ba584b00d59a624ce0bf71c73424b51ccfbee580",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 572769,
+        "weightedCmykRmse": 0.72427
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1155577,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 572769,
+          "weightedCmykRmse": 0.72427
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        52,
+        36,
+        1268,
+        1154
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-smile.pdf",
+          "bytes": 572769,
+          "sha256": "1809569e75249698b4aa221613cd4047f79ee85974befa73c8d1f57db7d8a25d"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-smile.webp",
+          "bytes": 911728,
+          "sha256": "391e6d2a1e1393a0527985a2c3f0f69a69c5e8ec6596cc088e3cf8f4a5639901"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-smile-thumb.webp",
+          "bytes": 47956,
+          "sha256": "d298ad7df1d0480231f65cf9ae4ebb5f0a97266415e9956737ae2954d3698124"
+        }
+      },
+      "proofSha256": "acfec61cd6afba2fe1dc91834ed23f5bb3614dd4120d2aca6b4d0f8a9aeaed5e",
+      "pairMeanRgbDifference": 4.38191
+    },
+    {
+      "id": "pumpkin-lantern-cat-face",
+      "title": "Cat-Faced Pumpkin Lantern",
+      "alt": "A cat-faced pumpkin lantern has glowing almond-shaped eyes, whisker cutouts and two leaf-shaped ears.",
+      "description": "A cat-faced pumpkin lantern has glowing almond-shaped eyes, whisker cutouts and two leaf-shaped ears. Use this illustration for animal-themed seasonal crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-lantern-cat-face.png",
+      "topic": "pumpkin",
+      "width": 1374,
+      "height": 1145,
+      "sourceType": "raster",
+      "sourceSha256": "4d6dd8a55be8bb84648ec7c69b4a0de31297a8e0f34ed6015fe0f26692886b6d",
+      "inputSignature": "a9d6734a95124379f0fe2ca79bb2dbe1c7bf0bd6afbf07cd901b41c9b5227009",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 618830,
+        "weightedCmykRmse": 0.728731
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1206521,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 618830,
+          "weightedCmykRmse": 0.728731
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        83,
+        63,
+        1292,
+        1075
+      ],
+      "image": {
+        "width": 1374,
+        "height": 1145,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-cat-face.pdf",
+          "bytes": 618830,
+          "sha256": "0516d7a645dccf022ea13c3b5078a1a21e427332c76f3522b4f6e4445782c6c8"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-cat-face.webp",
+          "bytes": 953450,
+          "sha256": "d4245ba547af594449d382d53f03f0d642371a33af19cfc4223a9d601f820760"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-cat-face-thumb.webp",
+          "bytes": 45540,
+          "sha256": "6124b420a602048d2f7ebaff80f49671d6bbb1d55b92c0f35376181d24e347e8"
+        }
+      },
+      "proofSha256": "c74466c78157bf1e1582b3922d2d7da06a852160827a86a02a7f7a07c464be3a",
+      "pairMeanRgbDifference": 4.14876
+    },
+    {
+      "id": "pumpkin-lantern-sleepy",
+      "title": "Sleepy Pumpkin Lantern",
+      "alt": "A tall sleepy pumpkin lantern has closed crescent eyes, a small smile and a star-shaped cheek opening.",
+      "description": "A tall sleepy pumpkin lantern has closed crescent eyes, a small smile and a star-shaped cheek opening. Use this illustration for calm seasonal bedtime cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-lantern-sleepy.png",
+      "topic": "pumpkin",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "57c4adb15ecb068861a9798eb4731cc98bdaa6aaad9180fffb8badcb3c51c522",
+      "inputSignature": "3ed7c2c28c2e4e5eeff082b7c044def14b1095cd0fbe04e60b0a1b5b14efeb48",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 812050,
+        "weightedCmykRmse": 0.796364
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1333690,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 812050,
+          "weightedCmykRmse": 0.796364
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        36,
+        129,
+        1279,
+        1068
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-sleepy.pdf",
+          "bytes": 812050,
+          "sha256": "23de13aa32cd6390a1c0b7bad36ac89100f9002c5ed3b102ff82fef9df38e1da"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-sleepy.webp",
+          "bytes": 960820,
+          "sha256": "d63b046cd0b90cf47ff6e1c6dbc7c63b1ec45e305b5dc1856a16f2f5ee2fff11"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-lantern-sleepy-thumb.webp",
+          "bytes": 50626,
+          "sha256": "2ac1e12df0d00b69bb7e746e6642aa0bdc8f9ea03b662ca6a8a0a93d17761279"
+        }
+      },
+      "proofSha256": "ea4f599d5243603d0986106411c0e5ee01159b4c3f17770bd53a80121fe0d318",
+      "pairMeanRgbDifference": 3.454
+    },
+    {
+      "id": "pumpkin-hot-air-balloon",
+      "title": "Pumpkin Hot Air Balloon",
+      "alt": "An orange pumpkin forms a whimsical hot air balloon above a small wicker basket suspended on ropes.",
+      "description": "An orange pumpkin forms a whimsical hot air balloon above a small wicker basket suspended on ropes. Use this illustration for autumn adventure storytelling.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-hot-air-balloon.png",
+      "topic": "pumpkin",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "raster",
+      "sourceSha256": "ccd500bb4c3535b0dae121e4cfb3e2a5a626d8bf8b752e831a14956460dc3473",
+      "inputSignature": "6686bb5599c040afa339032b06201497b5b6b4b51971f778f5a194873963eb02",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 822972,
+        "weightedCmykRmse": 0.763645
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1296812,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 822972,
+          "weightedCmykRmse": 0.763645
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        48,
+        33,
+        992,
+        1424
+      ],
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-hot-air-balloon.pdf",
+          "bytes": 822972,
+          "sha256": "1f88042cf7b2d0e816b88569e8446ccdcde92ed0215c3ed21cc6f6c055906bed"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-hot-air-balloon.webp",
+          "bytes": 1179548,
+          "sha256": "7d3f12d4d1fd36453f0f4e5b95887c779ce64f8cdcbdf89d55643ee50e0b593b"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-hot-air-balloon-thumb.webp",
+          "bytes": 41974,
+          "sha256": "7a039e11d416f12bf3ac0ac8052e6be619d5d54b7658c5f960a42260c65386a2"
+        }
+      },
+      "proofSha256": "c935b33d8d95ec8540ab0f76045fe9fd83c6f551dc49aa9608bfabb290ca118f",
+      "pairMeanRgbDifference": 3.32467
+    },
+    {
+      "id": "pumpkin-shaped-teapot",
+      "title": "Pumpkin-Shaped Teapot",
+      "alt": "A pumpkin-shaped orange teapot has a green vine handle and leaf spout beside a matching cup.",
+      "description": "A pumpkin-shaped orange teapot has a green vine handle and leaf spout beside a matching cup. Use this illustration for personal fall tea invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-shaped-teapot.png",
+      "topic": "pumpkin",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "891f7f2ecb32c24ae944cc0450d34a870d99a40b038dcfcef625117a018a3fbc",
+      "inputSignature": "8056cfdb73c487e23036f2237eb5e0b5455e81a4dd7dc452548d7add24c00b9e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 845119,
+        "weightedCmykRmse": 0.818331
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1356963,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 845119,
+          "weightedCmykRmse": 0.818331
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        44,
+        91,
+        1497,
+        915
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-shaped-teapot.pdf",
+          "bytes": 845119,
+          "sha256": "72c1229f0bb3cfd1ad061bae03f03b3d1c769db189c096d23782ec2a30356b2a"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-shaped-teapot.webp",
+          "bytes": 1288910,
+          "sha256": "da9fb12163e30e188764341ec614f0bfc2eb4a6d50d579eaf8664bac2b88bcf5"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-shaped-teapot-thumb.webp",
+          "bytes": 42254,
+          "sha256": "2da44a863eb9dc1633d41094ad7089c1d60fe34ae74ff54e35f8fe6049e37c31"
+        }
+      },
+      "proofSha256": "c150da3088d9b2bfb9e6f3c4ab30f5b85181dd43c6104922f836ff35178b890a",
+      "pairMeanRgbDifference": 2.91006
+    },
+    {
+      "id": "pumpkin-on-autumn-books",
+      "title": "Pumpkin on Autumn Books",
+      "alt": "A small orange pumpkin rests on three stacked books with blank spines beside round reading glasses and maple leaves.",
+      "description": "A small orange pumpkin rests on three stacked books with blank spines beside round reading glasses and maple leaves. Use this illustration for autumn reading challenge cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_022/source/pumpkin-on-autumn-books.png",
+      "topic": "pumpkin",
+      "width": 1448,
+      "height": 1086,
+      "sourceType": "raster",
+      "sourceSha256": "69b79f1a4042dc4ab773bae8c5233bc9b47287896ff676cd7818d3d0e776365c",
+      "inputSignature": "01261bd5bef036733ae38ca55d7e638029ae16aae0503e1fe9136dd3ee643a85",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 904707,
+        "weightedCmykRmse": 0.966619
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1542153,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1010629,
+          "weightedCmykRmse": 0.827247
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 904707,
+          "weightedCmykRmse": 0.966619
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        67,
+        14,
+        1425,
+        1034
+      ],
+      "image": {
+        "width": 1448,
+        "height": 1086,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_022/exports/pumpkin-on-autumn-books.pdf",
+          "bytes": 904707,
+          "sha256": "480486622d6aa7ced9a71ae1ae823e9c9bf02ad457c30c5cfccbe84b73b3c9ab"
+        },
+        "webp": {
+          "path": "work/production/wave_022/exports/pumpkin-on-autumn-books.webp",
+          "bytes": 1053262,
+          "sha256": "726cc0371b7f943d03ac84ad2e0f7ef7bb7b55a968c46c34fae78c0de6a69721"
+        },
+        "thumb": {
+          "path": "work/production/wave_022/exports/pumpkin-on-autumn-books-thumb.webp",
+          "bytes": 46238,
+          "sha256": "f45962a120222c2309f005ab338ec1f1fa2eea0f4221217f941085ff7942a33b"
+        }
+      },
+      "proofSha256": "2a8dfecfefa4930e9e65f01ef942f3aea4d7f06dafd382383e0516eddfc646a0",
+      "pairMeanRgbDifference": 2.61925
+    }
+  ],
+  "deferred": [
+    {
+      "id": "pumpkin-dried-flower-pumpkin",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "pumpkin-outline-botanical",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T16:10:56.473Z",
+  "allAccountR2Bytes": 434037941,
+  "publicationBatch": "wave_021_028"
+}

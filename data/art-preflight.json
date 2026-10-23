@@ -1,18 +1,18 @@
 {
   "status": "PASS",
-  "generatedCount": 58,
-  "originalTopicArtworkCount": 108,
+  "generatedCount": 94,
+  "originalTopicArtworkCount": 144,
   "suppliedCount": 150,
-  "availableCount": 208,
+  "availableCount": 244,
   "supplementalCount": 100,
-  "topicCount": 5,
+  "topicCount": 6,
   "targetCount": 5500,
   "completedTopicCount": 1,
-  "publishedApprovedCount": 208,
-  "totalLocalAssetBytes": 347069014,
+  "publishedApprovedCount": 244,
+  "totalLocalAssetBytes": 418886373,
   "r2MeasuredBytes": null,
   "maxPdfBytes": 998269,
-  "p95PdfBytes": 987742,
+  "p95PdfBytes": 984635,
   "pdfOverCapCount": 0,
   "maliciousSvgVectorsRejected": 6,
   "exactDuplicateSvgCount": 0,
@@ -12335,6 +12335,2166 @@
             {
               "width": 1199,
               "height": 1312,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-cutaway-seeds",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            20,
+            1491,
+            1000
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            10,
+            429,
+            271
+          ]
+        },
+        "pdf": {
+          "bytes": 945679,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-rooted-seed",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1159,
+          "height": 1357,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            23,
+            1147,
+            1357
+          ]
+        },
+        "thumb": {
+          "width": 376,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            10,
+            14,
+            372,
+            435
+          ]
+        },
+        "pdf": {
+          "bytes": 865220,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.863 \u00d7 4.523 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1159,
+              "height": 1357,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-carved-crescent",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            0,
+            1522,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            31,
+            0,
+            426,
+            290
+          ]
+        },
+        "pdf": {
+          "bytes": 891181,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-sleeping-cat",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            52,
+            7,
+            1498,
+            974
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            1,
+            431,
+            280
+          ]
+        },
+        "pdf": {
+          "bytes": 971615,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-child-carrying",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1199,
+          "height": 1312,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            25,
+            0,
+            1183,
+            1298
+          ]
+        },
+        "thumb": {
+          "width": 402,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            40,
+            0,
+            360,
+            437
+          ]
+        },
+        "pdf": {
+          "bytes": 698974,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.997 \u00d7 4.373 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1199,
+              "height": 1312,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-garden-gnome",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1283,
+          "height": 1226,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            13,
+            1261,
+            1202
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 420,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            39,
+            3,
+            434,
+            413
+          ]
+        },
+        "pdf": {
+          "bytes": 957549,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.277 \u00d7 4.087 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1283,
+              "height": 1226,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-patch-sign",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            55,
+            42,
+            1496,
+            998
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            18,
+            10,
+            421,
+            279
+          ]
+        },
+        "pdf": {
+          "bytes": 930695,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-corner-cluster",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1302,
+            1185
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            438,
+            399
+          ]
+        },
+        "pdf": {
+          "bytes": 944640,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-hanging-garland",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 2159,
+          "height": 728,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            15,
+            2149,
+            728
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 148,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            1,
+            1,
+            439,
+            147
+          ]
+        },
+        "pdf": {
+          "bytes": 907361,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "7.197 \u00d7 2.427 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 2159,
+              "height": 728,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-stacked-harvest",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1145,
+          "height": 1374,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            31,
+            65,
+            1129,
+            1311
+          ]
+        },
+        "thumb": {
+          "width": 367,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            33,
+            19,
+            345,
+            421
+          ]
+        },
+        "pdf": {
+          "bytes": 840823,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.817 \u00d7 4.580 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1145,
+              "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-ribbon-keepsake",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            39,
+            1292,
+            1175
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            28,
+            18,
+            421,
+            378
+          ]
+        },
+        "pdf": {
+          "bytes": 904540,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-rain-boots",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            0,
+            1312,
+            1169
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            3,
+            0,
+            440,
+            391
+          ]
+        },
+        "pdf": {
+          "bytes": 940846,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-wooden-wagon",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            144,
+            47,
+            1478,
+            998
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            39,
+            20,
+            425,
+            278
+          ]
+        },
+        "pdf": {
+          "bytes": 765652,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-market-scale",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1024,
+          "height": 1536,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            4,
+            1010,
+            1536
+          ]
+        },
+        "thumb": {
+          "width": 293,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            28,
+            5,
+            274,
+            435
+          ]
+        },
+        "pdf": {
+          "bytes": 765754,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.413 \u00d7 5.120 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1024,
+              "height": 1536,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-soup-tureen",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            59,
+            21,
+            1520,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            19,
+            7,
+            428,
+            279
+          ]
+        },
+        "pdf": {
+          "bytes": 720713,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-pie-and-pumpkin",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            63,
+            71,
+            1486,
+            959
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            17,
+            29,
+            426,
+            274
+          ]
+        },
+        "pdf": {
+          "bytes": 813227,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-seed-scoop",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            11,
+            1488,
+            1000
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            13,
+            1,
+            428,
+            287
+          ]
+        },
+        "pdf": {
+          "bytes": 821804,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-ceramic-lantern",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            15,
+            1299,
+            1199
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            4,
+            4,
+            436,
+            397
+          ]
+        },
+        "pdf": {
+          "bytes": 880247,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-knitted-pumpkin",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            31,
+            1263,
+            1199
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            18,
+            16,
+            423,
+            379
+          ]
+        },
+        "pdf": {
+          "bytes": 976018,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-wooden-pumpkin",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            63,
+            9,
+            1282,
+            1177
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            20,
+            14,
+            431,
+            387
+          ]
+        },
+        "pdf": {
+          "bytes": 962768,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-lantern-smile",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            33,
+            32,
+            1294,
+            1163
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            12,
+            10,
+            434,
+            389
+          ]
+        },
+        "pdf": {
+          "bytes": 572769,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-lantern-cat-face",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            80,
+            41,
+            1356,
+            1083
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            24,
+            13,
+            422,
+            347
+          ]
+        },
+        "pdf": {
+          "bytes": 618830,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-lantern-sleepy",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            21,
+            1308,
+            1199
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            10,
+            41,
+            431,
+            396
+          ]
+        },
+        "pdf": {
+          "bytes": 812050,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-hot-air-balloon",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1024,
+          "height": 1536,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            19,
+            1010,
+            1536
+          ]
+        },
+        "thumb": {
+          "width": 293,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            11,
+            7,
+            286,
+            414
+          ]
+        },
+        "pdf": {
+          "bytes": 822972,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.413 \u00d7 5.120 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1024,
+              "height": 1536,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-shaped-teapot",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            9,
+            1515,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            10,
+            23,
+            431,
+            293
+          ]
+        },
+        "pdf": {
+          "bytes": 845119,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-on-autumn-books",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1448,
+          "height": 1086,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            41,
+            10,
+            1444,
+            1086
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 330,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            18,
+            2,
+            435,
+            316
+          ]
+        },
+        "pdf": {
+          "bytes": 904707,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.827 \u00d7 3.620 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1448,
+              "height": 1086,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-folded-tartan-scarf",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1199,
+          "height": 1312,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            53,
+            1187,
+            1252
+          ]
+        },
+        "thumb": {
+          "width": 402,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            17,
+            19,
+            360,
+            420
+          ]
+        },
+        "pdf": {
+          "bytes": 972496,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.997 \u00d7 4.373 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1199,
+              "height": 1312,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-alpine-skis-and-poles",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1151,
+          "height": 1367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            39,
+            31,
+            1125,
+            1321
+          ]
+        },
+        "thumb": {
+          "width": 370,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            23,
+            11,
+            360,
+            427
+          ]
+        },
+        "pdf": {
+          "bytes": 949443,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.837 \u00d7 4.557 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1151,
+              "height": 1367,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-knitting-basket",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            8,
+            1514,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            53,
+            7,
+            404,
+            269
+          ]
+        },
+        "pdf": {
+          "bytes": 975845,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-snowy-pine-grove",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            34,
+            1350,
+            1145
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            9,
+            424,
+            364
+          ]
+        },
+        "pdf": {
+          "bytes": 896215,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-snowy-owl-stump",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1145,
+          "height": 1374,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            14,
+            1137,
+            1374
+          ]
+        },
+        "thumb": {
+          "width": 367,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            3,
+            364,
+            440
+          ]
+        },
+        "pdf": {
+          "bytes": 963613,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.817 \u00d7 4.580 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1145,
+              "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-polar-bear-cub",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            19,
+            1382,
+            994
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            42,
+            7,
+            397,
+            285
+          ]
+        },
+        "pdf": {
+          "bytes": 487597,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-squirrel-hazelnut",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1310,
+          "height": 1201,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            5,
+            1292,
+            1201
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 403,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            2,
+            421,
+            396
+          ]
+        },
+        "pdf": {
+          "bytes": 928690,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.367 \u00d7 4.003 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1310,
+              "height": 1201,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-floral-skull",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            35,
+            14,
+            1471,
+            1000
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            25,
+            2,
+            422,
+            287
+          ]
+        },
+        "pdf": {
+          "bytes": 929028,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-cat-pumpkin-wagon",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            15,
+            9,
+            1530,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            2,
+            19,
+            437,
+            288
+          ]
+        },
+        "pdf": {
+          "bytes": 946769,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "halloween-vampire-puppet",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1254,
+          "height": 1254,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            37,
+            11,
+            1246,
+            1254
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            22,
+            2,
+            408,
+            437
+          ]
+        },
+        "pdf": {
+          "bytes": 947954,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.180 \u00d7 4.180 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1254,
+              "height": 1254,
               "components": 4,
               "alphaMask": true,
               "profile": "GRACoL2006_Coated1v2 (registered output intent)",
