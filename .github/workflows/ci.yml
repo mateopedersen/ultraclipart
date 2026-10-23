@@ -32,16 +32,26 @@ jobs:
         run: pnpm exec playwright install --with-deps chromium
       - name: Desktop, tablet, mobile and accessibility
         run: |
-          pnpm preview --host 127.0.0.1 --port 4321 > /tmp/ultraclipart-preview.log 2>&1 &
+          mkdir -p reports
+          pnpm exec astro preview --host 127.0.0.1 --port 4321 --ignore-lock > reports/preview.log 2>&1 &
           PREVIEW_PID=$!
           trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          PREVIEW_READY=0
           for attempt in $(seq 1 30); do
-            if curl --fail --silent http://127.0.0.1:4321/ > /dev/null; then break; fi
+            if curl --fail --silent http://127.0.0.1:4321/ > /dev/null; then
+              PREVIEW_READY=1
+              break
+            fi
+            if ! kill -0 "$PREVIEW_PID" 2>/dev/null; then break; fi
             sleep 1
           done
+          if [ "$PREVIEW_READY" -ne 1 ]; then
+            cat reports/preview.log
+            exit 1
+          fi
           BASE_URL=http://127.0.0.1:4321 node tests/e2e/search.mjs
           BASE_URL=http://127.0.0.1:4321 node tests/e2e/site.mjs
-      - name: Keep test evidence
+      - name: Keep browser evidence and preview log
         if: always()
         uses: actions/upload-artifact@v4
         with:
