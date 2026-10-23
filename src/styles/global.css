@@ -384,6 +384,8 @@ p {
   min-width: 0;
 }
 .art-picture {
+  position: relative;
+  overflow: hidden;
   flex-shrink: 0;
   display: block;
   aspect-ratio: 1.16;
@@ -397,8 +399,10 @@ p {
   background: #edf4fa;
 }
 .art-picture img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 9px;
+  width: calc(100% - 18px);
+  height: calc(100% - 18px);
   object-fit: contain;
   transition: transform 0.2s;
 }

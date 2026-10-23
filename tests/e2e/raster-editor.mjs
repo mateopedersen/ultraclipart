@@ -8,7 +8,9 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
 mkdirSync(out, { recursive: true });
 const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url))).filter(
-  (a) => a.sourceType === 'raster',
+  (a) =>
+    a.sourceType === 'raster' &&
+    (!process.env.RASTER_TOPICS || process.env.RASTER_TOPICS.split(',').includes(a.topic)),
 );
 const targets =
   process.env.ALL_RASTER === '1'
@@ -72,7 +74,7 @@ try {
       await page.locator('[data-action=duplicate]').filter({ visible: true }).first().click();
       await commitInput('[data-prop=scaleX]', 35);
       await commitInput('[data-prop=scaleY]', 35);
-      await commitInput('[data-prop=x]', 750);
+      await commitInput('[data-prop=x]', Math.round(a.width * 0.54));
       await commitInput('[data-prop=y]', 250);
       await page.locator('[data-panel=color]').click();
       await page.locator('[data-prop=opacity]').evaluate((input) => {
@@ -88,7 +90,7 @@ try {
     await expect(page.locator('.uc-canvas text')).toContainText('Play together');
     await page.locator('[data-panel=transform]').click();
     await commitInput('[data-prop=x]', 120);
-    await commitInput('[data-prop=y]', 1150);
+    await commitInput('[data-prop=y]', Math.round(a.height * 0.82));
     await page.locator('[data-panel=create]').click();
     await page.locator('[data-shape=star]').click();
     await expect(page.locator('.uc-canvas [data-layer]')).toHaveCount(imageCount + 2);
@@ -99,8 +101,8 @@ try {
     await page.locator('[data-panel=crop]').click();
     await commitInput('[data-crop=x]', 50);
     await commitInput('[data-crop=y]', 60);
-    await commitInput('[data-crop=width]', 1250);
-    await commitInput('[data-crop=height]', 1200);
+    await commitInput('[data-crop=width]', a.width - 132);
+    await commitInput('[data-crop=height]', a.height - 182);
     await page.locator('[data-action=crop]').click();
     await page.locator('[data-panel=background]').click();
     await page.locator('[data-bg="#edf1e7"]').click();

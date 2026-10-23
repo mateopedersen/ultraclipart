@@ -65,6 +65,8 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/content.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/volleyball.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=baby node tests/e2e/collection.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=heart node tests/e2e/collection.mjs
             if [ "$engine" = chromium ]; then RASTER_COVERAGE=1; else RASTER_COVERAGE=0; fi
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" ALL_RASTER="$RASTER_COVERAGE" node tests/e2e/raster-editor.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/editor node scripts/test-editor-browser.mjs

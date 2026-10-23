@@ -6,7 +6,9 @@ import { resolve } from 'node:path';
 import { tokenBucket } from '../../src/lib/search-index.ts';
 const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
 const pumpkinCount = catalog.filter(
-  (x) => x.topic === 'pumpkin' || x.id === 'volleyball-halloween-pumpkin-clipart',
+  (x) =>
+    x.topic === 'pumpkin' ||
+    ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(x.id),
 ).length;
 const giftCount = catalog.filter((x) =>
   /\bgift\b/i.test([x.topic, x.title, x.description, x.alt].join(' ')),

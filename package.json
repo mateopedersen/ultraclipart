@@ -21,7 +21,8 @@
     "@jsquash/webp": "1.5.0",
     "astro": "7.4.2",
     "jspdf": "4.2.1",
-    "pdf-lib": "1.17.1"
+    "pdf-lib": "1.17.1",
+    "pako": "2.2.0"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
@@ -31,7 +32,8 @@
     "prettier-plugin-astro": "1.1.1",
     "sharp": "0.35.5",
     "typescript": "6.0.2",
-    "wrangler": "4.151.3"
+    "wrangler": "4.151.3",
+    "@types/pako": "2.0.4"
   },
   "packageManager": "pnpm@11.25.0"
 }

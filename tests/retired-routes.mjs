@@ -19,6 +19,7 @@ test('only unavailable subjects get an edge policy within the Pages Free route l
 });
 test('retired routes ignore stale cached content and return real 404 with current page and headers', async () => {
   const policy = retirementPolicy(topics, art);
+  const retired = policy.retired.find((route) => route.startsWith('/clipart/')).replace(/\/$/, '');
   const handler = createRetiredHandler(policy.retired, {
     'Content-Security-Policy': "default-src 'self'",
   });
@@ -38,7 +39,7 @@ test('retired routes ignore stale cached content and return real 404 with curren
   };
   for (const suffix of ['/', '/?q=retired', '']) {
     const response = await handler.fetch(
-      new Request(`https://ultraclipart.com/clipart/heart${suffix}`),
+      new Request(`https://ultraclipart.com${retired}${suffix}`),
       env,
     );
     assert.equal(response.status, 404);
@@ -49,20 +50,20 @@ test('retired routes ignore stale cached content and return real 404 with curren
   }
   assert.ok(urls.every((url) => url === 'https://ultraclipart.com/404.html'));
   const head = await handler.fetch(
-    new Request('https://ultraclipart.com/clipart/heart/', { method: 'HEAD' }),
+    new Request(`https://ultraclipart.com${retired}/`, { method: 'HEAD' }),
     env,
   );
   assert.equal(head.status, 404);
   assert.equal(await head.text(), '');
   const post = await handler.fetch(
-    new Request('https://ultraclipart.com/clipart/heart/', { method: 'POST' }),
+    new Request(`https://ultraclipart.com${retired}/`, { method: 'POST' }),
     env,
   );
   assert.equal(post.status, 405);
   assert.equal(post.headers.get('Allow'), 'GET, HEAD');
   const active = await handler.fetch(new Request('https://ultraclipart.com/clipart/pumpkin/'), env);
   assert.equal(active.status, 200);
-  const unavailable = await handler.fetch(new Request('https://ultraclipart.com/clipart/heart/'), {
+  const unavailable = await handler.fetch(new Request(`https://ultraclipart.com${retired}/`), {
     ASSETS: {
       fetch: () => {
         throw Error('offline');

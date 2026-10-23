@@ -37,6 +37,7 @@ export const defaults: SearchState = {
 };
 const aliases: Record<string, string> = {
   leaves: 'leaf',
+  babies: 'baby',
   snowmen: 'snowman',
   presents: 'gift',
   present: 'gift',
@@ -98,6 +99,7 @@ export function parseState(params: URLSearchParams): SearchState {
       'blue',
       'green',
       'pink',
+      'gray',
     ]),
     format: choices('format', ['webp', 'pdf']),
     orientation: choices('orientation', ['square', 'portrait', 'landscape']),

@@ -4,7 +4,7 @@ import Search from '../components/Search.astro';
 import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
 import { art, newestArt, topics, availableClusters, slugify } from '../lib/catalog';
-const picks = ['volleyball', 'pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'gift', 'snowman'];
+const picks = ['baby', 'heart', 'volleyball', 'pumpkin', 'ghost', 'sunflower', 'gift', 'snowman'];
 ---
 
 <Layout>
@@ -16,7 +16,7 @@ const picks = ['volleyball', 'pumpkin', 'ghost', 'bat', 'sunflower', 'apple', 'g
       <Search />
       <div class="popular chips">
         <span>Try a subject:</span>
-        {['volleyball', 'pumpkin', 'ghost', 'gift'].map((t) => (
+        {['baby', 'heart', 'volleyball', 'pumpkin'].map((t) => (
           <a href={`/search/?q=${t}`}>{t}</a>
         ))}
       </div>

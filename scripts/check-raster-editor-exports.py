@@ -1,8 +1,10 @@
 """Independently verify exported CMYK images and screen-render their placement."""
 import argparse,hashlib,json,os,shutil,subprocess
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from PIL import Image,ImageChops,ImageStat,ImageDraw,ImageFont
 from pypdf import PdfReader
+from raster_source import inspect_cmyk_image,decoded_alpha
 ROOT=Path(__file__).resolve().parents[1]
 def images(reader):
     found=[];seen=set()
@@ -16,15 +18,14 @@ def images(reader):
     for page in reader.pages:visit(page['/Resources'])
     return found
 def signature(obj):
-    cs=obj['/ColorSpace'];assert cs[0]=='/ICCBased'
-    profile=cs[1].get_object();assert profile['/N']==4 and profile.get_data()[16:20]==b'CMYK'
+    info=inspect_cmyk_image(obj,obj['/Width'],obj['/Height'])
     mask=obj['/SMask'].get_object() if '/SMask' in obj else None
-    return {'width':obj['/Width'],'height':obj['/Height'],'imageSha256':hashlib.sha256(obj.get_data()).hexdigest(),'iccSha256':hashlib.sha256(profile.get_data()).hexdigest(),'alphaSha256':hashlib.sha256(mask.get_data()).hexdigest() if mask else None}
+    return {'colorSpace':info['colorSpace'],'decode':list(obj.get('/Decode',[])),'width':obj['/Width'],'height':obj['/Height'],'imageSha256':hashlib.sha256(obj.get_data()).hexdigest(),'iccSha256':info['iccSha256'],'alphaSha256':hashlib.sha256(decoded_alpha(mask)).hexdigest() if mask else None}
 def main():
     cli=argparse.ArgumentParser();cli.add_argument('directory');args=cli.parse_args();folder=Path(args.directory)
     binary=os.environ.get('PDFTOPPM_BIN') or shutil.which('pdftoppm');assert binary
     art={a['id']:a for a in json.loads((ROOT/'data/art.json').read_text())};rows=[]
-    for pdf in sorted(folder.glob('*-edited.pdf')):
+    def verify(pdf):
         art_id=pdf.name.removesuffix('-edited.pdf');original=ROOT/'public'/art[art_id]['pdf'].lstrip('/')
         reader=PdfReader(pdf);assert len(reader.pages)==1 and pdf.stat().st_size<=1_000_000
         source=[signature(i) for i in images(PdfReader(original))];output=[signature(i) for i in images(reader)]
@@ -39,7 +40,9 @@ def main():
         web=Image.open(folder/f'{art_id}-edited.webp').convert('RGBA');background=Image.new('RGBA',web.size,'white');background.alpha_composite(web);web=background.convert('RGB').resize(proof.size)
         error=sum(ImageStat.Stat(ImageChops.difference(web,proof)).mean)/3
         assert error<18,f'PDF/WebP positioning or rendering differs: {art_id}: {error}'
-        rows.append({'id':art_id,'status':'PASS','bytes':pdf.stat().st_size,'originalImageProfileAlphaPreserved':True,'image':output[0],'pdfWebpMeanDifference':round(error,4)})
+        return {'id':art_id,'status':'PASS','bytes':pdf.stat().st_size,'originalImageProfileAlphaPreserved':True,'image':output[0],'pdfWebpMeanDifference':round(error,4)}
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        rows=list(pool.map(verify, sorted(folder.glob('*-edited.pdf'))))
     assert rows
     for offset in range(0,len(rows),10):
         sheet=Image.new('RGB',(1250,650),'#f2f3ef');draw=ImageDraw.Draw(sheet);font=ImageFont.load_default(size=12)

@@ -32,3 +32,9 @@ representative sources in Firefox/WebKit. ALL_RASTER=1 also runs full coverage
 locally. scripts/check-raster-editor-exports.py independently verifies source
 CMYK/ICC/alpha preservation and renders PDFs against corresponding WebP exports.
 Existing vector editor and creation-studio interaction suites remain required.
+
+Supplied collection intake
+Run verify-raster-intake.py --topic <slug> on the staged 50 PDF/WebP pairs; review both WebP and independently rendered PDF contact sheets. Add reviewed, image-specific metadata and collection copy, then run import-raster-collection.mjs --topic <slug> [--catalog prior-candidate.json]. Dimensions, orientation, actual CMYK representation and print size come from verified originals. Use the guarded R2 ingestion and CDN publication preparation for each batch; never publish a catalog with missing files.
+
+Edited PDF size optimization
+The editor preserves the original CMYK image streams and existing ICC profiles. For supported 8-bit grayscale alpha masks only, bounded decompression followed by PNG row prediction and level-9 DEFLATE can reduce storage losslessly. The smaller candidate is accepted only with sufficient overhead savings; all other sources remain untouched. Independent pypdf decoding compares every alpha byte and CMYK stream against the original; Poppler compares the final rendered composition with WebP. Unprofiled DeviceCMYK is verified by decoding the actual four-component JPEG and is never relabeled as ICC-profiled.

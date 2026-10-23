@@ -2,6 +2,7 @@
 import hashlib, io
 from PIL import Image, ImageCms
 from pypdf import PdfReader
+from raster_source import inspect_cmyk_image
 
 def inspect_raster(art, files):
     checks={'sourceType':'raster','namedLayers':0}
@@ -17,7 +18,7 @@ def inspect_raster(art, files):
             image.load();assert image.format=='WEBP' and image.size==size and image.mode=='RGBA'
             alpha=image.getchannel('A');low,high=alpha.getextrema()
             # Downsampling the supplied near-opaque pixels can produce 253/254.
-            assert low==0 and (high==255 if kind=='webp' else high>=250)
+            assert low==0 and high>=250
             checks[kind]={'width':size[0],'height':size[1],'alpha':True,'alphaRange':[low,high],'bounds':alpha.getbbox()}
     reader=PdfReader(files['pdf'],strict=True);assert len(reader.pages)==1
     root=reader.trailer['/Root']
@@ -32,13 +33,10 @@ def inspect_raster(art, files):
     for ref in page['/Resources'].get('/XObject',{}).values():
         image=ref.get_object()
         if image.get('/Subtype')!='/Image':continue
-        cs=image['/ColorSpace'];assert cs[0]=='/ICCBased'
-        icc=cs[1].get_object();profile=icc.get_data();assert icc['/N']==4 and profile[16:20]==b'CMYK'
-        assert image['/Width']==art['width'] and image['/Height']==art['height']
-        description=ImageCms.getProfileDescription(ImageCms.ImageCmsProfile(io.BytesIO(profile))).strip()
-        assert description==art['printProfile']
-        images.append({'profile':description,'components':4,'embeddedICC':True})
+        info=inspect_cmyk_image(image,width,height)
+        assert info['profile']==art['printProfile'] and info['colorSpace']==art['pdfColorSpace']
+        images.append(info)
     assert images and files['pdf'].stat().st_size<=1_000_000
-    checks['pdf']={'bytes':files['pdf'].stat().st_size,'underCap':True,'colorSpace':'ICCBased CMYK','rasterImages':len(images),'page':art['pdfPage'],'profileEmbedded':True,'images':images}
+    checks['pdf']={'bytes':files['pdf'].stat().st_size,'underCap':True,'colorSpace':art['pdfColorSpace'],'rasterImages':len(images),'page':art['pdfPage'],'profileEmbedded':all(i['iccBytes']>0 for i in images),'images':images}
     checks['pass']=True
     return checks

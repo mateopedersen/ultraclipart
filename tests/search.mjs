@@ -18,7 +18,9 @@ const data = arts.map((item) => ({
   cluster: topics.find((topic) => topic.slug === item.topic).cluster,
 }));
 const pumpkinCount = data.filter(
-  (item) => item.topic === 'pumpkin' || item.id === 'volleyball-halloween-pumpkin-clipart',
+  (item) =>
+    item.topic === 'pumpkin' ||
+    ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(item.id),
 ).length;
 const search = (patch) => searchArtwork(data, { ...defaults, ...patch });
 
@@ -62,12 +64,19 @@ test('all explicit facets combine and match actual file metadata', () => {
     }).total,
     data.filter(
       (x) =>
-        (x.topic === 'pumpkin' || x.id === 'volleyball-halloween-pumpkin-clipart') &&
+        (x.topic === 'pumpkin' ||
+          ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(
+            x.id,
+          )) &&
         x.style === 'Color' &&
-        x.color === 'Orange',
+        x.color === 'Orange' &&
+        x.orientation === 'Square',
     ).length,
   );
-  assert.equal(search({ orientation: 'portrait' }).total, 0);
+  assert.equal(
+    search({ orientation: 'portrait' }).total,
+    data.filter((a) => a.orientation === 'Portrait').length,
+  );
   assert.equal(search({ background: 'opaque' }).total, 0);
   const withoutPdf = [{ ...data[0], formats: ['WEBP'] }];
   assert.equal(searchArtwork(withoutPdf, { ...defaults, format: 'pdf' }).total, 0);

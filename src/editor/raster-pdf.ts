@@ -14,6 +14,7 @@ import type { EditorDocument, Layer, RasterLayer } from './model';
 import { paperLayout } from './pdf-math';
 import { rasterPlacement } from './raster-placement';
 import { rasterPdf } from './raster';
+import { compactSoftMasks } from './pdf-alpha';
 
 /** Compose existing CMYK image streams with independently rendered vector runs.
  * No bitmap resampling, JPEG recompression, tracing, or RGB-to-CMYK relabeling.
@@ -70,7 +71,9 @@ export async function exportRasterPdf(
     await flushVectors();
     let image = embedded.get(layer.assetId);
     if (!image) {
-      [image] = await output.embedPdf(await sourcePdf(layer), [0]);
+      const source = await PDFDocument.load(await sourcePdf(layer), { updateMetadata: false });
+      await compactSoftMasks(source);
+      [image] = await output.embedPages([source.getPage(0)]);
       embedded.set(layer.assetId, image);
     }
     page.pushOperators(

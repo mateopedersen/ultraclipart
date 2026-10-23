@@ -9,10 +9,12 @@ const approved = art.filter((a) => a.published);
 const originalTopics = new Set(topics.map((t) => t.slug));
 const originalArt = art.filter((a) => originalTopics.has(a.topic));
 const queue = {
-  version: 2,
+  version: 3,
   states: prior.states,
   targetArtworkCount: 5500,
-  generatedArtworkCount: originalArt.length,
+  generatedArtworkCount: originalArt.filter((a) => a.productionMethod !== 'owner-supplied').length,
+  suppliedArtworkCount: art.filter((a) => a.productionMethod === 'owner-supplied').length,
+  originalTopicArtworkCount: originalArt.length,
   supplementalArtworkCount: art.length - originalArt.length,
   qualityApprovedArtworkCount: originalArt.filter((a) => a.published).length,
   supplementalApprovedArtworkCount: approved.filter((a) => !originalTopics.has(a.topic)).length,
@@ -35,7 +37,9 @@ const queue = {
       keyword: t.keyword,
       wave: t.wave,
       target: 50,
-      generated: items.length,
+      generated: items.filter((a) => a.productionMethod !== 'owner-supplied').length,
+      supplied: items.filter((a) => a.productionMethod === 'owner-supplied').length,
+      available: items.length,
       approved: items.filter((a) => a.published).length,
       remainingToDraw: 50 - items.length,
       briefStatus: reviewed
