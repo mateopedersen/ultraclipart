@@ -18,6 +18,9 @@ PROFILE=ROOT/'public/color/print.icc'
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def atomic_json(path, data):
     temp=path.with_suffix('.tmp');temp.write_text(json.dumps(data,indent=2)+'\n');temp.replace(path)
+def validate_native_alpha(alpha):
+    low,high=alpha.getextrema()
+    assert low==0 and high>=250, 'Source needs transparent surroundings and near-opaque artwork'
 def png_payload(gray):
     out=io.BytesIO();gray.save(out,'PNG',compress_level=9)
     body=out.getvalue();pos=8;payload=[]
@@ -70,7 +73,7 @@ def main():
         with Image.open(source) as opened:
             opened.load();assert opened.mode=='RGBA' and max(opened.size)<=4096
             image=opened.copy()
-        alpha=image.getchannel('A');assert alpha.getextrema()==(0,255)
+        alpha=image.getchannel('A');validate_native_alpha(alpha)
         # Tiny isolated alpha noise is recorded; visible contours must stay inside the canvas.
         visible=alpha.point(lambda v:255 if v>=32 else 0).getbbox();assert visible
         width,height=image.size

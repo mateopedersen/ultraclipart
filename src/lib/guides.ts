@@ -10,9 +10,9 @@ export const guides = [
   },
   {
     slug: 'turn-clipart-into-a-coloring-activity',
-    title: 'Turn a pumpkin into a useful coloring activity',
+    title: 'Make a botanical coloring activity',
     description:
-      'Simplify the real pumpkin drawing, preserve important outlines, and leave room for a personal caption.',
+      'Turn the Botanical sprig starter into clear outlines, simplify its layers, and leave room for a personal caption.',
     image: '/studio/botanical-sprig.svg',
     alt: 'Editable botanical shapes, illustrating the idea of simplifying a layered composition.',
     category: 'For classrooms and families',

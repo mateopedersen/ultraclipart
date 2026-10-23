@@ -134,6 +134,10 @@ const slugify = (value) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 const unavailable = [
+  ...JSON.parse(
+    readFileSync(resolve(root, 'data/retired-artwork.json'), 'utf8'),
+  ).artworkIds.flatMap((id) => [`/art/${id}/`, `/edit/${id}/`]),
+  ...JSON.parse(readFileSync(resolve(root, 'data/retired-artwork.json'), 'utf8')).assetPaths,
   ...topics.filter((topic) => !available.has(topic.slug)).map((topic) => `/clipart/${topic.slug}/`),
   ...[...new Set(topics.map((topic) => topic.cluster))]
     .filter(

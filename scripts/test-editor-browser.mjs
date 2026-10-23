@@ -25,9 +25,7 @@ const change = async (selector, value) => {
   await page.locator(selector).press('Tab');
 };
 const state = async () =>
-  JSON.parse(
-    await page.evaluate(() => localStorage.getItem('ultraclipart:editor:v1:pumpkin-curly-vine')),
-  );
+  JSON.parse(await page.evaluate(() => localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
 const downloaded = async (format, name) => {
   await page.locator(`[data-format][value="${format}"]`).locator('..').click();
   await expect(page.locator(`[data-format][value="${format}"]`)).toBeChecked();
@@ -38,8 +36,9 @@ const downloaded = async (format, name) => {
   return d;
 };
 try {
-  await page.goto(`${base}/edit/pumpkin-curly-vine/`);
-  await expect(page.locator('[data-status]')).toContainText('editable layers loaded');
+  await page.goto(`${base}/create/`);
+  await page.locator('[data-creator-template=botanical-sprig]').click();
+  await expect(page.locator('[data-status]')).toContainText('editable starter layers loaded');
   await page.screenshot({ path: new URL('06-editor-desktop.png', out).pathname, fullPage: true });
   passed.push('source opens, semantic layers, eight resize handles');
   await panel('layers');
@@ -78,8 +77,8 @@ try {
   await page.locator('[data-visibility="layer-2"]').click();
   expect((await state()).layers[2].visible).toBe(false);
   await page.locator('[data-visibility="layer-2"]').click();
-  await change('[data-layer-name]', 'Edited pumpkin');
-  expect((await state()).layers[1].label).toBe('Edited pumpkin');
+  await change('[data-layer-name]', 'Edited leaf');
+  expect((await state()).layers[1].label).toBe('Edited leaf');
   await action('layer-up').click();
   expect((await state()).layers[2].id).toBe('layer-1');
   passed.push('lock hide show rename reorder');
@@ -92,9 +91,9 @@ try {
   });
   await page.locator('[data-bg="transparent"]').click();
   await panel('text');
-  await page.locator('[data-text]').fill('Happy Harvest');
+  await page.locator('[data-text]').fill('My Leaf Study');
   await action('text').click();
-  expect((await state()).layers.at(-1).text).toBe('Happy Harvest');
+  expect((await state()).layers.at(-1).text).toBe('My Leaf Study');
   passed.push('caption persisted into editable document');
   const projectEvent = page.waitForEvent('download');
   await action('save').click();
@@ -128,7 +127,7 @@ try {
   passed.push('outline and A4 landscape PDF');
   await page.reload();
   await expect(page.locator('[data-status]')).toContainText('restored');
-  expect((await state()).layers.at(-1).text).toBe('Happy Harvest');
+  expect((await state()).layers.at(-1).text).toBe('My Leaf Study');
   passed.push('local session recovery');
   await panel('crop');
   await change('[data-crop=x]', 100);

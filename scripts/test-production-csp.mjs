@@ -60,13 +60,14 @@ const download = async (format) => {
   await expect(page.locator('[data-export-status]')).toContainText('ready');
 };
 try {
-  const response = await page.goto(`${base}/edit/pumpkin-curly-vine/`);
+  const response = await page.goto(`${base}/create/`);
   const csp = response.headers()['content-security-policy'];
   expect(csp).toContain("'wasm-unsafe-eval'");
   expect(csp).toContain("'sha256-");
   expect(csp.split('script-src')[1].split(';')[0]).not.toContain("'unsafe-inline'");
   passed.push('actual response has hashed scripts and specific WASM CSP');
-  await expect(page.locator('[data-status]')).toContainText('editable layers loaded');
+  await page.locator('[data-creator-template=botanical-sprig]').click();
+  await expect(page.locator('[data-status]')).toContainText('editable starter layers loaded');
   await page.locator('[data-panel=layers]').click();
   await page.locator('[data-select=layer-1]').click();
   await page.locator('[data-panel=color]').click();
@@ -84,7 +85,7 @@ try {
     passed.push('WebKit lazy local WASM compiled under production CSP');
   }
   violations.push(...(await page.evaluate(() => window.__csp)));
-  await page.goto(`${base}/art/pumpkin-curly-vine/`);
+  await page.goto(`${base}/art/winter-arctic-fox-resting/`);
   const original = page.locator('a[download][href$=".pdf"]').first();
   await expect(original).toBeVisible();
   if (!productionOrigin) {

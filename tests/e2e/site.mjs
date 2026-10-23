@@ -49,8 +49,10 @@ const report = {
   checks: [],
   pageErrors,
 };
-const editor = '/edit/pumpkin-curly-vine/';
+const editor = '/create/';
 async function readyEditor() {
+  if (!(await page.locator('.uc-canvas [data-layer]').count()))
+    await page.locator('[data-creator-template=botanical-sprig]').click();
   await page.locator('.uc-canvas [data-layer]').first().waitFor();
 }
 const states = [
@@ -64,10 +66,10 @@ const states = [
       await expect(page.locator('#result-count')).toContainText('illustrations for “pumpkin”');
     },
   },
-  { name: '04-topic', url: '/clipart/pumpkin/' },
+  { name: '04-topic', url: '/clipart/winter/' },
   // Keep this sequence: the detail preview warms the SVG cache before the editor
   // fetches the same asset with CORS, covering cached image-to-fetch regressions.
-  { name: '05-art-detail', url: '/art/pumpkin-curly-vine/' },
+  { name: '05-art-detail', url: '/art/winter-arctic-fox-resting/' },
   { name: '06-editor', url: editor, prepare: readyEditor },
   {
     name: '07-recolor',
@@ -75,7 +77,7 @@ const states = [
     prepare: async () => {
       await readyEditor();
       await page.locator('[data-panel=color]').click();
-      await page.locator('[data-layer-picker]').selectOption({ label: 'Pumpkin skin' });
+      await page.locator('[data-layer-picker]').selectOption({ label: 'Lower sage leaf' });
       await page.locator('[data-hex]').fill('#729bd6');
       await page.locator('[data-hex]').blur();
       await page.locator('[data-action=apply-color]').click();
@@ -174,7 +176,7 @@ try {
   for (const value of await page.locator('[data-topic]:not([hidden])').allTextContents())
     assert.ok(value.toLowerCase().startsWith('k'));
   report.checks.push('category A-Z filtering');
-  await page.goto(`${base}/art/pumpkin-curly-vine/`);
+  await page.goto(`${base}/art/winter-arctic-fox-resting/`);
   await page.locator('[data-favorite]').click();
   await page.reload();
   assert.equal(await page.locator('[data-favorite]').getAttribute('aria-pressed'), 'true');
@@ -184,15 +186,15 @@ try {
   );
   assert.equal(await page.locator('#favorites .art-card:not([hidden])').count(), 1);
   report.checks.push('favorite persistence');
-  await page.goto(`${base}/art/pumpkin-curly-vine/`);
+  await page.goto(`${base}/art/winter-arctic-fox-resting/`);
   const original = JSON.parse(
     readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8'),
-  ).find((item) => item.id === 'pumpkin-curly-vine');
+  ).find((item) => item.id === 'winter-arctic-fox-resting');
   for (const format of ['webp', 'pdf']) {
     const pending = page.waitForEvent('download');
     await page.getByRole('link', { name: new RegExp(`Download ${format}`, 'i') }).click();
     const download = await pending;
-    const path = resolve(dir, `original-pumpkin.${format}`);
+    const path = resolve(dir, `original-winter-fox.${format}`);
     await download.saveAs(path);
     const bytes = readFileSync(path);
     assert.equal(bytes.length, original.files[format].bytes);

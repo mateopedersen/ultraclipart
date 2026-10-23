@@ -67,6 +67,7 @@ if (process.env.CF_PAGES === '1') {
 const retirement = retirementPolicy(
   JSON.parse(readFileSync(join(root, 'data/topics.json'), 'utf8')).topics,
   JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
+  JSON.parse(readFileSync(join(root, 'data/retired-artwork.json'), 'utf8')),
 );
 if (retirement) {
   const responseHeaders = Object.fromEntries(

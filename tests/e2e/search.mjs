@@ -10,8 +10,8 @@ const pumpkinCount = catalog.filter(
     x.topic === 'pumpkin' ||
     ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(x.id),
 ).length;
-const giftCount = catalog.filter((x) =>
-  /\bgift\b/i.test([x.topic, x.title, x.description, x.alt].join(' ')),
+const cardinalCount = catalog.filter((x) =>
+  /\bcardinal\b/i.test([x.topic, x.title, x.description, x.alt].join(' ')),
 ).length;
 const base = process.env.BASE_URL ?? 'http://127.0.0.1:4322';
 const engine = process.env.UC_BROWSER ?? 'chromium';
@@ -44,9 +44,9 @@ try {
   await expect(cards()).toHaveCount(pumpkinCount);
   report.checks.push('subject search, eight-card HTML cap');
   await page.selectOption('#filter-style', 'outline');
-  await expect(cards()).toHaveCount(1);
-  await expect(cards()).toHaveAttribute('data-id', 'pumpkin-botanical-outline');
-  report.checks.push('real outline filter');
+  await expect(cards()).toHaveCount(0);
+  await expect(page.locator('#search-empty')).toBeVisible();
+  report.checks.push('outline filter never invents unavailable artwork');
   await page.selectOption('#filter-orientation', 'portrait');
   await expect(page.locator('#search-empty')).toBeVisible();
   report.checks.push('honest empty facet');
@@ -76,7 +76,7 @@ try {
   report.checks.push('query rendered as text');
   await page.fill('#search-query', 'black and white pumpkin');
   await page.locator('#catalog-search button').click();
-  await expect(cards()).toHaveCount(1);
+  await expect(cards()).toHaveCount(0);
   await page.screenshot({ path: resolve(evidence, 'desktop.png'), fullPage: true });
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
@@ -99,13 +99,13 @@ try {
   await page.screenshot({ path: resolve(evidence, 'mobile-320.png'), fullPage: true });
   // Fail a cold manifest request, then retry through the visible control.
   await page.route('**/search-data/**', (route) => route.abort('failed'));
-  await page.goto(`${base}/search/?q=ghost`);
+  await page.goto(`${base}/search/?q=arctic+fox`);
   await expect(page.locator('#search-error')).toBeVisible();
   await expect(page.locator('#result-count')).toHaveText('Search is temporarily unavailable.');
   await page.unroute('**/search-data/**');
   await page.click('#search-retry');
   await expect(cards()).toHaveCount(1);
-  await expect(cards()).toHaveAttribute('data-id', 'ghost-teacup');
+  await expect(cards()).toHaveAttribute('data-id', 'winter-arctic-fox-resting');
   report.checks.push('network error and visible retry recovery');
   // Hold an old query's network request while a newer query completes.
   let release, started;
@@ -120,23 +120,23 @@ try {
   await page.fill('#search-query', 'pumpkin');
   await page.locator('#catalog-search button').click();
   await seen;
-  await page.fill('#search-query', 'gift');
+  await page.fill('#search-query', 'cardinal');
   await page.locator('#catalog-search button').click();
-  await expect(cards()).toHaveCount(giftCount);
+  await expect(cards()).toHaveCount(cardinalCount);
   await expect(
-    cards().filter({ has: page.locator('[href="/art/gift-ribbon-keepsake/"]') }),
+    cards().filter({ has: page.locator('[href="/art/winter-red-cardinal-holly/"]') }),
   ).toHaveCount(1);
   release();
   await page.unroute(slow);
   await expect(page.locator('#result-count')).toHaveText(
-    `${giftCount} ${giftCount === 1 ? 'illustration' : 'illustrations'} for “gift”`,
+    `${cardinalCount} ${cardinalCount === 1 ? 'illustration' : 'illustrations'} for “cardinal”`,
   );
   report.checks.push('outdated request cannot overwrite newer results');
   // Favorites have no catalog cards in HTML and fetch only the saved IDs.
   await page.evaluate(() =>
     localStorage.setItem(
       'ultraclipart-favorites',
-      JSON.stringify(['ghost-teacup', 'gift-ribbon-keepsake']),
+      JSON.stringify(['winter-arctic-fox-resting', 'winter-red-cardinal-holly']),
     ),
   );
   const requested = [];
@@ -152,7 +152,7 @@ try {
       .filter((url) => url.includes('/items/'))
       .map((url) => url.split('/').at(-1))
       .sort(),
-    ['ghost-teacup.json', 'gift-ribbon-keepsake.json'],
+    ['winter-arctic-fox-resting.json', 'winter-red-cardinal-holly.json'],
   );
   assert.equal(
     requested.some((url) => /\/(tokens|ranked|lexicon)\//.test(url)),

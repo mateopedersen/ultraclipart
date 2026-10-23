@@ -9,7 +9,9 @@ export function getStaticPaths() {
   return art.map((a) => ({ params: { id: a.id }, props: { item: a } }));
 }
 const { item } = Astro.props;
-const note = notes[item.id as keyof typeof notes];
+const note = (
+  notes as Record<string, { layers: string[]; use: string; edit: string; guide: string }>
+)[item.id];
 if (item.layered && !note) throw new Error(`Missing source layers for ${item.id}`);
 const layers = note?.layers ?? [];
 const topic = topics.find((t) => t.slug === item.topic)!;

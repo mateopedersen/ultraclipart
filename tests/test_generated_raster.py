@@ -10,6 +10,13 @@ spec=importlib.util.spec_from_file_location('producer',ROOT/'scripts/produce-ras
 producer=importlib.util.module_from_spec(spec);spec.loader.exec_module(producer)
 
 class GeneratedRasterContract(unittest.TestCase):
+    def test_near_opaque_native_alpha_is_preserved_without_normalizing(self):
+        alpha=Image.new('L',(3,1));alpha.putdata([0,127,254]);before=alpha.tobytes()
+        producer.validate_native_alpha(alpha)
+        self.assertEqual(alpha.tobytes(),before)
+        for values in ([1,127,254],[0,120,249],[0,0,0]):
+            alpha.putdata(values)
+            with self.assertRaises(AssertionError):producer.validate_native_alpha(alpha)
     def fixture(self,mode='CMYK',size=(31,27)):
         out=io.BytesIO();Image.new(mode,size,tuple([83]*len(mode))).save(out,'JPEG2000',irreversible=False)
         alpha=Image.new('L',(31,27));alpha.putdata([(i*37)%256 for i in range(31*27)])

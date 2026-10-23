@@ -46,7 +46,7 @@ try {
         if (condition.font) await new Promise((resolve) => setTimeout(resolve, condition.font));
         await route.continue();
       });
-      await page.route(/\/pumpkin-curly-vine\.(?:webp|svg)(?:\?|$)/, async (route) => {
+      await page.route(/\/winter-arctic-fox-resting\.(?:webp|svg)(?:\?|$)/, async (route) => {
         if (condition.image) await new Promise((resolve) => setTimeout(resolve, condition.image));
         await route.continue();
       });
@@ -87,7 +87,7 @@ try {
           document.fonts.ready.then(() => snapshot('fonts-ready'));
         });
       });
-      await page.goto(base + '/art/pumpkin-curly-vine/', { waitUntil: 'networkidle' });
+      await page.goto(base + '/art/winter-arctic-fox-resting/', { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts.ready);
       await page.locator('#art-preview img').evaluate((image) => image.decode());
       await page.waitForTimeout(700);

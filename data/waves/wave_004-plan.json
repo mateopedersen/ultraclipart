@@ -1,0 +1,39 @@
+{
+  "wave": "wave_004",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-snowy-birdhouse",
+      "title": "Snow-Capped Wooden Birdhouse",
+      "alt": "A wooden birdhouse with a blue roof, round entrance and small perch is topped with fresh snow.",
+      "description": "A wooden birdhouse with a blue roof, round entrance and small perch is topped with fresh snow. Use the birdhouse beside a winter bird-feeding activity or a nature-journal heading.",
+      "color": "Blue",
+      "style": "Watercolor",
+      "source": "work/production/wave_004/source/winter-snowy-birdhouse.png"
+    },
+    {
+      "id": "winter-white-hare",
+      "title": "White Winter Hare",
+      "alt": "A white hare sits upright with long black-tipped ears and its front paws tucked close.",
+      "description": "A white hare sits upright with long black-tipped ears and its front paws tucked close. Place the hare on a winter wildlife vocabulary card or a personal nature-journal page.",
+      "color": "White",
+      "style": "Watercolor",
+      "source": "work/production/wave_004/source/winter-white-hare.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-thermos-and-cup",
+      "reason": "Quality/size gate blocked; native source retained. Do not lower quality floor."
+    },
+    {
+      "id": "winter-candle-lantern",
+      "reason": "Quality/size gate blocked; native source retained. Do not lower quality floor."
+    }
+  ]
+}

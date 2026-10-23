@@ -1,0 +1,187 @@
+{
+  "wave": "wave_004",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-snowy-birdhouse",
+      "title": "Snow-Capped Wooden Birdhouse",
+      "alt": "A wooden birdhouse with a blue roof, round entrance and small perch is topped with fresh snow.",
+      "description": "A wooden birdhouse with a blue roof, round entrance and small perch is topped with fresh snow. Use the birdhouse beside a winter bird-feeding activity or a nature-journal heading.",
+      "color": "Blue",
+      "style": "Watercolor",
+      "source": "work/production/wave_004/source/winter-snowy-birdhouse.png",
+      "topic": "winter",
+      "width": 1145,
+      "height": 1374,
+      "sourceType": "raster",
+      "sourceSha256": "4b8face0c953052593efb4ba2ebc7f50f656ba4e7c1dfb82b4ba12214b60614a",
+      "inputSignature": "d0d77d8ace40f57f03a70bcc7eefde0c8a51170bab4e57f79ebd1ec9b1c497f7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 935312,
+        "weightedCmykRmse": 1.214398
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1619593,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1141497,
+          "weightedCmykRmse": 0.829945
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1036172,
+          "weightedCmykRmse": 0.987282
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 935312,
+          "weightedCmykRmse": 1.214398
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        109,
+        33,
+        1051,
+        1338
+      ],
+      "image": {
+        "width": 1145,
+        "height": 1374,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_004/exports/winter-snowy-birdhouse.pdf",
+          "bytes": 935312,
+          "sha256": "374b37c3110c1500d20434027bb5386018eb4bc9e4265f36f3989b56a97d8638"
+        },
+        "webp": {
+          "path": "work/production/wave_004/exports/winter-snowy-birdhouse.webp",
+          "bytes": 1086532,
+          "sha256": "d2942495b7dff52e91b6c215a1656f32f8e33cde099c6c87fe12e556e36772e5"
+        },
+        "thumb": {
+          "path": "work/production/wave_004/exports/winter-snowy-birdhouse-thumb.webp",
+          "bytes": 52172,
+          "sha256": "3e09ae581bc34b161b55a38a791c8021ff96cfe86b8a506e3a725a437f2b2a7b"
+        }
+      },
+      "proofSha256": "d4a6425728402b6f5b8081226de6e6aff1c9dab7068687f3f9b4394e8411c03c",
+      "pairMeanRgbDifference": 1.24747
+    },
+    {
+      "id": "winter-white-hare",
+      "title": "White Winter Hare",
+      "alt": "A white hare sits upright with long black-tipped ears and its front paws tucked close.",
+      "description": "A white hare sits upright with long black-tipped ears and its front paws tucked close. Place the hare on a winter wildlife vocabulary card or a personal nature-journal page.",
+      "color": "White",
+      "style": "Watercolor",
+      "source": "work/production/wave_004/source/winter-white-hare.png",
+      "topic": "winter",
+      "width": 1145,
+      "height": 1374,
+      "sourceType": "raster",
+      "sourceSha256": "ecd1535cefef8b77d111be20b831bcee7b0350eb28bdb75216a39d00bd022d3f",
+      "inputSignature": "d0d77d8ace40f57f03a70bcc7eefde0c8a51170bab4e57f79ebd1ec9b1c497f7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 824787,
+        "weightedCmykRmse": 0.887486
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1197003,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 824787,
+          "weightedCmykRmse": 0.887486
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        286,
+        37,
+        956,
+        1317
+      ],
+      "image": {
+        "width": 1145,
+        "height": 1374,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_004/exports/winter-white-hare.pdf",
+          "bytes": 824787,
+          "sha256": "61755148327d2e71e04b9424727c18a1db5d2c1c150b77bd79234215db14b38e"
+        },
+        "webp": {
+          "path": "work/production/wave_004/exports/winter-white-hare.webp",
+          "bytes": 786548,
+          "sha256": "a841374f1833ec29979c0eead2ee21a8b3f777d65e9a8a1ed8b9f570f6472c52"
+        },
+        "thumb": {
+          "path": "work/production/wave_004/exports/winter-white-hare-thumb.webp",
+          "bytes": 37704,
+          "sha256": "795b58e720106c8a42398d779ce2f8ec4c6d6d4ce520835c1062ffbc63766e3e"
+        }
+      },
+      "proofSha256": "05e4de1a385c00d1fb1df54e6a0d2ad5c00114835397bd2699f8f9123be2c114",
+      "pairMeanRgbDifference": 0.38724
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-thermos-and-cup",
+      "reason": "Quality/size gate blocked; native source retained. Do not lower quality floor."
+    },
+    {
+      "id": "winter-candle-lantern",
+      "reason": "Quality/size gate blocked; native source retained. Do not lower quality floor."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T13:09:14.276Z",
+  "allAccountR2Bytes": 256755290
+}

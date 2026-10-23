@@ -22,7 +22,7 @@ const routes = [
   '/guides/webp-pdf-and-editable-projects/',
   '/print-size/',
   '/categories/',
-  '/art/pumpkin-curly-vine/',
+  '/art/winter-arctic-fox-resting/',
 ];
 try {
   for (const width of [320, 390, 768, 1440]) {

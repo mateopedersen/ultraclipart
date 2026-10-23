@@ -73,7 +73,7 @@ const failed = async (name) => {
   report.checks.push(name);
 };
 try {
-  const response = await page.goto(`${origin}/art/pumpkin-curly-vine/`);
+  const response = await page.goto(`${origin}/art/winter-arctic-fox-resting/`);
   expect(response.status()).toBe(200);
   expect(response.headers()['content-security-policy']).toContain(
     "connect-src 'self' https://assets.ultraclipart.com",
@@ -86,9 +86,9 @@ try {
   await expect(status).toHaveAttribute('aria-live', 'polite');
   for (const format of ['pdf', 'webp']) {
     const published = publication.files.find(
-      (file) => file.name === `pumpkin-curly-vine.${format}`,
+      (file) => file.name === `winter-arctic-fox-resting.${format}`,
     );
-    const url = process.env.CDN_BASE ? `${cdn}/pumpkin-curly-vine.${format}` : published.url,
+    const url = process.env.CDN_BASE ? `${cdn}/winter-arctic-fox-resting.${format}` : published.url,
       expected = await context.request.get(url, { headers: { Origin: origin } });
     expect(expected.status()).toBe(200);
     const source = await expected.body();

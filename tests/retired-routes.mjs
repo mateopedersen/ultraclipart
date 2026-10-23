@@ -61,7 +61,7 @@ test('retired routes ignore stale cached content and return real 404 with curren
   );
   assert.equal(post.status, 405);
   assert.equal(post.headers.get('Allow'), 'GET, HEAD');
-  const active = await handler.fetch(new Request('https://ultraclipart.com/clipart/pumpkin/'), env);
+  const active = await handler.fetch(new Request('https://ultraclipart.com/clipart/winter/'), env);
   assert.equal(active.status, 200);
   const unavailable = await handler.fetch(new Request(`https://ultraclipart.com${retired}/`), {
     ASSETS: {
@@ -71,4 +71,40 @@ test('retired routes ignore stale cached content and return real 404 with curren
     },
   });
   assert.equal(unavailable.status, 503);
+});
+
+test('withdrawn artwork and media cannot reappear through cached public routes', async () => {
+  const withdrawn = JSON.parse(
+    readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
+  );
+  const ids = new Set(art.map((item) => item.id));
+  assert.ok(withdrawn.artworkIds.every((id) => !ids.has(id)));
+  const policy = retirementPolicy(topics, art, withdrawn);
+  assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 100);
+  const handler = createRetiredHandler(policy.retired);
+  const matches = (pattern, path) =>
+    pattern.endsWith('*') ? path.startsWith(pattern.slice(0, -1)) : path === pattern;
+  for (const path of [
+    ...withdrawn.artworkIds.flatMap((id) => [`/art/${id}/`, `/edit/${id}/`]),
+    ...withdrawn.assetPaths,
+  ]) {
+    assert.ok(
+      policy.routes.include.some((pattern) => matches(pattern, path)),
+      path,
+    );
+    assert.ok(!policy.routes.exclude.some((pattern) => matches(pattern, path)), path);
+    for (const suffix of ['', '?cached=1']) {
+      const response = await handler.fetch(
+        new Request(`https://ultraclipart.com${path}${suffix}`),
+        { ASSETS: { fetch: async () => new Response('Current missing-page body') } },
+      );
+      assert.equal(response.status, 404, path);
+    }
+  }
+  const republished = retirementPolicy(
+    topics,
+    [...art, { id: withdrawn.artworkIds[0], topic: 'winter' }],
+    withdrawn,
+  );
+  assert.ok(!republished.retired.includes(`/art/${withdrawn.artworkIds[0]}/`));
 });

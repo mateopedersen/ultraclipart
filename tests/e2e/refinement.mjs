@@ -32,12 +32,12 @@ const routes = [
   '/',
   '/categories/',
   '/new/',
-  '/collection/thanksgiving-autumn/',
+  '/clipart/heart/',
   '/collection/christmas-winter/',
   '/black-and-white/',
   '/create/',
-  '/art/pumpkin-curly-vine/',
-  '/edit/pumpkin-curly-vine/',
+  '/art/winter-arctic-fox-resting/',
+  '/edit/winter-arctic-fox-resting/',
 ];
 try {
   for (const width of [320, 390, 768, 1440]) {

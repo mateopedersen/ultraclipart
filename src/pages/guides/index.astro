@@ -1,16 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { guides } from '../../lib/guides';
-import { art } from '../../lib/catalog';
-const displayGuides = guides.map((guide) =>
-  guide.slug === 'turn-clipart-into-a-coloring-activity'
-    ? {
-        ...guide,
-        image: art.find((item) => item.id === 'pumpkin-curly-vine')!.svg,
-        alt: art.find((item) => item.id === 'pumpkin-curly-vine')!.alt,
-      }
-    : guide,
-);
+const displayGuides = guides;
 ---
 
 <Layout
