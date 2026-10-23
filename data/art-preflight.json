@@ -1,18 +1,18 @@
 {
   "status": "PASS",
-  "generatedCount": 6,
-  "originalTopicArtworkCount": 56,
+  "generatedCount": 10,
+  "originalTopicArtworkCount": 60,
   "suppliedCount": 150,
-  "availableCount": 156,
+  "availableCount": 160,
   "supplementalCount": 100,
   "topicCount": 4,
   "targetCount": 5500,
   "completedTopicCount": 1,
-  "publishedApprovedCount": 156,
-  "totalLocalAssetBytes": 251369227,
+  "publishedApprovedCount": 160,
+  "totalLocalAssetBytes": 258553311,
   "r2MeasuredBytes": null,
   "maxPdfBytes": 998269,
-  "p95PdfBytes": 992712,
+  "p95PdfBytes": 990735,
   "pdfOverCapCount": 0,
   "maliciousSvgVectorsRejected": 6,
   "exactDuplicateSvgCount": 0,
@@ -9215,6 +9215,246 @@
             {
               "width": 1145,
               "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-penguin-fish",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1278,
+            1199
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            31,
+            0,
+            426,
+            402
+          ]
+        },
+        "pdf": {
+          "bytes": 756612,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-snowy-park-bench",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            2,
+            1510,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            1,
+            434,
+            293
+          ]
+        },
+        "pdf": {
+          "bytes": 967914,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-snowy-mailbox",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1206,
+          "height": 1304,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            25,
+            20,
+            1186,
+            1304
+          ]
+        },
+        "thumb": {
+          "width": 407,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            16,
+            6,
+            364,
+            440
+          ]
+        },
+        "pdf": {
+          "bytes": 624759,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.020 \u00d7 4.347 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1206,
+              "height": 1304,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-amber-ski-goggles",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            86,
+            1510,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            6,
+            23,
+            434,
+            283
+          ]
+        },
+        "pdf": {
+          "bytes": 772537,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
               "components": 4,
               "alphaMask": true,
               "profile": "GRACoL2006_Coated1v2 (registered output intent)",

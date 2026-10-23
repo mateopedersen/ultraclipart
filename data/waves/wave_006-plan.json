@@ -1,0 +1,39 @@
+{
+  "wave": "wave_006",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-penguin-fish",
+      "title": "Penguin Carrying a Fish",
+      "alt": "A cheerful penguin holds a silver fish in its beak while stepping across a blue ice patch.",
+      "description": "A cheerful penguin holds a silver fish in its beak while stepping across a blue ice patch. Use this illustration for polar animal storytelling or a personal winter card.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_006/source/winter-penguin-fish.png"
+    },
+    {
+      "id": "winter-snowy-park-bench",
+      "title": "Snow-Covered Wooden Park Bench",
+      "alt": "A wooden park bench with curved teal iron supports has fresh snow along its slats and base.",
+      "description": "A wooden park bench with curved teal iron supports has fresh snow along its slats and base. Use this illustration for winter landscape collages or classroom scene descriptions.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_006/source/winter-snowy-park-bench.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-squirrel-hazelnut",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-hedgehog-nest",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

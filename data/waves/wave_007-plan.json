@@ -1,0 +1,39 @@
+{
+  "wave": "wave_007",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-snowy-mailbox",
+      "title": "Snow-Capped Blue Mailbox",
+      "alt": "A blue mailbox with a raised red flag and open front door holds an envelope beneath a cap of snow.",
+      "description": "A blue mailbox with a raised red flag and open front door holds an envelope beneath a cap of snow. Use this illustration for winter letter-writing activities or a personal seasonal greeting.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_007/source/winter-snowy-mailbox.png"
+    },
+    {
+      "id": "winter-amber-ski-goggles",
+      "title": "Blue Ski Goggles with Amber Lens",
+      "alt": "Blue ski goggles have a curved amber lens, dark strap and large side buckles.",
+      "description": "Blue ski goggles have a curved amber lens, dark strap and large side buckles. Use this illustration for winter sports vocabulary cards or a personal ski-trip scrapbook.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_007/source/winter-amber-ski-goggles.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-robin-bare-branch",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-snowdrops-emerging",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

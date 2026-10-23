@@ -15,16 +15,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 6,
+  "generatedArtworkCount": 10,
   "suppliedArtworkCount": 150,
-  "originalTopicArtworkCount": 56,
+  "originalTopicArtworkCount": 60,
   "supplementalArtworkCount": 100,
-  "qualityApprovedArtworkCount": 56,
+  "qualityApprovedArtworkCount": 60,
   "supplementalApprovedArtworkCount": 100,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 156,
-  "remainingToDraw": 5444,
+  "availableArtworkCount": 160,
+  "remainingToDraw": 5440,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -1215,11 +1215,11 @@
       "keyword": "Winter clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 6,
+      "generated": 10,
       "supplied": 0,
-      "available": 6,
-      "approved": 6,
-      "remainingToDraw": 44,
+      "available": 10,
+      "approved": 10,
+      "remainingToDraw": 40,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/winter.json"
     },
@@ -3174,6 +3174,50 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "a841374f1833ec29979c0eead2ee21a8b3f777d65e9a8a1ed8b9f570f6472c52"
+    },
+    {
+      "id": "winter-penguin-fish",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "431239625dda8de6388ffd9f62767c7602bb7a2aabe3d68e9e3818b8265d5a50"
+    },
+    {
+      "id": "winter-snowy-park-bench",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "d83d05fd7347b4c58adcbff380910820742e3b24898c44fcd2974bd9efdf39b4"
+    },
+    {
+      "id": "winter-snowy-mailbox",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "f6cb5f5a8412926cc63dc7ef68290a5510d5e7868b76d4a7e330c0b3431efbb6"
+    },
+    {
+      "id": "winter-amber-ski-goggles",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "ca374241b23868d5e4d4a6dd76547b2ab7d55c26600d1c3760d65e9dde0cc88b"
     }
   ]
 }

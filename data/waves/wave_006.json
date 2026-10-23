@@ -1,0 +1,193 @@
+{
+  "wave": "wave_006",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-penguin-fish",
+      "title": "Penguin Carrying a Fish",
+      "alt": "A cheerful penguin holds a silver fish in its beak while stepping across a blue ice patch.",
+      "description": "A cheerful penguin holds a silver fish in its beak while stepping across a blue ice patch. Use this illustration for polar animal storytelling or a personal winter card.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_006/source/winter-penguin-fish.png",
+      "topic": "winter",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "467127bffeea30c2b0a423719a541187445ba165ff23ea2e9767fe7f7328889a",
+      "inputSignature": "b56a8cd644053f7cdd04cc01f8287ddfcbd3348bc0fd75de59ad19418b9c63ba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 756612,
+        "weightedCmykRmse": 0.819794
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1316074,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 756612,
+          "weightedCmykRmse": 0.819794
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        99,
+        9,
+        1238,
+        1193
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_006/exports/winter-penguin-fish.pdf",
+          "bytes": 756612,
+          "sha256": "860db49e31ba93db432333e278ef4f869efcfa0d36cbb4130cc94b93c891a24c"
+        },
+        "webp": {
+          "path": "work/production/wave_006/exports/winter-penguin-fish.webp",
+          "bytes": 718724,
+          "sha256": "431239625dda8de6388ffd9f62767c7602bb7a2aabe3d68e9e3818b8265d5a50"
+        },
+        "thumb": {
+          "path": "work/production/wave_006/exports/winter-penguin-fish-thumb.webp",
+          "bytes": 44704,
+          "sha256": "797bbd04677aad523329e77d0cfceff6b3269e1f105d69cbffbe1baffca2dc7d"
+        }
+      },
+      "proofSha256": "ab0c027a0b48da18b1e017bf3f5ab495c736fdaf5ddbd0fe59ed0653c40e56be",
+      "pairMeanRgbDifference": 1.35833
+    },
+    {
+      "id": "winter-snowy-park-bench",
+      "title": "Snow-Covered Wooden Park Bench",
+      "alt": "A wooden park bench with curved teal iron supports has fresh snow along its slats and base.",
+      "description": "A wooden park bench with curved teal iron supports has fresh snow along its slats and base. Use this illustration for winter landscape collages or classroom scene descriptions.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_006/source/winter-snowy-park-bench.png",
+      "topic": "winter",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "afbc9afe262bfd4a8a1cb3c1af12843f4fbc185fa87a6cce8370adbe452ee7fb",
+      "inputSignature": "b56a8cd644053f7cdd04cc01f8287ddfcbd3348bc0fd75de59ad19418b9c63ba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967914,
+        "weightedCmykRmse": 1.318932
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1936500,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1368139,
+          "weightedCmykRmse": 0.761572
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1243741,
+          "weightedCmykRmse": 0.895277
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1101864,
+          "weightedCmykRmse": 1.069712
+        },
+        {
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967914,
+          "weightedCmykRmse": 1.318932
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        39,
+        13,
+        1507,
+        1015
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_006/exports/winter-snowy-park-bench.pdf",
+          "bytes": 967914,
+          "sha256": "5847a2b41d16bef3090fc67cf9b9ac81264e9191691c72bbb588e4aa81286473"
+        },
+        "webp": {
+          "path": "work/production/wave_006/exports/winter-snowy-park-bench.webp",
+          "bytes": 1417368,
+          "sha256": "d83d05fd7347b4c58adcbff380910820742e3b24898c44fcd2974bd9efdf39b4"
+        },
+        "thumb": {
+          "path": "work/production/wave_006/exports/winter-snowy-park-bench-thumb.webp",
+          "bytes": 59882,
+          "sha256": "cdc08088b558777a3b0de24b3bb4107c64b4542b55e81f2d851a62b2180804ce"
+        }
+      },
+      "proofSha256": "192f68fda65d72975445bd8e47dab6b3d087c62cd281358f98158424e9541ee2",
+      "pairMeanRgbDifference": 2.3944
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-squirrel-hazelnut",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-hedgehog-nest",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T13:35:39.023Z",
+  "allAccountR2Bytes": 255334431
+}
