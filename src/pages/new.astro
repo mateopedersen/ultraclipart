@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import Card from '../components/Card.astro';import {art} from '../lib/catalog';
+---
+<Layout title="New Clipart" noindex={true}><section class="hero"><p class="eyebrow">The pilot collection</p><h1>Fresh from the sketchbook.</h1><p>{art.length} original illustrations to try, edit and make your own. Visual review is ongoing.</p></section><div class="gallery">{art.map(item=><Card item={item}/>)}</div></Layout>

@@ -1,0 +1,50 @@
+name: Validate UltraClipart
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm build
+      - run: pnpm test
+      - name: Install browser test dependencies
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Desktop, tablet, mobile and accessibility
+        run: |
+          pnpm preview --host 127.0.0.1 --port 4321 > /tmp/ultraclipart-preview.log 2>&1 &
+          PREVIEW_PID=$!
+          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4321/ > /dev/null; then break; fi
+            sleep 1
+          done
+          BASE_URL=http://127.0.0.1:4321 node tests/e2e/search.mjs
+          BASE_URL=http://127.0.0.1:4321 node tests/e2e/site.mjs
+      - name: Keep test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-evidence
+          path: reports/
+          retention-days: 14

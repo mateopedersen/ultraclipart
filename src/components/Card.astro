@@ -1,0 +1,7 @@
+---
+const {item}=Astro.props;
+---
+<article class="art-card" data-id={item.id}>
+<a class="art-picture" href={`/art/${item.id}/`}><img src={item.thumb} alt={item.alt} width="400" height="400" loading="lazy" /></a>
+<div class="card-body"><a class="card-title" href={`/art/${item.id}/`}>{item.title}</a><div class="formats"><a href={item.webp} download class="webp">WEBP</a>{item.pdf && <a href={item.pdf} download class="pdf">PDF</a>}</div><div class="card-actions"><a class="button" href={`/edit/${item.id}/`}>✎ Edit</a><a class="button primary" href={`/art/${item.id}/`}>↓ Download</a></div></div>
+</article>

@@ -1,0 +1,256 @@
+{
+  "base": "http://127.0.0.1:4322",
+  "browser": "webkit",
+  "browserVersion": "27.2",
+  "date": "2026-10-23T05:24:36.672Z",
+  "status": "failed",
+  "failure": "Expected values to be strictly equal:\n\nfalse !== true\n",
+  "states": [
+    {
+      "state": "01-home",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "02-categories",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/categories/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "03-search",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/search/?q=pumpkin",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "04-topic",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/clipart/pumpkin/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "05-art-detail",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/art/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "06-editor",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "07-recolor",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "08-background-layers",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "09-black-white-print",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/edit/pumpkin-curly-vine/?mode=outline",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "10-export",
+      "viewport": "desktop",
+      "width": 1440,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "01-home",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "02-categories",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/categories/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "03-search",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/search/?q=pumpkin",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "04-topic",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/clipart/pumpkin/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "05-art-detail",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/art/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "06-editor",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "07-recolor",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "08-background-layers",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "09-black-white-print",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/edit/pumpkin-curly-vine/?mode=outline",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "10-export",
+      "viewport": "tablet",
+      "width": 768,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "01-home",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "02-categories",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/categories/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "03-search",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/search/?q=pumpkin",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "04-topic",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/clipart/pumpkin/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "05-art-detail",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/art/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "06-editor",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "07-recolor",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "08-background-layers",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "09-black-white-print",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/edit/pumpkin-curly-vine/?mode=outline",
+      "overflow": false,
+      "violations": []
+    },
+    {
+      "state": "10-export",
+      "viewport": "mobile",
+      "width": 390,
+      "url": "/edit/pumpkin-curly-vine/",
+      "overflow": false,
+      "violations": []
+    }
+  ],
+  "checks": [
+    "mobile navigation",
+    "category A-Z filtering",
+    "favorite persistence"
+  ],
+  "pageErrors": []
+}

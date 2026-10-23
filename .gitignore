@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+.env*
+!.env.example
+test-results/
+playwright-report/
+.r2-ingest.lock
+r2-ingest-journal.json
+r2-ingest-journal.json.*.tmp
+work/r2-batch.json
+work/
+__pycache__/
+.venv-art/

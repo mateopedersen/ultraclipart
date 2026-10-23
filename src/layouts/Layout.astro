@@ -1,0 +1,16 @@
+---
+import '../styles/global.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+const {title='Clipart made simple.',description='Explore original seasonal clipart. Edit colors and layers, then download WebP and printable PDF files.',noindex=false,wide=false}=Astro.props;
+const nav=[['Explore','/'],['Categories','/categories/'],['Collections','/collections/'],['New','/new/'],['Black & White','/black-and-white/'],['For Teachers','/for-teachers/'],['About','/about/']];
+const canonical=new URL(Astro.url.pathname,'https://ultraclipart.com').href;
+---
+<!doctype html><html lang="en-US"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><title>{title} | UltraClipart</title><meta name="description" content={description}/><link rel="canonical" href={canonical}/><meta name="robots" content={noindex?'noindex,follow':'index,follow'}/><meta property="og:title" content={title+' | UltraClipart'}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary"/><meta name="theme-color" content="#2865D2"/><link rel="icon" href="/logo.svg" type="image/svg+xml"/><slot name="head"/></head><body>
+<a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/" aria-label="UltraClipart home"><img src="/logo.svg" width="38" height="42" alt=""/>UltraClipart</a><button class="menu-button" aria-expanded="false" aria-controls="navigation">Menu</button><nav id="navigation" aria-label="Main navigation">{nav.map(([label,url])=><a href={url} aria-current={Astro.url.pathname===url?'page':undefined}>{label}</a>)}</nav><a class="favorites-link" href="/favorites/">♡ <span>Favorites</span></a></header>
+<main id="main" class:list={['container',{wide}]}><slot/></main>
+<footer><div class="footer-inner"><div><a class="brand" href="/"><img src="/logo.svg" width="38" height="42" alt=""/>UltraClipart</a><p>A little inspiration.<br/>A world of possibilities.</p><small>Original vector pilot · Growing thoughtfully.</small></div><div><strong>Explore</strong><a href="/categories/">All topics</a><a href="/collections/">Collections</a><a href="/new/">New clipart</a><a href="/black-and-white/">Black & White</a></div><div><strong>Help & information</strong><a href="/faq/">FAQ</a><a href="/license/">License</a><a href="/terms/">Terms of use</a><a href="/privacy/">Privacy</a><a href="/accessibility/">Accessibility</a></div><div><strong>Let's make it better</strong><a href="/contact/">Contact us</a><a href="/copyright/">Copyright & corrections</a><a href="/editorial-process/">Our creative process</a><p>© {new Date().getFullYear()} UltraClipart</p></div></div></footer>
+<script>document.querySelector('.menu-button')?.addEventListener('click',e=>{const b=e.currentTarget as HTMLButtonElement;const on=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(on));document.querySelector('header')?.classList.toggle('menu-open',on);});</script>
+</body></html>

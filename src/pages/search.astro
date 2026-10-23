@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import {art,topics} from '../lib/catalog';
+const colors = [...new Set(art.map(item => item.color))].sort();
+---
+<Layout title="Search Clipart" description="Find original pilot clipart by subject, style, color and format. Explore editable artwork with transparent WebP and printable PDF downloads." noindex={true}>
+  <section class="hero search-hero"><p class="eyebrow">Find your next little inspiration</p><h1>Search clipart.</h1><form id="catalog-search" class="searchbox" action="/search/" role="search"><span aria-hidden="true">⌕</span><label class="sr-only" for="search-query">Search clipart</label><input id="search-query" name="q" type="search" maxlength="160" placeholder="Try pumpkin, ghost or sunflower…" autocomplete="off" list="search-topics"/><button class="primary" type="submit">Search</button></form><datalist id="search-topics">{topics.map(topic=><option value={topic.keyword}/>)}</datalist><p class="popular">Try a topic: <a href="/search/?q=pumpkin">Pumpkin</a> · <a href="/search/?q=ghost">Ghost</a> · <a href="/search/?q=sunflower">Sunflower</a> · <a href="/search/?q=black+and+white+pumpkin">Black & white</a></p></section>
+  <div class="catalog-grid"><aside class="filters" aria-label="Filter illustrations"><h2>Refine your search</h2>
+    <div><label for="filter-style">Style</label><select id="filter-style" data-filter="style"><option value="">All styles</option><option value="color">Color</option><option value="outline">Black & white outline</option></select></div>
+    <div><label for="filter-color">Main color</label><select id="filter-color" data-filter="color"><option value="">Any color</option>{colors.map(color=><option value={color.toLowerCase()}>{color}</option>)}</select></div>
+    <div><label for="filter-format">Download format</label><select id="filter-format" data-filter="format"><option value="">Any format</option><option value="webp">WebP</option><option value="pdf">PDF</option></select></div>
+    <div><label for="filter-orientation">Orientation</label><select id="filter-orientation" data-filter="orientation"><option value="">Any orientation</option><option value="square">Square</option><option value="portrait">Portrait</option><option value="landscape">Landscape</option></select></div>
+    <div><label for="filter-background">Background</label><select id="filter-background" data-filter="background"><option value="">Any background</option><option value="transparent">Transparent</option><option value="opaque">Opaque</option></select></div>
+    <button id="clear-filters" type="button">Reset filters</button>
+  </aside><section aria-label="Search results"><div class="result-head"><p id="result-count" role="status" aria-live="polite" aria-atomic="true">{art.length} pilot illustrations</p><div class="sort-control"><label for="search-sort">Sort by</label><select id="search-sort"><option value="relevance">Relevance</option><option value="title">Name A–Z</option><option value="newest">Newest</option></select></div></div>
+    <p id="close-matches" class="notice" hidden>Showing close spelling matches. Check each illustration to find the subject you need.</p>
+    <div class="gallery" id="search-results">{art.map(item=><Card item={item}/>)}</div>
+    <div id="search-empty" class="empty" hidden><h2>No illustrations found yet.</h2><p id="empty-description">Try a broader subject or reset your filters. Our pilot collection is still growing.</p><button type="button" id="show-all">Browse all pilot artwork</button></div>
+    <nav id="search-pagination" class="pagination" aria-label="Search result pages"><button type="button" id="previous-page">← Previous</button><span id="page-position" aria-live="polite">Page 1</span><button type="button" id="next-page">Next →</button></nav>
+    <div class="page-size"><label for="search-size">Illustrations per page</label><select id="search-size"><option value="8">8</option><option value="16">16</option><option value="32">32</option></select></div>
+    <div id="topic-suggestions" class="related-topics" hidden><h2>Explore related topics</h2><div class="chips" id="topic-suggestion-links"></div></div>
+    <noscript><p class="notice">JavaScript enables search and filters. All pilot illustrations are shown above; you can also browse the <a href="/categories/">complete topic directory</a>.</p></noscript>
+    <p class="notice">{art.length} original illustrations are available in this pilot. Filters describe the existing artwork; color drawings are not labeled as black & white. Personal and educational use is free. <a href="/license/">Read the license.</a></p>
+  </section></div>
+</Layout>
+<script>
+  import { initSearch } from '../scripts/search-client';
+  initSearch();
+</script>
+<style>
+  .notice a{text-decoration:underline}
+  .search-hero{padding:32px 40px}.search-hero h1{font-size:38px}.search-hero .searchbox{max-width:790px}.search-hero .popular{margin-bottom:0}.filters h2{font-size:18px}.sort-control{display:flex;align-items:center;gap:9px;font-size:13px}.pagination{display:flex!important;align-items:center}.page-size{display:flex;align-items:center;justify-content:center;gap:12px;margin:20px 0;font-size:13px}.related-topics{margin-top:30px}.related-topics h2{font-size:20px}button:disabled{cursor:default;opacity:.45}#search-pagination[hidden]{display:none!important}@media(max-width:580px){.search-hero{padding:25px 20px}.search-hero h1{font-size:32px}.result-head{align-items:flex-start}.sort-control{display:grid;gap:5px}.pagination{gap:7px;font-size:12px}.pagination button{font-size:12px;padding:9px}.filters{grid-template-columns:1fr 1fr}}
+</style>

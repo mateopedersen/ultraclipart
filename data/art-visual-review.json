@@ -1,0 +1,205 @@
+{
+  "reviewer": "Codex art-pipeline agent",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "reviewDate": "2026-10-23",
+  "scope": "Screen-based visual inspection of contact sheet for all 10 items; 128px white/navy/checkerboard proofs; enlarged ghost, bat, sunflower and outline WebPs; rendered original US Letter PDFs.",
+  "result": "PILOT_SCREEN_REVIEW_PASS_WITH_NOTES",
+  "ownerArtApproval": "PENDING",
+  "productionPublicationApproval": false,
+  "physicalPrintProof": "NOT_PERFORMED",
+  "corrections": [
+    "Moved ghost steam away from smile.",
+    "Changed outline pumpkin contour from navy to neutral black; original PDF preserves neutral colors in pure K."
+  ],
+  "duplicateReview": {
+    "pair": [
+      "pumpkin-curly-vine",
+      "pumpkin-botanical-outline"
+    ],
+    "automatedSilhouetteIoU": 0.8876,
+    "agentFinding": "Similar expected pumpkin silhouette, but separately drawn source paths, different leaves/tendrils, rib arrangement and coloring-page treatment. Retain owner concept review before counting as production-approved originals."
+  },
+  "items": [
+    {
+      "id": "pumpkin-curly-vine",
+      "sourceSha256": "3e9f9c3dc9a1ec03d39d1641eadaf832b247001e2f7c313c173a0df59b4e7ab6",
+      "note": "Clear plump silhouette, contained stroke and warm highlights. Vine extends behind leaf and pumpkin; no clipped canvas edge.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "ghost-teacup",
+      "sourceSha256": "990e9d8a9ab61ae83e78da92efcae899fec7440edd9b634aa871956aee0a4c50",
+      "note": "Inspected enlarged WebP and revised steam so it no longer crosses the smile. Cup, folds and cheeks remain legible at 128px.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "bat-crescent-flight",
+      "sourceSha256": "b0932db3c8db07686f60f971e3200f030d539ebf88352fd9cba5bdad266788bb",
+      "note": "Inspected enlarged WebP: distinct wing membranes, two ears, small teeth, continuous contour and clean separation from moon.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "spider-thread-and-bow",
+      "sourceSha256": "1715bbc0e01ae80f6068514c8491183babeb6dc26f8e2f2324a2b123aeb80932",
+      "note": "Eight legs visually counted, symmetric friendly face, fine thread intact. Dark legs have lower contrast on navy; light backgrounds give best legibility.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "apple-orchard-cutaway",
+      "sourceSha256": "92d08aaf9f9061a2d415dc8d35cb84f84885ad1fef3a559cacbf50e9c2db1b08",
+      "note": "Apple and foreground slice read separately; seeds and edge band stay legible. Stylized food illustration, no scientific anatomy claim.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "sunflower-garden-stem",
+      "sourceSha256": "0a8e53f20ba1958d17b1224e2a6e02a391d478c708f17e6ed0670f0adba083a3",
+      "note": "Inspected enlarged WebP: petal overlaps render correctly, seeds are clear, leaves connect to stem and no clipping is visible.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "acorn-oak-companions",
+      "sourceSha256": "1aace03c1838213c57febcbb9c0701f0fcb013b98e6a9df9b9fce207342376e0",
+      "note": "Cap pattern and nut silhouette are distinct; stylized oak leaf is legible. Not a botanical species identification diagram.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "gift-ribbon-keepsake",
+      "sourceSha256": "a97de12806089b2a28c85a7c443e2bae697d60b1e3d69330ce14e947e0211177",
+      "note": "Bow, lid, ribbon and hanging tag separate cleanly. No text or branded mark is present.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "snowman-knitted-scarf",
+      "sourceSha256": "90d5884eb8d39ed3773e187c72b8ed2cc18d473fc1e4fd10ec478168ec972991",
+      "note": "Hat and scarf separate from body, twig arms extend without clipping; face remains clear on white and dark backgrounds.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    },
+    {
+      "id": "pumpkin-botanical-outline",
+      "sourceSha256": "4b5cebf6735ca46f8a04f7353a850a4f41b5f8ff8eb9ec8c1df2ef103be5cb4e",
+      "note": "Inspected enlarged WebP and changed navy contour to neutral black. Source has distinct leaf geometry, vine paths and rib drawing from color pumpkin; meaningful coloring regions.",
+      "agentScreenReview": "PASS",
+      "ownerReview": "PENDING"
+    }
+  ],
+  "proofMetrics": {
+    "rows": [
+      {
+        "id": "pumpkin-curly-vine",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9994,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "ghost-teacup",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9957,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "bat-crescent-flight",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9993,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "spider-thread-and-bow",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9971,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "apple-orchard-cutaway",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9995,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "sunflower-garden-stem",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9994,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "acorn-oak-companions",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9996,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "gift-ribbon-keepsake",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9998,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "snowman-knitted-scarf",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9967,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      },
+      {
+        "id": "pumpkin-botanical-outline",
+        "pagePixels": [
+          2550,
+          3300
+        ],
+        "rasterProofDpi": 300,
+        "sourceToPdfDarkSilhouetteIoU": 0.9922,
+        "note": "Screen proof with GRACoL process-CMYK profile; optical color differences expected within print gamut."
+      }
+    ],
+    "physicalPrintProof": "NOT_PERFORMED"
+  },
+  "limitations": [
+    "No human art reviewer is claimed.",
+    "No physical printer/press, proofing instrument or PDF/X validator was used.",
+    "No religious/cultural symbol pilot was made; that acceptance matrix remains incomplete.",
+    "Screen print proofs do not certify a match for every printer or paper stock."
+  ]
+}

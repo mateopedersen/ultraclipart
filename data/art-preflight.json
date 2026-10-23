@@ -1,0 +1,421 @@
+{
+  "status": "PASS",
+  "generatedCount": 10,
+  "topicCount": 9,
+  "targetCount": 5500,
+  "completedTopicCount": 0,
+  "publishedApprovedCount": 0,
+  "totalLocalAssetBytes": 734901,
+  "r2MeasuredBytes": null,
+  "maxPdfBytes": 4007,
+  "p95PdfBytes": 4007,
+  "pdfOverCapCount": 0,
+  "maliciousSvgVectorsRejected": 6,
+  "exactDuplicateSvgCount": 0,
+  "silhouetteReviewFlags": [
+    {
+      "a": "pumpkin-curly-vine",
+      "b": "pumpkin-botanical-outline",
+      "silhouetteIoU": 0.8876,
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "rows": [
+    {
+      "id": "pumpkin-curly-vine",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            265,
+            302,
+            1795,
+            1736
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            57,
+            64,
+            386,
+            373
+          ]
+        },
+        "pdf": {
+          "bytes": 2645,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "ghost-teacup",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            372,
+            273,
+            1680,
+            1743
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            80,
+            58,
+            361,
+            375
+          ]
+        },
+        "pdf": {
+          "bytes": 3063,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "bat-crescent-flight",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            226,
+            250,
+            1822,
+            1574
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            48,
+            53,
+            392,
+            339
+          ]
+        },
+        "pdf": {
+          "bytes": 3019,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "spider-thread-and-bow",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            324,
+            204,
+            1736,
+            1684
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            69,
+            43,
+            373,
+            362
+          ]
+        },
+        "pdf": {
+          "bytes": 2966,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "apple-orchard-cutaway",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            403,
+            342,
+            1734,
+            1754
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            86,
+            73,
+            373,
+            377
+          ]
+        },
+        "pdf": {
+          "bytes": 2660,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "sunflower-garden-stem",
+      "checks": {
+        "namedLayers": 6,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            478,
+            238,
+            1546,
+            1802
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            102,
+            51,
+            333,
+            388
+          ]
+        },
+        "pdf": {
+          "bytes": 4007,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "acorn-oak-companions",
+      "checks": {
+        "namedLayers": 6,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            502,
+            362,
+            1802,
+            1694
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            107,
+            77,
+            388,
+            364
+          ]
+        },
+        "pdf": {
+          "bytes": 2569,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "gift-ribbon-keepsake",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            308,
+            300,
+            1740,
+            1678
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            66,
+            64,
+            374,
+            361
+          ]
+        },
+        "pdf": {
+          "bytes": 2820,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "snowman-knitted-scarf",
+      "checks": {
+        "namedLayers": 10,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            250,
+            354,
+            1770,
+            1782
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            53,
+            76,
+            381,
+            383
+          ]
+        },
+        "pdf": {
+          "bytes": 3430,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-botanical-outline",
+      "checks": {
+        "namedLayers": 6,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            280,
+            274,
+            1762,
+            1721
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            60,
+            58,
+            379,
+            370
+          ]
+        },
+        "pdf": {
+          "bytes": 2471,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "No PDF/X compliance claim. Registered GRACoL output condition is referenced; full ICC not embedded due 1 MB cap.",
+    "Physical print proof and owner visual signoff are pending. Automated checks do not prove artistic originality.",
+    "R2 counters are unknown until authenticated remote inventory is obtained."
+  ]
+}

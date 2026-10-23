@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import {clusters,topics,art,slugify} from '../lib/catalog';
+---
+<Layout title="Seasonal Clipart Collections"><section class="hero"><h1>Made for the moment.</h1><p class="lead">Discover a season, start a project, make something yours.</p></section><div class="category-grid">{clusters.map(c=>{const ts=topics.filter(t=>t.cluster===c);const items=art.filter(a=>ts.some(t=>t.slug===a.topic));return <a class="category-card" href={`/collection/${slugify(c)}/`}><div class="category-visual">{items[0]?<img src={items[0].thumb} alt="" width="200" height="150"/>:c.charAt(0)}</div><div><h3>{c} →</h3><p>{items.length} pilot illustrations · {ts.length} planned topics</p></div></a>})}</div></Layout>

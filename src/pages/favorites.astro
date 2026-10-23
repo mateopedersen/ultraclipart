@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro';import Card from '../components/Card.astro';import {art} from '../lib/catalog';
+---
+<Layout title="Your Favorites" noindex={true}><section class="hero"><h1>Your little collection.</h1><p>Saved on this browser, just for you.</p></section><div class="gallery" id="favorites">{art.map(item=><Card item={item}/>)}</div><div id="favorites-empty" class="empty" hidden><h2>Nothing saved yet.</h2><p>Tap “Add to Favorites” on any illustration to keep it here.</p><a href="/new/">Find your first favorite →</a></div><script>let ids:string[]=[];try{ids=JSON.parse(localStorage.getItem('ultraclipart-favorites')||'[]');}catch{}let n=0;document.querySelectorAll<HTMLElement>('#favorites [data-id]').forEach(el=>{el.hidden=!ids.includes(el.dataset.id!);if(!el.hidden)n++;});document.querySelector<HTMLElement>('#favorites-empty')!.hidden=n>0;</script></Layout>

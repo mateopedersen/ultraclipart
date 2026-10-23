@@ -1,0 +1,67 @@
+UltraClipart original art pilot — reproducible local pipeline
+
+Requirements
+- Node.js meeting package.json engines and pnpm (corepack enable).
+- Python 3.12 or later and venv/pip.
+- Poppler command-line tools for screen proofs (pdftoppm).
+- GRACoL2006_Coated1v2 print.icc is checked in under public/color with the
+  unmodified profile's sharing/embedding license and official registry source.
+- No image-generation service, paid API, or third-party stock artwork is used.
+
+Fresh checkout
+  pnpm install --frozen-lockfile
+  python3 -m venv .venv-art
+  .venv-art/bin/python -m pip install -r scripts/requirements-art.txt
+
+Regenerate the exact ten source-backed pilot artworks
+  .venv-art/bin/python scripts/art-create.py
+  .venv-art/bin/python scripts/art-export.py
+  .venv-art/bin/python scripts/art-preflight.py
+  .venv-art/bin/python scripts/art-plan.py
+  .venv-art/bin/python scripts/art-proofs.py
+  pnpm test
+
+Optional explicit executable overrides
+- NODE_BIN: Node executable. Otherwise discovered on PATH.
+- SHARP_MODULE_ROOT: optional node_modules directory; ordinary local dependency
+  resolution is preferred. No machine-specific runtime path is required.
+- PDFTOPPM_BIN: pdftoppm executable. Otherwise discovered on PATH.
+
+Pipeline outputs
+- assets/masters: canonical named-group SVG sources.
+- public/pilot: ten small pilot SVGs, lossless 2048px WebPs, 440px thumbnails,
+  and original US Letter process-CMYK vector PDFs.
+- data/art.json: actual byte lengths and SHA-256 hashes, truthfully separate
+  owner license policy, automated preflight and pending owner art approval.
+- data/art-preflight.json: file/dimension/alpha/CMYK/security evidence.
+- data/production-queue.json: 110 topics, 5,500 target, 10 drawn, 5,490 undrawn.
+- data/briefs: 450 draft creative briefs for the nine represented topics.
+  These are planning rows, not artwork. Initial pilot preceded full briefs;
+  future production waves must complete and review briefs before drawing.
+- work/art-proofs: 300-dpi PDF screen renders, 128px background checks, contact
+  sheets and measured geometry comparisons. Work outputs are not catalog art.
+
+Color and PDF policy
+Colors pass through LittleCMS from sRGB to GRACoL2006_Coated1v2 (relative
+colorimetric with black-point compensation). Exact neutrals preserve pure K.
+Vector PDF uses actual CMYK painting operators; it contains no raster artwork.
+The registered CGATS TR 006 print condition is named in OutputIntent. Its
+2.75 MB ICC profile cannot fit the exact 1,000,000-byte PDF cap and is therefore
+referenced, not embedded. No PDF/X certification is asserted. Users/printers
+must select the documented GRACoL condition; other print substrates need a
+separately validated profile. Tiny file size results from actual vector paths,
+not image resolution reduction. A screen proof is not a physical print proof.
+The browser LUT samples that same transform; it uses trilinear interpolation
+and is an approximation to full LittleCMS (see editor tests for fidelity).
+
+Publishing and resuming
+scripts/r2/{make-batch,plan,ingest}.mjs is the ONLY supported R2 ingestion path.
+Read docs/R2-RUNBOOK.md if present and each command's help/source. The previous
+art-publish.py is a disabled compatibility notice; an experimental Python
+prototype is deliberately kept only in ignored work/experimental.
+Do not publish production catalog counts or bypass required approval gates.
+Owner-confirmed license: free personal and educational use; commercial use and
+resale as clipart prohibited. A license decision is not art-quality approval.
+No cultural/religious pilot was created; those topics require source-informed
+review before production. No remote R2 usage or upload success is inferred
+from local files or dry-runs.
