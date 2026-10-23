@@ -16,8 +16,10 @@ const items = topicArt(topic.slug).sort(
 const topicReady = items.length === 50 && items.every((item) => item.indexable && item.published);
 const related = availableTopics
   .filter(
-    (t) => t.slug !== topic.slug && (t.cluster === topic.cluster || copy?.related.includes(t.slug)),
+    (t) =>
+      t.slug !== topic.slug && (copy ? copy.related.includes(t.slug) : t.cluster === topic.cluster),
   )
+  .sort((a, b) => (copy ? copy.related.indexOf(a.slug) - copy.related.indexOf(b.slug) : 0))
   .slice(0, 8);
 const title = topic.keyword.replace('clipart', 'Clipart');
 const isVolleyball = topic.slug === 'volleyball';

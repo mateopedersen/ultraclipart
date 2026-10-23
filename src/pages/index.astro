@@ -7,6 +7,12 @@ import { art, newestArt, topics, availableClusters, slugify } from '../lib/catal
 const picks = ['baby', 'heart', 'volleyball', 'winter'].filter((slug) =>
   art.some((item) => item.topic === slug),
 );
+const recentSubjects = new Set<string>();
+const recentPicks = newestArt.filter((item) => {
+  if (recentSubjects.has(item.topic)) return false;
+  recentSubjects.add(item.topic);
+  return true;
+});
 ---
 
 <Layout>
@@ -71,7 +77,7 @@ const picks = ['baby', 'heart', 'volleyball', 'winter'].filter((slug) =>
   </div>
   <p>Explore {art.length} illustrations for school, crafts and personal projects.</p>
   <div class="gallery">
-    {newestArt.slice(0, 12).map((item) => (
+    {recentPicks.slice(0, 12).map((item) => (
       <Card item={item} />
     ))}
   </div>

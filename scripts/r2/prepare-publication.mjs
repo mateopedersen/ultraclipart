@@ -63,8 +63,14 @@ function validateJournal(journal, batch, batchSha256) {
   }
 }
 
-async function verifiedCdnFile(file, fetcher, now) {
-  validateAssetUrl(file);
+class CdnTransportError extends Error {}
+
+const transientTransport = (error) =>
+  ['TypeError', 'AbortError', 'TimeoutError'].includes(error?.name) &&
+  !/redirect/i.test(String(error?.cause?.message ?? error?.message ?? ''));
+const waitForRetry = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function verifiedCdnAttempt(file, fetcher, now) {
   let response;
   try {
     response = await fetcher(file.url, {
@@ -72,8 +78,15 @@ async function verifiedCdnFile(file, fetcher, now) {
       redirect: 'error',
       signal: AbortSignal.timeout(30000),
     });
-  } catch {
-    throw new Error(`CDN verification could not fetch ${file.assetId}/${file.kind}`);
+  } catch (error) {
+    const Failure = transientTransport(error) ? CdnTransportError : Error;
+    throw new Failure(`CDN verification could not fetch ${file.assetId}/${file.kind}`, {
+      cause: error,
+    });
+  }
+  if ([408, 429].includes(response.status) || response.status >= 500) {
+    await response.body?.cancel();
+    throw new CdnTransportError(`CDN temporarily returned ${response.status}`);
   }
   if (response.status !== 200 || (response.url && response.url !== file.url))
     throw new Error(`CDN returned a redirect or non-200 response for ${file.assetId}/${file.kind}`);
@@ -87,7 +100,15 @@ async function verifiedCdnFile(file, fetcher, now) {
   const reader = response.body.getReader();
   try {
     while (true) {
-      const chunk = await reader.read();
+      let chunk;
+      try {
+        chunk = await reader.read();
+      } catch (error) {
+        const Failure = transientTransport(error) ? CdnTransportError : Error;
+        throw new Failure(`CDN response interrupted for ${file.assetId}/${file.kind}`, {
+          cause: error,
+        });
+      }
       if (chunk.done) break;
       bytes += chunk.value.byteLength;
       if (bytes > file.bytes) {
@@ -97,6 +118,7 @@ async function verifiedCdnFile(file, fetcher, now) {
       digest.update(chunk.value);
     }
   } finally {
+    await reader.cancel().catch(() => {});
     reader.releaseLock();
   }
   if (bytes !== file.bytes || digest.digest('hex') !== file.sha256)
@@ -110,6 +132,19 @@ async function verifiedCdnFile(file, fetcher, now) {
   };
 }
 
+async function verifiedCdnFile(file, fetcher, now, retryWait) {
+  validateAssetUrl(file);
+  for (let attempt = 0; ; attempt++) {
+    try {
+      // Each attempt starts a new stream and hash; partial responses are never accepted.
+      return await verifiedCdnAttempt(file, fetcher, now);
+    } catch (error) {
+      if (!(error instanceof CdnTransportError) || attempt === 2) throw error;
+      await retryWait([250, 1000][attempt]);
+    }
+  }
+}
+
 /** Read-only publication preparation. Existing verified URLs are retained; only new bytes are fetched. */
 export async function preparePublication({
   prior,
@@ -120,6 +155,7 @@ export async function preparePublication({
   readAsset,
   fetcher = fetch,
   now = Date.now,
+  retryWait = waitForRetry,
 }) {
   validateBatch(batch);
   if (new Set(batch.map((object) => object.assetId)).size > 50)
@@ -165,9 +201,20 @@ export async function preparePublication({
       );
     return { fresh: { ...file, url: `${ASSET_ORIGIN}/${object.key}` } };
   });
-  const files = [];
-  for (const candidate of candidates)
-    files.push(candidate.retained ?? (await verifiedCdnFile(candidate.fresh, fetcher, now)));
+  const files = new Array(candidates.length);
+  let cursor = 0;
+  const results = await Promise.allSettled(
+    Array.from({ length: Math.min(8, candidates.length) }, async () => {
+      while (cursor < candidates.length) {
+        const index = cursor++,
+          candidate = candidates[index];
+        files[index] =
+          candidate.retained ?? (await verifiedCdnFile(candidate.fresh, fetcher, now, retryWait));
+      }
+    }),
+  );
+  const failed = results.find((result) => result.status === 'rejected');
+  if (failed) throw failed.reason;
   const manifest = {
     schema: 2,
     status: 'verified',

@@ -12,14 +12,30 @@ const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.u
     a.sourceType === 'raster' &&
     (!process.env.RASTER_TOPICS || process.env.RASTER_TOPICS.split(',').includes(a.topic)),
 );
-const targets =
-  process.env.ALL_RASTER === '1'
-    ? art
-    : [
-        art[0],
-        art.find((a) => a.style === 'Watercolor'),
-        [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
-      ];
+const targets = [
+  ...new Map(
+    (process.env.ALL_RASTER === '1'
+      ? art
+      : process.env.RASTER_PER_TOPIC === '1'
+        ? [
+            ...[...new Set(art.map((a) => a.topic))].map((topic) =>
+              art.find((a) => a.topic === topic),
+            ),
+            // A smaller source can have a less compressible alpha mask than
+            // the largest PDF. Exercise every file with under 5 KB headroom.
+            ...art.filter((a) => a.files.pdf.bytes > 995_000),
+            [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+          ]
+        : [
+            art[0],
+            art.find((a) => a.style === 'Watercolor'),
+            [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+          ]
+    )
+      .filter(Boolean)
+      .map((a) => [a.id, a]),
+  ).values(),
+];
 const browser = await { chromium, firefox, webkit }[engine].launch({
   headless: true,
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),

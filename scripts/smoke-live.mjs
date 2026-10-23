@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { readFileSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve, relative, join } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
@@ -133,7 +133,18 @@ const slugify = (value) =>
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
+const animalReviewPath = resolve(root, 'data/animal-package-review.json');
+const heldArtwork = existsSync(animalReviewPath)
+  ? JSON.parse(readFileSync(animalReviewPath, 'utf8')).heldIds
+  : [];
 const unavailable = [
+  ...heldArtwork.flatMap((id) => [
+    `/art/${id}/`,
+    `/edit/${id}/`,
+    `/catalog/octopus/${id}.webp`,
+    `/catalog/octopus/${id}.pdf`,
+    `/catalog/octopus/${id}-thumb.webp`,
+  ]),
   ...JSON.parse(
     readFileSync(resolve(root, 'data/retired-artwork.json'), 'utf8'),
   ).artworkIds.flatMap((id) => [`/art/${id}/`, `/edit/${id}/`]),

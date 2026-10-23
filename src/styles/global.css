@@ -427,7 +427,8 @@ p {
 .formats {
   display: flex;
   gap: 6px;
-  margin: 6px 0 10px;
+  margin: auto 0 10px;
+  padding-top: 6px;
 }
 .formats a {
   display: inline-flex;
@@ -453,7 +454,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px;
-  margin-top: auto;
+  margin-top: 0;
 }
 .card-actions .button {
   font-size: 12px;

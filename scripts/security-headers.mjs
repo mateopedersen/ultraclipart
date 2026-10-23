@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { join, resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
@@ -65,9 +65,13 @@ if (process.env.CF_PAGES === '1') {
   console.log(`CDN release: ${publication.files} verified files, ${publication.bytes} bytes.`);
 }
 const retirement = retirementPolicy(
-  JSON.parse(readFileSync(join(root, 'data/topics.json'), 'utf8')).topics,
+  [
+    ...JSON.parse(readFileSync(join(root, 'data/topics.json'), 'utf8')).topics,
+    ...JSON.parse(readFileSync(join(root, 'data/extra-topics.json'), 'utf8')),
+  ],
   JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
   JSON.parse(readFileSync(join(root, 'data/retired-artwork.json'), 'utf8')),
+  files(dist).map((path) => '/' + relative(dist, path)),
 );
 if (retirement) {
   const responseHeaders = Object.fromEntries(

@@ -27,7 +27,7 @@ import {
 
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const usage =
-  'node scripts/r2/ingest.mjs batch.json [--transport s3|cloudflare-api] [--inventory measured-inventory.json] [--verify-absent-scopes] [--apply]';
+  'node scripts/r2/ingest.mjs batch.json [--transport s3|cloudflare-api] [--inventory measured-inventory.json] [--verify-absent-scopes] [--workers 1-4] [--apply]';
 const args = process.argv.slice(2);
 if (!args[0] || args.includes('--help')) {
   console.log(usage);
@@ -38,6 +38,7 @@ let apply = false;
 let verifyAbsentScopes = false;
 let inventoryPath;
 let transport = 's3';
+let workers = 1;
 while (args.length) {
   const flag = args.shift();
   if (flag === '--apply') apply = true;
@@ -46,6 +47,7 @@ while (args.length) {
     inventoryPath = resolve(args.shift());
   else if (flag === '--transport' && ['s3', 'cloudflare-api'].includes(args[0]))
     transport = args.shift();
+  else if (flag === '--workers' && /^[1-4]$/.test(args[0] ?? '')) workers = Number(args.shift());
   else throw new Error(`Unknown argument: ${flag}`);
 }
 if (apply && inventoryPath)
@@ -133,7 +135,7 @@ async function aws(command, fields = [], requestEndpoint = endpoint) {
   }
 }
 async function measure() {
-  return measureAccount({
+  const options = {
     endpoint,
     batch,
     aws,
@@ -148,7 +150,20 @@ async function measure() {
             }),
         }
       : {}),
-  });
+  };
+  // A cold resume may spend most of the freshness window hashing existing
+  // objects. Keep that verified ETag cache, then enumerate again; never extend
+  // the inventory's age or pretend the first slow snapshot is fresh.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const inventory = await measureAccount(options);
+      if (Date.now() - inventory.observedAt <= 45_000) return inventory;
+      if (attempt === 1) throw new Error('Fresh all-account inventory could not finish in time');
+    } catch (error) {
+      if (attempt === 1 || error.message !== 'Invalid disabled-jurisdiction capability proof')
+        throw error;
+    }
+  }
 }
 let lock;
 const lockPath = resolve('.r2-ingest.lock');
@@ -168,6 +183,7 @@ try {
     ? JSON.parse(readFileSync(inventoryPath, 'utf8'))
     : await measure();
   let plan = buildPlan(inventory, batch);
+  let reservedAt = inventory.observedAt;
   console.log(
     JSON.stringify(
       {
@@ -201,61 +217,78 @@ try {
       publishApproved: false,
     };
     checkpoint(journal);
-    for (const id of plan.artworkIds) {
-      // Fresh full-account measurement precedes each artwork that adds bytes.
-      // Operators must also serialize any uploaders on other machines/accounts.
-      if (plan.upload.some((object) => object.assetId === id))
-        plan = buildPlan(await measure(), batch);
-      for (const object of batch.filter((candidate) => candidate.assetId === id)) {
-        if (plan.upload.some((candidate) => objectIdentity(candidate) === objectIdentity(object))) {
-          const mime =
-            object.kind === 'pdf'
-              ? 'application/pdf'
-              : object.kind === 'svg'
-                ? 'image/svg+xml'
-                : 'image/webp';
-          const uploadSnapshot = join(verificationDir, `upload-${object.sha256}`);
-          writeFileSync(uploadSnapshot, contents.get(objectIdentity(object)).bytes, {
-            mode: 0o600,
+    const artworkIds = [...plan.artworkIds];
+    for (let offset = 0; offset < artworkIds.length; offset += workers) {
+      const group = artworkIds.slice(offset, offset + workers);
+      // Reserve the entire remaining batch against an all-account inventory,
+      // renewing within 30 seconds before a bounded group starts. One exclusive writer owns this reservation;
+      // other machines must serialize uploaders against the same account as well.
+      if (
+        Date.now() - reservedAt >= 30_000 &&
+        plan.upload.some((object) => group.includes(object.assetId))
+      ) {
+        const fresh = await measure();
+        plan = buildPlan(fresh, batch);
+        reservedAt = fresh.observedAt;
+      }
+      async function ingestOne(id) {
+        for (const object of batch.filter((candidate) => candidate.assetId === id)) {
+          if (
+            plan.upload.some((candidate) => objectIdentity(candidate) === objectIdentity(object))
+          ) {
+            const mime =
+              object.kind === 'pdf'
+                ? 'application/pdf'
+                : object.kind === 'svg'
+                  ? 'image/svg+xml'
+                  : 'image/webp';
+            const uploadSnapshot = join(verificationDir, `upload-${object.sha256}`);
+            writeFileSync(uploadSnapshot, contents.get(objectIdentity(object)).bytes, {
+              mode: 0o600,
+            });
+            await aws('put-object', [
+              '--bucket',
+              object.bucket,
+              '--key',
+              object.key,
+              '--body',
+              uploadSnapshot,
+              '--storage-class',
+              'STANDARD',
+              '--content-type',
+              mime,
+              '--cache-control',
+              'public,max-age=31536000,immutable',
+              '--metadata',
+              JSON.stringify({ sha256: object.sha256, 'artwork-id': object.assetId }),
+              '--if-none-match',
+              '*',
+              ...(object.kind === 'pdf'
+                ? ['--content-disposition', `attachment; filename="${object.assetId}.pdf"`]
+                : []),
+            ]);
+          }
+          const downloaded = join(verificationDir, `object-${object.sha256}`);
+          await aws('get-object', ['--bucket', object.bucket, '--key', object.key, downloaded]);
+          const actual = readFileSync(downloaded);
+          if (actual.length !== object.bytes || sha(actual) !== object.sha256)
+            throw new Error(`Remote checksum mismatch for ${object.key}`);
+          journal.verifiedObjects.push({
+            jurisdiction: jurisdictionOf(object),
+            bucket: object.bucket,
+            key: object.key,
+            sha256: object.sha256,
+            bytes: object.bytes,
           });
-          await aws('put-object', [
-            '--bucket',
-            object.bucket,
-            '--key',
-            object.key,
-            '--body',
-            uploadSnapshot,
-            '--storage-class',
-            'STANDARD',
-            '--content-type',
-            mime,
-            '--cache-control',
-            'public,max-age=31536000,immutable',
-            '--metadata',
-            JSON.stringify({ sha256: object.sha256, 'artwork-id': object.assetId }),
-            '--if-none-match',
-            '*',
-            ...(object.kind === 'pdf'
-              ? ['--content-disposition', `attachment; filename="${object.assetId}.pdf"`]
-              : []),
-          ]);
+          checkpoint(journal);
         }
-        const downloaded = join(verificationDir, 'object');
-        await aws('get-object', ['--bucket', object.bucket, '--key', object.key, downloaded]);
-        const actual = readFileSync(downloaded);
-        if (actual.length !== object.bytes || sha(actual) !== object.sha256)
-          throw new Error(`Remote checksum mismatch for ${object.key}`);
-        journal.verifiedObjects.push({
-          jurisdiction: jurisdictionOf(object),
-          bucket: object.bucket,
-          key: object.key,
-          sha256: object.sha256,
-          bytes: object.bytes,
-        });
+        journal.verifiedArtworkIds.push(id);
         checkpoint(journal);
       }
-      journal.verifiedArtworkIds.push(id);
-      checkpoint(journal);
+      // Do not release the writer lock while any request in this group is pending.
+      const results = await Promise.allSettled(group.map(ingestOne));
+      const failed = results.find((result) => result.status === 'rejected');
+      if (failed) throw failed.reason;
     }
     const finalInventory = await measure();
     const final = buildPlan(finalInventory, batch);
