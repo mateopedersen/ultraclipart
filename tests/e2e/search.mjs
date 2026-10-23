@@ -4,15 +4,23 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { tokenBucket } from '../../src/lib/search-index.ts';
+import { defaults, searchArtwork } from '../../src/lib/search.ts';
 const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
-const pumpkinCount = catalog.filter(
-  (x) =>
-    x.topic === 'pumpkin' ||
-    ['volleyball-halloween-pumpkin-clipart', 'baby-pumpkin-costume-clipart'].includes(x.id),
-).length;
-const cardinalCount = catalog.filter((x) =>
-  /\bcardinal\b/i.test([x.topic, x.title, x.description, x.alt].join(' ')),
-).length;
+const topics = [
+  ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics,
+  ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
+];
+const searchable = catalog.map((item) => ({
+  ...item,
+  cluster: topics.find((topic) => topic.slug === item.topic)?.cluster ?? '',
+}));
+// Semantic scoring has isolated unit fixtures. Here verify browser integration
+// against the current catalog, including pagination and future outline additions.
+const expected = (patch) => searchArtwork(searchable, { ...defaults, ...patch });
+const pumpkin = expected({ q: 'pumpkin' });
+const pumpkinCount = pumpkin.total;
+const cardinal = expected({ q: 'cardinal' });
+const cardinalCount = cardinal.total;
 const base = process.env.BASE_URL ?? 'http://127.0.0.1:4322';
 const engine = process.env.UC_BROWSER ?? 'chromium';
 const browser = await { chromium, firefox, webkit }[engine].launch({
@@ -39,19 +47,26 @@ try {
     'initial HTML is capped at eight cards',
   );
   await expect(page.locator('#result-count')).toHaveText(
-    `${pumpkinCount} illustrations for “pumpkin”`,
+    `${pumpkinCount} ${pumpkinCount === 1 ? 'illustration' : 'illustrations'} for “pumpkin”`,
   );
-  await expect(cards()).toHaveCount(pumpkinCount);
-  report.checks.push('subject search, eight-card HTML cap');
+  await expect(cards()).toHaveCount(pumpkin.items.length);
+  assert.deepEqual(
+    await cards().evaluateAll((nodes) => nodes.map((node) => node.dataset.id)),
+    pumpkin.items.map((item) => item.id),
+  );
+  report.checks.push('subject search, exact ranked identities, eight-card HTML cap');
   await page.selectOption('#filter-style', 'outline');
-  await expect(cards()).toHaveCount(0);
-  await expect(page.locator('#search-empty')).toBeVisible();
-  report.checks.push('outline filter never invents unavailable artwork');
+  const outlines = expected({ q: 'pumpkin', style: 'outline' });
+  await expect(cards()).toHaveCount(outlines.items.length);
+  await expect(page.locator('#search-empty')).toBeVisible({ visible: outlines.total === 0 });
+  report.checks.push('outline filter matches available catalog artwork');
   await page.selectOption('#filter-orientation', 'portrait');
-  await expect(page.locator('#search-empty')).toBeVisible();
-  report.checks.push('honest empty facet');
+  const portraits = expected({ q: 'pumpkin', style: 'outline', orientation: 'portrait' });
+  await expect(cards()).toHaveCount(portraits.items.length);
+  await expect(page.locator('#search-empty')).toBeVisible({ visible: portraits.total === 0 });
+  report.checks.push('combined facets match actual catalog');
   await page.click('#clear-filters');
-  await expect(cards()).toHaveCount(pumpkinCount);
+  await expect(cards()).toHaveCount(pumpkin.items.length);
   await page.fill('#search-query', '');
   await page.locator('#catalog-search button').click();
   await expect(cards()).toHaveCount(8);
@@ -76,7 +91,9 @@ try {
   report.checks.push('query rendered as text');
   await page.fill('#search-query', 'black and white pumpkin');
   await page.locator('#catalog-search button').click();
-  await expect(cards()).toHaveCount(0);
+  await expect(cards()).toHaveCount(
+    expected({ q: 'black and white pumpkin', sort: 'title' }).items.length,
+  );
   await page.screenshot({ path: resolve(evidence, 'desktop.png'), fullPage: true });
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
@@ -104,8 +121,10 @@ try {
   await expect(page.locator('#result-count')).toHaveText('Search is temporarily unavailable.');
   await page.unroute('**/search-data/**');
   await page.click('#search-retry');
-  await expect(cards()).toHaveCount(1);
-  await expect(cards()).toHaveAttribute('data-id', 'winter-arctic-fox-resting');
+  await expect(cards()).toHaveCount(expected({ q: 'arctic fox' }).items.length);
+  await expect(
+    cards().filter({ has: page.locator('[href="/art/winter-arctic-fox-resting/"]') }),
+  ).toHaveCount(1);
   report.checks.push('network error and visible retry recovery');
   // Hold an old query's network request while a newer query completes.
   let release, started;
@@ -122,7 +141,7 @@ try {
   await seen;
   await page.fill('#search-query', 'cardinal');
   await page.locator('#catalog-search button').click();
-  await expect(cards()).toHaveCount(cardinalCount);
+  await expect(cards()).toHaveCount(cardinal.items.length);
   await expect(
     cards().filter({ has: page.locator('[href="/art/winter-red-cardinal-holly/"]') }),
   ).toHaveCount(1);
@@ -177,7 +196,7 @@ try {
     await route.continue();
   });
   await page.goto(`${base}/search/?q=pumpkin`);
-  await expect(cards()).toHaveCount(pumpkinCount);
+  await expect(cards()).toHaveCount(pumpkin.items.length);
   await page.waitForLoadState('networkidle');
   report.delayedColdQueryCLS = await page.evaluate(() => window.__searchCLS);
   if (report.delayedColdQueryCLS !== null) {
