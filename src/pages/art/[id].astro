@@ -84,7 +84,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
       </div>
     </div>
     <section>
-      <p class="eyebrow">Original pilot illustration</p>
+      <p class="eyebrow">Original illustration</p>
       <h1>{item.title}</h1>
       <p>{item.description}</p>
       <div class="metadata">
@@ -128,58 +128,41 @@ const topic = topics.find((t) => t.slug === item.topic)!;
         Free for personal and educational use. No commercial use or resale as clipart.{' '}
         <a href="/license/">License details →</a>
       </p>
-      <small>{item.provenance}</small>
       <p class="notice">
-        Pilot artwork: visual quality review is ongoing. Changing the preview background does not
-        change the original download; use the editor to export your changes.
+        Changing the preview background does not change the original download; use the editor to
+        export your changes.
       </p>
     </section>
   </div>
-  <section class="artwork-guide" aria-labelledby="artwork-use-heading">
-    <div class="prose">
-      <p class="eyebrow">Working with this drawing</p>
-      <h2 id="artwork-use-heading">{note.heading}</h2>
-      <p>{note.use}</p>
-      <h3>Make a considered edit</h3>
-      <p>{note.edit}</p>
-      <h3>Check before using it</h3>
-      <p>{note.check}</p>
-      <p>
-        <a href={`/guides/${note.guide}/`}>Follow a related project guide →</a>
-      </p>
-    </div>
-    <aside class="asset-facts">
-      <h2>Inside this download</h2>
-      <dl>
-        <dt>Editable source</dt>
-        <dd>{layers.length} named layers</dd>
-        <dt>WebP</dt>
-        <dd>
-          {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} pixels ·{' '}
-          {item.files.webp.bytes.toLocaleString('en-US')} bytes
-        </dd>
-        <dt>PDF</dt>
-        <dd>
-          {item.pdfPage} · {item.pdfColorSpace} · {item.files.pdf.bytes.toLocaleString('en-US')}{' '}
-          bytes
-        </dd>
-        <dt>Print conversion</dt>
-        <dd>{item.printProfile}</dd>
-      </dl>
-      <details>
-        <summary>See the editable layers</summary>
-        <ul>
-          {layers.map((layer) => (
-            <li>{layer}</li>
-          ))}
-        </ul>
-      </details>
-      <p>
-        <a href="/print-size/">Check a raster print size</a> or{' '}
-        <a href="/guides/webp-pdf-and-editable-projects/">compare the file formats</a>. A physical
-        print proof is still recommended.
-      </p>
-    </aside>
+  <section class="asset-facts" aria-label="Download details">
+    <h2>Inside this download</h2>
+    <dl>
+      <dt>Editable source</dt>
+      <dd>{layers.length} named layers</dd>
+      <dt>WebP</dt>
+      <dd>
+        {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} pixels ·{' '}
+        {item.files.webp.bytes.toLocaleString('en-US')} bytes
+      </dd>
+      <dt>PDF</dt>
+      <dd>
+        {item.pdfPage} · {item.pdfColorSpace} · {item.files.pdf.bytes.toLocaleString('en-US')} bytes
+      </dd>
+      <dt>Print conversion</dt>
+      <dd>{item.printProfile}</dd>
+    </dl>
+    <details>
+      <summary>See the editable layers</summary>
+      <ul>
+        {layers.map((layer) => (
+          <li>{layer}</li>
+        ))}
+      </ul>
+    </details>
+    <p>
+      <a href="/print-size/">Check a raster print size</a> or{' '}
+      <a href="/guides/webp-pdf-and-editable-projects/">compare the file formats</a>.
+    </p>
   </section>
   <div class="section-head">
     <h2>A little more inspiration</h2>

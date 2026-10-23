@@ -6,11 +6,9 @@ import { art } from '../lib/catalog';
 
 <Layout title="New Clipart" noindex={true}>
   <section class="hero">
-    <p class="eyebrow">The pilot collection</p>
+    <p class="eyebrow">The growing collection</p>
     <h1>Fresh from the sketchbook.</h1>
-    <p>
-      {art.length} original illustrations to try, edit and make your own. Visual review is ongoing.
-    </p>
+    <p>{art.length} original illustrations to try, edit and make your own.</p>
   </section>
   <div class="gallery">
     {art.slice(0, 32).map((item) => (

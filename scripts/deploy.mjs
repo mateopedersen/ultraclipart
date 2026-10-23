@@ -4,7 +4,6 @@ import { resolve } from 'node:path';
 import { readPublication } from './publication-policy.mjs';
 
 const root = resolve(import.meta.dirname, '..');
-readPublication(root);
 const env = { ...process.env, CF_PAGES: '1', ASTRO_TELEMETRY_DISABLED: '1' };
 function run(script, args = []) {
   const result = spawnSync(process.execPath, [script, ...args], {
@@ -18,6 +17,8 @@ function run(script, args = []) {
 
 // Manual publication has the same gates as Git-driven publication. Never deploy
 // a previously generated local dist: it may contain stale or unverified media.
+run('scripts/restore-assets.mjs');
+readPublication(root);
 run('node_modules/astro/bin/astro.mjs', ['check']);
 run('node_modules/astro/bin/astro.mjs', ['build']);
 run('scripts/security-headers.mjs');

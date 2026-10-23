@@ -37,8 +37,30 @@ export function validateInventoryScope(inventory) {
       !Array.isArray(scope.buckets)
     )
       throw new Error('Incomplete, duplicate or mismatched jurisdiction scope');
-    if (!['s3-list-buckets', 'cloudflare-api-empty'].includes(scope.proof?.source))
+    if (
+      ![
+        's3-list-buckets',
+        'cloudflare-api-list-buckets',
+        'cloudflare-api-empty',
+        'cloudflare-entitlement-disabled',
+      ].includes(scope.proof?.source)
+    )
       throw new Error('Missing jurisdiction enumeration proof');
+    if (
+      scope.proof.source === 'cloudflare-entitlement-disabled' &&
+      (!['fedramp', 'fedramp-high'].includes(scope.jurisdiction) ||
+        scope.buckets.length ||
+        scope.proof.accountId !== inventory.accountId ||
+        scope.proof.jurisdiction !== scope.jurisdiction ||
+        scope.proof.entitlementKey !== 'r2.fedramp' ||
+        scope.proof.allocated !== false ||
+        scope.proof.endpoint !==
+          `https://api.cloudflare.com/client/v4/accounts/${inventory.accountId}/entitlements` ||
+        !Number.isFinite(scope.proof.observedAt) ||
+        scope.proof.observedAt < inventory.observedAt ||
+        scope.proof.observedAt - inventory.observedAt > 60000)
+    )
+      throw new Error('Invalid disabled-jurisdiction capability proof');
     if (
       scope.proof.source === 'cloudflare-api-empty' &&
       (scope.buckets.length ||
@@ -103,7 +125,16 @@ export async function proveEmptyJurisdiction({ accountId, jurisdiction, token, f
   };
 }
 
-export async function measureAccount({ endpoint, batch, aws, proveAbsent, now = Date.now }) {
+export async function measureAccount({
+  endpoint,
+  batch,
+  aws,
+  proveAbsent,
+  now = Date.now,
+  enumerationSource = 's3-list-buckets',
+}) {
+  if (!['s3-list-buckets', 'cloudflare-api-list-buckets'].includes(enumerationSource))
+    throw new Error('Unknown bucket enumeration transport');
   const { accountId } = parseEndpoint(endpoint);
   const observedAt = now(),
     jurisdictions = [],
@@ -114,15 +145,25 @@ export async function measureAccount({ endpoint, batch, aws, proveAbsent, now = 
       seenNames = new Set(),
       seenBucketTokens = new Set();
     let bucketToken,
-      proof = { source: 's3-list-buckets' };
+      expectedBucketCount,
+      proof = { source: enumerationSource };
     try {
       do {
-        const page = aws(
+        const page = await aws(
           'list-buckets',
           ['--no-paginate', ...(bucketToken ? ['--continuation-token', bucketToken] : [])],
           scopeEndpoint,
         );
         if (!Array.isArray(page.Buckets)) throw new Error('Missing bucket enumeration');
+        if (page.TotalCount !== undefined) {
+          if (
+            !Number.isSafeInteger(page.TotalCount) ||
+            page.TotalCount < 0 ||
+            (expectedBucketCount !== undefined && expectedBucketCount !== page.TotalCount)
+          )
+            throw new Error('Bucket count changed or is invalid');
+          expectedBucketCount = page.TotalCount;
+        }
         for (const bucket of page.Buckets) {
           if (!bucket.Name || seenNames.has(bucket.Name))
             throw new Error('Duplicate or invalid bucket listing');
@@ -137,14 +178,16 @@ export async function measureAccount({ endpoint, batch, aws, proveAbsent, now = 
           throw new Error('Incomplete or looping bucket enumeration');
         if (bucketToken) seenBucketTokens.add(bucketToken);
       } while (bucketToken);
+      if (expectedBucketCount !== undefined && names.length !== expectedBucketCount)
+        throw new Error('Incomplete bucket roster');
     } catch {
       // A failure or permission denial is never evidence that a jurisdiction is empty.
       if (!proveAbsent || names.length)
         throw new Error(`Cannot inventory ${jurisdiction}; all-jurisdiction occupancy is unknown`);
       proof = await proveAbsent(accountId, jurisdiction);
       if (
-        proof?.source !== 'cloudflare-api-empty' ||
-        proof.totalCount !== 0 ||
+        !['cloudflare-api-empty', 'cloudflare-entitlement-disabled'].includes(proof?.source) ||
+        (proof.source === 'cloudflare-api-empty' && proof.totalCount !== 0) ||
         proof.accountId !== accountId ||
         proof.jurisdiction !== jurisdiction
       )
@@ -155,7 +198,7 @@ export async function measureAccount({ endpoint, batch, aws, proveAbsent, now = 
         seenTokens = new Set();
       let token;
       do {
-        const page = aws(
+        const page = await aws(
           'list-objects-v2',
           [
             '--bucket',
@@ -171,22 +214,28 @@ export async function measureAccount({ endpoint, batch, aws, proveAbsent, now = 
           throw new Error('Uncertain bucket pagination');
         if (page.Contents !== undefined && !Array.isArray(page.Contents))
           throw new Error('Invalid object inventory');
-        for (const entry of page.Contents ?? []) {
-          const object = { key: entry.Key, bytes: entry.Size };
-          if (
-            batch.some(
-              (candidate) =>
-                jurisdictionOf(candidate) === jurisdiction &&
-                candidate.bucket === name &&
-                candidate.key === entry.Key,
-            )
-          )
-            object.sha256 = aws(
-              'head-object',
-              ['--bucket', name, '--key', entry.Key],
-              scopeEndpoint,
-            ).Metadata?.sha256;
-          objects.push(object);
+        const entries = page.Contents ?? [];
+        // Read-only hash checks are independent. Bound concurrency to four so
+        // resumed waves fit the freshness window without a request burst.
+        for (let offset = 0; offset < entries.length; offset += 4) {
+          const measured = await Promise.all(
+            entries.slice(offset, offset + 4).map(async (entry) => {
+              const object = { key: entry.Key, bytes: entry.Size };
+              if (
+                batch.some(
+                  (candidate) =>
+                    jurisdictionOf(candidate) === jurisdiction &&
+                    candidate.bucket === name &&
+                    candidate.key === entry.Key,
+                )
+              )
+                object.sha256 = (
+                  await aws('head-object', ['--bucket', name, '--key', entry.Key], scopeEndpoint)
+                ).Metadata?.sha256;
+              return object;
+            }),
+          );
+          objects.push(...measured);
         }
         token = page.IsTruncated ? page.NextContinuationToken : undefined;
         if (page.IsTruncated && (!token || typeof token !== 'string' || seenTokens.has(token)))

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// AWS CLI owns authentication. Credentials are never accepted in command-line flags.
+// Existing CLI login/environment owns authentication; never accept credential flags.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
@@ -16,6 +16,7 @@ import {
 import { resolve, join, extname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { buildPlan, validateBatch } from './plan.mjs';
+import { configuredToken, cloudflareTransport } from './cloudflare-api.mjs';
 import {
   measureAccount,
   proveEmptyJurisdiction,
@@ -26,7 +27,7 @@ import {
 
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const usage =
-  'node scripts/r2/ingest.mjs batch.json [--inventory measured-inventory.json] [--verify-absent-scopes] [--apply]';
+  'node scripts/r2/ingest.mjs batch.json [--transport s3|cloudflare-api] [--inventory measured-inventory.json] [--verify-absent-scopes] [--apply]';
 const args = process.argv.slice(2);
 if (!args[0] || args.includes('--help')) {
   console.log(usage);
@@ -36,12 +37,15 @@ const batchPath = resolve(args.shift());
 let apply = false;
 let verifyAbsentScopes = false;
 let inventoryPath;
+let transport = 's3';
 while (args.length) {
   const flag = args.shift();
   if (flag === '--apply') apply = true;
   else if (flag === '--verify-absent-scopes') verifyAbsentScopes = true;
   else if (flag === '--inventory' && args[0] && !args[0].startsWith('--'))
     inventoryPath = resolve(args.shift());
+  else if (flag === '--transport' && ['s3', 'cloudflare-api'].includes(args[0]))
+    transport = args.shift();
   else throw new Error(`Unknown argument: ${flag}`);
 }
 if (apply && inventoryPath)
@@ -89,7 +93,20 @@ if (!inventoryPath) {
 }
 let reads = 0;
 let writes = 0;
-function aws(command, fields = [], requestEndpoint = endpoint) {
+const rest =
+  transport === 'cloudflare-api'
+    ? cloudflareTransport({
+        accountId: parseEndpoint(endpoint).accountId,
+        token: configuredToken(),
+        writeBucket: process.env.R2_WRITE_BUCKET,
+      })
+    : null;
+async function aws(command, fields = [], requestEndpoint = endpoint) {
+  if (rest) {
+    const result = await rest.aws(command, fields, requestEndpoint);
+    command === 'put-object' ? writes++ : reads++;
+    return result;
+  }
   try {
     const stdout = execFileSync(
       'aws',
@@ -120,7 +137,8 @@ async function measure() {
     endpoint,
     batch,
     aws,
-    ...(verifyAbsentScopes
+    ...(rest ? { proveAbsent: rest.proveAbsent, enumerationSource: rest.enumerationSource } : {}),
+    ...(!rest && verifyAbsentScopes
       ? {
           proveAbsent: (accountId, jurisdiction) =>
             proveEmptyJurisdiction({
@@ -184,9 +202,10 @@ try {
     };
     checkpoint(journal);
     for (const id of plan.artworkIds) {
-      // Full-account remeasurement before each complete artwork limits drift.
+      // Fresh full-account measurement precedes each artwork that adds bytes.
       // Operators must also serialize any uploaders on other machines/accounts.
-      plan = buildPlan(await measure(), batch);
+      if (plan.upload.some((object) => object.assetId === id))
+        plan = buildPlan(await measure(), batch);
       for (const object of batch.filter((candidate) => candidate.assetId === id)) {
         if (plan.upload.some((candidate) => objectIdentity(candidate) === objectIdentity(object))) {
           const mime =
@@ -199,7 +218,7 @@ try {
           writeFileSync(uploadSnapshot, contents.get(objectIdentity(object)).bytes, {
             mode: 0o600,
           });
-          aws('put-object', [
+          await aws('put-object', [
             '--bucket',
             object.bucket,
             '--key',
@@ -222,7 +241,7 @@ try {
           ]);
         }
         const downloaded = join(verificationDir, 'object');
-        aws('get-object', ['--bucket', object.bucket, '--key', object.key, downloaded]);
+        await aws('get-object', ['--bucket', object.bucket, '--key', object.key, downloaded]);
         const actual = readFileSync(downloaded);
         if (actual.length !== object.bytes || sha(actual) !== object.sha256)
           throw new Error(`Remote checksum mismatch for ${object.key}`);
@@ -240,6 +259,8 @@ try {
     }
     const finalInventory = await measure();
     const final = buildPlan(finalInventory, batch);
+    if (final.upload.length)
+      throw new Error('Final inventory is missing batch objects; publication remains unverified');
     journal.inventoryScope = {
       accountId: finalInventory.accountId,
       scopeVersion: finalInventory.scopeVersion,

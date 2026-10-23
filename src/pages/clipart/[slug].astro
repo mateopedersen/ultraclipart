@@ -17,7 +17,7 @@ const title = topic.keyword.replace('clipart', 'Clipart');
 
 <Layout
   title={title}
-  description={`Explore ${topic.keyword.toLowerCase()} and related ${topic.cluster.toLowerCase()} subjects. ${items.length ? `${items.length} original ${topicReady ? '' : 'pilot '}illustration${items.length === 1 ? '' : 's'} available for editing.` : 'Artwork is in preparation.'}`}
+  description={`Explore ${topic.keyword.toLowerCase()} and related ${topic.cluster.toLowerCase()} subjects. ${items.length ? `${items.length} original illustration${items.length === 1 ? '' : 's'} available for editing.` : 'Artwork is in preparation.'}`}
   noindex={!topicReady}
 >
   <script
@@ -55,7 +55,7 @@ const title = topic.keyword.replace('clipart', 'Clipart');
   </section>
   <div class="section-head">
     <h2>
-      {items.length} pilot {items.length === 1 ? 'illustration' : 'illustrations'}
+      {items.length} {items.length === 1 ? 'illustration' : 'illustrations'}
     </h2>
     <a href="/license/">Personal & educational use</a>
   </div>
@@ -70,7 +70,7 @@ const title = topic.keyword.replace('clipart', 'Clipart');
       <h2>Good things take a little drawing.</h2>
       <p>No artwork has been released for this topic yet.</p>
       <a class="button primary" href="/new/">
-        Explore available pilot artwork
+        Explore available artwork
       </a>
     </div>
   )}

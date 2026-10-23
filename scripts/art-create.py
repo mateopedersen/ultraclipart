@@ -4,6 +4,9 @@ from pathlib import Path
 import json, html, math
 from art_refinements import revise
 ROOT=Path(__file__).resolve().parents[1]
+catalog_path = ROOT/'data/art.json'
+if catalog_path.exists() and any(a.get('productionWave') for a in json.loads(catalog_path.read_text())):
+ raise RuntimeError('Historical pilot command cannot reset production waves. Use produce-wave.py and sync-production-queue.mjs.')
 OUT=ROOT/'assets/masters'; OUT.mkdir(parents=True,exist_ok=True)
 INK='#29354B'
 def path(d,fill,stroke=INK,w=7,**kw): return el('path',d=d,fill=fill,stroke=stroke,stroke_width=w,**kw)

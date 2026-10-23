@@ -14,13 +14,17 @@ const data = arts.map((item) => ({
   ...item,
   cluster: topics.find((topic) => topic.slug === item.topic).cluster,
 }));
+const pumpkinCount = data.filter((item) => item.topic === 'pumpkin').length;
 const search = (patch) => searchArtwork(data, { ...defaults, ...patch });
 
 test('query normalization handles punctuation, accents, plurals and controlled synonyms', () => {
   assert.deepEqual(normalizeQuery('  PÚMPKINS, free clipart!  '), ['pumpkin']);
   assert.deepEqual(normalizeQuery('Presents and leaves'), ['gift', 'leaf']);
-  assert.equal(search({ q: 'pumpkins clipart' }).total, 2);
-  assert.equal(search({ q: 'present' }).items[0].id, 'gift-ribbon-keepsake');
+  assert.equal(search({ q: 'pumpkins clipart' }).total, pumpkinCount);
+  const gifts = search({ q: 'present' }).items;
+  assert.ok(gifts.some((x) => x.id === 'gift-ribbon-keepsake'));
+  assert.ok(gifts.some((x) => x.id === 'gift-kraft-parcel-twine'));
+  assert.ok(gifts.slice(0, 2).every((x) => x.topic === 'gift'));
 });
 test('black-and-white queries return true outlines, not black-colored artwork', () => {
   for (const q of [
@@ -48,7 +52,7 @@ test('all explicit facets combine and match actual file metadata', () => {
       orientation: 'square',
       background: 'transparent',
     }).total,
-    1,
+    data.filter((x) => x.topic === 'pumpkin' && x.style === 'Color' && x.color === 'Orange').length,
   );
   assert.equal(search({ orientation: 'portrait' }).total, 0);
   assert.equal(search({ background: 'opaque' }).total, 0);
@@ -57,7 +61,7 @@ test('all explicit facets combine and match actual file metadata', () => {
 });
 test('search ranks subject matches, allows a single typo on long words and refuses short fuzzy substitutions', () => {
   const typo = search({ q: 'pumkin' });
-  assert.equal(typo.total, 2);
+  assert.equal(typo.total, pumpkinCount);
   assert.equal(typo.hasFuzzyMatches, true);
   assert.equal(search({ q: 'cat' }).total, 0);
   assert.equal(search({ q: 'unicorn' }).total, 0);
@@ -67,9 +71,13 @@ test('pagination clamps invalid pages and never duplicates result identities', (
   const first = search({ size: 8 });
   const last = search({ page: 999, size: 8 });
   assert.equal(first.items.length, 8);
-  assert.equal(last.page, 2);
-  assert.equal(last.items.length, 2);
-  assert.equal(new Set([...first.items, ...last.items].map((item) => item.id)).size, data.length);
+  assert.equal(last.page, Math.ceil(data.length / 8));
+  assert.equal(last.items.length, data.length % 8 || 8);
+  const all = Array.from(
+    { length: last.page },
+    (_, i) => search({ page: i + 1, size: 8 }).items,
+  ).flat();
+  assert.equal(new Set(all.map((item) => item.id)).size, data.length);
   assert.equal(searchArtwork([...data, ...data], defaults).total, data.length);
 });
 test('sorting is deterministic and URL parameters roundtrip with validation', () => {

@@ -2,7 +2,7 @@
 
 An English-language, static-first Astro 7.4.2 clipart catalog with a layered SVG browser editor, transparent WebP downloads, and process-CMYK vector PDF exports. TypeScript, small browser modules, Inter, and Cloudflare Pages keep the application lightweight.
 
-**This checkout contains an honest pilot: 10 original illustrations across 9 topics.** The supplied taxonomy includes all 110 topics. The production target is 50 distinct, reviewed illustrations per topic: 5,500 total, with **5,490 still undrawn** and no completed 50-art topic. Planning rows and recolor presets are never counted as drawings. Pilot catalog pages remain separate from approved production content and are not submitted for indexing as a completed library.
+**31 original illustrations across 23 topics are available in this release.** This includes the ten initial designs and 21 independently composed drawings in the first production wave. The supplied taxonomy retains all 110 topics and a target of 5,500 distinct drawings: **5,469 remain undrawn**; no topic is complete at 50. Review records distinguish AI screen review from human approval. Production and review notes are kept in repository records, not displayed on the website or inside the illustrations.
 
 ## Run locally
 
@@ -12,6 +12,7 @@ Use Node.js 24 and pnpm 11.25.0. The package's minimum Node version is 22.23.4.
 corepack enable
 corepack prepare pnpm@11.25.0 --activate
 pnpm install --frozen-lockfile
+node scripts/restore-assets.mjs
 pnpm dev
 ```
 
@@ -66,17 +67,17 @@ python3 -m venv .venv-art
 .venv-art/bin/python scripts/art-proofs.py
 ```
 
-These commands rebuild the existing pilot; they do not invent another 5,490 finished drawings. `data/production-queue.json` records actual generated assets, pending reviews, and all topic targets. `data/briefs/` contains 450 **draft** concept rows for the nine represented topics. Review and refine briefs before drawing the next minibatch. The initial pilot preceded the full draft briefs; that limitation is recorded rather than hidden.
+These commands rebuild the existing pilot; they do not invent another 5,469 finished drawings. `data/production-queue.json` records actual generated assets, pending reviews, and all topic targets. `data/briefs/` contains 450 **draft** concept rows for the nine represented topics. Review and refine briefs before drawing the next minibatch. The initial pilot preceded the full draft briefs; that limitation is recorded rather than hidden.
 
 See [the reproducible art pipeline](scripts/ART-PIPELINE.txt) for optional executable overrides and file locations. `data/art-preflight.json` records structural and file checks. `data/art-visual-review.json` records an **AI-agent screen review**, not human or physical-print approval.
 
 Original downloads use lossless 2048 × 2048 WebP with alpha. PDFs contain actual CMYK vector painting operations. LittleCMS converts sRGB to GRACoL2006_Coated1v2; exact neutral colors preserve pure K. PDFs identify the registered print condition, while the full ICC profile is referenced rather than embedded because its size exceeds the 1,000,000-byte PDF cap. The licensed profile and terms are in `public/color/`. No PDF/X certification or universal printer/paper color match is claimed. Browser edited exports use the same sampled color transform, subject to their recorded fidelity tests.
 
-Latest original pilot preflight: 40 representations totaling 1,013,178 local bytes; maximum/P95 PDF 6,349 bytes; zero PDFs above the cap. These are local measurements, not R2 usage.
+Current catalog preflight: 124 representations totaling 2,779,456 local bytes; maximum PDF 6,272 bytes; zero PDFs above the cap. These are local measurements, not R2 usage.
 
 ## R2 and deployment
 
-[scripts/r2](scripts/r2/) is the supported automated R2 ingestion path. The small initial pilot and its revised immutable snapshot were uploaded through the authorized Cloudflare dashboard and then checked byte-for-byte through the public CDN; automated waves must use the guarded uploader. Read the [R2 runbook](docs/r2-ingestion.md) before use. It requires an owner-authorized, activated R2 Standard account, an existing bucket, AWS CLI, privately supplied credentials, and full-account inventory access. It does not activate subscriptions or configure billing.
+[scripts/r2](scripts/r2/) is the supported automated R2 ingestion path. The small initial pilot and its revised immutable snapshot were uploaded through the authorized Cloudflare dashboard and then checked byte-for-byte through the public CDN; automated waves must use the guarded uploader. Read the [R2 runbook](docs/r2-ingestion.md) before use. It requires an owner-authorized, activated R2 Standard account, an existing bucket, existing authorized REST login or S3 credentials, and full-account inventory access. It does not activate subscriptions or configure billing.
 
 ```sh
 node scripts/r2/make-batch.mjs BUCKET --pilot --output work/r2-batch.json
@@ -89,7 +90,7 @@ The first command only writes a local batch; the second reads remote inventory w
 
 Connect this repository to a new Cloudflare Pages project named `ultraclipart`, using the repository root and production branch `main`. Set the build command to `pnpm check && pnpm build && pnpm test` and the output directory to `dist`. Pages publishes the successful build automatically; its Git integration does not need a separate deploy command or a new account-wide API token.
 
-Set build variables `NODE_VERSION=24.19.0`, `PNPM_VERSION=11.25.0`, and `ASTRO_TELEMETRY_DISABLED=1`. Cloudflare sets `CF_PAGES=1`: production then reads `data/publication.json`, checks every catalog file against the verified CDN snapshot and compiles each verified immutable file URL into HTML and search data. A missing, incomplete or changed release fails the build. A dashboard `PUBLIC_ASSET_BASE` cannot override this release record. Local and CI builds use the bundled pilot. No Pages Functions or runtime R2/D1 bindings are required.
+Set build variables `NODE_VERSION=24.19.0`, `PNPM_VERSION=11.25.0`, and `ASTRO_TELEMETRY_DISABLED=1`. Cloudflare sets `CF_PAGES=1`: production then reads `data/publication.json`, checks every catalog file against the verified CDN snapshot and compiles each verified immutable file URL into HTML and search data. A missing, incomplete or changed release fails the build. A dashboard `PUBLIC_ASSET_BASE` cannot override this release record. Local and CI builds restore exact catalog assets from the public CDN. A narrow Pages Function returns a real 404 for retired empty collection routes; other pages and assets are static. No runtime R2/D1 binding is used.
 
 For an optional manual deployment using an already authorized local Cloudflare session (the command rebuilds in production mode and requires publication, type, build and unit-test gates before uploading):
 
@@ -115,10 +116,16 @@ HTTP and CDN results are saved in `reports/live/`. A passing HTTP check does not
 
 The owner approved **free personal and educational use**; commercial use and resale as clipart are prohibited. Contact: [ultraclipart@gmail.com](mailto:ultraclipart@gmail.com). This policy is not a human art-quality signoff. Inter is bundled under its open font license; no proprietary Avenir webfont is distributed.
 
-Remaining work includes the 5,490 undrawn designs, review and production publication gates, source-informed cultural/religious artwork review, physical print proofing, and any browser/device or live-account checks not backed by saved evidence. No Search Console verification, traffic, ranking, artist credential, review, or storage total is fabricated.
+Remaining work includes the 5,469 undrawn designs, review and production publication gates, source-informed cultural/religious artwork review, physical print proofing, and any browser/device or live-account checks not backed by saved evidence. No Search Console verification, traffic, ranking, artist credential, review, or storage total is fabricated.
 
 Further implementation decisions and official-source research: [requirements](docs/requirements.md), [research](docs/research.md).
 
 ## Content readiness
 
-The 110-subject production plan remains intact. Public topic and collection routes now require actual artwork; planned subjects in the directory are opt-in labels without empty destinations. Three practical guides, a browser-local print-size calculator, and composition-specific artwork notes help visitors finish real projects. The notes' layer metadata is tested against source SVGs. See `docs/CONTENT-READINESS.txt` for official Google sources, implemented controls, and pending owner/human editorial review. No AdSense approval, minimum content count, or advertising integration is claimed.
+The 110-subject production plan remains intact. Public topic and collection routes now require actual artwork; planned subjects in the directory are opt-in labels without empty destinations. Three practical guides and a browser-local print-size calculator help visitors finish real projects. Composition-specific artwork notes are separate repository records. The notes' layer metadata is tested against source SVGs. See `docs/CONTENT-READINESS.txt` for official Google sources, implemented controls, and pending owner/human editorial review. No AdSense approval, minimum content count, or advertising integration is claimed.
+
+## Production wave 001
+
+Original drawing recipes live in `scripts/waves/`; exported production binaries live in R2. `scripts/restore-assets.mjs` restores missing build inputs from the hash-pinned publication manifest without credentials, rejects changed local files and confines writes to public/. Both check and build run it automatically. The 21 new drawings use 6–10 named layers, lossless 2048px WebP, and vector CMYK PDF. Their composition notes and screen-review records are in `data/artwork-notes.json` and `data/waves/wave_001.json`. Human approval and physical printing are not claimed.
+
+The browser tests use the actual growing catalog for counts and pagination. `scripts/sync-production-queue.mjs` refreshes the 110-topic progress ledger; avoid the historical pilot planner after adding new waves. New artwork is not complete until all four representations pass export, R2 readback and public CDN hash/MIME/CORS checks. A successful upload alone never grants editorial approval.

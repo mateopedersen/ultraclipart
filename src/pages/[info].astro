@@ -1,10 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { art, availableTopics } from '../lib/catalog';
 const pages: Record<string, { title: string; description: string; sections: [string, string][] }> =
   {
     about: {
       title: 'A little art for everyday creativity.',
-      description: 'About UltraClipart and its original editable illustration pilot.',
+      description: 'About UltraClipart and its editable illustration collection.',
       sections: [
         [
           'Made to be made your own',
@@ -12,11 +13,11 @@ const pages: Record<string, { title: string; description: string; sections: [str
         ],
         [
           'A collection in progress',
-          'The current pilot contains 10 original illustrations across 9 topics. Our longer-term plan covers 110 subjects and 50 distinct illustrations per subject. Planned artwork is not counted as finished or available.',
+          `The collection currently offers ${art.length} original illustrations across ${availableTopics.length} topics. Our longer-term plan covers 110 subjects and 50 distinct illustrations per subject. Planned artwork is not counted as finished or available.`,
         ],
         [
-          'How the artwork is made',
-          'These illustrations are AI-assisted original vector drawings created specifically for UltraClipart. We do not invent artist biographies or use stock art disguised as original work. Each source contains named, editable shapes. Technical checks and visual review are recorded separately.',
+          'Make it your own',
+          'Choose an illustration, open its named layers in the editor, and adjust the colors or layout. Add a caption and save an editable project to continue later.',
         ],
       ],
     },
@@ -40,10 +41,6 @@ const pages: Record<string, { title: string; description: string; sections: [str
         [
           'Your own studio work',
           'UltraClipart does not claim ownership of original work you create on a blank canvas. These artwork restrictions apply when you use UltraClipart illustrations or starter templates, including edited versions. Imported material keeps its existing rights and restrictions.',
-        ],
-        [
-          'Policy record',
-          'The site owner approved this personal-and-educational-use policy on October 23, 2026. Artwork supplied in the pilot is identified as AI-assisted original vector work.',
         ],
       ],
     },
@@ -77,7 +74,7 @@ const pages: Record<string, { title: string; description: string; sections: [str
         ],
         [
           'Hosting and requests',
-          'Loading pages and downloading files sends ordinary request information, such as your IP address and browser details, to our hosting provider. Cloudflare processes these requests to deliver and protect the site. This pilot does not add advertising trackers or third-party analytics.',
+          'Loading pages and downloading files sends ordinary request information, such as your IP address and browser details, to our hosting provider. Cloudflare processes these requests to deliver and protect the site. This site does not add advertising trackers or third-party analytics.',
         ],
         [
           'Email',
@@ -102,8 +99,8 @@ const pages: Record<string, { title: string; description: string; sections: [str
           'Our artwork license permits free personal and educational use. Commercial use and resale as clipart are prohibited. Refer to the License page for the scope of permission. Third-party software and font licenses remain separate.',
         ],
         [
-          'Pilot availability',
-          'This is an evolving pilot. Features, files and availability may change. Check the exported artwork and print settings before relying on them for a project. We do not guarantee search rankings, universal printer compatibility or uninterrupted availability.',
+          'Availability',
+          'This collection is growing. Features, files and availability may change. Check the exported artwork and print settings before relying on them for a project. We do not guarantee search rankings, universal printer compatibility or uninterrupted availability.',
         ],
         ['Get in touch', 'Questions and corrections can be sent to ultraclipart@gmail.com.'],
       ],
@@ -134,7 +131,7 @@ const pages: Record<string, { title: string; description: string; sections: [str
         ],
         [
           'Why are some subjects marked Planned?',
-          'The 110-topic plan is larger than the current pilot. Planned subjects are listed without links to empty pages. A public topic page is added when downloadable artwork exists; indexing requires a separate quality review. We do not count recolors or rotations as new illustrations.',
+          'Browse the available subjects in Categories. New subjects appear when their illustrations are ready to download.',
         ],
         [
           'What is saved?',
@@ -156,7 +153,7 @@ const pages: Record<string, { title: string; description: string; sections: [str
         ],
         [
           'Build a seasonal display',
-          'Combine a few distinct motifs in your own layout rather than repeating the same image everywhere. The pilot includes pumpkins, a friendly ghost, autumn botanicals and other seasonal subjects.',
+          'Combine a few distinct motifs in your own layout rather than repeating the same image everywhere. The collection includes pumpkins, a friendly ghost, autumn botanicals and other seasonal subjects.',
         ],
         [
           'Respect privacy and permissions',
@@ -170,7 +167,7 @@ const pages: Record<string, { title: string; description: string; sections: [str
       sections: [
         [
           'Our goal',
-          'We aim for WCAG 2.2 AA and test keyboard access, visible focus, labels, contrast and responsive layouts. An automated scan alone does not establish full conformance. This pilot has not received an independent accessibility certification.',
+          'We aim for WCAG 2.2 AA and test keyboard access, visible focus, labels, contrast and responsive layouts. An automated scan alone does not establish full conformance. This site has not received an independent accessibility certification.',
         ],
         [
           'Using the editor',
@@ -187,10 +184,6 @@ const pages: Record<string, { title: string; description: string; sections: [str
       description: 'Report artwork rights concerns and factual errors to UltraClipart.',
       sections: [
         [
-          'Original work and provenance',
-          'Pilot illustrations are AI-assisted original vector drawings. Their metadata records the production method; no named human artist is implied. We do not use third-party stock art or licensed character artwork in the pilot.',
-        ],
-        [
           'Report a concern',
           'Email ultraclipart@gmail.com with the artwork URL, a description of the concern and any relevant evidence. If you represent a rights holder, explain your relationship to the work. Please do not send sensitive identification documents unless specifically needed and agreed.',
         ],
@@ -201,24 +194,20 @@ const pages: Record<string, { title: string; description: string; sections: [str
       ],
     },
     'editorial-process': {
-      title: 'From first sketch to useful artwork.',
-      description: 'How UltraClipart creates and checks original editable vector illustrations.',
+      title: 'Choose, edit and download.',
+      description: 'Find the right illustration and make it work in your next project.',
       sections: [
         [
-          'One idea, one original',
-          'A new design needs a distinct visual concept and composition. Color changes, flips and crops are editing options, not additional original designs. The pilot is code-drawn with AI assistance and uses meaningful vector layers.',
+          'Choose a subject',
+          'Browse the available subjects or search for an illustration. Preview its transparent edges against a light or dark background, and check the file dimensions before downloading.',
         ],
         [
-          'Technical preflight',
-          'We inspect SVG structure, exported image dimensions and transparency, PDF process colors and exact file sizes. Standard PDFs must stay at or below 1,000,000 bytes. A failed file stays outside the approved publication queue.',
+          'Make your changes',
+          'Open the editor to select individual layers, change colors, add text and arrange the composition. Save a project file to keep your layers editable.',
         ],
         [
-          'Review is separate from rendering',
-          'A file that opens successfully is not automatically good artwork. Legibility, shape quality, visual differences and cultural accuracy require their own review. We distinguish agent review from human approval and show the pilot status honestly.',
-        ],
-        [
-          'Incremental growth',
-          'The production queue records unfinished designs. New batches should pass checks before publication. We do not fabricate completed counts, artist credentials or user reviews.',
+          'Pick a file format',
+          'Download WebP for a transparent digital image or PDF for a print layout. The format guide explains how to choose a paper size and preserve the proportions of your illustration.',
         ],
       ],
     },

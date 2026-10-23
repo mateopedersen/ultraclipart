@@ -108,7 +108,7 @@ def draw(c,e,inherited=None):
 
 def pdf_export(source,dest,title):
  root=validate_svg(source.read_text()); out=BytesIO(); c=canvas.Canvas(out,pagesize=(612,792),pageCompression=1,invariant=1)
- c.setTitle(title);c.setAuthor('UltraClipart — AI-assisted original vector pilot');c.setSubject('Process-CMYK vector artwork; output intent GRACoL2006_Coated1v2; not PDF/X certified')
+ c.setTitle(title);c.setAuthor('UltraClipart');c.setSubject('Process-CMYK vector artwork; output intent GRACoL2006_Coated1v2; not PDF/X certified')
  c.translate(50,652);c.scale(1,-1);draw(c,root);c.showPage();c.save()
  w=PdfWriter();w.clone_document_from_reader(PdfReader(out))
  intent=DictionaryObject({NameObject('/Type'):NameObject('/OutputIntent'),NameObject('/S'):NameObject('/GTS_PDFX'),NameObject('/OutputConditionIdentifier'):TextStringObject('CGATS TR 006'),NameObject('/RegistryName'):TextStringObject('http://www.color.org'),NameObject('/OutputCondition'):TextStringObject('GRACoL2006_Coated1v2'),NameObject('/Info'):TextStringObject('LittleCMS sRGB to GRACoL2006_Coated1v2; relative colorimetric; black point compensation. Registered profile referenced, not embedded.')})

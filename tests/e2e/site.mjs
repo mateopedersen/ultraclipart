@@ -1,4 +1,4 @@
-import { chromium, firefox, webkit } from '@playwright/test';
+import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -60,9 +60,8 @@ const states = [
     name: '03-search',
     url: '/search/?q=pumpkin',
     prepare: async () => {
-      await page.waitForFunction(() =>
-        document.querySelector('#result-count')?.textContent?.startsWith('2 pilot'),
-      );
+      await expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
+      await expect(page.locator('#result-count')).toContainText('illustrations for “pumpkin”');
     },
   },
   { name: '04-topic', url: '/clipart/pumpkin/' },

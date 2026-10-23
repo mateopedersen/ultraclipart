@@ -74,3 +74,15 @@ This replaces prior pilot artwork; it does not add 10 designs or multiply the
 catalog count. Rebuild all four formats and hashes together before publishing
 new immutable R2 keys. Previous revision proof/quality records are historical.
 The technical preflight now explicitly requires pure-K color for Outline PDFs.
+
+Production waves (current workflow)
+  python scripts/produce-wave.py --wave wave_001
+  python scripts/proof-wave.py --wave wave_001
+  node scripts/r2/make-wave-batch.mjs wave_001 BUCKET
+  # Review and use the guarded R2 workflow documented in docs/r2-ingestion.md.
+  node scripts/sync-production-queue.mjs
+
+Production binaries are ignored by Git and restored through the verified CDN
+manifest for clean builds. The historical art-plan.py command replaces the old
+pilot queue and must not be used to reset a later production release. All notes
+about generation and review remain outside public UI and illustration pixels.

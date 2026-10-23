@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "states": [
     "CREATIVE_BRIEF",
     "DRAWN_SVG",
@@ -15,10 +15,13 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 10,
-  "qualityApprovedArtworkCount": 0,
-  "remainingToDraw": 5490,
-  "nextAction": "Review 10 pilot designs and refine draft creative briefs before rendering any production minibatch.",
+  "generatedArtworkCount": 31,
+  "qualityApprovedArtworkCount": 21,
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "humanApprovedArtworkCount": 0,
+  "availableArtworkCount": 31,
+  "remainingToDraw": 5469,
+  "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
       "topic": "halloween",
@@ -36,10 +39,10 @@
       "keyword": "Pumpkin clipart",
       "wave": "W1",
       "target": 50,
-      "generated": 2,
-      "approved": 0,
-      "remainingToDraw": 48,
-      "briefStatus": "50_DRAFT_ROWS",
+      "generated": 4,
+      "approved": 2,
+      "remainingToDraw": 46,
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/pumpkin.json"
     },
     {
@@ -50,7 +53,7 @@
       "generated": 1,
       "approved": 0,
       "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/ghost.json"
     },
     {
@@ -94,7 +97,7 @@
       "generated": 1,
       "approved": 0,
       "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/bat.json"
     },
     {
@@ -105,7 +108,7 @@
       "generated": 1,
       "approved": 0,
       "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/spider.json"
     },
     {
@@ -190,10 +193,10 @@
       "keyword": "Acorn clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 1,
-      "approved": 0,
-      "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "generated": 2,
+      "approved": 1,
+      "remainingToDraw": 48,
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/acorn.json"
     },
     {
@@ -201,9 +204,9 @@
       "keyword": "Maple clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -212,9 +215,9 @@
       "keyword": "Leaves clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -245,9 +248,9 @@
       "keyword": "Wheat clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -256,9 +259,9 @@
       "keyword": "Corn clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -267,9 +270,9 @@
       "keyword": "Cranberry clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -300,10 +303,10 @@
       "keyword": "Sunflower clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 1,
-      "approved": 0,
-      "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "generated": 2,
+      "approved": 1,
+      "remainingToDraw": 48,
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/sunflower.json"
     },
     {
@@ -311,10 +314,10 @@
       "keyword": "Apple clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 1,
-      "approved": 0,
-      "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "generated": 3,
+      "approved": 2,
+      "remainingToDraw": 47,
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/apple.json"
     },
     {
@@ -776,7 +779,7 @@
       "generated": 1,
       "approved": 0,
       "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/snowman.json"
     },
     {
@@ -784,9 +787,9 @@
       "keyword": "Gingerbread clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -828,9 +831,9 @@
       "keyword": "Stocking clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -861,9 +864,9 @@
       "keyword": "Holly clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -905,10 +908,10 @@
       "keyword": "Gift clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 1,
-      "approved": 0,
-      "remainingToDraw": 49,
-      "briefStatus": "50_DRAFT_ROWS",
+      "generated": 2,
+      "approved": 1,
+      "remainingToDraw": 48,
+      "briefStatus": "DRAFT_ROWS_REQUIRE_REVIEW",
       "briefPath": "data/briefs/gift.json"
     },
     {
@@ -927,9 +930,9 @@
       "keyword": "Bell clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -938,9 +941,9 @@
       "keyword": "Snowflake clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -993,9 +996,9 @@
       "keyword": "Cocoa clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -1026,9 +1029,9 @@
       "keyword": "Winter clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -1037,9 +1040,9 @@
       "keyword": "Pinecone clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -1202,9 +1205,9 @@
       "keyword": "Rose clipart",
       "wave": "W4",
       "target": 50,
-      "generated": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
+      "generated": 1,
+      "approved": 1,
+      "remainingToDraw": 49,
       "briefStatus": "NOT_STARTED",
       "briefPath": null
     },
@@ -1238,17 +1241,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "0de4933c35b6a0946b7f0ddbf5a3df637e9090b6c828d0c7d9ad2ff9170d596c"
     },
     {
@@ -1257,17 +1252,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "a0d75f7c7413a20c2b94d50e4b82cc39453b24f6e16537f30d72d815d9c36c1c"
     },
     {
@@ -1276,17 +1263,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "3da69299a8e12db1cd17f514e649e41479937b64368a42e6a068060c5dd70f2a"
     },
     {
@@ -1295,17 +1274,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "f03801297a908f9dd93f70b1f1785c9abde9f2f8b202565680fb01ebecd377de"
     },
     {
@@ -1314,17 +1285,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "92581dddf031424f0e688c3df4ceeb273f57a973103e7b53da44a5618955a93e"
     },
     {
@@ -1333,17 +1296,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "1eed2a54ea45771362f7dd8487077b66ea24033522bc2ac24bda2eb7788dad51"
     },
     {
@@ -1352,17 +1307,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "c5f193675f12d84a84c6a8becdcc6342400179b52b13aed68f2f195cc57e3cda"
     },
     {
@@ -1371,17 +1318,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "77f3b813eaf74a5449a358abbc667556d4c6e87491c2111c0330647c10222c85"
     },
     {
@@ -1390,17 +1329,9 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "1708d071967a4effd4fd25903559a3ee95202d3b65559ca3537c209ca8058f4c"
     },
     {
@@ -1409,18 +1340,241 @@
       "state": "ART_REVIEW",
       "retryCount": 0,
       "failReason": null,
-      "checksCompleted": [
-        "DRAWN_SVG",
-        "STRUCTURAL_VALIDATION",
-        "WEBP_EXPORT",
-        "PDF_EXPORT",
-        "FORMAT_PREFLIGHT"
-      ],
-      "artReview": "OWNER_REVIEW_REQUIRED",
-      "metadataReview": "OWNER_REVIEW_REQUIRED",
+      "artReview": "PILOT_REVIEW_REQUIRED",
+      "humanReview": "NOT_PERFORMED",
       "publicationBlocked": true,
-      "reason": "Automated export validation does not replace visual approval.",
       "sha256": "ee2116f0f23efd15854b868e4288d23a2759acba321928f53ea3a638113b5211"
+    },
+    {
+      "id": "pumpkin-seed-cross-section",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "2157c18c3b1de238ea44f3b0c2e36c82929049b77f40ee47eb56348266459836"
+    },
+    {
+      "id": "pumpkin-low-ribbed-heirloom",
+      "topic": "pumpkin",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "c6bf2a5a9544f390215d7e143c486741d2cd33e0fba84d43430668e9f67b6835"
+    },
+    {
+      "id": "apple-branch-two-fruits",
+      "topic": "apple",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "71370d371874f9555c3e7077a3d4f6ff3289acbd26e6f8ff0c7251113e8dd9af"
+    },
+    {
+      "id": "apple-sliced-on-board",
+      "topic": "apple",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "ebc88a18394c2827a8ff9a6f0d9ea4dbd73ff1bd6183f1dcd164bb69d5263f15"
+    },
+    {
+      "id": "maple-five-lobed-study",
+      "topic": "maple",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "1c99372aa7e223dd2422dabb766d2c1096fd6dd4547cc553c3723e9c3a7e567d"
+    },
+    {
+      "id": "oak-leaves-crossed-pair",
+      "topic": "leaves",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "9053f853362ec392bced88321f352519b2b5d2e5f454fcf9a83c1906e888b37f"
+    },
+    {
+      "id": "wheat-three-tied-ears",
+      "topic": "wheat",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "701184456fdbe84f4785b74f813de465b899d99c43f1cd68a75274df55c6b6fc"
+    },
+    {
+      "id": "corn-open-husk-ear",
+      "topic": "corn",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "cbc6562cfc111359b886ee55139e33d8992c5c2d0c153398b930eec28df93a4d"
+    },
+    {
+      "id": "cranberries-wooden-scoop",
+      "topic": "cranberry",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "dbe1e41857100a5800724b0b253431edd6e34efd2c894c877ea1134eba67482a"
+    },
+    {
+      "id": "sunflower-open-and-bud",
+      "topic": "sunflower",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "da1fa6213b1f22f1b664a695fee54888934d6e576a854edb8e1c354f8ff09b00"
+    },
+    {
+      "id": "rose-open-bloom-and-bud",
+      "topic": "rose",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "36bf5a2ebc20dbd7c361623647b339362fba36888bfeef1985ed07ca1a4e40b0"
+    },
+    {
+      "id": "pinecone-open-scales",
+      "topic": "pinecone",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "225b60aa4f7e6d7a6b342bdffac0850322a52ee788f94fa6e0f380ed04b82a93"
+    },
+    {
+      "id": "acorns-twin-on-twig",
+      "topic": "acorn",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "a943736211b37e3101098ca26c4d33b681195bba604ea7b80415ec681fe9a5a9"
+    },
+    {
+      "id": "holly-berries-three-leaves",
+      "topic": "holly",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e30f795dc8d7e46fbeb320c707968ae63f1140e070ae8f2a7b457e5303ba3959"
+    },
+    {
+      "id": "winter-bells-linen-bow",
+      "topic": "bell",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "4d2df102b3251fe535683dc1fff057b11ca9acd8a908d683b8e68ef94b158707"
+    },
+    {
+      "id": "stocking-patchwork-cuff",
+      "topic": "stocking",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "5debe8b16f0c3198bd8bfa6131c64bac8e1f5b2e8b0921b1fabbccb69af3e3e6"
+    },
+    {
+      "id": "snowflake-six-branch-crystal",
+      "topic": "snowflake",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "9c6d47da48faf1d3de076315885d6f07251d617fddf88a12998d3d7115ee6599"
+    },
+    {
+      "id": "cocoa-enamel-mug",
+      "topic": "cocoa",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "9a9bd0e773c9e8759bd3e5c0bd4d00e59c50c59dfd8b224485242e31c245cd6a"
+    },
+    {
+      "id": "gingerbread-house-cookie",
+      "topic": "gingerbread",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e79af22ba72b46c52e5b10ea12f1f13fb7fb0d7397199df728ef4630a251efee"
+    },
+    {
+      "id": "winter-cable-knit-mittens",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "9d7f4b08ba95d98e4715e02d369c2b2deb475e11b1657280e08a1df8f6eda836"
+    },
+    {
+      "id": "gift-kraft-parcel-twine",
+      "topic": "gift",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "39809518f940df5de7e8c0949e4aefb52697ad50729915eaad67b92c2ea05ef7"
     }
   ]
 }

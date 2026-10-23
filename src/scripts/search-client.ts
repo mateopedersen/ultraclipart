@@ -66,7 +66,7 @@ export function initSearch() {
         gallery.replaceChildren(...result.items.map(renderCard));
         gallery.hidden = false;
         gallery.setAttribute('aria-busy', 'false');
-        count.textContent = `${result.total} pilot ${result.total === 1 ? 'illustration' : 'illustrations'}${requested.q ? ` for “${requested.q}”` : ''}`;
+        count.textContent = `${result.total} ${result.total === 1 ? 'illustration' : 'illustrations'}${requested.q ? ` for “${requested.q}”` : ''}`;
         empty.hidden = result.total > 0;
         document.querySelector<HTMLElement>('#close-matches')!.hidden = !result.hasFuzzyMatches;
         pagination.hidden = result.pages <= 1;

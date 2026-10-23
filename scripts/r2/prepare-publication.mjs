@@ -175,12 +175,13 @@ async function main() {
   const root = resolve(import.meta.dirname, '../..'),
     args = process.argv.slice(2);
   const usage =
-    'node scripts/r2/prepare-publication.mjs --batch work/r2-batch.json --journal r2-ingest-journal.json [--prior data/publication.json | --initial] [--output work/publication.next.json]';
+    'node scripts/r2/prepare-publication.mjs --batch work/r2-batch.json --journal r2-ingest-journal.json [--catalog work/art.next.json] [--prior data/publication.json | --initial] [--output work/publication.next.json]';
   if (args.includes('--help')) {
     console.log(usage);
     return;
   }
   const options = {
+    catalog: resolve(root, 'data/art.json'),
     prior: resolve(root, 'data/publication.json'),
     output: resolve(root, 'work/publication.next.json'),
   };
@@ -188,7 +189,7 @@ async function main() {
     const flag = args.shift();
     if (flag === '--initial') options.prior = null;
     else if (
-      ['--batch', '--journal', '--prior', '--output'].includes(flag) &&
+      ['--batch', '--journal', '--catalog', '--prior', '--output'].includes(flag) &&
       args[0] &&
       !args[0].startsWith('--')
     )
@@ -196,14 +197,18 @@ async function main() {
     else throw new Error(usage);
   }
   if (!options.batch || !options.journal) throw new Error(usage);
-  if ([options.batch, options.journal, options.prior].filter(Boolean).includes(options.output))
+  if (
+    [options.batch, options.journal, options.prior, options.catalog]
+      .filter(Boolean)
+      .includes(options.output)
+  )
     throw new Error('Write a separate reviewable next manifest; do not overwrite an input');
   const rawBatch = readFileSync(options.batch),
     readJson = (path) => JSON.parse(readFileSync(path, 'utf8'));
   const publicRoot = realpathSync(join(root, 'public'));
   const manifest = await preparePublication({
     prior: options.prior ? readJson(options.prior) : null,
-    catalog: readJson(join(root, 'data/art.json')),
+    catalog: readJson(options.catalog),
     batch: JSON.parse(rawBatch),
     journal: readJson(options.journal),
     batchSha256: sha(rawBatch),

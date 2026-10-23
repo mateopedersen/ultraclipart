@@ -61,3 +61,20 @@ test(
       );
   },
 );
+
+test(
+  'production and review notes stay out of rendered public pages',
+  { skip: !existsSync(dist) },
+  () => {
+    const walk = (dir) =>
+      readdirSync(dir, { withFileTypes: true }).flatMap((entry) =>
+        entry.isDirectory() ? walk(join(dir, entry.name)) : [join(dir, entry.name)],
+      );
+    for (const file of walk(fileURLToPath(dist)).filter((path) => path.endsWith('.html')))
+      assert.doesNotMatch(
+        readFileSync(file, 'utf8'),
+        /AI-assisted|AI assistance|code-drawn|visual quality review|Visual review is ongoing|Working with this drawing|Original pilot illustration/i,
+        file,
+      );
+  },
+);

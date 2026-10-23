@@ -7,6 +7,9 @@ only ten source-backed pilot rows have actual exported files.
 from pathlib import Path
 import json
 ROOT=Path(__file__).resolve().parents[1]
+catalog_path = ROOT/'data/art.json'
+if catalog_path.exists() and any(a.get('productionWave') for a in json.loads(catalog_path.read_text())):
+ raise RuntimeError('Historical pilot command cannot reset production waves. Use produce-wave.py and sync-production-queue.mjs.')
 STATES=['CREATIVE_BRIEF','DRAWN_SVG','STRUCTURAL_VALIDATION','ART_REVIEW','WEBP_EXPORT','PDF_EXPORT','FORMAT_PREFLIGHT','DUPLICATE_SCAN','METADATA_REVIEW','STAGING_R2','VERIFIED_R2','PUBLISHED']
 contexts=[
 ('isolated botanical study','one subject with defining anatomy and balanced whitespace'),

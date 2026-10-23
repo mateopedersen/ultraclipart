@@ -16,7 +16,9 @@ try {
       body: '<!doctype html><html lang=\"en\"><body></body></html>',
     }),
   );
-  await page.goto('http://127.0.0.1:4321/__editor-export-test.html');
+  await page.goto(
+    `${process.env.UC_BASE_URL || 'http://127.0.0.1:4321'}/__editor-export-test.html`,
+  );
   for (const item of art) {
     for (const format of ['pdf', 'webp']) {
       console.log('export', item.id, format);

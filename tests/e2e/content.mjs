@@ -94,7 +94,7 @@ try {
   await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(1);
   await expect(page.locator('[data-topic]:not([hidden])')).toContainText('Planned');
   report.checks.push(
-    'only nine real topics link to public artwork; planned labels do not create empty destinations',
+    'only populated topics link to public artwork; planned labels do not create empty destinations',
   );
   await page.goto(base + '/create/');
   await page.locator('[data-creator-template=school-label]').click();

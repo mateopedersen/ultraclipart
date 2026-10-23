@@ -1,9 +1,14 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { tokenBucket } from '../../src/lib/search-index.ts';
+const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
+const pumpkinCount = catalog.filter((x) => x.topic === 'pumpkin').length;
+const giftCount = catalog.filter((x) =>
+  /\bgift\b/i.test([x.topic, x.title, x.description, x.alt].join(' ')),
+).length;
 const base = process.env.BASE_URL ?? 'http://127.0.0.1:4322';
 const engine = process.env.UC_BROWSER ?? 'chromium';
 const browser = await { chromium, firefox, webkit }[engine].launch({
@@ -29,8 +34,10 @@ try {
     8,
     'initial HTML is capped at eight cards',
   );
-  await expect(page.locator('#result-count')).toHaveText('2 pilot illustrations for “pumpkin”');
-  await expect(cards()).toHaveCount(2);
+  await expect(page.locator('#result-count')).toHaveText(
+    `${pumpkinCount} illustrations for “pumpkin”`,
+  );
+  await expect(cards()).toHaveCount(pumpkinCount);
   report.checks.push('subject search, eight-card HTML cap');
   await page.selectOption('#filter-style', 'outline');
   await expect(cards()).toHaveCount(1);
@@ -40,16 +47,18 @@ try {
   await expect(page.locator('#search-empty')).toBeVisible();
   report.checks.push('honest empty facet');
   await page.click('#clear-filters');
-  await expect(cards()).toHaveCount(2);
+  await expect(cards()).toHaveCount(pumpkinCount);
   await page.fill('#search-query', '');
   await page.locator('#catalog-search button').click();
   await expect(cards()).toHaveCount(8);
   await page.click('#next-page');
-  await expect(cards()).toHaveCount(2);
+  await expect(cards()).toHaveCount(Math.min(8, catalog.length - 8));
   assert.ok(page.url().includes('page=2'));
   report.checks.push('pagination and URL');
   await page.goBack();
-  await expect(page.locator('#page-position')).toHaveText('Page 1 of 2');
+  await expect(page.locator('#page-position')).toHaveText(
+    `Page 1 of ${Math.ceil(catalog.length / 8)}`,
+  );
   await expect(cards()).toHaveCount(8);
   report.checks.push('browser history');
   await page.selectOption('#search-sort', 'title');
@@ -109,11 +118,15 @@ try {
   await seen;
   await page.fill('#search-query', 'gift');
   await page.locator('#catalog-search button').click();
-  await expect(cards()).toHaveCount(1);
-  await expect(cards()).toHaveAttribute('data-id', 'gift-ribbon-keepsake');
+  await expect(cards()).toHaveCount(giftCount);
+  await expect(
+    cards().filter({ has: page.locator('[href="/art/gift-ribbon-keepsake/"]') }),
+  ).toHaveCount(1);
   release();
   await page.unroute(slow);
-  await expect(page.locator('#result-count')).toHaveText('1 pilot illustration for “gift”');
+  await expect(page.locator('#result-count')).toHaveText(
+    `${giftCount} ${giftCount === 1 ? 'illustration' : 'illustrations'} for “gift”`,
+  );
   report.checks.push('outdated request cannot overwrite newer results');
   // Favorites have no catalog cards in HTML and fetch only the saved IDs.
   await page.evaluate(() =>
@@ -160,7 +173,7 @@ try {
     await route.continue();
   });
   await page.goto(`${base}/search/?q=pumpkin`);
-  await expect(cards()).toHaveCount(2);
+  await expect(cards()).toHaveCount(pumpkinCount);
   await page.waitForLoadState('networkidle');
   report.delayedColdQueryCLS = await page.evaluate(() => window.__searchCLS);
   if (report.delayedColdQueryCLS !== null) {

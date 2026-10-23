@@ -1555,18 +1555,8 @@ button[aria-busy='true'],
   }
 }
 
-.artwork-guide {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-  gap: 40px;
-  margin: 48px 0;
-  align-items: start;
-}
-.artwork-guide .prose {
-  margin: 0;
-  padding: 0;
-}
 .asset-facts {
+  margin: 40px 0;
   background: #f5f8fc;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -1602,10 +1592,4 @@ button[aria-busy='true'],
   font-size: 14px;
   line-height: 1.8;
   padding-left: 22px;
-}
-@media (max-width: 768px) {
-  .artwork-guide {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
 }

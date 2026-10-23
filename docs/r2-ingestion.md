@@ -1,6 +1,6 @@
 # R2 ingestion
 
-`scripts/r2/plan.mjs` provides the tested byte-budget and complete-file-group validator. `scripts/r2/ingest.mjs` is an AWS CLI adapter for a previously approved, activated R2 Standard account. It does not create buckets, activate subscriptions, configure billing or publish artwork.
+`scripts/r2/plan.mjs` provides the tested byte-budget and complete-file-group validator. `scripts/r2/ingest.mjs` supports AWS CLI and the official Cloudflare REST API for a previously approved, activated R2 Standard account. It does not create buckets, activate subscriptions, configure billing or publish artwork.
 
 ## Preconditions
 
@@ -30,7 +30,7 @@ This dry run makes read/list requests but no object writes. It measures aggregat
 node scripts/r2/ingest.mjs work/r2-batch.json --apply
 ```
 
-This writes only the reviewed batch, using immutable keys and conditional creation. It remeasures every jurisdiction before each artwork, downloads every remote object to verify the full SHA256, and atomically checkpoints `r2-ingest-journal.json`. It never deletes objects. Rerun the same command to resume: existing matching keys are downloaded and reverified instead of reuploaded. A conflicting/unknown existing key fails closed.
+This writes only the reviewed batch using content-addressed keys. S3 conditional creation is enforced by its endpoint; see the REST qualification below. It remeasures every jurisdiction before each artwork, downloads every remote object to verify the full SHA256, and atomically checkpoints `r2-ingest-journal.json`. It never deletes objects. Rerun the same command to resume: existing matching keys are downloaded and reverified instead of reuploaded. A conflicting/unknown existing key fails closed.
 
 Only after all four representations verify is an artwork ID recorded as uploaded. Even a fully uploaded batch has `publishApproved: false`; the content manifest must be separately reviewed for originality, CMYK and metadata before publication. A failed wave may leave objects in storage; they remain counted on the next run. Quarantine/diff them before any later manual deletion.
 
@@ -56,7 +56,7 @@ The guard rejects projected totals above **8,000,000,000 bytes** and PDFs above 
 
 ## Verification status
 
-The deterministic budget and jurisdiction validators are unit tested, including cross-jurisdiction occupancy, same-named buckets, missing scopes, API denial, empty-scope proof, pagination and loop rejection. The AWS adapter is tested against a local S3 command double for dry run, conditional creation, full-object verification, idempotent resume and corruption rejection. Live all-jurisdiction API integration remains untested because dedicated credentials are not available in this task; no R2 network reads or writes are implied by the local tests. The current pilot uploaded through the dashboard is not retroactively certified by this adapter. An incomplete inventory, API error, stale snapshot, changed local file or checksum mismatch aborts the run.
+The deterministic budget and jurisdiction validators are unit tested, including cross-jurisdiction occupancy, same-named buckets, missing scopes, API denial, empty-scope proof, pagination and loop rejection. The AWS adapter is tested against a local S3 command double for dry run, conditional creation, full-object verification, idempotent resume and corruption rejection. The S3 adapter uses a deterministic local double. The REST transport was subsequently tested against the live account; see the verified REST section below. The current pilot uploaded through the dashboard is not retroactively certified by this adapter. An incomplete inventory, API error, stale snapshot, changed local file or checksum mismatch aborts the run.
 
 ## Inaccessible or disabled jurisdictions
 
@@ -73,3 +73,17 @@ This requires `R2_ACCOUNT_READ_TOKEN` supplied privately by the operator, with *
 For each inaccessible scope, the adapter calls the documented `GET /accounts/{account_id}/r2/buckets` endpoint with the corresponding `cf-r2-jurisdiction` header. Only a successful response containing `success: true`, no errors, an empty `result.buckets` array, `result_info.total_count: 0`, and no continuation cursor establishes absence. Proof account, jurisdiction, endpoint and observation time are recorded in the journal. Any nonempty or uncertain result blocks the wave: object-list permission must be obtained for populated scopes. Saved exports, owner assertions and permission errors cannot substitute for the live check during `--apply`.
 
 A measurement older than 60 seconds is rejected, including a scan that took more than 60 seconds. Bucket creation, deletion and independent writes must be serialized throughout each wave; no multi-endpoint scan is an atomic account-wide snapshot. The all-scope guard therefore does not claim a transactional cap against uncoordinated external writers.
+
+## Verified REST transport (2026-10-23)
+
+Use `--transport cloudflare-api` with `R2_ENDPOINT`, `R2_WRITE_BUCKET`, and either an existing `CLOUDFLARE_API_TOKEN` or explicit `WRANGLER_AUTH_FILE`. The tool creates no credential and changes no account permissions or billing. The first 21-drawing wave completed 84 uploads/readbacks and all public CDN checks through this transport.
+
+The account's disabled government-region capability is independently checked through its explicit fresh boolean `r2.fedramp` entitlement. A denied bucket call alone never establishes absence. Enabled, missing, deleted, or unreadable capability evidence stops the run. Bucket counts, all object pages and the full account byte budget remain mandatory.
+
+A live same-bytes conditional-write probe returned HTTP 200: this REST endpoint does **not** enforce `If-None-Match: *`. Do not claim atomic conditional creation for REST. The planner rejects unknown/conflicting existing keys, reuses verified versions, and never intentionally replaces a listed object. All independent writers must be serialized; the local lock only protects this checkout. Use S3 when server-enforced conditional creation is required. The probe reused identical bytes, not different content.
+
+Fresh lists still measure every object's current size before each artwork. A full-SHA256 result can be reused only when the current list's opaque ETag and byte count match a version downloaded and hashed in the same process. Unknown or changed versions are downloaded again. The journal's operation counts are adapter calls, including cached head verification, rather than authoritative billable request totals.
+
+Create a staging wave batch with `node scripts/r2/make-wave-batch.mjs wave_001 BUCKET`; then use the same dry run, apply, readback and separate publication preparation. `prepare-publication.mjs --catalog work/art.next.json` permits review of the complete next catalog before promoting either catalog or manifest.
+
+Readback reuse holds at most 16 MB of downloaded bytes in memory and requires the same freshly listed ETag and size. A new bucket listing clears absent version entries, and a PUT invalidates cached bytes before readback. Already verified groups that add no bytes do not need an additional occupancy scan; every group that may add bytes still requires a fresh complete account scan. Final inventory must contain the complete batch. Read-only initial checksum checks are bounded to four concurrent requests.

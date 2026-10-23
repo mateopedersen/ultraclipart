@@ -15,7 +15,7 @@ const colors = [...new Set(art.map((item) => item.color))].sort();
 
 <Layout
   title="Search Clipart"
-  description="Find original pilot clipart by subject, style, color and format. Explore editable artwork with transparent WebP and printable PDF downloads."
+  description="Find original clipart by subject, style, color and format. Explore editable artwork with transparent WebP and printable PDF downloads."
   noindex={true}
 >
   <script slot="head" is:inline>
@@ -105,7 +105,7 @@ const colors = [...new Set(art.map((item) => item.color))].sort();
     <section aria-label="Search results">
       <div class="result-head">
         <p id="result-count" role="status" aria-live="polite" aria-atomic="true">
-          {art.length} pilot illustrations
+          {art.length} illustrations
         </p>
         <div class="sort-control">
           <label for="search-sort">Sort by</label>
@@ -137,10 +137,10 @@ const colors = [...new Set(art.map((item) => item.color))].sort();
         <div id="search-empty" class="empty" hidden>
           <h2>No illustrations found yet.</h2>
           <p id="empty-description">
-            Try a broader subject or reset your filters. Our pilot collection is still growing.
+            Try a broader subject or reset your filters. Our collection is still growing.
           </p>
           <button type="button" id="show-all">
-            Browse all pilot artwork
+            Browse all artwork
           </button>
         </div>
       </div>
@@ -169,12 +169,12 @@ const colors = [...new Set(art.map((item) => item.color))].sort();
       </div>
       <noscript>
         <p class="notice">
-          JavaScript enables search and filters. The first eight pilot illustrations are shown
-          above; browse the <a href="/categories/">complete topic directory</a>.
+          JavaScript enables search and filters. The first eight illustrations are shown above;
+          browse the <a href="/categories/">complete topic directory</a>.
         </p>
       </noscript>
       <p class="notice">
-        {art.length} original illustrations are available in this pilot. Filters describe the
+        {art.length} original illustrations are available in the collection. Filters describe the
         existing artwork; color drawings are not labeled as black & white. Personal and educational
         use is free. <a href="/license/">Read the license.</a>
       </p>

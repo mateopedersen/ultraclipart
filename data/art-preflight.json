@@ -1,14 +1,14 @@
 {
   "status": "PASS",
-  "generatedCount": 10,
-  "topicCount": 9,
+  "generatedCount": 31,
+  "topicCount": 23,
   "targetCount": 5500,
   "completedTopicCount": 0,
-  "publishedApprovedCount": 0,
-  "totalLocalAssetBytes": 1013178,
+  "publishedApprovedCount": 21,
+  "totalLocalAssetBytes": 2779456,
   "r2MeasuredBytes": null,
-  "maxPdfBytes": 6349,
-  "p95PdfBytes": 6349,
+  "maxPdfBytes": 6272,
+  "p95PdfBytes": 5981,
   "pdfOverCapCount": 0,
   "maliciousSvgVectorsRejected": 6,
   "exactDuplicateSvgCount": 0,
@@ -42,7 +42,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3607,
+          "bytes": 3530,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -81,7 +81,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3956,
+          "bytes": 3879,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -120,7 +120,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3471,
+          "bytes": 3394,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -159,7 +159,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3325,
+          "bytes": 3248,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -198,7 +198,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3510,
+          "bytes": 3433,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -237,7 +237,7 @@
           ]
         },
         "pdf": {
-          "bytes": 6349,
+          "bytes": 6272,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -276,7 +276,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3209,
+          "bytes": 3132,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -315,7 +315,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3454,
+          "bytes": 3377,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -354,7 +354,7 @@
           ]
         },
         "pdf": {
-          "bytes": 3789,
+          "bytes": 3712,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
@@ -394,7 +394,826 @@
         },
         "outlinePureK": true,
         "pdf": {
-          "bytes": 3024,
+          "bytes": 2947,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-seed-cross-section",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            274,
+            245,
+            1777,
+            1768
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            59,
+            52,
+            382,
+            380
+          ]
+        },
+        "pdf": {
+          "bytes": 2568,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pumpkin-low-ribbed-heirloom",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            254,
+            369,
+            1809,
+            1643
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            54,
+            79,
+            389,
+            353
+          ]
+        },
+        "pdf": {
+          "bytes": 2353,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "apple-branch-two-fruits",
+      "checks": {
+        "namedLayers": 10,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            302,
+            217,
+            1739,
+            1528
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            65,
+            46,
+            374,
+            329
+          ]
+        },
+        "pdf": {
+          "bytes": 2488,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "apple-sliced-on-board",
+      "checks": {
+        "namedLayers": 10,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            227,
+            654,
+            1711,
+            1756
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            48,
+            140,
+            368,
+            378
+          ]
+        },
+        "pdf": {
+          "bytes": 2622,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "maple-five-lobed-study",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            317,
+            293,
+            1759,
+            1735
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            68,
+            63,
+            378,
+            373
+          ]
+        },
+        "pdf": {
+          "bytes": 2172,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "oak-leaves-crossed-pair",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            508,
+            332,
+            1317,
+            1744
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            109,
+            71,
+            283,
+            375
+          ]
+        },
+        "pdf": {
+          "bytes": 2442,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "wheat-three-tied-ears",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            580,
+            248,
+            1572,
+            1710
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            124,
+            53,
+            338,
+            368
+          ]
+        },
+        "pdf": {
+          "bytes": 3192,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "corn-open-husk-ear",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            453,
+            168,
+            1639,
+            1802
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            97,
+            36,
+            353,
+            387
+          ]
+        },
+        "pdf": {
+          "bytes": 3834,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "cranberries-wooden-scoop",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            277,
+            373,
+            1788,
+            1765
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            59,
+            80,
+            384,
+            380
+          ]
+        },
+        "pdf": {
+          "bytes": 3438,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "sunflower-open-and-bud",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            409,
+            301,
+            1610,
+            1814
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            87,
+            64,
+            346,
+            390
+          ]
+        },
+        "pdf": {
+          "bytes": 5981,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "rose-open-bloom-and-bud",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            623,
+            284,
+            1522,
+            1814
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            133,
+            61,
+            327,
+            390
+          ]
+        },
+        "pdf": {
+          "bytes": 2664,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "pinecone-open-scales",
+      "checks": {
+        "namedLayers": 7,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            399,
+            285,
+            1581,
+            1779
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            85,
+            61,
+            340,
+            383
+          ]
+        },
+        "pdf": {
+          "bytes": 3763,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "acorns-twin-on-twig",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            496,
+            183,
+            1569,
+            1571
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            106,
+            39,
+            338,
+            338
+          ]
+        },
+        "pdf": {
+          "bytes": 2624,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "holly-berries-three-leaves",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            465,
+            365,
+            1595,
+            1734
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            99,
+            78,
+            343,
+            373
+          ]
+        },
+        "pdf": {
+          "bytes": 2942,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-bells-linen-bow",
+      "checks": {
+        "namedLayers": 10,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            498,
+            475,
+            1568,
+            1497
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            107,
+            102,
+            337,
+            322
+          ]
+        },
+        "pdf": {
+          "bytes": 2867,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "stocking-patchwork-cuff",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            592,
+            304,
+            1643,
+            1727
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            127,
+            65,
+            353,
+            371
+          ]
+        },
+        "pdf": {
+          "bytes": 2466,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "snowflake-six-branch-crystal",
+      "checks": {
+        "namedLayers": 6,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            337,
+            236,
+            1711,
+            1812
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            72,
+            50,
+            368,
+            390
+          ]
+        },
+        "pdf": {
+          "bytes": 2188,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "cocoa-enamel-mug",
+      "checks": {
+        "namedLayers": 10,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            520,
+            296,
+            1670,
+            1595
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            111,
+            63,
+            359,
+            343
+          ]
+        },
+        "pdf": {
+          "bytes": 2645,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "gingerbread-house-cookie",
+      "checks": {
+        "namedLayers": 8,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            370,
+            303,
+            1681,
+            1735
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            79,
+            65,
+            362,
+            373
+          ]
+        },
+        "pdf": {
+          "bytes": 2815,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-cable-knit-mittens",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            436,
+            462,
+            1573,
+            1786
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            93,
+            99,
+            338,
+            384
+          ]
+        },
+        "pdf": {
+          "bytes": 2569,
+          "underCap": true,
+          "colorSpace": "DeviceCMYK",
+          "rasterImages": 0,
+          "page": "US Letter",
+          "registeredCondition": "CGATS TR 006",
+          "profileEmbedded": false
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "gift-kraft-parcel-twine",
+      "checks": {
+        "namedLayers": 9,
+        "hashes": true,
+        "webp": {
+          "width": 2048,
+          "height": 2048,
+          "alpha": true,
+          "bounds": [
+            442,
+            601,
+            1647,
+            1655
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 440,
+          "alpha": true,
+          "bounds": [
+            94,
+            129,
+            354,
+            356
+          ]
+        },
+        "pdf": {
+          "bytes": 2259,
           "underCap": true,
           "colorSpace": "DeviceCMYK",
           "rasterImages": 0,
