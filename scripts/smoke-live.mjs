@@ -28,6 +28,7 @@ const report = {
   base,
   status: 'running',
   pages: [],
+  unavailableRoutes: [],
   resources: [],
   failures: [],
 };
@@ -122,6 +123,39 @@ async function parallel(queue, fn) {
   );
 }
 await parallel(targets, checkPage);
+// Removed URLs can survive in an edge cache after their files leave the build.
+// Check every planned topic/collection without art, not just a random 404 URL.
+const topics = JSON.parse(readFileSync(resolve(root, 'data/topics.json'), 'utf8')).topics;
+const artwork = JSON.parse(readFileSync(resolve(root, 'data/art.json'), 'utf8'));
+const available = new Set(artwork.map((item) => item.topic));
+const slugify = (value) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+const unavailable = [
+  ...topics.filter((topic) => !available.has(topic.slug)).map((topic) => `/clipart/${topic.slug}/`),
+  ...[...new Set(topics.map((topic) => topic.cluster))]
+    .filter(
+      (cluster) => !topics.some((topic) => topic.cluster === cluster && available.has(topic.slug)),
+    )
+    .map((cluster) => `/collection/${slugify(cluster)}/`),
+];
+await parallel(unavailable, async (route) => {
+  const url = new URL(route, base).href;
+  const result = { url, status: 0, issues: [] };
+  try {
+    const response = await fetch(url, { signal: AbortSignal.timeout(20000) });
+    result.status = response.status;
+    await response.arrayBuffer();
+    if (response.status !== 404)
+      result.issues.push(`Unavailable collection returned HTTP ${response.status}`);
+  } catch (error) {
+    result.issues.push(error.message);
+  }
+  report.unavailableRoutes.push(result);
+  if (result.issues.length) report.failures.push({ url, issues: result.issues });
+});
 for (const path of [
   '/robots.txt',
   '/sitemap.xml',
@@ -165,6 +199,7 @@ console.log(
     {
       status: report.status,
       pages: report.pages.length,
+      unavailableRoutes: report.unavailableRoutes.length,
       resources: report.resources.length,
       notFoundStatus: report.notFoundStatus,
       failures: report.failures,

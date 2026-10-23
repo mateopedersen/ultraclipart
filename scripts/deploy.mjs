@@ -18,8 +18,8 @@ function run(script, args = []) {
 
 // Manual publication has the same gates as Git-driven publication. Never deploy
 // a previously generated local dist: it may contain stale or unverified media.
-run('node_modules/astro/astro.js', ['check']);
-run('node_modules/astro/astro.js', ['build']);
+run('node_modules/astro/bin/astro.mjs', ['check']);
+run('node_modules/astro/bin/astro.mjs', ['build']);
 run('scripts/security-headers.mjs');
 run(
   '--test',

@@ -12,6 +12,10 @@ concurrency:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    # Match @playwright/test; browsers and OS libraries are already installed.
+    # Pin the official image digest so a registry tag cannot change the runner.
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
     timeout-minutes: 25
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
@@ -29,8 +33,6 @@ jobs:
       - run: pnpm check
       - run: pnpm build
       - run: pnpm test
-      - name: Install browser test dependencies
-        run: pnpm exec playwright install --with-deps chromium firefox webkit
       - name: Desktop, tablet, mobile and accessibility
         run: |
           mkdir -p reports
