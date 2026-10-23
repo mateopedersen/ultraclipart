@@ -26,6 +26,10 @@ const queue = {
     const items = art.filter((a) => a.topic === t.slug);
     if (items.length > 50) throw new Error('Topic target exceeded');
     const briefPath = `data/briefs/${t.slug}.json`;
+    const brief = existsSync(join(root, briefPath)) ? read(briefPath) : null;
+    const reviewed =
+      brief?.rows?.length === 50 &&
+      brief.rows.every((row) => row.briefReview === 'REVIEWED_FOR_DISTINCT_COMPOSITION');
     return {
       topic: t.slug,
       keyword: t.keyword,
@@ -34,7 +38,11 @@ const queue = {
       generated: items.length,
       approved: items.filter((a) => a.published).length,
       remainingToDraw: 50 - items.length,
-      briefStatus: existsSync(join(root, briefPath)) ? 'DRAFT_ROWS_REQUIRE_REVIEW' : 'NOT_STARTED',
+      briefStatus: reviewed
+        ? '50_COMPOSITIONS_REVIEWED'
+        : brief
+          ? 'DRAFT_ROWS_REQUIRE_REVIEW'
+          : 'NOT_STARTED',
       briefPath: existsSync(join(root, briefPath)) ? briefPath : null,
     };
   }),

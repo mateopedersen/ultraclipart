@@ -73,6 +73,14 @@ def main():
     assert len({item['id'] for item in art}) == len(art)
     assert all(item['topic'] in topics for item in art)
     assert len(art) <= 50
+    brief_paths=[]
+    if args.wave != 'wave_001':
+        for topic in {item['topic'] for item in art}:
+            brief_path=ROOT/f'data/briefs/{topic}.json';brief_paths.append(brief_path)
+            brief=json.loads(brief_path.read_text());rows=brief['rows']
+            assert len(rows)==50 and len({row['artId'] for row in rows})==50
+            approved={row['artId'] for row in rows if row.get('briefReview')=='REVIEWED_FOR_DISTINCT_COMPOSITION'}
+            assert all(item['id'] in approved for item in art if item['topic']==topic), 'Complete and review distinct composition briefs before drawing'
     stage = ROOT / 'work/production' / args.wave; stage.mkdir(parents=True, exist_ok=True)
     lock = (stage / '.production.lock').open('a')
     try: fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
@@ -80,7 +88,7 @@ def main():
     journal_path = stage / 'journal.json'
     journal = json.loads(journal_path.read_text()) if journal_path.exists() else {'schema': 1, 'wave': args.wave, 'artworks': {}}
     inputs = [Path(__file__), ROOT / f'scripts/waves/{args.wave}.py', ROOT / 'scripts/waves/vector.py',
-              ROOT / 'scripts/waves/raster.mjs', ROOT / 'scripts/art-export.py', ROOT / 'public/color/print.icc']
+              ROOT / 'scripts/waves/raster.mjs', ROOT / 'scripts/waves/normalize.mjs', ROOT / 'src/editor/pdf-math.ts', ROOT / 'scripts/art-export.py', ROOT / 'public/color/print.icc', *brief_paths]
     signature = sha(b''.join(path.read_bytes() for path in inputs))
     node = os.environ.get('NODE_BIN') or shutil.which('node')
     if not node: raise RuntimeError('Node.js required')
@@ -93,8 +101,9 @@ def main():
             check_files(paths); resumed += 1
             print(f'RESUMED {art_id}', flush=True)
         else:
-            paths['svg'].write_text(item['source'])
-            exporter.validate_svg(item['source'])
+            normalized=subprocess.run([node,str(ROOT/'scripts/waves/normalize.mjs')],input=item['source'],capture_output=True,text=True,check=True).stdout
+            exporter.validate_svg(normalized)
+            paths['svg'].write_text(normalized)
             exporter.pdf_export(paths['svg'], paths['pdf'], item['title'])
             pdf_optimization = optimize_pdf(paths['pdf'])
             run = subprocess.run([node, str(ROOT / 'scripts/waves/raster.mjs'), str(paths['svg']), str(paths['webp']), str(paths['thumb'])], capture_output=True, text=True, check=True)
@@ -124,10 +133,11 @@ def main():
         rows = [(node.tag.split('}')[-1], sorted((key,value) for key,value in node.attrib.items() if key in geometry_keys))
                 for node in root.iter() if node.tag.split('}')[-1] not in ('title','desc','svg')]
         return sha(json.dumps(rows, sort_keys=True).encode())
-    known = {geometry_hash(path.read_text()): path.stem for path in (ROOT / 'assets/masters').glob('*.svg')}
+    catalog=json.loads((ROOT/'data/art.json').read_text())
+    known = {geometry_hash((ROOT/'public'/item['svg'].lstrip('/')).read_text()): item['id'] for item in catalog if item.get('svg')}
     for row in completed:
         geometry = geometry_hash((ROOT / row['files']['svg']['path']).read_text())
-        assert geometry not in known, f'Geometry-only duplicate: {row["id"]} and {known.get(geometry)}'
+        assert geometry not in known or known[geometry]==row['id'], f'Geometry-only duplicate: {row["id"]} and {known.get(geometry)}'
         known[geometry] = row['id']; row['geometrySha256'] = geometry
     report = {'schema': 1, 'wave': args.wave, 'actualExportedDrawings': len(completed), 'resumed': resumed,
               'topics': sorted({row['topic'] for row in completed}), 'totalBytes': sum(f['bytes'] for row in completed for f in row['files'].values()),

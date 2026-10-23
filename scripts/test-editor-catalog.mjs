@@ -5,9 +5,17 @@ const browser = await chromium.launch({
   ...(process.env.UC_BROWSER_PATH ? { executablePath: process.env.UC_BROWSER_PATH } : {}),
 });
 const page = await browser.newPage({ acceptDownloads: true });
-const root = new URL('../work/editor-evidence/catalog/', import.meta.url);
+const root = new URL(
+  `../${process.env.UC_EVIDENCE_DIR || 'work/editor-evidence/catalog'}/`,
+  import.meta.url,
+);
 await fs.mkdir(root, { recursive: true });
-const art = JSON.parse(await fs.readFile(new URL('../data/art.json', import.meta.url), 'utf8'));
+const art = JSON.parse(
+  await fs.readFile(
+    new URL('../' + (process.env.UC_CATALOG_PATH || 'data/art.json'), import.meta.url),
+    'utf8',
+  ),
+).filter((a) => !process.env.UC_ART_WAVE || a.productionWave === process.env.UC_ART_WAVE);
 const report = [];
 try {
   await page.route('**/__editor-export-test.html', (route) =>

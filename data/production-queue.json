@@ -15,14 +15,14 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 31,
+  "generatedArtworkCount": 39,
   "supplementalArtworkCount": 50,
-  "qualityApprovedArtworkCount": 21,
+  "qualityApprovedArtworkCount": 29,
   "supplementalApprovedArtworkCount": 50,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 81,
-  "remainingToDraw": 5469,
+  "availableArtworkCount": 89,
+  "remainingToDraw": 5461,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -1031,11 +1031,11 @@
       "keyword": "Winter clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 1,
-      "approved": 1,
-      "remainingToDraw": 49,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "generated": 9,
+      "approved": 9,
+      "remainingToDraw": 41,
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/winter.json"
     },
     {
       "topic": "pinecone",
@@ -2127,6 +2127,94 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "2b6b3f9e051a337e4e3b9c05c0513d0116ead91dad151b562816fa180eed06f0"
+    },
+    {
+      "id": "winter-ribbed-pompom-beanie",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e940eb7c08dde04ccf4f7152e65c8d132c8f1c0bc0f38c92760fe0ba7ffa4757"
+    },
+    {
+      "id": "winter-fleece-earmuffs",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "08f5bf997bc65b017a78aa53549421c4f589606413479f5c79d80a6a80d68ab6"
+    },
+    {
+      "id": "winter-plaid-fringed-scarf",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "bb13a295d5afc83dacde58e1c607e27fe68681be45dca33fec335980cecd0c2f"
+    },
+    {
+      "id": "winter-wool-sock-pair",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "4a7dd1c30f9ed9f1b3219add3f8e1d2ed816c5ac9564f1f15d9b3693a47113cb"
+    },
+    {
+      "id": "winter-laced-snow-boot",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "c343c28147ef886f62c024274295d95a3588c634cd9a292bcd8f4a40174fe462"
+    },
+    {
+      "id": "winter-white-figure-skate",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "3eb896a36fc3fb5eb21ab27a71d34374d92565af90ce19948296db1ea2fb9d8d"
+    },
+    {
+      "id": "winter-wooden-runner-sled",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "5d0274f4544f00becec2fe16295e08d10bb3291ede76ecb0ffbc21cd5f6e5f0b"
+    },
+    {
+      "id": "winter-crossed-skis-poles",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "AI_SCREEN_AND_FORMAT_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e00636c562a26f7593dec6c7a79d798f30f24f9d55c03eddcffbd3eb5bb000d6"
     }
   ]
 }
