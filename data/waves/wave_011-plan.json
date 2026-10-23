@@ -1,0 +1,72 @@
+{
+  "wave": "wave_011",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-ice-crystals",
+      "title": "Blue Faceted Ice Crystals",
+      "alt": "Three tall blue crystalline ice shards rise above a low cluster of smaller angular chips.",
+      "description": "Three tall blue crystalline ice shards rise above a low cluster of smaller angular chips. Use this illustration for winter fantasy collages.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_011/source/winter-ice-crystals.png"
+    },
+    {
+      "id": "winter-icicle-branch",
+      "title": "Snowy Branch with Icicles",
+      "alt": "A crooked bare branch carries a thick layer of snow and several long blue icicles.",
+      "description": "A crooked bare branch carries a thick layer of snow and several long blue icicles. Use this illustration for freeze-and-thaw lesson illustrations.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_011/source/winter-icicle-branch.png"
+    },
+    {
+      "id": "winter-park-street-lantern",
+      "title": "Snowy Glowing Street Lamp",
+      "alt": "A tall black street lamp glows warmly beneath a snow cap, with a small evergreen sprig at its base.",
+      "description": "A tall black street lamp glows warmly beneath a snow cap, with a small evergreen sprig at its base. Use this illustration for personal winter stationery.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_011/source/winter-park-street-lantern.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-sparrow-feeder",
+      "reason": "Visible subject touches canvas edge; source retained for composition repair."
+    },
+    {
+      "id": "winter-birch-log",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-frosted-window",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-hiking-pack",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-mountain-pass",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-snowy-footbridge",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-stacked-firewood",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

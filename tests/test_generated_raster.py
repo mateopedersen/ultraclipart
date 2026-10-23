@@ -26,6 +26,7 @@ class GeneratedRasterContract(unittest.TestCase):
         return reader,image,alpha
     def test_actual_cmyk_and_exact_multilevel_alpha(self):
         reader,image,alpha=self.fixture()
+        self.assertEqual(reader.pdf_header,'%PDF-1.7')
         info=inspect_cmyk_image(image,31,27,reader.trailer['/Root']['/OutputIntents'])
         self.assertEqual(info['components'],4)
         self.assertEqual(info['registeredCondition'],'CGATS TR 006')

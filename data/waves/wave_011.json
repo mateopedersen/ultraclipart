@@ -1,0 +1,280 @@
+{
+  "wave": "wave_011",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-ice-crystals",
+      "title": "Blue Faceted Ice Crystals",
+      "alt": "Three tall blue crystalline ice shards rise above a low cluster of smaller angular chips.",
+      "description": "Three tall blue crystalline ice shards rise above a low cluster of smaller angular chips. Use this illustration for winter fantasy collages.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_011/source/winter-ice-crystals.png",
+      "topic": "winter",
+      "width": 1331,
+      "height": 1181,
+      "sourceType": "raster",
+      "sourceSha256": "3c98db53f61aaa2d0d1721972ae257365d802ab4c09e949aedf84a9bff6e71e3",
+      "inputSignature": "a9d48c949e3dee88afb7d2f944a460e3b498b0523352f958670a787ad634c039",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 923085,
+        "weightedCmykRmse": 1.222991
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1532912,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1116193,
+          "weightedCmykRmse": 0.831496
+        },
+        {
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1013734,
+          "weightedCmykRmse": 0.993924
+        },
+        {
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 923085,
+          "weightedCmykRmse": 1.222991
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        163,
+        66,
+        1195,
+        1125
+      ],
+      "image": {
+        "width": 1331,
+        "height": 1181,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_011/exports/winter-ice-crystals.pdf",
+          "bytes": 923085,
+          "sha256": "436eb6e2b40a4e1e0ffeffc8007a36dde10f91bee88d7877e018bfffce610608"
+        },
+        "webp": {
+          "path": "work/production/wave_011/exports/winter-ice-crystals.webp",
+          "bytes": 1059390,
+          "sha256": "5766eb8d8bd3c455d8e4347fe3ed5ccf2f76f2f5a83d277b89cf60f2965d5958"
+        },
+        "thumb": {
+          "path": "work/production/wave_011/exports/winter-ice-crystals-thumb.webp",
+          "bytes": 63284,
+          "sha256": "a03ce6edf19918e6b2cb003a40f6cd51b9c69a630a1c82e8f0d7470093841737"
+        }
+      },
+      "proofSha256": "83a0c137c71d14f31213e93eb62c10dabcb4707b75386c9441cc8f8702688a17",
+      "pairMeanRgbDifference": 1.44115
+    },
+    {
+      "id": "winter-icicle-branch",
+      "title": "Snowy Branch with Icicles",
+      "alt": "A crooked bare branch carries a thick layer of snow and several long blue icicles.",
+      "description": "A crooked bare branch carries a thick layer of snow and several long blue icicles. Use this illustration for freeze-and-thaw lesson illustrations.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_011/source/winter-icicle-branch.png",
+      "topic": "winter",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "e00e93f1ea4f0223818f013416705a8cef1d28173178b37f54005a469d638e5f",
+      "inputSignature": "a9d48c949e3dee88afb7d2f944a460e3b498b0523352f958670a787ad634c039",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 898141,
+        "weightedCmykRmse": 0.935461
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1219286,
+          "weightedCmykRmse": 0
+        },
+        {
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 898141,
+          "weightedCmykRmse": 0.935461
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        80,
+        33,
+        1458,
+        981
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_011/exports/winter-icicle-branch.pdf",
+          "bytes": 898141,
+          "sha256": "f9a89d34af38eafd697d99e17d5cf11555e3e45516f0984e0bca62f948bc1895"
+        },
+        "webp": {
+          "path": "work/production/wave_011/exports/winter-icicle-branch.webp",
+          "bytes": 1116060,
+          "sha256": "0a7b45e67598219def9b4050e3b99b37bbe8b92a1422ae9c0f654785eddd0af4"
+        },
+        "thumb": {
+          "path": "work/production/wave_011/exports/winter-icicle-branch-thumb.webp",
+          "bytes": 40802,
+          "sha256": "9d47bd503ab858c1da99cfecaa164046f3f7ed86f929e42b8acaa69644e916c7"
+        }
+      },
+      "proofSha256": "755c3873b5ccd7b4f1c31e13ef27d87ad933189dea1c73c3c13c7ae29a367db6",
+      "pairMeanRgbDifference": 0.87167
+    },
+    {
+      "id": "winter-park-street-lantern",
+      "title": "Snowy Glowing Street Lamp",
+      "alt": "A tall black street lamp glows warmly beneath a snow cap, with a small evergreen sprig at its base.",
+      "description": "A tall black street lamp glows warmly beneath a snow cap, with a small evergreen sprig at its base. Use this illustration for personal winter stationery.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_011/source/winter-park-street-lantern.png",
+      "topic": "winter",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "raster",
+      "sourceSha256": "64c66984d98ea4bcbc9b3ae896a163b23459ba76db85245a8df21342a3fbe213",
+      "inputSignature": "a9d48c949e3dee88afb7d2f944a460e3b498b0523352f958670a787ad634c039",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 913798,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 913798,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        325,
+        43,
+        789,
+        1498
+      ],
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_011/exports/winter-park-street-lantern.pdf",
+          "bytes": 913798,
+          "sha256": "10df3c4958bb7e3f32555d27997bd7c50472ec0d62d6c96abffff536bad7ec77"
+        },
+        "webp": {
+          "path": "work/production/wave_011/exports/winter-park-street-lantern.webp",
+          "bytes": 893628,
+          "sha256": "07bdceb7311eafbadcef6a6819b566b7dea0189458871dedcd29bbd2742c0336"
+        },
+        "thumb": {
+          "path": "work/production/wave_011/exports/winter-park-street-lantern-thumb.webp",
+          "bytes": 24336,
+          "sha256": "b8d55316fa940c00e4f47c56d283ce76c546eb939f862a2d2dc8ecaf278f5138"
+        }
+      },
+      "proofSha256": "e64c8a9981e8edd0e8af7e58db0b477db0e5d2c27eb31d3a64599e1e7d8d0643",
+      "pairMeanRgbDifference": 0.72093
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-sparrow-feeder",
+      "reason": "Visible subject touches canvas edge; source retained for composition repair."
+    },
+    {
+      "id": "winter-birch-log",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-frosted-window",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-hiking-pack",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-mountain-pass",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-snowy-footbridge",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-stacked-firewood",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T14:19:22.037Z",
+  "allAccountR2Bytes": 294092656
+}

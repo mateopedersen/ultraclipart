@@ -1,0 +1,59 @@
+{
+  "wave": "wave_010",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-laced-figure-skate",
+      "title": "White Lace-Up Figure Skate",
+      "alt": "A white leather figure skate has laces, a brown raised heel and a silver blade with a front toe pick.",
+      "description": "A white leather figure skate has laces, a brown raised heel and a silver blade with a front toe pick. Use this illustration for winter sports activity sheets or a personal seasonal scrapbook.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_010/source/winter-laced-figure-skate.png"
+    },
+    {
+      "id": "winter-wood-slat-sled",
+      "title": "Wooden Sled with Red Runners",
+      "alt": "A wooden slat sled with curved red runners has a loose rope attached to its front.",
+      "description": "A wooden slat sled with curved red runners has a loose rope attached to its front. Use this illustration for winter play story prompts or a personal seasonal scrapbook.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_010/source/winter-wood-slat-sled.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-knitted-mittens-on-cord",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-burgundy-knitted-hat",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-blue-knitted-earmuffs",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-folded-tartan-scarf",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-cozy-pair-of-socks",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-tan-insulated-boot",
+      "reason": "Visible subject touches canvas edge; retain original and regenerate complete composition before publication."
+    },
+    {
+      "id": "winter-alpine-skis-and-poles",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

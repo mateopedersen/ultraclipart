@@ -21,6 +21,8 @@ def inspect_raster(art, files):
             assert low==0 and high>=250
             checks[kind]={'width':size[0],'height':size[1],'alpha':True,'alphaRange':[low,high],'bounds':alpha.getbbox()}
     reader=PdfReader(files['pdf'],strict=True);assert len(reader.pages)==1
+    if art.get('productionMethod')=='generated-raster':
+        assert tuple(map(int,reader.pdf_header.removeprefix('%PDF-').split('.')))>=(1,5), 'JPX image data requires PDF 1.5 or later'
     root=reader.trailer['/Root']
     assert not any(key in root for key in ('/OpenAction','/AA','/AcroForm'))
     assert '/JavaScript' not in root.get('/Names',{})

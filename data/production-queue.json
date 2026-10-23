@@ -15,16 +15,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 10,
+  "generatedArtworkCount": 20,
   "suppliedArtworkCount": 150,
-  "originalTopicArtworkCount": 60,
+  "originalTopicArtworkCount": 70,
   "supplementalArtworkCount": 100,
-  "qualityApprovedArtworkCount": 60,
+  "qualityApprovedArtworkCount": 70,
   "supplementalApprovedArtworkCount": 100,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 160,
-  "remainingToDraw": 5440,
+  "availableArtworkCount": 170,
+  "remainingToDraw": 5430,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -37,8 +37,8 @@
       "available": 0,
       "approved": 0,
       "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/halloween.json"
     },
     {
       "topic": "pumpkin",
@@ -1215,11 +1215,11 @@
       "keyword": "Winter clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 10,
+      "generated": 20,
       "supplied": 0,
-      "available": 10,
-      "approved": 10,
-      "remainingToDraw": 40,
+      "available": 20,
+      "approved": 20,
+      "remainingToDraw": 30,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/winter.json"
     },
@@ -3218,6 +3218,116 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "ca374241b23868d5e4d4a6dd76547b2ab7d55c26600d1c3760d65e9dde0cc88b"
+    },
+    {
+      "id": "winter-hooded-parka",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "79e3a99a1597968b5a3dcc280479a65dc07c969140115f241b336e36166a3714"
+    },
+    {
+      "id": "winter-hot-water-bottle",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "b18074a948093dcba0e6ffb1e7b447c7669a73e3464dc6e5c10fbcfe4a3b9e2d"
+    },
+    {
+      "id": "winter-child-ice-skating",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "ea06239d1cd585fe5c957cd24352bd453ef01e54e90721bfa818d1deedbec629"
+    },
+    {
+      "id": "winter-child-snow-angel",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "d19071adbc4ebedc8885313cb00792b495a1e940201ced2c02c40fdf03600220"
+    },
+    {
+      "id": "winter-fox-knitted-scarf",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "086f72e320d8d258ac5c40444fca5e1250dd25cd925b4f701540216b07c23a3b"
+    },
+    {
+      "id": "winter-laced-figure-skate",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "88759e70577bde533e3c630858e92c68e8dabb16e072c47a606dcbfe3ce270eb"
+    },
+    {
+      "id": "winter-wood-slat-sled",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "789a89ad2d047273ada98117f64217caad7a755b8d8f684304966fcfe501f7bd"
+    },
+    {
+      "id": "winter-ice-crystals",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "5766eb8d8bd3c455d8e4347fe3ed5ccf2f76f2f5a83d277b89cf60f2965d5958"
+    },
+    {
+      "id": "winter-icicle-branch",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "0a7b45e67598219def9b4050e3b99b37bbe8b92a1422ae9c0f654785eddd0af4"
+    },
+    {
+      "id": "winter-park-street-lantern",
+      "topic": "winter",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "07bdceb7311eafbadcef6a6819b566b7dea0189458871dedcd29bbd2742c0336"
     }
   ]
 }

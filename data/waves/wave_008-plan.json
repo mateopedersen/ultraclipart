@@ -1,0 +1,39 @@
+{
+  "wave": "wave_008",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-hooded-parka",
+      "title": "Olive Hooded Winter Parka",
+      "alt": "An olive-green winter parka has a fleece-trimmed hood, teal lining, zipper, pockets and ribbed cuffs.",
+      "description": "An olive-green winter parka has a fleece-trimmed hood, teal lining, zipper, pockets and ribbed cuffs. Use this illustration for winter clothing vocabulary cards or a personal packing checklist.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_008/source/winter-hooded-parka.png"
+    },
+    {
+      "id": "winter-hot-water-bottle",
+      "title": "Pink Knitted Hot Water Bottle",
+      "alt": "A hot water bottle in a pink cable-knit cover has a ribbed neck and visible cream stopper.",
+      "description": "A hot water bottle in a pink cable-knit cover has a ribbed neck and visible cream stopper. Use this illustration for cozy winter journal layouts or household-object matching cards.",
+      "color": "Pink",
+      "style": "Color",
+      "source": "work/production/wave_008/source/winter-hot-water-bottle.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-wooden-snowshoe",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    },
+    {
+      "id": "winter-rosehip-twig",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}

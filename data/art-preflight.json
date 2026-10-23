@@ -1,15 +1,15 @@
 {
   "status": "PASS",
-  "generatedCount": 10,
-  "originalTopicArtworkCount": 60,
+  "generatedCount": 20,
+  "originalTopicArtworkCount": 70,
   "suppliedCount": 150,
-  "availableCount": 160,
+  "availableCount": 170,
   "supplementalCount": 100,
   "topicCount": 4,
   "targetCount": 5500,
   "completedTopicCount": 1,
-  "publishedApprovedCount": 160,
-  "totalLocalAssetBytes": 258553311,
+  "publishedApprovedCount": 170,
+  "totalLocalAssetBytes": 278941088,
   "r2MeasuredBytes": null,
   "maxPdfBytes": 998269,
   "p95PdfBytes": 990735,
@@ -9455,6 +9455,606 @@
             {
               "width": 1536,
               "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-hooded-parka",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1140,
+          "height": 1380,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1140,
+            1380
+          ]
+        },
+        "thumb": {
+          "width": 363,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            1,
+            0,
+            363,
+            440
+          ]
+        },
+        "pdf": {
+          "bytes": 949536,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.800 \u00d7 4.600 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1140,
+              "height": 1380,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-hot-water-bottle",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1145,
+          "height": 1374,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            39,
+            1131,
+            1374
+          ]
+        },
+        "thumb": {
+          "width": 367,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            29,
+            17,
+            359,
+            428
+          ]
+        },
+        "pdf": {
+          "bytes": 873465,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.817 \u00d7 4.580 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1145,
+              "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-child-ice-skating",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1218,
+          "height": 1292,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            7,
+            1190,
+            1292
+          ]
+        },
+        "thumb": {
+          "width": 415,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            2,
+            400,
+            440
+          ]
+        },
+        "pdf": {
+          "bytes": 942806,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.060 \u00d7 4.307 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1218,
+              "height": 1292,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-child-snow-angel",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1312,
+          "height": 1199,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1293,
+            1199
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 402,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            426,
+            402
+          ]
+        },
+        "pdf": {
+          "bytes": 978939,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.373 \u00d7 3.997 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1312,
+              "height": 1199,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-fox-knitted-scarf",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1145,
+          "height": 1374,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            33,
+            0,
+            1145,
+            1374
+          ]
+        },
+        "thumb": {
+          "width": 367,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            22,
+            0,
+            350,
+            437
+          ]
+        },
+        "pdf": {
+          "bytes": 891603,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.817 \u00d7 4.580 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1145,
+              "height": 1374,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-laced-figure-skate",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1374,
+          "height": 1145,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1320,
+            1145
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 367,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            17,
+            0,
+            424,
+            367
+          ]
+        },
+        "pdf": {
+          "bytes": 946782,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.580 \u00d7 3.817 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1374,
+              "height": 1145,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-wood-slat-sled",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            0,
+            21,
+            1520,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            10,
+            436,
+            293
+          ]
+        },
+        "pdf": {
+          "bytes": 977316,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-ice-crystals",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1331,
+          "height": 1181,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            0,
+            0,
+            1319,
+            1181
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 390,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            19,
+            9,
+            436,
+            379
+          ]
+        },
+        "pdf": {
+          "bytes": 923085,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "4.437 \u00d7 3.937 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1331,
+              "height": 1181,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-icicle-branch",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1536,
+          "height": 1024,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            57,
+            23,
+            1518,
+            1024
+          ]
+        },
+        "thumb": {
+          "width": 440,
+          "height": 293,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            20,
+            7,
+            428,
+            287
+          ]
+        },
+        "pdf": {
+          "bytes": 898141,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "5.120 \u00d7 3.413 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1536,
+              "height": 1024,
+              "components": 4,
+              "alphaMask": true,
+              "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+              "colorSpace": "Device CMYK",
+              "iccBytes": 0,
+              "iccSha256": null,
+              "registeredCondition": "CGATS TR 006"
+            }
+          ]
+        },
+        "pass": true
+      }
+    },
+    {
+      "id": "winter-park-street-lantern",
+      "checks": {
+        "sourceType": "raster",
+        "namedLayers": 0,
+        "hashes": true,
+        "webp": {
+          "width": 1024,
+          "height": 1536,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            254
+          ],
+          "bounds": [
+            47,
+            37,
+            994,
+            1512
+          ]
+        },
+        "thumb": {
+          "width": 293,
+          "height": 440,
+          "alpha": true,
+          "alphaRange": [
+            0,
+            255
+          ],
+          "bounds": [
+            46,
+            10,
+            277,
+            433
+          ]
+        },
+        "pdf": {
+          "bytes": 913798,
+          "underCap": true,
+          "colorSpace": "Device CMYK",
+          "rasterImages": 1,
+          "page": "3.413 \u00d7 5.120 in",
+          "profileEmbedded": false,
+          "images": [
+            {
+              "width": 1024,
+              "height": 1536,
               "components": 4,
               "alphaMask": true,
               "profile": "GRACoL2006_Coated1v2 (registered output intent)",

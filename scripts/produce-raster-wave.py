@@ -31,7 +31,7 @@ def png_payload(gray):
     return b''.join(payload)
 def pdf_bytes(encoded,alpha,title):
     width,height=alpha.size;pw,ph=width*72/300,height*72/300
-    writer=PdfWriter();page=writer.add_blank_page(pw,ph)
+    writer=PdfWriter();writer.pdf_header='%PDF-1.7';page=writer.add_blank_page(pw,ph)
     mask=EncodedStreamObject();mask._data=png_payload(alpha)
     mask.update({NameObject('/Type'):NameObject('/XObject'),NameObject('/Subtype'):NameObject('/Image'),NameObject('/Width'):NumberObject(width),NameObject('/Height'):NumberObject(height),NameObject('/BitsPerComponent'):NumberObject(8),NameObject('/ColorSpace'):NameObject('/DeviceGray'),NameObject('/Filter'):NameObject('/FlateDecode'),NameObject('/DecodeParms'):DictionaryObject({NameObject('/Predictor'):NumberObject(15),NameObject('/Colors'):NumberObject(1),NameObject('/Columns'):NumberObject(width),NameObject('/BitsPerComponent'):NumberObject(8)})})
     image=EncodedStreamObject();image._data=encoded

@@ -1,0 +1,44 @@
+{
+  "wave": "wave_009",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-child-ice-skating",
+      "title": "Child Learning to Ice Skate",
+      "alt": "A smiling child in a teal coat and plum hat balances on white ice skates with both arms extended.",
+      "description": "A smiling child in a teal coat and plum hat balances on white ice skates with both arms extended. Use this illustration for winter sports vocabulary or classroom storytelling.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_009/source/winter-child-ice-skating.png"
+    },
+    {
+      "id": "winter-child-snow-angel",
+      "title": "Child Making a Snow Angel",
+      "alt": "A child in a blue snowsuit lies with arms and legs spread inside a snow angel imprint.",
+      "description": "A child in a blue snowsuit lies with arms and legs spread inside a snow angel imprint. Use this illustration for winter play prompts or a personal snow-day scrapbook.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_009/source/winter-child-snow-angel.png"
+    },
+    {
+      "id": "winter-fox-knitted-scarf",
+      "title": "Fox Wearing a Teal Scarf",
+      "alt": "An upright red fox with a large white-tipped tail waves one paw while wearing a long teal knitted scarf.",
+      "description": "An upright red fox with a large white-tipped tail waves one paw while wearing a long teal knitted scarf. Use this illustration for winter reading labels or a personal greeting.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_009/source/winter-fox-knitted-scarf.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-child-sledding",
+      "reason": "Native-resolution CMYK quality/size gate blocked; original source retained. Quality floor unchanged."
+    }
+  ]
+}
