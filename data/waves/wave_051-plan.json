@@ -1,0 +1,29 @@
+{
+  "wave": "wave_051",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-cat-bookshelf",
+      "title": "Cat on a Spooky Bookshelf",
+      "alt": "A black cat resting on three antique books beside a tiny pumpkin and an unlit candle.",
+      "color": "Black",
+      "style": "Color",
+      "description": "A black cat resting on three antique books beside a tiny pumpkin and an unlit candle. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_051/source/halloween-cat-bookshelf.png"
+    },
+    {
+      "id": "halloween-coffin-flowers",
+      "title": "Decorative Coffin Flower Box",
+      "alt": "A small coffin-shaped wooden planter filled with orange daisies and purple flowers.",
+      "color": "Purple",
+      "style": "Color",
+      "description": "A small coffin-shaped wooden planter filled with orange daisies and purple flowers. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_051/source/halloween-coffin-flowers.png"
+    }
+  ]
+}

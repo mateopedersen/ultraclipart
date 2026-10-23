@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Native-resolution raster export with bounded quality, resumable evidence and no remote writes.
 
-WebP is exact lossless RGBA. CMYK uses LittleCMS and an independently decoded JPEG2000
-stream, choosing lossless first, then only explicitly permitted high-quality candidates.
+WebP is exact lossless RGBA. Color CMYK uses LittleCMS; explicitly reviewed neutral
+line art may use process black with empty C/M/Y plates. Independently decoded JPEG2000
+streams choose lossless first, then only explicitly permitted high-quality candidates.
 The alpha mask remains byte-exact. No resampling or invented embedded print profile.
 """
 import argparse, fcntl, hashlib, io, json, math, os, re, shutil, struct, subprocess, zlib
@@ -27,6 +28,25 @@ def export_signature(plan, item, dependencies):
 def validate_native_alpha(alpha):
     low,high=alpha.getextrema()
     assert low==0 and high>=250, 'Source needs transparent surroundings and near-opaque artwork'
+def separate_cmyk(image,alpha,transform,meta):
+    weights=np.asarray(alpha,dtype=np.float64)
+    separation=meta.get('printSeparation','profile-cmyk')
+    assert separation in ('profile-cmyk','black-only'), 'Unknown print separation'
+    if separation=='black-only':
+        # Explicit process-black separation for neutral line art. Four-channel CMYK
+        # is retained; colored artwork must never take this path to meet a byte cap.
+        assert meta.get('style') in ('Outline','Black & White'), 'Black-only requires monochrome artwork'
+        rgb=np.asarray(image.convert('RGB'),dtype=np.float64)
+        chroma=rgb.max(axis=2)-rgb.min(axis=2)
+        assert weights.sum()>0 and np.sum(chroma*weights)/weights.sum()<=1, 'Colored source cannot use black-only separation'
+        assert np.max(chroma[weights>32],initial=0)<=16, 'Visible colored accents cannot use black-only separation'
+        raw=np.zeros((*weights.shape,4),dtype=np.uint8)
+        raw[:,:,3]=255-np.asarray(image.convert('L'))
+    else:
+        raw=np.array(ImageCms.applyTransform(image.convert('RGB'),transform))
+    # Color under fully transparent pixels cannot affect any composite.
+    raw[weights==0]=0
+    return raw
 def png_payload(gray):
     out=io.BytesIO();gray.save(out,'PNG',compress_level=9)
     body=out.getvalue();pos=8;payload=[]
@@ -105,9 +125,8 @@ def main():
         webp=files_dir/f'{art_id}.webp';image.save(webp,'WEBP',lossless=True,quality=100,method=6,exact=True)
         with Image.open(webp) as decoded:assert decoded.convert('RGBA').tobytes()==image.tobytes(),'WebP must preserve every RGBA byte'
         thumb=image.copy();thumb.thumbnail((440,440),Image.Resampling.LANCZOS);thumb.save(files_dir/f'{art_id}-thumb.webp','WEBP',quality=94,method=6,alpha_quality=100)
-        raw=np.array(ImageCms.applyTransform(image.convert('RGB'),transform));weights=np.array(alpha,dtype=np.float64)
-        # Fully transparent color cannot affect any composite. Keep all visible samples intact.
-        raw[weights==0]=0;cmyk=Image.fromarray(raw,'CMYK');trials=[];selected=None
+        raw=separate_cmyk(image,alpha,transform,meta);weights=np.array(alpha,dtype=np.float64)
+        cmyk=Image.fromarray(raw,'CMYK');trials=[];selected=None
         # Wavelet decomposition changes packing, never native pixel dimensions or the quality floor.
         resolutions=meta.get('jpeg2000Resolutions',6)
         assert type(resolutions) is int and 4<=resolutions<=6, 'Unsupported JPEG2000 decomposition count'

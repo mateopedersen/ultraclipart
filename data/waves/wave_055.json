@@ -1,0 +1,118 @@
+{
+  "wave": "wave_055",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-spider-gift",
+      "title": "Friendly Spider with a Gift",
+      "alt": "A friendly purple spider with eight separate legs holding an orange present.",
+      "color": "Purple",
+      "style": "Color",
+      "description": "A friendly purple spider with eight separate legs holding an orange present. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_055/source/halloween-spider-gift.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d1b24f876d714527a497cc60b91a84d1432f14bb20d19612eb52712c854dfc54",
+      "inputSignature": "17fd88168e3bd5671b8d9817812403ee5e650edcee6b6e28047b7eb1b6fdcca3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 946521,
+        "weightedCmykRmse": 1.259223
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1451999,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1116886,
+          "weightedCmykRmse": 0.82862
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1026860,
+          "weightedCmykRmse": 0.974275
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 946521,
+          "weightedCmykRmse": 1.259223
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        60,
+        220,
+        1195,
+        1043
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_055/exports/halloween-spider-gift.pdf",
+          "bytes": 946521,
+          "sha256": "dfbcf587ffcaa22548df0e838460dcf166ba9693128899887599adcea8512934"
+        },
+        "webp": {
+          "path": "work/production/wave_055/exports/halloween-spider-gift.webp",
+          "bytes": 826038,
+          "sha256": "2b20c0c8b9a661fee7296dc637eafe391c4efe05376e0872783d89176e55fb10"
+        },
+        "thumb": {
+          "path": "work/production/wave_055/exports/halloween-spider-gift-thumb.webp",
+          "bytes": 57098,
+          "sha256": "1ae54befc1bbae919dfee35747d7719faf4b7b7e3a3006c101521817ef6cbe0f"
+        }
+      },
+      "proofSha256": "d7997d9a4f38fc97e25a84d075a28b29ea10681bf283cd2f0c338ef8983befe0",
+      "pairMeanRgbDifference": 4.06891
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-crooked-cottage",
+      "reason": "PDF size budget at unchanged native quality floor"
+    },
+    {
+      "id": "halloween-hat-wreath",
+      "reason": "PDF size budget at unchanged native quality floor"
+    }
+  ],
+  "screenReviewNotes": "Eight separate connected legs visible: three outward pairs and one pair holding the present; full margins; PDF matches source.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:55:09.415Z",
+  "cdnVerifiedAt": "2026-10-23T21:57:20.894Z"
+}

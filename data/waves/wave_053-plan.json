@@ -1,0 +1,35 @@
+{
+  "wave": "wave_053",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-owl-wizard-hat",
+      "title": "Owl in a Starry Hat",
+      "alt": "A tawny owl in a plum wizard hat perched on a twisting branch beside a lantern.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A tawny owl in a plum wizard hat perched on a twisting branch beside a lantern. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_053/source/halloween-owl-wizard-hat.png"
+    },
+    {
+      "id": "halloween-graveyard-lantern",
+      "title": "Quiet Moonlit Graveyard Vignette",
+      "alt": "Two unlettered rounded gravestones beside dry grass and a glowing lantern.",
+      "color": "Gray",
+      "style": "Color",
+      "description": "Two unlettered rounded gravestones beside dry grass and a glowing lantern. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_053/source/halloween-graveyard-lantern.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-spider-gift",
+      "reason": "Visual review: web clipped by canvas edge and ambiguous leg count; redraw required"
+    }
+  ]
+}

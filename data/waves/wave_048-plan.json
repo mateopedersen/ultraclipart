@@ -1,0 +1,34 @@
+{
+  "wave": "wave_048",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-snowy-footbridge",
+      "title": "Snowy Wooden Footbridge",
+      "alt": "A small arched wooden bridge over an icy stream with snow on its railings.",
+      "description": "A small arched wooden bridge over an icy stream with snow on its railings. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_048/source/winter-snowy-footbridge.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "PDF byte budget exceeded; quality floor preserved"
+    },
+    {
+      "id": "winter-frozen-pond-cabin",
+      "reason": "PDF byte budget exceeded; quality floor preserved"
+    },
+    {
+      "id": "winter-mountain-pass",
+      "reason": "PDF byte budget exceeded; quality floor preserved"
+    }
+  ]
+}

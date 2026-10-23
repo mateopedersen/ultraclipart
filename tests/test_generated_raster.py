@@ -10,6 +10,22 @@ spec=importlib.util.spec_from_file_location('producer',ROOT/'scripts/produce-ras
 producer=importlib.util.module_from_spec(spec);spec.loader.exec_module(producer)
 
 class GeneratedRasterContract(unittest.TestCase):
+    def test_explicit_black_only_separation_preserves_native_geometry_and_alpha(self):
+        image=Image.new('RGBA',(4,1));image.putdata([(0,0,0,255),(128,128,128,127),(255,255,255,255),(255,0,0,0)])
+        original=image.tobytes();alpha=image.getchannel('A');mask=alpha.tobytes()
+        raw=producer.separate_cmyk(image,alpha,None,{'style':'Outline','printSeparation':'black-only'})
+        self.assertEqual(raw.shape,(1,4,4))
+        self.assertFalse(raw[:,:,:3].any())
+        self.assertEqual(raw[0,:,3].tolist(),[255,127,0,0])
+        self.assertEqual(image.tobytes(),original);self.assertEqual(alpha.tobytes(),mask)
+    def test_black_only_rejects_color_and_unsupported_separation(self):
+        image=Image.new('RGBA',(2,2),(255,30,0,255));alpha=image.getchannel('A')
+        for meta in [{'style':'Outline','printSeparation':'black-only'},{'style':'Color','printSeparation':'black-only'},{'style':'Outline','printSeparation':'unknown'}]:
+            with self.subTest(meta=meta),self.assertRaises(AssertionError):
+                producer.separate_cmyk(image,alpha,None,meta)
+        tiny_accent=Image.new('RGBA',(100,100),'white');tiny_accent.putpixel((50,50),(255,0,0,255))
+        with self.assertRaises(AssertionError):
+            producer.separate_cmyk(tiny_accent,tiny_accent.getchannel('A'),None,{'style':'Outline','printSeparation':'black-only'})
     def test_resume_survives_an_unrelated_deferred_item(self):
         plan={'wave':'wave_999','topic':'winter','method':'builtin-image-generation','research':'research.json','maxPdfBytes':980000,'minimumJpxQualityDb':48,'maximumWeightedCmykRmse':1.8,'items':[{'id':'one'},{'id':'two'}]}
         item={'id':'one','title':'Original title','source':'source.png'}

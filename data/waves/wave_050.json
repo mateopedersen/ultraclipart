@@ -1,0 +1,186 @@
+{
+  "wave": "wave_050",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-frozen-pond-cabin",
+      "title": "Frozen Pond and Snowy Cottage",
+      "alt": "A frozen blue pond beside a small snowy cottage and evergreen trees.",
+      "description": "A frozen blue pond beside a small snowy cottage and evergreen trees. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_050/source/winter-frozen-pond-cabin.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d6ca366e114cc8d41dc8fa5af7caf056cbd605c14c2aba13ae2e26d31b5f9ac8",
+      "inputSignature": "c149ea7709c45ead78d981b7bc8419a1e439a309f648004560053fe9dc6d11e6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 907855,
+        "weightedCmykRmse": 1.081711
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1668437,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1108858,
+          "weightedCmykRmse": 0.762451
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1001708,
+          "weightedCmykRmse": 0.885352
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 907855,
+          "weightedCmykRmse": 1.081711
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        15,
+        86,
+        1238,
+        1162
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_050/exports/winter-frozen-pond-cabin.pdf",
+          "bytes": 907855,
+          "sha256": "558b206bd7cdafd42c870f0dad02b2e308d3d504992ebbd56130c927b0c7c3d1"
+        },
+        "webp": {
+          "path": "work/production/wave_050/exports/winter-frozen-pond-cabin.webp",
+          "bytes": 1018230,
+          "sha256": "922dd409401b8f6caa42d426dc656eedc40491d7635c464ba31119415b2ac0b5"
+        },
+        "thumb": {
+          "path": "work/production/wave_050/exports/winter-frozen-pond-cabin-thumb.webp",
+          "bytes": 66168,
+          "sha256": "1446a2dd5e0c19fb7233e2070d1c4f6c7f3e8955edfb1449bc982c1e1e3b9ef8"
+        }
+      },
+      "proofSha256": "fa88ad6438716a71290e5101c7bbaa8d30562aa624c151fbc378c70bb4dae741",
+      "pairMeanRgbDifference": 2.59102
+    },
+    {
+      "id": "winter-mountain-pass",
+      "title": "Snowy Mountain Pass",
+      "alt": "Two snow-covered mountain ridges framing a winding pass.",
+      "description": "Two snow-covered mountain ridges framing a winding pass. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_050/source/winter-mountain-pass.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "cd980e3aea94a86a3068eab941683070ab9686f4b41a4acfcdaa73171f5fd7bd",
+      "inputSignature": "13a7784b88f0b2809cd2103e4d835a34b8985a22eb28bb5c561233fa82df0999",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 841337,
+        "weightedCmykRmse": 0.824462
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1341622,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 841337,
+          "weightedCmykRmse": 0.824462
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        37,
+        232,
+        1224,
+        1046
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_050/exports/winter-mountain-pass.pdf",
+          "bytes": 841337,
+          "sha256": "083a8b6000a8e3360daf442a75d0ef1de5495bb53a506384d94ba68dfefb445e"
+        },
+        "webp": {
+          "path": "work/production/wave_050/exports/winter-mountain-pass.webp",
+          "bytes": 806682,
+          "sha256": "6398685f16b9fefdb803cb8be211ce367b91cb2418c91a4050e282ab242a6254"
+        },
+        "thumb": {
+          "path": "work/production/wave_050/exports/winter-mountain-pass-thumb.webp",
+          "bytes": 51254,
+          "sha256": "43e051fd9d10184f124633a19d8dc838e289a28111e202d7fdac77b8472f15b1"
+        }
+      },
+      "proofSha256": "1501f87f47f506e87c8504c84980575b179cab8f02b9d1a70ab6301984852076",
+      "pairMeanRgbDifference": 1.36903
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:38:51.457Z",
+  "cdnVerifiedAt": "2026-10-23T21:44:07.839Z"
+}

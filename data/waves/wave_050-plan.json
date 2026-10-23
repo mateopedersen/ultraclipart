@@ -1,0 +1,29 @@
+{
+  "wave": "wave_050",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-frozen-pond-cabin",
+      "title": "Frozen Pond and Snowy Cottage",
+      "alt": "A frozen blue pond beside a small snowy cottage and evergreen trees.",
+      "description": "A frozen blue pond beside a small snowy cottage and evergreen trees. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_050/source/winter-frozen-pond-cabin.png"
+    },
+    {
+      "id": "winter-mountain-pass",
+      "title": "Snowy Mountain Pass",
+      "alt": "Two snow-covered mountain ridges framing a winding pass.",
+      "description": "Two snow-covered mountain ridges framing a winding pass. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_050/source/winter-mountain-pass.png"
+    }
+  ]
+}

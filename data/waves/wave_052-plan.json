@@ -1,0 +1,26 @@
+{
+  "wave": "wave_052",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-wooden-snowshoe",
+      "title": "Traditional Wooden Snowshoe",
+      "alt": "An oval wooden snowshoe with open woven lacing and a brown leather foot binding.",
+      "description": "An oval wooden snowshoe with open woven lacing and a brown leather foot binding. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_052/source/winter-wooden-snowshoe.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "Native CMYK byte budget; quality floor retained"
+    }
+  ]
+}

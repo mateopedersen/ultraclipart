@@ -1,0 +1,30 @@
+{
+  "wave": "wave_055",
+  "topic": "halloween",
+  "method": "builtin-image-generation",
+  "research": "data/research/halloween-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "halloween-spider-gift",
+      "title": "Friendly Spider with a Gift",
+      "alt": "A friendly purple spider with eight separate legs holding an orange present.",
+      "color": "Purple",
+      "style": "Color",
+      "description": "A friendly purple spider with eight separate legs holding an orange present. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_055/source/halloween-spider-gift.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-crooked-cottage",
+      "reason": "PDF size budget at unchanged native quality floor"
+    },
+    {
+      "id": "halloween-hat-wreath",
+      "reason": "PDF size budget at unchanged native quality floor"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "wave": "wave_046",
+  "topic": "winter",
+  "method": "builtin-image-generation",
+  "research": "data/research/winter-2026-10-23.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "winter-snowdrops-emerging",
+      "title": "Snowdrops Emerging from Snow",
+      "alt": "Three white snowdrops with slender green leaves emerging through a small patch of snow.",
+      "description": "Three white snowdrops with slender green leaves emerging through a small patch of snow. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_046/source/winter-snowdrops-emerging.png"
+    },
+    {
+      "id": "winter-hedgehog-nest",
+      "title": "Hedgehog Sleeping in Leaves",
+      "alt": "A hedgehog curled asleep in a nest of broad autumn leaves.",
+      "description": "A hedgehog curled asleep in a nest of broad autumn leaves. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_046/source/winter-hedgehog-nest.png"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-wooden-snowshoe",
+      "reason": "PDF byte cap at unchanged quality floor"
+    }
+  ]
+}

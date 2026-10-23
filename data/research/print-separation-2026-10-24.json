@@ -1,0 +1,16 @@
+{
+  "purpose": "Internal process-black separation rationale for explicitly reviewed neutral outline art",
+  "sources": [
+    "https://help.fiery.com/cws_hsij/6.6/en-us/GUID-52B8D3D4-2D2D-459B-9AD0-5C1F8782B31E.html",
+    "https://helpx.adobe.com/content/dam/help/en/indesign/pdf/CS6_PrintGuide.pdf"
+  ],
+  "decision": "An explicit black-only print separation is allowed only for neutral Outline or Black & White artwork. Four-channel DeviceCMYK is retained with zero C/M/Y. Colored sources and visible colored accents are rejected. This is a print-separation choice, not a color-art compression fallback.",
+  "unchanged": [
+    "Original lossless RGBA WebP",
+    "Native source dimensions",
+    "Exact soft alpha mask",
+    "Independent PDF render matching and maximum byte gates",
+    "Default ICC-managed CMYK for color illustrations"
+  ],
+  "validation": "Exact channel checks and rejection tests for colored sources, tiny saturated accents, invalid styles and unknown separation modes."
+}

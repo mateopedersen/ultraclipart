@@ -7,15 +7,23 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
   engine = process.env.UC_BROWSER || 'chromium';
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
 mkdirSync(out, { recursive: true });
+const requestedIds = new Set((process.env.RASTER_IDS || '').split(',').filter(Boolean));
 const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url))).filter(
   (a) =>
     a.sourceType === 'raster' &&
+    (!requestedIds.size || requestedIds.has(a.id)) &&
     (process.env.RASTER_REPLACEMENTS !== '1' || Boolean(a.replacesArtwork)) &&
     (!process.env.RASTER_TOPICS || process.env.RASTER_TOPICS.split(',').includes(a.topic)),
 );
+if (requestedIds.size)
+  assert.deepEqual(
+    new Set(art.map((a) => a.id)),
+    requestedIds,
+    'Every requested artwork must exist and match the selected topic/source filters',
+  );
 const targets = [
   ...new Map(
-    (process.env.ALL_RASTER === '1'
+    (process.env.ALL_RASTER === '1' || requestedIds.size
       ? art
       : process.env.RASTER_PER_TOPIC === '1'
         ? [

@@ -1,0 +1,114 @@
+{
+  "wave": "wave_048",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-snowy-footbridge",
+      "title": "Snowy Wooden Footbridge",
+      "alt": "A small arched wooden bridge over an icy stream with snow on its railings.",
+      "description": "A small arched wooden bridge over an icy stream with snow on its railings. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_048/source/winter-snowy-footbridge.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d49cce89f847a0998a11bf17a7522a50bf75ea54b426bde8c171e4a704d9f203",
+      "inputSignature": "3a73ce6e98a8f1a87d4a6028e7d48e0a8cfa5c14b3a0683d45868e78d3f30861",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 979951,
+        "weightedCmykRmse": 0.948711
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1601393,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1086136,
+          "weightedCmykRmse": 0.809993
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 979951,
+          "weightedCmykRmse": 0.948711
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        10,
+        237,
+        1239,
+        1058
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_048/exports/winter-snowy-footbridge.pdf",
+          "bytes": 979951,
+          "sha256": "2cddc806a503f8ded696c3bcdb0ddff04eb37f02cf8ecc5917e4539a609ccebb"
+        },
+        "webp": {
+          "path": "work/production/wave_048/exports/winter-snowy-footbridge.webp",
+          "bytes": 974494,
+          "sha256": "494f9200e7dac5364ae1bbcd4e84c8d7b42a11ddf01d561b7617ae03241de110"
+        },
+        "thumb": {
+          "path": "work/production/wave_048/exports/winter-snowy-footbridge-thumb.webp",
+          "bytes": 68292,
+          "sha256": "792d5e14d50fba8bcdf85990721abd7d1769510a5351ca90b030e6bfe410417d"
+        }
+      },
+      "proofSha256": "cbe1917caeff5ecd639f3ed1ece87cc84ce9a4909b6af5a255a81a3054edb931",
+      "pairMeanRgbDifference": 1.81095
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "PDF byte budget exceeded; quality floor preserved"
+    },
+    {
+      "id": "winter-frozen-pond-cabin",
+      "reason": "PDF byte budget exceeded; quality floor preserved"
+    },
+    {
+      "id": "winter-mountain-pass",
+      "reason": "PDF byte budget exceeded; quality floor preserved"
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:36:04.122Z",
+  "cdnVerifiedAt": "2026-10-23T21:44:07.839Z"
+}

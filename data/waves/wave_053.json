@@ -1,0 +1,198 @@
+{
+  "wave": "wave_053",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "halloween-owl-wizard-hat",
+      "title": "Owl in a Starry Hat",
+      "alt": "A tawny owl in a plum wizard hat perched on a twisting branch beside a lantern.",
+      "color": "Brown",
+      "style": "Color",
+      "description": "A tawny owl in a plum wizard hat perched on a twisting branch beside a lantern. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_053/source/halloween-owl-wizard-hat.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e6505221fd4905f5e66b2c373915502c36694bf52238851153ada06962a2b7a4",
+      "inputSignature": "120b708e47a0990f5a9028612cf16089c8d352f0c1f93d38a66d4ae777cfd4e9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 975651,
+        "weightedCmykRmse": 1.502503
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1785781,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1313514,
+          "weightedCmykRmse": 0.845131
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1204798,
+          "weightedCmykRmse": 0.984559
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1090715,
+          "weightedCmykRmse": 1.191887
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 975651,
+          "weightedCmykRmse": 1.502503
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        120,
+        34,
+        1195,
+        1224
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_053/exports/halloween-owl-wizard-hat.pdf",
+          "bytes": 975651,
+          "sha256": "e8c643fe65ac21aa0d002e0503ed3c9597e4c2c1b72e5cd86c85bc4c1e073673"
+        },
+        "webp": {
+          "path": "work/production/wave_053/exports/halloween-owl-wizard-hat.webp",
+          "bytes": 863646,
+          "sha256": "50b2135235e6c30b5ef971cad78cc48526355848dead5081e363802518be8eb3"
+        },
+        "thumb": {
+          "path": "work/production/wave_053/exports/halloween-owl-wizard-hat-thumb.webp",
+          "bytes": 59534,
+          "sha256": "7e437ddeb7013ef4ed7a8edf3771305717e799904a8f1bb3d9ee6fc1ed2aa98c"
+        }
+      },
+      "proofSha256": "6ac803c2f4afceba6fbd264e37eb77c0f9c29ae14e7e05eb8f1163d688f0aa1c",
+      "pairMeanRgbDifference": 1.85327
+    },
+    {
+      "id": "halloween-graveyard-lantern",
+      "title": "Quiet Moonlit Graveyard Vignette",
+      "alt": "Two unlettered rounded gravestones beside dry grass and a glowing lantern.",
+      "color": "Gray",
+      "style": "Color",
+      "description": "Two unlettered rounded gravestones beside dry grass and a glowing lantern. Use this illustration for personal Halloween projects and classroom activities.",
+      "source": "work/production/wave_053/source/halloween-graveyard-lantern.png",
+      "topic": "halloween",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "38df287ad5275c742f2581e6a011cc777529724ef56937b5a25db5737641f62f",
+      "inputSignature": "21f53eb1437604bd486169ed8613712b7bcdfe20d1ae58a531eb9f7c44aeaa13",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 746849,
+        "weightedCmykRmse": 0.926312
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1252781,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 746849,
+          "weightedCmykRmse": 0.926312
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        65,
+        217,
+        1190,
+        1040
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_053/exports/halloween-graveyard-lantern.pdf",
+          "bytes": 746849,
+          "sha256": "df36157bdf376057430c924c6aceb0d3d46ca058bd9bde54d8abaf010ddf966a"
+        },
+        "webp": {
+          "path": "work/production/wave_053/exports/halloween-graveyard-lantern.webp",
+          "bytes": 632640,
+          "sha256": "59e77e71800edf27e70f879f1f684ada0f5c44d406766215890c614cc8031179"
+        },
+        "thumb": {
+          "path": "work/production/wave_053/exports/halloween-graveyard-lantern-thumb.webp",
+          "bytes": 38824,
+          "sha256": "d046a2f77a9c2e2a98f36a5b9a903e7334aeedc302b6432817c39546a0ef82e2"
+        }
+      },
+      "proofSha256": "19f507479e87bc785f88ddab79d0da1c511b4ba9fcd6e824ff9edcda2df11449",
+      "pairMeanRgbDifference": 1.11606
+    }
+  ],
+  "deferred": [
+    {
+      "id": "halloween-spider-gift",
+      "reason": "Visual review: web clipped by canvas edge and ambiguous leg count; redraw required"
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:47:50.675Z",
+  "cdnVerifiedAt": "2026-10-23T21:49:25.376Z"
+}

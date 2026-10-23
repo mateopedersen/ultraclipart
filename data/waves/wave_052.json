@@ -1,0 +1,99 @@
+{
+  "wave": "wave_052",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-wooden-snowshoe",
+      "title": "Traditional Wooden Snowshoe",
+      "alt": "An oval wooden snowshoe with open woven lacing and a brown leather foot binding.",
+      "description": "An oval wooden snowshoe with open woven lacing and a brown leather foot binding. Use this illustration for personal winter projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_052/source/winter-wooden-snowshoe.png",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "33e41f7aaa89712a17f5d5ff1b5104fc02128caf008fc6b5b367251fc5ffd784",
+      "inputSignature": "98b59fb0a2545261ffa74cb6808d42c1836821b19fa9041788d45a8ce9667aa5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 866238,
+        "weightedCmykRmse": 1.037408
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1181078,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 866238,
+          "weightedCmykRmse": 1.037408
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        339,
+        12,
+        915,
+        1250
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_052/exports/winter-wooden-snowshoe.pdf",
+          "bytes": 866238,
+          "sha256": "1c7de4a92804a078e77c31c1231aac49b3c2ba7f42d3c8e4792ddb88bba94be9"
+        },
+        "webp": {
+          "path": "work/production/wave_052/exports/winter-wooden-snowshoe.webp",
+          "bytes": 584160,
+          "sha256": "4288e3dc824f9fd88c02b6508b005bb92375238442d360a24f4f909f9c6ca454"
+        },
+        "thumb": {
+          "path": "work/production/wave_052/exports/winter-wooden-snowshoe-thumb.webp",
+          "bytes": 56534,
+          "sha256": "3b1c8fe45f3b4c867e5186c0cc2345f8aefc2a1157ab47790e1939ba1d0dc7ae"
+        }
+      },
+      "proofSha256": "174f8391a4676186c5f517864dfa3f1384fb5849cedde55dd53a6f092d669044",
+      "pairMeanRgbDifference": 1.07921
+    }
+  ],
+  "deferred": [
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "reason": "Native CMYK byte budget; quality floor retained"
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:42:48.229Z",
+  "cdnVerifiedAt": "2026-10-23T21:44:07.839Z"
+}

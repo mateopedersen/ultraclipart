@@ -1,0 +1,89 @@
+{
+  "wave": "wave_054",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "winter-snowy-evergreen-branch",
+      "title": "Snowy Evergreen Branch Coloring Illustration",
+      "alt": "A black-and-white evergreen twig with outlined needles and three white rests of snow.",
+      "description": "A clean evergreen twig coloring illustration with snow resting on its needles. Use the open shapes for winter worksheets, coloring activities and personal seasonal crafts.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_054/source/winter-snowy-evergreen-branch.png",
+      "printSeparation": "black-only",
+      "topic": "winter",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "448ca251036a9a0edba6e6c8841321264e165ff98828f6f2c8b949414f395f42",
+      "inputSignature": "85d1f40d35dd7f63ce08768ecd6bbde0ab86d65e76c6bb74b04452ecdb96f617",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 548289,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 548289,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        91,
+        88,
+        1208,
+        1165
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_054/exports/winter-snowy-evergreen-branch.pdf",
+          "bytes": 548289,
+          "sha256": "5b8c3c99f51de97362c84a50cd66d6a00dfd5f4009f1d188cd8ff8fdf72e5136"
+        },
+        "webp": {
+          "path": "work/production/wave_054/exports/winter-snowy-evergreen-branch.webp",
+          "bytes": 592880,
+          "sha256": "649e42fc18616112e1933da1bd5f3b0cdf034035477a29cb49269e50f54dc12d"
+        },
+        "thumb": {
+          "path": "work/production/wave_054/exports/winter-snowy-evergreen-branch-thumb.webp",
+          "bytes": 65458,
+          "sha256": "e4a699dcba2293cda0e49fcab4d2e0cc67d20565e24b95fbb6572f1b0cb3b2b5"
+        }
+      },
+      "proofSha256": "2fd8f4a4f8abc9536ca94938e36e69be76e2ddb6e5c5d8dbd1e4b9a03b696dd7",
+      "pairMeanRgbDifference": 4.57583
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "K-only CMYK line art checked against source: native contours, white snow interiors and exact alpha retained; lossless four-channel encoding.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T21:54:20.188Z",
+  "cdnVerifiedAt": "2026-10-23T21:57:20.894Z"
+}
