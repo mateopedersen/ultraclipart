@@ -62,20 +62,36 @@ async function polygon(points, mode = 'replace') {
   }
   await action('finish-polygon');
 }
-async function imageBytes() {
+async function imageBytes(normalizeSource = false) {
   return await page
     .locator('.uc-canvas [data-layer="original-image"] image')
-    .evaluate(async (image) => {
+    .evaluate(async (image, normalizeSource) => {
       const loaded = new Image();
       loaded.src = image.getAttribute('href');
       await loaded.decode();
+      if (normalizeSource) {
+        // Match the editor's readback/putImageData/PNG pipeline without applying edits.
+        // This isolates actual mask spill from browser premultiplied-alpha quantization.
+        const source = document.createElement('canvas');
+        source.width = loaded.naturalWidth;
+        source.height = loaded.naturalHeight;
+        const sourceContext = source.getContext('2d', { willReadFrequently: true });
+        sourceContext.drawImage(loaded, 0, 0);
+        const pixels = sourceContext.getImageData(0, 0, source.width, source.height);
+        const output = document.createElement('canvas');
+        output.width = source.width;
+        output.height = source.height;
+        output.getContext('2d').putImageData(pixels, 0, 0);
+        loaded.src = output.toDataURL('image/png');
+        await loaded.decode();
+      }
       const canvas = document.createElement('canvas');
       canvas.width = loaded.naturalWidth;
       canvas.height = loaded.naturalHeight;
       const ctx = canvas.getContext('2d');
       ctx.drawImage(loaded, 0, 0);
       return Array.from(ctx.getImageData(0, 0, canvas.width, canvas.height).data);
-    });
+    }, normalizeSource);
 }
 try {
   await page.goto(`${base}/edit/${id}/`);
@@ -86,7 +102,7 @@ try {
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await settle();
   await page.locator('.uc-canvas').screenshot({ path: resolve(out, 'baby-before.png') });
-  const original = await imageBytes();
+  const original = await imageBytes(true);
   await point(600, 100);
   await point(350, 250, 'add');
   await point(410, 425, 'add');
@@ -120,12 +136,7 @@ try {
     [900, 1000],
   ]) {
     const p = (y * 1226 + x) * 4;
-    // Browser PNG round-tripping can quantize premultiplied RGB by one step,
-    // even where the worker kept the raw RGBA values exactly unchanged.
-    // Keep alpha exact and a tight RGB bound here; unit tests check raw pixels exactly.
-    assert.equal(bow[p + 3], original[p + 3]);
-    for (let channel = 0; channel < 3; channel++)
-      assert.ok(Math.abs(bow[p + channel] - original[p + channel]) <= 1);
+    assert.deepEqual(bow.slice(p, p + 4), original.slice(p, p + 4));
   }
   await action('new-region');
   // Separate garment pieces, avoiding neck, arms, hands and legs.
