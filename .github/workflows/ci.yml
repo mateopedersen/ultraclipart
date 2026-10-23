@@ -23,7 +23,7 @@ jobs:
       # GitHub owns mounted workspace/home directories as uid 1001. Firefox
       # rejects a root process whose profile home belongs to another user.
       options: --user 1001
-    timeout-minutes: 25
+    timeout-minutes: 45
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
@@ -54,6 +54,8 @@ jobs:
             fi
             if ! kill -0 "$PREVIEW_PID" 2>/dev/null; then break; fi
             sleep 1
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
           done
           if [ "$PREVIEW_READY" -ne 1 ]; then
             cat reports/preview.log
@@ -75,9 +77,13 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" ALL_RASTER="$RASTER_COVERAGE" node tests/e2e/raster-editor.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/editor node scripts/test-editor-browser.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
           done
           if [ '${{ matrix.engine }}' = chromium ]; then
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
+            BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
+            BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
           fi
       - name: Validate production CDN mapping and headers
         run: CF_PAGES=1 pnpm build
