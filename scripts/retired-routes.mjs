@@ -80,7 +80,11 @@ function commonGlob(a, b) {
 }
 
 function compactCover(ids, protectedPaths, protectedSuffixes, root = '/*/') {
-  const baseline = prefixCover(variants(ids), protectedSuffixes).map((pattern) => root + pattern);
+  const requiredSuffixes = root === '/*/' ? ['', '/'] : ['', '/', '/index.html'];
+  const requiredPaths = [
+    ...new Set(ids.flatMap((id) => requiredSuffixes.map((suffix) => id + suffix))),
+  ];
+  const baseline = prefixCover(requiredPaths, protectedSuffixes).map((pattern) => root + pattern);
   const candidates = new Set(baseline),
     names = [...ids].sort();
   let pairs = 0;
@@ -95,7 +99,7 @@ function compactCover(ids, protectedPaths, protectedSuffixes, root = '/*/') {
     .map((candidate) => ({
       ...candidate,
       ids: names.filter((id) =>
-        ['', '/'].every((suffix) =>
+        requiredSuffixes.every((suffix) =>
           candidate.matcher.test((root === '/*/' ? '/art/' : root) + id + suffix),
         ),
       ),

@@ -175,7 +175,12 @@ test('retirement rules reserve space for AI and public-sharing endpoints', () =>
   const withdrawn = JSON.parse(
     readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
   );
-  const policy = retirementPolicy(topics, art, withdrawn, [], 98);
+  const staticPaths = art.flatMap((item) => [
+    `/art/${item.id}/index.html`,
+    `/edit/${item.id}/index.html`,
+    `/clipart/${item.topic}/index.html`,
+  ]);
+  const policy = retirementPolicy(topics, art, withdrawn, staticPaths, 98);
   assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 98);
   const invokes = (path) =>
     policy.routes.include.some((pattern) => matches(pattern, path)) &&
