@@ -29,6 +29,7 @@ export function pageSitemap(art: Artwork[], topics: Topic[]): string {
     'categories/',
     'collections/',
     'create/',
+    'ai-clipart-generator/',
     'guides/',
     'print-size/',
     ...guides.map((guide) => `guides/${guide.slug}/`),

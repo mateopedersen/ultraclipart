@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
+import { build as bundleWorker } from 'esbuild';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = join(root, 'dist');
@@ -31,12 +32,19 @@ const csp = base.replace(
   "script-src 'self' 'wasm-unsafe-eval';",
   `script-src 'self' 'wasm-unsafe-eval' ${[...hashes].join(' ')};`,
 );
+const aiCsp =
+  csp
+    .split('\n')
+    .find((line) => line.startsWith('  Content-Security-Policy:'))
+    .replace("script-src 'self'", "script-src 'self' https://challenges.cloudflare.com")
+    .replace("connect-src 'self'", "connect-src 'self' https://challenges.cloudflare.com") +
+  "; frame-src https://challenges.cloudflare.com; worker-src 'self'";
 const searchVersion = JSON.parse(
   readFileSync(join(dist, 'search-data/manifest.json'), 'utf8'),
 ).version;
 writeFileSync(
   join(dist, '_headers'),
-  `${csp}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n/search-data/manifest.json\n  Cache-Control: no-cache\n`,
+  `${csp}\n/ai-clipart-generator/\n  ! Content-Security-Policy\n${aiCsp}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n/search-data/manifest.json\n  Cache-Control: no-cache\n`,
 );
 
 if (process.env.CF_PAGES === '1') {
@@ -75,6 +83,8 @@ const retirement = retirementPolicy(
   JSON.parse(readFileSync(join(root, 'data/retired-artwork.json'), 'utf8')),
   files(dist).map((path) => '/' + relative(dist, path)),
 );
+const apiRoutes = ['/api/ai/*'];
+let retiredWorker = '({fetch: (request, env) => env.ASSETS.fetch(request)})';
 if (retirement) {
   const responseHeaders = Object.fromEntries(
     [...csp.split('/_astro/*')[0].matchAll(/^  ([\w-]+): (.+)$/gm)].map((match) => [
@@ -82,17 +92,38 @@ if (retirement) {
       match[2],
     ]),
   );
-  writeFileSync(join(dist, '_routes.json'), JSON.stringify(retirement.routes));
   writeFileSync(
-    join(dist, '_worker.js'),
-    `export default (${createRetiredHandler.toString()})(${JSON.stringify(retirement.retired)}, ${JSON.stringify(responseHeaders)});\n`,
+    join(dist, '_routes.json'),
+    JSON.stringify({ ...retirement.routes, include: [...retirement.routes.include, ...apiRoutes] }),
   );
+  retiredWorker = `(${createRetiredHandler.toString()})(${JSON.stringify(retirement.retired)}, ${JSON.stringify(responseHeaders)})`;
   console.log(
     `Unavailable routes: ${retirement.retired.length}; live collections/assets bypass the 404 function.`,
   );
 } else {
-  for (const name of ['_routes.json', '_worker.js']) rmSync(join(dist, name), { force: true });
+  writeFileSync(
+    join(dist, '_routes.json'),
+    JSON.stringify({ version: 1, include: apiRoutes, exclude: [] }),
+  );
 }
+await bundleWorker({
+  stdin: {
+    contents: `import {handleAi} from './server/ai/handler.mjs';
+const retired = ${retiredWorker};
+export default {fetch(request, env, context) { return new URL(request.url).pathname.startsWith('/api/ai/') ? handleAi(request, env, context) : retired.fetch(request, env); }};`,
+    resolveDir: root,
+    sourcefile: 'worker-entry.js',
+  },
+  bundle: true,
+  format: 'esm',
+  platform: 'browser',
+  target: 'es2022',
+  minify: true,
+  outfile: join(dist, '_worker.js'),
+});
+const routes = JSON.parse(readFileSync(join(dist, '_routes.json'), 'utf8'));
+if (routes.include.length + routes.exclude.length > 100)
+  throw new Error('AI + retirement route count exceeds Pages limit');
 const count = files(dist).length;
 if (process.env.CF_PAGES === '1' && count > 20_000)
   throw new Error(`Pages Free file limit exceeded: ${count} files.`);

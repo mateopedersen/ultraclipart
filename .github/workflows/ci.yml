@@ -88,6 +88,8 @@ jobs:
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/creative-studio.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/real-artwork.mjs
+            BASE_URL=http://127.0.0.1:4321 BROWSER="$engine" node tests/e2e/ai-builder.mjs
+            UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/ai-studio-transfer.mjs
           done
           if [ '${{ matrix.engine }}' = chromium ]; then
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs

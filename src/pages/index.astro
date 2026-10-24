@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Search from '../components/Search.astro';
 import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
+import AiInvitation from '../components/AiInvitation.astro';
 import { art, newestArt, topics, availableClusters, slugify } from '../lib/catalog';
 const picks = ['baby', 'heart', 'volleyball', 'winter'].filter((slug) =>
   art.some((item) => item.topic === slug),
@@ -37,6 +38,7 @@ const recentPicks = newestArt.filter((item) => {
       ))}
     </div>
   </section>
+  <AiInvitation />
   <div class="section-head">
     <h2>Find your inspiration</h2>
     <a href="/categories/">Browse subjects →</a>

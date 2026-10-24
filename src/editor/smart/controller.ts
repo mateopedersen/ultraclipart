@@ -1,9 +1,10 @@
 import { clone, transformString, type EditorDocument, type RasterLayer } from '../model';
 import { NS } from '../svg';
-import { rasterPixels } from '../raster';
+import { rasterPixels, registerLocalImage } from '../raster';
 import { encodeMask, decodeMask, combineMasks, brushMask, polygonMask } from './pixels';
 import { defaultAdjustment, type Region, type Point, type Adjustment } from './types';
 import { withProcessor } from './render';
+import { extractSelectionPixels, extractedDocument } from './extract';
 import { StudioTools } from './studio';
 export interface EditorHost {
   root: HTMLElement;
@@ -723,6 +724,55 @@ export class SmartController {
       const d = clone(this.host.committed());
       delete d.selection;
       this.host.commit(d, 'Choose another region.');
+      return;
+    }
+    if (action === 'extract-layer') {
+      const source = this.requireLayer(),
+        snapshot = this.host.committed();
+      if (snapshot.selection?.layerId !== source.id) throw new Error('Select a region first.');
+      const name = this.value('data-extract-name'),
+        remove = this.checked('data-extract-remove');
+      this.host.status('Preparing an independent image layer…');
+      const cutout = await withProcessor(source, (p) =>
+        p.run<ReturnType<typeof extractSelectionPixels>>('extract', {
+          selection: snapshot.selection!.mask,
+          regions: source.regions,
+          effects: source.effects,
+        }),
+      );
+      const canvas = document.createElement('canvas');
+      canvas.width = cutout.width;
+      canvas.height = cutout.height;
+      const context = canvas.getContext('2d');
+      if (!context) throw new Error('Image processing is unavailable in this browser.');
+      context.putImageData(
+        new ImageData(new Uint8ClampedArray(cutout.data), cutout.width, cutout.height),
+        0,
+        0,
+      );
+      const png = await new Promise<Blob>((resolve, reject) =>
+        canvas.toBlob(
+          (b) => (b ? resolve(b) : reject(new Error('Could not create the cutout.'))),
+          'image/png',
+        ),
+      );
+      const layer = await registerLocalImage(new Uint8Array(await png.arrayBuffer()));
+      if (snapshot !== this.host.committed())
+        throw new Error(
+          'Your selection changed during extraction. Select the region and try again.',
+        );
+      const next = extractedDocument(snapshot, source.id, layer, cutout, remove, name);
+      this.cancel();
+      this.regionId = '';
+      this.shownRegion = '';
+      this.host.commit(
+        next,
+        remove
+          ? 'Independent layer created. The source has an editable erase mask; Undo restores both.'
+          : 'Independent layer created. Your source is preserved; move and edit the new layer on its own.',
+      );
+      this.host.select(layer.id);
+      this.host.panel('transform');
       return;
     }
     if (action === 'apply') {

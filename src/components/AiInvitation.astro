@@ -1,0 +1,329 @@
+---
+import { examples } from '../ai/presets';
+---
+
+<section class="ai-invitation" aria-labelledby="ai-invitation-title">
+  <div class="ai-invitation-copy">
+    <p class="ai-invitation-eyebrow">
+      <span>NEW</span> AI Clipart Builder
+    </p>
+    <h2 id="ai-invitation-title">
+      Describe it.
+      <br />
+      Make it yours.
+    </h2>
+    <p>Your idea, illustrated with AI. Refine the details and bring it into Clipart Studio.</p>
+    <form id="home-ai-form" action="/ai-clipart-generator/" method="get">
+      <label class="sr-only" for="home-ai-prompt">
+        Describe the clipart you want to create
+      </label>
+      <input
+        id="home-ai-prompt"
+        type="text"
+        maxlength="1200"
+        placeholder="A little rabbit holding a yellow daisy…"
+        required
+        autocomplete="off"
+      />
+      <button type="submit" class="primary">
+        Create with AI{' '}
+        <svg
+          aria-hidden="true"
+          width="19"
+          height="19"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+        >
+          <path d="M4 12h15m-6-6 6 6-6 6" />
+        </svg>
+      </button>
+    </form>
+    <div class="ai-invitation-prompts" aria-label="Try an example idea">
+      {examples.map((e, i) => (
+        <button type="button" data-home-ai-example={i}>
+          {e.label}
+        </button>
+      ))}
+    </div>
+    <small>Free daily capacity · No account needed · Review your idea before generating</small>
+  </div>
+  <div class="ai-invitation-art" aria-label="Examples generated with FLUX.1 schnell">
+    {examples
+      .filter((e) => 'image' in e)
+      .map((e, i) => (
+        <a href="/ai-clipart-generator/" data-home-ai-example={i} aria-label={`Try ${e.label}`}>
+          <img src={e.image} alt={e.alt} width="320" height="320" loading="lazy" decoding="async" />
+          <span>{e.label}</span>
+        </a>
+      ))}
+    <p>REAL GENERATED EXAMPLES · FLUX.1 SCHNELL</p>
+  </div>
+</section>
+<script>
+  import { examples } from '../ai/presets';
+  const form = document.querySelector<HTMLFormElement>('#home-ai-form');
+  const input = document.querySelector<HTMLInputElement>('#home-ai-prompt');
+  let selectedStyle = 'realistic';
+  const go = () => {
+    if (!input?.value.trim()) return;
+    try {
+      sessionStorage.setItem(
+        'ultraclipart-ai-prompt',
+        JSON.stringify({ prompt: input.value.trim(), style: selectedStyle, createdAt: Date.now() }),
+      );
+      location.assign('/ai-clipart-generator/');
+    } catch {
+      location.assign('/ai-clipart-generator/#idea=' + encodeURIComponent(input.value.trim()));
+    }
+  };
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    go();
+  });
+  document.querySelectorAll<HTMLElement>('[data-home-ai-example]').forEach((button) =>
+    button.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (!input) return;
+      const example = examples[Number(button.dataset.homeAiExample)];
+      input.value = example.prompt;
+      selectedStyle = example.style;
+      if (button.tagName === 'A') go();
+      else input.focus();
+    }),
+  );
+</script>
+<style>
+  .ai-invitation {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 36px;
+    padding: 36px;
+    margin: 34px 0 44px;
+    border: 1px solid #cddff5;
+    border-radius: 22px;
+    background: #f4f8fe;
+  }
+  .ai-invitation-eyebrow {
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #395d8a;
+    margin: 0 0 15px;
+  }
+  .ai-invitation-eyebrow > span {
+    font-size: 9px;
+    padding: 4px 6px;
+    border: 1px solid #bcd6f7;
+    background: #e3efff;
+    color: #1555a6;
+    border-radius: 4px;
+    margin-right: 7px;
+  }
+  .ai-invitation h2 {
+    font-size: clamp(30px, 3.5vw, 44px);
+    letter-spacing: -1.1px;
+    line-height: 1.13;
+    margin: 0 0 14px;
+  }
+  .ai-invitation-copy > p:not(.ai-invitation-eyebrow) {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 470px;
+  }
+  .ai-invitation form {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px;
+    background: white;
+    border: 1px solid #b9cfee;
+    border-radius: 12px;
+    margin: 20px 0 10px;
+  }
+  .ai-invitation input {
+    min-width: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+    padding: 10px 8px;
+    font-size: 13px;
+    color: #152849;
+    min-height: 43px;
+  }
+  .ai-invitation form button {
+    white-space: nowrap;
+    font-size: 13px;
+    border-radius: 8px;
+    min-height: 45px;
+    padding: 10px 14px;
+  }
+  .ai-invitation-prompts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+    margin: 6px 0 14px;
+  }
+  .ai-invitation-prompts button {
+    font-size: 11px;
+    padding: 4px 0;
+    border: 0;
+    min-height: 30px;
+    background: transparent;
+    color: #305f9c;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .ai-invitation small {
+    font-size: 10px;
+    color: #52617a;
+    display: block;
+    line-height: 1.7;
+  }
+  .ai-invitation-art {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    align-items: center;
+  }
+  .ai-invitation-art a {
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #d8e3ef;
+    border-radius: 13px;
+    box-shadow: 0 6px 20px #244c7710;
+    text-align: center;
+    color: #284467;
+  }
+  .ai-invitation-art a:nth-child(2) {
+    margin-top: 36px;
+  }
+  .ai-invitation-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  .ai-invitation-art span {
+    display: block;
+    font-size: 10px;
+    font-weight: 650;
+    line-height: 1.4;
+    padding: 10px 4px;
+    border-top: 1px solid #edf1f6;
+  }
+  .ai-invitation-art > p {
+    grid-column: 1/-1;
+    font-size: 9px;
+    letter-spacing: 0.11em;
+    text-align: center;
+    color: #5b6c82;
+    margin: 5px 0;
+  }
+  .ai-invitation :focus-visible {
+    outline: 3px solid #2474dd;
+    outline-offset: 4px;
+  }
+  @media (max-width: 1000px) {
+    .ai-invitation {
+      grid-template-columns: 1fr 1fr;
+      padding: 28px;
+      gap: 24px;
+    }
+    .ai-invitation form {
+      display: block;
+    }
+    .ai-invitation form button {
+      width: 100%;
+    }
+    .ai-invitation input {
+      font-size: 14px;
+    }
+    .ai-invitation-art {
+      gap: 6px;
+    }
+  }
+  @media (max-width: 700px) {
+    .ai-invitation {
+      grid-template-columns: 1fr;
+      padding: 25px;
+      gap: 25px;
+    }
+    .ai-invitation-art {
+      max-width: 450px;
+      gap: 10px;
+      width: 100%;
+      margin: auto;
+    }
+    .ai-invitation-art a:nth-child(2) {
+      margin-top: 0;
+    }
+    .ai-invitation-art span {
+      font-size: 10px;
+    }
+    .ai-invitation small {
+      font-size: 11px;
+    }
+    .ai-invitation-prompts button {
+      min-height: 36px;
+    }
+    .ai-invitation h2 br {
+      display: none;
+    }
+    .ai-invitation-copy > p:not(.ai-invitation-eyebrow) {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 380px) {
+    .ai-invitation {
+      padding: 18px;
+    }
+    .ai-invitation h2 {
+      font-size: 30px;
+    }
+    .ai-invitation-art {
+      gap: 6px;
+    }
+  }
+  .ai-invitation-eyebrow {
+    font-size: 13px;
+  }
+  .ai-invitation-eyebrow > span {
+    font-size: 10px;
+  }
+  .ai-invitation input,
+  .ai-invitation form button {
+    font-size: 14px;
+  }
+  .ai-invitation-prompts button {
+    font-size: 12px;
+    min-height: 36px;
+  }
+  .ai-invitation small {
+    font-size: 12px;
+  }
+  .ai-invitation-art span {
+    font-size: 12px;
+    padding: 12px 6px;
+  }
+  .ai-invitation-art > p {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+  @media (max-width: 700px) {
+    .ai-invitation-art span {
+      font-size: 11px;
+    }
+    .ai-invitation-art > p {
+      font-size: 10px;
+    }
+    .ai-invitation small {
+      font-size: 12px;
+    }
+  }
+</style>

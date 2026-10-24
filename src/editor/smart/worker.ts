@@ -1,5 +1,7 @@
 import { selectRegion, refineMask, decodeMask } from './pixels';
 import { renderPixels, inspectImage, palette } from './effects';
+import { extractSelectionPixels } from './extract';
+import { effectBounds } from './padding';
 import type { PixelImage } from './types';
 let source: PixelImage;
 self.onmessage = async (event) => {
@@ -14,6 +16,12 @@ self.onmessage = async (event) => {
       result = refineMask(payload.mask, source, payload.kind, payload.radius);
     else if (op === 'render')
       result = renderPixels(source, payload.regions || [], payload.effects || []);
+    else if (op === 'extract')
+      result = extractSelectionPixels(
+        renderPixels(source, payload.regions || [], payload.effects || []),
+        payload.selection,
+        effectBounds({ ...source, effects: payload.effects }),
+      );
     else if (op === 'inspect') result = inspectImage(payload.image || source, payload.widthInches);
     else if (op === 'cmyk') {
       const { cmykStreams } = await import('./cmyk');
