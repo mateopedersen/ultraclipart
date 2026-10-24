@@ -151,7 +151,8 @@ try {
     `${cardinalCount} ${cardinalCount === 1 ? 'illustration' : 'illustrations'} for “cardinal”`,
   );
   report.checks.push('outdated request cannot overwrite newer results');
-  // Favorites have no catalog cards in HTML and fetch only the saved IDs.
+  // Favorites have no catalog cards in HTML. Small ID-location tables resolve
+  // their bounded metadata chunks without loading the search/ranking index.
   await page.evaluate(() =>
     localStorage.setItem(
       'ultraclipart-favorites',
@@ -167,12 +168,17 @@ try {
   assert.equal((await favorites.text()).includes('class="art-card"'), false);
   await expect(page.locator('#favorites .art-card')).toHaveCount(2);
   assert.deepEqual(
-    requested
-      .filter((url) => url.includes('/items/'))
-      .map((url) => url.split('/').at(-1))
-      .sort(),
-    ['winter-arctic-fox-resting.json', 'winter-red-cardinal-holly.json'],
+    (
+      await page
+        .locator('#favorites .art-card')
+        .evaluateAll((nodes) => nodes.map((node) => node.dataset.id))
+    ).sort(),
+    ['winter-arctic-fox-resting', 'winter-red-cardinal-holly'],
   );
+  const chunks = requested.filter((url) => url.includes('/items/'));
+  assert.ok(chunks.length >= 1 && chunks.length <= 2);
+  assert.ok(chunks.every((url) => /\/items\/\d+\.json$/.test(url)));
+  assert.ok(requested.filter((url) => url.includes('/locations/')).length <= 2);
   assert.equal(
     requested.some((url) => /\/(tokens|ranked|lexicon)\//.test(url)),
     false,

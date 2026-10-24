@@ -105,6 +105,10 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=speaker node tests/e2e/collection.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=wifi-router ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/wifi-router node tests/e2e/collection.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=wifi-router ALL_RASTER=1 EVIDENCE_DIR=reports/wifi-router-editor node tests/e2e/raster-editor.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=robot ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/robot node tests/e2e/collection.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=robot ALL_RASTER=1 EVIDENCE_DIR=reports/robot-editor node tests/e2e/raster-editor.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 node tests/e2e/raster-editor.mjs
