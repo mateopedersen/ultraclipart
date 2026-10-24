@@ -73,6 +73,7 @@ test('split workflow retains every interface command and catalog-extra export ex
     'speaker',
     'wifi-router',
     'robot',
+    'camera',
   ])
     assert.equal(
       workflow.split(`RASTER_TOPICS=${topic} ALL_RASTER=1`).length - 1,
