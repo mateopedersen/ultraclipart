@@ -4,6 +4,8 @@ import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
+import { pruneVerifiedCatalogPages } from './catalog-pages/prune.mjs';
+import { releaseRevision } from './release-revision.mjs';
 import { build as bundleWorker } from 'esbuild';
 
 const root = resolve(import.meta.dirname, '..');
@@ -68,6 +70,18 @@ if (process.env.CF_PAGES === '1') {
   for (const url of allowed)
     if (!compiled.has(url))
       throw new Error(`Verified media was omitted from compiled output: ${url}`);
+  if (process.env.CATALOG_OFFLOAD_COLLECTION) {
+    const collection = process.env.CATALOG_OFFLOAD_COLLECTION;
+    const revision = releaseRevision();
+    const count = pruneVerifiedCatalogPages(
+      dist,
+      JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
+      join(root, 'work/catalog-pages', collection, revision, 'verified-manifest.json'),
+      collection,
+      revision,
+    );
+    console.log(`Catalog pages: ${count} verified HTML files moved to private R2.`);
+  }
   // A locally staged next wave must not leak into a manual production build.
   // Sources and unrelated UI assets, including the blank studio, stay intact.
   pruneCatalogOutput(dist);
@@ -75,6 +89,22 @@ if (process.env.CF_PAGES === '1') {
   console.log(`CDN release: ${publication.files} verified files, ${publication.bytes} bytes.`);
 }
 const apiRoutes = ['/api/*', '/share/*'];
+// A small book collection pilot keeps existing artwork on static delivery.
+// Wider routing is enabled only after the new ingestion path is verified.
+const catalogRoutes = ['/art/book*', '/edit/book*'];
+const responseHeaders = Object.fromEntries(
+  [...csp.split('/_astro/*')[0].matchAll(/^  ([\w-]+): (.+)$/gm)].map((match) => [
+    match[1],
+    match[2],
+  ]),
+);
+const editorHeaders = {
+  ...responseHeaders,
+  'Content-Security-Policy': aiCsp.trim().replace(/^Content-Security-Policy:\s*/, ''),
+};
+const withdrawnIds = JSON.parse(
+  readFileSync(join(root, 'data/retired-artwork.json'), 'utf8'),
+).artworkIds;
 const retirement = retirementPolicy(
   [
     ...JSON.parse(readFileSync(join(root, 'data/topics.json'), 'utf8')).topics,
@@ -83,19 +113,16 @@ const retirement = retirementPolicy(
   JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
   JSON.parse(readFileSync(join(root, 'data/retired-artwork.json'), 'utf8')),
   files(dist).map((path) => '/' + relative(dist, path)),
-  100 - apiRoutes.length,
+  100 - apiRoutes.length - catalogRoutes.length,
 );
 let retiredWorker = '({fetch: (request, env) => env.ASSETS.fetch(request)})';
 if (retirement) {
-  const responseHeaders = Object.fromEntries(
-    [...csp.split('/_astro/*')[0].matchAll(/^  ([\w-]+): (.+)$/gm)].map((match) => [
-      match[1],
-      match[2],
-    ]),
-  );
   writeFileSync(
     join(dist, '_routes.json'),
-    JSON.stringify({ ...retirement.routes, include: [...retirement.routes.include, ...apiRoutes] }),
+    JSON.stringify({
+      ...retirement.routes,
+      include: [...retirement.routes.include, ...apiRoutes, ...catalogRoutes],
+    }),
   );
   retiredWorker = `(${createRetiredHandler.toString()})(${JSON.stringify(retirement.retired)}, ${JSON.stringify(responseHeaders)})`;
   console.log(
@@ -104,15 +131,17 @@ if (retirement) {
 } else {
   writeFileSync(
     join(dist, '_routes.json'),
-    JSON.stringify({ version: 1, include: apiRoutes, exclude: [] }),
+    JSON.stringify({ version: 1, include: [...apiRoutes, ...catalogRoutes], exclude: [] }),
   );
 }
 await bundleWorker({
   stdin: {
     contents: `import {handleAi} from './server/ai/handler.mjs';
 import {handleShare} from './server/share/handler.mjs';
+import {handleCatalogPage} from './server/catalog/pages.mjs';
 const retired = ${retiredWorker};
-export default {fetch(request, env, context) { const path = new URL(request.url).pathname; return path.startsWith('/api/ai/') ? handleAi(request, env, context) : path.startsWith('/api/share/') || path.startsWith('/share/') ? handleShare(request, env, context) : retired.fetch(request, env); }};`,
+const catalogOptions = ${JSON.stringify({ pageHeaders: responseHeaders, editorHeaders, withdrawnIds, revision: releaseRevision() })};
+export default {fetch(request, env, context) { const path = new URL(request.url).pathname; return path.startsWith('/api/ai/') ? handleAi(request, env, context) : path.startsWith('/api/share/') || path.startsWith('/share/') ? handleShare(request, env, context) : path.startsWith('/art/') || path.startsWith('/edit/') ? handleCatalogPage(request, env, retired, catalogOptions) : retired.fetch(request, env); }};`,
     resolveDir: root,
     sourcefile: 'worker-entry.js',
   },
