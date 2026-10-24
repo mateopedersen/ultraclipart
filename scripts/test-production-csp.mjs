@@ -1,5 +1,6 @@
 import { chromium, webkit, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
+import { chooseVectorStarter } from '../tests/helpers/creator.mjs';
 const name = process.env.UC_BROWSER || 'chromium',
   upstream = process.env.UC_BASE_URL || 'http://127.0.0.1:4324',
   productionOrigin = process.env.UC_PRODUCTION_ORIGIN === '1',
@@ -66,7 +67,7 @@ try {
   expect(csp).toContain("'sha256-");
   expect(csp.split('script-src')[1].split(';')[0]).not.toContain("'unsafe-inline'");
   passed.push('actual response has hashed scripts and specific WASM CSP');
-  await page.locator('[data-creator-template=botanical-sprig]').click();
+  await chooseVectorStarter(page, 'botanical-sprig');
   await expect(page.locator('[data-status]')).toContainText('editable starter layers loaded');
   await page.locator('[data-panel=layers]').click();
   await page.locator('[data-select=layer-1]').click();

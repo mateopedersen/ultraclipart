@@ -26,7 +26,14 @@ try {
   await page.goto(base + '/create/');
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
   await page.screenshot({ path: path.join(out, 'real-artwork-desktop.png') });
-  await expect(page.locator('[data-artwork-count]')).toContainText('23 of 23');
+  const studioCatalog = JSON.parse(
+    await fs.readFile(path.resolve('dist/studio-catalog.json'), 'utf8'),
+  );
+  const realisticCount = studioCatalog.filter((item) => item.id.includes('realistic')).length;
+  expect(realisticCount).toBeGreaterThan(0);
+  await expect(page.locator('[data-artwork-count]')).toHaveText(
+    `${Math.min(24, realisticCount)} of ${realisticCount.toLocaleString()} artworks`,
+  );
   await page.locator('[data-artwork-search]').fill('strawberry');
   await expect(page.locator('[data-artwork]')).toHaveCount(1);
   await page.locator('[data-artwork]').click();

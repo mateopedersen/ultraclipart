@@ -4,6 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { stripTypeScriptTypes } from 'node:module';
 import { PDFDocument } from 'pdf-lib';
+import sharp from 'sharp';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353',
   engine = process.env.UC_BROWSER || 'chromium';
 const out = path.resolve(process.env.EVIDENCE_DIR || 'reports/creative-studio', engine);
@@ -45,6 +46,7 @@ const download = async (format, name) => {
   }
   exports.push({ file: name, bytes: bytes.length });
   await action('close-export').click();
+  return bytes;
 };
 try {
   await page.goto(`${base}/create/`);
@@ -82,14 +84,25 @@ try {
   );
   await panel('layers');
   await page.locator('[data-select]').first().click();
-  const beforeParts = await page.locator('[data-artwork-canvas]').screenshot();
+  // Compare actual full-resolution export pixels. A scaled editor screenshot also
+  // captures selection controls and browser subpixel compositing after DOM splits.
+  const beforeParts = await download('webp', 'parts-before.webp');
   await action('separate-parts').click();
   expect((await state()).layers.length).toBeGreaterThan(2);
-  const afterParts = await page.locator('[data-artwork-canvas]').screenshot();
-  expect(afterParts.equals(beforeParts)).toBe(true);
+  const afterParts = await download('webp', 'parts-after.webp');
+  const beforePixels = await sharp(beforeParts)
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  const afterPixels = await sharp(afterParts)
+    .ensureAlpha()
+    .raw()
+    .toBuffer({ resolveWithObject: true });
+  expect(afterPixels.info).toEqual(beforePixels.info);
+  expect(afterPixels.data.equals(beforePixels.data)).toBe(true);
   await action('undo').click();
   expect((await state()).layers).toHaveLength(2);
-  checks.push('separate parts preserves exact canvas pixels and is reversible');
+  checks.push('separate parts preserves exact original-resolution export pixels and is reversible');
   await panel('text');
   await page.locator('[data-text-preset=editorial]').click();
   await page.locator('[data-text]').fill('Creative\nStudio');

@@ -1,0 +1,111 @@
+---
+import RelatedCard from './RelatedCard.astro';
+import { relatedIndex } from '../lib/related/service';
+import '../styles/related.css';
+interface Props {
+  sourceId: string;
+}
+const snapshot = relatedIndex.snapshot(Astro.props.sourceId);
+const alternatives = snapshot.alternatives.slice(0, 8),
+  companions = snapshot.companions.slice(0, 4);
+const hasCards = alternatives.length + companions.length > 0;
+const mono = snapshot.alternatives.some((card) => card.monochrome);
+const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companions';
+---
+
+<section class="related-discovery" aria-labelledby="related-heading" data-related-root>
+  <div class="related-heading-row">
+    <div>
+      <p class="related-eyebrow">Keep creating</p>
+      <h2 id="related-heading">More like this</h2>
+      <p class="related-intro">
+        {hasCards
+          ? 'Explore another take on the subject, or find a design that pairs with it.'
+          : 'Explore the collection for more artwork and ideas.'}
+      </p>
+    </div>
+    <a class="related-collection" href={snapshot.category}>
+      {snapshot.categoryLabel} <span aria-hidden="true">→</span>
+    </a>
+  </div>
+  {hasCards && (
+    <>
+      <div
+        class="related-filters"
+        role="group"
+        aria-label="Filter related artwork"
+        data-related-controls
+        hidden
+      >
+        <button type="button" data-related-mode="best" aria-pressed="true">
+          Best matches
+        </button>
+        {alternatives.length > 0 && (
+          <button type="button" data-related-mode="subject" aria-pressed="false">
+            More {snapshot.plural ?? 'of this subject'}
+          </button>
+        )}
+        {companions.length > 0 && (
+          <button type="button" data-related-mode="companions" aria-pressed="false">
+            {companionLabel}
+          </button>
+        )}
+        {mono && (
+          <button type="button" data-related-mode="monochrome" aria-pressed="false">
+            Black &amp; white
+          </button>
+        )}
+      </div>
+      <div data-related-results>
+        <div class="related-group" data-related-alternatives hidden={!alternatives.length}>
+          <h3>More {snapshot.plural ?? 'of the same subject'}</h3>
+          <div class="related-grid">
+            {alternatives.map((card) => (
+              <RelatedCard card={card} />
+            ))}
+          </div>
+        </div>
+        <div
+          class="related-group related-companions"
+          data-related-companions
+          data-count={companions.length}
+          hidden={!companions.length}
+        >
+          <div class="related-group-heading">
+            <h3>Pair with matching fruit</h3>
+            <p>A different subject, with a compatible technique and composition.</p>
+          </div>
+          <div class="related-grid">
+            {companions.map((card) => (
+              <RelatedCard card={card} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="related-footer">
+        <button type="button" class="related-more" data-related-more hidden>
+          Show more relevant clipart <span aria-hidden="true">＋</span>
+        </button>
+        <p class="related-status" role="status" aria-live="polite" data-related-status></p>
+        <a href={snapshot.category} data-related-end hidden>
+          Continue exploring the collection <span aria-hidden="true">→</span>
+        </a>
+        <a href={`/art/${snapshot.sourceId}/`} data-related-refresh hidden>
+          Refresh artwork recommendations <span aria-hidden="true">↻</span>
+        </a>
+      </div>
+      <p class="related-license">
+        Downloads follow the same <a href="/license/">personal and educational use license</a>.
+      </p>
+      <script
+        type="application/json"
+        data-related-snapshot
+        set:html={JSON.stringify(snapshot).replace(/</g, '\\u003c')}
+      />
+    </>
+  )}
+</section>
+<script>
+  import { initRelatedArtwork } from '../scripts/related-artwork';
+  initRelatedArtwork();
+</script>

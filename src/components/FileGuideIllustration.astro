@@ -1,0 +1,282 @@
+---
+interface Props {
+  kind: 'image' | 'print' | 'edit' | 'license';
+  thumb: string;
+}
+const { kind, thumb } = Astro.props;
+const id = `file-guide-${kind}`;
+---
+
+<svg viewBox="0 0 200 136" fill="none" aria-hidden="true" class="file-guide-illustration">
+  <defs>
+    <linearGradient
+      id={`${id}-paper`}
+      x1="50"
+      y1="15"
+      x2="145"
+      y2="115"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" />
+      <stop offset=".55" stop-color="#fcfdff" />
+      <stop offset="1" stop-color="#c6d4e5" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-metal`}
+      x1="30"
+      y1="35"
+      x2="150"
+      y2="120"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#f4f7fb" />
+      <stop offset=".25" stop-color="#cfdaea" />
+      <stop offset=".5" stop-color="#edf3fa" />
+      <stop offset=".75" stop-color="#9bafc8" />
+      <stop offset="1" stop-color="#536e91" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-blue`}
+      x1="45"
+      y1="20"
+      x2="155"
+      y2="115"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#70baf4" />
+      <stop offset=".4" stop-color="#357ec4" />
+      <stop offset="1" stop-color="#153e76" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-glass`}
+      x1="60"
+      y1="18"
+      x2="135"
+      y2="98"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#f6fbff" />
+      <stop offset="1" stop-color="#d5e5f5" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-gold`}
+      x1="122"
+      y1="76"
+      x2="163"
+      y2="120"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff2b0" />
+      <stop offset=".3" stop-color="#e6ba58" />
+      <stop offset=".65" stop-color="#bb842d" />
+      <stop offset="1" stop-color="#f4d47c" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-dark`}
+      x1="40"
+      y1="55"
+      x2="148"
+      y2="96"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#526a88" />
+      <stop offset="1" stop-color="#182e4c" />
+    </linearGradient>
+    <pattern id={`${id}-check`} width="12" height="12" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#f7fbff" />
+      <path d="M0 0h6v6H0zM6 6h6v6H6z" fill="#dce7f2" />
+    </pattern>
+    <filter id={`${id}-shadow`} x="0" y="0" width="200" height="136" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="5" stdDeviation="3" flood-color="#163359" flood-opacity=".2" />
+    </filter>
+  </defs>
+  <ellipse cx="103" cy="124" rx="68" ry="8" fill="#1a3553" opacity=".08" />
+  <ellipse cx="103" cy="124" rx="45" ry="3" fill="#1a3553" opacity=".12" />
+  {kind === 'image' && (
+    <g filter={`url(#${id}-shadow)`}>
+      <path d="m79 97-3 18-16 7h81l-17-7-3-18" fill={`url(#${id}-metal)`} stroke="#91a5be" />
+      <path d="M78 116h47" stroke="#fff" stroke-opacity=".8" />
+      <rect x="25" y="15" width="151" height="90" rx="10" fill="#344e70" />
+      <rect
+        x="24"
+        y="11"
+        width="151"
+        height="90"
+        rx="10"
+        fill={`url(#${id}-metal)`}
+        stroke="#a0b7d2"
+      />
+      <rect x="29" y="16" width="141" height="73" rx="6" fill="#1e3b61" />
+      <rect x="33" y="20" width="133" height="65" rx="3" fill={`url(#${id}-check)`} />
+      <image
+        href={thumb}
+        x="56"
+        y="20"
+        width="87"
+        height="64"
+        preserveAspectRatio="xMidYMid meet"
+      />
+      <path d="M35 21h100L35 67Z" fill="white" opacity=".15" />
+      <circle cx="100" cy="95" r="2.5" fill="#8b9fb7" />
+      <rect x="135" y="79" width="49" height="29" rx="7" fill="#183e74" />
+      <rect
+        x="135"
+        y="76"
+        width="49"
+        height="29"
+        rx="7"
+        fill={`url(#${id}-blue)`}
+        stroke="#6b9dd0"
+      />
+      <path d="M142 80h34" stroke="#a7d4f8" stroke-opacity=".6" />
+      <text
+        x="159.5"
+        y="95"
+        fill="white"
+        font-family="Arial,sans-serif"
+        font-weight="700"
+        font-size="12"
+        text-anchor="middle"
+      >
+        WebP
+      </text>
+    </g>
+  )}
+  {kind === 'print' && (
+    <g filter={`url(#${id}-shadow)`}>
+      <path
+        d="m29 59 17-20h107l18 20v43a8 8 0 0 1-8 8H37a8 8 0 0 1-8-8Z"
+        fill={`url(#${id}-metal)`}
+        stroke="#91a7c0"
+      />
+      <rect
+        x="60"
+        y="9"
+        width="81"
+        height="53"
+        rx="3"
+        fill={`url(#${id}-paper)`}
+        stroke="#9eafc6"
+      />
+      <image
+        href={thumb}
+        x="80"
+        y="13"
+        width="41"
+        height="34"
+        preserveAspectRatio="xMidYMid meet"
+      />
+      <path d="M68 51h63" stroke="#9eafc6" stroke-width="2" />
+      <path d="m31 59 15-12h108l15 12" fill="#f5f8fc" />
+      <rect
+        x="29"
+        y="59"
+        width="142"
+        height="36"
+        rx="8"
+        fill={`url(#${id}-metal)`}
+        stroke="#a0b4ce"
+      />
+      <path d="M34 64h131" stroke="white" stroke-opacity=".8" />
+      <rect x="50" y="80" width="102" height="20" rx="4" fill={`url(#${id}-dark)`} />
+      <rect x="148" y="67" width="12" height="5" rx="2" fill="#2e557d" />
+      <circle cx="152" cy="69.5" r="1.5" fill="#7fe4b4" />
+      <path d="M62 88h77v27l-7 8H55l7-8Z" fill={`url(#${id}-paper)`} stroke="#9eafc6" />
+      <path d="M70 98h58m-58 7h42" stroke="#a5b6ca" stroke-width="3" stroke-linecap="round" />
+      <rect x="19" y="88" width="46" height="28" rx="7" fill="#862b45" />
+      <rect x="19" y="85" width="46" height="28" rx="7" fill="#bd4c69" stroke="#e3a0b2" />
+      <text
+        x="42"
+        y="104"
+        fill="white"
+        font-family="Arial,sans-serif"
+        font-weight="700"
+        font-size="12"
+        text-anchor="middle"
+      >
+        PDF
+      </text>
+    </g>
+  )}
+  {kind === 'edit' && (
+    <g filter={`url(#${id}-shadow)`}>
+      <path
+        d="m35 18 123 7a10 10 0 0 1 9 10l-6 74a9 9 0 0 1-10 8l-123-7a10 10 0 0 1-9-10l6-73a10 10 0 0 1 10-9Z"
+        fill="#253e60"
+      />
+      <path
+        d="m34 13 123 7a10 10 0 0 1 9 10l-6 74a9 9 0 0 1-10 8l-123-7a10 10 0 0 1-9-10l6-73a10 10 0 0 1 10-9Z"
+        fill={`url(#${id}-metal)`}
+        stroke="#9cafc5"
+      />
+      <path d="m34 21 123 7-6 74-123-7Z" fill={`url(#${id}-glass)`} />
+      <path d="m34 21 123 7-1 11-123-7Z" fill="#e7eef7" />
+      <circle cx="41" cy="27" r="2" fill="#c87584" />
+      <circle cx="48" cy="27.4" r="2" fill="#dfb36e" />
+      <circle cx="55" cy="27.8" r="2" fill="#63a794" />
+      <path d="m35 38 13 1-4 50-13-1Z" fill="#a6c9e9" />
+      <path d="m37 47 6 .4m-7 11 6 .4m-7 11 6 .4m-7 11 6 .4" stroke="#376699" stroke-width="2" />
+      <image
+        href={thumb}
+        x="61"
+        y="38"
+        width="76"
+        height="56"
+        preserveAspectRatio="xMidYMid meet"
+      />
+      <rect
+        x="59"
+        y="39"
+        width="79"
+        height="54"
+        rx="1"
+        stroke="#397db8"
+        stroke-width="1.3"
+        stroke-dasharray="4 3"
+      />
+      {[
+        ['56', '36'],
+        ['135', '36'],
+        ['56', '90'],
+        ['135', '90'],
+      ].map(([x, y]) => (
+        <rect x={x} y={y} width="6" height="6" rx="1" fill="white" stroke="#28649b" />
+      ))}
+      <path d="m176 31 7 3-34 78-9 9 1-13Z" fill={`url(#${id}-dark)`} stroke="#45607f" />
+      <path d="m176 31 7 3 2-5-7-3Z" fill="#c9d5e3" />
+      <path d="m140 121 5-3-4-2Z" fill="#567b9f" />
+      <path d="m177 37-30 69" stroke="#9eafc4" stroke-width="1.5" />
+    </g>
+  )}
+  {kind === 'license' && (
+    <g filter={`url(#${id}-shadow)`}>
+      <path d="m48 14 81 4 23 25-4 73-111-6Z" fill="#93a9c3" />
+      <path d="m45 10 81 4 24 25-4 73-111-6Z" fill={`url(#${id}-paper)`} stroke="#a2b6ce" />
+      <path d="m126 14-1 24 25 1" fill="#cbd9ea" stroke="#9fb5ce" />
+      <path d="m127 16 21 23-20-3Z" fill="#e7eef8" />
+      <path
+        d="m51 31 52 3m-53 10 71 4m-72 10 65 4m-66 10 44 2"
+        stroke="#8ca4c1"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
+      <path d="m49 89 21 1m-21 5 32 2" stroke="#a5b8cf" stroke-width="2" stroke-linecap="round" />
+      <path d="m128 98-4 31 13-8 11 10 1-34" fill="#3365a0" stroke="#204878" />
+      <path d="m126 98-4 26 9-5 6 4 3-27" fill="#5e91c5" />
+      <path
+        d="m140 67 6 4 7-1 4 6 7 3v8l4 5-4 6-1 7-7 2-5 6-7-2-7 3-5-6-7-2v-8l-4-5 4-6 1-7 7-3Z"
+        fill={`url(#${id}-gold)`}
+        stroke="#c59439"
+      />
+      <circle cx="143" cy="91" r="15" fill="#f8e0a0" stroke="#af7d2e" />
+      <circle cx="143" cy="91" r="12" stroke="#fff2c8" />
+      <path
+        d="m136 91 5 5 9-11"
+        stroke="#795421"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+  )}
+</svg>
