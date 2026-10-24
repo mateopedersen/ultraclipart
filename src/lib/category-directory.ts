@@ -1,4 +1,11 @@
-import { art, availableTopics, availableClusters, slugify } from './catalog';
+import {
+  art,
+  availableTopics,
+  availableClusters,
+  slugify,
+  clustersForTopic,
+  topicInCluster,
+} from './catalog';
 
 const collectionStyle: Record<
   string,
@@ -46,6 +53,12 @@ const collectionStyle: Record<
     color: 'sand',
     subjects: ['thanksgiving', 'squirrel'],
   },
+  'Food & drink': {
+    title: 'Fruit & fresh ideas',
+    description: 'Orchard favorites, tropical color and cheerful fruit characters.',
+    color: 'peach',
+    subjects: ['apple', 'strawberry', 'pineapple'],
+  },
 };
 const preferred: Record<string, string> = {
   fox: 'baby-fennec-fox-watercolor-clipart',
@@ -74,6 +87,7 @@ export const categorySubjects = availableTopics
       count: items.length,
       sample,
       group: slugify(topic.cluster),
+      groups: clustersForTopic(topic).map(slugify),
       color: collectionStyle[topic.cluster]?.color ?? 'sage',
     };
   })
@@ -82,7 +96,7 @@ export const categorySubjects = availableTopics
 const order = Object.keys(collectionStyle);
 export const categoryCollections = availableClusters
   .map((cluster) => {
-    const subjects = categorySubjects.filter((topic) => topic.cluster === cluster);
+    const subjects = categorySubjects.filter((topic) => topicInCluster(topic, cluster));
     const design = collectionStyle[cluster] ?? {
       title: cluster,
       description: 'Find a new starting point for your next project.',

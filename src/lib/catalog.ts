@@ -2,6 +2,8 @@ import source from '../../data/topics.json';
 import illustrations from '../../data/art.json';
 import extraTopics from '../../data/extra-topics.json';
 import { validateEditorSource } from './artwork-source';
+import { clustersForTopic, topicInCluster } from './topic-clusters';
+export { clustersForTopic, topicInCluster } from './topic-clusters';
 export const topics = [...source.topics, ...extraTopics];
 type AssetKind = 'svg' | 'webp' | 'pdf' | 'thumb';
 type PublishedAssets = Record<string, Record<AssetKind, string>>;
@@ -21,7 +23,7 @@ export const art = illustrations.map((item) => ({
   ),
 }));
 export const newestArt = [...art].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
-export const clusters = [...new Set(topics.map((t) => t.cluster))];
+export const clusters = [...new Set(topics.flatMap(clustersForTopic))];
 export const slugify = (s: string) =>
   s
     .toLowerCase()
@@ -34,5 +36,5 @@ export const availableTopics = topics.filter((topic) =>
   art.some((item) => item.topic === topic.slug),
 );
 export const availableClusters = clusters.filter((cluster) =>
-  availableTopics.some((topic) => topic.cluster === cluster),
+  availableTopics.some((topic) => topicInCluster(topic, cluster)),
 );

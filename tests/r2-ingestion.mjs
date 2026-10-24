@@ -76,6 +76,12 @@ closeSync(lock);unlinkSync(path+'.lock');console.log(JSON.stringify(result));`;
       'Unknown jurisdiction must block before every PUT',
     );
     delete env.FAKE_DENY_JURIS;
+    assert.throws(() => run('--apply', '--max-account-bytes', '1'), /account storage budget/);
+    assert.equal(
+      existsSync(env.FAKE_STATE),
+      false,
+      'The free-tier budget must block before any PUT',
+    );
     assert.match(run('--apply', '--workers', '4'), /All objects verified/);
     assert.equal(JSON.parse(readFileSync(env.FAKE_STATE)).puts, 16);
     const journal = JSON.parse(readFileSync(join(dir, 'r2-ingest-journal.json')));

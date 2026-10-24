@@ -42,6 +42,15 @@ const aliases: Record<string, string> = {
   presents: 'gift',
   present: 'gift',
   gifts: 'gift',
+  cherries: 'cherry',
+  blackberries: 'blackberry',
+  cranberries: 'cranberry',
+  strawberries: 'strawberry',
+  raspberries: 'raspberry',
+  blueberries: 'blueberry',
+  peaches: 'peach',
+  mangoes: 'mango',
+  figs: 'fig',
   xmas: 'christmas',
 };
 const stopWords = new Set([

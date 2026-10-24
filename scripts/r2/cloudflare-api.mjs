@@ -35,10 +35,14 @@ export function cloudflareTransport({
   writeBucket,
   fetcher = fetch,
   now = Date.now,
+  requestIntervalMs = 0,
 }) {
   if (!/^[a-f0-9]{32}$/.test(accountId) || !token)
     throw new Error('Invalid Cloudflare authentication configuration');
   const base = `https://api.cloudflare.com/client/v4/accounts/${accountId}`;
+  if (!Number.isSafeInteger(requestIntervalMs) || requestIntervalMs < 0)
+    throw new Error('Invalid REST request interval');
+  let nextRequestAt = 0;
   // A SHA is reusable only for an exact version seen in a fresh object list.
   // Never trust a filename or user-supplied SHA metadata as content verification.
   const listedVersions = new Map(),
@@ -52,7 +56,12 @@ export function cloudflareTransport({
   };
   async function request(path, jurisdiction, options = {}) {
     const readOnly = !options.method || ['GET', 'HEAD'].includes(options.method);
-    for (let attempt = 0; attempt < 3; attempt++) {
+    for (let attempt = 0; attempt < 6; attempt++) {
+      // Reserve a slot synchronously before yielding so concurrent format transfers
+      // share one conservative REST pace, including retry attempts and inventory.
+      const slot = Math.max(Date.now(), nextRequestAt);
+      nextRequestAt = slot + requestIntervalMs;
+      if (slot > Date.now()) await delay(slot - Date.now());
       let response;
       try {
         response = await fetcher(base + path, {
@@ -73,12 +82,21 @@ export function cloudflareTransport({
         throw new Error('Cloudflare R2 request failed; credential-bearing output suppressed');
       }
       if (
-        readOnly &&
-        ([408, 429].includes(response.status) || response.status >= 500) &&
-        attempt < 2
+        (response.status === 429 ||
+          (readOnly && (response.status === 408 || response.status >= 500))) &&
+        attempt < 5
       ) {
         await response.body?.cancel();
-        await delay(250 * 4 ** attempt);
+        const retryAfter = response.headers.get('retry-after');
+        const seconds = Number(retryAfter);
+        const requestedDelay = retryAfter
+          ? Number.isFinite(seconds)
+            ? seconds * 1000
+            : Date.parse(retryAfter) - Date.now()
+          : 0;
+        // A 429 explicitly rejects the operation: replay the same conditional request.
+        // Other write failures remain non-retriable because their outcome is unknown.
+        await delay(Math.min(60000, Math.max(1000 * 2 ** attempt, requestedDelay || 0)));
         continue;
       }
       if (!response.ok)

@@ -8,6 +8,13 @@ import {
 import { sourceTypeOf, representationKinds } from '../asset-representations.mjs';
 export const HARD_CAP = 10_000_000_000_000;
 export const PDF_CAP = 1_000_000;
+export function enforceStorageBudget(plan, byteBudget = HARD_CAP) {
+  if (!Number.isSafeInteger(byteBudget) || byteBudget <= 0 || byteBudget > HARD_CAP)
+    throw new Error('Invalid account storage budget');
+  if (!Number.isSafeInteger(plan.projectedBytes) || plan.projectedBytes > byteBudget)
+    throw new Error(`Batch would exceed the configured ${byteBudget}-byte account storage budget`);
+  return plan;
+}
 const representations = ['pdf', 'svg', 'thumbnail', 'webp'];
 
 function natural(value, field) {
