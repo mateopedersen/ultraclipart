@@ -10,10 +10,10 @@ const engine = process.env.UC_BROWSER ?? 'chromium';
 const output = resolve(process.env.EVIDENCE_DIR ?? 'reports/animal-gallery', engine);
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const catalog = read('../../data/art.json');
+const collectionId = process.env.SOURCE_COLLECTION || 'owner-animal-2026-10-23';
 const items = catalog.filter(
   (art) =>
-    art.sourceCollection === 'owner-animal-2026-10-23' ||
-    art.replacesArtwork?.sourceCollection === 'owner-animal-2026-10-23',
+    art.sourceCollection === collectionId || art.replacesArtwork?.sourceCollection === collectionId,
 );
 const topics = [...new Set(items.map((art) => art.topic))].sort();
 const manifest = read('../../data/publication.json');
@@ -21,8 +21,8 @@ const files = new Map(manifest.files.map((file) => [`${file.assetId}:${file.kind
 const url = (art, kind) =>
   base.startsWith('https:') ? files.get(`${art.id}:${kind}`).url : new URL(art[kind], base).href;
 mkdirSync(output, { recursive: true });
-assert.equal(items.length, 2500);
-assert.equal(topics.length, 50);
+assert.equal(items.length, Number(process.env.EXPECTED_ARTWORKS || 2500));
+assert.equal(topics.length, Number(process.env.EXPECTED_TOPICS || 50));
 const browser = await { chromium, firefox, webkit }[engine].launch({
   headless: true,
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
@@ -139,7 +139,12 @@ try {
       }));
       report.states.push({ topic, width, illustrations: expected.length, overflow, violations });
       assert.deepEqual(violations, [], `${topic}: ${width}px accessibility`);
-      if (['cat', 'penguin', 'octopus', 'zebra'].includes(topic) && [390, 1440].includes(width))
+      if (
+        ['cat', 'penguin', 'octopus', 'zebra', 'apple', 'kiwi-fruit', 'tangerine'].includes(
+          topic,
+        ) &&
+        [390, 1440].includes(width)
+      )
         await page.screenshot({ path: resolve(output, `${topic}-${width}.png`), fullPage: false });
     }
     const art = expected[0];

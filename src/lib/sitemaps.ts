@@ -47,7 +47,7 @@ export function pageSitemap(art: Artwork[], topics: Topic[]): string {
   urls.push(...approvedArt(art).map(artUrl));
   for (const topic of topics) {
     const items = art.filter((item) => item.topic === topic.slug);
-    if (items.length === 50 && items.every((item) => item.published && item.indexable))
+    if (items.length >= 50 && items.every((item) => item.published && item.indexable))
       urls.push(absolute(`clipart/${encodeURIComponent(topic.slug)}/`));
   }
   return `${XML}<urlset xmlns="${NS}">${urls.map((url) => `<url><loc>${xmlEscape(url)}</loc></url>`).join('')}</urlset>`;

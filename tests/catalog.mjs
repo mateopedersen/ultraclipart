@@ -1,9 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, statSync, readdirSync, existsSync } from 'node:fs';
-import { resolve, join } from 'node:path';
+import { resolve, join, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { representationKinds } from '../scripts/asset-representations.mjs';
+import { readPublication } from '../scripts/publication-policy.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const topics = JSON.parse(readFileSync(join(root, 'data/topics.json'))).topics;
@@ -81,7 +82,11 @@ test('art identities, topic assignment, provenance and review states remain hone
     }
   }
   for (const topic of topics)
-    assert.ok(arts.filter((a) => a.topic === topic.slug && a.published).length <= 50);
+    assert.ok(
+      arts.filter(
+        (a) => a.topic === topic.slug && a.published && a.productionMethod !== 'owner-supplied',
+      ).length <= 50,
+    );
 });
 
 test('every artwork has its declared real, correctly typed, paired and hashed representations', () => {
@@ -130,7 +135,18 @@ test(
         entry.isDirectory() ? files(join(dir, entry.name)) : [join(dir, entry.name)],
       );
     }
-    const output = files(join(root, 'dist'));
+    const dist = join(root, 'dist');
+    // Development bundles local masters for offline editing. Production removes
+    // catalog staging and the byte-verified R2 representations before upload.
+    // CF_PAGES checks the actual output with no exclusions.
+    const localMedia =
+      process.env.CF_PAGES === '1' ? new Set() : new Set(readPublication(root).localPaths);
+    const output = files(dist).filter((file) => {
+      const path = '/' + relative(dist, file);
+      return (
+        process.env.CF_PAGES === '1' || (!path.startsWith('/catalog/') && !localMedia.has(path))
+      );
+    });
     assert.ok(output.length <= 20_000, `too many static assets: ${output.length}`);
     for (const file of output)
       assert.ok(statSync(file).size <= 25 * 1024 * 1024, `oversized static asset: ${file}`);

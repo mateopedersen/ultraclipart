@@ -30,15 +30,24 @@ const compilePattern = (pattern) =>
       '$',
   );
 const matches = (pattern, path) => compilePattern(pattern).test(path);
-function subjectRoutes(root, missing, current) {
+function subjectRoutes(root, missing, current, compact = false) {
+  const cover = (wanted, protectedNames) =>
+    compact
+      ? compactCover(
+          wanted,
+          variants(protectedNames).map((name) => root + name),
+          variants(protectedNames),
+          root,
+        )
+      : prefixCover(variants(wanted), variants(protectedNames)).map((name) => root + name);
   if (!missing.length) return { include: [], exclude: [] };
   const positive = {
-    include: prefixCover(variants(missing), variants(current)).map((path) => root + path),
+    include: cover(missing, current),
     exclude: [],
   };
   const negative = {
     include: [root + '*'],
-    exclude: prefixCover(variants(current), variants(missing)).map((path) => root + path),
+    exclude: cover(current, missing),
   };
   return positive.include.length <= negative.include.length + negative.exclude.length
     ? positive
@@ -70,22 +79,26 @@ function commonGlob(a, b) {
   return pattern + '*';
 }
 
-function artworkRoutes(ids, protectedPaths, protectedSuffixes) {
-  const baseline = prefixCover(variants(ids), protectedSuffixes).map((pattern) => '/*/' + pattern);
+function compactCover(ids, protectedPaths, protectedSuffixes, root = '/*/') {
+  const baseline = prefixCover(variants(ids), protectedSuffixes).map((pattern) => root + pattern);
   const candidates = new Set(baseline),
     names = [...ids].sort();
   let pairs = 0;
   for (let i = 0; i < names.length; i++)
     for (let j = i + 1; j < names.length && pairs++ < 2048; j++)
       if (names[i].length <= 128 && names[j].length <= 128)
-        candidates.add('/*/' + commonGlob(names[i], names[j]));
+        candidates.add(root + commonGlob(names[i], names[j]));
   const safe = [...candidates]
     .filter((pattern) => pattern.length <= 100)
     .map((pattern) => ({ pattern, matcher: compilePattern(pattern) }))
     .filter(({ matcher }) => !protectedPaths.some((path) => matcher.test(path)))
     .map((candidate) => ({
       ...candidate,
-      ids: names.filter((id) => candidate.matcher.test('/art/' + id)),
+      ids: names.filter((id) =>
+        ['', '/'].every((suffix) =>
+          candidate.matcher.test((root === '/*/' ? '/art/' : root) + id + suffix),
+        ),
+      ),
     }));
   const remaining = new Set(names),
     chosen = [];
@@ -159,7 +172,7 @@ export function retirementPolicy(topics, artwork, withdrawn = {}, staticPaths = 
     ),
   ];
   const protectedSuffixes = suffixes(protectedPaths);
-  const artifactRoutes = artworkRoutes(withdrawnIds, protectedPaths, protectedSuffixes);
+  const artifactRoutes = compactCover(withdrawnIds, protectedPaths, protectedSuffixes);
   const assetRoutes = [
     ...new Set(withdrawnAssets.map((path) => path.slice(0, path.lastIndexOf('/') + 1) + '*')),
   ];
@@ -180,6 +193,35 @@ export function retirementPolicy(topics, artwork, withdrawn = {}, staticPaths = 
     include: [...topicRoutes.include, ...clusterRoutes.include, ...artifactRoutes, ...assetRoutes],
     exclude: [...topicRoutes.exclude, ...clusterRoutes.exclude],
   };
+  // Prefer cheap prefix covers. As subjects fill in, compact the subject
+  // partitions too; every candidate is checked against the opposite partition
+  // and the final policy is checked against all real static resources below.
+  if (routes.include.length + routes.exclude.length > 100) {
+    const compactTopics = subjectRoutes(
+      '/clipart/',
+      topics.filter((topic) => !available.has(topic.slug)).map((topic) => topic.slug),
+      existing.map((topic) => topic.slug),
+      true,
+    );
+    const compactClusters = subjectRoutes(
+      '/collection/',
+      [...new Set(topics.map((topic) => topic.cluster))]
+        .filter((cluster) => !activeClusters.has(cluster))
+        .map(slug),
+      [...activeClusters].map(slug),
+      true,
+    );
+    routes = {
+      version: 1,
+      include: [
+        ...compactTopics.include,
+        ...compactClusters.include,
+        ...artifactRoutes,
+        ...assetRoutes,
+      ],
+      exclude: [...compactTopics.exclude, ...compactClusters.exclude],
+    };
+  }
   if (exact.length < routes.include.length + routes.exclude.length)
     routes = { version: 1, include: exact, exclude: [] };
   if (

@@ -194,7 +194,7 @@ try {
   ).find((item) => item.id === 'winter-arctic-fox-resting');
   for (const format of ['webp', 'pdf']) {
     const pending = page.waitForEvent('download');
-    await page.getByRole('link', { name: new RegExp(`Download ${format}`, 'i') }).click();
+    await page.locator(`.detail-actions a[download="${original.id}.${format}"]`).click();
     const download = await pending;
     const path = resolve(dir, `original-winter-fox.${format}`);
     await download.saveAs(path);

@@ -9,7 +9,9 @@ const approved = art.filter((a) => a.published);
 const originalTopics = new Set(topics.map((t) => t.slug));
 const originalArt = art.filter((a) => originalTopics.has(a.topic));
 const queue = {
-  version: 3,
+  version: 4,
+  targetBasis: 'GENERATED_ARTWORKS_IN_ORIGINAL_110_TOPICS',
+  productionPausedByOwner: prior.productionPausedByOwner ?? false,
   states: prior.states,
   targetArtworkCount: 5500,
   generatedArtworkCount: originalArt.filter((a) => a.productionMethod !== 'owner-supplied').length,
@@ -21,12 +23,14 @@ const queue = {
   reviewerType: 'AI_AGENT_NOT_HUMAN',
   humanApprovedArtworkCount: 0,
   availableArtworkCount: art.length,
-  remainingToDraw: 5500 - originalArt.length,
-  nextAction:
-    'Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.',
+  remainingToDraw: 5500 - originalArt.filter((a) => a.productionMethod !== 'owner-supplied').length,
+  nextAction: prior.productionPausedByOwner
+    ? 'New image generation is paused until the owner explicitly resumes it. Import and publish supplied packages after verification.'
+    : 'Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.',
   topics: topics.map((t) => {
     const items = art.filter((a) => a.topic === t.slug);
-    if (items.length > 50) throw new Error('Topic target exceeded');
+    const generated = items.filter((a) => a.productionMethod !== 'owner-supplied').length;
+    if (generated > 50) throw new Error('Topic target exceeded');
     const briefPath = `data/briefs/${t.slug}.json`;
     const brief = existsSync(join(root, briefPath)) ? read(briefPath) : null;
     const reviewed =
@@ -41,7 +45,7 @@ const queue = {
       supplied: items.filter((a) => a.productionMethod === 'owner-supplied').length,
       available: items.length,
       approved: items.filter((a) => a.published).length,
-      remainingToDraw: 50 - items.length,
+      remainingToDraw: 50 - generated,
       briefStatus: reviewed
         ? '50_COMPOSITIONS_REVIEWED'
         : brief

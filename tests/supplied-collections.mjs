@@ -70,6 +70,9 @@ test('owner-supplied heart coverage does not inflate generated artwork counts', 
     queue.generatedArtworkCount,
     art.filter((a) => topics.has(a.topic) && a.productionMethod !== 'owner-supplied').length,
   );
-  assert.equal(queue.remainingToDraw, 5500 - art.filter((a) => topics.has(a.topic)).length);
+  assert.equal(
+    queue.remainingToDraw,
+    5500 - art.filter((a) => topics.has(a.topic) && a.productionMethod !== 'owner-supplied').length,
+  );
   assert.equal(queue.topics.find((t) => t.topic === 'heart').supplied, 50);
 });

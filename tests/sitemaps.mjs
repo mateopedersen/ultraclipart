@@ -38,13 +38,18 @@ test('the pilot index excludes an empty image sitemap; approval adds a real chil
   assert.ok(imageSitemap([example]).includes(`<image:loc>${example.webp}</image:loc>`));
 });
 
-test('topics enter the sitemap only at 50 approved distinct catalog items', () => {
+test('topics enter the sitemap at 50 or more approved distinct catalog items', () => {
   const collection = Array.from({ length: 50 }, (_, index) => ({
     ...example,
     id: `pumpkin-${index + 1}`,
   }));
   const topics = [{ slug: 'pumpkin' }];
   assert.ok(pageSitemap(collection, topics).includes('/clipart/pumpkin/'));
+  assert.ok(
+    pageSitemap([...collection, { ...example, id: 'pumpkin-extra' }], topics).includes(
+      '/clipart/pumpkin/',
+    ),
+  );
   assert.ok(!pageSitemap(collection.slice(0, 49), topics).includes('/clipart/pumpkin/'));
   assert.ok(
     !pageSitemap(

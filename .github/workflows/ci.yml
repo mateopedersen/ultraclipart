@@ -89,12 +89,15 @@ jobs:
           done
           if [ '${{ matrix.engine }}' = chromium ]; then
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-2026-10-24 EXPECTED_ARTWORKS=550 EXPECTED_TOPICS=11 EVIDENCE_DIR=reports/fruit-gallery node tests/e2e/package-gallery.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
           fi
       - name: Validate production CDN mapping and headers
-        run: CF_PAGES=1 pnpm build
+        run: |
+          CF_PAGES=1 pnpm build
+          CF_PAGES=1 pnpm exec node --test tests/catalog.mjs tests/csp.mjs tests/publication.mjs
       - name: Keep browser evidence and preview log
         if: always()
         uses: actions/upload-artifact@v4
