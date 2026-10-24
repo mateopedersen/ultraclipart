@@ -4,13 +4,14 @@ from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 STAGE = ROOT / 'work/imports/fruit-expansion-29'
+SOURCE_DIR = pathlib.Path('/Users/melihozcan/Downloads')
 TOPICS = 'green-apple blackberry persimmon guava red-apple pineapple lychee nectarine dragon-fruit date pomegranate melon papaya blackcurrant plum passion-fruit cranberry apricot fig lemon cantaloupe cherry lime grapefruit mango grapes peach pear watermelon'.split()
 
 def main():
     STAGE.mkdir(parents=True, exist_ok=True)
     records, archives, mapping, ids = [], [], [], set()
     for topic in TOPICS:
-        source = pathlib.Path('/Users/melihozcan/Downloads') / f'{topic}-clipart-50-designs-100-files.zip'
+        source = SOURCE_DIR / f'{topic}-clipart-50-designs-100-files.zip'
         with zipfile.ZipFile(source) as package:
             members = package.infolist()
             assert len(members) == 100 and len(set(m.filename for m in members)) == 100

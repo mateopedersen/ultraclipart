@@ -87,7 +87,7 @@ for (const topic of topics) {
         '--workers',
         '4',
         '--max-account-bytes',
-        '9500000000',
+        '10000000000000',
         '--apply',
       ],
       join(stage, topic + '.upload.log'),

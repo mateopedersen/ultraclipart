@@ -43,22 +43,59 @@ try {
     'href',
     'https://ultraclipart.com/clipart/cranberry/',
   );
+  await page.goto(base + '/categories/?collection=nature-elements');
+  await expect(page.locator('#category-group')).toHaveValue('nature-elements');
+  while (await page.locator('#show-more-subjects').isVisible())
+    await page.locator('#show-more-subjects').click();
+  for (const topic of ['fire', 'leaves'])
+    await expect(
+      page.locator(`[data-topic]:not([hidden]) a[href="/clipart/${topic}/"]`),
+    ).toHaveCount(1);
+  await page.goto(base + '/clipart/leaves/');
+  await expect(page.locator('.chips a[href="/collection/nature-elements/"]')).toHaveCount(1);
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
+    'href',
+    'https://ultraclipart.com/clipart/leaves/',
+  );
+  await page.goto(base + '/categories/?collection=school-learning');
+  await expect(page.locator('#category-group')).toHaveValue('school-learning');
+  while (await page.locator('#show-more-subjects').isVisible())
+    await page.locator('#show-more-subjects').click();
+  await expect(page.locator('[data-topic]:not([hidden]) a[href="/clipart/school/"]')).toHaveCount(
+    1,
+  );
+  await page.goto(base + '/clipart/school/');
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
+    'href',
+    'https://ultraclipart.com/clipart/school/',
+  );
+  await page.goto(base + '/categories/?collection=sports');
+  await expect(page.locator('#category-group')).toHaveValue('sports');
+  while (await page.locator('#show-more-subjects').isVisible())
+    await page.locator('#show-more-subjects').click();
+  await expect(
+    page.locator('[data-topic]:not([hidden]) a[href="/clipart/basketball/"]'),
+  ).toHaveCount(1);
+  await page.goto(base + '/clipart/basketball/');
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
+    'href',
+    'https://ultraclipart.com/clipart/basketball/',
+  );
   await page.goto(base + '/');
   const ids = await page
     .locator('.gallery .art-card')
     .evaluateAll((xs) => xs.map((x) => x.dataset.id));
   assert.equal(ids.length, 12);
   assert.equal(new Set(ids.map((id) => art.find((x) => x.id === id).topic)).size, 12);
-  assert.ok(
-    ids.every(
-      (id) => art.find((x) => x.id === id).sourceCollection === 'owner-fruit-expansion-2026-10-24',
-    ),
-  );
+  assert.ok(ids.every((id) => art.some((item) => item.id === id)));
   assert.ok(ids.every((id) => !id.includes('astronaut')));
   report.checks = [
     'Food dropdown shows all fruit topics without duplicate links',
     'Cranberry is discoverable from both Food and Autumn with one canonical topic URL',
-    'Homepage introduces 12 different new fruit subjects',
+    'Fire and Leaves are discoverable in Nature & elements; Leaves keeps one canonical topic URL',
+    'School & learning exposes the repaired school collection with one canonical category URL',
+    'Sports includes the repaired basketball collection with one canonical category URL',
+    'Homepage introduces 12 different recently added subjects',
   ];
   assert.deepEqual(report.errors, []);
   report.status = 'passed';

@@ -15,6 +15,7 @@ import {
 } from 'node:fs';
 import { resolve, join, extname } from 'node:path';
 import { tmpdir } from 'node:os';
+import { setTimeout as delay } from 'node:timers/promises';
 import { buildPlan, validateBatch, enforceStorageBudget, HARD_CAP } from './plan.mjs';
 import { configuredToken, cloudflareTransport } from './cloudflare-api.mjs';
 import {
@@ -107,7 +108,7 @@ const rest =
         accountId: parseEndpoint(endpoint).accountId,
         token: configuredToken(),
         writeBucket: process.env.R2_WRITE_BUCKET,
-        requestIntervalMs: 400,
+        requestIntervalMs: 550,
       })
     : null;
 async function aws(command, fields = [], requestEndpoint = endpoint) {
@@ -161,14 +162,21 @@ async function measure() {
   // A cold resume may spend most of the freshness window hashing existing
   // objects. Keep that verified ETag cache, then enumerate again; never extend
   // the inventory's age or pretend the first slow snapshot is fresh.
-  for (let attempt = 0; attempt < 2; attempt++) {
+  for (let attempt = 0; attempt < 3; attempt++) {
     try {
       const inventory = await measureAccount(options);
       if (Date.now() - inventory.observedAt <= 45_000) return inventory;
-      if (attempt === 1) throw new Error('Fresh all-account inventory could not finish in time');
+      if (attempt === 2) throw new Error('Fresh all-account inventory could not finish in time');
     } catch (error) {
-      if (attempt === 1 || error.message !== 'Invalid disabled-jurisdiction capability proof')
+      if (
+        attempt === 2 ||
+        ![
+          'Invalid disabled-jurisdiction capability proof',
+          'An inaccessible enabled jurisdiction must block ingestion',
+        ].includes(error.message)
+      )
         throw error;
+      await delay(2500 * (attempt + 1));
     }
   }
 }

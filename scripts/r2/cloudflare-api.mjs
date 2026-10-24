@@ -56,7 +56,7 @@ export function cloudflareTransport({
   };
   async function request(path, jurisdiction, options = {}) {
     const readOnly = !options.method || ['GET', 'HEAD'].includes(options.method);
-    for (let attempt = 0; attempt < 6; attempt++) {
+    for (let attempt = 0; attempt < 8; attempt++) {
       // Reserve a slot synchronously before yielding so concurrent format transfers
       // share one conservative REST pace, including retry attempts and inventory.
       const slot = Math.max(Date.now(), nextRequestAt);
@@ -84,7 +84,7 @@ export function cloudflareTransport({
       if (
         (response.status === 429 ||
           (readOnly && (response.status === 408 || response.status >= 500))) &&
-        attempt < 5
+        attempt < 7
       ) {
         await response.body?.cancel();
         const retryAfter = response.headers.get('retry-after');
@@ -96,7 +96,7 @@ export function cloudflareTransport({
           : 0;
         // A 429 explicitly rejects the operation: replay the same conditional request.
         // Other write failures remain non-retriable because their outcome is unknown.
-        await delay(Math.min(60000, Math.max(1000 * 2 ** attempt, requestedDelay || 0)));
+        await delay(Math.min(120000, Math.max(1000 * 2 ** attempt, requestedDelay || 0)));
         continue;
       }
       if (!response.ok)

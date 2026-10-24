@@ -43,6 +43,11 @@ const aliases: Record<string, string> = {
   present: 'gift',
   gifts: 'gift',
   cherries: 'cherry',
+  starfruits: 'starfruit',
+  mulberries: 'mulberry',
+  kumquats: 'kumquat',
+  quinces: 'quince',
+  gooseberries: 'gooseberry',
   blackberries: 'blackberry',
   cranberries: 'cranberry',
   strawberries: 'strawberry',
@@ -79,6 +84,7 @@ export function normalizeQuery(query: string): string[] {
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/[’']/g, '')
+    .replace(/\bstar[\s-]+fruits?\b/g, 'starfruit')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
     .split(/\s+/)

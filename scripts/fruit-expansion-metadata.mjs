@@ -4,6 +4,8 @@ const titleCase = (s) =>
     .replace(/\b\w/g, (x) => x.toUpperCase())
     .replace(/\b3d\b/i, '3D');
 const techniques = [
+  ['rounded-3d-cartoon', '3D Character', 'a softly rounded three-dimensional cartoon style'],
+  ['three-dimensional-cartoon', '3D Character', 'a three-dimensional cartoon style'],
   ['painted-ceramic-cartoon', 'Ceramic Character', 'a painted ceramic appearance'],
   ['colored-pencil-cartoon', 'Colored Pencil Character', 'a colored-pencil texture'],
   ['watercolor-cartoon', 'Watercolor Character', 'a watercolor texture'],

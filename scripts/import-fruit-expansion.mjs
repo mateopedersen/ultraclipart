@@ -212,7 +212,7 @@ for (const { topic, folder } of mapping) {
   copy[topic] = expansionCopy(topic, items);
   if (!topics.some((x) => x.slug === topic)) {
     const row = {
-      id: Math.max(110, ...topics.map((x) => x.id)) + 1,
+      id: 300 + mapping.findIndex((entry) => entry.topic === topic),
       keyword:
         (topic === 'date'
           ? 'Date Fruit'
@@ -243,6 +243,8 @@ for (const { topic, folder } of mapping) {
   );
 }
 const all = [...originalArt, ...imported];
+if (new Set(topics.map((x) => x.id)).size !== topics.length)
+  throw Error('Category IDs collide with another release');
 if (imported.length !== 1450 || new Set(all.map((x) => x.id)).size !== all.length)
   throw Error('Expansion count/identity mismatch');
 save(join(stage, 'art.next.json'), all);

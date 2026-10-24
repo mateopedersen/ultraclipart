@@ -32,6 +32,7 @@ def main():
     cli.add_argument('--root',required=True)
     cli.add_argument('--workers',type=int,default=6)
     cli.add_argument('--topic')
+    cli.add_argument('--allow-one-bit-cmyk',action='store_true',help='Permit the owner School package monochrome CMYK image encoding')
     args=cli.parse_args()
     root=(ROOT/args.root).resolve()
     assert root.is_relative_to(ROOT/'work')
@@ -80,7 +81,15 @@ def main():
             for ref in page['/Resources'].get('/XObject',{}).values():
                 obj=ref.get_object()
                 if obj.get('/Subtype')!='/Image':continue
-                images.append(inspect_cmyk_image(obj,width,height,reader.trailer['/Root'].get('/OutputIntents')))
+                if args.allow_one_bit_cmyk and obj.get('/BitsPerComponent')==1:
+                    assert obj['/Width']==width and obj['/Height']==height
+                    assert obj['/ColorSpace']=='/DeviceCMYK' and obj['/Filter']=='/FlateDecode'
+                    assert len(obj.get_data())==((width*4+7)//8)*height
+                    images.append({'width':width,'height':height,'components':4,'bitsPerComponent':1,
+                                   'alphaMask':True,'profile':'Device CMYK (unprofiled, 1-bit channels)',
+                                   'colorSpace':'Device CMYK','iccBytes':0,'iccSha256':None})
+                else:
+                    images.append(inspect_cmyk_image(obj,width,height,reader.trailer['/Root'].get('/OutputIntents')))
                 assert '/SMask' in obj, 'Transparent source needs PDF alpha mask'
                 alphaEqual.append(decoded_alpha(obj['/SMask'].get_object())==alpha.tobytes())
             assert len(images)==1 and all(alphaEqual), 'PDF/WebP alpha mismatch'
