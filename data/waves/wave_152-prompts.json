@@ -1,0 +1,47 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-teapot-host",
+      "title": "Spider beside a Teapot",
+      "composition": "A friendly brown spider stands next to a tiny teal teapot and one cup, eight legs spread around its visible body.",
+      "use": "imaginative tea party stories",
+      "color": "Brown",
+      "prompt": "Use case: illustration-story. Create ONE original polished professional clipart for imaginative tea party stories. A friendly brown spider stands next to a tiny teal teapot and one cup, eight legs spread around its visible body. Thoughtful fresh composition. The spider is a complete body with TWO main segments and exactly EIGHT articulated walking legs, four matching pairs: four left and four right, every leg separately traceable from its attachment to tip. Interaction leg counts among those eight; never add human arms. Slight overhead angle for clear leg visibility. Round expressive face, charming natural asymmetric pose. Smooth carefully layered cel shading, warm handcrafted children's book finish, confident clean ink outlines, medium broad fur tufts only, no micrograin. Main prop sits beside body not hiding legs. Whole artwork inside central70% canvas, ample clear margin. Genuine transparent background and all gaps transparent. No white fringe, colored halo, words, labels, watermark or cast shadow."
+    },
+    {
+      "id": "spider-cookie-helper",
+      "title": "Spider with a Wooden Spoon",
+      "composition": "A gray spider in a small chef cap holds a wooden spoon with one front leg beside a plain mixing bowl, the other seven legs visible.",
+      "use": "personal baking cards",
+      "color": "Gray",
+      "prompt": "Use case: illustration-story. Create ONE original polished professional clipart for personal baking cards. A gray spider in a small chef cap holds a wooden spoon with one front leg beside a plain mixing bowl, the other seven legs visible. Thoughtful fresh composition. The spider is a complete body with TWO main segments and exactly EIGHT articulated walking legs, four matching pairs: four left and four right, every leg separately traceable from its attachment to tip. Interaction leg counts among those eight; never add human arms. Slight overhead angle for clear leg visibility. Round expressive face, charming natural asymmetric pose. Smooth carefully layered cel shading, warm handcrafted children's book finish, confident clean ink outlines, medium broad fur tufts only, no micrograin. Main prop sits beside body not hiding legs. Whole artwork inside central70% canvas, ample clear margin. Genuine transparent background and all gaps transparent. No white fringe, colored halo, words, labels, watermark or cast shadow."
+    },
+    {
+      "id": "spider-pumpkin-window",
+      "title": "Spider at a Pumpkin Window",
+      "composition": "A small black spider peeks from a broad round opening in a squat orange pumpkin, all eight legs arranged clearly around the opening.",
+      "use": "personal Halloween crafts",
+      "color": "Black",
+      "prompt": "Use case: illustration-story. Create ONE original polished professional clipart for personal Halloween crafts. A small black spider peeks from a broad round opening in a squat orange pumpkin, all eight legs arranged clearly around the opening. Thoughtful fresh composition. The spider is a complete body with TWO main segments and exactly EIGHT articulated walking legs, four matching pairs: four left and four right, every leg separately traceable from its attachment to tip. Interaction leg counts among those eight; never add human arms. Slight overhead angle for clear leg visibility. Round expressive face, charming natural asymmetric pose. Smooth carefully layered cel shading, warm handcrafted children's book finish, confident clean ink outlines, medium broad fur tufts only, no micrograin. Main prop sits beside body not hiding legs. Whole artwork inside central70% canvas, ample clear margin. Genuine transparent background and all gaps transparent. No white fringe, colored halo, words, labels, watermark or cast shadow."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "cookie-cutout-prompt.txt",
+      "content": "Remove ONLY the entire background including ALL gray and warm glowing halos around the spider, chef hat, bowl and spoon. Produce a genuine transparent cutout with clean alpha edges and transparent empty gaps. Preserve the exact eight walking legs, face, body, white chef hat, bowl, wooden spoon and all painted shading. Keep the artwork identical otherwise; no added elements or drop shadows. No white matte or residual glow anywhere outside object silhouettes."
+    },
+    {
+      "file": "repair-prompts.json",
+      "content": "[\n  {\n    \"id\": \"spider-teapot-host\",\n    \"source\": null,\n    \"prompt\": \"Create an original premium storybook illustration: friendly brown spider next to a small teal floral teapot and one matching cup. Strict near-top-down composition. Spider occupies upper center, teapot and cup below right with clear gap from every leg. The spider has TWO main body segments and exactly FOUR PAIRS of legs, eight limbs total, all long segmented walking legs. Pair1 curves upper left and upper right. Pair2 extends middle left and middle right. Pair3 extends lower left and lower right. Pair4 extends down left and down right. Every leg fully distinct from tip to body; no overlap with props. No mouth palps or antennae or extra arms. Fine ink outline, polished smooth cel shading, natural brown broad tuft design without fine hair microtexture. Large charming eyes. Whole design well within central70% canvas with transparent margins. Actual alpha background and gaps. No text, halo, white fringe or shadow.\"\n  },\n  {\n    \"id\": \"spider-cookie-helper\",\n    \"source\": null,\n    \"prompt\": \"Create an original professional storybook clipart: a smiling charcoal-gray spider wears a small white chef hat. A cream bowl of cake batter with a wooden spoon rests BELOW and to its left, with empty space separating bowl from spider. Spider's one front leg points toward bowl but does not overlap it. Strict high overhead angle shows all EIGHT distinct segmented legs in FOUR PAIRS, four left and four right, one pair curves upwards, two pairs extend outward, last pair points downwards. All eight tips visible, no props conceal any legs. TWO body segments, not three. No arms, antennae or mouth palps. Polished smooth layered cel shading, thoughtfully designed broad fur tufts, confident dark outlines. Rich readable clean forms, no microhair or grain. Whole design central70%, genuine transparent margins and gaps, no text, halo, white fringe or shadow.\"\n  },\n  {\n    \"id\": \"spider-pumpkin-window\",\n    \"source\": \"[workspace]/work/production/wave_152/source/spider-pumpkin-window.png\",\n    \"prompt\": \"Edit this exact excellent spider emerging from an open pumpkin illustration. Preserve EIGHT legs in four pairs, face, pumpkin and lid arrangement. Complete the entire pumpkin lid stem that is clipped at the right edge. Frame the complete artwork smaller within the canvas with generous15% transparent margin on every side. Refine the surface into smooth polished layered cel shading and broad intentional fur tufts, no dense microtexture. Keep rich orange color, confident dark contours and charming volumes. Actual transparent background and gaps, no colored halo or white fringe. No text.\"\n  }\n]"
+    },
+    {
+      "file": "spider-cookie-helper-next-prompt.txt",
+      "content": "Original standalone cutout clipart for baking story cards. One friendly slate-gray cartoon spider wearing a small white chef cap, overhead view. Below it a small ivory mixing bowl with a wooden spoon lying across its rim. The spider has TWO body parts and FOUR PAIRS of legs: four fully visible legs curve to the left and four to the right, evenly separated, eight total. No legs touch or disappear behind the bowl. Smooth opaque cel-painted shapes, rich clean colors, tidy dark ink contours, broad stylized tuft edges. Every object has an opaque surface and sharply defined silhouette. All remaining canvas including spaces between limbs is 100 percent transparent. Small whole composition centered within70% square. No lettering."
+    },
+    {
+      "file": "spider-teapot-host-smooth-prompt.txt",
+      "content": "Refine this exact illustration's surface finish. Preserve its eight separated jointed walking legs, two main body segments, face, all props, pose and colors. Replace ALL microscopic hairs and speckled surface strokes with smooth sculpted color planes and broad deliberate tuft shapes. Elegant clean ink contours, smooth rich layered cel shading, polished professional craft clipart. Keep full detail of eyes, joints and props; do not blur. Make composition comfortably framed with transparent margins all around. Actual alpha background and gaps, remove any stray color fringe outside silhouette. No text. Preserve exact eight-leg anatomy."
+    }
+  ]
+}

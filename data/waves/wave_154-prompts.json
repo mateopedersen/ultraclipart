@@ -1,0 +1,43 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-snowflake-web",
+      "title": "Spider beside a Snowflake Web",
+      "composition": "One friendly blue-gray spider hangs beneath a small charcoal-gray web decorated with three pale blue snowflake ornaments, eight legs visibly separated from the threads.",
+      "use": "winter paper crafts",
+      "color": "Blue",
+      "prompt": "Create one original professional clean clipart. One friendly blue-gray spider hangs beneath a small charcoal-gray web decorated with three pale blue snowflake ornaments, eight legs visibly separated from the threads. Detailed but smoothly shaded polished illustration, fine confident ink outlines, wide clean color areas and expressive eyes. Useful for winter paper crafts. Two main spider body parts, eight walking legs exactly, FOUR pairs: four attached on left and four attached on right. All tips clearly separate and visible. No additional arms or antennae. High overhead or front view suited to the composition, props do not obscure the leg count. Clean broad shapes, carefully designed cel shading, no microscopic texture, no thousands of hair strokes. Full illustration well inside central70% of canvas. Genuine transparent background and transparent gaps including web spaces. No white patches between web lines. No text, watermark, halo, glow, shadow or background."
+    },
+    {
+      "id": "spider-scarf-stroll",
+      "title": "Spider Wearing a Scarf",
+      "composition": "A round charcoal spider wears a short mustard scarf around its front body while all eight legs extend unobstructed.",
+      "use": "winter vocabulary cards",
+      "color": "Gray",
+      "prompt": "Create one original professional clean clipart. A round charcoal spider wears a short mustard scarf around its front body while all eight legs extend unobstructed. Detailed but smoothly shaded polished illustration, fine confident ink outlines, wide clean color areas and expressive eyes. Useful for winter vocabulary cards. Two main spider body parts, eight walking legs exactly, FOUR pairs: four attached on left and four attached on right. All tips clearly separate and visible. No additional arms or antennae. High overhead or front view suited to the composition, props do not obscure the leg count. Clean broad shapes, carefully designed cel shading, no microscopic texture, no thousands of hair strokes. Full illustration well inside central70% of canvas. Genuine transparent background and transparent gaps including web spaces. No white patches between web lines. No text, watermark, halo, glow, shadow or background."
+    },
+    {
+      "id": "spider-leaf-boat",
+      "title": "Spider in a Leaf Boat",
+      "composition": "One orange-brown spider sits in a shallow curled green leaf boat, eight legs reaching over its open rim in four pairs.",
+      "use": "adventure stories",
+      "color": "Brown",
+      "prompt": "Create one original professional clean clipart. One orange-brown spider sits in a shallow curled green leaf boat, eight legs reaching over its open rim in four pairs. Detailed but smoothly shaded polished illustration, fine confident ink outlines, wide clean color areas and expressive eyes. Useful for adventure stories. Two main spider body parts, eight walking legs exactly, FOUR pairs: four attached on left and four attached on right. All tips clearly separate and visible. No additional arms or antennae. High overhead or front view suited to the composition, props do not obscure the leg count. Clean broad shapes, carefully designed cel shading, no microscopic texture, no thousands of hair strokes. Full illustration well inside central70% of canvas. Genuine transparent background and transparent gaps including web spaces. No white patches between web lines. No text, watermark, halo, glow, shadow or background."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "spider-leaf-boat-clean-reference-prompt.txt",
+      "content": "Create a NEW professional clipart in the crisp opaque storybook finish of the reference. Use only illustration quality and transparent cutout edges, never repeat its pose, leaf umbrella or water drop. New scene: an amber spider rests INSIDE one shallow curved green leaf shaped like a little canoe. Exactly EIGHT long segmented walking legs, four at each side of its two-part body, draped clearly over the low leaf rim; all eight ends visible and separate. A small cute face, rich green leaf veins and polished smooth painted forms with confident dark ink contours. Every part is opaque; entire exterior canvas is fully transparent. Complete scene centered with generous margins. No water, glow, shadow, text or background."
+    },
+    {
+      "file": "spider-leaf-boat-cutout-margin-prompt.txt",
+      "content": "Remove the background completely. Keep only the spider and leaf boat. Erase all green and brown aura outside the leaf and spider. Make the empty canvas fully transparent with sharp clean cutout edges. Preserve exactly eight walking legs plus two short mouth palps and all object detail."
+    },
+    {
+      "file": "spider-snowflake-web-cutout-margin-prompt.txt",
+      "content": "Reframe this exact spider and snowflake web clipart so the top hanging loop is COMPLETE and all objects have generous transparent margin on every side. Keep exactly eight legs, all three snowflake ornaments and web structure unchanged. The current topmost loop is cut by the canvas edge; complete that loop and move the full composition inward. Clear fully transparent canvas and web gaps, sharp edges. Preserve colors and detail."
+    }
+  ]
+}

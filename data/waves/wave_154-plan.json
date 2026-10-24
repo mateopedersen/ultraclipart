@@ -1,0 +1,38 @@
+{
+  "wave": "wave_154",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-scarf-stroll",
+      "title": "Spider Wearing a Scarf",
+      "alt": "A round charcoal spider wears a short mustard scarf around its front body while all eight legs extend unobstructed.",
+      "description": "A round charcoal spider wears a short mustard scarf around its front body while all eight legs extend unobstructed. Useful for winter vocabulary cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_154/source/spider-scarf-stroll.png"
+    },
+    {
+      "id": "spider-leaf-boat",
+      "title": "Spider in a Leaf Boat",
+      "alt": "Amber spider resting in a curved green leaf boat with eight legs over the rim.",
+      "description": "Amber spider resting in a curved green leaf boat with eight legs over the rim. Useful for story cards, nature crafts and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_154/source/spider-leaf-boat-clean-v6.png"
+    },
+    {
+      "id": "spider-snowflake-web",
+      "title": "Spider Hanging beneath a Snowflake",
+      "alt": "Friendly blue spider with eight legs hangs on a silk thread beneath one icy snowflake.",
+      "description": "Friendly blue spider with eight legs hangs on a silk thread beneath one icy snowflake. Useful for winter story cards and seasonal classroom crafts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_154/source/spider-snowflake-web-v5.png"
+    }
+  ]
+}

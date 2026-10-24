@@ -1,0 +1,38 @@
+{
+  "wave": "wave_156",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-leaf-magnifier",
+      "title": "Spider Exploring a Leaf",
+      "alt": "One spider uses a front leg to hold a small magnifying glass above a broad fallen leaf, seven other legs clearly visible.",
+      "description": "One spider uses a front leg to hold a small magnifying glass above a broad fallen leaf, seven other legs clearly visible. Useful for observation activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_156/source/spider-leaf-magnifier-v3.png"
+    },
+    {
+      "id": "spider-drum-beat",
+      "title": "Spider Playing a Small Drum",
+      "alt": "One spider holds two short drumsticks with its front two legs, six legs supporting its body beside one small drum.",
+      "description": "One spider holds two short drumsticks with its front two legs, six legs supporting its body beside one small drum. Useful for rhythm activities.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_156/source/spider-drum-beat-v3.png"
+    },
+    {
+      "id": "spider-xylophone-player",
+      "title": "Spider at a Xylophone",
+      "alt": "A spider reaches two front legs toward two mallets over a small five-bar xylophone, six other legs spread behind it.",
+      "description": "A spider reaches two front legs toward two mallets over a small five-bar xylophone, six other legs spread behind it. Useful for music story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_156/source/spider-xylophone-player-v3.png"
+    }
+  ]
+}

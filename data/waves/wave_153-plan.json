@@ -1,0 +1,38 @@
+{
+  "wave": "wave_153",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-stem-balancer",
+      "title": "Spider Balancing on a Pumpkin Stem",
+      "alt": "One warm brown spider balances on a thick curled pumpkin stem, eight legs fanned out in a clear playful pose.",
+      "description": "One warm brown spider balances on a thick curled pumpkin stem, eight legs fanned out in a clear playful pose. Useful for seasonal story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_153/source/spider-stem-balancer-v2.png"
+    },
+    {
+      "id": "spider-hat-visitor",
+      "title": "Spider beside a Pointed Hat",
+      "alt": "A friendly charcoal spider with eight jointed legs looks down toward a purple pointed hat with a gold buckle.",
+      "description": "A friendly charcoal spider with eight jointed legs looks down toward a purple pointed hat with a gold buckle. Useful for personal costume party cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_153/source/spider-hat-visitor-v3.png"
+    },
+    {
+      "id": "spider-lantern-visitor",
+      "title": "Spider beside a Lantern",
+      "alt": "Friendly brown spider beside a closed orange lantern with dark glass.",
+      "description": "Friendly brown spider beside a closed orange lantern with dark glass. Useful for story cards, nature crafts and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_153/source/spider-lantern-visitor-clean-v6.png"
+    }
+  ]
+}

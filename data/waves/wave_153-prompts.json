@@ -1,0 +1,51 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-stem-balancer",
+      "title": "Spider Balancing on a Pumpkin Stem",
+      "composition": "One warm brown spider balances on a thick curled pumpkin stem, eight legs fanned out in a clear playful pose.",
+      "use": "seasonal story prompts",
+      "color": "Brown",
+      "prompt": "Original premium storybook clipart for seasonal story prompts: One warm brown spider balances on a thick curled pumpkin stem, eight legs fanned out in a clear playful pose. Full spider with TWO body segments. EIGHT legs shown as FOUR PAIRS of matched jointed legs. Distinct left rear, left mid-rear, left mid-front, left front; distinct right rear, right mid-rear, right mid-front, right front. High slightly overhead view, all eight limbs visible and separated, no antennae or hands or extra arms. Charming expressive face. Thoughtful clear prop relationship and pose. Broad smooth richly shaded color areas, carefully designed tuft shapes not individual hair strokes, confident fine dark outlines and handcrafted illustration finish. True transparent background and holes, no white matte, no halo, no glow or shadow. Entire composition well inside canvas with 15% empty margins on EVERY side. No text or watermarks."
+    },
+    {
+      "id": "spider-hat-visitor",
+      "title": "Spider beside a Pointed Hat",
+      "composition": "One charcoal gray spider stands beside a small empty purple pointed hat, one front leg touching the brim and seven legs visible.",
+      "use": "personal costume party cards",
+      "color": "Gray",
+      "prompt": "Original premium storybook clipart for personal costume party cards: One charcoal gray spider stands beside a small empty purple pointed hat, one front leg touching the brim and seven legs visible. Full spider with TWO body segments. EIGHT legs shown as FOUR PAIRS of matched jointed legs. Distinct left rear, left mid-rear, left mid-front, left front; distinct right rear, right mid-rear, right mid-front, right front. High slightly overhead view, all eight limbs visible and separated, no antennae or hands or extra arms. Charming expressive face. Thoughtful clear prop relationship and pose. Broad smooth richly shaded color areas, carefully designed tuft shapes not individual hair strokes, confident fine dark outlines and handcrafted illustration finish. True transparent background and holes, no white matte, no halo, no glow or shadow. Entire composition well inside canvas with 15% empty margins on EVERY side. No text or watermarks."
+    },
+    {
+      "id": "spider-lantern-visitor",
+      "title": "Spider beside a Lantern",
+      "composition": "One russet spider rests beside a compact orange lantern with flat yellow panes, all eight legs visible and no emitted glow.",
+      "use": "nighttime stories",
+      "color": "Brown",
+      "prompt": "Original premium storybook clipart for nighttime stories: One russet spider rests beside a compact orange lantern with flat yellow panes, all eight legs visible and no emitted glow. Full spider with TWO body segments. EIGHT legs shown as FOUR PAIRS of matched jointed legs. Distinct left rear, left mid-rear, left mid-front, left front; distinct right rear, right mid-rear, right mid-front, right front. High slightly overhead view, all eight limbs visible and separated, no antennae or hands or extra arms. Charming expressive face. Thoughtful clear prop relationship and pose. Broad smooth richly shaded color areas, carefully designed tuft shapes not individual hair strokes, confident fine dark outlines and handcrafted illustration finish. True transparent background and holes, no white matte, no halo, no glow or shadow. Entire composition well inside canvas with 15% empty margins on EVERY side. No text or watermarks."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "final-repair-prompts.json",
+      "content": "[\n  {\n    \"id\": \"spider-hat-visitor\",\n    \"prompt\": \"Edit only the spider's body anatomy: merge the separate round head and middle thorax into ONE continuous cephalothorax, keeping the large abdomen as its second body segment. There must be TWO main body masses total, not three. Preserve exactly EIGHT legs, four on either side, their poses, eyes, smile, gray colors, purple hat and transparent background. Keep clean polished artwork. No new elements, no extra limbs, no halo.\",\n    \"source\": \"[workspace]/work/production/wave_153/source/spider-hat-visitor-v2.png\"\n  },\n  {\n    \"id\": \"spider-lantern-visitor\",\n    \"prompt\": \"Edit this clipart with two corrections. First remove ALL background glow and colored haze, leaving genuine transparent background and all gaps transparent. Second the spider currently has NINE long walking legs: remove the extra shortest inward front leg whose pointed tip sits immediately under the LEFT eye toward the center-bottom, at about x970 y825 of this1536x1024image. Keep the other eight legs: four extending to viewer-left and four to viewer-right. Preserve body, smiling face, orange lantern and all other lines and colors. No added legs or arms. Clean alpha edges and no shadow or glow outside the silhouettes.\",\n    \"source\": \"[workspace]/work/production/wave_153/source/spider-lantern-visitor-v2.png\"\n  }\n]"
+    },
+    {
+      "file": "lantern-fresh-prompt.txt",
+      "content": "An original premium cut-paper style colored clipart: ONE friendly russet-brown spider positioned ABOVE a small orange camping lantern. Dorsal overhead view, two oval body segments, friendly tiny eyes at the lower end. Exactly eight walking legs: four on LEFT, four on RIGHT, symmetrically spaced in four pairs and completely separated. The empty lantern sits below the spider with visible space between them, dark glass panes and a metal handle. Smooth opaque painted color shapes, crisp dark ink outlines, warm clean cel shading. Detailed feet joints and lantern hardware, broad stylized fur patterns. Entire complete artwork centered with wide margins. Every space outside the object contours and between all limbs is fully transparent alpha. No lettering."
+    },
+    {
+      "file": "repair-prompts.json",
+      "content": "[\n  {\n    \"id\": \"spider-stem-balancer\",\n    \"source\": \"[workspace]/work/production/wave_153/source/spider-stem-balancer.png\",\n    \"prompt\": \"Edit this spider balanced on a pumpkin stem clipart. Preserve all EIGHT legs, four per side, two body parts and face. Complete the pumpkin so its entire round lower half is visible rather than a straight cut crop. Show a whole small squat pumpkin under the curled stem, fit whole composition within central70% canvas with clear margins. Refine dense microtexture to smooth professional layered cel shading and broad designed fur shapes. Crisp ink contours, rich colors. True transparent background, no fringe, text or shadow.\"\n  },\n  {\n    \"id\": \"spider-hat-visitor\",\n    \"source\": null,\n    \"prompt\": \"One original polished cartoon spider clipart for a Halloween card: smooth charcoal spider stands above a small deep purple pointed costume hat. Face angled slightly toward the hat below, overhead view. Show EXACTLY EIGHT curved segmented walking legs in FOUR PAIRS, four left and four right, every attachment and tip separate. Two main body segments. Four legs fan out left at11,10,8,7 oclock; four fan out right at1,2,4,5 oclock. Do not hide any leg behind body or hat. No antennae, pedipalps or extra arms. A lovely expressive face, confident ink lines, clean flat rich color areas with sophisticated smooth cel shading, broad stylized fur edges only. No individual fur hairs or noise. Art central70% of square, genuinely transparent background and holes, clean edges, no labels or words.\"\n  },\n  {\n    \"id\": \"spider-lantern-visitor\",\n    \"source\": null,\n    \"prompt\": \"One original polished spider storybook clipart for nighttime stories: a russet spider next to a compact orange metal lantern with flat golden panes, lantern on left with a gap and spider on right. Slight overhead view. EIGHT clearly countable legs, FOUR left and FOUR right, arranged in four symmetrical jointed pairs around TWO body segments. All eight tips visible and unobscured by lantern, no extra arms, pedipalps or antennae. Expressive gentle face, elegant hand-inked outlines. Broad smooth rich color areas and carefully composed cel shading, no microscopic texture or fine hairs. Whole art in central70% of canvas with generous empty margin. True transparent background and gaps, no emitted light or glow, no halo, no white fringe, no text.\"\n  }\n]"
+    },
+    {
+      "file": "spider-lantern-visitor-clean-reference-prompt.txt",
+      "content": "Create a NEW professional clipart in the crisp opaque storybook finish of the reference. Use only the illustration quality and transparent cutout style; do not reuse the leaf, droplet, spider pose or pattern. New scene: a friendly chocolate-brown spider with exactly eight clearly separated walking legs, four each side, next to a small CLOSED orange lantern with DARK glass. Spider on right and small lantern on left, no objects overlap limbs. Two body segments and small friendly eyes. Smooth broad color planes, detailed deliberate ink contours and simple fur tufts. Fully transparent canvas and gaps, opaque object silhouettes with crisp edges. All objects fit well within the canvas. No background atmosphere or illumination."
+    },
+    {
+      "file": "spider-lantern-visitor-cutout-margin-prompt.txt",
+      "content": "Remove the background completely. Keep only the spider and the lantern. Erase the brown aura everywhere, including between legs and inside the lantern handle. Make all empty areas fully transparent, with sharp clean cutout edges. Preserve the objects exactly."
+    }
+  ]
+}

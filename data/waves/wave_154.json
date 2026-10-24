@@ -1,0 +1,285 @@
+{
+  "wave": "wave_154",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-scarf-stroll",
+      "title": "Spider Wearing a Scarf",
+      "alt": "A round charcoal spider wears a short mustard scarf around its front body while all eight legs extend unobstructed.",
+      "description": "A round charcoal spider wears a short mustard scarf around its front body while all eight legs extend unobstructed. Useful for winter vocabulary cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_154/source/spider-scarf-stroll.png",
+      "topic": "spider",
+      "width": 1472,
+      "height": 1069,
+      "sourceType": "raster",
+      "sourceSha256": "c38e7f413ee06f50cfda8331f517b8ffdd0ce3c5704ec8089ce04f5c26456ed2",
+      "inputSignature": "d73cb94b23b3f2db0e77f531a861310a50e2461630876b8177abbae281bcbb33",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 967081,
+        "weightedCmykRmse": 1.276731
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1669745,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1187665,
+          "weightedCmykRmse": 0.899528
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1080109,
+          "weightedCmykRmse": 1.039404
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 967081,
+          "weightedCmykRmse": 1.276731
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        96,
+        89,
+        1382,
+        990
+      ],
+      "image": {
+        "width": 1472,
+        "height": 1069,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_154/exports/spider-scarf-stroll.pdf",
+          "bytes": 967081,
+          "sha256": "93c0e958568905575fb683862b743438af02863ecf3f126af29013b9352292e8"
+        },
+        "webp": {
+          "path": "work/production/wave_154/exports/spider-scarf-stroll.webp",
+          "bytes": 781088,
+          "sha256": "f04ffcc5cd70fdc6278d4b574b83b2ba53dc68d7af1266fdf3a95d582bf3e217"
+        },
+        "thumb": {
+          "path": "work/production/wave_154/exports/spider-scarf-stroll-thumb.webp",
+          "bytes": 47754,
+          "sha256": "9313392ad28973ee3d5849b25ccbc94915d87a5c920fa1ab8ffd2a4a7ba3460a"
+        }
+      },
+      "proofSha256": "5622cf3eb3a3a3ed0a456eeeaa8edf5efd1997733fe438df74ae8ab0c9849a8e",
+      "pairMeanRgbDifference": 1.61289
+    },
+    {
+      "id": "spider-leaf-boat",
+      "title": "Spider in a Leaf Boat",
+      "alt": "Amber spider resting in a curved green leaf boat with eight legs over the rim.",
+      "description": "Amber spider resting in a curved green leaf boat with eight legs over the rim. Useful for story cards, nature crafts and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_154/source/spider-leaf-boat-clean-v6.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "47fc2fe46bcf7e7c8f6e9ba54d837f64c25b8ed67a52c4583c766352b9de3ea1",
+      "inputSignature": "79048303436c409a3444179e956593405459a5061e17c9c57a12e29b00e1eb69",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 856355,
+        "weightedCmykRmse": 0.858719
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1324468,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 856355,
+          "weightedCmykRmse": 0.858719
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        20,
+        279,
+        1241,
+        1011
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_154/exports/spider-leaf-boat.pdf",
+          "bytes": 856355,
+          "sha256": "727b9a75d2f23057c9dbeb9bd8ead15c2daedcb3faaf6797860892d64b00b231"
+        },
+        "webp": {
+          "path": "work/production/wave_154/exports/spider-leaf-boat.webp",
+          "bytes": 805634,
+          "sha256": "829429bdcb14b23620f8d84f70ba35684b1f09b142cd8eb0e23b2c7d418f5d90"
+        },
+        "thumb": {
+          "path": "work/production/wave_154/exports/spider-leaf-boat-thumb.webp",
+          "bytes": 49438,
+          "sha256": "0857bbfc1000b0f6e87f7e1bb29658bc0a2dd23cc45e13762a7ca62ee3182fdb"
+        }
+      },
+      "proofSha256": "fbc5cc332d74b71c24326352410335e9ec7d0e68b41a9c9d021c3b97da2ab5f2",
+      "pairMeanRgbDifference": 3.53635
+    },
+    {
+      "id": "spider-snowflake-web",
+      "title": "Spider Hanging beneath a Snowflake",
+      "alt": "Friendly blue spider with eight legs hangs on a silk thread beneath one icy snowflake.",
+      "description": "Friendly blue spider with eight legs hangs on a silk thread beneath one icy snowflake. Useful for winter story cards and seasonal classroom crafts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_154/source/spider-snowflake-web-v5.png",
+      "topic": "spider",
+      "width": 1230,
+      "height": 1278,
+      "sourceType": "raster",
+      "sourceSha256": "d76cfe2804461886bf5beb8089c4c72c8b260fc4bcefd568577a9f7f3fc0463a",
+      "inputSignature": "88be75f1369e4e824207c8fdf6aa517f48df0876e522e0c5dbae87939c8bfea5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 956697,
+        "weightedCmykRmse": 1.458479
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1589601,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1225071,
+          "weightedCmykRmse": 0.836434
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1124394,
+          "weightedCmykRmse": 0.968193
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1034829,
+          "weightedCmykRmse": 1.215549
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 956697,
+          "weightedCmykRmse": 1.458479
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        53,
+        26,
+        1177,
+        1256
+      ],
+      "image": {
+        "width": 1230,
+        "height": 1278,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_154/exports/spider-snowflake-web.pdf",
+          "bytes": 956697,
+          "sha256": "020a1afa92abf0d68a43db2d040c56141e272c0b25195c8621d6ac269c508642"
+        },
+        "webp": {
+          "path": "work/production/wave_154/exports/spider-snowflake-web.webp",
+          "bytes": 736950,
+          "sha256": "e2ac0187b6e077d495a96b92f2f677f08a7504c50e8c3e03ebb3a72f4d51cc6e"
+        },
+        "thumb": {
+          "path": "work/production/wave_154/exports/spider-snowflake-web-thumb.webp",
+          "bytes": 58298,
+          "sha256": "561c16dd7036ef64c067ad861854fa53bf8f7d03d0313fe563647dac10e62b0a"
+        }
+      },
+      "proofSha256": "2816d20b08455a5e2eaad52800c790aa3588db8e03dbfbc89dbfc719924aa3c5",
+      "pairMeanRgbDifference": 2.41861
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Selected native source images and actual rendered PDF proof contact reviewed. Eight legs per stylized spider, distinct useful props, complete clean silhouettes, transparent exterior without background haze, no material clipping. Physical print proof not performed.",
+  "createdAt": "2026-10-24T03:54:55.704Z"
+}

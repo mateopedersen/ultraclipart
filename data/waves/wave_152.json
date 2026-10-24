@@ -1,0 +1,264 @@
+{
+  "wave": "wave_152",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-pumpkin-window",
+      "title": "Spider Peeking from a Pumpkin",
+      "alt": "A cheerful black spider spreads eight legs over the rim of an open orange pumpkin with its lid leaning beside it.",
+      "description": "A cheerful black spider spreads eight legs over the rim of an open orange pumpkin with its lid leaning beside it. Useful for personal Halloween crafts.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_152/source/spider-pumpkin-window-v2.png",
+      "topic": "spider",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "4a8941b9dbfe51bca0e3838d8816ed2f34adaf581c311dc2be2b478071d9c18f",
+      "inputSignature": "2304610ed3ef772e8cf8f85a6e6b1fc052dfc9d948bd2420c41263d30b54b9f3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 758828,
+        "weightedCmykRmse": 0.774717
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1275965,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 758828,
+          "weightedCmykRmse": 0.774717
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        105,
+        184,
+        1278,
+        1055
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_152/exports/spider-pumpkin-window.pdf",
+          "bytes": 758828,
+          "sha256": "b7e151e3b1516d87419d4279ae96552eb7321c76c292d5ad47d951c9b9ffbafc"
+        },
+        "webp": {
+          "path": "work/production/wave_152/exports/spider-pumpkin-window.webp",
+          "bytes": 864464,
+          "sha256": "3dc51054d4e0f9c46753f1f93a8ac343a770284205dad1f33227f8c6cc3a6231"
+        },
+        "thumb": {
+          "path": "work/production/wave_152/exports/spider-pumpkin-window-thumb.webp",
+          "bytes": 48014,
+          "sha256": "a8cc0c5e0c1fcf734248a32aa8bfb41d0e4d1a0ffc1130c94916ce4e9470ccfc"
+        }
+      },
+      "proofSha256": "287dc8bc247c55673a1288167ab7f4df16047a0ae6c4ef05f540a7b051c836b5",
+      "pairMeanRgbDifference": 3.37521
+    },
+    {
+      "id": "spider-teapot-host",
+      "title": "Spider beside a Teapot",
+      "alt": "A brown spider seen from above spreads eight legs beside a teal floral teapot and matching cup of tea.",
+      "description": "A brown spider seen from above spreads eight legs beside a teal floral teapot and matching cup of tea. Useful for imaginative tea party stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_152/source/spider-teapot-host-v3.png",
+      "topic": "spider",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "13ba03a3463bce42dcbbe9a639f346ab69cd9d04c54b693d4144f5d1d30ec162",
+      "inputSignature": "748b305538cec8ac715d017bd6fb9cb12975fd7e81e0e52ffba6369c8982dc28",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 901577,
+        "weightedCmykRmse": 1.328095
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1511658,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1079698,
+          "weightedCmykRmse": 0.901382
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 986221,
+          "weightedCmykRmse": 1.057511
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 901577,
+          "weightedCmykRmse": 1.328095
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        60,
+        47,
+        1288,
+        1146
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_152/exports/spider-teapot-host.pdf",
+          "bytes": 901577,
+          "sha256": "15e6d8d73fc5ad55e9454a7902b1b63920e79d26879f20de30e810e6a92047cb"
+        },
+        "webp": {
+          "path": "work/production/wave_152/exports/spider-teapot-host.webp",
+          "bytes": 770494,
+          "sha256": "f60975de21a8711b8a4545000b13f083ed9c42f59b89fbfb0a927dc32799e6b1"
+        },
+        "thumb": {
+          "path": "work/production/wave_152/exports/spider-teapot-host-thumb.webp",
+          "bytes": 58644,
+          "sha256": "25dbefaaa7238936170a9668c6673a86e914879e9b23c6fa1dc046fbebb650da"
+        }
+      },
+      "proofSha256": "0a73ffa1dd073681b0f0bc915c04f00d9291400adeca1a775d69129df38b2395",
+      "pairMeanRgbDifference": 1.78996
+    },
+    {
+      "id": "spider-cookie-helper",
+      "title": "Spider with a Mixing Bowl",
+      "alt": "A smiling gray spider wearing a white chef hat lifts its two short front legs above an ivory bowl with a wooden spoon resting across the rim.",
+      "description": "A smiling gray spider wearing a white chef hat sits above an ivory bowl and wooden spoon. Useful for personal baking story cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_152/source/spider-cookie-helper-v4.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "616856780aee2cbdce0461113e6d6301b362746126d4b56d68e5c994c89d519e",
+      "inputSignature": "c084032a0a087440710832f63dbe1e879c6452b82e0922fb04ad9037b5544419",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 815673,
+        "weightedCmykRmse": 0.931398
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1241507,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 815673,
+          "weightedCmykRmse": 0.931398
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        132,
+        153,
+        1122,
+        1118
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_152/exports/spider-cookie-helper.pdf",
+          "bytes": 815673,
+          "sha256": "be103e366071adeb0be7fdca5423c39b10c0ab4e266634172913900a8c94bc83"
+        },
+        "webp": {
+          "path": "work/production/wave_152/exports/spider-cookie-helper.webp",
+          "bytes": 575214,
+          "sha256": "1f3ed069b18fbdad64b97b6f355bf3b1e26879e4ca1fb4dec86a074b7a898c46"
+        },
+        "thumb": {
+          "path": "work/production/wave_152/exports/spider-cookie-helper-thumb.webp",
+          "bytes": 44590,
+          "sha256": "a1f1451bccbb51f7f2bb25632e5ba9393f4930f4af1740afd62e0cb139e3d505"
+        }
+      },
+      "proofSha256": "5e01ac12c944487dc2085580ebd0bc242d8ca9254c300552e55209a7ec4c330f",
+      "pairMeanRgbDifference": 1.16089
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Selected native illustrations and actual PDF contact personally reviewed: pumpkin opening has eight legs and complete lid stem; overhead tea scene has eight separate long legs; chef character has six extended legs and two raised short front legs. Clean prop framing and smooth shading. Screen proof only.",
+  "createdAt": "2026-10-24T03:21:58.263Z"
+}
