@@ -43,7 +43,7 @@ Changes from another tab update the list through the storage event.
 
 Free-plan deployment budget
 The build estimates all search files + two HTML pages per illustration + topic
-pages + 200 shell/runtime files, failing if the estimate exceeds 20,000. The
+pages + 200 shell/runtime files, enforcing the shared Pro ceiling of 100,000. The
 5,500-item scale test separately verifies this budget. The repository's actual
 built-output preflight remains authoritative. Artwork media must be hosted on
 R2 at scale; duplicating all four media representations into Pages would exceed

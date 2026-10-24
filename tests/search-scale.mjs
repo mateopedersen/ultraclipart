@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { assertPagesFileCount } from '../src/lib/pages-limits.ts';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { buildSearchIndex } from '../src/lib/search-index.ts';
@@ -170,8 +171,7 @@ test('current catalog search shards fit the Pages file budget with room for the 
     'budget-test',
   );
   const projected = build.files.size + original.length * 2 + allTopics.length + 200;
-  assert.ok(projected < 20000, `Projected Pages deployment has ${projected} files`);
-  assert.ok(projected <= 19600, `Leave capacity for routine site assets: ${projected}`);
+  assertPagesFileCount(projected + 500);
 });
 test('queries resolve bounded card chunks and favorites locate only their saved IDs', async () => {
   const a = fixture(synthetic);
