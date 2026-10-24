@@ -6,6 +6,7 @@ import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
 import { pruneVerifiedCatalogPages } from './catalog-pages/prune.mjs';
 import { releaseRevision } from './release-revision.mjs';
+import { assertPagesFileCount, PAGES_FILE_LIMIT } from '../src/lib/pages-limits.ts';
 import { build as bundleWorker } from 'esbuild';
 
 const root = resolve(import.meta.dirname, '..');
@@ -156,10 +157,7 @@ const routes = JSON.parse(readFileSync(join(dist, '_routes.json'), 'utf8'));
 if (routes.include.length + routes.exclude.length > 100)
   throw new Error('AI + retirement route count exceeds Pages limit');
 const count = files(dist).length;
-// Pro entitlement verified from this project's upload-token claims on 2026-10-24.
-const fileLimit = 100_000;
-if (process.env.CF_PAGES === '1' && count > fileLimit)
-  throw new Error(`Pages Pro file limit exceeded: ${count} files (limit ${fileLimit}).`);
+if (process.env.CF_PAGES === '1') assertPagesFileCount(count);
 console.log(
-  `CSP: ${hashes.size} exact script hashes. ${process.env.CF_PAGES === '1' ? 'Production' : 'Local'} build: ${count} files${process.env.CF_PAGES === '1' ? ' / 100,000 allowed' : ' (bundled development media included)'}.`,
+  `CSP: ${hashes.size} exact script hashes. ${process.env.CF_PAGES === '1' ? 'Production' : 'Local'} build: ${count} files${process.env.CF_PAGES === '1' ? ` / ${PAGES_FILE_LIMIT.toLocaleString('en-US')} allowed` : ' (bundled development media included)'}.`,
 );

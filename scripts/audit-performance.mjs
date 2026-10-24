@@ -2,6 +2,7 @@ import { chromium } from '@playwright/test';
 import { readFileSync, readdirSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, relative, extname } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { PAGES_FILE_LIMIT } from '../src/lib/pages-limits.ts';
 const root = resolve(import.meta.dirname, '..'),
   base = process.env.BASE_URL ?? 'http://127.0.0.1:4322';
 const catalog = JSON.parse(readFileSync(resolve(root, 'data/art.json'), 'utf8')),
@@ -59,7 +60,7 @@ for (const a of assets) {
 }
 report.payload = {
   staticAssetCount: all.length,
-  withinStaticAssetCountLimit: all.length < 20000,
+  withinStaticAssetCountLimit: all.length <= PAGES_FILE_LIMIT,
   totalDistBytes: assets.reduce((s, a) => s + a.bytes, 0),
   largestAssets: [...assets].sort((a, b) => b.bytes - a.bytes).slice(0, 10),
   byExtension: types,
