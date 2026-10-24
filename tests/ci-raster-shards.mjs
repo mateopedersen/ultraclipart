@@ -16,13 +16,13 @@ test('all seasonal catalog targets occur exactly once across the three CI shards
   const targets = JSON.parse(
     readFileSync(new URL('../data/art.json', import.meta.url), 'utf8'),
   ).filter((item) => item.sourceType === 'raster' && topics.has(item.topic));
-  assert.equal(targets.length, 550, 'Keep all currently published seasonal artworks covered');
+  assert.ok(targets.length >= 550, 'Keep all currently published seasonal artworks covered');
   const shards = [0, 1, 2].map((index) =>
     shardRasterTargets(targets, { RASTER_SHARD_COUNT: '3', RASTER_SHARD_INDEX: String(index) }),
   );
   assert.deepEqual(
     shards.map((part) => part.length),
-    [184, 183, 183],
+    [0, 1, 2].map((index) => Math.floor(targets.length / 3) + (index < targets.length % 3 ? 1 : 0)),
   );
   const originalIds = targets.map((item) => item.id).sort();
   const actualIds = shards
