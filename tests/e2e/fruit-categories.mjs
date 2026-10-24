@@ -61,13 +61,19 @@ try {
   await expect(page.locator('#category-group')).toHaveValue('school-learning');
   while (await page.locator('#show-more-subjects').isVisible())
     await page.locator('#show-more-subjects').click();
-  await expect(page.locator('[data-topic]:not([hidden]) a[href="/clipart/school/"]')).toHaveCount(
-    1,
-  );
+  for (const topic of ['school', 'book'])
+    await expect(
+      page.locator(`[data-topic]:not([hidden]) a[href="/clipart/${topic}/"]`),
+    ).toHaveCount(1);
   await page.goto(base + '/clipart/school/');
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
     'href',
     'https://ultraclipart.com/clipart/school/',
+  );
+  await page.goto(base + '/clipart/book/');
+  await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
+    'href',
+    'https://ultraclipart.com/clipart/book/',
   );
   await page.goto(base + '/categories/?collection=sports');
   await expect(page.locator('#category-group')).toHaveValue('sports');
@@ -93,7 +99,7 @@ try {
     'Food dropdown shows all fruit topics without duplicate links',
     'Cranberry is discoverable from both Food and Autumn with one canonical topic URL',
     'Fire and Leaves are discoverable in Nature & elements; Leaves keeps one canonical topic URL',
-    'School & learning exposes the repaired school collection with one canonical category URL',
+    'School & learning exposes school and book collections with canonical category URLs',
     'Sports includes the repaired basketball collection with one canonical category URL',
     'Homepage introduces 12 different recently added subjects',
   ];

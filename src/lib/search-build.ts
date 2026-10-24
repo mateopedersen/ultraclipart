@@ -10,7 +10,7 @@ export function getSearchBuild(): Promise<SearchBuild> {
     }));
     const digest = await crypto.subtle.digest(
       'SHA-256',
-      new TextEncoder().encode('search-schema-1\n' + JSON.stringify({ data, topics })),
+      new TextEncoder().encode('search-schema-2-chunk256\n' + JSON.stringify({ data, topics })),
     );
     const version = Array.from(new Uint8Array(digest), (value) =>
       value.toString(16).padStart(2, '0'),

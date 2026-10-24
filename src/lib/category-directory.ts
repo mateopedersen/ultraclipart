@@ -67,9 +67,9 @@ const collectionStyle: Record<
   },
   'School & learning': {
     title: 'School & learning',
-    description: 'Scenes for school days, curious minds and classroom projects.',
+    description: 'School days, favorite stories and reading moments.',
     color: 'ice',
-    subjects: ['school'],
+    subjects: ['school', 'book'],
   },
 };
 const preferred: Record<string, string> = {
@@ -82,6 +82,7 @@ const preferred: Record<string, string> = {
   leaves: 'leaf-sugar-maple-five-lobed-autumn-watercolor-clipart',
   fire: 'fire-crossed-logs-campfire-colored-pencil-clipart',
   school: 'school-students-reading-in-library-classic-clipart',
+  book: 'book-children-reading-together-classic-clipart',
 };
 const artworkByTopic = new Map<string, typeof art>();
 for (const item of art) {
