@@ -34,4 +34,6 @@ run('node_modules/wrangler/bin/wrangler.js', [
   'dist',
   '--project-name',
   'ultraclipart',
+  '--branch',
+  'main',
 ]);
