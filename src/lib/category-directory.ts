@@ -54,22 +54,40 @@ const collectionStyle: Record<
     subjects: ['thanksgiving', 'squirrel'],
   },
   'Food & drink': {
-    title: 'Fruit & fresh ideas',
-    description: 'Orchard favorites, tropical color and cheerful fruit characters.',
+    title: 'Food & fresh ideas',
+    description: 'Fresh fruit, favorite treats and playful kitchen inspiration.',
     color: 'peach',
-    subjects: ['apple', 'strawberry', 'pineapple'],
+    subjects: ['apple', 'pizza', 'cookie'],
   },
   'Nature & elements': {
     title: 'Nature & elements',
     description: 'Leaf shapes, flickering flames and details drawn from the natural world.',
     color: 'sage',
-    subjects: ['leaves', 'fire'],
+    subjects: ['leaves', 'fire', 'beach'],
   },
   'School & learning': {
     title: 'School & learning',
     description: 'School days, favorite stories and reading moments.',
     color: 'ice',
     subjects: ['school', 'book'],
+  },
+  'People & activities': {
+    title: 'Everyday adventures',
+    description: 'Curious minds, creative moments and characters in motion.',
+    color: 'lavender',
+    subjects: ['boy', 'girl'],
+  },
+  'Arts & entertainment': {
+    title: 'Music & movie moments',
+    description: 'Instruments, cinema details and a little creative rhythm.',
+    color: 'rose',
+    subjects: ['music', 'movie'],
+  },
+  'Business & money': {
+    title: 'Money & little lessons',
+    description: 'Coins, savings and familiar details for learning about money.',
+    color: 'sand',
+    subjects: ['money'],
   },
 };
 const preferred: Record<string, string> = {
