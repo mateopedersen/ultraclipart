@@ -431,6 +431,7 @@ p {
   padding-top: 12px;
 }
 .formats a {
+  flex: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -453,11 +454,6 @@ p {
 }
 .formats a svg {
   flex-shrink: 0;
-}
-.formats a > svg:last-child {
-  width: 13px;
-  height: 13px;
-  color: #536b8c;
 }
 .formats a:hover {
   background: #eaf1fc;
@@ -485,17 +481,18 @@ p {
     gap: 5px;
     font-size: 12px;
   }
-  .formats a > svg:last-child {
-    display: none;
-  }
 }
 .card-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 8px;
   margin-top: 0;
 }
 .card-actions .button {
+  justify-content: center;
+  border-color: #ccdcf5;
+  background: #edf4ff;
+  color: #1558bb;
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
@@ -506,11 +503,15 @@ p {
   gap: 6px;
   white-space: nowrap;
 }
+.card-actions .button:hover {
+  background: #deebff;
+  border-color: #92b5eb;
+}
 .card-actions .button svg {
   display: block;
-  flex: 0 0 16px;
-  width: 16px;
-  height: 16px;
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
 }
 .card-actions .button span {
   display: block;

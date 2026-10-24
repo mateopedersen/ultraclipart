@@ -63,24 +63,23 @@ try {
       'Portrait and landscape previews must retain one shared gallery height',
     );
     const buttons = await page.locator('.card-actions').evaluateAll((groups) =>
-      groups.map((group) =>
-        [...group.children].map((button) => {
-          const r = button.getBoundingClientRect();
-          return { top: r.top, left: r.left, height: r.height, width: r.width };
-        }),
-      ),
+      groups.map((group) => {
+        const bounds = group.getBoundingClientRect();
+        const button = group.firstElementChild.getBoundingClientRect();
+        return {
+          count: group.children.length,
+          height: button.height,
+          centered: Math.abs(bounds.x + bounds.width / 2 - button.x - button.width / 2) < 1,
+        };
+      }),
     );
-    for (const [a, b] of buttons)
-      for (const dimension of ['height', 'width'])
-        assert.ok(
-          Math.abs(a[dimension] - b[dimension]) <= 1,
-          `${width}: ${dimension} misalignment`,
-        );
-    for (const [a, b] of buttons)
+    for (const button of buttons) {
+      assert.equal(button.count, 1, 'One editor action below direct downloads');
       assert.ok(
-        Math.abs(a.top - b.top) <= 1 || Math.abs(a.left - b.left) <= 1,
-        'Responsive buttons must align in a row or column',
+        button.height >= 44 && button.centered,
+        `${width}: centered, touch-friendly action`,
       );
+    }
     if ([390, 1440].includes(width))
       await page.screenshot({ path: resolve(out, `gallery-${width}.png`), fullPage: false });
   }

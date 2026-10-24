@@ -1,5 +1,5 @@
 ---
-import { actionIcons } from '../lib/action-icons';
+import { actionIcons, actionIconAccents } from '../lib/action-icons';
 interface Props {
   name: string;
   size?: number;
@@ -19,9 +19,8 @@ const paths: Record<string, readonly string[]> = {
   text: ['M4 5V3h16v2M12 3v18M8 21h8'],
   undo: ['M8 4 3 9l5 5M3 9h11a6 6 0 0 1 0 12'],
   redo: ['m16 4 5 5-5 5M21 9H10a6 6 0 0 0 0 12'],
-  image: ['M3 3h18v18H3z', 'm3 17 6-7 4 5 3-3 5 6M16 7h.01'],
-  document: ['M5 3h9l5 5v13H5zM14 3v6h5M9 13h6M9 17h6'],
 };
+const accent = actionIconAccents[name as keyof typeof actionIcons];
 ---
 
 <svg
@@ -36,6 +35,7 @@ const paths: Record<string, readonly string[]> = {
   aria-hidden="true"
   focusable="false"
 >
+  {accent && <path d={accent} fill="currentColor" fill-opacity="0.14" stroke="none" />}
   {(paths[name] ?? paths.document).map((d) => (
     <path d={d} />
   ))}

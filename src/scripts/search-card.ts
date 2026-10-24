@@ -1,5 +1,5 @@
 import type { SearchCard } from '../lib/search-index';
-import { actionIcons } from '../lib/action-icons';
+import { actionIcons, actionIconAccents } from '../lib/action-icons';
 export function renderCard(item: SearchCard): HTMLElement {
   const article = document.createElement('article');
   article.className = 'art-card';
@@ -36,8 +36,8 @@ export function renderCard(item: SearchCard): HTMLElement {
     const a = link('', href, className);
     const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     for (const [name, value] of Object.entries({
-      width: '16',
-      height: '16',
+      width: '20',
+      height: '20',
       viewBox: '0 0 24 24',
       fill: 'none',
       stroke: 'currentColor',
@@ -48,6 +48,15 @@ export function renderCard(item: SearchCard): HTMLElement {
       focusable: 'false',
     }))
       svg.setAttribute(name, value);
+    const accent = actionIconAccents[kind];
+    if (accent) {
+      const fill = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      fill.setAttribute('d', accent);
+      fill.setAttribute('fill', 'currentColor');
+      fill.setAttribute('fill-opacity', '0.14');
+      fill.setAttribute('stroke', 'none');
+      svg.append(fill);
+    }
     for (const d of actionIcons[kind]) {
       const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
       path.setAttribute('d', d);
@@ -66,15 +75,12 @@ export function renderCard(item: SearchCard): HTMLElement {
     const a = action(icon, label, url, extension);
     a.download = `${item.id}.${extension}`;
     a.setAttribute('aria-label', `Download ${label}: ${item.title}`);
-    const arrow = action('download', '', '#', '').querySelector('svg')!;
-    a.append(arrow);
     formats.append(a);
   }
   actions.append(
     item.editable === false
       ? action('view', 'View', detail, 'button')
       : action('edit', 'Edit', `/edit/${item.id}/`, 'button'),
-    action('download', 'Download', detail, 'button primary'),
   );
   body.append(formats, actions);
   article.append(picture, body);

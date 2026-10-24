@@ -18,9 +18,8 @@ const { item } = Astro.props;
         class="webp"
         aria-label={`Download Image: ${item.title}`}
       >
-        <Icon name="image" size={16} />
+        <Icon name="image" size={20} />
         <span>Image</span>
-        <Icon name="download" size={14} />
       </a>
       {item.pdf && (
         <a
@@ -29,20 +28,15 @@ const { item } = Astro.props;
           class="pdf"
           aria-label={`Download PDF: ${item.title}`}
         >
-          <Icon name="document" size={16} />
+          <Icon name="document" size={20} />
           <span>PDF</span>
-          <Icon name="download" size={14} />
         </a>
       )}
     </div>
     <div class="card-actions">
       <a class="button" href={item.editable === false ? `/art/${item.id}/` : `/edit/${item.id}/`}>
-        <Icon name={item.editable === false ? 'view' : 'edit'} size={16} />
+        <Icon name={item.editable === false ? 'view' : 'edit'} size={20} />
         <span>{item.editable === false ? 'View' : 'Edit'}</span>
-      </a>
-      <a class="button primary" href={`/art/${item.id}/`}>
-        <Icon name="download" size={16} />
-        <span>Download</span>
       </a>
     </div>
   </div>
