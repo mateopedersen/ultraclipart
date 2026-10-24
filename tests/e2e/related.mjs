@@ -37,6 +37,9 @@ assert.ok(samples.every(Boolean));
 await mkdir(output, { recursive: true });
 const browser = await { chromium, firefox, webkit }[engine].launch();
 const context = await browser.newContext();
+// Availability assertions require fresh network responses, including in Firefox.
+// Routing disables the HTTP cache without accepting 304 as a successful first load.
+await context.route('**/*', (route) => route.continue());
 const page = await context.newPage();
 const errors = [],
   report = { engine, base, layouts: [], accessibility: [], checks: [], errors };
