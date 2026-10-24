@@ -55,6 +55,7 @@ function fixture() {
 }
 test('complete reviewed recovery accepts new CMYK exports without claiming original PDFs', () => {
   const f = fixture();
+  f.intake.rows[0].style = 'Watercolor';
   assert.equal(validateRecoveredCollection(f.intake, f.read).length, 50);
 });
 test('recovery rejects incomplete collections, RGB, unreviewed art, changed bytes and cross-wired sources', () => {
@@ -77,6 +78,9 @@ test('recovery rejects incomplete collections, RGB, unreviewed art, changed byte
     },
     (f) => {
       f.intake.rows[0].print.weightedCmykRmse = NaN;
+    },
+    (f) => {
+      f.intake.rows[0].style = 'Unclassified';
     },
   ]) {
     const f = fixture();

@@ -12,4 +12,8 @@ The headphones recovery includes 49 supplied artworks and one original replaceme
 
 The television recovery includes 33 supplied artworks and 17 original replacements. Its 100 native downloads and 100 edited exports passed their own gallery, search, mobile, accessibility and editor checks. Independent PDF preflight confirmed the source CMYK image, output profile and alpha mask survive editing; the largest edited PDF is 979,538 bytes. Screen-rendered proofs were also inspected.
 
+The laptop recovery includes 35 supplied artworks and 15 original replacements. All 100 native downloads and 100 edited exports passed collection and editor checks at four viewport widths. Independent preflight verified the original CMYK image, alpha mask and output-condition metadata remain unchanged in all 50 edited PDFs, with a maximum of 982,203 bytes. Rendered proofs were inspected. Recovery accepts the existing Watercolor style as well as Color, Outline and Black & White; unknown styles still fail validation.
+
+The smartwatch recovery includes 36 supplied artworks and 14 original replacements. Its gallery and editor checks cover all 50 designs, 100 native downloads and 100 edited exports at four viewport widths. Independent preflight and inspected renderings confirmed the CMYK image and alpha survive editing; the largest edited PDF is 981,297 bytes. Descriptions distinguish decorative concept graphics from real device capabilities. SEO checks parse quoted attributes correctly when English descriptions contain apostrophes.
+
 Production pages identify their source commit for both Git-connected and manual builds. A manual build resolves the current Git HEAD when Cloudflare has not supplied a revision; missing or invalid production revisions stop the build.
