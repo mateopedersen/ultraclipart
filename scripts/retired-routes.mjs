@@ -123,7 +123,15 @@ function compactCover(ids, protectedPaths, protectedSuffixes, root = '/*/') {
 
 /** Deleted Pages assets may remain cached. Keep every current page/resource
  * outside Functions, including after the catalog grows beyond 100 artwork IDs. */
-export function retirementPolicy(topics, artwork, withdrawn = {}, staticPaths = []) {
+export function retirementPolicy(
+  topics,
+  artwork,
+  withdrawn = {},
+  staticPaths = [],
+  maxRules = 100,
+) {
+  if (!Number.isInteger(maxRules) || maxRules < 1 || maxRules > 100)
+    throw new Error('Invalid Pages route budget');
   const available = new Set(artwork.map((item) => item.topic));
   const slug = (value) =>
     value
@@ -196,7 +204,7 @@ export function retirementPolicy(topics, artwork, withdrawn = {}, staticPaths = 
   // Prefer cheap prefix covers. As subjects fill in, compact the subject
   // partitions too; every candidate is checked against the opposite partition
   // and the final policy is checked against all real static resources below.
-  if (routes.include.length + routes.exclude.length > 100) {
+  if (routes.include.length + routes.exclude.length > maxRules) {
     const compactTopics = subjectRoutes(
       '/clipart/',
       topics.filter((topic) => !available.has(topic.slug)).map((topic) => topic.slug),
@@ -225,7 +233,7 @@ export function retirementPolicy(topics, artwork, withdrawn = {}, staticPaths = 
   if (exact.length < routes.include.length + routes.exclude.length)
     routes = { version: 1, include: exact, exclude: [] };
   if (
-    routes.include.length + routes.exclude.length > 100 ||
+    routes.include.length + routes.exclude.length > maxRules ||
     [...routes.include, ...routes.exclude].some((route) => route.length > 100)
   )
     throw new Error('Pages function route limit exceeded');

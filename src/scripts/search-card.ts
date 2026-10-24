@@ -4,6 +4,18 @@ export function renderCard(item: SearchCard): HTMLElement {
   const article = document.createElement('article');
   article.className = 'art-card';
   article.dataset.id = item.id;
+  const share = document.createElement('button');
+  share.type = 'button';
+  share.className = 'share-trigger share-trigger-card';
+  share.dataset.shareArt = '';
+  share.dataset.shareTitle = item.title;
+  share.dataset.shareUrl = `https://ultraclipart.com/art/${item.id}/`;
+  share.dataset.shareImage = item.webp;
+  share.setAttribute('aria-label', `Share ${item.title}`);
+  share.title = 'Share this clipart';
+  share.innerHTML =
+    '<svg width="23" height="23" viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect x="3" y="9" width="18" height="17" rx="5" fill="#e7f1ff"/><path d="M11 12 20 7M11 16l9 5" stroke="#2870c9" stroke-width="2"/><circle cx="7" cy="14" r="4" fill="#58a8ff" stroke="#1f68bb" stroke-width="1.3"/><circle cx="22" cy="5.5" r="4" fill="#9bcaff" stroke="#1f68bb" stroke-width="1.3"/><circle cx="22" cy="22" r="4" fill="#2b7ee0" stroke="#1f68bb" stroke-width="1.3"/><path d="M5.5 12.5h2M20.5 4h2M20.5 20.5h2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>';
+  article.append(share);
   const link = (label: string, href: string, className: string) => {
     const a = document.createElement('a');
     a.textContent = label;

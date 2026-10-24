@@ -70,6 +70,27 @@ const rasterSource = raster
       <button data-action="save">
         <StudioIcon name="save" size={22} /> Save project
       </button>
+      <button data-action="share" disabled aria-label="Share your edited artwork">
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path
+            d="m8.5 10.5 7-4m-7 7 7 4"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+          <circle cx="6" cy="12" r="3.2" fill="#d7e9ff" stroke="#2160b4" stroke-width="1.5" />
+          <circle cx="18" cy="5" r="3.2" fill="#a5dfce" stroke="#237768" stroke-width="1.5" />
+          <circle cx="18" cy="19" r="3.2" fill="#ffdc9c" stroke="#9b651a" stroke-width="1.5" />
+        </svg>{' '}
+        Share
+      </button>
       <button class="uc-primary" data-action="export">
         <Icon name="download" size={18} /> Export
       </button>

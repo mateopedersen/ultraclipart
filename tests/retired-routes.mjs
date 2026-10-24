@@ -170,3 +170,19 @@ test('adding subjects keeps withdrawals protected without routing current pages 
     for (const path of policy.retired) assert.equal(invokes(path), true, path);
   }
 });
+
+test('retirement rules reserve space for AI and public-sharing endpoints', () => {
+  const withdrawn = JSON.parse(
+    readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
+  );
+  const policy = retirementPolicy(topics, art, withdrawn, [], 98);
+  assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 98);
+  const invokes = (path) =>
+    policy.routes.include.some((pattern) => matches(pattern, path)) &&
+    !policy.routes.exclude.some((pattern) => matches(pattern, path));
+  for (const item of art) {
+    assert.equal(invokes(`/art/${item.id}/`), false);
+    assert.equal(invokes(`/edit/${item.id}/`), false);
+  }
+  for (const path of policy.retired) assert.equal(invokes(path), true, path);
+});

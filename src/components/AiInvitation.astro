@@ -1,73 +1,208 @@
 ---
 import { examples } from '../ai/presets';
+import AiBuilderMark from './AiBuilderMark.astro';
 ---
 
 <section class="ai-invitation" aria-labelledby="ai-invitation-title">
   <div class="ai-invitation-copy">
-    <p class="ai-invitation-eyebrow">
-      <span>NEW</span> AI Clipart Builder
-    </p>
+    <div class="ai-invitation-eyebrow">
+      <span class="ai-invitation-mark" aria-hidden="true">
+        <AiBuilderMark id="home" size={60} />
+      </span>
+      <span>AI Clipart Builder</span>
+      <span class="ai-new-label">New</span>
+    </div>
     <h2 id="ai-invitation-title">
-      Describe it.
+      Imagine it. Describe it.
       <br />
-      Make it yours.
+      <span>Create it with AI.</span>
     </h2>
-    <p>Your idea, illustrated with AI. Refine the details and bring it into Clipart Studio.</p>
+    <p class="ai-invitation-description">
+      Turn your description into a new clipart image. Choose the look, explore your result, and make
+      every finishing touch your own in Studio.
+    </p>
     <form id="home-ai-form" action="/ai-clipart-generator/" method="get">
-      <label class="sr-only" for="home-ai-prompt">
-        Describe the clipart you want to create
-      </label>
-      <input
+      <label for="home-ai-prompt">What would you like to create?</label>
+      <textarea
         id="home-ai-prompt"
-        type="text"
         maxlength="1200"
-        placeholder="A little rabbit holding a yellow daisy…"
-        required
+        rows="3"
+        placeholder="A tiny robot caring for a little green plant…"
         autocomplete="off"
-      />
-      <button type="submit" class="primary">
-        Create with AI{' '}
-        <svg
-          aria-hidden="true"
-          width="19"
-          height="19"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-        >
-          <path d="M4 12h15m-6-6 6 6-6 6" />
-        </svg>
-      </button>
+      >{examples[1].prompt}</textarea>
+      <div class="ai-invitation-form-bottom">
+        <span>Your words. A new starting point.</span>
+        <button type="submit">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m14 3 1.9 5.1L21 10l-5.1 1.9L14 17l-1.9-5.1L7 10l5.1-1.9L14 3Z" fill="#FFF" />
+            <path
+              d="m5 14 1.2 3.3L9.5 18.5l-3.3 1.2L5 23l-1.2-3.3L.5 18.5l3.3-1.2L5 14Z"
+              fill="#A8D3FF"
+            />
+          </svg>
+          Create with AI
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            aria-hidden="true"
+          >
+            <path d="M4 12h15m-6-6 6 6-6 6" />
+          </svg>
+        </button>
+      </div>
     </form>
     <div class="ai-invitation-prompts" aria-label="Try an example idea">
-      {examples.map((e, i) => (
+      <span>Need a little spark?</span>
+      {examples.slice(0, 3).map((e, i) => (
         <button type="button" data-home-ai-example={i}>
-          {e.label}
+          {'image' in e && <img src={e.image} alt="" width="32" height="32" loading="lazy" />}
+          <span>{e.label}</span>
         </button>
       ))}
     </div>
-    <small>Free daily capacity · No account needed · Review your idea before generating</small>
+    <div class="ai-invitation-notes">
+      <span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"
+        >
+          <path d="m4 10 4 4 8-8" />
+        </svg>
+        Free daily capacity
+      </span>
+      <span>
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"
+        >
+          <path d="m4 10 4 4 8-8" />
+        </svg>
+        No account needed
+      </span>
+    </div>
+    <p class="ai-invitation-fine">
+      Review your idea before generating. Results can vary; refine the details in the editor.
+    </p>
   </div>
-  <div class="ai-invitation-art" aria-label="Examples generated with FLUX.1 schnell">
-    {examples
-      .filter((e) => 'image' in e)
-      .map((e, i) => (
-        <a href="/ai-clipart-generator/" data-home-ai-example={i} aria-label={`Try ${e.label}`}>
-          <img src={e.image} alt={e.alt} width="320" height="320" loading="lazy" decoding="async" />
-          <span>{e.label}</span>
-        </a>
-      ))}
-    <p>REAL GENERATED EXAMPLES · FLUX.1 SCHNELL</p>
+  <div class="ai-invitation-art" aria-label="AI artwork ideas">
+    <div class="ai-invitation-art-orbit" aria-hidden="true"></div>
+    <div class="ai-artboard-label">
+      <span></span> YOUR IMAGINATION, TAKING SHAPE
+    </div>
+    <a
+      class="ai-example-card ai-example-robot"
+      href="/ai-clipart-generator/"
+      data-home-ai-example="1"
+      aria-label="Try the friendly robot idea"
+    >
+      <div class="ai-example-card-top">
+        <span>PROMPT → CLIPART</span>
+        <svg
+          width="17"
+          height="17"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"
+        >
+          <path d="M7 17 17 7M7 7h10v10" />
+        </svg>
+      </div>
+      <p>
+        “A friendly robot
+        <br />
+        with a love for plants.”
+      </p>
+      <img
+        src="/ai-examples/garden-robot-1024.webp"
+        alt="A detailed silver and orange robot holding a green potted plant"
+        width="640"
+        height="640"
+        loading="lazy"
+        decoding="async"
+      />
+      <span class="ai-example-card-bottom">
+        Meet your next creation
+        <span>
+          Try this idea
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M3 10h13m-5-5 5 5-5 5" />
+          </svg>
+        </span>
+      </span>
+    </a>
+    <a
+      class="ai-example-card ai-example-rabbit"
+      href="/ai-clipart-generator/"
+      data-home-ai-example="0"
+      aria-label="Try the baby rabbit idea"
+    >
+      <img
+        src="/ai-examples/baby-rabbit-1024.webp"
+        alt="A soft baby rabbit holding a yellow daisy"
+        width="320"
+        height="320"
+        loading="lazy"
+        decoding="async"
+      />
+      <span>Soft fur. Big personality.</span>
+    </a>
+    <a
+      class="ai-example-card ai-example-floral"
+      href="/ai-clipart-generator/"
+      data-home-ai-example="2"
+      aria-label="Try the floral teacup idea"
+    >
+      <img
+        src="/ai-examples/floral-teacup-1024.webp"
+        alt="Pink peonies and white daisies in a pale green teacup"
+        width="320"
+        height="320"
+        loading="lazy"
+        decoding="async"
+      />
+      <span>Flowers, with a little magic.</span>
+    </a>
   </div>
 </section>
 <script>
   import { examples } from '../ai/presets';
   const form = document.querySelector<HTMLFormElement>('#home-ai-form');
-  const input = document.querySelector<HTMLInputElement>('#home-ai-prompt');
+  const input = document.querySelector<HTMLTextAreaElement>('#home-ai-prompt');
   let selectedStyle = 'realistic';
   const go = () => {
-    if (!input?.value.trim()) return;
+    if (!input?.value.trim()) {
+      try {
+        sessionStorage.removeItem('ultraclipart-ai-prompt');
+      } catch {
+        /* Optional local storage. */
+      }
+      location.assign('/ai-clipart-generator/');
+      return;
+    }
     try {
       sessionStorage.setItem(
         'ultraclipart-ai-prompt',
@@ -97,233 +232,764 @@ import { examples } from '../ai/presets';
 <style>
   .ai-invitation {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    align-items: center;
-    gap: 36px;
-    padding: 36px;
-    margin: 34px 0 44px;
-    border: 1px solid #cddff5;
-    border-radius: 22px;
-    background: #f4f8fe;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 0;
+    align-items: stretch;
+    margin: 28px 0 55px;
+    border: 1px solid #cedff5;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 35px #24487808;
+    color: #152d50;
+  }
+  .ai-invitation-copy {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 39px 36px 32px;
   }
   .ai-invitation-eyebrow {
-    font-size: 12px;
-    font-weight: 750;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: #395d8a;
-    margin: 0 0 15px;
-  }
-  .ai-invitation-eyebrow > span {
-    font-size: 9px;
-    padding: 4px 6px;
-    border: 1px solid #bcd6f7;
-    background: #e3efff;
-    color: #1555a6;
-    border-radius: 4px;
-    margin-right: 7px;
-  }
-  .ai-invitation h2 {
-    font-size: clamp(30px, 3.5vw, 44px);
-    letter-spacing: -1.1px;
-    line-height: 1.13;
-    margin: 0 0 14px;
-  }
-  .ai-invitation-copy > p:not(.ai-invitation-eyebrow) {
-    font-size: 15px;
-    line-height: 1.7;
-    max-width: 470px;
-  }
-  .ai-invitation form {
     display: flex;
     align-items: center;
-    gap: 5px;
-    padding: 6px;
-    background: white;
-    border: 1px solid #b9cfee;
-    border-radius: 12px;
-    margin: 20px 0 10px;
+    gap: 11px;
+    margin: 0 0 22px;
+    color: #1f4f8c;
+    font:
+      650 16px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
   }
-  .ai-invitation input {
-    min-width: 0;
+  .ai-invitation-mark {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    background: #ecf5ff;
+    border: 1px solid #ccdef5;
+    border-radius: 13px;
+    flex-shrink: 0;
+  }
+  .ai-new-label {
+    display: inline-block;
+    margin-left: 0;
+    padding: 4px 7px;
+    border: 1px solid #b8d2f5;
+    border-radius: 5px;
+    background: #e8f2ff;
+    color: #1a559f;
+    font:
+      700 11px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .ai-invitation h2 {
+    margin: 0 0 19px;
+    color: #14294b;
+    font-family: 'UltraClipart Sans', Arial, sans-serif;
+    font-size: clamp(32px, 3.2vw, 43px);
+    font-weight: 750;
+    letter-spacing: -1.6px;
+    line-height: 1.14;
+  }
+  .ai-invitation h2 > span {
+    color: #1766ce;
+  }
+  .ai-invitation-description {
+    max-width: 500px;
+    margin: 0 0 24px;
+    color: #304e75;
+    font:
+      400 17px/1.7 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .ai-invitation form {
+    margin: 0;
+    padding: 15px;
+    background: #fff;
+    border: 1.5px solid #a7c5ed;
+    border-radius: 14px;
+    box-shadow: 0 5px 0 #f0f5fd;
+  }
+  .ai-invitation form:focus-within {
+    border-color: #3478d4;
+    box-shadow:
+      0 0 0 3px #e1edff,
+      0 5px 0 #f0f5fd;
+  }
+  .ai-invitation form > label {
+    display: block;
+    color: #26486f;
+    font:
+      650 14px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    margin: 0 0 9px;
+  }
+  .ai-invitation textarea {
+    display: block;
+    resize: vertical;
+    min-height: 82px;
+    max-height: 250px;
     width: 100%;
+    padding: 5px 0 12px;
     border: 0;
+    border-radius: 0;
     background: transparent;
-    padding: 10px 8px;
-    font-size: 13px;
-    color: #152849;
-    min-height: 43px;
+    color: #233f63;
+    box-shadow: none;
+    font:
+      400 16px/1.6 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .ai-invitation textarea::placeholder {
+    color: #456589;
+    opacity: 1;
+  }
+  .ai-invitation textarea:focus {
+    outline: 0;
+  }
+  .ai-invitation-form-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding-top: 11px;
+    border-top: 1px solid #e6eef9;
+  }
+  .ai-invitation-form-bottom > span {
+    max-width: 160px;
+    color: #546d8b;
+    font-size: 12px;
+    line-height: 1.5;
   }
   .ai-invitation form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    padding: 11px 13px;
     white-space: nowrap;
-    font-size: 13px;
-    border-radius: 8px;
-    min-height: 45px;
-    padding: 10px 14px;
+    border: 1px solid #0e5ed0;
+    border-radius: 9px;
+    background: linear-gradient(120deg, #1b77ee, #075bd4);
+    box-shadow:
+      inset 0 1px #ffffff30,
+      0 3px 6px #1461bd12;
+    color: #fff;
+    font:
+      650 15px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .ai-invitation form button:hover {
+    background: #074faf;
   }
   .ai-invitation-prompts {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 4px 10px;
-    margin: 6px 0 14px;
+    gap: 8px;
+    margin: 22px 0 16px;
+  }
+  .ai-invitation-prompts > span {
+    flex-basis: 100%;
+    font-size: 12px;
+    font-weight: 550;
+    color: #506b8e;
+    margin-bottom: 1px;
   }
   .ai-invitation-prompts button {
-    font-size: 11px;
-    padding: 4px 0;
-    border: 0;
-    min-height: 30px;
-    background: transparent;
-    color: #305f9c;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-height: 40px;
+    padding: 3px 8px 3px 3px;
+    border: 1px solid #d9e5f4;
+    border-radius: 8px;
+    background: #f8faff;
+    color: #345680;
+    font:
+      600 14px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    box-shadow: none;
   }
-  .ai-invitation small {
-    font-size: 10px;
-    color: #52617a;
-    display: block;
-    line-height: 1.7;
+  .ai-invitation-prompts button:hover {
+    background: #edf5ff;
+    border-color: #b1cef3;
+  }
+  .ai-invitation-prompts img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 5px;
+    background: #fff;
+  }
+  .ai-invitation-notes {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 0 0 8px;
+    color: #42638a;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .ai-invitation-notes > span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .ai-invitation-notes svg {
+    color: #2d87a2;
+    flex-shrink: 0;
+  }
+  .ai-invitation-fine {
+    margin: 0;
+    color: #59718e;
+    font-size: 11px;
+    line-height: 1.6;
   }
   .ai-invitation-art {
+    grid-column: 1;
+    grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 10px;
+    grid-template-columns: minmax(0, 0.64fr) minmax(0, 1fr);
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
     align-items: center;
-  }
-  .ai-invitation-art a {
-    display: block;
+    gap: 24px 18px;
+    position: relative;
+    min-width: 0;
+    padding: 88px 24px 38px;
+    min-height: 650px;
+    isolation: isolate;
     overflow: hidden;
-    background: #fff;
-    border: 1px solid #d8e3ef;
-    border-radius: 13px;
-    box-shadow: 0 6px 20px #244c7710;
-    text-align: center;
-    color: #284467;
+    background: linear-gradient(140deg, #2076e4 5%, #0e5bc8 80%);
+    border-radius: 24px 0 0 24px;
   }
-  .ai-invitation-art a:nth-child(2) {
-    margin-top: 36px;
+  .ai-invitation-art-orbit {
+    position: absolute;
+    z-index: -1;
+    left: -60px;
+    top: 56px;
+    width: 550px;
+    height: 550px;
+    border: 1px solid #69a5f0;
+    border-radius: 50%;
+    background: #347fdf;
   }
-  .ai-invitation-art img {
+  .ai-invitation-art-orbit:before {
+    content: '';
+    position: absolute;
+    inset: 45px;
+    border-radius: 50%;
+    border: 1px solid #ffffff26;
+    background: #ffffff09;
+  }
+  .ai-artboard-label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    top: 31px;
+    left: 27px;
+    right: 20px;
+    color: #fff;
+    font:
+      600 14px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .ai-artboard-label > span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #c3e0ff;
+    box-shadow: 0 0 0 4px #ffffff16;
+    flex-shrink: 0;
+  }
+  .ai-example-card {
+    position: relative;
+    display: block;
+    min-width: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #e0e9f4;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #27456d;
+    box-shadow: 0 15px 30px #0b376b40;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
+    overflow: hidden;
+  }
+  .ai-example-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 35px #0b376b55;
+  }
+  .ai-example-card img {
     display: block;
     width: 100%;
     height: auto;
     aspect-ratio: 1;
     object-fit: contain;
+    background: white;
   }
-  .ai-invitation-art span {
-    display: block;
-    font-size: 10px;
+  .ai-example-robot {
+    grid-column: 2;
+    grid-row: 1/3;
+  }
+  .ai-example-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 18px 0;
+    color: #48688c;
+    font-size: 11px;
     font-weight: 650;
-    line-height: 1.4;
-    padding: 10px 4px;
-    border-top: 1px solid #edf1f6;
+    letter-spacing: 0.08em;
   }
-  .ai-invitation-art > p {
-    grid-column: 1/-1;
-    font-size: 9px;
-    letter-spacing: 0.11em;
+  .ai-example-robot > p {
+    margin: 8px 18px 0;
+    color: #29466c;
+    font:
+      650 16px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -0.2px;
+  }
+  .ai-example-robot img {
+    padding: 4px 8px 0;
+  }
+  .ai-example-card-bottom {
+    display: block;
+    padding: 0 18px 18px;
+    font:
+      650 14px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .ai-example-card-bottom > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    color: #2d69b2;
+    font-size: 12px;
+    font-weight: 550;
+  }
+  .ai-example-rabbit {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    padding: 7px 7px 0;
+  }
+  .ai-example-floral {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    padding: 7px 7px 0;
+  }
+  .ai-example-rabbit img,
+  .ai-example-floral img {
+    border-radius: 8px;
+  }
+  .ai-example-rabbit > span,
+  .ai-example-floral > span {
+    display: block;
+    padding: 8px 5px 14px;
     text-align: center;
-    color: #5b6c82;
-    margin: 5px 0;
+    font:
+      650 13px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
   }
   .ai-invitation :focus-visible {
-    outline: 3px solid #2474dd;
+    outline: 3px solid #296ed1;
     outline-offset: 4px;
   }
-  @media (max-width: 1000px) {
-    .ai-invitation {
-      grid-template-columns: 1fr 1fr;
-      padding: 28px;
-      gap: 24px;
+  .ai-invitation-art :focus-visible {
+    outline-color: #fff;
+  }
+  @media (max-width: 1100px) {
+    .ai-invitation-copy {
+      padding: 30px 25px;
     }
-    .ai-invitation form {
-      display: block;
+    .ai-invitation h2 {
+      font-size: 35px;
+      letter-spacing: -1.1px;
+    }
+    .ai-invitation-description {
+      font-size: 16px;
+    }
+    .ai-invitation-eyebrow {
+      font-size: 14px;
+      gap: 9px;
+    }
+    .ai-invitation-form-bottom > span {
+      display: none;
     }
     .ai-invitation form button {
       width: 100%;
+      font-size: 16px;
     }
-    .ai-invitation input {
-      font-size: 14px;
-    }
-    .ai-invitation-art {
+    .ai-invitation-prompts {
       gap: 6px;
     }
+    .ai-invitation-prompts button {
+      font-size: 14px;
+    }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     .ai-invitation {
       grid-template-columns: 1fr;
-      padding: 25px;
-      gap: 25px;
+      margin-top: 12px;
+      border-radius: 21px;
     }
-    .ai-invitation-art {
-      max-width: 450px;
-      gap: 10px;
-      width: 100%;
-      margin: auto;
+    .ai-invitation-copy {
+      grid-column: 1;
+      grid-row: 1;
+      padding: 30px;
     }
-    .ai-invitation-art a:nth-child(2) {
-      margin-top: 0;
+    .ai-invitation-eyebrow {
+      font-size: 16px;
+      margin-bottom: 18px;
     }
-    .ai-invitation-art span {
-      font-size: 10px;
+    .ai-invitation h2 {
+      font-size: 41px;
     }
-    .ai-invitation small {
-      font-size: 11px;
+    .ai-invitation-description {
+      max-width: none;
+      font-size: 17px;
+    }
+    .ai-invitation-form-bottom > span {
+      display: block;
+    }
+    .ai-invitation form button {
+      width: auto;
     }
     .ai-invitation-prompts button {
-      min-height: 36px;
+      font-size: 14px;
     }
-    .ai-invitation h2 br {
-      display: none;
+    .ai-invitation-notes {
+      font-size: 13px;
     }
-    .ai-invitation-copy > p:not(.ai-invitation-eyebrow) {
-      font-size: 15px;
+    .ai-invitation-fine {
+      font-size: 12px;
     }
   }
-  @media (max-width: 380px) {
+  @media (max-width: 520px) {
     .ai-invitation {
-      padding: 18px;
+      margin-bottom: 40px;
+    }
+    .ai-invitation-copy {
+      padding: 25px 20px;
+    }
+    .ai-invitation-eyebrow {
+      font-size: 14px;
+      gap: 8px;
+    }
+    .ai-invitation-mark {
+      width: 43px;
+      height: 43px;
+      border-radius: 11px;
+    }
+    .ai-new-label {
+      font-size: 10px;
+    }
+    .ai-invitation h2 {
+      font-size: 34px;
+      letter-spacing: -1.2px;
+    }
+    .ai-invitation-description {
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 21px;
+    }
+    .ai-invitation form {
+      padding: 12px;
+    }
+    .ai-invitation form > label {
+      font-size: 13px;
+    }
+    .ai-invitation textarea {
+      font-size: 16px;
+      min-height: 104px;
+    }
+    .ai-invitation-form-bottom > span {
+      display: none;
+    }
+    .ai-invitation form button {
+      width: 100%;
+      font-size: 16px;
+      padding: 12px;
+    }
+    .ai-invitation-prompts {
+      gap: 7px;
+      margin-top: 21px;
+    }
+    .ai-invitation-prompts button {
+      font-size: 14px;
+      min-height: 40px;
+    }
+    .ai-invitation-prompts > span {
+      font-size: 12px;
+    }
+    .ai-invitation-notes {
+      gap: 6px 14px;
+      font-size: 12px;
+    }
+    .ai-invitation-fine {
+      font-size: 11px;
+    }
+    .ai-example-rabbit > span,
+    .ai-example-floral > span {
+      font-size: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  @media (max-width: 359px) {
+    .ai-invitation-copy {
+      padding: 22px 16px;
     }
     .ai-invitation h2 {
       font-size: 30px;
+      letter-spacing: -0.9px;
     }
-    .ai-invitation-art {
+    .ai-invitation-eyebrow {
+      font-size: 13px;
       gap: 6px;
     }
-  }
-  .ai-invitation-eyebrow {
-    font-size: 13px;
-  }
-  .ai-invitation-eyebrow > span {
-    font-size: 10px;
-  }
-  .ai-invitation input,
-  .ai-invitation form button {
-    font-size: 14px;
-  }
-  .ai-invitation-prompts button {
-    font-size: 12px;
-    min-height: 36px;
-  }
-  .ai-invitation small {
-    font-size: 12px;
-  }
-  .ai-invitation-art span {
-    font-size: 12px;
-    padding: 12px 6px;
-  }
-  .ai-invitation-art > p {
-    font-size: 11px;
-    letter-spacing: 0.05em;
-  }
-  @media (max-width: 700px) {
-    .ai-invitation-art span {
-      font-size: 11px;
+    .ai-example-rabbit > span,
+    .ai-example-floral > span {
+      font-size: 9px;
     }
-    .ai-invitation-art > p {
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ai-invitation * {
+      transition: none !important;
+    }
+  }
+
+  @media (max-width: 1100px) {
+    .ai-invitation-art {
+      grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+      padding: 82px 18px 32px;
+      gap: 20px 12px;
+      min-height: 690px;
+    }
+    .ai-example-robot > p {
+      font-size: 14px;
+      margin: 8px 12px 0;
+    }
+    .ai-example-card-top {
+      padding: 13px 12px 0;
       font-size: 10px;
     }
-    .ai-invitation small {
+    .ai-example-card-bottom {
+      padding: 0 12px 15px;
+      font-size: 13px;
+    }
+    .ai-example-rabbit > span,
+    .ai-example-floral > span {
       font-size: 12px;
+      padding: 7px 2px 12px;
+    }
+  }
+  @media (max-width: 800px) {
+    .ai-invitation-art {
+      grid-column: 1;
+      grid-row: 2;
+      grid-template-columns: minmax(0, 0.6fr) minmax(0, 1fr);
+      min-height: 560px;
+      padding: 78px 40px 30px;
+      border-radius: 0 0 20px 20px;
+      gap: 20px;
+    }
+    .ai-example-robot > p {
+      font-size: 17px;
+    }
+    .ai-example-card-bottom {
+      font-size: 15px;
+    }
+    .ai-example-rabbit > span,
+    .ai-example-floral > span {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 520px) {
+    .ai-invitation-art {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      min-height: 0;
+      padding: 73px 18px 24px;
+      gap: 17px 13px;
+    }
+    .ai-example-robot {
+      grid-column: 1/3;
+      grid-row: 1;
+      max-width: 300px;
+      justify-self: center;
+    }
+    .ai-example-robot > p {
+      font-size: 16px;
+    }
+    .ai-example-card-top {
+      font-size: 11px;
+    }
+    .ai-example-robot img {
+      max-height: 270px;
+    }
+    .ai-example-rabbit {
+      grid-column: 1;
+      grid-row: 2;
+      align-self: start;
+    }
+    .ai-example-floral {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .ai-example-rabbit > span,
+    .ai-example-floral > span {
+      font-size: 12px;
+    }
+    .ai-artboard-label {
+      font-size: 12px;
+      top: 25px;
+      left: 21px;
+    }
+  }
+
+  .ai-invitation .ai-invitation-mark {
+    width: 66px;
+    height: 66px;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .ai-invitation .ai-invitation-eyebrow {
+    font-weight: 750;
+    font-size: 17px;
+    gap: 9px;
+  }
+  .ai-invitation .ai-invitation-art {
+    background:
+      radial-gradient(ellipse at 30% 15%, #60a8ff55, transparent 65%),
+      linear-gradient(145deg, #1768d5, #084495);
+    perspective: 1000px;
+    padding-top: 92px;
+    padding-bottom: 56px;
+  }
+  .ai-invitation .ai-invitation-art:after {
+    content: '';
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    bottom: -130px;
+    height: 380px;
+    z-index: -1;
+    background:
+      repeating-linear-gradient(0deg, #ffffff18 0 1px, transparent 1px 48px),
+      repeating-linear-gradient(90deg, #ffffff18 0 1px, transparent 1px 48px);
+    transform: perspective(500px) rotateX(60deg);
+    mask-image: linear-gradient(transparent, #000);
+  }
+  .ai-invitation .ai-invitation-art-orbit {
+    background: radial-gradient(circle, #4f98ee55, #4f98ee05 70%);
+    border-color: #90c4ff30;
+  }
+  .ai-invitation .ai-artboard-label {
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 0.08em;
+    top: 34px;
+  }
+  .ai-invitation .ai-example-card {
+    border: 1px solid #ffffffca;
+    box-shadow:
+      0 4px 0 #b3d1ed,
+      0 9px 0 #80abd8,
+      0 25px 35px #001d5960,
+      inset 0 1px white;
+    border-radius: 20px;
+  }
+  .ai-invitation .ai-example-card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 4px 0 #b3d1ed,
+      0 9px 0 #80abd8,
+      0 32px 40px #001d5970;
+  }
+  .ai-invitation .ai-example-robot {
+    transform: rotateY(-7deg);
+  }
+  .ai-invitation .ai-example-robot > p {
+    font-size: 19px;
+    font-weight: 750;
+    line-height: 1.35;
+    color: #14355d;
+  }
+  .ai-invitation .ai-example-card-top {
+    color: #315b8c;
+    font-weight: 750;
+    font-size: 11px;
+    padding-top: 22px;
+  }
+  .ai-invitation .ai-example-card-bottom {
+    font-size: 16px;
+    font-weight: 750;
+    padding-bottom: 24px;
+  }
+  .ai-invitation .ai-example-card-bottom > span {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .ai-invitation .ai-example-rabbit > span,
+  .ai-invitation .ai-example-floral > span {
+    font-size: 14px;
+    font-weight: 750;
+    padding: 12px 8px 18px;
+    color: #183d6b;
+  }
+  .ai-invitation .ai-example-card img {
+    border-radius: 18px;
+  }
+  .ai-invitation .ai-example-rabbit {
+    transform: rotateY(8deg) rotateZ(-3deg);
+  }
+  .ai-invitation .ai-example-floral {
+    transform: rotateY(8deg) rotateZ(3deg);
+  }
+  @media (max-width: 520px) {
+    .ai-invitation .ai-invitation-art {
+      padding-top: 75px;
+      padding-bottom: 37px;
+      gap: 22px 14px;
+    }
+    .ai-invitation .ai-example-robot > p {
+      font-size: 16px;
+    }
+    .ai-invitation .ai-example-card-bottom {
+      font-size: 14px;
+      padding: 0 12px 17px;
+    }
+    .ai-invitation .ai-example-rabbit > span,
+    .ai-invitation .ai-example-floral > span {
+      font-size: 12px;
+      line-height: 1.35;
+      padding: 9px 3px 13px;
+    }
+    .ai-invitation .ai-artboard-label {
+      font-size: 11px;
+    }
+    .ai-invitation .ai-example-card {
+      border-radius: 15px;
     }
   }
 </style>
