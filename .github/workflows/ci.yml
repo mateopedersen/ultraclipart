@@ -125,6 +125,7 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fire-leaf-two-packs-2026-10-24 EXPECTED_ARTWORKS=100 EXPECTED_TOPICS=2 EVIDENCE_DIR=reports/fire-leaf node tests/e2e/package-gallery.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-school-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/school node tests/e2e/package-gallery.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-basketball-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/basketball node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-book-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/book node tests/e2e/package-gallery.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
