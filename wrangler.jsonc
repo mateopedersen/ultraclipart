@@ -2,6 +2,12 @@
   "name": "ultraclipart",
   "compatibility_date": "2026-10-23",
   "pages_build_output_dir": "./dist",
+  "r2_buckets": [
+    {
+      "binding": "CATALOG_PAGES",
+      "bucket_name": "ultraclipart-pages",
+    },
+  ],
   "ai": {
     "binding": "AI",
   },
