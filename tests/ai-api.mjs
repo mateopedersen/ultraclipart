@@ -174,26 +174,28 @@ test('production route validates origin, session, Turnstile, inference and no-st
     assert.match(r.headers.get('cache-control'), /no-store/);
     assert.equal((await r.json()).neurons, 175.8);
     assert.equal((await handleAi(req(valid), env)).status, 429);
+    assert.equal(
+      (await handleAi(req(valid), { ...env, AI_GENERATION_ENABLED: 'false' })).status,
+      503,
+    );
+    // Keep Turnstile mocked while testing database failure. Restoring fetch
+    // first calls the real service with a fake token and masks this failure.
+    assert.equal(
+      (
+        await handleAi(req(valid), {
+          ...env,
+          AI_DB: {
+            prepare() {
+              throw Error('db unavailable');
+            },
+          },
+        })
+      ).status,
+      503,
+    );
   } finally {
     globalThis.fetch = saved;
   }
-  assert.equal(
-    (await handleAi(req(valid), { ...env, AI_GENERATION_ENABLED: 'false' })).status,
-    503,
-  );
-  assert.equal(
-    (
-      await handleAi(req(valid), {
-        ...env,
-        AI_DB: {
-          prepare() {
-            throw Error('db unavailable');
-          },
-        },
-      })
-    ).status,
-    503,
-  );
 });
 test('missing production security settings never enable inference; public health contains no secrets', async () => {
   const r = await handleAi(new Request('https://ultraclipart.com/api/ai/clipart/health'), {

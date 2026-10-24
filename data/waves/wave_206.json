@@ -1,0 +1,253 @@
+{
+  "wave": "wave_206",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-turkey-outline-front",
+      "title": "Fan-Tail Coloring Outline",
+      "alt": "Black clean-line frontal turkey and layered tail feathers with generous white coloring areas.",
+      "description": "Black clean-line frontal turkey and layered tail feathers with generous white coloring areas. Suitable for coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_206/source/turkey-turkey-outline-front-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "7807ec71da969857e58a80b47747dcc860abe5b84f545ce0bd2491e09f889adb",
+      "inputSignature": "7e628a5a4e478988b6a2b2e379eaad1e4c2d32d3e3beea76b6b168eceaa57884",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 928585,
+        "weightedCmykRmse": 0.698681
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1198899,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 928585,
+          "weightedCmykRmse": 0.698681
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        18,
+        16,
+        1293,
+        1195
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-front.pdf",
+          "bytes": 928585,
+          "sha256": "58a83e11d447e394f12488d714d2effa78078719d06314d3412bdede5863e40c"
+        },
+        "webp": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-front.webp",
+          "bytes": 823262,
+          "sha256": "935f7a05ae7ac3bdeeed11713ae575d9b5c8e4201aadf55726b9e9fa2a1aa39c"
+        },
+        "thumb": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-front-thumb.webp",
+          "bytes": 62554,
+          "sha256": "f671b1577bb4c40206e9fa987c9010bcf3868d18322a9eb05e73ec37e1a8da66"
+        }
+      },
+      "proofSha256": "1a5fc56e278ad29b9cead93d8f2a9f04fe715685f4831f35235f58f6fffa9766",
+      "pairMeanRgbDifference": 11.62445
+    },
+    {
+      "id": "turkey-turkey-outline-poult",
+      "title": "Poult Coloring Outline",
+      "alt": "Simple accurate poult outline in three-quarter view with broad white areas.",
+      "description": "Simple accurate poult outline in three-quarter view with broad white areas. Suitable for preschool coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_206/source/turkey-turkey-outline-poult-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1228,
+      "height": 1281,
+      "pdfWidth": 863,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "d391219715faffc98e7ebc60e4e305ba69d9b99af20e3fd6222a29327edb078e",
+      "inputSignature": "aea22dfdb7bcba61cbade7e06bffaacb59f85fd70791f2038108f53a661fc251",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 836546,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 836546,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        138,
+        27,
+        1083,
+        1268
+      ],
+      "image": {
+        "width": 863,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-poult.pdf",
+          "bytes": 836546,
+          "sha256": "923a75495c45046b805d2eeeb84211f653c2c17550e14164e9adcd79c9604e3f"
+        },
+        "webp": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-poult.webp",
+          "bytes": 555032,
+          "sha256": "ba3f1a2aefeedbbbfd591282d4955ec46cbfb3a42f4620efb468f8e71c4caed4"
+        },
+        "thumb": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-poult-thumb.webp",
+          "bytes": 45972,
+          "sha256": "f7d7f2861d54d3d2e82bff336d020568209076aded6fdf205721e37249806fb6"
+        }
+      },
+      "proofSha256": "e86a71d053e2dd761c0285ccd75e07686096d6dd8a4ec9c14d5c30059c6c5c09",
+      "pairMeanRgbDifference": 7.33575
+    },
+    {
+      "id": "turkey-turkey-outline-feather",
+      "title": "Turkey Feather Coloring Outline",
+      "alt": "A single large banded turkey feather in black outline with open sections to color.",
+      "description": "A single large banded turkey feather in black outline with open sections to color. Suitable for nature coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_206/source/turkey-turkey-outline-feather-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 600,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "a58939f7bab9980c817a5e9bb151221e640b83fe3fc47ad8af648870ff09d94a",
+      "inputSignature": "4258f325e9726a93794e355194a5e56683c78093007b795b4fee4456f255b351",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 791850,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 791850,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        105,
+        15,
+        978,
+        1517
+      ],
+      "image": {
+        "width": 600,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-feather.pdf",
+          "bytes": 791850,
+          "sha256": "583fabc07b44589354e1d21e69d6c7e574aadb598be5ce2a84256ad32e85f56d"
+        },
+        "webp": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-feather.webp",
+          "bytes": 1002500,
+          "sha256": "e937335d607624cefe9c07e39a93102b6f0c55d0c70f188280f3d8a003743c62"
+        },
+        "thumb": {
+          "path": "work/production/wave_206/exports/turkey-turkey-outline-feather-thumb.webp",
+          "bytes": 45276,
+          "sha256": "807ce9b4574f19b24a90bb92ce2fd239b2c184bb61a1ea2a31fd1f2984f4a89b"
+        }
+      },
+      "proofSha256": "17f51cd9f4b387001fac8e0ab4b0188d798bfc6d1d012804797b050719584428",
+      "pairMeanRgbDifference": 11.3751
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:27.851Z"
+}

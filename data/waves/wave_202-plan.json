@@ -1,0 +1,44 @@
+{
+  "wave": "wave_202",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-tom-head-study",
+      "title": "Wild Turkey Head Study",
+      "alt": "A cropped anatomical head and neck of a mature turkey showing snood, wattle, eye and beak without labels.",
+      "description": "A cropped anatomical head and neck of a mature turkey showing snood, wattle, eye and beak without labels. Suitable for science lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_202/source/turkey-tom-head-study-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-single-feather",
+      "title": "Banded Turkey Feather",
+      "alt": "One long slightly curved turkey feather with a visible shaft and warm banded vane.",
+      "description": "One long slightly curved turkey feather with a visible shaft and warm banded vane. Suitable for scrapbook accent.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_202/source/turkey-single-feather-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-wing-spread",
+      "title": "Turkey With Spread Wings",
+      "alt": "A lively standing turkey extends both wings while its tail remains closed, readable wing structure.",
+      "description": "A lively standing turkey extends both wings while its tail remains closed, readable wing structure. Suitable for movement lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_202/source/turkey-wing-spread-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

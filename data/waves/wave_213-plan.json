@@ -1,0 +1,55 @@
+{
+  "wave": "wave_213",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-turkey-sunrise",
+      "title": "Morning Turkey",
+      "alt": "A turkey calls with its beak open beside a simple sunrise arc, isolated icon composition.",
+      "description": "A turkey calls with its beak open beside a simple sunrise arc, isolated icon composition. Suitable for morning routine card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-turkey-sunrise-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-turkey-in-snow",
+      "title": "Turkey in Snow",
+      "alt": "A wild turkey steps through a small pale snow patch with a visible footprint.",
+      "description": "A wild turkey steps through a small pale snow patch with a visible footprint. Suitable for seasonal animal lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-turkey-in-snow-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-turkey-with-acorns",
+      "title": "Turkey Foraging Acorns",
+      "alt": "A turkey looks down at exactly three scattered acorns, full bird visible.",
+      "description": "A turkey looks down at exactly three scattered acorns, full bird visible. Suitable for autumn worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-turkey-with-acorns-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-three-eggs-nest",
+      "title": "Turkey Eggs in Nest",
+      "alt": "Exactly three speckled turkey eggs resting in a shallow twig-and-straw nest.",
+      "description": "Exactly three speckled turkey eggs resting in a shallow twig-and-straw nest. Suitable for life-cycle lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-three-eggs-nest-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    }
+  ]
+}

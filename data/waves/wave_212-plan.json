@@ -1,0 +1,55 @@
+{
+  "wave": "wave_212",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-poult-under-wing",
+      "title": "Poult Under Wing",
+      "alt": "A young poult shelters partly beneath a sitting hen\u2019s raised wing.",
+      "description": "A young poult shelters partly beneath a sitting hen\u2019s raised wing. Suitable for story illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-poult-under-wing-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-drinking-water",
+      "title": "Turkey Drinking",
+      "alt": "A turkey lowers its beak to a small plain water bowl, no other props.",
+      "description": "A turkey lowers its beak to a small plain water bowl, no other props. Suitable for care-of-animals guide.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-drinking-water-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-running-poult",
+      "title": "Running Turkey Poult",
+      "alt": "One poult in a quick running pose with both tiny legs separated and wings slightly lifted.",
+      "description": "One poult in a quick running pose with both tiny legs separated and wings slightly lifted. Suitable for children\u2019s story.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-running-poult-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-tail-feather-fan",
+      "title": "Turkey Tail Feather Fan",
+      "alt": "A detached orderly fan of real turkey tail feathers with individual banding and central quills, no bird body.",
+      "description": "A detached orderly fan of real turkey tail feathers with individual banding and central quills, no bird body. Suitable for craft border.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-tail-feather-fan-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    }
+  ]
+}

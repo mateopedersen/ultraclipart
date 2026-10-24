@@ -1,0 +1,289 @@
+{
+  "wave": "wave_200",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-wild-tom-side-profile",
+      "title": "Wild Tom in Profile",
+      "alt": "A full adult wild tom facing left with folded tail, long neck, visible snood and sturdy three-toed feet.",
+      "description": "A full adult wild tom facing left with folded tail, long neck, visible snood and sturdy three-toed feet. Suitable for nature-study worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_200/source/turkey-wild-tom-side-profile-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "2f19feb232bae9e1c9ef2dafe52d9718fc33dd67088b42e7e5813caa6332931c",
+      "inputSignature": "bcfc4dbbbdf317f59f7cb7032821bab06e15f2947527aefdb6aa18be7f8e82a3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 978810,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 978810,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        67,
+        19,
+        1285,
+        1175
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_200/exports/turkey-wild-tom-side-profile.pdf",
+          "bytes": 978810,
+          "sha256": "eae4d4d3ba73d5b863497968ea36d03b0217a0e32b7b22800d73e7392408eace"
+        },
+        "webp": {
+          "path": "work/production/wave_200/exports/turkey-wild-tom-side-profile.webp",
+          "bytes": 989308,
+          "sha256": "e31d63cb08b472b5059d6ded0b1dbf7846b7139b56e042c87df7a0494faac13f"
+        },
+        "thumb": {
+          "path": "work/production/wave_200/exports/turkey-wild-tom-side-profile-thumb.webp",
+          "bytes": 60898,
+          "sha256": "72c99cdf8c28a68be09a9fe2d0efd9cf97b381b1594c05572387e8cc20bf7e83"
+        }
+      },
+      "proofSha256": "e56099bb213e248ab30393c58bd53e3846369f5c491bcb4c39662aea6cb26ae1",
+      "pairMeanRgbDifference": 3.86445
+    },
+    {
+      "id": "turkey-fan-tail-front",
+      "title": "Fan-Tail Front View",
+      "alt": "A standing turkey faces forward with a symmetrical fanned tail, correct two legs and chest feathers.",
+      "description": "A standing turkey faces forward with a symmetrical fanned tail, correct two legs and chest feathers. Suitable for classroom poster.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_200/source/turkey-fan-tail-front-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 856,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "7967e1f75bee52ce32edb0c93f216aabbad4155d81a52cbd377717551960c9c7",
+      "inputSignature": "19bd43fb4d550272a240971382785a2800557e1067f7afee8508056eced46b7d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 957709,
+        "weightedCmykRmse": 1.035695
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1388715,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1115647,
+          "weightedCmykRmse": 0.738796
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1040703,
+          "weightedCmykRmse": 0.874942
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 957709,
+          "weightedCmykRmse": 1.035695
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        17,
+        1202,
+        1267
+      ],
+      "image": {
+        "width": 856,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_200/exports/turkey-fan-tail-front.pdf",
+          "bytes": 957709,
+          "sha256": "f921698cbf47f88cfd8a060eeefd4ccab40ab197ed0156dd344c88585d15d775"
+        },
+        "webp": {
+          "path": "work/production/wave_200/exports/turkey-fan-tail-front.webp",
+          "bytes": 1473376,
+          "sha256": "da6b42ded4aef3fb6dbd8cf2a44a3c262bd9c2a971e5a310bcc6fc0aa0a99974"
+        },
+        "thumb": {
+          "path": "work/production/wave_200/exports/turkey-fan-tail-front-thumb.webp",
+          "bytes": 83654,
+          "sha256": "70285f80d12b0e36ae6ac0ad84a4ef2f1d4766f54fd26d32598b08687410f93b"
+        }
+      },
+      "proofSha256": "eded84aa33ee63c8390bb7e87ca63ee6bb34d0120a2549951590e5abf731d857",
+      "pairMeanRgbDifference": 5.25133
+    },
+    {
+      "id": "turkey-tom-strutting",
+      "title": "Strutting Tom",
+      "alt": "A tom in three-quarter view struts with lowered wing tips, broad fan and puffed body.",
+      "description": "A tom in three-quarter view struts with lowered wing tips, broad fan and puffed body. Suitable for seasonal invitations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_200/source/turkey-tom-strutting-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 750,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 750,
+      "pdfHeight": 685,
+      "sourceType": "raster",
+      "sourceSha256": "a17b8bcaf88ccfc3a22e29b31c38bb14dc61f4a29b20e2fb9a8b9559bc7eecc3",
+      "inputSignature": "fce4a7e16c62dad3c5e08228f7efec222b2df612e661bc028676aa4ab77b4ac4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 957559,
+        "weightedCmykRmse": 0.990473
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1217847,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1058811,
+          "weightedCmykRmse": 0.687404
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1014658,
+          "weightedCmykRmse": 0.819687
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 957559,
+          "weightedCmykRmse": 0.990473
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        14,
+        9,
+        1291,
+        1179
+      ],
+      "image": {
+        "width": 750,
+        "height": 685,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_200/exports/turkey-tom-strutting.pdf",
+          "bytes": 957559,
+          "sha256": "16eb85205a135205c775a5aa1708f655d124c0f591cd914ab1b689193deb50ca"
+        },
+        "webp": {
+          "path": "work/production/wave_200/exports/turkey-tom-strutting.webp",
+          "bytes": 1779684,
+          "sha256": "0afa27fc313e9e48519d403ef631d7a92502c361e8080e5bb52e6d90dbb03dcc"
+        },
+        "thumb": {
+          "path": "work/production/wave_200/exports/turkey-tom-strutting-thumb.webp",
+          "bytes": 104822,
+          "sha256": "ca429d589c9ec19a80090e6e67b73c0b89f14103bde92e405a29510471e247f7"
+        }
+      },
+      "proofSha256": "e5bc4404d92cfbdb11a73b1112b6c1fee754245bd3276e7925d3791d194ef4f6",
+      "pairMeanRgbDifference": 8.31274
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNote": "All three original birds and independent CMYK PDF renders inspected for full anatomy, cutout edges, correct composition and image-to-PDF pairing.",
+  "createdAt": "2026-10-24T10:25:26.798Z"
+}

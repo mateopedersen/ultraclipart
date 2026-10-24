@@ -1,0 +1,33 @@
+{
+  "wave": "wave_216",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-autumn-leaf-turkey",
+      "title": "Autumn Leaf Craft Turkey",
+      "alt": "A friendly brown craft turkey has a fan of red, orange and yellow autumn leaves for its tail.",
+      "description": "A friendly brown craft turkey has a fan of red, orange and yellow autumn leaves for its tail. Suitable for fall craft.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_216/source/turkey-autumn-leaf-turkey-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-turkey-track-pair",
+      "title": "Turkey Footprint Pair",
+      "alt": "Two dark brown turkey footprint silhouettes are arranged diagonally, each with three long forward toes and a short rear toe.",
+      "description": "Two dark brown turkey footprint silhouettes are arranged diagonally, each with three long forward toes and a short rear toe. Suitable for tracking lesson.",
+      "color": "Brown",
+      "style": "Silhouette",
+      "source": "work/production/wave_216/source/turkey-turkey-track-pair-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    }
+  ]
+}

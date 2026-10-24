@@ -1,0 +1,33 @@
+{
+  "wave": "wave_214",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-barnyard-pair",
+      "title": "Two Turkeys Facing",
+      "alt": "Two visually distinct adult turkeys face each other with space between them, neither touching.",
+      "description": "Two visually distinct adult turkeys face each other with space between them, neither touching. Suitable for matching activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_214/source/turkey-barnyard-pair-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-turkey-family-group",
+      "title": "Turkey Family Trio",
+      "alt": "An adult tom, hen and one poult form a small balanced trio with three separate full bodies.",
+      "description": "An adult tom, hen and one poult form a small balanced trio with three separate full bodies. Suitable for animal-family chart.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_214/source/turkey-turkey-family-group-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    }
+  ]
+}

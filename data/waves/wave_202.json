@@ -1,0 +1,302 @@
+{
+  "wave": "wave_202",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-tom-head-study",
+      "title": "Wild Turkey Head Study",
+      "alt": "A cropped anatomical head and neck of a mature turkey showing snood, wattle, eye and beak without labels.",
+      "description": "A cropped anatomical head and neck of a mature turkey showing snood, wattle, eye and beak without labels. Suitable for science lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_202/source/turkey-tom-head-study-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 750,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "5e050ea724fc3462211eb2c55c82e194ce41208e32972231e71a53a6cc497858",
+      "inputSignature": "e507ad6ab65d1b6459dbb90ff783c5f055c97f090088e558807ab9b57e58c6e5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 937514,
+        "weightedCmykRmse": 1.098417
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1239988,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1058564,
+          "weightedCmykRmse": 0.750348
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1010942,
+          "weightedCmykRmse": 0.896614
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 937514,
+          "weightedCmykRmse": 1.098417
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        90,
+        53,
+        1063,
+        1347
+      ],
+      "image": {
+        "width": 750,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_202/exports/turkey-tom-head-study.pdf",
+          "bytes": 937514,
+          "sha256": "2b28e2d22497afb57962629f35494b8951610e477f6ccdc836609be62d70df12"
+        },
+        "webp": {
+          "path": "work/production/wave_202/exports/turkey-tom-head-study.webp",
+          "bytes": 1515164,
+          "sha256": "634da9fa01aea0dfd9c7c775154404b65ca63dbc9a1b5650ef3b6f94613f4fb7"
+        },
+        "thumb": {
+          "path": "work/production/wave_202/exports/turkey-tom-head-study-thumb.webp",
+          "bytes": 71548,
+          "sha256": "faf471c67af43a9a6f28218f5b2979919dcba0b609b7e814b0400487f2a49576"
+        }
+      },
+      "proofSha256": "c574097ba0a46bbd3ce53c98a037f4b53f01cc8c3fd380240aec91c10b03c72d",
+      "pairMeanRgbDifference": 6.838
+    },
+    {
+      "id": "turkey-single-feather",
+      "title": "Banded Turkey Feather",
+      "alt": "One long slightly curved turkey feather with a visible shaft and warm banded vane.",
+      "description": "One long slightly curved turkey feather with a visible shaft and warm banded vane. Suitable for scrapbook accent.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_202/source/turkey-single-feather-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "3dc0ecbda335ba379261e32c161b1c15a47e58c2167be009bb72886f6110480a",
+      "inputSignature": "795e6c2f83eabcb152646861f21f1e2e3949cfaad20fd4cb6e358b3fe6491e89",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 810631,
+        "weightedCmykRmse": 0.853472
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 997167,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 810631,
+          "weightedCmykRmse": 0.853472
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        22,
+        1302,
+        1179
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_202/exports/turkey-single-feather.pdf",
+          "bytes": 810631,
+          "sha256": "f65166bd2fc291e3be4826d58ba4fd030e2349030b93016d7826b13da358ed9f"
+        },
+        "webp": {
+          "path": "work/production/wave_202/exports/turkey-single-feather.webp",
+          "bytes": 1090020,
+          "sha256": "c16b2e50a68ad01c24f5007f16667af0330a9ca6db62fcb23bd33fa0861c30d9"
+        },
+        "thumb": {
+          "path": "work/production/wave_202/exports/turkey-single-feather-thumb.webp",
+          "bytes": 61474,
+          "sha256": "2aff1e84c914686c60c8ba209706cd57af8a13edad337b846e3083fa4acf5a90"
+        }
+      },
+      "proofSha256": "87b4229b922db8a226abbfa0d834d80af3103d785ca85cf29956eede09faaefb",
+      "pairMeanRgbDifference": 3.47853
+    },
+    {
+      "id": "turkey-wing-spread",
+      "title": "Turkey With Spread Wings",
+      "alt": "A lively standing turkey extends both wings while its tail remains closed, readable wing structure.",
+      "description": "A lively standing turkey extends both wings while its tail remains closed, readable wing structure. Suitable for movement lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_202/source/turkey-wing-spread-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "ab69bfb2411f44a47e17ec108d55a406f0e59acfc4bf56cd9f266563334fd9ee",
+      "inputSignature": "14413b1c2a4c6cab5f35a6318ce236045553f5789fce57543f23ed92164de7a8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 937385,
+        "weightedCmykRmse": 1.405359
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1339962,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1129529,
+          "weightedCmykRmse": 0.768084
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1076933,
+          "weightedCmykRmse": 0.915182
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 996996,
+          "weightedCmykRmse": 1.113528
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 937385,
+          "weightedCmykRmse": 1.405359
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        15,
+        32,
+        1301,
+        1173
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_202/exports/turkey-wing-spread.pdf",
+          "bytes": 937385,
+          "sha256": "73d3f9b8fc02731c8b8f6da3ce1b4892a571566b45989f76b524e32274fe2944"
+        },
+        "webp": {
+          "path": "work/production/wave_202/exports/turkey-wing-spread.webp",
+          "bytes": 1399436,
+          "sha256": "dbe8360c853a4767a24de8dc33429e7112b893c490e875e86af5269a76635d4d"
+        },
+        "thumb": {
+          "path": "work/production/wave_202/exports/turkey-wing-spread-thumb.webp",
+          "bytes": 83568,
+          "sha256": "6d82483b99229df56633995baf5dc3bbfff38ee28edc105fc31c690fd0f8cb18"
+        }
+      },
+      "proofSha256": "b5ff5aeb319d8f0f394ca08f894a77114efde197841b0334733b685e177d20d1",
+      "pairMeanRgbDifference": 5.99986
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:27.119Z"
+}

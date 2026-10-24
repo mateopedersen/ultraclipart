@@ -1,0 +1,352 @@
+{
+  "wave": "wave_212",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-poult-under-wing",
+      "title": "Poult Under Wing",
+      "alt": "A young poult shelters partly beneath a sitting hen’s raised wing.",
+      "description": "A young poult shelters partly beneath a sitting hen’s raised wing. Suitable for story illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-poult-under-wing-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "562ae5713bfc36e024537a6d295d6967065edc11bab2ac01bb37d53e740e9e2c",
+      "inputSignature": "83a8dae013bba71ef26c2f1866f0ca728cae324a92dd232bf5ed874f26457a43",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 846285,
+        "weightedCmykRmse": 0.773467
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1034058,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 846285,
+          "weightedCmykRmse": 0.773467
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        9,
+        136,
+        1246,
+        1102
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_212/exports/turkey-poult-under-wing.pdf",
+          "bytes": 846285,
+          "sha256": "ce756ba4d8a2538427763670fddd749f0836d656a2712228e8081b8c4e537f79"
+        },
+        "webp": {
+          "path": "work/production/wave_212/exports/turkey-poult-under-wing.webp",
+          "bytes": 1328026,
+          "sha256": "d985feceaafeeb78035032c7680161dd932f2dd5c742174340329cbcc31bfd8a"
+        },
+        "thumb": {
+          "path": "work/production/wave_212/exports/turkey-poult-under-wing-thumb.webp",
+          "bytes": 71530,
+          "sha256": "815f429627301deb434d7737bc178a35f32ac690e8bc1511b94a0d1433247b94"
+        }
+      },
+      "proofSha256": "7a7575a8b510843057966687a874ecb50807f22799bbb37440cfaa076a040dee",
+      "pairMeanRgbDifference": 8.17187
+    },
+    {
+      "id": "turkey-drinking-water",
+      "title": "Turkey Drinking",
+      "alt": "A turkey lowers its beak to a small plain water bowl, no other props.",
+      "description": "A turkey lowers its beak to a small plain water bowl, no other props. Suitable for care-of-animals guide.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-drinking-water-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "38b0f7c292429cfd78d899cb24ee73e8ea737c5b172d37d4bcf23e6a010224d1",
+      "inputSignature": "ef5b7382915a5b48f6830c4051ea4295daafda04eb0b4655fc850ce2ed2bf461",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 830549,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 830549,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        4,
+        228,
+        1246,
+        1069
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_212/exports/turkey-drinking-water.pdf",
+          "bytes": 830549,
+          "sha256": "54a593b3e6fe6f64c31fc44c0e306e7c835f838c66509ac2a74dc4f36727d71e"
+        },
+        "webp": {
+          "path": "work/production/wave_212/exports/turkey-drinking-water.webp",
+          "bytes": 1039254,
+          "sha256": "7f1d2a2b70dc10836b60edca4abadd4ee95ec44522b0c0a32b91fc85ad96e8aa"
+        },
+        "thumb": {
+          "path": "work/production/wave_212/exports/turkey-drinking-water-thumb.webp",
+          "bytes": 61710,
+          "sha256": "c583e8e4d9043ea388e71e8ec45ab6d645c8a73c0937a4875b5423fcea18bb8c"
+        }
+      },
+      "proofSha256": "8f5767e9a8a36c7b976c52699b27a8607b0919052a8ce57f6906d49b1fb33cfe",
+      "pairMeanRgbDifference": 6.60564
+    },
+    {
+      "id": "turkey-running-poult",
+      "title": "Running Turkey Poult",
+      "alt": "One poult in a quick running pose with both tiny legs separated and wings slightly lifted.",
+      "description": "One poult in a quick running pose with both tiny legs separated and wings slightly lifted. Suitable for children’s story.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-running-poult-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "dcd7fe8b7f8540bdb5ffaa679a59538ab9b7bec99ed81fedfed0ad20f387915a",
+      "inputSignature": "e6ea6c41c673f31f3ff362be64fffe709bbedd86061f7d57e725a035b22c7e8c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 902208,
+        "weightedCmykRmse": 0.76287
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1025082,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 902208,
+          "weightedCmykRmse": 0.76287
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        38,
+        193,
+        1232,
+        1157
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_212/exports/turkey-running-poult.pdf",
+          "bytes": 902208,
+          "sha256": "39cdc1bc422ddc52c8c056b302b51ac84d84d7ecfdf6791d0287233620714feb"
+        },
+        "webp": {
+          "path": "work/production/wave_212/exports/turkey-running-poult.webp",
+          "bytes": 1148844,
+          "sha256": "8d371f1461835f0a00dd762995ebe2e3584890afaf20b34b31b0475ad051221a"
+        },
+        "thumb": {
+          "path": "work/production/wave_212/exports/turkey-running-poult-thumb.webp",
+          "bytes": 71200,
+          "sha256": "c7a4f362980ded8d4bf68af62df6d2af37fc43cc88b504487ad9d403f85e7f0c"
+        }
+      },
+      "proofSha256": "987ddeddd5b8d20c6d64d1f85edb47746444b6db62ed2f84d9b2a837568b926d",
+      "pairMeanRgbDifference": 5.87481
+    },
+    {
+      "id": "turkey-tail-feather-fan",
+      "title": "Turkey Tail Feather Fan",
+      "alt": "A detached orderly fan of real turkey tail feathers with individual banding and central quills, no bird body.",
+      "description": "A detached orderly fan of real turkey tail feathers with individual banding and central quills, no bird body. Suitable for craft border.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_212/source/turkey-tail-feather-fan-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "b136a5abc81eb08d21b41616bd7234c5e3ee22e6099f05fec4050de4497e385e",
+      "inputSignature": "05894432dcd5b5c82fc46cf77095482c3b5a6256a59895ca0ac7640ea46f3e69",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 937410,
+        "weightedCmykRmse": 0.877414
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1196683,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 984037,
+          "weightedCmykRmse": 0.739424
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 937410,
+          "weightedCmykRmse": 0.877414
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        6,
+        152,
+        1248,
+        1113
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_212/exports/turkey-tail-feather-fan.pdf",
+          "bytes": 937410,
+          "sha256": "37c4528bdbff87ef9e995268484146687e8b293d409092f08cf81e9cd5c5a33e"
+        },
+        "webp": {
+          "path": "work/production/wave_212/exports/turkey-tail-feather-fan.webp",
+          "bytes": 1546014,
+          "sha256": "2f51dd561cf2c34dc93c71eff73d1a9d8976aed751337c0f31a860dae58c79d7"
+        },
+        "thumb": {
+          "path": "work/production/wave_212/exports/turkey-tail-feather-fan-thumb.webp",
+          "bytes": 78806,
+          "sha256": "48c5867dc6d20c674bee8f6a51e0d721b6609dc6cdb2db70ec3542e623040bcc"
+        }
+      },
+      "proofSha256": "90ae65267cd3b62aa5a6cec976e2851a5ac4a522aa85a9367fa0a5771fb33003",
+      "pairMeanRgbDifference": 8.19663
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Native source and rendered CMYK PDF proof reviewed: matching subject, unclipped silhouette, transparent background and distinct composition.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:28.890Z"
+}

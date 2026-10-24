@@ -1,0 +1,352 @@
+{
+  "wave": "wave_208",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-heritage-royal-palm",
+      "title": "Royal Palm Heritage Turkey",
+      "alt": "A white turkey with sharp black feather bands, standing with tail partly fanned.",
+      "description": "A white turkey with sharp black feather bands, standing with tail partly fanned. Suitable for breed comparison.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-heritage-royal-palm-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "abc5fc623271960181e4f2106811013cbe613ef7c6aa802ec97bac30c869e287",
+      "inputSignature": "b0f7c92a65b38ff97edf41177e2dbc55b88608a04a13d9a996cd007fbb2fa58a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 948738,
+        "weightedCmykRmse": 0.889894
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1230093,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1005690,
+          "weightedCmykRmse": 0.75571
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 948738,
+          "weightedCmykRmse": 0.889894
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        18,
+        17,
+        1283,
+        1174
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_208/exports/turkey-heritage-royal-palm.pdf",
+          "bytes": 948738,
+          "sha256": "d1d5e5a19e413b6346210bb2daaf0a825217557efa9a160e7468abadd0281ba1"
+        },
+        "webp": {
+          "path": "work/production/wave_208/exports/turkey-heritage-royal-palm.webp",
+          "bytes": 1278860,
+          "sha256": "021ce480ea83896cd43623003a2289f60a819c95b83df58a3d6d5d84ad5f2199"
+        },
+        "thumb": {
+          "path": "work/production/wave_208/exports/turkey-heritage-royal-palm-thumb.webp",
+          "bytes": 76614,
+          "sha256": "286ad4169148c6565db5e1bd271b624dad2abc6d90ac9ecc3978792108353fe7"
+        }
+      },
+      "proofSha256": "125ac780bb4821f5d46b018b4bfd6019399bd9ed518442b04fe105aef249d808",
+      "pairMeanRgbDifference": 6.35138
+    },
+    {
+      "id": "turkey-broad-breasted-white",
+      "title": "White Farm Turkey",
+      "alt": "A clean white domestic turkey in three-quarter view, red head and two sturdy legs.",
+      "description": "A clean white domestic turkey in three-quarter view, red head and two sturdy legs. Suitable for farm identification.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-broad-breasted-white-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1205,
+      "height": 1305,
+      "pdfWidth": 831,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "7ca85704d6ed1784c23952dea9a8047db143f019aa70a2f739248301ea2940be",
+      "inputSignature": "b993d6beb5b21c1547feb97ceafd88501d18f0e16270fc18305647b547aa6145",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 910773,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 910773,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        38,
+        35,
+        1170,
+        1274
+      ],
+      "image": {
+        "width": 831,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_208/exports/turkey-broad-breasted-white.pdf",
+          "bytes": 910773,
+          "sha256": "e03411adffdfe912ebe2064447c3954dd620ca15ec1b1b21bb3e38824d2abec5"
+        },
+        "webp": {
+          "path": "work/production/wave_208/exports/turkey-broad-breasted-white.webp",
+          "bytes": 1110688,
+          "sha256": "952d97ab9a3ece43d3cf4b9e2dadcffdf6b90b597b268e652986f53422975f99"
+        },
+        "thumb": {
+          "path": "work/production/wave_208/exports/turkey-broad-breasted-white-thumb.webp",
+          "bytes": 60268,
+          "sha256": "c6572a89df52034247114e07ee6fb335dfceff8b96d5b88326b2de729cba323b"
+        }
+      },
+      "proofSha256": "4f8ad3587b7040c8e9f60e18377738ac9cc9b3b4b0b53e40a272030ed2051371",
+      "pairMeanRgbDifference": 2.29933
+    },
+    {
+      "id": "turkey-bronze-feather-tom",
+      "title": "Bronze Turkey Preening",
+      "alt": "A bronze turkey bends its neck back to preen its folded wing feathers.",
+      "description": "A bronze turkey bends its neck back to preen its folded wing feathers. Suitable for bird portrait.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-bronze-feather-tom-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1292,
+      "height": 1217,
+      "pdfWidth": 900,
+      "pdfHeight": 848,
+      "sourceType": "raster",
+      "sourceSha256": "0bd461039e5b0799dfe780c30d3e387f5add4a3999fa191f347ca39e075076bd",
+      "inputSignature": "ff1a6d0cff35d9cb9e4caf28bda574f67d05f6c9933eb684d8210fae5fa7739a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 976795,
+        "weightedCmykRmse": 0.807892
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1174497,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 976795,
+          "weightedCmykRmse": 0.807892
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        146,
+        18,
+        1236,
+        1198
+      ],
+      "image": {
+        "width": 900,
+        "height": 848,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_208/exports/turkey-bronze-feather-tom.pdf",
+          "bytes": 976795,
+          "sha256": "ca533dce593799612834067e3738acf93f0406e9a11aefbc58854dadf838967f"
+        },
+        "webp": {
+          "path": "work/production/wave_208/exports/turkey-bronze-feather-tom.webp",
+          "bytes": 1168884,
+          "sha256": "92a00f0683e52c77f78848bd8c3f314963176fed1305951bf8c4e6d1b578c5d9"
+        },
+        "thumb": {
+          "path": "work/production/wave_208/exports/turkey-bronze-feather-tom-thumb.webp",
+          "bytes": 70224,
+          "sha256": "9d03b93a3b93e8527f63bc0d64ae2144d768837a13f8c38e8415ace92bf07246"
+        }
+      },
+      "proofSha256": "efc55811e64b278ca46d51b7361d84f25ad9aa57ab9d2c04c42970e1c96ade03",
+      "pairMeanRgbDifference": 4.13759
+    },
+    {
+      "id": "turkey-turkey-in-rain",
+      "title": "Turkey With Raindrops",
+      "alt": "A calm adult turkey under three small raindrops, feathers slightly ruffled; no umbrella.",
+      "description": "A calm adult turkey under three small raindrops, feathers slightly ruffled; no umbrella. Suitable for weather worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-turkey-in-rain-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "b61c65f0dbefa3eef6753a854400eb631bed9cd94b65ff5ec8e60da2eca943ff",
+      "inputSignature": "cc71dd05d1871d6c5acc2444cf342435f03feccdd6d9e182f9b0ea31f181840b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 973460,
+        "weightedCmykRmse": 0.798407
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1167324,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 973460,
+          "weightedCmykRmse": 0.798407
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        107,
+        13,
+        1215,
+        1166
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_208/exports/turkey-turkey-in-rain.pdf",
+          "bytes": 973460,
+          "sha256": "0b88f0353beb99b2b523fbbc0acab8a1a885bddf9e47f6b5fa94cb8c23fc3b59"
+        },
+        "webp": {
+          "path": "work/production/wave_208/exports/turkey-turkey-in-rain.webp",
+          "bytes": 1216498,
+          "sha256": "9684c521e02f7150d6d143d18bd804a321521be3907acd62ecf2fe85db156b5c"
+        },
+        "thumb": {
+          "path": "work/production/wave_208/exports/turkey-turkey-in-rain-thumb.webp",
+          "bytes": 69286,
+          "sha256": "a4387b601e08bcb8f061760e4ebf6a041b788fb22f44494f06016815d7612866"
+        }
+      },
+      "proofSha256": "e846a7df0a74c9504e0e9a72b42ace78aa1da253dbb747cd667c1980d0abc391",
+      "pairMeanRgbDifference": 4.62692
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Rendered CMYK PDF contact checked: correct subjects and composition, no visible background halo or clipped anatomy.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:28.154Z"
+}

@@ -101,9 +101,9 @@ test('rejects a target bucket absent from inventory and flags early warnings', (
       ),
     /missing/,
   );
-  assert.equal(buildPlan(inventory(6_500_000_000), batch, now).warning, 'REVIEW_STORAGE');
+  assert.equal(buildPlan(inventory(8_000_000_000_000), batch, now).warning, 'REVIEW_STORAGE');
   assert.equal(
-    buildPlan(inventory(7_500_000_000), batch, now).warning,
-    'STOP_NONESSENTIAL_OBJECTS',
+    buildPlan(inventory(9_500_000_000_000), batch, now).warning,
+    'APPROACHING_STORAGE_CAP',
   );
 });

@@ -38,4 +38,4 @@ Generating many pages primarily to manipulate rankings is scaled content abuse. 
 
 ## Project-specific storage policy
 
-The **8,000,000,000-byte ingestion ceiling** is the owner's project safety rule, not a Cloudflare limit. Planned per-art averages (PDF 600,000 + WebP 350,000 + thumbnail 45,000 + SVG 100,000) imply 6,022,500,000 bytes for 5,500 artworks. This is a projection, never an actual usage report. Reviews begin at 6.5 GB; nonessential objects stop at 7.5 GB; reject any batch that would cross 8 GB. The standard PDF hard cap is 1,000,000 bytes.
+The owner updated the account ingestion ceiling to **10,000,000,000,000 bytes (10 TB)** on 2026-10-24 after resolving billing. This supersedes the previous 8 GB project rule. Fresh account-wide inventory remains required. Storage review warnings begin at 8 TB and approaching-cap warnings at 9.5 TB; only crossing 10 TB blocks ingestion. The independent standard PDF hard cap remains **1,000,000 bytes**.

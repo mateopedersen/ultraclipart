@@ -1,0 +1,44 @@
+{
+  "wave": "wave_200",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-wild-tom-side-profile",
+      "title": "Wild Tom in Profile",
+      "alt": "A full adult wild tom facing left with folded tail, long neck, visible snood and sturdy three-toed feet.",
+      "description": "A full adult wild tom facing left with folded tail, long neck, visible snood and sturdy three-toed feet. Suitable for nature-study worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_200/source/turkey-wild-tom-side-profile-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-fan-tail-front",
+      "title": "Fan-Tail Front View",
+      "alt": "A standing turkey faces forward with a symmetrical fanned tail, correct two legs and chest feathers.",
+      "description": "A standing turkey faces forward with a symmetrical fanned tail, correct two legs and chest feathers. Suitable for classroom poster.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_200/source/turkey-fan-tail-front-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-tom-strutting",
+      "title": "Strutting Tom",
+      "alt": "A tom in three-quarter view struts with lowered wing tips, broad fan and puffed body.",
+      "description": "A tom in three-quarter view struts with lowered wing tips, broad fan and puffed body. Suitable for seasonal invitations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_200/source/turkey-tom-strutting-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 750
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "wave": "wave_203",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-paired-feathers",
+      "title": "Crossed Turkey Feathers",
+      "alt": "Two distinct turkey feathers crossed at the quills, one broad and one narrow.",
+      "description": "Two distinct turkey feathers crossed at the quills, one broad and one narrow. Suitable for nature journal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-paired-feathers-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-looking-back",
+      "title": "Turkey Looking Back",
+      "alt": "A bronze wild turkey turns its head back toward a partially spread barred tail.",
+      "description": "A bronze wild turkey turns its head back toward a partially spread barred tail. Suitable for greeting cards and wildlife activity sheets.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-looking-back-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-pecking-ground",
+      "title": "Turkey Pecking",
+      "alt": "A turkey bends to peck a single seed on the ground line, full body and feet visible.",
+      "description": "A turkey bends to peck a single seed on the ground line, full body and feet visible. Suitable for farm activity sheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-pecking-ground-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-perched-fence",
+      "title": "Turkey on Fence Rail",
+      "alt": "A turkey balances on a short isolated wooden fence rail with two visible feet.",
+      "description": "A turkey balances on a short isolated wooden fence rail with two visible feet. Suitable for farm poster.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-perched-fence-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

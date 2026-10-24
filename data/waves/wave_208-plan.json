@@ -1,0 +1,55 @@
+{
+  "wave": "wave_208",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-heritage-royal-palm",
+      "title": "Royal Palm Heritage Turkey",
+      "alt": "A white turkey with sharp black feather bands, standing with tail partly fanned.",
+      "description": "A white turkey with sharp black feather bands, standing with tail partly fanned. Suitable for breed comparison.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-heritage-royal-palm-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-broad-breasted-white",
+      "title": "White Farm Turkey",
+      "alt": "A clean white domestic turkey in three-quarter view, red head and two sturdy legs.",
+      "description": "A clean white domestic turkey in three-quarter view, red head and two sturdy legs. Suitable for farm identification.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-broad-breasted-white-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-bronze-feather-tom",
+      "title": "Bronze Turkey Preening",
+      "alt": "A bronze turkey bends its neck back to preen its folded wing feathers.",
+      "description": "A bronze turkey bends its neck back to preen its folded wing feathers. Suitable for bird portrait.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-bronze-feather-tom-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-in-rain",
+      "title": "Turkey With Raindrops",
+      "alt": "A calm adult turkey under three small raindrops, feathers slightly ruffled; no umbrella.",
+      "description": "A calm adult turkey under three small raindrops, feathers slightly ruffled; no umbrella. Suitable for weather worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_208/source/turkey-turkey-in-rain-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

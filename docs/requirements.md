@@ -37,7 +37,7 @@ Source: owner request and handoff documents 04, 06, 07, 08, 09; framework/servic
 - New public GitHub repository only; do not alter existing calendar repositories. Store source/metadata, not full generated binary corpus or proprietary font files.
 - Locked dependencies, supported Node, reproducible clean install/build; CI checks before production.
 - Cloudflare Pages Free static hosting with GitHub integration; optional dynamic services only when necessary. Owner approval before R2 checkout, paid products, upgrades or paid APIs.
-- R2 Standard, aggregate measured storage across production buckets; fail closed on unknown totals; preflight next batch against 8,000,000,000 bytes.
+- R2 Standard, aggregate measured storage across production buckets; fail closed on unknown totals; preflight next batch against 10,000,000,000,000 bytes, as updated by the owner on 2026-10-24.
 - Content hashes, narrowly scoped credentials, cache headers, CORS, MIME, download filename; resumable upload journal with verified checksums. Publish only complete validated art groups.
 - No tokens, cookies, private user uploads or Avenir binaries in repository, browser bundles or logs. CSP and hostile SVG tests.
 - Check output file count <20,000 and each static file <=25 MiB. Track Class A/B operations, Pages build usage and storage; storage guard does not prevent read-overage charges.

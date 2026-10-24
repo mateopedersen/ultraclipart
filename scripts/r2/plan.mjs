@@ -6,7 +6,7 @@ import {
   validateInventoryScope,
 } from './inventory.mjs';
 import { sourceTypeOf, representationKinds } from '../asset-representations.mjs';
-export const HARD_CAP = 8_000_000_000;
+export const HARD_CAP = 10_000_000_000_000;
 export const PDF_CAP = 1_000_000;
 const representations = ['pdf', 'svg', 'thumbnail', 'webp'];
 
@@ -113,16 +113,17 @@ export function buildPlan(inventory, batch, now = Date.now()) {
     'batch bytes',
   );
   const projectedBytes = natural(total + additionalBytes, 'projected bytes');
-  if (projectedBytes > HARD_CAP) throw new Error('Batch would exceed 8,000,000,000-byte hard cap');
+  if (projectedBytes > HARD_CAP)
+    throw new Error('Batch would exceed 10,000,000,000,000-byte hard cap');
   return {
     measuredBytes: total,
     additionalBytes,
     projectedBytes,
     hardCapBytes: HARD_CAP,
     warning:
-      projectedBytes >= 7_500_000_000
-        ? 'STOP_NONESSENTIAL_OBJECTS'
-        : projectedBytes >= 6_500_000_000
+      projectedBytes >= 9_500_000_000_000
+        ? 'APPROACHING_STORAGE_CAP'
+        : projectedBytes >= 8_000_000_000_000
           ? 'REVIEW_STORAGE'
           : null,
     upload,

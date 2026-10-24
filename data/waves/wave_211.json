@@ -1,0 +1,359 @@
+{
+  "wave": "wave_211",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-roast-turkey-platter",
+      "title": "Roast Turkey in a Pan",
+      "alt": "An overhead view of a golden roast turkey in a dark roasting pan with carrots, onions and sage leaves.",
+      "description": "An overhead view of a golden roast turkey in a dark roasting pan with carrots, onions and sage leaves. Suitable for holiday menu.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-roast-turkey-platter-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "38d750fd505c9231d8157e501113e7a00537a18e8c68ca4858ae3f48b11aeef3",
+      "inputSignature": "a2d99a01bf9c1b31d841786a3519e15cb2a1074dc45469ab1f3675f2c91ab9c2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 969356,
+        "weightedCmykRmse": 1.011927
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1299806,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1090818,
+          "weightedCmykRmse": 0.702342
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1039167,
+          "weightedCmykRmse": 0.837218
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 969356,
+          "weightedCmykRmse": 1.011927
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        105,
+        84,
+        1149,
+        1169
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_211/exports/turkey-roast-turkey-platter.pdf",
+          "bytes": 969356,
+          "sha256": "41cb664ab610963233fd2ef433e93f9dfc6534e9c790c3dcce03767e00015dc7"
+        },
+        "webp": {
+          "path": "work/production/wave_211/exports/turkey-roast-turkey-platter.webp",
+          "bytes": 1786240,
+          "sha256": "8b7ab66459d9f724e64865bdb4ea30259f27b4ed439af624c6d8dd62cf1b9350"
+        },
+        "thumb": {
+          "path": "work/production/wave_211/exports/turkey-roast-turkey-platter-thumb.webp",
+          "bytes": 91048,
+          "sha256": "25a3c0b0ba6c3bba0d94e6536ebbde8c8b76cc15b379367315ee4ce26461cacc"
+        }
+      },
+      "proofSha256": "0f1c0ccfd0b9724f44ffbba7adc50babe7a924626ec892d115546c95d5cbed4d",
+      "pairMeanRgbDifference": 8.65853
+    },
+    {
+      "id": "turkey-turkey-slices-board",
+      "title": "Carved Turkey Slices",
+      "alt": "Three slices of cooked turkey on a cutting board beside a carving fork, no person.",
+      "description": "Three slices of cooked turkey on a cutting board beside a carving fork, no person. Suitable for recipe card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-turkey-slices-board-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 900,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "3eb5efe3d659bf53f11b453c2953693a3739c48a57e6bc702fa88e59f01eedfe",
+      "inputSignature": "25c794c5b6d0ee61343ec4872eefc348498003f211821183e646aaa6d151c999",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 965181,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 965181,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        8,
+        228,
+        1251,
+        1095
+      ],
+      "image": {
+        "width": 900,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_211/exports/turkey-turkey-slices-board.pdf",
+          "bytes": 965181,
+          "sha256": "4cfd619ef9055cdb40089a55b4ae54efda799c2723da9d839a23757a3cdb5e59"
+        },
+        "webp": {
+          "path": "work/production/wave_211/exports/turkey-turkey-slices-board.webp",
+          "bytes": 1198594,
+          "sha256": "c4a41fb788d1c1c4c21649db30bab5ddca1f0843df2ece51877731d829e75c52"
+        },
+        "thumb": {
+          "path": "work/production/wave_211/exports/turkey-turkey-slices-board-thumb.webp",
+          "bytes": 62426,
+          "sha256": "c14681624fec7289835f44a42755bb5e6fa146ed036c11619c3be24a515889b2"
+        }
+      },
+      "proofSha256": "14f9038a8c7cb458ba089906b91ddeb340850a2901b3e66f1200f490939108ee",
+      "pairMeanRgbDifference": 5.36362
+    },
+    {
+      "id": "turkey-turkey-leg-food",
+      "title": "Roasted Turkey Drumstick",
+      "alt": "One cooked turkey drumstick with a neat foil-free bone end, isolated food icon.",
+      "description": "One cooked turkey drumstick with a neat foil-free bone end, isolated food icon. Suitable for menu illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-turkey-leg-food-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 900,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "f2a10a45d515cb5975fae9d42f9d208d22c9489dfa24df47858de16e1f50c320",
+      "inputSignature": "8c23c93c01ec2b96c2a2f29d5df1012a23d99581b32c989bf080de6af2dee678",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 828169,
+        "weightedCmykRmse": 0.79038
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1011336,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 828169,
+          "weightedCmykRmse": 0.79038
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        14,
+        190,
+        1246,
+        1102
+      ],
+      "image": {
+        "width": 900,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_211/exports/turkey-turkey-leg-food.pdf",
+          "bytes": 828169,
+          "sha256": "b060987089fcacb2ba6fe70db310c8e964f4ac7878149c2cc28ae7a3be50d5b9"
+        },
+        "webp": {
+          "path": "work/production/wave_211/exports/turkey-turkey-leg-food.webp",
+          "bytes": 1233638,
+          "sha256": "ac608e42c39d89cbecd2e557d8f1cfb9c7be9ef999a0103bea1698ba533a3eb8"
+        },
+        "thumb": {
+          "path": "work/production/wave_211/exports/turkey-turkey-leg-food-thumb.webp",
+          "bytes": 61370,
+          "sha256": "4e15bdf8cb94d328f630d47cb2ebba47b7ff46e34f3fab7ee130966ee306b8d2"
+        }
+      },
+      "proofSha256": "8c9d5c5865c5bdc55cb5423e4619de7a7c80b08041a0f39561ef60e33cdcc414",
+      "pairMeanRgbDifference": 5.10904
+    },
+    {
+      "id": "turkey-turkey-sandwich",
+      "title": "Turkey Sandwich",
+      "alt": "A halved turkey sandwich with sliced bread, lettuce and visible turkey slices on a small plain plate.",
+      "description": "A halved turkey sandwich with sliced bread, lettuce and visible turkey slices on a small plain plate. Suitable for leftover recipe card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-turkey-sandwich-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 900,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "d0f351d2039c9a2dd2e0f6433394b6c09ba2acb8b66bdd37fc4d0638bf37f2de",
+      "inputSignature": "005c972c73f0006653f4943445111f563219c16247e6277b0934aee045eccc08",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 922707,
+        "weightedCmykRmse": 0.743376
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1185684,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 922707,
+          "weightedCmykRmse": 0.743376
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        5,
+        197,
+        1250,
+        1112
+      ],
+      "image": {
+        "width": 900,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_211/exports/turkey-turkey-sandwich.pdf",
+          "bytes": 922707,
+          "sha256": "674c08b6952fa83a5ff6d15f410b4da6171f7acd88cc6454416d105c55e39bd2"
+        },
+        "webp": {
+          "path": "work/production/wave_211/exports/turkey-turkey-sandwich.webp",
+          "bytes": 1436198,
+          "sha256": "66ec799612c9b31ffed917d61f5bba1f2719c74e34de60f0c6c5d41d937060f8"
+        },
+        "thumb": {
+          "path": "work/production/wave_211/exports/turkey-turkey-sandwich-thumb.webp",
+          "bytes": 75246,
+          "sha256": "937c322fe7650fc50ca19de9c399a66a7aef3a6f9b82f0e791a8062e3f828f44"
+        }
+      },
+      "proofSha256": "d14b189817c4b34d9664895c07b4de6cc738177048b00d1eb6e65a41bcb14594",
+      "pairMeanRgbDifference": 8.28914
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Final native source and actual CMYK PDF proof reviewed; matching files, clean isolated silhouettes. Roast pan replacement changes viewpoint and composition from the existing Thanksgiving platter.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:28.656Z"
+}

@@ -1,0 +1,44 @@
+{
+  "wave": "wave_206",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-turkey-outline-front",
+      "title": "Fan-Tail Coloring Outline",
+      "alt": "Black clean-line frontal turkey and layered tail feathers with generous white coloring areas.",
+      "description": "Black clean-line frontal turkey and layered tail feathers with generous white coloring areas. Suitable for coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_206/source/turkey-turkey-outline-front-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-outline-poult",
+      "title": "Poult Coloring Outline",
+      "alt": "Simple accurate poult outline in three-quarter view with broad white areas.",
+      "description": "Simple accurate poult outline in three-quarter view with broad white areas. Suitable for preschool coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_206/source/turkey-turkey-outline-poult-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-outline-feather",
+      "title": "Turkey Feather Coloring Outline",
+      "alt": "A single large banded turkey feather in black outline with open sections to color.",
+      "description": "A single large banded turkey feather in black outline with open sections to color. Suitable for nature coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_206/source/turkey-turkey-outline-feather-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}
