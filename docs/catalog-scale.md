@@ -1,10 +1,35 @@
 # Catalog capacity and migration
 
-Cloudflare Pages Free limits a deployment to 20,000 files. The current release
-contains 6,200 illustrations and 19,396 Pages files before offloading. Each
-illustration currently generates a detail page and an editor page. Upgrading to
-Pages Pro raises the file limit to 100,000, but does not make a five-million-item
+UltraClipart upgraded to Cloudflare Pro on 2026-10-24. The project's upload-token
+claim `max_file_count_allowed` was verified as 100,000 through the Cloudflare API.
+The production project has `PAGES_WRANGLER_MAJOR_VERSION=4`; the manual deployment
+also sets it explicitly. Production build checks enforce that verified ceiling.
+
+Before card-chunk consolidation, the 6,200-illustration release used 19,396
+Pages files before offloading (19,296 after Book offloading). Each illustration
+generates a detail page and an editor page, plus search data. The 100,000-file
+limit is per Pages project, not 100,000 illustrations. It does not make a five-million-item
 catalog viable if one HTML file per item remains in the Pages deployment.
+
+## Bounded search metadata
+
+Search card metadata is stored in title-ordered chunks of eight records rather
+than one static file per illustration. Ranked results already carry ordinals,
+so normal browsing and query results go directly to the required chunks.
+Only arbitrary saved IDs consult a small hashed ID-to-ordinal table. The
+manifest does not embed all artwork metadata or ID locations.
+
+Concurrent reads of the same chunk share a request only within the same
+cancellation scope. A cancelled older search cannot cancel or cache over a
+newer request. Every resolved card must still match its requested ID and
+ordinal; malformed or cross-wired chunks fail closed. Content-versioned URLs
+isolate the new format from existing browser caches.
+
+The 5,500-item cold-browse fixture transfers 15,576 uncompressed JSON bytes
+for its first eight cards, including the manifest and ranked ID page. Tests
+compare all ranks and facets against the original scorer and verify file
+headroom for a 7,700-artwork technology-completion scenario. These are bounded
+tests, not a claim that the eventual multi-million-item architecture is done.
 
 ## First production stage: private HTML storage
 

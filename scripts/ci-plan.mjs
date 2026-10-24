@@ -10,6 +10,7 @@ export const ALL_SUITES = [
   'catalog',
   'catalog-extra-0',
   'catalog-extra-1',
+  'catalog-extra-2',
   'studio',
   'catalog-seasonal-0',
   'catalog-seasonal-1',

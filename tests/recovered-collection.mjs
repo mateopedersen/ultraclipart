@@ -98,3 +98,12 @@ test('even a hash-consistent PDF over the hard byte cap is rejected', () => {
   row.files.pdf.sha256 = createHash('sha256').update(body).digest('hex');
   assert.throws(() => validateRecoveredCollection(f.intake, f.read), /oversized/);
 });
+
+test('reviewed files cannot be imported into a different topic', () => {
+  const f = fixture();
+  f.intake.topic = 'wifi-router';
+  assert.throws(() => validateRecoveredCollection(f.intake, f.read), /different topic/);
+  f.intake.topic = 'headphones';
+  f.intake.rows[0].id = 'robot-inspection-rover';
+  assert.throws(() => validateRecoveredCollection(f.intake, f.read), /different topic/);
+});

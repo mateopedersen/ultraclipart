@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { assertPagesFileCount } from '../src/lib/pages-limits.ts';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { buildSearchIndex } from '../src/lib/search-index.ts';
@@ -128,7 +129,8 @@ test('initial browse transfers only eight card records and one ranked ID page at
   const { repo, requests, build } = fixture(synthetic);
   const result = await repo.search(defaults);
   assert.equal(result.items.length, 8);
-  assert.equal(requests.filter((path) => path.includes('/items/')).length, 8);
+  assert.equal(requests.filter((path) => path.includes('/items/')).length, 1);
+  assert.equal(requests.filter((path) => path.includes('/locations/')).length, 0);
   assert.equal(requests.filter((path) => path.includes('/ranked/')).length, 1);
   assert.equal(
     requests.some((path) => /\/(tokens|lexicon|order|ids)\//.test(path)),
@@ -169,13 +171,14 @@ test('current catalog search shards fit the Pages file budget with room for the 
     'budget-test',
   );
   const projected = build.files.size + original.length * 2 + allTopics.length + 200;
-  assert.ok(projected < 20000, `Projected Pages deployment has ${projected} files`);
-  assert.ok(projected <= 19600, `Leave capacity for routine site assets: ${projected}`);
+  assertPagesFileCount(projected + 500);
 });
-test('a broad query downloads postings but only the visible page metadata, and favorites request only saved IDs', async () => {
+test('queries resolve bounded card chunks and favorites locate only their saved IDs', async () => {
   const a = fixture(synthetic);
-  await a.repo.search({ ...defaults, q: 'seasonal' });
-  assert.equal(a.requests.filter((path) => path.includes('/items/')).length, 8);
+  const page = await a.repo.search({ ...defaults, q: 'seasonal' });
+  assert.equal(page.items.length, 8);
+  assert.ok(a.requests.filter((path) => path.includes('/items/')).length <= 8);
+  assert.equal(a.requests.filter((path) => path.includes('/locations/')).length, 0);
   assert.ok(a.requests.some((path) => path.includes('/tokens/')));
   const b = fixture(synthetic);
   const ids = [synthetic[20].id, synthetic[4000].id];
@@ -184,11 +187,60 @@ test('a broad query downloads postings but only the visible page metadata, and f
     result.map((item) => item.id),
     ids,
   );
-  assert.deepEqual(
-    b.requests.filter((path) => !path.endsWith('/manifest.json')).sort(),
-    ids.map((id) => `/search-data/test-version/items/${id}.json`).sort(),
+  assert.equal(b.requests.filter((path) => path.includes('/locations/')).length, 2);
+  assert.equal(b.requests.filter((path) => path.includes('/items/')).length, 2);
+  assert.equal(
+    b.requests.some((path) => /\/(tokens|ranked|order|ids)\//.test(path)),
+    false,
   );
   assert.deepEqual(await b.repo.favoriteItems(['../bad', 'removed-artwork']), [null, null]);
+});
+
+test('card chunks preserve exact ID bindings and same-search requests share one fetch', async () => {
+  const f = fixture(synthetic);
+  const manifest = await f.repo.manifest();
+  const first = f.build.files.get('test-version/items/0');
+  const cards = await Promise.all(first.map((item) => f.repo.item(item.id, manifest)));
+  assert.deepEqual(
+    cards.map((item) => item.id),
+    first.map((item) => item.id),
+  );
+  assert.equal(f.requests.filter((path) => path.includes('/items/')).length, 1);
+  const broken = fixture(synthetic);
+  broken.build.files.get('test-version/items/0').reverse();
+  await assert.rejects(broken.repo.search(defaults), /could not be read/);
+});
+
+test('all 40 technology collections retain Free-plan file headroom at 7,700 artworks', () => {
+  const allTopics = [...topics, ...extraTopics];
+  const future = Array.from({ length: 7700 }, (_, n) => ({
+    ...real[n % real.length],
+    id: `capacity-artwork-${n}`,
+  }));
+  const build = buildSearchIndex(future, allTopics, 'capacity');
+  const projected = build.files.size + future.length * 2 + allTopics.length + 200;
+  assert.ok(projected < 19600, `Technology capacity exceeds safe file budget: ${projected}`);
+});
+
+test('cancelling an older chunk request cannot cancel or poison a newer search', async () => {
+  const f = fixture(synthetic);
+  const gates = [];
+  const repo = new SearchRepository(async (path, signal) => {
+    if (path.includes('/items/')) await new Promise((resolve) => gates.push(resolve));
+    return f.loader(path, signal);
+  });
+  const manifest = await repo.manifest();
+  const id = f.build.files.get('test-version/items/0')[0].id;
+  const old = new AbortController();
+  const current = new AbortController();
+  const before = repo.item(id, manifest, old.signal, 0);
+  const after = repo.item(id, manifest, current.signal, 0);
+  assert.equal(gates.length, 2, 'different cancellation scopes must not share a fetch');
+  old.abort();
+  gates.forEach((resolve) => resolve());
+  await assert.rejects(before, { name: 'AbortError' });
+  assert.equal((await after).id, id);
+  assert.equal((await repo.item(id, manifest)).id, id);
 });
 test('the latest request wins even when the old response ignores cancellation, and stale errors stay silent', async () => {
   const gate = new LatestRequest(),

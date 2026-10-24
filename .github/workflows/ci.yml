@@ -156,6 +156,12 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 node tests/e2e/raster-editor.mjs
             fi
+            if [ '${{ matrix.suite }}' = 'catalog-extra-2' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=wifi-router ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/wifi-router node tests/e2e/collection.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=wifi-router ALL_RASTER=1 EVIDENCE_DIR=reports/wifi-router-editor node tests/e2e/raster-editor.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=robot ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/robot node tests/e2e/collection.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=robot ALL_RASTER=1 EVIDENCE_DIR=reports/robot-editor node tests/e2e/raster-editor.mjs
+            fi
             if [ '${{ matrix.suite }}' = 'studio' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs

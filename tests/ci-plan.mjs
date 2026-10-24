@@ -64,7 +64,16 @@ test('split workflow retains every interface command and catalog-extra export ex
       1,
       `Browser command ${name} must run once per engine`,
     );
-  for (const topic of ['earbuds', 'printer', 'keyboard', 'scanner', 'tablet', 'speaker'])
+  for (const topic of [
+    'earbuds',
+    'printer',
+    'keyboard',
+    'scanner',
+    'tablet',
+    'speaker',
+    'wifi-router',
+    'robot',
+  ])
     assert.equal(
       workflow.split(`RASTER_TOPICS=${topic} ALL_RASTER=1`).length - 1,
       1,

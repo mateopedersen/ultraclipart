@@ -18,6 +18,7 @@ export interface SearchManifest {
   version: string;
   total: number;
   pageChunk: number;
+  cardChunk?: number;
   tokenBuckets: number;
   lexiconLengths: number[];
   facets: string[];
@@ -35,6 +36,9 @@ export interface SearchBuild {
 // as the catalog grows, while a cold first browse still stays below 25 KiB.
 export const SEARCH_CHUNK = 256;
 export const TOKEN_BUCKETS = 256;
+// Eight adjacent cards share one file: a cold eight-card browse transfers no
+// extra card records, while the catalog no longer needs one Pages file per ID.
+export const CARD_CHUNK = 8;
 
 // FNV-1a keeps the number of generated files bounded as vocabulary grows.
 export function tokenBucket(token: string): string {
@@ -66,13 +70,17 @@ export function buildSearchIndex(
   const buckets = new Map<string, Record<string, number[]>>();
   const lexicons = new Map<number, Set<string>>();
   const facets = new Map<string, number[]>();
+  const locations = new Map<string, Record<string, number>>();
   const addFacet = (name: string, ordinal: number) => {
     const values = facets.get(name) ?? [];
     values.push(ordinal);
     facets.set(name, values);
   };
   items.forEach((item, ordinal) => {
-    files.set(`${version}/items/${item.id}`, cardMetadata(item));
+    const key = tokenBucket(item.id);
+    const location = locations.get(key) ?? Object.create(null);
+    location[item.id] = ordinal;
+    locations.set(key, location);
     const strong = new Set(normalizeQuery(`${item.topic} ${item.title}`));
     const words = new Set(
       normalizeQuery(
@@ -99,6 +107,15 @@ export function buildSearchIndex(
       addFacet(`background/${item.alpha ? 'transparent' : 'opaque'}`, ordinal);
     addFacet(`topic/${item.topic}`, ordinal);
   });
+  for (let offset = 0; offset < items.length; offset += CARD_CHUNK)
+    files.set(
+      `${version}/items/${offset / CARD_CHUNK}`,
+      items.slice(offset, offset + CARD_CHUNK).map(cardMetadata),
+    );
+  for (let bucket = 0; bucket < TOKEN_BUCKETS; bucket++) {
+    const key = bucket.toString(16).padStart(2, '0');
+    files.set(`${version}/locations/${key}`, locations.get(key) ?? {});
+  }
   // Empty buckets exist too: a missing word is a normal zero-result query, not a 404.
   for (let bucket = 0; bucket < TOKEN_BUCKETS; bucket++) {
     const key = bucket.toString(16).padStart(2, '0');
@@ -136,6 +153,7 @@ export function buildSearchIndex(
     version,
     total: items.length,
     pageChunk: SEARCH_CHUNK,
+    cardChunk: CARD_CHUNK,
     tokenBuckets: TOKEN_BUCKETS,
     lexiconLengths: [...lexicons.keys()].sort((a, b) => a - b),
     facets: [...facets.keys()].sort(),

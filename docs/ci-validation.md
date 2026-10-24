@@ -8,8 +8,8 @@ It never relies on a truncated API list or commit-message hints.
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Documentation or the CI planner/workflow only                                                      | Policy tests and workflow formatting; no product browser jobs |
 | Explicitly allowlisted artwork guide, related presentation, isolated listing styles or guide pages | All three interface groups in Chromium, Firefox and WebKit    |
-| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All ten groups in all three engines                           |
-| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All ten groups in all three engines                           |
+| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All eleven groups in all three engines                        |
+| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All eleven groups in all three engines                        |
 
 The interface groups include the original search, category, header, artwork-details,
 related, sharing, general site, refinement and content browser commands. Splitting the

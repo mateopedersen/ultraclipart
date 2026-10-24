@@ -51,6 +51,8 @@ export class SearchRepository {
   private loader: JsonLoader;
   private cache = new Map<string, unknown>();
   private cards = new Map<string, SearchCard>();
+  private pending = new Map<string, { signal?: AbortSignal; value: Promise<unknown> }>();
+  private generation = 0;
   constructor(loader: JsonLoader = browserLoader) {
     this.loader = loader;
   }
@@ -58,8 +60,10 @@ export class SearchRepository {
     for (const item of items) this.cards.set(`${version}/${item.id}`, item);
   }
   clear() {
+    this.generation++;
     this.cache.clear();
     this.cards.clear();
+    this.pending.clear();
   }
   private async json<T>(path: string, signal?: AbortSignal): Promise<T> {
     if (signal?.aborted) throw new DOMException('Request cancelled', 'AbortError');
@@ -69,11 +73,26 @@ export class SearchRepository {
       this.cache.set(path, value);
       return value as T;
     }
-    const value = await this.loader(path, signal);
-    if (signal?.aborted) throw new DOMException('Request cancelled', 'AbortError');
-    this.cache.set(path, value);
-    if (this.cache.size > 48) this.cache.delete(this.cache.keys().next().value!);
-    return value as T;
+    // Adjacent cards share a chunk. Coalesce only callers with the same
+    // cancellation scope, so aborting an old search cannot cancel a new one.
+    const pending = this.pending.get(path);
+    if (pending && pending.signal === signal) return pending.value as Promise<T>;
+    const generation = this.generation;
+    const operation = (async () => {
+      const value = await this.loader(path, signal);
+      if (signal?.aborted) throw new DOMException('Request cancelled', 'AbortError');
+      if (generation === this.generation) {
+        this.cache.set(path, value);
+        if (this.cache.size > 48) this.cache.delete(this.cache.keys().next().value!);
+      }
+      return value;
+    })();
+    this.pending.set(path, { signal, value: operation });
+    try {
+      return (await operation) as T;
+    } finally {
+      if (this.pending.get(path)?.value === operation) this.pending.delete(path);
+    }
   }
   async manifest(signal?: AbortSignal): Promise<SearchManifest> {
     const result = await this.json<SearchManifest>('/search-data/manifest.json', signal);
@@ -81,7 +100,9 @@ export class SearchRepository {
       result.schema !== 1 ||
       !Number.isInteger(result.total) ||
       result.total < 0 ||
-      !/^[a-z0-9-]+$/.test(result.version)
+      !/^[a-z0-9-]+$/.test(result.version) ||
+      (result.cardChunk !== undefined &&
+        (!Number.isInteger(result.cardChunk) || result.cardChunk < 1 || result.cardChunk > 32))
     )
       throw new Error('The catalog needs to be refreshed.');
     return result;
@@ -89,13 +110,40 @@ export class SearchRepository {
   private path(manifest: SearchManifest, path: string) {
     return `/search-data/${manifest.version}/${path}.json`;
   }
-  async item(id: string, manifest: SearchManifest, signal?: AbortSignal): Promise<SearchCard> {
+  async item(
+    id: string,
+    manifest: SearchManifest,
+    signal?: AbortSignal,
+    ordinal?: number,
+  ): Promise<SearchCard> {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(id)) throw new SearchHttpError(404);
     const key = `${manifest.version}/${id}`;
     const cached = this.cards.get(key);
     if (cached) return cached;
-    const item = await this.json<SearchCard>(this.path(manifest, `items/${id}`), signal);
-    if (item.id !== id || typeof item.title !== 'string' || typeof item.thumb !== 'string')
+    let item: SearchCard;
+    if (manifest.cardChunk) {
+      // Search already knows ordinals. Only arbitrary saved IDs need the small
+      // hashed location table; the manifest never embeds the whole catalog.
+      if (ordinal === undefined) {
+        const locations = await this.json<Record<string, number>>(
+          this.path(manifest, `locations/${tokenBucket(id)}`),
+          signal,
+        );
+        ordinal = locations[id];
+      }
+      if (!Number.isInteger(ordinal) || ordinal! < 0 || ordinal! >= manifest.total)
+        throw new SearchHttpError(404);
+      const chunk = await this.json<SearchCard[]>(
+        this.path(manifest, `items/${Math.floor(ordinal! / manifest.cardChunk)}`),
+        signal,
+      );
+      if (!Array.isArray(chunk) || chunk.length > manifest.cardChunk)
+        throw new Error('An illustration could not be read.');
+      item = chunk[ordinal! % manifest.cardChunk];
+    } else {
+      item = await this.json<SearchCard>(this.path(manifest, `items/${id}`), signal);
+    }
+    if (item?.id !== id || typeof item.title !== 'string' || typeof item.thumb !== 'string')
       throw new Error('An illustration could not be read.');
     this.cards.set(key, item);
     if (this.cards.size > 128) this.cards.delete(this.cards.keys().next().value!);
@@ -155,9 +203,12 @@ export class SearchRepository {
       const ids = chunks
         .flatMap((chunk) => chunk.ids)
         .slice(start % manifest.pageChunk, (start % manifest.pageChunk) + state.size);
+      const ordinals = chunks
+        .flatMap((chunk) => chunk.ordinals)
+        .slice(start % manifest.pageChunk, (start % manifest.pageChunk) + state.size);
       return {
         ...meta,
-        items: await mapLimit(ids, (id) => this.item(id, manifest, signal)),
+        items: await mapLimit(ids, (id, index) => this.item(id, manifest, signal, ordinals[index])),
         hasFuzzyMatches: false,
         manifest,
       };
@@ -246,7 +297,9 @@ export class SearchRepository {
     );
     return {
       ...meta,
-      items: await mapLimit(ids, (id) => this.item(id, manifest, signal)),
+      items: await mapLimit(ids, (id, index) =>
+        this.item(id, manifest, signal, selected[index].id),
+      ),
       hasFuzzyMatches: selected.some((item) => item.fuzzy),
       manifest,
     };

@@ -20,6 +20,10 @@ export function validateRecoveredCollection(intake, read) {
   const screenHashes = new Set();
   for (const row of intake.rows) {
     requireFact(
+      safe(row.id) && row.id.startsWith(`${intake.topic}-`),
+      `Artwork identity belongs to a different topic: ${row.id ?? 'unknown artwork'}`,
+    );
+    requireFact(
       safe(row.id) &&
         row.title?.length > 5 &&
         row.alt?.length > 20 &&
