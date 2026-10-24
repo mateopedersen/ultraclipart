@@ -14,8 +14,13 @@ import { createHash } from 'node:crypto';
 import { setTimeout as delay } from 'node:timers/promises';
 import { configuredToken } from './r2/cloudflare-api.mjs';
 
-const root = resolve(import.meta.dirname, '..'),
-  stage = join(root, 'work/imports/fruit-package');
+const root = resolve(import.meta.dirname, '..');
+const args = process.argv.slice(2);
+if (args.length && (args.length !== 2 || args[0] !== '--stage'))
+  throw new Error('Use --stage work/imports/<reviewed-package>');
+const stage = resolve(root, args[1] ?? 'work/imports/fruit-package');
+if (!stage.startsWith(join(root, 'work/imports') + '/'))
+  throw new Error('Package staging must remain in work/imports');
 const read = (path) => JSON.parse(readFileSync(path, 'utf8'));
 const hash = (path) => createHash('sha256').update(readFileSync(path)).digest('hex');
 const topics = read(join(stage, 'topic-map.json')).map((item) => item.topic);
@@ -75,7 +80,16 @@ for (const topic of topics) {
     }
     await run(
       'scripts/r2/ingest.mjs',
-      [batch, '--transport', 'cloudflare-api', '--workers', '4', '--apply'],
+      [
+        batch,
+        '--transport',
+        'cloudflare-api',
+        '--workers',
+        '4',
+        '--max-account-bytes',
+        '10000000000000',
+        '--apply',
+      ],
       join(stage, topic + '.upload.log'),
     );
     copyFileSync(join(root, 'r2-ingest-journal.json'), journal);

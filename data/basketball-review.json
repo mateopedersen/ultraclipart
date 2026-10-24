@@ -1,0 +1,836 @@
+{
+  "collection": "owner-basketball-pack-2026-10-24",
+  "count": 50,
+  "repairs": [
+    {
+      "id": "basketball-through-hoop-decorative-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "c930c2bbb7a677857ea4d43e9f2a786422e7dd5e8776b32fe01f89fc067ee0a1",
+      "repairedWebpSha256": "fd2d94f99e719c247e1408b1d7d3e0517a563e670cfab6753fd813e77c4bea67",
+      "renderCompositeMeanDifference": 0.032,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "basketball-with-flames-decorative-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "aa8994552ec85aba9d2fff3effc2267f0638dcf85287086e351be09db5f2ac42",
+      "repairedWebpSha256": "604ef6ac8a45987bd8100d4852c6a91e1df696593024f3362e43e3778252c6fe",
+      "renderCompositeMeanDifference": 0.035,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    }
+  ],
+  "archives": [
+    {
+      "topic": "basketball",
+      "source": "source.zip",
+      "bytes": 72832333,
+      "sha256": "0524f9765d28ac2081b16c4078e3a940bdd43d51975ea7bb14c64d5c7672d8fe",
+      "pairs": 50
+    }
+  ],
+  "screenReview": "PASS",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false,
+  "rows": [
+    {
+      "id": "basketball-and-whistle-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "78fa89dfa2c710ddf0da95596fe5fe4be3000f5c0983c8be1fe8c84def386159",
+        "webp": "16ba664a3972854f59e2d718cebd964f9795fa05c1eba1679fd05457da7b0c7c"
+      },
+      "pdfBytes": 989788,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-and-whistle-ornate-clipart",
+      "meanRgbDifference": 6.4163
+    },
+    {
+      "id": "basketball-and-whistle-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "6f6c5d2bd292e15a13800b1ca4802dbcdaa363192b6ba0bd6707be3a2be619ca",
+        "webp": "a80ca960715158354509b2282e2cd42a85d9cfa4523dde54d2edc926fbec2467"
+      },
+      "pdfBytes": 974729,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-and-whistle-classic-clipart",
+      "meanRgbDifference": 5.3677
+    },
+    {
+      "id": "basketball-and-whistle-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "3d00a06082a8f8f1d992b4abc3e990d6d79b2feb8a467bbca120b6d25b9aea30",
+        "webp": "ff91c26d38d08fc603b3efe607932df3b5efe8dd9bc3f21bbf5f75da738b833e"
+      },
+      "pdfBytes": 309474,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-and-whistle-black-and-white-clipart",
+      "meanRgbDifference": 7.6317
+    },
+    {
+      "id": "basketball-and-whistle-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "43200248df9ed5b6d101d32d5dcbe9209d392bb1fa25fdb4cca9b80e9ddf7bd1",
+        "webp": "807938ac1b0301617e6261272296694b5d8b8268fd653568b2d66e9fdd60e5ed"
+      },
+      "pdfBytes": 960829,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-and-whistle-decorative-clipart",
+      "meanRgbDifference": 5.5408
+    },
+    {
+      "id": "basketball-championship-medal-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "2a5915245b8b1f046b272e030a1bf9a32847d3ff37fec86a99a97450492a3027",
+        "webp": "f34b6bcaf5f8e7b9c7fa376ca54d83c96802772c326f32aab4790f17b98178ef"
+      },
+      "pdfBytes": 305498,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-championship-medal-black-and-white-clipart",
+      "meanRgbDifference": 6.8944
+    },
+    {
+      "id": "basketball-and-whistle-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "060168a06003a7dc5e1b90c8bec402b0f906dfcf39be99d52cdeb74ff141734c",
+        "webp": "a84f90920ab76493569ac048eddadd43278c7ad259c878b03b33181da09c8ded"
+      },
+      "pdfBytes": 960387,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-and-whistle-playful-clipart",
+      "meanRgbDifference": 5.5173
+    },
+    {
+      "id": "basketball-championship-medal-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "0e84aa894136c07b158fdfceaeb9b8a8b7905d4f181b3eb24804e3a26ba9bae5",
+        "webp": "a9b019c7b38c753af21f51330ca2bc21a256b63b2dfc80b3d929c55c898d31cd"
+      },
+      "pdfBytes": 972498,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-championship-medal-classic-clipart",
+      "meanRgbDifference": 6.3108
+    },
+    {
+      "id": "basketball-championship-medal-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "867b87a1b3506ef0ed5201877824c1034279862988e682363c4b0931ba7c8647",
+        "webp": "0184f47db8b2b92281613c6939e99e44195c5980137e4b05f59357fe4a26e723"
+      },
+      "pdfBytes": 997278,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-championship-medal-decorative-clipart",
+      "meanRgbDifference": 7.735
+    },
+    {
+      "id": "basketball-girl-dribbling-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "2fb01bb4e03c36d6a4727caca840c24f42d1243dbb8e5f0c3604e1dac7997296",
+        "webp": "a42161181a78cb5e9a770d8ef1a5df3a3bd817f6701b98ac8860627cd77afd42"
+      },
+      "pdfBytes": 329305,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-girl-dribbling-black-and-white-clipart",
+      "meanRgbDifference": 3.7601
+    },
+    {
+      "id": "basketball-championship-medal-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "0f05b49dae15ddd6bc81191a047f2918eb88a5142e804f71ca7401ac37e98a57",
+        "webp": "07e28c5729bf3edb78b110b669e5325628e3410788015f76bd2fddc6ff7480c2"
+      },
+      "pdfBytes": 961163,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-championship-medal-playful-clipart",
+      "meanRgbDifference": 6.5341
+    },
+    {
+      "id": "basketball-girl-dribbling-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "08cd83381370aead299982d3da7c7ee94cd1e468b05fef67388a79dc8767028d",
+        "webp": "c69254abc0562c1b2a04da07036cd288d957600fec8d40abfd618953e1896acb"
+      },
+      "pdfBytes": 997193,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-girl-dribbling-classic-clipart",
+      "meanRgbDifference": 3.9564
+    },
+    {
+      "id": "basketball-championship-medal-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "f901c4a4fba95126d244abf3ea553909a21f6aa2fe2f1db9f6ca709fcf72425a",
+        "webp": "831afa0e19666c9b0784a2e976cbe6595a47a9339435adc456810a5837a11021"
+      },
+      "pdfBytes": 985923,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-championship-medal-ornate-clipart",
+      "meanRgbDifference": 6.2912
+    },
+    {
+      "id": "basketball-girl-dribbling-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "3c19fa6efd389cace6ed853be2550e59815d460d1e34e025292002d9d939e2cc",
+        "webp": "9de7a80f5a4225890086e9dfe9187394efa3b06dfc9805d2a0a2dcd49083372a"
+      },
+      "pdfBytes": 951714,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-girl-dribbling-decorative-clipart",
+      "meanRgbDifference": 4.7261
+    },
+    {
+      "id": "basketball-girl-dribbling-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "2507081e6d723acc5066a33ced0c68c185b89f35ff0da41b6461ee54842233cb",
+        "webp": "d13b58392bd80ce96a17a6c7784e0bdeeea343acc34c8f09caf1a28b1b999d8c"
+      },
+      "pdfBytes": 967785,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-girl-dribbling-playful-clipart",
+      "meanRgbDifference": 4.0205
+    },
+    {
+      "id": "basketball-jersey-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "a3d799268fa77b260fcb048e5170f4d3ba55ef5eee9fe0fc17e25a16a6c66f1b",
+        "webp": "f75ccf0152f77c3fd29da86f5b2a1606028576f6fe1e89bc00d27d58e12ec47d"
+      },
+      "pdfBytes": 365604,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-jersey-black-and-white-clipart",
+      "meanRgbDifference": 6.2673
+    },
+    {
+      "id": "basketball-girl-dribbling-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "7ae6403dc77c95b7a3756d14b4779beec93d78f5179f93d8fbb64373d8b92e71",
+        "webp": "c9edfa8119f90fd54b1ef5fce2497df994a9d744bb49a83f3e339f9d14bbbff8"
+      },
+      "pdfBytes": 976467,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-girl-dribbling-ornate-clipart",
+      "meanRgbDifference": 4.3762
+    },
+    {
+      "id": "basketball-jersey-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "72edb6a1c9d7b34d7fbe8c2de5fe4fa360cd93f38ebe1ec843ba26c41dacffc6",
+        "webp": "1c3fb4fa9f9094667ea0f89ee86984544ecabb6254a1d8f6221283d5670b780d"
+      },
+      "pdfBytes": 958815,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-jersey-decorative-clipart",
+      "meanRgbDifference": 5.7
+    },
+    {
+      "id": "basketball-jersey-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "5e850377402264bf621bd2ed72a38619d9b69ad6b1b70891c3c2774f81298369",
+        "webp": "56730b9258e2e13456da107371214138e93365439154a2856cafec6b421bb890"
+      },
+      "pdfBytes": 935908,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-jersey-classic-clipart",
+      "meanRgbDifference": 5.2325
+    },
+    {
+      "id": "basketball-jersey-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "e7b1a6f336d81685dc5f87c936cd7eb30c7c0bbab71874c777a78c667bf87c51",
+        "webp": "85acf99b5ba35f34c7f58d3c33d2a5ddd63c274c6426ec8eea585abf41a77091"
+      },
+      "pdfBytes": 992137,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-jersey-ornate-clipart",
+      "meanRgbDifference": 6.3371
+    },
+    {
+      "id": "basketball-jersey-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "64e03b009145d020485003e87c28c8a41e8cfd0d3005f338d2be5abd9df56baa",
+        "webp": "7f9ebef22db856e3e75b3394ee73c2f294bc9acde3337ebe8e35940d8fedaaea"
+      },
+      "pdfBytes": 975215,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-jersey-playful-clipart",
+      "meanRgbDifference": 5.8976
+    },
+    {
+      "id": "basketball-kid-shooting-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "45368f3b04767e0616d8dcb50701dec356b469f7f5da1c068310f2997d0c8d57",
+        "webp": "9caee3881ad0c24cf0810c26bf3ff20eb7b18c50e417912ec9f0f44bc9521bcd"
+      },
+      "pdfBytes": 331434,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kid-shooting-black-and-white-clipart",
+      "meanRgbDifference": 5.6605
+    },
+    {
+      "id": "basketball-kid-shooting-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "371a6c3bb22cb0eca0c20be3378ef54a8978e1ec6772e31726a39a3a0222bf3b",
+        "webp": "6dd577a555fbcecba3829f73648177a3033009ba7645b215950d96989046c84f"
+      },
+      "pdfBytes": 934830,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kid-shooting-classic-clipart",
+      "meanRgbDifference": 2.8905
+    },
+    {
+      "id": "basketball-kid-shooting-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "cc50510aad65ba6c2a37b9ae15fb75eb2b85b20cd56465340bf97f6b26921e97",
+        "webp": "5217069c3469d3f7f5e573b18c9e3a55290a03a0897b7910982264b8e885c61f"
+      },
+      "pdfBytes": 977719,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kid-shooting-decorative-clipart",
+      "meanRgbDifference": 4.0291
+    },
+    {
+      "id": "basketball-kid-shooting-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "6435e3b1ba7473285b1562ddaa32bb04acfc4e31180b302c6c88d4f8f1dfbf21",
+        "webp": "34f109445188427ed81594539f72070efbd61ed4bac406ed8a3d7158aa9fea40"
+      },
+      "pdfBytes": 954306,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kid-shooting-ornate-clipart",
+      "meanRgbDifference": 3.5268
+    },
+    {
+      "id": "basketball-kid-shooting-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "a48798ecf926c9c687126304e5d52281d16def4add91e9dcd476c3b2ddc58c17",
+        "webp": "0268fde74e3b69b289549b940ec4921ed758d45dcacb72c9af2f908a1f36f2c9"
+      },
+      "pdfBytes": 962746,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kid-shooting-playful-clipart",
+      "meanRgbDifference": 3.8393
+    },
+    {
+      "id": "basketball-kids-playing-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "7a07ec2a838af3f0f17ae88646b067e738147fd2e66498c377c413cd842fc24b",
+        "webp": "c23b514b007b29d076e904ddea8422958bd20049ffc52e8f47201ef02f63b793"
+      },
+      "pdfBytes": 345993,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kids-playing-black-and-white-clipart",
+      "meanRgbDifference": 5.117
+    },
+    {
+      "id": "basketball-kids-playing-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "d6690e59b475896922e7d92501b44eebf6046bc90e47876c2f140c454726d242",
+        "webp": "15ddf079ca2ee5302f764728474e9091c72521e1fa6e16e18acb0e9d015be237"
+      },
+      "pdfBytes": 978063,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kids-playing-classic-clipart",
+      "meanRgbDifference": 5.5907
+    },
+    {
+      "id": "basketball-kids-playing-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "e6dc5e0898e13badd2462f2284362d2c4d8ec5b907fce19c500b95bccf3ff756",
+        "webp": "78c642cbf24e9a86f1482e28ebf287cd6d431a780166cf3409a4d518860db1d7"
+      },
+      "pdfBytes": 976547,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kids-playing-decorative-clipart",
+      "meanRgbDifference": 5.2529
+    },
+    {
+      "id": "basketball-kids-playing-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "e485a9b1cdcb0fc629d32554b816d3693cb3a7f3172e34efb5c5c8cb3f381870",
+        "webp": "9f84ce0d11cc6241f463e91cfa0baeddf963e94d4dd3d29d85538c9e51a131a2"
+      },
+      "pdfBytes": 979433,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kids-playing-ornate-clipart",
+      "meanRgbDifference": 4.962
+    },
+    {
+      "id": "basketball-kids-playing-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "72c896a770a9e92fc0045b851859930d3bc5af57e396593572e5d5b4b6832c9e",
+        "webp": "6fae38dc5bbadbd6d758301dddf33c55c1c64810e96c8f437d16d49a12bef7a7"
+      },
+      "pdfBytes": 994624,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-kids-playing-playful-clipart",
+      "meanRgbDifference": 6.8648
+    },
+    {
+      "id": "basketball-through-hoop-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "f84ee0bf64ba50f089ce77570a970d0ba09db9fb7067daacf9b36d73524d20e8",
+        "webp": "58312b780307418a2183fcb45acada3d0015a19f0d6924ec051da205091c1493"
+      },
+      "pdfBytes": 389975,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-through-hoop-black-and-white-clipart",
+      "meanRgbDifference": 6.8932
+    },
+    {
+      "id": "basketball-through-hoop-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "7ad7be159df896d0cc75f45740481280389052b0c1f82f731081d670559be0a2",
+        "webp": "074f81f1f064ec6f3c9664fefb06f406eb3c55d0124d884e26ccf78625be5c32"
+      },
+      "pdfBytes": 995893,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-through-hoop-classic-clipart",
+      "meanRgbDifference": 5.1748
+    },
+    {
+      "id": "basketball-through-hoop-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "c930c2bbb7a677857ea4d43e9f2a786422e7dd5e8776b32fe01f89fc067ee0a1",
+        "webp": "fd2d94f99e719c247e1408b1d7d3e0517a563e670cfab6753fd813e77c4bea67"
+      },
+      "pdfBytes": 918857,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-through-hoop-decorative-clipart",
+      "meanRgbDifference": 2.2264
+    },
+    {
+      "id": "basketball-through-hoop-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "145f828af6e53ad8d5296e1dd582f7ef9c12f69f42ea5aeedf4d5a2a7c067a50",
+        "webp": "2611a21beaf9a306a1b8870818ef9fed22a7f9bc5fdf0fdd76e8cce1a18e26ff"
+      },
+      "pdfBytes": 995791,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-through-hoop-ornate-clipart",
+      "meanRgbDifference": 5.915
+    },
+    {
+      "id": "basketball-trophy-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "5e07037c6ecc174faa17acc8d44b8ee7587420ca9dc4b6cfe5337a026431f8bd",
+        "webp": "8ac6cb5295be4ef5b50b4c22ce3ef54004c8e2a06fdaf0037bab9effe41fc863"
+      },
+      "pdfBytes": 254862,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-trophy-black-and-white-clipart",
+      "meanRgbDifference": 4.178
+    },
+    {
+      "id": "basketball-through-hoop-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "8677fd48794d8b57d9a6841b0ae68ee598fdab707fb670758da9428f8cfa2a08",
+        "webp": "8a7838c373bd5b2e2d121b471fce338a16f1878a3e619655d131f90041f2c9a6"
+      },
+      "pdfBytes": 998964,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-through-hoop-playful-clipart",
+      "meanRgbDifference": 4.6764
+    },
+    {
+      "id": "basketball-trophy-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "1ad12ca2a010e4076141736d82dd3281191fd746ff3633005e4dd8ffbd59f924",
+        "webp": "fc3261b20c3c9bb833d428a049bc5f2ba558b73d8aa2db7a35be716818f503a0"
+      },
+      "pdfBytes": 963103,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-trophy-classic-clipart",
+      "meanRgbDifference": 4.0169
+    },
+    {
+      "id": "basketball-trophy-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "658091cc4178fc5b818c12bdb3db13f97e3f589e2e5ef2d91430109a2f9bb9fc",
+        "webp": "45f9b18a9d96be175bf32def561a513d6a7eff336c8d1627f46e55d9db49195d"
+      },
+      "pdfBytes": 982207,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-trophy-decorative-clipart",
+      "meanRgbDifference": 4.9891
+    },
+    {
+      "id": "basketball-trophy-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "9fd820ffb14790ccf6f8cdbf918a5b0b1d4bb7f7e267773e0d6ba47949da8a32",
+        "webp": "7beafd553b273354e9a2f89ec7976eb0258bc32a2669015a5ca57ea5e814cb55"
+      },
+      "pdfBytes": 969354,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-trophy-ornate-clipart",
+      "meanRgbDifference": 5.7215
+    },
+    {
+      "id": "basketball-trophy-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "29e1f9eb4354578a1fc77be0ce24bb03cc0a64dc58c8c517ded6c3b19ee41215",
+        "webp": "9e6b8e16eb053b3dba6d253372cf13d83232dc4747a587a01690d9ea7144377b"
+      },
+      "pdfBytes": 982797,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-trophy-playful-clipart",
+      "meanRgbDifference": 5.3451
+    },
+    {
+      "id": "basketball-with-flames-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "ca59bcf82d2f7bbb1d8a91e56686ff0a4fcdf4a7f637e8fa2ddaeb851c897789",
+        "webp": "c13ba98d66d95eb7fb286faf2a0f8d63dc9822d43e353838bc97859dd8e2266b"
+      },
+      "pdfBytes": 397181,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-flames-black-and-white-clipart",
+      "meanRgbDifference": 6.053
+    },
+    {
+      "id": "basketball-with-flames-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "aa8994552ec85aba9d2fff3effc2267f0638dcf85287086e351be09db5f2ac42",
+        "webp": "604ef6ac8a45987bd8100d4852c6a91e1df696593024f3362e43e3778252c6fe"
+      },
+      "pdfBytes": 890870,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-flames-decorative-clipart",
+      "meanRgbDifference": 2.1757
+    },
+    {
+      "id": "basketball-with-flames-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "cfc8a8728bf3ec8a68432bb772e1ce66898f9f0184c5dcbabc9e21c1c470a624",
+        "webp": "24ae8582591a2995100b7f8df5488457685780df59624a79c4f042349f76e5e4"
+      },
+      "pdfBytes": 994932,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-flames-classic-clipart",
+      "meanRgbDifference": 5.2621
+    },
+    {
+      "id": "basketball-with-flames-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "90e24df9a1c92c0f74293077339f3078882bfd4768001de3d325b4f33ba68f96",
+        "webp": "f57f21cfe270f3d6bac1b85c3f39d9a0133825d3138256d783bdf488c365e419"
+      },
+      "pdfBytes": 983144,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-flames-ornate-clipart",
+      "meanRgbDifference": 5.3545
+    },
+    {
+      "id": "basketball-with-flames-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "75cf3b7a66d01ecb1e3fc80ed223471241a8ffabac09596a7781cf65d3ff2771",
+        "webp": "873efeb57e4739ee599b9b4917cc7a785d76efa2be1de2a39d5678a840d031dc"
+      },
+      "pdfBytes": 992549,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-flames-playful-clipart",
+      "meanRgbDifference": 5.5754
+    },
+    {
+      "id": "basketball-with-sneakers-black-and-white-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "6cb977394e2daf6d1d8144c2135e36c3f3689ae0f06874d8ff9ebbea86a50cc1",
+        "webp": "b94b85da0afab242a8e4f8103f7a9925d400b0720e9bbcc8fbecc87091640828"
+      },
+      "pdfBytes": 318818,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-sneakers-black-and-white-clipart",
+      "meanRgbDifference": 5.2345
+    },
+    {
+      "id": "basketball-with-sneakers-classic-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "b5d9d108fda0bb0086b12fde128235ecf8220f0e679e4bdf882ea767a6f3dcef",
+        "webp": "8650965c7dd02abe76672fc6d7c7446fca39310aa9eb8b82adee5d7b557369da"
+      },
+      "pdfBytes": 963246,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-sneakers-classic-clipart",
+      "meanRgbDifference": 5.1832
+    },
+    {
+      "id": "basketball-with-sneakers-decorative-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "16837adf8e26a288a95dba0e017a2d91916bac5c57657bffae3d38c95bcff01c",
+        "webp": "72d23d09e2254626ca143686fdfceee29dd40abd513f5f20bb13338b66a34afe"
+      },
+      "pdfBytes": 972267,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-sneakers-decorative-clipart",
+      "meanRgbDifference": 6.4118
+    },
+    {
+      "id": "basketball-with-sneakers-ornate-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "1313e2c8656d3aad33dcc02493744facfb2ce2d7a9590d2a3e35acccd3f7a18d",
+        "webp": "051b25cd3973972d887bfdaae19aeaebd49f126c745e99d7b003f3d1b37b0de0"
+      },
+      "pdfBytes": 970149,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-sneakers-ornate-clipart",
+      "meanRgbDifference": 5.9375
+    },
+    {
+      "id": "basketball-with-sneakers-playful-clipart",
+      "topic": "basketball",
+      "hashes": {
+        "pdf": "466ce425f4817569b0717c4a20bc4db49a3746fc7d92fc1dc5bdb88e90dfd4f3",
+        "webp": "69c68fcd6f74050d18a75b5377ce295f5c20be3b1db00ae90df042c799423363"
+      },
+      "pdfBytes": 990677,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "basketball-with-sneakers-playful-clipart",
+      "meanRgbDifference": 5.256
+    }
+  ]
+}

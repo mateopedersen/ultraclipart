@@ -1,5 +1,5 @@
 ---
-import { art, topics, slugify, availableClusters } from '../lib/catalog';
+import { art, topics, slugify, availableClusters, topicInCluster } from '../lib/catalog';
 const seasons = [
   {
     cluster: 'Halloween',
@@ -58,7 +58,7 @@ const seasons = [
       if (!item) throw new Error(`Missing seasonal artwork: ${id}`);
       return item;
     }),
-    count: art.filter((a) => topics.some((t) => t.slug === a.topic && t.cluster === s.cluster))
+    count: art.filter((a) => topics.some((t) => t.slug === a.topic && topicInCluster(t, s.cluster)))
       .length,
   }));
 ---

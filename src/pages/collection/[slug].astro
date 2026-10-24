@@ -1,12 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import { art, availableTopics, availableClusters, slugify } from '../../lib/catalog';
+import {
+  art,
+  availableTopics,
+  availableClusters,
+  slugify,
+  topicInCluster,
+} from '../../lib/catalog';
 export function getStaticPaths() {
   return availableClusters.map((c) => ({ params: { slug: slugify(c) }, props: { cluster: c } }));
 }
 const { cluster } = Astro.props;
-const ts = availableTopics.filter((t) => t.cluster === cluster);
+const ts = availableTopics.filter((t) => topicInCluster(t, cluster));
 const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
 ---
 

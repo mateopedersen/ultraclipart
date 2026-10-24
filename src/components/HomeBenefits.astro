@@ -1,35 +1,35 @@
 ---
-import BenefitIllustration from './BenefitIllustration.astro';
+import HomeBenefitVisual from './HomeBenefitVisual.astro';
 const benefits = [
   {
     kind: 'license' as const,
-    label: 'A little generosity',
-    title: 'Lovely art. Freely yours.',
-    body: 'For personal projects, classroom resources and everyday creativity.',
+    label: 'Personal & classroom use',
+    title: 'Good art. Yours to use.',
+    body: 'Find something for your personal projects and teaching. Check the license before you begin.',
     href: '/license/',
     link: 'Read the license',
   },
   {
     kind: 'formats' as const,
-    label: 'From screen to paper',
-    title: 'Save it. Print it. Love it.',
-    body: 'Choose transparent WebP artwork or a printable PDF from the collection.',
+    label: 'Two useful formats',
+    title: 'Digital or printed. Ready.',
+    body: 'Transparent WebP for your layout. Matching PDF for your printer. Choose the file that fits.',
     href: '/guides/webp-pdf-and-editable-projects/',
     link: 'Choose your file format',
   },
   {
     kind: 'studio' as const,
-    label: 'Your creative finishing touch',
-    title: 'Make it feel like you.',
+    label: 'Clipart Studio',
+    title: 'Make the details your own.',
     body: 'Arrange artwork, add text and build your own composition in Clipart Studio.',
     href: '/create/',
     link: 'Open Clipart Studio',
   },
   {
     kind: 'privacy' as const,
-    label: 'You’re in control',
-    title: 'Your work. Your choice.',
-    body: 'Edit in your browser. Create a public link only when you choose to share.',
+    label: 'Private by design',
+    title: 'Your project stays with you.',
+    body: 'Edit in your browser and save an editable copy. Publish a link only when you choose.',
     href: '/privacy/',
     link: 'About your privacy',
   },
@@ -40,15 +40,15 @@ const benefits = [
   <div class="home-benefits-heading">
     <div>
       <p class="home-benefits-eyebrow">Made for everyday creativity</p>
-      <h2 id="home-benefits-title">The little details, taken care of.</h2>
+      <h2 id="home-benefits-title">Ready for the way you create.</h2>
     </div>
-    <p>From the first spark to the final little flourish.</p>
+    <p>Find it. Make it yours. Take it with you.</p>
   </div>
   <div class="home-benefits-grid">
     {benefits.map((benefit) => (
       <a class={`home-benefit home-benefit-${benefit.kind}`} href={benefit.href}>
         <div class="home-benefit-art">
-          <BenefitIllustration kind={benefit.kind} />
+          <HomeBenefitVisual kind={benefit.kind} />
         </div>
         <div class="home-benefit-copy">
           <p class="home-benefit-label">{benefit.label}</p>
@@ -80,7 +80,7 @@ const benefits = [
     padding: 36px;
     border: 1px solid #dce7f5;
     border-radius: 26px;
-    background: linear-gradient(145deg, #f6faff, #edf4fd);
+    background: #f5f7fa;
     box-shadow: inset 0 2px #fff;
   }
   .home-benefits-heading {
@@ -149,27 +149,23 @@ const benefits = [
     position: relative;
     display: grid;
     place-items: center;
-    height: 176px;
-    background:
-      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#fff7f5, #fff);
+    height: 220px;
+    background: #f3ebe7;
     border-bottom: 1px solid #eef2f8;
   }
   .home-benefit-formats .home-benefit-art {
-    background:
-      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#f3f8ff, #fff);
+    background: #edf2f6;
   }
   .home-benefit-studio .home-benefit-art {
-    background:
-      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#f7f4ff, #fff);
+    background: #e9eef6;
   }
   .home-benefit-privacy .home-benefit-art {
-    background:
-      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#f0f9f5, #fff);
+    background: #eaf0e9;
   }
   .home-benefit-art :global(svg) {
     width: 100%;
     max-width: 240px;
-    height: 176px;
+    height: 220px;
     transition: transform 0.2s;
   }
   .home-benefit:hover .home-benefit-art :global(svg) {
@@ -184,8 +180,8 @@ const benefits = [
   .home-benefit-label {
     margin: 0 0 9px;
     color: #46698e;
-    font-size: 12px;
-    font-weight: 650;
+    font-size: 11px;
+    font-weight: 700;
     line-height: 1.4;
   }
   .home-benefit h3 {
@@ -226,10 +222,10 @@ const benefits = [
       gap: 22px;
     }
     .home-benefit-art {
-      height: 190px;
+      height: 220px;
     }
     .home-benefit-art :global(svg) {
-      height: 190px;
+      height: 220px;
       max-width: 255px;
     }
   }
@@ -255,12 +251,12 @@ const benefits = [
       display: flex;
     }
     .home-benefit-art {
-      height: 165px;
+      height: 230px;
     }
     .home-benefit-art :global(svg) {
       width: 225px;
       max-width: 100%;
-      height: 165px;
+      height: 230px;
     }
     .home-benefit-copy {
       padding: 22px;

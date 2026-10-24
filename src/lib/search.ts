@@ -42,6 +42,20 @@ const aliases: Record<string, string> = {
   presents: 'gift',
   present: 'gift',
   gifts: 'gift',
+  cherries: 'cherry',
+  starfruits: 'starfruit',
+  mulberries: 'mulberry',
+  kumquats: 'kumquat',
+  quinces: 'quince',
+  gooseberries: 'gooseberry',
+  blackberries: 'blackberry',
+  cranberries: 'cranberry',
+  strawberries: 'strawberry',
+  raspberries: 'raspberry',
+  blueberries: 'blueberry',
+  peaches: 'peach',
+  mangoes: 'mango',
+  figs: 'fig',
   xmas: 'christmas',
 };
 const stopWords = new Set([
@@ -70,6 +84,7 @@ export function normalizeQuery(query: string): string[] {
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
     .replace(/[’']/g, '')
+    .replace(/\bstar[\s-]+fruits?\b/g, 'starfruit')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim()
     .split(/\s+/)
