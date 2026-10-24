@@ -1,0 +1,41 @@
+{
+  "wave": "wave_165",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-blank-leaf-place-card",
+      "title": "Leaf Place Card Holder",
+      "alt": "A blank folded ivory place card in a wooden acorn holder beside a red maple leaf.",
+      "description": "A blank folded ivory place card in a wooden acorn holder beside a red maple leaf. Useful for personal seating plans.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_165/source/thanksgiving-blank-leaf-place-card-v2.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-family-serving-hands",
+      "title": "Hands Passing a Serving Bowl",
+      "alt": "Four hands of two skin tones with rust and green sweater cuffs passing a cream bowl of mashed potatoes.",
+      "description": "Four hands of two skin tones with rust and green sweater cuffs passing a cream bowl of mashed potatoes. Useful for community sharing posters.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_165/source/thanksgiving-family-serving-hands-v3.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-candle-table-centerpiece",
+      "title": "Autumn Candle Centerpiece",
+      "alt": "Three ivory taper candles of different heights in brass holders surrounded by a low arrangement of leaves and small pears.",
+      "description": "Three ivory taper candles of different heights in brass holders surrounded by a low arrangement of leaves and small pears. Useful for table decoration plans.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_165/source/thanksgiving-candle-table-centerpiece-v5.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

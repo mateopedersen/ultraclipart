@@ -1,0 +1,316 @@
+{
+  "wave": "wave_163",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-harvest-place-setting",
+      "title": "Harvest Place Setting",
+      "alt": "An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag.",
+      "description": "An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag. Useful for personal dinner invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_163/source/thanksgiving-harvest-place-setting-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "efdc9b01a5a119ee3e9b01cf4c8be9f0bded1d8490f1751ab46a2b5aa409f10a",
+      "inputSignature": "9b523f394566f9ea31ddeaccd2d99f9d5ca1a7fbde116ff955a5a9bd70223e79",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 978992,
+        "weightedCmykRmse": 1.24057
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1999155,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1318520,
+          "weightedCmykRmse": 0.732434
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1206801,
+          "weightedCmykRmse": 0.841823
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1086876,
+          "weightedCmykRmse": 1.001624
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 978992,
+          "weightedCmykRmse": 1.24057
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        28,
+        85,
+        1252,
+        1204
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_163/exports/thanksgiving-harvest-place-setting.pdf",
+          "bytes": 978992,
+          "sha256": "8fbff0d5f0f6895d81c8dd9001a5f8a828608fe4c99f0f12a6676c77982326e2"
+        },
+        "webp": {
+          "path": "work/production/wave_163/exports/thanksgiving-harvest-place-setting.webp",
+          "bytes": 1250086,
+          "sha256": "29528492c787c5ade4e771104ad4ae22a96f5685ac7419a638f45d8bca1b294c"
+        },
+        "thumb": {
+          "path": "work/production/wave_163/exports/thanksgiving-harvest-place-setting-thumb.webp",
+          "bytes": 72966,
+          "sha256": "3af813035b46b6d9a488d6ce64c933b4c174f9c4f31bf7a1ab4a667235f5e970"
+        }
+      },
+      "proofSha256": "ccf07d4545e019ec148ca55d73b84e31fc758366c4efcc4273bc76153caa6703",
+      "pairMeanRgbDifference": 3.18405
+    },
+    {
+      "id": "thanksgiving-gratitude-note-jar",
+      "title": "Jar of Gratitude Notes",
+      "alt": "Glass jar holding folded blank notes with a kraft tag tied around its neck and two amber leaves at its base.",
+      "description": "Glass jar holding folded blank notes with a kraft tag tied around its neck and two amber leaves at its base. Useful for family gratitude activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_163/source/thanksgiving-gratitude-note-jar-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d1d6a4e6a1a2c9c5afe5995f44a6768d02ef5c72532c9b3abf1280b1f7cb3795",
+      "inputSignature": "a0808fd4215005513ea74a9bb04229d1031c2a3ce6416b9153bde54b1de20384",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 891741,
+        "weightedCmykRmse": 1.323177
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1838804,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1232137,
+          "weightedCmykRmse": 0.757178
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1122039,
+          "weightedCmykRmse": 0.877426
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1003602,
+          "weightedCmykRmse": 1.060652
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 891741,
+          "weightedCmykRmse": 1.323177
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        21,
+        66,
+        1243,
+        1199
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_163/exports/thanksgiving-gratitude-note-jar.pdf",
+          "bytes": 891741,
+          "sha256": "f6af150282695ff5c478ee38aa349e16020e59e45977d01f09c013e89cd1587c"
+        },
+        "webp": {
+          "path": "work/production/wave_163/exports/thanksgiving-gratitude-note-jar.webp",
+          "bytes": 1236684,
+          "sha256": "dbc0c48d6f6318eae8e3cc097e8041e4236acf24921e8175f769a0e9de88ddc7"
+        },
+        "thumb": {
+          "path": "work/production/wave_163/exports/thanksgiving-gratitude-note-jar-thumb.webp",
+          "bytes": 66900,
+          "sha256": "240f2fbfa63ab5a659525cc1c477aa71999067c90356cbf9c5dac0ca17f94337"
+        }
+      },
+      "proofSha256": "9480e61c3f1f2ca06b24aba956a0893ca603f3cead9f8bc9f8e4ab7fc65c93e5",
+      "pairMeanRgbDifference": 2.68358
+    },
+    {
+      "id": "thanksgiving-shared-bread-basket",
+      "title": "Bread Basket for Sharing",
+      "alt": "An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle.",
+      "description": "An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle. Useful for community meal invitations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_163/source/thanksgiving-shared-bread-basket-v3.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "6067d9fd67ebf04876d02ce367248ba65f190cb215b9e5918c217c76a76ea293",
+      "inputSignature": "bdc5a78cedf1710335bf8f526a17f219702855a45cd5ce7a9dbad2e36bd8fc7d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 899582,
+        "weightedCmykRmse": 1.451341
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1803638,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1250513,
+          "weightedCmykRmse": 0.810746
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1140398,
+          "weightedCmykRmse": 0.95195
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1018044,
+          "weightedCmykRmse": 1.160775
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 899582,
+          "weightedCmykRmse": 1.451341
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        16,
+        263,
+        1250,
+        1081
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_163/exports/thanksgiving-shared-bread-basket.pdf",
+          "bytes": 899582,
+          "sha256": "eba36b75c0431f80f655a9785d40c5be6ec441cc604a4c4ae089f5cccfc01900"
+        },
+        "webp": {
+          "path": "work/production/wave_163/exports/thanksgiving-shared-bread-basket.webp",
+          "bytes": 1189058,
+          "sha256": "c6ecf48967105ced428a226f75be7de5f1353cb157e589ae6fe06277dac6124b"
+        },
+        "thumb": {
+          "path": "work/production/wave_163/exports/thanksgiving-shared-bread-basket-thumb.webp",
+          "bytes": 65674,
+          "sha256": "2d1bbfb1f3262f422c926f042bbd0993b5d867c3579a8a1c72e32c01278b133a"
+        }
+      },
+      "proofSha256": "16588a2096e16639366a4d2a5dc24086c4c4ae9db62aabd95c9401f8426f68f4",
+      "pairMeanRgbDifference": 2.51151
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "All three native illustrations have clean transparency and distinct useful compositions. Place setting and note jar v2, bread basket v3. Actual three CMYK PDF proofs reviewed and matched; lossless alpha packing preserves original bytes, PDFs below980000.",
+  "createdAt": "2026-10-24T05:00:11.217Z"
+}

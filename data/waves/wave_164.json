@@ -1,0 +1,281 @@
+{
+  "wave": "wave_164",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-roast-serving-platter",
+      "title": "Roast Turkey Serving Platter",
+      "alt": "Golden roast turkey on an ivory platter with two carrots, orange wedges and green herbs.",
+      "description": "Golden roast turkey on an ivory platter with two carrots, orange wedges and green herbs. Useful for holiday menu layouts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_164/source/thanksgiving-roast-serving-platter-v3.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "33b073b8a0af736651afdf29cd770d9e55ee5b616cd6927e2f702f4ab1642908",
+      "inputSignature": "532145772f3e4a214fce86903017ed6ada0459311cfdd6ed04f330dfcfc4fb72",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 913637,
+        "weightedCmykRmse": 0.780475
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1397322,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 913637,
+          "weightedCmykRmse": 0.780475
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        22,
+        210,
+        1232,
+        1030
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_164/exports/thanksgiving-roast-serving-platter.pdf",
+          "bytes": 913637,
+          "sha256": "b537436887190f6cfa5f50c0a922040b140e8c5edc18744f4e2059908aa0f87f"
+        },
+        "webp": {
+          "path": "work/production/wave_164/exports/thanksgiving-roast-serving-platter.webp",
+          "bytes": 962150,
+          "sha256": "5cdf56c2a2cf4cdcf5e02c49099d18c42038070aa315431e4082d9aa4abac9f7"
+        },
+        "thumb": {
+          "path": "work/production/wave_164/exports/thanksgiving-roast-serving-platter-thumb.webp",
+          "bytes": 55254,
+          "sha256": "39191a066f205f09f689367b8235b1fb32db0aeda182634b9c5a357f3770dc4c"
+        }
+      },
+      "proofSha256": "63ccb6ea9e71384f54e5b0e050707c39dd6036885ce6fc5da73326fc23101182",
+      "pairMeanRgbDifference": 3.64438
+    },
+    {
+      "id": "thanksgiving-cranberry-gravy-pair",
+      "title": "Gravy and Cranberry Serving Dishes",
+      "alt": "An ivory gravy boat and a matching bowl of red cranberries with two serving spoons on a folded checked napkin.",
+      "description": "An ivory gravy boat and a matching bowl of red cranberries with two serving spoons on a folded checked napkin. Useful for buffet menu cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_164/source/thanksgiving-cranberry-gravy-pair.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ce43a8ba6d10c8f955a7904fd528fcf15e906024ab61aa491368d61fa980c77b",
+      "inputSignature": "a458152aab7cd8f27838187beaceb634e9d03246fac070c3793288a3fce8e94a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 918239,
+        "weightedCmykRmse": 1.431369
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1785863,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1258638,
+          "weightedCmykRmse": 0.801732
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1149134,
+          "weightedCmykRmse": 0.937655
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1030347,
+          "weightedCmykRmse": 1.141395
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 918239,
+          "weightedCmykRmse": 1.431369
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        9,
+        135,
+        1247,
+        1101
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_164/exports/thanksgiving-cranberry-gravy-pair.pdf",
+          "bytes": 918239,
+          "sha256": "8d05bc88e093787136bbc6dfd7a3e020791f9190a6e8718197c739ac43efaa57"
+        },
+        "webp": {
+          "path": "work/production/wave_164/exports/thanksgiving-cranberry-gravy-pair.webp",
+          "bytes": 1151860,
+          "sha256": "86c4b992033f3e266064aad5889e28a89f9f60fa401274dd748e8155141a206b"
+        },
+        "thumb": {
+          "path": "work/production/wave_164/exports/thanksgiving-cranberry-gravy-pair-thumb.webp",
+          "bytes": 64432,
+          "sha256": "4bacc9217dc9bbcb70499e060b1a6cf7a2f2296c1e03747c83974f3f83cd12ec"
+        }
+      },
+      "proofSha256": "1cf2bc843dfd3c946925125a7a779dee60d0b168b9dfa2255d5173b140efde58",
+      "pairMeanRgbDifference": 3.37768
+    },
+    {
+      "id": "thanksgiving-pie-dessert-stand",
+      "title": "Pie on a Dessert Stand",
+      "alt": "A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it.",
+      "description": "A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it. Useful for dessert invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_164/source/thanksgiving-pie-dessert-stand-v3.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "9a48565c92423fea8ccdaa773c002358a2c7ab1bd67def4eab5c2cea69e96db4",
+      "inputSignature": "2f54159bba913b1ea2c03b6e73ce1797bd1a3371992043b914153717bdc8e899",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 913277,
+        "weightedCmykRmse": 0.950702
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1526113,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1018489,
+          "weightedCmykRmse": 0.807536
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 913277,
+          "weightedCmykRmse": 0.950702
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        82,
+        143,
+        1172,
+        1170
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_164/exports/thanksgiving-pie-dessert-stand.pdf",
+          "bytes": 913277,
+          "sha256": "05627ab963f8538d48b15286d6e190a5d1906934e8d81865a29aefc71c381567"
+        },
+        "webp": {
+          "path": "work/production/wave_164/exports/thanksgiving-pie-dessert-stand.webp",
+          "bytes": 1093766,
+          "sha256": "521bd3a6f1acf925d9dc22dc60fd07623afead95b9dde4b1442a16acce13f969"
+        },
+        "thumb": {
+          "path": "work/production/wave_164/exports/thanksgiving-pie-dessert-stand-thumb.webp",
+          "bytes": 62644,
+          "sha256": "d95de28d2a6c9113b6726a280cf4bebaaf7c72f190078db2733428df116f8710"
+        }
+      },
+      "proofSha256": "cca8e1fd47337a16ec7a2e84c11cf99212604d0a11cfb46281f789e7fc42b977",
+      "pairMeanRgbDifference": 3.15207
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed all native transparent sources and the actual rendered CMYK contact proof: complete platter and pedestal margins, two carrots, two matching ivory sauce dishes and spoons, clear pie wedge and server. Smooth revisions preserve intended forms; no broad matte. Metadata describes observed artwork. No physical print proof.",
+  "createdAt": "2026-10-24T05:23:16.305Z"
+}

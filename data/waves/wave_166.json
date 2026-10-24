@@ -1,0 +1,202 @@
+{
+  "wave": "wave_166",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-dinner-bell",
+      "title": "Dinner Bell with Autumn Ribbon",
+      "alt": "A polished brass handbell with a deep red bow and autumn oak leaves.",
+      "description": "A polished brass handbell with a deep red bow and autumn oak leaves. Useful for meal announcement cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_166/source/thanksgiving-dinner-bell-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "9003fa0f0bccb3a0e65e13aee9a5161cf363f32d55edfccf32ddee17bf246624",
+      "inputSignature": "21f4492a81c59a28b85e6cc4d589c7e7b26d4390e7f173a8437d1e612e006ce3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 927117,
+        "weightedCmykRmse": 1.359717
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1496371,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1107091,
+          "weightedCmykRmse": 0.896585
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1008227,
+          "weightedCmykRmse": 1.078604
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 927117,
+          "weightedCmykRmse": 1.359717
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        225,
+        73,
+        1068,
+        1117
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_166/exports/thanksgiving-dinner-bell.pdf",
+          "bytes": 927117,
+          "sha256": "47ec873b74c07e6b7f8d9de61325a065e715d81cb10fcaf5a33b4b19dd2e49b4"
+        },
+        "webp": {
+          "path": "work/production/wave_166/exports/thanksgiving-dinner-bell.webp",
+          "bytes": 926302,
+          "sha256": "66e7c44e6557822a1282198c4af3b04021a6d06266f7a16e1a11d7c6bd0f2d4a"
+        },
+        "thumb": {
+          "path": "work/production/wave_166/exports/thanksgiving-dinner-bell-thumb.webp",
+          "bytes": 54406,
+          "sha256": "135e1df1114e8aae68c82aa856780edae96e75194cd25d79e5b778de19446a3f"
+        }
+      },
+      "proofSha256": "cbab99b0f6737b2ad805445dc68ef98ff5aa7f05936ea82db3cd27ad8138ebec",
+      "pairMeanRgbDifference": 2.3674
+    },
+    {
+      "id": "thanksgiving-thankful-tree-craft",
+      "title": "Gratitude Tree Craft",
+      "alt": "A small bare gratitude tree in a terracotta pot with seven blank leaf-shaped tags hanging from branches.",
+      "description": "A small bare gratitude tree in a terracotta pot with seven blank leaf-shaped tags hanging from branches. Useful for classroom gratitude crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_166/source/thanksgiving-thankful-tree-craft-v4.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1bd1ce5406f9b5e6f8d1c3d602a22c42b8f6d608dd1705d4c8b3ec5de43a0a15",
+      "inputSignature": "a01f93ac9b78f709831e6c0f38dd25171ad2cf1c82c1df4edc120dc957ab8301",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 974816,
+        "weightedCmykRmse": 1.178277
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1576082,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1144677,
+          "weightedCmykRmse": 0.827618
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1051786,
+          "weightedCmykRmse": 0.943837
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 974816,
+          "weightedCmykRmse": 1.178277
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        70,
+        7,
+        1189,
+        1237
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_166/exports/thanksgiving-thankful-tree-craft.pdf",
+          "bytes": 974816,
+          "sha256": "26091af8e2dc2eebc1ffc18e7b5788761a8873f7c7ff6a75cd7d3f3e2f63cbef"
+        },
+        "webp": {
+          "path": "work/production/wave_166/exports/thanksgiving-thankful-tree-craft.webp",
+          "bytes": 708616,
+          "sha256": "9a99f6fcb17d4dfeda7a528b1d4ec757e9dfe463a1a708e340c062aabb4a5fde"
+        },
+        "thumb": {
+          "path": "work/production/wave_166/exports/thanksgiving-thankful-tree-craft-thumb.webp",
+          "bytes": 66726,
+          "sha256": "2678713eae2d63398b975a509bfbfda49023d6c7cb177a88d2c28457bc26178b"
+        }
+      },
+      "proofSha256": "d2481e5d030dc782605e598da23629a55ea5dc5e6d196ed1af6956e46558d976",
+      "pairMeanRgbDifference": 1.73248
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed both native images and actual rendered PDF proof: a complete brass dinner bell and bare gratitude tree with exactly seven blank tags. No cropped visible object contours or broad background matte. Wreath excluded and deferred to wave171 because it does not pass the byte gate. No physical print proof.",
+  "createdAt": "2026-10-24T05:47:57.950Z"
+}

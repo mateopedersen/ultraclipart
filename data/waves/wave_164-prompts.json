@@ -1,0 +1,89 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts-initial.json",
+      "content": [
+        {
+          "id": "thanksgiving-roast-serving-platter",
+          "title": "Roast Turkey Serving Platter",
+          "composition": "A neatly roasted turkey on a long ivory platter with three carrots, fresh herbs and orange wedges, no extra dishes.",
+          "use": "holiday menu layouts",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving clipart. Use supplied reference ONLY for the sophisticated clean hand-inked illustration technique, smooth broad shading and clean transparent cutout. Do not reuse any objects or composition. Subject: A neatly roasted turkey on a long ivory platter with three carrots, fresh herbs and orange wedges, no extra dishes. Distinct balanced three-quarter-view composition for holiday menu layouts. Beautiful convincing forms, deliberate dark contours, warm cream, caramel, rust and sage. No photographic grain, paper texture or excessive stippling; detail should be intentional painted shapes. All subjects fully visible with generous margin. Genuine transparent exterior and transparent object gaps, no glow, pale matte, ground shadow, background, text or logos. Professional original clipart ready for personal stationery."
+        },
+        {
+          "id": "thanksgiving-cranberry-gravy-pair",
+          "title": "Gravy and Cranberry Serving Dishes",
+          "composition": "A small ivory gravy boat next to a red cranberry relish bowl with separate serving spoons and a folded checked napkin.",
+          "use": "buffet menu cards",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving clipart. Use supplied reference ONLY for the sophisticated clean hand-inked illustration technique, smooth broad shading and clean transparent cutout. Do not reuse any objects or composition. Subject: A small ivory gravy boat next to a red cranberry relish bowl with separate serving spoons and a folded checked napkin. Distinct balanced three-quarter-view composition for buffet menu cards. Beautiful convincing forms, deliberate dark contours, warm cream, caramel, rust and sage. No photographic grain, paper texture or excessive stippling; detail should be intentional painted shapes. All subjects fully visible with generous margin. Genuine transparent exterior and transparent object gaps, no glow, pale matte, ground shadow, background, text or logos. Professional original clipart ready for personal stationery."
+        },
+        {
+          "id": "thanksgiving-pie-dessert-stand",
+          "title": "Pie on a Dessert Stand",
+          "composition": "A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it.",
+          "use": "dessert invitations",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving clipart. Use supplied reference ONLY for the sophisticated clean hand-inked illustration technique, smooth broad shading and clean transparent cutout. Do not reuse any objects or composition. Subject: A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it. Distinct balanced three-quarter-view composition for dessert invitations. Beautiful convincing forms, deliberate dark contours, warm cream, caramel, rust and sage. No photographic grain, paper texture or excessive stippling; detail should be intentional painted shapes. All subjects fully visible with generous margin. Genuine transparent exterior and transparent object gaps, no glow, pale matte, ground shadow, background, text or logos. Professional original clipart ready for personal stationery."
+        }
+      ]
+    },
+    {
+      "file": "prompts-margin.json",
+      "content": [
+        {
+          "id": "thanksgiving-roast-serving-platter",
+          "key": "164MarginResult",
+          "source": "164SmoothResult",
+          "prompt": "Change only composition framing: show the ENTIRE ivory platter and every carrot, turkey edge and garnish, with at least 8 percent transparent margin on ALL four sides. Preserve the elegant hand-inked smooth shading and exactly the same two carrots, turkey and orange wedges. Square canvas. No element may touch frame. Remove fringe outside ink contours. Genuine transparent background; no shadow, glow or matte."
+        },
+        {
+          "id": "thanksgiving-pie-dessert-stand",
+          "suffix": "164MarginResult",
+          "prior": "164SmoothResult",
+          "prompt": "Use case: precise-object-edit. Keep this illustrated pie, pedestal and pie server exactly as a coherent design, but reframe it smaller within the square canvas so every edge is fully contained with 8 percent transparent empty margin on ALL sides. The pie crust and stand may not touch image boundaries. Preserve smooth colorful hand-inked shading and no photographic grain. Real transparency, no floor, matte or glow."
+        }
+      ]
+    },
+    {
+      "file": "prompts-smooth.json",
+      "content": [
+        {
+          "id": "thanksgiving-roast-serving-platter",
+          "key": "thanksgiving-roast-serving-platter164FreshResult",
+          "prompt": "Use case: style-transfer. Turn this EXACT roast turkey platter composition into a polished VECTOR-STYLE colored illustration with deliberate dark outlines, broad smooth cel-shaded surfaces and beautifully drawn curved shapes. Keep the convincing turkey form, two carrots, orange wedges, herbs and ivory plate. ALL skin surfaces must be smooth painted caramel and golden highlights; REMOVE every tiny skin pore, speckle, photographic texture and grain. Use large clearly designed highlight regions, elegant illustrator-style finish with clear depth, not a photograph. No flat primitive icon. Preserve true transparency, no background or glow. All contours fully inside the canvas."
+        },
+        {
+          "id": "thanksgiving-pie-dessert-stand",
+          "key": "thanksgiving-pie-dessert-stand164Result",
+          "prompt": "Use case: style-transfer. Preserve this exact original pie, cut wedge, blue pedestal and serving tool. Refine into polished hand-inked VECTOR-STYLE colored illustration with elegant broad smooth shading and clear deliberate contours. Replace tiny spice dots, crumb grain and photographic microtexture with a clean smooth pumpkin filling, broad golden crust ridges and silky cream swirls. Keep convincing appetizing proportions, rich warm color and detailed sculpted form. Transparent exterior, no backdrop, shadow, fog, matte or glow. All parts entirely within safe margins, no text."
+        }
+      ]
+    },
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-roast-serving-platter",
+          "title": "Roast Turkey Serving Platter",
+          "composition": "A neatly roasted turkey on a long ivory platter with three carrots, fresh herbs and orange wedges, no extra dishes.",
+          "use": "holiday menu layouts",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving clipart. Use supplied reference ONLY for the sophisticated clean hand-inked illustration technique, smooth broad shading and clean transparent cutout. Do not reuse any objects or composition. Subject: A neatly roasted turkey on a long ivory platter with three carrots, fresh herbs and orange wedges, no extra dishes. Distinct balanced three-quarter-view composition for holiday menu layouts. Beautiful convincing forms, deliberate dark contours, warm cream, caramel, rust and sage. No photographic grain, paper texture or excessive stippling; detail should be intentional painted shapes. All subjects fully visible with generous margin. Genuine transparent exterior and transparent object gaps, no glow, pale matte, ground shadow, background, text or logos. Professional original clipart ready for personal stationery."
+        },
+        {
+          "id": "thanksgiving-cranberry-gravy-pair",
+          "title": "Gravy and Cranberry Serving Dishes",
+          "composition": "A small ivory gravy boat next to a red cranberry relish bowl with separate serving spoons and a folded checked napkin.",
+          "use": "buffet menu cards",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving clipart. Use supplied reference ONLY for the sophisticated clean hand-inked illustration technique, smooth broad shading and clean transparent cutout. Do not reuse any objects or composition. Subject: A small ivory gravy boat next to a red cranberry relish bowl with separate serving spoons and a folded checked napkin. Distinct balanced three-quarter-view composition for buffet menu cards. Beautiful convincing forms, deliberate dark contours, warm cream, caramel, rust and sage. No photographic grain, paper texture or excessive stippling; detail should be intentional painted shapes. All subjects fully visible with generous margin. Genuine transparent exterior and transparent object gaps, no glow, pale matte, ground shadow, background, text or logos. Professional original clipart ready for personal stationery."
+        },
+        {
+          "id": "thanksgiving-pie-dessert-stand",
+          "title": "Pie on a Dessert Stand",
+          "composition": "A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it.",
+          "use": "dessert invitations",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving clipart. Use supplied reference ONLY for the sophisticated clean hand-inked illustration technique, smooth broad shading and clean transparent cutout. Do not reuse any objects or composition. Subject: A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it. Distinct balanced three-quarter-view composition for dessert invitations. Beautiful convincing forms, deliberate dark contours, warm cream, caramel, rust and sage. No photographic grain, paper texture or excessive stippling; detail should be intentional painted shapes. All subjects fully visible with generous margin. Genuine transparent exterior and transparent object gaps, no glow, pale matte, ground shadow, background, text or logos. Professional original clipart ready for personal stationery."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts-final.json",
+      "content": [
+        {
+          "id": "thanksgiving-candle-table-centerpiece",
+          "suffix": "165FinalResult",
+          "prior": "165FreshResult",
+          "prompt": "Use case: precise-object-edit. Restyle this arrangement with bold crisp BLACK OUTLINES around EVERY candle, flame, holder, leaf and pear. Fill opaque warm cream candles and smooth rich colors. Remove all floating flecks, speckles, ragged white patches and glows between the candles. Simplify microscopic pear texture into clean smooth shading. Keep three candles, three pears, five leaves and elegant proportions. Entire arrangement within 8 percent transparent margin all sides on a square canvas. Fully transparent gaps/exterior, no ambient glow, cast shadow or matte."
+        },
+        {
+          "id": "thanksgiving-candle-table-centerpiece",
+          "suffix": "165CutoutResult",
+          "prior": "165FinalResult",
+          "prompt": "Use case: background-extraction. Keep the complete artwork unchanged, with one correction: remove the stray white patch below the front yellow leaf at the bottom edge, and remove ALL unrelated stray specks outside the black object outlines. Clean transparent alpha around the full arrangement and inside empty spaces. Do not add any backdrop, halo or shadow. Put entire artwork in middle 70 percent of square canvas with clear margin so bottom leaf is complete."
+        }
+      ]
+    },
+    {
+      "file": "prompts-revisions.json",
+      "content": [
+        {
+          "id": "thanksgiving-candle-table-centerpiece",
+          "key": "165CleanResult",
+          "source": "165Result",
+          "prompt": "Refine this illustration as clean hand-inked vector-style clipart. Keep the three ivory candles in brass holders, autumn leaves and pears. Frame the COMPLETE arrangement with 8 percent transparent margin ALL sides; left leaf must be complete. Use broad smooth rich shading with deliberate shape accents instead of grain/speckles. Remove all stray flecks and pale fuzz in transparent gaps. Keep opaque crisp objects and clear flames without glow. Transparent background, no floor/shadows."
+        },
+        {
+          "id": "thanksgiving-family-serving-hands",
+          "key": "165CleanResult",
+          "source": "165Result",
+          "prompt": "Keep the four naturally posed adult hands of two skin tones passing this bowl, but make the entire illustration a self-contained cutout with transparent margin. Finish each of the four forearms in a neat short sweater cuff, all cuffs and hands fully visible inside the canvas, no frame contact. Keep anatomically plausible hands, fingers hidden naturally by bowl. Simplify painted texture into broad smooth shaded inked forms, retain tasteful bowl decoration. Transparent background with no matte, fog or floor shadow."
+        },
+        {
+          "id": "thanksgiving-blank-leaf-place-card",
+          "suffix": "165CleanResult",
+          "prior": "165Result",
+          "prompt": "Use case: precise-object-edit. Preserve this original composition of a blank ivory folded place card, wooden acorn holder and red maple leaf. Refine to broad smooth hand-inked shading and clean sharp opaque contours, remove white fuzzy fringe outside card and all stray alpha flecks. Show all objects within generous 8 percent transparent margin. Retain elegant convincing shapes but no grain or tiny texture noise. Transparent background, no matte or shadow."
+        },
+        {
+          "id": "thanksgiving-family-serving-hands",
+          "suffix": "165FreshResult",
+          "prompt": "Use case: illustration-story. New original Thanksgiving clipart for a community sharing card: a small cream ceramic bowl of mashed potato being gently passed between two people, ONLY their four hands shown, each ending at a neat closed sweater cuff. A compact SQUARE illustration with the complete four cuffs inside the canvas, hands naturally supporting bowl with anatomically plausible partially occluded fingers. Warm different skin tones. Graceful black ink outlines, professional clean vector-style illustration, broad smooth shading, elegant restrained olive leaf motif on bowl. NOT photorealistic, no fabric grain or noisy speckles. Center the whole composition in middle 75 percent, ample empty margin ALL sides. Pure transparent background, no glow, matte, smoke, shadow, environment, text or logo."
+        },
+        {
+          "id": "thanksgiving-candle-table-centerpiece",
+          "suffix": "165FreshResult",
+          "prompt": "Use case: illustration-story. Original square Thanksgiving clipart: THREE ivory taper candles of different heights in simple brass candlesticks, with a compact LOW cluster of three pears and five autumn leaves at the bases. Refined professional hand-drawn vector-style ink illustration, beautiful curved contours, crisp opaque shapes, rich smooth warm shading without grain or flecks. Minimal deliberate leaf veins, smooth pear skins. Entire complete arrangement contained in middle 80 percent of square canvas. Transparent gaps between candles, transparent exterior. Flames are solid enclosed teardrop shapes with NO GLOW. No dust, noise, fog, vignette, paper, cast shadow, text or logo."
+        }
+      ]
+    },
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-blank-leaf-place-card",
+          "title": "Leaf Place Card Holder",
+          "composition": "A blank folded ivory place card held upright in a split acorn-shaped wooden holder with a single red maple leaf.",
+          "use": "personal seating plans",
+          "prompt": "Use case: illustration-story. NEW original premium Thanksgiving clipart for personal seating plans. Subject: A blank folded ivory place card held upright in a split acorn-shaped wooden holder with a single red maple leaf. A beautifully hand-drawn VECTOR-STYLE colored illustration with confident dark ink contours, graceful curved forms and broad smooth richly shaded color regions. Warm cream, brass gold, rust and sage colors. Elegant convincing geometry, selected deliberate small accents, no photographic grain, no fine fabric texture, no paper noise or speckles. Compact SQUARE composition with generous empty margin, every object complete. Genuine transparent background and all negative gaps transparent; absolutely no matte, glow, fog, vignette, floor or cast shadow. No text or logos. ",
+          "version": "v2",
+          "alt": "A blank folded ivory place card in a wooden acorn holder beside a red maple leaf."
+        },
+        {
+          "id": "thanksgiving-family-serving-hands",
+          "title": "Hands Passing a Serving Bowl",
+          "composition": "Two pairs of clearly formed adult hands of different skin tones pass a warm ceramic bowl of mashed potatoes, each hand anatomically clear.",
+          "use": "community sharing posters",
+          "prompt": "Use case: illustration-story. NEW original premium Thanksgiving clipart for community sharing posters. Subject: Two pairs of clearly formed adult hands of different skin tones pass a warm ceramic bowl of mashed potatoes, each hand anatomically clear. A beautifully hand-drawn VECTOR-STYLE colored illustration with confident dark ink contours, graceful curved forms and broad smooth richly shaded color regions. Warm cream, brass gold, rust and sage colors. Elegant convincing geometry, selected deliberate small accents, no photographic grain, no fine fabric texture, no paper noise or speckles. Compact SQUARE composition with generous empty margin, every object complete. Genuine transparent background and all negative gaps transparent; absolutely no matte, glow, fog, vignette, floor or cast shadow. No text or logos. Hands must be anatomically plausible with five fingers each including thumb; four hands total, two supporting each side of one bowl. No extra fingers or fused hands.",
+          "version": "v3",
+          "alt": "Four hands of two skin tones with rust and green sweater cuffs passing a cream bowl of mashed potatoes."
+        },
+        {
+          "id": "thanksgiving-candle-table-centerpiece",
+          "title": "Autumn Candle Centerpiece",
+          "composition": "Three ivory taper candles of different heights in brass holders surrounded by a low arrangement of leaves and small pears.",
+          "use": "table decoration plans",
+          "prompt": "Use case: illustration-story. NEW original premium Thanksgiving clipart for table decoration plans. Subject: Three ivory taper candles of different heights in brass holders surrounded by a low arrangement of leaves and small pears. A beautifully hand-drawn VECTOR-STYLE colored illustration with confident dark ink contours, graceful curved forms and broad smooth richly shaded color regions. Warm cream, brass gold, rust and sage colors. Elegant convincing geometry, selected deliberate small accents, no photographic grain, no fine fabric texture, no paper noise or speckles. Compact SQUARE composition with generous empty margin, every object complete. Genuine transparent background and all negative gaps transparent; absolutely no matte, glow, fog, vignette, floor or cast shadow. No text or logos. ",
+          "version": "v3"
+        }
+      ]
+    }
+  ]
+}

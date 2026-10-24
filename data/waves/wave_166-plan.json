@@ -1,0 +1,31 @@
+{
+  "wave": "wave_166",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-dinner-bell",
+      "title": "Dinner Bell with Autumn Ribbon",
+      "alt": "A polished brass handbell with a deep red bow and autumn oak leaves.",
+      "description": "A polished brass handbell with a deep red bow and autumn oak leaves. Useful for meal announcement cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_166/source/thanksgiving-dinner-bell-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-thankful-tree-craft",
+      "title": "Gratitude Tree Craft",
+      "alt": "A small bare gratitude tree in a terracotta pot with seven blank leaf-shaped tags hanging from branches.",
+      "description": "A small bare gratitude tree in a terracotta pot with seven blank leaf-shaped tags hanging from branches. Useful for classroom gratitude crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_166/source/thanksgiving-thankful-tree-craft-v4.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

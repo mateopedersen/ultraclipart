@@ -1,0 +1,41 @@
+{
+  "wave": "wave_167",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-recipe-card-holder",
+      "title": "Autumn Recipe Card Holder",
+      "alt": "A blank cream recipe card on a wooden easel with measuring spoons, cinnamon sticks and autumn leaves.",
+      "description": "A blank cream recipe card on a wooden easel with measuring spoons, cinnamon sticks and autumn leaves. Useful for family recipe exchange.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_167/source/thanksgiving-recipe-card-holder-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-seasonal-donation-box",
+      "title": "Harvest Food Donation Box",
+      "alt": "An open cardboard box containing unbranded cans, a bag of rice, two apples and a loaf of bread, with a blank label on the front.",
+      "description": "An open cardboard box containing unbranded cans, a bag of rice, two apples and a loaf of bread, with a blank label on the front. Useful for food drive flyers.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_167/source/thanksgiving-seasonal-donation-box-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-potluck-tote",
+      "title": "Potluck Casserole Tote",
+      "alt": "A quilted rust fabric carrier holding a covered rectangular casserole, two sturdy handles upright and a blank hanging tag.",
+      "description": "A quilted rust fabric carrier holding a covered rectangular casserole, two sturdy handles upright and a blank hanging tag. Useful for potluck invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_167/source/thanksgiving-potluck-tote-v2.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

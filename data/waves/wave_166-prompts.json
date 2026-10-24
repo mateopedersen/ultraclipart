@@ -1,0 +1,76 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts-final.json",
+      "content": [
+        {
+          "id": "thanksgiving-thankful-tree-craft",
+          "suffix": "166CleanResult",
+          "prior": "166Result",
+          "prompt": "Use case: precise-object-edit. Preserve this potted gratitude tree composition with exactly seven blank leaf-shaped tags on individual loops. Render in clean polished vector-style hand-inked illustration, bold precise dark outlines and broad smooth shades. Remove photographic bark, moss and paper textures, replace moss with a simple smooth soil surface. Retain graceful branch shapes, clean leaf shapes and convincing terracotta pot. No stray flecks anywhere. Fully transparent exterior and gaps. All parts complete with 8 percent empty margins. No new objects/text/glow/matte."
+        },
+        {
+          "id": "thanksgiving-harvest-door-wreath",
+          "suffix": "166CleanResult",
+          "prior": "166Result",
+          "prompt": "Use case: precise-object-edit. Preserve the asymmetrical twig wreath, three pumpkins at lower left and wheat upper right. Reframe smaller so all wheat and twigs are fully inside 8 percent transparent margin on all sides. Render broad smooth rich shading and deliberate dark ink contours. Reduce microscopic grain, excessive wood scratches and speckles, keep tasteful material detail. True transparent center/exterior/gaps, no matte/glow/fog/shadow or text."
+        },
+        {
+          "id": "thanksgiving-thankful-tree-craft",
+          "suffix": "166CutoutResult",
+          "prior": "166CleanResult",
+          "prompt": "Use case: background-extraction. Keep this exact seven-label gratitude tree illustration unchanged. Remove ALL isolated speckles in empty air, especially above upper-right branch and underneath hanging tags, and any pale fringe outside object outlines. Entire exterior and open gaps genuinely transparent. Do not change labels, colors, tree, pot or introduce a background."
+        },
+        {
+          "id": "thanksgiving-harvest-door-wreath",
+          "suffix": "166MarginResult",
+          "prior": "166CleanResult",
+          "prompt": "Use case: precise-object-edit. ZOOM OUT SIGNIFICANTLY. Put this wreath in the middle 65 percent of a SQUARE transparent canvas, so a wide empty transparent border surrounds the whole wreath. Recover the complete wheat tips and outer leaves on the right; absolutely no part touches the canvas. Preserve three pumpkins and the same detailed inked design. Empty center is transparent. No glow/fog/matte/shadow, no text."
+        },
+        {
+          "id": "thanksgiving-harvest-door-wreath",
+          "key": "166FreshResult",
+          "prompt": "Use case: illustration-story. NEW professional Thanksgiving clipart: an elegant asymmetrical round wreath made of FOUR thick smooth braided willow stems, three small richly shaded pumpkins grouped lower-left (two orange, one ivory), FIVE golden wheat heads upper-right, and a few broad autumn leaves. Large entirely empty transparent center. Refined hand-inked VECTOR-STYLE illustration, strong clean contours, graceful smooth colored shapes with deliberate highlights, no microscopic grain, no wood scratch texture, no thin twig tangles, no dense clutter or dotted noise. An accomplished stationery artist's original design. Square composition, complete arrangement in central 75 percent. Transparent background and gaps, no halo, matte, shadow, floor, text or logos."
+        },
+        {
+          "id": "thanksgiving-harvest-door-wreath",
+          "key": "166SmoothResult",
+          "prior": "166FreshResult",
+          "prompt": "Use case: style-transfer. Preserve this exact original wreath composition and proportions. Make it an exquisitely polished FLAT VECTOR illustration with smooth two-tone highlights/shadows, bold clean ink outlines and deliberate large color shapes. Remove ALL bark/wood grain strokes, pumpkin fine streaking, leaf surface textures and stippled wheat. Keep the braided willow geometry, three pumpkins, five wheat heads and autumn leaf silhouettes beautiful and recognizable. No photographic gradients or microtexture. Solid opaque shapes, true transparent background/gaps, no haze or fringe. Entire wreath fully inside canvas with comfortable margins. No text."
+        },
+        {
+          "id": "thanksgiving-thankful-tree-craft",
+          "prompt": "Use case: illustration-story. NEW original Thanksgiving classroom clipart, professional clean inked VECTOR-STYLE artwork: a small bare branching wooden gratitude tree in a simple terracotta flowerpot. Exactly SEVEN blank large leaf-shaped cream paper tags hang separately on short loops from the branches. No real leaves, berries, moss, ribbons or clutter. Elegant balanced tree silhouette, tags well spaced and easily usable for writing. Smooth broad rich shading on wood and pot, bold dark clean outlines around everything. No grain, speckles or tiny textures. Entire tree in central 75 percent of square canvas. Genuine transparent background, transparent gaps, no colored haze, floating flecks, ambient glow, floor or cast shadow. No text or logos."
+        }
+      ]
+    },
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-dinner-bell",
+          "title": "Dinner Bell with Autumn Ribbon",
+          "composition": "A small polished brass handbell with a deep red fabric bow around its handle and two tiny oak leaves.",
+          "use": "meal announcement cards",
+          "prompt": "Use case: illustration-story. NEW original premium Thanksgiving clipart for meal announcement cards. A small polished brass handbell with a deep red fabric bow around its handle and two tiny oak leaves. Professional hand-inked illustration with graceful dark contours, broad smooth rich colors and carefully chosen elegant accents. Warm cream, ochre, rust and sage. Clear useful composition, NOT photographic grain, noise, stippling, or excessive fine textures. Square canvas, COMPLETE subjects contained in central 80 percent with generous transparent margins on all sides, no edge contact. Genuine transparent background and gaps; no shadow, fog, glow, pale matte, floor or vignette. No text, numbers, logos or watermark.",
+          "alt": "A polished brass handbell with a deep red bow and autumn oak leaves."
+        },
+        {
+          "id": "thanksgiving-thankful-tree-craft",
+          "title": "Gratitude Tree Craft",
+          "composition": "A small branch tree in a terracotta pot with seven blank leaf-shaped paper tags suspended individually on fine loops.",
+          "use": "classroom gratitude crafts",
+          "prompt": "Use case: illustration-story. NEW original premium Thanksgiving clipart for classroom gratitude crafts. A small branch tree in a terracotta pot with seven blank leaf-shaped paper tags suspended individually on fine loops. Professional hand-inked illustration with graceful dark contours, broad smooth rich colors and carefully chosen elegant accents. Warm cream, ochre, rust and sage. Clear useful composition, NOT photographic grain, noise, stippling, or excessive fine textures. Square canvas, COMPLETE subjects contained in central 80 percent with generous transparent margins on all sides, no edge contact. Genuine transparent background and gaps; no shadow, fog, glow, pale matte, floor or vignette. No text, numbers, logos or watermark."
+        },
+        {
+          "id": "thanksgiving-harvest-door-wreath",
+          "title": "Harvest Door Wreath",
+          "composition": "An asymmetrical twig wreath with three mini pumpkins at lower left, wheat at upper right and a large empty center.",
+          "use": "seasonal invitation borders",
+          "prompt": "Use case: illustration-story. NEW original premium Thanksgiving clipart for seasonal invitation borders. An asymmetrical twig wreath with three mini pumpkins at lower left, wheat at upper right and a large empty center. Professional hand-inked illustration with graceful dark contours, broad smooth rich colors and carefully chosen elegant accents. Warm cream, ochre, rust and sage. Clear useful composition, NOT photographic grain, noise, stippling, or excessive fine textures. Square canvas, COMPLETE subjects contained in central 80 percent with generous transparent margins on all sides, no edge contact. Genuine transparent background and gaps; no shadow, fog, glow, pale matte, floor or vignette. No text, numbers, logos or watermark."
+        }
+      ]
+    }
+  ]
+}

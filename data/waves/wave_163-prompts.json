@@ -1,0 +1,57 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts-clean.json",
+      "content": [
+        {
+          "id": "thanksgiving-harvest-place-setting",
+          "title": "Harvest Place Setting",
+          "composition": "An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag.",
+          "use": "personal dinner invitations",
+          "prompt": "Use case: style-transfer. Keep the exact subject and composition of the supplied illustration. Redraw as PREMIUM HAND-INKED CLIPART with crisp carefully designed dark contours and beautiful smooth broad shaded color regions, like a polished children's-book spot illustration. Preserve the elegant material forms and warm palette. Replace photographic grain, fabric weave, wood grain speckles, bread pore microtexture and paper noise with clean deliberate smooth painted shapes and a few intentional accent strokes. Do not make a photograph, watercolor paper texture or noisy shaded raster. Keep correct geometry and all components; keep blank tag/cards completely blank. Genuine clean transparent exterior and clear gaps, no halo or glow. Generous full-object margin. It must look like a professional illustrator drew it, richly finished but naturally clean, not a low-detail icon."
+        },
+        {
+          "id": "thanksgiving-gratitude-note-jar",
+          "title": "Jar of Gratitude Notes",
+          "composition": "A clear glass jar containing five folded cream notes, a blank kraft tag tied around its neck, two fallen amber leaves at its base.",
+          "use": "family gratitude activities",
+          "prompt": "Use case: style-transfer. Keep the exact subject and composition of the supplied illustration. Redraw as PREMIUM HAND-INKED CLIPART with crisp carefully designed dark contours and beautiful smooth broad shaded color regions, like a polished children's-book spot illustration. Preserve the elegant material forms and warm palette. Replace photographic grain, fabric weave, wood grain speckles, bread pore microtexture and paper noise with clean deliberate smooth painted shapes and a few intentional accent strokes. Do not make a photograph, watercolor paper texture or noisy shaded raster. Keep correct geometry and all components; keep blank tag/cards completely blank. Genuine clean transparent exterior and clear gaps, no halo or glow. Generous full-object margin. It must look like a professional illustrator drew it, richly finished but naturally clean, not a low-detail icon."
+        },
+        {
+          "id": "thanksgiving-shared-bread-basket",
+          "title": "Bread Basket for Sharing",
+          "composition": "An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle.",
+          "use": "community meal invitations",
+          "prompt": "Use case: style-transfer. Keep the exact subject and composition of the supplied illustration. Redraw as PREMIUM HAND-INKED CLIPART with crisp carefully designed dark contours and beautiful smooth broad shaded color regions, like a polished children's-book spot illustration. Preserve the elegant material forms and warm palette. Replace photographic grain, fabric weave, wood grain speckles, bread pore microtexture and paper noise with clean deliberate smooth painted shapes and a few intentional accent strokes. Do not make a photograph, watercolor paper texture or noisy shaded raster. Keep correct geometry and all components; keep blank tag/cards completely blank. Genuine clean transparent exterior and clear gaps, no halo or glow. Generous full-object margin. It must look like a professional illustrator drew it, richly finished but naturally clean, not a low-detail icon."
+        }
+      ]
+    },
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-harvest-place-setting",
+          "title": "Harvest Place Setting",
+          "composition": "An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag.",
+          "use": "personal dinner invitations",
+          "prompt": "Use case: illustration-story. Create one original premium Thanksgiving clipart for personal dinner invitations. An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag. Professional hand-inked illustration with carefully shaped contours, refined warm shading and convincing material detail; natural elegant proportions, no generic cartoon faces. Warm rust, sage, golden brown and cream accents. Isolated complete composition, no environment or floor, generous transparent margin. Smooth broad color forms with selective fine detail, no noisy texture. Genuine transparent background and fully transparent gaps, crisp opaque edges without glow or pale matte. No text, no logos, no watermark. Balanced visually clear design ready for invitations and personal crafts. Output approximately 1024 square, native detail must be sufficient without tiny clutter."
+        },
+        {
+          "id": "thanksgiving-gratitude-note-jar",
+          "title": "Jar of Gratitude Notes",
+          "composition": "A clear glass jar containing five folded cream notes, a blank kraft tag tied around its neck, two fallen amber leaves at its base.",
+          "use": "family gratitude activities",
+          "prompt": "Use case: illustration-story. Create one original premium Thanksgiving clipart for family gratitude activities. A clear glass jar containing five folded cream notes, a blank kraft tag tied around its neck, two fallen amber leaves at its base. Professional hand-inked illustration with carefully shaped contours, refined warm shading and convincing material detail; natural elegant proportions, no generic cartoon faces. Warm rust, sage, golden brown and cream accents. Isolated complete composition, no environment or floor, generous transparent margin. Smooth broad color forms with selective fine detail, no noisy texture. Genuine transparent background and fully transparent gaps, crisp opaque edges without glow or pale matte. No text, no logos, no watermark. Balanced visually clear design ready for invitations and personal crafts. Output approximately 1024 square, native detail must be sufficient without tiny clutter."
+        },
+        {
+          "id": "thanksgiving-shared-bread-basket",
+          "title": "Bread Basket for Sharing",
+          "composition": "An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle.",
+          "use": "community meal invitations",
+          "prompt": "Use case: illustration-story. Create one original premium Thanksgiving clipart for community meal invitations. An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle. Professional hand-inked illustration with carefully shaped contours, refined warm shading and convincing material detail; natural elegant proportions, no generic cartoon faces. Warm rust, sage, golden brown and cream accents. Isolated complete composition, no environment or floor, generous transparent margin. Smooth broad color forms with selective fine detail, no noisy texture. Genuine transparent background and fully transparent gaps, crisp opaque edges without glow or pale matte. No text, no logos, no watermark. Balanced visually clear design ready for invitations and personal crafts. Output approximately 1024 square, native detail must be sufficient without tiny clutter."
+        }
+      ]
+    }
+  ]
+}

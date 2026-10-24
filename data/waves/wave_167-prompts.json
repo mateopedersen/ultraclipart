@@ -1,0 +1,43 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts-final.json",
+      "content": [
+        {
+          "id": "thanksgiving-potluck-tote",
+          "suffix": "167CleanResult",
+          "prior": "167Result",
+          "prompt": "Use case: style-transfer. Preserve this attractive covered casserole in a rust quilted tote with handles and blank tag, but redraw as polished professional vector-style hand-inked clipart. Smooth rich color regions, clear deliberate contours, quilted diamonds shown through simple soft shading instead of tiny textile grain or microstitches. Keep convincing glass lid and warm food. Entire composition fully inside 10 percent transparent margins. Genuine transparency, no exterior matte/glow/shadow or text."
+        }
+      ]
+    },
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-recipe-card-holder",
+          "title": "Autumn Recipe Card Holder",
+          "composition": "A blank cream recipe card clipped upright on a miniature wooden easel with a measuring spoon and a small cinnamon bundle below.",
+          "use": "family recipe exchange",
+          "prompt": "Use case: illustration-story. Original professional Thanksgiving clipart for family recipe exchange: A blank cream recipe card clipped upright on a miniature wooden easel with a measuring spoon and a small cinnamon bundle below. Beautiful polished hand-drawn vector-style illustration, refined dark contours, broad smooth saturated shading, convincing shapes and tasteful small details. Warm rust and cream with sage accents. Avoid photographic grain and fabric/paper speckling; materials conveyed by clean shapes. Square composition, complete subjects in central 75 percent of canvas with generous empty margins. Real transparent background and gaps. No glow, matte, floor, fog or cast shadow. No readable text, branding or watermarks. Blank labels truly blank.",
+          "alt": "A blank cream recipe card on a wooden easel with measuring spoons, cinnamon sticks and autumn leaves."
+        },
+        {
+          "id": "thanksgiving-potluck-tote",
+          "title": "Potluck Casserole Tote",
+          "composition": "A quilted rust fabric carrier holding a covered rectangular casserole, two sturdy handles upright and a blank hanging tag.",
+          "use": "potluck invitations",
+          "prompt": "Use case: illustration-story. Original professional Thanksgiving clipart for potluck invitations: A quilted rust fabric carrier holding a covered rectangular casserole, two sturdy handles upright and a blank hanging tag. Beautiful polished hand-drawn vector-style illustration, refined dark contours, broad smooth saturated shading, convincing shapes and tasteful small details. Warm rust and cream with sage accents. Avoid photographic grain and fabric/paper speckling; materials conveyed by clean shapes. Square composition, complete subjects in central 75 percent of canvas with generous empty margins. Real transparent background and gaps. No glow, matte, floor, fog or cast shadow. No readable text, branding or watermarks. Blank labels truly blank."
+        },
+        {
+          "id": "thanksgiving-seasonal-donation-box",
+          "title": "Harvest Food Donation Box",
+          "composition": "An open cardboard box containing unbranded cans, a bag of rice, two apples and a loaf of bread, with a blank label on the front.",
+          "use": "food drive flyers",
+          "prompt": "Use case: illustration-story. Original professional Thanksgiving clipart for food drive flyers: An open cardboard box containing unbranded cans, a bag of rice, two apples and a loaf of bread, with a blank label on the front. Beautiful polished hand-drawn vector-style illustration, refined dark contours, broad smooth saturated shading, convincing shapes and tasteful small details. Warm rust and cream with sage accents. Avoid photographic grain and fabric/paper speckling; materials conveyed by clean shapes. Square composition, complete subjects in central 75 percent of canvas with generous empty margins. Real transparent background and gaps. No glow, matte, floor, fog or cast shadow. No readable text, branding or watermarks. Blank labels truly blank."
+        }
+      ]
+    }
+  ]
+}

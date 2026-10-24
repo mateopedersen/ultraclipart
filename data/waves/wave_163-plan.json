@@ -1,0 +1,41 @@
+{
+  "wave": "wave_163",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-harvest-place-setting",
+      "title": "Harvest Place Setting",
+      "alt": "An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag.",
+      "description": "An overhead cream ceramic dinner plate on a rust folded napkin, a brass fork on the left, knife and spoon on the right, and a small maple leaf tied to a blank place tag. Useful for personal dinner invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_163/source/thanksgiving-harvest-place-setting-v2.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-gratitude-note-jar",
+      "title": "Jar of Gratitude Notes",
+      "alt": "Glass jar holding folded blank notes with a kraft tag tied around its neck and two amber leaves at its base.",
+      "description": "Glass jar holding folded blank notes with a kraft tag tied around its neck and two amber leaves at its base. Useful for family gratitude activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_163/source/thanksgiving-gratitude-note-jar-v2.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-shared-bread-basket",
+      "title": "Bread Basket for Sharing",
+      "alt": "An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle.",
+      "description": "An oval woven basket lined with sage cloth holding three golden dinner rolls and one partly sliced rustic loaf, viewed from a low three-quarter angle. Useful for community meal invitations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_163/source/thanksgiving-shared-bread-basket-v3.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "wave": "wave_164",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-roast-serving-platter",
+      "title": "Roast Turkey Serving Platter",
+      "alt": "Golden roast turkey on an ivory platter with two carrots, orange wedges and green herbs.",
+      "description": "Golden roast turkey on an ivory platter with two carrots, orange wedges and green herbs. Useful for holiday menu layouts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_164/source/thanksgiving-roast-serving-platter-v3.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-cranberry-gravy-pair",
+      "title": "Gravy and Cranberry Serving Dishes",
+      "alt": "An ivory gravy boat and a matching bowl of red cranberries with two serving spoons on a folded checked napkin.",
+      "description": "An ivory gravy boat and a matching bowl of red cranberries with two serving spoons on a folded checked napkin. Useful for buffet menu cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_164/source/thanksgiving-cranberry-gravy-pair.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-pie-dessert-stand",
+      "title": "Pie on a Dessert Stand",
+      "alt": "A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it.",
+      "description": "A pumpkin pie with one cut wedge resting on a low blue ceramic pedestal and a small pie server beside it. Useful for dessert invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_164/source/thanksgiving-pie-dessert-stand-v3.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

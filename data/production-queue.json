@@ -15,16 +15,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 452,
+  "generatedArtworkCount": 466,
   "suppliedArtworkCount": 2642,
-  "originalTopicArtworkCount": 600,
+  "originalTopicArtworkCount": 614,
   "supplementalArtworkCount": 2500,
-  "qualityApprovedArtworkCount": 600,
+  "qualityApprovedArtworkCount": 614,
   "supplementalApprovedArtworkCount": 2500,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 3100,
-  "remainingToDraw": 4900,
+  "availableArtworkCount": 3114,
+  "remainingToDraw": 4886,
   "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
@@ -136,13 +136,13 @@
       "keyword": "Thanksgiving clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
+      "generated": 14,
       "supplied": 0,
-      "available": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "available": 14,
+      "approved": 14,
+      "remainingToDraw": 36,
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/thanksgiving.json"
     },
     {
       "topic": "turkey",
@@ -35558,6 +35558,160 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "4f51740144272ed917928c3274edbb2187cc762ce15d0c82a670115e6ceaca17"
+    },
+    {
+      "id": "thanksgiving-harvest-place-setting",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "29528492c787c5ade4e771104ad4ae22a96f5685ac7419a638f45d8bca1b294c"
+    },
+    {
+      "id": "thanksgiving-gratitude-note-jar",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "dbc0c48d6f6318eae8e3cc097e8041e4236acf24921e8175f769a0e9de88ddc7"
+    },
+    {
+      "id": "thanksgiving-shared-bread-basket",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "c6ecf48967105ced428a226f75be7de5f1353cb157e589ae6fe06277dac6124b"
+    },
+    {
+      "id": "thanksgiving-roast-serving-platter",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "5cdf56c2a2cf4cdcf5e02c49099d18c42038070aa315431e4082d9aa4abac9f7"
+    },
+    {
+      "id": "thanksgiving-cranberry-gravy-pair",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "86c4b992033f3e266064aad5889e28a89f9f60fa401274dd748e8155141a206b"
+    },
+    {
+      "id": "thanksgiving-pie-dessert-stand",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "521bd3a6f1acf925d9dc22dc60fd07623afead95b9dde4b1442a16acce13f969"
+    },
+    {
+      "id": "thanksgiving-blank-leaf-place-card",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "f7aefa49d1dd415951aaa80dac1d48aa1b6df3e5d504232764371b09a93b57b4"
+    },
+    {
+      "id": "thanksgiving-family-serving-hands",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "f04cda48a41ee0734cdae6f4240180644bcd9952b6655cc861990a7b628394cb"
+    },
+    {
+      "id": "thanksgiving-candle-table-centerpiece",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "b59d9981455a34e49169d750a52550414c4bf1dbc83ce8f20290fa1f60a41988"
+    },
+    {
+      "id": "thanksgiving-recipe-card-holder",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "0d634b37aa7ec054c3fd15e07359ca94905d7ef128249562bb8d1ceda50f9d9b"
+    },
+    {
+      "id": "thanksgiving-seasonal-donation-box",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "eaf491ba102f29078e0897fefa1249f324e3e7aea8dd4d2f171a3b15f0e834d5"
+    },
+    {
+      "id": "thanksgiving-potluck-tote",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "49467f875114736945fb0346b6660aaa2016967ed9e8c791f44d7728e00a39c3"
+    },
+    {
+      "id": "thanksgiving-dinner-bell",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "66e7c44e6557822a1282198c4af3b04021a6d06266f7a16e1a11d7c6bd0f2d4a"
+    },
+    {
+      "id": "thanksgiving-thankful-tree-craft",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "9a99f6fcb17d4dfeda7a528b1d4ec757e9dfe463a1a708e340c062aabb4a5fde"
     }
   ]
 }
