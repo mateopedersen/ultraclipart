@@ -1,0 +1,38 @@
+{
+  "wave": "wave_108",
+  "topic": "skeleton",
+  "method": "builtin-image-generation",
+  "research": "data/research/skeleton-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "skeleton-ribbon-dance",
+      "title": "Skeleton Ribbon Dancer",
+      "alt": "A skeleton balances on one foot holding a short wand with one broad curling ribbon.",
+      "description": "A skeleton balances on one foot holding a short wand with one broad curling ribbon. Useful for dance activity cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_108/source/skeleton-ribbon-dance.png"
+    },
+    {
+      "id": "skeleton-backpack-ready",
+      "title": "Skeleton with a School Backpack",
+      "alt": "A friendly skeleton tightens one strap of a plain blue backpack, lunchbox held in the other hand.",
+      "description": "A friendly skeleton tightens one strap of a plain blue backpack, lunchbox held in the other hand. Useful for school routine cards.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_108/source/skeleton-backpack-ready.png"
+    },
+    {
+      "id": "skeleton-umbrella-repair",
+      "title": "Skeleton Repairing an Umbrella",
+      "alt": "A seated skeleton adjusts one exposed rib of an open red umbrella using a small pair of pliers.",
+      "description": "A seated skeleton adjusts one exposed rib of an open red umbrella using a small pair of pliers. Useful for repair vocabulary.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_108/source/skeleton-umbrella-repair.png"
+    }
+  ]
+}

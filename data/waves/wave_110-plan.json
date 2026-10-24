@@ -1,0 +1,38 @@
+{
+  "wave": "wave_110",
+  "topic": "skeleton",
+  "method": "builtin-image-generation",
+  "research": "data/research/skeleton-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "skeleton-skull-flower-frame",
+      "title": "Friendly Skull with a Floral Frame",
+      "alt": "One original friendly ivory skull surrounded by a half-wreath of broad green leaves and three simple marigolds.",
+      "description": "One original friendly ivory skull surrounded by a half-wreath of broad green leaves and three simple marigolds. Useful for personal seasonal decorations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_110/source/skeleton-skull-flower-frame.png"
+    },
+    {
+      "id": "skeleton-crossed-bones-bow",
+      "title": "Crossed Bones with a Ribbon",
+      "alt": "Two gently curved ivory bones cross neatly under a plain teal ribbon bow, clean balanced composition.",
+      "description": "Two gently curved ivory bones cross neatly under a plain teal ribbon bow, clean balanced composition. Useful for personal party labels.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_110/source/skeleton-crossed-bones-bow.png"
+    },
+    {
+      "id": "skeleton-sleepy-skull-book",
+      "title": "Sleepy Skull on Two Books",
+      "alt": "One friendly sleeping skull rests on two plain closed books, a small soft cap drapes to one side.",
+      "description": "One friendly sleeping skull rests on two plain closed books, a small soft cap drapes to one side. Useful for reading corner stickers.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_110/source/skeleton-sleepy-skull-book.png"
+    }
+  ]
+}

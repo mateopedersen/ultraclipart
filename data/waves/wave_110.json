@@ -1,0 +1,251 @@
+{
+  "wave": "wave_110",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "skeleton-skull-flower-frame",
+      "title": "Friendly Skull with a Floral Frame",
+      "alt": "One original friendly ivory skull surrounded by a half-wreath of broad green leaves and three simple marigolds.",
+      "description": "One original friendly ivory skull surrounded by a half-wreath of broad green leaves and three simple marigolds. Useful for personal seasonal decorations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_110/source/skeleton-skull-flower-frame.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "bf402eb44fd880ea4ed339b50bfa58e83011f43ecd28fe3eb456a156a71cc8f7",
+      "inputSignature": "6e08d1acacadd0def2c54907800c8bbf5875181fd559b06dcd4668c87b522922",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 857409,
+        "weightedCmykRmse": 0.838895
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1336315,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 857409,
+          "weightedCmykRmse": 0.838895
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        109,
+        97,
+        1171,
+        1160
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_110/exports/skeleton-skull-flower-frame.pdf",
+          "bytes": 857409,
+          "sha256": "90c57387450181fd9b95f001c0f47d056e0c067d697ec1e198bb49cb540b87cb"
+        },
+        "webp": {
+          "path": "work/production/wave_110/exports/skeleton-skull-flower-frame.webp",
+          "bytes": 713966,
+          "sha256": "d19296fb6bfca20462aaba26ded8b176b85feb73feb2452ea20b2efbfb5fb1f1"
+        },
+        "thumb": {
+          "path": "work/production/wave_110/exports/skeleton-skull-flower-frame-thumb.webp",
+          "bytes": 51594,
+          "sha256": "f9db44495bb2d5bf1ef0344b16acf1e3f25a1ab3edad737d67d0b11bea3e4db3"
+        }
+      },
+      "proofSha256": "991af9f03d69eb73bc019213e462aa0b4cf18fba40564050f8f9c1289e377931",
+      "pairMeanRgbDifference": 2.27169
+    },
+    {
+      "id": "skeleton-crossed-bones-bow",
+      "title": "Crossed Bones with a Ribbon",
+      "alt": "Two gently curved ivory bones cross neatly under a plain teal ribbon bow, clean balanced composition.",
+      "description": "Two gently curved ivory bones cross neatly under a plain teal ribbon bow, clean balanced composition. Useful for personal party labels.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_110/source/skeleton-crossed-bones-bow.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "64254b4e0497e1a225a4d814449daeadaec0f49985ceeaabb1b09060572219da",
+      "inputSignature": "e7236177bde3626421e8ac05e45951d121e2f5d28a4c2c71fcaa5816aa7a2ce7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 590686,
+        "weightedCmykRmse": 0.909237
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1006782,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 590686,
+          "weightedCmykRmse": 0.909237
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        104,
+        145,
+        1154,
+        1116
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_110/exports/skeleton-crossed-bones-bow.pdf",
+          "bytes": 590686,
+          "sha256": "d7b6887351d1b33dc35f7a424db62fe815be908deff880eb388bce2acdef80f2"
+        },
+        "webp": {
+          "path": "work/production/wave_110/exports/skeleton-crossed-bones-bow.webp",
+          "bytes": 478486,
+          "sha256": "513200771858ce5ce1a15cd55d8d7d323aca031630144a5da1f92a7877ffd0ca"
+        },
+        "thumb": {
+          "path": "work/production/wave_110/exports/skeleton-crossed-bones-bow-thumb.webp",
+          "bytes": 38936,
+          "sha256": "b8ba9b038babe3f9bd63d0228d56a17311db8a426fd386ca2691a2acebfffdfb"
+        }
+      },
+      "proofSha256": "c148fe80137fb5ab1228aa4ee59a7e33f2a5107031e13b4bc188d561e9240938",
+      "pairMeanRgbDifference": 1.18523
+    },
+    {
+      "id": "skeleton-sleepy-skull-book",
+      "title": "Sleepy Skull on Two Books",
+      "alt": "One friendly sleeping skull rests on two plain closed books, a small soft cap drapes to one side.",
+      "description": "One friendly sleeping skull rests on two plain closed books, a small soft cap drapes to one side. Useful for reading corner stickers.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_110/source/skeleton-sleepy-skull-book.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a6ec8bae2319d44b9cdb9a33b588ee2b0813ab307d1bd5e4f9a64379dd72c1e6",
+      "inputSignature": "3c6ef92c47cad5075d772a5aa8949edbdc4a97836d4bf16781d7abe2fbc42724",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 579959,
+        "weightedCmykRmse": 0.858238
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1047911,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 579959,
+          "weightedCmykRmse": 0.858238
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        151,
+        194,
+        1119,
+        1111
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_110/exports/skeleton-sleepy-skull-book.pdf",
+          "bytes": 579959,
+          "sha256": "027aef38ce44fbbccc00d3a2bfd906dc1b934e1cea8742ed59466a2ae4e5a54a"
+        },
+        "webp": {
+          "path": "work/production/wave_110/exports/skeleton-sleepy-skull-book.webp",
+          "bytes": 594872,
+          "sha256": "9fdf4d82c88a2bfb124dc8b766e881db4d4ccf6a45032ef5add64736a0e7c4ad"
+        },
+        "thumb": {
+          "path": "work/production/wave_110/exports/skeleton-sleepy-skull-book-thumb.webp",
+          "bytes": 38422,
+          "sha256": "b9442d5a094ca74efa29c97f6bae369e5ed0d8320edd36b3d8d30448beeeb495"
+        }
+      },
+      "proofSha256": "0db27db13d61ee58c60cc03bd4c6c456fd809b0136b2af6350f326d25d54a440",
+      "pairMeanRgbDifference": 2.12196
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Inspected all native images and actual CMYK PDF contact: three distinct object compositions, one skull with three flowers, exactly two crossed bones, sleeping skull on two books. Clear shapes, readable margins and no clipping.",
+  "createdAt": "2026-10-24T00:30:09.643Z",
+  "cdnVerifiedAt": "2026-10-24T00:31:46.303Z"
+}

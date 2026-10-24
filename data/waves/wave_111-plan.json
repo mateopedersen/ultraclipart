@@ -1,0 +1,31 @@
+{
+  "wave": "wave_111",
+  "topic": "skeleton",
+  "method": "builtin-image-generation",
+  "research": "data/research/skeleton-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "skeleton-stretch-coloring",
+      "title": "Stretching Skeleton Coloring Illustration",
+      "alt": "Black outline illustration of a friendly full skeleton stretching both arms overhead, palms open, feet apart; enclosed white bones and transparent outside.",
+      "description": "Black outline illustration of a friendly full skeleton stretching both arms overhead, palms open, feet apart; enclosed white bones and transparent outside. Useful for personal coloring pages.",
+      "color": "Black",
+      "style": "Outline",
+      "printSeparation": "black-only",
+      "source": "work/production/wave_111/source/skeleton-stretch-coloring.png"
+    },
+    {
+      "id": "skeleton-dancing-silhouette",
+      "title": "Dancing Skeleton Silhouette",
+      "alt": "A crisp dark silhouette of a lively skeleton in a clear side-step dance pose, readable skull ribs pelvis and separate limbs, no background.",
+      "description": "A crisp dark silhouette of a lively skeleton in a clear side-step dance pose, readable skull ribs pelvis and separate limbs, no background. Useful for personal silhouette crafts.",
+      "color": "Black",
+      "style": "Black & White",
+      "printSeparation": "black-only",
+      "source": "work/production/wave_111/source/skeleton-dancing-silhouette.png"
+    }
+  ]
+}

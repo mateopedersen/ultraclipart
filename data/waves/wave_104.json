@@ -1,0 +1,244 @@
+{
+  "wave": "wave_104",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "skeleton-canoe-paddler",
+      "title": "Skeleton Paddling a Canoe",
+      "alt": "A skeleton in a simple life vest sits in a short red canoe and holds one paddle with both hands.",
+      "description": "A skeleton in a simple life vest sits in a short red canoe and holds one paddle with both hands. Useful for outdoor adventure stories.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_104/source/skeleton-canoe-paddler.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1ea226078d34bd4e5a98b60e15a815173cdfe256f04e774884346ff2e42cf1b7",
+      "inputSignature": "508caf4313e04414a2914089ae14b4337e12a697801d925224a72120bb96b1a2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 684146,
+        "weightedCmykRmse": 0.900792
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1047448,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 684146,
+          "weightedCmykRmse": 0.900792
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        107,
+        134,
+        1148,
+        1078
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_104/exports/skeleton-canoe-paddler.pdf",
+          "bytes": 684146,
+          "sha256": "3f580dd5e72e34e823f7853b47287339d93ddbe3942c519cb4c90efbd9af3167"
+        },
+        "webp": {
+          "path": "work/production/wave_104/exports/skeleton-canoe-paddler.webp",
+          "bytes": 536426,
+          "sha256": "58003fc1e12f101c287c15ac4f0d458d47911504aa3b2cb823e91a611e1d0e40"
+        },
+        "thumb": {
+          "path": "work/production/wave_104/exports/skeleton-canoe-paddler-thumb.webp",
+          "bytes": 42400,
+          "sha256": "dfca23ffdfaabd7144cc9125453f7ad2fa2d6593a89fac9396fea2723771c3fe"
+        }
+      },
+      "proofSha256": "2992e41d72ea72083e3a6ff2a9c1fda2099d3f151f4556f7a7925e94af95f33c",
+      "pairMeanRgbDifference": 1.7756
+    },
+    {
+      "id": "skeleton-magician-hat",
+      "title": "Skeleton Performing a Card Trick",
+      "alt": "A skeleton magician in a short cape fans three blank cards in one hand and holds a small wand in the other.",
+      "description": "A skeleton magician in a short cape fans three blank cards in one hand and holds a small wand in the other. Useful for imaginative play cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_104/source/skeleton-magician-hat.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "57e796a5b9e0d77a44f310415a712d35057c6136a1e477bf6aa0a5b7038a3de5",
+      "inputSignature": "04df6605faadddfdea01b0b17037ae9fec6c00e949bec84db823049333160b36",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 826707,
+        "weightedCmykRmse": 0.962739
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1163873,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 826707,
+          "weightedCmykRmse": 0.962739
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        215,
+        33,
+        1029,
+        1226
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_104/exports/skeleton-magician-hat.pdf",
+          "bytes": 826707,
+          "sha256": "9d5f812247b04bf13b541bc4233724d74cd92e8b43b4b20f7b9e10c088162b36"
+        },
+        "webp": {
+          "path": "work/production/wave_104/exports/skeleton-magician-hat.webp",
+          "bytes": 552356,
+          "sha256": "1aeafaf6c2e496a10658ebe86b27fb59a662f97799052e69f747d11eecbf0407"
+        },
+        "thumb": {
+          "path": "work/production/wave_104/exports/skeleton-magician-hat-thumb.webp",
+          "bytes": 45364,
+          "sha256": "fa17bfe460ca4e8657f51f38fb16c1997496c9fa945479df0b964281b4d2fa42"
+        }
+      },
+      "proofSha256": "cf41eaae02947d23ba0ee0194077d35896e68395298a464f453b898988b4af0f",
+      "pairMeanRgbDifference": 1.52415
+    },
+    {
+      "id": "skeleton-map-explorer",
+      "title": "Skeleton Reading a Trail Map",
+      "alt": "A skeleton in hiking boots holds an open folded trail map with simple route symbols and wears a small brown backpack.",
+      "description": "A skeleton in hiking boots holds an open folded trail map with simple route symbols and wears a small brown backpack. Useful for adventure sequence cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_104/source/skeleton-map-explorer.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "b465750f7a991ee62ef0b6e4741b00ca041eb432ec34f6e2373d65c27f6d5f54",
+      "inputSignature": "6f026bc74ea61f8db5619213c502bbaaec6087fd5cad0e21118d3629a65d9b71",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 915657,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 915657,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        362,
+        39,
+        961,
+        1196
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_104/exports/skeleton-map-explorer.pdf",
+          "bytes": 915657,
+          "sha256": "3c02bbd443ec0e2f228c65da60dfd26ddc3c3aaa43239b4830489f3baa5a8955"
+        },
+        "webp": {
+          "path": "work/production/wave_104/exports/skeleton-map-explorer.webp",
+          "bytes": 431548,
+          "sha256": "adc9711f0c41b027b9ecc47e9f5c96fbfdd5a088474413561d1776bd6251e8f5"
+        },
+        "thumb": {
+          "path": "work/production/wave_104/exports/skeleton-map-explorer-thumb.webp",
+          "bytes": 36568,
+          "sha256": "682b9c098ecc1c10b20b51bc09c836367b25d42bbeca073a1a0690c7d7368739"
+        }
+      },
+      "proofSha256": "0e31d8192d2a02d6dd6ad38840fb7c8f525f943b45bc86469c0a4294305f5201",
+      "pairMeanRgbDifference": 1.158
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual PDF proofs reviewed; corrected map description, all export bytes unchanged.",
+  "createdAt": "2026-10-24T00:24:00.380Z",
+  "cdnVerifiedAt": "2026-10-24T00:31:46.303Z"
+}

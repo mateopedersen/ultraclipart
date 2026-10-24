@@ -1,0 +1,38 @@
+{
+  "wave": "wave_106",
+  "topic": "skeleton",
+  "method": "builtin-image-generation",
+  "research": "data/research/skeleton-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "skeleton-soup-server",
+      "title": "Skeleton Serving Soup",
+      "alt": "A skeleton in a white apron pours a ladle of soup into a single bowl held in the other hand.",
+      "description": "A skeleton in a white apron pours a ladle of soup into a single bowl held in the other hand. Useful for cooking vocabulary.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_106/source/skeleton-soup-server.png"
+    },
+    {
+      "id": "skeleton-compass-navigator",
+      "title": "Skeleton Using a Compass",
+      "alt": "A skeleton crouches with an open compass in one hand and points toward a simple trail signpost with blank arrows.",
+      "description": "A skeleton crouches with an open compass in one hand and points toward a simple trail signpost with blank arrows. Useful for direction activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_106/source/skeleton-compass-navigator.png"
+    },
+    {
+      "id": "skeleton-shell-collector",
+      "title": "Skeleton Collecting Seashells",
+      "alt": "A skeleton in a wide plain sunhat holds one scallop shell over a shallow basket containing two other shells.",
+      "description": "A skeleton in a wide plain sunhat holds one scallop shell over a shallow basket containing two other shells. Useful for seaside stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_106/source/skeleton-shell-collector.png"
+    }
+  ]
+}

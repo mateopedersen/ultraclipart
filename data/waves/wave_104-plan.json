@@ -1,0 +1,38 @@
+{
+  "wave": "wave_104",
+  "topic": "skeleton",
+  "method": "builtin-image-generation",
+  "research": "data/research/skeleton-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "skeleton-canoe-paddler",
+      "title": "Skeleton Paddling a Canoe",
+      "alt": "A skeleton in a simple life vest sits in a short red canoe and holds one paddle with both hands.",
+      "description": "A skeleton in a simple life vest sits in a short red canoe and holds one paddle with both hands. Useful for outdoor adventure stories.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_104/source/skeleton-canoe-paddler.png"
+    },
+    {
+      "id": "skeleton-magician-hat",
+      "title": "Skeleton Performing a Card Trick",
+      "alt": "A skeleton magician in a short cape fans three blank cards in one hand and holds a small wand in the other.",
+      "description": "A skeleton magician in a short cape fans three blank cards in one hand and holds a small wand in the other. Useful for imaginative play cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_104/source/skeleton-magician-hat.png"
+    },
+    {
+      "id": "skeleton-map-explorer",
+      "title": "Skeleton Reading a Trail Map",
+      "alt": "A skeleton in hiking boots holds an open folded trail map with simple route symbols and wears a small brown backpack.",
+      "description": "A skeleton in hiking boots holds an open folded trail map with simple route symbols and wears a small brown backpack. Useful for adventure sequence cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_104/source/skeleton-map-explorer.png"
+    }
+  ]
+}

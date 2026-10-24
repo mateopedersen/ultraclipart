@@ -1,0 +1,251 @@
+{
+  "wave": "wave_106",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "skeleton-soup-server",
+      "title": "Skeleton Serving Soup",
+      "alt": "A skeleton in a white apron pours a ladle of soup into a single bowl held in the other hand.",
+      "description": "A skeleton in a white apron pours a ladle of soup into a single bowl held in the other hand. Useful for cooking vocabulary.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_106/source/skeleton-soup-server.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a280a0d8d0d85440973f3f5f7a90030318b04b9572fb3f6cf8ea842f3dc2536e",
+      "inputSignature": "5b17c910d36f7c7da6a8479790b1914c7827b66839655f6cfee60d4aae12b423",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 786048,
+        "weightedCmykRmse": 0.964721
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1028614,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 786048,
+          "weightedCmykRmse": 0.964721
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        287,
+        41,
+        879,
+        1215
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_106/exports/skeleton-soup-server.pdf",
+          "bytes": 786048,
+          "sha256": "32533035a3eb2100d0fb46736c7534357af07ea212ecaee2169a1eefb6eb3f62"
+        },
+        "webp": {
+          "path": "work/production/wave_106/exports/skeleton-soup-server.webp",
+          "bytes": 426592,
+          "sha256": "cd819f060fbaf66ff409cd08b02220128526256b844ffc1aa3e9b1e28791bc1b"
+        },
+        "thumb": {
+          "path": "work/production/wave_106/exports/skeleton-soup-server-thumb.webp",
+          "bytes": 37560,
+          "sha256": "48021f5ca24d035ce0521381f2d7b73c969259e5ca8dfa936d2a3746fc6a73c1"
+        }
+      },
+      "proofSha256": "8e55eb43322341c70b215cc4e87e9a30a1e949e64527c1e7ea853da71c6b6fa1",
+      "pairMeanRgbDifference": 1.12882
+    },
+    {
+      "id": "skeleton-compass-navigator",
+      "title": "Skeleton Using a Compass",
+      "alt": "A skeleton crouches with an open compass in one hand and points toward a simple trail signpost with blank arrows.",
+      "description": "A skeleton crouches with an open compass in one hand and points toward a simple trail signpost with blank arrows. Useful for direction activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_106/source/skeleton-compass-navigator.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "32188e0bf2159ce2801ffcbe55a64042a9ee31264e616cc7a900851347d7bf5a",
+      "inputSignature": "115a6378cacbf101c0d92fa38d90c856e5fcd8dd6810a1d51daebc814965d5a8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 886360,
+        "weightedCmykRmse": 0.938381
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1232479,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 886360,
+          "weightedCmykRmse": 0.938381
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        163,
+        197,
+        1235,
+        1027
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_106/exports/skeleton-compass-navigator.pdf",
+          "bytes": 886360,
+          "sha256": "e9b78247db6d535233c5676272c08f2a58139d31a79494390dee7a6eb50972ea"
+        },
+        "webp": {
+          "path": "work/production/wave_106/exports/skeleton-compass-navigator.webp",
+          "bytes": 586576,
+          "sha256": "ad622167ee1400e6df2c818d1946dde34d87115f9a9a2bd0fe5b48d02ccc1b60"
+        },
+        "thumb": {
+          "path": "work/production/wave_106/exports/skeleton-compass-navigator-thumb.webp",
+          "bytes": 50140,
+          "sha256": "f59409748b381146253f56d182a60940c2d1f861b5ccd9ee4be34dea232a46a0"
+        }
+      },
+      "proofSha256": "9c5b3cf1eda7a2f963eb74761d83baef931831d142847e14da21318d7436aae1",
+      "pairMeanRgbDifference": 1.65878
+    },
+    {
+      "id": "skeleton-shell-collector",
+      "title": "Skeleton Collecting Seashells",
+      "alt": "A skeleton in a wide plain sunhat holds one scallop shell over a shallow basket containing two other shells.",
+      "description": "A skeleton in a wide plain sunhat holds one scallop shell over a shallow basket containing two other shells. Useful for seaside stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_106/source/skeleton-shell-collector.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "81d011ae218d53de09dd05f91c00c3189ef55c1f726757ee5c3ce546eddea2cb",
+      "inputSignature": "3dce4e1d410c9d6fe6e561946c22847c95624e4f3304428003a3507358bfc7c1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 859023,
+        "weightedCmykRmse": 0.990873
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1142039,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 859023,
+          "weightedCmykRmse": 0.990873
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        331,
+        15,
+        920,
+        1245
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_106/exports/skeleton-shell-collector.pdf",
+          "bytes": 859023,
+          "sha256": "60e2b2131a0e0828de6eef5ec469d6227f6c59656439e3b2f545cc83960d6a6d"
+        },
+        "webp": {
+          "path": "work/production/wave_106/exports/skeleton-shell-collector.webp",
+          "bytes": 534056,
+          "sha256": "2353b30d188e529bcbf57bf147a01b651a824464b848861129cea23c80b48f68"
+        },
+        "thumb": {
+          "path": "work/production/wave_106/exports/skeleton-shell-collector-thumb.webp",
+          "bytes": 46906,
+          "sha256": "a8cda0d2d04babf741f7d74a44704a2164ba29491498d4f9d13a46a2ab712768"
+        }
+      },
+      "proofSha256": "3019bc7b88fcb9e72677e7c444567255f39b7e4545b1ae1d7e488a98e21c5af3",
+      "pairMeanRgbDifference": 1.23124
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed native images and CMYK proofs: coherent soup ladle and bowl, compass/signpost pose and three-shell collector; distinct silhouettes and intact margins.",
+  "createdAt": "2026-10-24T00:20:48.241Z",
+  "cdnVerifiedAt": "2026-10-24T00:31:46.303Z"
+}

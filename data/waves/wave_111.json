@@ -1,0 +1,161 @@
+{
+  "wave": "wave_111",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "skeleton-stretch-coloring",
+      "title": "Stretching Skeleton Coloring Illustration",
+      "alt": "Black outline illustration of a friendly full skeleton stretching both arms overhead, palms open, feet apart; enclosed white bones and transparent outside.",
+      "description": "Black outline illustration of a friendly full skeleton stretching both arms overhead, palms open, feet apart; enclosed white bones and transparent outside. Useful for personal coloring pages.",
+      "color": "Black",
+      "style": "Outline",
+      "printSeparation": "black-only",
+      "source": "work/production/wave_111/source/skeleton-stretch-coloring.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "db528b3010ec60cb371767cdc289b6df1ee5ce07a68683ca0c856337fe1ebc4e",
+      "inputSignature": "c228ba241bce0fab86f593db079894e9a8e4bdac4e1e690b2cc8d806739beaee",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 323948,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 323948,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        194,
+        6,
+        1062,
+        1240
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_111/exports/skeleton-stretch-coloring.pdf",
+          "bytes": 323948,
+          "sha256": "345f87b737f87fc36443b8443f7965b72c73ccb07253c4055e8136b9369104a5"
+        },
+        "webp": {
+          "path": "work/production/wave_111/exports/skeleton-stretch-coloring.webp",
+          "bytes": 360248,
+          "sha256": "542520ee81e62fe177feae05eb47b40d44ca3fc9cbd3161dddb6ec0b1e9f18e7"
+        },
+        "thumb": {
+          "path": "work/production/wave_111/exports/skeleton-stretch-coloring-thumb.webp",
+          "bytes": 39846,
+          "sha256": "7edeef0258565c5273b8d1ff66c76e7e268ed31f9de203e9136f7d90890f90e4"
+        }
+      },
+      "proofSha256": "f76beaafcda06a73d0acbe98ff72e7fd7e22ca0cc976c2df03839b01a491ec84",
+      "pairMeanRgbDifference": 3.08281
+    },
+    {
+      "id": "skeleton-dancing-silhouette",
+      "title": "Dancing Skeleton Silhouette",
+      "alt": "A crisp dark silhouette of a lively skeleton in a clear side-step dance pose, readable skull ribs pelvis and separate limbs, no background.",
+      "description": "A crisp dark silhouette of a lively skeleton in a clear side-step dance pose, readable skull ribs pelvis and separate limbs, no background. Useful for personal silhouette crafts.",
+      "color": "Black",
+      "style": "Black & White",
+      "printSeparation": "black-only",
+      "source": "work/production/wave_111/source/skeleton-dancing-silhouette.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c2da32cb66925f6967d9eed423ad3794cef16fb938fff40e3525c96da115a3d0",
+      "inputSignature": "b42a0583c4ba00d7daa94614b5d239099cfa9941d895079cda8008cc83110767",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 208459,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 208459,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        256,
+        32,
+        966,
+        1214
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_111/exports/skeleton-dancing-silhouette.pdf",
+          "bytes": 208459,
+          "sha256": "29f96c3bac0932e56bd402d9fbf403bd94692f748a6e9329fba659b2be98ab2a"
+        },
+        "webp": {
+          "path": "work/production/wave_111/exports/skeleton-dancing-silhouette.webp",
+          "bytes": 106800,
+          "sha256": "e6f73a3e3acd427c477ce70107378c8aed08dd5f74c994a61d58d7921383d909"
+        },
+        "thumb": {
+          "path": "work/production/wave_111/exports/skeleton-dancing-silhouette-thumb.webp",
+          "bytes": 17294,
+          "sha256": "7427e46cff584a7624eb96e7994fde9213c1480f368e6b98812a924e47f0e934"
+        }
+      },
+      "proofSha256": "51cefee0104739f2014e52063316f05e66975a6b7b875e8c4d61bdb3d56298d5",
+      "pairMeanRgbDifference": 2.42962
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources composited on white and actual CMYK proofs reviewed: complete two-arm two-leg coloring pose and distinct dancing silhouette, no clipping, black-only lossless separation with native alpha.",
+  "createdAt": "2026-10-24T00:31:15.910Z",
+  "cdnVerifiedAt": "2026-10-24T00:31:46.303Z"
+}

@@ -1,0 +1,244 @@
+{
+  "wave": "wave_100",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "skeleton-pumpkin-carver",
+      "title": "Skeleton Carving a Pumpkin",
+      "alt": "A skeleton in an apron uses a small scoop to remove seeds from an open uncarved pumpkin.",
+      "description": "A skeleton in an apron uses a small scoop to remove seeds from an open uncarved pumpkin. Use this illustration for autumn sequence cards and personal crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_100/source/skeleton-pumpkin-carver.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "6fe152d5c51a260c733c7e3f33ec62a6986ed7420b4a56d06d224def29ff10bd",
+      "inputSignature": "c1ba2c8229056966667ce15909b9eac90d5f7427bc3f0d47a8abf97357e119c1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 973053,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 973053,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        290,
+        37,
+        968,
+        1206
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_100/exports/skeleton-pumpkin-carver.pdf",
+          "bytes": 973053,
+          "sha256": "8666d499aac5119cc61a6722a7e01d5209a5993f16d64e78b98165a6978ff708"
+        },
+        "webp": {
+          "path": "work/production/wave_100/exports/skeleton-pumpkin-carver.webp",
+          "bytes": 536746,
+          "sha256": "858be5c102fb5a4a888109ca5314f5cc71dad4326ca8334836749ef6d4778ba0"
+        },
+        "thumb": {
+          "path": "work/production/wave_100/exports/skeleton-pumpkin-carver-thumb.webp",
+          "bytes": 42284,
+          "sha256": "976062191b07bbea0f78638ec055c978c82da13c3d9dddde14bc1bacb96e0d39"
+        }
+      },
+      "proofSha256": "ce0a2b893a07f2585a54c35b7bbcc32c9c60b33ed8378b0c9bc59458fde78805",
+      "pairMeanRgbDifference": 1.84966
+    },
+    {
+      "id": "skeleton-book-return",
+      "title": "Skeleton Returning Library Books",
+      "alt": "A standing skeleton carries two closed books toward a low library return box with a blank front.",
+      "description": "A standing skeleton carries two closed books toward a low library return box with a blank front. Use this illustration for reading routine cards and personal crafts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_100/source/skeleton-book-return.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "771a4b1b5b645b6efc41c3827876a4952e7da13cc57250b8407260472ee93288",
+      "inputSignature": "41d2e1c4fe594876cc2620e955e495f146ee2bc51a05a7f7be99a17e4b1c658d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 746816,
+        "weightedCmykRmse": 0.886285
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1144137,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 746816,
+          "weightedCmykRmse": 0.886285
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        180,
+        55,
+        1067,
+        1189
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_100/exports/skeleton-book-return.pdf",
+          "bytes": 746816,
+          "sha256": "3080172ce234067e2c46183f70375837151d6d982a273bec3c47de00e42ac9c6"
+        },
+        "webp": {
+          "path": "work/production/wave_100/exports/skeleton-book-return.webp",
+          "bytes": 542274,
+          "sha256": "3abb3165c76c5f784026bd56d657078d734cdcb4db387ddbfb629fcdc547fbce"
+        },
+        "thumb": {
+          "path": "work/production/wave_100/exports/skeleton-book-return-thumb.webp",
+          "bytes": 44028,
+          "sha256": "8ccf187f6a53163ce268255a1d0e14ee7203edac9420ba411bfc187e7f585a62"
+        }
+      },
+      "proofSha256": "02f3370be77fffa9a4a524e246476a0adff488f275da1ba827c3c2d2d5d7a180",
+      "pairMeanRgbDifference": 1.61643
+    },
+    {
+      "id": "skeleton-bubble-maker",
+      "title": "Skeleton Blowing Bubbles",
+      "alt": "A friendly skeleton holds a bubble wand near its mouth and a small open bubble pot, three floating bubbles.",
+      "description": "A friendly skeleton holds a bubble wand near its mouth and a small open bubble pot, three floating bubbles. Use this illustration for playtime story prompts and personal crafts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_100/source/skeleton-bubble-maker.png",
+      "topic": "skeleton",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "aef771602e6f01746adf48c45591daa1d8a75a212e26d567a648d72554b5cb19",
+      "inputSignature": "850cfb074cc2240d999be65c41e1e029ab4e47a67535ffa524d7dc82e16d0651",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 723159,
+        "weightedCmykRmse": 1.005329
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 981944,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 723159,
+          "weightedCmykRmse": 1.005329
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        306,
+        80,
+        960,
+        1176
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_100/exports/skeleton-bubble-maker.pdf",
+          "bytes": 723159,
+          "sha256": "ce9742ad0bc683d01a4345b4b053ff698764c1fc7efc2ba6afc0a3a44d9749cc"
+        },
+        "webp": {
+          "path": "work/production/wave_100/exports/skeleton-bubble-maker.webp",
+          "bytes": 469004,
+          "sha256": "53e9906a8cdb5f7b38a0810606d4b264b75864acd6c983c80577977bbc7a6a2b"
+        },
+        "thumb": {
+          "path": "work/production/wave_100/exports/skeleton-bubble-maker-thumb.webp",
+          "bytes": 43200,
+          "sha256": "e6977a68521cb30b16070959881a931d96ff57c241cc99ee21efd46d3b47358b"
+        }
+      },
+      "proofSha256": "4a89f05f28291d3b4cd366c3226b5aaf6c070e8ace00b84a57d1517fb09d2635",
+      "pairMeanRgbDifference": 1.17522
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All three original sources and actual CMYK proofs reviewed: pumpkin scooping has coherent two-hand grips, book return shows two distinct closed books and readable slot, bubble scene has three bubbles and two hands holding wand and pot. No clipping; matching native-resolution files and alpha.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T00:05:57.964Z",
+  "cdnVerifiedAt": "2026-10-24T00:31:46.303Z"
+}
