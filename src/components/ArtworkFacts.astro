@@ -106,18 +106,17 @@ const facts = artworkDetails(item);
       <span class="artwork-facts-icon artwork-facts-violet">
         <Icon name="document" size={26} />
       </span>
-      <h3>Origin & permission</h3>
+      <h3>Use & permission</h3>
       <dl>
         <div>
-          <dt>Artwork origin</dt>
-          <dd>{facts.origin}</dd>
+          <dt>Included files</dt>
+          <dd>{item.pdf ? 'WebP image and PDF document' : 'WebP image'}</dd>
         </div>
         <div>
           <dt>License</dt>
           <dd>Personal & educational use</dd>
         </div>
       </dl>
-      <p>{facts.originDescription}</p>
       <p>
         Use it in your personal and classroom projects. Commercial use and resale as clipart are not
         permitted.

@@ -84,9 +84,8 @@ try {
       });
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
       await expect(page.locator('main h1')).toHaveCount(1);
-      await expect(page.locator('.art-ai-badge')).toHaveCount(
-        id === 'winter-arctic-fox-resting' ? 1 : 0,
-      );
+      await expect(page.locator('.art-ai-badge')).toHaveCount(0);
+      await expect(page.locator('.artwork-facts')).not.toContainText('Artwork origin');
       const original = await page
         .locator('.detail-actions .download-option')
         .first()
@@ -179,7 +178,7 @@ try {
     'All preview backgrounds work and restore checkerboard',
     'Selected state follows presets and custom input',
     'Preview changes preserve original download URLs',
-    'AI origin is displayed only with evidence',
+    'Catalog details keep production provenance outside the public artwork facts',
     'Expanded technical file facts remain accessible',
     'Custom picker starts neutral and can reapply the last chosen color',
     'Download sizes remain visible beside separate WebP and PDF explanations',
