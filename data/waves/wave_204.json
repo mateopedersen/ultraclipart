@@ -1,0 +1,309 @@
+{
+  "wave": "wave_204",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-pumpkin-side-companion",
+      "title": "Turkey Beside Pumpkin",
+      "alt": "A friendly turkey stands next to a single squat pumpkin, bird larger than prop.",
+      "description": "A friendly turkey stands next to a single squat pumpkin, bird larger than prop. Suitable for seasonal card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_204/source/turkey-pumpkin-side-companion-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "6c3a91202b5ab3e14428f82bb400946ecb87083f8bc8c99f943d6be3e4946e17",
+      "inputSignature": "e4709f07e0a9628d2d0cda400a29b0e76d502cf3a855ad23e891f7311e4d26a7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 961864,
+        "weightedCmykRmse": 1.287145
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1412944,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1177200,
+          "weightedCmykRmse": 0.724997
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1116698,
+          "weightedCmykRmse": 0.860384
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1036193,
+          "weightedCmykRmse": 1.035248
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 961864,
+          "weightedCmykRmse": 1.287145
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        16,
+        1291,
+        1175
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_204/exports/turkey-pumpkin-side-companion.pdf",
+          "bytes": 961864,
+          "sha256": "653d7edccc22ff1ce597117552c793ea45d0da733dbcc742f76c9df3e2d09e34"
+        },
+        "webp": {
+          "path": "work/production/wave_204/exports/turkey-pumpkin-side-companion.webp",
+          "bytes": 1577130,
+          "sha256": "83a85522001dff9a0972b42cd82028a92039118ac6796da94b27377b3382192d"
+        },
+        "thumb": {
+          "path": "work/production/wave_204/exports/turkey-pumpkin-side-companion-thumb.webp",
+          "bytes": 90006,
+          "sha256": "cd7cd7e25ce6037a5a8581998b4bf33a16f91834833d287eb4ed88de109282f4"
+        }
+      },
+      "proofSha256": "60598299ed7d8600723337c6350076ac0657c06cdb93b97b156bfd178c0d0fd1",
+      "pairMeanRgbDifference": 5.67153
+    },
+    {
+      "id": "turkey-corn-stalk-turkey",
+      "title": "Turkey by Corn Stalk",
+      "alt": "A turkey stands near one intact corn stalk with two visible ears, no farm landscape.",
+      "description": "A turkey stands near one intact corn stalk with two visible ears, no farm landscape. Suitable for harvest worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_204/source/turkey-corn-stalk-turkey-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 800,
+      "pdfHeight": 731,
+      "sourceType": "raster",
+      "sourceSha256": "41af977b5037041a4b2ac7504dffd8ca3bc898ec6715abbffd7894e615ef4364",
+      "inputSignature": "0c3b75d595eeac8f5bdda3282151c215fbd21863d9188433468e4ca929f09663",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973533,
+        "weightedCmykRmse": 1.215007
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1327147,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1159478,
+          "weightedCmykRmse": 0.692752
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1110444,
+          "weightedCmykRmse": 0.831781
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1045948,
+          "weightedCmykRmse": 0.996324
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973533,
+          "weightedCmykRmse": 1.215007
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        10,
+        10,
+        1305,
+        1189
+      ],
+      "image": {
+        "width": 800,
+        "height": 731,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_204/exports/turkey-corn-stalk-turkey.pdf",
+          "bytes": 973533,
+          "sha256": "8d02d095d11055b73336baf6bd370c530044befd1454b6204bdba285685bff3f"
+        },
+        "webp": {
+          "path": "work/production/wave_204/exports/turkey-corn-stalk-turkey.webp",
+          "bytes": 1720644,
+          "sha256": "699a9c2f020377c47701ee7917dd14e26d2253e74a9710fed5e68d1842238f60"
+        },
+        "thumb": {
+          "path": "work/production/wave_204/exports/turkey-corn-stalk-turkey-thumb.webp",
+          "bytes": 109802,
+          "sha256": "479892f4a61983843753487986a41c7c4da7350c449a2b822177e36d1b819f18"
+        }
+      },
+      "proofSha256": "17974ffc0ccb87d99501432e6e671f1f479e0c49893e1909e254f8debdd0d8c8",
+      "pairMeanRgbDifference": 8.67188
+    },
+    {
+      "id": "turkey-hay-bale-turkey",
+      "title": "Turkey on Hay Bale",
+      "alt": "A turkey sits atop a compact rectangular hay bale, tail falling behind the bale.",
+      "description": "A turkey sits atop a compact rectangular hay bale, tail falling behind the bale. Suitable for farm-themed print.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_204/source/turkey-hay-bale-turkey-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 800,
+      "pdfHeight": 731,
+      "sourceType": "raster",
+      "sourceSha256": "c5366574a2b77673bb061a0ffea05226765e28e66f458141363f92a87e0470b2",
+      "inputSignature": "2d303267406587100e34df237e9b1cd1e6327fd2fa04c4ca9da0b9763436f3bb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 910223,
+        "weightedCmykRmse": 0.742282
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1081768,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 910223,
+          "weightedCmykRmse": 0.742282
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        72,
+        77,
+        1233,
+        1159
+      ],
+      "image": {
+        "width": 800,
+        "height": 731,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_204/exports/turkey-hay-bale-turkey.pdf",
+          "bytes": 910223,
+          "sha256": "6710d45a04aa93c2ba86e9c4e86324c0d59dc7e25c83a9ab8eaf0ae5c300ca09"
+        },
+        "webp": {
+          "path": "work/production/wave_204/exports/turkey-hay-bale-turkey.webp",
+          "bytes": 1539258,
+          "sha256": "6243dfe6c4081a2b5891ff74d7b8ab1d50623795fe645813f3d417f994b62bd2"
+        },
+        "thumb": {
+          "path": "work/production/wave_204/exports/turkey-hay-bale-turkey-thumb.webp",
+          "bytes": 82436,
+          "sha256": "daf071a8c0a149da4d58d6a1a1ac8b6d2257bab019550835582801b6b241b614"
+        }
+      },
+      "proofSha256": "ecc8c5abafc680bb0a5b06329c1c6e0e7a1097f54f0619e9078806d6384f838e",
+      "pairMeanRgbDifference": 6.43479
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:27.512Z"
+}

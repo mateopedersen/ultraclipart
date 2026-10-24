@@ -1,0 +1,99 @@
+{
+  "wave": "wave_207",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-hatching-poult",
+      "title": "Hatching Turkey Poult",
+      "alt": "A poult peeks out of one cracked speckled egg, both shell halves coherent.",
+      "description": "A poult peeks out of one cracked speckled egg, both shell halves coherent. Suitable for life-cycle card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_207/source/turkey-hatching-poult-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1295,
+      "height": 1215,
+      "pdfWidth": 900,
+      "pdfHeight": 844,
+      "sourceType": "raster",
+      "sourceSha256": "fc37e85a6fa20b23db3740e9789bb15a2b703e5a89da9b2c2ae9220ce08054d3",
+      "inputSignature": "2e27373b758141525a78cb6418a62602192717c356b34eed75e5f0baf9620f82",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 772550,
+        "weightedCmykRmse": 0.791482
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1005095,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 772550,
+          "weightedCmykRmse": 0.791482
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        253,
+        26,
+        1086,
+        1186
+      ],
+      "image": {
+        "width": 900,
+        "height": 844,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_207/exports/turkey-hatching-poult.pdf",
+          "bytes": 772550,
+          "sha256": "45d1e7d8a7397de86e26302320fa3557e773aeddaa214e151e1e1e8d882349e2"
+        },
+        "webp": {
+          "path": "work/production/wave_207/exports/turkey-hatching-poult.webp",
+          "bytes": 1144162,
+          "sha256": "f692fca93fc8da7faa8d2a2880b929ff6bd19b5572c969d59734f280b0e0c6b5"
+        },
+        "thumb": {
+          "path": "work/production/wave_207/exports/turkey-hatching-poult-thumb.webp",
+          "bytes": 62100,
+          "sha256": "bff8e849cd33d45f925729b8e46d62b0ebfa7a6c032221f36b2ed005e023ca71"
+        }
+      },
+      "proofSha256": "d5125c6f3a1d56571b39c4d8fb56701bc666b99d91bef906e20eee29f1cb9c45",
+      "pairMeanRgbDifference": 4.09389
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:28.008Z"
+}

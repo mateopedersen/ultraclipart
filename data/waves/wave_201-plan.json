@@ -1,0 +1,33 @@
+{
+  "wave": "wave_201",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-hen-walking",
+      "title": "Walking Turkey Hen",
+      "alt": "A slender hen walks right with a closed tail, compact wings and alert head.",
+      "description": "A slender hen walks right with a closed tail, compact wings and alert head. Suitable for bird identification cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_201/source/turkey-hen-walking-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-poult-first-steps",
+      "title": "Turkey Poult First Steps",
+      "alt": "A single fluffy poult takes a small step, tiny wing buds and short beak clearly visible.",
+      "description": "A single fluffy poult takes a small step, tiny wing buds and short beak clearly visible. Suitable for early-years flashcard.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_201/source/turkey-poult-first-steps-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

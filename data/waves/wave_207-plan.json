@@ -1,0 +1,22 @@
+{
+  "wave": "wave_207",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-hatching-poult",
+      "title": "Hatching Turkey Poult",
+      "alt": "A poult peeks out of one cracked speckled egg, both shell halves coherent.",
+      "description": "A poult peeks out of one cracked speckled egg, both shell halves coherent. Suitable for life-cycle card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_207/source/turkey-hatching-poult-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

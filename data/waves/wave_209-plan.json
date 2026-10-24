@@ -1,0 +1,22 @@
+{
+  "wave": "wave_209",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-turkey-circular-badge",
+      "title": "Turkey Round Emblem",
+      "alt": "A compact turkey bust sits inside a simple open circular leaf frame with no writing.",
+      "description": "A compact turkey bust sits inside a simple open circular leaf frame with no writing. Suitable for personal invitation seal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_209/source/turkey-turkey-circular-badge-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 750
+    }
+  ]
+}

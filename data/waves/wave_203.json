@@ -1,0 +1,400 @@
+{
+  "wave": "wave_203",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-paired-feathers",
+      "title": "Crossed Turkey Feathers",
+      "alt": "Two distinct turkey feathers crossed at the quills, one broad and one narrow.",
+      "description": "Two distinct turkey feathers crossed at the quills, one broad and one narrow. Suitable for nature journal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-paired-feathers-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "b8db679c108bf212d1ca52bcd0e7f944c043b32089cd0215914d1522b8b3be62",
+      "inputSignature": "e76cbdce711df6a64efae6e732e1888a35c6ae763f41ef27ee7314cc7f4148d2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 933202,
+        "weightedCmykRmse": 1.152668
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1248431,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1059104,
+          "weightedCmykRmse": 0.790768
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1006642,
+          "weightedCmykRmse": 0.954544
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 933202,
+          "weightedCmykRmse": 1.152668
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        51,
+        28,
+        1267,
+        1166
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_203/exports/turkey-paired-feathers.pdf",
+          "bytes": 933202,
+          "sha256": "d7fd7d305762bfe16ec24501ee1edacd072e8acbed2176efe02b6503e4e1f3cd"
+        },
+        "webp": {
+          "path": "work/production/wave_203/exports/turkey-paired-feathers.webp",
+          "bytes": 1351742,
+          "sha256": "50b8a1939155dcc9d969c1413b487d9fd08555b9d5ead26f82b2bb106ff036df"
+        },
+        "thumb": {
+          "path": "work/production/wave_203/exports/turkey-paired-feathers-thumb.webp",
+          "bytes": 72660,
+          "sha256": "ba7940c7a27a23bf5dab29b302990d87c52b4a9bc58df2fe8e60e634bc67bdc6"
+        }
+      },
+      "proofSha256": "6e2a0684be7fd15333bdf342d2a69beefb10839934644ae2098b8e50ced67083",
+      "pairMeanRgbDifference": 3.56147
+    },
+    {
+      "id": "turkey-looking-back",
+      "title": "Turkey Looking Back",
+      "alt": "A bronze wild turkey turns its head back toward a partially spread barred tail.",
+      "description": "A bronze wild turkey turns its head back toward a partially spread barred tail. Suitable for greeting cards and wildlife activity sheets.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-looking-back-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "22a7d2cc625b9f50c9dd4bf484c3b49f97e4bbf14144b567356902ab5a520fab",
+      "inputSignature": "cd63cf83f7c12e160312377607e0e33821be2689aa7bdb16a7631ca4a2459d75",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 972415,
+        "weightedCmykRmse": 1.342385
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1392442,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175304,
+          "weightedCmykRmse": 0.74995
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1121527,
+          "weightedCmykRmse": 0.887168
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041198,
+          "weightedCmykRmse": 1.07935
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 972415,
+          "weightedCmykRmse": 1.342385
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        144,
+        16,
+        1281,
+        1176
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_203/exports/turkey-looking-back.pdf",
+          "bytes": 972415,
+          "sha256": "5b7ef15be63a0547ca87a268d68c5dca3145d6553bbd498a65c80bce6096cace"
+        },
+        "webp": {
+          "path": "work/production/wave_203/exports/turkey-looking-back.webp",
+          "bytes": 1482676,
+          "sha256": "ae13c9967f6ec47644565f91c483cc925f0151017c6a7f5a30b87bd904999664"
+        },
+        "thumb": {
+          "path": "work/production/wave_203/exports/turkey-looking-back-thumb.webp",
+          "bytes": 80096,
+          "sha256": "5dd415c2fb8da2512bf490cf559785e6592e673fa98c1be7131294913a5830ef"
+        }
+      },
+      "proofSha256": "9566a92b6b261b328220d587373d1d6ea82d2844ca4846736410da4176db9415",
+      "pairMeanRgbDifference": 5.79911
+    },
+    {
+      "id": "turkey-pecking-ground",
+      "title": "Turkey Pecking",
+      "alt": "A turkey bends to peck a single seed on the ground line, full body and feet visible.",
+      "description": "A turkey bends to peck a single seed on the ground line, full body and feet visible. Suitable for farm activity sheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-pecking-ground-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 900,
+      "pdfHeight": 750,
+      "sourceType": "raster",
+      "sourceSha256": "f9310d59fbc56fd8738c6fb3f47449f04e5f057c3dafb15ee8c00defb181cfbe",
+      "inputSignature": "c7ff2e8f172b1bd4ab9807748c53af96b517e3db245775485585208309f3383d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 954155,
+        "weightedCmykRmse": 0.782471
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1125227,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 954155,
+          "weightedCmykRmse": 0.782471
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        116,
+        54,
+        1355,
+        1083
+      ],
+      "image": {
+        "width": 900,
+        "height": 750,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_203/exports/turkey-pecking-ground.pdf",
+          "bytes": 954155,
+          "sha256": "044b02676392e3c0bc623b4fbc3e30aabe405db0a651985be7897c8d13be2668"
+        },
+        "webp": {
+          "path": "work/production/wave_203/exports/turkey-pecking-ground.webp",
+          "bytes": 1259864,
+          "sha256": "2321a854a9012a392d09a2eb0715ae585fda595b67313a738558e25657148f1f"
+        },
+        "thumb": {
+          "path": "work/production/wave_203/exports/turkey-pecking-ground-thumb.webp",
+          "bytes": 66788,
+          "sha256": "7a36bbb2b76cfaf0f0a8cb6894618a98c499e106cf617ea547848becfecb0839"
+        }
+      },
+      "proofSha256": "a1b3b9a6beb6f3a2d00b20f9917bd0878a3614fcd48d5289025ef43276bc059f",
+      "pairMeanRgbDifference": 6.48217
+    },
+    {
+      "id": "turkey-perched-fence",
+      "title": "Turkey on Fence Rail",
+      "alt": "A turkey balances on a short isolated wooden fence rail with two visible feet.",
+      "description": "A turkey balances on a short isolated wooden fence rail with two visible feet. Suitable for farm poster.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_203/source/turkey-perched-fence-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1284,
+      "height": 1225,
+      "pdfWidth": 900,
+      "pdfHeight": 859,
+      "sourceType": "raster",
+      "sourceSha256": "35c9a66bf88e4704dc37d3ef0a21bed3238a42bbb17b31234721c055372a2e67",
+      "inputSignature": "8440d0e249f1d21293b45cff6239e16f341b5b6177fbfd7c4d599e3583374943",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 945097,
+        "weightedCmykRmse": 1.137124
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1238947,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1076731,
+          "weightedCmykRmse": 0.782654
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1022180,
+          "weightedCmykRmse": 0.954382
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 945097,
+          "weightedCmykRmse": 1.137124
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        61,
+        14,
+        1225,
+        1200
+      ],
+      "image": {
+        "width": 900,
+        "height": 859,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_203/exports/turkey-perched-fence.pdf",
+          "bytes": 945097,
+          "sha256": "e205404c56c55cd694d3399f00926be09b366f879ef749cc2a7232a1a56eeadd"
+        },
+        "webp": {
+          "path": "work/production/wave_203/exports/turkey-perched-fence.webp",
+          "bytes": 1135202,
+          "sha256": "55bfc2987ae06ee101809ebceecf0f88639e7e2c078ca1520d087f25aa0a1b49"
+        },
+        "thumb": {
+          "path": "work/production/wave_203/exports/turkey-perched-fence-thumb.webp",
+          "bytes": 69430,
+          "sha256": "2abff35304d7931d7535bc638b821b17425f68ac10484fe4874c9648b4099563"
+        }
+      },
+      "proofSha256": "ed1e8d844f4c24a9aae8d0e00924ea87fe4f10d73fa8c875b3fcf613acb7c2a3",
+      "pairMeanRgbDifference": 4.46706
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:27.308Z"
+}

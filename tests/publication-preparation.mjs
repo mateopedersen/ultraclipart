@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { HARD_CAP } from '../scripts/r2/plan.mjs';
 import assert from 'node:assert/strict';
 import { preparePublication } from '../scripts/r2/prepare-publication.mjs';
 import {
@@ -80,7 +81,7 @@ test('incomplete or unverified journals cannot produce a publication manifest', 
     (j) => (j.verifiedArtworkIds = []),
     (j) => (j.verifiedObjects[0].sha256 = 'c'.repeat(64)),
     (j) => j.inventoryScope.jurisdictions.pop(),
-    (j) => (j.aggregateBytes = 8_000_000_001),
+    (j) => (j.aggregateBytes = HARD_CAP + 1),
   ]) {
     const bodies = new Map(),
       a = artwork('drawing-one', bodies),

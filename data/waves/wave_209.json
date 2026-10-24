@@ -1,0 +1,114 @@
+{
+  "wave": "wave_209",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-turkey-circular-badge",
+      "title": "Turkey Round Emblem",
+      "alt": "A compact turkey bust sits inside a simple open circular leaf frame with no writing.",
+      "description": "A compact turkey bust sits inside a simple open circular leaf frame with no writing. Suitable for personal invitation seal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_209/source/turkey-turkey-circular-badge-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 750,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 750,
+      "pdfHeight": 685,
+      "sourceType": "raster",
+      "sourceSha256": "d7c1ea1f632d0290f890168250d4e4e11d0b343b533ea6849dd70fad4ae12529",
+      "inputSignature": "50f472f588ab8accdac41f5936353f1904e06b8fd412dc5a4132db2726482d18",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 947114,
+        "weightedCmykRmse": 0.98901
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1194705,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1046331,
+          "weightedCmykRmse": 0.688959
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1003795,
+          "weightedCmykRmse": 0.82503
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 947114,
+          "weightedCmykRmse": 0.98901
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        40,
+        1296,
+        1165
+      ],
+      "image": {
+        "width": 750,
+        "height": 685,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_209/exports/turkey-turkey-circular-badge.pdf",
+          "bytes": 947114,
+          "sha256": "732ef34bcd80b0d48529ac2481fd09710c6f71c0345838cd21657f9b32c70768"
+        },
+        "webp": {
+          "path": "work/production/wave_209/exports/turkey-turkey-circular-badge.webp",
+          "bytes": 1745892,
+          "sha256": "82451b8a7d10432c3520860695fc21d0744d93cd1aace392f54e15c81082c52d"
+        },
+        "thumb": {
+          "path": "work/production/wave_209/exports/turkey-turkey-circular-badge-thumb.webp",
+          "bytes": 110184,
+          "sha256": "444ed5a826f5fbb96e0bf0db986415fe8fcae4dbe3f3c7acbe850b5189dfab7e"
+        }
+      },
+      "proofSha256": "6be71d55b89130d6e8f1efe1a9aec8f7e38bb92bd26542f160d4da67d076ea03",
+      "pairMeanRgbDifference": 9.21425
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Rendered CMYK PDF contact checked: correct subjects and composition, no visible background halo or clipped anatomy.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:28.340Z"
+}

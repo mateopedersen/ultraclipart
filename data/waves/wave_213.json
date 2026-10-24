@@ -1,0 +1,359 @@
+{
+  "wave": "wave_213",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 4,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-turkey-sunrise",
+      "title": "Morning Turkey",
+      "alt": "A turkey calls with its beak open beside a simple sunrise arc, isolated icon composition.",
+      "description": "A turkey calls with its beak open beside a simple sunrise arc, isolated icon composition. Suitable for morning routine card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-turkey-sunrise-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "dc5f90e790dba3335126746c7e672e53e4b543deb8c7bd5a649f3db3504efd6b",
+      "inputSignature": "54e307d97e3f941673273af4e27ed9ee36b83366d4ced1d48ace788b24bb0517",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 886410,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 886410,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        39,
+        1231,
+        1230
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_213/exports/turkey-turkey-sunrise.pdf",
+          "bytes": 886410,
+          "sha256": "8f5a02a205fb1538cfe131f2af67beb3fc390cd0a0e74322e4409c946b23a978"
+        },
+        "webp": {
+          "path": "work/production/wave_213/exports/turkey-turkey-sunrise.webp",
+          "bytes": 1063004,
+          "sha256": "202c1c0c9b180737d09193636fb707aaa019bc6688f26b3e634c28c6559456de"
+        },
+        "thumb": {
+          "path": "work/production/wave_213/exports/turkey-turkey-sunrise-thumb.webp",
+          "bytes": 71744,
+          "sha256": "86f47c3ee2e28927976d14b5e79d933361b3c039a0cd277d297663f02f97f9c6"
+        }
+      },
+      "proofSha256": "fef4430ec841c858d4d2115fb07f30e7c63e7aa7fbbe73286537300259c96b67",
+      "pairMeanRgbDifference": 8.96275
+    },
+    {
+      "id": "turkey-turkey-in-snow",
+      "title": "Turkey in Snow",
+      "alt": "A wild turkey steps through a small pale snow patch with a visible footprint.",
+      "description": "A wild turkey steps through a small pale snow patch with a visible footprint. Suitable for seasonal animal lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-turkey-in-snow-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "f429c6c7ac2409210dffdb271538dc31578ab96377db8833214fe313cc598dd3",
+      "inputSignature": "3e37b539470f374d2c1fb4fa522d1b08eed72a5bf5332ec784cfd31fc7bd1d9b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 895681,
+        "weightedCmykRmse": 0.750982
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1073872,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 895681,
+          "weightedCmykRmse": 0.750982
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        68,
+        1210,
+        1216
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_213/exports/turkey-turkey-in-snow.pdf",
+          "bytes": 895681,
+          "sha256": "e28cf46f12306ca185004d0a1eec71a73bf4549c8b772c849d2beb079ad09a48"
+        },
+        "webp": {
+          "path": "work/production/wave_213/exports/turkey-turkey-in-snow.webp",
+          "bytes": 1466386,
+          "sha256": "88d7317af606a63ac289ea9ba31489a2d18a9c43b7ce89fcb594bb570b68a1ce"
+        },
+        "thumb": {
+          "path": "work/production/wave_213/exports/turkey-turkey-in-snow-thumb.webp",
+          "bytes": 89458,
+          "sha256": "b75fd47019fb9af4387bbf0a356f6f5184d8fed680959b7ec6a8739df6325b41"
+        }
+      },
+      "proofSha256": "766e9c728376af44d47d627557657f46f84004544f88375adb17eae0a50f6ba4",
+      "pairMeanRgbDifference": 8.81419
+    },
+    {
+      "id": "turkey-turkey-with-acorns",
+      "title": "Turkey Foraging Acorns",
+      "alt": "A turkey looks down at exactly three scattered acorns, full bird visible.",
+      "description": "A turkey looks down at exactly three scattered acorns, full bird visible. Suitable for autumn worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-turkey-with-acorns-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "1047c16484c35b504787c1d69eabe11657891cfbeb3e35d249ffe2e70af0141f",
+      "inputSignature": "dcd13d9851501e8446d53607527c9e5396b87870e33d3899b3de92ff0de9ab1d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 859616,
+        "weightedCmykRmse": 0.784656
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1031276,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 859616,
+          "weightedCmykRmse": 0.784656
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        15,
+        188,
+        1232,
+        1086
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_213/exports/turkey-turkey-with-acorns.pdf",
+          "bytes": 859616,
+          "sha256": "abf00afb46d407b1bd3c185a115abcaf01b6825780134af995b94d5771558687"
+        },
+        "webp": {
+          "path": "work/production/wave_213/exports/turkey-turkey-with-acorns.webp",
+          "bytes": 1304662,
+          "sha256": "1b957e0c8da64e333bd56617ff54208a5938bf24886be0418e9c82f0bd2831ae"
+        },
+        "thumb": {
+          "path": "work/production/wave_213/exports/turkey-turkey-with-acorns-thumb.webp",
+          "bytes": 78752,
+          "sha256": "979d608ee007142bbbe42a0ef94defe7d31ce27ee04ec48fab9dad98ab337c20"
+        }
+      },
+      "proofSha256": "1f611a0f1abdb2bab9a50a2553786cf4cf4a66bdba7de8b97c411de10bc8bef8",
+      "pairMeanRgbDifference": 10.0887
+    },
+    {
+      "id": "turkey-three-eggs-nest",
+      "title": "Turkey Eggs in Nest",
+      "alt": "Exactly three speckled turkey eggs resting in a shallow twig-and-straw nest.",
+      "description": "Exactly three speckled turkey eggs resting in a shallow twig-and-straw nest. Suitable for life-cycle lesson.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_213/source/turkey-three-eggs-nest-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "790d54033a3886a360af9cf467df4ecacdf3f1a43b162231446c1ca7f72d6dde",
+      "inputSignature": "588c0524dcfea1f72c05d41e640f8dae6318f01e3d8390f03764deda931c93fd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 952336,
+        "weightedCmykRmse": 1.045988
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1253441,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1068328,
+          "weightedCmykRmse": 0.719896
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1022488,
+          "weightedCmykRmse": 0.857081
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 952336,
+          "weightedCmykRmse": 1.045988
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        7,
+        185,
+        1250,
+        1114
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_213/exports/turkey-three-eggs-nest.pdf",
+          "bytes": 952336,
+          "sha256": "2c72d79a6f7de62ffb24b95858c2c38886d911596b4e0680311e827e8a1de03c"
+        },
+        "webp": {
+          "path": "work/production/wave_213/exports/turkey-three-eggs-nest.webp",
+          "bytes": 1624222,
+          "sha256": "146bdbf785c03ec7ba635210da695a6c00733a8f12e047baab62b05a3cc86c74"
+        },
+        "thumb": {
+          "path": "work/production/wave_213/exports/turkey-three-eggs-nest-thumb.webp",
+          "bytes": 93118,
+          "sha256": "5a4ca293c1aa8cc7ead7b4e286a4cbca092ee3436166ca9bcc7e97ad623c730d"
+        }
+      },
+      "proofSha256": "fc5e3d74b6194788699a1b0fc9279d4e81976dd48d433dbe8b67e9cb9be25d42",
+      "pairMeanRgbDifference": 11.96685
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Native source and rendered CMYK PDF proof reviewed: matching subject, unclipped silhouette, transparent background and distinct composition.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:29.102Z"
+}

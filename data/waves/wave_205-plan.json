@@ -1,0 +1,44 @@
+{
+  "wave": "wave_205",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-turkey-silhouette-profile",
+      "title": "Turkey Profile Silhouette",
+      "alt": "One solid dark side-profile turkey silhouette with correctly shaped beak, wattle and feet.",
+      "description": "One solid dark side-profile turkey silhouette with correctly shaped beak, wattle and feet. Suitable for stencil craft.",
+      "color": "Black",
+      "style": "Silhouette",
+      "source": "work/production/wave_205/source/turkey-turkey-silhouette-profile-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-silhouette-fan",
+      "title": "Fan-Tail Silhouette",
+      "alt": "One single-color frontal turkey silhouette with negative gaps between major feathers.",
+      "description": "One single-color frontal turkey silhouette with negative gaps between major feathers. Suitable for cutout craft.",
+      "color": "Black",
+      "style": "Silhouette",
+      "source": "work/production/wave_205/source/turkey-turkey-silhouette-fan-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-outline-profile",
+      "title": "Turkey Profile Coloring Outline",
+      "alt": "Black clean-line side profile of a walking turkey with open white fill and no grayscale.",
+      "description": "Black clean-line side profile of a walking turkey with open white fill and no grayscale. Suitable for coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_205/source/turkey-turkey-outline-profile-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

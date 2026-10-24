@@ -1,0 +1,55 @@
+{
+  "wave": "wave_211",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-roast-turkey-platter",
+      "title": "Roast Turkey in a Pan",
+      "alt": "An overhead view of a golden roast turkey in a dark roasting pan with carrots, onions and sage leaves.",
+      "description": "An overhead view of a golden roast turkey in a dark roasting pan with carrots, onions and sage leaves. Suitable for holiday menu.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-roast-turkey-platter-v3.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-turkey-slices-board",
+      "title": "Carved Turkey Slices",
+      "alt": "Three slices of cooked turkey on a cutting board beside a carving fork, no person.",
+      "description": "Three slices of cooked turkey on a cutting board beside a carving fork, no person. Suitable for recipe card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-turkey-slices-board-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-leg-food",
+      "title": "Roasted Turkey Drumstick",
+      "alt": "One cooked turkey drumstick with a neat foil-free bone end, isolated food icon.",
+      "description": "One cooked turkey drumstick with a neat foil-free bone end, isolated food icon. Suitable for menu illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-turkey-leg-food-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-turkey-sandwich",
+      "title": "Turkey Sandwich",
+      "alt": "A halved turkey sandwich with sliced bread, lettuce and visible turkey slices on a small plain plate.",
+      "description": "A halved turkey sandwich with sliced bread, lettuce and visible turkey slices on a small plain plate. Suitable for leftover recipe card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_211/source/turkey-turkey-sandwich-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

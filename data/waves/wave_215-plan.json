@@ -1,0 +1,55 @@
+{
+  "wave": "wave_215",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-hen-and-two-poults",
+      "title": "Hen with Two Poults",
+      "alt": "A wild turkey hen bends her head toward two striped poults looking up at her.",
+      "description": "A wild turkey hen bends her head toward two striped poults looking up at her. Suitable for classroom family and life-cycle activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_215/source/turkey-hen-and-two-poults-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-roosting-turkey",
+      "title": "Sleeping Turkey on a Branch",
+      "alt": "A wild turkey rests on a short branch with its eyes closed and head tucked into its shoulder feathers.",
+      "description": "A wild turkey rests on a short branch with its eyes closed and head tucked into its shoulder feathers. Suitable for wildlife worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_215/source/turkey-roosting-turkey-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-simple-turkey-diagram",
+      "title": "Wild Turkey in Flight",
+      "alt": "A wild turkey flies with barred wings raised, its neck extended and feet tucked beneath its body.",
+      "description": "A wild turkey flies with barred wings raised, its neck extended and feet tucked beneath its body. Suitable for label-it-yourself worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_215/source/turkey-simple-turkey-diagram-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-heritage-bourbon-red",
+      "title": "Resting Bourbon Red Turkey",
+      "alt": "A resting Bourbon Red turkey has chestnut body feathers, a pale red head, and white wing and tail feathers.",
+      "description": "A resting Bourbon Red turkey has chestnut body feathers, a pale red head, and white wing and tail feathers. Suitable for breed comparison.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_215/source/turkey-heritage-bourbon-red-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    }
+  ]
+}

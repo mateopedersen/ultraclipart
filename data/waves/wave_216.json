@@ -1,0 +1,177 @@
+{
+  "wave": "wave_216",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-autumn-leaf-turkey",
+      "title": "Autumn Leaf Craft Turkey",
+      "alt": "A friendly brown craft turkey has a fan of red, orange and yellow autumn leaves for its tail.",
+      "description": "A friendly brown craft turkey has a fan of red, orange and yellow autumn leaves for its tail. Suitable for fall craft.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_216/source/turkey-autumn-leaf-turkey-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "ef39bda456d0265ed0d59fa9a22f7461c685a3fa78cf802162e017d094feda13",
+      "inputSignature": "fd7b27677f26bc839591ca1e5692be1f4cb3393ef79a52f0863b03d8e18acb82",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 876832,
+        "weightedCmykRmse": 0.759298
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1058152,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 876832,
+          "weightedCmykRmse": 0.759298
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        58,
+        54,
+        1198,
+        1187
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_216/exports/turkey-autumn-leaf-turkey.pdf",
+          "bytes": 876832,
+          "sha256": "857b5d2459207530d7cbf3e0cef07236573862cf6cd7c6e240f25d42da357a33"
+        },
+        "webp": {
+          "path": "work/production/wave_216/exports/turkey-autumn-leaf-turkey.webp",
+          "bytes": 1412736,
+          "sha256": "24ecb3063b325cdb88ea6b31cd4aeaf7b631c91da6fe2e0fbf0ea9cf0dd56f4d"
+        },
+        "thumb": {
+          "path": "work/production/wave_216/exports/turkey-autumn-leaf-turkey-thumb.webp",
+          "bytes": 74200,
+          "sha256": "e8b0f843fe6beedafc5b7ebc54890c877f7d4934ea88fc7a19bfc7c2e59d59c1"
+        }
+      },
+      "proofSha256": "8c11149d1c403bd7942f3a1ce20064c70ea46643087db286a25ed10a02b92169",
+      "pairMeanRgbDifference": 4.77579
+    },
+    {
+      "id": "turkey-turkey-track-pair",
+      "title": "Turkey Footprint Pair",
+      "alt": "Two dark brown turkey footprint silhouettes are arranged diagonally, each with three long forward toes and a short rear toe.",
+      "description": "Two dark brown turkey footprint silhouettes are arranged diagonally, each with three long forward toes and a short rear toe. Suitable for tracking lesson.",
+      "color": "Brown",
+      "style": "Silhouette",
+      "source": "work/production/wave_216/source/turkey-turkey-track-pair-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "5377db1bdf1e436d3fa8ce742a65ad1d939728b7e98046af89026c886f17b97d",
+      "inputSignature": "0e6836c6cf676e562b24c4836ae42e7bd78c9b208d4176c4f9971e43ef86a8f8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 268083,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 268083,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        131,
+        95,
+        1132,
+        1162
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_216/exports/turkey-turkey-track-pair.pdf",
+          "bytes": 268083,
+          "sha256": "7a38df8bcce797a853c9b1155fe36dd99b883cd2484574cb21c3f48f1f32f972"
+        },
+        "webp": {
+          "path": "work/production/wave_216/exports/turkey-turkey-track-pair.webp",
+          "bytes": 155282,
+          "sha256": "b72ab304b1373e1a329125a02acedec44ffa266deb989cd07e67dde34a991796"
+        },
+        "thumb": {
+          "path": "work/production/wave_216/exports/turkey-turkey-track-pair-thumb.webp",
+          "bytes": 19276,
+          "sha256": "37e9d73958e6931e6bfa74347eef941385c990a8d7df64ecab97e498db334545"
+        }
+      },
+      "proofSha256": "81ad5f4047877d3fbaa56bf9fd24f477fa11d1bf57ebcc454ec80faa63d1c2c6",
+      "pairMeanRgbDifference": 2.28619
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Native source and rendered CMYK PDF proof reviewed: matching subject, unclipped silhouette, transparent background and distinct composition.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:29.630Z"
+}

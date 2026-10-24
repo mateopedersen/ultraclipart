@@ -1,0 +1,176 @@
+{
+  "wave": "wave_201",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-hen-walking",
+      "title": "Walking Turkey Hen",
+      "alt": "A slender hen walks right with a closed tail, compact wings and alert head.",
+      "description": "A slender hen walks right with a closed tail, compact wings and alert head. Suitable for bird identification cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_201/source/turkey-hen-walking-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "d3e5a07c8016497f150f27262a95d90bbc4ca6ec9baf81b9b3323f95fd3d5683",
+      "inputSignature": "c9db8ed5e97c0e4bf17c1a60e90e5d0dfff532aa434bf8d009a3bb0a9e89a551",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 918143,
+        "weightedCmykRmse": 0.823198
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1023062,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 918143,
+          "weightedCmykRmse": 0.823198
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        27,
+        36,
+        1284,
+        1141
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_201/exports/turkey-hen-walking.pdf",
+          "bytes": 918143,
+          "sha256": "c6ac80ab11748ea698559913353ace4dcab379d4a4b1559682305a4999f9867f"
+        },
+        "webp": {
+          "path": "work/production/wave_201/exports/turkey-hen-walking.webp",
+          "bytes": 865544,
+          "sha256": "c50f747ab00a75b0410abac69bd5d5592f4a86b807058dc1fbaf834a75111954"
+        },
+        "thumb": {
+          "path": "work/production/wave_201/exports/turkey-hen-walking-thumb.webp",
+          "bytes": 53980,
+          "sha256": "fec6253f8aebefee77f9190ef3fd4543b66e0ed3c2c59aa2927e54b20918e2ed"
+        }
+      },
+      "proofSha256": "bc46b0bf6d6ea5b302870e81b7243034bd02cf0683f07e2365116822066cec58",
+      "pairMeanRgbDifference": 3.57937
+    },
+    {
+      "id": "turkey-poult-first-steps",
+      "title": "Turkey Poult First Steps",
+      "alt": "A single fluffy poult takes a small step, tiny wing buds and short beak clearly visible.",
+      "description": "A single fluffy poult takes a small step, tiny wing buds and short beak clearly visible. Suitable for early-years flashcard.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_201/source/turkey-poult-first-steps-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "turkey",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "9bd62ddb63e48d6e59fa6e7492e689a8f45b6fa5ad15980c484defbbe5afbb1f",
+      "inputSignature": "4d95b04ace59669e976c6cfbe273179cbdc333279eb75a4b0e4efac7d967538a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 757686,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 757686,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        213,
+        69,
+        1172,
+        1138
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_201/exports/turkey-poult-first-steps.pdf",
+          "bytes": 757686,
+          "sha256": "b78f453fbd736e16da0f126f2ca321eb273729c2f9b58f6ef353d805e7c7e2f1"
+        },
+        "webp": {
+          "path": "work/production/wave_201/exports/turkey-poult-first-steps.webp",
+          "bytes": 853786,
+          "sha256": "85c375d6344a8028136c2c567c5f3e755fb78f64c20ba1a681f0f27162ec6539"
+        },
+        "thumb": {
+          "path": "work/production/wave_201/exports/turkey-poult-first-steps-thumb.webp",
+          "bytes": 50058,
+          "sha256": "dad594d8ad518ab76c0f4fa3a5f61b190f059d972fdbcbf6b0ac8594718d09d0"
+        }
+      },
+      "proofSha256": "e171ad61ef846417a59aaae4e5af9590fecb1b1b7b886ee501cac1145044b282",
+      "pairMeanRgbDifference": 1.80974
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:26.958Z"
+}

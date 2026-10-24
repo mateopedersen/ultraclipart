@@ -1,0 +1,184 @@
+{
+  "wave": "wave_214",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "turkey-barnyard-pair",
+      "title": "Two Turkeys Facing",
+      "alt": "Two visually distinct adult turkeys face each other with space between them, neither touching.",
+      "description": "Two visually distinct adult turkeys face each other with space between them, neither touching. Suitable for matching activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_214/source/turkey-barnyard-pair-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "eb816615237bddc34c8c4b30ded89823ce3bacd051ef0b6348ea59335d6978ad",
+      "inputSignature": "da8057dd997fd355ea88fe6791dba44237876bd7528c42c30d56390949e4d022",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 932907,
+        "weightedCmykRmse": 0.763517
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1116300,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 932907,
+          "weightedCmykRmse": 0.763517
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        13,
+        130,
+        1250,
+        1152
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_214/exports/turkey-barnyard-pair.pdf",
+          "bytes": 932907,
+          "sha256": "a6f8f83b26e79bb5fdc80c311b826e2c1243ab220b8333876b6a135b87b92c4a"
+        },
+        "webp": {
+          "path": "work/production/wave_214/exports/turkey-barnyard-pair.webp",
+          "bytes": 1394026,
+          "sha256": "784dec6fb89661f16cced4f5c7ef53c3a8de56e6f23dfb69c8c2ae0cbcf8edc6"
+        },
+        "thumb": {
+          "path": "work/production/wave_214/exports/turkey-barnyard-pair-thumb.webp",
+          "bytes": 86736,
+          "sha256": "d02286c4ce49ad25ef3c2e249c39937825f06b7c786de02293a1463d550f4526"
+        }
+      },
+      "proofSha256": "2362ac43d91f69dd631aa3e98375dca10f5ad65a2b52dba59acf242bafab9356",
+      "pairMeanRgbDifference": 10.5024
+    },
+    {
+      "id": "turkey-turkey-family-group",
+      "title": "Turkey Family Trio",
+      "alt": "An adult tom, hen and one poult form a small balanced trio with three separate full bodies.",
+      "description": "An adult tom, hen and one poult form a small balanced trio with three separate full bodies. Suitable for animal-family chart.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_214/source/turkey-turkey-family-group-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800,
+      "topic": "turkey",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 800,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "ec7fff18b77ad843207d7d374b7659ef1f17c734bb738847195ef58847957acf",
+      "inputSignature": "66614eaf1cd96149e1d934898be1b8d51371b345b38785568df88d41ca5e94bb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 906417,
+        "weightedCmykRmse": 0.7798
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1062743,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 906417,
+          "weightedCmykRmse": 0.7798
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        12,
+        137,
+        1242,
+        1142
+      ],
+      "image": {
+        "width": 800,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_214/exports/turkey-turkey-family-group.pdf",
+          "bytes": 906417,
+          "sha256": "0ac28d42068639b6e9b22dd3b55756760b3e39f04ab89b75a64591b846e55ec7"
+        },
+        "webp": {
+          "path": "work/production/wave_214/exports/turkey-turkey-family-group.webp",
+          "bytes": 1323160,
+          "sha256": "565310705a829e9d86a473d7c34482064ef494b5c30585b6fc344376ae2b99e0"
+        },
+        "thumb": {
+          "path": "work/production/wave_214/exports/turkey-turkey-family-group-thumb.webp",
+          "bytes": 80004,
+          "sha256": "67a9193e7bc4de7236f0a257370634769c53911992a8fbddc3d8cc3d20273813"
+        }
+      },
+      "proofSha256": "110b5f8d0e943a46be492f875755ee3ebd4d42bfbeb1405e202e8403d95a5567",
+      "pairMeanRgbDifference": 10.26126
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Native source and rendered CMYK PDF proof reviewed: matching subject, unclipped silhouette, transparent background and distinct composition.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-24T10:25:29.299Z"
+}

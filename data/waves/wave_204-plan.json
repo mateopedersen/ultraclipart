@@ -1,0 +1,44 @@
+{
+  "wave": "wave_204",
+  "topic": "turkey",
+  "method": "builtin-image-generation",
+  "research": "data/research/turkey-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "turkey-pumpkin-side-companion",
+      "title": "Turkey Beside Pumpkin",
+      "alt": "A friendly turkey stands next to a single squat pumpkin, bird larger than prop.",
+      "description": "A friendly turkey stands next to a single squat pumpkin, bird larger than prop. Suitable for seasonal card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_204/source/turkey-pumpkin-side-companion-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    },
+    {
+      "id": "turkey-corn-stalk-turkey",
+      "title": "Turkey by Corn Stalk",
+      "alt": "A turkey stands near one intact corn stalk with two visible ears, no farm landscape.",
+      "description": "A turkey stands near one intact corn stalk with two visible ears, no farm landscape. Suitable for harvest worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_204/source/turkey-corn-stalk-turkey-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    },
+    {
+      "id": "turkey-hay-bale-turkey",
+      "title": "Turkey on Hay Bale",
+      "alt": "A turkey sits atop a compact rectangular hay bale, tail falling behind the bale.",
+      "description": "A turkey sits atop a compact rectangular hay bale, tail falling behind the bale. Suitable for farm-themed print.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_204/source/turkey-hay-bale-turkey-v1.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 800
+    }
+  ]
+}
