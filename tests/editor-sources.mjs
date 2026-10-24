@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { validateEditorSource } from '../src/lib/artwork-source.ts';
 import { verifiedSourceUrl } from '../src/editor/source-policy.ts';
+import { readPublishedPage } from './support/published-page.mjs';
 const read = (p) => readFileSync(new URL('../' + p, import.meta.url), 'utf8');
 const catalog = JSON.parse(read('data/art.json'));
 const raster = catalog.find((a) => a.sourceType === 'raster');
@@ -60,9 +61,9 @@ test(
   { skip: !existsSync(new URL('../dist', import.meta.url)) },
   () => {
     for (const art of catalog) {
-      const detail = read(`dist/art/${art.id}/index.html`);
+      const detail = readPublishedPage(art, 'art');
       assert.ok(detail.includes(`href="/edit/${art.id}/"`), `missing Edit link: ${art.id}`);
-      const editor = read(`dist/edit/${art.id}/index.html`);
+      const editor = readPublishedPage(art, 'edit');
       assert.ok(editor.includes(`data-art-id="${art.id}"`));
       assert.match(editor, /<meta name="robots" content="noindex/);
       if (art.sourceType === 'raster') {
