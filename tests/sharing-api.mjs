@@ -9,6 +9,7 @@ import {
   validateWebP,
   insertShare,
   SHARE_LIMITS,
+  stripWebPMetadata,
 } from '../server/share/handler.mjs';
 
 const origin = 'https://ultraclipart.com';
@@ -22,6 +23,37 @@ const input = {
   imageData: image.toString('base64'),
   turnstileToken: 'verified',
 };
+test('native canvas ICC metadata is removed while alpha and raster pixels remain identical', async () => {
+  const native = await sharp(image).withMetadata().webp().toBuffer();
+  const cleaned = stripWebPMetadata(native);
+  assert.ok(cleaned.length < native.length);
+  const chunks = (bytes) => {
+    const result = [];
+    for (let p = 12; p < bytes.length;) {
+      const size = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getUint32(
+        p + 4,
+        true,
+      );
+      const type = String.fromCharCode(...bytes.subarray(p, p + 4));
+      if (['VP8 ', 'VP8L', 'ALPH'].includes(type))
+        result.push(Buffer.from(bytes.subarray(p, p + 8 + size)));
+      p += 8 + size + (size % 2);
+    }
+    return result;
+  };
+  assert.deepEqual(chunks(cleaned), chunks(native));
+  assert.deepEqual(
+    await sharp(cleaned).ensureAlpha().raw().toBuffer(),
+    await sharp(native).ensureAlpha().raw().toBuffer(),
+  );
+  assert.deepEqual(validateWebP(cleaned), { width: 96, height: 80 });
+  assert.equal(
+    validateShare({ ...input, imageData: native.toString('base64') }).image.byteLength,
+    cleaned.byteLength,
+  );
+  for (const invalid of [native.subarray(0, -1), Buffer.from('not an image')])
+    assert.throws(() => stripWebPMetadata(invalid));
+});
 function database() {
   const raw = new DatabaseSync(':memory:');
   raw.exec(readFileSync('migrations/0003_public_shares.sql', 'utf8'));

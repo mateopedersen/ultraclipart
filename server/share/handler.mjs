@@ -152,8 +152,45 @@ async function readJson(request) {
 const ascii = (bytes, offset, count) =>
   String.fromCharCode(...bytes.subarray(offset, offset + count));
 const uint24 = (bytes, at) => bytes[at] | (bytes[at + 1] << 8) | (bytes[at + 2] << 16);
-// A bounded, non-animated WebP container only. Browsers re-encode before publication;
-// metadata chunks are rejected to avoid accidentally exposing imported EXIF/XMP.
+// Native browser encoders may attach an ICC profile even to a new sRGB canvas.
+// Remove metadata before validating/storing; retain the encoded alpha/raster bytes.
+export function stripWebPMetadata(bytes) {
+  if (
+    bytes.length < 12 ||
+    bytes.length > SHARE_LIMITS.maxImageBytes ||
+    ascii(bytes, 0, 4) !== 'RIFF' ||
+    ascii(bytes, 8, 4) !== 'WEBP'
+  )
+    throw new ShareError('invalid_image', 415);
+  const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+  if (view.getUint32(4, true) !== bytes.length - 8) throw new ShareError('invalid_image', 415);
+  const chunks = [];
+  let size = 12;
+  for (let offset = 12; offset < bytes.length;) {
+    if (offset + 8 > bytes.length) throw new ShareError('invalid_image', 415);
+    const type = ascii(bytes, offset, 4),
+      length = view.getUint32(offset + 4, true);
+    const end = offset + 8 + length + (length % 2);
+    if (end > bytes.length) throw new ShareError('invalid_image', 415);
+    if (!['ICCP', 'EXIF', 'XMP '].includes(type)) {
+      const chunk = bytes.slice(offset, end);
+      if (type === 'VP8X' && length >= 1) chunk[8] &= ~0x2c;
+      chunks.push(chunk);
+      size += chunk.length;
+    }
+    offset = end;
+  }
+  const result = new Uint8Array(size);
+  result.set(bytes.subarray(0, 12));
+  new DataView(result.buffer).setUint32(4, size - 8, true);
+  let offset = 12;
+  for (const chunk of chunks) {
+    result.set(chunk, offset);
+    offset += chunk.length;
+  }
+  return result;
+}
+// Only bounded, non-animated WebP raster/alpha chunks reach persistent storage.
 export function validateWebP(bytes) {
   if (!(bytes instanceof Uint8Array) || bytes.byteLength > SHARE_LIMITS.maxImageBytes)
     throw new ShareError('image_too_large', 413);
@@ -273,8 +310,9 @@ export function validateShare(value) {
     throw new ShareError('invalid_image', 415);
   }
   if (btoa(raw) !== value.imageData) throw new ShareError('invalid_image', 415);
-  const image = new Uint8Array(raw.length);
-  for (let i = 0; i < raw.length; i++) image[i] = raw.charCodeAt(i);
+  const decoded = new Uint8Array(raw.length);
+  for (let i = 0; i < raw.length; i++) decoded[i] = raw.charCodeAt(i);
+  const image = stripWebPMetadata(decoded);
   return {
     title,
     image,
