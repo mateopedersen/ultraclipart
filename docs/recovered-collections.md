@@ -22,4 +22,6 @@ The printer recovery includes 40 supplied artworks and 10 original replacements.
 
 The keyboard recovery includes 50 supplied artworks. Its 100 native downloads and 100 edited exports passed Chromium checks at four viewport widths, together with all 206 unit tests. Independent preflight verified unchanged source CMYK images and alpha in all 50 edited PDFs; the largest is 975,787 bytes. All native and edited PDF proofs were inspected. A repeated washing composition was replaced by a distinct supplied industrial keyboard outline before intake approval.
 
+The scanner recovery includes 50 supplied artworks. Its 100 native downloads and 100 edited exports passed Chromium checks at four viewport widths, together with all 206 unit tests and 14 production checks. Independent preflight verified unchanged CMYK images and alpha in all 50 edited PDFs; the largest is 982,215 bytes. All native and edited proofs were inspected. A repeated gloved barcode scanning scene was replaced by a distinct supplied bare-hand composition before intake approval.
+
 Production pages identify their source commit for both Git-connected and manual builds. A manual build resolves the current Git HEAD when Cloudflare has not supplied a revision; missing or invalid production revisions stop the build.

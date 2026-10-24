@@ -1,5 +1,5 @@
 /** Explicit topic bindings: collection labels and URL slugs are not subject identities. */
-export const TAXONOMY_VERSION = 'uc-subjects-2';
+export const TAXONOMY_VERSION = 'uc-subjects-3';
 export interface Subject {
   id: string;
   topic: string;
@@ -155,6 +155,7 @@ add(
 television|television|television|televisions|televisions,tv
 laptop|laptop|laptop|laptops|notebook computer,notebook computers,portable computer,portable computers
 printer|printer|printer|printers|desktop printer,desktop printers,printing machine,printing machines
+scanner|scanner|scanner|scanners|flatbed scanner,flatbed scanners,barcode scanner,barcode scanners,document scanner,document scanners
 keyboard|keyboard|computer keyboard|computer keyboards|keyboard,keyboards,typing keyboard,typing keyboards
 apple-logo|apple.brand|apple logo|Apple logo designs|iphone,macbook`,
 );

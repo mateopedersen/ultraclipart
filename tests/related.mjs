@@ -405,8 +405,8 @@ test('labeled relevance set: exact fruit reference, cross-subject errors and com
     assert.equal(actual, expected, id);
   }
 });
-test('T29 keyboard, laptop and printer collections have safe same-subject alternatives', () => {
-  for (const topic of ['keyboard', 'laptop', 'printer']) {
+test('T29 device collections have safe same-subject alternatives', () => {
+  for (const topic of ['keyboard', 'laptop', 'printer', 'scanner']) {
     const records = catalog.filter((artwork) => artwork.topic === topic);
     assert.ok(records.length >= 2, `${topic} collection should contain multiple artworks`);
     const safeRecords = records.filter((artwork) => index.profiles.get(artwork.id)?.eligible);
