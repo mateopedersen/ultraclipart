@@ -1,0 +1,38 @@
+{
+  "wave": "wave_124",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-snow-scarf",
+      "title": "Vampire Wrapping a Winter Scarf",
+      "alt": "A cheerful vampire in boots wraps a mustard scarf around the neck over a short navy cape.",
+      "description": "A cheerful vampire in boots wraps a mustard scarf around the neck over a short navy cape. Useful for winter clothing vocabulary.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_124/source/vampire-snow-scarf.png"
+    },
+    {
+      "id": "vampire-cupcake-tray",
+      "title": "Vampire Carrying Three Cupcakes",
+      "alt": "A vampire host holds a tray with exactly three simple cupcakes topped with tiny crescent cookies.",
+      "description": "A vampire host holds a tray with exactly three simple cupcakes topped with tiny crescent cookies. Useful for personal celebration menus.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_124/source/vampire-cupcake-tray.png"
+    },
+    {
+      "id": "vampire-door-knocker",
+      "title": "Vampire Answering a Castle Door",
+      "alt": "A friendly vampire peeks around one small arched wooden door, visible hand grasping its inner edge.",
+      "description": "A friendly vampire peeks around one small arched wooden door, visible hand grasping its inner edge. Useful for story opening prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_124/source/vampire-door-knocker.png"
+    }
+  ]
+}

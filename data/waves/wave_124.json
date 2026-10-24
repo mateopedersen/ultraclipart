@@ -1,0 +1,229 @@
+{
+  "wave": "wave_124",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-snow-scarf",
+      "title": "Vampire Wrapping a Winter Scarf",
+      "alt": "A cheerful vampire in boots wraps a mustard scarf around the neck over a short navy cape.",
+      "description": "A cheerful vampire in boots wraps a mustard scarf around the neck over a short navy cape. Useful for winter clothing vocabulary.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_124/source/vampire-snow-scarf.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f5406fcd3b9ec5e42190352865f285649ea1cfae26ca342b058f22402bee1b3c",
+      "inputSignature": "8e02a457103f436a4720ef359c7a1cf4ffdf79e6dc00c4aacef103722298237d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 979939,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 979939,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [351, 10, 905, 1222],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_124/exports/vampire-snow-scarf.pdf",
+          "bytes": 979939,
+          "sha256": "527d57771bae4722551e45ff527281fdb4f423fa9c2590e77e5f87f321bcef04"
+        },
+        "webp": {
+          "path": "work/production/wave_124/exports/vampire-snow-scarf.webp",
+          "bytes": 419880,
+          "sha256": "8ba0b2f00d32c4fb231d3cd7c10bc9e94e1ba0fcef325bdfcf8e84a18b2daadd"
+        },
+        "thumb": {
+          "path": "work/production/wave_124/exports/vampire-snow-scarf-thumb.webp",
+          "bytes": 29978,
+          "sha256": "289aeaa8edec7e456bc256fd69b825e400eefe678b4e0d001c9395171d659473"
+        }
+      },
+      "proofSha256": "10c35671492411f71acfb8c85a4e1470227a129b52cb252670d9ad7c4cc68b49",
+      "pairMeanRgbDifference": 0.82174
+    },
+    {
+      "id": "vampire-cupcake-tray",
+      "title": "Vampire Carrying Three Cupcakes",
+      "alt": "A vampire host holds a tray with exactly three simple cupcakes topped with tiny crescent cookies.",
+      "description": "A vampire host holds a tray with exactly three simple cupcakes topped with tiny crescent cookies. Useful for personal celebration menus.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_124/source/vampire-cupcake-tray.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e85c7485e621678a6cea941a9187237f4b7a66e7cf07d3df91e9d63e088ba34b",
+      "inputSignature": "284e4c141e34822e5b091c36b715ead9a3bbaa1deffe248156e0ea644931e0f5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 772574,
+        "weightedCmykRmse": 0.965813
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1165862,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 772574,
+          "weightedCmykRmse": 0.965813
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [346, 15, 939, 1239],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_124/exports/vampire-cupcake-tray.pdf",
+          "bytes": 772574,
+          "sha256": "8a8e345fa6192039c297262a308061346b429fa64a3fcf32b1509d83637c0f7a"
+        },
+        "webp": {
+          "path": "work/production/wave_124/exports/vampire-cupcake-tray.webp",
+          "bytes": 562134,
+          "sha256": "239b07299783b3fef1bd151906873e6578872045e1690f72ed459dd56ffa3282"
+        },
+        "thumb": {
+          "path": "work/production/wave_124/exports/vampire-cupcake-tray-thumb.webp",
+          "bytes": 35802,
+          "sha256": "12ca56face47ea70b72eb0b2cff6c82489a8e328cbbdf7a08290e6cd4cbcdfd5"
+        }
+      },
+      "proofSha256": "1647eec9d160215f899a4beb51db60de860915b97dd36269fe7641f0509a3ab1",
+      "pairMeanRgbDifference": 0.99713
+    },
+    {
+      "id": "vampire-door-knocker",
+      "title": "Vampire Answering a Castle Door",
+      "alt": "A friendly vampire peeks around one small arched wooden door, visible hand grasping its inner edge.",
+      "description": "A friendly vampire peeks around one small arched wooden door, visible hand grasping its inner edge. Useful for story opening prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_124/source/vampire-door-knocker.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "eaa2342bcae766539650116c6bbfa1a4288497b0c7b9d73d851090dc4f3e5fb3",
+      "inputSignature": "6dcc740efc189bba1af350ddc849ce35d8a9449a2cb4fa45ecf52e91b888353c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 938556,
+        "weightedCmykRmse": 0.897631
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1400717,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 938556,
+          "weightedCmykRmse": 0.897631
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [310, 65, 1023, 1197],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_124/exports/vampire-door-knocker.pdf",
+          "bytes": 938556,
+          "sha256": "6d54812525128b140f01c2b0e9c8b2832ef6b8e2a0ee1335a77baca2f241ee9b"
+        },
+        "webp": {
+          "path": "work/production/wave_124/exports/vampire-door-knocker.webp",
+          "bytes": 732106,
+          "sha256": "2e7ba2d7e469ba6dcccfc448063bf2dcc9bfaae7e09693c3a5ee1687e6810c8b"
+        },
+        "thumb": {
+          "path": "work/production/wave_124/exports/vampire-door-knocker-thumb.webp",
+          "bytes": 40060,
+          "sha256": "b435009f1985ad387f98da978216f952d38c8832fc5564e362c0e29c4225f45b"
+        }
+      },
+      "proofSha256": "db21a19fce76151a7feb2bc30a8920b617dc7628ed659d9beffa449c5b80b024",
+      "pairMeanRgbDifference": 1.42428
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed three native sources and actual PDF proof: scarf held naturally, exactly three cupcakes with coherent tray grips, friendly door scene fully contained with two visible hands. No clipping, duplicate pose or file mismatch.",
+  "createdAt": "2026-10-24T01:05:51.073Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

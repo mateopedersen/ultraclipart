@@ -1,0 +1,38 @@
+{
+  "wave": "wave_113",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-organ-player",
+      "title": "Vampire Playing a Small Organ",
+      "alt": "A seated vampire with swept silver hair plays a compact wooden keyboard with five simple organ pipes.",
+      "description": "A seated vampire with swept silver hair plays a compact wooden keyboard with five simple organ pipes. Useful for music story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_113/source/vampire-organ-player.png"
+    },
+    {
+      "id": "vampire-rose-gift",
+      "title": "Vampire Offering a Rose",
+      "alt": "A shy young vampire with wavy dark hair offers one peach rose, other hand resting against a teal waistcoat.",
+      "description": "A shy young vampire with wavy dark hair offers one peach rose, other hand resting against a teal waistcoat. Useful for personal greeting cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_113/source/vampire-rose-gift.png"
+    },
+    {
+      "id": "vampire-candle-guide",
+      "title": "Vampire Carrying a Lantern",
+      "alt": "A cheerful vampire girl with two short braids walks holding a small enclosed lantern in front of her.",
+      "description": "A cheerful vampire girl with two short braids walks holding a small enclosed lantern in front of her. Useful for night adventure cards.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_113/source/vampire-candle-guide.png"
+    }
+  ]
+}

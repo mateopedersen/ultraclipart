@@ -1,0 +1,229 @@
+{
+  "wave": "wave_125",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-coat-hanger",
+      "title": "Vampire Hanging a Cape",
+      "alt": "A vampire lifts a short red-lined cape onto a single standing coat rack with both hands.",
+      "description": "A vampire lifts a short red-lined cape onto a single standing coat rack with both hands. Useful for daily routine sequences.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_125/source/vampire-coat-hanger.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "5e7d36eda69d86bb2b8e4d6de603d894c50ebe94994d6f8c25edeaf41dffe370",
+      "inputSignature": "9c19cdd4af5a2d2a3a0c9f6a4ce2ca9bdcd62fe226aa8d1302747433a17bdb20",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 776292,
+        "weightedCmykRmse": 0.972811
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1075280,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 776292,
+          "weightedCmykRmse": 0.972811
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [359, 53, 987, 1196],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_125/exports/vampire-coat-hanger.pdf",
+          "bytes": 776292,
+          "sha256": "13f44f24786650ae68a69fd74af73c977719cb8e2b1bd82ca993d47a577f0ccf"
+        },
+        "webp": {
+          "path": "work/production/wave_125/exports/vampire-coat-hanger.webp",
+          "bytes": 393840,
+          "sha256": "e094917e186823afb954ad3bd944c20cda3d3457ca97e1525c1cb2b1bff56eae"
+        },
+        "thumb": {
+          "path": "work/production/wave_125/exports/vampire-coat-hanger-thumb.webp",
+          "bytes": 33652,
+          "sha256": "560e8fbad5610a6c04c0b343904ce0e690660c8741ddbeac5d75e99cde20796b"
+        }
+      },
+      "proofSha256": "32a925450c79db602a58c9f0a86cb788d91dde4d7f1201baf1c8e63fc0717a47",
+      "pairMeanRgbDifference": 1.14614
+    },
+    {
+      "id": "vampire-floating-cape",
+      "title": "Vampire Cape and Bow Tie",
+      "alt": "One flowing charcoal cape with deep plum lining hangs from a broad collar with a small teal bow tie, no person.",
+      "description": "One flowing charcoal cape with deep plum lining hangs from a broad collar with a small teal bow tie, no person. Useful for personal costume labels.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_125/source/vampire-floating-cape.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "16c3cf5cd5d588b358e10c8fb76ae2c92e8c1299348856379b77b3abe238115d",
+      "inputSignature": "97bdbafdaa56c2d0dc1bd7d541d974cfc5e0574f6157202932613965680ea97c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 676425,
+        "weightedCmykRmse": 0.916649
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1125554,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 676425,
+          "weightedCmykRmse": 0.916649
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [69, 98, 1209, 1177],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_125/exports/vampire-floating-cape.pdf",
+          "bytes": 676425,
+          "sha256": "3e5b1b1945179fb5d50fbf309ec080e6395eefe433cf24385c063d5b3049d2d1"
+        },
+        "webp": {
+          "path": "work/production/wave_125/exports/vampire-floating-cape.webp",
+          "bytes": 457122,
+          "sha256": "8d4d37c9c60ced22460a185834fb997d7b63ba98302ffb9ff99a37a4e3384fc5"
+        },
+        "thumb": {
+          "path": "work/production/wave_125/exports/vampire-floating-cape-thumb.webp",
+          "bytes": 32190,
+          "sha256": "b8cf97b239658233885b61f0ecfadbf79d18279ac07439a7640cf55be8102052"
+        }
+      },
+      "proofSha256": "38e309a5312b71c538a292cc4cc5f4006cb96cce2f5afb892a61d564ba07dc38",
+      "pairMeanRgbDifference": 1.49108
+    },
+    {
+      "id": "vampire-fangs-smile",
+      "title": "Friendly Vampire Smile",
+      "alt": "A simple cheerful mouth with two small upper fangs and rounded pink lips, no blood or extra objects.",
+      "description": "A simple cheerful mouth with two small upper fangs and rounded pink lips, no blood or extra objects. Useful for personal costume stickers.",
+      "color": "Pink",
+      "style": "Color",
+      "source": "work/production/wave_125/source/vampire-fangs-smile-v3.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "84281853364558170f0301b49c911c0b97041b1de9ff1d4b52a7e8bbbfe5c32a",
+      "inputSignature": "f3746e318ca76cad7b8a86bd51d4070ec5904c4ee1e4df2da4b751d3c5809533",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 490116,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 490116,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [152, 388, 1102, 888],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_125/exports/vampire-fangs-smile.pdf",
+          "bytes": 490116,
+          "sha256": "106cf19b8d4066f4a09fc9bc24f486651aa29166006e648be475a43ba073debc"
+        },
+        "webp": {
+          "path": "work/production/wave_125/exports/vampire-fangs-smile.webp",
+          "bytes": 225184,
+          "sha256": "42ad7398146898e7f54a9bd7467ae58f275475be6e81c3f11e3d4da2b4a16746"
+        },
+        "thumb": {
+          "path": "work/production/wave_125/exports/vampire-fangs-smile-thumb.webp",
+          "bytes": 15136,
+          "sha256": "941285bbf780049b5e13e7eef0ac88b35c9fe1898a12eb4759b4cecb9393fdb5"
+        }
+      },
+      "proofSha256": "67bee5afc8cb472b6fe54f9275e3f0803e550f1617f4b45f8b705a4247c45a0d",
+      "pairMeanRgbDifference": 0.55669
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed all native sources and actual PDF proof. Cape hanging grip coherent; standalone cape has clean transparent opening. Original smile and first repair held for outer glow, accepted fresh v3 has clean outlined edge with exactly two fangs. Count one design only.",
+  "createdAt": "2026-10-24T01:14:06.519Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

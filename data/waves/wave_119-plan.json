@@ -1,0 +1,38 @@
+{
+  "wave": "wave_119",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-night-bicycle",
+      "title": "Vampire Riding a Bicycle",
+      "alt": "A smiling vampire boy rides a teal bicycle with both hands on the handlebars and a short red-lined cape behind him.",
+      "description": "A smiling vampire boy rides a teal bicycle with both hands on the handlebars and a short red-lined cape behind him. Useful for movement story cards.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_119/source/vampire-night-bicycle.png"
+    },
+    {
+      "id": "vampire-apple-basket",
+      "title": "Vampire Picking an Apple",
+      "alt": "A red-haired vampire reaches for one of three apples on a small potted tree while holding an empty basket.",
+      "description": "A red-haired vampire reaches for one of three apples on a small potted tree while holding an empty basket. Useful for autumn story prompts.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_119/source/vampire-apple-basket.png"
+    },
+    {
+      "id": "vampire-moon-telescope",
+      "title": "Vampire Adjusting a Telescope",
+      "alt": "A vampire with a small silver streak in his hair leans toward a short blue telescope on a sturdy tripod.",
+      "description": "A vampire with a small silver streak in his hair leans toward a short blue telescope on a sturdy tripod. Useful for night-sky activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_119/source/vampire-moon-telescope.png"
+    }
+  ]
+}

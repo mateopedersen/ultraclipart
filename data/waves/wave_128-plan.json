@@ -1,0 +1,31 @@
+{
+  "wave": "wave_128",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-hopscotch-coloring",
+      "title": "Vampire Playing Hopscotch Coloring Illustration",
+      "alt": "Black outlines with white interiors show a smiling vampire girl hopping on one foot over four simple unnumbered chalk squares, arms spread for balance.",
+      "description": "Black outlines with white interiors show a smiling vampire girl hopping on one foot over four simple unnumbered chalk squares, arms spread for balance. Useful for educational coloring and movement activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_128/source/vampire-hopscotch-coloring-v2.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "vampire-vampire-book-coloring",
+      "title": "Reading Vampire Coloring Illustration",
+      "alt": "Black outlines with white interiors show a friendly vampire seated cross-legged with one open book on the lap.",
+      "description": "Black outlines with white interiors show a friendly vampire seated cross-legged with one open book on the lap. Useful for educational coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_128/source/vampire-vampire-book-coloring.png",
+      "printSeparation": "black-only"
+    }
+  ]
+}

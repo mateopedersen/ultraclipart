@@ -1,0 +1,229 @@
+{
+  "wave": "wave_126",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-castle-window",
+      "title": "Vampire at an Arched Window",
+      "alt": "A friendly vampire rests both forearms on the sill of one small arched stone window with an open curtain.",
+      "description": "A friendly vampire rests both forearms on the sill of one small arched stone window with an open curtain. Useful for personal storybook decorations.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_126/source/vampire-castle-window.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c0044508cde1e6b3bacf0627dd948e84917f607b6521dfa9f883b8cd0e7b3c4c",
+      "inputSignature": "88fd38295a0914ad4b06baced30efc471743cc1983ed4254f277fd8a393f2591",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 802914,
+        "weightedCmykRmse": 0.895883
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1301054,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 802914,
+          "weightedCmykRmse": 0.895883
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [203, 109, 1054, 1072],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_126/exports/vampire-castle-window.pdf",
+          "bytes": 802914,
+          "sha256": "cbf4c96ee8cb2886b7723aa037229383911e57a0f542378501c0aa501001ea54"
+        },
+        "webp": {
+          "path": "work/production/wave_126/exports/vampire-castle-window.webp",
+          "bytes": 648878,
+          "sha256": "82630001cd4b2904566326874abc2994cd173c0fe67a9fbac370a2fd5711311c"
+        },
+        "thumb": {
+          "path": "work/production/wave_126/exports/vampire-castle-window-thumb.webp",
+          "bytes": 41838,
+          "sha256": "cb6a7b06733946415df92dae552f2c99c2e5b90eb87bf3084ff4b23062677636"
+        }
+      },
+      "proofSha256": "80da8f44c267521c1fff2a1cf82a3de3c0f8a1b1a2d066e71e5015850978b762",
+      "pairMeanRgbDifference": 1.48282
+    },
+    {
+      "id": "vampire-bat-collar-brooch",
+      "title": "Vampire Collar with a Bat Brooch",
+      "alt": "A tailored crimson high collar with a small friendly bat-shaped clasp on a cream shirt front, object-only.",
+      "description": "A tailored crimson high collar with a small friendly bat-shaped clasp on a cream shirt front, object-only. Useful for personal costume craft.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_126/source/vampire-bat-collar-brooch.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "13c3d0dca4a129bf9f9108c52c16798781c2e0b7a60345ae4cfb195d45a6a534",
+      "inputSignature": "03163b07b937bff1beda5f41ba812c9ca9b5cd6e1f1d68bc281b8f600bbf81ac",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 964374,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 964374,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [94, 123, 1161, 1131],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_126/exports/vampire-bat-collar-brooch.pdf",
+          "bytes": 964374,
+          "sha256": "e239847e574afaee44ee571e3390705225f10e7b0a5b9306b1ce96448dadcd79"
+        },
+        "webp": {
+          "path": "work/production/wave_126/exports/vampire-bat-collar-brooch.webp",
+          "bytes": 543448,
+          "sha256": "c2b961c56b1093143ee1b0f648632f7b371fdffcd5a9ba6a80c0a989feaf9c88"
+        },
+        "thumb": {
+          "path": "work/production/wave_126/exports/vampire-bat-collar-brooch-thumb.webp",
+          "bytes": 33094,
+          "sha256": "b5f83f7b4c535389467a5ea7462044aeec0fa8bee4dd229fbf7ae812ea87107b"
+        }
+      },
+      "proofSha256": "365e47c41ea8ffff1261f0ac1d0897bf88a908717750cf5f30a97cebe7079911",
+      "pairMeanRgbDifference": 3.276
+    },
+    {
+      "id": "vampire-moon-invitation",
+      "title": "Vampire Invitation Envelope",
+      "alt": "An open deep purple envelope holds one blank cream card, sealed with a small fang-and-crescent wax emblem.",
+      "description": "An open deep purple envelope holds one blank cream card, sealed with a small fang-and-crescent wax emblem. Useful for personal invitations.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_126/source/vampire-moon-invitation.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "23daf0434d59ac7fcf5f63b28fa21c9d8e9e9976797b22b12e88f8d26b9c1ab6",
+      "inputSignature": "69d554ba683526f689dd1dd64a6b635c1d7c0c8e1c54eea984939ab3074f2d0d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 655677,
+        "weightedCmykRmse": 0.800774
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1347497,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 655677,
+          "weightedCmykRmse": 0.800774
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [117, 68, 1176, 1170],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_126/exports/vampire-moon-invitation.pdf",
+          "bytes": 655677,
+          "sha256": "eb65619d719af232058466d007d777effe32b3ff08e25f7adf3d9d45566518c3"
+        },
+        "webp": {
+          "path": "work/production/wave_126/exports/vampire-moon-invitation.webp",
+          "bytes": 613414,
+          "sha256": "85f1eed2baf6e797d60865b97e22c8be7471fc80ed1d7fba695b233e5a8963b9"
+        },
+        "thumb": {
+          "path": "work/production/wave_126/exports/vampire-moon-invitation-thumb.webp",
+          "bytes": 28856,
+          "sha256": "56b394d63711cdbe03756c15a66b70ec9f7b7bcd447ee85444cdb1ddeb08328f"
+        }
+      },
+      "proofSha256": "1b6f96874929a53dcdc667a2dbc6f911df3eed5a625145fe05804bc1a9dc35e3",
+      "pairMeanRgbDifference": 1.21543
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "All native sources and actual PDF proof reviewed: two forearms resting on complete stone sill; object-only collar and bat brooch distinct from full cape; blank invitation card and decorative wax seal coherent. Transparent gaps and full edges preserved.",
+  "createdAt": "2026-10-24T01:15:31.002Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

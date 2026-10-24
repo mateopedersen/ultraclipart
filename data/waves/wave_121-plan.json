@@ -1,0 +1,38 @@
+{
+  "wave": "wave_121",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-broom-sweep",
+      "title": "Vampire Sweeping Autumn Leaves",
+      "alt": "A vampire in rolled sleeves sweeps three broad autumn leaves with a small ordinary broom, cape tied back.",
+      "description": "A vampire in rolled sleeves sweeps three broad autumn leaves with a small ordinary broom, cape tied back. Useful for everyday routine cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_121/source/vampire-broom-sweep.png"
+    },
+    {
+      "id": "vampire-pocket-watch",
+      "title": "Vampire Checking a Pocket Watch",
+      "alt": "A vampire with a neat mustache studies an open pocket watch in one hand, other hand holding the chain.",
+      "description": "A vampire with a neat mustache studies an open pocket watch in one hand, other hand holding the chain. Useful for time and routine stories.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_121/source/vampire-pocket-watch.png"
+    },
+    {
+      "id": "vampire-blank-banner",
+      "title": "Vampire Holding a Blank Banner",
+      "alt": "A friendly vampire holds the two ends of a wide blank cream banner in front of a dark teal cape.",
+      "description": "A friendly vampire holds the two ends of a wide blank cream banner in front of a dark teal cape. Useful for personal party label templates.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_121/source/vampire-blank-banner.png"
+    }
+  ]
+}

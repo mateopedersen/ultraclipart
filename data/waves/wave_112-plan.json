@@ -1,0 +1,38 @@
+{
+  "wave": "wave_112",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-tea-host",
+      "title": "Vampire Pouring Tea",
+      "alt": "A smiling adult vampire with a short burgundy cape pours tea from a round pot into a cup on a tiny tray, one hand per object.",
+      "description": "A smiling adult vampire with a short burgundy cape pours tea from a round pot into a cup on a tiny tray, one hand per object. Useful for personal party invitations.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_112/source/vampire-tea-host.png"
+    },
+    {
+      "id": "vampire-cape-tailor",
+      "title": "Vampire Mending a Cape",
+      "alt": "A curly-haired vampire seamstress sits sideways on a low stool sewing a large patch onto her violet cape.",
+      "description": "A curly-haired vampire seamstress sits sideways on a low stool sewing a large patch onto her violet cape. Useful for craft storytelling cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_112/source/vampire-cape-tailor.png"
+    },
+    {
+      "id": "vampire-moon-postman",
+      "title": "Vampire Delivering a Moon Letter",
+      "alt": "A friendly vampire courier in a navy cape holds a sealed crescent-stamped envelope beside a small satchel.",
+      "description": "A friendly vampire courier in a navy cape holds a sealed crescent-stamped envelope beside a small satchel. Useful for seasonal correspondence labels.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_112/source/vampire-moon-postman.png"
+    }
+  ]
+}

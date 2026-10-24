@@ -1,0 +1,243 @@
+{
+  "wave": "wave_116",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-bat-balloon",
+      "title": "Vampire Holding a Bat Balloon",
+      "alt": "A cheerful vampire child holds the string of one friendly bat-shaped balloon while stepping forward.",
+      "description": "A cheerful vampire child holds the string of one friendly bat-shaped balloon while stepping forward. Useful for personal birthday invitations.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_116/source/vampire-bat-balloon.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d87d03c44db35891c88430afb02f34bb22bfb595c20cf36922cc686c821db05b",
+      "inputSignature": "849608f1ba32720d3984b08e8259a32588e2b1e9f81fc5732781b952ec87c767",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 778799,
+        "weightedCmykRmse": 0.928103
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1144076,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 778799,
+          "weightedCmykRmse": 0.928103
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [137, 21, 977, 1230],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_116/exports/vampire-bat-balloon.pdf",
+          "bytes": 778799,
+          "sha256": "c25a473cb5699f8f2ce50b3ff824a94a2a3cf0280f377bdc8a05c81ab570348d"
+        },
+        "webp": {
+          "path": "work/production/wave_116/exports/vampire-bat-balloon.webp",
+          "bytes": 501786,
+          "sha256": "1d1765819574ab783ebacd67d8fee44c13c1d848afd22c0aef271aebaa88e26c"
+        },
+        "thumb": {
+          "path": "work/production/wave_116/exports/vampire-bat-balloon-thumb.webp",
+          "bytes": 37130,
+          "sha256": "889d5927b8794cd6f8bb0d8cfc4336c6e8ac22c3f144ec90e7b07cfcc3c64361"
+        }
+      },
+      "proofSha256": "d192f4fa2904099176b4ee8fa9f13d74a7a340500366efc46ec863c31307eaaa",
+      "pairMeanRgbDifference": 1.52686
+    },
+    {
+      "id": "vampire-chess-move",
+      "title": "Vampire Making a Chess Move",
+      "alt": "A seated vampire studies a small chessboard and moves one clearly shaped knight with one hand.",
+      "description": "A seated vampire studies a small chessboard and moves one clearly shaped knight with one hand. Useful for strategy club decorations.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_116/source/vampire-chess-move.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "be59492230bd6238a8060123dc62e704d6c32691dcb2819c1d825b6e338c4a58",
+      "inputSignature": "9ec50d868479b6af3d4d85502f58fcb449233e6ef439b7848d1370ac4ebf73ce",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 888219,
+        "weightedCmykRmse": 1.274811
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1530435,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1090791,
+          "weightedCmykRmse": 0.883923
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 985722,
+          "weightedCmykRmse": 1.037425
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 888219,
+          "weightedCmykRmse": 1.274811
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [201, 27, 1054, 1218],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_116/exports/vampire-chess-move.pdf",
+          "bytes": 888219,
+          "sha256": "86de0220d85b4583125a96b98ae93868c807a85d70c4048cb1144edee7ea27e8"
+        },
+        "webp": {
+          "path": "work/production/wave_116/exports/vampire-chess-move.webp",
+          "bytes": 711114,
+          "sha256": "eaabb6285a5635d8ca30a8499a58334feb5af7159f655a969f8b18cbf7af9af2"
+        },
+        "thumb": {
+          "path": "work/production/wave_116/exports/vampire-chess-move-thumb.webp",
+          "bytes": 48680,
+          "sha256": "94deb94b6981aa67451a85e720df412ce2ee52f485ec95271bd44ae660a7ef34"
+        }
+      },
+      "proofSha256": "833220a743520af243d24eee4c1fb6937e1aa6cba7a52bddcd855496a3bc6b7e",
+      "pairMeanRgbDifference": 1.94042
+    },
+    {
+      "id": "vampire-star-stitch",
+      "title": "Vampire Embroidering a Star",
+      "alt": "A vampire with round glasses holds an embroidery hoop containing one simple star, needle in the other hand.",
+      "description": "A vampire with round glasses holds an embroidery hoop containing one simple star, needle in the other hand. Useful for craft vocabulary.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_116/source/vampire-star-stitch.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "43a358d0c66a563c8d03119fa357896195fca660123a79d4441b03e49a73c4b1",
+      "inputSignature": "82011c187f9e0b16263f4ec5abae16c782eae271c3bf4d0be8356f678bd017b4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 958484,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 958484,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [319, 34, 917, 1220],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_116/exports/vampire-star-stitch.pdf",
+          "bytes": 958484,
+          "sha256": "e155578fdc43b873279f1ab85897a449a89e6281038b3d316084a8c294d5a3b5"
+        },
+        "webp": {
+          "path": "work/production/wave_116/exports/vampire-star-stitch.webp",
+          "bytes": 469440,
+          "sha256": "b1f43a07af2434df8138e9a6d899a080d1cf83245d56f4a412f7e2405aa171f2"
+        },
+        "thumb": {
+          "path": "work/production/wave_116/exports/vampire-star-stitch-thumb.webp",
+          "bytes": 33034,
+          "sha256": "2e49490de6c6539b11fad84296857f190f38700a99858208c75a4e812a936f96"
+        }
+      },
+      "proofSha256": "f9726071f44844a59fe0a3515c0e6f81bc260b3f0d803b0bb6ad91775b587ad3",
+      "pairMeanRgbDifference": 1.54811
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed all three native sources and rendered CMYK proof: balloon string attached, coherent chess hand and stylized board, embroidery hoop and hand positions clear; no clipping or source mismatch.",
+  "createdAt": "2026-10-24T00:50:14.012Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

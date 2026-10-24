@@ -1,0 +1,38 @@
+{
+  "wave": "wave_125",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-coat-hanger",
+      "title": "Vampire Hanging a Cape",
+      "alt": "A vampire lifts a short red-lined cape onto a single standing coat rack with both hands.",
+      "description": "A vampire lifts a short red-lined cape onto a single standing coat rack with both hands. Useful for daily routine sequences.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_125/source/vampire-coat-hanger.png"
+    },
+    {
+      "id": "vampire-floating-cape",
+      "title": "Vampire Cape and Bow Tie",
+      "alt": "One flowing charcoal cape with deep plum lining hangs from a broad collar with a small teal bow tie, no person.",
+      "description": "One flowing charcoal cape with deep plum lining hangs from a broad collar with a small teal bow tie, no person. Useful for personal costume labels.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_125/source/vampire-floating-cape.png"
+    },
+    {
+      "id": "vampire-fangs-smile",
+      "title": "Friendly Vampire Smile",
+      "alt": "A simple cheerful mouth with two small upper fangs and rounded pink lips, no blood or extra objects.",
+      "description": "A simple cheerful mouth with two small upper fangs and rounded pink lips, no blood or extra objects. Useful for personal costume stickers.",
+      "color": "Pink",
+      "style": "Color",
+      "source": "work/production/wave_125/source/vampire-fangs-smile-v3.png"
+    }
+  ]
+}

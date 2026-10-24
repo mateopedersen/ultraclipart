@@ -1,0 +1,39 @@
+{
+  "wave": "wave_127",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-cape-suitcase",
+      "title": "Vampire Travel Case",
+      "alt": "A small vintage travel case sits open with a folded crimson cape, white gloves and a compact pocket watch inside.",
+      "description": "A small vintage travel case sits open with a folded crimson cape, white gloves and a compact pocket watch inside. Useful for travel story illustrations.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_127/source/vampire-cape-suitcase.png"
+    },
+    {
+      "id": "vampire-sleeping-vampire",
+      "title": "Sleepy Vampire in an Armchair",
+      "alt": "A friendly vampire dozes in a small rounded armchair with an open book resting on the lap.",
+      "description": "A friendly vampire dozes in a small rounded armchair with an open book resting on the lap. Useful for quiet reading cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_127/source/vampire-sleeping-vampire.png"
+    },
+    {
+      "id": "vampire-vampire-profile",
+      "title": "Vampire Profile Silhouette",
+      "alt": "A pure black profile silhouette of a smiling vampire with a high collar and one raised hand presenting a small crescent.",
+      "description": "A pure black profile silhouette of a smiling vampire with a high collar and one raised hand presenting a small crescent. Useful for personal silhouette crafts.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_127/source/vampire-vampire-profile.png",
+      "printSeparation": "black-only"
+    }
+  ]
+}

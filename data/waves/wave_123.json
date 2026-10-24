@@ -1,0 +1,236 @@
+{
+  "wave": "wave_123",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-ballroom-step",
+      "title": "Vampire Practicing a Dance Step",
+      "alt": "A vampire in a teal waistcoat balances in a sweeping ballroom step, one hand raised and one at waist, cape moving behind.",
+      "description": "A vampire in a teal waistcoat balances in a sweeping ballroom step, one hand raised and one at waist, cape moving behind. Useful for movement prompts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_123/source/vampire-ballroom-step.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "3a4aa310a457cdac3420748104350fcfd77c7b384ea4c6d93800b2a0ed38e9c1",
+      "inputSignature": "0eecc92bfc21d9802a71b8566a5475f6882b238ab41f6f93466ed10f8a486631",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 706590,
+        "weightedCmykRmse": 0.962066
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1108951,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 706590,
+          "weightedCmykRmse": 0.962066
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [256, 22, 1153, 1230],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_123/exports/vampire-ballroom-step.pdf",
+          "bytes": 706590,
+          "sha256": "f288868b8649587f22962522e46714f11c40ebada9e89dd248314c7c2fe4bc4c"
+        },
+        "webp": {
+          "path": "work/production/wave_123/exports/vampire-ballroom-step.webp",
+          "bytes": 476696,
+          "sha256": "7a528d7935c8a23301e587534ce43f53aba1fad0053d71e308df99fc89ae2e3b"
+        },
+        "thumb": {
+          "path": "work/production/wave_123/exports/vampire-ballroom-step-thumb.webp",
+          "bytes": 35552,
+          "sha256": "a5e12e74c8fa89fccd69bf40294f576ab674dadaf8ed9cc8787e3e0adf452ceb"
+        }
+      },
+      "proofSha256": "e879384483a6a7c12885c240c14650e0af2569531847304bbfe61b98b6d59f1e",
+      "pairMeanRgbDifference": 0.86621
+    },
+    {
+      "id": "vampire-night-garden-seat",
+      "title": "Vampire Sitting on a Crescent Bench",
+      "alt": "A smiling vampire child sits on a small crescent-shaped bench holding one closed book against the chest.",
+      "description": "A smiling vampire child sits on a small crescent-shaped bench holding one closed book against the chest. Useful for reading reward stickers.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_123/source/vampire-night-garden-seat.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "909a2b5a9d5a183c9741f22cf004705f736fe8ef8d01fd554a9dbbf62bc8a364",
+      "inputSignature": "d35bee4c2422a5b54fd47fa11f65ab680312544153f2180828d3871d5736b31f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 742054,
+        "weightedCmykRmse": 0.896297
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1192250,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 742054,
+          "weightedCmykRmse": 0.896297
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [168, 124, 1090, 1145],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_123/exports/vampire-night-garden-seat.pdf",
+          "bytes": 742054,
+          "sha256": "6e80f8b886e7a27869079f99c72e170d4a7995437872442358556e1b48c6eb98"
+        },
+        "webp": {
+          "path": "work/production/wave_123/exports/vampire-night-garden-seat.webp",
+          "bytes": 589414,
+          "sha256": "9b32258f3344fdb0d37178067034ea526e9a93ac64c66850e2a7074043a3ecc9"
+        },
+        "thumb": {
+          "path": "work/production/wave_123/exports/vampire-night-garden-seat-thumb.webp",
+          "bytes": 40534,
+          "sha256": "797563d6ef39e739b59f6b4f24fe8b5081270622e2cc41811a3525472e61695c"
+        }
+      },
+      "proofSha256": "c834b9b2da8959eb7ff5a440f5451d2c6efd8c41b477d50002ed77e306568242",
+      "pairMeanRgbDifference": 1.70134
+    },
+    {
+      "id": "vampire-camera-tripod",
+      "title": "Vampire Using a Tripod Camera",
+      "alt": "A vampire looks through a small camera fixed to a short tripod, one hand operating the shutter.",
+      "description": "A vampire looks through a small camera fixed to a short tripod, one hand operating the shutter. Useful for hobby story cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_123/source/vampire-camera-tripod.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ba4fcd302c3c4749b004c26175e2bb88cad9f4764aba736367e6182792977026",
+      "inputSignature": "353ec9da7a786ecd8ace13349640100f05edb8b55e56af8c9eaf47b1abecf760",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 809388,
+        "weightedCmykRmse": 0.974095
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1180248,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 809388,
+          "weightedCmykRmse": 0.974095
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [305, 21, 1000, 1211],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_123/exports/vampire-camera-tripod.pdf",
+          "bytes": 809388,
+          "sha256": "cf5abf2052f0d99ebf24741515ba13302606db67373cee94e48656c92d3203b9"
+        },
+        "webp": {
+          "path": "work/production/wave_123/exports/vampire-camera-tripod.webp",
+          "bytes": 510344,
+          "sha256": "10ad09c01f898d5ec3862e0e78db0ef4ffbbee849a1fd179eea7c4f074c14601"
+        },
+        "thumb": {
+          "path": "work/production/wave_123/exports/vampire-camera-tripod-thumb.webp",
+          "bytes": 41738,
+          "sha256": "a56bcb0e686f19d4c4135c40a53ed67117de35169b1ae5a26e69a5a542e6b213"
+        }
+      },
+      "proofSha256": "0546f09e596411c9c78c8bb46f092467888c81badbc75ee2a1ad2524f871eac4",
+      "pairMeanRgbDifference": 1.32437
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed native sources and CMYK proof: coherent dance pose, crescent bench supports reader, tripod camera has three legs and two hands. Auth safely refreshed after guard blocked first upload; no visual issues.",
+  "createdAt": "2026-10-24T01:04:05.432Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

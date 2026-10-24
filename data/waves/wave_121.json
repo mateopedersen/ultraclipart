@@ -1,0 +1,236 @@
+{
+  "wave": "wave_121",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-broom-sweep",
+      "title": "Vampire Sweeping Autumn Leaves",
+      "alt": "A vampire in rolled sleeves sweeps three broad autumn leaves with a small ordinary broom, cape tied back.",
+      "description": "A vampire in rolled sleeves sweeps three broad autumn leaves with a small ordinary broom, cape tied back. Useful for everyday routine cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_121/source/vampire-broom-sweep.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "2b9cfe82cdcf4dff96831722d48448c614348a56217448dbb6c98065ffe5d2c5",
+      "inputSignature": "7b623cb4a202d87014a067f5b6d24f960d3dd83fb731ef5b6fc9edb69d968bb6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 707507,
+        "weightedCmykRmse": 0.969744
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1087242,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 707507,
+          "weightedCmykRmse": 0.969744
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [242, 15, 1108, 1226],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_121/exports/vampire-broom-sweep.pdf",
+          "bytes": 707507,
+          "sha256": "5c4bf421f0636240969b8a649d7af70ce03f8906d81225a5dee12139357a7867"
+        },
+        "webp": {
+          "path": "work/production/wave_121/exports/vampire-broom-sweep.webp",
+          "bytes": 472588,
+          "sha256": "515eef0564bd3378ea3ef2637b8138a0cdc77e3a4170be6ac8755649dbb0d359"
+        },
+        "thumb": {
+          "path": "work/production/wave_121/exports/vampire-broom-sweep-thumb.webp",
+          "bytes": 38118,
+          "sha256": "140ab38c5259c7e8fa43ec9e6e732b2cb47f4d4558471d0ec439e27f4e61ba9d"
+        }
+      },
+      "proofSha256": "697c36102ac15a0fb8932e6cb14e513236f41cd9939e92af1e644ff2bd0a842b",
+      "pairMeanRgbDifference": 1.328
+    },
+    {
+      "id": "vampire-pocket-watch",
+      "title": "Vampire Checking a Pocket Watch",
+      "alt": "A vampire with a neat mustache studies an open pocket watch in one hand, other hand holding the chain.",
+      "description": "A vampire with a neat mustache studies an open pocket watch in one hand, other hand holding the chain. Useful for time and routine stories.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_121/source/vampire-pocket-watch.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "4c38a857f78b075f5e937ee880176c84fabe45acbce8a8b4c5c27347e2d67398",
+      "inputSignature": "452d3361fedcdf2e80cb4cc61886eeb0ab9fa05af9046d5505265bb8eefb9129",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 639402,
+        "weightedCmykRmse": 0.979155
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1030945,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 639402,
+          "weightedCmykRmse": 0.979155
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [352, 12, 941, 1234],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_121/exports/vampire-pocket-watch.pdf",
+          "bytes": 639402,
+          "sha256": "7894c76fb1457775f38a0be974604f950945003e6b9cb9a3b28cb369839d2ac5"
+        },
+        "webp": {
+          "path": "work/production/wave_121/exports/vampire-pocket-watch.webp",
+          "bytes": 437910,
+          "sha256": "b43287bf11d2790f287487e7da9657dbe433640d399e51856d4ee72ff9d44c10"
+        },
+        "thumb": {
+          "path": "work/production/wave_121/exports/vampire-pocket-watch-thumb.webp",
+          "bytes": 30638,
+          "sha256": "a99bd6e50d0e84cc116a315e836da70ddcf7e51fe416c87818dedb74038b5832"
+        }
+      },
+      "proofSha256": "cabaac8709ead7ed25a38b28c8ca20ec5301fff5eb62a8a9f61fa33ae2736de2",
+      "pairMeanRgbDifference": 1.13324
+    },
+    {
+      "id": "vampire-blank-banner",
+      "title": "Vampire Holding a Blank Banner",
+      "alt": "A friendly vampire holds the two ends of a wide blank cream banner in front of a dark teal cape.",
+      "description": "A friendly vampire holds the two ends of a wide blank cream banner in front of a dark teal cape. Useful for personal party label templates.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_121/source/vampire-blank-banner.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f2795f9e1b4500eb0af1379c85251d4a5313cec64815e30ad26ed6610196ebfd",
+      "inputSignature": "7f2f69a848805fc442a4bbcb9a50f3195218c445671d48b923c506cf97b11487",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 746795,
+        "weightedCmykRmse": 0.897503
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1192897,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 746795,
+          "weightedCmykRmse": 0.897503
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [148, 11, 1106, 1228],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_121/exports/vampire-blank-banner.pdf",
+          "bytes": 746795,
+          "sha256": "b9c565ac75f4fc075086aa47132c96651e8f92cc8bcd96323e62cbe4c5b5d18a"
+        },
+        "webp": {
+          "path": "work/production/wave_121/exports/vampire-blank-banner.webp",
+          "bytes": 598240,
+          "sha256": "5dbe3c2d41c27cec2d6d5ef2d010a90bb1f611d2c3e9649788527ad80d64edb5"
+        },
+        "thumb": {
+          "path": "work/production/wave_121/exports/vampire-blank-banner-thumb.webp",
+          "bytes": 43092,
+          "sha256": "3c5ef8da2b354273302659b6f405f30247889f5e0a194803ab02df77533b7a3f"
+        }
+      },
+      "proofSha256": "3cb2457fcb19a9ca5d3830ad75285de8a4b7cef62164fdb0123fa4ac56884360",
+      "pairMeanRgbDifference": 1.17417
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed all full native sources and CMYK proof: broom contacts three distinct leaves, watch chain and two grips coherent, blank banner clean and spacious for separate user text. Full compositions, no source mismatch or clipping.",
+  "createdAt": "2026-10-24T00:58:14.560Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_123",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-ballroom-step",
+      "title": "Vampire Practicing a Dance Step",
+      "alt": "A vampire in a teal waistcoat balances in a sweeping ballroom step, one hand raised and one at waist, cape moving behind.",
+      "description": "A vampire in a teal waistcoat balances in a sweeping ballroom step, one hand raised and one at waist, cape moving behind. Useful for movement prompts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_123/source/vampire-ballroom-step.png"
+    },
+    {
+      "id": "vampire-night-garden-seat",
+      "title": "Vampire Sitting on a Crescent Bench",
+      "alt": "A smiling vampire child sits on a small crescent-shaped bench holding one closed book against the chest.",
+      "description": "A smiling vampire child sits on a small crescent-shaped bench holding one closed book against the chest. Useful for reading reward stickers.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_123/source/vampire-night-garden-seat.png"
+    },
+    {
+      "id": "vampire-camera-tripod",
+      "title": "Vampire Using a Tripod Camera",
+      "alt": "A vampire looks through a small camera fixed to a short tripod, one hand operating the shutter.",
+      "description": "A vampire looks through a small camera fixed to a short tripod, one hand operating the shutter. Useful for hobby story cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_123/source/vampire-camera-tripod.png"
+    }
+  ]
+}

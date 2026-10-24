@@ -1,0 +1,38 @@
+{
+  "wave": "wave_115",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-umbrella-stroll",
+      "title": "Vampire Walking with a Parasol",
+      "alt": "A vampire in a fitted navy coat strolls beneath one plum parasol held above a clearly visible smiling face.",
+      "description": "A vampire in a fitted navy coat strolls beneath one plum parasol held above a clearly visible smiling face. Useful for weather vocabulary.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_115/source/vampire-umbrella-stroll.png"
+    },
+    {
+      "id": "vampire-pumpkin-lantern",
+      "title": "Vampire Lighting a Pumpkin Lantern",
+      "alt": "A kneeling vampire sets a small battery candle into an open smiling pumpkin, lid beside it.",
+      "description": "A kneeling vampire sets a small battery candle into an open smiling pumpkin, lid beside it. Useful for seasonal craft sequences.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_115/source/vampire-pumpkin-lantern.png"
+    },
+    {
+      "id": "vampire-flower-basket",
+      "title": "Vampire with a Flower Basket",
+      "alt": "A vampire grandmother in a plum cape holds a shallow basket of three large autumn flowers at waist height.",
+      "description": "A vampire grandmother in a plum cape holds a shallow basket of three large autumn flowers at waist height. Useful for family story cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_115/source/vampire-flower-basket.png"
+    }
+  ]
+}

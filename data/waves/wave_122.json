@@ -1,0 +1,229 @@
+{
+  "wave": "wave_122",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-paper-bat",
+      "title": "Vampire Folding a Paper Bat",
+      "alt": "A seated vampire child creases one large simple paper bat on a low desk, one unused purple paper sheet beside it.",
+      "description": "A seated vampire child creases one large simple paper bat on a low desk, one unused purple paper sheet beside it. Useful for paper craft sequences.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_122/source/vampire-paper-bat.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "25978ec163da8c7c6cf208c1ceec513249a153b4d70d8e659ab7b17d1efee404",
+      "inputSignature": "45a4744d8954b8377a6e768415af72c258991a4478b25b554cbac8733c4c46ac",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 896758,
+        "weightedCmykRmse": 0.889102
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1378474,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 896758,
+          "weightedCmykRmse": 0.889102
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [134, 56, 1189, 1212],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_122/exports/vampire-paper-bat.pdf",
+          "bytes": 896758,
+          "sha256": "886bda94b427cc6845e1aba67992f8bf8f509c5f3bfe64141ca8ca4da7f6d286"
+        },
+        "webp": {
+          "path": "work/production/wave_122/exports/vampire-paper-bat.webp",
+          "bytes": 643482,
+          "sha256": "9e92b950b619ab1d20c198aaf13e37a8bb7919ab44b4e086d18355f37cad18b7"
+        },
+        "thumb": {
+          "path": "work/production/wave_122/exports/vampire-paper-bat-thumb.webp",
+          "bytes": 43378,
+          "sha256": "d2df408736c5aad912a4df1a617062abf9fe2beb5b2a6c9c80e3e8ef2554458a"
+        }
+      },
+      "proofSha256": "a0b7594e163cf98a57f94b3f130af5ad658aa9f15b0b32152abddb4f77e0dac1",
+      "pairMeanRgbDifference": 1.58435
+    },
+    {
+      "id": "vampire-soup-taste",
+      "title": "Vampire Tasting Pumpkin Soup",
+      "alt": "A vampire cook holds a spoon near his mouth while balancing one orange soup bowl at chest height.",
+      "description": "A vampire cook holds a spoon near his mouth while balancing one orange soup bowl at chest height. Useful for cooking story cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_122/source/vampire-soup-taste.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "872e55aa8bcd94cb1eee96a6fe15c61489dd05a2ebf6a1e663ded65e13054082",
+      "inputSignature": "00e5d15f1ec80f11abd881a73b57f21f40e00936cfa3679ecf7b4635218bd8e3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 976490,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 976490,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [271, 74, 961, 1195],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_122/exports/vampire-soup-taste.pdf",
+          "bytes": 976490,
+          "sha256": "e9e0c719fd2ff09b7cfc15997475e657a6f098b99ba7d6e87401afc89fe623da"
+        },
+        "webp": {
+          "path": "work/production/wave_122/exports/vampire-soup-taste.webp",
+          "bytes": 471290,
+          "sha256": "a818a034ac1a2745870ea54831f03a20a95146d5d2c2c49a119fcfdf0d0a166c"
+        },
+        "thumb": {
+          "path": "work/production/wave_122/exports/vampire-soup-taste-thumb.webp",
+          "bytes": 32188,
+          "sha256": "94955f7d2e8bcb2be4b9dc7922cf5ab8ad37c2ca60f96f46d8affe9b885b9247"
+        }
+      },
+      "proofSha256": "52895ed621b2ea93e65209e1249620cb1504938dbc717f9188a1c3f61e7487f3",
+      "pairMeanRgbDifference": 1.32265
+    },
+    {
+      "id": "vampire-harp-player",
+      "title": "Vampire Playing a Small Harp",
+      "alt": "A seated vampire woman plucks a compact crescent harp with both hands, maroon cape falling behind her.",
+      "description": "A seated vampire woman plucks a compact crescent harp with both hands, maroon cape falling behind her. Useful for music themed greetings.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_122/source/vampire-harp-player.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "8f916ce3d5c5e529d4eda7ae2ece97cb3169dc9f73e3df47eb2d98cc6a9ceff1",
+      "inputSignature": "6e41be0e5db9a68bc952d4bb8c1738dab0e5604d61da0fc25d99d66636a46bf5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 861465,
+        "weightedCmykRmse": 0.874015
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1321763,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 861465,
+          "weightedCmykRmse": 0.874015
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [212, 58, 1143, 1177],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_122/exports/vampire-harp-player.pdf",
+          "bytes": 861465,
+          "sha256": "1b65160f93a1e6b6ae468dacde8220f15043a875a6a01a679dfdf871f2ed662e"
+        },
+        "webp": {
+          "path": "work/production/wave_122/exports/vampire-harp-player.webp",
+          "bytes": 628508,
+          "sha256": "bf39657005a2e4f732fa3d7191e5a32fdc26f7bd1250074ca3cb0a53b0e4d300"
+        },
+        "thumb": {
+          "path": "work/production/wave_122/exports/vampire-harp-player-thumb.webp",
+          "bytes": 40506,
+          "sha256": "9245ccc6051ffadd3821f7b9307038d9900c5e19b95637d13d985be45ae3a259"
+        }
+      },
+      "proofSha256": "a54076ba87950bfa58155162d9f7717632b0699c3e217c9a0e51496913753c84",
+      "pairMeanRgbDifference": 2.46899
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed native sources and actual CMYK proof: paper craft has geometric folds and distinct spare sheet, soup spoon and bowl held coherently, crescent harp frame and strings continuous. No extra arms, clipping or file mismatch.",
+  "createdAt": "2026-10-24T00:59:38.559Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

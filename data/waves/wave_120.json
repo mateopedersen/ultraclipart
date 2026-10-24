@@ -1,0 +1,229 @@
+{
+  "wave": "wave_120",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-hat-bow",
+      "title": "Vampire Taking a Bow",
+      "alt": "A smiling adult vampire bends politely while holding a top hat against his waist, one arm open to the side.",
+      "description": "A smiling adult vampire bends politely while holding a top hat against his waist, one arm open to the side. Useful for manners activity cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_120/source/vampire-hat-bow.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a3b2cb98388cf0a01f2577e082c2d07db14a88964081c602317c59d464252230",
+      "inputSignature": "24b6bb42b5a680571ae805bb48238ac29a45c5660f4fa0c7f6f282b2f95ba0ee",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 833746,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 833746,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [290, 23, 1138, 1224],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_120/exports/vampire-hat-bow.pdf",
+          "bytes": 833746,
+          "sha256": "4571c176932955b47fca1267847c19dd3b8c21b5d71ddacee251911107b78b4e"
+        },
+        "webp": {
+          "path": "work/production/wave_120/exports/vampire-hat-bow.webp",
+          "bytes": 354534,
+          "sha256": "32a1566571211f274ea62cfab796e6ffe26878d0c1bb7c215d05aa88684da1e7"
+        },
+        "thumb": {
+          "path": "work/production/wave_120/exports/vampire-hat-bow-thumb.webp",
+          "bytes": 26346,
+          "sha256": "d40ad532ecf8e56959dea743f675ed313356ef5e6a161ae3ae633b902b421207"
+        }
+      },
+      "proofSha256": "3defbff87f13465d1d8b53383e3ecf89a878c7f6e483dca9c2abf341e46428c6",
+      "pairMeanRgbDifference": 0.91936
+    },
+    {
+      "id": "vampire-gift-wrap",
+      "title": "Vampire Wrapping a Present",
+      "alt": "A vampire woman with short curls ties one broad bow around a small square gift on a simple table.",
+      "description": "A vampire woman with short curls ties one broad bow around a small square gift on a simple table. Useful for birthday sequence cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_120/source/vampire-gift-wrap.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "625762f6559b496b12abed1988045399bb7d8eed6340c7be6824cdaca7fe4a66",
+      "inputSignature": "033b045a9447c6e37d3bc739c8a74bf087069723037228f91fe33cbe927c69ce",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 804985,
+        "weightedCmykRmse": 0.915846
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1242097,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 804985,
+          "weightedCmykRmse": 0.915846
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [171, 30, 1103, 1187],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_120/exports/vampire-gift-wrap.pdf",
+          "bytes": 804985,
+          "sha256": "b8a6aec3654a8f854d3e21c523417ef3e3979bbebc2728d804ba53814b748b9e"
+        },
+        "webp": {
+          "path": "work/production/wave_120/exports/vampire-gift-wrap.webp",
+          "bytes": 598256,
+          "sha256": "eb86def4caceba78a7d39f261ce50c3f2371cefe5faee5435d0ce8602193292b"
+        },
+        "thumb": {
+          "path": "work/production/wave_120/exports/vampire-gift-wrap-thumb.webp",
+          "bytes": 42048,
+          "sha256": "6827630cbac024cb4f0655ff16281073a1b2a4d4da3c5343b83c259e80bd126e"
+        }
+      },
+      "proofSha256": "6ba2df5380b0bee6d238b391a3b8743819ddf38464edce2c4016ce09e056dce4",
+      "pairMeanRgbDifference": 1.4558
+    },
+    {
+      "id": "vampire-cello-rest",
+      "title": "Vampire with a Cello",
+      "alt": "A vampire sits upright beside a cello resting on its endpin, one hand on the neck and a bow held low.",
+      "description": "A vampire sits upright beside a cello resting on its endpin, one hand on the neck and a bow held low. Useful for instrument vocabulary.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_120/source/vampire-cello-rest.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "58d20475247dc07cc88963284a1fb1d06482b629304900fce3a50cf9c191efaf",
+      "inputSignature": "e0317441c428238288f9a6cc410bcd7398e3e2144bba1a30139cb5107dd56d0f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 774055,
+        "weightedCmykRmse": 0.938707
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1206355,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 774055,
+          "weightedCmykRmse": 0.938707
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [265, 22, 969, 1225],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_120/exports/vampire-cello-rest.pdf",
+          "bytes": 774055,
+          "sha256": "9872d6bd60d9fb36cdd87e1898dd1d34f2170220d9d9b1e51b5cfebb318c74d7"
+        },
+        "webp": {
+          "path": "work/production/wave_120/exports/vampire-cello-rest.webp",
+          "bytes": 675292,
+          "sha256": "44d8c302506914779aab62db54e1216c5209254e76f67568e4f6ccff390edcca"
+        },
+        "thumb": {
+          "path": "work/production/wave_120/exports/vampire-cello-rest-thumb.webp",
+          "bytes": 42584,
+          "sha256": "4359eaea21e5096d11d40a0cbd9e8f29cd3c1aaac237684c565099f582640f41"
+        }
+      },
+      "proofSha256": "d97f6e46d6c815791eac62977064c315cc7b0ba2fddfb587f5aca412a40181a5",
+      "pairMeanRgbDifference": 1.99084
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual PDF proof reviewed: polite hat bow, coherent gift ribbon grip, seated cello rest with two hands and continuous strings/endpin. Complete silhouettes and correct file matching; no extra limbs or clipping.",
+  "createdAt": "2026-10-24T00:55:50.156Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

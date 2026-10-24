@@ -1,0 +1,229 @@
+{
+  "wave": "wave_113",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-organ-player",
+      "title": "Vampire Playing a Small Organ",
+      "alt": "A seated vampire with swept silver hair plays a compact wooden keyboard with five simple organ pipes.",
+      "description": "A seated vampire with swept silver hair plays a compact wooden keyboard with five simple organ pipes. Useful for music story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_113/source/vampire-organ-player.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f60634d815d39a0f4135a1e5185491d384e71ce2a4d91f579c23ee4e6d42a77a",
+      "inputSignature": "1d1531a4076440daf585a18c26d5e87560876b83b9fab8cc719409fb21a3664c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 759454,
+        "weightedCmykRmse": 0.94233
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1183274,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 759454,
+          "weightedCmykRmse": 0.94233
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [287, 160, 1031, 1112],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_113/exports/vampire-organ-player.pdf",
+          "bytes": 759454,
+          "sha256": "240fc26073ee399d02776a9e4bc571c5894b1faefcce094580dc4b1bd885364f"
+        },
+        "webp": {
+          "path": "work/production/wave_113/exports/vampire-organ-player.webp",
+          "bytes": 550958,
+          "sha256": "32e4bec14ef4e6134f2c1fba2b93355b7c1c2e9e56e274cf99214729116ee3de"
+        },
+        "thumb": {
+          "path": "work/production/wave_113/exports/vampire-organ-player-thumb.webp",
+          "bytes": 37300,
+          "sha256": "d4128cb35ab729eed65a55ec3bec4cdf1f687a5ca83d7921890231ca0970653c"
+        }
+      },
+      "proofSha256": "2cb52d3fdef72e2683e24fcba32c5b6df49336b2ffbcbc162a5098bd1632cae9",
+      "pairMeanRgbDifference": 1.4237
+    },
+    {
+      "id": "vampire-rose-gift",
+      "title": "Vampire Offering a Rose",
+      "alt": "A shy young vampire with wavy dark hair offers one peach rose, other hand resting against a teal waistcoat.",
+      "description": "A shy young vampire with wavy dark hair offers one peach rose, other hand resting against a teal waistcoat. Useful for personal greeting cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_113/source/vampire-rose-gift.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "3dc9e32d7db25a5af5a4f10498a70c6bd5ca6c85d975f4f3dccb5dc4cf66a020",
+      "inputSignature": "b742ca8031a3bbd5dbfd1eef42e9f06661156e93bffcee4f65194472609b3307",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 854156,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 854156,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [407, 18, 868, 1232],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_113/exports/vampire-rose-gift.pdf",
+          "bytes": 854156,
+          "sha256": "1d717853c2f95eadcaf069a23e53c603a3eb05fbc5ffa770662fda1b131912e8"
+        },
+        "webp": {
+          "path": "work/production/wave_113/exports/vampire-rose-gift.webp",
+          "bytes": 399912,
+          "sha256": "af2200c75a609a4c184d997de2144557153e8903d246748f34a462367b90dcee"
+        },
+        "thumb": {
+          "path": "work/production/wave_113/exports/vampire-rose-gift-thumb.webp",
+          "bytes": 27060,
+          "sha256": "99e5f70a2922962199645034e53070cf5d88183bce6c4a1c8c206519007124d1"
+        }
+      },
+      "proofSha256": "c4f1bc87b3037966568c35540fd07e07414087758f66ac6a1d9da1dbd152a6fc",
+      "pairMeanRgbDifference": 0.80494
+    },
+    {
+      "id": "vampire-candle-guide",
+      "title": "Vampire Carrying a Lantern",
+      "alt": "A cheerful vampire girl with two short braids walks holding a small enclosed lantern in front of her.",
+      "description": "A cheerful vampire girl with two short braids walks holding a small enclosed lantern in front of her. Useful for night adventure cards.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_113/source/vampire-candle-guide.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "0ae97b7d0c9c3dae8024cdf82f054f3d33578ffb40145bee8e46ecb58828076c",
+      "inputSignature": "ead8cf1bc4ef5542c80b8cb7688a2c14c982b1e3fce95c664690d0df208e7692",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 637992,
+        "weightedCmykRmse": 0.956611
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 983082,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 637992,
+          "weightedCmykRmse": 0.956611
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [281, 105, 1002, 1183],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_113/exports/vampire-candle-guide.pdf",
+          "bytes": 637992,
+          "sha256": "00519275ef2e29181653686286905db46272ad67d67694a75dae23de5b6a37a0"
+        },
+        "webp": {
+          "path": "work/production/wave_113/exports/vampire-candle-guide.webp",
+          "bytes": 479788,
+          "sha256": "59b6566d2570836ba8285650f7e859512b53a35692fd48985c0b514486ae0e5b"
+        },
+        "thumb": {
+          "path": "work/production/wave_113/exports/vampire-candle-guide-thumb.webp",
+          "bytes": 32652,
+          "sha256": "a1da277fe514ba69b97057b086b398d419a594e949b16ecc9b21de329cab6339"
+        }
+      },
+      "proofSha256": "c812c7b1c6a8c6d1fd2b1ff9d4832010e2bca9599f71ed0e685b290ac02d14e7",
+      "pairMeanRgbDifference": 1.38439
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual CMYK proof inspected: five organ pipes and coherent seated player, rose held clearly, lantern attached to hand; distinct faces and actions with clean margins.",
+  "createdAt": "2026-10-24T00:39:13.842Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

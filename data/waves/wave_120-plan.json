@@ -1,0 +1,38 @@
+{
+  "wave": "wave_120",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-hat-bow",
+      "title": "Vampire Taking a Bow",
+      "alt": "A smiling adult vampire bends politely while holding a top hat against his waist, one arm open to the side.",
+      "description": "A smiling adult vampire bends politely while holding a top hat against his waist, one arm open to the side. Useful for manners activity cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_120/source/vampire-hat-bow.png"
+    },
+    {
+      "id": "vampire-gift-wrap",
+      "title": "Vampire Wrapping a Present",
+      "alt": "A vampire woman with short curls ties one broad bow around a small square gift on a simple table.",
+      "description": "A vampire woman with short curls ties one broad bow around a small square gift on a simple table. Useful for birthday sequence cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_120/source/vampire-gift-wrap.png"
+    },
+    {
+      "id": "vampire-cello-rest",
+      "title": "Vampire with a Cello",
+      "alt": "A vampire sits upright beside a cello resting on its endpin, one hand on the neck and a bow held low.",
+      "description": "A vampire sits upright beside a cello resting on its endpin, one hand on the neck and a bow held low. Useful for instrument vocabulary.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_120/source/vampire-cello-rest.png"
+    }
+  ]
+}

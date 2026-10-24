@@ -1,0 +1,229 @@
+{
+  "wave": "wave_112",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-tea-host",
+      "title": "Vampire Pouring Tea",
+      "alt": "A smiling adult vampire with a short burgundy cape pours tea from a round pot into a cup on a tiny tray, one hand per object.",
+      "description": "A smiling adult vampire with a short burgundy cape pours tea from a round pot into a cup on a tiny tray, one hand per object. Useful for personal party invitations.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_112/source/vampire-tea-host.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "06f725a20c7f787bc63f5a566e5d78150c516830213713213e752a7d258ad9ae",
+      "inputSignature": "fc02a3d40dbe7aa8a0796bdf48e2fa0f396451e182fe9b219ae9e5183f1f5a39",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 941030,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 941030,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [311, 55, 927, 1199],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_112/exports/vampire-tea-host.pdf",
+          "bytes": 941030,
+          "sha256": "8aa941361171bd65136fb991c821a66d4ef05869c8b55bc2e90a421f839280c7"
+        },
+        "webp": {
+          "path": "work/production/wave_112/exports/vampire-tea-host.webp",
+          "bytes": 479290,
+          "sha256": "50ee68969b24b37a73f40301ac334f414f973dcbaec276992aa874beb7d0a5a3"
+        },
+        "thumb": {
+          "path": "work/production/wave_112/exports/vampire-tea-host-thumb.webp",
+          "bytes": 29698,
+          "sha256": "fb76ef868be47d03c560f2754368c0ebbdb0d15426a052a6302e2ad798422694"
+        }
+      },
+      "proofSha256": "5b5cb0e8535b22571e14cd1f2d0d0825d61d0f15232b5e167fd74d194d2d47d1",
+      "pairMeanRgbDifference": 1.43432
+    },
+    {
+      "id": "vampire-cape-tailor",
+      "title": "Vampire Mending a Cape",
+      "alt": "A curly-haired vampire seamstress sits sideways on a low stool sewing a large patch onto her violet cape.",
+      "description": "A curly-haired vampire seamstress sits sideways on a low stool sewing a large patch onto her violet cape. Useful for craft storytelling cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_112/source/vampire-cape-tailor.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d6fcc9b406dc1976c7faaa306426f056a6b6b4c08ad7115486a0dcb021493878",
+      "inputSignature": "11b7eee889846a09f1dcee329c680ab17bf2654ed3a537f18933acd67202e624",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 880338,
+        "weightedCmykRmse": 0.901131
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1338395,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 880338,
+          "weightedCmykRmse": 0.901131
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [141, 40, 1114, 1171],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_112/exports/vampire-cape-tailor.pdf",
+          "bytes": 880338,
+          "sha256": "b9631899274a837f4364a0decb32f05eb643630f93dfdde74c977289554bfff4"
+        },
+        "webp": {
+          "path": "work/production/wave_112/exports/vampire-cape-tailor.webp",
+          "bytes": 619916,
+          "sha256": "bcf7a08d0c2f656f3c9c5cd48d1ffd0159dbfeaf7e1c70bce0fc709495cf557a"
+        },
+        "thumb": {
+          "path": "work/production/wave_112/exports/vampire-cape-tailor-thumb.webp",
+          "bytes": 41520,
+          "sha256": "a6d5b090d0d4ae28c044907e2a25e82d689d5c662e9f9b522f5c0f003a43acae"
+        }
+      },
+      "proofSha256": "4df917c5b64e6e509dd3bd4b6de3da52c9c23370c0e90dbdd378bbd50ed68889",
+      "pairMeanRgbDifference": 1.49091
+    },
+    {
+      "id": "vampire-moon-postman",
+      "title": "Vampire Delivering a Moon Letter",
+      "alt": "A friendly vampire courier in a navy cape holds a sealed crescent-stamped envelope beside a small satchel.",
+      "description": "A friendly vampire courier in a navy cape holds a sealed crescent-stamped envelope beside a small satchel. Useful for seasonal correspondence labels.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_112/source/vampire-moon-postman.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1b7bf3c2c94ea8f9575473438065510825972752bdc55e46018dfc1ceda84916",
+      "inputSignature": "9fa959f14a0758ae3d09c51a1740048f2f6cf5879f9b63e86596c04ef3f2f08d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 809252,
+        "weightedCmykRmse": 0.959441
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1188164,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 809252,
+          "weightedCmykRmse": 0.959441
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [266, 20, 991, 1237],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_112/exports/vampire-moon-postman.pdf",
+          "bytes": 809252,
+          "sha256": "2f14264bc20a963cc9251104c7489370db03b79ccc6b2697ebd6233d70b4c9ef"
+        },
+        "webp": {
+          "path": "work/production/wave_112/exports/vampire-moon-postman.webp",
+          "bytes": 502158,
+          "sha256": "f3de19c1f25c1287c65747f562741136dbaa2d6e3a84ac9e464abc57ce08e67a"
+        },
+        "thumb": {
+          "path": "work/production/wave_112/exports/vampire-moon-postman-thumb.webp",
+          "bytes": 36514,
+          "sha256": "bad72bca2a7de1bd7c443199903fb6744be2ecc203730160d71faf63358a7b58"
+        }
+      },
+      "proofSha256": "31bf379673dbf1b04ae48e83b33384641af8c0d221520f364c599ad58beb3a4c",
+      "pairMeanRgbDifference": 0.93295
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual CMYK PDF proof reviewed: coherent tea pour, needle/fabric grip and letter courier; distinct original faces, poses and full margins.",
+  "createdAt": "2026-10-24T00:36:41.855Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

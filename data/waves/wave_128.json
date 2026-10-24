@@ -1,0 +1,151 @@
+{
+  "wave": "wave_128",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-hopscotch-coloring",
+      "title": "Vampire Playing Hopscotch Coloring Illustration",
+      "alt": "Black outlines with white interiors show a smiling vampire girl hopping on one foot over four simple unnumbered chalk squares, arms spread for balance.",
+      "description": "Black outlines with white interiors show a smiling vampire girl hopping on one foot over four simple unnumbered chalk squares, arms spread for balance. Useful for educational coloring and movement activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_128/source/vampire-hopscotch-coloring-v2.png",
+      "printSeparation": "black-only",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "0e10a829bd3983ac2dd898c06ce539fe40eb1eb788fbf5d79994c5a0dd2fa0e2",
+      "inputSignature": "dcb9cabb875c27ac29bf7b1b37f24102916deb541125623a49e534d921160356",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 251803,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 251803,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [320, 191, 1028, 1176],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_128/exports/vampire-hopscotch-coloring.pdf",
+          "bytes": 251803,
+          "sha256": "e7127d7c8871586d1a58415b45017b1970b89322c9795bc8ea341897a6b27df6"
+        },
+        "webp": {
+          "path": "work/production/wave_128/exports/vampire-hopscotch-coloring.webp",
+          "bytes": 296672,
+          "sha256": "3975599bc171197027a7929fb2f97c4ebc5de9c63e529b6b1207450da5d69e07"
+        },
+        "thumb": {
+          "path": "work/production/wave_128/exports/vampire-hopscotch-coloring-thumb.webp",
+          "bytes": 31252,
+          "sha256": "55eafeec1dd0df279b4a90017c7bd3f309efa3d350a0c5c60557c8457f832782"
+        }
+      },
+      "proofSha256": "5b2022fc6ce4f7f9a768b131162a432c1b41f065ebb6386de6b218e09b22759f",
+      "pairMeanRgbDifference": 2.01221
+    },
+    {
+      "id": "vampire-vampire-book-coloring",
+      "title": "Reading Vampire Coloring Illustration",
+      "alt": "Black outlines with white interiors show a friendly vampire seated cross-legged with one open book on the lap.",
+      "description": "Black outlines with white interiors show a friendly vampire seated cross-legged with one open book on the lap. Useful for educational coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_128/source/vampire-vampire-book-coloring.png",
+      "printSeparation": "black-only",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "13c95a3ed7cf7765aae111664690f5676c000b0c8358023cfd1a1b23b54d1e07",
+      "inputSignature": "ecbf7931e9f20915f3c2cf7880b97f8c856b25c800fe217d408714f19eb1fc43",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 435684,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 435684,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [40, 12, 1214, 1197],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_128/exports/vampire-vampire-book-coloring.pdf",
+          "bytes": 435684,
+          "sha256": "13950f3c2f83e3e48a9f745405b8ffded8ffc10a55af1c1ba20f526269099ebd"
+        },
+        "webp": {
+          "path": "work/production/wave_128/exports/vampire-vampire-book-coloring.webp",
+          "bytes": 586702,
+          "sha256": "1858c21e56a8c2faad55d03793f0232d7673858cb6bbbd78fe761d580612ba36"
+        },
+        "thumb": {
+          "path": "work/production/wave_128/exports/vampire-vampire-book-coloring-thumb.webp",
+          "bytes": 45796,
+          "sha256": "38db44969fff5dca6c369503a85b5fdd247229daa63898f32bb1b44114bad7b6"
+        }
+      },
+      "proofSha256": "c65de2123c0d4c4b1984803499618633aa4053069f7449cc3c99ecaf0391be1c",
+      "pairMeanRgbDifference": 3.67161
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Both native sources and actual PDF proof reviewed. Hopscotch original held for bottom edge clipping; v2 has all four closed squares and full margins. Distinct crossed-leg reader has clear hands and book. Black-only lossless CMYK separation, no color claim or duplicate composition.",
+  "createdAt": "2026-10-24T01:18:25.424Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

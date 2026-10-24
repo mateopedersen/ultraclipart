@@ -1,0 +1,236 @@
+{
+  "wave": "wave_117",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "vampire-gardening-watering",
+      "title": "Vampire Watering Moonflowers",
+      "alt": "A vampire in rolled sleeves waters a single wide planter with two broad moonflowers using a small watering can.",
+      "description": "A vampire in rolled sleeves waters a single wide planter with two broad moonflowers using a small watering can. Useful for nature story prompts.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_117/source/vampire-gardening-watering.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "03eccb0495d4eef637938829c54320fb40a42b66ca0b7374f3300907562659e0",
+      "inputSignature": "c8fb5424d02ff2040c46d8cd8519b719fcd0139c278221ef0e588ac9c10dd868",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 781027,
+        "weightedCmykRmse": 0.921562
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1207240,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 781027,
+          "weightedCmykRmse": 0.921562
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [257, 36, 999, 1174],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_117/exports/vampire-gardening-watering.pdf",
+          "bytes": 781027,
+          "sha256": "3520604053a3e7f5adee16404566367231f1c0409e8a5f8906c55802ec26107c"
+        },
+        "webp": {
+          "path": "work/production/wave_117/exports/vampire-gardening-watering.webp",
+          "bytes": 609062,
+          "sha256": "2922c6c4fb68026a8f328d1ffca861a608633fff28c40497241d839f9bf8ac33"
+        },
+        "thumb": {
+          "path": "work/production/wave_117/exports/vampire-gardening-watering-thumb.webp",
+          "bytes": 44450,
+          "sha256": "0810c0bb08aa615f681e5f0d58dea1eb11a89ec2eb4947a68a42369fcb838dcb"
+        }
+      },
+      "proofSha256": "1af16fb2878bb2f8bdc56d1397155521394c3e743a0ac9a1eb07f846504102a9",
+      "pairMeanRgbDifference": 1.86569
+    },
+    {
+      "id": "vampire-juice-toast",
+      "title": "Vampire with a Berry Drink",
+      "alt": "A friendly vampire in a red-lined cape raises a clear tumbler of purple berry juice, small grape bunch on a tray in the other hand.",
+      "description": "A friendly vampire in a red-lined cape raises a clear tumbler of purple berry juice, small grape bunch on a tray in the other hand. Useful for party food labels.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_117/source/vampire-juice-toast.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e19bfed73bb63002c65cb0f90e9bd2dbab163ea696bf0413a03383329e108a1c",
+      "inputSignature": "d9af962b44fe7f1c009bc2b393a3b1bf52041edbec2663800428a321ef222777",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 742556,
+        "weightedCmykRmse": 0.903198
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1130718,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 742556,
+          "weightedCmykRmse": 0.903198
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [313, 25, 1063, 1229],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_117/exports/vampire-juice-toast.pdf",
+          "bytes": 742556,
+          "sha256": "c4cb78306fc0cc481736067b8652f8fd709a4e4f93b1a586d20f2733a543bf7d"
+        },
+        "webp": {
+          "path": "work/production/wave_117/exports/vampire-juice-toast.webp",
+          "bytes": 529584,
+          "sha256": "76f632a71832e561fef5ff12923ea38845c7533ad3556149b8a20c73f445b103"
+        },
+        "thumb": {
+          "path": "work/production/wave_117/exports/vampire-juice-toast-thumb.webp",
+          "bytes": 38364,
+          "sha256": "455757c59b16492920d6c1e2876f452f51073840fada6e83155a068a26256755"
+        }
+      },
+      "proofSha256": "783a496b09d8d39a5c84e754a3d2dad401f229dc9e47aba529dc265e415e028d",
+      "pairMeanRgbDifference": 2.08623
+    },
+    {
+      "id": "vampire-moon-kite",
+      "title": "Vampire Flying a Crescent Kite",
+      "alt": "A vampire girl in a short teal cape holds the reel of a crescent-shaped kite with one broad ribbon tail.",
+      "description": "A vampire girl in a short teal cape holds the reel of a crescent-shaped kite with one broad ribbon tail. Useful for outdoor imagination cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_117/source/vampire-moon-kite.png",
+      "topic": "vampire",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a55b0354fba1876b389d696111a04e64fe8096da4715350d1ce1c88b907195b2",
+      "inputSignature": "df81c6e7f96651368fbef0733b5a704cc3c44ee989455c5b6b8474afb7a38196",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 663501,
+        "weightedCmykRmse": 0.965474
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1020683,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 663501,
+          "weightedCmykRmse": 0.965474
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [60, 13, 1217, 1241],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_117/exports/vampire-moon-kite.pdf",
+          "bytes": 663501,
+          "sha256": "d6a873465757f48bd618c70e0edb03aa923af337a8fc98fba2a95cb650d3d699"
+        },
+        "webp": {
+          "path": "work/production/wave_117/exports/vampire-moon-kite.webp",
+          "bytes": 433054,
+          "sha256": "0d273e5cc7b9ec93e50108f97694af4e30eedf8c9dd9ea59416198fb371f24c8"
+        },
+        "thumb": {
+          "path": "work/production/wave_117/exports/vampire-moon-kite-thumb.webp",
+          "bytes": 38254,
+          "sha256": "ef1b598e0f2998b8114840b4200a64fc0b1bd5bf2fb02d61be9ac2a12ec1dc47"
+        }
+      },
+      "proofSha256": "e80c122cf60100d25a77f6ab02b31da54726b24fe43826e4843a0518c0d1f36b",
+      "pairMeanRgbDifference": 1.165
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "All three full native sources and actual PDF proof reviewed: two moonflowers in planter, coherent juice tumbler and grape tray grips, attached kite string and complete crescent silhouette. Clear margins, no clipping or extra limbs.",
+  "createdAt": "2026-10-24T00:51:22.738Z",
+  "cdnVerifiedAt": "2026-10-24T01:18:57.111Z"
+}

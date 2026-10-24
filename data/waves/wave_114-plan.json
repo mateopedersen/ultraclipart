@@ -1,0 +1,38 @@
+{
+  "wave": "wave_114",
+  "topic": "vampire",
+  "method": "builtin-image-generation",
+  "research": "data/research/vampire-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "vampire-book-ladder",
+      "title": "Vampire Choosing a Library Book",
+      "alt": "A bespectacled vampire stands on a two-step stool reaching for one large book on a short three-book shelf.",
+      "description": "A bespectacled vampire stands on a two-step stool reaching for one large book on a short three-book shelf. Useful for reading corner activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_114/source/vampire-book-ladder.png"
+    },
+    {
+      "id": "vampire-moon-cookie",
+      "title": "Vampire Decorating a Moon Cookie",
+      "alt": "A vampire baker in a plum apron pipes a simple icing curl onto one crescent cookie on a low board.",
+      "description": "A vampire baker in a plum apron pipes a simple icing curl onto one crescent cookie on a low board. Useful for baking sequence cards.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_114/source/vampire-moon-cookie.png"
+    },
+    {
+      "id": "vampire-viola-player",
+      "title": "Vampire Playing a Viola",
+      "alt": "A vampire woman with a low bun holds a viola under her chin while drawing a bow across the strings.",
+      "description": "A vampire woman with a low bun holds a viola under her chin while drawing a bow across the strings. Useful for personal music cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_114/source/vampire-viola-player.png"
+    }
+  ]
+}
