@@ -63,6 +63,14 @@ try {
           }),
         );
       });
+      // Studio can populate its artwork library after the first image snapshot.
+      // Wait for those images too; a genuine broken response still fails here.
+      await page.waitForFunction(() =>
+        [...document.images].every((image) => {
+          image.loading = 'eager';
+          return image.complete && image.naturalWidth > 0;
+        }),
+      );
       const layout = await page.evaluate(() => ({
         overflow: document.documentElement.scrollWidth > innerWidth,
         clippedCardTitles: [...document.querySelectorAll('.card-title')]
