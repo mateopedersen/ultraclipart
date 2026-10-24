@@ -1,113 +1,704 @@
-<section class="create-invitation" aria-labelledby="create-invitation-title">
-  <div class="create-mark" aria-hidden="true">
-    <svg viewBox="0 0 120 100" fill="none">
-      <rect x="20" y="17" width="75" height="68" rx="10" fill="#fff" stroke="#bdcce8" />
-      <path
-        d="m46 61 5-19 31-27 13 15-32 27-17 4Z"
-        fill="#f9c96b"
-        stroke="#142442"
-        stroke-width="2"
-      />
-      <path d="m51 42 12 15m19-42 13 15M46 61l11-3-8-10-3 13Z" fill="#142442" />
-      <path d="M29 72c13-11 16 11 34 0" stroke="#2360e8" stroke-width="3" stroke-linecap="round" />
-      <circle cx="20" cy="21" r="7" fill="#b7cdb9" />
-      <path d="m101 62 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z" fill="#709bd4" />
-    </svg>
+---
+import { art } from '../lib/catalog';
+const strawberry = art.find((item) => item.id === 'strawberry-fruit-trio-realistic-clipart')!;
+const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart')!;
+---
+
+<section class="creative-projects" aria-labelledby="creative-projects-title">
+  <div class="creative-projects-heading">
+    <p>From a little artwork to a finished idea</p>
+    <h2 id="creative-projects-title">Give it your own little twist.</h2>
   </div>
-  <div>
-    <p class="eyebrow">Your idea. Your canvas.</p>
-    <h2 id="create-invitation-title">Make something that is completely yours.</h2>
-    <p>Build with shapes, draw your own lines and give every little detail a personal touch.</p>
-  </div>
-  <div class="create-invitation-action">
-    <a class="button primary" href="/create/">
-      Open the Clipart Studio <span aria-hidden="true">→</span>
+  <div class="creative-projects-grid">
+    <a class="creative-studio-card" href="/create/#studio-workspace">
+      <div class="creative-studio-scene" aria-hidden="true">
+        <div class="creative-scene-orbit"></div>
+        <div class="creative-paper-back"></div>
+        <div class="creative-paper">
+          <span class="creative-paper-label">A little homemade happiness</span>
+          <strong>
+            Freshly
+            <br />
+            picked.
+          </strong>
+          <img
+            class="creative-paper-apple"
+            src={apple.thumb}
+            alt=""
+            width="220"
+            height="220"
+            loading="lazy"
+          />
+          <img
+            class="creative-paper-berry"
+            src={strawberry.thumb}
+            alt=""
+            width="180"
+            height="180"
+            loading="lazy"
+          />
+          <span class="creative-paper-caption">Made with a little imagination.</span>
+        </div>
+        <div class="creative-color-strip">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="creative-pencil">
+          <i></i>
+        </div>
+        <span class="creative-layer-tag">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.6"
+          >
+            <path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5" />
+          </svg>{' '}
+          Your finishing touches
+        </span>
+      </div>
+      <div class="creative-studio-copy">
+        <span class="creative-project-eyebrow">Clipart Studio</span>
+        <h3>
+          Your artwork.
+          <br />
+          Your kind of wonderful.
+        </h3>
+        <p>Combine illustrations, add a few words and arrange every detail on your own canvas.</p>
+        <span class="creative-project-action">
+          Start your design <span aria-hidden="true">↗</span>
+        </span>
+        <small>No account needed · Edit in your browser</small>
+      </div>
     </a>
-    <small>No account needed. Your edits stay on this device.</small>
+    <div class="creative-guide-stack">
+      <a
+        class="creative-guide-card creative-guide-classroom"
+        href="/guides/make-a-classroom-label/"
+      >
+        <div class="creative-guide-cover" aria-hidden="true">
+          <div class="creative-label-sheet">
+            <i></i>
+            <strong>
+              Reading
+              <br />
+              corner
+            </strong>
+            <span>little minds, big ideas</span>
+          </div>
+          <div class="creative-mini-pencil"></div>
+        </div>
+        <div>
+          <span class="creative-project-eyebrow">A classroom project</span>
+          <h3>A label with a little personality.</h3>
+          <p>Make a clear, readable classroom label, step by step.</p>
+          <span class="creative-guide-link">
+            Make a classroom label <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+      <a
+        class="creative-guide-card creative-guide-coloring"
+        href="/guides/turn-clipart-into-a-coloring-activity/"
+      >
+        <div class="creative-guide-cover" aria-hidden="true">
+          <div class="creative-botanical-sheet">
+            <svg viewBox="0 0 100 130" fill="none" stroke="#416d64" stroke-width="1.7">
+              <path d="M49 119V31M49 94C23 94 15 72 21 61c19 1 29 14 28 33Zm1-21c26-1 35-21 28-33-19 3-30 17-28 33ZM49 53C32 49 30 29 40 19c15 7 17 22 9 34Z" />
+              <path d="M49 93 27 69m23 2 21-23M49 49l-7-23" stroke-width="1" />
+            </svg>
+          </div>
+          <div class="creative-color-dot"></div>
+        </div>
+        <div>
+          <span class="creative-project-eyebrow">A hands-on activity</span>
+          <h3>A fresh page of possibilities.</h3>
+          <p>Turn the botanical starter into a simple coloring activity.</p>
+          <span class="creative-guide-link">
+            Follow the coloring guide <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+      <a class="creative-all-guides" href="/guides/">
+        More projects to make your own <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 </section>
-
 <style>
-  .create-invitation {
-    display: grid;
-    grid-template-columns: 110px 1fr auto;
-    gap: 26px;
-    align-items: center;
-    margin: 42px 0;
-    padding: 30px;
-    border: 1px solid #d6e3f4;
-    border-radius: 18px;
-    background: #f5f8ff;
+  .creative-projects {
+    margin: 58px 0;
+    color: #183557;
   }
-  .create-mark svg {
-    display: block;
-    width: 110px;
-    max-width: 100%;
+  .creative-projects-heading {
+    margin-bottom: 24px;
   }
-  .create-invitation .eyebrow {
-    margin: 0 0 10px;
+  .creative-projects-heading > p {
+    margin: 0 0 9px;
+    color: #416389;
+    font:
+      650 13px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
   }
-  .create-invitation h2 {
-    font-size: 24px;
-    line-height: 1.25;
-    margin: 0 0 10px;
-  }
-  .create-invitation p:last-child {
+  .creative-projects h2 {
     margin: 0;
-    max-width: 520px;
-    font-size: 15px;
+    color: #183557;
+    font:
+      750 clamp(27px, 3vw, 36px)/1.2 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -1px;
   }
-  .create-invitation-action {
+  .creative-projects-grid {
     display: grid;
-    justify-items: center;
-    gap: 12px;
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr);
+    gap: 22px;
   }
-  .create-invitation-action small {
-    max-width: 235px;
+  .creative-studio-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border: 1px solid #dae3ed;
+    border-radius: 24px;
+    overflow: hidden;
+    text-decoration: none;
+    background: #fff;
+    box-shadow: 0 6px 0 #edf2f9;
+    transition:
+      box-shadow 0.2s,
+      border-color 0.2s;
+  }
+  .creative-studio-card:hover {
+    border-color: #95b5df;
+    box-shadow:
+      0 8px 0 #e1ebf7,
+      0 16px 30px #29466f12;
+  }
+  .creative-studio-scene {
+    position: relative;
+    height: 345px;
+    overflow: hidden;
+    isolation: isolate;
+    background: radial-gradient(ellipse at 25% 15%, #fff, #fff2d9 70%);
+  }
+  .creative-scene-orbit {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #f4ddba55;
+    border: 1px solid #fffc;
+  }
+  .creative-paper-back,
+  .creative-paper {
+    position: absolute;
+    left: 50%;
+    top: 29px;
+    width: 224px;
+    height: 277px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    box-shadow:
+      0 4px 0 #e5dccd,
+      0 18px 24px #80603b26;
+  }
+  .creative-paper-back {
+    transform: translateX(-50%) rotate(-12deg);
+    background: repeating-linear-gradient(45deg, #e1eadb 0 8px, #edf3e9 8px 16px);
+  }
+  .creative-paper {
+    background: #fffef8;
+    transform: translateX(-50%) rotate(5deg);
+    padding: 17px;
+  }
+  .creative-paper-label {
+    display: block;
+    color: #436454;
+    font:
+      550 8px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
     text-align: center;
-    color: #52617a;
-    font-size: 12px;
+  }
+  .creative-paper > strong {
+    position: relative;
+    z-index: 1;
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+    color: #325f4d;
+    font:
+      italic 700 32px/0.95 Georgia,
+      serif;
+    letter-spacing: -1.3px;
+  }
+  .creative-paper img {
+    position: absolute;
+    object-fit: contain;
+    filter: drop-shadow(0 7px 4px #6f53341a);
+  }
+  .creative-paper-apple {
+    width: 162px;
+    height: 162px;
+    left: -10px;
+    top: 93px;
+    transform: rotate(-12deg);
+  }
+  .creative-paper-berry {
+    width: 135px;
+    height: 135px;
+    right: -7px;
+    top: 127px;
+    transform: rotate(9deg);
+  }
+  .creative-paper-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #5e7566;
+    font:
+      450 8px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .creative-color-strip {
+    position: absolute;
+    left: calc(50% - 175px);
+    bottom: 54px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 10px 9px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid #eadfcd;
+    box-shadow:
+      0 5px 0 #e6d9c4,
+      0 10px 13px #745a3822;
+    transform: rotate(-7deg);
+  }
+  .creative-color-strip span {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: #d96c52;
+  }
+  .creative-color-strip span:nth-child(2) {
+    background: #e7c86b;
+  }
+  .creative-color-strip span:nth-child(3) {
+    background: #6e9d7b;
+  }
+  .creative-color-strip span:nth-child(4) {
+    background: #365e4a;
+  }
+  .creative-pencil {
+    position: absolute;
+    left: calc(50% + 139px);
+    top: 76px;
+    width: 16px;
+    height: 168px;
+    border-radius: 7px 7px 0 0;
+    transform: rotate(24deg);
+    background: linear-gradient(
+      90deg,
+      #e7a747 0 25%,
+      #ffe7a4 25% 48%,
+      #f4c66c 48% 80%,
+      #cc9440 80%
+    );
+    box-shadow: 8px 9px 9px #624e3029;
+  }
+  .creative-pencil:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 18px;
+    border-radius: 7px 7px 0 0;
+    background: #d68e98;
+    border-bottom: 7px solid #bacbd8;
+  }
+  .creative-pencil:after {
+    content: '';
+    position: absolute;
+    bottom: -22px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 23px solid #d7b68c;
+  }
+  .creative-pencil i {
+    position: absolute;
+    bottom: -22px;
+    left: 5px;
+    width: 6px;
+    height: 8px;
+    background: #38474e;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
+  .creative-layer-tag {
+    position: absolute;
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    white-space: nowrap;
+    padding: 8px 13px;
+    border: 1px solid #e0d8ca;
+    border-radius: 9px;
+    background: #fffef8;
+    color: #526a5b;
+    font:
+      600 11px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .creative-studio-copy {
+    padding: 27px 30px;
+  }
+  .creative-project-eyebrow {
+    display: block;
+    margin-bottom: 10px;
+    color: #46688c;
+    font:
+      650 12px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .creative-projects h3 {
+    margin: 0 0 13px;
+    color: #183557;
+    font:
+      750 26px/1.2 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -0.7px;
+  }
+  .creative-studio-copy > p {
+    margin: 0 0 23px;
+    color: #425f7e;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 460px;
+  }
+  .creative-project-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 26px;
+    padding: 13px 18px;
+    border-radius: 11px;
+    background: #1260cf;
+    color: #fff;
+    font:
+      650 14px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    box-shadow:
+      inset 0 1px #fff3,
+      0 3px 0 #d1e2fa;
+  }
+  .creative-studio-copy > small {
+    display: block;
+    margin-top: 13px;
+    color: #526b89;
+    font-size: 11px;
     line-height: 1.5;
   }
-  .create-invitation .button {
-    white-space: nowrap;
-    min-height: 48px;
+  .creative-guide-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0;
   }
-  @media (max-width: 1000px) {
-    .create-invitation {
-      grid-template-columns: 85px 1fr;
+  .creative-guide-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 1px solid #dce6f2;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    background: #fff;
+    box-shadow: 0 4px 0 #edf2f9;
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
+  }
+  .creative-guide-card:hover {
+    transform: translateY(-3px);
+    border-color: #95b5df;
+  }
+  .creative-guide-cover {
+    position: relative;
+    overflow: hidden;
+    height: 145px;
+    flex-shrink: 0;
+    background: linear-gradient(140deg, #eef5ff, #dce9fb);
+  }
+  .creative-guide-coloring .creative-guide-cover {
+    background: linear-gradient(140deg, #f0f6f0, #e1ece0);
+  }
+  .creative-label-sheet {
+    position: absolute;
+    width: 185px;
+    height: 102px;
+    top: 21px;
+    left: 50%;
+    padding: 15px 18px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    transform: translateX(-50%) rotate(-6deg);
+    background: #fff;
+    box-shadow:
+      0 5px 0 #b9cce5,
+      0 15px 16px #304f7d20;
+  }
+  .creative-label-sheet:before {
+    content: '';
+    position: absolute;
+    inset: 7px;
+    border: 1px dashed #b7cbe6;
+    border-radius: 4px;
+  }
+  .creative-label-sheet > strong {
+    display: block;
+    color: #305d96;
+    font:
+      700 20px/1.05 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -0.7px;
+  }
+  .creative-label-sheet > span {
+    display: block;
+    margin-top: 6px;
+    color: #59779b;
+    font-size: 8px;
+  }
+  .creative-mini-pencil {
+    position: absolute;
+    left: calc(50% + 70px);
+    top: 27px;
+    width: 12px;
+    height: 90px;
+    transform: rotate(28deg);
+    background: linear-gradient(90deg, #dba64f, #ffe6a3 40%, #efbe61 70%, #c78a33);
+    box-shadow: 5px 7px 6px #42608328;
+    border-radius: 4px;
+  }
+  .creative-mini-pencil:after {
+    content: '';
+    position: absolute;
+    bottom: -14px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 15px solid #5f5d56;
+  }
+  .creative-botanical-sheet {
+    position: absolute;
+    left: 50%;
+    top: 12px;
+    width: 125px;
+    height: 154px;
+    transform: translateX(-50%) rotate(9deg);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow:
+      0 5px 0 #c1d2bd,
+      0 12px 16px #4a665c20;
+  }
+  .creative-botanical-sheet svg {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .creative-color-dot {
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 48px;
+    left: calc(50% + 83px);
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background: #88b59a;
+    box-shadow: 0 4px 0 #b5ceb9;
+  }
+  .creative-color-dot:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 32px;
+    left: -27px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    background: #f2ce8d;
+    box-shadow: 0 3px 0 #d9c49f;
+  }
+  .creative-guide-card > div:last-child {
+    padding: 21px 24px;
+  }
+  .creative-guide-card h3 {
+    font-size: 21px;
+  }
+  .creative-guide-card p {
+    margin: 0 0 17px;
+    color: #425f7e;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .creative-guide-link,
+  .creative-all-guides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    color: #155bb6;
+    font:
+      650 13px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .creative-all-guides {
+    padding: 5px 4px;
+  }
+  .creative-projects a:focus-visible {
+    outline: 3px solid #246ad0;
+    outline-offset: 4px;
+  }
+  @media (min-width: 1100px) {
+    .creative-guide-card {
+      flex-direction: row;
+      align-items: center;
     }
-    .create-invitation-action {
-      grid-column: 2;
-      justify-items: start;
+    .creative-guide-cover {
+      width: 165px;
+      height: 100%;
+      min-height: 230px;
     }
-    .create-invitation-action small {
-      text-align: left;
-      max-width: none;
+    .creative-label-sheet {
+      top: 65px;
+      width: 145px;
+      padding: 20px 15px;
+    }
+    .creative-mini-pencil {
+      left: calc(50% + 52px);
+      top: 45px;
+    }
+    .creative-botanical-sheet {
+      top: 40px;
+      width: 120px;
+    }
+    .creative-color-dot {
+      left: calc(50% + 36px);
+      top: 120px;
+    }
+    .creative-guide-card > div:last-child {
+      flex: 1;
+      min-width: 0;
     }
   }
-  @media (max-width: 580px) {
-    .create-invitation {
+  @media (max-width: 700px) {
+    .creative-projects-grid {
       grid-template-columns: 1fr;
-      padding: 24px;
-      gap: 18px;
     }
-    .create-mark {
-      width: 85px;
+    .creative-studio-scene {
+      height: 325px;
     }
-    .create-invitation-action {
-      grid-column: auto;
-      justify-items: stretch;
+    .creative-studio-copy {
+      padding: 25px;
     }
-    .create-invitation-action small {
-      text-align: center;
+    .creative-guide-card {
+      flex-direction: row;
+      align-items: center;
     }
-    .create-invitation h2 {
-      font-size: 23px;
+    .creative-guide-cover {
+      width: 120px;
+      height: 100%;
+      min-height: 220px;
     }
-    .create-invitation .button {
-      white-space: normal;
-      text-align: center;
+    .creative-guide-card > div:last-child {
+      flex: 1;
+      min-width: 0;
+      padding: 20px 17px;
+    }
+    .creative-label-sheet {
+      top: 55px;
+      width: 135px;
+    }
+    .creative-mini-pencil {
+      left: calc(50% + 36px);
+      top: 44px;
+    }
+    .creative-botanical-sheet {
+      top: 40px;
+      width: 104px;
+    }
+    .creative-color-dot {
+      left: calc(50% + 20px);
+      top: 133px;
+    }
+    .creative-projects h3 {
+      font-size: 24px;
+    }
+    .creative-guide-card h3 {
+      font-size: 19px;
+    }
+    .creative-guide-link {
+      font-size: 12px;
+    }
+    .creative-projects {
+      margin: 42px 0;
+    }
+  }
+  @media (max-width: 359px) {
+    .creative-studio-copy {
+      padding: 22px;
+    }
+    .creative-guide-cover {
+      width: 90px;
+    }
+    .creative-guide-card > div:last-child {
+      padding: 19px 14px;
+    }
+    .creative-guide-card h3 {
+      font-size: 18px;
+    }
+    .creative-guide-cover .creative-label-sheet {
+      width: 120px;
+      padding: 21px 12px;
+    }
+    .creative-paper,
+    .creative-paper-back {
+      width: 205px;
+    }
+    .creative-color-strip {
+      left: 16px;
+    }
+    .creative-pencil {
+      left: auto;
+      right: 27px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .creative-projects a {
+      transition: none;
     }
   }
 </style>

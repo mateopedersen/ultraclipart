@@ -1,0 +1,442 @@
+---
+import { art, topics, slugify, availableClusters } from '../lib/catalog';
+const seasons = [
+  {
+    cluster: 'Halloween',
+    label: 'Halloween',
+    title: 'A little magic. A little mischief.',
+    body: 'For treat bags, party invitations and autumn crafts.',
+    link: 'Find your Halloween favorites',
+    tone: 'halloween',
+    images: ['pumpkin-lantern-smile', 'halloween-treat-pail', 'halloween-caramel-apple'],
+  },
+  {
+    cluster: 'Thanksgiving & Autumn',
+    label: 'Autumn & Thanksgiving',
+    title: 'Gather something lovely.',
+    body: 'Warm details for table settings and thoughtful thank-you notes.',
+    link: 'Explore the autumn collection',
+    tone: 'autumn',
+    images: [
+      'thanksgiving-harvest-door-wreath',
+      'thanksgiving-harvest-picnic-basket',
+      'thanksgiving-apple-cider-tray',
+    ],
+  },
+  {
+    cluster: 'Christmas & Winter',
+    label: 'Winter',
+    title: 'Cozy up your next creation.',
+    body: 'Snowy scenes and little comforts for your winter projects.',
+    link: 'Discover winter artwork',
+    tone: 'winter',
+    images: [
+      'winter-snowy-timber-cabin',
+      'winter-thermos-and-cup',
+      'winter-knitted-mittens-on-cord',
+    ],
+  },
+  {
+    cluster: "Valentine's Day",
+    label: 'Love & little gestures',
+    title: 'A little heart goes a long way.',
+    body: 'Flowers, handwritten wishes and something made with love.',
+    link: 'Explore heartfelt ideas',
+    tone: 'love',
+    images: [
+      'floral-heart-roses-wreath-clipart',
+      'love-letter-envelope-heart-clipart',
+      'satin-ribbon-heart-bow-clipart',
+    ],
+  },
+]
+  .filter((s) => availableClusters.includes(s.cluster))
+  .map((s) => ({
+    ...s,
+    images: s.images.map((id) => {
+      const item = art.find((a) => a.id === id);
+      if (!item) throw new Error(`Missing seasonal artwork: ${id}`);
+      return item;
+    }),
+    count: art.filter((a) => topics.some((t) => t.slug === a.topic && t.cluster === s.cluster))
+      .length,
+  }));
+---
+
+<section class="seasonal-showcase" aria-labelledby="seasonal-showcase-title">
+  <div class="seasonal-heading">
+    <div>
+      <p>A little inspiration for the occasion</p>
+      <h2 id="seasonal-showcase-title">Make the moment feel special.</h2>
+    </div>
+    <a href="/collections/">
+      All collections <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+  <div class="seasonal-grid">
+    {seasons.map((season) => (
+      <a
+        class={`seasonal-card seasonal-${season.tone}`}
+        href={`/collection/${slugify(season.cluster)}/`}
+      >
+        <div class="seasonal-scene" aria-hidden="true">
+          <span class="seasonal-orbit"></span>
+          <span class="seasonal-platform"></span>
+          {season.images.map((image, i) => (
+            <img
+              class={`seasonal-object seasonal-object-${i}`}
+              src={image.thumb}
+              alt=""
+              width="240"
+              height="240"
+              loading="lazy"
+            />
+          ))}
+          <span class="seasonal-count">{season.count} illustrations</span>
+        </div>
+        <div class="seasonal-copy">
+          <span class="seasonal-label">{season.label}</span>
+          <h3>{season.title}</h3>
+          <p>{season.body}</p>
+          <span class="seasonal-link">
+            {season.link}
+            <span aria-hidden="true">→</span>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+<style>
+  .seasonal-showcase {
+    margin: 58px 0 0;
+    color: #1b3557;
+  }
+  .seasonal-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 25px;
+  }
+  .seasonal-heading p {
+    margin: 0 0 9px;
+    color: #46688c;
+    font:
+      650 13px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .seasonal-heading h2 {
+    margin: 0;
+    color: #183557;
+    font:
+      750 clamp(27px, 3vw, 36px)/1.2 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -1px;
+  }
+  .seasonal-heading > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+    color: #155bb6;
+    font-size: 13px;
+    font-weight: 650;
+    padding: 8px 0;
+  }
+  .seasonal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .seasonal-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #dee5ee;
+    border-radius: 21px;
+    background: #fff;
+    text-decoration: none;
+    box-shadow: 0 5px 0 #edf2f9;
+    transition:
+      transform 0.2s,
+      border-color 0.2s,
+      box-shadow 0.2s;
+  }
+  .seasonal-card:hover {
+    transform: translateY(-5px);
+    border-color: #91b2df;
+    box-shadow:
+      0 7px 0 #dfe9f7,
+      0 17px 22px #294c7a13;
+  }
+  .seasonal-scene {
+    position: relative;
+    height: 222px;
+    flex-shrink: 0;
+    isolation: isolate;
+    overflow: hidden;
+    background: radial-gradient(ellipse at 40% 10%, #fff8f0, #f5e6d5);
+  }
+  .seasonal-autumn .seasonal-scene {
+    background: radial-gradient(ellipse at 40% 10%, #fffaf0, #eee5cf);
+  }
+  .seasonal-winter .seasonal-scene {
+    background: radial-gradient(ellipse at 40% 10%, #fcffff, #e1edf5);
+  }
+  .seasonal-love .seasonal-scene {
+    background: radial-gradient(ellipse at 40% 10%, #fffafc, #f4e5ea);
+  }
+  .seasonal-orbit {
+    position: absolute;
+    left: 10%;
+    top: 17px;
+    width: 80%;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid #ffffffa0;
+    background: #fff3;
+  }
+  .seasonal-platform {
+    position: absolute;
+    left: 9%;
+    right: 9%;
+    bottom: 35px;
+    height: 37px;
+    border-radius: 50%;
+    background: linear-gradient(#fff, #e0d3bc);
+    border-top: 2px solid #fff;
+    box-shadow:
+      0 5px 0 #d6c7af,
+      0 16px 18px #69574320;
+  }
+  .seasonal-winter .seasonal-platform {
+    background: linear-gradient(#fff, #d0e3f0);
+    box-shadow:
+      0 5px 0 #b9cfde,
+      0 16px 18px #36577520;
+  }
+  .seasonal-love .seasonal-platform {
+    background: linear-gradient(#fff, #eddae1);
+    box-shadow:
+      0 5px 0 #d9c4cd,
+      0 16px 18px #76526420;
+  }
+  .seasonal-object {
+    position: absolute;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 6px #4d41251e);
+    transition: transform 0.2s;
+  }
+  .seasonal-object-0 {
+    width: 180px;
+    height: 180px;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%) rotate(-5deg);
+  }
+  .seasonal-object-1 {
+    width: 105px;
+    height: 105px;
+    left: 0;
+    bottom: 28px;
+    transform: rotate(-11deg);
+  }
+  .seasonal-object-2 {
+    width: 95px;
+    height: 95px;
+    right: 0;
+    bottom: 33px;
+    transform: rotate(9deg);
+  }
+  .seasonal-card:hover .seasonal-object-0 {
+    transform: translateX(-50%) rotate(-2deg) translateY(-3px);
+  }
+  .seasonal-count {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #68573d;
+    font:
+      550 10px/1.5 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .seasonal-winter .seasonal-count {
+    color: #42647e;
+  }
+  .seasonal-love .seasonal-count {
+    color: #775367;
+  }
+  .seasonal-copy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px 22px;
+  }
+  .seasonal-label {
+    display: block;
+    color: #6f583c;
+    font:
+      650 11px/1.4 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    margin-bottom: 10px;
+  }
+  .seasonal-winter .seasonal-label {
+    color: #476a84;
+  }
+  .seasonal-love .seasonal-label {
+    color: #8a4d69;
+  }
+  .seasonal-copy h3 {
+    margin: 0 0 13px;
+    color: #1b3557;
+    font:
+      750 22px/1.25 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -0.6px;
+  }
+  .seasonal-copy p {
+    margin: 0 0 24px;
+    color: #455f7e;
+    font-size: 13px;
+    line-height: 1.75;
+  }
+  .seasonal-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    color: #155bb6;
+    font:
+      650 12px/1.6 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+  }
+  .seasonal-card:focus-visible {
+    outline: 3px solid #246ad0;
+    outline-offset: 4px;
+  }
+  @media (max-width: 1050px) {
+    .seasonal-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .seasonal-scene {
+      height: 235px;
+    }
+    .seasonal-object-0 {
+      width: 195px;
+      height: 195px;
+    }
+    .seasonal-object-1 {
+      left: calc(50% - 140px);
+    }
+    .seasonal-object-2 {
+      right: calc(50% - 135px);
+    }
+  }
+  @media (max-width: 600px) {
+    .seasonal-showcase {
+      margin-top: 43px;
+    }
+    .seasonal-heading {
+      display: block;
+    }
+    .seasonal-heading > a {
+      margin-top: 13px;
+    }
+    .seasonal-grid {
+      grid-template-columns: 1fr;
+    }
+    .seasonal-card {
+      display: grid;
+      grid-template-columns: 125px minmax(0, 1fr);
+    }
+    .seasonal-scene {
+      height: 100%;
+      min-height: 278px;
+    }
+    .seasonal-object-0 {
+      width: 125px;
+      height: 150px;
+      top: 42px;
+    }
+    .seasonal-object-1 {
+      width: 85px;
+      height: 85px;
+      left: -4px;
+      bottom: 42px;
+    }
+    .seasonal-object-2 {
+      width: 75px;
+      height: 75px;
+      right: -10px;
+      bottom: 53px;
+    }
+    .seasonal-orbit {
+      left: -20%;
+      width: 140%;
+      top: 35px;
+    }
+    .seasonal-platform {
+      left: -7%;
+      right: -7%;
+      bottom: 49px;
+    }
+    .seasonal-copy {
+      padding: 24px 18px;
+    }
+    .seasonal-copy h3 {
+      font-size: 21px;
+    }
+    .seasonal-copy p {
+      font-size: 13px;
+    }
+    .seasonal-count {
+      font-size: 9px;
+      bottom: 13px;
+    }
+  }
+  @media (max-width: 359px) {
+    .seasonal-card {
+      grid-template-columns: 100px minmax(0, 1fr);
+    }
+    .seasonal-copy {
+      padding: 23px 15px;
+    }
+    .seasonal-copy h3 {
+      font-size: 20px;
+    }
+    .seasonal-object-0 {
+      width: 100px;
+      height: 130px;
+      top: 58px;
+    }
+    .seasonal-object-1 {
+      width: 72px;
+      height: 72px;
+    }
+    .seasonal-object-2 {
+      width: 65px;
+      height: 65px;
+    }
+    .seasonal-count {
+      font-size: 8px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .seasonal-showcase a,
+    .seasonal-object {
+      transition: none;
+    }
+  }
+</style>

@@ -9,7 +9,8 @@ type ArtworkFacts = {
 
 const techniques: [RegExp, string][] = [
   [/watercolor/, 'Watercolor'],
-  [/colored-pencil|crayon/, 'Colored pencil & crayon'],
+  [/colored-pencil/, 'Colored pencil'],
+  [/crayon/, 'Crayon illustration'],
   [/botanical/, 'Botanical illustration'],
   [/gouache/, 'Gouache'],
   [/ink-wash/, 'Ink wash'],

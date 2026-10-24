@@ -96,6 +96,7 @@ jobs:
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/ai-studio-transfer.mjs
           done
           if [ '${{ matrix.engine }}' = chromium ]; then
+            BASE_URL=http://127.0.0.1:4321 node tests/e2e/cute-surprise.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-2026-10-24 EXPECTED_ARTWORKS=550 EXPECTED_TOPICS=11 EVIDENCE_DIR=reports/fruit-gallery node tests/e2e/package-gallery.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs

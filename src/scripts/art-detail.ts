@@ -5,12 +5,19 @@ export function initArtDetail() {
   if (preview) {
     const buttons = document.querySelectorAll<HTMLButtonElement>('.art-preview-controls [data-bg]');
     const custom = document.querySelector<HTMLElement>('.art-custom-color');
+    const applyCustom = custom?.querySelector<HTMLButtonElement>('[data-apply-custom]');
+    const customLabel = custom?.querySelector<HTMLElement>('[data-custom-label]');
+    let customColor: string | null = null;
     const background = (color: string, customSelected = false) => {
       preview.style.background = color === 'transparent' ? '' : color;
       buttons.forEach((button) =>
         button.setAttribute('aria-pressed', String(!customSelected && button.dataset.bg === color)),
       );
       if (custom) custom.dataset.selected = String(customSelected);
+      if (applyCustom) {
+        applyCustom.setAttribute('aria-pressed', String(customSelected));
+        applyCustom.textContent = customSelected ? 'Selected' : 'Use color';
+      }
     };
     buttons.forEach((button) => {
       button.addEventListener('click', () => background(button.dataset.bg!));
@@ -18,8 +25,18 @@ export function initArtDetail() {
     document
       .querySelector<HTMLInputElement>('#preview-color')
       ?.addEventListener('input', (event) => {
-        background((event.target as HTMLInputElement).value, true);
+        customColor = (event.target as HTMLInputElement).value;
+        if (custom) {
+          custom.dataset.picked = 'true';
+          custom.style.setProperty('--custom-color', customColor);
+        }
+        if (customLabel) customLabel.textContent = customColor.toUpperCase();
+        if (applyCustom) applyCustom.hidden = false;
+        background(customColor, true);
       });
+    applyCustom?.addEventListener('click', () => {
+      if (customColor) background(customColor, true);
+    });
   }
   const button = document.querySelector<HTMLButtonElement>('[data-favorite]');
   const status = document.querySelector<HTMLElement>('#favorite-status');
