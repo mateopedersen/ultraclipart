@@ -22,6 +22,7 @@ const state = () =>
 try {
   await page.goto(`${base}/create/`);
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
+  await page.locator('[data-panel=create]').tap();
   await page.locator('[data-shape=heart]').tap();
   expect((await state()).layers.length).toBe(1);
   await page.locator('[data-action=draw]').tap();

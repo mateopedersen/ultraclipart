@@ -125,6 +125,50 @@ export class StudioTools {
     this.controls();
     this.renderEffects();
   }
+  async addCatalogue(id: string) {
+    if (!this.catalogue.length) this.catalogue = await rasterCatalog();
+    const asset = this.catalogue.find((a) => a.id === id);
+    if (!asset) throw new Error('Choose a catalogue illustration.');
+    const host = this.editor.host;
+    const snapshot = host.committed(),
+      d = clone(snapshot),
+      images = [
+        ...new Map(
+          d.layers.filter((l): l is RasterLayer => l.kind === 'raster').map((l) => [l.assetId, l]),
+        ).values(),
+      ];
+    if (
+      (!images.some((l) => l.assetId === asset.id) && images.length >= 12) ||
+      images.reduce(
+        (sum, l) => sum + l.width * l.height,
+        images.some((l) => l.assetId === asset.id) ? 0 : asset.width * asset.height,
+      ) > 40_000_000
+    )
+      throw new Error(
+        'This composition reached its 12-image or 40-million-pixel limit. Save a copy and simplify it before adding more.',
+      );
+    host.status('Opening verified catalogue artwork…');
+    const opened = await openRaster(asset),
+      layer = opened.layers[0] as RasterLayer;
+    if (snapshot !== host.committed())
+      throw new Error(
+        'The composition changed while opening this clipart. Add it again to keep your latest edits.',
+      );
+    layer.id = `image-${crypto.randomUUID()}`;
+    layer.label = asset.title || asset.id;
+    if (!d.layers.length && host.root.dataset.creator === 'true') {
+      d.width = Math.min(4096, asset.width);
+      d.height = Math.min(4096, asset.height);
+      layer.scaleX = layer.scaleY = Math.min(d.width / asset.width, d.height / asset.height);
+    } else
+      layer.scaleX = layer.scaleY = Math.min(d.width / asset.width, d.height / asset.height) * 0.55;
+    layer.x = (d.width - asset.width * layer.scaleX) / 2;
+    layer.y = (d.height - asset.height * layer.scaleY) / 2;
+    d.layers.push(layer);
+    d.version = 2;
+    host.commit(d, 'Clipart added as an independent image layer.');
+    host.select(layer.id);
+  }
   private async addLocal(file: File) {
     const host = this.editor.host,
       snapshot = host.committed();
@@ -136,7 +180,11 @@ export class StudioTools {
         'The composition changed while reading this image. Choose the file again to keep your latest work.',
       );
     const d = clone(snapshot),
-      images = d.layers.filter((l): l is RasterLayer => l.kind === 'raster');
+      images = [
+        ...new Map(
+          d.layers.filter((l): l is RasterLayer => l.kind === 'raster').map((l) => [l.assetId, l]),
+        ).values(),
+      ];
     if (
       images.length >= 12 ||
       images.reduce((n, l) => n + l.width * l.height, layer.width * layer.height) > 40000000
@@ -405,35 +453,7 @@ export class StudioTools {
         'Cut contour downloaded at native 600 PPI scale. Confirm size in your cutting software.',
       );
     } else if (action === 'add-clipart') {
-      if (!this.catalogue.length) this.catalogue = await rasterCatalog();
-      const asset = this.catalogue.find((a) => a.id === e.value('data-composer-list'));
-      if (!asset) throw new Error('Choose a catalogue illustration.');
-      const snapshot = host.committed(),
-        d = clone(snapshot),
-        images = d.layers.filter((l): l is RasterLayer => l.kind === 'raster');
-      if (
-        images.length >= 12 ||
-        images.reduce((sum, l) => sum + l.width * l.height, asset.width * asset.height) > 40_000_000
-      )
-        throw new Error(
-          'This composition reached its 12-image or 40-million-pixel limit. Save a copy and simplify it before adding more.',
-        );
-      host.status('Opening verified catalogue artwork…');
-      const opened = await openRaster(asset),
-        layer = opened.layers[0] as RasterLayer;
-      if (snapshot !== host.committed())
-        throw new Error(
-          'The composition changed while opening this clipart. Add it again to keep your latest edits.',
-        );
-      layer.id = `image-${crypto.randomUUID()}`;
-      layer.label = asset.title || asset.id;
-      layer.scaleX = layer.scaleY = Math.min(d.width / asset.width, d.height / asset.height) * 0.55;
-      layer.x = (d.width - asset.width * layer.scaleX) / 2;
-      layer.y = (d.height - asset.height * layer.scaleY) / 2;
-      d.layers.push(layer);
-      d.version = 2;
-      host.commit(d, 'Clipart added as an independent image layer.');
-      host.select(layer.id);
+      await this.addCatalogue(e.value('data-composer-list'));
     } else if (action === 'pattern') {
       if (!e.region()) {
         e.inputs({ ...defaultAdjustment(), mode: 'adjust' });
@@ -461,6 +481,7 @@ export class StudioTools {
           TextLayer | undefined;
       if (!layer || layer.locked) throw new Error('Select an unlocked text layer first.');
       layer.typography = {
+        ...layer.typography,
         layout: e.value('data-type-layout') as Typography['layout'],
         font: e.value('data-type-font') as Typography['font'],
         radius: e.number('data-type-radius'),

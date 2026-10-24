@@ -58,7 +58,15 @@ export class SmartController {
         root
           .querySelectorAll<HTMLButtonElement>('[data-work-mode]')
           .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
-        host.panel(button.dataset.workMode === 'print' ? 'studio' : 'region');
+        host.panel(
+          button.dataset.workMode === 'print'
+            ? 'studio'
+            : root.dataset.creator === 'true'
+              ? button.dataset.workMode === 'quick'
+                ? 'elements'
+                : 'create'
+              : 'region',
+        );
         return;
       }
       if (button.dataset.smartAction) {
@@ -216,6 +224,9 @@ export class SmartController {
   }
   tool() {
     return this.value('data-smart-tool') as Tool;
+  }
+  async addArtwork(id: string) {
+    return this.studio.addCatalogue(id);
   }
   onPanel(name: string) {
     this.active = name === 'region';

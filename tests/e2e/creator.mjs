@@ -81,6 +81,7 @@ try {
   await expect(page.locator('[data-empty-canvas]')).toBeVisible();
   await expect(page.locator('.uc-editor [inert]')).toHaveCount(0);
   checks.push('blank first-class canvas, one H1, ready controls');
+  await panel('create');
   for (const kind of [
     'rectangle',
     'rounded',
@@ -201,6 +202,7 @@ try {
   await action('undo').click();
   expect(JSON.stringify(await state())).toBe(exact);
   checks.push('import replacement remains undoable');
+  await page.locator('.studio-basic-starters').evaluate((el) => (el.open = true));
   for (const [id, count] of [
     ['sunny-badge', 20],
     ['botanical-sprig', 12],

@@ -79,6 +79,8 @@ export interface Typography {
   strokeWidth: number;
   shadow: boolean;
   font: 'sans' | 'serif' | 'mono';
+  italic?: boolean;
+  decoration?: 'none' | 'underline' | 'strike';
 }
 export const defaultAdjustment = (): Adjustment => ({
   mode: 'replace',
