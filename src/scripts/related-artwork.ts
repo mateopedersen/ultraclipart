@@ -248,6 +248,8 @@ export function initRelatedArtwork() {
         more.hidden = true;
         end.hidden = true;
         observer?.disconnect();
+        for (const timer of timers.values()) clearTimeout(timer);
+        timers.clear();
         status.textContent =
           'Recommendations could not be refreshed. Check your connection and try again.';
         return false;

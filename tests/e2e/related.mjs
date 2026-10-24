@@ -290,6 +290,28 @@ try {
   await expect(plain.locator('.detail-actions [download]')).toHaveCount(2);
   await nojs.close();
   report.checks.push('T24 server-rendered links and original downloads work without JavaScript');
+  // A failed revalidation must cancel impressions that have not reached one second.
+  await page.unrouteAll({ behavior: 'wait' });
+  let failRelease;
+  await page.route('**/related-release.json', async (route) => {
+    await new Promise((resolve) => {
+      failRelease = resolve;
+    });
+    await route.fulfill({ status: 503, body: '{}' });
+  });
+  await page.goto(`${base}/art/${reference}/`, { waitUntil: 'domcontentloaded' });
+  await expect(page.locator('[data-related-root]')).toHaveAttribute('data-ready', 'true');
+  await page.locator('.related-card').first().scrollIntoViewIfNeeded();
+  await page.waitForTimeout(100);
+  assert.equal(typeof failRelease, 'function');
+  failRelease();
+  await expect(page.locator('[data-related-results]')).toBeHidden();
+  await page.waitForTimeout(1100);
+  assert.equal(
+    await page.evaluate(() => window.relatedEvents.filter((e) => e.event === 'impression').length),
+    0,
+  );
+  report.checks.push('Failed revalidation cancels pending visibility impressions');
   assert.deepEqual(errors, []);
   console.log(JSON.stringify(report, null, 2));
 } finally {
