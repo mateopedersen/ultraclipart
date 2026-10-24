@@ -1,0 +1,126 @@
+<div class="uc-text-presets" aria-label="Text styles">
+  <button data-text-preset="headline">
+    <b>MAKE IT</b>
+    <span>Headline</span>
+  </button>
+  <button data-text-preset="editorial">
+    <b>Lovely</b>
+    <span>Editorial</span>
+  </button>
+  <button data-text-preset="badge">
+    <b>GOOD VIBES</b>
+    <span>Curved</span>
+  </button>
+  <button data-text-preset="outline">
+    <b>HELLO</b>
+    <span>Outlined</span>
+  </button>
+  <button data-text-preset="typewriter">
+    <b>Once upon</b>
+    <span>Typewriter</span>
+  </button>
+  <button data-text-preset="label">
+    <b>Made for you</b>
+    <span>Label</span>
+  </button>
+</div>
+<p class="uc-hint">Choose a style, then type your words. Select existing text to edit it.</p>
+<label>
+  Your text<textarea data-text rows="3" maxlength="500" placeholder="Make it your own"></textarea>
+</label>
+<div class="uc-row">
+  <label>
+    Typeface
+    <select data-text-font>
+      <option value="sans">Modern sans</option>
+      <option value="serif">Classic serif</option>
+      <option value="mono">Typewriter</option>
+    </select>
+  </label>
+  <label>
+    Font size
+    <input data-text-size type="number" min="8" max="300" value="48" />
+  </label>
+</div>
+<div class="uc-text-toggles">
+  <label class="uc-check">
+    <input data-text-bold type="checkbox" />
+    <b>Bold</b>
+  </label>
+  <label class="uc-check">
+    <input data-text-italic type="checkbox" />
+    <i>Italic</i>
+  </label>
+</div>
+<div class="uc-row">
+  <label>
+    Text color
+    <input data-text-color type="color" value="#17274f" />
+  </label>
+  <label>
+    Decoration
+    <select data-text-decoration>
+      <option value="none">None</option>
+      <option value="underline">Underline</option>
+      <option value="strike">Strike through</option>
+    </select>
+  </label>
+</div>
+<div class="uc-row">
+  <label>
+    Alignment
+    <select data-text-align>
+      <option value="start">Left</option>
+      <option value="middle">Center</option>
+      <option value="end">Right</option>
+    </select>
+  </label>
+  <label>
+    Text path
+    <select data-text-layout>
+      <option value="straight">Straight</option>
+      <option value="arc">Curve</option>
+      <option value="circle">Full circle</option>
+    </select>
+  </label>
+</div>
+<div class="uc-row">
+  <label>
+    Letter spacing
+    <input data-text-spacing type="number" min="-20" max="100" step="0.5" value="0" />
+  </label>
+  <label>
+    Line height
+    <input data-text-line-height type="number" min="0.5" max="3" step="0.1" value="1.2" />
+  </label>
+</div>
+<label data-text-radius-label hidden>
+  Curve radius
+  <input data-text-radius type="number" min="20" max="4000" value="150" />
+</label>
+<details class="uc-control-details">
+  <summary>Outline &amp; shadow</summary>
+  <div class="uc-row">
+    <label>
+      Outline color
+      <input data-text-stroke type="color" value="#ffffff" />
+    </label>
+    <label>
+      Outline width
+      <input data-text-stroke-width type="number" min="0" max="20" step="0.5" value="0" />
+    </label>
+  </div>
+  <label class="uc-check">
+    <input data-text-shadow type="checkbox" /> Soft offset shadow
+  </label>
+</details>
+<div class="uc-text-actions">
+  <button class="uc-primary" data-action="text">
+    Add / update text
+  </button>
+  <button data-action="new-text">Add as new layer</button>
+</div>
+<p class="uc-hint">
+  Text stays editable in your project. Image exports support your browser’s characters; PDF uses
+  standard Latin print fonts. Check the print proof for font differences.
+</p>

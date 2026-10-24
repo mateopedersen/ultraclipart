@@ -1,0 +1,109 @@
+---
+import { studioElements } from '../editor/elements';
+---
+
+<div
+  id="uc-pane-elements"
+  role="region"
+  aria-labelledby="uc-tool-elements"
+  data-pane="elements"
+  hidden
+>
+  <div class="uc-library-tabs" role="group" aria-label="Element library">
+    <button data-library-kind="artwork" aria-pressed="true">
+      Artwork
+    </button>
+    <button data-library-kind="vector" aria-pressed="false">
+      Vector shapes
+    </button>
+  </div>
+  <div data-library-view="artwork">
+    <p class="uc-hint">
+      Original-resolution cutouts with natural texture, light and detail. Add an image, then refine
+      its regions or combine it with others.
+    </p>
+    <label>
+      Search artwork
+      <input
+        data-artwork-search
+        type="search"
+        placeholder="Rabbit, strawberry, flowers…"
+        autocomplete="off"
+      />
+    </label>
+    <div class="uc-row">
+      <label>
+        Visual style
+        <select data-artwork-style>
+          <option value="realistic">Realistic</option>
+          <option value="">All styles</option>
+          <option value="Watercolor">Watercolor</option>
+          <option value="Color">Color illustration</option>
+          <option value="Outline">Line art</option>
+          <option value="Black &amp; White">Black &amp; white</option>
+        </select>
+      </label>
+      <label>
+        Subject
+        <select data-artwork-topic>
+          <option value="">All subjects</option>
+        </select>
+      </label>
+    </div>
+    <p class="uc-hint" data-artwork-count aria-live="polite">
+      Loading the artwork library…
+    </p>
+    <div class="uc-artwork-grid" data-artwork-grid></div>
+    <button class="uc-library-more" data-artwork-more hidden>
+      Show 24 more artworks
+    </button>
+    <button class="uc-upload-art" data-action="open-import">
+      Import your own PNG / WebP
+    </button>
+    <p class="uc-hint">
+      Images remain raster artwork. Smart Select creates editable masks; it does not invent hidden
+      vector layers. Personal &amp; educational use.
+    </p>
+  </div>
+  <div data-library-view="vector" hidden>
+    <div class="uc-library-intro">
+      <span class="uc-library-count">{studioElements.length} original vectors</span>
+      <p>Small pieces. Big possibilities. Add any element, then make it yours.</p>
+    </div>
+    <label class="uc-search-field">
+      Find an element
+      <input
+        data-element-search
+        type="search"
+        placeholder="Try flower, rainbow, cat…"
+        autocomplete="off"
+      />
+    </label>
+    <div class="uc-library-filters">
+      <label>
+        Collection
+        <select data-element-category>
+          <option value="">All collections</option>
+        </select>
+      </label>
+      <button
+        data-element-favorites
+        aria-pressed="false"
+        aria-label="Favorites: show favorite elements"
+      >
+        Favorites
+      </button>
+    </div>
+    <p class="uc-hint" data-element-count aria-live="polite">
+      Open the library to load elements.
+    </p>
+    <div class="uc-element-grid" data-element-grid></div>
+    <button data-element-more class="uc-library-more" hidden>
+      Show 24 more
+    </button>
+    <p class="uc-hint">
+      Each element becomes an editable vector layer. Use Recolor for individual colors, or Separate
+      parts in Layers.
+    </p>
+  </div>
+</div>

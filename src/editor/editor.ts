@@ -27,6 +27,7 @@ import {
 import { paperLayout, exportPdf } from './pdf';
 import {
   openRaster,
+  rasterCatalog,
   prepareProjectSources,
   serializeProject,
   withoutEmbeddedSources,
@@ -46,6 +47,11 @@ import {
   type ShapeKind,
   type ShapeStyle,
 } from './creation';
+
+import type { Typography } from './smart/types';
+import type { StudioElement } from './elements';
+import { repeatSelection } from './repeat';
+import { studioScenes } from '../lib/studio-scenes';
 
 type Bounds = { x: number; y: number; width: number; height: number };
 function init(root: HTMLElement) {
@@ -80,6 +86,7 @@ function init(root: HTMLElement) {
     | { start: DOMPoint; before: EditorDocument; bounds: Bounds; action: string; pointer: number }
     | undefined;
   let drawing = false;
+  let placing: Extract<Layer, { kind: 'raster' }> | undefined;
   let stroke:
     | {
         points: DrawPoint[];
@@ -89,6 +96,8 @@ function init(root: HTMLElement) {
         style: ShapeStyle;
       }
     | undefined;
+  let libraryReady: Promise<void> | undefined;
+  let artworkReady: Promise<void> | undefined;
   let templateRequest: AbortController | undefined;
   const status = (message: string, error = false) => {
     q('[data-status]').textContent = message;
@@ -174,13 +183,13 @@ function init(root: HTMLElement) {
   function selectedChange(fn: (layer: Layer) => void, message?: string) {
     commit(changeLayers(history.current, selected, fn), message);
   }
-  function bounds(): Bounds | null {
+  function bounds(ids = selected): Bounds | null {
     const svg = canvas.querySelector('svg');
     if (!svg) return null;
     const inv = svg.getCTM()?.inverse();
     if (!inv) return null;
     const points: DOMPoint[] = [];
-    for (const sid of selected) {
+    for (const sid of ids) {
       const node = svg.querySelector<SVGGElement>(`[data-layer="${sid}"]`);
       if (!node) continue;
       let b: DOMRect;
@@ -418,11 +427,11 @@ function init(root: HTMLElement) {
         select.setAttribute('aria-pressed', String(selected.includes(layer.id)));
         const visible = document.createElement('button');
         visible.dataset.visibility = layer.id;
-        visible.textContent = layer.visible ? '◉' : '○';
+        visible.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M2 12S5 5 12 5s10 7 10 7-3 7-10 7S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="currentColor"/>${layer.visible ? '' : '<path d="M3 3 21 21" stroke="currentColor" stroke-width="2"/>'}</svg>`;
         visible.setAttribute('aria-label', `${layer.visible ? 'Hide' : 'Show'} ${layer.label}`);
         const lock = document.createElement('button');
         lock.dataset.lock = layer.id;
-        lock.textContent = layer.locked ? '▣' : '□';
+        lock.innerHTML = `<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="${layer.locked ? 'M8 10V7a4 4 0 0 1 8 0v3' : 'M8 10V6a4 4 0 0 1 8 0'}" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="15" r="1.5" fill="currentColor"/></svg>`;
         lock.setAttribute('aria-label', `${layer.locked ? 'Unlock' : 'Lock'} ${layer.label}`);
         row.append(select, visible, lock);
         return row;
@@ -440,7 +449,9 @@ function init(root: HTMLElement) {
       q<HTMLInputElement>('[data-text-color]').value = l.color;
       q<HTMLInputElement>('[data-text-bold]').checked = l.bold;
       q<HTMLSelectElement>('[data-text-align]').value = l.align;
-    }
+      writeTypography(l.typography);
+      q<HTMLButtonElement>('[data-action=text]').textContent = 'Update selected text';
+    } else q<HTMLButtonElement>('[data-action=text]').textContent = 'Add text to canvas';
   }
   function select(id: string, add = false) {
     const layer = doc().layers.find((l) => l.id === id);
@@ -459,7 +470,35 @@ function init(root: HTMLElement) {
     render();
   }
   function panel(name: string) {
-    if (drawing && name !== 'create') setDrawing(false);
+    if (name === 'elements' && compositionTools && !artworkReady) {
+      artworkReady = import('./artwork-library')
+        .then((m) =>
+          m.mountArtworkLibrary(root, async (id) => {
+            await smart?.addArtwork(id);
+          }),
+        )
+        .catch((error) => {
+          artworkReady = undefined;
+          q('[data-artwork-count]').textContent =
+            'The library could not load. Reopen Elements to retry.';
+          status(error.message, true);
+        });
+    }
+    if (name === 'elements' && compositionTools && !libraryReady) {
+      libraryReady = import('./element-library')
+        .then((m) => m.mountElementLibrary(root, addElement))
+        .catch((error) => {
+          libraryReady = undefined;
+          status(
+            `The element library could not load. Reopen Elements to retry. ${error.message}`,
+            true,
+          );
+        });
+    }
+    if ((drawing || placing) && name !== 'create') {
+      stopPlacing();
+      setDrawing(false);
+    }
     qa('[data-pane]').forEach((p) => (p.hidden = p.dataset.pane !== name));
     qa<HTMLButtonElement>('[data-panel]').forEach((b) =>
       b.setAttribute('aria-pressed', String(b.dataset.panel === name)),
@@ -468,7 +507,8 @@ function init(root: HTMLElement) {
       {
         region: 'Select & recolor a region',
         studio: 'Studio Pro',
-        create: 'Make something yours',
+        create: 'Build & draw',
+        elements: 'The element library',
         canvas: 'Your canvas',
         transform: 'Edit clipart',
         color: 'Recolor elements',
@@ -476,10 +516,244 @@ function init(root: HTMLElement) {
         print: 'Black & white / print',
         crop: 'Crop artwork',
         layers: 'Artwork layers',
-        text: 'Add a caption',
+        text: 'Text studio',
       } as Record<string, string>
     )[name];
     smart?.onPanel(name);
+  }
+  function addElement(element: StudioElement) {
+    cancelInteraction();
+    if (drawing) setDrawing(false);
+    const layerId = `element-${crypto.randomUUID()}`;
+    const size = Math.min(280, doc().width * 0.45, doc().height * 0.45);
+    const layer = vectorLayer(
+      layerId,
+      element.name,
+      element.markup,
+      (doc().width - size) / 2,
+      (doc().height - size) / 2,
+    );
+    layer.scaleX = layer.scaleY = size / 256;
+    modify((d) => {
+      d.layers.push(layer);
+    }, `${element.name} added. Drag to position, or open Recolor to change its colors.`);
+    selected = [layerId];
+    render();
+  }
+  const typeDefaults: Typography = {
+    font: 'sans',
+    layout: 'straight',
+    radius: 150,
+    spacing: 0,
+    lineHeight: 1.2,
+    stroke: '#ffffff',
+    strokeWidth: 0,
+    shadow: false,
+    italic: false,
+    decoration: 'none',
+  };
+  const typeFields: Record<string, keyof Typography> = {
+    font: 'font',
+    layout: 'layout',
+    radius: 'radius',
+    spacing: 'spacing',
+    'line-height': 'lineHeight',
+    stroke: 'stroke',
+    'stroke-width': 'strokeWidth',
+    shadow: 'shadow',
+    italic: 'italic',
+    decoration: 'decoration',
+  };
+  function writeTypography(value?: Typography) {
+    const t = { ...typeDefaults, ...value };
+    for (const [field, key] of Object.entries(typeFields)) {
+      const input = q<HTMLInputElement>(`[data-text-${field}]`);
+      if (input.type === 'checkbox') input.checked = Boolean(t[key]);
+      else input.value = String(t[key]);
+    }
+    q('[data-text-radius-label]').hidden = t.layout === 'straight';
+  }
+  function readTypography(): Typography {
+    const t = { ...typeDefaults };
+    for (const [field, key] of Object.entries(typeFields)) {
+      const input = q<HTMLInputElement>(`[data-text-${field}]`);
+      Object.assign(t, {
+        [key]:
+          input.type === 'checkbox'
+            ? input.checked
+            : input.type === 'number'
+              ? Number(input.value)
+              : input.value,
+      });
+    }
+    return t;
+  }
+  function textPreset(name: string) {
+    const styles: Record<
+      string,
+      { text: string; size: number; bold: boolean; color: string; type: Partial<Typography> }
+    > = {
+      headline: {
+        text: 'MAKE IT YOURS',
+        size: 66,
+        bold: true,
+        color: '#17274f',
+        type: { spacing: 1 },
+      },
+      editorial: {
+        text: 'Something lovely',
+        size: 58,
+        bold: false,
+        color: '#9b4774',
+        type: { font: 'serif', italic: true },
+      },
+      badge: {
+        text: 'GOOD VIBES ONLY',
+        size: 36,
+        bold: true,
+        color: '#216bcb',
+        type: { layout: 'arc', spacing: 3, radius: 160 },
+      },
+      outline: {
+        text: 'HELLO',
+        size: 80,
+        bold: true,
+        color: '#f37baa',
+        type: { stroke: '#17274f', strokeWidth: 2, spacing: 2 },
+      },
+      typewriter: {
+        text: 'Once upon a time...',
+        size: 36,
+        bold: false,
+        color: '#354e6f',
+        type: { font: 'mono', lineHeight: 1.5 },
+      },
+      label: {
+        text: 'Made for you',
+        size: 40,
+        bold: true,
+        color: '#ffffff',
+        type: { stroke: '#216bcb', strokeWidth: 6, shadow: true },
+      },
+    };
+    const preset = styles[name];
+    if (!preset) return;
+    if (!q<HTMLTextAreaElement>('[data-text]').value.trim())
+      q<HTMLTextAreaElement>('[data-text]').value = preset.text;
+    q<HTMLInputElement>('[data-text-size]').value = String(preset.size);
+    q<HTMLInputElement>('[data-text-bold]').checked = preset.bold;
+    q<HTMLInputElement>('[data-text-color]').value = preset.color;
+    writeTypography({ ...typeDefaults, ...preset.type });
+    status('Text style selected. Apply it to the selected text or add a new text layer.');
+  }
+  function arrange(action: string) {
+    const active = doc().layers.filter(
+      (l) =>
+        selected.includes(l.id) &&
+        l.visible &&
+        !l.locked &&
+        (!l.group ||
+          doc()
+            .layers.filter((member) => member.group === l.group)
+            .every((member) => selected.includes(member.id) && member.visible && !member.locked)),
+    );
+    const groups = new Map<string, string[]>();
+    for (const l of active) {
+      const key = l.group || l.id;
+      groups.set(key, [...(groups.get(key) || []), l.id]);
+    }
+    const units = [...groups.values()]
+      .map((ids) => ({ ids, b: bounds(ids) }))
+      .filter((u): u is { ids: string[]; b: Bounds } => !!u.b);
+    if (!units.length) return status('Select unlocked, visible layers first.');
+    const area =
+      q<HTMLSelectElement>('[data-align-to]').value === 'canvas'
+        ? doc().crop || { x: 0, y: 0, width: doc().width, height: doc().height }
+        : bounds(active.map((l) => l.id))!;
+    const moves = new Map<string, { x: number; y: number }>();
+    if (action.startsWith('distribute')) {
+      if (units.length < 3)
+        return status('Select at least three independent layers or linked groups to space evenly.');
+      const axis = action === 'distribute-x' ? 'x' : 'y',
+        dim = axis === 'x' ? 'width' : 'height';
+      units.sort((a, b) => a.b[axis] - b.b[axis]);
+      const start = units[0].b[axis],
+        end = units.at(-1)!.b[axis] + units.at(-1)!.b[dim];
+      const gap = (end - start - units.reduce((sum, u) => sum + u.b[dim], 0)) / (units.length - 1);
+      let cursor = start;
+      for (const u of units) {
+        for (const id of u.ids)
+          moves.set(id, {
+            x: axis === 'x' ? cursor - u.b.x : 0,
+            y: axis === 'y' ? cursor - u.b.y : 0,
+          });
+        cursor += u.b[dim] + gap;
+      }
+    } else
+      for (const u of units) {
+        const x =
+          action === 'left'
+            ? area.x - u.b.x
+            : action === 'right'
+              ? area.x + area.width - u.b.x - u.b.width
+              : action === 'center-x'
+                ? area.x + area.width / 2 - u.b.x - u.b.width / 2
+                : 0;
+        const y =
+          action === 'top'
+            ? area.y - u.b.y
+            : action === 'bottom'
+              ? area.y + area.height - u.b.y - u.b.height
+              : action === 'center-y'
+                ? area.y + area.height / 2 - u.b.y - u.b.height / 2
+                : 0;
+        for (const id of u.ids) moves.set(id, { x, y });
+      }
+    modify((d) => {
+      for (const layer of d.layers) {
+        const move = moves.get(layer.id);
+        if (move) {
+          layer.x += move.x;
+          layer.y += move.y;
+        }
+      }
+    }, 'Arrangement updated. Linked groups stay together.');
+  }
+  function separateParts() {
+    const l = currentLayer();
+    if (!l || l.kind !== 'vector' || l.locked || !l.visible)
+      return status('Select an unlocked vector element first.');
+    if (l.opacity !== 1)
+      return status('Set the element opacity to 100% before separating overlapping parts.');
+    const svg = sanitizeSvg(`<svg xmlns="${NS}" viewBox="0 0 256 256">${l.markup}</svg>`);
+    const primitives = [...svg.querySelectorAll('path,rect,circle,ellipse,line,polygon,polyline')];
+    if (primitives.length < 2) return status('This vector already contains a single part.');
+    const ids: string[] = [];
+    const layers = primitives.map((primitive, i) => {
+      let branch = primitive.cloneNode(true) as Element;
+      let parent = primitive.parentElement;
+      while (parent && parent !== (svg as unknown as Element)) {
+        const wrapper = parent.cloneNode(false) as Element;
+        wrapper.append(branch);
+        branch = wrapper;
+        parent = parent.parentElement;
+      }
+      const part = {
+        ...clone(l),
+        id: `part-${crypto.randomUUID()}`,
+        label: `${l.label.slice(0, 60)} · ${i + 1}`,
+        markup: new XMLSerializer().serializeToString(branch),
+      };
+      delete part.group;
+      ids.push(part.id);
+      return part;
+    });
+    modify((d) => {
+      const at = d.layers.findIndex((layer) => layer.id === l.id);
+      d.layers.splice(at, 1, ...layers);
+    }, `${layers.length} independent vector parts. Select a single part in Layers to edit it.`);
+    selected = ids;
+    render();
   }
   function cancelInteraction() {
     smart?.cancel();
@@ -491,7 +765,17 @@ function init(root: HTMLElement) {
     panDrag = undefined;
     live = undefined;
   }
+  function stopPlacing() {
+    placing = undefined;
+    root.dataset.placing = 'false';
+    const button = q('[data-action=place-image]');
+    if (button) {
+      button.setAttribute('aria-pressed', 'false');
+      button.textContent = 'Place image copies';
+    }
+  }
   function setDrawing(enabled: boolean) {
+    stopPlacing();
     cancelInteraction();
     drawing = enabled;
     if (enabled) {
@@ -565,11 +849,71 @@ function init(root: HTMLElement) {
   if (creator)
     document.addEventListener('click', async (event) => {
       const button = (event.target as Element).closest<HTMLButtonElement>(
-        '[data-creator-template]',
+        '[data-creator-template], [data-studio-scene]',
       );
       if (!button || !history) return;
       templateRequest?.abort();
-      if (button.dataset.creatorTemplate === 'blank') {
+      if (button.dataset.studioScene) {
+        const scene = studioScenes.find((s) => s.id === button.dataset.studioScene);
+        if (!scene) return;
+        const request = new AbortController();
+        templateRequest = request;
+        button.setAttribute('aria-busy', 'true');
+        status('Opening the original-resolution artwork…');
+        try {
+          const catalogue = await rasterCatalog();
+          const next = blankDocument(id, 1400, 1000);
+          next.background = scene.background;
+          for (const item of scene.items) {
+            if (request.signal.aborted) return;
+            const asset = catalogue.find((a) => a.id === item.id);
+            if (!asset)
+              throw new Error('This artwork is unavailable. Your current canvas is preserved.');
+            const source = await openRaster(asset);
+            const layer = source.layers[0];
+            layer.id = `scene-${crypto.randomUUID()}`;
+            layer.label = asset.id.replaceAll('-', ' ');
+            layer.x = item.x;
+            layer.y = item.y;
+            layer.scaleX = layer.scaleY = item.width / asset.width;
+            next.layers.push(layer);
+          }
+          next.layers.push({
+            kind: 'text',
+            id: `text-${crypto.randomUUID()}`,
+            label: scene.caption,
+            visible: true,
+            locked: false,
+            opacity: 1,
+            ...identity(),
+            x: 700,
+            y: 150,
+            text: scene.caption,
+            size: 72,
+            color: scene.color,
+            bold: false,
+            align: 'middle',
+            typography: { ...typeDefaults, font: 'serif', italic: true },
+          });
+          if (request.signal.aborted) return;
+          templateRequest = undefined;
+          replaceCanvas(
+            next,
+            `${scene.title} opened. Every image and caption is editable. Undo restores your previous work.`,
+          );
+          panel('layers');
+        } catch (error) {
+          if (!request.signal.aborted)
+            status(
+              error instanceof Error ? error.message : 'This composition could not load.',
+              true,
+            );
+        } finally {
+          button.removeAttribute('aria-busy');
+          if (templateRequest === request) templateRequest = undefined;
+        }
+        if (request.signal.aborted) return;
+      } else if (button.dataset.creatorTemplate === 'blank') {
         replaceCanvas(
           blankDocument(id),
           'A fresh blank canvas is ready. Undo restores your previous work.',
@@ -733,7 +1077,7 @@ function init(root: HTMLElement) {
   }).observe(stage);
   const actions: Record<string, () => void | Promise<void>> = {
     pan: () => {
-      if (compositionTools && drawing) setDrawing(false);
+      if (compositionTools && (drawing || placing)) setDrawing(false);
       smart?.onPanel('');
       panMode = !panMode;
       q('[data-action=pan]').setAttribute('aria-pressed', String(panMode));
@@ -915,6 +1259,7 @@ function init(root: HTMLElement) {
         color: q<HTMLInputElement>('[data-text-color]').value,
         bold: q<HTMLInputElement>('[data-text-bold]').checked,
         align: q<HTMLSelectElement>('[data-text-align]').value as 'start' | 'middle' | 'end',
+        typography: readTypography(),
       };
       if (current?.kind === 'text')
         selectedChange((l) => {
@@ -940,6 +1285,68 @@ function init(root: HTMLElement) {
         render();
       }
     },
+    'repeat-selection': () => {
+      const b = bounds();
+      if (!b) throw new Error('Select layers before making a repeated layout.');
+      const result = repeatSelection(doc(), selected, b, {
+        rows: Number(q<HTMLInputElement>('[data-repeat-rows]').value),
+        columns: Number(q<HTMLInputElement>('[data-repeat-columns]').value),
+        gapX: Number(q<HTMLInputElement>('[data-repeat-gap-x]').value),
+        gapY: Number(q<HTMLInputElement>('[data-repeat-gap-y]').value),
+        stagger: q<HTMLInputElement>('[data-repeat-stagger]').checked,
+        expand: q<HTMLInputElement>('[data-repeat-expand]').checked,
+      });
+      commit(
+        result.doc,
+        'Repeated layout created. Each copy stays editable; Undo removes the full arrangement.',
+      );
+      selected = result.ids;
+      render();
+    },
+    'place-image': () => {
+      if (placing) {
+        stopPlacing();
+        return;
+      }
+      const source = currentLayer();
+      if (source?.kind !== 'raster' || source.locked || !source.visible)
+        throw new Error(
+          'Select an unlocked image on the canvas first. Add one from Artwork if your canvas is empty.',
+        );
+      const image = clone(source);
+      setDrawing(false);
+      cancelInteraction();
+      panMode = false;
+      printPreview = false;
+      q<HTMLInputElement>('[data-print-preview]').checked = false;
+      q('[data-action=pan]').setAttribute('aria-pressed', 'false');
+      stage.style.cursor = '';
+      smart?.onPanel('');
+      placing = image;
+      root.dataset.placing = 'true';
+      q('[data-action=place-image]').setAttribute('aria-pressed', 'true');
+      q('[data-action=place-image]').textContent = 'Finish placing';
+      status(
+        'Click the canvas to place a copy. Adjust width and rotation between clicks. Escape finishes.',
+      );
+    },
+    'browse-artwork': () => panel('elements'),
+    'open-import': () => q<HTMLInputElement>('[data-local-clipart]').click(),
+    'new-text': () => {
+      selected = [];
+      actions.text();
+    },
+    'separate-parts': separateParts,
+    front: () =>
+      modify((d) => {
+        const moving = d.layers.filter((l) => selected.includes(l.id) && !l.locked && l.visible);
+        d.layers = [...d.layers.filter((l) => !moving.includes(l)), ...moving];
+      }),
+    back: () =>
+      modify((d) => {
+        const moving = d.layers.filter((l) => selected.includes(l.id) && !l.locked && l.visible);
+        d.layers = [...moving, ...d.layers.filter((l) => !moving.includes(l))];
+      }),
     blank: () => {
       if (!compositionTools) return;
       templateRequest?.abort();
@@ -1030,7 +1437,16 @@ function init(root: HTMLElement) {
     const target = (event.target as Element).closest<HTMLElement>('button');
     if (!target) return;
     try {
-      if (target.dataset.shape) addShape(target.dataset.shape as ShapeKind);
+      if (target.dataset.libraryKind) {
+        qa('[data-library-view]').forEach(
+          (view) => (view.hidden = view.dataset.libraryView !== target.dataset.libraryKind),
+        );
+        qa('[data-library-kind]').forEach((button) =>
+          button.setAttribute('aria-pressed', String(button === target)),
+        );
+      } else if (target.dataset.textPreset) textPreset(target.dataset.textPreset);
+      else if (target.dataset.arrange) arrange(target.dataset.arrange);
+      else if (target.dataset.shape) addShape(target.dataset.shape as ShapeKind);
       else if (target.dataset.action) {
         const result = actions[target.dataset.action]?.();
         if (result instanceof Promise) void result.catch((error) => status(error.message, true));
@@ -1062,7 +1478,9 @@ function init(root: HTMLElement) {
     if (!history) return;
     const target = event.target as HTMLInputElement;
     try {
-      if (target.dataset.prop) {
+      if (target.hasAttribute('data-text-layout'))
+        q('[data-text-radius-label]').hidden = target.value === 'straight';
+      else if (target.dataset.prop) {
         const key = target.dataset.prop as 'x' | 'y' | 'scaleX' | 'scaleY' | 'angle' | 'opacity';
         const raw = Number(target.value);
         if (!Number.isFinite(raw)) return;
@@ -1185,6 +1603,45 @@ function init(root: HTMLElement) {
   };
   stage.addEventListener('pointerdown', (event) => {
     if (!history || event.button !== 0) return;
+    if (placing && compositionTools && !printPreview) {
+      try {
+        const p = point(event);
+        if (p.x < 0 || p.y < 0 || p.x > doc().width || p.y > doc().height) return;
+        const width = Number(q<HTMLInputElement>('[data-place-width]').value),
+          angle = Number(q<HTMLInputElement>('[data-place-angle]').value);
+        if (
+          !Number.isFinite(width) ||
+          width < 16 ||
+          width > 4096 ||
+          !Number.isFinite(angle) ||
+          Math.abs(angle) > 360
+        )
+          throw new Error('Use a width from 16 to 4,096 and a rotation from −360° to 360°.');
+        if (doc().layers.length >= 500)
+          throw new Error(
+            'The 500-layer limit has been reached. Remove a layer before placing more copies.',
+          );
+        const copy = clone(placing);
+        copy.id = `placed-${crypto.randomUUID()}`;
+        copy.label = copy.label.slice(0, 75) + ' copy';
+        delete copy.group;
+        copy.scaleX = copy.scaleY = width / copy.width;
+        copy.angle = angle;
+        copy.x = p.x - width / 2;
+        copy.y = p.y - (copy.height * copy.scaleY) / 2;
+        modify(
+          (d) => d.layers.push(copy),
+          'Image copy placed. Click again to add another, or press Escape to finish.',
+        );
+        selected = [copy.id];
+        render();
+        stage.focus({ preventScroll: true });
+        event.preventDefault();
+      } catch (error) {
+        status(error instanceof Error ? error.message : 'The image could not be placed.', true);
+      }
+      return;
+    }
     if (drawing && compositionTools) {
       if (stroke) return;
       try {
@@ -1365,7 +1822,7 @@ function init(root: HTMLElement) {
   root.addEventListener('keydown', (event) => {
     if (!history || dialog.open) return;
     const target = event.target as Element;
-    if (event.key === 'Escape' && (drawing || drag || stroke)) {
+    if (event.key === 'Escape' && (drawing || placing || drag || stroke)) {
       event.preventDefault();
       if (compositionTools) setDrawing(false);
       else {
@@ -1505,7 +1962,7 @@ function init(root: HTMLElement) {
       if (creator) {
         root.dataset.workMode = 'advanced';
         smart.render();
-        panel('create');
+        panel('elements');
       } else if (rasterSource) panel('region');
       root.removeAttribute('aria-busy');
       qa('[inert]').forEach((el) => el.removeAttribute('inert'));

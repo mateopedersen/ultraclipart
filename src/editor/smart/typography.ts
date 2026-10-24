@@ -16,6 +16,7 @@ export function textNodes(layer: TextLayer): SVGElement[] {
     el.setAttribute('font-family', family);
     el.setAttribute('font-size', String(layer.size));
     el.setAttribute('font-weight', layer.bold ? '700' : '400');
+    el.setAttribute('font-style', t?.italic ? 'italic' : 'normal');
     el.setAttribute('text-anchor', anchor);
     el.setAttribute('fill', layer.color);
     el.setAttribute('transform', `translate(${x} ${y}) rotate(${angle})`);
@@ -37,6 +38,20 @@ export function textNodes(layer: TextLayer): SVGElement[] {
       nodes.push(shadow);
     }
     nodes.push(el);
+    if (t?.decoration && t.decoration !== 'none') {
+      const measure = document.createElement('canvas').getContext('2d')!;
+      measure.font = `${t.italic ? 'italic ' : ''}${layer.bold ? 'bold ' : ''}${layer.size}px ${family}`;
+      const width = measure.measureText(value).width;
+      const start = anchor === 'middle' ? -width / 2 : anchor === 'end' ? -width : 0;
+      const line = document.createElementNS(NS, 'path');
+      const dy = t.decoration === 'underline' ? layer.size * 0.13 : -layer.size * 0.3;
+      line.setAttribute('d', `M${start} ${dy} H${start + width}`);
+      line.setAttribute('fill', 'none');
+      line.setAttribute('stroke', layer.color);
+      line.setAttribute('stroke-width', String(Math.max(1, layer.size * 0.045)));
+      line.setAttribute('transform', `translate(${x} ${y}) rotate(${angle})`);
+      nodes.push(line);
+    }
   };
   if (!t || (t.layout === 'straight' && !t.spacing)) {
     for (const [i, line] of layer.text.split('\n').entries())
@@ -44,7 +59,7 @@ export function textNodes(layer: TextLayer): SVGElement[] {
     return nodes;
   }
   const ctx = document.createElement('canvas').getContext('2d')!;
-  ctx.font = `${layer.bold ? 'bold ' : ''}${layer.size}px ${family}`;
+  ctx.font = `${t?.italic ? 'italic ' : ''}${layer.bold ? 'bold ' : ''}${layer.size}px ${family}`;
   for (const [lineIndex, line] of layer.text.split('\n').entries()) {
     const characters = [...line],
       widths = characters.map((c) => ctx.measureText(c).width + t.spacing),

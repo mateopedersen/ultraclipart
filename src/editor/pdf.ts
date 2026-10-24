@@ -244,7 +244,13 @@ async function exportVectorPdf(doc: EditorDocument): Promise<Blob> {
               : style.fontFamily.includes('Georgia')
                 ? 'times'
                 : 'helvetica',
-            Number(style.fontWeight) >= 600 ? 'bold' : 'normal',
+            style.fontStyle === 'italic'
+              ? Number(style.fontWeight) >= 600
+                ? 'bolditalic'
+                : 'italic'
+              : Number(style.fontWeight) >= 600
+                ? 'bold'
+                : 'normal',
           );
           pdf.setFontSize(parseFloat(style.fontSize) || 48);
           pdf.text(text, a('x'), a('y'), {

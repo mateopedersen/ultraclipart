@@ -1,0 +1,64 @@
+---
+interface Props {
+  name: string;
+  size?: number;
+}
+const { name, size = 40 } = Astro.props;
+const artwork: Record<string, string> = {
+  create:
+    '<path d="M8 38 12 25 32 5 43 16 23 36Z" fill="#ffd05d"/><path d="m12 25 11 11 17-17-11-11Z" fill="#f5ab30"/><path d="m16 26 17-17 4 4-17 17Z" fill="#ffe59a"/><path d="m8 38 4-13 11 11Z" fill="#f4d5b3"/><path d="m8 38 2-6 4 4Z" fill="#253657"/><path d="m32 5 3-3q3-2 5 0l6 6q2 3 0 5l-3 3Z" fill="#f27ea7"/><path d="m29 8 3-3 11 11-3 3Z" fill="#a5bbd5"/><path d="M7 44h34" stroke="#a3c6f5" stroke-width="3" stroke-linecap="round"/>',
+  elements:
+    '<rect x="4" y="5" width="23" height="27" rx="6" fill="#2676eb"/><path d="M9 10h13v4H9Z" fill="#8dc3ff"/><circle cx="29" cy="30" r="15" fill="#ffc64a"/><path d="m30 15 6 8 10 1-7 7 1 10-10-4-9 4 1-10-7-7 10-1Z" fill="#ffcc58"/><path d="m12 24 4 7 8 1-6 6 1 8-7-4-7 4 1-8-6-6 8-1Z" fill="#eb6f9f"/><circle cx="33" cy="28" r="5" fill="#fff0b8"/>',
+  canvas:
+    '<rect x="7" y="5" width="34" height="36" rx="4" fill="#9ec8fa"/><rect x="11" y="9" width="26" height="28" rx="2" fill="#fff"/><path d="M16 30 23 21l5 5 5-7v13H16Z" fill="#58c5a2"/><circle cx="19" cy="16" r="3" fill="#ffc84b"/><path d="M4 14V4h10M34 4h10v10M44 34v10H34M14 44H4V34" fill="none" stroke="#24599f" stroke-width="3" stroke-linecap="round"/>',
+  region:
+    '<path d="M8 10q14-9 28 0t2 24q-8 9-24 3T8 10Z" fill="#d8c7ff" stroke="#9064d0" stroke-width="2" stroke-dasharray="4 3"/><path d="m20 14 22 15-10 2-4 11Z" fill="#315fb4" stroke="#fff" stroke-width="2"/><path d="m20 14 8 28 3-12Z" fill="#6098ef"/><path d="M8 3v8M4 7h8" stroke="#ecaa21" stroke-width="2" stroke-linecap="round"/>',
+  studio:
+    '<rect x="5" y="8" width="34" height="32" rx="6" fill="#9c72df"/><rect x="9" y="12" width="26" height="24" rx="3" fill="#ede5ff"/><path d="M11 31 19 18l7 9 5-5 4 10Z" fill="#b891f2"/><path d="m33 3 3 7 8 2-8 3-3 8-3-8-8-3 8-2Z" fill="#ffc84b"/><path d="m32 28 4 6 7 1-5 5 1 7-7-3-6 3 1-7-5-5 7-1Z" fill="#ec79a6"/>',
+  transform:
+    '<path d="M9 12h27v25H9Z" fill="#d1e7ff" stroke="#367bdd" stroke-width="2"/><path d="m18 19 23 11-9 4-4 10Z" fill="#365aa3"/><path d="m18 19 10 25 2-13Z" fill="#6d9ceb"/><g fill="#fff" stroke="#367bdd" stroke-width="2"><rect x="6" y="9" width="6" height="6" rx="1"/><rect x="33" y="9" width="6" height="6" rx="1"/><rect x="6" y="34" width="6" height="6" rx="1"/></g><path d="M16 5h21q7 0 7 7v8m-4-4 4 4 3-4" fill="none" stroke="#f0a82e" stroke-width="2"/>',
+  color:
+    '<path d="M24 4C3 2-3 29 10 40c9 8 21 5 18-3-3-7 3-8 10-8C51 28 47 5 24 4Z" fill="#f5d3ae"/><path d="M8 30q9 16 21 7c2 9-12 11-19 3Z" fill="#dca873"/><circle cx="14" cy="15" r="5" fill="#ec70a1"/><circle cx="28" cy="12" r="5" fill="#ffc33f"/><circle cx="38" cy="20" r="5" fill="#42bb91"/><circle cx="10" cy="28" r="5" fill="#347cea"/><circle cx="29" cy="27" r="4" fill="#fff"/>',
+  background:
+    '<rect x="5" y="5" width="36" height="36" rx="5" fill="#e9f0fa"/><path d="M5 5h12v12H5Zm24 0h12v12H29ZM17 17h12v12H17ZM5 29h12v12H5Zm24 0h12v12H29Z" fill="#b3c8e5"/><path d="m26 10 15 13-13 15-16-13Z" fill="#36b696"/><path d="m17 19 10 9 9-10-10-8Z" fill="#8be0c2"/><path d="M41 30q-8 9 0 12 8-3 0-12" fill="#237be3"/>',
+  print:
+    '<rect x="12" y="3" width="24" height="16" rx="2" fill="#9cb5d6"/><rect x="15" y="6" width="18" height="11" fill="#fff"/><rect x="4" y="14" width="40" height="24" rx="6" fill="#4e80bf"/><path d="M4 24h40v8H4Z" fill="#35669e"/><rect x="11" y="27" width="26" height="18" rx="2" fill="#fff" stroke="#b1c7df" stroke-width="2"/><path d="M17 33h14M17 38h10" stroke="#809abb" stroke-width="2"/><circle cx="36" cy="21" r="2" fill="#96e8b8"/>',
+  crop: '<rect x="11" y="10" width="29" height="29" rx="3" fill="#f8d2df"/><path d="m13 32 9-14 8 9 7-7v16H13Z" fill="#e99bb9"/><path d="M11 3v34h34M3 11h34v34" fill="none" stroke="#ba4f80" stroke-width="5" stroke-linecap="round"/><path d="M12 14v18h18" fill="none" stroke="#fff" stroke-width="2"/>',
+  layers:
+    '<path d="m3 30 21-11 21 11-21 13Z" fill="#2f69b8"/><path d="m3 24 21-11 21 11-21 13Z" fill="#a0c8f8"/><path d="m3 17 21-12 21 12-21 12Z" fill="#4b90ec"/><path d="m10 17 14-8 14 8-14 8Z" fill="#8bbdff"/><path d="m3 17 21 12v5L3 22Z" fill="#2870d4"/><path d="m24 29 21-12v5L24 34Z" fill="#1a54aa"/>',
+  text: '<rect x="5" y="6" width="37" height="36" rx="7" fill="#f3e7fd"/><path d="M12 15v-4h24v4M24 12v21M18 34h12" fill="none" stroke="#8d4cb3" stroke-width="4" stroke-linecap="round"/><path d="M10 40q14 8 28-2" fill="none" stroke="#ed9b29" stroke-width="3"/><circle cx="9" cy="40" r="3" fill="#ffc64a"/><circle cx="39" cy="37" r="3" fill="#ffc64a"/>',
+  save: '<path d="M7 5h28l7 7v31H7Z" fill="#447bd0"/><path d="M13 5h19v13H13Z" fill="#bcd8ff"/><path d="M27 7h4v9h-4Z" fill="#456b9d"/><rect x="13" y="25" width="23" height="18" rx="2" fill="#fff"/><path d="M18 31h13M18 36h10" stroke="#b0c5df" stroke-width="2"/>',
+};
+// Local SVG paint servers add material depth without loading icon fonts or images.
+const uid = `studio-${crypto.randomUUID()}`;
+const original = artwork[name] || artwork.elements;
+const colors = [...new Set([...original.matchAll(/fill="(#[a-f0-9]{6})"/gi)].map((m) => m[1]))];
+const shade = (hex: string, delta: number) =>
+  '#' +
+  [1, 3, 5]
+    .map((i) =>
+      Math.max(0, Math.min(255, parseInt(hex.slice(i, i + 2), 16) + delta))
+        .toString(16)
+        .padStart(2, '0'),
+    )
+    .join('');
+let painted = original;
+const defs = colors
+  .map((color, i) => {
+    painted = painted.replaceAll(`fill="${color}"`, `fill="url(#${uid}-${i})"`);
+    return `<linearGradient id="${uid}-${i}" x1="0" y1="0" x2="0.85" y2="1"><stop stop-color="${shade(color, 22)}"/><stop offset=".45" stop-color="${color}"/><stop offset="1" stop-color="${shade(color, -24)}"/></linearGradient>`;
+  })
+  .join('');
+const iconMarkup = `<defs>${defs}</defs>${painted}`;
+---
+
+<svg
+  class="uc-studio-icon"
+  width={size}
+  height={size}
+  viewBox="0 0 48 48"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+  set:html={iconMarkup}
+/>

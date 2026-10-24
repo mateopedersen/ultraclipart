@@ -1,5 +1,9 @@
 ---
 import Icon from './Icon.astro';
+import StudioIcon from './StudioIcon.astro';
+import ElementLibrary from './ElementLibrary.astro';
+import TextStudio from './TextStudio.astro';
+import '../styles/studio-workspace.css';
 import StudioPanels from './StudioPanels.astro';
 import { shapeMarkup, shapeNames } from '../editor/creation';
 interface Props {
@@ -45,7 +49,7 @@ const rasterSource = raster
     <div>
       {creator ? (
         <>
-          <span class="uc-studio-label">YOUR LOCAL WORKSPACE</span>
+          <span class="uc-studio-label">ULTRACLIPART STUDIO</span>
           <h2>{art.title}</h2>
         </>
       ) : (
@@ -63,7 +67,9 @@ const rasterSource = raster
         <Icon name="redo" size={18} /> Redo
       </button>
       <button data-action="reset">Reset</button>
-      <button data-action="save">Save project</button>
+      <button data-action="save">
+        <StudioIcon name="save" size={22} /> Save project
+      </button>
       <button class="uc-primary" data-action="export">
         <Icon name="download" size={18} /> Export
       </button>
@@ -92,7 +98,8 @@ const rasterSource = raster
       {[
         ...(compositionTools
           ? [
-              ['create', 'image', 'Create'],
+              ['create', 'image', 'Draw'],
+              ['elements', 'image', 'Elements'],
               ['canvas', 'crop', 'Canvas'],
             ]
           : []),
@@ -105,14 +112,14 @@ const rasterSource = raster
         ['crop', 'crop', 'Crop'],
         ['layers', 'layers', 'Layers'],
         ['text', 'text', 'Text'],
-      ].map(([panel, icon, label]) => (
+      ].map(([panel, , label]) => (
         <button
           id={`uc-tool-${panel}`}
           data-panel={panel}
           aria-pressed={panel === (creator ? 'create' : 'transform')}
           aria-controls={`uc-pane-${panel}`}
         >
-          <Icon name={icon} />
+          <StudioIcon name={panel} />
           <span>{label}</span>
         </button>
       ))}
@@ -127,8 +134,8 @@ const rasterSource = raster
         <div class="uc-canvas"></div>
         {creator && (
           <div class="uc-empty-canvas" data-empty-canvas>
-            <strong>A little idea starts here.</strong>
-            <span>Add a shape, draw a line, or pick a starter.</span>
+            <strong>Your next great idea starts here.</strong>
+            <span>Build with elements, draw freely, or start with a template.</span>
           </div>
         )}
       </div>
@@ -161,6 +168,7 @@ const rasterSource = raster
         Select a layer to begin
       </p>
       <StudioPanels />
+      {compositionTools && <ElementLibrary />}
       {compositionTools && (
         <>
           <div
@@ -170,89 +178,121 @@ const rasterSource = raster
             data-pane="create"
             hidden={!creator}
           >
-            <p class="uc-hint">
-              Choose a shape to add an editable layer. Adjust its size and colors below before
-              adding.
-            </p>
-            <div class="uc-shape-grid">
-              {Object.entries(shapeNames).map(([kind, label]) => (
-                <button data-shape={kind} aria-label={`Add ${label.toLowerCase()}`}>
-                  <svg
-                    viewBox="-5 -5 80 60"
-                    width="62"
-                    height="46"
-                    aria-hidden="true"
-                    set:html={shapeMarkup(kind as keyof typeof shapeNames, {
-                      width: 70,
-                      height: 50,
-                      sides: 5,
-                      rounding: 20,
-                      fill: '#c5d5b8',
-                      stroke: '#1b293c',
-                      strokeWidth: 2,
-                    })}
-                  />
-                  <span>{label}</span>
-                </button>
-              ))}
+            <div class="uc-place-card">
+              <h3>Compose with real artwork</h3>
+              <p class="uc-hint">
+                Select an image, then place copies exactly where you want them. Its texture,
+                transparent edges and edits stay intact.
+              </p>
+              <div class="uc-row">
+                <label>
+                  Copy width
+                  <input type="number" data-place-width min="16" max="4096" value="300" />
+                </label>
+                <label>
+                  Rotation °<input type="number" data-place-angle min="-360" max="360" value="0" />
+                </label>
+              </div>
+              <button data-action="place-image" aria-pressed="false">
+                Place image copies
+              </button>
+              <button data-action="browse-artwork">Browse artwork</button>
             </div>
-            <div class="uc-row">
+            <details class="uc-control-details" open>
+              <summary>Shapes &amp; vector drawing</summary>
+              <p class="uc-hint">
+                Use precise geometric shapes as frames, labels or accents. Set their size, fill and
+                outline before adding.
+              </p>
+              <div class="uc-shape-grid">
+                {Object.entries(shapeNames).map(([kind, label]) => (
+                  <button data-shape={kind} aria-label={`Add ${label.toLowerCase()}`}>
+                    <svg
+                      viewBox="-5 -5 80 60"
+                      width="62"
+                      height="46"
+                      aria-hidden="true"
+                      set:html={shapeMarkup(kind as keyof typeof shapeNames, {
+                        width: 70,
+                        height: 50,
+                        sides: 5,
+                        rounding: 20,
+                        fill: [
+                          '#91bfff',
+                          '#ffb1ce',
+                          '#ffce62',
+                          '#baa3ef',
+                          '#80d4b7',
+                          '#f6ad80',
+                          '#91bfff',
+                          '#ffb1ce',
+                        ][Object.keys(shapeNames).indexOf(kind)],
+                        stroke: '#314e7a',
+                        strokeWidth: 2,
+                      })}
+                    />
+                    <span>{label}</span>
+                  </button>
+                ))}
+              </div>
+              <div class="uc-row">
+                <label>
+                  Shape width
+                  <input data-shape-width type="number" min="4" max="4096" value="240" />
+                </label>
+                <label>
+                  Shape height
+                  <input data-shape-height type="number" min="4" max="4096" value="180" />
+                </label>
+              </div>
+              <div class="uc-row">
+                <label>
+                  Points / sides
+                  <input data-shape-sides type="number" min="3" max="12" value="5" />
+                </label>
+                <label>
+                  Corner roundness %
+                  <input data-shape-rounding type="number" min="0" max="50" value="20" />
+                </label>
+              </div>
+              <div class="uc-row">
+                <label>
+                  Fill
+                  <input type="color" data-create-fill value="#b7cba5" />
+                </label>
+                <label>
+                  Stroke
+                  <input type="color" data-create-stroke value="#1b293c" />
+                </label>
+              </div>
+              <div class="uc-row">
+                <label class="uc-check">
+                  <input data-create-no-fill type="checkbox" /> No fill
+                </label>
+                <label class="uc-check">
+                  <input data-create-no-stroke type="checkbox" /> No stroke
+                </label>
+              </div>
               <label>
-                Shape width
-                <input data-shape-width type="number" min="4" max="4096" value="240" />
+                Stroke width
+                <input data-create-width type="number" min="0" max="100" value="5" step="0.5" />
               </label>
-              <label>
-                Shape height
-                <input data-shape-height type="number" min="4" max="4096" value="180" />
-              </label>
-            </div>
-            <div class="uc-row">
-              <label>
-                Points / sides
-                <input data-shape-sides type="number" min="3" max="12" value="5" />
-              </label>
-              <label>
-                Corner roundness %
-                <input data-shape-rounding type="number" min="0" max="50" value="20" />
-              </label>
-            </div>
-            <div class="uc-row">
-              <label>
-                Fill
-                <input type="color" data-create-fill value="#b7cba5" />
-              </label>
-              <label>
-                Stroke
-                <input type="color" data-create-stroke value="#1b293c" />
-              </label>
-            </div>
-            <div class="uc-row">
-              <label class="uc-check">
-                <input data-create-no-fill type="checkbox" /> No fill
-              </label>
-              <label class="uc-check">
-                <input data-create-no-stroke type="checkbox" /> No stroke
-              </label>
-            </div>
-            <label>
-              Stroke width
-              <input data-create-width type="number" min="0" max="100" value="5" step="0.5" />
-            </label>
-            <button data-action="paint-selection">Apply fill &amp; stroke to selection</button>
-            <h3>Draw by hand</h3>
-            <p class="uc-hint">
-              Draw with a mouse, pen or touch. Uses the stroke color and width above. Each stroke
-              stays a separate vector layer.
-            </p>
-            <button data-action="draw" aria-pressed="false">
-              Start drawing
-            </button>
-            <button data-action="cancel-draw" hidden>
-              Cancel current stroke
-            </button>
-            <p data-draw-hint class="uc-hint" hidden>
-              Drawing is on. Drag on the canvas. Escape cancels a stroke and returns to selection.
-            </p>
+              <button data-action="paint-selection">Apply fill &amp; stroke to selection</button>
+              <h3>Draw by hand</h3>
+              <p class="uc-hint">
+                Draw with a mouse, pen or touch. Uses the stroke color and width above. Each stroke
+                stays a separate vector layer.
+              </p>
+              <button data-action="draw" aria-pressed="false">
+                Start drawing
+              </button>
+              <button data-action="cancel-draw" hidden>
+                Cancel current stroke
+              </button>
+              <p data-draw-hint class="uc-hint" hidden>
+                Drawing is on. Drag on the canvas. Escape cancels a stroke and returns to selection.
+              </p>
+            </details>
           </div>
           <div
             id="uc-pane-canvas"
@@ -514,6 +554,96 @@ const rasterSource = raster
         <p class="uc-hint">
           Top rows appear in front. Select multiple with Shift. Locked layers cannot be edited.
         </p>
+        <div class="uc-arrange-tools" aria-label="Arrange selected layers">
+          <label>
+            Align to
+            <select data-align-to>
+              <option value="selection">Selection bounds</option>
+              <option value="canvas">Canvas</option>
+            </select>
+          </label>
+          <div class="uc-align-grid">
+            {[
+              ['left', 'Left'],
+              ['center-x', 'Horizontal center'],
+              ['right', 'Right'],
+              ['top', 'Top'],
+              ['center-y', 'Vertical center'],
+              ['bottom', 'Bottom'],
+            ].map(([value, label]) => (
+              <button
+                data-arrange={value}
+                title={`Align ${label.toLowerCase()}`}
+                aria-label={`Align ${label.toLowerCase()}`}
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <path
+                    d={
+                      value === 'left'
+                        ? 'M4 3v18M8 7h12M8 12h8M8 17h12'
+                        : value === 'right'
+                          ? 'M20 3v18M4 7h12M8 12h8M4 17h12'
+                          : value === 'center-x'
+                            ? 'M12 3v18M4 7h16M7 12h10M4 17h16'
+                            : value === 'top'
+                              ? 'M3 4h18M7 8v12M12 8v8M17 8v12'
+                              : value === 'bottom'
+                                ? 'M3 20h18M7 4v12M12 8v8M17 4v12'
+                                : 'M3 12h18M7 4v16M12 7v10M17 4v16'
+                    }
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            ))}
+          </div>
+          <div class="uc-row">
+            <button data-arrange="distribute-x">Space evenly ↔</button>
+            <button data-arrange="distribute-y">Space evenly ↕</button>
+          </div>
+          <div class="uc-row">
+            <button data-action="front">Bring to front</button>
+            <button data-action="back">Send to back</button>
+          </div>
+          <button data-action="separate-parts">Separate vector parts</button>
+        </div>
+        <details class="uc-control-details uc-repeat-controls">
+          <summary>Repeat a selection</summary>
+          <p class="uc-hint">
+            Create evenly spaced rows and columns from selected images, shapes or groups. Copies
+            remain editable.
+          </p>
+          <div class="uc-row">
+            <label>
+              Rows
+              <input data-repeat-rows type="number" min="1" max="10" value="2" />
+            </label>
+            <label>
+              Columns
+              <input data-repeat-columns type="number" min="1" max="10" value="2" />
+            </label>
+          </div>
+          <div class="uc-row">
+            <label>
+              Horizontal gap
+              <input data-repeat-gap-x type="number" min="0" max="1000" value="24" />
+            </label>
+            <label>
+              Vertical gap
+              <input data-repeat-gap-y type="number" min="0" max="1000" value="24" />
+            </label>
+          </div>
+          <label class="uc-check">
+            <input data-repeat-stagger type="checkbox" /> Offset alternate rows
+          </label>
+          <label class="uc-check">
+            <input data-repeat-expand type="checkbox" checked /> Expand canvas to fit
+          </label>
+          <button data-action="repeat-selection">Create repeated layout</button>
+        </details>
         <div data-layers class="uc-layer-list"></div>
         <label>
           Layer name
@@ -536,36 +666,7 @@ const rasterSource = raster
         <input hidden data-load type="file" accept=".json,application/json" />
       </div>
       <div id="uc-pane-text" role="region" aria-labelledby="uc-tool-text" data-pane="text" hidden>
-        <label>
-          Caption
-          <textarea data-text rows="3" maxlength="500" placeholder="Make it your own"></textarea>
-        </label>
-        <div class="uc-row">
-          <label>
-            Font size
-            <input data-text-size type="number" min="8" max="300" value="48" />
-          </label>
-          <label>
-            Text color
-            <input data-text-color type="color" value="#1b293c" />
-          </label>
-        </div>
-        <label class="uc-check">
-          <input data-text-bold type="checkbox" /> Bold
-        </label>
-        <label>
-          Alignment
-          <select data-text-align>
-            <option value="start">Left</option>
-            <option value="middle">Center</option>
-            <option value="end">Right</option>
-          </select>
-        </label>
-        <button data-action="text">Add / update caption</button>
-        <p class="uc-hint">
-          Text uses the browser's Arial-compatible sans serif. PDF export supports Latin text in
-          Helvetica. Check your print proof for minor font differences.
-        </p>
+        <TextStudio />
       </div>
     </aside>
   </div>

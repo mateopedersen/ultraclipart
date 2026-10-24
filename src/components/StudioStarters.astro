@@ -5,8 +5,8 @@ import { studioTemplates } from '../lib/studio-templates';
 <section class="studio-starters" aria-labelledby="starter-heading">
   <div class="studio-section-heading">
     <div>
-      <p class="studio-kicker">A place to begin</p>
-      <h2 id="starter-heading">A blank canvas. Or a little inspiration.</h2>
+      <p class="studio-kicker">PICK A STARTING POINT</p>
+      <h2 id="starter-heading">A head start for your next idea.</h2>
     </div>
     <button class="studio-blank-button" data-creator-template="blank">
       <span aria-hidden="true">＋</span> Start blank
@@ -18,14 +18,16 @@ import { studioTemplates } from '../lib/studio-templates';
         class:list={['studio-starter', `studio-tone-${template.tone}`]}
         data-creator-template={template.id}
         data-template-source={template.src}
-        aria-label={`Start with ${template.title}: ${template.description}`}
+        aria-label={`${template.title} Use template: ${template.description}`}
       >
         <span class="studio-starter-picture">
           <img src={template.src} alt="" width="800" height="600" decoding="async" />
         </span>
         <span class="studio-starter-caption">
-          <strong>{template.title}</strong>
-          <span aria-hidden="true">↗</span>
+          <strong>{template.title}</strong>{' '}
+          <span class="studio-template-use" aria-hidden="true">
+            Use
+          </span>
         </span>
       </button>
     ))}

@@ -1,0 +1,46 @@
+---
+import { studioScenes } from '../lib/studio-scenes';
+import { art } from '../lib/catalog';
+---
+
+<section class="studio-scenes" aria-labelledby="scene-title">
+  <div class="studio-section-heading">
+    <div>
+      <p class="studio-kicker">START WITH THE DETAILS</p>
+      <h2 id="scene-title">Real artwork. Ready to make your own.</h2>
+    </div>
+    <p>Every image and caption stays independently editable.</p>
+  </div>
+  <div class="studio-scene-grid">
+    {studioScenes.map((scene) => (
+      <button data-studio-scene={scene.id}>
+        <span
+          class="studio-scene-preview"
+          style={`background:${scene.background};color:${scene.color}`}
+        >
+          <b>{scene.caption}</b>
+          {scene.items.map((item) => {
+            const a = art.find((a) => a.id === item.id)!;
+            return (
+              <img
+                src={a.thumb}
+                alt=""
+                width={a.width}
+                height={a.height}
+                loading="lazy"
+                decoding="async"
+                style={`left:${item.x / 14}%;top:${item.y / 10}%;width:${item.width / 14}%;`}
+              />
+            );
+          })}
+        </span>
+        <span class="studio-scene-label">
+          <strong>{scene.title}</strong>
+          <span>
+            {scene.items.length} {scene.items.length === 1 ? 'image' : 'images'} + text
+          </span>
+        </span>
+      </button>
+    ))}
+  </div>
+</section>

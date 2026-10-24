@@ -400,7 +400,9 @@ function validTypography(t: Typography | undefined): boolean {
       Number.isFinite(t.strokeWidth) &&
       t.strokeWidth >= 0 &&
       t.strokeWidth <= 20 &&
-      typeof t.shadow === 'boolean')
+      typeof t.shadow === 'boolean' &&
+      (t.italic === undefined || typeof t.italic === 'boolean') &&
+      (t.decoration === undefined || ['none', 'underline', 'strike'].includes(t.decoration)))
   );
 }
 

@@ -8,6 +8,9 @@ export function GET() {
         .map((a) => ({
           id: a.id,
           title: a.title,
+          topic: a.topic,
+          style: a.style,
+          thumb: a.thumb,
           width: a.width,
           height: a.height,
           webp: { url: a.webp, ...a.files.webp },
