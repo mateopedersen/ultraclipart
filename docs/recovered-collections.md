@@ -16,4 +16,6 @@ The laptop recovery includes 35 supplied artworks and 15 original replacements. 
 
 The smartwatch recovery includes 36 supplied artworks and 14 original replacements. Its gallery and editor checks cover all 50 designs, 100 native downloads and 100 edited exports at four viewport widths. Independent preflight and inspected renderings confirmed the CMYK image and alpha survive editing; the largest edited PDF is 981,297 bytes. Descriptions distinguish decorative concept graphics from real device capabilities. SEO checks parse quoted attributes correctly when English descriptions contain apostrophes.
 
+The earbuds recovery includes 40 supplied artworks and 10 original replacements. Chromium and WebKit each passed 100 native downloads and 100 edited exports, with four viewport widths and accessibility checks. Independent preflight confirmed CMYK image and alpha preservation in all 50 edited PDFs; the largest is 972,112 bytes. All native and edited PDF proofs were inspected. Replacement review caught and repaired clipped framing, an incompletely seated jack and an impossible additional cable segment before acceptance.
+
 Production pages identify their source commit for both Git-connected and manual builds. A manual build resolves the current Git HEAD when Cloudflare has not supplied a revision; missing or invalid production revisions stop the build.

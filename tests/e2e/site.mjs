@@ -51,8 +51,11 @@ const report = {
 };
 const editor = '/create/';
 async function readyEditor() {
-  if (!(await page.locator('.uc-canvas [data-layer]').count()))
+  if (!(await page.locator('.uc-canvas [data-layer]').count())) {
+    const starters = page.locator('.studio-basic-starters');
+    if ((await starters.getAttribute('open')) === null) await starters.locator('summary').click();
     await page.locator('[data-creator-template=botanical-sprig]').click();
+  }
   await page.locator('.uc-canvas [data-layer]').first().waitFor();
 }
 const states = [
