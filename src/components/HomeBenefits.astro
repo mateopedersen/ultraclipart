@@ -1,0 +1,293 @@
+---
+import BenefitIllustration from './BenefitIllustration.astro';
+const benefits = [
+  {
+    kind: 'license' as const,
+    label: 'A little generosity',
+    title: 'Lovely art. Freely yours.',
+    body: 'For personal projects, classroom resources and everyday creativity.',
+    href: '/license/',
+    link: 'Read the license',
+  },
+  {
+    kind: 'formats' as const,
+    label: 'From screen to paper',
+    title: 'Save it. Print it. Love it.',
+    body: 'Choose transparent WebP artwork or a printable PDF from the collection.',
+    href: '/guides/webp-pdf-and-editable-projects/',
+    link: 'Choose your file format',
+  },
+  {
+    kind: 'studio' as const,
+    label: 'Your creative finishing touch',
+    title: 'Make it feel like you.',
+    body: 'Arrange artwork, add text and build your own composition in Clipart Studio.',
+    href: '/create/',
+    link: 'Open Clipart Studio',
+  },
+  {
+    kind: 'privacy' as const,
+    label: 'You’re in control',
+    title: 'Your work. Your choice.',
+    body: 'Edit in your browser. Create a public link only when you choose to share.',
+    href: '/privacy/',
+    link: 'About your privacy',
+  },
+];
+---
+
+<section class="home-benefits" aria-labelledby="home-benefits-title">
+  <div class="home-benefits-heading">
+    <div>
+      <p class="home-benefits-eyebrow">Made for everyday creativity</p>
+      <h2 id="home-benefits-title">The little details, taken care of.</h2>
+    </div>
+    <p>From the first spark to the final little flourish.</p>
+  </div>
+  <div class="home-benefits-grid">
+    {benefits.map((benefit) => (
+      <a class={`home-benefit home-benefit-${benefit.kind}`} href={benefit.href}>
+        <div class="home-benefit-art">
+          <BenefitIllustration kind={benefit.kind} />
+        </div>
+        <div class="home-benefit-copy">
+          <p class="home-benefit-label">{benefit.label}</p>
+          <h3>{benefit.title}</h3>
+          <p class="home-benefit-body">{benefit.body}</p>
+          <span class="home-benefit-link">
+            {benefit.link}
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15m-6-6 6 6-6 6" />
+            </svg>
+          </span>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .home-benefits {
+    margin: 64px 0 20px;
+    padding: 36px;
+    border: 1px solid #dce7f5;
+    border-radius: 26px;
+    background: linear-gradient(145deg, #f6faff, #edf4fd);
+    box-shadow: inset 0 2px #fff;
+  }
+  .home-benefits-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 26px;
+  }
+  .home-benefits-eyebrow {
+    margin: 0 0 9px;
+    color: #315b8c;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .home-benefits h2 {
+    margin: 0;
+    font-family: 'UltraClipart Sans', Arial, sans-serif;
+    font-weight: 750;
+    font-size: clamp(25px, 2.5vw, 33px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #142f56;
+  }
+  .home-benefits-heading > p {
+    max-width: 225px;
+    margin: 0 0 3px;
+    color: #466282;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .home-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+  }
+  .home-benefit {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #dae5f2;
+    border-radius: 18px;
+    background: #fff;
+    text-decoration: none;
+    box-shadow:
+      0 5px 0 #dfe9f5,
+      0 13px 24px #234b7b08;
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s,
+      border-color 0.2s;
+  }
+  .home-benefit:hover {
+    transform: translateY(-5px);
+    border-color: #90b6e6;
+    box-shadow:
+      0 7px 0 #d5e3f5,
+      0 18px 25px #234b7b15;
+  }
+  .home-benefit:focus-visible {
+    outline: 3px solid #2572d5;
+    outline-offset: 5px;
+  }
+  .home-benefit-art {
+    position: relative;
+    display: grid;
+    place-items: center;
+    height: 176px;
+    background:
+      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#fff7f5, #fff);
+    border-bottom: 1px solid #eef2f8;
+  }
+  .home-benefit-formats .home-benefit-art {
+    background:
+      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#f3f8ff, #fff);
+  }
+  .home-benefit-studio .home-benefit-art {
+    background:
+      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#f7f4ff, #fff);
+  }
+  .home-benefit-privacy .home-benefit-art {
+    background:
+      radial-gradient(ellipse at 50% 90%, #e3edfb, transparent 65%), linear-gradient(#f0f9f5, #fff);
+  }
+  .home-benefit-art :global(svg) {
+    width: 100%;
+    max-width: 240px;
+    height: 176px;
+    transition: transform 0.2s;
+  }
+  .home-benefit:hover .home-benefit-art :global(svg) {
+    transform: translateY(-3px);
+  }
+  .home-benefit-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 21px 20px 23px;
+  }
+  .home-benefit-label {
+    margin: 0 0 9px;
+    color: #46698e;
+    font-size: 12px;
+    font-weight: 650;
+    line-height: 1.4;
+  }
+  .home-benefit h3 {
+    margin: 0 0 12px;
+    font:
+      750 21px/1.3 'UltraClipart Sans',
+      Arial,
+      sans-serif;
+    letter-spacing: -0.6px;
+    color: #142f56;
+  }
+  .home-benefit-body {
+    margin: 0 0 23px;
+    color: #415d7e;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .home-benefit-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: auto;
+    color: #155cb6;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+  .home-benefit-link svg {
+    flex-shrink: 0;
+  }
+  @media (max-width: 1100px) {
+    .home-benefits {
+      padding: 27px;
+    }
+    .home-benefits-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+    .home-benefit-art {
+      height: 190px;
+    }
+    .home-benefit-art :global(svg) {
+      height: 190px;
+      max-width: 255px;
+    }
+  }
+  @media (max-width: 600px) {
+    .home-benefits {
+      padding: 23px 15px;
+      margin-top: 42px;
+      border-radius: 20px;
+    }
+    .home-benefits-heading {
+      display: block;
+      padding: 0 5px;
+    }
+    .home-benefits-heading > p {
+      max-width: none;
+      margin: 13px 0 0;
+    }
+    .home-benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 21px;
+    }
+    .home-benefit {
+      display: flex;
+    }
+    .home-benefit-art {
+      height: 165px;
+    }
+    .home-benefit-art :global(svg) {
+      width: 225px;
+      max-width: 100%;
+      height: 165px;
+    }
+    .home-benefit-copy {
+      padding: 22px;
+    }
+    .home-benefit h3 {
+      font-size: 20px;
+    }
+    .home-benefit-body {
+      font-size: 14px;
+      margin-bottom: 17px;
+    }
+  }
+  @media (max-width: 359px) {
+    .home-benefit-art :global(svg) {
+      width: 210px;
+    }
+    .home-benefit-copy {
+      padding: 20px;
+    }
+    .home-benefit h3 {
+      font-size: 18px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .home-benefit,
+    .home-benefit-art :global(svg) {
+      transition: none;
+    }
+  }
+</style>

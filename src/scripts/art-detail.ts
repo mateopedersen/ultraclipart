@@ -3,16 +3,22 @@ import { FAVORITES_KEY, parseFavoriteIds, toggleStoredFavorite } from '../lib/fa
 export function initArtDetail() {
   const preview = document.querySelector<HTMLElement>('#art-preview');
   if (preview) {
-    const background = (color: string) => {
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.art-preview-controls [data-bg]');
+    const custom = document.querySelector<HTMLElement>('.art-custom-color');
+    const background = (color: string, customSelected = false) => {
       preview.style.background = color === 'transparent' ? '' : color;
+      buttons.forEach((button) =>
+        button.setAttribute('aria-pressed', String(!customSelected && button.dataset.bg === color)),
+      );
+      if (custom) custom.dataset.selected = String(customSelected);
     };
-    document.querySelectorAll<HTMLButtonElement>('[data-bg]').forEach((button) => {
+    buttons.forEach((button) => {
       button.addEventListener('click', () => background(button.dataset.bg!));
     });
     document
       .querySelector<HTMLInputElement>('#preview-color')
       ?.addEventListener('input', (event) => {
-        background((event.target as HTMLInputElement).value);
+        background((event.target as HTMLInputElement).value, true);
       });
   }
   const button = document.querySelector<HTMLButtonElement>('[data-favorite]');
