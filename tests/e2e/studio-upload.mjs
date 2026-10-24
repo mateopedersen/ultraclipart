@@ -2,6 +2,7 @@ import { chromium, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
+import { chooseExportFormat } from '../helpers/export.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4351',
   out = resolve('reports/studio-upload');
 mkdirSync(out, { recursive: true });
@@ -75,7 +76,7 @@ try {
   await page.locator('[data-print=scale]').selectOption('native');
   for (const format of ['webp', 'pdf']) {
     await page.locator('[data-action=export]').click();
-    await page.locator(`[data-format][value=${format}]`).check();
+    await chooseExportFormat(page, format);
     await expect(page.locator('[data-size]')).toHaveValue('original');
     if (format === 'pdf') await page.locator('[data-allow-large-pdf]').check();
     await download('[data-action=download]', `local-edited.${format}`);

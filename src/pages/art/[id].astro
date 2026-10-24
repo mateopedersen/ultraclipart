@@ -1,7 +1,7 @@
 ---
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
-import Card from '../../components/Card.astro';
+import RelatedArtwork from '../../components/RelatedArtwork.astro';
 import Icon from '../../components/Icon.astro';
 import ShareButton from '../../components/ShareButton.astro';
 import ArtworkFacts from '../../components/ArtworkFacts.astro';
@@ -207,9 +207,12 @@ const facts = artworkDetails(item);
               {item.alpha ? 'Transparent image for digital projects' : 'Image for digital projects'}
             </small>
           </span>
-          <span class="download-size">
+          <span
+            class="download-size"
+            title={`${item.files.webp.bytes.toLocaleString('en-US')} bytes`}
+          >
+            <small>File size: </small>
             <strong>{formatFileSize(item.files.webp.bytes)}</strong>
-            <small>File size</small>
           </span>
           <Icon name="download" size={18} />
         </a>
@@ -222,9 +225,12 @@ const facts = artworkDetails(item);
               <strong>Download PDF</strong>
               <small>Printable document · {item.pdfPage}</small>
             </span>
-            <span class="download-size">
+            <span
+              class="download-size"
+              title={`${item.files.pdf.bytes.toLocaleString('en-US')} bytes`}
+            >
+              <small>File size: </small>
               <strong>{formatFileSize(item.files.pdf.bytes)}</strong>
-              <small>File size</small>
             </span>
             <Icon name="download" size={18} />
           </a>
@@ -247,20 +253,8 @@ const facts = artworkDetails(item);
       )}
     </section>
   </div>
+  <RelatedArtwork sourceId={item.id} />
   <ArtworkFacts item={item} layers={layers} />
-  <div class="section-head">
-    <h2>A little more inspiration</h2>
-    <a href="/new/">Explore all →</a>
-  </div>
-  <div class="gallery">
-    {art
-      .filter((a) => a.id !== item.id)
-      .sort((a, b) => Number(b.topic === item.topic) - Number(a.topic === item.topic))
-      .slice(0, 5)
-      .map((item) => (
-        <Card item={item} />
-      ))}
-  </div>
   <script>
     import { initArtDetail } from '../../scripts/art-detail';
     initArtDetail();

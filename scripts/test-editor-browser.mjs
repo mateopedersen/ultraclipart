@@ -1,5 +1,6 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
+import { chooseVectorStarter } from '../tests/helpers/creator.mjs';
 const browserName = process.env.UC_BROWSER || 'chromium',
   base = process.env.UC_BASE_URL || 'http://127.0.0.1:4321';
 const out = new URL(
@@ -37,7 +38,7 @@ const downloaded = async (format, name) => {
 };
 try {
   await page.goto(`${base}/create/`);
-  await page.locator('[data-creator-template=botanical-sprig]').click();
+  await chooseVectorStarter(page, 'botanical-sprig');
   await expect(page.locator('[data-status]')).toContainText('editable starter layers loaded');
   await page.screenshot({ path: new URL('06-editor-desktop.png', out).pathname, fullPage: true });
   passed.push('source opens, semantic layers, eight resize handles');

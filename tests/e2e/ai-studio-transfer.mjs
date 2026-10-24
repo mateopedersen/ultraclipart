@@ -308,6 +308,7 @@ try {
   }
   await page.locator('.uc-extract-object').evaluate((e) => (e.open = true));
   const violations = (await new AxeBuilder({ page }).analyze()).violations;
+  await fs.writeFile(path.join(out, 'accessibility.json'), JSON.stringify(violations, null, 2));
   assert.equal(violations.length, 0);
   checks.push('Missing transfer nonfatal; responsive 390/768/1440; Axe accessibility');
 

@@ -3,6 +3,8 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { chooseExportFormat } from '../helpers/export.mjs';
+import { shardRasterTargets } from '../../scripts/ci-raster-shards.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
   engine = process.env.UC_BROWSER || 'chromium';
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
@@ -21,7 +23,7 @@ if (requestedIds.size)
     requestedIds,
     'Every requested artwork must exist and match the selected topic/source filters',
   );
-const targets = [
+const targets = shardRasterTargets([
   ...new Map(
     (process.env.ALL_RASTER === '1' || requestedIds.size
       ? art
@@ -44,7 +46,9 @@ const targets = [
       .filter(Boolean)
       .map((a) => [a.id, a]),
   ).values(),
-];
+]);
+const representative = targets[0];
+assert.ok(representative, 'The selected raster shard must contain an artwork');
 const browser = await { chromium, firefox, webkit }[engine].launch({
   headless: true,
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
@@ -62,7 +66,7 @@ async function commitInput(selector, value) {
 }
 async function save(kind, id) {
   await page.locator('[data-action=export]').click();
-  await page.locator(`[data-format][value=${kind}]`).check();
+  await chooseExportFormat(page, kind);
   const pending = page.waitForEvent('download', { timeout: 60000 });
   await page.locator('[data-action=download]').click();
   const result = await pending;
@@ -151,9 +155,12 @@ try {
     if (index === 0)
       await page.screenshot({ path: resolve(out, 'edited-desktop.png'), fullPage: false });
   }
-  const altered = Buffer.from(readFileSync(new URL('../../public' + art[0].webp, import.meta.url)));
+  const altered = Buffer.from(
+    readFileSync(new URL('../../public' + representative.webp, import.meta.url)),
+  );
   altered[altered.length - 1] ^= 1;
-  const sourceRequest = (url) => url.pathname.includes(art[0].id) && url.pathname.endsWith('.webp');
+  const sourceRequest = (url) =>
+    url.pathname.includes(representative.id) && url.pathname.endsWith('.webp');
   await page.route(sourceRequest, (route) =>
     route.fulfill({
       status: 200,
@@ -162,7 +169,7 @@ try {
       body: altered,
     }),
   );
-  await page.goto(base + `/edit/${art[0].id}/`);
+  await page.goto(base + `/edit/${representative.id}/`);
   await expect(page.locator('[data-status]')).toContainText('verification failed', {
     timeout: 30000,
   });
@@ -172,7 +179,7 @@ try {
   await page.unroute(sourceRequest);
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto(base + `/edit/${art[0].id}/`);
+    await page.goto(base + `/edit/${representative.id}/`);
     await expect(page.locator('.uc-canvas image')).toHaveCount(2, { timeout: 30000 });
     const audit = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])

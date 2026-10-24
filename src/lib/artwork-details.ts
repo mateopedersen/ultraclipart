@@ -70,7 +70,7 @@ export function artworkDetails(item: ArtworkFacts) {
 
 export function formatFileSize(bytes: number) {
   if (!Number.isFinite(bytes) || bytes < 0) return 'Size unavailable';
-  if (bytes < 1024) return `${bytes} B`;
-  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(0)} KiB`;
-  return `${(bytes / (1024 * 1024)).toFixed(2)} MiB`;
+  if (bytes < 1000) return `${Math.round(bytes)} B`;
+  if (bytes < 100_000) return `${Math.round(bytes / 1000)} KB`;
+  return `${(bytes / 1_000_000).toFixed(1)} MB`;
 }
