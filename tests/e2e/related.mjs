@@ -224,6 +224,8 @@ try {
   }
   report.checks.push('T23 main and related WebP/PDF downloads return original SHA-256 bytes');
   await page.locator('[data-related-mode="best"]').click();
+  await expect(page.locator('[data-related-mode="best"]')).toHaveAttribute('aria-pressed', 'true');
+  await expect(root).not.toHaveAttribute('aria-busy', 'true');
   await page.locator('.related-card').first().scrollIntoViewIfNeeded();
   await page.waitForTimeout(1200);
   const events = await page.evaluate(() => window.relatedEvents);
