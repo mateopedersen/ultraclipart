@@ -24,8 +24,8 @@ export function validateRecoveredCollection(intake, read) {
         row.title?.length > 5 &&
         row.alt?.length > 20 &&
         row.description?.length > 30 &&
-        ['Color', 'Outline', 'Black & White'].includes(row.style),
-      'Missing descriptive artwork metadata',
+        ['Color', 'Outline', 'Watercolor', 'Black & White'].includes(row.style),
+      `Missing descriptive artwork metadata: ${row.id ?? 'unknown artwork'}`,
     );
     requireFact(
       ['owner-supplied', 'generated-raster'].includes(row.productionMethod) &&
