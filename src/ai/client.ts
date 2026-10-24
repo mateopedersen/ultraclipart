@@ -37,6 +37,45 @@ function initialize(root: HTMLElement) {
     | undefined;
   let thumbnailURLs: string[] = [];
   const api = '/api/ai/clipart/';
+  const ingredients = new Set<string>();
+  const moods = new Set<string>();
+  const swatches = new Set<string>();
+  const ingredientNames: Record<string, string> = {
+    cabin: 'a wooden cabin',
+    trees: 'pine trees',
+    fox: 'a little fox',
+  };
+  const moodNames: Record<string, string> = {
+    cozy: 'warm and cozy atmosphere',
+    minimal: 'minimal uncluttered composition',
+  };
+  const colorNames: Record<string, string> = {
+    '#164e44': 'deep forest green',
+    '#e5532f': 'terracotta orange',
+    '#ffe7c9': 'warm cream',
+    '#58a6d6': 'sky blue',
+    '#f49a28': 'golden amber',
+  };
+  const composedIdea = () => {
+    const details = [
+      ingredients.size ? `Include: ${[...ingredients].join(', ')}.` : '',
+      moods.size ? `Mood: ${[...moods].join(', ')}.` : '',
+      swatches.size
+        ? `Accent colors: ${[...swatches].map((c) => colorNames[c] || c).join(', ')}.`
+        : '',
+    ].filter(Boolean);
+    return [prompt.value.trim(), ...details].join(' ');
+  };
+  const clearIngredients = () => {
+    ingredients.clear();
+    moods.clear();
+    swatches.clear();
+    root
+      .querySelectorAll<HTMLElement>('[data-ai-ingredient], [data-ai-mood], [data-ai-swatch]')
+      .forEach((b) => b.setAttribute('aria-pressed', 'false'));
+    root.querySelector('#ai-custom-ingredients')?.replaceChildren();
+  };
+
   const errorMessages: Record<string, string> = {
     capacity_or_rate_limit:
       'Please wait one minute before trying again. If your daily or shared-network limit has been reached, come back after the reset shown below. Your current artwork is safe.',
@@ -100,6 +139,15 @@ function initialize(root: HTMLElement) {
         } as Record<string, string>
       )[state] || state;
     status.textContent = text;
+    const stage = ['validating', 'generating'].includes(state)
+      ? 'make'
+      : active
+        ? 'refine'
+        : 'idea';
+    root.querySelectorAll<HTMLElement>('[data-ai-step]').forEach((button) => {
+      if (button.dataset.aiStep === stage) button.setAttribute('aria-current', 'step');
+      else button.removeAttribute('aria-current');
+    });
   };
   const count = () => {
     element('ai-count').textContent = `${prompt.value.length} / 1200`;
@@ -122,6 +170,14 @@ function initialize(root: HTMLElement) {
       !token ||
       Boolean(quota?.cooldownUntil && Date.parse(quota.cooldownUntil) > Date.now());
     generate.setAttribute('aria-busy', String(busy));
+    root
+      .querySelectorAll<HTMLButtonElement>(
+        '[data-ai-ingredient], [data-ai-mood], [data-ai-swatch], [data-ai-theme], [data-ai-concept], [data-ai-style], [data-ai-add-ingredient]',
+      )
+      .forEach((button) => (button.disabled = busy));
+    root
+      .querySelectorAll<HTMLButtonElement>('[data-ai-step="refine"]')
+      .forEach((button) => (button.disabled = busy || !active));
     for (const button of actionButtons) {
       const action = button.dataset.aiAction!;
       if (['random', 'improve', 'copy', 'reset', 'clear'].includes(action)) button.disabled = busy;
@@ -186,6 +242,12 @@ function initialize(root: HTMLElement) {
     thumbnailURLs = [];
     const list = element('ai-history');
     list.replaceChildren();
+    const concepts = root.querySelector<HTMLElement>('#ai-concepts');
+    concepts?.replaceChildren();
+    if (concepts) concepts.hidden = !active;
+    const conceptLimit = Number(
+      root.querySelector<HTMLSelectElement>('#ai-concept-count')?.value || 4,
+    );
     for (const item of records) {
       const button = document.createElement('button'),
         image = document.createElement('img');
@@ -204,6 +266,17 @@ function initialize(root: HTMLElement) {
         if (!busy) void open(item).catch(failure);
       });
       list.append(button);
+      if (concepts && concepts.children.length < conceptLimit) {
+        const concept = button.cloneNode(true) as HTMLButtonElement;
+        concept.className = 'ai-saved-concept';
+        const label = document.createElement('span');
+        label.textContent = active?.id === item.id ? 'Selected' : item.prompt.slice(0, 64);
+        concept.append(label);
+        concept.addEventListener('click', () => {
+          if (!busy) void open(item).catch(failure);
+        });
+        concepts.append(concept);
+      }
     }
     element('ai-history-count').textContent =
       `${records.length} image${records.length === 1 ? '' : 's'}`;
@@ -244,6 +317,7 @@ function initialize(root: HTMLElement) {
     before.src = activeURL;
     element('ai-used-prompt').hidden = false;
     element('ai-used-prompt-text').textContent = item.composedPrompt || item.prompt;
+    clearIngredients();
     prompt.value = item.prompt;
     style.value = item.style;
     count();
@@ -360,11 +434,13 @@ function initialize(root: HTMLElement) {
       prompt.focus();
       return;
     }
-    if (prompt.value.length > 1200) {
+    if (composedIdea().length > 1200) {
       say('error', 'Please keep your description under 1,200 characters.');
       prompt.focus();
       return;
     }
+    const submittedIdea = composedIdea();
+    const wantsTransparency = root.querySelector<HTMLInputElement>('#ai-transparent')?.checked;
     busy = true;
     stopped = false;
     updateButtons();
@@ -390,7 +466,7 @@ function initialize(root: HTMLElement) {
         headers: { 'Content-Type': 'application/json' },
         signal: request.signal,
         body: JSON.stringify({
-          prompt: prompt.value.trim(),
+          prompt: submittedIdea,
           style: style.value,
           ...options,
           background: 'white',
@@ -431,6 +507,18 @@ function initialize(root: HTMLElement) {
         original: image,
       };
       await open(item);
+      if (wantsTransparency) {
+        try {
+          const note = await cutout();
+          snapshot();
+          say('ready', `Your image is ready. ${note}`);
+        } catch {
+          say(
+            'ready',
+            'Your image is ready. Automatic background removal could not finish; use Refine design to adjust it.',
+          );
+        }
+      }
       await persist();
     } catch (error) {
       say(
@@ -462,11 +550,134 @@ function initialize(root: HTMLElement) {
       selectStyle();
     }),
   );
+  root.querySelectorAll<HTMLButtonElement>('[data-ai-ingredient]').forEach((button) =>
+    button.addEventListener('click', () => {
+      const key = button.dataset.aiIngredient!;
+      if (key === 'custom') {
+        const input = root.querySelector<HTMLInputElement>('#ai-ingredient-custom');
+        const panel = root.querySelector<HTMLElement>('#ai-custom-ingredient-panel');
+        if (panel) panel.hidden = false;
+        button.setAttribute('aria-expanded', 'true');
+        if (input) {
+          input.hidden = false;
+          input.focus();
+        }
+        return;
+      }
+      const value = ingredientNames[key];
+      if (!value) return;
+      ingredients.has(value) ? ingredients.delete(value) : ingredients.add(value);
+      button.setAttribute('aria-pressed', String(ingredients.has(value)));
+    }),
+  );
+  const addIngredient = () => {
+    const input = root.querySelector<HTMLInputElement>('#ai-ingredient-custom');
+    const value = input?.value.trim().slice(0, 80);
+    if (!value || ingredients.has(value) || ingredients.size >= 8) return;
+    ingredients.add(value);
+    const chip = document.createElement('button');
+    chip.type = 'button';
+    chip.textContent = value + ' ×';
+    chip.setAttribute('aria-label', 'Remove ingredient: ' + value);
+    chip.addEventListener('click', () => {
+      if (!busy) {
+        ingredients.delete(value);
+        chip.remove();
+      }
+    });
+    root.querySelector('#ai-custom-ingredients')?.append(chip);
+    input!.value = '';
+  };
+  root.querySelector('[data-ai-add-ingredient]')?.addEventListener('click', addIngredient);
+  root.querySelector('#ai-ingredient-custom')?.addEventListener('keydown', (event) => {
+    if ((event as KeyboardEvent).key === 'Enter') {
+      event.preventDefault();
+      addIngredient();
+    }
+  });
+  for (const [attribute, selected, names] of [
+    ['mood', moods, moodNames],
+    ['swatch', swatches, colorNames],
+  ] as const) {
+    root.querySelectorAll<HTMLButtonElement>(`[data-ai-${attribute}]`).forEach((button) =>
+      button.addEventListener('click', () => {
+        const key = button.getAttribute(`data-ai-${attribute}`)!;
+        const value = attribute === 'mood' ? names[key] : key;
+        if (!value) return;
+        selected.has(value) ? selected.delete(value) : selected.add(value);
+        button.setAttribute('aria-pressed', String(selected.has(value)));
+      }),
+    );
+  }
+  root.querySelectorAll<HTMLButtonElement>('[data-ai-view]').forEach((button) =>
+    button.addEventListener('click', () => {
+      const view = button.dataset.aiView!;
+      root.querySelector('#ai-concept-board')?.setAttribute('data-view', view);
+      root
+        .querySelectorAll<HTMLButtonElement>('[data-ai-view]')
+        .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+    }),
+  );
+  root.querySelector('#ai-concept-count')?.addEventListener('change', renderHistory);
+  const themes: Record<string, string> = {
+    animals:
+      'A lifelike baby deer standing beside wildflowers, gentle eyes, detailed soft fur, full body.',
+    florals: 'A graceful bouquet of pink peonies, orange daisies and delicate green leaves.',
+    holidays:
+      'A festive red ribbon bow with evergreen branches, pine cones and bright red berries.',
+    school: 'A cheerful school arrangement with colored pencils, three books and a red apple.',
+    food: 'A golden flaky croissant beside a porcelain teacup with delicate blue flowers.',
+    nature:
+      'A cozy wooden cabin nestled among tall pine trees, a winding path and warm golden sunlight.',
+  };
+  root.querySelectorAll<HTMLButtonElement>('[data-ai-theme]').forEach((button) =>
+    button.addEventListener('click', () => {
+      clearIngredients();
+      prompt.value = themes[button.dataset.aiTheme!] || '';
+      count();
+      prompt.focus();
+      say('idle', 'Theme added to your description. Choose your details, then create one image.');
+    }),
+  );
+  const conceptStyles = ['cut-paper', 'realistic', 'black-white', 'watercolor'];
+  root.querySelectorAll<HTMLButtonElement>('[data-ai-concept]').forEach((button) =>
+    button.addEventListener('click', () => {
+      clearIngredients();
+      prompt.value = themes.nature;
+      style.value = conceptStyles[Number(button.dataset.aiConcept)] || 'realistic';
+      count();
+      selectStyle();
+      root
+        .querySelectorAll('[data-ai-concept]')
+        .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      say(
+        'idle',
+        'Example direction selected. Create your own image to enable editing and downloads.',
+      );
+    }),
+  );
+  root.querySelectorAll<HTMLButtonElement>('[data-ai-step]').forEach((button) =>
+    button.addEventListener('click', () => {
+      if (button.dataset.aiStep === 'idea') {
+        prompt.focus();
+        prompt.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      } else if (button.dataset.aiStep === 'make')
+        element('ai-preview-title').scrollIntoView({ block: 'center', behavior: 'smooth' });
+      else if (active) {
+        const details = root.querySelector<HTMLDetailsElement>('#ai-refine-tools');
+        if (details) {
+          details.open = true;
+          details.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }
+      }
+    }),
+  );
   prompt.addEventListener('input', count);
   style.addEventListener('change', selectStyle);
   root.querySelectorAll<HTMLButtonElement>('[data-ai-example]').forEach((button) =>
     button.addEventListener('click', () => {
       const example = examples[Number(button.dataset.aiExample)];
+      clearIngredients();
       prompt.value = example.prompt;
       style.value = example.style;
       count();
@@ -518,6 +729,7 @@ function initialize(root: HTMLElement) {
     if (busy) return;
     if (action === 'random') {
       const example = examples[Math.floor(Math.random() * examples.length)];
+      clearIngredients();
       prompt.value = example.prompt;
       style.value = example.style;
       count();
@@ -526,6 +738,7 @@ function initialize(root: HTMLElement) {
       return;
     }
     if (action === 'reset') {
+      clearIngredients();
       prompt.value = '';
       style.value = 'realistic';
       count();
@@ -614,13 +827,28 @@ function initialize(root: HTMLElement) {
     busy = true;
     updateButtons();
     try {
-      if (['download', 'project', 'studio'].includes(action)) {
+      if (['download', 'pdf', 'project', 'studio'].includes(action)) {
         say(
           'exporting',
           action === 'studio'
             ? 'Preparing your image for Clipart Studio…'
             : 'Preparing your download…',
         );
+        if (action === 'pdf') {
+          const { downloadAiPdf } = await import('./pdf-export');
+          await downloadAiPdf(await toBlob(), 'my-ai-clipart.pdf', {
+            paper:
+              root.querySelector<HTMLSelectElement>('#ai-pdf-paper')?.value === 'a4'
+                ? 'a4'
+                : 'letter',
+            allowLargePdf: root.querySelector<HTMLInputElement>('#ai-pdf-large')?.checked === true,
+          });
+          say(
+            'ready',
+            'CMYK PDF downloaded at native 300 PPI. Open Studio for page layouts and editable text.',
+          );
+          return;
+        }
         if (action === 'download') {
           let blob = await toBlob('image/webp', 0.95);
           if (blob.type !== 'image/webp') {
