@@ -114,6 +114,7 @@ try {
         const axe = await new AxeBuilder({ page })
           .setLegacyMode(engine === 'webkit')
           .include('[data-related-root]')
+          .include('.artwork-facts')
           .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
           .analyze();
         assert.deepEqual(
@@ -121,9 +122,18 @@ try {
           [],
         );
         report.accessibility.push({ width, violations: 0 });
-        if (width === 1440 || width === 390)
+        if (width === 1440 || width === 390) {
           await root.screenshot({ path: `${output}/reference-${width}.png` });
+          await page
+            .locator('.artwork-facts')
+            .screenshot({ path: `${output}/file-guide-${width}.png` });
+        }
       }
+      const factsBox = await page.locator('.artwork-facts').boundingBox();
+      assert.ok(
+        factsBox.height < (width > 1000 ? 560 : 1050),
+        `Compact guide ${width}: ${factsBox.height}`,
+      );
       report.layouts.push({
         id,
         width,

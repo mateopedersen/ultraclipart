@@ -32,7 +32,7 @@ The browser uses the page's small immutable snapshot. A tiny `related-release.js
 
 ## Interface
 
-Initial server HTML contains up to eight alternatives and four companions, with no unrelated filler. JavaScript uses up to four plus two on small screens. Show-more advances the bounded snapshot without duplicates. Only filters with actual results are rendered. Black & white filters true metadata color modes. Sparse companion results use compact horizontal cards, with their distinct group label retained. The file guide uses four concise desktop columns, two on mobile and a compact single-column fallback.
+Initial server HTML contains up to eight alternatives and four companions, with no unrelated filler. JavaScript uses up to four plus two on small screens. Show-more advances the bounded snapshot without duplicates. Only filters with actual results are rendered. Black & white filters true metadata color modes. Sparse companion results use compact horizontal cards, with their distinct group label retained. The file guide uses four concise desktop columns, two on tablets and compact horizontal cards in one column on phones. Dark 18 px card headings and 14 px descriptions stay readable; metallic, shaded SVG illustrations embed the actual artwork.
 
 Cards have real thumbnail links, `object-fit: contain`, intrinsic dimensions, lazy loading, real WebP/PDF links and the existing favorite store. A thumbnail failure replaces its image with a detail link and removes download actions. Each filter is a button with `aria-pressed`; statuses are announced politely. Native details keep file information accessible without JavaScript.
 
