@@ -67,6 +67,7 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/artwork-details.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/related.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/sharing.mjs
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
             BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs

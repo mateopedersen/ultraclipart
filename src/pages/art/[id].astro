@@ -1,7 +1,7 @@
 ---
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
-import Card from '../../components/Card.astro';
+import RelatedArtwork from '../../components/RelatedArtwork.astro';
 import Icon from '../../components/Icon.astro';
 import ShareButton from '../../components/ShareButton.astro';
 import ArtworkFacts from '../../components/ArtworkFacts.astro';
@@ -205,20 +205,8 @@ const facts = artworkDetails(item);
       )}
     </section>
   </div>
+  <RelatedArtwork sourceId={item.id} />
   <ArtworkFacts item={item} layers={layers} />
-  <div class="section-head">
-    <h2>A little more inspiration</h2>
-    <a href="/new/">Explore all →</a>
-  </div>
-  <div class="gallery">
-    {art
-      .filter((a) => a.id !== item.id)
-      .sort((a, b) => Number(b.topic === item.topic) - Number(a.topic === item.topic))
-      .slice(0, 5)
-      .map((item) => (
-        <Card item={item} />
-      ))}
-  </div>
   <script>
     import { initArtDetail } from '../../scripts/art-detail';
     initArtDetail();
