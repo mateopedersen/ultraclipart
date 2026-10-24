@@ -165,9 +165,12 @@ const facts = artworkDetails(item);
               {item.alpha ? 'Transparent image for digital projects' : 'Image for digital projects'}
             </small>
           </span>
-          <span class="download-size">
+          <span
+            class="download-size"
+            title={`${item.files.webp.bytes.toLocaleString('en-US')} bytes`}
+          >
+            <small>File size: </small>
             <strong>{formatFileSize(item.files.webp.bytes)}</strong>
-            <small>File size</small>
           </span>
           <Icon name="download" size={18} />
         </a>
@@ -180,9 +183,12 @@ const facts = artworkDetails(item);
               <strong>Download PDF</strong>
               <small>Printable document · {item.pdfPage}</small>
             </span>
-            <span class="download-size">
+            <span
+              class="download-size"
+              title={`${item.files.pdf.bytes.toLocaleString('en-US')} bytes`}
+            >
+              <small>File size: </small>
               <strong>{formatFileSize(item.files.pdf.bytes)}</strong>
-              <small>File size</small>
             </span>
             <Icon name="download" size={18} />
           </a>
