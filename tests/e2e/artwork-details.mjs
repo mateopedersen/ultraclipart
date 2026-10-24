@@ -18,7 +18,11 @@ page.on('pageerror', (error) => report.errors.push(error.message));
 try {
   for (const width of detailOnly ? [] : [1920, 1440, 1321, 1251, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
-    assert.equal((await page.goto(base + '/', { waitUntil: 'networkidle' })).status(), 200);
+    // Firefox may expose a successful conditional navigation as 304. The
+    // rendered layout, decoded images and controls below still verify its body.
+    assert.ok(
+      [200, 304].includes((await page.goto(base + '/', { waitUntil: 'networkidle' })).status()),
+    );
     await page.evaluate(() => document.fonts.ready);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     const artworkClear = await page.locator('.home-benefit').evaluateAll((cards) =>
@@ -71,9 +75,10 @@ try {
       page = await context.newPage();
       page.on('pageerror', (error) => report.errors.push(error.message));
       await page.setViewportSize({ width, height: 1000 });
-      assert.equal(
-        (await page.goto(`${base}/art/${id}/`, { waitUntil: 'networkidle' })).status(),
-        200,
+      assert.ok(
+        [200, 304].includes(
+          (await page.goto(`${base}/art/${id}/`, { waitUntil: 'networkidle' })).status(),
+        ),
       );
       // Warm lazy images before Axe creates its helper document. Otherwise
       // WebKit may report cancelled helper-image loads as access-control errors.

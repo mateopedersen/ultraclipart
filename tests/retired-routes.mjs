@@ -1,6 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
+import { join, relative } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { retirementPolicy, createRetiredHandler } from '../scripts/retired-routes.mjs';
 const topics = [
   ...JSON.parse(readFileSync(new URL('../data/topics.json', import.meta.url))).topics,
@@ -189,5 +191,26 @@ test('retirement rules reserve space for AI and public-sharing endpoints', () =>
     assert.equal(invokes(`/art/${item.id}/`), false);
     assert.equal(invokes(`/edit/${item.id}/`), false);
   }
+  for (const path of policy.retired) assert.equal(invokes(path), true, path);
+});
+
+test('compact retirement patterns protect every built HTML alias and static resource', () => {
+  const dist = new URL('../dist/', import.meta.url);
+  if (!existsSync(dist)) return;
+  const walk = (directory) =>
+    readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+      const path = join(directory, entry.name);
+      return entry.isDirectory() ? walk(path) : [path];
+    });
+  const directory = fileURLToPath(dist);
+  const paths = walk(directory).map((path) => '/' + relative(directory, path));
+  const withdrawn = JSON.parse(
+    readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
+  );
+  const policy = retirementPolicy(topics, art, withdrawn, paths, 98);
+  const invokes = (path) =>
+    policy.routes.include.some((pattern) => matches(pattern, path)) &&
+    !policy.routes.exclude.some((pattern) => matches(pattern, path));
+  for (const path of paths) assert.equal(invokes(path), false, path);
   for (const path of policy.retired) assert.equal(invokes(path), true, path);
 });

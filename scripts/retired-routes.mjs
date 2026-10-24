@@ -31,15 +31,21 @@ const compilePattern = (pattern) =>
   );
 const matches = (pattern, path) => compilePattern(pattern).test(path);
 function subjectRoutes(root, missing, current, compact = false) {
-  const cover = (wanted, protectedNames) =>
-    compact
-      ? compactCover(
-          wanted,
-          variants(protectedNames).map((name) => root + name),
-          variants(protectedNames),
-          root,
-        )
-      : prefixCover(variants(wanted), variants(protectedNames)).map((name) => root + name);
+  const cover = (wanted, protectedNames) => {
+    if (!compact)
+      return prefixCover(variants(wanted), variants(protectedNames)).map((name) => root + name);
+    // A glob spans slashes. A safe match for a slug can still capture the
+    // "index.html" suffix of an unrelated, currently published subject.
+    const protectedVariants = variants(
+      protectedNames.flatMap((name) => [name, `${name}/index.html`]),
+    );
+    return compactCover(
+      wanted,
+      protectedVariants.map((name) => root + name),
+      protectedVariants,
+      root,
+    );
+  };
   if (!missing.length) return { include: [], exclude: [] };
   const positive = {
     include: cover(missing, current),
