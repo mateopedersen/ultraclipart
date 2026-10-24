@@ -2,9 +2,12 @@ import source from '../../data/topics.json';
 import illustrations from '../../data/art.json';
 import extraTopics from '../../data/extra-topics.json';
 import { validateEditorSource } from './artwork-source';
-import { clustersForTopic, topicInCluster } from './topic-clusters';
+import { clustersForTopic, topicInCluster, primaryClusterForTopic } from './topic-clusters';
 export { clustersForTopic, topicInCluster } from './topic-clusters';
-export const topics = [...source.topics, ...extraTopics];
+export const topics = [...source.topics, ...extraTopics].map((topic) => ({
+  ...topic,
+  cluster: primaryClusterForTopic(topic),
+}));
 type AssetKind = 'svg' | 'webp' | 'pdf' | 'thumb';
 type PublishedAssets = Record<string, Record<AssetKind, string>>;
 const publishedAssets = import.meta.env.PUBLIC_ASSET_URLS as PublishedAssets | null;
