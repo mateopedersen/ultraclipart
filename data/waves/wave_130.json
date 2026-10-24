@@ -1,0 +1,244 @@
+{
+  "wave": "wave_130",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-fruit-roost",
+      "title": "Bat Beside a Hanging Fig",
+      "alt": "A brown bat hangs from a short leafy twig beside one ripe purple fig, one wing partly open and muzzle near the fruit.",
+      "description": "A brown bat hangs from a short leafy twig beside one ripe purple fig, one wing partly open and muzzle near the fruit. Useful for nature story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_130/source/bat-fruit-roost.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "2fb08d4df4210a56043e744c42f6ffa46d7d6a0c9927c750cd1ea4c427bfda18",
+      "inputSignature": "db6416438fa84c4d56dbcab43df8d77f2c927f4863911ada8b81a4fe71c32ea9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 910164,
+        "weightedCmykRmse": 1.117655
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1404356,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1009050,
+          "weightedCmykRmse": 0.936286
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 910164,
+          "weightedCmykRmse": 1.117655
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        201,
+        76,
+        1043,
+        1019
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_130/exports/bat-fruit-roost.pdf",
+          "bytes": 910164,
+          "sha256": "149956561ae08534c968004bac7a3e140149f66342bfa591964c4cda7982a151"
+        },
+        "webp": {
+          "path": "work/production/wave_130/exports/bat-fruit-roost.webp",
+          "bytes": 657724,
+          "sha256": "9fe3911c4af8240839dc92efbe56be0892805d75c9fae0343054b33337ebd0e7"
+        },
+        "thumb": {
+          "path": "work/production/wave_130/exports/bat-fruit-roost-thumb.webp",
+          "bytes": 45042,
+          "sha256": "592f2c6ebfce52a9e47999509f55e6b0f18a9a1509bfb3163dd4a3ca669e0d9d"
+        }
+      },
+      "proofSha256": "ba594eb77afbc8793959aa9d35c19316252dd853985968f7b802fa96be56782d",
+      "pairMeanRgbDifference": 1.30193
+    },
+    {
+      "id": "bat-wrapped-sleep",
+      "title": "Bat Sleeping in Folded Wings",
+      "alt": "A compact smoky-gray bat hangs upside down from a curved bare branch, wings wrapped snugly, eyes closed and two tiny feet gripping above.",
+      "description": "A compact smoky-gray bat hangs upside down from a curved bare branch, wings wrapped snugly, eyes closed and two tiny feet gripping above. Useful for bedtime cards.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_130/source/bat-wrapped-sleep.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d87454f4596bd398cd9b13e7ccdca2f03d269cfc6a139a0e8fd95c4f9910e9e4",
+      "inputSignature": "490941afe5c36e35793644f57d9428aa5a7e42659039b15d2bdf5e72746144ba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 809167,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 809167,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        195,
+        96,
+        1056,
+        1055
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_130/exports/bat-wrapped-sleep.pdf",
+          "bytes": 809167,
+          "sha256": "a29829852e16b8eeae24547388ee0e38b15881b5761a287aad68e4fbbba2ba62"
+        },
+        "webp": {
+          "path": "work/production/wave_130/exports/bat-wrapped-sleep.webp",
+          "bytes": 330712,
+          "sha256": "d431c4be6d79492269b61e7f15489b94af628e46e8b427b9bb6974e8a8105f23"
+        },
+        "thumb": {
+          "path": "work/production/wave_130/exports/bat-wrapped-sleep-thumb.webp",
+          "bytes": 26330,
+          "sha256": "3285858f0db1872c4a529d9f4823572c51f5a8f1aef74022d6d4eaf71ebc7656"
+        }
+      },
+      "proofSha256": "588510b3a7f9fe2b3ff1cb9dd5decab90dbed1f6fe291a7a971a5fd66f276e57",
+      "pairMeanRgbDifference": 0.59606
+    },
+    {
+      "id": "bat-wing-stretch",
+      "title": "Bat Stretching One Wing",
+      "alt": "A drowsy brown bat hangs by both hind feet and stretches one broad wing outward while the other remains folded around the body.",
+      "description": "A drowsy brown bat hangs by both hind feet and stretches one broad wing outward while the other remains folded around the body. Useful for movement contrast cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_130/source/bat-wing-stretch.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1acd2bf2b04e46b21bbf47c088f5795d8d24d9eba90968e264e6e91264bf05c9",
+      "inputSignature": "a9a5561bc9e6d23ad00688251d1bc0a4afb682de7e39dfe1f02f400ebadc60e9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 918846,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 918846,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        122,
+        203,
+        1126,
+        1013
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_130/exports/bat-wing-stretch.pdf",
+          "bytes": 918846,
+          "sha256": "ea86c9dc9d8ec575fc2c126f03233036041678bad399bd1bbd4936d1f76355e0"
+        },
+        "webp": {
+          "path": "work/production/wave_130/exports/bat-wing-stretch.webp",
+          "bytes": 404866,
+          "sha256": "f1d4b2e9d302a706d08d8c707d04b4d12314959956e69f2bafde89f77c001aeb"
+        },
+        "thumb": {
+          "path": "work/production/wave_130/exports/bat-wing-stretch-thumb.webp",
+          "bytes": 28842,
+          "sha256": "f2943145afb699f47f3b6d69b574898ce005c3e1f4a5c82d6a7cb55daa76b075"
+        }
+      },
+      "proofSha256": "c533d5964d0a814d56c4a95181fcd1120aff717d196775e03c1aad2f8d886bdc",
+      "pairMeanRgbDifference": 0.71167
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed all three native originals and actual PDF contact: fig-roost feeding pose, wrapped sleep and wing stretch are distinct, complete and legible; two hind feet grip each branch; no clipping or visible rendering defects.",
+  "createdAt": "2026-10-24T01:28:12.464Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.708128+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_132",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-low-swoop",
+      "title": "Bat Swooping Above Reeds",
+      "alt": "A long-winged bat skims above three broad reed stems with feet tucked and muzzle angled down, isolated without a sky or water rectangle.",
+      "description": "A long-winged bat skims above three broad reed stems with feet tucked and muzzle angled down, isolated without a sky or water rectangle. Useful for night nature stories.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_132/source/bat-low-swoop-v2.png"
+    },
+    {
+      "id": "bat-landing-grip",
+      "title": "Bat Landing on a Twig",
+      "alt": "A small bat folds its wings while reaching its two hind feet toward a slanted twig, captured at the moment before gripping.",
+      "description": "A small bat folds its wings while reaching its two hind feet toward a slanted twig, captured at the moment before gripping. Useful for sequence cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_132/source/bat-landing-grip.png"
+    },
+    {
+      "id": "bat-curious-face",
+      "title": "Curious Bat Portrait",
+      "alt": "A friendly bat bust with broad rounded ears tilts its head, one folded wing edge visible beneath its chin and an alert gentle expression.",
+      "description": "A friendly bat bust with broad rounded ears tilts its head, one folded wing edge visible beneath its chin and an alert gentle expression. Useful for emotion vocabulary.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_132/source/bat-curious-face.png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_136",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-envelope-flight",
+      "title": "Bat Delivering an Envelope",
+      "alt": "A bat glides diagonally while its hind feet hold a closed cream envelope by the top edge, wings unobstructed and distinct.",
+      "description": "A bat glides diagonally while its hind feet hold a closed cream envelope by the top edge, wings unobstructed and distinct. Useful for personal invitation accents.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_136/source/bat-envelope-flight.png"
+    },
+    {
+      "id": "bat-berry-basket",
+      "title": "Bat Carrying a Berry Basket",
+      "alt": "A friendly bat hovers above a small basket of three broad berries, its two feet hooked around the single basket handle.",
+      "description": "A friendly bat hovers above a small basket of three broad berries, its two feet hooked around the single basket handle. Useful for counting and story cards.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_136/source/bat-berry-basket.png"
+    },
+    {
+      "id": "bat-lantern-perch",
+      "title": "Bat Resting on a Lantern",
+      "alt": "A bat perches atop a simple green lantern with a warm flat yellow pane, wings folded and head tilted curiously.",
+      "description": "A bat perches atop a simple green lantern with a warm flat yellow pane, wings folded and head tilted curiously. Useful for cozy nighttime cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_136/source/bat-lantern-perch.png"
+    }
+  ]
+}

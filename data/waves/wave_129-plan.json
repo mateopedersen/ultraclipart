@@ -1,0 +1,38 @@
+{
+  "wave": "wave_129",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-upward-launch",
+      "title": "Bat Taking Flight",
+      "alt": "A small chestnut bat launches upward from a short branch, wings raised in a deep V and hind feet just releasing the bark.",
+      "description": "A small chestnut bat launches upward from a short branch, wings raised in a deep V and hind feet just releasing the bark. Useful for movement vocabulary.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_129/source/bat-upward-launch.png"
+    },
+    {
+      "id": "bat-banked-turn",
+      "title": "Bat Banking in Flight",
+      "alt": "A charcoal bat makes a clear banking turn, one wing tilted toward the viewer and the other extended behind, head looking into the turn.",
+      "description": "A charcoal bat makes a clear banking turn, one wing tilted toward the viewer and the other extended behind, head looking into the turn. Useful for direction story cards.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_129/source/bat-banked-turn.png"
+    },
+    {
+      "id": "bat-flower-hover",
+      "title": "Bat Hovering Beside a Flower",
+      "alt": "A tawny bat hovers beside one large white night flower on a short leafy stem, muzzle directed toward the bloom and wings spread.",
+      "description": "A tawny bat hovers beside one large white night flower on a short leafy stem, muzzle directed toward the bloom and wings spread. Useful for nature-themed learning.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_129/source/bat-flower-hover.png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_142",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-baby-yawn",
+      "title": "Baby Bat Yawning",
+      "alt": "A small fluffy-looking bat sits upright on a smooth pebble with eyes squeezed shut in a wide yawn, wings drooping gently to the sides.",
+      "description": "A small fluffy-looking bat sits upright on a smooth pebble with eyes squeezed shut in a wide yawn, wings drooping gently to the sides. Useful for emotion and routine cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_142/source/bat-baby-yawn.png"
+    },
+    {
+      "id": "bat-wreath-rest",
+      "title": "Bat on a Small Oak Wreath",
+      "alt": "One sleeping bat hangs from the upper curve of a simple open oak-leaf wreath with only six broad leaves and two acorns.",
+      "description": "One sleeping bat hangs from the upper curve of a simple open oak-leaf wreath with only six broad leaves and two acorns. Useful for personal seasonal cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_142/source/bat-wreath-rest-v2.png"
+    },
+    {
+      "id": "bat-blank-round-sign",
+      "title": "Bat Holding a Round Blank Sign",
+      "alt": "A bat spreads its wings behind a broad empty cream circle, two hind feet visible gripping the sign's upper edge.",
+      "description": "A bat spreads its wings behind a broad empty cream circle, two hind feet visible gripping the sign's upper edge. Useful for personal labels.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_142/source/bat-blank-round-sign.png"
+    }
+  ]
+}

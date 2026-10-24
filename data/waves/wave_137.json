@@ -1,0 +1,251 @@
+{
+  "wave": "wave_137",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-book-perch",
+      "title": "Bat Perched on an Open Book",
+      "alt": "A friendly bat peeks over a large open red book with its wings spread behind the blank pages.",
+      "description": "A friendly bat peeks over a large open red book with its wings spread behind the blank pages. Useful for reading reward cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_137/source/bat-book-perch.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a2cd3e8aadea0eb3bee97e9c63c854c105c855df8a5c0d03b906d365e23a8beb",
+      "inputSignature": "2e3d7dc5bdec4769e04eff0bee86a6799ccd116c07e10ee07a901a185c5534bd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 766915,
+        "weightedCmykRmse": 0.844604
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1360037,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 766915,
+          "weightedCmykRmse": 0.844604
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        76,
+        89,
+        1178,
+        1169
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_137/exports/bat-book-perch.pdf",
+          "bytes": 766915,
+          "sha256": "2b0d03771447b9071370090ed68db57bf433b5062f241f9ebf0be569bed1c3ca"
+        },
+        "webp": {
+          "path": "work/production/wave_137/exports/bat-book-perch.webp",
+          "bytes": 710444,
+          "sha256": "20e9966f9bfad66bcf9726d014fbc53b2ce81b3b9147ae8039657b03f8bbce1f"
+        },
+        "thumb": {
+          "path": "work/production/wave_137/exports/bat-book-perch-thumb.webp",
+          "bytes": 40784,
+          "sha256": "2791605c178547cab0c13cefcac1709f665d1ac65dd9fff8bad6ae9c7562f009"
+        }
+      },
+      "proofSha256": "e0336db2c7642f8670e9252c86502b52cea1897efe43f60d7d17013d560d1666",
+      "pairMeanRgbDifference": 2.47599
+    },
+    {
+      "id": "bat-pencil-banner",
+      "title": "Bat Above a Blank Pencil Label",
+      "alt": "A smiling bat spreads two wings above a wide blank pencil-shaped label, two hind feet gripping the label's top edge.",
+      "description": "A smiling bat spreads two wings above a wide blank pencil-shaped label, two hind feet gripping the label's top edge. Useful for classroom name labels.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_137/source/bat-pencil-banner.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c6cc1ebe11aad949545a3f2773985e57615137c370c5497f39b51af5079dd8fa",
+      "inputSignature": "873fbb79bcd6d6723d3afb86f692da3dbb19fb80a5ebf3bddaf46fc55893fc71",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 936311,
+        "weightedCmykRmse": 0.814656
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1451684,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 936311,
+          "weightedCmykRmse": 0.814656
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        21,
+        128,
+        1233,
+        1032
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_137/exports/bat-pencil-banner.pdf",
+          "bytes": 936311,
+          "sha256": "db8f5983a8a2d345cd29593d20a8bc62b257dcc21c4fae8b6de3fbe9f4c30dab"
+        },
+        "webp": {
+          "path": "work/production/wave_137/exports/bat-pencil-banner.webp",
+          "bytes": 656748,
+          "sha256": "93c61b41e99bc1ad74208787e26f9a6df967c282f6ff2350a10fcd5d9eafc3af"
+        },
+        "thumb": {
+          "path": "work/production/wave_137/exports/bat-pencil-banner-thumb.webp",
+          "bytes": 43960,
+          "sha256": "159cfd71d95980d726ce35aba2ca72fc3d1f6f3ea7f52ca9cd703fa91bf7f7f1"
+        }
+      },
+      "proofSha256": "9a43c3e49115dfb14fe5b57cecd5479bb8aa817044513e0d8ba31973dad67e75",
+      "pairMeanRgbDifference": 1.50666
+    },
+    {
+      "id": "bat-pumpkin-perch",
+      "title": "Bat Perched on a Small Pumpkin",
+      "alt": "A friendly bat rests on the stem of one squat pumpkin, wings partly raised for balance and both hind feet gripping the stem.",
+      "description": "A friendly bat rests on the stem of one squat pumpkin, wings partly raised for balance and both hind feet gripping the stem. Useful for personal Halloween crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_137/source/bat-pumpkin-perch.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f48fe2373c91a5abc6382c4323eabc12e56693e88e68dd9a2d5c0ecb85ec7e4e",
+      "inputSignature": "a2b8f27c70f0391f6faae6e082417a02535212b08ceba6eb66fdff1adcec3e12",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 607054,
+        "weightedCmykRmse": 0.861283
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1026175,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 607054,
+          "weightedCmykRmse": 0.861283
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        166,
+        88,
+        1121,
+        1168
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_137/exports/bat-pumpkin-perch.pdf",
+          "bytes": 607054,
+          "sha256": "3436994c8b54f0c40a7770fe17fe438a0082d79d6b541db26667e8871e59b9fd"
+        },
+        "webp": {
+          "path": "work/production/wave_137/exports/bat-pumpkin-perch.webp",
+          "bytes": 538018,
+          "sha256": "0430ee2dbe68ba3f1b200011cccf981298f1920cce4d0a4316342266330de99b"
+        },
+        "thumb": {
+          "path": "work/production/wave_137/exports/bat-pumpkin-perch-thumb.webp",
+          "bytes": 39078,
+          "sha256": "3e4db3c5d6bc7b4ef63462427ce7f4aef0eb1a6c068a8f767e742b8a9571c8fe"
+        }
+      },
+      "proofSha256": "490298bf3d50c08522db6599586447e0f8a48190e0abdea80243e57dac424928",
+      "pairMeanRgbDifference": 2.17678
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed native sources and actual PDFs: book scene corrected to actual spread wings/red cover; blank pencil label clear and unlettered; pumpkin balancing pose complete. Clean silhouettes, intact ears/wings/props and no rendering artifacts.",
+  "createdAt": "2026-10-24T01:41:38.138Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.718134+00:00"
+}

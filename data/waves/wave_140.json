@@ -1,0 +1,265 @@
+{
+  "wave": "wave_140",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-berry-taste",
+      "title": "Bat Tasting a Strawberry",
+      "alt": "A seated friendly bat holds a single large strawberry between its two wing thumb hooks, wings folded into clear elbow-like bends without extra arms.",
+      "description": "A seated friendly bat holds a single large strawberry between its two wing thumb hooks, wings folded into clear elbow-like bends without extra arms. Useful for fruit vocabulary cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_140/source/bat-berry-taste.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "4ae873e04514e5fc2800bc074e7dbde78dec785da4c03ddd7435ef31890f3175",
+      "inputSignature": "e0cfb9a418a52e4cfdb6ba26763e6461922e4c8c16dca27ffb873229a4d7389a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 886169,
+        "weightedCmykRmse": 0.89454
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1372459,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 886169,
+          "weightedCmykRmse": 0.89454
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        262,
+        9,
+        1063,
+        1186
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_140/exports/bat-berry-taste.pdf",
+          "bytes": 886169,
+          "sha256": "6374bb77458808b7eab733535b58f4d80bd921e6461d3fd91bbb7ea7735e29ba"
+        },
+        "webp": {
+          "path": "work/production/wave_140/exports/bat-berry-taste.webp",
+          "bytes": 670460,
+          "sha256": "a3fd1fdea1a881a46ad0b200516af5623889ce95013873dbd8f5a7b20377710c"
+        },
+        "thumb": {
+          "path": "work/production/wave_140/exports/bat-berry-taste-thumb.webp",
+          "bytes": 40762,
+          "sha256": "b17e77956c727bf942c3bb1216b493953f7ddba5fd84de08fddceec0cc2d3d35"
+        }
+      },
+      "proofSha256": "63e0fd6675545e70e2393004aa0d2cd45c118ef1cec5b4c7329a6a02ffcd3886",
+      "pairMeanRgbDifference": 1.74501
+    },
+    {
+      "id": "bat-magnifier-leaf",
+      "title": "Bat Exploring a Leaf",
+      "alt": "A bat perches on a low branch and uses a wing thumb hook to hold one simple magnifying glass over a broad leaf resting beside it.",
+      "description": "A bat perches on a low branch and uses a wing thumb hook to hold one simple magnifying glass over a broad leaf resting beside it. Useful for observation activity cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_140/source/bat-magnifier-leaf.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f8d2e86cba05b82941095f2f829063ea9aac8e79bb2006e175970f4fa5dd167e",
+      "inputSignature": "387f135e2d73485b1203e1ce5a437c27fbe2122c13703740345fc2018b12a9ec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 938335,
+        "weightedCmykRmse": 1.314201
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1543612,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1141726,
+          "weightedCmykRmse": 0.908898
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1038203,
+          "weightedCmykRmse": 1.07219
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 938335,
+          "weightedCmykRmse": 1.314201
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        94,
+        103,
+        1191,
+        1055
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_140/exports/bat-magnifier-leaf.pdf",
+          "bytes": 938335,
+          "sha256": "bea9aca8b6d043754997172ef3456ad830e63a4be8f39111386115c35976af09"
+        },
+        "webp": {
+          "path": "work/production/wave_140/exports/bat-magnifier-leaf.webp",
+          "bytes": 744452,
+          "sha256": "6148292b0aeaafae4843f2886554d14eee53fd075109c7a8a6324172b6a79d70"
+        },
+        "thumb": {
+          "path": "work/production/wave_140/exports/bat-magnifier-leaf-thumb.webp",
+          "bytes": 53694,
+          "sha256": "3200c387b0339ebad9fe4910ec0a99c1d6bea652b68249a31882c9b64fc2f9f6"
+        }
+      },
+      "proofSha256": "5b8df1f0234c50b69f23077e5f1fd267f0617f1c55a005d26bf45c46b3acbab0",
+      "pairMeanRgbDifference": 1.7049
+    },
+    {
+      "id": "bat-bell-roost",
+      "title": "Bat Hanging Inside a Bell Frame",
+      "alt": "A cheerful bat hangs from a crossbar inside a small open wooden bell frame, with one brass bell suspended separately beside it.",
+      "description": "A cheerful bat hangs from a crossbar inside a small open wooden bell frame, with one brass bell suspended separately beside it. Useful for sound story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_140/source/bat-bell-roost.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "68f24e6a4fa05134c330bd48e6860d0473874f4fcea00ef2735baf93c46a0656",
+      "inputSignature": "87a8308166b8308cd22c988d7f309918a151ad8ee4e641e19010b2f23d33ef9e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 890900,
+        "weightedCmykRmse": 0.925455
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1295193,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 890900,
+          "weightedCmykRmse": 0.925455
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        107,
+        162,
+        1149,
+        1095
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_140/exports/bat-bell-roost.pdf",
+          "bytes": 890900,
+          "sha256": "4256ae02d172e55b82231588c68e03efac2f03779ca52694dd61cf1c3620f498"
+        },
+        "webp": {
+          "path": "work/production/wave_140/exports/bat-bell-roost.webp",
+          "bytes": 572346,
+          "sha256": "810c5db99636e44cffccaad015adab8cea4f56a824b89231ae92523e2ab87a3e"
+        },
+        "thumb": {
+          "path": "work/production/wave_140/exports/bat-bell-roost-thumb.webp",
+          "bytes": 44506,
+          "sha256": "8c1aaac515cd889fdf12bfb14785c2aaa46e44a5f87aec02bbdf4aa596b38afe"
+        }
+      },
+      "proofSha256": "cedfb90b83377d7cafbc7f5cd8ffc75f58ad0fe483d42cb2956fa599ae735cbf",
+      "pairMeanRgbDifference": 1.63901
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed native images and PDF proof: strawberry supported by two wing thumbs with two separate feet; magnifier held by wing thumb over leaf; bell frame has separate hanging bat and bell. Complete contours, clear poses and no clipping or extra limbs observed.",
+  "createdAt": "2026-10-24T01:47:50.137Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.721736+00:00"
+}

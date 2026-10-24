@@ -1,0 +1,251 @@
+{
+  "wave": "wave_132",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-low-swoop",
+      "title": "Bat Swooping Above Reeds",
+      "alt": "A long-winged bat skims above three broad reed stems with feet tucked and muzzle angled down, isolated without a sky or water rectangle.",
+      "description": "A long-winged bat skims above three broad reed stems with feet tucked and muzzle angled down, isolated without a sky or water rectangle. Useful for night nature stories.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_132/source/bat-low-swoop-v2.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c4356e6cbe133cb0b34dd9f73cd619a58d30930a4d016eabd6e07b74a5d91ff9",
+      "inputSignature": "ab3624bb1203e6a93e72a5f6da7387f34ee84d7164fda27d96dffc81b12d8d1a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 809191,
+        "weightedCmykRmse": 0.973712
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1151233,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 809191,
+          "weightedCmykRmse": 0.973712
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        23,
+        113,
+        1231,
+        1141
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_132/exports/bat-low-swoop.pdf",
+          "bytes": 809191,
+          "sha256": "4dfee344e9ab2861252ea0a5148e1b150e1f9cb3458d2016ab45745906b139db"
+        },
+        "webp": {
+          "path": "work/production/wave_132/exports/bat-low-swoop.webp",
+          "bytes": 444708,
+          "sha256": "6e3e8f32ae974b2728b3879a12889538c51ae4b1c4af625579214804df127439"
+        },
+        "thumb": {
+          "path": "work/production/wave_132/exports/bat-low-swoop-thumb.webp",
+          "bytes": 37740,
+          "sha256": "42fc9bc50999d30506a9ae7a50732bf1aebeaed6fcb1c1fe6723fad07f5688eb"
+        }
+      },
+      "proofSha256": "b03e73993f81f6556364cef2843cadd450d3bca13d1d78f555d87ded551ccede",
+      "pairMeanRgbDifference": 0.7949
+    },
+    {
+      "id": "bat-landing-grip",
+      "title": "Bat Landing on a Twig",
+      "alt": "A small bat folds its wings while reaching its two hind feet toward a slanted twig, captured at the moment before gripping.",
+      "description": "A small bat folds its wings while reaching its two hind feet toward a slanted twig, captured at the moment before gripping. Useful for sequence cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_132/source/bat-landing-grip.png",
+      "topic": "bat",
+      "width": 1374,
+      "height": 1145,
+      "sourceType": "raster",
+      "sourceSha256": "31da43200293eba5a0cfae59d425d0b7de6e88d6d29bc0240b81e8c214ce6b1e",
+      "inputSignature": "b93b31d9dcafe0fa6532aa8dea1e726071080eaa961f1683a20accb6a123f80b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 934572,
+        "weightedCmykRmse": 0.960218
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1295302,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 934572,
+          "weightedCmykRmse": 0.960218
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        202,
+        47,
+        1336,
+        1105
+      ],
+      "image": {
+        "width": 1374,
+        "height": 1145,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_132/exports/bat-landing-grip.pdf",
+          "bytes": 934572,
+          "sha256": "3f6fe54b8d63a80d168ad322b713755f3b76dd60b94535911cdcf68e81525f53"
+        },
+        "webp": {
+          "path": "work/production/wave_132/exports/bat-landing-grip.webp",
+          "bytes": 541946,
+          "sha256": "e6606d3cd2cb3444e40dd0d5333aab1d1d22b8db104808e3ec5f0207cfe0b6fa"
+        },
+        "thumb": {
+          "path": "work/production/wave_132/exports/bat-landing-grip-thumb.webp",
+          "bytes": 35040,
+          "sha256": "ce9250ce54672e4f4f09d26520fa3352f95f0d03663e4b75fe2ab2f2b77f42c7"
+        }
+      },
+      "proofSha256": "c0be76da870813eb51e0903900b01a2db79e798b8cf6123db52ff8e395c91550",
+      "pairMeanRgbDifference": 0.94786
+    },
+    {
+      "id": "bat-curious-face",
+      "title": "Curious Bat Portrait",
+      "alt": "A friendly bat bust with broad rounded ears tilts its head, one folded wing edge visible beneath its chin and an alert gentle expression.",
+      "description": "A friendly bat bust with broad rounded ears tilts its head, one folded wing edge visible beneath its chin and an alert gentle expression. Useful for emotion vocabulary.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_132/source/bat-curious-face.png",
+      "topic": "bat",
+      "width": 1263,
+      "height": 1245,
+      "sourceType": "raster",
+      "sourceSha256": "7866790e98163060a572bf76b230119e4587af438f93b7c404dbb07c15e35d64",
+      "inputSignature": "0a6206c2299352186ff4fe1438a738065d7127b827d5bac9ee0fd45c20b6b1cf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 699294,
+        "weightedCmykRmse": 0.891296
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1240546,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 699294,
+          "weightedCmykRmse": 0.891296
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        175,
+        17,
+        1081,
+        1230
+      ],
+      "image": {
+        "width": 1263,
+        "height": 1245,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_132/exports/bat-curious-face.pdf",
+          "bytes": 699294,
+          "sha256": "502fd98be5d51f5cb39b496e70c9a0a847e39c586b35bb75d1888ea67ba405b9"
+        },
+        "webp": {
+          "path": "work/production/wave_132/exports/bat-curious-face.webp",
+          "bytes": 588302,
+          "sha256": "548c3b3658b7cc4b8a869e14cd1327f234a27441548f362b17d3ddf89575b8e7"
+        },
+        "thumb": {
+          "path": "work/production/wave_132/exports/bat-curious-face-thumb.webp",
+          "bytes": 36778,
+          "sha256": "e180fe15ab6de0ed4876b4fd094b27970ffe963b98c22871bc73ba84b864e654"
+        }
+      },
+      "proofSha256": "1b648494cfefa78a9acb5c574115697cc7122f0685cf5a576687458d7013fb9c",
+      "pairMeanRgbDifference": 0.93288
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed native sources and rendered PDFs: swoop fresh v2 removes unwanted haze; landing feet reach toward branch and portrait has both complete ears. All silhouettes intact, distinct poses and transparent gaps; no rendering defects observed.",
+  "createdAt": "2026-10-24T01:34:29.467Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.711754+00:00"
+}

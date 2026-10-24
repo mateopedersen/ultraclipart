@@ -50,6 +50,7 @@ try {
       width,
       overflow: await page.evaluate(() => document.documentElement.scrollWidth > innerWidth),
       violations: audit.violations.map((v) => v.id),
+      violationDetails: audit.violations.map(({ id, impact, nodes }) => ({ id, impact, nodes })),
     };
     report.states.push(state);
     assert.equal(state.overflow, false);

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_133",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-leaf-shelter",
+      "title": "Bat Sheltering Under a Leaf",
+      "alt": "A tiny bat hangs beneath one large curled green leaf, wing tips closed around the body and two feet gripping the stem.",
+      "description": "A tiny bat hangs beneath one large curled green leaf, wing tips closed around the body and two feet gripping the stem. Useful for habitat imagination.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_133/source/bat-leaf-shelter.png"
+    },
+    {
+      "id": "bat-hollow-log",
+      "title": "Bat Peeking from a Hollow Log",
+      "alt": "One curious bat peeks from an oval hollow in a short upright log, wing thumb hooks resting on the edge.",
+      "description": "One curious bat peeks from an oval hollow in a short upright log, wing thumb hooks resting on the edge. Useful for story openings.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_133/source/bat-hollow-log.png"
+    },
+    {
+      "id": "bat-moth-watch",
+      "title": "Bat Watching a Moth",
+      "alt": "A friendly brown bat hangs from a curved branch with wings loosely folded, watching one pale moth nearby.",
+      "description": "A friendly brown bat hangs from a curved branch with wings loosely folded, watching one pale moth nearby. Useful for observation prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_133/source/bat-moth-watch-v2.png"
+    }
+  ]
+}

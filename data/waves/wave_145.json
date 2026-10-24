@@ -1,0 +1,161 @@
+{
+  "wave": "wave_145",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-flower-coloring",
+      "title": "Bat and Sunflower Coloring Illustration",
+      "alt": "Black outlines with white interiors show a friendly bat peeking around one large sunflower, a folded wing resting along the stem.",
+      "description": "Black outlines with white interiors show a friendly bat peeking around one large sunflower, a folded wing resting along the stem. Useful for personal coloring pages.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_145/source/bat-flower-coloring.png",
+      "printSeparation": "black-only",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "972cde82dbe8b8f27430f1de6c6f758785b68098bd9d31d538ba3bfb05792ea6",
+      "inputSignature": "0e7069d9dd9a98fee786d9450269db4308b04a156d22126b3b857b777e26d77b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 350636,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 350636,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        165,
+        54,
+        1088,
+        1156
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_145/exports/bat-flower-coloring.pdf",
+          "bytes": 350636,
+          "sha256": "3f2138259eb3b3a7091d683559d6313bb4734d2583aa32ce5f309311f9c79df1"
+        },
+        "webp": {
+          "path": "work/production/wave_145/exports/bat-flower-coloring.webp",
+          "bytes": 435342,
+          "sha256": "2235c749bb087999c814a4c2cb92df1083ce1477b2dbb38b68b993d50235b403"
+        },
+        "thumb": {
+          "path": "work/production/wave_145/exports/bat-flower-coloring-thumb.webp",
+          "bytes": 35636,
+          "sha256": "581822cc8aaf26c507f6f1228178484706e7eada268f663a97ff4229f3ce60d9"
+        }
+      },
+      "proofSha256": "b1d393adc82f7e3031b10032c96ac337810ee6da64d6aa7a4810600c28c16cde",
+      "pairMeanRgbDifference": 2.95473
+    },
+    {
+      "id": "bat-roost-family-coloring",
+      "title": "Bat Family Coloring Illustration",
+      "alt": "Black outlines with white interiors show one large and one small bat sleeping side by side beneath a broad curved branch, wings wrapped in distinct poses.",
+      "description": "Black outlines with white interiors show one large and one small bat sleeping side by side beneath a broad curved branch, wings wrapped in distinct poses. Useful for family coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_145/source/bat-roost-family-coloring.png",
+      "printSeparation": "black-only",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1869ac63bbe0327166a6d2cb9480ab7e4f8a2247f31e6339240cc38978806c45",
+      "inputSignature": "4bbfac4780e76d78930558d5ad32010c5b41cdd7346bc3b24450f4272a2727f6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 380709,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 380709,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        60,
+        35,
+        1205,
+        1075
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_145/exports/bat-roost-family-coloring.pdf",
+          "bytes": 380709,
+          "sha256": "a3d71893a8c25292fe7dd14773e5ed3dbdd0c898f60798e1cfcc385aa35258aa"
+        },
+        "webp": {
+          "path": "work/production/wave_145/exports/bat-roost-family-coloring.webp",
+          "bytes": 466438,
+          "sha256": "55ad793de946f441ad650b032586e83843baca07922ee11a9038549c394eab03"
+        },
+        "thumb": {
+          "path": "work/production/wave_145/exports/bat-roost-family-coloring-thumb.webp",
+          "bytes": 43240,
+          "sha256": "0db4e2ceec8dc4ba34852ba891cc9c187e6afd5d44c4e57db4fe5602e7b42f81"
+        }
+      },
+      "proofSha256": "54e171195e1866910f8343336156f2052124af6200735bc58cac4215545bd5ec",
+      "pairMeanRgbDifference": 3.03185
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Both native coloring sources and actual CMYK PDF proofs inspected. Sunflower bat has coherent folded wing, two hind feet and full flower margins; family shows two distinct bats with two hanging feet each. Closed broad white coloring regions, clean black contours, no clipped branch ends.",
+  "createdAt": "2026-10-24T02:05:03.451Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.727916+00:00"
+}

@@ -1,0 +1,251 @@
+{
+  "wave": "wave_134",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-rain-leaf",
+      "title": "Bat with a Leaf Umbrella",
+      "alt": "A small fantasy bat perches on a twig and hooks one wing thumb around the stem of a broad leaf held overhead like an umbrella.",
+      "description": "A small fantasy bat perches on a twig and hooks one wing thumb around the stem of a broad leaf held overhead like an umbrella. Useful for weather story cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_134/source/bat-rain-leaf.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "30a29e26a86b2e3c83fa72466cd74df680fe9ddefc2b8b9d6d9008e2d492405e",
+      "inputSignature": "34755bd315a8875a3045aff315c9c65fe0cdf6a20f99f4e36997cd4fc95b7caa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 928163,
+        "weightedCmykRmse": 1.017122
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1346877,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1012629,
+          "weightedCmykRmse": 0.876357
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 928163,
+          "weightedCmykRmse": 1.017122
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        310,
+        97,
+        1158,
+        1128
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_134/exports/bat-rain-leaf.pdf",
+          "bytes": 928163,
+          "sha256": "9bb17ed8bc2d9a9e87bd510640a269a291a8b9a6e13b49919f519f7be9443a53"
+        },
+        "webp": {
+          "path": "work/production/wave_134/exports/bat-rain-leaf.webp",
+          "bytes": 549266,
+          "sha256": "0bef67d2f1ace7c9ccc908abc433719319631be055252265bb01dca0e8c80801"
+        },
+        "thumb": {
+          "path": "work/production/wave_134/exports/bat-rain-leaf-thumb.webp",
+          "bytes": 43976,
+          "sha256": "6225afa624d5d56a66abb07b9a1a1ed046eaa9629aa0a9f48d356d44cfb0d206"
+        }
+      },
+      "proofSha256": "83f57ce0af11ebabeb7eaee969b04fa8abb6405f0307d62277fe5e7776a0bc8d",
+      "pairMeanRgbDifference": 1.63628
+    },
+    {
+      "id": "bat-snow-roost",
+      "title": "Bat in a Winter Roost",
+      "alt": "A sleepy bat hangs inside a small wooden shelter whose roof carries a light cap of snow, body protected from the open outside.",
+      "description": "A sleepy bat hangs inside a small wooden shelter whose roof carries a light cap of snow, body protected from the open outside. Useful for seasonal comparison.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_134/source/bat-snow-roost.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "49e1986dc2d1d4bb65020ce19f21245131a8135606e38d46af6ac8148bebfecb",
+      "inputSignature": "5b263919f31824639819cdacfe58140d05d398a51670172d884997e95db0a47e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 973303,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 973303,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        222,
+        162,
+        1034,
+        1034
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_134/exports/bat-snow-roost.pdf",
+          "bytes": 973303,
+          "sha256": "cacc14ebfdfabfceb05945a1b7ccd93983dba4418d3ad3cf016df6d5730f52a7"
+        },
+        "webp": {
+          "path": "work/production/wave_134/exports/bat-snow-roost.webp",
+          "bytes": 435440,
+          "sha256": "7cb5eafd9cea4e58e97be788591eddbd4e5221ca85f33ebb5d7a0118d626a63c"
+        },
+        "thumb": {
+          "path": "work/production/wave_134/exports/bat-snow-roost-thumb.webp",
+          "bytes": 28144,
+          "sha256": "71c674c9e516e735bce3c7f03c48a865a38594ad90b882ed98d4c83d89f04a99"
+        }
+      },
+      "proofSha256": "a27504073392fe0b1ce995c060233661a855a95bede74d5b071f39ee42d55870",
+      "pairMeanRgbDifference": 1.3554
+    },
+    {
+      "id": "bat-leaf-pile",
+      "title": "Bat Peeking over Autumn Leaves",
+      "alt": "A playful bat with wings tucked peeks above three overlapping orange and yellow leaves, ears and face clearly visible.",
+      "description": "A playful bat with wings tucked peeks above three overlapping orange and yellow leaves, ears and face clearly visible. Useful for autumn paper crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_134/source/bat-leaf-pile.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "96c3f09c46cf63139de1fd6d8584893e38857fa42467d33d41830264db0a2623",
+      "inputSignature": "cd48bfdafa141ccb021cbae82420bf20509e85fa4b4ef627630fbf76a9410084",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 774240,
+        "weightedCmykRmse": 0.856989
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1227540,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 774240,
+          "weightedCmykRmse": 0.856989
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        85,
+        167,
+        1173,
+        1056
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_134/exports/bat-leaf-pile.pdf",
+          "bytes": 774240,
+          "sha256": "6faef1cb7e636b4c043cace8d24a1edb2b1cf1a6746d72fe02cc6e8b206a7281"
+        },
+        "webp": {
+          "path": "work/production/wave_134/exports/bat-leaf-pile.webp",
+          "bytes": 655180,
+          "sha256": "9f9916a3b2a06e58d620d4161f4f0b2572923a8fc92081b4e0737dc2adb3b07c"
+        },
+        "thumb": {
+          "path": "work/production/wave_134/exports/bat-leaf-pile-thumb.webp",
+          "bytes": 45972,
+          "sha256": "de4a1b4e00961117b511324ef1d5638463925193b2ffb109c74599680892c630"
+        }
+      },
+      "proofSha256": "bf2054c9b9c2010002738e5844c9a600b230ac2595547d047c8fa380471d941b",
+      "pairMeanRgbDifference": 1.61579
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed all three native sources and actual PDF proof: leaf umbrella has a single wing thumb holding stem and two feet on twig; snowy shelter encloses sleeping bat; three autumn leaves frame a complete smiling face. Distinct compositions, no clipping or unwanted backdrop.",
+  "createdAt": "2026-10-24T01:37:16.355Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.714675+00:00"
+}

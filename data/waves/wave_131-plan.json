@@ -1,0 +1,38 @@
+{
+  "wave": "wave_131",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-cave-pair",
+      "title": "Two Bats at a Cave Arch",
+      "alt": "Two small bats hang at different heights inside a compact freestanding rocky cave arch, one awake and one sleeping.",
+      "description": "Two small bats hang at different heights inside a compact freestanding rocky cave arch, one awake and one sleeping. Useful for compare-and-describe activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_131/source/bat-cave-pair.png"
+    },
+    {
+      "id": "bat-mother-pup",
+      "title": "Bat with a Clinging Pup",
+      "alt": "A gentle adult bat hangs from a sturdy twig with a tiny pup tucked against its chest, protective wings partly wrapped around both.",
+      "description": "A gentle adult bat hangs from a sturdy twig with a tiny pup tucked against its chest, protective wings partly wrapped around both. Useful for family nature stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_131/source/bat-mother-pup.png"
+    },
+    {
+      "id": "bat-three-roost",
+      "title": "Three Bats Sharing a Branch",
+      "alt": "Three distinct small bats hang along one short branch, facing forward, sideways and tucked asleep; different poses and ear angles.",
+      "description": "Three distinct small bats hang along one short branch, facing forward, sideways and tucked asleep; different poses and ear angles. Useful for counting to three.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_131/source/bat-three-roost-v3.png"
+    }
+  ]
+}

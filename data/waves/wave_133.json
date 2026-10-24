@@ -1,0 +1,265 @@
+{
+  "wave": "wave_133",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-leaf-shelter",
+      "title": "Bat Sheltering Under a Leaf",
+      "alt": "A tiny bat hangs beneath one large curled green leaf, wing tips closed around the body and two feet gripping the stem.",
+      "description": "A tiny bat hangs beneath one large curled green leaf, wing tips closed around the body and two feet gripping the stem. Useful for habitat imagination.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_133/source/bat-leaf-shelter.png",
+      "topic": "bat",
+      "width": 1177,
+      "height": 1336,
+      "sourceType": "raster",
+      "sourceSha256": "4aa1301861bd1f004fe64d097408ce9e54df37a9ac10042333ed7ce36ed29279",
+      "inputSignature": "561198a3c4418d345c51d20aa8c2c9d7180008477706071f453eea33d0a7a862",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 787719,
+        "weightedCmykRmse": 0.919524
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1231398,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 787719,
+          "weightedCmykRmse": 0.919524
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        31,
+        71,
+        1151,
+        1184
+      ],
+      "image": {
+        "width": 1177,
+        "height": 1336,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_133/exports/bat-leaf-shelter.pdf",
+          "bytes": 787719,
+          "sha256": "eb1bb23614fea24598767a52d78998c5dd345bcb79112ae3143ebf508106a3ac"
+        },
+        "webp": {
+          "path": "work/production/wave_133/exports/bat-leaf-shelter.webp",
+          "bytes": 600532,
+          "sha256": "0d20a61016f98d536215f7db88919cfdfcc17447f77e83d2cf1db2f57651d7d8"
+        },
+        "thumb": {
+          "path": "work/production/wave_133/exports/bat-leaf-shelter-thumb.webp",
+          "bytes": 36504,
+          "sha256": "7b2045ddb2b3ff5a5b73da9c14f41b090095482a47a2dde0dda862cf5bdfdc3c"
+        }
+      },
+      "proofSha256": "84688b763244f2d36b1d979688d1e5665fd9198dbf3f620faeb7e678d9550a92",
+      "pairMeanRgbDifference": 1.6266
+    },
+    {
+      "id": "bat-hollow-log",
+      "title": "Bat Peeking from a Hollow Log",
+      "alt": "One curious bat peeks from an oval hollow in a short upright log, wing thumb hooks resting on the edge.",
+      "description": "One curious bat peeks from an oval hollow in a short upright log, wing thumb hooks resting on the edge. Useful for story openings.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_133/source/bat-hollow-log.png",
+      "topic": "bat",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "0f6699a41fd67e47db64cee7dffc1f9204bbaf75d18bfaabc31dec34cbed6556",
+      "inputSignature": "c65a52b25422dd1fa7e2fba2b0e7de371e7c30477538602d56cddd638b118e1f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 916452,
+        "weightedCmykRmse": 1.187652
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1736190,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1165217,
+          "weightedCmykRmse": 0.837653
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1044504,
+          "weightedCmykRmse": 0.985746
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 916452,
+          "weightedCmykRmse": 1.187652
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        249,
+        15,
+        1071,
+        1180
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_133/exports/bat-hollow-log.pdf",
+          "bytes": 916452,
+          "sha256": "8cc2ff201c49239bea606050ba5819ee2074b997cbb45bdb380653914138383f"
+        },
+        "webp": {
+          "path": "work/production/wave_133/exports/bat-hollow-log.webp",
+          "bytes": 947342,
+          "sha256": "f2c6b10530b3f49c1fb3592073c5940a06b8aabe7d857b1150667feff6c7758d"
+        },
+        "thumb": {
+          "path": "work/production/wave_133/exports/bat-hollow-log-thumb.webp",
+          "bytes": 54484,
+          "sha256": "51eddb56c953b0bd7e3651d4e2a61e087965484acf80836738c00ce92efb46bc"
+        }
+      },
+      "proofSha256": "aedecdcfa3c043b5364df3acbaa4d1a0be54f9dd1e0391d5ceea9c45f2d73d55",
+      "pairMeanRgbDifference": 1.60944
+    },
+    {
+      "id": "bat-moth-watch",
+      "title": "Bat Watching a Moth",
+      "alt": "A friendly brown bat hangs from a curved branch with wings loosely folded, watching one pale moth nearby.",
+      "description": "A friendly brown bat hangs from a curved branch with wings loosely folded, watching one pale moth nearby. Useful for observation prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_133/source/bat-moth-watch-v2.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "4c55a4dc7976a2df0abb4ec357c850ce415de35b44318fe0ca84991148206324",
+      "inputSignature": "10ca641df44dc7d82efeecbd0f4f5fcb5dbad461605aedb0eabb181f492da052",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 738018,
+        "weightedCmykRmse": 0.994721
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1099119,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 738018,
+          "weightedCmykRmse": 0.994721
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        202,
+        199,
+        1149,
+        1091
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_133/exports/bat-moth-watch.pdf",
+          "bytes": 738018,
+          "sha256": "2a16178c3e8c15a84d225e8e0ea060ea65b767ea58d82b1ea5eace7be060dd4c"
+        },
+        "webp": {
+          "path": "work/production/wave_133/exports/bat-moth-watch.webp",
+          "bytes": 523350,
+          "sha256": "9737fcfc2dd942a2c650d77d1fdf46a37c75d22a5fc9ab9a6140084781330da0"
+        },
+        "thumb": {
+          "path": "work/production/wave_133/exports/bat-moth-watch-thumb.webp",
+          "bytes": 40466,
+          "sha256": "f0598eddebe7d5d03faa8ccbe3e82b565dab7a6aa4c70ca83111d3556f0b229d"
+        }
+      },
+      "proofSha256": "cfc8b8b93a576eb14f436bb03a78a49e5395f21151cafa8b6ca71c7a15640278",
+      "pairMeanRgbDifference": 0.95753
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed all native images and regenerated PDF proof: leaf shelter and hollow log intact; repaired moth-watch v2 has complete branch ends and safe transparent margins. Accurate hanging-pose ALT corrected; no visible defects.",
+  "createdAt": "2026-10-24T01:35:50.516Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.712894+00:00"
+}

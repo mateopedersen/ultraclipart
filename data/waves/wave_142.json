@@ -1,0 +1,265 @@
+{
+  "wave": "wave_142",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-baby-yawn",
+      "title": "Baby Bat Yawning",
+      "alt": "A small fluffy-looking bat sits upright on a smooth pebble with eyes squeezed shut in a wide yawn, wings drooping gently to the sides.",
+      "description": "A small fluffy-looking bat sits upright on a smooth pebble with eyes squeezed shut in a wide yawn, wings drooping gently to the sides. Useful for emotion and routine cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_142/source/bat-baby-yawn.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f5c6c073057f2f9cd9bfa2a4f591c83e7de1443c76618bd2c16e24abdea0b843",
+      "inputSignature": "c34a6ce83fa35d1048b7a038b82aeb67a56aec75eca01eddefeea3f56ee573bc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 932635,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 932635,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        265,
+        173,
+        1005,
+        1051
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_142/exports/bat-baby-yawn.pdf",
+          "bytes": 932635,
+          "sha256": "142eeb4a8b2915fc525961bcb6b8575436f0d8847ab14678f44f24c7be72df2d"
+        },
+        "webp": {
+          "path": "work/production/wave_142/exports/bat-baby-yawn.webp",
+          "bytes": 416770,
+          "sha256": "8909f78ca3868401ee9b3214ce0c311dc42ff9903bc5b7aba52192a48f36b684"
+        },
+        "thumb": {
+          "path": "work/production/wave_142/exports/bat-baby-yawn-thumb.webp",
+          "bytes": 26620,
+          "sha256": "cb1906cf8db85402f6e49c53b773fdfa3e7940b50371e68c1d84501215202f3a"
+        }
+      },
+      "proofSha256": "e9a087fa86b11ae3872f66547abfcee2bca978dfda285b6bef4dc589ef856b76",
+      "pairMeanRgbDifference": 0.62165
+    },
+    {
+      "id": "bat-wreath-rest",
+      "title": "Bat on a Small Oak Wreath",
+      "alt": "One sleeping bat hangs from the upper curve of a simple open oak-leaf wreath with only six broad leaves and two acorns.",
+      "description": "One sleeping bat hangs from the upper curve of a simple open oak-leaf wreath with only six broad leaves and two acorns. Useful for personal seasonal cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_142/source/bat-wreath-rest-v2.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "aea5890b3f2468dfaf192011d8d9de6fc71bae303c019fbce9fd8398a13a0ce9",
+      "inputSignature": "94525c8b657d4397559786ae8c995ca2937e4695391251d6a8c0012e27a65066",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 940360,
+        "weightedCmykRmse": 1.487182
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1568390,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1190730,
+          "weightedCmykRmse": 0.867573
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1096547,
+          "weightedCmykRmse": 1.002023
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1012410,
+          "weightedCmykRmse": 1.261123
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 940360,
+          "weightedCmykRmse": 1.487182
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        31,
+        64,
+        1225,
+        1163
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_142/exports/bat-wreath-rest.pdf",
+          "bytes": 940360,
+          "sha256": "ce4b4ec599d95d46c303c02d4678f529525cdf94a52f2dea92abfe0e9f97b7fe"
+        },
+        "webp": {
+          "path": "work/production/wave_142/exports/bat-wreath-rest.webp",
+          "bytes": 628182,
+          "sha256": "3929062f94b144b1bb74125a4f9cf5a3352a90ab0aae37021677d1accecbb38a"
+        },
+        "thumb": {
+          "path": "work/production/wave_142/exports/bat-wreath-rest-thumb.webp",
+          "bytes": 55848,
+          "sha256": "19a4c6f0503102719e008203624cee2e913251d4df8c77c3fac7720aadb47aa6"
+        }
+      },
+      "proofSha256": "d06d630d6ec12e5a04f6755b2b27a3efa646c247a9032b536782a67e033326bc",
+      "pairMeanRgbDifference": 1.5588
+    },
+    {
+      "id": "bat-blank-round-sign",
+      "title": "Bat Holding a Round Blank Sign",
+      "alt": "A bat spreads its wings behind a broad empty cream circle, two hind feet visible gripping the sign's upper edge.",
+      "description": "A bat spreads its wings behind a broad empty cream circle, two hind feet visible gripping the sign's upper edge. Useful for personal labels.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_142/source/bat-blank-round-sign.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f904d7b522bfb7f91df398f71fbda9e4d3b545b90c1e46c2852da48afca29b56",
+      "inputSignature": "6fbcb2703bfe13db5f53501bc4d699916452d2b3fe2815e0428a537a4512b26b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 623052,
+        "weightedCmykRmse": 0.790464
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1199629,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 623052,
+          "weightedCmykRmse": 0.790464
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        27,
+        45,
+        1232,
+        1212
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_142/exports/bat-blank-round-sign.pdf",
+          "bytes": 623052,
+          "sha256": "a93aa76124fee324bde99ae8c73be667e744703baec0ea96d488370e2600d882"
+        },
+        "webp": {
+          "path": "work/production/wave_142/exports/bat-blank-round-sign.webp",
+          "bytes": 597696,
+          "sha256": "42438dc1087e91b72f0b42162a4e59e8f263d8eec08b06b45298f29bb3ce67be"
+        },
+        "thumb": {
+          "path": "work/production/wave_142/exports/bat-blank-round-sign-thumb.webp",
+          "bytes": 38404,
+          "sha256": "c00b2fdea97cdf428373721a29ad19fec0af72d53c6831bc2297f89026305612"
+        }
+      },
+      "proofSha256": "4ca7f60289837495626f0a2d40b8af71c70ad390456c156e4e68eda01fd1f280",
+      "pairMeanRgbDifference": 1.24068
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and rendered CMYK PDF contact inspected; yawning pose and round label clear; repaired v2 wreath has clean folded wing with no stray white patch. Full margins and matching metadata.",
+  "createdAt": "2026-10-24T02:00:17.863Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.724194+00:00"
+}

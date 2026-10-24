@@ -1,0 +1,38 @@
+{
+  "wave": "wave_141",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-mailbox-peek",
+      "title": "Bat Peeking from a Mailbox",
+      "alt": "A tiny bat peeks from an open burgundy mailbox, ears upright and wing thumb hooks resting on the lower door edge.",
+      "description": "A tiny bat peeks from an open burgundy mailbox, ears upright and wing thumb hooks resting on the lower door edge. Useful for personal correspondence cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_141/source/bat-mailbox-peek.png"
+    },
+    {
+      "id": "bat-nestled-scarf",
+      "title": "Bat Wrapped in a Scarf",
+      "alt": "A bat perches on a short twig with a wide mustard scarf wrapped around its body, ears free and folded wing tips visible.",
+      "description": "A bat perches on a short twig with a wide mustard scarf wrapped around its body, ears free and folded wing tips visible. Useful for winter vocabulary.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_141/source/bat-nestled-scarf.png"
+    },
+    {
+      "id": "bat-two-highfive",
+      "title": "Two Bats Touching Wing Tips",
+      "alt": "Two cheerful bats face each other in midair, one wing tip from each meeting lightly while their outer wings balance the composition.",
+      "description": "Two cheerful bats face each other in midair, one wing tip from each meeting lightly while their outer wings balance the composition. Useful for friendship greeting cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_141/source/bat-two-highfive.png"
+    }
+  ]
+}

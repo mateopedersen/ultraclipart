@@ -1,0 +1,31 @@
+{
+  "wave": "wave_145",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-flower-coloring",
+      "title": "Bat and Sunflower Coloring Illustration",
+      "alt": "Black outlines with white interiors show a friendly bat peeking around one large sunflower, a folded wing resting along the stem.",
+      "description": "Black outlines with white interiors show a friendly bat peeking around one large sunflower, a folded wing resting along the stem. Useful for personal coloring pages.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_145/source/bat-flower-coloring.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "bat-roost-family-coloring",
+      "title": "Bat Family Coloring Illustration",
+      "alt": "Black outlines with white interiors show one large and one small bat sleeping side by side beneath a broad curved branch, wings wrapped in distinct poses.",
+      "description": "Black outlines with white interiors show one large and one small bat sleeping side by side beneath a broad curved branch, wings wrapped in distinct poses. Useful for family coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_145/source/bat-roost-family-coloring.png",
+      "printSeparation": "black-only"
+    }
+  ]
+}

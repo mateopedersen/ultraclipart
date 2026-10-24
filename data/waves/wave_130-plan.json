@@ -1,0 +1,38 @@
+{
+  "wave": "wave_130",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-fruit-roost",
+      "title": "Bat Beside a Hanging Fig",
+      "alt": "A brown bat hangs from a short leafy twig beside one ripe purple fig, one wing partly open and muzzle near the fruit.",
+      "description": "A brown bat hangs from a short leafy twig beside one ripe purple fig, one wing partly open and muzzle near the fruit. Useful for nature story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_130/source/bat-fruit-roost.png"
+    },
+    {
+      "id": "bat-wrapped-sleep",
+      "title": "Bat Sleeping in Folded Wings",
+      "alt": "A compact smoky-gray bat hangs upside down from a curved bare branch, wings wrapped snugly, eyes closed and two tiny feet gripping above.",
+      "description": "A compact smoky-gray bat hangs upside down from a curved bare branch, wings wrapped snugly, eyes closed and two tiny feet gripping above. Useful for bedtime cards.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_130/source/bat-wrapped-sleep.png"
+    },
+    {
+      "id": "bat-wing-stretch",
+      "title": "Bat Stretching One Wing",
+      "alt": "A drowsy brown bat hangs by both hind feet and stretches one broad wing outward while the other remains folded around the body.",
+      "description": "A drowsy brown bat hangs by both hind feet and stretches one broad wing outward while the other remains folded around the body. Useful for movement contrast cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_130/source/bat-wing-stretch.png"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_140",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-berry-taste",
+      "title": "Bat Tasting a Strawberry",
+      "alt": "A seated friendly bat holds a single large strawberry between its two wing thumb hooks, wings folded into clear elbow-like bends without extra arms.",
+      "description": "A seated friendly bat holds a single large strawberry between its two wing thumb hooks, wings folded into clear elbow-like bends without extra arms. Useful for fruit vocabulary cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_140/source/bat-berry-taste.png"
+    },
+    {
+      "id": "bat-magnifier-leaf",
+      "title": "Bat Exploring a Leaf",
+      "alt": "A bat perches on a low branch and uses a wing thumb hook to hold one simple magnifying glass over a broad leaf resting beside it.",
+      "description": "A bat perches on a low branch and uses a wing thumb hook to hold one simple magnifying glass over a broad leaf resting beside it. Useful for observation activity cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_140/source/bat-magnifier-leaf.png"
+    },
+    {
+      "id": "bat-bell-roost",
+      "title": "Bat Hanging Inside a Bell Frame",
+      "alt": "A cheerful bat hangs from a crossbar inside a small open wooden bell frame, with one brass bell suspended separately beside it.",
+      "description": "A cheerful bat hangs from a crossbar inside a small open wooden bell frame, with one brass bell suspended separately beside it. Useful for sound story prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_140/source/bat-bell-roost.png"
+    }
+  ]
+}

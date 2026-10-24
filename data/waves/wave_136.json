@@ -1,0 +1,237 @@
+{
+  "wave": "wave_136",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-envelope-flight",
+      "title": "Bat Delivering an Envelope",
+      "alt": "A bat glides diagonally while its hind feet hold a closed cream envelope by the top edge, wings unobstructed and distinct.",
+      "description": "A bat glides diagonally while its hind feet hold a closed cream envelope by the top edge, wings unobstructed and distinct. Useful for personal invitation accents.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_136/source/bat-envelope-flight.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c08f7acf0bc0a313a1d3bc7a09fe41ebda0e787db1ee61d20011e969750ea288",
+      "inputSignature": "ce3d7c0f5cc207e4bcc5d335f0cdc30644f3affac1bf182940a1c4a7055defe3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 663443,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 663443,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        136,
+        137,
+        1137,
+        1000
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_136/exports/bat-envelope-flight.pdf",
+          "bytes": 663443,
+          "sha256": "bd1cfd93a419ba0273b74aeb85e4aa441ca5968b90d50911e893cb3caa2ebba6"
+        },
+        "webp": {
+          "path": "work/production/wave_136/exports/bat-envelope-flight.webp",
+          "bytes": 300738,
+          "sha256": "24d3b09af12434a0fee852e0901c78274b0cb4cff1dabf0e250a2a307facef51"
+        },
+        "thumb": {
+          "path": "work/production/wave_136/exports/bat-envelope-flight-thumb.webp",
+          "bytes": 22892,
+          "sha256": "cbfb4cbf5f6b9a796788833a2c814e7f1464676190e1585c8251922f60bdec23"
+        }
+      },
+      "proofSha256": "40c453e5cd1b9a02ad5278a5ea52d3074901b5ff8797147ff9c326b1fc38ea57",
+      "pairMeanRgbDifference": 0.37921
+    },
+    {
+      "id": "bat-berry-basket",
+      "title": "Bat Carrying a Berry Basket",
+      "alt": "A friendly bat hovers above a small basket of three broad berries, its two feet hooked around the single basket handle.",
+      "description": "A friendly bat hovers above a small basket of three broad berries, its two feet hooked around the single basket handle. Useful for counting and story cards.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_136/source/bat-berry-basket.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "fafcf3b33c33d1a2801cdf69c13efc9725ede2fe1e193958403c8a666a4828f7",
+      "inputSignature": "cb1e8c3a072095cf77f93d46ba87b307cc473826a365ddebaaf33da9779159f4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 689921,
+        "weightedCmykRmse": 0.990222
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1068208,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 689921,
+          "weightedCmykRmse": 0.990222
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        83,
+        162,
+        1183,
+        1092
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_136/exports/bat-berry-basket.pdf",
+          "bytes": 689921,
+          "sha256": "b5c90e4912332f27150210e8637d27a6fc0dc62596778ccc1a1e87a5a2cd8a9c"
+        },
+        "webp": {
+          "path": "work/production/wave_136/exports/bat-berry-basket.webp",
+          "bytes": 456340,
+          "sha256": "52bf5312ef37394c67b9731dc91a4957c4b3049eb7114dc35669192c1ce0ce66"
+        },
+        "thumb": {
+          "path": "work/production/wave_136/exports/bat-berry-basket-thumb.webp",
+          "bytes": 35220,
+          "sha256": "65a716f7e5da5eddcc0b6e9a3c9704736b3496bcc4b18c537b8d238179c0c6d4"
+        }
+      },
+      "proofSha256": "de6929a03704cfe42340f7fa4092d0286f52279847ab554e07358cbe847960ec",
+      "pairMeanRgbDifference": 0.9369
+    },
+    {
+      "id": "bat-lantern-perch",
+      "title": "Bat Resting on a Lantern",
+      "alt": "A bat perches atop a simple green lantern with a warm flat yellow pane, wings folded and head tilted curiously.",
+      "description": "A bat perches atop a simple green lantern with a warm flat yellow pane, wings folded and head tilted curiously. Useful for cozy nighttime cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_136/source/bat-lantern-perch.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "3c9e271b11171fabe0898ae64d9a5dd19356d2a6d84e6b5d9ab79e33591a978e",
+      "inputSignature": "bdaf62649c3e16d4a65fbfacaaf29bc32185db76994006c8547501277e55af4b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 743768,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 743768,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        464,
+        87,
+        872,
+        1139
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_136/exports/bat-lantern-perch.pdf",
+          "bytes": 743768,
+          "sha256": "5fdd1e849b4a402b496fee0c011b88bec89f42f6a8db6babce9cbc30a77e216b"
+        },
+        "webp": {
+          "path": "work/production/wave_136/exports/bat-lantern-perch.webp",
+          "bytes": 338304,
+          "sha256": "a13a0bf1565bebd7a67659b4adb12a660e95ddbc6f0c44a2b70cb60ca388a127"
+        },
+        "thumb": {
+          "path": "work/production/wave_136/exports/bat-lantern-perch-thumb.webp",
+          "bytes": 24846,
+          "sha256": "0834373d87b5c19da8aaa1ff760370d3576af0d4be4ebb539d8cf6e2e1f1a0a2"
+        }
+      },
+      "proofSha256": "7e0f88a9b5edb602040d8bc5c35c129ae828c4ccf1029eb4a6cbc94d4cedac3f",
+      "pairMeanRgbDifference": 0.67332
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Inspected native sources and PDF contact: envelope, three-berry basket and green lantern are separate useful designs; two wings/two feet coherent, full silhouettes, clean transparent backgrounds. Yellow lantern panes are opaque with no emitted glow.",
+  "createdAt": "2026-10-24T01:40:05.148Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.717008+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_134",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-rain-leaf",
+      "title": "Bat with a Leaf Umbrella",
+      "alt": "A small fantasy bat perches on a twig and hooks one wing thumb around the stem of a broad leaf held overhead like an umbrella.",
+      "description": "A small fantasy bat perches on a twig and hooks one wing thumb around the stem of a broad leaf held overhead like an umbrella. Useful for weather story cards.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_134/source/bat-rain-leaf.png"
+    },
+    {
+      "id": "bat-snow-roost",
+      "title": "Bat in a Winter Roost",
+      "alt": "A sleepy bat hangs inside a small wooden shelter whose roof carries a light cap of snow, body protected from the open outside.",
+      "description": "A sleepy bat hangs inside a small wooden shelter whose roof carries a light cap of snow, body protected from the open outside. Useful for seasonal comparison.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_134/source/bat-snow-roost.png"
+    },
+    {
+      "id": "bat-leaf-pile",
+      "title": "Bat Peeking over Autumn Leaves",
+      "alt": "A playful bat with wings tucked peeks above three overlapping orange and yellow leaves, ears and face clearly visible.",
+      "description": "A playful bat with wings tucked peeks above three overlapping orange and yellow leaves, ears and face clearly visible. Useful for autumn paper crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_134/source/bat-leaf-pile.png"
+    }
+  ]
+}

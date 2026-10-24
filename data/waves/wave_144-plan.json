@@ -1,0 +1,41 @@
+{
+  "wave": "wave_144",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-roosting-silhouette",
+      "title": "Roosting Bat Silhouette",
+      "alt": "A pure black silhouette of one bat hanging from a short forked twig with folded wings and clearly separated ears and feet.",
+      "description": "A pure black silhouette of one bat hanging from a short forked twig with folded wings and clearly separated ears and feet. Useful for personal silhouette crafts.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_144/source/bat-roosting-silhouette.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "bat-diving-silhouette",
+      "title": "Diving Bat Silhouette",
+      "alt": "A pure black bat silhouette in a steep diagonal dive, wings swept backward, head angled down and small feet tucked.",
+      "description": "A pure black bat silhouette in a steep diagonal dive, wings swept backward, head angled down and small feet tucked. Useful for personal cut-paper projects.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_144/source/bat-diving-silhouette.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "bat-stretch-coloring",
+      "title": "Stretching Bat Coloring Illustration",
+      "alt": "Black outlines with white interiors show a bat perched on a stump stretching both wings outward, full wing fingers and feet clearly enclosed.",
+      "description": "Black outlines with white interiors show a bat perched on a stump stretching both wings outward, full wing fingers and feet clearly enclosed. Useful for educational coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_144/source/bat-stretch-coloring.png",
+      "printSeparation": "black-only"
+    }
+  ]
+}

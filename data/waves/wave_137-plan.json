@@ -1,0 +1,38 @@
+{
+  "wave": "wave_137",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-book-perch",
+      "title": "Bat Perched on an Open Book",
+      "alt": "A friendly bat peeks over a large open red book with its wings spread behind the blank pages.",
+      "description": "A friendly bat peeks over a large open red book with its wings spread behind the blank pages. Useful for reading reward cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_137/source/bat-book-perch.png"
+    },
+    {
+      "id": "bat-pencil-banner",
+      "title": "Bat Above a Blank Pencil Label",
+      "alt": "A smiling bat spreads two wings above a wide blank pencil-shaped label, two hind feet gripping the label's top edge.",
+      "description": "A smiling bat spreads two wings above a wide blank pencil-shaped label, two hind feet gripping the label's top edge. Useful for classroom name labels.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_137/source/bat-pencil-banner.png"
+    },
+    {
+      "id": "bat-pumpkin-perch",
+      "title": "Bat Perched on a Small Pumpkin",
+      "alt": "A friendly bat rests on the stem of one squat pumpkin, wings partly raised for balance and both hind feet gripping the stem.",
+      "description": "A friendly bat rests on the stem of one squat pumpkin, wings partly raised for balance and both hind feet gripping the stem. Useful for personal Halloween crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_137/source/bat-pumpkin-perch.png"
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "wave": "wave_129",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-upward-launch",
+      "title": "Bat Taking Flight",
+      "alt": "A small chestnut bat launches upward from a short branch, wings raised in a deep V and hind feet just releasing the bark.",
+      "description": "A small chestnut bat launches upward from a short branch, wings raised in a deep V and hind feet just releasing the bark. Useful for movement vocabulary.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_129/source/bat-upward-launch.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "cf7d0ddc33805e46984481b3462c6c7bbcf54c78861403b2b63c073c3c911465",
+      "inputSignature": "154767d304d8142485fd3443e76196cc6e42e0d0cbc7faa397abf7b14023cde7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 934815,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 934815,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        146,
+        130,
+        1164,
+        1070
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_129/exports/bat-upward-launch.pdf",
+          "bytes": 934815,
+          "sha256": "7bd489b04c83d470cf8301ffb3bfea75e257ce88d25daac7bd381d4e05793f95"
+        },
+        "webp": {
+          "path": "work/production/wave_129/exports/bat-upward-launch.webp",
+          "bytes": 381742,
+          "sha256": "b4dee8621a88b791fcef51f0b378674db9345d5ec269162417e74a8b360786fa"
+        },
+        "thumb": {
+          "path": "work/production/wave_129/exports/bat-upward-launch-thumb.webp",
+          "bytes": 29154,
+          "sha256": "51a56abb9e883a85187376a5a4d973f06051c73ebdf6a5a00a762803ab8187b4"
+        }
+      },
+      "proofSha256": "b0a3c2e7784670700608d3755f7693e31c3b0ade03a2f4a24928b399fe2d04ed",
+      "pairMeanRgbDifference": 0.62623
+    },
+    {
+      "id": "bat-banked-turn",
+      "title": "Bat Banking in Flight",
+      "alt": "A charcoal bat makes a clear banking turn, one wing tilted toward the viewer and the other extended behind, head looking into the turn.",
+      "description": "A charcoal bat makes a clear banking turn, one wing tilted toward the viewer and the other extended behind, head looking into the turn. Useful for direction story cards.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_129/source/bat-banked-turn.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "4769d8f5e922bf84ebef517464c0373ee6924572e3b8872f360c2ddd9081d1f9",
+      "inputSignature": "0b56fd3c4bb1280107153be506be38d3607babe6ee670b2af35604c15b4829ef",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 709646,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 709646,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        30,
+        210,
+        1225,
+        1015
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_129/exports/bat-banked-turn.pdf",
+          "bytes": 709646,
+          "sha256": "88d8780abb1c4b068a813d7c43bc62eea72e14a670a6f0a604a0d69233b6d636"
+        },
+        "webp": {
+          "path": "work/production/wave_129/exports/bat-banked-turn.webp",
+          "bytes": 290442,
+          "sha256": "e11d5b6e07b34e23885f3fbe05471ab452114ae65349cbf3dacbd7c7396b1e9c"
+        },
+        "thumb": {
+          "path": "work/production/wave_129/exports/bat-banked-turn-thumb.webp",
+          "bytes": 22096,
+          "sha256": "716b24c9fcd7d58a41d5b90d3e5a568f44bd21b8230387e5280c71e966d99531"
+        }
+      },
+      "proofSha256": "07570529a54a25b1db7439f0e6725daedf8f81926ba0c54c6fb94de2e66a1bbe",
+      "pairMeanRgbDifference": 0.42025
+    },
+    {
+      "id": "bat-flower-hover",
+      "title": "Bat Hovering Beside a Flower",
+      "alt": "A tawny bat hovers beside one large white night flower on a short leafy stem, muzzle directed toward the bloom and wings spread.",
+      "description": "A tawny bat hovers beside one large white night flower on a short leafy stem, muzzle directed toward the bloom and wings spread. Useful for nature-themed learning.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_129/source/bat-flower-hover.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "73eb3bb8c1cd70c582d53d7bfcab5389f90202979444e9cf6d4416660dfd2982",
+      "inputSignature": "d594dc75bcd3af00be7ded1a238dc5bd09dde6f019e60f02fd10a0635ca7bd49",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 839400,
+        "weightedCmykRmse": 0.925263
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1241620,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 839400,
+          "weightedCmykRmse": 0.925263
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        43,
+        153,
+        1223,
+        1057
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_129/exports/bat-flower-hover.pdf",
+          "bytes": 839400,
+          "sha256": "c515b757b7ce6c19f24dfe24093a98c9804cdde6d4be641dd9c1eac2c8c222fa"
+        },
+        "webp": {
+          "path": "work/production/wave_129/exports/bat-flower-hover.webp",
+          "bytes": 595580,
+          "sha256": "7f5703093f29127879efeb0791ad1ac5678a2064bcf5e3677f3075b0d0d0f417"
+        },
+        "thumb": {
+          "path": "work/production/wave_129/exports/bat-flower-hover-thumb.webp",
+          "bytes": 42064,
+          "sha256": "1d8d31d5c128b7175433bced558302eda19f88cc758f1879aa4f35f5d6a434d0"
+        }
+      },
+      "proofSha256": "7c1f4e3236315e8803ccb1f94d4446703b16de1711ba765411f349d52f9c7c59",
+      "pairMeanRgbDifference": 0.87421
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Viewed all three native transparent originals and actual PDF contact: full wings and two hind feet, coherent launching, banking and flower-hover poses; clear silhouettes and margins, no visual defects found.",
+  "createdAt": "2026-10-24T01:26:59.058Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.705950+00:00"
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_135",
+  "topic": "bat",
+  "method": "builtin-image-generation",
+  "research": "data/research/bat-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "bat-hanging-heart",
+      "title": "Bat Hanging with a Heart Charm",
+      "alt": "A friendly upside-down bat hangs from a simple twig, a small red heart charm tied beside it on a separate short ribbon.",
+      "description": "A friendly upside-down bat hangs from a simple twig, a small red heart charm tied beside it on a separate short ribbon. Useful for personal greeting cards.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_135/source/bat-hanging-heart.png"
+    },
+    {
+      "id": "bat-ribbon-delivery",
+      "title": "Bat Carrying a Ribbon",
+      "alt": "A flying bat holds the ends of a single loose gold ribbon in its two hind feet, ribbon forming a broad open loop below the body.",
+      "description": "A flying bat holds the ends of a single loose gold ribbon in its two hind feet, ribbon forming a broad open loop below the body. Useful for personal celebration decorations.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_135/source/bat-ribbon-delivery.png"
+    },
+    {
+      "id": "bat-tiny-parcel",
+      "title": "Bat Delivering a Tiny Parcel",
+      "alt": "A small bat flies upright with two wings fully spread and a tiny wrapped parcel suspended securely from a cord held by both hind feet.",
+      "description": "A small bat flies upright with two wings fully spread and a tiny wrapped parcel suspended securely from a cord held by both hind feet. Useful for story sequence cards.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_135/source/bat-tiny-parcel.png"
+    }
+  ]
+}

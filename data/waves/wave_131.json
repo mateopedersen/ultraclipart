@@ -1,0 +1,258 @@
+{
+  "wave": "wave_131",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "bat-cave-pair",
+      "title": "Two Bats at a Cave Arch",
+      "alt": "Two small bats hang at different heights inside a compact freestanding rocky cave arch, one awake and one sleeping.",
+      "description": "Two small bats hang at different heights inside a compact freestanding rocky cave arch, one awake and one sleeping. Useful for compare-and-describe activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_131/source/bat-cave-pair.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c2739e32c9a3b688e411fe269e476e9bd1dbba058b1ac8534fce4cf5271231c0",
+      "inputSignature": "ec8c849c5e94112fd485ca34528337ff1382e785723c4cb46ece711e06d7c3ea",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 719944,
+        "weightedCmykRmse": 0.992972
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1142214,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 719944,
+          "weightedCmykRmse": 0.992972
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        92,
+        203,
+        1163,
+        1003
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_131/exports/bat-cave-pair.pdf",
+          "bytes": 719944,
+          "sha256": "a036986fd634ac523ee15d7b0399faef81394dc31167f213ed843ab8a3707f4d"
+        },
+        "webp": {
+          "path": "work/production/wave_131/exports/bat-cave-pair.webp",
+          "bytes": 534674,
+          "sha256": "9d9380ac3f2f768185e42534aa73c8a908bee44b6d30b10a519e7255136e7399"
+        },
+        "thumb": {
+          "path": "work/production/wave_131/exports/bat-cave-pair-thumb.webp",
+          "bytes": 32426,
+          "sha256": "2170fc531a7a62f22dae488c819bb7daf9795699706b07d97787211e3489c3c4"
+        }
+      },
+      "proofSha256": "b55bd946a3d8b3fd39833ddd659714a1973704df6c169124bb3aa938c47edb39",
+      "pairMeanRgbDifference": 0.71233
+    },
+    {
+      "id": "bat-mother-pup",
+      "title": "Bat with a Clinging Pup",
+      "alt": "A gentle adult bat hangs from a sturdy twig with a tiny pup tucked against its chest, protective wings partly wrapped around both.",
+      "description": "A gentle adult bat hangs from a sturdy twig with a tiny pup tucked against its chest, protective wings partly wrapped around both. Useful for family nature stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_131/source/bat-mother-pup.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "91e768b689350c4fd3c991ab065b5d923eb61a02edb14177ecb0db1ada69029b",
+      "inputSignature": "2470456a36c9515670515ee23b4c6158f0409712cea6d9d66898d4f99c841a49",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 732033,
+        "weightedCmykRmse": 1.053074
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1065426,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 732033,
+          "weightedCmykRmse": 1.053074
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        345,
+        60,
+        972,
+        1127
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_131/exports/bat-mother-pup.pdf",
+          "bytes": 732033,
+          "sha256": "6e7b529550f94153a47ddeb49e2ae354fff769316de6afc7be23746a3074d043"
+        },
+        "webp": {
+          "path": "work/production/wave_131/exports/bat-mother-pup.webp",
+          "bytes": 526458,
+          "sha256": "38ef90373e61efd90cc5a8b20694055fcf848cd6561e4434817f455d6b9a6b55"
+        },
+        "thumb": {
+          "path": "work/production/wave_131/exports/bat-mother-pup-thumb.webp",
+          "bytes": 33130,
+          "sha256": "7eae8b090847b94271d2a48682f1889c7407bd06f566f0e836d844f894826fec"
+        }
+      },
+      "proofSha256": "334c5390f040e32f78143655dcb6edc041262ac9741f20c9fdf4e12c3b54331e",
+      "pairMeanRgbDifference": 0.68846
+    },
+    {
+      "id": "bat-three-roost",
+      "title": "Three Bats Sharing a Branch",
+      "alt": "Three distinct small bats hang along one short branch, facing forward, sideways and tucked asleep; different poses and ear angles.",
+      "description": "Three distinct small bats hang along one short branch, facing forward, sideways and tucked asleep; different poses and ear angles. Useful for counting to three.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_131/source/bat-three-roost-v3.png",
+      "topic": "bat",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f101e52899fc4b14e2732f331600afc6335297c35d7ba724b7a620cc1f5901ef",
+      "inputSignature": "63e5b0b67f297a45011df9e5ca8a1d83b77786c33e16c8fba3d4dc34a052d876",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 949183,
+        "weightedCmykRmse": 1.078784
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1421699,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1043199,
+          "weightedCmykRmse": 0.922637
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 949183,
+          "weightedCmykRmse": 1.078784
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        59,
+        207,
+        1206,
+        983
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_131/exports/bat-three-roost.pdf",
+          "bytes": 949183,
+          "sha256": "c7665f24b4f3bf6a9b7d3dfdc2eed9a0b0cee7cb81a1638b2604e084bcd113ab"
+        },
+        "webp": {
+          "path": "work/production/wave_131/exports/bat-three-roost.webp",
+          "bytes": 565464,
+          "sha256": "d47a6de55204d6572f225678d8488d364e8b49f2ecbbda133132364090fe5ab0"
+        },
+        "thumb": {
+          "path": "work/production/wave_131/exports/bat-three-roost-thumb.webp",
+          "bytes": 47186,
+          "sha256": "304d8ff1347fa7c9b99a446656c28ee30e7117bd338ea7ce5aad3d30ab43623a"
+        }
+      },
+      "proofSha256": "27d914d8d1a6943d6b9d97fc23290de17a348b49ca627678c56711a6d73db3d3",
+      "pairMeanRgbDifference": 1.18417
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Inspected native originals and actual PDF proof: coherent cave pair and parent-pup scene; three-roost fresh v3 has clean transparent gaps and three distinct complete bats. Rejected halo-bearing v1/v2 excluded. Complete silhouettes, readable faces and feet.",
+  "createdAt": "2026-10-24T01:33:16.004Z",
+  "cdnVerifiedAt": "2026-10-24T02:06:32.709639+00:00"
+}
