@@ -1,0 +1,36 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-child-paper-turkey-craft",
+          "title": "Paper Turkey Table Craft",
+          "composition": "A handmade folded-paper turkey centerpiece with an accordion fan tail and simple oval body, paper creases visible, no writing.",
+          "use": "family craft activity labels",
+          "prompt": "Use case: illustration-story. Create an original professional Thanksgiving clipart for family craft activity labels: A handmade folded-paper turkey centerpiece with an accordion fan tail and simple oval body, paper creases visible, no writing. Refined clean hand-inked VECTOR illustration, graceful clear dark contours, broad smooth colors and two-tone shadows, no photographic grain, paper noise or tiny texture. Material form conveyed through elegant shapes and selective intentional detail. Warm rust, cream, sage and brass palette. Entire scene in central 70 percent of square canvas, complete cutout with generous empty margins. Truly transparent background and gaps, no haze, matte, floor, cast shadow or glow. No text, numbers or logos; blank surfaces truly blank."
+        },
+        {
+          "id": "thanksgiving-leftover-box-stack",
+          "title": "Thanksgiving Leftover Boxes",
+          "composition": "Three neatly stacked unbranded kraft food cartons tied with green twine, a blank round tag and a folded linen napkin beside them.",
+          "use": "take-home food labels",
+          "prompt": "Use case: illustration-story. Create an original professional Thanksgiving clipart for take-home food labels: Three neatly stacked unbranded kraft food cartons tied with green twine, a blank round tag and a folded linen napkin beside them. Refined clean hand-inked VECTOR illustration, graceful clear dark contours, broad smooth colors and two-tone shadows, no photographic grain, paper noise or tiny texture. Material form conveyed through elegant shapes and selective intentional detail. Warm rust, cream, sage and brass palette. Entire scene in central 70 percent of square canvas, complete cutout with generous empty margins. Truly transparent background and gaps, no haze, matte, floor, cast shadow or glow. No text, numbers or logos; blank surfaces truly blank.",
+          "alt": "Three kraft takeaway boxes tied with green twine and a blank round tag, autumn foliage and a folded cream napkin."
+        },
+        {
+          "id": "thanksgiving-meal-planning-board",
+          "title": "Autumn Meal Planning Board",
+          "composition": "A blank small chalkboard with a wooden frame, one clipped maple leaf and a spoon resting on its bottom ledge.",
+          "use": "personal menu planning",
+          "prompt": "Use case: illustration-story. Create an original professional Thanksgiving clipart for personal menu planning: A blank small chalkboard with a wooden frame, one clipped maple leaf and a spoon resting on its bottom ledge. Refined clean hand-inked VECTOR illustration, graceful clear dark contours, broad smooth colors and two-tone shadows, no photographic grain, paper noise or tiny texture. Material form conveyed through elegant shapes and selective intentional detail. Warm rust, cream, sage and brass palette. Entire scene in central 70 percent of square canvas, complete cutout with generous empty margins. Truly transparent background and gaps, no haze, matte, floor, cast shadow or glow. No text, numbers or logos; blank surfaces truly blank."
+        }
+      ]
+    },
+    {
+      "file": "thanksgiving-leftover-box-stack-v2-prompt.txt",
+      "content": "Use case: style-transfer. Preserve this three-box Thanksgiving leftovers stack, green twine, blank round tag, napkin and foliage. Replace only material rendering with elegant FLAT VECTOR STYLE clean solid smooth fills and two-tone shadows. Remove every bit of kraft-paper grain, linen fabric speckle and tiny twine texture. Preserve clear dark contours, believable box folds, tied loop, smooth large autumn leaves and whole composition. All objects completely inside square canvas with generous transparent margin. No extra objects, no ground shadow, matte or glow, no words. True transparent background.\n"
+    }
+  ]
+}

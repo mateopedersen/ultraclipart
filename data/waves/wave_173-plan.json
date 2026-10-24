@@ -1,0 +1,41 @@
+{
+  "wave": "wave_173",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-gratitude-envelope",
+      "title": "Gratitude Letter Envelope",
+      "alt": "An open cream envelope with a blank card, red oak-leaf wax seal, autumn leaves and two acorns.",
+      "description": "An open cream envelope with a blank card, red oak-leaf wax seal, autumn leaves and two acorns. Useful for thank-you stationery.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_173/source/thanksgiving-gratitude-envelope-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-harvest-garland",
+      "title": "Autumn Table Garland",
+      "alt": "A gently sagging twine garland with alternating cut-paper oak leaves, maple leaves and small acorns, fully visible endpoints.",
+      "description": "A gently sagging twine garland with alternating cut-paper oak leaves, maple leaves and small acorns, fully visible endpoints. Useful for personal party borders.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_173/source/thanksgiving-harvest-garland-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-dessert-sampler",
+      "title": "Thanksgiving Dessert Sampler",
+      "alt": "A single rectangular platter holds one pumpkin tart, one pecan tart and one apple turnover arranged with deliberate empty space.",
+      "description": "A single rectangular platter holds one pumpkin tart, one pecan tart and one apple turnover arranged with deliberate empty space. Useful for dessert menu labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_173/source/thanksgiving-dessert-sampler-v1.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

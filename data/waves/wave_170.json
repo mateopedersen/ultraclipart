@@ -1,0 +1,181 @@
+{
+  "wave": "wave_170",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-welcome-porch",
+      "title": "Autumn Welcome Porch Vignette",
+      "alt": "A small isolated doorstep vignette with a blue door, one lantern, a straw bale and a pot of rust chrysanthemums, no lettering.",
+      "description": "A small isolated doorstep vignette with a blue door, one lantern, a straw bale and a pot of rust chrysanthemums, no lettering. Useful for seasonal welcome cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_170/source/thanksgiving-welcome-porch-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d2c6db36a8dec4fdba4083b7ba11ae1c09ba4b3c936e2da96fa6f24ed8c30a3f",
+      "inputSignature": "d3fe078f2ecbecaeb31550c0c1f9a59d6403deadc9b65071d1457e190e20a9fa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 974206,
+        "weightedCmykRmse": 1.036534
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1855276,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1204518,
+          "weightedCmykRmse": 0.750781
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1094387,
+          "weightedCmykRmse": 0.864643
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 974206,
+          "weightedCmykRmse": 1.036534
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        95,
+        35,
+        1152,
+        1218
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_170/exports/thanksgiving-welcome-porch.pdf",
+          "bytes": 974206,
+          "sha256": "8b896cca1783dbff98a391ba6acd7bb7f54608778279ed63d6b2c9147cd13d25"
+        },
+        "webp": {
+          "path": "work/production/wave_170/exports/thanksgiving-welcome-porch.webp",
+          "bytes": 1029350,
+          "sha256": "721f1c68cceca3e31ad83f0ee8349f58d299897615fe999d01e9a19024eaa346"
+        },
+        "thumb": {
+          "path": "work/production/wave_170/exports/thanksgiving-welcome-porch-thumb.webp",
+          "bytes": 56738,
+          "sha256": "8cb4fc8471b21f2294e4ee47c3654c0f9bb839187359db4183e4beea1d1a4a5b"
+        }
+      },
+      "proofSha256": "61c15090983c472f1f56ff5f5fbd90563926243873de650cc18a54ce5aeca6c2",
+      "pairMeanRgbDifference": 2.64023
+    },
+    {
+      "id": "thanksgiving-blank-gather-banner",
+      "title": "Autumn Gathering Banner",
+      "alt": "A blank gently curved ivory banner held between two original clusters of oak leaves, acorns and cranberries.",
+      "description": "A blank gently curved ivory banner held between two original clusters of oak leaves, acorns and cranberries. Useful for custom family greetings.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_170/source/thanksgiving-blank-gather-banner-v4.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "8c21b13d83cf47664ca31ecb16aba9f557fd2be8da4333105ba5b812335fa4e5",
+      "inputSignature": "d2643c25cda4294ef6c07404db9c56184c8e6db5043387fc4b4cc6301bab360e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 931175,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 931175,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        14,
+        305,
+        1240,
+        918
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_170/exports/thanksgiving-blank-gather-banner.pdf",
+          "bytes": 931175,
+          "sha256": "5ab8267db17aed8bc7993fc3dc8d947dc0c3dafbd2ce5abb017ec17d2443cc9d"
+        },
+        "webp": {
+          "path": "work/production/wave_170/exports/thanksgiving-blank-gather-banner.webp",
+          "bytes": 548840,
+          "sha256": "a2e363325dfd803c4c631d1604c7f94d7ecb04aadb695b1e4b785452c667313d"
+        },
+        "thumb": {
+          "path": "work/production/wave_170/exports/thanksgiving-blank-gather-banner-thumb.webp",
+          "bytes": 36258,
+          "sha256": "62c23dbd7ef2e079c6c4c82f9ac70c12cf19163342e96ce314d137992ba3134f"
+        }
+      },
+      "proofSha256": "34a81c7f855d3578bc6ff4257fae2fb59e277404838f66266311b526948732b4",
+      "pairMeanRgbDifference": 1.26158
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and rendered PDF proofs reviewed: complete blue doorway and lantern vignette; clean redesigned blank ribbon with intact ends and autumn clusters. Older matte-damaged ribbon rejected.",
+  "createdAt": "2026-10-24T06:31:58.965Z"
+}

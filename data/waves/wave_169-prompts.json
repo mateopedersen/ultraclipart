@@ -1,0 +1,46 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-harvest-picnic-basket",
+          "title": "Thanksgiving Picnic Basket",
+          "composition": "A hinged picnic basket open to reveal a pie box, checked blanket, two apples and two folded napkins.",
+          "use": "outdoor family celebration plans",
+          "prompt": "Use case: illustration-story. Original premium Thanksgiving clipart for outdoor family celebration plans: A hinged picnic basket open to reveal a pie box, checked blanket, two apples and two folded napkins. Sophisticated clean hand-inked VECTOR-STYLE drawing with graceful dark contours, rich broad smooth shading, warm cream and rust with sage/blue accents. Selected fine details without photographic grain, tiny textile texture or dense stippling. Every object complete, centered within middle 75 percent of square canvas. Real transparent background and gaps, no glow, matte, cast shadow, floor, vignette, speckles or lettering.",
+          "alt": "An open picnic basket holding a boxed lattice pie, checked blanket, two apples and folded napkins."
+        },
+        {
+          "id": "thanksgiving-oven-mitts-dish",
+          "title": "Oven Mitts Carrying a Baking Dish",
+          "composition": "Two quilted oven mitts support a blue rectangular dish filled with roasted root vegetables, no body or detached bare hands.",
+          "use": "cooking activity cards",
+          "prompt": "Use case: illustration-story. Original premium Thanksgiving clipart for cooking activity cards: Two quilted oven mitts support a blue rectangular dish filled with roasted root vegetables, no body or detached bare hands. Sophisticated clean hand-inked VECTOR-STYLE drawing with graceful dark contours, rich broad smooth shading, warm cream and rust with sage/blue accents. Selected fine details without photographic grain, tiny textile texture or dense stippling. Every object complete, centered within middle 75 percent of square canvas. Real transparent background and gaps, no glow, matte, cast shadow, floor, vignette, speckles or lettering.",
+          "alt": "Two patterned oven mitts holding a blue baking dish of roasted carrots, potatoes and onions."
+        },
+        {
+          "id": "thanksgiving-table-runner-arrangement",
+          "title": "Autumn Table Runner Arrangement",
+          "composition": "A short cream fabric runner laid diagonally with a single vase, two little pumpkins and loose oak leaves arranged in balanced spacing.",
+          "use": "table setting ideas",
+          "prompt": "Use case: illustration-story. Original premium Thanksgiving clipart for table setting ideas: A short cream fabric runner laid diagonally with a single vase, two little pumpkins and loose oak leaves arranged in balanced spacing. Sophisticated clean hand-inked VECTOR-STYLE drawing with graceful dark contours, rich broad smooth shading, warm cream and rust with sage/blue accents. Selected fine details without photographic grain, tiny textile texture or dense stippling. Every object complete, centered within middle 75 percent of square canvas. Real transparent background and gaps, no glow, matte, cast shadow, floor, vignette, speckles or lettering.",
+          "alt": "A cream table runner with a blue floral vase of autumn leaves, two pumpkins and loose oak leaves."
+        }
+      ]
+    },
+    {
+      "file": "thanksgiving-harvest-picnic-basket-v3-prompt.txt",
+      "content": "Use case: style-transfer. Preserve the pie picnic basket design. Render sophisticated flat vector-style hand-inked illustration with broad clean colored shapes and just two-tone shading. Wide woven strips are clear and smooth; blanket checks have no grain, pastry and apples have clean defined highlights without speckles. Show the COMPLETE basket, fringe, lid and handles inside a generous transparent margin on ALL sides; nothing clipped. Keep checked blanket, two apples, pie box and two napkins. No background, shadow, haze or text.\n"
+    },
+    {
+      "file": "thanksgiving-harvest-picnic-basket-v4-prompt.txt",
+      "content": "Use case: illustration-story. A distinctive professional autumn picnic clipart: an open small wicker picnic hamper in three-quarter view with LARGE smooth broad basket-weave strips, a boxed lattice apple pie visible inside, two glossy red apples, a cream and red checked blanket draped over the left corner, two neatly folded sage napkins on right. Beautiful confident clean inked illustration, vector-style solid color regions, two clean shadow shades, warm honey basket, red/cream accent, crisp material forms. Each woven strip is one broad smooth curve. No microscopic grain, stippling, fine hatching, faux paper texture or photographic noise. Complete compact object in center of square canvas with ample empty margin. All silhouette and interior empty gaps truly transparent; no floor, cast shadow, white matte, glow or text.\n"
+    },
+    {
+      "file": "thanksgiving-table-runner-arrangement-v3-prompt.txt",
+      "content": "Use case: precise-object-edit. Zoom out and show the entire composition with every runner fringe fully intact, especially the bottom-left corner that is currently cut. Put the whole composition in middle 65 percent of a square transparent canvas. Preserve the clear sophisticated vector-style blue vase, autumn leaves, two pumpkins and cream runner. No photographic grain or extra props. All surroundings and gaps fully transparent, no floor, shadows, glow, fog or text.\n"
+    }
+  ]
+}

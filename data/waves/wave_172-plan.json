@@ -1,0 +1,41 @@
+{
+  "wave": "wave_172",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-child-paper-turkey-craft",
+      "title": "Paper Turkey Table Craft",
+      "alt": "A handmade folded-paper turkey centerpiece with an accordion fan tail and simple oval body, paper creases visible, no writing.",
+      "description": "A handmade folded-paper turkey centerpiece with an accordion fan tail and simple oval body, paper creases visible, no writing. Useful for family craft activity labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_172/source/thanksgiving-child-paper-turkey-craft-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-meal-planning-board",
+      "title": "Autumn Meal Planning Board",
+      "alt": "A blank small chalkboard with a wooden frame, one clipped maple leaf and a spoon resting on its bottom ledge.",
+      "description": "A blank small chalkboard with a wooden frame, one clipped maple leaf and a spoon resting on its bottom ledge. Useful for personal menu planning.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_172/source/thanksgiving-meal-planning-board-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-leftover-box-stack",
+      "title": "Thanksgiving Leftover Boxes",
+      "alt": "Three kraft takeaway boxes tied with green twine and a blank round tag, autumn foliage and a folded cream napkin.",
+      "description": "Three kraft takeaway boxes tied with green twine and a blank round tag, autumn foliage and a folded cream napkin. Useful for take-home food labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_172/source/thanksgiving-leftover-box-stack-v2.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

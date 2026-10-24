@@ -1,0 +1,31 @@
+{
+  "wave": "wave_170",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-welcome-porch",
+      "title": "Autumn Welcome Porch Vignette",
+      "alt": "A small isolated doorstep vignette with a blue door, one lantern, a straw bale and a pot of rust chrysanthemums, no lettering.",
+      "description": "A small isolated doorstep vignette with a blue door, one lantern, a straw bale and a pot of rust chrysanthemums, no lettering. Useful for seasonal welcome cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_170/source/thanksgiving-welcome-porch-v2.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-blank-gather-banner",
+      "title": "Autumn Gathering Banner",
+      "alt": "A blank gently curved ivory banner held between two original clusters of oak leaves, acorns and cranberries.",
+      "description": "A blank gently curved ivory banner held between two original clusters of oak leaves, acorns and cranberries. Useful for custom family greetings.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_170/source/thanksgiving-blank-gather-banner-v4.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

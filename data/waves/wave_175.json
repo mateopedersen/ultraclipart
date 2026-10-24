@@ -1,0 +1,174 @@
+{
+  "wave": "wave_175",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-pear-napkin-ring",
+      "title": "Pear and Leaf Napkin Ring",
+      "alt": "A folded terracotta linen napkin through a brass ring decorated with one small pear and an olive sprig.",
+      "description": "A folded terracotta linen napkin through a brass ring decorated with one small pear and an olive sprig. Useful for place setting stationery.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_175/source/thanksgiving-pear-napkin-ring-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "47b9a34320d729245f4809eb45d8325bf502318bbe92fba0f5400a50945ef2dd",
+      "inputSignature": "2597da7ba4e737bf2b91ab6701ee940fb85e87f643838650f525fcf09cf7a53d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 867420,
+        "weightedCmykRmse": 0.953737
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1275471,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 867420,
+          "weightedCmykRmse": 0.953737
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        237,
+        28,
+        1031,
+        1206
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_175/exports/thanksgiving-pear-napkin-ring.pdf",
+          "bytes": 867420,
+          "sha256": "0f61028de606f7024504699b79e0ce3301248205d9feb9167ce84a797d15f6b7"
+        },
+        "webp": {
+          "path": "work/production/wave_175/exports/thanksgiving-pear-napkin-ring.webp",
+          "bytes": 709234,
+          "sha256": "b10e01db93312162c89b9cbad16c8a52f6ce4f25bed9a8ba793e5267498653d7"
+        },
+        "thumb": {
+          "path": "work/production/wave_175/exports/thanksgiving-pear-napkin-ring-thumb.webp",
+          "bytes": 37136,
+          "sha256": "f6b6a29237b14f1ade078f2c03237bbb6abd6b429e01172377ec3378f44bffc5"
+        }
+      },
+      "proofSha256": "984e40faf0bd53ea21d8764e9ce3b8904a30a38ed39fe43c1cbb56822283710c",
+      "pairMeanRgbDifference": 1.30877
+    },
+    {
+      "id": "thanksgiving-dining-chair-ribbon",
+      "title": "Autumn Dining Chair Decoration",
+      "alt": "The back of a simple wooden dining chair decorated with a draped sage sash and a small bouquet of fall leaves.",
+      "description": "The back of a simple wooden dining chair decorated with a draped sage sash and a small bouquet of fall leaves. Useful for seating plan illustrations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_175/source/thanksgiving-dining-chair-ribbon-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "825e9c0ded0e6db8e3581f99be07c0f6fade3b62403460492f21c5db9417e5f9",
+      "inputSignature": "e4cbb0df0ee259625e026429d95792803b54565cad86d252d350b507c3685511",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 965884,
+        "weightedCmykRmse": 0.904504
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1414825,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 965884,
+          "weightedCmykRmse": 0.904504
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        231,
+        70,
+        1025,
+        1185
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_175/exports/thanksgiving-dining-chair-ribbon.pdf",
+          "bytes": 965884,
+          "sha256": "120cad8996f714d571e57cd3ca379c643f024f37dbc505d6eae492c729ec00e0"
+        },
+        "webp": {
+          "path": "work/production/wave_175/exports/thanksgiving-dining-chair-ribbon.webp",
+          "bytes": 773034,
+          "sha256": "50324bade51f97e789f13060604e0dc64b85fdd6fa46425e1998581a61c6b229"
+        },
+        "thumb": {
+          "path": "work/production/wave_175/exports/thanksgiving-dining-chair-ribbon-thumb.webp",
+          "bytes": 52772,
+          "sha256": "029342d87209a9573d713f2f46cdca374e5689007bf7de587292c897c10eaa75"
+        }
+      },
+      "proofSha256": "c0b915b8f061a6aeb4dacf91898c5f70ce5fe69b4ecb83c4e1e119c338f6b5c9",
+      "pairMeanRgbDifference": 1.53793
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual PDF proofs reviewed: terracotta pear napkin ring and complete decorated wooden dining chair. Distinct compositions, readable silhouettes, accurate file pairings.",
+  "createdAt": "2026-10-24T06:33:23.504Z"
+}

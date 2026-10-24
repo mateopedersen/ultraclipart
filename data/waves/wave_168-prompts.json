@@ -1,0 +1,37 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-guest-book",
+          "title": "Autumn Guest Book",
+          "composition": "An open cream guest book with blank pages, a copper pen diagonally beside it and a simple leaf bookmark.",
+          "use": "family celebration memories",
+          "prompt": "Use case: illustration-story. Create a fresh professional Thanksgiving clipart for family celebration memories. An open cream guest book with blank pages, a copper pen diagonally beside it and a simple leaf bookmark. Elegant hand-inked illustration with broad smooth colored shading and clearly defined dark contours around all objects. Artfully chosen rich detail, no tiny grain, stippling or photographic texture. COMPACT SQUARE illustration; complete objects occupy only central 70 percent with empty 15 percent margin each side. True transparent background, no halo, no ground shadow, no environment, no specks or texture in empty space. No text or branding.",
+          "alt": "An open blank cream guest book with a copper pen, leaf bookmark and an autumn pumpkin arrangement."
+        },
+        {
+          "id": "thanksgiving-pumpkin-vase-bouquet",
+          "title": "Pumpkin Vase Bouquet",
+          "composition": "A hollow pale pumpkin used as a vase with a compact original arrangement of rust chrysanthemums, golden wheat and olive leaves.",
+          "use": "celebration stationery",
+          "prompt": "Use case: illustration-story. Create a fresh professional Thanksgiving clipart for celebration stationery. A hollow pale pumpkin used as a vase with a compact original arrangement of rust chrysanthemums, golden wheat and olive leaves. Elegant hand-inked illustration with broad smooth colored shading and clearly defined dark contours around all objects. Artfully chosen rich detail, no tiny grain, stippling or photographic texture. COMPACT SQUARE illustration; complete objects occupy only central 70 percent with empty 15 percent margin each side. True transparent background, no halo, no ground shadow, no environment, no specks or texture in empty space. No text or branding."
+        },
+        {
+          "id": "thanksgiving-apple-cider-tray",
+          "title": "Warm Cider Tray",
+          "composition": "A small wooden tray carries two ceramic mugs of amber cider, one apple and two cinnamon sticks, restrained curled steam.",
+          "use": "cozy gathering invitations",
+          "prompt": "Use case: illustration-story. Create a fresh professional Thanksgiving clipart for cozy gathering invitations. A small wooden tray carries two ceramic mugs of amber cider, one apple and two cinnamon sticks, restrained curled steam. Elegant hand-inked illustration with broad smooth colored shading and clearly defined dark contours around all objects. Artfully chosen rich detail, no tiny grain, stippling or photographic texture. COMPACT SQUARE illustration; complete objects occupy only central 70 percent with empty 15 percent margin each side. True transparent background, no halo, no ground shadow, no environment, no specks or texture in empty space. No text or branding.",
+          "alt": "Two mugs of amber cider with cinnamon sticks and an apple on a wooden tray."
+        }
+      ]
+    },
+    {
+      "file": "thanksgiving-pumpkin-vase-bouquet-v4-prompt.txt",
+      "content": "Use case: style-transfer. Keep the two chrysanthemum flowers, three wheat heads and pale pumpkin vase. Redraw as premium FLAT VECTOR illustration with large clean color shapes, solid opaque fills, crisp dark contours and two-tone highlights/shadows. Petals retain elegant layered geometry but each petal has only a few smooth color regions. Remove all fine linear streaks and microscopic leaf/petal textures. Preserve original arrangement and warm rust/cream palette. Genuine transparent exterior/gaps, no stray flecks/matte/fog. All parts fully inside square canvas with ample margin.\n"
+    }
+  ]
+}

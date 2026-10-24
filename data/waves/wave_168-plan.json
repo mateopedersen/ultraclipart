@@ -1,0 +1,31 @@
+{
+  "wave": "wave_168",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-guest-book",
+      "title": "Autumn Guest Book",
+      "alt": "An open blank cream guest book with a copper pen, leaf bookmark and an autumn pumpkin arrangement.",
+      "description": "An open blank cream guest book with a copper pen, leaf bookmark and an autumn pumpkin arrangement. Useful for family celebration memories.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_168/source/thanksgiving-guest-book-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-apple-cider-tray",
+      "title": "Warm Cider Tray",
+      "alt": "Two mugs of amber cider with cinnamon sticks and an apple on a wooden tray.",
+      "description": "Two mugs of amber cider with cinnamon sticks and an apple on a wooden tray. Useful for cozy gathering invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_168/source/thanksgiving-apple-cider-tray-v2.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

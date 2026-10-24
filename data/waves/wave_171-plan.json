@@ -1,0 +1,21 @@
+{
+  "wave": "wave_171",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-harvest-door-wreath",
+      "title": "Harvest Door Wreath",
+      "alt": "A braided willow wreath with three pumpkins at the lower left and a burgundy maple leaf, acorns and green leaves at the upper right.",
+      "description": "A braided willow wreath with three pumpkins at the lower left and a burgundy maple leaf, acorns and green leaves at the upper right. Useful for seasonal invitation borders.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_171/source/thanksgiving-harvest-door-wreath-v6.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

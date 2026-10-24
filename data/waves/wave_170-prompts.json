@@ -1,0 +1,34 @@
+{
+  "method": "builtin-image-generation",
+  "logs": [
+    {
+      "file": "banner-v4-prompt.txt",
+      "content": "Use case: illustration-story. Original premium autumn greeting clipart: a beautifully curved BLANK IVORY RIBBON with broad central writing panel, folded ends, a small cluster of TWO oak leaves, TWO acorns and THREE red cranberries at each end. Sophisticated clean vector-style hand-inked illustration, solid cream ribbon bounded by a decisive continuous dark outline, warm rust and sage leaves, crisp two-tone shading. Distinct elegant balanced composition with quiet blank space. No grain, scratchy tiny lines, stippling or detailed textures. Entire ribbon and every leaf in central 70 percent of square canvas, large clear margins. Genuine transparent surroundings and gaps, NO white/yellow matte fringing or flecks outside contour, no glow, shadows, text or logos.\n"
+    },
+    {
+      "file": "prompts.json",
+      "content": [
+        {
+          "id": "thanksgiving-welcome-porch",
+          "title": "Autumn Welcome Porch Vignette",
+          "composition": "A small isolated doorstep vignette with a blue door, one lantern, a straw bale and a pot of rust chrysanthemums, no lettering.",
+          "use": "seasonal welcome cards",
+          "prompt": "Use case: illustration-story. Original professional Thanksgiving clipart for seasonal welcome cards. A small isolated doorstep vignette with a blue door, one lantern, a straw bale and a pot of rust chrysanthemums, no lettering. Accomplished stationery illustration, clean hand-inked VECTOR STYLE, elegant dark contours and broad smooth painted color shapes, richly shaded without tiny grain, stippling or photographic noise. Convincing structure and material forms. Complete scene isolated in central 75 percent of a square canvas with 12 percent clear margin. Genuine transparent background and gaps, no backdrop, ground shadow, vignette, fog, matte, glow or text. Blank surfaces remain blank.",
+          "version": "v2"
+        },
+        {
+          "id": "thanksgiving-wheelbarrow-harvest",
+          "title": "Harvest Wheelbarrow",
+          "composition": "A rustic single-wheel garden barrow holding two pumpkins, a small sheaf of wheat and purple cabbages.",
+          "use": "harvest event invitations",
+          "prompt": "Use case: illustration-story. Original professional Thanksgiving clipart for harvest event invitations. A rustic single-wheel garden barrow holding two pumpkins, a small sheaf of wheat and purple cabbages. Accomplished stationery illustration, clean hand-inked VECTOR STYLE, elegant dark contours and broad smooth painted color shapes, richly shaded without tiny grain, stippling or photographic noise. Convincing structure and material forms. Complete scene isolated in central 75 percent of a square canvas with 12 percent clear margin. Genuine transparent background and gaps, no backdrop, ground shadow, vignette, fog, matte, glow or text. Blank surfaces remain blank.",
+          "version": "v2"
+        }
+      ]
+    },
+    {
+      "file": "wheelbarrow-v3-prompt.txt",
+      "content": "Use case: style-transfer. Preserve this one-wheel harvest barrow holding two pumpkins and two purple cabbages. Refine it into premium flat-color vector-like inked illustration with LARGE solid smooth color shapes, two clean shadow tones, few intentional highlights. Remove fine pumpkin streaks, microscopic wood grain, dense leaf veining and mottled textures. Replace the dense wheat bundle with FIVE elegant clearly separated wheat heads with smooth broad grains. All parts fully visible well inside square canvas with margin. Genuine transparent exterior and gaps, no stray fragments, matte, glow, shadow or text.\n"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "wave": "wave_174",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-cornbread-skillet",
+      "title": "Cornbread in a Skillet",
+      "alt": "A cast-iron skillet with golden cornbread cut into wedges, one wedge lifted by a wooden spatula and a small butter pat melting at center.",
+      "description": "A cast-iron skillet with golden cornbread cut into wedges, one wedge lifted by a wooden spatula and a small butter pat melting at center. Useful for holiday cooking prompts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_174/source/thanksgiving-cornbread-skillet-v2.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-stuffed-squash-plate",
+      "title": "Stuffed Squash Dinner Plate",
+      "alt": "Two roasted acorn squash halves filled with grains and cranberries on a plain cream platter.",
+      "description": "Two roasted acorn squash halves filled with grains and cranberries on a plain cream platter. Useful for vegetarian holiday menus.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_174/source/thanksgiving-stuffed-squash-plate-v2.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

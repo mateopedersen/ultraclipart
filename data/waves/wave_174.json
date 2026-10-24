@@ -1,0 +1,188 @@
+{
+  "wave": "wave_174",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-cornbread-skillet",
+      "title": "Cornbread in a Skillet",
+      "alt": "A cast-iron skillet with golden cornbread cut into wedges, one wedge lifted by a wooden spatula and a small butter pat melting at center.",
+      "description": "A cast-iron skillet with golden cornbread cut into wedges, one wedge lifted by a wooden spatula and a small butter pat melting at center. Useful for holiday cooking prompts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_174/source/thanksgiving-cornbread-skillet-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "bda0caf1c5ea0f284bd060971ae0bea1db67b4569fbb8d1faad353da956c7f9d",
+      "inputSignature": "a9c64d3ccd668930dc8b0559d90932d53360068523daf1696ac26b059f7b0c39",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 915316,
+        "weightedCmykRmse": 0.85033
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1371577,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 915316,
+          "weightedCmykRmse": 0.85033
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        86,
+        179,
+        1239,
+        1107
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_174/exports/thanksgiving-cornbread-skillet.pdf",
+          "bytes": 915316,
+          "sha256": "65b64bcbfaae0cfd330c5e9ca17867e6aa54d4280b067d9dbb1c3210722ad27a"
+        },
+        "webp": {
+          "path": "work/production/wave_174/exports/thanksgiving-cornbread-skillet.webp",
+          "bytes": 962422,
+          "sha256": "ef6d64829e1a605b7621d1cec989b0cea58b6e3016abb26a4035c92825d702a4"
+        },
+        "thumb": {
+          "path": "work/production/wave_174/exports/thanksgiving-cornbread-skillet-thumb.webp",
+          "bytes": 48698,
+          "sha256": "3c75c01863ab7e9a6266c7de295bc0786c2a3894eaff384d86d7264c680fc06e"
+        }
+      },
+      "proofSha256": "67e6f93b9a0c14a8b0061653878a4cccfea0cbeb31d1488a3a0548f629c38eae",
+      "pairMeanRgbDifference": 2.01019
+    },
+    {
+      "id": "thanksgiving-stuffed-squash-plate",
+      "title": "Stuffed Squash Dinner Plate",
+      "alt": "Two roasted acorn squash halves filled with grains and cranberries on a plain cream platter.",
+      "description": "Two roasted acorn squash halves filled with grains and cranberries on a plain cream platter. Useful for vegetarian holiday menus.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_174/source/thanksgiving-stuffed-squash-plate-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "02268e89a598395057d16539af7eb636dc0c0ecfbf4451b1a5aa9ede54ed886d",
+      "inputSignature": "5e811b0a3877f73a4f5de27b3ea5589a92f3c508c3666902fe0bb4c534fd8432",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 960007,
+        "weightedCmykRmse": 1.162326
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1678224,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1163158,
+          "weightedCmykRmse": 0.801071
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1056075,
+          "weightedCmykRmse": 0.948809
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 960007,
+          "weightedCmykRmse": 1.162326
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        44,
+        218,
+        1229,
+        1092
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_174/exports/thanksgiving-stuffed-squash-plate.pdf",
+          "bytes": 960007,
+          "sha256": "bcb43ccfac06f0d57323d71f05977a3520361ad2466223b09a3a163d5848037f"
+        },
+        "webp": {
+          "path": "work/production/wave_174/exports/thanksgiving-stuffed-squash-plate.webp",
+          "bytes": 1152332,
+          "sha256": "a004a544cd931992618647d42a9d24e3186028ed824b130a68f86c671dce0e8f"
+        },
+        "thumb": {
+          "path": "work/production/wave_174/exports/thanksgiving-stuffed-squash-plate-thumb.webp",
+          "bytes": 64840,
+          "sha256": "5ecd27350c283a6f6caf4cd03edf67a7337c06f6d15857c271fec2bf31794dc6"
+        }
+      },
+      "proofSha256": "72a65f2a083c13a5986cbd18f9baf840e1368e2fca410b8ae0226c903495a71a",
+      "pairMeanRgbDifference": 3.02272
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual PDF proofs reviewed: complete cornbread skillet and spatula handle; two distinct stuffed squash halves on an intact platter. Earlier clipped variants rejected.",
+  "createdAt": "2026-10-24T06:32:37.283Z"
+}

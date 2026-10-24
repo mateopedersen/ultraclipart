@@ -1,0 +1,21 @@
+{
+  "wave": "wave_169",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-oven-mitts-dish",
+      "title": "Oven Mitts Carrying a Baking Dish",
+      "alt": "Two patterned oven mitts holding a blue baking dish of roasted carrots, potatoes and onions.",
+      "description": "Two patterned oven mitts holding a blue baking dish of roasted carrots, potatoes and onions. Useful for cooking activity cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_169/source/thanksgiving-oven-mitts-dish-v2.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

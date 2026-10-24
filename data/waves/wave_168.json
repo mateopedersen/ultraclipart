@@ -1,0 +1,188 @@
+{
+  "wave": "wave_168",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-guest-book",
+      "title": "Autumn Guest Book",
+      "alt": "An open blank cream guest book with a copper pen, leaf bookmark and an autumn pumpkin arrangement.",
+      "description": "An open blank cream guest book with a copper pen, leaf bookmark and an autumn pumpkin arrangement. Useful for family celebration memories.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_168/source/thanksgiving-guest-book-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "fabf0d4a71ae0929ab5cfc94f3638141736f6b29c4b906d06a228b77e9f87d71",
+      "inputSignature": "7c8b950e9bb55ecb9288b7a6955d503611fbcfb6329fec7af803aeac0ca5db53",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 784285,
+        "weightedCmykRmse": 0.853074
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1239170,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 784285,
+          "weightedCmykRmse": 0.853074
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        121,
+        202,
+        1144,
+        1030
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_168/exports/thanksgiving-guest-book.pdf",
+          "bytes": 784285,
+          "sha256": "6bdb8664a3a3f581962616711024b76f3fc1874a3f751944850ee222fe68f830"
+        },
+        "webp": {
+          "path": "work/production/wave_168/exports/thanksgiving-guest-book.webp",
+          "bytes": 717514,
+          "sha256": "7837f0d47d43e4f5d76dccd7ae984b3c216484ee713b12776ba2654294286e6d"
+        },
+        "thumb": {
+          "path": "work/production/wave_168/exports/thanksgiving-guest-book-thumb.webp",
+          "bytes": 40380,
+          "sha256": "5b1da504fd69e32ad54e0df8a1493b8cdb0353ce7d7dde54feedf72961aa77ba"
+        }
+      },
+      "proofSha256": "90a013c677ba648b950dba647335d862b5f60e04120d12d4c394d37851c0df93",
+      "pairMeanRgbDifference": 1.46105
+    },
+    {
+      "id": "thanksgiving-apple-cider-tray",
+      "title": "Warm Cider Tray",
+      "alt": "Two mugs of amber cider with cinnamon sticks and an apple on a wooden tray.",
+      "description": "Two mugs of amber cider with cinnamon sticks and an apple on a wooden tray. Useful for cozy gathering invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_168/source/thanksgiving-apple-cider-tray-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "2297263423ad3e9bc09f18167966689999743d0743139fb74196de991e339816",
+      "inputSignature": "a6f8463ba53ee5fd8dd4238bf9619aecd4200326f509af77ad36675577667ed3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 921937,
+        "weightedCmykRmse": 1.104224
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1746735,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1146379,
+          "weightedCmykRmse": 0.783194
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1036787,
+          "weightedCmykRmse": 0.913062
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 921937,
+          "weightedCmykRmse": 1.104224
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        28,
+        210,
+        1234,
+        1171
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_168/exports/thanksgiving-apple-cider-tray.pdf",
+          "bytes": 921937,
+          "sha256": "19e79773de9310ebfea0676197e5edd489227c3bc380206ed45659785daef5c6"
+        },
+        "webp": {
+          "path": "work/production/wave_168/exports/thanksgiving-apple-cider-tray.webp",
+          "bytes": 1123746,
+          "sha256": "10792e73d443343666ba89303096f38e8c84766720517a49e28bdebc77af553b"
+        },
+        "thumb": {
+          "path": "work/production/wave_168/exports/thanksgiving-apple-cider-tray-thumb.webp",
+          "bytes": 64472,
+          "sha256": "83d228b521e2987a386983a48bb834bec5e348c25dce54096150598b4fe988bf"
+        }
+      },
+      "proofSha256": "bffe105091e65b795cba4980a021d6419d748c2d04034c788977651d4df1b9e4",
+      "pairMeanRgbDifference": 3.53288
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and rendered PDF proofs reviewed: open blank guest book and complete cider tray, no clipped parts, matching WebP/PDF content, clean contours and no steam halo.",
+  "createdAt": "2026-10-24T06:30:37.036Z"
+}

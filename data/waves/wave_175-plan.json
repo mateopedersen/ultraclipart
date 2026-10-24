@@ -1,0 +1,31 @@
+{
+  "wave": "wave_175",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-pear-napkin-ring",
+      "title": "Pear and Leaf Napkin Ring",
+      "alt": "A folded terracotta linen napkin through a brass ring decorated with one small pear and an olive sprig.",
+      "description": "A folded terracotta linen napkin through a brass ring decorated with one small pear and an olive sprig. Useful for place setting stationery.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_175/source/thanksgiving-pear-napkin-ring-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-dining-chair-ribbon",
+      "title": "Autumn Dining Chair Decoration",
+      "alt": "The back of a simple wooden dining chair decorated with a draped sage sash and a small bouquet of fall leaves.",
+      "description": "The back of a simple wooden dining chair decorated with a draped sage sash and a small bouquet of fall leaves. Useful for seating plan illustrations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_175/source/thanksgiving-dining-chair-ribbon-v1.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

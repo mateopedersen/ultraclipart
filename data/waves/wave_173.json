@@ -1,0 +1,246 @@
+{
+  "wave": "wave_173",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-gratitude-envelope",
+      "title": "Gratitude Letter Envelope",
+      "alt": "An open cream envelope with a blank card, red oak-leaf wax seal, autumn leaves and two acorns.",
+      "description": "An open cream envelope with a blank card, red oak-leaf wax seal, autumn leaves and two acorns. Useful for thank-you stationery.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_173/source/thanksgiving-gratitude-envelope-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "70f64b9415cb35f99e38180decc1f6e242dbe95a53d7ffd363f0886d9d7ee6fe",
+      "inputSignature": "b05e9a9a2c90c8bb787aafa733dc8e91e906cb15d7da3d957c95ad5e49acbc3b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 427015,
+        "weightedCmykRmse": 0.781465
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1025136,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 427015,
+          "weightedCmykRmse": 0.781465
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        145,
+        82,
+        1110,
+        1090
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_173/exports/thanksgiving-gratitude-envelope.pdf",
+          "bytes": 427015,
+          "sha256": "d1b8dbb7aee0aee8c9644755f4413b31b0c177a3acacd4ad824b4750f7ad0c46"
+        },
+        "webp": {
+          "path": "work/production/wave_173/exports/thanksgiving-gratitude-envelope.webp",
+          "bytes": 601122,
+          "sha256": "3bc3589c4667d3e71b6536d2f639289c3286ea9c35257b5732c73e172228c0ad"
+        },
+        "thumb": {
+          "path": "work/production/wave_173/exports/thanksgiving-gratitude-envelope-thumb.webp",
+          "bytes": 29956,
+          "sha256": "e8d31df79bdd5786b12825ac23f6ef5828a1d9f6f624f260504271729a1f6c40"
+        }
+      },
+      "proofSha256": "f91ee1519d5a5e3d54d40a80a3611df4891fb15973a62b528da12d253fab36a0",
+      "pairMeanRgbDifference": 1.46347
+    },
+    {
+      "id": "thanksgiving-harvest-garland",
+      "title": "Autumn Table Garland",
+      "alt": "A gently sagging twine garland with alternating cut-paper oak leaves, maple leaves and small acorns, fully visible endpoints.",
+      "description": "A gently sagging twine garland with alternating cut-paper oak leaves, maple leaves and small acorns, fully visible endpoints. Useful for personal party borders.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_173/source/thanksgiving-harvest-garland-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "7b43f74a43fbb3f68e790a51a10157844b0714e67d50f7ea47349a885ff26bd2",
+      "inputSignature": "9b56d19dea24805ad193f01ecf734ac103ea4e454e61efa74800b224b114a548",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 832086,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 832086,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        24,
+        359,
+        1229,
+        851
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_173/exports/thanksgiving-harvest-garland.pdf",
+          "bytes": 832086,
+          "sha256": "f7e9086469f30ec010858f1d8d46a77419df1d8dc9351223228cc64ec2734c21"
+        },
+        "webp": {
+          "path": "work/production/wave_173/exports/thanksgiving-harvest-garland.webp",
+          "bytes": 424888,
+          "sha256": "59a6a12b459f98c2ab976a5c355d84a1402a9b560309feb6fcd675e0c0995078"
+        },
+        "thumb": {
+          "path": "work/production/wave_173/exports/thanksgiving-harvest-garland-thumb.webp",
+          "bytes": 41620,
+          "sha256": "22014f439de98fb92bede5a5e1a8f58e220e03bd81bbe58eb1e769d6d6e2df13"
+        }
+      },
+      "proofSha256": "adfa2c4aac11a639f1538c27d24be261191b8dff7f0477f7946efbf363533db8",
+      "pairMeanRgbDifference": 1.26508
+    },
+    {
+      "id": "thanksgiving-dessert-sampler",
+      "title": "Thanksgiving Dessert Sampler",
+      "alt": "A single rectangular platter holds one pumpkin tart, one pecan tart and one apple turnover arranged with deliberate empty space.",
+      "description": "A single rectangular platter holds one pumpkin tart, one pecan tart and one apple turnover arranged with deliberate empty space. Useful for dessert menu labels.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_173/source/thanksgiving-dessert-sampler-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "73295c4e36793f3a881471126ff69831431c7cde94ca5856fba614be0e70c0e2",
+      "inputSignature": "9f84d3dd46f0d8fb6662dbdf9d0e6378013597763201f12acd2d6ed891ff147c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 830369,
+        "weightedCmykRmse": 0.921444
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1228986,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 830369,
+          "weightedCmykRmse": 0.921444
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        24,
+        295,
+        1231,
+        958
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_173/exports/thanksgiving-dessert-sampler.pdf",
+          "bytes": 830369,
+          "sha256": "458523288ce3dd57d96483c1100aba4b4d60dca6fc56c74439a1ab555692fb3d"
+        },
+        "webp": {
+          "path": "work/production/wave_173/exports/thanksgiving-dessert-sampler.webp",
+          "bytes": 841094,
+          "sha256": "2106a5feae244869c4daf0dd9564a8ba3f7d6d24f1abe77f9d6c6183636fb617"
+        },
+        "thumb": {
+          "path": "work/production/wave_173/exports/thanksgiving-dessert-sampler-thumb.webp",
+          "bytes": 46142,
+          "sha256": "eb4058b4bb53da8f415ad3046eb8da6b13da637c5857db3a77ae0f738a728357"
+        }
+      },
+      "proofSha256": "6ce5e904756713d552c3b4c657b71f436a9f69b42d4393f81e62ef6b6af30039",
+      "pairMeanRgbDifference": 1.93626
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native artwork and rendered CMYK PDF contact visually reviewed: complete envelope and blank card, intact garland endpoints, three distinct desserts on a complete platter. Sharp clear contours, clean transparent surroundings, correct file pairings. Alpha and native pixels preserved.",
+  "createdAt": "2026-10-24T06:18:18.666Z"
+}

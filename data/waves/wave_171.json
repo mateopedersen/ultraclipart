@@ -1,0 +1,116 @@
+{
+  "wave": "wave_171",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-harvest-door-wreath",
+      "title": "Harvest Door Wreath",
+      "alt": "A braided willow wreath with three pumpkins at the lower left and a burgundy maple leaf, acorns and green leaves at the upper right.",
+      "description": "A braided willow wreath with three pumpkins at the lower left and a burgundy maple leaf, acorns and green leaves at the upper right. Useful for seasonal invitation borders.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_171/source/thanksgiving-harvest-door-wreath-v6.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f5ed016e3bb1affe6a852f5e76ab4040e432e983dd5dfbdf39fb0516c14353f8",
+      "inputSignature": "1419f47821d9b46b95bafc181aeab12d0bd03b7f1a731e63ed84aef0ad8bdb9c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 909566,
+        "weightedCmykRmse": 1.555615
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1703552,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1230746,
+          "weightedCmykRmse": 0.861626
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1123793,
+          "weightedCmykRmse": 1.008044
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1017646,
+          "weightedCmykRmse": 1.232791
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 909566,
+          "weightedCmykRmse": 1.555615
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        9,
+        16,
+        1244,
+        1231
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_171/exports/thanksgiving-harvest-door-wreath.pdf",
+          "bytes": 909566,
+          "sha256": "ec4f1a72224794cb5565d2f8354a650f2cb6faf75eeb8eb236e03a09f4dd9473"
+        },
+        "webp": {
+          "path": "work/production/wave_171/exports/thanksgiving-harvest-door-wreath.webp",
+          "bytes": 882554,
+          "sha256": "4bc5a7689a3df8f27aeb9c443e860c91f66d4f70c8e8ddb0d11e73391d2a6973"
+        },
+        "thumb": {
+          "path": "work/production/wave_171/exports/thanksgiving-harvest-door-wreath-thumb.webp",
+          "bytes": 60150,
+          "sha256": "711bc6cb36a1f285143259e7fabba218114a8aaf87c8479af9766b991e348b51"
+        }
+      },
+      "proofSha256": "ffebee9c4670fe9521ba1df26d1cc9534f9b9b50e6e38c2b9148f10f13df83eb",
+      "pairMeanRgbDifference": 2.18093
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Reviewed new composition native source and rendered CMYK proof: open braided ring, three pumpkins, maple leaf and acorns, complete clean silhouettes. The earlier wheat-heavy revisions remain held and are not counted. Metadata now describes the new composition. No physical print proof.",
+  "createdAt": "2026-10-24T06:00:08.742Z"
+}

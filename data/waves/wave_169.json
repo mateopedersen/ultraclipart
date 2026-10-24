@@ -1,0 +1,102 @@
+{
+  "wave": "wave_169",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-oven-mitts-dish",
+      "title": "Oven Mitts Carrying a Baking Dish",
+      "alt": "Two patterned oven mitts holding a blue baking dish of roasted carrots, potatoes and onions.",
+      "description": "Two patterned oven mitts holding a blue baking dish of roasted carrots, potatoes and onions. Useful for cooking activity cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_169/source/thanksgiving-oven-mitts-dish-v2.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f19de813023ebc2f3cce22ee6d4aa28f238691855c5df386e912fc4e3498b124",
+      "inputSignature": "2d0beeb5c8a456ef4b569fcd6e3bccc37f74a4e1f7c3a9383dfa362a136d6e8e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 948441,
+        "weightedCmykRmse": 0.985876
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1514423,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1049479,
+          "weightedCmykRmse": 0.834472
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 948441,
+          "weightedCmykRmse": 0.985876
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        4,
+        246,
+        1251,
+        967
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_169/exports/thanksgiving-oven-mitts-dish.pdf",
+          "bytes": 948441,
+          "sha256": "f1ef22d521c2415dcd0843af393c93b20fdb7610b8d72aa83afe71bd4ff97ac9"
+        },
+        "webp": {
+          "path": "work/production/wave_169/exports/thanksgiving-oven-mitts-dish.webp",
+          "bytes": 986688,
+          "sha256": "7781723d52dc9177b0a75cf426a3dcb1446d948be223e213adfeba831d1a82c6"
+        },
+        "thumb": {
+          "path": "work/production/wave_169/exports/thanksgiving-oven-mitts-dish-thumb.webp",
+          "bytes": 57176,
+          "sha256": "0dd11b019963a462034dcc2c7f2da546f46cc6af25942479587d8770ae53f3ab"
+        }
+      },
+      "proofSha256": "2ee42f61eac2d4959a6837decfe99fc7c1d37e84793d01467c8b870a78ce7fdf",
+      "pairMeanRgbDifference": 2.46451
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native source and actual PDF proof reviewed: two complete patterned mitts support the blue vegetable dish; accurate object pairing and clear silhouette.",
+  "createdAt": "2026-10-24T06:31:19.549Z"
+}
