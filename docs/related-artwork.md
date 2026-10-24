@@ -8,6 +8,8 @@ All `/art/[id]` pages use `RelatedArtwork.astro`. The original gallery based on 
 
 The controlled vocabulary in `taxonomy.ts` separates domains, families, canonical subjects and aliases. Collection names such as Winter and Thanksgiving do not become subjects. Phrase boundaries and contextual exclusions handle kiwi bird/fruit, apple/pineapple/Apple branding, orange color/fruit, fruit rings/jewelry, animal/baseball bats, Turkey country/bird, baby animals and human babies. Unknown subjects stay unknown; contradictory metadata is withheld.
 
+An explicit catalog topic outside that vocabulary remains unclassified until a supported binding or revision-matched review exists. Title words cannot turn a new device family into fruit or animals through a color or decoration (for example a lime watch or cat-face watch). Title inference remains available for missing topics and the explicitly recognized seasonal collections.
+
 Profiles retain separate technique, technique family, composition, depiction, color mode, secondary roles, evidence sources, rule versions and revision. `Color` is not a technique. An optional `semanticReview` adapter accepts an explicit subject only when reviewer, evidence and matching content revision are present. It does not convert an old review into new evidence.
 
 Eligibility requires an approved, published, indexable, revisioned record, usable thumbnail/WebP paths, file hashes/sizes, the repository's approved license and file-pair review statuses, and an unambiguous subject. The existing publication validator remains responsible for checking original file hashes and CDN availability. Related queries do not issue per-card file requests.

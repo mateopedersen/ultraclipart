@@ -8,7 +8,7 @@ import {
   type Subject,
 } from './taxonomy';
 
-export const CLASSIFIER_VERSION = 'uc-metadata-1';
+export const CLASSIFIER_VERSION = 'uc-metadata-2';
 export type ColorMode = 'color' | 'monochrome' | 'unknown';
 export type Depiction = 'natural_object' | 'character' | 'scene' | 'unknown';
 export interface ArtworkInput {
@@ -135,8 +135,15 @@ export function normalize(item: ArtworkInput): Profile {
     status: Profile['status'] = 'auto_classified';
   let subjectEvidence = 'catalog topic + contextual title/alt (one metadata source)';
   if (!topic || THEME_COLLECTIONS.has(item.topic ?? '')) {
-    subject = titled[0]?.subject;
-    subjectEvidence = 'contextual title; collection is not a subject';
+    const inferFromTitle = !item.topic || THEME_COLLECTIONS.has(item.topic);
+    // An unmapped primary category may describe a new kind of object. Its title
+    // can mention a color or decoration (e.g. a lime watch or cat-face watch).
+    // Preserve that uncertainty instead of promoting a secondary word to subject.
+    subject = inferFromTitle ? titled[0]?.subject : undefined;
+    subjectEvidence = inferFromTitle
+      ? 'contextual title; collection is not a subject'
+      : 'unmapped catalog subject; title mentions are not primary-subject evidence';
+    if (!inferFromTitle) issues.push('unknown_catalog_topic');
   }
   if (!subject) {
     status = 'unclassified';

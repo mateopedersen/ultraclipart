@@ -256,6 +256,24 @@ test('T14 a new unknown subject stays unclassified instead of forcing a fruit ma
     ).status,
     'unclassified',
   );
+  for (const title of [
+    'Lime Fitness Watch with Towel and Bottle',
+    'Pink Cat Face Watch with Charms',
+    'Travel Laptop with Suitcase and Headphones',
+    'Unknown Device with Apple Decoration',
+  ]) {
+    const profile = normalize(
+      item('new-device', { topic: 'new-device-family', title, alt: title }),
+    );
+    assert.equal(profile.status, 'unclassified', title);
+    assert.equal(profile.subject, undefined, title);
+    assert.equal(profile.eligible, false, title);
+    assert.ok(profile.issues.includes('unknown_catalog_topic'));
+  }
+  assert.equal(
+    normalize(item('missing-topic', { topic: undefined, title: 'Apple Crayon' })).subject.id,
+    'food.fruit.apple',
+  );
 });
 test('T15 remove/unpublish immediately invalidates snapshots; stale jobs cannot resurrect a record', () => {
   const candidate = item('candidate'),
