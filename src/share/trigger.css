@@ -1,0 +1,50 @@
+.art-card {
+  position: relative;
+}
+.share-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #c9daf1;
+  border-radius: 12px;
+  background: #fff;
+  color: #214d83;
+  font:
+    600 14px/1.3 Inter,
+    Arial,
+    sans-serif;
+  cursor: pointer;
+}
+.share-trigger:hover {
+  border-color: #7fa8e2;
+  background: #edf5ff;
+}
+.share-trigger:focus-visible {
+  outline: 3px solid #075ee6;
+  outline-offset: 3px;
+}
+.share-trigger svg {
+  flex: none;
+  width: 23px;
+  height: 23px;
+}
+.share-trigger-card {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  min-height: 40px;
+  width: 40px;
+  padding: 8px;
+  background: #fffffff5;
+  border-color: #d6e4f5;
+  box-shadow: 0 3px 10px #173f6310;
+  z-index: 1;
+}
+.share-trigger-detail {
+  width: 100%;
+  margin-top: 10px;
+  background: #f1f7ff;
+}

@@ -74,7 +74,7 @@ const pages: Record<string, { title: string; description: string; sections: [str
       sections: [
         [
           'Local editor and favorites',
-          'The editor processes artwork in your browser. Favorites and recoverable editing sessions are stored on your device when local storage is available. Drawings, imported SVGs, project files and edits are processed locally and are not uploaded to UltraClipart. Clearing browser site data removes this local information.',
+          'The editor processes artwork in your browser. Favorites and recoverable editing sessions are stored on your device when local storage is available. Drawings, imported SVGs, project files and edits are processed locally. They are not automatically uploaded. A finished image and its title are uploaded only when you explicitly create a public share link. Clearing browser site data removes local recovery and any saved share-removal keys.',
         ],
         [
           'AI generation and protection',
@@ -95,6 +95,10 @@ const pages: Record<string, { title: string; description: string; sections: [str
         [
           'Email',
           'If you email us, your email provider and ours process the message. We use the information you send to handle your request. Ask us at ultraclipart@gmail.com if you want to discuss deletion of correspondence.',
+        ],
+        [
+          'Public links and social sharing',
+          'Catalog sharing uses the original artwork page link. Social posting opens the platform you choose; that platform applies its own terms and privacy policy. Native device sharing passes the image, title and caption to the app you select. We do not automatically post to your accounts. Creating a public artwork link uploads a resized WebP image and its title to Cloudflare D1. Anyone with that link can view and download the image. Projects, layers and AI prompts are not included. Publication requires an explicit choice and Turnstile verification. Public artwork remains until removed or the service is discontinued; storage limits can pause new publication. Keep the removal key saved in your browser or back it up to remove a link. Removal stops serving the image here but cannot recall copies saved by recipients or cached by social platforms. Daily hashed visitor and network identifiers protect free sharing limits; hashes and deletion counters are cleared after seven days when the service is next used. A compact deleted-link identifier remains to prevent a removed URL from being reused. No raw IP addresses are stored in the sharing database. Contact us with the share URL for privacy or copyright concerns.',
         ],
         [
           'Control and questions',
@@ -125,6 +129,10 @@ const pages: Record<string, { title: string; description: string; sections: [str
         [
           'Responsible generation',
           'Use AI Clipart Builder only for lawful, appropriate creative work. Do not request sexual exploitation, child abuse, violent threats, hateful targeting or other illegal material; do not impersonate people, infringe rights or bypass safety and usage limits. Avoid personal or private information. Automated safeguards can make mistakes and do not replace your review. Report harmful output or a rights concern through our Copyright and corrections page. Children should use the tool with an adult who can review prompts and results.',
+        ],
+        [
+          'Publishing and sharing artwork',
+          'Publish only artwork you have permission to share, without private information about other people. You retain your rights in original work and allow UltraClipart to store and display the image you explicitly publish through a public link. Publishing does not grant visitors a reuse license or remove restrictions on source artwork. Do not use public links to host unlawful, abusive or infringing material. We may remove reported artwork or disable sharing to protect the service. Free publication has daily and storage limits; there is no automatic paid fallback. Share links are a convenience, not a permanent backup.',
         ],
         ['Get in touch', 'Questions and corrections can be sent to ultraclipart@gmail.com.'],
       ],

@@ -3,6 +3,7 @@ import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
 import Icon from '../../components/Icon.astro';
+import ShareButton from '../../components/ShareButton.astro';
 import notes from '../../../data/artwork-notes.json';
 import { art, topics } from '../../lib/catalog';
 export function getStaticPaths() {
@@ -141,6 +142,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
         ♡ Add to Favorites
       </button>
       <p id="favorite-status" role="status" aria-live="polite" hidden></p>
+      <ShareButton item={item} />
       <p class="notice">
         Free for personal and educational use. No commercial use or resale as clipart.{' '}
         <a href="/license/">License details →</a>

@@ -1,9 +1,11 @@
 ---
 import Icon from './Icon.astro';
+import ShareButton from './ShareButton.astro';
 const { item } = Astro.props;
 ---
 
 <article class="art-card" data-id={item.id}>
+  <ShareButton item={item} compact />
   <a class="art-picture" href={`/art/${item.id}/`}>
     <img src={item.thumb} alt={item.alt} width="400" height="400" loading="lazy" />
   </a>

@@ -98,6 +98,7 @@ function init(root: HTMLElement) {
     panDrag: { x: number; y: number; left: number; top: number } | undefined;
   let printPreview = false,
     busy = false,
+    sharing = false,
     exportGeneration = 0,
     exportFocus: HTMLElement | null = null;
   let drag:
@@ -368,6 +369,7 @@ function init(root: HTMLElement) {
     q<HTMLOutputElement>('[data-zoom]').value = `${Math.round(zoom * 100)}%`;
     q<HTMLButtonElement>('[data-action=undo]').disabled = !history.canUndo;
     q<HTMLButtonElement>('[data-action=redo]').disabled = !history.canRedo;
+    updateShareButton();
     if (compositionTools) {
       q<HTMLInputElement>('[data-canvas-width]').value = String(doc().width);
       q<HTMLInputElement>('[data-canvas-height]').value = String(doc().height);
@@ -1003,6 +1005,87 @@ function init(root: HTMLElement) {
       l.y += c.y + c.height / 2 - b.y - b.height / 2;
     });
   }
+  function updateShareButton() {
+    const button = q<HTMLButtonElement>('[data-action=share]');
+    button.disabled =
+      busy || sharing || !history?.current.layers.some((l) => l.visible && l.opacity > 0);
+    button.setAttribute('aria-busy', String(sharing));
+  }
+  async function shareArtwork() {
+    if (busy || sharing || !history.current.layers.some((l) => l.visible && l.opacity > 0)) return;
+    sharing = true;
+    updateShareButton();
+    status('Preparing a PNG of your current design. Nothing has been uploaded.');
+    const snapshot = clone(history.current);
+    try {
+      await prepareDocument(snapshot);
+      const svg = documentSvg(snapshot),
+        box = snapshot.crop || snapshot;
+      const scale = Math.min(
+        1,
+        4096 / box.width,
+        4096 / box.height,
+        Math.sqrt(16777216 / (box.width * box.height)),
+      );
+      const width = Math.max(1, Math.round(box.width * scale)),
+        height = Math.max(1, Math.round(box.height * scale));
+      svg.setAttribute('width', String(width));
+      svg.setAttribute('height', String(height));
+      await document.fonts.ready;
+      const url = URL.createObjectURL(
+        new Blob([new XMLSerializer().serializeToString(svg)], { type: 'image/svg+xml' }),
+      );
+      let blob: Blob;
+      try {
+        const image = new Image();
+        image.src = url;
+        await image.decode();
+        const shareCanvas = document.createElement('canvas');
+        shareCanvas.width = width;
+        shareCanvas.height = height;
+        const context = shareCanvas.getContext('2d');
+        if (!context)
+          throw new Error(
+            'Your browser could not prepare a share image. Export your image and share the downloaded file instead.',
+          );
+        context.drawImage(image, 0, 0, width, height);
+        blob = await new Promise<Blob>((resolve, reject) =>
+          shareCanvas.toBlob(
+            (result) =>
+              result
+                ? resolve(result)
+                : reject(new Error('The PNG could not be prepared. Your design is unchanged.')),
+            'image/png',
+          ),
+        );
+      } finally {
+        URL.revokeObjectURL(url);
+      }
+      const { openShare } = await import('../share/client');
+      await openShare({
+        kind: 'creation',
+        trigger: q<HTMLButtonElement>('[data-action=share]'),
+        title: creator ? 'My UltraClipart creation' : 'My edited UltraClipart artwork',
+        blob,
+        sourceUrl: creator
+          ? 'https://ultraclipart.com/create/'
+          : `https://ultraclipart.com/art/${id}/`,
+      });
+      status(
+        `Share image prepared at ${width} × ${height} pixels. Your editable project stays on this device.`,
+      );
+    } catch (error) {
+      status(
+        error instanceof Error
+          ? error.message
+          : 'Sharing could not be opened. Your project and downloads are unchanged.',
+        true,
+      );
+    } finally {
+      sharing = false;
+      updateShareButton();
+    }
+  }
   async function exportOpen() {
     cancelSource();
     exportGeneration++;
@@ -1039,6 +1122,7 @@ function init(root: HTMLElement) {
   async function saveExport() {
     if (busy) return;
     busy = true;
+    updateShareButton();
     const generation = exportGeneration;
     const button = q<HTMLButtonElement>('[data-action=download]');
     button.disabled = true;
@@ -1087,6 +1171,7 @@ function init(root: HTMLElement) {
         busy = false;
         button.disabled = false;
         button.removeAttribute('aria-busy');
+        updateShareButton();
       }
     }
   }
@@ -1446,6 +1531,7 @@ function init(root: HTMLElement) {
       status('Editable project saved. Open it from the Layers panel to continue.');
     },
     load: () => q<HTMLInputElement>('[data-load]').click(),
+    share: shareArtwork,
     export: exportOpen,
     'close-export': () => dialog.close(),
     download: saveExport,
@@ -1898,6 +1984,7 @@ function init(root: HTMLElement) {
     busy = false;
     q<HTMLButtonElement>('[data-action=download]').disabled = false;
     q('[data-action=download]').removeAttribute('aria-busy');
+    updateShareButton();
     exportFocus?.focus();
   });
   dialog.addEventListener('click', (event) => {

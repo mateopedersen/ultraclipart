@@ -44,7 +44,7 @@ const searchVersion = JSON.parse(
 ).version;
 writeFileSync(
   join(dist, '_headers'),
-  `${csp}\n/ai-clipart-generator/\n  ! Content-Security-Policy\n${aiCsp}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n/search-data/manifest.json\n  Cache-Control: no-cache\n`,
+  `${csp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n/search-data/manifest.json\n  Cache-Control: no-cache\n`,
 );
 
 if (process.env.CF_PAGES === '1') {
@@ -74,6 +74,7 @@ if (process.env.CF_PAGES === '1') {
   for (const path of publication.localPaths) rmSync(join(dist, path.slice(1)), { force: true });
   console.log(`CDN release: ${publication.files} verified files, ${publication.bytes} bytes.`);
 }
+const apiRoutes = ['/api/*', '/share/*'];
 const retirement = retirementPolicy(
   [
     ...JSON.parse(readFileSync(join(root, 'data/topics.json'), 'utf8')).topics,
@@ -82,8 +83,8 @@ const retirement = retirementPolicy(
   JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
   JSON.parse(readFileSync(join(root, 'data/retired-artwork.json'), 'utf8')),
   files(dist).map((path) => '/' + relative(dist, path)),
+  100 - apiRoutes.length,
 );
-const apiRoutes = ['/api/ai/*'];
 let retiredWorker = '({fetch: (request, env) => env.ASSETS.fetch(request)})';
 if (retirement) {
   const responseHeaders = Object.fromEntries(
@@ -109,8 +110,9 @@ if (retirement) {
 await bundleWorker({
   stdin: {
     contents: `import {handleAi} from './server/ai/handler.mjs';
+import {handleShare} from './server/share/handler.mjs';
 const retired = ${retiredWorker};
-export default {fetch(request, env, context) { return new URL(request.url).pathname.startsWith('/api/ai/') ? handleAi(request, env, context) : retired.fetch(request, env); }};`,
+export default {fetch(request, env, context) { const path = new URL(request.url).pathname; return path.startsWith('/api/ai/') ? handleAi(request, env, context) : path.startsWith('/api/share/') || path.startsWith('/share/') ? handleShare(request, env, context) : retired.fetch(request, env); }};`,
     resolveDir: root,
     sourcefile: 'worker-entry.js',
   },

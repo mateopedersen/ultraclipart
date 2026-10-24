@@ -827,13 +827,31 @@ function initialize(root: HTMLElement) {
     busy = true;
     updateButtons();
     try {
-      if (['download', 'pdf', 'project', 'studio'].includes(action)) {
+      if (['download', 'pdf', 'project', 'studio', 'share'].includes(action)) {
         say(
           'exporting',
           action === 'studio'
             ? 'Preparing your image for Clipart Studio…'
-            : 'Preparing your download…',
+            : action === 'share'
+              ? 'Preparing your current image to share. Nothing has been uploaded.'
+              : 'Preparing your download…',
         );
+        if (action === 'share') {
+          const blob = await toBlob();
+          const { openShare } = await import('../share/client');
+          await openShare({
+            kind: 'creation',
+            trigger: root.querySelector<HTMLButtonElement>('[data-ai-action=share]') || undefined,
+            title: 'My AI clipart',
+            blob,
+            sourceUrl: 'https://ultraclipart.com/ai-clipart-generator/',
+          });
+          say(
+            'ready',
+            'Sharing options are ready for your current image. Your private description and history stay on this device.',
+          );
+          return;
+        }
         if (action === 'pdf') {
           const { downloadAiPdf } = await import('./pdf-export');
           await downloadAiPdf(await toBlob(), 'my-ai-clipart.pdf', {
