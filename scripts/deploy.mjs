@@ -4,7 +4,12 @@ import { resolve } from 'node:path';
 import { readPublication } from './publication-policy.mjs';
 
 const root = resolve(import.meta.dirname, '..');
-const env = { ...process.env, CF_PAGES: '1', ASTRO_TELEMETRY_DISABLED: '1' };
+const env = {
+  ...process.env,
+  CF_PAGES: '1',
+  ASTRO_TELEMETRY_DISABLED: '1',
+  PAGES_WRANGLER_MAJOR_VERSION: '4',
+};
 function run(script, args = []) {
   const result = spawnSync(process.execPath, [script, ...args], {
     cwd: root,

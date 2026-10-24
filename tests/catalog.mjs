@@ -147,7 +147,7 @@ test(
         process.env.CF_PAGES === '1' || (!path.startsWith('/catalog/') && !localMedia.has(path))
       );
     });
-    assert.ok(output.length <= 20_000, `too many static assets: ${output.length}`);
+    assert.ok(output.length <= 100_000, `too many static assets: ${output.length}`);
     for (const file of output)
       assert.ok(statSync(file).size <= 25 * 1024 * 1024, `oversized static asset: ${file}`);
   },
