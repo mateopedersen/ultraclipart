@@ -7,6 +7,9 @@ const engine = process.env.UC_BROWSER || 'chromium';
 const detailOnly = process.env.UC_DETAIL_ONLY === '1';
 const browser = await { chromium, firefox, webkit }[engine].launch();
 const context = await browser.newContext();
+// Availability assertions require fresh network responses, including in Firefox.
+// Routing disables the HTTP cache without accepting 304 as a successful first load.
+await context.route('**/*', (route) => route.continue());
 let page = await context.newPage();
 const output = `reports/artwork-details/${engine}`;
 await mkdir(output, { recursive: true });

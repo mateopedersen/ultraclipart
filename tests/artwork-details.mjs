@@ -32,9 +32,12 @@ test('print guidance describes the full raster canvas at 300 ppi, including port
   );
 });
 
-test('file sizes use honest binary units with safe missing-data handling', () => {
-  assert.equal(formatFileSize(441044), '431 KiB');
-  assert.equal(formatFileSize(1024 * 1024), '1.00 MiB');
+test('file sizes use compact decimal KB/MB with safe missing-data handling', () => {
+  assert.equal(formatFileSize(441044), '0.4 MB');
+  assert.equal(formatFileSize(1024 * 1024), '1.0 MB');
+  assert.equal(formatFileSize(936407), '0.9 MB');
+  assert.equal(formatFileSize(999752), '1.0 MB');
+  assert.equal(formatFileSize(98300), '98 KB');
   assert.equal(formatFileSize(500), '500 B');
   assert.equal(formatFileSize(NaN), 'Size unavailable');
 });

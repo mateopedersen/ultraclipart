@@ -53,6 +53,13 @@ try {
       await page.evaluate(() => document.fonts.ready);
       if (route.startsWith('/edit/'))
         await page.locator('.uc-canvas [data-layer]').first().waitFor();
+      // Create mounts its artwork library asynchronously. Include those previews
+      // in decoding before checking every image, including offscreen thumbnails.
+      if (route === '/create/')
+        await page
+          .locator('[data-artwork-grid] .uc-artwork-card')
+          .first()
+          .waitFor({ state: 'attached' });
       await page.evaluate(async () => {
         await Promise.all(
           [...document.images].map(async (image) => {

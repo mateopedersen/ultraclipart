@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadTypescript } from '../helpers/typescript.mjs';
+import { chooseExportFormat } from '../helpers/export.mjs';
 const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const base = process.env.BASE_URL || 'http://127.0.0.1:4350',
   engine = process.env.UC_BROWSER || 'chromium',
@@ -269,7 +270,7 @@ try {
   await saveProject('baby-print-project');
   for (const format of ['webp', 'pdf']) {
     await page.locator('[data-action=export]').click();
-    await page.locator(`[data-format][value=${format}]`).check();
+    await chooseExportFormat(page, format);
     if (format === 'pdf') {
       await page.locator('[data-action=download]').click();
       await expect(page.locator('[data-export-status]')).toContainText(

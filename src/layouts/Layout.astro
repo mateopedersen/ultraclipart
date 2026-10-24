@@ -320,7 +320,6 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
             href={`/art/${surprisePicks[0].id}/`}
             data-surprise-art={JSON.stringify(surprisePicks)}
             data-surprise-source={`/surprise-picks.json?v=${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
-            aria-label="Surprise me with something cute"
           >
             <HeaderIllustration kind="surprise" />
             <span>

@@ -3,6 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { chooseExportFormat } from '../helpers/export.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
   engine = process.env.UC_BROWSER || 'chromium';
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
@@ -62,7 +63,7 @@ async function commitInput(selector, value) {
 }
 async function save(kind, id) {
   await page.locator('[data-action=export]').click();
-  await page.locator(`[data-format][value=${kind}]`).check();
+  await chooseExportFormat(page, kind);
   const pending = page.waitForEvent('download', { timeout: 60000 });
   await page.locator('[data-action=download]').click();
   const result = await pending;
