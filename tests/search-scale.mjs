@@ -7,6 +7,7 @@ import { LatestRequest } from '../src/lib/search-request.ts';
 import { defaults, searchArtwork } from '../src/lib/search.ts';
 const original = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url)));
 const topics = JSON.parse(readFileSync(new URL('../data/topics.json', import.meta.url))).topics;
+const extraTopics = JSON.parse(readFileSync(new URL('../data/extra-topics.json', import.meta.url)));
 const real = original.map((item) => ({
   ...item,
   cluster: topics.find((topic) => topic.slug === item.topic)?.cluster ?? '',
@@ -158,6 +159,18 @@ test('initial browse transfers only eight card records and one ranked ID page at
       freePlanFileCap: 20000,
     }),
   );
+});
+test('current catalog search shards fit the Pages file budget with room for the book collection', () => {
+  const allTopics = [...topics, ...extraTopics];
+  const cluster = new Map(allTopics.map((topic) => [topic.slug, topic.cluster]));
+  const build = buildSearchIndex(
+    original.map((item) => ({ ...item, cluster: cluster.get(item.topic) ?? '' })),
+    allTopics,
+    'budget-test',
+  );
+  const projected = build.files.size + original.length * 2 + allTopics.length + 200;
+  assert.ok(projected < 20000, `Projected Pages deployment has ${projected} files`);
+  assert.ok(projected <= 19600, `Leave capacity for routine site assets: ${projected}`);
 });
 test('a broad query downloads postings but only the visible page metadata, and favorites request only saved IDs', async () => {
   const a = fixture(synthetic);

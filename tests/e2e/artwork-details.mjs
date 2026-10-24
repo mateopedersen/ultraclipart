@@ -15,8 +15,46 @@ const output = `reports/artwork-details/${engine}`;
 await mkdir(output, { recursive: true });
 const report = { engine, layouts: [], accessibility: [], checks: [], errors: [] };
 page.on('pageerror', (error) => report.errors.push(error.message));
+async function imagesReady(label) {
+  try {
+    await page.locator('img').evaluateAll(async (images) => {
+      await Promise.all(
+        images.map(async (image) => {
+          image.loading = 'eager';
+          let timer;
+          try {
+            await Promise.race([
+              image.decode(),
+              new Promise((_, reject) => {
+                timer = setTimeout(
+                  () =>
+                    reject(new Error(`Image decode timed out: ${image.currentSrc || image.src}`)),
+                  90_000,
+                );
+              }),
+            ]);
+            if (image.naturalWidth === 0)
+              throw new Error(`Decoded image has no pixels: ${image.currentSrc || image.src}`);
+          } finally {
+            clearTimeout(timer);
+          }
+        }),
+      );
+    });
+  } catch (error) {
+    const unready = await page
+      .locator('img')
+      .evaluateAll((images) =>
+        images
+          .filter((image) => !image.complete || image.naturalWidth === 0)
+          .map((image) => ({ src: image.currentSrc || image.src, complete: image.complete })),
+      );
+    throw new Error(`${label}: images did not load: ${JSON.stringify(unready)}`, { cause: error });
+  }
+}
 try {
   for (const width of detailOnly ? [] : [1920, 1440, 1321, 1251, 768, 390, 320]) {
+    console.log(`artwork details: home ${width}px`);
     await page.setViewportSize({ width, height: 1000 });
     // Firefox may expose a successful conditional navigation as 304. The
     // rendered layout, decoded images and controls below still verify its body.
@@ -27,7 +65,7 @@ try {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     const artworkClear = await page.locator('.home-benefit').evaluateAll((cards) =>
       cards.every((card) => {
-        const image = card.querySelector('svg').getBoundingClientRect();
+        const image = card.querySelector('.home-benefit-art').getBoundingClientRect();
         const copy = card.querySelector('.home-benefit-label').getBoundingClientRect();
         return image.bottom <= copy.top || image.right <= copy.left || image.left >= copy.right;
       }),
@@ -68,6 +106,7 @@ try {
       'winter-arctic-fox-resting',
       'apple-and-dried-rings-crayon-clipart',
     ]) {
+      console.log(`artwork details: ${id} ${width}px`);
       // Isolate each case so viewport changes cannot cancel the previous page's
       // responsive image loads while WebKit is tearing down its document.
       page.removeAllListeners('pageerror');
@@ -82,14 +121,7 @@ try {
       );
       // Warm lazy images before Axe creates its helper document. Otherwise
       // WebKit may report cancelled helper-image loads as access-control errors.
-      await page.locator('img').evaluateAll(async (images) => {
-        await Promise.all(
-          images.map(async (image) => {
-            image.loading = 'eager';
-            await image.decode();
-          }),
-        );
-      });
+      await imagesReady(`${id} ${width}px before accessibility`);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
       await expect(page.locator('main h1')).toHaveCount(1);
       await expect(page.locator('.art-ai-badge')).toHaveCount(0);
@@ -171,14 +203,7 @@ try {
       report.accessibility.push({ id, width, violations: 0 });
       // Complete image requests before navigation; WebKit reports cancelled image
       // loads as access-control errors when a lazy image is still starting up.
-      await page.locator('img').evaluateAll(async (images) => {
-        await Promise.all(
-          images.map(async (image) => {
-            image.loading = 'eager';
-            await image.decode();
-          }),
-        );
-      });
+      await imagesReady(`${id} ${width}px before navigation`);
     }
   }
   assert.deepEqual(report.errors, []);

@@ -3,7 +3,7 @@ import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import collectionCopy from '../../../data/collection-copy.json';
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import { availableTopics, topicArt, slugify } from '../../lib/catalog';
+import { availableTopics, topicArt, slugify, clustersForTopic } from '../../lib/catalog';
 export function getStaticPaths() {
   return availableTopics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
 }
@@ -109,6 +109,11 @@ const description =
             : `Our ${topic.keyword.toLowerCase()} collection is in preparation. Explore the related subjects below while original illustrations are developed and checked.`)}
     </p>
     <div class="chips">
+      {clustersForTopic(topic)
+        .filter((cluster) => cluster !== topic.cluster)
+        .map((cluster) => (
+          <a href={`/collection/${slugify(cluster)}/`}>{cluster}</a>
+        ))}
       {copy?.chips.map((chip) => (
         <a href={`/search/?q=${encodeURIComponent(chip.query)}`}>{chip.label}</a>
       ))}

@@ -31,7 +31,9 @@ export interface SearchBuild {
   manifest: SearchManifest;
   files: Map<string, unknown>;
 }
-export const SEARCH_CHUNK = 32;
+// Larger rank and ordinal pages keep Pages' static file count below its limit
+// as the catalog grows, while a cold first browse still stays below 25 KiB.
+export const SEARCH_CHUNK = 256;
 export const TOKEN_BUCKETS = 256;
 
 // FNV-1a keeps the number of generated files bounded as vocabulary grows.

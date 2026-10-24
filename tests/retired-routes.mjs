@@ -190,6 +190,7 @@ test('retirement rules reserve space for AI and public-sharing endpoints', () =>
   for (const item of art) {
     assert.equal(invokes(`/art/${item.id}/`), false);
     assert.equal(invokes(`/edit/${item.id}/`), false);
+    assert.equal(invokes(`/clipart/${item.topic}/index.html`), false);
   }
   for (const path of policy.retired) assert.equal(invokes(path), true, path);
 });

@@ -56,8 +56,8 @@ export const contexts = {
     'mandarin,orange,banana',
   ],
 };
-export function collectionCopy(topic, items) {
-  const [lead, intro, links] = contexts[topic];
+export function collectionCopy(topic, items, context = contexts[topic]) {
+  const [lead, intro, links] = context;
   const label = topic === 'kiwi-fruit' ? 'kiwi fruit' : topic;
   const find = (pattern) => items.find((item) => pattern.test(item.id));
   const realistic = find(/realistic|botanical|whole.*watercolor|fresh/),

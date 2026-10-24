@@ -1,0 +1,852 @@
+{
+  "collection": "owner-book-pack-2026-10-24",
+  "count": 50,
+  "repairs": [
+    {
+      "id": "book-child-at-bookshelf-decorative-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "448746a09c318565a84965e0e5055bc9ad866cc89f51a523c2eef4569fa767f6",
+      "repairedWebpSha256": "cb0531da7c145e0f561dd0b25d5f0715bc7e60da00f924d0cdae161abe1ac976",
+      "renderCompositeMeanDifference": 0.106,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "book-library-books-ornate-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "972cd88997fab47102442c64e1d6c543e0aea7e8f1d2c6267f5f5815714cc4f6",
+      "repairedWebpSha256": "447b495801ad9b46ea10f6fc5beb705e62a6a13fd1a3e9878b9c174038307237",
+      "renderCompositeMeanDifference": 0.105,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "book-stack-of-books-decorative-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "19cb9361376912041e40a7da653c9adba10118038763a097c28e8ef3a540d038",
+      "repairedWebpSha256": "772d29a8efa0d64a1e39b9f5c1307d1660f2a8b53052d68aefe73fd37c3a250a",
+      "renderCompositeMeanDifference": 0.102,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "book-stack-of-books-playful-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "38386220150dd89def0e042fdbaa54ddd1a9d4f15e24bf09df4a09b95d321946",
+      "repairedWebpSha256": "0353eba3e6f8abbaa3fae0eff83bf340824564315d17f3a0169ff275cd2eb0a2",
+      "renderCompositeMeanDifference": 0.128,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    }
+  ],
+  "archives": [
+    {
+      "topic": "book",
+      "source": "source.zip",
+      "bytes": 72478896,
+      "sha256": "05a1a229a4c7f33737869340280227123b57c65b26a7211f2dd3379625d42451",
+      "pairs": 50
+    }
+  ],
+  "screenReview": "PASS",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false,
+  "rows": [
+    {
+      "id": "book-and-feather-quill-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "f9ce5c778bdc4345dda55d4fdae52a5f6c752662c78e4f333d61dd87f6cab98e",
+        "webp": "19cc31f4a28eae606bb0dea909595bff424138181bc6d41c9ae7c939c2c0c9c5"
+      },
+      "pdfBytes": 324215,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-and-feather-quill-black-and-white-clipart",
+      "meanRgbDifference": 4.4865
+    },
+    {
+      "id": "book-and-feather-quill-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "65f10eba8b68306dca3b45e1c43c4ac4e8355dcbedd389a5c0c105584f13b398",
+        "webp": "547534e383d3b82807c0428f1566538e939d9f5bfab7828c87ee1f3387f76c4e"
+      },
+      "pdfBytes": 971215,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-and-feather-quill-classic-clipart",
+      "meanRgbDifference": 4.9352
+    },
+    {
+      "id": "book-and-feather-quill-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "52d035df8237d6fe26ab0e801449d2a41f657ef35ea48715b0eb0727dda59dff",
+        "webp": "3fb7f1a66edbb609d6d2b1e4bb8dbdf32f54d6a01581317a05e58c023e8e47cd"
+      },
+      "pdfBytes": 966163,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-and-feather-quill-decorative-clipart",
+      "meanRgbDifference": 5.275
+    },
+    {
+      "id": "book-and-feather-quill-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "93d7b14d9696efb6e392396acd0a8486ce05d528c50db6f0408d05be9c45dc7d",
+        "webp": "35c1769b4be7aadd8fad4306351112384c15a8a7c003bbe12002c6f0da25deb9"
+      },
+      "pdfBytes": 978339,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-and-feather-quill-ornate-clipart",
+      "meanRgbDifference": 5.6519
+    },
+    {
+      "id": "book-and-feather-quill-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "8729818bc39da393170ae3abeaaf009dcaf5337c79dd16f54363ef0154a2204f",
+        "webp": "1c689d79c18cd9502ee7423e4514166f4a45d2fe3500c701a98bf467e9916331"
+      },
+      "pdfBytes": 973576,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-and-feather-quill-playful-clipart",
+      "meanRgbDifference": 4.6316
+    },
+    {
+      "id": "book-child-at-bookshelf-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "63ee7e7d2b9fcb0ebd01b71f0832d014c47ab58c4480e68606c7b5ccfccc0b87",
+        "webp": "51ff47de5a19b5310b9ab7b2aff9add8986796e5610a5febc25aebd4d4b1abf1"
+      },
+      "pdfBytes": 408429,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-child-at-bookshelf-black-and-white-clipart",
+      "meanRgbDifference": 6.2108
+    },
+    {
+      "id": "book-child-at-bookshelf-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "448746a09c318565a84965e0e5055bc9ad866cc89f51a523c2eef4569fa767f6",
+        "webp": "cb0531da7c145e0f561dd0b25d5f0715bc7e60da00f924d0cdae161abe1ac976"
+      },
+      "pdfBytes": 966929,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-child-at-bookshelf-decorative-clipart",
+      "meanRgbDifference": 2.9142
+    },
+    {
+      "id": "book-child-at-bookshelf-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "46455c0ec0ec3044e52604b54d11353964de2dfff0fd97423cd64ab129c4f51c",
+        "webp": "b3466b9aeb5778a3445391b90bab97c1acba59f65cf36741faad6da342277edb"
+      },
+      "pdfBytes": 983135,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-child-at-bookshelf-classic-clipart",
+      "meanRgbDifference": 6.3338
+    },
+    {
+      "id": "book-child-at-bookshelf-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "50b0865fec1497d043e0156dcfcb82100dcef5f6194b35407c07018657d9b8b0",
+        "webp": "77932498a2f8e70213483f39634754325d9fa0d3841f48e89a470f130e76481c"
+      },
+      "pdfBytes": 976216,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-child-at-bookshelf-playful-clipart",
+      "meanRgbDifference": 6.8724
+    },
+    {
+      "id": "book-child-at-bookshelf-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "0d94804fec14dc8ee6a0fd40234c26ca14828c7142be64e1e5f00b9cc1388607",
+        "webp": "0028a98b2744c621f4be8c9c89f209285fe44c7150ae9e1dd3f275385e9af17d"
+      },
+      "pdfBytes": 995207,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-child-at-bookshelf-ornate-clipart",
+      "meanRgbDifference": 6.0369
+    },
+    {
+      "id": "book-children-reading-together-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "4001de3650742a19a649ee01fa59ac0fb633778e886eefc66c562d9496b34a19",
+        "webp": "22c5d4acfdbce25d7ff15566705f4a763e8f80fa183e0a2331ffd5f34bcf307a"
+      },
+      "pdfBytes": 385802,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-children-reading-together-black-and-white-clipart",
+      "meanRgbDifference": 7.109
+    },
+    {
+      "id": "book-children-reading-together-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "1e0908422c3ba9e66cf38c1475c8b189735704d09d38383ca5fe6b79efc0dfc7",
+        "webp": "7a0f6769046444890298b4086b8a9e34ca920ee3fa125f80231a68fce97d82b6"
+      },
+      "pdfBytes": 999370,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-children-reading-together-ornate-clipart",
+      "meanRgbDifference": 5.8684
+    },
+    {
+      "id": "book-children-reading-together-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "8e108797d108ffd9631a8a20a52517aaa24cf9e02145665927c4e5128ca4224e",
+        "webp": "139f27752808f36e8f8c29172844a9ffe06e94db342e9f5af0384d132e4406e7"
+      },
+      "pdfBytes": 972258,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-children-reading-together-classic-clipart",
+      "meanRgbDifference": 5.8818
+    },
+    {
+      "id": "book-children-reading-together-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "d5fdf33f33b355b6b40eef91238fc98d03d991f47009988999b272589bd62182",
+        "webp": "48e4ac90737097b7db31d5d39b24d3411c44343aa0e965c2dd235c2c89b66f61"
+      },
+      "pdfBytes": 962107,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-children-reading-together-playful-clipart",
+      "meanRgbDifference": 6.3713
+    },
+    {
+      "id": "book-children-reading-together-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "6bb2d3d61cc038c74af5777e38fb892ffe06b8a276047bb0f97c86ba08030d10",
+        "webp": "d2dbffc6e181f0806d95688832678aca5c2249b67cc4465277824e22e8f6ca22"
+      },
+      "pdfBytes": 952233,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-children-reading-together-decorative-clipart",
+      "meanRgbDifference": 6.6796
+    },
+    {
+      "id": "book-girl-reading-books-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "fdf7fff72988956b289a98c39173df9347e97bf0c28ed8bbbbe86ceee30ad577",
+        "webp": "67ac01723cc49dfbf71f4cbecfa6470932a83342866ad18cfc9218cbb99fc10e"
+      },
+      "pdfBytes": 372886,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-girl-reading-books-black-and-white-clipart",
+      "meanRgbDifference": 5.3095
+    },
+    {
+      "id": "book-girl-reading-books-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "ff8a5bac3bb51bc47891202772f5712e989483cc4da0f1d97c2059817de70c26",
+        "webp": "31f30ca62a199185b82a182ef082e476903ce3a349f7fa66ea92654d6e26ba64"
+      },
+      "pdfBytes": 945666,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-girl-reading-books-decorative-clipart",
+      "meanRgbDifference": 5.0834
+    },
+    {
+      "id": "book-library-books-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "273cd3fcabe1d46eba3e269bcbc9b33fb82a2d9bf3d3ca0e0b44b4536ff9361b",
+        "webp": "31b7ceda9dd219cdd2cd0c54897db4eec4f8f384e7132944171c6897ac0d929d"
+      },
+      "pdfBytes": 364931,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-library-books-black-and-white-clipart",
+      "meanRgbDifference": 7.365
+    },
+    {
+      "id": "book-girl-reading-books-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "c3302e4fd9f7418affbb82759c06a9005dbae3422eee2ef58f7459b2190bc51c",
+        "webp": "3038f47bffc7d6f29b4b539f276352509be4f567295e8f26f6827832eaccbff3"
+      },
+      "pdfBytes": 978616,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-girl-reading-books-classic-clipart",
+      "meanRgbDifference": 5.3878
+    },
+    {
+      "id": "book-girl-reading-books-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "32f70358fe9cc0a4758339849b64f22548e2d3812590b9bb9bdf538d13e49f95",
+        "webp": "1ac90791884bc4d645b29b5bbd0ed673176eb2ff82a14e50026dd11076e7f3b1"
+      },
+      "pdfBytes": 995172,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-girl-reading-books-playful-clipart",
+      "meanRgbDifference": 5.6778
+    },
+    {
+      "id": "book-girl-reading-books-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "8ac8ce55097dcbdd532e4bac567f9d52a356742ddc4ddd294f6f3aad398259fd",
+        "webp": "2e7fe1c9a77a0686a502fc65ae2e95a5d843619ffd7e4a653d3a1bafdc03e72f"
+      },
+      "pdfBytes": 966309,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-girl-reading-books-ornate-clipart",
+      "meanRgbDifference": 5.7942
+    },
+    {
+      "id": "book-library-books-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "1baec1e861e89b8d4ee2dacac9ee2c29ab083b65093c52b92d02f5da087ba318",
+        "webp": "534dc156e8fa602151b848fe8689216d513589ee94732655c29c9b6d49df2000"
+      },
+      "pdfBytes": 983928,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-library-books-classic-clipart",
+      "meanRgbDifference": 7.3168
+    },
+    {
+      "id": "book-library-books-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "f40af7cc02db7e85acf346d52be71f4b88d4bc83c7c9380f741350dd43573e23",
+        "webp": "c9ff50b39baaa743b4560268516772b0d22e3270fcb8e2b4046c6c4fdb0b212c"
+      },
+      "pdfBytes": 988079,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-library-books-decorative-clipart",
+      "meanRgbDifference": 6.5968
+    },
+    {
+      "id": "book-library-books-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "421c41099d1da2a9ed36376207f9306f377ec441d8d892cf840e9da127134a8c",
+        "webp": "769bd3f0c320ceb98b359bad286fdc3cbaf7e490f24c7dea2d352c88fc900a7c"
+      },
+      "pdfBytes": 976437,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-library-books-playful-clipart",
+      "meanRgbDifference": 7.3993
+    },
+    {
+      "id": "book-library-books-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "972cd88997fab47102442c64e1d6c543e0aea7e8f1d2c6267f5f5815714cc4f6",
+        "webp": "447b495801ad9b46ea10f6fc5beb705e62a6a13fd1a3e9878b9c174038307237"
+      },
+      "pdfBytes": 954321,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-library-books-ornate-clipart",
+      "meanRgbDifference": 2.8744
+    },
+    {
+      "id": "book-open-book-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "ca4602041ee6786d4c3fe165a2861bda2de37f50ae668f27a02081dbce86879c",
+        "webp": "683d94b9e595896b4fc0cb6adf3e34662948b4368e3a85a92c237e80fb9090f6"
+      },
+      "pdfBytes": 277009,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-open-book-black-and-white-clipart",
+      "meanRgbDifference": 4.2518
+    },
+    {
+      "id": "book-open-book-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "b872e066ca3b3cf86b76087a6c01f2af3f3c8f5c7f3581812bba580645fd2c71",
+        "webp": "d705ecd2f60aaf064845060ef4017ea69b50e6ad0614cef9a7b94a276161174c"
+      },
+      "pdfBytes": 922103,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-open-book-classic-clipart",
+      "meanRgbDifference": 3.3639
+    },
+    {
+      "id": "book-open-book-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "597dd6cabf5700d125a488caaad871feae8eb88b4c884deaba8c85478b13783c",
+        "webp": "194ccc515cc21c1738b89847578ec467b48cd20a27562607091e2c8937ba7fcb"
+      },
+      "pdfBytes": 996595,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-open-book-decorative-clipart",
+      "meanRgbDifference": 3.4623
+    },
+    {
+      "id": "book-open-book-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "5c4e6be41e0092785c06415f4871dd44fd3830b37fed399ee227476ca1fae3f9",
+        "webp": "1f4c52d06a93aafcb1efe33e2a97394c0b82fa3357db2eb728ede29245a1ab13"
+      },
+      "pdfBytes": 974195,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-open-book-ornate-clipart",
+      "meanRgbDifference": 3.7974
+    },
+    {
+      "id": "book-stack-of-books-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "a4d9e103a31c1ba865b4d846099d30dfc1ebf7e21ce87cd3390cfc41a7c9b0ce",
+        "webp": "14ae7202d2f5cb578e6248e26da92f084ad8ef4932c50ef8edc5a800d4255a1b"
+      },
+      "pdfBytes": 344695,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-stack-of-books-black-and-white-clipart",
+      "meanRgbDifference": 6.2095
+    },
+    {
+      "id": "book-open-book-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "66a2ae907b202d9a7bbdb07e2391ddb00ad3a48d21a39720fcd929f5e314742e",
+        "webp": "4907091dfe3598f1d0ba908262d2aa12df6d3fe841c1b37fdee52ec069ea942b"
+      },
+      "pdfBytes": 992831,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-open-book-playful-clipart",
+      "meanRgbDifference": 4.7363
+    },
+    {
+      "id": "book-stack-of-books-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "19cb9361376912041e40a7da653c9adba10118038763a097c28e8ef3a540d038",
+        "webp": "772d29a8efa0d64a1e39b9f5c1307d1660f2a8b53052d68aefe73fd37c3a250a"
+      },
+      "pdfBytes": 954457,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-stack-of-books-decorative-clipart",
+      "meanRgbDifference": 2.4081
+    },
+    {
+      "id": "book-stack-of-books-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "834ab3f7abe3fce270e63d7a9b1ae762ab86434cee7f15229ef8454d18b602b1",
+        "webp": "a85cae6772d38f06d3e0a5436527859e63616ac8aa2f95f570fe81fa8f0ef45a"
+      },
+      "pdfBytes": 990687,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-stack-of-books-classic-clipart",
+      "meanRgbDifference": 6.7304
+    },
+    {
+      "id": "book-stack-of-books-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "30bf2faae5f46ac3be01be88ef83859922840fbf2d128577b2d8dc91e17dd370",
+        "webp": "d95f43341a7ccc95aef9da87139eeeaf4d8924d83af2c9e6510366aedda76e27"
+      },
+      "pdfBytes": 979143,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-stack-of-books-ornate-clipart",
+      "meanRgbDifference": 5.7842
+    },
+    {
+      "id": "book-stack-of-books-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "38386220150dd89def0e042fdbaa54ddd1a9d4f15e24bf09df4a09b95d321946",
+        "webp": "0353eba3e6f8abbaa3fae0eff83bf340824564315d17f3a0169ff275cd2eb0a2"
+      },
+      "pdfBytes": 971067,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-stack-of-books-playful-clipart",
+      "meanRgbDifference": 2.5343
+    },
+    {
+      "id": "book-storybook-with-stars-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "8621295f4e2d48054aa815bb46f886a160c2ccd144bda823afcdd89d022ec18c",
+        "webp": "2b21dfcbe8932313ba74cf03c4f7574472f5622655f7f1ccbb02dc42f7c217ba"
+      },
+      "pdfBytes": 358229,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-storybook-with-stars-black-and-white-clipart",
+      "meanRgbDifference": 4.6002
+    },
+    {
+      "id": "book-storybook-with-stars-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "5af2cc03c8df85b00fb3893c9e3c22e919751d9278d6add2090a17ef73189fac",
+        "webp": "d0aed06c81113212ee32bb45bf3d0d88f3dbe20390206a00eb3212cd9d6be164"
+      },
+      "pdfBytes": 950301,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-storybook-with-stars-decorative-clipart",
+      "meanRgbDifference": 3.9701
+    },
+    {
+      "id": "book-storybook-with-stars-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "bb4e50a51cc14f8070e67ef9b4c8f49f18e3e6860270cb33c8770a1270ab051d",
+        "webp": "838a86493c4ca653a85921c3c2f43ca3ac96a8c931fe559ad7791ae4e0c5a3b9"
+      },
+      "pdfBytes": 985582,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-storybook-with-stars-classic-clipart",
+      "meanRgbDifference": 4.0995
+    },
+    {
+      "id": "book-storybook-with-stars-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "85618898872d6c703522fd95177667cb163e477d7bca8ff13c1a334d78893649",
+        "webp": "6d0e9c5491b0f05e7d3883348d8376d30cda671dd904d6f9c8ec0b621d514cfa"
+      },
+      "pdfBytes": 984724,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-storybook-with-stars-playful-clipart",
+      "meanRgbDifference": 4.6634
+    },
+    {
+      "id": "book-storybook-with-stars-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "6781328fef3b380f45d62037e422336c68eeaa6fa5a993b797e7eca6e9ff4b5b",
+        "webp": "f6a5c355be98d4dab3a612690624a8ed46d44eac3dbb97cd5d4040999a605024"
+      },
+      "pdfBytes": 980703,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-storybook-with-stars-ornate-clipart",
+      "meanRgbDifference": 4.4029
+    },
+    {
+      "id": "book-with-glasses-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "bfd03a034e7dedae69805e32afa9738cf3a8b974fcb2ef9b53fa44ed4400933b",
+        "webp": "9ad3d1a774477d0856d5f8f98a39e1fddb2b511f87e4ddb1105931dc52af614a"
+      },
+      "pdfBytes": 338752,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-with-glasses-black-and-white-clipart",
+      "meanRgbDifference": 4.5147
+    },
+    {
+      "id": "book-with-glasses-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "df4884e54e9dffedce716fd53d66a84645a8f269e4d8ebbbde39b75829260cea",
+        "webp": "84ac67341136c0b86d1328f9812e973cb0d311050d36b4697d8860ba516db7b7"
+      },
+      "pdfBytes": 994199,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-with-glasses-classic-clipart",
+      "meanRgbDifference": 4.6856
+    },
+    {
+      "id": "bookworm-reading-black-and-white-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "986d93062cf4fb71c0898c4867bcb8c25c2c8717c4d2a3a9533b770733d7053e",
+        "webp": "86f2c31c00e6b5ae4f630d96f1e1be552f7abca32ec763f5002f3d368944c8ea"
+      },
+      "pdfBytes": 317373,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "bookworm-reading-black-and-white-clipart",
+      "meanRgbDifference": 4.847
+    },
+    {
+      "id": "book-with-glasses-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "17d5c1fbc36cab944c22cc5f9fcb39de7363b58f2dbf7709a28462a4433bce24",
+        "webp": "c36b8238a40cfca1eeafc9b80d47d537be373c50913497ca7ced1c9eaf9938d8"
+      },
+      "pdfBytes": 950206,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-with-glasses-ornate-clipart",
+      "meanRgbDifference": 5.1141
+    },
+    {
+      "id": "book-with-glasses-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "630f0fcbeba6dc261480b4db3c98b6825248566865985eb197feeb0205688079",
+        "webp": "57768dbd77fddca8bc33c12c6d11087f959277694122bafb38969438f7837d86"
+      },
+      "pdfBytes": 982545,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-with-glasses-decorative-clipart",
+      "meanRgbDifference": 5.3516
+    },
+    {
+      "id": "book-with-glasses-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "ba61c226ecc80e418ff11d72b4991f61719fcb7c25891c48063600654eb01fe9",
+        "webp": "8d1f9c4db26aa254b56cec4a2cbff8d9a29116752b297b722c5ae3aa36a544d3"
+      },
+      "pdfBytes": 956272,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "book-with-glasses-playful-clipart",
+      "meanRgbDifference": 5.4405
+    },
+    {
+      "id": "bookworm-reading-decorative-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "eb3f147fc274875fd775367856fdd5a0e9077d2a7ecb4322ba9a492599c4e193",
+        "webp": "da44d8ee38ff9330bd8e5635e59ab112e46fe96be031bc74293b1c1de6eab146"
+      },
+      "pdfBytes": 995254,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "bookworm-reading-decorative-clipart",
+      "meanRgbDifference": 5.6222
+    },
+    {
+      "id": "bookworm-reading-classic-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "07be80c5e23bf17bb7bed0bbba027e6b6a7634107e8dcac882ac0a5f0c23acac",
+        "webp": "e3eb14dd075bd0881e9c542c0ac02e8c3a0247001b81430023baa0d4e3faa69a"
+      },
+      "pdfBytes": 979162,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "bookworm-reading-classic-clipart",
+      "meanRgbDifference": 5.5111
+    },
+    {
+      "id": "bookworm-reading-ornate-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "79198ec580f79108f45b27db75b7d75c9d5d999f18d68e58320e046dd14b247f",
+        "webp": "30b6ae954aaf96cf412439a9762524d30fed4c6ef3d5a2c7c1578b629bc6c5fd"
+      },
+      "pdfBytes": 955778,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "bookworm-reading-ornate-clipart",
+      "meanRgbDifference": 5.806
+    },
+    {
+      "id": "bookworm-reading-playful-clipart",
+      "topic": "book",
+      "hashes": {
+        "pdf": "303762f8cd80327db286e07d450aa582e36e14a416e6868f0facd9b43f2cc74b",
+        "webp": "2f09919a8a1b6941207d88fcf645ba2d8498c5d8c4b1b42aea05a0a12009f0d2"
+      },
+      "pdfBytes": 963821,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "bookworm-reading-playful-clipart",
+      "meanRgbDifference": 5.9525
+    }
+  ]
+}

@@ -21,6 +21,10 @@ run('scripts/restore-assets.mjs');
 readPublication(root);
 run('node_modules/astro/bin/astro.mjs', ['check']);
 run('node_modules/astro/bin/astro.mjs', ['build']);
+// HTML leaves Pages only after each page is uploaded and read back from R2.
+const catalogCollection = 'owner-book-pack-2026-10-24';
+run('scripts/catalog-pages/upload.mjs', [catalogCollection, '50']);
+env.CATALOG_OFFLOAD_COLLECTION = catalogCollection;
 run('scripts/security-headers.mjs');
 run(
   '--test',
@@ -34,4 +38,6 @@ run('node_modules/wrangler/bin/wrangler.js', [
   'dist',
   '--project-name',
   'ultraclipart',
+  '--branch',
+  'main',
 ]);
