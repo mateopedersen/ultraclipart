@@ -1,0 +1,868 @@
+{
+  "collection": "owner-school-pack-2026-10-24",
+  "count": 50,
+  "repairs": [
+    {
+      "id": "school-elementary-school-building-decorative-clipart",
+      "reason": "Owner ZIP contains a zero-byte WebP",
+      "sourcePdfSha256": "bfb89c7982e8ae21b9f8f62f6915440a29706d29e5abd62e8d13c00b446acd69",
+      "repairedWebpSha256": "7c05a9748188294768fb28acfd146ccb895b3872b262058d79fbed5a5271efd1",
+      "renderCompositeMeanDifference": 0.044,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "school-elementary-school-building-ornate-clipart",
+      "reason": "Owner ZIP contains a zero-byte WebP",
+      "sourcePdfSha256": "4e1b11b50b617e74f5ed8a06d399417db14264f5e71395af8544017dcf855c5d",
+      "repairedWebpSha256": "8c9a37d0efdf62884babd10d43140fb4ca1ce2b4de51817967019354337e3cdd",
+      "renderCompositeMeanDifference": 0.044,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "school-science-class-ornate-clipart",
+      "reason": "Owner ZIP contains a zero-byte WebP",
+      "sourcePdfSha256": "43ed1b06218a01fa8391fffbaf34d2ee84059d85406efcc55913c69a97daf002",
+      "repairedWebpSha256": "aba7ecc7ee554dff21adbba4afcf852267fa44a250508a044949ba2b7bb025d1",
+      "renderCompositeMeanDifference": 0.062,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "school-students-reading-in-library-ornate-clipart",
+      "reason": "Owner ZIP contains a zero-byte WebP",
+      "sourcePdfSha256": "97dae0d8b3e2b47187100c7047552e84cb0e6fbba555dd59bcbf12057d71c1f0",
+      "repairedWebpSha256": "7f8b9905d0dd773f9f5e8e6931eb3c8e60bbe491886cb3d428a53a3d783e17b8",
+      "renderCompositeMeanDifference": 0.099,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "school-students-reading-in-library-playful-clipart",
+      "reason": "Owner WebP transparency differs from matching PDF mask",
+      "sourcePdfSha256": "a287c910f15aadf78b0f965ae11ad3c35f0248d0bf1dc3b3d2c6075b0e2d71e6",
+      "repairedWebpSha256": "f41efb0ba0b84c7a9680955891360620af26b28114a3f0e87aafc5d90d421466",
+      "renderCompositeMeanDifference": 0.064,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    },
+    {
+      "id": "school-teacher-teaching-students-decorative-clipart",
+      "reason": "Owner ZIP contains a zero-byte WebP",
+      "sourcePdfSha256": "575203b8f5a4ed972f8f9944ea976925ecb16fb23a5b041c4511c8e52358481f",
+      "repairedWebpSha256": "491bb92eda5f05af28bcbbeb4bdc2e08f4286207e294a079c12a32562d5f403b",
+      "renderCompositeMeanDifference": 0.136,
+      "method": "Native-size Poppler PDF render; original PDF alpha mask; lossless WebP"
+    }
+  ],
+  "archives": [
+    {
+      "topic": "school",
+      "source": "source.zip",
+      "bytes": 69454210,
+      "sha256": "23157b6504dfb63f17d8cbae9b9af7610f9fd8aff20ecd76deb1784673225654",
+      "pairs": 50
+    }
+  ],
+  "screenReview": "PASS",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false,
+  "rows": [
+    {
+      "id": "school-backpack-filled-with-pencils-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "a58df2477a2df449b00dc0a639352676723321451cf5e009a18ab2a124b33f33",
+        "webp": "c7e8d0aa0dff9489aa918309b2f938b9b8502345bae22e6dbd81fe87ab85f453"
+      },
+      "pdfBytes": 322980,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-backpack-filled-with-pencils-black-and-white-clipart",
+      "meanRgbDifference": 6.8304
+    },
+    {
+      "id": "school-backpack-filled-with-pencils-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "8fca112fc58087cc6c4444bddea00612c64b13f93396788186d63b6bdf88f59e",
+        "webp": "367f62988cc7e2314d383f6baa45c06f020ce8d5988a7e9515d58a511de28b9f"
+      },
+      "pdfBytes": 995271,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-backpack-filled-with-pencils-ornate-clipart",
+      "meanRgbDifference": 6.7248
+    },
+    {
+      "id": "school-backpack-filled-with-pencils-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "b9b94246704df1d06588447bc2503b72cff0c54eab64fc7c08272267991cf810",
+        "webp": "3c135ace06155b3c53574b1e9f84eea74296d928a73ad9f05029feb6c4279d0d"
+      },
+      "pdfBytes": 977544,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-backpack-filled-with-pencils-classic-clipart",
+      "meanRgbDifference": 7.6066
+    },
+    {
+      "id": "school-backpack-filled-with-pencils-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "e20e332663e9ed7252414e3a820cacdab68e609020aef35af7c8c44c755b21a5",
+        "webp": "a2179974cd85c8eaf60fd79736cc3fe875776248612e391c0b390e3ea86140b7"
+      },
+      "pdfBytes": 963157,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-backpack-filled-with-pencils-decorative-clipart",
+      "meanRgbDifference": 6.8783
+    },
+    {
+      "id": "school-backpack-filled-with-pencils-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "5dae777222f5349371578f27a0463ae327b6b7bba40061f8563528287be82868",
+        "webp": "7027934f046f1cc28b6ec2c67df02223a91670ed526e019facd33a44b3e2130a"
+      },
+      "pdfBytes": 966452,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-backpack-filled-with-pencils-playful-clipart",
+      "meanRgbDifference": 6.2427
+    },
+    {
+      "id": "school-elementary-school-building-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "126bab638661f93fd28d4463a1fc2686f8696f6963623e7838828279e95e95a2",
+        "webp": "dd19e2e496414b5d10f3d5553a6db12e4c70dec7a690f8d5cea0cd309a7dc644"
+      },
+      "pdfBytes": 295931,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-elementary-school-building-black-and-white-clipart",
+      "meanRgbDifference": 6.3851
+    },
+    {
+      "id": "school-elementary-school-building-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "e350c02b5ab73af7d4ee224f8e6d841fc3734a8f77487d4d0fb271514ef315d8",
+        "webp": "7dbae58573a14023c05af194cc8e3929f3fc42d465b3ccf406580a2da49acb53"
+      },
+      "pdfBytes": 980020,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-elementary-school-building-classic-clipart",
+      "meanRgbDifference": 5.6779
+    },
+    {
+      "id": "school-elementary-school-building-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f834a544258aac4a45d8fb2ae7b74c6e7cdd737e1d7df4776f0e83f7a5410686",
+        "webp": "059de0c6f7beecd79f8f47ba1c602328bf40e42a12a541117bfc7036f75773dd"
+      },
+      "pdfBytes": 986107,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-elementary-school-building-playful-clipart",
+      "meanRgbDifference": 5.2383
+    },
+    {
+      "id": "school-elementary-school-building-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "bfb89c7982e8ae21b9f8f62f6915440a29706d29e5abd62e8d13c00b446acd69",
+        "webp": "7c05a9748188294768fb28acfd146ccb895b3872b262058d79fbed5a5271efd1"
+      },
+      "pdfBytes": 994654,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-elementary-school-building-decorative-clipart",
+      "meanRgbDifference": 2.3328
+    },
+    {
+      "id": "school-playground-recess-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "e7b22558095fe35f0d11d749ec599f91f7231a13db25ae2d5dfc2cbe8bfd5a94",
+        "webp": "4bfaaacc74b43604b582e15e82001d8b201ee3136e58c8233376fc1a759f78ea"
+      },
+      "pdfBytes": 401856,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-playground-recess-black-and-white-clipart",
+      "meanRgbDifference": 6.1252
+    },
+    {
+      "id": "school-elementary-school-building-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "4e1b11b50b617e74f5ed8a06d399417db14264f5e71395af8544017dcf855c5d",
+        "webp": "8c9a37d0efdf62884babd10d43140fb4ca1ce2b4de51817967019354337e3cdd"
+      },
+      "pdfBytes": 964885,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-elementary-school-building-ornate-clipart",
+      "meanRgbDifference": 2.3437
+    },
+    {
+      "id": "school-playground-recess-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "6ba86b7c6f244eba911383d45fc339a0fb900e930ad1a607158de5da3a416d05",
+        "webp": "20ba67d2942e4a697f780fe764037e4d454ebad017f0d6b180e9a05918364ad7"
+      },
+      "pdfBytes": 998694,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-playground-recess-classic-clipart",
+      "meanRgbDifference": 5.9976
+    },
+    {
+      "id": "school-science-class-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "0f037b558612235e410c299713611e4bb0a482bc2b41239af247cad0159df427",
+        "webp": "629f58c39866f78894c2029595cca2637b899f2d94d4409ce38eefa64f584759"
+      },
+      "pdfBytes": 337216,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-science-class-black-and-white-clipart",
+      "meanRgbDifference": 6.4313
+    },
+    {
+      "id": "school-playground-recess-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "ebb48975d3bd5a8efb87a872b8f14ded0fc5467989dfeb44504f0adbb077c009",
+        "webp": "683e67977e8e2e45feafc79d0a487acdc4a5cfdbef552e538524d16cd2315182"
+      },
+      "pdfBytes": 991223,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-playground-recess-ornate-clipart",
+      "meanRgbDifference": 7.0069
+    },
+    {
+      "id": "school-playground-recess-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "34d4488813975d29172c1a7cadbc294b4398d833cb529efbf2ba5b3e85596c7b",
+        "webp": "5ff6620a480556be692500043724861486f67e3c86ef47af0667090c03dcfd81"
+      },
+      "pdfBytes": 966226,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-playground-recess-decorative-clipart",
+      "meanRgbDifference": 7.684
+    },
+    {
+      "id": "school-playground-recess-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "807b8066d0ce56241c64654247f7f4bc914e11879d6f08b6c9613b29094a719f",
+        "webp": "ef7b44d7647b64885fe943bc453f00c1cbf2a0c548521a5ccf21be46ae127c99"
+      },
+      "pdfBytes": 977812,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-playground-recess-playful-clipart",
+      "meanRgbDifference": 6.8536
+    },
+    {
+      "id": "school-science-class-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "d0173b8178e50f35304aa6a97fd1a272d83cbf145acab77956504fb891a7a6f9",
+        "webp": "4d6b2b5ec4ca2dd061d0e221f4f21b87c55e51a1f75c98cb91c9a9d794769214"
+      },
+      "pdfBytes": 951688,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-science-class-classic-clipart",
+      "meanRgbDifference": 6.7652
+    },
+    {
+      "id": "school-students-graduation-day-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "d8a5b323014456a0f93ad6ef790739ba930906839f498cc5bd95641ffbf28189",
+        "webp": "d0f714ba5b5533bea17882d05d6cf1787bbe1615ec5fc82bd41d747879665223"
+      },
+      "pdfBytes": 344312,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-graduation-day-black-and-white-clipart",
+      "meanRgbDifference": 7.3155
+    },
+    {
+      "id": "school-science-class-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f780affb1e7376a1f93b194103e8c8f5b844b0f859add895042e2331b1a30e34",
+        "webp": "08c4785fee4d104d251e2839cf777c9680672a75f6f648c84484a1345ad8f385"
+      },
+      "pdfBytes": 956542,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-science-class-decorative-clipart",
+      "meanRgbDifference": 6.2975
+    },
+    {
+      "id": "school-science-class-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "43ed1b06218a01fa8391fffbaf34d2ee84059d85406efcc55913c69a97daf002",
+        "webp": "aba7ecc7ee554dff21adbba4afcf852267fa44a250508a044949ba2b7bb025d1"
+      },
+      "pdfBytes": 991965,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-science-class-ornate-clipart",
+      "meanRgbDifference": 2.2012
+    },
+    {
+      "id": "school-science-class-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "342b86846426d5aa8b8e70a6b74a6f69f04a22ffafb8728e7fefe9778094a9db",
+        "webp": "645cf6c9a1986e1dee97ea0636f7619104747b5c786bbafb4f4e528474a033b6"
+      },
+      "pdfBytes": 996935,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-science-class-playful-clipart",
+      "meanRgbDifference": 6.9859
+    },
+    {
+      "id": "school-students-graduation-day-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "83142f53270cb7b86ef11d2952876fb225e963ea7d54f0c2a9283b84d30a24e8",
+        "webp": "10688f75bdd3df22fb9b50322b46c5bbcb400936785ab58ff51bc53bedc0cbbe"
+      },
+      "pdfBytes": 958101,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-graduation-day-classic-clipart",
+      "meanRgbDifference": 6.3661
+    },
+    {
+      "id": "school-students-reading-in-library-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f650cf18e323551a1b846aa7b876ba736418ea1e3ebafe50126e0d1de73a01d3",
+        "webp": "1c698105865d0bb5dbe0a8ca7b5411551ca2af0ceddd6b27544ff27d08a28001"
+      },
+      "pdfBytes": 442358,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-reading-in-library-black-and-white-clipart",
+      "meanRgbDifference": 7.6112
+    },
+    {
+      "id": "school-students-graduation-day-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f38c7de2cfc1889c5d7ea4c90b26d336dcba475a4aeec0436d6aa95d152ed490",
+        "webp": "9a9169cfc9bb17695e7a4ce953d7fb10bd958e29ba2e43ec40e1497b680d2fc8"
+      },
+      "pdfBytes": 961450,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-graduation-day-decorative-clipart",
+      "meanRgbDifference": 6.8025
+    },
+    {
+      "id": "school-students-graduation-day-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "26b7967381beae9b74d1cc4db815040d8d993b8f3c16365af6b4456c87db71da",
+        "webp": "31e5baf2545c83e9a10577ca47114fd1146ed0c4157a86f2a0fce271e24dc8f1"
+      },
+      "pdfBytes": 971852,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-graduation-day-playful-clipart",
+      "meanRgbDifference": 6.8554
+    },
+    {
+      "id": "school-students-graduation-day-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "cde04ba6f845794a548d103b0d2703c71aa79337401353c899b9361f53ea5b7a",
+        "webp": "40d08a6828cc3d36b97d9366e288caef3ddcef3424f616528dfba43f7078ba51"
+      },
+      "pdfBytes": 993990,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-graduation-day-ornate-clipart",
+      "meanRgbDifference": 6.7115
+    },
+    {
+      "id": "school-students-reading-in-library-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f037a9e2b9aff79c29fbe5db7b9e28a826b820ca35585d8234af34e6a1370541",
+        "webp": "8a7e20b08250c3a1854c0793cb2a7b68a07c6d966bb7bc578349d8369e86e59c"
+      },
+      "pdfBytes": 981216,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-reading-in-library-classic-clipart",
+      "meanRgbDifference": 7.022
+    },
+    {
+      "id": "school-students-walking-to-school-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "751d746a2ba95a7a81d38ae815a49d8908233d9405a4eab1fbe38d9b88f7901c",
+        "webp": "87094cfbb2f3778ce0efb2f1c0c287b7501a6f6ac56f3ca4cb1d1cd6dece529f"
+      },
+      "pdfBytes": 379436,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-walking-to-school-black-and-white-clipart",
+      "meanRgbDifference": 6.6605
+    },
+    {
+      "id": "school-students-reading-in-library-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "97dae0d8b3e2b47187100c7047552e84cb0e6fbba555dd59bcbf12057d71c1f0",
+        "webp": "7f8b9905d0dd773f9f5e8e6931eb3c8e60bbe491886cb3d428a53a3d783e17b8"
+      },
+      "pdfBytes": 989001,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-reading-in-library-ornate-clipart",
+      "meanRgbDifference": 2.6561
+    },
+    {
+      "id": "school-students-reading-in-library-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "5b3ff6c9ee79e2c09bc99747300c064e25dae2b14507ffb8679709bc59137518",
+        "webp": "59da4233fb55de53b5f29d86eb6e56182c4a35d11457ea51cdb95a9adaccdd38"
+      },
+      "pdfBytes": 978966,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-reading-in-library-decorative-clipart",
+      "meanRgbDifference": 7.3214
+    },
+    {
+      "id": "school-students-reading-in-library-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "a287c910f15aadf78b0f965ae11ad3c35f0248d0bf1dc3b3d2c6075b0e2d71e6",
+        "webp": "f41efb0ba0b84c7a9680955891360620af26b28114a3f0e87aafc5d90d421466"
+      },
+      "pdfBytes": 926634,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-reading-in-library-playful-clipart",
+      "meanRgbDifference": 3.0887
+    },
+    {
+      "id": "school-students-walking-to-school-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "a244b2b00c64716c13a3bcaa0826cb0bdee49611eaea3b220f3628fead888eb2",
+        "webp": "b57ca8d98c46840d52dac1bf20c5fd765be099eaf43cb2b777d3cbad0d71bae7"
+      },
+      "pdfBytes": 953958,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-walking-to-school-classic-clipart",
+      "meanRgbDifference": 5.8594
+    },
+    {
+      "id": "school-teacher-in-classroom-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "779d4f2017b4219e8d68895e77d7aa0e181a9cece25a50c5c1686e4bcc962ee8",
+        "webp": "3fcf0920f3308ddc0be82c5949dbf0a427b4b1b1fded1fd8b034df9739974ae7"
+      },
+      "pdfBytes": 359125,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-in-classroom-black-and-white-clipart",
+      "meanRgbDifference": 6.7203
+    },
+    {
+      "id": "school-students-walking-to-school-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "3b0b5de2500ac245928de19cad9c3bf69ce2304cc6f3da6e081f9acfa8db54ee",
+        "webp": "6853b50eec475c0e2e8c85aadf362b2308af65de99c1b21f2ac3329746d26fff"
+      },
+      "pdfBytes": 962614,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-walking-to-school-decorative-clipart",
+      "meanRgbDifference": 5.7946
+    },
+    {
+      "id": "school-students-walking-to-school-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "79bd713239d72e8cb664ef0bbd0c3ed8b1d8e8c78c1891a4aa191a2b790fcbd4",
+        "webp": "f39ed6d4cc416fba0987fc4b2c5fd6b01c06203ea40a945c3a0475aba913584a"
+      },
+      "pdfBytes": 960078,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-walking-to-school-ornate-clipart",
+      "meanRgbDifference": 5.4554
+    },
+    {
+      "id": "school-students-walking-to-school-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "e366633e970ddb7bc2a970582ad0a6985f80f3c85bcb038fe954781e12d1700e",
+        "webp": "3d167a05a4bcf7f1e761e0b1accd5da203270e8b7a8c379eaac37be18c8dd596"
+      },
+      "pdfBytes": 986106,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-students-walking-to-school-playful-clipart",
+      "meanRgbDifference": 5.9455
+    },
+    {
+      "id": "school-teacher-in-classroom-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "43a47726064cf8f82a437929a295973e2e5e1222bc6259940750bb63e35160d6",
+        "webp": "1177f1315579af267a574de7c25315057b5d7d4af41f2b8cfebf84c2c0c62c4a"
+      },
+      "pdfBytes": 963391,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-in-classroom-classic-clipart",
+      "meanRgbDifference": 6.4427
+    },
+    {
+      "id": "school-teacher-teaching-students-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f80a69e0432a617e31bd6b1c648755de8243197adde08ccfcdcbc409d58f3223",
+        "webp": "9515b62c04b3e93d3e10cd7b1d4fe1a9fd8cb07c858da2d8049b876616e9068a"
+      },
+      "pdfBytes": 373678,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-teaching-students-black-and-white-clipart",
+      "meanRgbDifference": 6.7418
+    },
+    {
+      "id": "school-teacher-in-classroom-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "78e41176fd8b0882a01b192a945bc79462d29cd5e229311dca40fff09cbe78df",
+        "webp": "6a513d1d15109b264426ebcc68cff0880921869613629ec029bf0ff690ce016c"
+      },
+      "pdfBytes": 976655,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-in-classroom-decorative-clipart",
+      "meanRgbDifference": 7.4962
+    },
+    {
+      "id": "school-teacher-in-classroom-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "c0cde53b270ea73b966d434e3effcad5aea1bc42cb3ef74179c779e6bef25677",
+        "webp": "3803e6c5b1759b491b4f096713096f09424c66e369415f1e9a0e0db65e41a883"
+      },
+      "pdfBytes": 995935,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-in-classroom-ornate-clipart",
+      "meanRgbDifference": 6.5579
+    },
+    {
+      "id": "school-teacher-in-classroom-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "9097e887f51701d68a18551a9cad7732688873a372b2ba7177f24f9353014c96",
+        "webp": "e4ca52d01eb18ed0c735c179483df585680954750996a8d9c85b62e96063df1d"
+      },
+      "pdfBytes": 995828,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-in-classroom-playful-clipart",
+      "meanRgbDifference": 7.2522
+    },
+    {
+      "id": "school-teacher-teaching-students-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "169638098315e83e0c6887466ffeae03c94df9955a95af1ad82b0bc46c15554c",
+        "webp": "d952fe386b08f0f1a0f4ec67089686b5e04572a1e5a0d9060779a292116a1a2a"
+      },
+      "pdfBytes": 972341,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-teaching-students-classic-clipart",
+      "meanRgbDifference": 6.7748
+    },
+    {
+      "id": "school-yellow-school-bus-black-and-white-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "7b88903802be2bd6bbc94f09072c2358cb8d85298938e4d3d4044221e000eab9",
+        "webp": "2ed687b0435480c801880958db8d459c0d25905a34463dffd394e851f815c6b3"
+      },
+      "pdfBytes": 295178,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-yellow-school-bus-black-and-white-clipart",
+      "meanRgbDifference": 6.0933
+    },
+    {
+      "id": "school-teacher-teaching-students-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "575203b8f5a4ed972f8f9944ea976925ecb16fb23a5b041c4511c8e52358481f",
+        "webp": "491bb92eda5f05af28bcbbeb4bdc2e08f4286207e294a079c12a32562d5f403b"
+      },
+      "pdfBytes": 997047,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-teaching-students-decorative-clipart",
+      "meanRgbDifference": 2.3068
+    },
+    {
+      "id": "school-teacher-teaching-students-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "ad86daf246e2887a3c0c02d0cf0a72d1288325ec07f5227b8219d6de89973e81",
+        "webp": "66e42b7c85803d127b529fe2d6620b5ad4e197909b4d2167fddfaef7e8343afd"
+      },
+      "pdfBytes": 983429,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-teaching-students-ornate-clipart",
+      "meanRgbDifference": 6.1873
+    },
+    {
+      "id": "school-teacher-teaching-students-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "2adfdbe99a74b1f88c3c7a3fdf8a0cd1586d470c60c562fa8ee2364136244d3c",
+        "webp": "1a9eb34e12a1faa8d61016996a5dea91c57fd9feca2312a4f4fcd95193fbd63b"
+      },
+      "pdfBytes": 969200,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-teacher-teaching-students-playful-clipart",
+      "meanRgbDifference": 6.6013
+    },
+    {
+      "id": "school-yellow-school-bus-classic-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "26f427e75da93522c537daa9f0511634d920c4ecf3b437590e24e04f0e22cf1c",
+        "webp": "05b69b65a2eb740cceb063c64b1b1632c299b0bbe9cfb94895b55ce432402a5b"
+      },
+      "pdfBytes": 965661,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-yellow-school-bus-classic-clipart",
+      "meanRgbDifference": 5.4159
+    },
+    {
+      "id": "school-yellow-school-bus-decorative-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "f78cadfd2f8f0bd4845f41308d5b1a4fafe4f58efc08d1d410f5c51a5ce18868",
+        "webp": "0a510194b4efebbe22ba74527dfa3b44ef5ffe75c388bc2401b043d8ad222e9e"
+      },
+      "pdfBytes": 969118,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-yellow-school-bus-decorative-clipart",
+      "meanRgbDifference": 5.5733
+    },
+    {
+      "id": "school-yellow-school-bus-ornate-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "923616d9f0a323b9e2ace060ef8e7fc03a8e6f2ed6543b8185ef323d7682a347",
+        "webp": "817fcb5f02d01fe6378aa0f1b48ad5e540214a5d14799f70fef3b5efba29da8e"
+      },
+      "pdfBytes": 955577,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-yellow-school-bus-ornate-clipart",
+      "meanRgbDifference": 5.6778
+    },
+    {
+      "id": "school-yellow-school-bus-playful-clipart",
+      "topic": "school",
+      "hashes": {
+        "pdf": "2f01ebfe6b193be07cec3eb12785a87d414f4982805641b2ba4d5d8901e18644",
+        "webp": "dfff34d791a148a5e1ff0a9314aabc903fa1cec74d50c0001913fee2c1aff65d"
+      },
+      "pdfBytes": 961191,
+      "width": 1500,
+      "height": 1500,
+      "pdfAlphaExact": true,
+      "components": 4,
+      "ppi": 750,
+      "pairedWebp": "school-yellow-school-bus-playful-clipart",
+      "meanRgbDifference": 5.3767
+    }
+  ]
+}

@@ -117,8 +117,14 @@ jobs:
           done
           if [ '${{ matrix.engine }}' = chromium ]; then
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/cute-surprise.mjs
+            BASE_URL=http://127.0.0.1:4321 node tests/e2e/fruit-categories.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-2026-10-24 EXPECTED_ARTWORKS=550 EXPECTED_TOPICS=11 EVIDENCE_DIR=reports/fruit-gallery node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-expansion-2026-10-24 EXPECTED_ARTWORKS=1450 EXPECTED_TOPICS=29 EVIDENCE_DIR=reports/fruit-expansion node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-five-packs-2026-10-24 EXPECTED_ARTWORKS=250 EXPECTED_TOPICS=5 EVIDENCE_DIR=reports/fruit-five node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fire-leaf-two-packs-2026-10-24 EXPECTED_ARTWORKS=100 EXPECTED_TOPICS=2 EVIDENCE_DIR=reports/fire-leaf node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-school-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/school node tests/e2e/package-gallery.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-basketball-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/basketball node tests/e2e/package-gallery.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
             BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs

@@ -24,7 +24,7 @@ try {
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
     const artworkClear = await page.locator('.home-benefit').evaluateAll((cards) =>
       cards.every((card) => {
-        const image = card.querySelector('svg').getBoundingClientRect();
+        const image = card.querySelector('.home-benefit-art').getBoundingClientRect();
         const copy = card.querySelector('.home-benefit-label').getBoundingClientRect();
         return image.bottom <= copy.top || image.right <= copy.left || image.left >= copy.right;
       }),
