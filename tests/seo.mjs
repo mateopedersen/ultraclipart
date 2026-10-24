@@ -12,7 +12,7 @@ function list(dir) {
   );
 }
 const pages = built ? list(dist).filter((path) => path.endsWith('.html')) : [];
-const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}=["']([^"']*)["']`, 'i'))?.[1];
+const attribute = (tag, name) => tag.match(new RegExp(`\\b${name}=(["'])(.*?)\\1`, 'i'))?.[2];
 const tags = (text, tag) =>
   [...text.matchAll(new RegExp(`<${tag}\\b[^>]*>`, 'gi'))].map((match) => match[0]);
 const routeExists = (pathname) =>
