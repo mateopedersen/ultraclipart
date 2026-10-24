@@ -138,6 +138,7 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=keyboard node tests/e2e/collection.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=scanner node tests/e2e/collection.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=tablet node tests/e2e/collection.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=speaker node tests/e2e/collection.mjs
             fi
             if [ '${{ matrix.suite }}' = 'catalog-extra' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=earbuds ALL_RASTER=1 EVIDENCE_DIR=reports/earbuds-editor node tests/e2e/raster-editor.mjs
@@ -145,6 +146,7 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=keyboard ALL_RASTER=1 EVIDENCE_DIR=reports/keyboard-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=scanner ALL_RASTER=1 EVIDENCE_DIR=reports/scanner-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 node tests/e2e/raster-editor.mjs
             fi
