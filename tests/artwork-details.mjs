@@ -38,3 +38,15 @@ test('file sizes use honest binary units with safe missing-data handling', () =>
   assert.equal(formatFileSize(500), '500 B');
   assert.equal(formatFileSize(NaN), 'Size unavailable');
 });
+
+test('colored pencil and crayon artwork retain their distinct documented techniques', () => {
+  const sample = { style: 'Color', width: 1000, height: 1000 };
+  assert.equal(
+    artworkDetails({ ...sample, id: 'apple-and-dried-rings-crayon-clipart' }).style,
+    'Crayon illustration',
+  );
+  assert.equal(
+    artworkDetails({ ...sample, id: 'fox-colored-pencil-clipart' }).style,
+    'Colored pencil',
+  );
+});

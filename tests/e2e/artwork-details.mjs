@@ -4,15 +4,16 @@ import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
 const engine = process.env.UC_BROWSER || 'chromium';
+const detailOnly = process.env.UC_DETAIL_ONLY === '1';
 const browser = await { chromium, firefox, webkit }[engine].launch();
 const context = await browser.newContext();
-const page = await context.newPage();
+let page = await context.newPage();
 const output = `reports/artwork-details/${engine}`;
 await mkdir(output, { recursive: true });
 const report = { engine, layouts: [], accessibility: [], checks: [], errors: [] };
 page.on('pageerror', (error) => report.errors.push(error.message));
 try {
-  for (const width of [1920, 1440, 1321, 1251, 768, 390, 320]) {
+  for (const width of detailOnly ? [] : [1920, 1440, 1321, 1251, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 1000 });
     assert.equal((await page.goto(base + '/', { waitUntil: 'networkidle' })).status(), 200);
     await page.evaluate(() => document.fonts.ready);
@@ -26,6 +27,7 @@ try {
     );
     assert.ok(artworkClear, `Benefit illustrations must not cover text at ${width}`);
     const axe = await new AxeBuilder({ page })
+      .setLegacyMode(engine === 'webkit')
       .include('.home-benefits')
       .include('.site-header')
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
@@ -54,12 +56,32 @@ try {
     report.layouts.push({ page: 'home', width });
   }
   for (const width of [1440, 768, 390, 320]) {
-    await page.setViewportSize({ width, height: 1000 });
-    for (const id of ['koala-halloween-pumpkin-clipart', 'winter-arctic-fox-resting']) {
+    for (const id of [
+      'koala-halloween-pumpkin-clipart',
+      'winter-arctic-fox-resting',
+      'apple-and-dried-rings-crayon-clipart',
+    ]) {
+      // Isolate each case so viewport changes cannot cancel the previous page's
+      // responsive image loads while WebKit is tearing down its document.
+      page.removeAllListeners('pageerror');
+      await page.close();
+      page = await context.newPage();
+      page.on('pageerror', (error) => report.errors.push(error.message));
+      await page.setViewportSize({ width, height: 1000 });
       assert.equal(
         (await page.goto(`${base}/art/${id}/`, { waitUntil: 'networkidle' })).status(),
         200,
       );
+      // Warm lazy images before Axe creates its helper document. Otherwise
+      // WebKit may report cancelled helper-image loads as access-control errors.
+      await page.locator('img').evaluateAll(async (images) => {
+        await Promise.all(
+          images.map(async (image) => {
+            image.loading = 'eager';
+            await image.decode();
+          }),
+        );
+      });
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
       await expect(page.locator('main h1')).toHaveCount(1);
       await expect(page.locator('.art-ai-badge')).toHaveCount(
@@ -69,6 +91,20 @@ try {
         .locator('.detail-actions .download-option')
         .first()
         .getAttribute('href');
+      await expect(page.locator('.art-custom-color')).toHaveAttribute('data-picked', 'false');
+      await expect(page.locator('[data-apply-custom]')).toBeHidden();
+      await expect(page.locator('[data-custom-label]')).toHaveText('Choose your own shade');
+      await expect(page.locator('.download-size strong')).toHaveCount(2);
+      await page.locator('[data-bg="#b8d8ff"]').click();
+      assert.equal(
+        await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundColor),
+        'rgb(184, 216, 255)',
+      );
+      await page.locator('[data-bg="#23344d"]').click();
+      assert.equal(
+        await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundColor),
+        'rgb(35, 52, 77)',
+      );
       await page.locator('[data-bg="#ffffff"]').click();
       await expect(page.locator('[data-bg="#ffffff"]')).toHaveAttribute('aria-pressed', 'true');
       assert.equal(
@@ -77,6 +113,14 @@ try {
       );
       await page.locator('#preview-color').fill('#123456');
       await expect(page.locator('.art-custom-color')).toHaveAttribute('data-selected', 'true');
+      await expect(page.locator('[data-custom-label]')).toHaveText('#123456');
+      assert.equal(
+        await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundColor),
+        'rgb(18, 52, 86)',
+      );
+      await page.locator('[data-bg="#ffffff"]').click();
+      await expect(page.locator('.art-custom-color')).toHaveAttribute('data-selected', 'false');
+      await page.locator('[data-apply-custom]').click();
       assert.equal(
         await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundColor),
         'rgb(18, 52, 86)',
@@ -94,6 +138,7 @@ try {
       await page.getByText('Full file information', { exact: true }).click();
       await expect(page.locator('.artwork-technical')).toHaveAttribute('open', '');
       const axe = await new AxeBuilder({ page })
+        .setLegacyMode(engine === 'webkit')
         .include('.art-detail')
         .include('.artwork-facts')
         .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
@@ -108,9 +153,25 @@ try {
           .locator('.art-preview-controls')
           .screenshot({ path: `${output}/controls-${width}.png` });
         await page.locator('.artwork-facts').screenshot({ path: `${output}/facts-${width}.png` });
+        await page
+          .locator('.detail-actions')
+          .screenshot({ path: `${output}/downloads-${width}.png` });
+        await page
+          .locator('.art-detail-overview')
+          .screenshot({ path: `${output}/overview-${width}.png` });
       }
       report.layouts.push({ page: id, width });
       report.accessibility.push({ id, width, violations: 0 });
+      // Complete image requests before navigation; WebKit reports cancelled image
+      // loads as access-control errors when a lazy image is still starting up.
+      await page.locator('img').evaluateAll(async (images) => {
+        await Promise.all(
+          images.map(async (image) => {
+            image.loading = 'eager';
+            await image.decode();
+          }),
+        );
+      });
     }
   }
   assert.deepEqual(report.errors, []);
@@ -120,8 +181,8 @@ try {
     'Preview changes preserve original download URLs',
     'AI origin is displayed only with evidence',
     'Expanded technical file facts remain accessible',
-    'Header group spacing is consistent',
-    'Four linked illustrated benefit cards fit every viewport',
+    'Custom picker starts neutral and can reapply the last chosen color',
+    'Download sizes remain visible beside separate WebP and PDF explanations',
   ];
   report.status = 'passed';
 } finally {

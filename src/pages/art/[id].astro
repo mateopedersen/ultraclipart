@@ -83,19 +83,26 @@ const facts = artworkDetails(item);
         <button type="button" data-bg="#ffffff" aria-pressed="false">
           <span class="art-color-chip art-white" aria-hidden="true"></span>White
         </button>
-        <button type="button" data-bg="#e6eff9" aria-pressed="false">
-          <span class="art-color-chip art-blue" aria-hidden="true"></span>Soft blue
+        <button type="button" data-bg="#b8d8ff" aria-pressed="false">
+          <span class="art-color-chip art-blue" aria-hidden="true"></span>Blue
         </button>
-        <label class="art-custom-color" data-selected="false">
-          <input
-            aria-label="Custom preview background"
-            id="preview-color"
-            type="color"
-            value="#f0f5f1"
-          />
-          <span>Custom</span>
-        </label>
-        <p>Preview only — your download stays unchanged.</p>
+        <button type="button" data-bg="#23344d" aria-pressed="false">
+          <span class="art-color-chip art-dark" aria-hidden="true"></span>Dark
+        </button>
+        <div class="art-custom-color" data-selected="false" data-picked="false">
+          <label for="preview-color">
+            <span class="art-custom-symbol" aria-hidden="true"></span>
+            <span class="art-custom-copy">
+              <strong>Custom color</strong>
+              <span data-custom-label>Choose your own shade</span>
+            </span>
+            <input id="preview-color" type="color" value="#ffffff" />
+          </label>
+          <button type="button" data-apply-custom aria-pressed="false" hidden>
+            Use color
+          </button>
+        </div>
+        <p>Try a background to check the transparent edges. This changes the preview only.</p>
       </fieldset>
     </div>
     <section>
@@ -131,11 +138,20 @@ const facts = artworkDetails(item);
           <dt>Image resolution</dt>
           <dd>
             {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} px
+            <small>Width × height of the original image</small>
           </dd>
         </div>
         <div>
-          <dt>Included files</dt>
-          <dd>{item.pdf ? 'WebP image + printable PDF' : 'WebP image'}</dd>
+          <dt>Choose your download</dt>
+          <dd>
+            <span>WebP — {item.alpha ? 'transparent image' : 'digital image'}</span>
+            {item.pdf && <span>PDF — printable document</span>}
+            <small>
+              {item.pdf
+                ? 'Two separate files; choose either format below.'
+                : 'Save the image using the button below.'}
+            </small>
+          </dd>
         </div>
       </dl>
       <div class="detail-actions">
@@ -152,9 +168,12 @@ const facts = artworkDetails(item);
           <span class="download-copy">
             <strong>Download WebP</strong>
             <small>
-              {item.alpha ? 'Transparent image' : 'Image file'} ·{' '}
-              {formatFileSize(item.files.webp.bytes)}
+              {item.alpha ? 'Transparent image for digital projects' : 'Image for digital projects'}
             </small>
+          </span>
+          <span class="download-size">
+            <strong>{formatFileSize(item.files.webp.bytes)}</strong>
+            <small>File size</small>
           </span>
           <Icon name="download" size={18} />
         </a>
@@ -165,9 +184,11 @@ const facts = artworkDetails(item);
             </span>
             <span class="download-copy">
               <strong>Download PDF</strong>
-              <small>
-                {item.pdfPage} · {formatFileSize(item.files.pdf.bytes)}
-              </small>
+              <small>Printable document · {item.pdfPage}</small>
+            </span>
+            <span class="download-size">
+              <strong>{formatFileSize(item.files.pdf.bytes)}</strong>
+              <small>File size</small>
             </span>
             <Icon name="download" size={18} />
           </a>

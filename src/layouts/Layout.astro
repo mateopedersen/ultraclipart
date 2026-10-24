@@ -3,7 +3,7 @@ import '../styles/global.css';
 import AiBuilderMark from '../components/AiBuilderMark.astro';
 import '../styles/site-header.css';
 import HeaderIllustration from '../components/HeaderIllustration.astro';
-import { art } from '../lib/catalog';
+import { cuteSurpriseIndex } from '../lib/surprise-catalog';
 import { structuredData } from '../lib/structured-data';
 import regularFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import boldFont from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
@@ -15,14 +15,7 @@ const {
   image = '',
   imageAlt = title,
 } = Astro.props;
-const surpriseArtIds = [
-  ...new Set(
-    Array.from(
-      { length: Math.min(48, art.length) },
-      (_, index) => art[Math.floor((index * art.length) / Math.min(48, art.length))].id,
-    ),
-  ),
-];
+const surprisePicks = cuteSurpriseIndex.slice(0, 48);
 const browseLinks = [
   {
     label: 'Explore clipart',
@@ -324,14 +317,15 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
           </div>
           <a
             class="site-surprise-link"
-            href={`/art/${surpriseArtIds[0]}/`}
-            data-surprise-art={JSON.stringify(surpriseArtIds)}
-            aria-label="Surprise me with a clipart"
+            href={`/art/${surprisePicks[0].id}/`}
+            data-surprise-art={JSON.stringify(surprisePicks)}
+            data-surprise-source={`/surprise-picks.json?v=${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
+            aria-label="Surprise me with something cute"
           >
             <HeaderIllustration kind="surprise" />
             <span>
               <strong>Surprise me</strong>
-              <span>A little discovery</span>
+              <span>A little reason to smile</span>
             </span>
           </a>
           <div class="site-navigation-actions">
@@ -433,48 +427,8 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
       </div>
     </footer>
     <script>
-      const surprise = document.querySelector<HTMLAnchorElement>('[data-surprise-art]');
-      if (surprise) {
-        let choices: string[] = [];
-        try {
-          choices = JSON.parse(surprise.dataset.surpriseArt || '[]').filter(
-            (id: unknown): id is string => typeof id === 'string' && /^[a-z0-9-]+$/.test(id),
-          );
-        } catch {
-          /* The real href remains a usable fallback. */
-        }
-        const chooseArtwork = () => {
-          if (!choices.length) return;
-          let previous = '';
-          try {
-            previous = sessionStorage.getItem('ultraclipart-surprise-last') || '';
-          } catch {
-            /* Storage is optional. */
-          }
-          const available = choices.filter((id) => id !== previous);
-          const pool = available.length ? available : choices;
-          const random = crypto.getRandomValues(new Uint32Array(1))[0];
-          const selected = pool[random % pool.length];
-          surprise.href = `/art/${selected}/`;
-          try {
-            sessionStorage.setItem('ultraclipart-surprise-last', selected);
-          } catch {
-            /* Navigation also works with storage blocked. */
-          }
-        };
-        surprise.addEventListener('pointerenter', chooseArtwork);
-        surprise.addEventListener('focus', chooseArtwork);
-        surprise.addEventListener('click', (event) => {
-          if (
-            event.button === 0 &&
-            !event.metaKey &&
-            !event.ctrlKey &&
-            !event.shiftKey &&
-            !event.altKey
-          )
-            chooseArtwork();
-        });
-      }
+      import { initCuteSurprise } from '../scripts/cute-surprise';
+      initCuteSurprise();
       import '../share/entry';
       const header = document.querySelector<HTMLElement>('[data-site-header]');
       if (header) {

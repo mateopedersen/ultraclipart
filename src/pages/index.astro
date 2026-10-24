@@ -5,7 +5,8 @@ import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
 import AiInvitation from '../components/AiInvitation.astro';
 import HomeBenefits from '../components/HomeBenefits.astro';
-import { art, newestArt, topics, availableClusters, slugify } from '../lib/catalog';
+import SeasonalShowcase from '../components/SeasonalShowcase.astro';
+import { art, newestArt } from '../lib/catalog';
 const picks = ['baby', 'heart', 'volleyball', 'winter'].filter((slug) =>
   art.some((item) => item.topic === slug),
 );
@@ -284,45 +285,6 @@ const recentPicks = newestArt.filter((item) => {
     ))}
   </div>
   <CreateInvitation />
-  <section class="guide-callout">
-    <div>
-      <p class="eyebrow">From a drawing to a finished project</p>
-      <h2>A little help with the next step.</h2>
-      <p>
-        Make a readable classroom label, simplify a coloring activity, or check a print size before
-        using your paper and ink.
-      </p>
-    </div>
-    <a class="button primary" href="/guides/">
-      Explore project guides
-    </a>
-  </section>
-  <section>
-    <div class="section-head">
-      <h2>Made for the season</h2>
-      <a href="/collections/">All collections →</a>
-    </div>
-    <div class="collection-grid">
-      {availableClusters
-        .filter((c) =>
-          ['Halloween', 'Thanksgiving & Autumn', 'Christmas & Winter', "Valentine's Day"].includes(
-            c,
-          ),
-        )
-        .map((c) => {
-          const ts = topics.filter((t) => t.cluster === c);
-          const a = art.find((a) => ts.some((t) => t.slug === a.topic));
-          return (
-            <a class="collection-card" href={`/collection/${slugify(c)}/`}>
-              {a && <img src={a.thumb} alt="" width="90" height="90" />}
-              <div>
-                <strong>{c}</strong>
-                <p>Little details for memorable projects.</p>
-              </div>
-            </a>
-          );
-        })}
-    </div>
-  </section>
+  <SeasonalShowcase />
   <HomeBenefits />
 </Layout>
