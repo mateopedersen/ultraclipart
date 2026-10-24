@@ -149,12 +149,18 @@ export function normalize(item: ArtworkInput): Profile {
     status = 'unclassified';
     issues.push('unknown_subject');
   } else {
+    const firstPrimaryCandidate =
+      titled.find((m) => !['seasonal', 'object'].includes(m.subject.domain)) ?? titled[0];
+    const topicMention = titled.find((m) => m.subject.id === topic?.id);
     const titlePrimary =
-      titled.find((m) => !['seasonal', 'object'].includes(m.subject.domain))?.subject ??
-      titled[0]?.subject;
+      topicMention &&
+      (!firstPrimaryCandidate || topicMention.position < firstPrimaryCandidate.position)
+        ? topicMention.subject
+        : firstPrimaryCandidate?.subject;
+    const topicEvidence = named.some((m) => m.subject.id === topic?.id);
     const speciesEquivalent = (a: string, b: string) =>
       a === b || (a === 'animal.mammal.elephant.young' && b === 'animal.mammal.elephant');
-    if (topic && titlePrimary && !speciesEquivalent(topic.id, titlePrimary.id)) {
+    if (topic && titlePrimary && !speciesEquivalent(topic.id, titlePrimary.id) && !topicEvidence) {
       status = 'needs_review';
       issues.push('topic_title_conflict');
     }

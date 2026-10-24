@@ -20,4 +20,6 @@ The earbuds recovery includes 40 supplied artworks and 10 original replacements.
 
 The printer recovery includes 40 supplied artworks and 10 original replacements. Chromium and WebKit each passed 100 native downloads and 100 edited exports at four viewport widths. Independent preflight verified the source CMYK image and alpha are unchanged in all 50 edited PDFs, with a maximum of 981,594 bytes. Native and edited renderings were inspected. Descriptions distinguish decorative barcode, Braille and interface patterns and conceptual component arrangements from functional documents or device-specific service instructions.
 
+The keyboard recovery includes 50 supplied artworks. Its 100 native downloads and 100 edited exports passed Chromium checks at four viewport widths, together with all 206 unit tests. Independent preflight verified unchanged source CMYK images and alpha in all 50 edited PDFs; the largest is 975,787 bytes. All native and edited PDF proofs were inspected. A repeated washing composition was replaced by a distinct supplied industrial keyboard outline before intake approval.
+
 Production pages identify their source commit for both Git-connected and manual builds. A manual build resolves the current Git HEAD when Cloudflare has not supplied a revision; missing or invalid production revisions stop the build.

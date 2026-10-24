@@ -405,3 +405,33 @@ test('labeled relevance set: exact fruit reference, cross-subject errors and com
     assert.equal(actual, expected, id);
   }
 });
+test('T29 keyboard, laptop and printer collections have safe same-subject alternatives', () => {
+  for (const topic of ['keyboard', 'laptop', 'printer']) {
+    const records = catalog.filter((artwork) => artwork.topic === topic);
+    assert.ok(records.length >= 2, `${topic} collection should contain multiple artworks`);
+    const safeRecords = records.filter((artwork) => index.profiles.get(artwork.id)?.eligible);
+    assert.ok(safeRecords.length >= 2, `${topic} should have multiple safe alternatives`);
+    for (const artwork of safeRecords) {
+      const profile = index.profiles.get(artwork.id);
+      assert.equal(profile.subject.topic, topic, artwork.id);
+    }
+    const result = index.snapshot(safeRecords[0].id);
+    assert.ok(result.alternatives.length > 0, topic);
+    assert.ok(
+      result.alternatives.every(
+        (candidate) => index.profiles.get(candidate.id).subject.topic === topic,
+      ),
+      topic,
+    );
+  }
+});
+test('a musical keyboard stays a secondary mention rather than a computer subject', () => {
+  const vampire = normalize(
+    item('vampire-organ-keyboard', {
+      topic: 'vampire',
+      title: 'Vampire at a Musical Organ',
+      alt: 'A vampire plays a small organ keyboard.',
+    }),
+  );
+  assert.equal(vampire.subject.topic, 'vampire');
+});

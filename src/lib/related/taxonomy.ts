@@ -1,5 +1,5 @@
 /** Explicit topic bindings: collection labels and URL slugs are not subject identities. */
-export const TAXONOMY_VERSION = 'uc-subjects-1';
+export const TAXONOMY_VERSION = 'uc-subjects-2';
 export interface Subject {
   id: string;
   topic: string;
@@ -153,6 +153,9 @@ add(
   'technology',
   `headphones|headphones|headphones|headphone designs|headset,headsets
 television|television|television|televisions|televisions,tv
+laptop|laptop|laptop|laptops|notebook computer,notebook computers,portable computer,portable computers
+printer|printer|printer|printers|desktop printer,desktop printers,printing machine,printing machines
+keyboard|keyboard|computer keyboard|computer keyboards|keyboard,keyboards,typing keyboard,typing keyboards
 apple-logo|apple.brand|apple logo|Apple logo designs|iphone,macbook`,
 );
 add(
@@ -217,6 +220,12 @@ export function mentions(value: string): { subject: Subject; position: number }[
     if (
       subject.topic === 'orange' &&
       !/\b(oranges|fruit|citrus|rind|peel|segments?|slice|juice|sweet orange)\b/.test(text)
+    )
+      continue;
+    if (
+      subject.topic === 'keyboard' &&
+      /\b(piano|organ|synthesizer|synth|musical|music|instrument|keytar)\b/.test(text) &&
+      !/\b(computer|desktop|laptop|gaming|typing|usb|mechanical|ergonomic)\b/.test(text)
     )
       continue;
     if (subject.topic === 'turkey' && /\b(country|map|flag|istanbul|ankara|turkiye)\b/.test(text))
