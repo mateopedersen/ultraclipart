@@ -95,23 +95,19 @@ try {
       const overflow = await page.evaluate(() => document.documentElement.scrollWidth > innerWidth);
       assert.equal(overflow, false, `${topic}: ${width}px horizontal overflow`);
       const geometry = await page.locator('.card-actions').evaluateAll((groups) =>
-        groups.map((group) =>
-          [...group.children].map((button) => {
-            const { top, left, width, height } = button.getBoundingClientRect();
-            return { top, left, width, height };
-          }),
-        ),
+        groups.map((group) => {
+          const bounds = group.getBoundingClientRect();
+          const edit = group.firstElementChild.getBoundingClientRect();
+          return {
+            count: group.children.length,
+            height: edit.height,
+            centered: Math.abs(bounds.x + bounds.width / 2 - edit.x - edit.width / 2) < 1,
+          };
+        }),
       );
-      for (const [edit, download] of geometry) {
-        assert.ok(
-          Math.abs(edit.width - download.width) <= 1 &&
-            Math.abs(edit.height - download.height) <= 1,
-          `${topic}: unequal action dimensions`,
-        );
-        assert.ok(
-          Math.abs(edit.top - download.top) <= 1 || Math.abs(edit.left - download.left) <= 1,
-          `${topic}: action alignment`,
-        );
+      for (const edit of geometry) {
+        assert.equal(edit.count, 1, `${topic}: one editor action`);
+        assert.ok(edit.height >= 44 && edit.centered, `${topic}: centered, touch-friendly action`);
       }
       const rows = await page.locator('.art-card').evaluateAll((cards) => {
         const groups = new Map();
