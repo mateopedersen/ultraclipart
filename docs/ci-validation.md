@@ -8,13 +8,13 @@ It never relies on a truncated API list or commit-message hints.
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Documentation or the CI planner/workflow only                                                      | Policy tests and workflow formatting; no product browser jobs |
 | Explicitly allowlisted artwork guide, related presentation, isolated listing styles or guide pages | Interface group in Chromium, Firefox and WebKit               |
-| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All four groups in all three engines                          |
-| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All four groups in all three engines                          |
+| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All seven groups in all three engines                         |
+| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All seven groups in all three engines                         |
 
 The interface group includes the original search, category, header, artwork-details,
 related, sharing, general site, refinement and content browser commands. It still runs
 formatting, type checks, a clean build, all unit tests and production CDN/header checks.
-Catalog and editor changes keep every existing download and export check.
+Catalog and editor changes keep every existing download and export check. The 550 seasonal artwork export cases are partitioned into three disjoint groups of 184, 183 and 183 targets. The exact same per-artwork assertions run in every engine; the partition tests require complete coverage with no duplicates. Invalid or empty partitions fail. Other export groups retain their original target lists.
 
 This is a conservative allowlist. Before adding a file to the smaller scope, inspect
 its consumers and add policy regression tests. An unknown file always receives the full suite.

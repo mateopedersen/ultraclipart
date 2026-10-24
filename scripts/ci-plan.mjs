@@ -3,7 +3,15 @@ import { appendFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
-export const ALL_SUITES = ['interface', 'catalog', 'catalog-extra', 'studio'];
+export const ALL_SUITES = [
+  'interface',
+  'catalog',
+  'catalog-extra',
+  'studio',
+  'catalog-seasonal-0',
+  'catalog-seasonal-1',
+  'catalog-seasonal-2',
+];
 
 // An allowlist, not an exclusion list: unknown runtime dependencies get the full suite.
 const interfaceFiles = new Set([
