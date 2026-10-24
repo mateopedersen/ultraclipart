@@ -1,9 +1,15 @@
 # Catalog capacity and migration
 
-Cloudflare Pages Free limits a deployment to 20,000 files. The current release
-contains 6,200 illustrations and 19,396 Pages files before offloading. Each
-illustration currently generates a detail page and an editor page. Upgrading to
-Pages Pro raises the file limit to 100,000, but does not make a five-million-item
+UltraClipart upgraded to Cloudflare Pro on 2026-10-24. The project's upload-token
+claim `max_file_count_allowed` was verified as 100,000 through the Cloudflare API.
+The production project has `PAGES_WRANGLER_MAJOR_VERSION=4`; the manual deployment
+also sets it explicitly. Production build checks now enforce the verified
+100,000-file ceiling instead of the old Free ceiling of 20,000.
+
+The current release contains 6,200 illustrations and 19,396 Pages files before
+offloading (19,296 after Book offloading). Each illustration currently generates
+a detail page and an editor page, plus search data. The 100,000-file limit is per
+Pages project, not 100,000 illustrations. It does not make a five-million-item
 catalog viable if one HTML file per item remains in the Pages deployment.
 
 ## First production stage: private HTML storage

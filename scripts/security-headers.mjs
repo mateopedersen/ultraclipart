@@ -156,8 +156,10 @@ const routes = JSON.parse(readFileSync(join(dist, '_routes.json'), 'utf8'));
 if (routes.include.length + routes.exclude.length > 100)
   throw new Error('AI + retirement route count exceeds Pages limit');
 const count = files(dist).length;
-if (process.env.CF_PAGES === '1' && count > 20_000)
-  throw new Error(`Pages Free file limit exceeded: ${count} files.`);
+// Pro entitlement verified from this project's upload-token claims on 2026-10-24.
+const fileLimit = 100_000;
+if (process.env.CF_PAGES === '1' && count > fileLimit)
+  throw new Error(`Pages Pro file limit exceeded: ${count} files (limit ${fileLimit}).`);
 console.log(
-  `CSP: ${hashes.size} exact script hashes. ${process.env.CF_PAGES === '1' ? 'Production' : 'Local'} build: ${count} files${process.env.CF_PAGES === '1' ? ' / 20,000 allowed' : ' (bundled development media included)'}.`,
+  `CSP: ${hashes.size} exact script hashes. ${process.env.CF_PAGES === '1' ? 'Production' : 'Local'} build: ${count} files${process.env.CF_PAGES === '1' ? ' / 100,000 allowed' : ' (bundled development media included)'}.`,
 );
