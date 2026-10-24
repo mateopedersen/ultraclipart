@@ -29,7 +29,54 @@ export interface TextLayer extends LayerBase {
   align: 'start' | 'middle' | 'end';
   typography?: Typography;
 }
+/** Private generation provenance stays in local project files, never in document markup. */
+export interface AiImageMetadata {
+  version: 1;
+  prompt: string;
+  model: string;
+  style: string;
+  createdAt: string;
+  composedPrompt?: string;
+  seed?: number;
+  transferId?: string;
+}
+export function validAiMetadata(value: unknown): value is AiImageMetadata {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
+  const m = value as AiImageMetadata;
+  const text = (v: unknown, max: number) =>
+    typeof v === 'string' &&
+    v.length > 0 &&
+    v.length <= max &&
+    !/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/.test(v);
+  return (
+    Object.keys(m).every((k) =>
+      [
+        'version',
+        'prompt',
+        'model',
+        'style',
+        'createdAt',
+        'composedPrompt',
+        'seed',
+        'transferId',
+      ].includes(k),
+    ) &&
+    m.version === 1 &&
+    text(m.prompt, 2048) &&
+    text(m.model, 160) &&
+    text(m.style, 80) &&
+    typeof m.createdAt === 'string' &&
+    m.createdAt.length <= 30 &&
+    Number.isFinite(Date.parse(m.createdAt)) &&
+    (m.composedPrompt === undefined || text(m.composedPrompt, 4096)) &&
+    (m.seed === undefined ||
+      (Number.isSafeInteger(m.seed) && m.seed >= 0 && m.seed <= 4294967295)) &&
+    (m.transferId === undefined ||
+      /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(m.transferId))
+  );
+}
 export interface RasterLayer extends LayerBase {
+  ai?: AiImageMetadata;
   kind: 'raster';
   assetId: string;
   sourceSha256: string;
@@ -206,6 +253,7 @@ export function validateDocument(value: unknown, artId: string): value is Editor
                 ? /^[a-z0-9-]{1,160}$/.test(l.assetId)
                 : l.assetId === doc.artId) &&
               validRegions(l) &&
+              (l.ai === undefined || validAiMetadata(l.ai)) &&
               /^[a-f0-9]{64}$/.test(l.sourceSha256) &&
               Number.isInteger(l.width) &&
               l.width > 0 &&

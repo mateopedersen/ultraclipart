@@ -1,4 +1,5 @@
 ---
+import StudioIcon from './StudioIcon.astro';
 const sliders = [
   ['hue', 'Hue', -180, 180, 0],
   ['saturation', 'Saturation', -100, 100, 0],
@@ -193,10 +194,33 @@ const sliders = [
       cancels a gesture.
     </p>
   </details>
+  <details class="uc-extract-object">
+    <summary>Extract an independent object</summary>
+    <p class="uc-hint">
+      Select the object above, then copy its visible pixels into a separate transparent image layer.
+      Saved color and effect changes are included.
+    </p>
+    <label>
+      New layer name
+      <input data-extract-name maxlength="100" value="Extracted object" />
+    </label>
+    <label class="uc-check">
+      <input data-extract-remove type="checkbox" />
+      Remove the selected pixels from the source
+    </label>
+    <button data-smart-action="extract-layer" class="uc-primary">
+      <StudioIcon name="layers" />
+      Extract selection as layer
+    </button>
+    <p class="uc-hint">
+      Move, resize, recolor and rotate the new layer independently. Source removal stays reversible
+      with its saved mask or Undo.
+    </p>
+  </details>
   <h3>Saved regions</h3>
   <p class="uc-hint">
-    Masks adjust pixels inside their source image. They move with that image; they are not separate
-    cut-out objects.
+    Masks adjust pixels inside their source image. They move with that image; use Extract selection
+    as layer to create a separate cut-out object.
   </p>
   <div data-regions class="uc-region-list"></div>
   <button data-smart-action="new-region">New region</button>

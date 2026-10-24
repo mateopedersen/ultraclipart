@@ -24,7 +24,7 @@ const pages: Record<string, { title: string; description: string; sections: [str
     license: {
       title: 'Simple, clear usage terms.',
       description:
-        'Free personal and educational use. Commercial use and resale as clipart are prohibited.',
+        'Catalog artwork is free for personal and educational use. Separate terms apply to your original work and AI-generated images.',
       sections: [
         [
           'What you may do',
@@ -37,6 +37,10 @@ const pages: Record<string, { title: string; description: string; sections: [str
         [
           'Questions about a use',
           'If a proposed use falls outside personal or educational projects, ask ultraclipart@gmail.com before using the artwork. This license applies to the original UltraClipart artwork, not to third-party software or fonts, which retain their own licenses.',
+        ],
+        [
+          'AI-generated images',
+          'Images you request through AI Clipart Builder are separate from our catalog license. UltraClipart does not claim ownership of your original prompts or assign the catalog restrictions to generated output. Prompt assistance is Built with Llama under the Llama 3.1 Community License. The FLUX.1 schnell image model is released under Apache 2.0, but a model license is not a guarantee that an output is unique, copyrightable or cleared for a particular use. Cloudflare service terms and third-party copyright, trademark and privacy rights still apply. Review an image and the applicable rights before publishing it or using it commercially. Combining generated output with our catalog art keeps the catalog restrictions on that artwork.',
         ],
         [
           'Your own studio work',
@@ -66,11 +70,23 @@ const pages: Record<string, { title: string; description: string; sections: [str
     privacy: {
       title: 'Your creativity stays yours.',
       description:
-        'How UltraClipart handles local editor data, favorites, downloads and contact email.',
+        'How UltraClipart handles local edits, AI prompts, device history, security checks and contact email.',
       sections: [
         [
           'Local editor and favorites',
           'The editor processes artwork in your browser. Favorites and recoverable editing sessions are stored on your device when local storage is available. Drawings, imported SVGs, project files and edits are processed locally and are not uploaded to UltraClipart. Clearing browser site data removes this local information.',
+        ],
+        [
+          'AI generation and protection',
+          'When you choose Generate in AI Clipart Builder, your description and chosen settings are sent to Cloudflare Workers AI to prepare and check the description with Llama 3.1 and create an image with FLUX.1 schnell. Generation is a cloud operation, unlike local Studio editing. Cloudflare Turnstile verifies requests and may process browser and connection information to prevent abuse. Do not include private student information, contact details or sensitive personal data in prompts. We do not automatically publish generated images or create public image URLs.',
+        ],
+        [
+          'Usage limits and essential storage',
+          'A signed, essential session cookie lasting up to 24 hours helps enforce daily generation limits. The cookie uses Secure, HttpOnly and SameSite protection. The server stores short-lived usage and job records with daily hashed visitor and network identifiers, status, model and cost information. Records older than seven days are deleted when the AI service is next used; cleanup may occur later if the service is inactive. It does not store raw IP addresses, prompt text or generated images in this application ledger. Cloudflare separately processes request and inference data under its service policies. We do not use these records for advertising.',
+        ],
+        [
+          'AI history on your device',
+          'AI results and their prompts are saved in this browser using IndexedDB when available, for up to seven days and twelve results. Cleanup runs when the AI page is used. A one-hour local transfer record lets you open an image in Studio without uploading it again; expired transfer records are removed on later access. Clear saved AI images removes AI history, while Studio recovery and downloaded project files remain separate. Anyone using the same browser profile may see locally saved work. Download a project if you need a lasting copy; private browsing or storage cleanup can remove local history.',
         ],
         [
           'Hosting and requests',
@@ -101,6 +117,14 @@ const pages: Record<string, { title: string; description: string; sections: [str
         [
           'Availability',
           'This collection is growing. Features, files and availability may change. Check the exported artwork and print settings before relying on them for a project. We do not guarantee search rankings, universal printer compatibility or uninterrupted availability.',
+        ],
+        [
+          'AI Clipart Builder',
+          'AI generation is offered subject to free daily capacity, visitor and shared-network limits, security verification and model availability. We may pause generation when limits or safeguards require it. There is no automatic paid fallback. Local editing and downloads of existing work remain available. A request that has already reached the model may count toward a limit even if you close the page, stop waiting or receive a timeout. Results can contain mistakes in anatomy, counting, spelling or other details; review them before use.',
+        ],
+        [
+          'Responsible generation',
+          'Use AI Clipart Builder only for lawful, appropriate creative work. Do not request sexual exploitation, child abuse, violent threats, hateful targeting or other illegal material; do not impersonate people, infringe rights or bypass safety and usage limits. Avoid personal or private information. Automated safeguards can make mistakes and do not replace your review. Report harmful output or a rights concern through our Copyright and corrections page. Children should use the tool with an adult who can review prompts and results.',
         ],
         ['Get in touch', 'Questions and corrections can be sent to ultraclipart@gmail.com.'],
       ],
@@ -234,7 +258,12 @@ const page = pages[Astro.params.info!];
     <p class="eyebrow">UltraClipart · Information</p>
     <h1>{page.title}</h1>
     {page.sections.map(([heading, body]) => (
-      <section>
+      <section
+        id={heading
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, '-')
+          .replace(/-$/, '')}
+      >
         <h2>{heading}</h2>
         <p>{body}</p>
       </section>
@@ -248,6 +277,28 @@ const page = pages[Astro.params.info!];
           or <a href="/guides/webp-pdf-and-editable-projects/">compare download formats</a>. The{' '}
           <a href="/print-size/">print size calculator</a> helps you choose image dimensions before
           printing.
+        </p>
+      </section>
+    )}
+    {['privacy', 'terms', 'license'].includes(Astro.params.info!) && (
+      <section>
+        <h2>AI service references</h2>
+        <p>
+          Read{' '}
+          <a href="https://developers.cloudflare.com/workers-ai/models/flux-1-schnell/">
+            Cloudflare’s FLUX.1 schnell model documentation
+          </a>
+          , the{' '}
+          <a href="https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/LICENSE.md">
+            model license
+          </a>
+          , <a href="https://www.cloudflare.com/terms/">Cloudflare terms</a> and the{' '}
+          <a href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE">
+            Llama 3.1 license
+          </a>{' '}
+          and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>. See
+          the <a href="/ai-clipart-generator/">AI Clipart Builder</a> for current availability and
+          local editing options.
         </p>
       </section>
     )}

@@ -54,6 +54,15 @@ export class Processor {
       return pixels.refineMask(payload.mask, source, payload.kind, payload.radius) as T;
     if (op === 'render')
       return effects.renderPixels(source, payload.regions || [], payload.effects || []) as T;
+    if (op === 'extract') {
+      const { extractSelectionPixels } = await import('./extract'),
+        { effectBounds } = await import('./padding');
+      return extractSelectionPixels(
+        effects.renderPixels(source, payload.regions || [], payload.effects || []),
+        payload.selection,
+        effectBounds({ ...source, effects: payload.effects }),
+      ) as T;
+    }
     if (op === 'inspect')
       return effects.inspectImage(payload.image || source, payload.widthInches) as T;
     if (op === 'cmyk') {

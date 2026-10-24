@@ -28,6 +28,7 @@ import { paperLayout, exportPdf } from './pdf';
 import {
   openRaster,
   rasterCatalog,
+  registerLocalImage,
   prepareProjectSources,
   serializeProject,
   withoutEmbeddedSources,
@@ -66,7 +67,24 @@ function init(root: HTMLElement) {
     ? (JSON.parse(root.dataset.rasterSource) as RasterAsset)
     : undefined;
   const id = root.dataset.artId!,
-    storageKey = `ultraclipart:editor:v1:${id}`;
+    baseStorageKey = `ultraclipart:editor:v1:${id}`;
+  const workspaceParams = new URLSearchParams(location.search),
+    workspaceToken = workspaceParams.get('import') || workspaceParams.get('workspace'),
+    workspaceId =
+      creator &&
+      workspaceToken &&
+      /^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$/i.test(workspaceToken)
+        ? workspaceToken
+        : undefined;
+  let storageKey = workspaceId ? `${baseStorageKey}:ai:${workspaceId}` : baseStorageKey;
+  if (creator && (workspaceParams.has('import') || workspaceParams.has('workspace'))) {
+    const robots =
+      document.head.querySelector<HTMLMetaElement>('meta[name="robots"]') ||
+      document.createElement('meta');
+    robots.name = 'robots';
+    robots.content = 'noindex,nofollow';
+    if (!robots.parentNode) document.head.append(robots);
+  }
   let smart: SmartController | undefined;
   let rasterRenderKey = '';
   let persistTimer: ReturnType<typeof setTimeout> | undefined;
@@ -1894,6 +1912,98 @@ function init(root: HTMLElement) {
         dialog.close();
     }
   });
+  async function importAiTransfer() {
+    const url = new URL(location.href),
+      transferId = url.searchParams.get('import');
+    if (!creator || !transferId) return;
+    const clearLink = () => {
+      url.searchParams.delete('import');
+      url.searchParams.set('workspace', transferId);
+      window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
+    };
+    const existing = history.current.layers.find(
+      (l) => l.kind === 'raster' && l.ai?.transferId === transferId,
+    );
+    if (existing) {
+      selected = [existing.id];
+      clearLink();
+      render();
+      status('Your AI image is already in this recovered project.');
+      return;
+    }
+    const owner = crypto.randomUUID();
+    let release: ((success: boolean) => Promise<void>) | undefined;
+    try {
+      status('Opening your AI image from this device…');
+      const transfer = await import('../ai/transfer');
+      const record = await transfer.claimStudioTransfer(transferId, owner);
+      release = (success) => transfer.finishStudioTransfer(transferId, owner, success);
+      const layer = await registerLocalImage(new Uint8Array(await record.image!.arrayBuffer()));
+      layer.ai = record.metadata;
+      layer.label = 'AI clipart';
+      const next = clone(history.current);
+      if (!next.layers.length) {
+        next.width = Math.max(64, layer.width);
+        next.height = Math.max(64, layer.height);
+        next.crop = null;
+        next.background = 'transparent';
+      } else {
+        const view = next.crop || { x: 0, y: 0, width: next.width, height: next.height };
+        const scale = Math.min(1, view.width / layer.width, view.height / layer.height);
+        if (scale < 0.01)
+          throw new Error(
+            'The current crop is too small for this image. Enlarge the crop or open the downloaded AI project file.',
+          );
+        layer.scaleX = layer.scaleY = scale;
+        layer.x = view.x + (view.width - layer.width * scale) / 2;
+        layer.y = view.y + (view.height - layer.height * scale) / 2;
+      }
+      next.version = 2;
+      next.layers.push(layer);
+      delete next.selection;
+      if (!validateDocument(next, id) || JSON.stringify(next).length > 16000000)
+        throw new Error(
+          'This project reached its image, pixel, or layer limit. Save your current project, start a new canvas, then reopen the image from AI Clipart Builder.',
+        );
+      commit(next);
+      selected = [layer.id];
+      // Persist before consuming. A reload can recognize transferId even if the final acknowledgement fails.
+      try {
+        await saveLocal(storageKey, serializeProject(history.current));
+      } catch {
+        clearLink();
+        render();
+        panel('region');
+        status(
+          'Your AI image is open, but browser recovery is unavailable. Save a project file now to keep it.',
+          true,
+        );
+        await release(true);
+        release = undefined;
+        return;
+      }
+      await release(true);
+      release = undefined;
+      clearLink();
+      render();
+      panel('region');
+      status(
+        'AI image opened at its native resolution. Your existing layers are preserved; Undo removes this addition. Use Smart Select to refine or extract an object.',
+      );
+    } catch (error) {
+      if (release) {
+        try {
+          await release(false);
+        } catch {}
+      }
+      status(
+        error instanceof Error
+          ? error.message
+          : 'The image transfer could not be opened. Return to AI Clipart Builder and download a project file, then use Open project.',
+        true,
+      );
+    }
+  }
   void (async () => {
     try {
       if (creator) original = blankDocument(id);
@@ -1914,13 +2024,21 @@ function init(root: HTMLElement) {
       let recovered = false;
       try {
         let saved: unknown;
-        const raw = localStorage.getItem(storageKey);
-        if (raw) saved = JSON.parse(raw);
-        if (!saved) {
+        const readRecovery = async (key: string) => {
           try {
-            saved = await loadLocal(storageKey);
+            const raw = localStorage.getItem(key);
+            if (raw) return JSON.parse(raw);
           } catch {}
-        }
+          try {
+            return await loadLocal(key);
+          } catch {
+            return undefined;
+          }
+        };
+        saved = await readRecovery(storageKey);
+        // Each AI handoff owns its recovery slot. A new one starts with a copy of the main canvas.
+        if (!saved && workspaceParams.has('import') && storageKey !== baseStorageKey)
+          saved = await readRecovery(baseStorageKey);
         if (saved) {
           if (validateDocument(saved, id)) {
             await prepareProjectSources(saved);
@@ -1964,8 +2082,6 @@ function init(root: HTMLElement) {
         smart.render();
         panel('elements');
       } else if (rasterSource) panel('region');
-      root.removeAttribute('aria-busy');
-      qa('[inert]').forEach((el) => el.removeAttribute('inert'));
       status(
         recovered
           ? 'Your last local editing session was restored. Changes stay on this device.'
@@ -1975,6 +2091,14 @@ function init(root: HTMLElement) {
               ? 'Click a part of the image to select it, choose a new color, then download. Your original image is preserved; edits stay on this device.'
               : `${original.layers.length} editable layers loaded. Changes are saved locally on this device.`,
       );
+      if (workspaceParams.has('workspace') && !recovered)
+        status(
+          'This local workspace is not available on this device. Open a saved project file, or start a new canvas.',
+          true,
+        );
+      await importAiTransfer();
+      root.removeAttribute('aria-busy');
+      qa('[inert]').forEach((el) => el.removeAttribute('inert'));
     } catch (error) {
       status(error instanceof Error ? error.message : 'The artwork could not be opened.', true);
       qa<HTMLButtonElement>('button').forEach((b) => (b.disabled = true));

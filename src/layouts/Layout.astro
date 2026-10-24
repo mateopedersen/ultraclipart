@@ -18,6 +18,7 @@ const nav = [
   ['New', '/new/'],
   ['Black & White', '/black-and-white/'],
   ['Create', '/create/'],
+  ['AI Clipart', '/ai-clipart-generator/'],
   ['For Teachers', '/for-teachers/'],
   ['Guides', '/guides/'],
   ['About', '/about/'],
@@ -83,6 +84,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
         {nav.map(([label, url]) => (
           <a href={url} aria-current={Astro.url.pathname === url ? 'page' : undefined}>
             {label}
+            {url === '/ai-clipart-generator/' && <span class="nav-new">New</span>}
           </a>
         ))}
       </nav>
@@ -112,6 +114,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
           <a href="/collections/">Collections</a>
           <a href="/new/">New clipart</a>
           <a href="/create/">Create your own</a>
+          <a href="/ai-clipart-generator/">AI Clipart Builder</a>
           <a href="/black-and-white/">Black & White</a>
         </div>
         <div>
@@ -149,6 +152,28 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
   </body>
 </html>
 <style>
+  .nav-new {
+    font-size: 8px;
+    font-weight: 750;
+    text-transform: uppercase;
+    background: #e5f0ff;
+    color: #1555a6;
+    padding: 3px 4px;
+    border-radius: 4px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  @media (min-width: 901px) and (max-width: 1320px) {
+    :global(body > header) {
+      gap: 16px;
+    }
+    :global(#navigation) {
+      gap: 11px;
+    }
+    :global(#navigation a) {
+      font-size: 12px;
+    }
+  }
   .download-status {
     position: fixed;
     inset: auto 18px 18px auto;

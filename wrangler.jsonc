@@ -1,5 +1,28 @@
 {
   "name": "ultraclipart",
   "compatibility_date": "2026-10-23",
-  "pages_build_output_dir": "./dist"
+  "pages_build_output_dir": "./dist",
+  "ai": {
+    "binding": "AI",
+  },
+  "d1_databases": [
+    {
+      "binding": "AI_DB",
+      "database_name": "ultraclipart-ai-quota",
+      "database_id": "4099f6dc-b595-41c4-85e2-c7922ea1c0f4",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "vars": {
+    "AI_GENERATION_ENABLED": "true",
+    "AI_FREE_PLAN_CONFIRMED": "true",
+    "AI_PUBLIC_ORIGIN": "https://ultraclipart.com",
+    "MAX_DAILY_NEURONS": "6000",
+    "MAX_DAILY_GENERATIONS": "24",
+    "MAX_GENERATIONS_PER_VISITOR": "2",
+    "MAX_CONCURRENT_JOBS": "2",
+    "AI_EDIT_ENABLED": "false",
+    "AI_MODEL_ALLOWLIST": "@cf/black-forest-labs/flux-1-schnell,@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+    "TURNSTILE_SITEKEY": "0x4AAAAAAFjox3Yo7r7lMR6i",
+  },
 }

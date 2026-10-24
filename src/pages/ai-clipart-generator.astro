@@ -1,0 +1,629 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { structuredData } from '../lib/structured-data';
+import { styles, examples } from '../ai/presets';
+import '../styles/ai-builder.css';
+const faq = [
+  [
+    'Is this AI clipart maker free?',
+    'Yes. Each visitor can request up to two images per day while the shared daily capacity remains available. One click requests one image. There is no paid fallback. Limits reset at midnight UTC; your local reset time is shown above. Editing and downloading existing work do not use generation capacity.',
+  ],
+  [
+    'Can I edit an AI-generated image?',
+    'Open your result in Clipart Studio to recolor selected regions, refine masks, add editable text, arrange layers and create stickers. The generated image starts as one raster image. Select a region and extract it as an independent image layer when you want to move that object separately.',
+  ],
+  [
+    'Will my image have a transparent background?',
+    'The model creates a solid-background image. Remove white background clears light pixels connected to its edges and creates real transparency. Fur, pale subjects and complex backgrounds may need manual refinement with Smart Select in Studio. Preview the result before downloading.',
+  ],
+  [
+    'Can I print my clipart or download PDF?',
+    'Download a WebP here, or use Studio for a CMYK PDF and page layouts. Images are generated at 1024 × 1024 pixels. At 300 pixels per inch, that supports approximately 3.4 × 3.4 inches of native detail. Enlarging an image does not add detail. Studio checks its PDF size and print settings.',
+  ],
+  [
+    'Where are my prompts and images stored?',
+    'Your prompt goes to Cloudflare Workers AI to generate the image. Results and edits are saved only in this browser when local storage is available, for up to seven days and twelve images. They are not automatically published. Download a copy before clearing browser data. Read our privacy policy for request protection and usage records.',
+  ],
+  [
+    'What rights do I have to generated images?',
+    'AI output is separate from our catalog artwork license. FLUX.1 schnell uses an Apache 2.0 model license; that does not guarantee exclusive rights or clearance for an output. Cloudflare service terms and third-party rights still apply. Avoid protected characters, logos and private personal information. Review our AI usage terms before publishing.',
+  ],
+  [
+    'How do I get a more accurate result?',
+    'Describe the subject first, then the action, number of objects, colors and composition. Use specific visual details and leave space around the subject. The model can misunderstand counting, anatomy or lettering. Add precise wording as an editable text layer in Studio and inspect the image before using it.',
+  ],
+];
+---
+
+<Layout
+  title="Free AI Clipart Generator & Editable Clipart Maker"
+  description="Describe an idea, generate a clipart illustration with AI, then refine, edit and download it in UltraClipart Studio. Free daily generation capacity available."
+  wide
+  image="/ai-examples/baby-rabbit-640.webp"
+  imageAlt="AI-generated baby rabbit illustration example"
+>
+  <Fragment slot="head">
+    <script
+      type="application/ld+json"
+      set:html={structuredData({
+        '@context': 'https://schema.org',
+        '@type': 'WebApplication',
+        name: 'UltraClipart AI Clipart Builder',
+        url: 'https://ultraclipart.com/ai-clipart-generator/',
+        applicationCategory: 'DesignApplication',
+        operatingSystem: 'Web browser',
+        description:
+          'Generate clipart from a written idea, refine the image, and edit it in Clipart Studio. Limited free daily generation capacity.',
+      })}
+    />
+    <script
+      type="application/ld+json"
+      set:html={structuredData({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ultraclipart.com/' },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'AI Clipart Builder',
+            item: 'https://ultraclipart.com/ai-clipart-generator/',
+          },
+        ],
+      })}
+    />
+  </Fragment>
+  <div class="ai-page" data-ai-builder>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span>AI Clipart Builder</span>
+    </div>
+    <div class="ai-heading">
+      <div>
+        <p class="ai-eyebrow">
+          <span class="ai-new">NEW</span> AI Clipart Builder
+        </p>
+        <h1>AI Clipart Builder.</h1>
+        <p>A little imagination. A whole new illustration.</p>
+      </div>
+      <a class="ai-studio-link" href="/create/">
+        Already have artwork? Open Studio <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <div class="ai-workspace">
+      <section class="ai-panel ai-prompt-panel" aria-labelledby="ai-prompt-title">
+        <div class="ai-section-heading">
+          <h2 id="ai-prompt-title">Describe your idea</h2>
+        </div>
+        <form id="ai-form">
+          <label for="ai-prompt">What would you like to create?</label>
+          <textarea
+            id="ai-prompt"
+            name="prompt"
+            maxlength="1200"
+            rows="6"
+            required
+            placeholder="A lifelike baby elephant holding three blue balloons, gentle eyes, full body on white…"
+            aria-describedby="ai-prompt-help"
+          ></textarea>
+          <div class="ai-input-meta">
+            <small id="ai-prompt-help">Subject, details, colors, mood.</small>
+            <output id="ai-count" for="ai-prompt">
+              0 / 1200
+            </output>
+          </div>
+          <p class="ai-language-note">
+            Write in your language. A language model prepares an English description for image
+            generation; your original is kept.
+          </p>
+          <div class="ai-prompt-tools">
+            <button type="button" data-ai-action="random">
+              Surprise me
+            </button>
+            <button type="button" data-ai-action="improve">
+              Add clipart details
+            </button>
+            <button type="button" data-ai-action="copy">
+              Copy
+            </button>
+            <button type="button" data-ai-action="reset">
+              Reset
+            </button>
+          </div>
+          <div id="ai-turnstile" role="group" aria-label="Security verification"></div>
+          <button class="ai-generate primary" type="submit" id="ai-generate" disabled>
+            <svg
+              width="21"
+              height="21"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+            >
+              <path d="m6 17 11-11 2 2L8 19l-3 1 1-3ZM14 5l2 2M4 4v4M2 6h4M19 15v6M16 18h6" />
+            </svg>
+            Generate one image
+          </button>
+          <button type="button" id="ai-cancel" hidden>
+            Stop waiting
+          </button>
+          <p class="ai-quota" id="ai-quota">
+            Checking today’s free capacity…
+          </p>
+          <button type="button" class="ai-refresh-quota" id="ai-refresh-quota">
+            Refresh availability
+          </button>
+          <details class="ai-options">
+            <summary>Composition & finishing details</summary>
+            <div class="ai-options-fields">
+              <label for="ai-composition">Composition</label>
+              <select id="ai-composition">
+                <option value="centered">Centered subject</option>
+                <option value="full-body">Full subject, nothing cropped</option>
+                <option value="balanced">Balanced group of objects</option>
+                <option value="negative-space">Room for a caption</option>
+              </select>
+              <label for="ai-palette">Color palette</label>
+              <select id="ai-palette">
+                <option value="prompt">Follow my description</option>
+                <option value="natural">Natural colors</option>
+                <option value="pastel">Soft pastels</option>
+                <option value="vibrant">Rich, vibrant colors</option>
+                <option value="monochrome">Black & white</option>
+              </select>
+              <label for="ai-detail">Detail</label>
+              <select id="ai-detail">
+                <option value="detailed">Richly detailed</option>
+                <option value="balanced">Balanced</option>
+                <option value="simple">Simple and clear</option>
+              </select>
+              <label for="ai-outline">Outline</label>
+              <select id="ai-outline">
+                <option value="none">Natural edges</option>
+                <option value="fine">Fine outline</option>
+                <option value="bold">Bold outline</option>
+              </select>
+              <label for="ai-margin">Space around the subject</label>
+              <select id="ai-margin">
+                <option value="standard">Comfortable margin</option>
+                <option value="generous">Generous white space</option>
+              </select>
+              <p>
+                Square · 1024 × 1024 pixels · white background requested. Remove the background
+                after generation if needed. Styles guide the model; they do not guarantee exact
+                results.
+              </p>
+            </div>
+          </details>
+          <p class="ai-privacy">
+            Your prompt is processed by Cloudflare AI. Don’t include private information. Images are
+            not published. <a href="/privacy/#ai-generation-and-protection">Privacy</a> ·{' '}
+            <a href="/terms/#ai-clipart-builder">AI terms</a>
+          </p>
+        </form>
+      </section>
+      <section class="ai-panel ai-preview-panel" aria-labelledby="ai-preview-title">
+        <div class="ai-style-ribbon">
+          <div class="ai-style-heading">
+            <label for="ai-style">Choose a look</label>
+            <span>15 styles</span>
+          </div>
+          <div class="ai-visual-styles" role="group" aria-label="Popular illustration styles">
+            {[
+              ['realistic', 'Natural', 'realistic'],
+              ['watercolor', 'Watercolor', 'watercolor'],
+              ['coloring', 'Coloring', 'coloring'],
+              ['sticker', 'Sticker', 'sticker'],
+              ['pastel', 'Pastel', 'pastel'],
+              ['black-white', 'Ink', 'black-white'],
+            ].map(([id, label, image]) => (
+              <button type="button" data-ai-style={id} aria-pressed={id === 'realistic'}>
+                <img
+                  src={`/ai-examples/style-${image}.webp`}
+                  width="160"
+                  height="160"
+                  alt=""
+                  loading="lazy"
+                />
+                <span>{label}</span>
+              </button>
+            ))}
+          </div>
+          <select id="ai-style" name="style">
+            {styles.map(([value, label]) => (
+              <option value={value}>{label}</option>
+            ))}
+          </select>
+          <p class="ai-style-note" id="ai-style-note">
+            Soft light · realistic detail
+          </p>
+        </div>
+        <div class="ai-preview-heading">
+          <div class="ai-section-heading">
+            <h2 id="ai-preview-title">Your artwork</h2>
+          </div>
+          <span class="ai-state" id="ai-state">
+            Ready for an idea
+          </span>
+        </div>
+        <p class="ai-status" id="ai-status" role="status" aria-live="polite">
+          Start with your own description or try an example below.
+        </p>
+        <div class="ai-preview" id="ai-preview">
+          <div class="ai-empty" id="ai-empty">
+            <div class="ai-empty-heading">
+              <span class="ai-example-label">A LITTLE INSPIRATION</span>
+              <h3>What will you make today?</h3>
+              <p>Pick a starting point, or describe something entirely yours.</p>
+            </div>
+            <div class="ai-example-gallery">
+              {examples
+                .filter((e) => 'image' in e)
+                .map((e, i) => (
+                  <button type="button" data-ai-example={i}>
+                    <img src={e.image} alt={e.alt} width="320" height="320" />
+                    <span>
+                      {e.label}
+                      <svg
+                        width="19"
+                        height="19"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14m-6-6 6 6-6 6" />
+                      </svg>
+                    </span>
+                  </button>
+                ))}
+            </div>
+            <p class="ai-examples-caption">
+              Real FLUX.1 schnell examples. Your result will be a new generation.
+            </p>
+            <div class="ai-empty-workflow">
+              <span>
+                <b>Describe</b> your subject
+              </span>
+              <span>
+                <b>Generate</b> an illustration
+              </span>
+              <span>
+                <b>Edit</b> the finishing touches
+              </span>
+            </div>
+          </div>
+          <canvas
+            id="ai-canvas"
+            width="1024"
+            height="1024"
+            aria-label="Your generated artwork preview"
+            hidden
+          ></canvas>
+          <img
+            id="ai-before"
+            src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+            width="1024"
+            height="1024"
+            alt="Original generated image before local edits"
+            hidden
+          />
+        </div>
+        <div class="ai-canvas-meta ai-result-only">
+          <span id="ai-dimensions">FLUX.1 schnell · native 1024 × 1024</span>
+          <button type="button" data-ai-action="compare" disabled aria-pressed="false">
+            Compare original
+          </button>
+        </div>
+        <div class="ai-local-tools ai-result-only" role="group" aria-label="Local image tools">
+          <button type="button" data-ai-action="undo" disabled aria-label="Undo image edit">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="M9 4 4 9l5 5M4 9h10a6 6 0 0 1 0 12" />
+            </svg>
+            <span>Undo</span>
+          </button>
+          <button type="button" data-ai-action="redo" disabled aria-label="Redo image edit">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <path d="m15 4 5 5-5 5m5-5H10a6 6 0 0 0 0 12" />
+            </svg>
+            <span>Redo</span>
+          </button>
+          <button type="button" data-ai-action="rotate" disabled>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 7v6h-6M19 12a7 7 0 1 0-1 6" />
+            </svg>
+            Rotate 90°
+          </button>
+          <button type="button" data-ai-action="flip" disabled>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3v18M3 7h5v10H3zM16 7h5v10h-5z" />
+            </svg>
+            Flip
+          </button>
+          <button type="button" data-ai-action="trim" disabled>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M3 8V3h5m8 0h5v5M3 16v5h5m8 0h5v-5M8 8h8v8H8z" />
+            </svg>
+            Trim empty edges
+          </button>
+          <button type="button" data-ai-action="bw" disabled>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0v18" />
+            </svg>
+            Black & white
+          </button>
+        </div>
+        <details class="ai-local-options ai-result-only">
+          <summary>Background, size & print quality</summary>
+          <div class="ai-refine-grid">
+            <label>
+              White-background tolerance{' '}
+              <input id="ai-tolerance" type="range" min="10" max="90" value="35" />
+              <span>Only light areas touching an image edge are removed.</span>
+            </label>
+            <button type="button" data-ai-action="cutout" disabled>
+              Remove white background
+            </button>
+            <label>
+              Background color <input id="ai-background" type="color" value="#ffffff" />
+            </label>
+            <button type="button" data-ai-action="background" disabled>
+              Apply solid background
+            </button>
+            <label>
+              Width in pixels{' '}
+              <input id="ai-resize" type="number" min="64" max="2048" value="1024" step="1" />
+            </label>
+            <button type="button" data-ai-action="resize" disabled>
+              Resize proportionally
+            </button>
+          </div>
+          <fieldset class="ai-crop-fields">
+            <legend>Crop to a rectangle</legend>
+            <label>
+              Left (px)
+              <input id="ai-crop-x" type="number" min="0" value="0" />
+            </label>
+            <label>
+              Top (px)
+              <input id="ai-crop-y" type="number" min="0" value="0" />
+            </label>
+            <label>
+              Width (px)
+              <input id="ai-crop-width" type="number" min="64" value="1024" />
+            </label>
+            <label>
+              Height (px)
+              <input id="ai-crop-height" type="number" min="64" value="1024" />
+            </label>
+            <button type="button" data-ai-action="crop" disabled>
+              Apply crop
+            </button>
+          </fieldset>
+          <p id="ai-quality">
+            The original image is 1024 px wide: about 3.4 inches at 300 PPI. Downloading at a higher
+            size does not create new detail.
+          </p>
+          <p>
+            Fine fur, white subjects and enclosed gaps may need manual mask refinement.{' '}
+            <button type="button" data-ai-action="studio" disabled>
+              Refine in Studio
+            </button>
+          </p>
+        </details>
+        <details id="ai-used-prompt" class="ai-local-options" hidden>
+          <summary>See the description used by the model</summary>
+          <p id="ai-used-prompt-text"></p>
+        </details>
+      </section>
+      <aside class="ai-actions-panel" aria-label="Save, edit and history">
+        <div class="ai-result-actions ai-result-only">
+          <button class="primary ai-open-studio" type="button" data-ai-action="studio" disabled>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="5" width="15" height="16" rx="3" fill="#fff" opacity=".2" />
+              <path
+                d="m9 16 2-5 7-7a2 2 0 0 1 3 3l-7 7-5 2Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+              />
+              <path d="m16 6 3 3M5 20h11" stroke="currentColor" stroke-width="1.7" />
+            </svg>
+            Edit in Clipart Studio
+          </button>
+          <p class="ai-small">
+            Masks, separate cutout layers, text, stickers, coloring pages and CMYK PDF.
+          </p>
+          <div class="ai-downloads">
+            <button type="button" data-ai-action="download" disabled>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+              </svg>
+              Download Image <span>WebP</span>
+            </button>
+            <button type="button" data-ai-action="project" disabled>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 3h12l3 3v15H4V3Zm3 0v6h8V3M8 21v-7h8v7" />
+              </svg>
+              Save editable project <span>JSON</span>
+            </button>
+          </div>
+          <button class="ai-new-image" type="button" data-ai-action="again" disabled>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 7v6h-6M19 12a7 7 0 1 0-1 6" />
+            </svg>
+            Generate a new interpretation
+          </button>
+          <p class="ai-small">Uses one more generation. Your current result stays in history.</p>
+        </div>
+        <details class="ai-history-section">
+          <summary>
+            Your recent images <span>Saved on this device</span>
+          </summary>
+          <div class="ai-history-heading">
+            <h3>On this device</h3>
+            <span id="ai-history-count">0 images</span>
+          </div>
+          <div id="ai-history" class="ai-history">
+            <p class="ai-small">Your recent results will appear here.</p>
+          </div>
+          <p class="ai-small" id="ai-storage-note">
+            Up to 12 results · saved for 7 days in this browser. Download a project to keep it
+            longer.
+          </p>
+          <button class="ai-clear" type="button" data-ai-action="clear">
+            Clear saved AI images
+          </button>
+        </details>
+        <p class="ai-model-note">
+          Images by FLUX.1 schnell. Prompt assistance:{' '}
+          <a href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE">
+            Built with Llama
+          </a>
+          . Local edits use no generation quota.
+        </p>
+      </aside>
+    </div>
+    <section class="ai-how" aria-labelledby="ai-how-title">
+      <p class="ai-eyebrow">From an idea to a finished piece</p>
+      <h2 id="ai-how-title">Create clipart with AI. Finish it with care.</h2>
+      <div>
+        <article>
+          <span>1</span>
+          <h3>Describe what matters</h3>
+          <p>
+            Name your subject, its action and the details that make it yours. Choose an illustration
+            style and leave a little space around the edges.
+          </p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Inspect and refine</h3>
+          <p>
+            Check the pose, small details and any lettering. Compare local edits with the original,
+            remove a simple white background and keep the version you like.
+          </p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Make something useful</h3>
+          <p>
+            Open <a href="/create/">Clipart Studio</a> to add editable text, build a sticker or
+            arrange a printable page. Our <a href="/guides/">project guides</a> explain the next
+            steps.
+          </p>
+        </article>
+      </div>
+    </section>
+    <section class="ai-faq" aria-labelledby="ai-faq-title">
+      <div>
+        <p class="ai-eyebrow">A few things to know</p>
+        <h2 id="ai-faq-title">An idea is only the beginning.</h2>
+        <p>
+          Real model generation, practical editing tools and clear limits. You stay in charge of the
+          final result.
+        </p>
+        <a href="/categories/">Explore ready-made clipart →</a>
+      </div>
+      <div>
+        {faq.map(([q, a]) => (
+          <details>
+            <summary>{q}</summary>
+            <p>{a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+  <script>
+    import '../ai/client';
+  </script>
+</Layout>
