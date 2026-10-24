@@ -1,0 +1,349 @@
+---
+import type { art } from '../lib/catalog';
+import { artworkDetails, formatFileSize } from '../lib/artwork-details';
+import Icon from './Icon.astro';
+interface Props {
+  item: (typeof art)[number];
+  layers: string[];
+}
+const { item, layers } = Astro.props;
+const facts = artworkDetails(item);
+---
+
+<section class="artwork-facts" aria-labelledby="artwork-facts-title">
+  <div class="artwork-facts-heading">
+    <div>
+      <p>Good to know before you download</p>
+      <h2 id="artwork-facts-title">The artwork, in detail.</h2>
+    </div>
+    <a href="/guides/webp-pdf-and-editable-projects/">
+      A guide to your files <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+  <div class="artwork-facts-grid">
+    <article>
+      <span class="artwork-facts-icon">
+        <Icon name="image" size={26} />
+      </span>
+      <h3>Your digital image</h3>
+      <dl>
+        <div>
+          <dt>Format & size</dt>
+          <dd>WebP · {formatFileSize(item.files.webp.bytes)}</dd>
+        </div>
+        <div>
+          <dt>Resolution</dt>
+          <dd>
+            {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} px
+          </dd>
+        </div>
+        <div>
+          <dt>Background</dt>
+          <dd>{item.alpha ? 'Transparent — no background to remove' : 'Included in the image'}</dd>
+        </div>
+        <div>
+          <dt>Layout</dt>
+          <dd>{facts.orientation} canvas</dd>
+        </div>
+      </dl>
+    </article>
+    {item.pdf && (
+      <article>
+        <span class="artwork-facts-icon artwork-facts-rose">
+          <Icon name="print" size={26} />
+        </span>
+        <h3>Your printable file</h3>
+        <dl>
+          <div>
+            <dt>Format & size</dt>
+            <dd>PDF · {formatFileSize(item.files.pdf.bytes)}</dd>
+          </div>
+          <div>
+            <dt>PDF page size</dt>
+            <dd>{item.pdfPage}</dd>
+          </div>
+          <div>
+            <dt>Print color</dt>
+            <dd>{item.pdfColorSpace.includes('CMYK') ? 'CMYK' : item.pdfColorSpace}</dd>
+          </div>
+          <div>
+            <dt>Image at 300 pixels/inch</dt>
+            <dd>
+              {facts.printInches}
+              <small>{facts.printCentimeters} · full image canvas</small>
+            </dd>
+          </div>
+        </dl>
+        <a href="/print-size/">
+          Check your print size <span aria-hidden="true">→</span>
+        </a>
+      </article>
+    )}
+    <article>
+      <span class="artwork-facts-icon artwork-facts-mint">
+        <Icon name="layers" size={26} />
+      </span>
+      <h3>Make it your own</h3>
+      <p>{facts.editing}</p>
+      {item.layered && <p>{layers.length} named source layers included.</p>}
+      <p>
+        Preview colors help you see the edges. They don’t change the original download; export from
+        Studio to save your edits.
+      </p>
+      <a href={`/edit/${item.id}/`}>
+        Edit this artwork <span aria-hidden="true">→</span>
+      </a>
+    </article>
+    <article>
+      <span class="artwork-facts-icon artwork-facts-violet">
+        <Icon name="document" size={26} />
+      </span>
+      <h3>Origin & permission</h3>
+      <dl>
+        <div>
+          <dt>Artwork origin</dt>
+          <dd>{facts.origin}</dd>
+        </div>
+        <div>
+          <dt>License</dt>
+          <dd>Personal & educational use</dd>
+        </div>
+      </dl>
+      <p>{facts.originDescription}</p>
+      <p>
+        Use it in your personal and classroom projects. Commercial use and resale as clipart are not
+        permitted.
+      </p>
+      <a href="/license/">
+        Read the full license <span aria-hidden="true">→</span>
+      </a>
+    </article>
+  </div>
+  <details class="artwork-technical">
+    <summary>Full file information</summary>
+    <dl>
+      <div>
+        <dt>Artwork ID</dt>
+        <dd>{item.id}</dd>
+      </div>
+      <div>
+        <dt>WebP file size</dt>
+        <dd>{item.files.webp.bytes.toLocaleString('en-US')} bytes</dd>
+      </div>
+      {item.pdf && (
+        <>
+          <div>
+            <dt>PDF file size</dt>
+            <dd>{item.files.pdf.bytes.toLocaleString('en-US')} bytes</dd>
+          </div>
+          <div>
+            <dt>PDF color space</dt>
+            <dd>{item.pdfColorSpace}</dd>
+          </div>
+          <div>
+            <dt>Print profile</dt>
+            <dd>{item.printProfile}</dd>
+          </div>
+        </>
+      )}
+      <div>
+        <dt>Source type</dt>
+        <dd>{item.layered ? 'Layered vector artwork' : 'Raster artwork; one image layer'}</dd>
+      </div>
+    </dl>
+    {item.layered && (
+      <>
+        <h3>Editable source layers</h3>
+        <ul>
+          {layers.map((layer) => (
+            <li>{layer}</li>
+          ))}
+        </ul>
+      </>
+    )}
+  </details>
+</section>
+
+<style>
+  .artwork-facts {
+    margin: 48px 0;
+    padding: 30px;
+    border: 1px solid #dbe6f3;
+    border-radius: 23px;
+    background: linear-gradient(145deg, #f7faff, #edf4fc);
+  }
+  .artwork-facts-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 25px;
+  }
+  .artwork-facts-heading p {
+    margin: 0 0 7px;
+    font-size: 13px;
+    font-weight: 650;
+    color: #41638c;
+  }
+  .artwork-facts h2 {
+    font-family: 'UltraClipart Sans', Arial, sans-serif;
+    margin: 0;
+    font-size: 29px;
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+    color: #162e51;
+  }
+  .artwork-facts a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #155bb6;
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.6;
+  }
+  .artwork-facts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+  .artwork-facts article {
+    min-width: 0;
+    padding: 25px;
+    border: 1px solid #dce7f4;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 3px 0 #e1eaf5;
+  }
+  .artwork-facts-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 49px;
+    height: 49px;
+    border: 1px solid #c8ddf7;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #f3f9ff, #dcecff);
+    color: #2b6bb5;
+    box-shadow:
+      0 3px #e5edf8,
+      inset 0 1px #fff;
+  }
+  .artwork-facts-rose {
+    color: #9e566c;
+    border-color: #edd1d9;
+    background: linear-gradient(145deg, #fff7f9, #f9e5eb);
+  }
+  .artwork-facts-mint {
+    color: #33786d;
+    border-color: #c6e4d9;
+    background: linear-gradient(145deg, #f3fcf7, #e0f2e9);
+  }
+  .artwork-facts-violet {
+    color: #6d59a1;
+    border-color: #dfd5f2;
+    background: linear-gradient(145deg, #fcf9ff, #ede7f9);
+  }
+  .artwork-facts h3 {
+    font-family: 'UltraClipart Sans', Arial, sans-serif;
+    margin: 17px 0 16px;
+    color: #173255;
+    font-size: 20px;
+    letter-spacing: -0.4px;
+  }
+  .artwork-facts dl {
+    margin: 0;
+  }
+  .artwork-facts dl > div {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.75fr) minmax(0, 1fr);
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #edf1f7;
+  }
+  .artwork-facts dl > div:last-child {
+    border-bottom: 0;
+  }
+  .artwork-facts dt {
+    color: #526985;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .artwork-facts dd {
+    margin: 0;
+    color: #243f61;
+    font-size: 13px;
+    font-weight: 550;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .artwork-facts dd small {
+    display: block;
+    margin-top: 4px;
+    color: #526985;
+    font-size: 11px;
+    font-weight: 400;
+  }
+  .artwork-facts article > p {
+    margin: 0 0 14px;
+    color: #415c7b;
+    font-size: 14px;
+    line-height: 1.75;
+  }
+  .artwork-facts article > a {
+    margin-top: 14px;
+  }
+  .artwork-technical {
+    margin-top: 20px;
+    border-top: 1px solid #d5e2f3;
+  }
+  .artwork-technical summary {
+    display: list-item;
+    min-height: 48px;
+    padding: 17px 3px 7px;
+    cursor: pointer;
+    color: #2a4f80;
+    font-size: 14px;
+    font-weight: 650;
+  }
+  .artwork-technical dl {
+    margin-top: 10px;
+  }
+  .artwork-technical dl > div {
+    grid-template-columns: 160px minmax(0, 1fr);
+    border-color: #dce6f2;
+  }
+  .artwork-facts :focus-visible {
+    outline: 3px solid #1f6ed4;
+    outline-offset: 4px;
+  }
+  @media (max-width: 700px) {
+    .artwork-facts {
+      padding: 22px 17px;
+      border-radius: 18px;
+    }
+    .artwork-facts-heading {
+      display: block;
+    }
+    .artwork-facts-heading > a {
+      margin-top: 13px;
+    }
+    .artwork-facts h2 {
+      font-size: 26px;
+    }
+    .artwork-facts-grid {
+      grid-template-columns: 1fr;
+    }
+    .artwork-facts article {
+      padding: 22px 20px;
+    }
+    .artwork-technical dl > div {
+      grid-template-columns: 105px minmax(0, 1fr);
+    }
+  }
+  @media (max-width: 359px) {
+    .artwork-facts dl > div {
+      grid-template-columns: 1fr;
+      gap: 3px;
+    }
+  }
+</style>

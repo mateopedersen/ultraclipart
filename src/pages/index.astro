@@ -4,6 +4,7 @@ import '../styles/home-showcase.css';
 import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
 import AiInvitation from '../components/AiInvitation.astro';
+import HomeBenefits from '../components/HomeBenefits.astro';
 import { art, newestArt, topics, availableClusters, slugify } from '../lib/catalog';
 const picks = ['baby', 'heart', 'volleyball', 'winter'].filter((slug) =>
   art.some((item) => item.topic === slug),
@@ -14,6 +15,9 @@ const heroFruit = art.find((item) => item.id === 'strawberry-fruit-trio-realisti
 const heroButterfly = art.find(
   (item) => item.id === 'monarch-butterfly-open-wings-illustration-clipart',
 )!;
+const woodlandFox = art.find((item) => item.id === 'red-fox-wildflowers-botanical-clipart')!;
+const woodlandSquirrel = art.find((item) => item.id === 'squirrel-baby-watercolor-clipart')!;
+const woodlandHedgehog = art.find((item) => item.id === 'baby-hedgehog-watercolor-clipart')!;
 const quickSubjects = [
   { label: 'Little animals', href: '/clipart/fox/', image: heroFox },
   { label: 'Hearts & flowers', href: '/clipart/heart/', image: heroHeart },
@@ -145,64 +149,64 @@ const recentPicks = newestArt.filter((item) => {
     </div>
     <div
       class="home-artboard home-gallery-stage"
-      aria-label="Explore original artwork from the clipart collection"
+      aria-label="A little woodland story: fox, squirrel, hedgehog and butterfly clipart"
     >
       <div class="home-artboard-orbit" aria-hidden="true"></div>
       <div class="home-artboard-caption">
-        <span></span> The art of a little imagination
+        <span></span> A little woodland story
       </div>
       <a
         class="home-art-piece home-art-fox"
-        href={`/art/${heroFox.id}/`}
-        aria-label={`Explore ${heroFox.title}`}
+        href={`/art/${woodlandFox.id}/`}
+        aria-label={`Explore ${woodlandFox.title}`}
       >
         <img
-          src="/home-art/fox-1024.webp"
-          srcset="/home-art/fox-640.webp 640w, /home-art/fox-1024.webp 1024w"
+          src="/home-art/woodland-fox-1024.webp"
+          srcset="/home-art/woodland-fox-640.webp 640w, /home-art/woodland-fox-1024.webp 1024w"
           sizes="(max-width: 520px) 230px, 360px"
-          alt="A detailed baby fennec fox with large ears and soft sandy fur"
+          alt={woodlandFox.alt}
           width="440"
           height="440"
           fetchpriority="high"
         />
         <div class="home-piece-title">
           <strong>
-            Little details.
+            Small friends.
             <br />
-            Big character.
+            Big adventures.
           </strong>
-          <span>Discover your next favorite</span>
+          <span>Bring a woodland tale to life</span>
         </div>
       </a>
       <a
         class="home-art-piece home-art-heart"
-        href={`/art/${heroHeart.id}/`}
-        aria-label={`Explore ${heroHeart.title}`}
+        href={`/art/${woodlandSquirrel.id}/`}
+        aria-label={`Explore ${woodlandSquirrel.title}`}
       >
         <img
-          src="/home-art/heart-1024.webp"
-          srcset="/home-art/heart-640.webp 640w, /home-art/heart-1024.webp 1024w"
+          src="/home-art/woodland-squirrel-1024.webp"
+          srcset="/home-art/woodland-squirrel-640.webp 640w, /home-art/woodland-squirrel-1024.webp 1024w"
           sizes="(max-width: 520px) 230px, 360px"
-          alt="A heart-shaped wreath of pink and cream roses"
+          alt={woodlandSquirrel.alt}
           width="440"
           height="440"
         />
-        <span>Made for heartfelt moments</span>
+        <span>A curious little neighbor</span>
       </a>
       <a
         class="home-art-piece home-art-fruit"
-        href={`/art/${heroFruit.id}/`}
-        aria-label={`Explore ${heroFruit.title}`}
+        href={`/art/${woodlandHedgehog.id}/`}
+        aria-label={`Explore ${woodlandHedgehog.title}`}
       >
         <img
-          src="/home-art/fruit-1024.webp"
-          srcset="/home-art/fruit-640.webp 640w, /home-art/fruit-1024.webp 1024w"
+          src="/home-art/woodland-hedgehog-1024.webp"
+          srcset="/home-art/woodland-hedgehog-640.webp 640w, /home-art/woodland-hedgehog-1024.webp 1024w"
           sizes="(max-width: 520px) 230px, 360px"
-          alt="Three realistic ripe red strawberries with green leaves"
+          alt={woodlandHedgehog.alt}
           width="440"
           height="440"
         />
-        <span>A fresh splash of color</span>
+        <span>A tiny forest companion</span>
       </a>
       <a
         class="home-art-butterfly"
@@ -320,18 +324,5 @@ const recentPicks = newestArt.filter((item) => {
         })}
     </div>
   </section>
-  <div class="benefits">
-    {[
-      ['♡', 'Free to create', 'For personal and educational projects.'],
-      ['↓', 'Two useful formats', 'Transparent WebP and printable PDF.'],
-      ['✎', 'Make it your own', 'Edit colors, shapes and individual layers.'],
-      ['⌂', 'Keep it private', 'Your edits stay in your browser.'],
-    ].map(([icon, title, body]) => (
-      <div>
-        <div class="benefit-icon">{icon}</div>
-        <strong>{title}</strong>
-        <p>{body}</p>
-      </div>
-    ))}
-  </div>
+  <HomeBenefits />
 </Layout>

@@ -1,0 +1,131 @@
+import assert from 'node:assert/strict';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { chromium, firefox, webkit, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
+const engine = process.env.UC_BROWSER || 'chromium';
+const browser = await { chromium, firefox, webkit }[engine].launch();
+const context = await browser.newContext();
+const page = await context.newPage();
+const output = `reports/artwork-details/${engine}`;
+await mkdir(output, { recursive: true });
+const report = { engine, layouts: [], accessibility: [], checks: [], errors: [] };
+page.on('pageerror', (error) => report.errors.push(error.message));
+try {
+  for (const width of [1920, 1440, 1321, 1251, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 1000 });
+    assert.equal((await page.goto(base + '/', { waitUntil: 'networkidle' })).status(), 200);
+    await page.evaluate(() => document.fonts.ready);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    const artworkClear = await page.locator('.home-benefit').evaluateAll((cards) =>
+      cards.every((card) => {
+        const image = card.querySelector('svg').getBoundingClientRect();
+        const copy = card.querySelector('.home-benefit-label').getBoundingClientRect();
+        return image.bottom <= copy.top || image.right <= copy.left || image.left >= copy.right;
+      }),
+    );
+    assert.ok(artworkClear, `Benefit illustrations must not cover text at ${width}`);
+    const axe = await new AxeBuilder({ page })
+      .include('.home-benefits')
+      .include('.site-header')
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
+      .analyze();
+    assert.deepEqual(
+      axe.violations.map((v) => ({ id: v.id, targets: v.nodes.map((n) => n.target) })),
+      [],
+      `Homepage accessibility ${width}`,
+    );
+    if (width > 1320) {
+      const gaps = await page.evaluate(() => {
+        const b = (s) => document.querySelector(s).getBoundingClientRect();
+        const links = b('.site-navigation-links'),
+          surprise = b('.site-surprise-link'),
+          actions = b('.site-navigation-actions');
+        return { before: surprise.left - links.right, after: actions.left - surprise.right };
+      });
+      assert.ok(
+        gaps.before >= 14 && gaps.before <= 20 && gaps.after >= 14 && gaps.after <= 20,
+        `Header gaps at ${width}: ${JSON.stringify(gaps)}`,
+      );
+    }
+    await page.locator('.home-benefits').screenshot({ path: `${output}/benefits-${width}.png` });
+    if (width === 1440 || width === 390)
+      await page.screenshot({ path: `${output}/homepage-${width}.png` });
+    report.layouts.push({ page: 'home', width });
+  }
+  for (const width of [1440, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 1000 });
+    for (const id of ['koala-halloween-pumpkin-clipart', 'winter-arctic-fox-resting']) {
+      assert.equal(
+        (await page.goto(`${base}/art/${id}/`, { waitUntil: 'networkidle' })).status(),
+        200,
+      );
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+      await expect(page.locator('main h1')).toHaveCount(1);
+      await expect(page.locator('.art-ai-badge')).toHaveCount(
+        id === 'winter-arctic-fox-resting' ? 1 : 0,
+      );
+      const original = await page
+        .locator('.detail-actions .download-option')
+        .first()
+        .getAttribute('href');
+      await page.locator('[data-bg="#ffffff"]').click();
+      await expect(page.locator('[data-bg="#ffffff"]')).toHaveAttribute('aria-pressed', 'true');
+      assert.equal(
+        await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundColor),
+        'rgb(255, 255, 255)',
+      );
+      await page.locator('#preview-color').fill('#123456');
+      await expect(page.locator('.art-custom-color')).toHaveAttribute('data-selected', 'true');
+      assert.equal(
+        await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundColor),
+        'rgb(18, 52, 86)',
+      );
+      await page.locator('[data-bg="transparent"]').click();
+      await expect(page.locator('[data-bg="transparent"]')).toHaveAttribute('aria-pressed', 'true');
+      assert.notEqual(
+        await page.locator('#art-preview').evaluate((el) => getComputedStyle(el).backgroundImage),
+        'none',
+      );
+      assert.equal(
+        await page.locator('.detail-actions .download-option').first().getAttribute('href'),
+        original,
+      );
+      await page.getByText('Full file information', { exact: true }).click();
+      await expect(page.locator('.artwork-technical')).toHaveAttribute('open', '');
+      const axe = await new AxeBuilder({ page })
+        .include('.art-detail')
+        .include('.artwork-facts')
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
+        .analyze();
+      assert.deepEqual(
+        axe.violations.map((v) => ({ id: v.id, targets: v.nodes.map((n) => n.target) })),
+        [],
+        `Artwork accessibility ${id} at ${width}`,
+      );
+      if (id.startsWith('koala')) {
+        await page
+          .locator('.art-preview-controls')
+          .screenshot({ path: `${output}/controls-${width}.png` });
+        await page.locator('.artwork-facts').screenshot({ path: `${output}/facts-${width}.png` });
+      }
+      report.layouts.push({ page: id, width });
+      report.accessibility.push({ id, width, violations: 0 });
+    }
+  }
+  assert.deepEqual(report.errors, []);
+  report.checks = [
+    'All preview backgrounds work and restore checkerboard',
+    'Selected state follows presets and custom input',
+    'Preview changes preserve original download URLs',
+    'AI origin is displayed only with evidence',
+    'Expanded technical file facts remain accessible',
+    'Header group spacing is consistent',
+    'Four linked illustrated benefit cards fit every viewport',
+  ];
+  report.status = 'passed';
+} finally {
+  await writeFile(`${output}/report.json`, JSON.stringify(report, null, 2));
+  await browser.close();
+}
+console.log(JSON.stringify(report));

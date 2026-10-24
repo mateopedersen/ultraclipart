@@ -4,6 +4,9 @@ import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
 import Icon from '../../components/Icon.astro';
 import ShareButton from '../../components/ShareButton.astro';
+import ArtworkFacts from '../../components/ArtworkFacts.astro';
+import { artworkDetails, formatFileSize } from '../../lib/artwork-details';
+import '../../styles/artwork-detail.css';
 import notes from '../../../data/artwork-notes.json';
 import { art, topics } from '../../lib/catalog';
 export function getStaticPaths() {
@@ -16,6 +19,7 @@ const note = (
 if (item.layered && !note) throw new Error(`Missing source layers for ${item.id}`);
 const layers = note?.layers ?? [];
 const topic = topics.find((t) => t.slug === item.topic)!;
+const facts = artworkDetails(item);
 ---
 
 <Layout
@@ -59,7 +63,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
   <div class="breadcrumb">
     <a href="/">Home</a> / <a href={`/clipart/${item.topic}/`}>{topic.keyword}</a> / {item.title}
   </div>
-  <div class="detail">
+  <div class="detail art-detail">
     <div>
       <div class="preview" id="art-preview">
         <img
@@ -71,43 +75,69 @@ const topic = topics.find((t) => t.slug === item.topic)!;
           decoding="async"
         />
       </div>
-      <div class="swatches" aria-label="Preview background">
-        <button data-bg="transparent">▦ Transparent</button>
-        <button data-bg="#ffffff">White</button>
-        <button data-bg="#e6eff9">Soft blue</button>
-        <label>
-          Custom{' '}
+      <fieldset class="swatches art-preview-controls">
+        <legend>Preview background</legend>
+        <button type="button" data-bg="transparent" aria-pressed="true">
+          <span class="art-color-chip art-checker" aria-hidden="true"></span>Transparent
+        </button>
+        <button type="button" data-bg="#ffffff" aria-pressed="false">
+          <span class="art-color-chip art-white" aria-hidden="true"></span>White
+        </button>
+        <button type="button" data-bg="#e6eff9" aria-pressed="false">
+          <span class="art-color-chip art-blue" aria-hidden="true"></span>Soft blue
+        </button>
+        <label class="art-custom-color" data-selected="false">
           <input
             aria-label="Custom preview background"
             id="preview-color"
             type="color"
             value="#f0f5f1"
           />
+          <span>Custom</span>
         </label>
-      </div>
+        <p>Preview only — your download stays unchanged.</p>
+      </fieldset>
     </div>
     <section>
       <p class="eyebrow">{item.layered ? 'Original illustration' : topic.keyword}</p>
       <h1>{item.title}</h1>
-      <p>{item.description}</p>
-      <div class="metadata">
-        <div>
-          <small>Topic</small>
-          <a href={`/clipart/${item.topic}/`}>{topic.keyword}</a>
-        </div>
-        <div>
-          <small>Style</small>
-          {item.style}
-        </div>
-        <div>
-          <small>WebP dimensions</small>
-          {item.width} × {item.height}
-        </div>
-        <div>
-          <small>{item.layered ? 'Source' : 'Downloads'}</small>
-          {item.layered ? 'Editable layered vector' : 'Editable image layer'}
-        </div>
+      <div class="art-detail-badges">
+        {item.alpha && (
+          <span>
+            <Icon name="background" size={15} />
+            Transparent background
+          </span>
+        )}
+        {facts.aiGenerated && (
+          <span class="art-ai-badge">
+            <Icon name="image" size={15} />
+            AI-generated artwork
+          </span>
+        )}
       </div>
+      <p class="art-detail-description">{item.description}</p>
+      <dl class="art-detail-overview">
+        <div>
+          <dt>Explore the subject</dt>
+          <dd>
+            <a href={`/clipart/${item.topic}/`}>{topic.keyword}</a>
+          </dd>
+        </div>
+        <div>
+          <dt>Illustration style</dt>
+          <dd>{facts.style}</dd>
+        </div>
+        <div>
+          <dt>Image resolution</dt>
+          <dd>
+            {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} px
+          </dd>
+        </div>
+        <div>
+          <dt>Included files</dt>
+          <dd>{item.pdf ? 'WebP image + printable PDF' : 'WebP image'}</dd>
+        </div>
+      </dl>
       <div class="detail-actions">
         {item.editable && (
           <a class="button primary" href={`/edit/${item.id}/`}>
@@ -120,8 +150,11 @@ const topic = topics.find((t) => t.slug === item.topic)!;
             <Icon name="image" size={22} />
           </span>
           <span class="download-copy">
-            <strong>Download Image</strong>
-            <small>Transparent background</small>
+            <strong>Download WebP</strong>
+            <small>
+              {item.alpha ? 'Transparent image' : 'Image file'} ·{' '}
+              {formatFileSize(item.files.webp.bytes)}
+            </small>
           </span>
           <Icon name="download" size={18} />
         </a>
@@ -132,7 +165,9 @@ const topic = topics.find((t) => t.slug === item.topic)!;
             </span>
             <span class="download-copy">
               <strong>Download PDF</strong>
-              <small>Print-ready file</small>
+              <small>
+                {item.pdfPage} · {formatFileSize(item.files.pdf.bytes)}
+              </small>
             </span>
             <Icon name="download" size={18} />
           </a>
@@ -155,42 +190,7 @@ const topic = topics.find((t) => t.slug === item.topic)!;
       )}
     </section>
   </div>
-  <section class="asset-facts" aria-label="Download details">
-    <h2>Inside this download</h2>
-    <dl>
-      {item.layered && (
-        <>
-          <dt>Editable source</dt>
-          <dd>{layers.length} named layers</dd>
-        </>
-      )}
-      <dt>WebP</dt>
-      <dd>
-        {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} pixels ·{' '}
-        {item.files.webp.bytes.toLocaleString('en-US')} bytes
-      </dd>
-      <dt>PDF</dt>
-      <dd>
-        {item.pdfPage} · {item.pdfColorSpace} · {item.files.pdf.bytes.toLocaleString('en-US')} bytes
-      </dd>
-      <dt>Print color</dt>
-      <dd>{item.printProfile}</dd>
-    </dl>
-    {item.layered && (
-      <details>
-        <summary>See the editable layers</summary>
-        <ul>
-          {layers.map((layer) => (
-            <li>{layer}</li>
-          ))}
-        </ul>
-      </details>
-    )}
-    <p>
-      <a href="/print-size/">Check a raster print size</a> or{' '}
-      <a href="/guides/webp-pdf-and-editable-projects/">compare the file formats</a>.
-    </p>
-  </section>
+  <ArtworkFacts item={item} layers={layers} />
   <div class="section-head">
     <h2>A little more inspiration</h2>
     <a href="/new/">Explore all →</a>
