@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import { readPublication } from './scripts/publication-policy.mjs';
+import { releaseRevision } from './scripts/release-revision.mjs';
 
 // The checked release, rather than a mutable dashboard value, selects production media.
 const production = process.env.CF_PAGES === '1';
@@ -12,9 +13,7 @@ export default defineConfig({
   vite: {
     worker: { format: 'es' },
     define: {
-      'import.meta.env.PUBLIC_RELEASE_REVISION': JSON.stringify(
-        process.env.CF_PAGES_COMMIT_SHA ?? 'local',
-      ),
+      'import.meta.env.PUBLIC_RELEASE_REVISION': JSON.stringify(releaseRevision()),
       'import.meta.env.PUBLIC_ASSET_URLS': JSON.stringify(publication?.assetUrls ?? null),
     },
   },

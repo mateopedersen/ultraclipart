@@ -9,3 +9,7 @@ The importer stages local media, a next catalog and one 150-object R2 batch. It 
 Keep source archives immutable. Excluded designs and replacement candidates remain outside the public catalog. Recovery audit files record the source and output hashes, print facts and screen-review scope without inventing a human reviewer or physical press proof. The original 110-topic generation queue is separate from supplemental recovery collections.
 
 The headphones recovery includes 49 supplied artworks and one original replacement. All 50 native PDF/WebP pairs and all 50 edited exports were tested before release. Subsequent collections require their own reviewed intake and cannot inherit this approval.
+
+The television recovery includes 33 supplied artworks and 17 original replacements. Its 100 native downloads and 100 edited exports passed their own gallery, search, mobile, accessibility and editor checks. Independent PDF preflight confirmed the source CMYK image, output profile and alpha mask survive editing; the largest edited PDF is 979,538 bytes. Screen-rendered proofs were also inspected.
+
+Production pages identify their source commit for both Git-connected and manual builds. A manual build resolves the current Git HEAD when Cloudflare has not supplied a revision; missing or invalid production revisions stop the build.
