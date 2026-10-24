@@ -61,6 +61,9 @@ const browse = header.locator('#site-browse-toggle');
 const resources = header.locator('#site-resources-toggle');
 
 async function scan(label) {
+  const surprise = header.locator('.site-surprise-link');
+  if (await surprise.isVisible())
+    await expect(surprise).toHaveAccessibleName(/Surprise me.*A little reason to smile/);
   const result = await new AxeBuilder({ page })
     .include('.site-header')
     .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
