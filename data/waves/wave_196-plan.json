@@ -1,0 +1,22 @@
+{
+  "wave": "wave_196",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-harvest-flower-basket",
+      "title": "Harvest Flower Basket",
+      "alt": "A low handled basket contains golden chrysanthemums, burgundy dahlias and loose wheat stems, no other props.",
+      "description": "A low handled basket contains golden chrysanthemums, burgundy dahlias and loose wheat stems, no other props. Useful for autumn celebration cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_196/source/thanksgiving-harvest-flower-basket-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

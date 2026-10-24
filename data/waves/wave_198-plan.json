@@ -1,0 +1,22 @@
+{
+  "wave": "wave_198",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-meal-delivery-basket",
+      "title": "Meal Delivery Basket",
+      "alt": "A sturdy basket holds a lidded soup jar, wrapped bread, two apples and a blank folded note tucked into the side.",
+      "description": "A sturdy basket holds a lidded soup jar, wrapped bread, two apples and a blank folded note tucked into the side. Useful for neighbor kindness projects.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_198/source/thanksgiving-meal-delivery-basket-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 875
+    }
+  ]
+}

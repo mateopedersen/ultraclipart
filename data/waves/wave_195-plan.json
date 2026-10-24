@@ -1,0 +1,22 @@
+{
+  "wave": "wave_195",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-roasted-vegetable-board",
+      "title": "Roasted Vegetable Serving Board",
+      "alt": "An oval wooden serving board holds orange carrots, beet wedges and Brussels sprouts, garnished with two herb sprigs.",
+      "description": "An oval wooden serving board holds orange carrots, beet wedges and Brussels sprouts, garnished with two herb sprigs. Useful for vegetarian feast invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_195/source/thanksgiving-roasted-vegetable-board-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

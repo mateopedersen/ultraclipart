@@ -37,7 +37,15 @@ for (const row of report.artworks) {
     row.state !== 'FORMAT_PREFLIGHT_PASSED' ||
     !row.webpExactRgba ||
     !row.pdfAlphaExact ||
-    !row.nativeResolutionPreserved ||
+    !(
+      row.nativeResolutionPreserved ||
+      (row.webpNativeResolutionPreserved &&
+        row.pdfAt300Ppi &&
+        row.pdfWidth > 0 &&
+        row.pdfHeight > 0 &&
+        row.pdfWidth <= row.width &&
+        row.pdfHeight <= row.height)
+    ) ||
     row.pairMeanRgbDifference >= 18
   )
     throw new Error('Incomplete source verification');
@@ -96,7 +104,10 @@ for (const row of report.artworks) {
     formats: ['WEBP', 'PDF'],
     printProfile: row.image.profile,
     pdfColorSpace: row.image.colorSpace,
-    pdfPage: [row.width, row.height].map((n) => (n / 300).toFixed(3)).join(' × ') + ' in',
+    pdfPage:
+      [row.pdfWidth ?? row.width, row.pdfHeight ?? row.height]
+        .map((n) => (n / 300).toFixed(3))
+        .join(' × ') + ' in',
     alpha: true,
     files: {},
   };

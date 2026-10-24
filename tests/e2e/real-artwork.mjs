@@ -166,10 +166,10 @@ try {
   await page
     .locator('.studio-scenes')
     .screenshot({ path: path.join(out, 'real-compositions.png') });
-  for (const [link, mode, pane] of [
-    ['text', 'advanced', 'text'],
-    ['studio', 'print', 'studio'],
-    ['elements', 'print', 'elements'],
+  for (const [link, pane] of [
+    ['text', 'text'],
+    ['studio', 'studio'],
+    ['elements', 'elements'],
   ]) {
     await page.locator(`#studio-guide [data-studio-launch="${link}"]`).click();
     await expect(page.locator(`[data-pane="${pane}"]`)).toBeVisible();

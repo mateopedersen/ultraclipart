@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Native-resolution raster export with bounded quality, resumable evidence and no remote writes.
+"""Raster export with bounded quality, resumable evidence and no remote writes.
 
 WebP is exact lossless RGBA. Color CMYK uses LittleCMS; explicitly reviewed neutral
 line art may use process black with empty C/M/Y plates. Independently decoded JPEG2000
 streams choose lossless first, then only explicitly permitted high-quality candidates.
-The alpha mask remains byte-exact. No resampling or invented embedded print profile.
+The alpha mask remains byte-exact at the declared 300 dpi print size. An optional
+smaller print page preserves the full native source in the lossless WebP.
 """
 import argparse, fcntl, hashlib, io, json, math, os, re, shutil, struct, subprocess, zlib
 from pathlib import Path
@@ -137,9 +138,18 @@ def main():
         webp=files_dir/f'{art_id}.webp';image.save(webp,'WEBP',lossless=True,quality=100,method=6,exact=True)
         with Image.open(webp) as decoded:assert decoded.convert('RGBA').tobytes()==image.tobytes(),'WebP must preserve every RGBA byte'
         thumb=image.copy();thumb.thumbnail((440,440),Image.Resampling.LANCZOS);thumb.save(files_dir/f'{art_id}-thumb.webp','WEBP',quality=94,method=6,alpha_quality=100)
-        raw=separate_cmyk(image,alpha,transform,meta);weights=np.array(alpha,dtype=np.float64)
+        print_limit=meta.get('printMaxEdgePx')
+        if print_limit is not None:
+            assert type(print_limit) is int and 750<=print_limit<=max(image.size), 'Unsupported 300 dpi print size'
+            print_image=image.copy()
+            print_image.thumbnail((print_limit,print_limit),Image.Resampling.LANCZOS)
+            assert max(print_image.size)<=print_limit and min(print_image.size)>=500
+        else:print_image=image
+        print_alpha=print_image.getchannel('A');validate_native_alpha(print_alpha)
+        print_width,print_height=print_image.size
+        raw=separate_cmyk(print_image,print_alpha,transform,meta);weights=np.array(print_alpha,dtype=np.float64)
         cmyk=Image.fromarray(raw,'CMYK');trials=[];selected=None
-        mask_payload=png_payload(alpha,meta.get('alphaCompression','zlib'))
+        mask_payload=png_payload(print_alpha,meta.get('alphaCompression','zlib'))
         # Wavelet decomposition changes packing, never native pixel dimensions or the quality floor.
         resolutions=meta.get('jpeg2000Resolutions',6)
         assert type(resolutions) is int and 4<=resolutions<=6, 'Unsupported JPEG2000 decomposition count'
@@ -147,11 +157,11 @@ def main():
             if quality and quality<plan['minimumJpxQualityDb']:continue
             out=io.BytesIO();cmyk.save(out,'JPEG2000',num_resolutions=resolutions,irreversible=quality is not None,**({'quality_mode':'dB','quality_layers':[quality]}if quality else {}))
             with Image.open(io.BytesIO(out.getvalue())) as decoded:
-                decoded.load();assert decoded.mode=='CMYK' and decoded.size==image.size
+                decoded.load();assert decoded.mode=='CMYK' and decoded.size==print_image.size
                 delta=raw.astype(np.float64)-np.array(decoded,dtype=np.float64)
             rmse=float(np.sqrt(np.sum(delta*delta*weights[:,:,None])/(4*np.sum(weights))))
             if quality is None:assert rmse==0
-            pdf=pdf_bytes(out.getvalue(),alpha,meta['title'],mask_payload)
+            pdf=pdf_bytes(out.getvalue(),print_alpha,meta['title'],mask_payload)
             trials.append({'numResolutions':resolutions,'qualityDb':quality,'losslessCmyk':quality is None,'bytes':len(pdf),'weightedCmykRmse':round(rmse,6)})
             if len(pdf)<=plan['maxPdfBytes'] and rmse<=plan['maximumWeightedCmykRmse']:
                 selected=trials[-1];break
@@ -161,10 +171,10 @@ def main():
         pdf_path=files_dir/f'{art_id}.pdf';pdf_path.write_bytes(pdf)
         reader=PdfReader(pdf_path,strict=True);assert len(reader.pages)==1
         obj=reader.pages[0]['/Resources']['/XObject']['/Artwork'].get_object()
-        info=inspect_cmyk_image(obj,width,height,reader.trailer['/Root']['/OutputIntents'])
-        assert decoded_alpha(obj['/SMask'].get_object())==alpha.tobytes()
+        info=inspect_cmyk_image(obj,print_width,print_height,reader.trailer['/Root']['/OutputIntents'])
+        assert decoded_alpha(obj['/SMask'].get_object())==print_alpha.tobytes()
         subprocess.run([binary,'-f','1','-singlefile','-r','144','-defaultcmykprofile',str(PROFILE),'-png',str(pdf_path),str(proof_dir/art_id)],check=True,capture_output=True)
-        row={**meta,'topic':plan['topic'],'width':width,'height':height,'sourceType':'raster','sourceSha256':source_sha,'inputSignature':signature,'state':'FORMAT_PREFLIGHT_PASSED','selectedEncoding':selected,'trials':trials,'webpExactRgba':True,'pdfAlphaExact':True,'nativeResolutionPreserved':True,'visibleBounds':visible,'image':info,'files':{}}
+        row={**meta,'topic':plan['topic'],'width':width,'height':height,'pdfWidth':print_width,'pdfHeight':print_height,'sourceType':'raster','sourceSha256':source_sha,'inputSignature':signature,'state':'FORMAT_PREFLIGHT_PASSED','selectedEncoding':selected,'trials':trials,'webpExactRgba':True,'pdfAlphaExact':True,'nativeResolutionPreserved':print_image is image,'webpNativeResolutionPreserved':True,'pdfAt300Ppi':True,'visibleBounds':visible,'image':info,'files':{}}
         for kind,path in [('pdf',pdf_path),('webp',webp),('thumb',files_dir/f'{art_id}-thumb.webp')]:
             body=path.read_bytes();row['files'][kind]={'path':str(path.relative_to(ROOT)),'bytes':len(body),'sha256':sha(body)}
         row['proofSha256']=sha((proof_dir/f'{art_id}.png').read_bytes())

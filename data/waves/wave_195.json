@@ -1,0 +1,100 @@
+{
+  "wave": "wave_195",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-roasted-vegetable-board",
+      "title": "Roasted Vegetable Serving Board",
+      "alt": "An oval wooden serving board holds orange carrots, beet wedges and Brussels sprouts, garnished with two herb sprigs.",
+      "description": "An oval wooden serving board holds orange carrots, beet wedges and Brussels sprouts, garnished with two herb sprigs. Useful for vegetarian feast invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_195/source/thanksgiving-roasted-vegetable-board-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "thanksgiving",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 900,
+      "pdfHeight": 600,
+      "sourceType": "raster",
+      "sourceSha256": "75a3c60001d68ddaa742348d32f120334be7adbd71077fbed47ac5f89577f550",
+      "inputSignature": "4996b8ba746170451d7bf417bfbf0adcf9b9db1ee27fd2432592929185fce189",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 858690,
+        "weightedCmykRmse": 0.714319
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1023127,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 858690,
+          "weightedCmykRmse": 0.714319
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        99,
+        1498,
+        920
+      ],
+      "image": {
+        "width": 900,
+        "height": 600,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_195/exports/thanksgiving-roasted-vegetable-board.pdf",
+          "bytes": 858690,
+          "sha256": "ef2fd07b4bebeee46cbd2a5da530426a1835283e763d6cc1027136fec29d416c"
+        },
+        "webp": {
+          "path": "work/production/wave_195/exports/thanksgiving-roasted-vegetable-board.webp",
+          "bytes": 1942420,
+          "sha256": "f23f3c3a0760703d24030eb9ab4e3e5851bc8a5b2d7b59f9210b030261692c1d"
+        },
+        "thumb": {
+          "path": "work/production/wave_195/exports/thanksgiving-roasted-vegetable-board-thumb.webp",
+          "bytes": 61384,
+          "sha256": "53e4d4e6c5d68f7bf5915e4e8d878f08615df7af7fff01d6ef230fdd496eac74"
+        }
+      },
+      "proofSha256": "13e23082335aa655d4c49fc42d84f160dd645ea5b0c1e6d944d98cd32f8a2c14",
+      "pairMeanRgbDifference": 9.94621
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNote": "Original artwork and independently rendered CMYK PDF proof visually checked; composition, isolation, complete edges and PDF/WebP pairing accepted. Print dimensions explicitly reflect 300 dpi.",
+  "createdAt": "2026-10-24T08:31:43.011Z"
+}

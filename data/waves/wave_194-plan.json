@@ -1,0 +1,22 @@
+{
+  "wave": "wave_194",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-wheelbarrow-harvest",
+      "title": "Harvest Wheelbarrow",
+      "alt": "A rustic single-wheel garden barrow holding two pumpkins, a small sheaf of wheat and purple cabbages.",
+      "description": "A rustic single-wheel garden barrow holding two pumpkins, a small sheaf of wheat and purple cabbages. Useful for harvest event invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_194/source/thanksgiving-wheelbarrow-harvest-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

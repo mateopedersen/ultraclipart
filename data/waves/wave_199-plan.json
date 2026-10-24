@@ -1,0 +1,22 @@
+{
+  "wave": "wave_199",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-leaf-circle-frame",
+      "title": "Autumn Leaf Circle Frame",
+      "alt": "A circular open-center frame of alternating oak leaves, cranberry clusters and small acorns with an airy gap at the top, no text.",
+      "description": "A circular open-center frame of alternating oak leaves, cranberry clusters and small acorns with an airy gap at the top, no text. Useful for personal invitations.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_199/source/thanksgiving-leaf-circle-frame-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900
+    }
+  ]
+}

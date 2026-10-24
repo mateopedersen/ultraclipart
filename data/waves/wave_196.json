@@ -1,0 +1,121 @@
+{
+  "wave": "wave_196",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-harvest-flower-basket",
+      "title": "Harvest Flower Basket",
+      "alt": "A low handled basket contains golden chrysanthemums, burgundy dahlias and loose wheat stems, no other props.",
+      "description": "A low handled basket contains golden chrysanthemums, burgundy dahlias and loose wheat stems, no other props. Useful for autumn celebration cards.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_196/source/thanksgiving-harvest-flower-basket-v2.png",
+      "alphaCompression": "zopfli",
+      "printMaxEdgePx": 900,
+      "topic": "thanksgiving",
+      "width": 1375,
+      "height": 1144,
+      "pdfWidth": 900,
+      "pdfHeight": 749,
+      "sourceType": "raster",
+      "sourceSha256": "6764d7812536d2a6fe3d74d4869ebd2e9bc61599abbe4f3b9312d8595aa3e99d",
+      "inputSignature": "0e6fcb4376b88a55f0f8ebf51710f8bfb5060d6610a69792d0fc5349cbca6afa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979888,
+        "weightedCmykRmse": 1.201886
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1419115,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1193599,
+          "weightedCmykRmse": 0.684946
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1132956,
+          "weightedCmykRmse": 0.817496
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1058766,
+          "weightedCmykRmse": 0.975329
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979888,
+          "weightedCmykRmse": 1.201886
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        36,
+        1357,
+        1110
+      ],
+      "image": {
+        "width": 900,
+        "height": 749,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_196/exports/thanksgiving-harvest-flower-basket.pdf",
+          "bytes": 979888,
+          "sha256": "318ee79422cb9884864afb50a4c1193582dfdf03d24446ea7bdaa0ee7d1fdf52"
+        },
+        "webp": {
+          "path": "work/production/wave_196/exports/thanksgiving-harvest-flower-basket.webp",
+          "bytes": 1883932,
+          "sha256": "71843aea327071a8114278d24927c19c2d04d16fdd4bc0b731644b1de5c164de"
+        },
+        "thumb": {
+          "path": "work/production/wave_196/exports/thanksgiving-harvest-flower-basket-thumb.webp",
+          "bytes": 97896,
+          "sha256": "12f9318f5dba8aa45ed8dd3c6f746bcc46dcd34b8e9aa772e84f35f5abffa7ee"
+        }
+      },
+      "proofSha256": "f43ecb6d7acd6c971139b775a3ba3afcda3b1fbde96c888d6c8b792bf0fd61a5",
+      "pairMeanRgbDifference": 7.22258
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNote": "Original artwork and independently rendered CMYK PDF proof visually checked; composition, isolation, complete edges and PDF/WebP pairing accepted. Print dimensions explicitly reflect 300 dpi.",
+  "createdAt": "2026-10-24T08:31:43.163Z"
+}

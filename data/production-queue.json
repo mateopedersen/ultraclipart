@@ -1,7 +1,7 @@
 {
   "version": 4,
   "targetBasis": "GENERATED_ARTWORKS_IN_ORIGINAL_110_TOPICS",
-  "productionPausedByOwner": true,
+  "productionPausedByOwner": false,
   "states": [
     "CREATIVE_BRIEF",
     "DRAWN_SVG",
@@ -17,17 +17,17 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 496,
+  "generatedArtworkCount": 502,
   "suppliedArtworkCount": 3192,
-  "originalTopicArtworkCount": 694,
+  "originalTopicArtworkCount": 700,
   "supplementalArtworkCount": 3000,
-  "qualityApprovedArtworkCount": 694,
+  "qualityApprovedArtworkCount": 700,
   "supplementalApprovedArtworkCount": 3000,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 3694,
-  "remainingToDraw": 5004,
-  "nextAction": "New image generation is paused until the owner explicitly resumes it. Import and publish supplied packages after verification.",
+  "availableArtworkCount": 3700,
+  "remainingToDraw": 4998,
+  "nextAction": "Develop distinct compositions for the remaining topic targets; export, visually review, verify all R2/CDN representations, then publish a complete wave.",
   "topics": [
     {
       "topic": "halloween",
@@ -138,11 +138,11 @@
       "keyword": "Thanksgiving clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 44,
+      "generated": 50,
       "supplied": 0,
-      "available": 44,
-      "approved": 44,
-      "remainingToDraw": 6,
+      "available": 50,
+      "approved": 50,
+      "remainingToDraw": 0,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/thanksgiving.json"
     },
@@ -156,8 +156,8 @@
       "available": 0,
       "approved": 0,
       "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/turkey.json"
     },
     {
       "topic": "cornucopia",
@@ -42094,6 +42094,72 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "6faa2159aae72498a40a03d262e7e608a780cd6da6db75edf2b36f7bc146af16"
+    },
+    {
+      "id": "thanksgiving-wheelbarrow-harvest",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e7e57599aff8b678527e0ed6a54022d050445393a37f6f0fea7d00e0f58b5cd0"
+    },
+    {
+      "id": "thanksgiving-roasted-vegetable-board",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "f23f3c3a0760703d24030eb9ab4e3e5851bc8a5b2d7b59f9210b030261692c1d"
+    },
+    {
+      "id": "thanksgiving-harvest-flower-basket",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "71843aea327071a8114278d24927c19c2d04d16fdd4bc0b731644b1de5c164de"
+    },
+    {
+      "id": "thanksgiving-autumn-window-box",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "e5be550d221161251f533aab6e1f06811794e8d86ce85a09b40863b175e0f974"
+    },
+    {
+      "id": "thanksgiving-meal-delivery-basket",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "7a6f07796bd9b4176a77cbcfb564c9bedc532f04c987ffcd20b199326f9a4970"
+    },
+    {
+      "id": "thanksgiving-leaf-circle-frame",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "3e628c7f1937a41f3db66aa461f028785f5d12393a9b0f0823152c971f8076e2"
     }
   ]
 }

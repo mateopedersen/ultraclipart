@@ -1,0 +1,34 @@
+{
+  "wave": "wave_197",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "deferred": [
+    {
+      "id": "thanksgiving-autumn-window-box",
+      "title": "Autumn Window Box",
+      "alt": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background.",
+      "description": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background. Useful for seasonal family newsletter.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-autumn-window-box-v1.png",
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "items": [
+    {
+      "id": "thanksgiving-autumn-window-box",
+      "title": "Autumn Window Box",
+      "alt": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background.",
+      "description": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background. Suitable for personal seasonal printables.",
+      "color": "Orange",
+      "style": "Color",
+      "alphaCompression": "zopfli",
+      "source": "work/production/wave_197/source/thanksgiving-autumn-window-box-v2.png",
+      "printMaxEdgePx": 900
+    }
+  ]
+}
