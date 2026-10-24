@@ -350,6 +350,8 @@
     Arial,
     sans-serif;
   box-shadow: 0 2px 0 #e5edf7;
+  /* Text changes immediately; keep its background in sync for contrast. */
+  transition-property: border-color, box-shadow;
 }
 .art-preview-controls [data-apply-custom][aria-pressed='true'] {
   color: #fff;
