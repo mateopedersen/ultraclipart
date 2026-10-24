@@ -1,0 +1,31 @@
+{
+  "wave": "wave_182",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-harvest-picnic-basket",
+      "title": "Thanksgiving Picnic Basket",
+      "alt": "An open picnic basket holding a boxed lattice pie, checked blanket, two apples and folded napkins.",
+      "description": "An open picnic basket holding a boxed lattice pie, checked blanket, two apples and folded napkins. Useful for outdoor family celebration plans.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_182/source/thanksgiving-harvest-picnic-basket-v5.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-table-runner-arrangement",
+      "title": "Autumn Table Runner Arrangement",
+      "alt": "A cream table runner with a blue floral vase of autumn leaves, two pumpkins and loose oak leaves.",
+      "description": "A cream table runner with a blue floral vase of autumn leaves, two pumpkins and loose oak leaves. Useful for table setting ideas.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_182/source/thanksgiving-table-runner-arrangement-owner-resumed.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

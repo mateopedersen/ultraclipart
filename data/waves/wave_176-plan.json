@@ -1,0 +1,41 @@
+{
+  "wave": "wave_176",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-sharing-soup-pot",
+      "title": "Soup Pot for a Community Meal",
+      "alt": "A copper pot of vegetable soup with its lid, a ladle and two empty autumn-patterned bowls.",
+      "description": "A copper pot of vegetable soup with its lid, a ladle and two empty autumn-patterned bowls. Useful for community meal announcements.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_176/source/thanksgiving-sharing-soup-pot-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-baked-apple-pair",
+      "title": "Baked Apples for Dessert",
+      "alt": "Two baked apples with oat and cinnamon filling on a white plate, with one apple cut open and fresh slices beside it.",
+      "description": "Two baked apples with oat and cinnamon filling on a white plate, with one apple cut open and fresh slices beside it. Useful for holiday dessert recipes.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_176/source/thanksgiving-baked-apple-pair-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-harvest-fruit-pitcher",
+      "title": "Pear and Apple Cider Pitcher",
+      "alt": "A clear squat pitcher of amber cider with three visible apple slices, one pear and a folded rust napkin beside it.",
+      "description": "A clear squat pitcher of amber cider with three visible apple slices, one pear and a folded rust napkin beside it. Useful for family drink menus.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_176/source/thanksgiving-harvest-fruit-pitcher-owner-resumed.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

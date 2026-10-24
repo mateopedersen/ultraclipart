@@ -1,0 +1,109 @@
+{
+  "wave": "wave_189",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-wishbone-keepsake",
+      "title": "Wishbone Keepsake Card",
+      "alt": "A clean ivory wishbone tied with a red bow on a blank kraft keepsake card, with one tiny autumn leaf.",
+      "description": "A clean ivory wishbone tied with a red bow on a blank kraft keepsake card, with one tiny autumn leaf. Useful for family tradition scrapbook.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_189/source/thanksgiving-wishbone-keepsake-resumed.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c63ff64fda52422c236ccadba1cb7a1539b03b1e7c4a00debe787823809e2125",
+      "inputSignature": "ddf2c031abc28fd59ffbe6ce0d0e0a8a732dab1543f12d157dc88fb37bec0a14",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 926815,
+        "weightedCmykRmse": 1.171726
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1604799,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1129453,
+          "weightedCmykRmse": 0.807555
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1024295,
+          "weightedCmykRmse": 0.951102
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 926815,
+          "weightedCmykRmse": 1.171726
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        66,
+        56,
+        1184,
+        1223
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_189/exports/thanksgiving-wishbone-keepsake.pdf",
+          "bytes": 926815,
+          "sha256": "0f83e7769321d597d0d6b1513b8654b1783f65d7bb0cc961f22664de755f2858"
+        },
+        "webp": {
+          "path": "work/production/wave_189/exports/thanksgiving-wishbone-keepsake.webp",
+          "bytes": 1025218,
+          "sha256": "307face0565e77dab90e54a5d1cab1aaf8ee8df3bdd4806d3488520436ec2b7e"
+        },
+        "thumb": {
+          "path": "work/production/wave_189/exports/thanksgiving-wishbone-keepsake-thumb.webp",
+          "bytes": 53132,
+          "sha256": "b07d2540b46cffdfdb47f6137b8be4515229ffd524741991c0a7418a6afc6a2f"
+        }
+      },
+      "proofSha256": "30bd2388ddf72001b2e13b62f478b9611a1733783755358647c5114061029d32",
+      "pairMeanRgbDifference": 1.67381
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Rendered PDF contact inspected; isolated subject and readable edges, no crop or background defect.",
+  "createdAt": "2026-10-24T08:07:54.755Z"
+}

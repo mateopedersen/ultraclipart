@@ -1,0 +1,21 @@
+{
+  "wave": "wave_192",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-feast-table-coloring",
+      "title": "Holiday Feast Table Coloring Illustration",
+      "alt": "Black ink outlines with opaque white interiors: a low oval table with a roast platter, bread basket, two plates and two candles, no people.",
+      "description": "Black ink outlines with opaque white interiors: a low oval table with a roast platter, bread basket, two plates and two candles, no people. Useful for personal holiday coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_192/source/thanksgiving-feast-table-coloring-resumed.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

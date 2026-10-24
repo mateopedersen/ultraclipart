@@ -1,0 +1,21 @@
+{
+  "wave": "wave_189",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-wishbone-keepsake",
+      "title": "Wishbone Keepsake Card",
+      "alt": "A clean ivory wishbone tied with a red bow on a blank kraft keepsake card, with one tiny autumn leaf.",
+      "description": "A clean ivory wishbone tied with a red bow on a blank kraft keepsake card, with one tiny autumn leaf. Useful for family tradition scrapbook.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_189/source/thanksgiving-wishbone-keepsake-resumed.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

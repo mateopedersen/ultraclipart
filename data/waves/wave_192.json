@@ -1,0 +1,102 @@
+{
+  "wave": "wave_192",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-feast-table-coloring",
+      "title": "Holiday Feast Table Coloring Illustration",
+      "alt": "Black ink outlines with opaque white interiors: a low oval table with a roast platter, bread basket, two plates and two candles, no people.",
+      "description": "Black ink outlines with opaque white interiors: a low oval table with a roast platter, bread basket, two plates and two candles, no people. Useful for personal holiday coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_192/source/thanksgiving-feast-table-coloring-resumed.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "a5b41be8549a3bd13f84753efa85f4308d699dae74155ce39176e674f347410b",
+      "inputSignature": "a1673612034279538e09b5f292f347d2a059ef0d434178489c4d316d992f9689",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 929774,
+        "weightedCmykRmse": 0.997413
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1432362,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1015971,
+          "weightedCmykRmse": 0.834861
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 929774,
+          "weightedCmykRmse": 0.997413
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        13,
+        189,
+        1241,
+        1097
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_192/exports/thanksgiving-feast-table-coloring.pdf",
+          "bytes": 929774,
+          "sha256": "f429166b0f3baa765e15d548489c254511b8f3e8d91aa474d5d718f847e61165"
+        },
+        "webp": {
+          "path": "work/production/wave_192/exports/thanksgiving-feast-table-coloring.webp",
+          "bytes": 575686,
+          "sha256": "6faa2159aae72498a40a03d262e7e608a780cd6da6db75edf2b36f7bc146af16"
+        },
+        "thumb": {
+          "path": "work/production/wave_192/exports/thanksgiving-feast-table-coloring-thumb.webp",
+          "bytes": 48082,
+          "sha256": "026ae4886fc338736bf028699bf661b5d25352b9bca82d54a0dffe57d9f0f862"
+        }
+      },
+      "proofSha256": "5b07604009c9011453ecb7a0f8accf14bda9ac724a0ea5dc4cc53cffa8248270",
+      "pairMeanRgbDifference": 2.67518
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Rendered PDF contact inspected; isolated subject and readable edges, no crop or background defect.",
+  "createdAt": "2026-10-24T08:07:55.409Z"
+}

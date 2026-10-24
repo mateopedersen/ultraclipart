@@ -1,0 +1,109 @@
+{
+  "wave": "wave_190",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-harvest-place-setting-coloring",
+      "title": "Harvest Place Setting Coloring Illustration",
+      "alt": "Black ink outlines with opaque white interiors: a dinner plate, folded leaf napkin, fork, knife and small pumpkin in a distinct three-quarter arrangement.",
+      "description": "Black ink outlines with opaque white interiors: a dinner plate, folded leaf napkin, fork, knife and small pumpkin in a distinct three-quarter arrangement. Useful for personal coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_190/source/thanksgiving-harvest-place-setting-coloring-resumed.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f06c4d0bb74c0d1d44048107df59aa51d31652448126f96b76ad4237b7f34591",
+      "inputSignature": "019e14f72d2460b06c65745ea5018cb21706f78f154d26782e7d9a5add701765",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 936164,
+        "weightedCmykRmse": 1.16766
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1561386,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1108792,
+          "weightedCmykRmse": 0.800212
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1014975,
+          "weightedCmykRmse": 0.94955
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 936164,
+          "weightedCmykRmse": 1.16766
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        33,
+        96,
+        1237,
+        1139
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_190/exports/thanksgiving-harvest-place-setting-coloring.pdf",
+          "bytes": 936164,
+          "sha256": "090ed7366d6d6d67ff5432a389ec4f5da62870b9f018cd3511e8d03b0d7120da"
+        },
+        "webp": {
+          "path": "work/production/wave_190/exports/thanksgiving-harvest-place-setting-coloring.webp",
+          "bytes": 625596,
+          "sha256": "90a99b2f6b024ddd1a3657fdad54d7af37287fec1f9e434d7b8f322a6095a17f"
+        },
+        "thumb": {
+          "path": "work/production/wave_190/exports/thanksgiving-harvest-place-setting-coloring-thumb.webp",
+          "bytes": 52960,
+          "sha256": "a3c8184d4109c4ba0e34a400a2aadb9710b9996a02be1dc95b6674bdc20e24a2"
+        }
+      },
+      "proofSha256": "03b195aa1f5dd4a4265b061d9a1989c298f40bb8b20a485cf29f7cf18e0447fe",
+      "pairMeanRgbDifference": 2.07128
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Rendered PDF contact inspected; isolated subject and readable edges, no crop or background defect.",
+  "createdAt": "2026-10-24T08:07:54.995Z"
+}

@@ -1,0 +1,21 @@
+{
+  "wave": "wave_187",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-family-photo-frame",
+      "title": "Autumn Family Photo Frame",
+      "alt": "An empty freestanding oval wooden photo frame decorated at lower right with two small leaves and a single acorn.",
+      "description": "An empty freestanding oval wooden photo frame decorated at lower right with two small leaves and a single acorn. Useful for personal holiday memories.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_187/source/thanksgiving-family-photo-frame-resumed.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "wave": "wave_191",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-gratitude-basket-coloring",
+      "title": "Gratitude Basket Coloring Illustration",
+      "alt": "Black ink outlines with opaque white interiors: a round basket holds rolled blank notes, an apple, a pear and a small wheat bundle.",
+      "description": "Black ink outlines with opaque white interiors: a round basket holds rolled blank notes, an apple, a pear and a small wheat bundle. Useful for classroom coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_191/source/thanksgiving-gratitude-basket-coloring-resumed.png",
+      "alphaCompression": "zopfli",
+      "jpeg2000Resolutions": 4,
+      "printSeparation": "black-only"
+    }
+  ]
+}

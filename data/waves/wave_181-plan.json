@@ -1,0 +1,21 @@
+{
+  "wave": "wave_181",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-pumpkin-vase-bouquet",
+      "title": "Pumpkin Vase Bouquet",
+      "alt": "A hollow pale pumpkin used as a vase with a compact original arrangement of rust chrysanthemums, golden wheat and olive leaves.",
+      "description": "A hollow pale pumpkin used as a vase with a compact original arrangement of rust chrysanthemums, golden wheat and olive leaves. Useful for celebration stationery.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_181/source/thanksgiving-pumpkin-vase-bouquet-v6.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

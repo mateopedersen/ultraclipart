@@ -1,0 +1,206 @@
+{
+  "wave": "wave_177",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-place-setting-flatlay",
+      "title": "Kids Thanksgiving Place Setting",
+      "alt": "An overhead child-sized round plate, wooden fork and spoon, folded leaf-shaped napkin and a blank name card.",
+      "description": "An overhead child-sized round plate, wooden fork and spoon, folded leaf-shaped napkin and a blank name card. Useful for children's table activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-place-setting-flatlay-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "0e18d71f62772937fb53a5961d8babe8c27dac522d918a6a649944928838310a",
+      "inputSignature": "971780c84204b03b12e69013811c031d27971d83726179943bb1941603ff72fd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 876444,
+        "weightedCmykRmse": 0.898317
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1593940,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 981842,
+          "weightedCmykRmse": 0.7808
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 876444,
+          "weightedCmykRmse": 0.898317
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        45,
+        86,
+        1211,
+        1151
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_177/exports/thanksgiving-place-setting-flatlay.pdf",
+          "bytes": 876444,
+          "sha256": "479cce178b47810952267a4d9eebe947b40321923ccaba9dbbd61863dc6aa4d0"
+        },
+        "webp": {
+          "path": "work/production/wave_177/exports/thanksgiving-place-setting-flatlay.webp",
+          "bytes": 975154,
+          "sha256": "a7eba7cdfbed9d5ba4f72eb97d684a4f9483c6586e5818609800ab1446b59352"
+        },
+        "thumb": {
+          "path": "work/production/wave_177/exports/thanksgiving-place-setting-flatlay-thumb.webp",
+          "bytes": 58596,
+          "sha256": "8af96ed6477d8e4c9642895a2529b21754b997e0c797b2f82e1ff55601eaa95f"
+        }
+      },
+      "proofSha256": "8d70ead29ab32223e8166c58cd02179712bf40a9c5eb0ad83a2b6d1595587ff3",
+      "pairMeanRgbDifference": 2.16724
+    },
+    {
+      "id": "thanksgiving-thankful-message-board",
+      "title": "Gratitude Pin Board",
+      "alt": "A cork board with five differently shaped blank paper notes, wooden pins and one autumn leaf pinned at a lower corner.",
+      "description": "A cork board with five differently shaped blank paper notes, wooden pins and one autumn leaf pinned at a lower corner. Useful for classroom gratitude display.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-thankful-message-board-v1.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "630f7d7222234e890eee9f8c083ffd04497ee9c08ea77af05f05523757a5bea8",
+      "inputSignature": "42508ff7e4a7d96fe02654f959e7ab9666b004850e440b679aaf1759b1ba467a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 925952,
+        "weightedCmykRmse": 0.984455
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1943639,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1180252,
+          "weightedCmykRmse": 0.716295
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1056309,
+          "weightedCmykRmse": 0.829288
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 925952,
+          "weightedCmykRmse": 0.984455
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        83,
+        86,
+        1216,
+        1170
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_177/exports/thanksgiving-thankful-message-board.pdf",
+          "bytes": 925952,
+          "sha256": "3a50836510a25682a6b5065e6da78480dc78aed96706003d81bce4dce738c207"
+        },
+        "webp": {
+          "path": "work/production/wave_177/exports/thanksgiving-thankful-message-board.webp",
+          "bytes": 1128536,
+          "sha256": "06f6835aeff42690ada25b1cffdbf10cb20521330b4a09494727613de0926035"
+        },
+        "thumb": {
+          "path": "work/production/wave_177/exports/thanksgiving-thankful-message-board-thumb.webp",
+          "bytes": 56684,
+          "sha256": "3a49df16c18e96066e91f574a2578b6b4d364cdc3e7f81efc384e1b93c56b28d"
+        }
+      },
+      "proofSha256": "25b2bc190c3bc67bc91efeac1f8d2a0dbd59aad92649a3b3f67d1f0e055ffb25",
+      "pairMeanRgbDifference": 2.31363
+    }
+  ],
+  "deferred": [
+    {
+      "id": "thanksgiving-autumn-window-box",
+      "title": "Autumn Window Box",
+      "alt": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background.",
+      "description": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background. Useful for seasonal family newsletter.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-autumn-window-box-v1.png",
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Rendered PDF contact inspected; clear isolated composition and no visible crop or alpha defect.",
+  "createdAt": "2026-10-24T08:07:53.907Z"
+}

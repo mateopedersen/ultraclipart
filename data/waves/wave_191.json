@@ -1,0 +1,90 @@
+{
+  "wave": "wave_191",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 1,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-gratitude-basket-coloring",
+      "title": "Gratitude Basket Coloring Illustration",
+      "alt": "Black ink outlines with opaque white interiors: a round basket holds rolled blank notes, an apple, a pear and a small wheat bundle.",
+      "description": "Black ink outlines with opaque white interiors: a round basket holds rolled blank notes, an apple, a pear and a small wheat bundle. Useful for classroom coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_191/source/thanksgiving-gratitude-basket-coloring-resumed.png",
+      "alphaCompression": "zopfli",
+      "jpeg2000Resolutions": 4,
+      "printSeparation": "black-only",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "708e55e99951eb62e56669998815dec309120bef48b58ee55b83d011b9b7303c",
+      "inputSignature": "ad49a00434d540a2733cfd86ab4f708975230e50b533c2b1ea49da3b635453b2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 4,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 715090,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 4,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 715090,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        58,
+        57,
+        1224,
+        1226
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_191/exports/thanksgiving-gratitude-basket-coloring.pdf",
+          "bytes": 715090,
+          "sha256": "29865d8debf780ff25d6192dfebaa842b8958d79ef2589736dc5fb4529556a1d"
+        },
+        "webp": {
+          "path": "work/production/wave_191/exports/thanksgiving-gratitude-basket-coloring.webp",
+          "bytes": 995086,
+          "sha256": "1c7cab547f9c35facc3bce32d95d6bdcbbcf83a5340ed99c24481723fab032a8"
+        },
+        "thumb": {
+          "path": "work/production/wave_191/exports/thanksgiving-gratitude-basket-coloring-thumb.webp",
+          "bytes": 81338,
+          "sha256": "185d807d405ec575060bfdf0ae705ba382835092df9a61c5222087c472ff6bec"
+        }
+      },
+      "proofSha256": "936bbc69bc1d90a743bc06c765d3b105ea5ca726950db6c97e3f2c279f1de20f",
+      "pairMeanRgbDifference": 7.27483
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Actual PDF contact inspected; monochrome coloring art renders without crop or lost detail.",
+  "createdAt": "2026-10-24T08:07:55.166Z"
+}

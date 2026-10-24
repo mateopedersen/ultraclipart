@@ -1,0 +1,195 @@
+{
+  "wave": "wave_182",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "thanksgiving-harvest-picnic-basket",
+      "title": "Thanksgiving Picnic Basket",
+      "alt": "An open picnic basket holding a boxed lattice pie, checked blanket, two apples and folded napkins.",
+      "description": "An open picnic basket holding a boxed lattice pie, checked blanket, two apples and folded napkins. Useful for outdoor family celebration plans.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_182/source/thanksgiving-harvest-picnic-basket-v5.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "ab4453311d13d19159a03c9dbaa5820ab33e7f96b79a62223077c00194d118dd",
+      "inputSignature": "217d21803560ba616002f4a549a1c38a37b45b204d199ac963b39b28bd03939f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973611,
+        "weightedCmykRmse": 1.245788
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 2043755,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1320589,
+          "weightedCmykRmse": 0.726875
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1208585,
+          "weightedCmykRmse": 0.841555
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1088566,
+          "weightedCmykRmse": 1.010074
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973611,
+          "weightedCmykRmse": 1.245788
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        13,
+        24,
+        1247,
+        1226
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_182/exports/thanksgiving-harvest-picnic-basket.pdf",
+          "bytes": 973611,
+          "sha256": "e637b9fcc3bdf8836b21468dd59d05a190396811f075b22990723d2c7fa46bf4"
+        },
+        "webp": {
+          "path": "work/production/wave_182/exports/thanksgiving-harvest-picnic-basket.webp",
+          "bytes": 1279950,
+          "sha256": "aa85a8feb1c0b5cf675e2c3b517f7e5a2b369c790b9094bb84724a2efca0f1ba"
+        },
+        "thumb": {
+          "path": "work/production/wave_182/exports/thanksgiving-harvest-picnic-basket-thumb.webp",
+          "bytes": 78998,
+          "sha256": "bd2bc6f6553b304ba6be586daa39420a8e2e3ea9175c3504f1e7616606be78e3"
+        }
+      },
+      "proofSha256": "658f01aec5f6600895a4b276aa65eaff45853f360986dcc22289d6f056881f2f",
+      "pairMeanRgbDifference": 3.72928
+    },
+    {
+      "id": "thanksgiving-table-runner-arrangement",
+      "title": "Autumn Table Runner Arrangement",
+      "alt": "A cream table runner with a blue floral vase of autumn leaves, two pumpkins and loose oak leaves.",
+      "description": "A cream table runner with a blue floral vase of autumn leaves, two pumpkins and loose oak leaves. Useful for table setting ideas.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_182/source/thanksgiving-table-runner-arrangement-owner-resumed.png",
+      "alphaCompression": "zopfli",
+      "topic": "thanksgiving",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "41de70ff8483c7ad1ea91f9c7cc29d6205f02d058677ef0d59777fa8e5145178",
+      "inputSignature": "4710262642663a0903296f58dae6701a9a47497000b535dccfa30b93ff99f8c7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 783747,
+        "weightedCmykRmse": 0.815464
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1228658,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 783747,
+          "weightedCmykRmse": 0.815464
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        58,
+        61,
+        1187,
+        1213
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_182/exports/thanksgiving-table-runner-arrangement.pdf",
+          "bytes": 783747,
+          "sha256": "f2a76e74dc30207e0711b31224be127e863765d97dd5d44fcca07a9923634b4e"
+        },
+        "webp": {
+          "path": "work/production/wave_182/exports/thanksgiving-table-runner-arrangement.webp",
+          "bytes": 705990,
+          "sha256": "1da3be2a97ce5a1dbb2fc06d7b58b3f42be631f2180e1ad7f3f083dd247b875c"
+        },
+        "thumb": {
+          "path": "work/production/wave_182/exports/thanksgiving-table-runner-arrangement-thumb.webp",
+          "bytes": 51768,
+          "sha256": "a4ff9578906c447a64b81eab9ee21e243aebe0c22b635cf83aacf4f020e6d073"
+        }
+      },
+      "proofSha256": "dfbb8f2ddabe2eac69dcb19e231862ec57e37c038c7ce05907e9e5feb25c2ec1",
+      "pairMeanRgbDifference": 2.42707
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Rendered PDF contact inspected; full subject, clear alpha and crop; source composition distinct from published collection.",
+  "createdAt": "2026-10-24T08:07:54.258Z"
+}

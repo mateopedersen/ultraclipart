@@ -17,16 +17,16 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 482,
+  "generatedArtworkCount": 496,
   "suppliedArtworkCount": 3192,
-  "originalTopicArtworkCount": 680,
+  "originalTopicArtworkCount": 694,
   "supplementalArtworkCount": 3000,
-  "qualityApprovedArtworkCount": 680,
+  "qualityApprovedArtworkCount": 694,
   "supplementalApprovedArtworkCount": 3000,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 3680,
-  "remainingToDraw": 5018,
+  "availableArtworkCount": 3694,
+  "remainingToDraw": 5004,
   "nextAction": "New image generation is paused until the owner explicitly resumes it. Import and publish supplied packages after verification.",
   "topics": [
     {
@@ -138,11 +138,11 @@
       "keyword": "Thanksgiving clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 30,
+      "generated": 44,
       "supplied": 0,
-      "available": 30,
-      "approved": 30,
-      "remainingToDraw": 20,
+      "available": 44,
+      "approved": 44,
+      "remainingToDraw": 6,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/thanksgiving.json"
     },
@@ -41940,6 +41940,160 @@
       "humanReview": "NOT_PERFORMED",
       "publicationBlocked": false,
       "sha256": "a771a0ae2d4d0da6a9408c67e424fab3941cc7da326530f0b49dbd4490ff3901"
+    },
+    {
+      "id": "thanksgiving-sharing-soup-pot",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "78339f9bb19664926a18b6ce2175d1203cdb5bfcb822ca57dd8a31f37ba8ae8b"
+    },
+    {
+      "id": "thanksgiving-baked-apple-pair",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "bc84a612bd9d1d3e4220deda4f7fcc7deb75bff0c8afba4ba45c6c14e4cb9bf3"
+    },
+    {
+      "id": "thanksgiving-harvest-fruit-pitcher",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "d23bed6a572379cc23357c5897a17f9dba1c48193a0df366fd03448b9d9b377c"
+    },
+    {
+      "id": "thanksgiving-place-setting-flatlay",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "a7eba7cdfbed9d5ba4f72eb97d684a4f9483c6586e5818609800ab1446b59352"
+    },
+    {
+      "id": "thanksgiving-thankful-message-board",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "06f6835aeff42690ada25b1cffdbf10cb20521330b4a09494727613de0926035"
+    },
+    {
+      "id": "thanksgiving-pumpkin-vase-bouquet",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "53f37d8a2d7ba3c0f4388c856a0128b9c2224b1584319e6ed582c3d02c45cbf4"
+    },
+    {
+      "id": "thanksgiving-harvest-picnic-basket",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "aa85a8feb1c0b5cf675e2c3b517f7e5a2b369c790b9094bb84724a2efca0f1ba"
+    },
+    {
+      "id": "thanksgiving-table-runner-arrangement",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "1da3be2a97ce5a1dbb2fc06d7b58b3f42be631f2180e1ad7f3f083dd247b875c"
+    },
+    {
+      "id": "thanksgiving-family-photo-frame",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "c736ec4cc5c34cb7e890683080d5772959aa2fa5bf6273eb5d20543ac0665369"
+    },
+    {
+      "id": "thanksgiving-leaf-confetti-bowl",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "9bf7abedbcee0e90d8ff9179db2ea536b50f78b515ea2fafffc20aac7bbce5e5"
+    },
+    {
+      "id": "thanksgiving-wishbone-keepsake",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "307face0565e77dab90e54a5d1cab1aaf8ee8df3bdd4806d3488520436ec2b7e"
+    },
+    {
+      "id": "thanksgiving-harvest-place-setting-coloring",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "90a99b2f6b024ddd1a3657fdad54d7af37287fec1f9e434d7b8f322a6095a17f"
+    },
+    {
+      "id": "thanksgiving-gratitude-basket-coloring",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "1c7cab547f9c35facc3bce32d95d6bdcbbcf83a5340ed99c24481723fab032a8"
+    },
+    {
+      "id": "thanksgiving-feast-table-coloring",
+      "topic": "thanksgiving",
+      "state": "PUBLISHED",
+      "retryCount": 0,
+      "failReason": null,
+      "artReview": "FORMAT_AND_PAIR_REVIEW_PASSED",
+      "humanReview": "NOT_PERFORMED",
+      "publicationBlocked": false,
+      "sha256": "6faa2159aae72498a40a03d262e7e608a780cd6da6db75edf2b36f7bc146af16"
     }
   ]
 }

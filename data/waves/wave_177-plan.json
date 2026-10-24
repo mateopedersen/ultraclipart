@@ -1,0 +1,43 @@
+{
+  "wave": "wave_177",
+  "topic": "thanksgiving",
+  "method": "builtin-image-generation",
+  "research": "data/research/thanksgiving-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "thanksgiving-place-setting-flatlay",
+      "title": "Kids Thanksgiving Place Setting",
+      "alt": "An overhead child-sized round plate, wooden fork and spoon, folded leaf-shaped napkin and a blank name card.",
+      "description": "An overhead child-sized round plate, wooden fork and spoon, folded leaf-shaped napkin and a blank name card. Useful for children's table activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-place-setting-flatlay-v1.png",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "thanksgiving-thankful-message-board",
+      "title": "Gratitude Pin Board",
+      "alt": "A cork board with five differently shaped blank paper notes, wooden pins and one autumn leaf pinned at a lower corner.",
+      "description": "A cork board with five differently shaped blank paper notes, wooden pins and one autumn leaf pinned at a lower corner. Useful for classroom gratitude display.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-thankful-message-board-v1.png",
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": [
+    {
+      "id": "thanksgiving-autumn-window-box",
+      "title": "Autumn Window Box",
+      "alt": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background.",
+      "description": "A compact isolated wooden window box filled with ornamental cabbages, small pumpkins and chrysanthemums, no house background. Useful for seasonal family newsletter.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_177/source/thanksgiving-autumn-window-box-v1.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}
