@@ -1,0 +1,229 @@
+{
+  "wave": "wave_083",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "witch-candle-dipper",
+      "title": "Witch Dipping Candles",
+      "alt": "A witch lifts two wax candles joined by a wick above a dipping pot.",
+      "description": "A witch lifts a pair of wax tapers joined by one wick above a narrow dipping pot; a single smooth wax drip hangs below. Use this illustration for traditional craft lessons and personal crafts.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_083/source/witch-candle-dipper.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "889888dc320a6349e5e87c0c26d0df4eb86b5537dd746cc5007e80b803957610",
+      "inputSignature": "731c0fe9c5f8b81ffa3caca1955793f83128792b5521bad6e6a1b93e858eceff",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 975113,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 975113,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [341, 38, 953, 1222],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_083/exports/witch-candle-dipper.pdf",
+          "bytes": 975113,
+          "sha256": "c7b76f8f5ed8193e794e718f1047bd60a8f46fab0d6b457538cb1287e6073ac0"
+        },
+        "webp": {
+          "path": "work/production/wave_083/exports/witch-candle-dipper.webp",
+          "bytes": 421668,
+          "sha256": "7ed7fb626cafe4d268585a8caba202950ea148a4338fab1a4051ad44c03e0106"
+        },
+        "thumb": {
+          "path": "work/production/wave_083/exports/witch-candle-dipper-thumb.webp",
+          "bytes": 33174,
+          "sha256": "4d854e76cdf3227d33e9ea7118213ad7a5b74c26767279efba2b1635b1220104"
+        }
+      },
+      "proofSha256": "6685b99af5b0a13e9727ab4fbc0e890a36fcbdabbae1e7deb7b1e2fd2cb326d6",
+      "pairMeanRgbDifference": 1.02031
+    },
+    {
+      "id": "witch-umbrella-walk",
+      "title": "Witch with a Leaf Umbrella",
+      "alt": "A witch walks under a leaf umbrella with a small snail on its handle.",
+      "description": "A witch in a short rain cape walks with an oversized leaf umbrella over one shoulder and a tiny snail perched on the umbrella handle. Use this illustration for rainy-day personal crafts and personal crafts.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_083/source/witch-umbrella-walk.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "72ab92f89a2dea7130d84232d5421729036e935ccef14b719668f1aed662058c",
+      "inputSignature": "e5588c16c24d4a523440150d6f1ef5eb56b60aeb6bd2bf33fa613e6f68991714",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 816980,
+        "weightedCmykRmse": 0.925144
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1202078,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 816980,
+          "weightedCmykRmse": 0.925144
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [288, 48, 971, 1197],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_083/exports/witch-umbrella-walk.pdf",
+          "bytes": 816980,
+          "sha256": "201e90f198299a7a1875a4bb3424cedb108730171cbd6add39a05abfdcd27a9c"
+        },
+        "webp": {
+          "path": "work/production/wave_083/exports/witch-umbrella-walk.webp",
+          "bytes": 482924,
+          "sha256": "1d95f0176e65c0a0bfb448d80efe2f4ee91843126faed074339d6de96a319bee"
+        },
+        "thumb": {
+          "path": "work/production/wave_083/exports/witch-umbrella-walk-thumb.webp",
+          "bytes": 37442,
+          "sha256": "2ad774a95d3f502046c833e4f70b9a1092d6a36812658c7056f7816151ebe13b"
+        }
+      },
+      "proofSha256": "1270a0548a11dc22a1dbe5aca6dd4a57e7ff89dca4f3b1724053fcfbe5bd412e",
+      "pairMeanRgbDifference": 1.03863
+    },
+    {
+      "id": "witch-key-keeper",
+      "title": "Witch Sorting Magical Keys",
+      "alt": "An older witch with glasses compares two decorative keys.",
+      "description": "An older witch with round spectacles compares two ornate keys, a short key ring hanging from her belt, no table clutter. Use this illustration for matching and counting activities and personal crafts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_083/source/witch-key-keeper.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f7892793ed8e8ed85a116374367cbfabc371d2407fefdc7b47970900e737e52d",
+      "inputSignature": "a333b661b14146f22c25f32e8d9b44c6e539ef5886062998aa8d2ccf2648f3ec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 662611,
+        "weightedCmykRmse": 0.955356
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1094061,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 662611,
+          "weightedCmykRmse": 0.955356
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [327, 35, 977, 1226],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_083/exports/witch-key-keeper.pdf",
+          "bytes": 662611,
+          "sha256": "f5b3dcf33a52bd919a1f2982f2c4c82d2c5860def0bc7b6d51c138616342f372"
+        },
+        "webp": {
+          "path": "work/production/wave_083/exports/witch-key-keeper.webp",
+          "bytes": 509182,
+          "sha256": "cb6f83ae30f0eec1032ff9330a2a8a62cfe9390436eb7c8078b066c3a80988aa"
+        },
+        "thumb": {
+          "path": "work/production/wave_083/exports/witch-key-keeper-thumb.webp",
+          "bytes": 37602,
+          "sha256": "d7d8125dcfe5ec76cd29e04ba98ee011a04cbf483e9d58288505661ba9c07c81"
+        }
+      },
+      "proofSha256": "5d6e72d5b7b8f6fdb9930279af1ea5783ac72716bb6a339e24e44afff6118bbb",
+      "pairMeanRgbDifference": 1.23212
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All three sources and CMYK proofs reviewed. Two tapers share a wick and wax drip; leaf umbrella has a supported snail on curved handle; key keeper holds two different keys. Two connected hands, full margins and correct file pairing.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T23:22:17.215Z",
+  "cdnVerifiedAt": "2026-10-23T23:52:10.377Z"
+}

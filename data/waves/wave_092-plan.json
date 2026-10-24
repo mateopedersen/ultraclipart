@@ -1,0 +1,29 @@
+{
+  "wave": "wave_092",
+  "topic": "witch",
+  "method": "builtin-image-generation",
+  "research": "data/research/witch-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "witch-wand-workbench",
+      "title": "Witch Wand-Making Tools",
+      "alt": "A compact wooden work board holds one unfinished crooked wand, a small carving tool, a spool of thread and one smooth crystal.",
+      "description": "A compact wooden work board holds one unfinished crooked wand, a small carving tool, a spool of thread and one smooth crystal. Use this illustration for fantasy craft props and personal crafts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_092/source/witch-wand-workbench.png"
+    },
+    {
+      "id": "witch-broom-parking-stand",
+      "title": "Witch Broom Stand",
+      "alt": "A freestanding wooden rack supports two clearly different handmade brooms upright, one with a braided handle and one curved handle.",
+      "description": "A freestanding wooden rack supports two clearly different handmade brooms upright, one with a braided handle and one curved handle. Use this illustration for classroom fantasy labels and personal crafts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_092/source/witch-broom-parking-stand.png"
+    }
+  ]
+}

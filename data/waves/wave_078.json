@@ -1,0 +1,170 @@
+{
+  "wave": "wave_078",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "witch-star-cookie-baker",
+      "title": "Witch Baking Star Cookies",
+      "alt": "A smiling witch holds a baking tray with five star-shaped cookies.",
+      "description": "A smiling witch in an oven apron carries a small baking tray with five clearly spaced star-shaped cookies, using two oven mitts. Use this illustration for personal crafts and seasonal recipe journals.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_078/source/witch-star-cookie-baker.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "425a85d14e433b7e219349de49b2b0f7856218c8a1674014ada723d1f047cfd0",
+      "inputSignature": "2c203ce6c007dc519e2f8fc36a67fd68a7b9028537add6f3e3f04b2a48220fa0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 767261,
+        "weightedCmykRmse": 0.941072
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1194744,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 767261,
+          "weightedCmykRmse": 0.941072
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [289, 15, 987, 1239],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_078/exports/witch-star-cookie-baker.pdf",
+          "bytes": 767261,
+          "sha256": "0edd4acdebd8216d146ce21d7323486eda41f25ac25b5611cbd98aee817fc6f3"
+        },
+        "webp": {
+          "path": "work/production/wave_078/exports/witch-star-cookie-baker.webp",
+          "bytes": 617548,
+          "sha256": "07733a3866fef3465a2cb94ab04a12d7a0ef25966345c3a5459b7dafdfd6cf65"
+        },
+        "thumb": {
+          "path": "work/production/wave_078/exports/witch-star-cookie-baker-thumb.webp",
+          "bytes": 41302,
+          "sha256": "915eadd0345b157f4cf9ee772dfca21661dc5b947605425fa0b549f48ade7b03"
+        }
+      },
+      "proofSha256": "83aa2a087140f3eab4bb659a44e859b0a9089e7b6084821c864b6a86e709fac8",
+      "pairMeanRgbDifference": 1.28479
+    },
+    {
+      "id": "witch-frog-storytime",
+      "title": "Witch Reading to a Frog",
+      "alt": "A bespectacled witch reads a book to a little frog seated on a cushion.",
+      "description": "A bespectacled witch sits on a small stool with a closed-back open book on her knees, while a little frog listens on a low cushion at her feet. Use this illustration for personal crafts and classroom reading corners.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_078/source/witch-frog-storytime.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e989f2ea37bf8451d2fdd3a8a2ccb69b5a72a69ca72bbab8ec87d9503de09451",
+      "inputSignature": "25c141ca0868828731547ae2c788868d3f39b6e816fc015c6234b0e4b0e58038",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 931144,
+        "weightedCmykRmse": 1.012904
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1560746,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1037170,
+          "weightedCmykRmse": 0.872586
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 931144,
+          "weightedCmykRmse": 1.012904
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [131, 17, 1130, 1233],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_078/exports/witch-frog-storytime.pdf",
+          "bytes": 931144,
+          "sha256": "220356eaac53b793241c8530ee8910ec146949cb4e03430ee5afbb8d33430088"
+        },
+        "webp": {
+          "path": "work/production/wave_078/exports/witch-frog-storytime.webp",
+          "bytes": 759128,
+          "sha256": "63586313dfa9450546de4b95673c15b4d66a79432ab8f67c0016ba17cc253da1"
+        },
+        "thumb": {
+          "path": "work/production/wave_078/exports/witch-frog-storytime-thumb.webp",
+          "bytes": 51786,
+          "sha256": "e2f0a8c2ce8c84eecb6cf4f9a8c41f77040006dc3ff324d794b153aa45c7577e"
+        }
+      },
+      "proofSha256": "ccd5e33b3237ec988d90e9bc41b20681939be181024cc2ea7409899e18ea1334",
+      "pairMeanRgbDifference": 1.56756
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Both native sources and rendered CMYK proofs reviewed. Five separated cookies on held tray; elderly reader and attentive frog have coherent anatomy, book and seat. Full silhouettes and matching source pairs. Dense broom version held separately and not counted.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T23:12:37.411Z",
+  "cdnVerifiedAt": "2026-10-23T23:52:10.377Z"
+}

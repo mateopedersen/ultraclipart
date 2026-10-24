@@ -1,0 +1,177 @@
+{
+  "wave": "wave_079",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "witch-tea-for-cat",
+      "title": "Witch Pouring Tea",
+      "alt": "A silver-haired witch pours tea while a black cat watches beside a low table.",
+      "description": "A silver-haired witch pours tea at a low round table with two cups while a seated black cat watches. Use this illustration for personal afternoon story cards, reading journals and seasonal crafts.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_079/source/witch-tea-for-cat.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f58083056684e809e467bfcef13afa624209ed9c3c59bcb974746230db46c4a2",
+      "inputSignature": "e4175a32f3c24e24ac799101763f239458986b224efa2b074f817c6057b4a83e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 969463,
+        "weightedCmykRmse": 1.142548
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1806518,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1206540,
+          "weightedCmykRmse": 0.818056
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1092658,
+          "weightedCmykRmse": 0.949189
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 969463,
+          "weightedCmykRmse": 1.142548
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [49, 5, 1237, 1189],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_079/exports/witch-tea-for-cat.pdf",
+          "bytes": 969463,
+          "sha256": "83a7fdd177afecb61ff39512d511a2dc9a107e2be9d549c60d6134d882c73bb2"
+        },
+        "webp": {
+          "path": "work/production/wave_079/exports/witch-tea-for-cat.webp",
+          "bytes": 860800,
+          "sha256": "7193e779334953705aeeb4f67d7b97bad96dd93f3bc02486da46702089b66cfc"
+        },
+        "thumb": {
+          "path": "work/production/wave_079/exports/witch-tea-for-cat-thumb.webp",
+          "bytes": 61048,
+          "sha256": "c7ed5004d2443732e67b378f0fbcdba0bec569d7df53b1773815dcf0090aa57d"
+        }
+      },
+      "proofSha256": "013f81173fa7425c6108a1311d145552e2302d94d09ec02d72b771410871dc03",
+      "pairMeanRgbDifference": 1.63382
+    },
+    {
+      "id": "witch-herbalist-harvest",
+      "title": "Witch Harvesting Herbs",
+      "alt": "A braided witch gathers herbs beside a terracotta pot with garden shears.",
+      "description": "A mature braided witch kneels next to a small pot containing five broad rosemary-like herb sprigs, holding three harvested sprigs and closed pruning shears. Use this illustration for personal crafts, storytelling and classroom projects.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_079/source/witch-herbalist-harvest.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e7bcb9847b68351f81e0cd7f78f5c75ab01dfffc7c6974a77e729307104f543a",
+      "inputSignature": "c5c1648bf54f96951662556481915d8c6c0ae382060c2bf616ba72c89a865d74",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 889194,
+        "weightedCmykRmse": 0.892591
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1342245,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 889194,
+          "weightedCmykRmse": 0.892591
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [225, 49, 1055, 1196],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_079/exports/witch-herbalist-harvest.pdf",
+          "bytes": 889194,
+          "sha256": "6572509381d4d6d207e30c10a157561e0e9404ea96be8773088de1253ee9d0b7"
+        },
+        "webp": {
+          "path": "work/production/wave_079/exports/witch-herbalist-harvest.webp",
+          "bytes": 663408,
+          "sha256": "bb5ea97be110ce7d0c884160368b44fcab368f2f88f3146e1245bb34383fba97"
+        },
+        "thumb": {
+          "path": "work/production/wave_079/exports/witch-herbalist-harvest-thumb.webp",
+          "bytes": 49078,
+          "sha256": "34e59d6cb09e45b4c78c4e460cf9e86ae0811b6b825d599dcc63bd87f0da75df"
+        }
+      },
+      "proofSha256": "9b1816f1a79c83d3fe4e7e658f9c85e62b5b5f5d382719848df951d4f93a2149",
+      "pairMeanRgbDifference": 1.40931
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Reviewed two accepted source images and rendered CMYK proofs. Tea stream enters cup, two hands correctly support pot, cat coherent. Herbalist has two connected hands, closed shears and distinct herb leaves. Original three-hand telescope quarantined and not counted.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T23:14:51.421Z",
+  "cdnVerifiedAt": "2026-10-23T23:52:10.377Z"
+}

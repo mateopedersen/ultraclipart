@@ -1,0 +1,229 @@
+{
+  "wave": "wave_085",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "witch-owl-feeding",
+      "title": "Witch Feeding an Owl",
+      "alt": "A witch offers a small food dish to an owl perched on a wooden stand.",
+      "description": "A witch holds a tiny food dish on her gloved forearm while a small owl perches on a short freestanding wooden stand beside her. Use this illustration for woodland fantasy stories and personal crafts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_085/source/witch-owl-feeding.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "06a39efd1fd2f7917d9c0114edfd809d7a831d18f56e394a00d5368d26283436",
+      "inputSignature": "3802fd47447f17b3ceacd414674c52919c72b0f34c0c06ca7378fce62eb105e0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 902392,
+        "weightedCmykRmse": 0.932663
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1299948,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 902392,
+          "weightedCmykRmse": 0.932663
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [245, 24, 1005, 1231],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_085/exports/witch-owl-feeding.pdf",
+          "bytes": 902392,
+          "sha256": "5c56ffb9d8738967434a89b80db8f35e427082ba7e845b60e37d930a3a00b39c"
+        },
+        "webp": {
+          "path": "work/production/wave_085/exports/witch-owl-feeding.webp",
+          "bytes": 576960,
+          "sha256": "27bca0f9e4543bc89393eb1919c54afc544dd534a2402899d058894d59ff1200"
+        },
+        "thumb": {
+          "path": "work/production/wave_085/exports/witch-owl-feeding-thumb.webp",
+          "bytes": 44064,
+          "sha256": "8c801c051c7272c898314c19e3365b8b038c5bed8122d199ab683f032a73f78b"
+        }
+      },
+      "proofSha256": "a34b3bdea8297b6ef55eff0fcade766fa67d7f50d5786d78dc3e43fdd2ebd3a4",
+      "pairMeanRgbDifference": 1.90348
+    },
+    {
+      "id": "witch-floating-book-librarian",
+      "title": "Witch Shelving a Book",
+      "alt": "A librarian witch lifts a teal book toward a small shelf while holding another book.",
+      "description": "A bespectacled librarian witch lifts a closed teal book toward a small shelf while holding a second book against her cardigan. Use this illustration for reading challenge cards and personal book journals.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_085/source/witch-floating-book-librarian.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "2c01578f49cae711b57ddb530767d9fdc3198e259f5c8b4fc4532b82d7a519b3",
+      "inputSignature": "a351d503c544adc9bd8b2cef763ec3a68739520c677ada34621d824cfa5e92a1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 902383,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 902383,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [281, 123, 1082, 1169],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_085/exports/witch-floating-book-librarian.pdf",
+          "bytes": 902383,
+          "sha256": "ca05549e87e750394b3df8aa80e2aad78e29000024b6eaad37884c64aa6b9e56"
+        },
+        "webp": {
+          "path": "work/production/wave_085/exports/witch-floating-book-librarian.webp",
+          "bytes": 391066,
+          "sha256": "9f3686744be34e406965224c2dc4663f0e5e8c1599057e1ea03c872d02d72528"
+        },
+        "thumb": {
+          "path": "work/production/wave_085/exports/witch-floating-book-librarian-thumb.webp",
+          "bytes": 28578,
+          "sha256": "1e016f0405dd6e84db3036464328283f7e6dc3aedd9b53c76cdb95869dc32c60"
+        }
+      },
+      "proofSha256": "8da69f270fbc7c88f035f5e303db3e51e32e9134ca8df3e43c0e891c0bc1044b",
+      "pairMeanRgbDifference": 0.83587
+    },
+    {
+      "id": "witch-cobbler-polishing-boots",
+      "title": "Witch Polishing a Boot",
+      "alt": "A seated witch polishes a curled-toe boot with a cloth.",
+      "description": "A seated witch uses a cloth to polish one curled-toe boot on her lap, its mate standing by the stool and a small polish tin nearby. Use this illustration for care and maintenance sequences and personal crafts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_085/source/witch-cobbler-polishing-boots.png",
+      "topic": "witch",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "1a767368ff25e88b0353fae98bf214d600d7a4c7fc07f58ea945a8675a83caec",
+      "inputSignature": "5fa67ee88aa9596723cea71cee5ed99f957be0f052fbb9955c85e07753273eaa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 799611,
+        "weightedCmykRmse": 0.951855
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1200276,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 799611,
+          "weightedCmykRmse": 0.951855
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [343, 51, 932, 1148],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_085/exports/witch-cobbler-polishing-boots.pdf",
+          "bytes": 799611,
+          "sha256": "4b5a5977a4e0e914ca7357ee1ecbfea8e0ce275ae403a4c35f3bf81e67aa5b53"
+        },
+        "webp": {
+          "path": "work/production/wave_085/exports/witch-cobbler-polishing-boots.webp",
+          "bytes": 528634,
+          "sha256": "96100cb35bddbe1f5bf16215905495f965e33ad285311fdd2278acda842ee3b3"
+        },
+        "thumb": {
+          "path": "work/production/wave_085/exports/witch-cobbler-polishing-boots-thumb.webp",
+          "bytes": 38190,
+          "sha256": "160789ad914566ef0084e5d2997381bad102eee6f13218fcd68133fd4fbc5bf2"
+        }
+      },
+      "proofSha256": "e8b8830982f7e9f11c4991049705084c4652073bd4894a976fb1cc761fd85a64",
+      "pairMeanRgbDifference": 1.14127
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "Native sources and actual CMYK proofs reviewed. Owl rests on stable stand; gloved witch offers dish. Librarian physically holds book, so public title/ALT corrected to shelving a book rather than floating. Boot polishing has coherent cloth grip and supported boot. No extra limbs, full margins.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-23T23:28:08.013Z",
+  "cdnVerifiedAt": "2026-10-23T23:52:10.377Z"
+}
