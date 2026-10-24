@@ -1,0 +1,41 @@
+{
+  "wave": "wave_161",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-hanging-silhouette",
+      "title": "Hanging Spider Silhouette",
+      "alt": "A pure black silhouette of one spider hanging on a single silk strand, four distinct legs on each side.",
+      "description": "A pure black silhouette of one spider hanging on a single silk strand, four distinct legs on each side. Useful for personal silhouette crafts.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_161/source/spider-hanging-silhouette-v2.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "spider-walking-silhouette",
+      "title": "Walking Spider Silhouette",
+      "alt": "A pure black side-angled silhouette of a walking spider with eight clearly traceable legs and a raised front leg.",
+      "description": "A pure black side-angled silhouette of a walking spider with eight clearly traceable legs and a raised front leg. Useful for personal cut-paper projects.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_161/source/spider-walking-silhouette.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "spider-seesaw-coloring",
+      "title": "Spider on a Leaf Seesaw Coloring Illustration",
+      "alt": "Black outlines with white interiors show one spider balancing on a curved leaf over a pebble, all eight legs clearly separated.",
+      "description": "Black outlines with white interiors show one spider balancing on a curved leaf over a pebble, all eight legs clearly separated. Useful for educational coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_161/source/spider-seesaw-coloring.png",
+      "printSeparation": "black-only"
+    }
+  ]
+}

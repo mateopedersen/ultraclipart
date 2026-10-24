@@ -1,0 +1,160 @@
+{
+  "wave": "wave_162",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-snowglobe-coloring",
+      "title": "Spider beside a Snow Globe Coloring Illustration",
+      "alt": "Black outlines with white interiors show one spider looking at a simple snow globe containing one snowflake, all eight legs outside the globe.",
+      "description": "Black outlines with white interiors show one spider looking at a simple snow globe containing one snowflake, all eight legs outside the globe. Useful for personal winter coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_162/source/spider-snowglobe-coloring-v2.png",
+      "printSeparation": "black-only",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "42ffcecb8b01cf5d824bc812d0b4b7f5600264f69f213f2e0998c92a6455d6cf",
+      "inputSignature": "10e26d921a00052699ad7c2db27fec002f1a78c55d82c75e24b387f9c79264ec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 482717,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 482717,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        32,
+        29,
+        1222,
+        1226
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_162/exports/spider-snowglobe-coloring.pdf",
+          "bytes": 482717,
+          "sha256": "ca55cd1e177be8d42ecfe8644e63eb25d383db96332af9342d7d71bd33891ba7"
+        },
+        "webp": {
+          "path": "work/production/wave_162/exports/spider-snowglobe-coloring.webp",
+          "bytes": 593476,
+          "sha256": "0015773d27b018075baf8884a1f8e08a1dbd9bcb5525a2e36aa6e694c06870c0"
+        },
+        "thumb": {
+          "path": "work/production/wave_162/exports/spider-snowglobe-coloring-thumb.webp",
+          "bytes": 51230,
+          "sha256": "eda81cc3a180cccc577e18d1a42c8968b91de7f9cdb04301e5f4e968176b16ee"
+        }
+      },
+      "proofSha256": "c3ba9b0ff1a26233905f14b9f92c2fb964d4cf595d7ba9b5d17e271816f6d5a8",
+      "pairMeanRgbDifference": 4.38638
+    },
+    {
+      "id": "spider-family-coloring",
+      "title": "Two Spiders Coloring Illustration",
+      "alt": "Black outlines with white interiors show one large and one small spider side by side on separate pebbles, each with four legs on each side.",
+      "description": "Black outlines with white interiors show one large and one small spider side by side on separate pebbles, each with four legs on each side. Useful for family coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_162/source/spider-family-coloring-v2.png",
+      "printSeparation": "black-only",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "f101237c75624eb7e8b892e3c7aac3df7c4e762823b74c71d7842c9712053818",
+      "inputSignature": "2866074cc0e00df40a595b54f6c972e1c6a1b2a601246c2579922b34e449a881",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 471250,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 471250,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        21,
+        130,
+        1234,
+        1157
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_162/exports/spider-family-coloring.pdf",
+          "bytes": 471250,
+          "sha256": "a49d5268a385a848071353e36884afa38b582bc71a6409097e9e48ac9db6902e"
+        },
+        "webp": {
+          "path": "work/production/wave_162/exports/spider-family-coloring.webp",
+          "bytes": 567590,
+          "sha256": "f9dfc3730457d8743bc5bbdf71c0bdf3a64908de49c65b24f95224a7b47a6889"
+        },
+        "thumb": {
+          "path": "work/production/wave_162/exports/spider-family-coloring-thumb.webp",
+          "bytes": 48784,
+          "sha256": "e0c573c7554138914ae5d4631834821169800519abedb5d5a34425318485eba3"
+        }
+      },
+      "proofSha256": "fdde8530bf8db30f3889b186de1340f681407d0d620c5237b0886881e75f295a",
+      "pairMeanRgbDifference": 4.03393
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Both clean coloring compositions reviewed with eight legs on every spider; actual lossless CMYK PDF proofs show readable linework without halo.",
+  "createdAt": "2026-10-24T04:56:25.955Z"
+}

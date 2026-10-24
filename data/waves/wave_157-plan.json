@@ -1,0 +1,39 @@
+{
+  "wave": "wave_157",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-camera-tripod",
+      "title": "Spider beside a Camera",
+      "alt": "One spider stands beside a small camera on a short tripod, one front leg touching the shutter and seven other legs distinct.",
+      "description": "One spider stands beside a small camera on a short tripod, one front leg touching the shutter and seven other legs distinct. Useful for personal photo journal accents.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_157/source/spider-camera-tripod-v4.png"
+    },
+    {
+      "id": "spider-telescope-look",
+      "title": "Spider Looking through a Telescope",
+      "alt": "A spider leans toward a short telescope on a low stand, all eight legs visible around the stand.",
+      "description": "A spider leans toward a short telescope on a low stand, all eight legs visible around the stand. Useful for night-sky storytelling.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_157/source/spider-telescope-look-v4.png"
+    },
+    {
+      "id": "spider-chess-knight",
+      "title": "Golden Spider Holding a Chess Knight",
+      "alt": "Front-facing golden spider with eight legs holding a carved walnut chess knight, three rear legs fanned on each side.",
+      "description": "A golden spider holds a walnut chess knight in a front-facing composition. Useful for personal game journals and storytelling activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_157/source/spider-chess-knight-v7.png",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

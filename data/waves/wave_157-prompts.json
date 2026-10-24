@@ -1,0 +1,47 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-camera-tripod",
+      "title": "Spider beside a Camera",
+      "composition": "One spider stands beside a small camera on a short tripod, one front leg touching the shutter and seven other legs distinct.",
+      "use": "personal photo journal accents",
+      "color": "Gray",
+      "prompt": "Create an original professional transparent clipart with smooth cel-shaded painted forms and crisp dark ink edges. One spider stands beside a small camera on a short tripod, one front leg touching the shutter and seven other legs distinct. Use a small slate-gray spider in a distinctive three-quarter overhead pose, with precisely FOUR clearly separated long legs extending LEFT and FOUR clearly separated long legs extending RIGHT. Two body segments. Props are beside the body with no limbs hidden. Warm expressive small face, intentional broad tufts, premium storybook detail. Entire isolated scene opaque on fully transparent canvas, no haze, no glow, no background, no text. All objects have generous margins. Useful for personal photo journal accents."
+    },
+    {
+      "id": "spider-telescope-look",
+      "title": "Spider Looking through a Telescope",
+      "composition": "A spider leans toward a short telescope on a low stand, all eight legs visible around the stand.",
+      "use": "night-sky storytelling",
+      "color": "Gray",
+      "prompt": "Create an original professional transparent clipart with smooth cel-shaded painted forms and crisp dark ink edges. A spider leans toward a short telescope on a low stand, all eight legs visible around the stand. Use a small slate-gray spider in a distinctive three-quarter overhead pose, with precisely FOUR clearly separated long legs extending LEFT and FOUR clearly separated long legs extending RIGHT. Two body segments. Props are beside the body with no limbs hidden. Warm expressive small face, intentional broad tufts, premium storybook detail. Entire isolated scene opaque on fully transparent canvas, no haze, no glow, no background, no text. All objects have generous margins. Useful for night-sky storytelling."
+    },
+    {
+      "id": "spider-chess-knight",
+      "title": "Spider beside a Chess Knight",
+      "composition": "One curious spider studies a single wooden chess knight, one front leg raised and seven legs grounded.",
+      "use": "thinking activity cards",
+      "color": "Gray",
+      "prompt": "Create an original professional transparent clipart with smooth cel-shaded painted forms and crisp dark ink edges. One curious spider studies a single wooden chess knight, one front leg raised and seven legs grounded. Use a small slate-gray spider in a distinctive three-quarter overhead pose, with precisely FOUR clearly separated long legs extending LEFT and FOUR clearly separated long legs extending RIGHT. Two body segments. Props are beside the body with no limbs hidden. Warm expressive small face, intentional broad tufts, premium storybook detail. Entire isolated scene opaque on fully transparent canvas, no haze, no glow, no background, no text. All objects have generous margins. Useful for thinking activity cards."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "prompts-final-correction.json",
+      "content": "{\"key\":\"spider-chessDistinctPrompt\",\"prompt\":\"Create one ORIGINAL professional hand-inked clipart with a new composition. A charming small golden-tan jumping spider sits FRONT-FACING behind one large dark walnut chess knight. The knight is centered in the foreground; the spider's face and round tan abdomen rise behind it. Exactly EIGHT jointed spider legs, four on each side: three legs on each side extend outward in a clearly separated low fan, and the front pair gently grasp opposite sides of the knight's base. Every leg root and tip must be traceable, no human hands or extra arms. Two body sections, confident cheerful face with large expressive eyes. The knight is a recognizable elegant carved horse head on a turned round chess base. Polished children's illustration, warm cream and caramel body with subtle natural dark spots, deep walnut chess piece. Rich smooth shading, deliberate dark contour, selected fine details, no noisy fur. Entire composition within generous transparent margin. Genuinely transparent exterior, no ground, shadow, matte, glow, lettering or signature. Do not resemble a side-on spider poking a prop.\"}\n"
+    },
+    {
+      "file": "prompts-refined-chess.json",
+      "content": "{\"prompt\":\"Precise surface refinement to this original clipart, keeping geometry and all eight legs unchanged. Replace the remaining tiny fur strokes on the spider's face and mouthparts with smooth cream and caramel painted planes, just three large shaped highlight/shadow regions per face area. Replace the abdomen's many brown spots with only THREE large elegant brown markings. Keep its face friendly and expressive, eyes glossy, chess knight rich walnut with smooth sculpted highlights. No speckles, gradients with noise, fine grain or tiny hatching. Premium clean hand-inked illustration with refined large shapes and deliberate outlines. Preserve full transparent cutout, no glow, no matte, no text. Do not remove or merge any leg.\"}\n"
+    },
+    {
+      "file": "prompts-selected-revisions.json",
+      "content": "[{\"key\":\"spider-camera-tripod157FreshPrompt\",\"prompt\":\"Create an entirely NEW composition; reference is only for crisp opaque smooth storybook finish and transparent exterior. A small silver camera on a short tripod stands on the left. A friendly slender gray spider on the right raises one front leg toward the shutter, without the leg being obscured by the camera. Show spider from overhead, with two body segments and exactly FOUR SEPARATE WALKING LEGS AT EACH SIDE, eight total. All eight tips visible, never hidden behind props. Slender long legs, small expressive eyes, broad intentional smooth shading. Remove the hat concept entirely. No atmosphere, halo, ground shadow, background or text. Complete objects centered with generous transparent margins.\"}]\n"
+    },
+    {
+      "file": "prompts-smooth-chess.json",
+      "content": "{\"prompt\":\"Use case: style-transfer. Preserve exactly the subject, centered front-facing pose, chess knight and eight legs of this illustration. Redraw the surface finish as polished premium hand-inked clipart: use broad smooth warm caramel and cream cel-shaded shapes, deliberate dark outlines and a few carefully placed hair tufts. Replace all photographic furry microtexture and dense wood grain with smooth professionally painted surfaces. Keep all eight legs distinct (six spread outward and two gripping the knight), the expressive eyes and two short mouthparts. Keep the walnut knight richly shaded with clear sculpted contours. No noise, no stipple, no countless fur strokes. Genuine transparent cutout and generous margin, no matte or glow. Sophisticated clean cartoon illustration, not a photograph or flat low-detail icon.\"}\n"
+    }
+  ]
+}

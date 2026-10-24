@@ -86,3 +86,10 @@ Production binaries are ignored by Git and restored through the verified CDN
 manifest for clean builds. The historical art-plan.py command replaces the old
 pilot queue and must not be used to reset a later production release. All notes
 about generation and review remain outside public UI and illustration pixels.
+
+Native raster PDF alpha packing
+- alphaCompression: zopfli is an opt-in per-artwork lossless mask repack.
+- Requires the pinned zopfli package from requirements-art.txt.
+- PNG predictor bytes must decompress identically; the independent PDF mask decoder checks every original alpha byte.
+- JPEG2000 quality floor, CMYK error cap, native geometry and PDF byte budget remain unchanged.
+- Verify with: python tests/test_generated_raster.py

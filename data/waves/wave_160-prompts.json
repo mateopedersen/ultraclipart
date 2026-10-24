@@ -1,0 +1,43 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-silk-zipline",
+      "title": "Spider on a Silk Zipline",
+      "composition": "One playful spider travels along a slanted silk thread between two short twig ends, two front legs grasping and six legs trailing separately.",
+      "use": "movement stories",
+      "color": "Brown",
+      "prompt": "Create an entirely original professional clipart using the reference only for clean transparency and smooth polished illustration finish. One playful spider travels along a slanted silk thread between two short twig ends, two front legs grasping and six legs trailing separately. Where a spider is present, use two body segments, eight separate jointed legs, four each side, small expressive eyes and smooth broad color shapes. Natural deliberate details, readable organic composition. Every element fully inside the canvas with ample margins. Opaque subjects on native transparent exterior and gaps. No fog, glow, background, text or extra decorative elements."
+    },
+    {
+      "id": "spider-empty-orb-web",
+      "title": "Freestanding Spider Web",
+      "composition": "A complete original oval orb web with clear radial spokes and curved connecting threads, anchored by two small twig ends and no spider.",
+      "use": "personal seasonal decorations",
+      "color": "Brown",
+      "prompt": "Create an entirely original professional clipart using the reference only for clean transparency and smooth polished illustration finish. A complete original oval orb web with clear radial spokes and curved connecting threads, anchored by two small twig ends and no spider. Where a spider is present, use two body segments, eight separate jointed legs, four each side, small expressive eyes and smooth broad color shapes. Natural deliberate details, readable organic composition. Every element fully inside the canvas with ample margins. Opaque subjects on native transparent exterior and gaps. No fog, glow, background, text or extra decorative elements."
+    },
+    {
+      "id": "spider-egg-sac-guard",
+      "title": "Spider beside a Silk Egg Sac",
+      "composition": "One gentle spider stands beside one rounded silk egg sac attached beneath a short twig, all eight legs visible.",
+      "use": "family nature prompts",
+      "color": "Brown",
+      "prompt": "Create an entirely original professional clipart using the reference only for clean transparency and smooth polished illustration finish. One gentle spider stands beside one rounded silk egg sac attached beneath a short twig, all eight legs visible. Where a spider is present, use two body segments, eight separate jointed legs, four each side, small expressive eyes and smooth broad color shapes. Natural deliberate details, readable organic composition. Every element fully inside the canvas with ample margins. Opaque subjects on native transparent exterior and gaps. No fog, glow, background, text or extra decorative elements."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "prompts-final-correction.json",
+      "content": "{\"key\":\"spider-ziplineEightPrompt\",\"prompt\":\"Precise anatomical correction ONLY: this spider currently has SEVEN legs. On the viewer LEFT side there are two trailing rear legs and one front gripping leg. Add ONE more trailing rear leg in the large empty gap BELOW the second left leg and ABOVE the front gripping arm. Give this new leg two clearly visible purple-gray joints and a pointed tip bending down-left. Do not remove or move any of the seven existing legs. Final layout: three trailing legs on each side plus one gripping front leg on each side, EIGHT TOTAL. Preserve face, body, rope, twigs, rich shading and fully transparent background. Absolutely no other changes.\"}\n"
+    },
+    {
+      "file": "prompts-spider160CleanSpecs.json",
+      "content": "undefined\n"
+    },
+    {
+      "file": "prompts-spider160FinalSpecs.json",
+      "content": "[{\"id\":\"spider-egg-sac-guard\",\"prompt\":\"Use case: precise-object-edit. Edit target: the supplied spider with silk egg sac. Fix exactly one anatomical omission: currently there are THREE legs on the viewer LEFT and FOUR on the right. Add ONE additional fully visible jointed rear leg behind the upper-left existing leg, curving outward toward upper-left with a separated pointed tip. This must produce exactly FOUR legs on each side, EIGHT in total. Keep the other seven legs, face, body, egg sac and twig completely unchanged. Crisp professionally inked cutout edges; genuinely transparent exterior, no glow or matte. Preserve original illustration quality and keep every object within the canvas.\"},{\"id\":\"spider-empty-orb-web\",\"prompt\":\"Use case: illustration-story. Original professional clipart of a complete oval orb spider web, suspended between TWO short detached brown twigs. Ten clean charcoal radial spokes and six rounded concentric connecting threads with twelve tiny pale-blue dew beads. Deliberately crisp smooth inked web strands, simplified natural construction, rich elegant clear linework like a skilled designer drew it. No spider. Front view, balanced oval composition, entire web and both twigs visible with a generous 10 percent transparent margin all around. Background completely transparent INCLUDING ALL OPEN HOLES BETWEEN THREADS. No fog, no pale matte, no gray fill, no glow, no blurred fibers, no fuzzy fringe, no shadows, no vignette, no text. This must remain a sharp clean usable cutout on white, black and colored backgrounds.\"}]\n"
+    }
+  ]
+}

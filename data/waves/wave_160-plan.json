@@ -1,0 +1,39 @@
+{
+  "wave": "wave_160",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-silk-zipline",
+      "title": "Spider on a Silk Zipline",
+      "alt": "One playful spider travels along a slanted silk thread between two short twig ends, two front legs grasping and six legs trailing separately.",
+      "description": "One playful spider travels along a slanted silk thread between two short twig ends, two front legs grasping and six legs trailing separately. Useful for movement stories.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_160/source/spider-silk-zipline-v4.png"
+    },
+    {
+      "id": "spider-empty-orb-web",
+      "title": "Black Orb Spider Web",
+      "alt": "Black orb spider web with tapered radial spokes and open transparent spaces between curved rings.",
+      "description": "A complete black orb web with clear open spaces and tapered strands. Useful for personal seasonal crafts and Halloween invitations.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_160/source/spider-empty-orb-web-v4.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "spider-egg-sac-guard",
+      "title": "Spider beside a Silk Egg Sac",
+      "alt": "One gentle spider stands beside one rounded silk egg sac attached beneath a short twig, all eight legs visible.",
+      "description": "One gentle spider stands beside one rounded silk egg sac attached beneath a short twig, all eight legs visible. Useful for family nature prompts.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_160/source/spider-egg-sac-guard-v3.png"
+    }
+  ]
+}

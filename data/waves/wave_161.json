@@ -1,0 +1,232 @@
+{
+  "wave": "wave_161",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-hanging-silhouette",
+      "title": "Hanging Spider Silhouette",
+      "alt": "A pure black silhouette of one spider hanging on a single silk strand, four distinct legs on each side.",
+      "description": "A pure black silhouette of one spider hanging on a single silk strand, four distinct legs on each side. Useful for personal silhouette crafts.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_161/source/spider-hanging-silhouette-v2.png",
+      "printSeparation": "black-only",
+      "topic": "spider",
+      "width": 1024,
+      "height": 1536,
+      "sourceType": "raster",
+      "sourceSha256": "c39d1b0de5dd5cb016001bef9f33252becd61882486e4624ac5a8e438573487e",
+      "inputSignature": "52e463065d147878d7cbbebf7d6c6692c5ffdc73768a32752d1bb94c6bf5f657",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 185155,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 185155,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        160,
+        190,
+        865,
+        1323
+      ],
+      "image": {
+        "width": 1024,
+        "height": 1536,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_161/exports/spider-hanging-silhouette.pdf",
+          "bytes": 185155,
+          "sha256": "352c4b8af966c3700b79b784bebe76bbffc9e0827b56eb2ee715b2910b825e39"
+        },
+        "webp": {
+          "path": "work/production/wave_161/exports/spider-hanging-silhouette.webp",
+          "bytes": 281610,
+          "sha256": "f4e2395b335648e55bd3d3ae8a11e8c822b0a7a754f7da3a8569801f02f9f149"
+        },
+        "thumb": {
+          "path": "work/production/wave_161/exports/spider-hanging-silhouette-thumb.webp",
+          "bytes": 12762,
+          "sha256": "ece4a0d6ccc12248339fe0ba89f0afb0fdd137f8fb67aeb8ad047c731bf26ca6"
+        }
+      },
+      "proofSha256": "3fbddc8b8a17a7f90b964fc09cf2c0d58d81bbe5b11e43598b8ff04fbc4b8948",
+      "pairMeanRgbDifference": 3.13589
+    },
+    {
+      "id": "spider-walking-silhouette",
+      "title": "Walking Spider Silhouette",
+      "alt": "A pure black side-angled silhouette of a walking spider with eight clearly traceable legs and a raised front leg.",
+      "description": "A pure black side-angled silhouette of a walking spider with eight clearly traceable legs and a raised front leg. Useful for personal cut-paper projects.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_161/source/spider-walking-silhouette.png",
+      "printSeparation": "black-only",
+      "topic": "spider",
+      "width": 1536,
+      "height": 1024,
+      "sourceType": "raster",
+      "sourceSha256": "3fe30d7c5bbc22d41b6b525c4aff1cb90c61cf424282f33233ad4dc3e27f9f3b",
+      "inputSignature": "ce350a18195fa332ed1b923070d6330b957562df3e5406f3f35c93f6e1482819",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 299797,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 299797,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        48,
+        108,
+        1479,
+        950
+      ],
+      "image": {
+        "width": 1536,
+        "height": 1024,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_161/exports/spider-walking-silhouette.pdf",
+          "bytes": 299797,
+          "sha256": "0b865147b22ca514d97b069caa406cb648a42e4b011222a14b182c7ccf82b383"
+        },
+        "webp": {
+          "path": "work/production/wave_161/exports/spider-walking-silhouette.webp",
+          "bytes": 357814,
+          "sha256": "5cdff9d49612e7ce8f29070b1e513f46c3c502d67e61aef26038c69edf70071d"
+        },
+        "thumb": {
+          "path": "work/production/wave_161/exports/spider-walking-silhouette-thumb.webp",
+          "bytes": 20104,
+          "sha256": "2aa4338f79ff374be1a72b57fd02901ee987a8becbc9da6673b730ee2a3d7afc"
+        }
+      },
+      "proofSha256": "2c7b3ec7117249fd62a907ea2ff708732f4febd6efbb1cc375276e575ea9ac4b",
+      "pairMeanRgbDifference": 5.93012
+    },
+    {
+      "id": "spider-seesaw-coloring",
+      "title": "Spider on a Leaf Seesaw Coloring Illustration",
+      "alt": "Black outlines with white interiors show one spider balancing on a curved leaf over a pebble, all eight legs clearly separated.",
+      "description": "Black outlines with white interiors show one spider balancing on a curved leaf over a pebble, all eight legs clearly separated. Useful for educational coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_161/source/spider-seesaw-coloring.png",
+      "printSeparation": "black-only",
+      "topic": "spider",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "a636f798571ddd9694c1eee7686810af60ba4e2082fa9e6177b9d0fd6366c0fd",
+      "inputSignature": "da1af58996562b1bfc5ae102e6599a653b0ad65f25a7b840f08617b1f1d9cd33",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 475211,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 475211,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        60,
+        121,
+        1287,
+        1116
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_161/exports/spider-seesaw-coloring.pdf",
+          "bytes": 475211,
+          "sha256": "7c4b099e6e7011cf86d468c6ada4f19654a60224a8ff86a987e9775e8807c6f7"
+        },
+        "webp": {
+          "path": "work/production/wave_161/exports/spider-seesaw-coloring.webp",
+          "bytes": 593514,
+          "sha256": "f269542ba014207fed1b2d66e623a30f29303b23cc12665f8839f74ab7fc569d"
+        },
+        "thumb": {
+          "path": "work/production/wave_161/exports/spider-seesaw-coloring-thumb.webp",
+          "bytes": 48962,
+          "sha256": "14fe307e687168207f0b1f6e11d41ceffba600101b68ab4266907018b0b120ed"
+        }
+      },
+      "proofSha256": "cd5f18e7067733b9f4aaed6a229cf43e0c19a0765c73293098bd5d30d4313278",
+      "pairMeanRgbDifference": 3.75112
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Both eight-leg silhouettes and leaf seesaw reviewed on white and green backgrounds; safe hanging-thread margin. Three actual lossless black-only CMYK PDF proofs reviewed.",
+  "createdAt": "2026-10-24T04:55:50.001Z"
+}

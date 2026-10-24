@@ -1,0 +1,38 @@
+{
+  "wave": "wave_158",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-plant-waterer",
+      "title": "Spider Watering a Seedling",
+      "alt": "Brown spider waters a potted seedling with a small green watering can, with eight distinct legs around its body.",
+      "description": "Brown spider waters a potted seedling with a small green watering can, with eight distinct legs around its body. Useful for gardening stories and plant-care activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_158/source/spider-plant-waterer-v3.png"
+    },
+    {
+      "id": "spider-seed-basket",
+      "title": "Spider beside a Seed Basket",
+      "alt": "Gray spider with eight legs leans over a woven basket containing three sunflower seeds.",
+      "description": "Gray spider with eight legs leans over a woven basket containing three sunflower seeds. Useful for seed sorting stories and classroom nature activities.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_158/source/spider-seed-basket-v3.png"
+    },
+    {
+      "id": "spider-blank-banner",
+      "title": "Spider above a Blank Banner",
+      "alt": "One spider spreads eight legs above a broad blank cream banner with gently curled ends and room for personal wording.",
+      "description": "One spider spreads eight legs above a broad blank cream banner with gently curled ends and room for personal wording. Useful for personal labels.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_158/source/spider-blank-banner.png"
+    }
+  ]
+}

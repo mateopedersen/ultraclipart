@@ -1,0 +1,39 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-corner-label",
+      "title": "Spider on a Corner Label",
+      "composition": "One spider rests at the upper outside corner of a blank rectangular label, all eight legs visible above and beside its edge.",
+      "use": "classroom material labels",
+      "color": "Brown",
+      "prompt": "Create a new standalone professional clipart. Use the reference only for smooth polished shading, clean edges and genuine transparent cutout, do not copy its composition. One spider rests at the upper outside corner of a blank rectangular label, all eight legs visible above and beside its edge. Use a slim deep-brown spider with long elegant jointed legs and small friendly eyes, two connected body segments. EXACTLY eight walking legs in four pairs, with all eight ends separated, no extra arms. Clearly readable original composition with generous margins. Opaque smooth broad painted forms, deliberate dark contours and selected refined detail. Exterior fully transparent, no haze, glow, background, text or signature."
+    },
+    {
+      "id": "spider-heart-web",
+      "title": "Spider beside a Heart Web",
+      "composition": "One small spider hangs beside a simple heart-shaped web outline with a few curved cross threads, eight legs clearly separated.",
+      "use": "personal friendship cards",
+      "color": "Brown",
+      "prompt": "Create a new standalone professional clipart. Use the reference only for smooth polished shading, clean edges and genuine transparent cutout, do not copy its composition. One small spider hangs beside a simple heart-shaped web outline with a few curved cross threads, eight legs clearly separated. Use a slim deep-brown spider with long elegant jointed legs and small friendly eyes, two connected body segments. EXACTLY eight walking legs in four pairs, with all eight ends separated, no extra arms. Clearly readable original composition with generous margins. Opaque smooth broad painted forms, deliberate dark contours and selected refined detail. Exterior fully transparent, no haze, glow, background, text or signature."
+    },
+    {
+      "id": "spider-leaf-parachute",
+      "title": "Spider under a Leaf Parachute",
+      "composition": "A spider floats below a single broad leaf canopy supported by two silk lines, its eight legs spread freely beneath.",
+      "use": "imaginative travel stories",
+      "color": "Brown",
+      "prompt": "Create a new standalone professional clipart. Use the reference only for smooth polished shading, clean edges and genuine transparent cutout, do not copy its composition. A spider floats below a single broad leaf canopy supported by two silk lines, its eight legs spread freely beneath. Use a slim deep-brown spider with long elegant jointed legs and small friendly eyes, two connected body segments. EXACTLY eight walking legs in four pairs, with all eight ends separated, no extra arms. Clearly readable original composition with generous margins. Opaque smooth broad painted forms, deliberate dark contours and selected refined detail. Exterior fully transparent, no haze, glow, background, text or signature."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "prompts-clean-heart.json",
+      "content": "{\"id\":\"spider-heart-web\",\"prompt\":\"Use case: precise-object-edit. Preserve this brown friendly spider, its exactly eight legs, expressive face, body and composition. Change ONLY the heart-shaped web above it: redraw the heart web with crisp clean smooth charcoal-brown strands, eight radial spokes and three curved connector rings, with subtly cream-lit edges. All holes between strands must be fully transparent, no gray-white film or fog or fringe. This is a polished hand-inked original cutout. The spider remains attached by one clean narrow silk line. Fit the complete composition with 6 percent transparent margin. No matte, no glow, no text. Preserve character detail; simplify only excessive web texture into clean silk strands.\"}\n"
+    },
+    {
+      "file": "prompts-compact-heart.json",
+      "content": "{\"prompt\":\"Use case: precise-object-edit. Preserve the friendly brown spider with all eight legs and the clean transparent exterior. Refine composition: make the heart-shaped web significantly SMALLER, about half the spider body's height, positioned just above the upper left of the spider, attached by one short silk thread. The small heart web should have only five crisp narrow smooth radial silk spokes and two cross rings, not thick shiny tubing. Preserve the spider's polished expressive face, rich brown shading and eight distinctly separate legs. Keep generous clear margins and absolutely transparent gaps. Original professional clipart suitable for a personal friendship card. No matte, glow, text or background. Target a compact square composition with carefully simplified smooth shading, no speckled microtexture.\"}\n"
+    }
+  ]
+}

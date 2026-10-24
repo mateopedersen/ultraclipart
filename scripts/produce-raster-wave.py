@@ -47,18 +47,30 @@ def separate_cmyk(image,alpha,transform,meta):
     # Color under fully transparent pixels cannot affect any composite.
     raw[weights==0]=0
     return raw
-def png_payload(gray):
+def png_payload(gray, compression='zlib'):
+    assert gray.mode=='L' and compression in ('zlib','zopfli'), 'Unsupported alpha packing'
     out=io.BytesIO();gray.save(out,'PNG',compress_level=9)
     body=out.getvalue();pos=8;payload=[]
     while pos<len(body):
         size=struct.unpack('>I',body[pos:pos+4])[0];kind=body[pos+4:pos+8]
         if kind==b'IDAT':payload.append(body[pos+8:pos+8+size])
         pos+=size+12
-    return b''.join(payload)
-def pdf_bytes(encoded,alpha,title):
+    packed=b''.join(payload)
+    if compression=='zopfli':
+        # Repack only PNG predictor bytes. No pixel quantization, thresholding or
+        # alpha cleanup is permitted, including almost-invisible edge pixels.
+        from importlib.metadata import version
+        from zopfli.zlib import compress
+        assert version('zopfli')=='0.4.0', 'Use the pinned art runtime'
+        raw=zlib.decompress(packed)
+        candidate=compress(raw,numiterations=20)
+        assert zlib.decompress(candidate)==raw, 'Lossless alpha repack failed'
+        if len(candidate)<len(packed):packed=candidate
+    return packed
+def pdf_bytes(encoded,alpha,title,mask_payload=None):
     width,height=alpha.size;pw,ph=width*72/300,height*72/300
     writer=PdfWriter();writer.pdf_header='%PDF-1.7';page=writer.add_blank_page(pw,ph)
-    mask=EncodedStreamObject();mask._data=png_payload(alpha)
+    mask=EncodedStreamObject();mask._data=png_payload(alpha) if mask_payload is None else mask_payload
     mask.update({NameObject('/Type'):NameObject('/XObject'),NameObject('/Subtype'):NameObject('/Image'),NameObject('/Width'):NumberObject(width),NameObject('/Height'):NumberObject(height),NameObject('/BitsPerComponent'):NumberObject(8),NameObject('/ColorSpace'):NameObject('/DeviceGray'),NameObject('/Filter'):NameObject('/FlateDecode'),NameObject('/DecodeParms'):DictionaryObject({NameObject('/Predictor'):NumberObject(15),NameObject('/Colors'):NumberObject(1),NameObject('/Columns'):NumberObject(width),NameObject('/BitsPerComponent'):NumberObject(8)})})
     image=EncodedStreamObject();image._data=encoded
     image.update({NameObject('/Type'):NameObject('/XObject'),NameObject('/Subtype'):NameObject('/Image'),NameObject('/Width'):NumberObject(width),NameObject('/Height'):NumberObject(height),NameObject('/BitsPerComponent'):NumberObject(8),NameObject('/ColorSpace'):NameObject('/DeviceCMYK'),NameObject('/Filter'):NameObject('/JPXDecode'),NameObject('/SMask'):writer._add_object(mask)})
@@ -127,6 +139,7 @@ def main():
         thumb=image.copy();thumb.thumbnail((440,440),Image.Resampling.LANCZOS);thumb.save(files_dir/f'{art_id}-thumb.webp','WEBP',quality=94,method=6,alpha_quality=100)
         raw=separate_cmyk(image,alpha,transform,meta);weights=np.array(alpha,dtype=np.float64)
         cmyk=Image.fromarray(raw,'CMYK');trials=[];selected=None
+        mask_payload=png_payload(alpha,meta.get('alphaCompression','zlib'))
         # Wavelet decomposition changes packing, never native pixel dimensions or the quality floor.
         resolutions=meta.get('jpeg2000Resolutions',6)
         assert type(resolutions) is int and 4<=resolutions<=6, 'Unsupported JPEG2000 decomposition count'
@@ -138,7 +151,7 @@ def main():
                 delta=raw.astype(np.float64)-np.array(decoded,dtype=np.float64)
             rmse=float(np.sqrt(np.sum(delta*delta*weights[:,:,None])/(4*np.sum(weights))))
             if quality is None:assert rmse==0
-            pdf=pdf_bytes(out.getvalue(),alpha,meta['title'])
+            pdf=pdf_bytes(out.getvalue(),alpha,meta['title'],mask_payload)
             trials.append({'numResolutions':resolutions,'qualityDb':quality,'losslessCmyk':quality is None,'bytes':len(pdf),'weightedCmykRmse':round(rmse,6)})
             if len(pdf)<=plan['maxPdfBytes'] and rmse<=plan['maximumWeightedCmykRmse']:
                 selected=trials[-1];break

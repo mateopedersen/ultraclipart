@@ -10,6 +10,21 @@ spec=importlib.util.spec_from_file_location('producer',ROOT/'scripts/produce-ras
 producer=importlib.util.module_from_spec(spec);spec.loader.exec_module(producer)
 
 class GeneratedRasterContract(unittest.TestCase):
+    def test_lossless_alpha_repacking_roundtrips_through_pdf_decoder(self):
+        # Transparent, near-transparent and near-opaque contours must all survive.
+        alpha=Image.new('L',(101,73));alpha.putdata([(i*37+i//101)%256 for i in range(101*73)])
+        before=alpha.tobytes()
+        standard=producer.png_payload(alpha)
+        packed=producer.png_payload(alpha,'zopfli')
+        self.assertLessEqual(len(packed),len(standard))
+        out=io.BytesIO();Image.new('CMYK',alpha.size,(0,120,80,30)).save(out,'JPEG2000',irreversible=False)
+        body=producer.pdf_bytes(out.getvalue(),alpha,'Lossless mask',packed)
+        reader=PdfReader(io.BytesIO(body),strict=True)
+        obj=reader.pages[0]['/Resources']['/XObject']['/Artwork'].get_object()
+        self.assertEqual(decoded_alpha(obj['/SMask'].get_object()),before)
+        self.assertEqual(alpha.tobytes(),before)
+        self.assertEqual(inspect_cmyk_image(obj,101,73)['components'],4)
+        with self.assertRaises(AssertionError):producer.png_payload(alpha,'lossy')
     def test_explicit_black_only_separation_preserves_native_geometry_and_alpha(self):
         image=Image.new('RGBA',(4,1));image.putdata([(0,0,0,255),(128,128,128,127),(255,255,255,255),(255,0,0,0)])
         original=image.tobytes();alpha=image.getchannel('A');mask=alpha.tobytes()

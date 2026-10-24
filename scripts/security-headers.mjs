@@ -3,6 +3,7 @@ import { join, resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
+import { pruneCatalogOutput } from './prune-catalog-output.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const dist = join(root, 'dist');
@@ -59,8 +60,9 @@ if (process.env.CF_PAGES === '1') {
   for (const url of allowed)
     if (!compiled.has(url))
       throw new Error(`Verified media was omitted from compiled output: ${url}`);
-  // Remove only the verified duplicate outputs. Source files and unrelated UI
-  // assets remain intact, including the independent blank creation studio.
+  // A locally staged next wave must not leak into a manual production build.
+  // Sources and unrelated UI assets, including the blank studio, stay intact.
+  pruneCatalogOutput(dist);
   for (const path of publication.localPaths) rmSync(join(dist, path.slice(1)), { force: true });
   console.log(`CDN release: ${publication.files} verified files, ${publication.bytes} bytes.`);
 }

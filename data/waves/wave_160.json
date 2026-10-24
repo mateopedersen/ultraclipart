@@ -1,0 +1,258 @@
+{
+  "wave": "wave_160",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-silk-zipline",
+      "title": "Spider on a Silk Zipline",
+      "alt": "One playful spider travels along a slanted silk thread between two short twig ends, two front legs grasping and six legs trailing separately.",
+      "description": "One playful spider travels along a slanted silk thread between two short twig ends, two front legs grasping and six legs trailing separately. Useful for movement stories.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_160/source/spider-silk-zipline-v4.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "fb8547c9e02b9de1ab676821ef56ba491dbef9672462bc7161464c267e483c30",
+      "inputSignature": "63ea9c96eaca6aea7274cbcf3bed5e43267f1b3a63eb35331c26b5e0f40a4b49",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 915663,
+        "weightedCmykRmse": 0.95441
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1314587,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 915663,
+          "weightedCmykRmse": 0.95441
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        24,
+        132,
+        1246,
+        1202
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_160/exports/spider-silk-zipline.pdf",
+          "bytes": 915663,
+          "sha256": "a7f7ccb4cb8147ddacba45ffea1ef9f9a429e907097898b8eac282d89a865a45"
+        },
+        "webp": {
+          "path": "work/production/wave_160/exports/spider-silk-zipline.webp",
+          "bytes": 555076,
+          "sha256": "fea2ecaa4132587bb3d36e5c3e1814ca4c66257fee265a83a98f8b4399e8c52f"
+        },
+        "thumb": {
+          "path": "work/production/wave_160/exports/spider-silk-zipline-thumb.webp",
+          "bytes": 47648,
+          "sha256": "bbfa255457e43365db93d84f51f1f9e6ecbba633f3842713217b42903df3b330"
+        }
+      },
+      "proofSha256": "e8e6b1166182569b559345b10c6915a806c23a46a39bac6e1604746dd5772425",
+      "pairMeanRgbDifference": 1.48013
+    },
+    {
+      "id": "spider-empty-orb-web",
+      "title": "Black Orb Spider Web",
+      "alt": "Black orb spider web with tapered radial spokes and open transparent spaces between curved rings.",
+      "description": "A complete black orb web with clear open spaces and tapered strands. Useful for personal seasonal crafts and Halloween invitations.",
+      "color": "Black",
+      "style": "Black & White",
+      "source": "work/production/wave_160/source/spider-empty-orb-web-v4.png",
+      "printSeparation": "black-only",
+      "topic": "spider",
+      "width": 1312,
+      "height": 1199,
+      "sourceType": "raster",
+      "sourceSha256": "c7d742e1639d4f5fd54bf6d8306f9b152305a13f8f390075ea67031c52c2b9e3",
+      "inputSignature": "ba1dc177d6b8f4916753c9c9941ecf73d797bf4427636fe62cc766b32779fc98",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 375466,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 375466,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        31,
+        7,
+        1285,
+        1192
+      ],
+      "image": {
+        "width": 1312,
+        "height": 1199,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_160/exports/spider-empty-orb-web.pdf",
+          "bytes": 375466,
+          "sha256": "06d1dcc81eb7b20c14adfa83435261ccab0703436632b880d3976756ab0b6a3e"
+        },
+        "webp": {
+          "path": "work/production/wave_160/exports/spider-empty-orb-web.webp",
+          "bytes": 159114,
+          "sha256": "f58a4c2140de16ada0d5200df8e9a98d569419b6cd0787c99180c178ddfb403e"
+        },
+        "thumb": {
+          "path": "work/production/wave_160/exports/spider-empty-orb-web-thumb.webp",
+          "bytes": 27370,
+          "sha256": "46f6037b7266b4eff1b2398d4ec8074f7845ef19d14a3c47974c06b36557d5ec"
+        }
+      },
+      "proofSha256": "c752cdce7e9e5ef6e369b19a3b353a7f7ca002854dcd40fb368cfdc7c4086ae8",
+      "pairMeanRgbDifference": 3.10536
+    },
+    {
+      "id": "spider-egg-sac-guard",
+      "title": "Spider beside a Silk Egg Sac",
+      "alt": "One gentle spider stands beside one rounded silk egg sac attached beneath a short twig, all eight legs visible.",
+      "description": "One gentle spider stands beside one rounded silk egg sac attached beneath a short twig, all eight legs visible. Useful for family nature prompts.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_160/source/spider-egg-sac-guard-v3.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "c29d08c608a998238a30758a6ef05ef7541ac3d93b8c7d68be83aaa3e9f13071",
+      "inputSignature": "84fb3135d8a8cf33dbed893cf3a3d4dfbfbbc7a548b4bc189a7c531206601ebb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 909781,
+        "weightedCmykRmse": 1.174192
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1703387,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1141743,
+          "weightedCmykRmse": 0.837587
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1029164,
+          "weightedCmykRmse": 0.973699
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 909781,
+          "weightedCmykRmse": 1.174192
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        18,
+        123,
+        1231,
+        1155
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_160/exports/spider-egg-sac-guard.pdf",
+          "bytes": 909781,
+          "sha256": "04fd1c8957c2aab1cc495546743bdb9db6d12606e9f120f8f17865a011c49b06"
+        },
+        "webp": {
+          "path": "work/production/wave_160/exports/spider-egg-sac-guard.webp",
+          "bytes": 820290,
+          "sha256": "4f51740144272ed917928c3274edbb2187cc762ce15d0c82a670115e6ceaca17"
+        },
+        "thumb": {
+          "path": "work/production/wave_160/exports/spider-egg-sac-guard-thumb.webp",
+          "bytes": 58040,
+          "sha256": "0ff8e34f473a4cc76f2d9c261756530ebb0c08966e2c32b68512222e5116e85e"
+        }
+      },
+      "proofSha256": "a851ad0e55f9e28478bb573beebe055c7495b72671205fef66cdbb12ad1914b7",
+      "pairMeanRgbDifference": 1.59506
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Zipline has three trailing plus one gripping leg per side. Egg-sac spider has eight. Black orb web has open transparent spaces; native green-background check passed. All three actual PDF proofs reviewed.",
+  "createdAt": "2026-10-24T04:57:36.812Z"
+}

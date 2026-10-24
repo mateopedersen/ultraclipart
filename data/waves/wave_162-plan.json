@@ -1,0 +1,31 @@
+{
+  "wave": "wave_162",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-snowglobe-coloring",
+      "title": "Spider beside a Snow Globe Coloring Illustration",
+      "alt": "Black outlines with white interiors show one spider looking at a simple snow globe containing one snowflake, all eight legs outside the globe.",
+      "description": "Black outlines with white interiors show one spider looking at a simple snow globe containing one snowflake, all eight legs outside the globe. Useful for personal winter coloring.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_162/source/spider-snowglobe-coloring-v2.png",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "spider-family-coloring",
+      "title": "Two Spiders Coloring Illustration",
+      "alt": "Black outlines with white interiors show one large and one small spider side by side on separate pebbles, each with four legs on each side.",
+      "description": "Black outlines with white interiors show one large and one small spider side by side on separate pebbles, each with four legs on each side. Useful for family coloring activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_162/source/spider-family-coloring-v2.png",
+      "printSeparation": "black-only"
+    }
+  ]
+}

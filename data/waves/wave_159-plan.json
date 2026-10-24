@@ -1,0 +1,38 @@
+{
+  "wave": "wave_159",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-corner-label",
+      "title": "Spider Holding a Blank Label",
+      "alt": "Brown spider with eight legs peeking over a blank cream rectangular label.",
+      "description": "A brown spider peeks over a blank cream rectangular label. Add a name or short message in the editor for personal classroom labels.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_159/source/spider-corner-label-v3.png"
+    },
+    {
+      "id": "spider-heart-web",
+      "title": "Spider beside a Heart Web",
+      "alt": "One small spider hangs beside a simple heart-shaped web outline with a few curved cross threads, eight legs clearly separated.",
+      "description": "One small spider hangs beside a simple heart-shaped web outline with a few curved cross threads, eight legs clearly separated. Useful for personal friendship cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_159/source/spider-heart-web-v4.png"
+    },
+    {
+      "id": "spider-leaf-parachute",
+      "title": "Spider under a Leaf Parachute",
+      "alt": "A spider floats below a single broad leaf canopy supported by two silk lines, its eight legs spread freely beneath.",
+      "description": "A spider floats below a single broad leaf canopy supported by two silk lines, its eight legs spread freely beneath. Useful for imaginative travel stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_159/source/spider-leaf-parachute.png"
+    }
+  ]
+}
