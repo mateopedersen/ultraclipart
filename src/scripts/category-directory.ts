@@ -20,7 +20,8 @@ function filter(save = true) {
   const matches = cards
     .filter(
       (card) =>
-        (!group.value || card.dataset.group === group.value) &&
+        (!group.value ||
+          (card.dataset.groups ?? card.dataset.group ?? '').split(' ').includes(group.value)) &&
         (!letter || card.dataset.letterValue === letter) &&
         terms.every((term) => card.dataset.keywords!.includes(term)),
     )

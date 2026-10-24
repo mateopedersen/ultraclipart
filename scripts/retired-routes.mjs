@@ -31,21 +31,20 @@ const compilePattern = (pattern) =>
   );
 const matches = (pattern, path) => compilePattern(pattern).test(path);
 function subjectRoutes(root, missing, current, compact = false) {
-  const cover = (wanted, protectedNames) => {
-    if (!compact)
-      return prefixCover(variants(wanted), variants(protectedNames)).map((name) => root + name);
-    // A glob spans slashes. A safe match for a slug can still capture the
-    // "index.html" suffix of an unrelated, currently published subject.
-    const protectedVariants = variants(
-      protectedNames.flatMap((name) => [name, `${name}/index.html`]),
-    );
-    return compactCover(
-      wanted,
-      protectedVariants.map((name) => root + name),
-      protectedVariants,
-      root,
-    );
-  };
+  // Pages also serves its generated index.html files directly. A compact
+  // wildcard must never send those current assets through the 404 Function.
+  const guarded = (names) => [
+    ...new Set(names.flatMap((name) => [name, `${name}/`, `${name}/index.html`])),
+  ];
+  const cover = (wanted, protectedNames, pathRoot = root) =>
+    compact
+      ? compactCover(
+          wanted,
+          guarded(protectedNames).map((name) => pathRoot + name),
+          guarded(protectedNames),
+          pathRoot,
+        )
+      : prefixCover(variants(wanted), variants(protectedNames)).map((name) => pathRoot + name);
   if (!missing.length) return { include: [], exclude: [] };
   const positive = {
     include: cover(missing, current),
@@ -55,9 +54,33 @@ function subjectRoutes(root, missing, current, compact = false) {
     include: [root + '*'],
     exclude: cover(current, missing),
   };
-  return positive.include.length <= negative.include.length + negative.exclude.length
-    ? positive
-    : negative;
+  const choices = [positive, negative];
+  if (
+    compact &&
+    Math.min(positive.include.length, negative.include.length + negative.exclude.length) > 60
+  ) {
+    const partitioned = { include: [], exclude: [] };
+    for (const letter of [...new Set(missing.map((name) => name[0]))].sort()) {
+      const absent = missing.filter((name) => name.startsWith(letter)).map((name) => name.slice(1));
+      const present = current
+        .filter((name) => name.startsWith(letter))
+        .map((name) => name.slice(1));
+      const pathRoot = root + letter;
+      const plus = { include: cover(absent, present, pathRoot), exclude: [] };
+      const minus = {
+        include: [pathRoot + '*'],
+        exclude: cover(present, absent, pathRoot),
+      };
+      const selected =
+        plus.include.length <= minus.include.length + minus.exclude.length ? plus : minus;
+      partitioned.include.push(...selected.include);
+      partitioned.exclude.push(...selected.exclude);
+    }
+    choices.push(partitioned);
+  }
+  return choices.sort(
+    (a, b) => a.include.length + a.exclude.length - b.include.length - b.exclude.length,
+  )[0];
 }
 
 // Preserve contiguous common runs; insert wildcards only where the two names
@@ -95,7 +118,7 @@ function compactCover(ids, protectedPaths, protectedSuffixes, root = '/*/') {
     names = [...ids].sort();
   let pairs = 0;
   for (let i = 0; i < names.length; i++)
-    for (let j = i + 1; j < names.length && pairs++ < 2048; j++)
+    for (let j = i + 1; j < names.length && pairs++ < 8192; j++)
       if (names[i].length <= 128 && names[j].length <= 128)
         candidates.add(root + commonGlob(names[i], names[j]));
   const safe = [...candidates]

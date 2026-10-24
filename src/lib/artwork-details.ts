@@ -8,6 +8,7 @@ type ArtworkFacts = {
 };
 
 const techniques: [RegExp, string][] = [
+  [/3d/, '3D illustration'],
   [/watercolor/, 'Watercolor'],
   [/colored-pencil/, 'Colored pencil'],
   [/crayon/, 'Crayon illustration'],
@@ -21,7 +22,12 @@ const techniques: [RegExp, string][] = [
   [/dotwork|stipple/, 'Stipple illustration'],
   [/paper-cut|papercut|cut-paper|papercraft|paper-craft/, 'Paper craft'],
   [/clay|ceramic|porcelain/, 'Sculpted illustration'],
-  [/embroidery|felt|knitted/, 'Textile illustration'],
+  [/embroidery|felt|knitted|crochet|amigurumi/, 'Textile illustration'],
+  [/carved-wood|wooden/, 'Carved wood illustration'],
+  [/paper-quilling/, 'Paper quilling illustration'],
+  [/airbrush/, 'Airbrush illustration'],
+  [/oil-painting/, 'Oil painting illustration'],
+  [/digital-graphic|digital-painting|lineless/, 'Digital illustration'],
   [/realistic/, 'Realistic illustration'],
   [/pastel/, 'Pastel'],
   [/stained-glass|mosaic/, 'Decorative glass'],

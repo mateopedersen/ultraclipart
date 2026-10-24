@@ -294,3 +294,23 @@ test('expired/missing Wrangler login is rejected without revealing credentials',
     rmSync(dir, { recursive: true, force: true });
   }
 });
+
+test('explicit rate limits retry the rejected request after backoff', async () => {
+  let calls = 0;
+  const observed = [];
+  const transport = cloudflareTransport({
+    accountId,
+    token,
+    writeBucket: 'ultraclipart-media',
+    fetcher: async (url, options) => {
+      observed.push({ method: options.method, condition: options.headers['If-None-Match'] });
+      calls++;
+      return calls === 1
+        ? new Response(null, { status: 429, headers: { 'retry-after': '0' } })
+        : json(envelope({ buckets: [] }, { total_count: 0 }));
+    },
+  });
+  await transport.aws('list-buckets', [], endpoint);
+  assert.equal(calls, 2);
+  assert.deepEqual(observed[0], observed[1]);
+});

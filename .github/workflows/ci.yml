@@ -11,13 +11,50 @@ concurrency:
   # Complete all three browser engines even when the next artwork wave arrives.
   cancel-in-progress: false
 jobs:
+  plan:
+    name: Select and verify affected checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      run_browser: ${{ steps.scope.outputs.run_browser }}
+      browser_suites: ${{ steps.scope.outputs.browser_suites }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Verify conservative scope policy
+        run: node --test tests/ci-plan.mjs tests/ci-raster-shards.mjs
+      - name: Validate workflow and planner formatting
+        run: pnpm exec prettier --check .github/workflows/ci.yml scripts/ci-plan.mjs tests/ci-plan.mjs scripts/ci-raster-shards.mjs tests/ci-raster-shards.mjs
+      - name: Lint workflow expressions and job dependencies
+        run: |
+          mkdir -p "$RUNNER_TEMP/uc-actionlint"
+          curl --fail --location --retry 2 --max-time 60 \
+            -o "$RUNNER_TEMP/uc-actionlint/archive.tar.gz" \
+            https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz
+          echo '8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  '"$RUNNER_TEMP/uc-actionlint/archive.tar.gz" | sha256sum --check
+          tar -xzf "$RUNNER_TEMP/uc-actionlint/archive.tar.gz" -C "$RUNNER_TEMP/uc-actionlint" actionlint
+          "$RUNNER_TEMP/uc-actionlint/actionlint" -shellcheck= .github/workflows/ci.yml
+      - name: Select affected browser groups
+        id: scope
+        run: node scripts/ci-plan.mjs
   browser:
+    needs: plan
+    if: ${{ needs.plan.outputs.run_browser == 'true' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         engine: [chromium, firefox, webkit]
-        suite: [interface, catalog, catalog-extra, studio]
+        suite: ${{ fromJSON(needs.plan.outputs.browser_suites) }}
     # Match @playwright/test; browsers and OS libraries are already installed.
     # Pin the official image digest so a registry tag cannot change the runner.
     container:
@@ -100,13 +137,16 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=printer node tests/e2e/collection.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=keyboard node tests/e2e/collection.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=scanner node tests/e2e/collection.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=tablet node tests/e2e/collection.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=speaker node tests/e2e/collection.mjs
             fi
             if [ '${{ matrix.suite }}' = 'catalog-extra' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=earbuds ALL_RASTER=1 EVIDENCE_DIR=reports/earbuds-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=printer ALL_RASTER=1 EVIDENCE_DIR=reports/printer-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=keyboard ALL_RASTER=1 EVIDENCE_DIR=reports/keyboard-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=scanner ALL_RASTER=1 EVIDENCE_DIR=reports/scanner-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 node tests/e2e/raster-editor.mjs
             fi
@@ -121,13 +161,27 @@ jobs:
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/ai-studio-transfer.mjs
               if [ '${{ matrix.engine }}' = chromium ]; then
                 BASE_URL=http://127.0.0.1:4321 node tests/e2e/cute-surprise.mjs
+                BASE_URL=http://127.0.0.1:4321 node tests/e2e/fruit-categories.mjs
                 BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs
                 BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-2026-10-24 EXPECTED_ARTWORKS=550 EXPECTED_TOPICS=11 EVIDENCE_DIR=reports/fruit-gallery node tests/e2e/package-gallery.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-expansion-2026-10-24 EXPECTED_ARTWORKS=1450 EXPECTED_TOPICS=29 EVIDENCE_DIR=reports/fruit-expansion node tests/e2e/package-gallery.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-five-packs-2026-10-24 EXPECTED_ARTWORKS=250 EXPECTED_TOPICS=5 EVIDENCE_DIR=reports/fruit-five node tests/e2e/package-gallery.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fire-leaf-two-packs-2026-10-24 EXPECTED_ARTWORKS=100 EXPECTED_TOPICS=2 EVIDENCE_DIR=reports/fire-leaf node tests/e2e/package-gallery.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-school-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/school node tests/e2e/package-gallery.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-basketball-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/basketball node tests/e2e/package-gallery.mjs
                 UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
                 BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
                 BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
               fi
             fi
+            case '${{ matrix.suite }}' in
+              catalog-seasonal-0|catalog-seasonal-1|catalog-seasonal-2)
+                UC_CI_SUITE='${{ matrix.suite }}'
+                export RASTER_SHARD_COUNT=3
+                export RASTER_SHARD_INDEX="${UC_CI_SUITE##*-}"
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
+                ;;
+            esac
           done
       - name: Validate production CDN mapping and headers
         run: |
@@ -142,7 +196,7 @@ jobs:
           retention-days: 14
   validate:
     name: validate (${{ matrix.engine }})
-    needs: browser
+    needs: [plan, browser]
     if: ${{ always() }}
     runs-on: ubuntu-latest
     strategy:
@@ -150,5 +204,15 @@ jobs:
       matrix:
         engine: [chromium, firefox, webkit]
     steps:
-      - name: Require every browser control group to succeed
-        run: test '${{ needs.browser.result }}' = success
+      - name: Require the selected checks to succeed
+        env:
+          PLAN_RESULT: ${{ needs.plan.result }}
+          RUN_BROWSER: ${{ needs.plan.outputs.run_browser }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
+        run: |
+          test "$PLAN_RESULT" = success
+          case "$RUN_BROWSER" in
+            true) test "$BROWSER_RESULT" = success ;;
+            false) test "$BROWSER_RESULT" = skipped ;;
+            *) exit 1 ;;
+          esac

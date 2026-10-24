@@ -56,10 +56,23 @@ try {
       // Create mounts its artwork library asynchronously. Include those previews
       // in decoding before checking every image, including offscreen thumbnails.
       if (route === '/create/')
-        await page
-          .locator('[data-artwork-grid] .uc-artwork-card')
-          .first()
-          .waitFor({ state: 'attached' });
+        await page.waitForFunction(() => {
+          const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
+          const match = count.match(/^(\d+) of ([\d,]+) artworks$/);
+          if (!match) return false;
+          const expected = Math.min(24, Number(match[2].replaceAll(',', '')));
+          const cards = [...document.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+          return (
+            expected > 0 &&
+            Number(match[1]) === expected &&
+            cards.length === expected &&
+            cards.every((card) => {
+              const image = card.querySelector('img');
+              if (image) image.loading = 'eager';
+              return image?.complete && image.naturalWidth > 0;
+            })
+          );
+        });
       await page.evaluate(async () => {
         await Promise.all(
           [...document.images].map(async (image) => {
@@ -72,6 +85,17 @@ try {
       });
       // Studio can populate its artwork library after the first image snapshot.
       // Wait for those images too; a genuine broken response still fails here.
+      await page.waitForFunction(() =>
+        [...document.images].every((image) => {
+          image.loading = 'eager';
+          return image.complete && image.naturalWidth > 0;
+        }),
+      );
+      const axe = await new AxeBuilder({ page })
+        .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
+        .analyze();
+      // Accessibility inspection can overlap with late asynchronous thumbnails.
+      // Recheck every image immediately before taking the layout snapshot.
       await page.waitForFunction(() =>
         [...document.images].every((image) => {
           image.loading = 'eager';
@@ -96,9 +120,6 @@ try {
           .map((image) => image.src),
         headingCount: document.querySelectorAll('h1').length,
       }));
-      const axe = await new AxeBuilder({ page })
-        .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
-        .analyze();
       const state = {
         route,
         width,

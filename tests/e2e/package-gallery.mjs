@@ -47,7 +47,7 @@ try {
     const expected = items.filter((art) => art.topic === topic);
     const response = await page.goto(`${base}/clipart/${topic}/`);
     assert.equal(response.status(), 200);
-    await expect(page.locator('h1')).toHaveCount(1);
+    await expect(page.locator('main h1')).toHaveCount(1);
     await expect(page.locator('.art-card')).toHaveCount(expected.length);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       'href',
@@ -140,9 +140,18 @@ try {
       report.states.push({ topic, width, illustrations: expected.length, overflow, violations });
       assert.deepEqual(violations, [], `${topic}: ${width}px accessibility`);
       if (
-        ['cat', 'penguin', 'octopus', 'zebra', 'apple', 'kiwi-fruit', 'tangerine'].includes(
-          topic,
-        ) &&
+        [
+          'cat',
+          'penguin',
+          'octopus',
+          'zebra',
+          'apple',
+          'kiwi-fruit',
+          'tangerine',
+          'green-apple',
+          'dragon-fruit',
+          'melon',
+        ].includes(topic) &&
         [390, 1440].includes(width)
       )
         await page.screenshot({ path: resolve(output, `${topic}-${width}.png`), fullPage: false });

@@ -254,10 +254,11 @@ const schema = {
             class="discovery-subject"
             data-topic={subject.keyword.toLowerCase()}
             data-group={subject.group}
+            data-groups={subject.groups.join(' ')}
             data-name={subject.name}
             data-count={subject.count}
             data-letter-value={subject.name[0].toUpperCase()}
-            data-keywords={`${subject.keyword} ${subject.cluster} ${subject.slug}`.toLowerCase()}
+            data-keywords={`${subject.keyword} ${subject.cluster} ${subject.groups.join(' ')} ${subject.slug}`.toLowerCase()}
           >
             <a href={`/clipart/${subject.slug}/`}>
               <div class={`subject-art tone-${subject.color}`}>

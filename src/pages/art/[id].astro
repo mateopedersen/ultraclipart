@@ -5,6 +5,7 @@ import RelatedArtwork from '../../components/RelatedArtwork.astro';
 import Icon from '../../components/Icon.astro';
 import ShareButton from '../../components/ShareButton.astro';
 import ArtworkFacts from '../../components/ArtworkFacts.astro';
+import ArtworkSymbol from '../../components/ArtworkSymbol.astro';
 import { artworkDetails, formatFileSize } from '../../lib/artwork-details';
 import '../../styles/artwork-detail.css';
 import notes from '../../../data/artwork-notes.json';
@@ -76,33 +77,48 @@ const facts = artworkDetails(item);
         />
       </div>
       <fieldset class="swatches art-preview-controls">
-        <legend>Preview background</legend>
-        <button type="button" data-bg="transparent" aria-pressed="true">
-          <span class="art-color-chip art-checker" aria-hidden="true"></span>Transparent
-        </button>
-        <button type="button" data-bg="#ffffff" aria-pressed="false">
-          <span class="art-color-chip art-white" aria-hidden="true"></span>White
-        </button>
-        <button type="button" data-bg="#b8d8ff" aria-pressed="false">
-          <span class="art-color-chip art-blue" aria-hidden="true"></span>Blue
-        </button>
-        <button type="button" data-bg="#23344d" aria-pressed="false">
-          <span class="art-color-chip art-dark" aria-hidden="true"></span>Dark
-        </button>
-        <div class="art-custom-color" data-selected="false" data-picked="false">
-          <label for="preview-color">
-            <span class="art-custom-symbol" aria-hidden="true"></span>
-            <span class="art-custom-copy">
-              <strong>Custom color</strong>
-              <span data-custom-label>Choose your own shade</span>
-            </span>
-            <input id="preview-color" type="color" value="#ffffff" />
-          </label>
-          <button type="button" data-apply-custom aria-pressed="false" hidden>
-            Use color
+        <legend>
+          Preview background <span>Find the right contrast</span>
+        </legend>
+        <div class="art-background-toolbar">
+          <button type="button" data-bg="transparent" aria-pressed="true">
+            <ArtworkSymbol name="transparent" id="backdrop-transparent" size={62} />
+            <span>Transparent</span>
           </button>
+          <button type="button" data-bg="#ffffff" aria-pressed="false">
+            <ArtworkSymbol name="white" id="backdrop-white" size={62} />
+            <span>White</span>
+          </button>
+          <button type="button" data-bg="#b8d8ff" aria-pressed="false">
+            <ArtworkSymbol name="blue" id="backdrop-blue" size={62} />
+            <span>Blue</span>
+          </button>
+          <button type="button" data-bg="#23344d" aria-pressed="false">
+            <ArtworkSymbol name="dark" id="backdrop-dark" size={62} />
+            <span>Dark</span>
+          </button>
+          <div class="art-custom-color" data-selected="false" data-picked="false">
+            <label for="preview-color">
+              <span class="art-custom-symbol" aria-hidden="true">
+                <ArtworkSymbol name="palette" id="backdrop-palette" size={44} />
+              </span>
+              <span class="art-custom-copy">
+                <strong>Custom color</strong>
+                <span data-custom-label>Choose your own shade</span>
+              </span>
+              <span class="art-color-picker-hint" aria-hidden="true">
+                Pick a shade <span>↗</span>
+              </span>
+              <input id="preview-color" type="color" value="#ffffff" />
+            </label>
+            <button type="button" data-apply-custom aria-pressed="false" hidden>
+              Use color
+            </button>
+          </div>
         </div>
-        <p>Try a background to check the transparent edges. This changes the preview only.</p>
+        <p>
+          <span aria-hidden="true">◉</span> Preview only. Your download stays unchanged.
+        </p>
       </fieldset>
     </div>
     <section>
@@ -110,40 +126,66 @@ const facts = artworkDetails(item);
       <h1>{item.title}</h1>
       <div class="art-detail-badges">
         {item.alpha && (
-          <span>
-            <Icon name="background" size={15} />
+          <span class="art-alpha-badge">
+            <ArtworkSymbol name="transparent" id="badge-alpha" size={32} />
             Transparent background
           </span>
         )}
       </div>
       <p class="art-detail-description">{item.description}</p>
       <dl class="art-detail-overview">
-        <div>
-          <dt>Explore the subject</dt>
+        <div class="art-fact art-fact-subject">
+          <dt>
+            <ArtworkSymbol name="subject" id="fact-subject" size={54} />
+            <span>Collection</span>
+          </dt>
           <dd>
-            <a href={`/clipart/${item.topic}/`}>{topic.keyword}</a>
+            <a href={`/clipart/${item.topic}/`}>
+              {topic.keyword}
+              <span aria-hidden="true"> ↗</span>
+            </a>
+            <small>More artwork on this subject</small>
           </dd>
         </div>
-        <div>
-          <dt>Illustration style</dt>
+        <div class="art-fact art-fact-style">
+          <dt>
+            <ArtworkSymbol name="style" id="fact-style" size={54} />
+            <span>Visual style</span>
+          </dt>
           <dd>{facts.style}</dd>
         </div>
-        <div>
-          <dt>Image resolution</dt>
+        <div class="art-fact art-fact-resolution">
+          <dt>
+            <ArtworkSymbol name="dimensions" id="fact-dimensions" size={54} />
+            <span>Original resolution</span>
+          </dt>
           <dd>
-            {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')} px
-            <small>Width × height of the original image</small>
+            <span class="art-resolution-number">
+              {item.width.toLocaleString('en-US')} × {item.height.toLocaleString('en-US')}{' '}
+              <span>px</span>
+            </span>
+            <small>Width × height · original image</small>
           </dd>
         </div>
-        <div>
-          <dt>Choose your download</dt>
+        <div class="art-fact art-fact-formats">
+          <dt>
+            <ArtworkSymbol name="formats" id="fact-formats" size={54} />
+            <span>Included files</span>
+          </dt>
           <dd>
-            <span>WebP — {item.alpha ? 'transparent image' : 'digital image'}</span>
-            {item.pdf && <span>PDF — printable document</span>}
+            <span class="art-file-types">
+              <span>WebP</span>
+              {item.pdf && (
+                <>
+                  <span class="art-file-plus">+</span>
+                  <span>PDF</span>
+                </>
+              )}
+            </span>
             <small>
               {item.pdf
-                ? 'Two separate files; choose either format below.'
-                : 'Save the image using the button below.'}
+                ? `${item.alpha ? 'Transparent' : 'Digital'} image + printable document. Choose either file below.`
+                : 'Image for your digital projects.'}
             </small>
           </dd>
         </div>

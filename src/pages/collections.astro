@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { availableClusters, availableTopics, art, slugify } from '../lib/catalog';
+import { availableClusters, availableTopics, art, slugify, topicInCluster } from '../lib/catalog';
 ---
 
 <Layout title="Seasonal Clipart Collections">
@@ -10,7 +10,7 @@ import { availableClusters, availableTopics, art, slugify } from '../lib/catalog
   </section>
   <div class="category-grid">
     {availableClusters.map((c) => {
-      const ts = availableTopics.filter((t) => t.cluster === c);
+      const ts = availableTopics.filter((t) => topicInCluster(t, c));
       const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
       return (
         <a class="category-card" href={`/collection/${slugify(c)}/`}>

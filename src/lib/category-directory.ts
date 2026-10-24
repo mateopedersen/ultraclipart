@@ -1,4 +1,11 @@
-import { art, availableTopics, availableClusters, slugify } from './catalog';
+import {
+  art,
+  availableTopics,
+  availableClusters,
+  slugify,
+  clustersForTopic,
+  topicInCluster,
+} from './catalog';
 
 const collectionStyle: Record<
   string,
@@ -36,9 +43,9 @@ const collectionStyle: Record<
   },
   Sports: {
     title: 'Sports & play',
-    description: 'Bring a little energy to your next idea.',
+    description: 'Players, game-day details and bright moments in motion.',
     color: 'lavender',
-    subjects: ['volleyball'],
+    subjects: ['volleyball', 'basketball'],
   },
   'Thanksgiving & Autumn': {
     title: 'Autumn & gratitude',
@@ -46,13 +53,35 @@ const collectionStyle: Record<
     color: 'sand',
     subjects: ['thanksgiving', 'squirrel'],
   },
+  'Food & drink': {
+    title: 'Fruit & fresh ideas',
+    description: 'Orchard favorites, tropical color and cheerful fruit characters.',
+    color: 'peach',
+    subjects: ['apple', 'strawberry', 'pineapple'],
+  },
+  'Nature & elements': {
+    title: 'Nature & elements',
+    description: 'Leaf shapes, flickering flames and details drawn from the natural world.',
+    color: 'sage',
+    subjects: ['leaves', 'fire'],
+  },
+  'School & learning': {
+    title: 'School & learning',
+    description: 'Scenes for school days, curious minds and classroom projects.',
+    color: 'ice',
+    subjects: ['school'],
+  },
 };
 const preferred: Record<string, string> = {
   fox: 'baby-fennec-fox-watercolor-clipart',
   baby: 'baby-girl-with-pink-bow-clipart',
   heart: 'floral-heart-roses-wreath-clipart',
   volleyball: 'female-volleyball-spike-dynamic-clipart',
+  basketball: 'basketball-kids-playing-playful-clipart',
   winter: 'winter-penguin-cocoa',
+  leaves: 'leaf-sugar-maple-five-lobed-autumn-watercolor-clipart',
+  fire: 'fire-crossed-logs-campfire-colored-pencil-clipart',
+  school: 'school-students-reading-in-library-classic-clipart',
 };
 const artworkByTopic = new Map<string, typeof art>();
 for (const item of art) {
@@ -74,6 +103,7 @@ export const categorySubjects = availableTopics
       count: items.length,
       sample,
       group: slugify(topic.cluster),
+      groups: clustersForTopic(topic).map(slugify),
       color: collectionStyle[topic.cluster]?.color ?? 'sage',
     };
   })
@@ -82,7 +112,7 @@ export const categorySubjects = availableTopics
 const order = Object.keys(collectionStyle);
 export const categoryCollections = availableClusters
   .map((cluster) => {
-    const subjects = categorySubjects.filter((topic) => topic.cluster === cluster);
+    const subjects = categorySubjects.filter((topic) => topicInCluster(topic, cluster));
     const design = collectionStyle[cluster] ?? {
       title: cluster,
       description: 'Find a new starting point for your next project.',
