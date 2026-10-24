@@ -14,7 +14,9 @@ const topics = [
 const counts = new Map();
 for (const item of art) counts.set(item.topic, (counts.get(item.topic) ?? 0) + 1);
 const available = topics.filter((topic) => counts.has(topic.slug));
-const browser = await { chromium, firefox, webkit }[engine].launch();
+const browser = await { chromium, firefox, webkit }[engine].launch({
+  ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
+});
 const context = await browser.newContext();
 const page = await context.newPage();
 const report = { base, engine, viewports: [], checks: [], errors: [], status: 'running' };
