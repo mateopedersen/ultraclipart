@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import '../styles/site-header.css';
 import { structuredData } from '../lib/structured-data';
 import regularFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import boldFont from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
@@ -11,18 +12,83 @@ const {
   image = '',
   imageAlt = title,
 } = Astro.props;
-const nav = [
-  ['Explore', '/'],
-  ['Categories', '/categories/'],
-  ['Collections', '/collections/'],
-  ['New', '/new/'],
-  ['Black & White', '/black-and-white/'],
-  ['Create', '/create/'],
-  ['AI Clipart', '/ai-clipart-generator/'],
-  ['For Teachers', '/for-teachers/'],
-  ['Guides', '/guides/'],
-  ['About', '/about/'],
+const browseLinks = [
+  {
+    label: 'Explore clipart',
+    href: '/',
+    description: 'Find something for your next idea.',
+    icon: 'discover',
+  },
+  {
+    label: 'Categories',
+    href: '/categories/',
+    description: 'Browse every subject in the library.',
+    icon: 'grid',
+  },
+  {
+    label: 'Collections',
+    href: '/collections/',
+    description: 'Thoughtful sets, ready to go together.',
+    icon: 'layers',
+  },
+  {
+    label: 'New clipart',
+    href: '/new/',
+    description: 'The latest additions to the collection.',
+    icon: 'spark',
+  },
+  {
+    label: 'Black & White',
+    href: '/black-and-white/',
+    description: 'Simple outlines and printable artwork.',
+    icon: 'contrast',
+  },
 ];
+const resourceLinks = [
+  {
+    label: 'Project guides',
+    href: '/guides/',
+    description: 'Make something, step by step.',
+    icon: 'book',
+  },
+  {
+    label: 'For Teachers',
+    href: '/for-teachers/',
+    description: 'Ideas for the classroom.',
+    icon: 'school',
+  },
+  {
+    label: 'Print size calculator',
+    href: '/print-size/',
+    description: 'Choose a size that prints clearly.',
+    icon: 'print',
+  },
+  {
+    label: 'About UltraClipart',
+    href: '/about/',
+    description: 'A little more about our collection.',
+    icon: 'info',
+  },
+];
+const headerIcons: Record<string, string> = {
+  discover: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm4 5-2.5 5.5L8 16l2.5-5.5L16 8Z',
+  grid: 'M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z',
+  layers: 'm12 3 9 5-9 5-9-5 9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5',
+  spark: 'm12 3 2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2L12 3ZM20 3v4m-2-2h4',
+  contrast: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 0v18m3-15v12m3-9v6',
+  book: 'M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14M6 8h3m-3 4h3m6-4h3m-3 4h3',
+  school: 'm2 9 10-6 10 6-10 6L2 9Zm4 3v6c4 3 8 3 12 0v-6m4-3v8',
+  print: 'M7 8V3h10v5M7 17H3V9h18v8h-4M7 14h10v7H7zM17 11h1',
+  info: 'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM12 11v6m0-10v.1',
+};
+const current = (path: string) => (Astro.url.pathname === path ? 'page' : undefined);
+const browseCurrent =
+  browseLinks.some((link) => Astro.url.pathname === link.href) ||
+  Astro.url.pathname.startsWith('/clipart/') ||
+  Astro.url.pathname.startsWith('/art/');
+const resourcesCurrent =
+  resourceLinks.some((link) => Astro.url.pathname === link.href) ||
+  Astro.url.pathname.startsWith('/guides/');
 const canonical = new URL(Astro.url.pathname, 'https://ultraclipart.com').href;
 const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REVISION ?? '')
   ? import.meta.env.PUBLIC_RELEASE_REVISION
@@ -72,25 +138,283 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     <a class="skip" href="#main">
       Skip to content
     </a>
-    <header>
-      <a class="brand" href="/" aria-label="UltraClipart home">
-        <img src="/logo.svg" width="38" height="42" alt="" />
-        UltraClipart
-      </a>
-      <button class="menu-button" aria-expanded="false" aria-controls="navigation">
-        Menu
-      </button>
-      <nav id="navigation" aria-label="Main navigation">
-        {nav.map(([label, url]) => (
-          <a href={url} aria-current={Astro.url.pathname === url ? 'page' : undefined}>
-            {label}
-            {url === '/ai-clipart-generator/' && <span class="nav-new">New</span>}
-          </a>
-        ))}
-      </nav>
-      <a class="favorites-link" href="/favorites/" aria-label="Favorites">
-        ♡ <span>Favorites</span>
-      </a>
+    <header class="site-header" data-site-header>
+      <div class="site-header-inner">
+        <a class="brand site-brand" href="/" aria-label="UltraClipart home">
+          <img src="/logo.svg" width="36" height="40" alt="" />
+          <span>UltraClipart</span>
+        </a>
+        <button
+          class="menu-button site-menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+        >
+          <svg
+            width="21"
+            height="21"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path class="site-menu-lines" d="M4 6h16M4 12h16M4 18h16" />
+            <path class="site-menu-close" d="m6 6 12 12M6 18 18 6" />
+          </svg>
+          <span>Menu</span>
+        </button>
+        <nav id="navigation" class="site-navigation" aria-label="Main navigation">
+          <div class="site-navigation-links">
+            <div class="site-nav-disclosure" data-nav-disclosure>
+              <button
+                id="site-browse-toggle"
+                type="button"
+                class="site-nav-trigger"
+                data-current={browseCurrent ? 'true' : undefined}
+                aria-expanded="false"
+                aria-controls="site-browse-panel"
+              >
+                Browse
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <path d="m5 8 5 5 5-5" />
+                </svg>
+              </button>
+              <div id="site-browse-panel" class="site-dropdown site-browse-dropdown" hidden>
+                <div class="site-dropdown-heading">
+                  <span>The clipart collection</span>
+                  <a href="/categories/">
+                    View all <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+                <div class="site-browse-content">
+                  <div class="site-dropdown-links">
+                    {browseLinks.map((link) => (
+                      <a
+                        href={link.href}
+                        class="site-dropdown-link"
+                        aria-current={current(link.href)}
+                        aria-label={link.label}
+                      >
+                        <span class="site-link-icon" data-icon={link.icon}>
+                          <svg
+                            width="23"
+                            height="23"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.65"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <path d={headerIcons[link.icon]} />
+                          </svg>
+                        </span>
+                        <span>
+                          <strong>{link.label}</strong>
+                          <small>{link.description}</small>
+                        </span>
+                        <svg
+                          class="site-link-arrow"
+                          width="17"
+                          height="17"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          aria-hidden="true"
+                        >
+                          <path d="M4 10h12m-5-5 5 5-5 5" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
+                  <a class="site-browse-feature" href="/categories/">
+                    <div>
+                      <img
+                        src="/ai-examples/reference-theme-animals.webp"
+                        width="180"
+                        height="180"
+                        alt=""
+                        loading="lazy"
+                      />
+                      <img
+                        src="/ai-examples/reference-theme-florals.webp"
+                        width="120"
+                        height="120"
+                        alt=""
+                        loading="lazy"
+                      />
+                    </div>
+                    <strong>A world of little details.</strong>
+                    <span>
+                      Find your next favorite{' '}
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        aria-hidden="true"
+                      >
+                        <path d="M4 10h12m-5-5 5 5-5 5" />
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="site-nav-disclosure" data-nav-disclosure>
+              <button
+                id="site-resources-toggle"
+                type="button"
+                class="site-nav-trigger"
+                data-current={resourcesCurrent ? 'true' : undefined}
+                aria-expanded="false"
+                aria-controls="site-resources-panel"
+              >
+                Resources
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <path d="m5 8 5 5 5-5" />
+                </svg>
+              </button>
+              <div id="site-resources-panel" class="site-dropdown site-resources-dropdown" hidden>
+                <div class="site-dropdown-heading">
+                  <span>A little help with your next idea</span>
+                </div>
+                <div class="site-dropdown-links">
+                  {resourceLinks.map((link) => (
+                    <a
+                      href={link.href}
+                      class="site-dropdown-link"
+                      aria-current={current(link.href)}
+                      aria-label={link.label}
+                    >
+                      <span class="site-link-icon" data-icon={link.icon}>
+                        <svg
+                          width="23"
+                          height="23"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.65"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d={headerIcons[link.icon]} />
+                        </svg>
+                      </span>
+                      <span>
+                        <strong>{link.label}</strong>
+                        <small>{link.description}</small>
+                      </span>
+                      <svg
+                        class="site-link-arrow"
+                        width="17"
+                        height="17"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        aria-hidden="true"
+                      >
+                        <path d="M4 10h12m-5-5 5 5-5 5" />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="site-navigation-actions">
+            <a href="/create/" class="site-studio-link" aria-current={current('/create/')}>
+              <svg width="23" height="23" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+                <rect x="4" y="5" width="20" height="19" rx="4" fill="#eaf3ff" />
+                <path
+                  d="M12 6H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-5"
+                  stroke="#255f9f"
+                  stroke-width="1.6"
+                />
+                <path
+                  d="m11 17 1-5L21 3a2 2 0 0 1 4 4l-9 9-5 1Z"
+                  fill="#79b9ff"
+                  stroke="#174b84"
+                  stroke-width="1.45"
+                />
+                <path d="m19 5 4 4m-12 8 4-1-3-3-1 4Z" fill="#174b84" />
+              </svg>
+              <span>Clipart Studio</span>
+            </a>
+            <a
+              href="/ai-clipart-generator/"
+              class="site-ai-link"
+              aria-current={current('/ai-clipart-generator/')}
+            >
+              <svg width="29" height="29" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect
+                  x="4"
+                  y="9"
+                  width="18"
+                  height="19"
+                  rx="4"
+                  fill="#89c6ff"
+                  transform="rotate(-8 4 9)"
+                />
+                <rect x="9" y="5" width="18" height="20" rx="4" fill="#fff" />
+                <path d="m12 20 4-5 3 3 3-5 2 7H12Z" fill="#3c92ef" />
+                <circle cx="15" cy="10" r="2" fill="#8dc9ff" />
+                <path
+                  d="m26 1 1.3 4.7L32 7l-4.7 1.3L26 13l-1.3-4.7L20 7l4.7-1.3L26 1Z"
+                  fill="#ffdb85"
+                />
+              </svg>
+              <span>AI Clipart Builder</span>
+              <span class="site-new-badge">New</span>
+            </a>
+            <a
+              href="/favorites/"
+              class="favorites-link site-favorites-link"
+              aria-label="Favorites"
+              aria-current={current('/favorites/')}
+            >
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M20.2 4.8a5.2 5.2 0 0 0-7.4 0l-.8.8-.8-.8a5.2 5.2 0 0 0-7.4 7.4L12 21l8.2-8.8a5.2 5.2 0 0 0 0-7.4Z" />
+              </svg>
+              <span>Favorites</span>
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
     <main id="main" class:list={['container', { wide }]}>
       <slot />
@@ -138,12 +462,85 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
       </div>
     </footer>
     <script>
-      document.querySelector('.menu-button')?.addEventListener('click', (e) => {
-        const b = e.currentTarget as HTMLButtonElement;
-        const on = b.getAttribute('aria-expanded') !== 'true';
-        b.setAttribute('aria-expanded', String(on));
-        document.querySelector('header')?.classList.toggle('menu-open', on);
-      });
+      const header = document.querySelector<HTMLElement>('[data-site-header]');
+      if (header) {
+        const menu = header.querySelector<HTMLButtonElement>('.menu-button')!;
+        const navigation = header.querySelector<HTMLElement>('#navigation')!;
+        const mobile = window.matchMedia('(max-width: 1100px)');
+        const disclosures = [...header.querySelectorAll<HTMLElement>('[data-nav-disclosure]')].map(
+          (group) => ({
+            group,
+            trigger: group.querySelector<HTMLButtonElement>('.site-nav-trigger')!,
+            panel: group.querySelector<HTMLElement>('.site-dropdown')!,
+          }),
+        );
+        const setDisclosure = (item: (typeof disclosures)[number], open: boolean) => {
+          item.trigger.setAttribute('aria-expanded', String(open));
+          item.panel.hidden = !open;
+        };
+        const close = (restoreFocus = false) => {
+          const active = disclosures.find(
+            (item) => item.trigger.getAttribute('aria-expanded') === 'true',
+          );
+          disclosures.forEach((item) => setDisclosure(item, false));
+          const wasMobileOpen = menu.getAttribute('aria-expanded') === 'true';
+          menu.setAttribute('aria-expanded', 'false');
+          header.classList.remove('menu-open');
+          if (restoreFocus) (wasMobileOpen ? menu : active?.trigger)?.focus();
+        };
+        menu.addEventListener('click', () => {
+          const open = menu.getAttribute('aria-expanded') !== 'true';
+          menu.setAttribute('aria-expanded', String(open));
+          header.classList.toggle('menu-open', open);
+          disclosures.forEach((item) => setDisclosure(item, open));
+        });
+        disclosures.forEach((item) => {
+          item.trigger.addEventListener('click', () => {
+            const open = item.trigger.getAttribute('aria-expanded') !== 'true';
+            if (!mobile.matches)
+              disclosures
+                .filter((other) => other !== item)
+                .forEach((other) => setDisclosure(other, false));
+            setDisclosure(item, open);
+          });
+          item.trigger.addEventListener('keydown', (event) => {
+            if (event.key !== 'ArrowDown') return;
+            event.preventDefault();
+            if (!mobile.matches)
+              disclosures
+                .filter((other) => other !== item)
+                .forEach((other) => setDisclosure(other, false));
+            setDisclosure(item, true);
+            item.panel.querySelector<HTMLAnchorElement>('a')?.focus();
+          });
+        });
+        document.addEventListener('pointerdown', (event) => {
+          if (!header.contains(event.target as Node)) close();
+        });
+        document.addEventListener('keydown', (event) => {
+          if (
+            event.key === 'Escape' &&
+            (menu.getAttribute('aria-expanded') === 'true' ||
+              disclosures.some((item) => !item.panel.hidden))
+          ) {
+            event.preventDefault();
+            close(true);
+          }
+        });
+        header.addEventListener('focusout', (event) => {
+          if (
+            !mobile.matches &&
+            event.relatedTarget instanceof Node &&
+            !header.contains(event.relatedTarget)
+          )
+            close();
+        });
+        navigation
+          .querySelectorAll<HTMLAnchorElement>('a')
+          .forEach((link) => link.addEventListener('click', () => close()));
+        mobile.addEventListener('change', () => close());
+        window.addEventListener('pageshow', () => close());
+      }
     </script>
     <p id="download-status" class="download-status" role="status" aria-live="polite" hidden></p>
     <script>
@@ -152,28 +549,6 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
   </body>
 </html>
 <style>
-  .nav-new {
-    font-size: 8px;
-    font-weight: 750;
-    text-transform: uppercase;
-    background: #e5f0ff;
-    color: #1555a6;
-    padding: 3px 4px;
-    border-radius: 4px;
-    margin-left: 4px;
-    vertical-align: middle;
-  }
-  @media (min-width: 901px) and (max-width: 1320px) {
-    :global(body > header) {
-      gap: 16px;
-    }
-    :global(#navigation) {
-      gap: 11px;
-    }
-    :global(#navigation a) {
-      font-size: 12px;
-    }
-  }
   .download-status {
     position: fixed;
     inset: auto 18px 18px auto;
