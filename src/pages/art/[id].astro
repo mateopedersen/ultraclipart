@@ -114,18 +114,26 @@ const topic = topics.find((t) => t.slug === item.topic)!;
             <span>Edit Clipart</span>
           </a>
         )}
-        <a
-          class:list={['button', { primary: !item.editable }]}
-          href={item.webp}
-          download={`${item.id}.webp`}
-        >
+        <a class="button download-option" href={item.webp} download={`${item.id}.webp`}>
+          <span class="download-symbol">
+            <Icon name="image" size={22} />
+          </span>
+          <span class="download-copy">
+            <strong>Download Image</strong>
+            <small>Transparent background</small>
+          </span>
           <Icon name="download" size={18} />
-          <span>Download WebP</span>
         </a>
         {item.pdf && (
-          <a class="button" href={item.pdf} download={`${item.id}.pdf`}>
+          <a class="button download-option" href={item.pdf} download={`${item.id}.pdf`}>
+            <span class="download-symbol">
+              <Icon name="document" size={22} />
+            </span>
+            <span class="download-copy">
+              <strong>Download PDF</strong>
+              <small>Print-ready file</small>
+            </span>
             <Icon name="download" size={18} />
-            <span>Download PDF</span>
           </a>
         )}
       </div>
