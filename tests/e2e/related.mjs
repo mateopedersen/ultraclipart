@@ -171,7 +171,11 @@ try {
   await expect(page.locator('[data-related-alternatives]')).toBeHidden();
   await expect(root).toContainText('Dried Orange Slices Crayon');
   await page.locator('[data-related-mode="companions"]').focus();
-  await page.keyboard.press('Tab');
+  // Safari on macOS uses Option+Tab to include buttons in keyboard navigation
+  // when the system-wide full keyboard access setting is disabled.
+  await page.keyboard.press(
+    engine === 'webkit' && process.platform === 'darwin' ? 'Alt+Tab' : 'Tab',
+  );
   await expect(page.locator('[data-related-mode="monochrome"]')).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.locator('[data-related-mode="monochrome"]')).toHaveAttribute(
