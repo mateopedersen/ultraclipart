@@ -1,3 +1,4 @@
+import { chooseVectorStarter } from '../helpers/creator.mjs';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
@@ -52,7 +53,7 @@ const report = {
 const editor = '/create/';
 async function readyEditor() {
   if (!(await page.locator('.uc-canvas [data-layer]').count()))
-    await page.locator('[data-creator-template=botanical-sprig]').click();
+    await chooseVectorStarter(page, 'botanical-sprig');
   await page.locator('.uc-canvas [data-layer]').first().waitFor();
 }
 const states = [

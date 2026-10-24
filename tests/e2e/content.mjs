@@ -1,3 +1,4 @@
+import { chooseVectorStarter } from '../helpers/creator.mjs';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
@@ -104,7 +105,7 @@ try {
     'only populated topics link to public artwork; unpublished subjects do not create empty destinations',
   );
   await page.goto(base + '/create/');
-  await page.locator('[data-creator-template=school-label]').click();
+  await chooseVectorStarter(page, 'school-label');
   await page.locator('.uc-canvas [data-layer]').first().waitFor();
   await page.locator('[data-panel=text]').click();
   await page.locator('[data-text]').fill('Science');

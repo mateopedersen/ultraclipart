@@ -170,7 +170,9 @@ try {
   await page.locator('[data-related-mode="companions"]').click();
   await expect(page.locator('[data-related-alternatives]')).toBeHidden();
   await expect(root).toContainText('Dried Orange Slices Crayon');
-  await page.locator('[data-related-mode="monochrome"]').focus();
+  await page.locator('[data-related-mode="companions"]').focus();
+  await page.keyboard.press('Tab');
+  await expect(page.locator('[data-related-mode="monochrome"]')).toBeFocused();
   await page.keyboard.press('Enter');
   await expect(page.locator('[data-related-mode="monochrome"]')).toHaveAttribute(
     'aria-pressed',
