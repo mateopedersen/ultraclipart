@@ -170,10 +170,12 @@ try {
     .click();
   assert.ok(page.url().includes('/categories/'));
   report.checks.push('mobile navigation');
-  await page.locator('#include-planned').check();
+  await page.locator('.discovery-alphabet summary').click();
   await page.locator('[data-letter=K]').click();
   assert.equal(await page.locator('[data-letter=K]').getAttribute('aria-pressed'), 'true');
-  for (const value of await page.locator('[data-topic]:not([hidden])').allTextContents())
+  for (const value of await page
+    .locator('[data-topic]:not([hidden])')
+    .evaluateAll((cards) => cards.map((card) => card.dataset.name)))
     assert.ok(value.toLowerCase().startsWith('k'));
   report.checks.push('category A-Z filtering');
   await page.goto(`${base}/art/winter-arctic-fox-resting/`);
