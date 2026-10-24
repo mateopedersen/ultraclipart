@@ -87,25 +87,21 @@ try {
   const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8'));
   const availableTopics = new Set(catalog.map((item) => item.topic));
   const topicCount = availableTopics.size;
-  await expect(page.locator('a[data-topic]')).toHaveCount(topicCount);
+  await expect(page.locator('[data-topic] a')).toHaveCount(topicCount);
   const allTopics = [
     ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics,
     ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
   ];
-  const allTopicCount = allTopics.length;
-  await expect(page.locator('.topic-planned')).toHaveCount(allTopicCount - topicCount);
-  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(topicCount);
-  await page.locator('#include-planned').check();
+  await expect(page.locator('.topic-planned')).toHaveCount(0);
+  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(16, topicCount));
   const plannedTopic = allTopics.find((topic) => !availableTopics.has(topic.slug));
   if (plannedTopic) {
     await page.locator('#topic-filter').fill(plannedTopic.keyword);
-    const plannedLabel = page.locator('.topic-planned').filter({ hasText: plannedTopic.keyword });
-    await expect(plannedLabel).toBeVisible();
-    await expect(plannedLabel).toContainText('Planned');
+    // A query can match a broader collection, but never links to an unpublished topic.
     await expect(page.locator(`a[href="/clipart/${plannedTopic.slug}/"]`)).toHaveCount(0);
   }
   report.checks.push(
-    'only populated topics link to public artwork; planned labels do not create empty destinations',
+    'only populated topics link to public artwork; unpublished subjects do not create empty destinations',
   );
   await page.goto(base + '/create/');
   await page.locator('[data-creator-template=school-label]').click();

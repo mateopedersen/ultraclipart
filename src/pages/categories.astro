@@ -1,181 +1,361 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { topics, availableTopics, availableClusters, art, slugify } from '../lib/catalog';
-const sortedTopics = [...topics].sort((a, b) => a.keyword.localeCompare(b.keyword, 'en'));
-const letters = [...new Set(sortedTopics.map((topic) => topic.keyword[0].toUpperCase()))].sort();
+import Icon from '../components/Icon.astro';
+import { categoryCollections, categorySubjects } from '../lib/category-directory';
+import { breadcrumbs, structuredData } from '../lib/structured-data';
+import '../styles/categories.css';
+const total = categorySubjects.reduce((sum, subject) => sum + subject.count, 0);
+const letters = [...new Set(categorySubjects.map((topic) => topic.name[0].toUpperCase()))].sort();
+const heroSubjects = ['fox', 'baby', 'butterfly', 'heart']
+  .map((slug) => categorySubjects.find((s) => s.slug === slug))
+  .filter((s) => s !== undefined);
+const title = 'Clipart Categories: Animals, Holidays, Baby & More';
+const description = `Explore ${categorySubjects.length} clipart topics and ${total.toLocaleString('en-US')} illustrations. Browse visual collections, find a subject, and download images or printable PDFs.`;
+const pageUrl = 'https://ultraclipart.com/categories/';
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': pageUrl + '#page',
+  url: pageUrl,
+  name: title,
+  description,
+  inLanguage: 'en-US',
+  breadcrumb: breadcrumbs([
+    { name: 'Home', path: '/' },
+    { name: 'Clipart categories', path: '/categories/' },
+  ]),
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: categorySubjects.length,
+    itemListElement: categorySubjects.map((subject, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: subject.keyword,
+      url: `https://ultraclipart.com/clipart/${subject.slug}/`,
+    })),
+  },
+};
 ---
 
-<Layout title="Browse Clipart Categories">
-  <section class="hero category-hero">
-    <p class="eyebrow">The subject directory</p>
-    <h1>Find a little inspiration.</h1>
-    <p class="lead">Find a subject for your next personal or classroom project.</p>
-    <label for="topic-filter">Find a subject</label>
-    <input
-      id="topic-filter"
-      type="search"
-      placeholder="Try winter, baby or heart"
-      aria-controls="topic-directory"
-    />
-    <label class="print-check">
-      <input id="include-planned" type="checkbox" /> Include planned subjects without artwork
-    </label>
-  </section>
-  <div class="section-head">
-    <h2>Explore the collections</h2>
-    <a href="/new/">See available artwork →</a>
-  </div>
-  <div class="category-grid">
-    {availableClusters.map((cluster) => {
-      const members = topics.filter((topic) => topic.cluster === cluster);
-      const available = art.filter((item) => members.some((topic) => topic.slug === item.topic));
-      const first = available[0];
-      return (
-        <a class="category-card" href={`/collection/${slugify(cluster)}/`}>
-          <div class:list={['category-visual', { 'category-planned': !first }]}>
-            {first ? (
-              <img src={first.thumb} alt="" width="200" height="155" loading="lazy" />
-            ) : (
-              <>
-                <svg
-                  class="category-symbol"
-                  viewBox="0 0 64 64"
-                  width="64"
-                  height="64"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M10 18a5 5 0 0 1 5-5h13l6 7h15a5 5 0 0 1 5 5v23a5 5 0 0 1-5 5H15a5 5 0 0 1-5-5Z" />
-                  <path d="M10 27h44M25 40h14M32 33v14" />
-                </svg>
-                <span class="planned-label">In preparation</span>
-              </>
-            )}
-          </div>
-          <div class="category-copy">
-            <h3>
-              {cluster}
+<Layout
+  title={title}
+  description={description}
+  image={heroSubjects[0]?.sample.thumb}
+  imageAlt="Explore illustrated clipart categories on UltraClipart"
+>
+  <script slot="head" type="application/ld+json" set:html={structuredData(schema)} />
+  <div class="category-discovery">
+    <nav class="discovery-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Clipart categories</span>
+    </nav>
+    <section class="discovery-hero" aria-labelledby="discovery-title">
+      <div class="discovery-intro">
+        <p class="discovery-eyebrow">
+          <span></span> A world of little possibilities
+        </p>
+        <h1 id="discovery-title">
+          Clipart for every
+          <br />
+          kind of <em>idea.</em>
+        </h1>
+        <p class="discovery-lead">
+          From woodland friends to moments worth celebrating. Find the artwork that feels just
+          right.
+        </p>
+        <form
+          class="discovery-search"
+          id="hero-topic-search"
+          role="search"
+          aria-label="Find clipart subjects"
+          action="/search/"
+        >
+          <label class="discovery-sr" for="hero-topic-query">
+            Search clipart subjects
+          </label>
+          <svg
+            viewBox="0 0 24 24"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <circle cx="10.5" cy="10.5" r="6.5" />
+            <path d="m16 16 4.5 4.5" stroke-linecap="round" />
+          </svg>
+          <input
+            id="hero-topic-query"
+            name="q"
+            type="search"
+            placeholder="Try fox, baby or Halloween…"
+            maxlength="160"
+          />
+          <button type="submit" aria-label="Find matching subjects">
+            Explore <span aria-hidden="true">→</span>
+          </button>
+        </form>
+        <div class="discovery-shortcuts">
+          <span>A little inspiration:</span>
+          {['butterfly', 'baby', 'halloween'].map((slug) => {
+            const subject = categorySubjects.find((s) => s.slug === slug);
+            return (
+              subject && (
+                <a href={`/clipart/${subject.slug}/`}>
+                  {subject.name} <span aria-hidden="true">↗</span>
+                </a>
+              )
+            );
+          })}
+        </div>
+        <p class="discovery-stats">
+          <strong>{total.toLocaleString('en-US')}</strong> illustrations{' '}
+          <span aria-hidden="true">·</span> <strong>{categorySubjects.length}</strong> subjects{' '}
+          <span aria-hidden="true">·</span> Yours to personalize
+        </p>
+      </div>
+      <div class="discovery-moodboard" aria-label="A few ideas to get you started">
+        <span class="moodboard-note">Small art. Endless ideas.</span>
+        {heroSubjects.map((subject, index) => (
+          <a
+            href={`/clipart/${subject.slug}/`}
+            class={`moodboard-piece moodboard-piece-${index + 1}`}
+            aria-label={`Explore ${subject.keyword}`}
+          >
+            <img
+              src={subject.sample.thumb}
+              alt=""
+              width="240"
+              height="240"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchpriority={index === 0 ? 'high' : 'auto'}
+              decoding="async"
+            />
+            <span>
+              {subject.name}
               <span aria-hidden="true">↗</span>
-            </h3>
-            <p>
-              {members.length} topics ·{' '}
-              {available.length
-                ? `${available.length} illustration${available.length === 1 ? '' : 's'}`
-                : 'Artwork coming later'}
-            </p>
-          </div>
+            </span>
+          </a>
+        ))}
+        <span class="moodboard-stamp">
+          <Icon name="edit" size={18} /> Make it your own
+        </span>
+      </div>
+    </section>
+
+    <section class="discovery-collections" aria-labelledby="collections-title">
+      <div class="discovery-section-heading">
+        <div>
+          <p class="discovery-eyebrow">Follow your curiosity</p>
+          <h2 id="collections-title">Which world will you explore?</h2>
+        </div>
+        <a href="#topic-directory">
+          All {categorySubjects.length} subjects <span aria-hidden="true">↘</span>
         </a>
-      );
-    })}
-  </div>
-  <section id="topic-directory" class="topic-directory" aria-labelledby="topic-directory-heading">
-    <div class="section-head">
-      <h2 id="topic-directory-heading">Every topic, A–Z</h2>
-      <p id="topic-result-count" role="status" aria-live="polite">
-        {availableTopics.length} available topics
-      </p>
-    </div>
-    <p class="directory-intro">
-      The complete subject plan is listed here. Only subjects with downloadable artwork have a link;
-      planned subjects are clearly labeled.
-    </p>
-    <div class="az-nav" role="group" aria-label="Filter topics by first letter">
-      <button data-letter="" aria-pressed="true">
-        All
-      </button>
-      {letters.map((letter) => (
-        <button
-          data-letter={letter}
-          aria-pressed="false"
-          aria-label={`Topics beginning with ${letter}`}
-        >
-          {letter}
-        </button>
-      ))}
-    </div>
-    <div class="topic-groups">
-      {letters.map((letter) => (
-        <section
-          class="topic-letter-group"
-          data-topic-group={letter}
-          hidden={!availableTopics.some((topic) => topic.keyword[0].toUpperCase() === letter)}
-          aria-labelledby={`letter-${letter}`}
-        >
-          <h3 id={`letter-${letter}`}>{letter}</h3>
-          <div class="topic-links">
-            {sortedTopics
-              .filter((topic) => topic.keyword[0].toUpperCase() === letter)
-              .map((topic) =>
-                art.some((item) => item.topic === topic.slug) ? (
-                  <a data-topic={topic.keyword.toLowerCase()} href={`/clipart/${topic.slug}/`}>
-                    <span>{topic.keyword}</span>
-                    <span aria-hidden="true">→</span>
-                  </a>
-                ) : (
-                  <span hidden class="topic-planned" data-topic={topic.keyword.toLowerCase()}>
-                    <span>{topic.keyword}</span>
-                    <small>Planned</small>
-                  </span>
-                ),
-              )}
+      </div>
+      <div class="discovery-collection-grid">
+        {categoryCollections.map((collection, index) => (
+          <a
+            class:list={[
+              'discovery-collection',
+              `tone-${collection.color}`,
+              { 'discovery-collection-wide': index === 0 },
+            ]}
+            href={`/collection/${collection.slug}/`}
+          >
+            <div class="collection-caption">
+              <span>
+                {collection.subjects.length}{' '}
+                {collection.subjects.length === 1 ? 'subject' : 'subjects'}
+              </span>
+              <span class="collection-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <div class="collection-art" aria-hidden="true">
+              {collection.previews.map((item) => (
+                <img
+                  src={item.thumb}
+                  alt=""
+                  width="180"
+                  height="180"
+                  loading="lazy"
+                  decoding="async"
+                />
+              ))}
+            </div>
+            <div class="collection-label">
+              <h3>{collection.title}</h3>
+              <p>{collection.description}</p>
+              <span>
+                {collection.count.toLocaleString('en-US')} illustrations{' '}
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section
+      id="topic-directory"
+      class="discovery-directory"
+      aria-labelledby="topic-directory-heading"
+      tabindex="-1"
+    >
+      <div class="discovery-section-heading">
+        <div>
+          <p class="discovery-eyebrow">One idea leads to another</p>
+          <h2 id="topic-directory-heading">Find your favorite subject.</h2>
+        </div>
+        <p>Real previews. Ready-to-use artwork.</p>
+      </div>
+      <div class="discovery-controls" id="discovery-controls" hidden>
+        <div class="discovery-filter-row">
+          <div class="directory-query">
+            <label for="topic-filter">Search subjects</label>
+            <div>
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                aria-hidden="true"
+              >
+                <circle cx="10.5" cy="10.5" r="6.5" />
+                <path d="m16 16 4.5 4.5" stroke-linecap="round" />
+              </svg>
+              <input
+                id="topic-filter"
+                type="search"
+                placeholder="An animal, a season, a little idea…"
+                aria-controls="subject-grid"
+                maxlength="160"
+              />
+            </div>
           </div>
-        </section>
-      ))}
-    </div>
-    <div id="no-topics" class="empty" hidden>
-      <h3>No matching topics yet</h3>
-      <p>Try a shorter search or choose another letter.</p>
-      <button id="clear-topic-filter">Show all topics</button>
-    </div>
-  </section>
+          <div>
+            <label for="category-group">Collection</label>
+            <select id="category-group" aria-controls="subject-grid">
+              <option value="">All collections</option>
+              {categoryCollections.map((collection) => (
+                <option value={collection.slug}>{collection.title}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label for="category-sort">Sort by</label>
+            <select id="category-sort" aria-controls="subject-grid">
+              <option value="name">Name: A–Z</option>
+              <option value="count">Most artwork</option>
+            </select>
+          </div>
+        </div>
+        <details class="discovery-alphabet">
+          <summary>
+            Browse by letter <span aria-hidden="true">A–Z</span>
+          </summary>
+          <div class="discovery-letters" role="group" aria-label="Filter topics by first letter">
+            <button data-letter="" aria-pressed="true">
+              All
+            </button>
+            {letters.map((letter) => (
+              <button
+                data-letter={letter}
+                aria-pressed="false"
+                aria-label={`Topics beginning with ${letter}`}
+              >
+                {letter}
+              </button>
+            ))}
+          </div>
+        </details>
+      </div>
+      <div class="discovery-result-row">
+        <p id="topic-result-count" role="status" aria-live="polite">
+          {categorySubjects.length} subjects to explore
+        </p>
+        <button id="reset-subjects" type="button" hidden>
+          Clear filters <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <ul class="discovery-subject-grid" id="subject-grid">
+        {categorySubjects.map((subject) => (
+          <li
+            class="discovery-subject"
+            data-topic={subject.keyword.toLowerCase()}
+            data-group={subject.group}
+            data-name={subject.name}
+            data-count={subject.count}
+            data-letter-value={subject.name[0].toUpperCase()}
+            data-keywords={`${subject.keyword} ${subject.cluster} ${subject.slug}`.toLowerCase()}
+          >
+            <a href={`/clipart/${subject.slug}/`}>
+              <div class={`subject-art tone-${subject.color}`}>
+                <img
+                  src={subject.sample.thumb}
+                  alt={`${subject.name} clipart preview`}
+                  width="240"
+                  height="200"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="subject-count">{subject.count} illustrations</span>
+              </div>
+              <div class="subject-label">
+                <div>
+                  <p>{categoryCollections.find((c) => c.slug === subject.group)?.title}</p>
+                  <h3>{subject.name}</h3>
+                </div>
+                <span class="subject-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </div>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div id="no-topics" class="discovery-empty" hidden>
+        <span aria-hidden="true">✦</span>
+        <h3>A different little idea?</h3>
+        <p>No subjects match these filters. Try a shorter search or explore another collection.</p>
+        <button id="clear-topic-filter" type="button">
+          Show all subjects <span aria-hidden="true">→</span>
+        </button>
+      </div>
+      <div class="discovery-more" id="discovery-more" hidden>
+        <p id="subject-progress"></p>
+        <button id="show-more-subjects" type="button">
+          Show more subjects <span aria-hidden="true">↓</span>
+        </button>
+      </div>
+      <noscript>
+        <p>All available subjects are listed above. Choose a preview to explore its artwork.</p>
+      </noscript>
+    </section>
+
+    <section class="discovery-create" aria-labelledby="discovery-create-title">
+      <div class="create-symbol">
+        <Icon name="layers" size={34} />
+      </div>
+      <div>
+        <p class="discovery-eyebrow">Found your starting point?</p>
+        <h2 id="discovery-create-title">A little clipart. A creation that's all you.</h2>
+        <p>
+          Choose a subject, personalize your artwork in the editor, then download an image or
+          printable PDF for your personal or classroom project.
+        </p>
+      </div>
+      <a href="/create/">
+        Open the creative studio <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </div>
   <script>
-    const input = document.querySelector<HTMLInputElement>('#topic-filter')!;
-    const planned = document.querySelector<HTMLInputElement>('#include-planned')!;
-    const buttons = document.querySelectorAll<HTMLButtonElement>('[data-letter]');
-    let letter = '';
-    function filter() {
-      const query = input.value.normalize('NFKC').trim().toLowerCase();
-      let count = 0;
-      document.querySelectorAll<HTMLElement>('[data-topic]').forEach((link) => {
-        const subject = link.dataset.topic!;
-        link.hidden = !(
-          (planned.checked || !link.classList.contains('topic-planned')) &&
-          subject.includes(query) &&
-          (!letter || subject.startsWith(letter.toLowerCase()))
-        );
-        if (!link.hidden) count++;
-      });
-      document.querySelectorAll<HTMLElement>('[data-topic-group]').forEach((group) => {
-        group.hidden = !group.querySelector('[data-topic]:not([hidden])');
-      });
-      buttons.forEach((button) =>
-        button.setAttribute('aria-pressed', String(button.dataset.letter === letter)),
-      );
-      document.querySelector<HTMLElement>('#no-topics')!.hidden = count > 0;
-      document.querySelector<HTMLElement>('#topic-result-count')!.textContent =
-        `${count} topic${count === 1 ? '' : 's'}`;
-    }
-    planned.addEventListener('change', () => {
-      letter = '';
-      filter();
-    });
-    input.addEventListener('input', filter);
-    buttons.forEach((button) =>
-      button.addEventListener('click', () => {
-        letter = button.dataset.letter!;
-        filter();
-      }),
-    );
-    filter();
-    document.querySelector('#clear-topic-filter')!.addEventListener('click', () => {
-      input.value = '';
-      letter = '';
-      filter();
-      input.focus();
-    });
+    import '../scripts/category-directory';
   </script>
 </Layout>

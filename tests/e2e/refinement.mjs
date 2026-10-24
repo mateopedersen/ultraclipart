@@ -108,39 +108,51 @@ try {
     }
   }
   await page.goto(base + '/categories/');
+  const publishedTopics = new Set(
+    JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8')).map(
+      (a) => a.topic,
+    ),
+  );
   const expected = [
     ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url), 'utf8')).topics,
     ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url), 'utf8')),
   ]
+    .filter((topic) => publishedTopics.has(topic.slug))
     .map((topic) => topic.keyword.toLowerCase())
     .sort();
   const actual = await page
     .locator('[data-topic]')
     .evaluateAll((links) => links.map((link) => link.dataset.topic).sort());
   assert.deepEqual(actual, expected);
-  report.checks.push('All 110 exact topic labels preserved; only available topics have links');
-  await page.locator('#include-planned').check();
+  report.checks.push(
+    'Every published subject has a preview and a link; planned subjects are excluded',
+  );
+  await page.locator('.discovery-alphabet summary').click();
   await page.locator('[data-letter=K]').click();
   assert.equal(await page.locator('[data-letter=K]').getAttribute('aria-pressed'), 'true');
   assert.ok(
-    (await page.locator('[data-topic]:not([hidden])').allTextContents()).every((text) =>
-      text.toLowerCase().startsWith('k'),
-    ),
+    (
+      await page
+        .locator('[data-topic]:not([hidden])')
+        .evaluateAll((cards) => cards.map((card) => card.dataset.name))
+    ).every((text) => text.toLowerCase().startsWith('k')),
   );
-  assert.equal(await page.locator('[data-topic-group]:not([hidden])').count(), 1);
   await page.locator('[data-letter=""]').click();
   await page.locator('#topic-filter').fill('  ＰＵＭＰＫＩＮ  ');
   assert.equal(await page.locator('[data-topic]:not([hidden])').count(), 1);
   await page.locator('#topic-filter').fill('no-such-subject');
   assert.equal(await page.locator('#no-topics').isVisible(), true);
   await page.locator('#clear-topic-filter').click();
-  assert.equal(await page.locator('[data-topic]:not([hidden])').count(), expected.length);
+  assert.equal(
+    await page.locator('[data-topic]:not([hidden])').count(),
+    Math.min(16, expected.length),
+  );
   assert.equal(
     await page.locator('#topic-filter').evaluate((input) => input === document.activeElement),
     true,
   );
   report.checks.push(
-    'A–Z pressed states, normalized search, group hiding, live counts and empty-state reset',
+    'A–Z pressed states, normalized search, progressive disclosure, live counts and empty-state reset',
   );
   const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8'));
   for (const [route, cap] of [
