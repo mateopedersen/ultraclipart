@@ -12,12 +12,26 @@ const { item } = Astro.props;
       {item.title}
     </a>
     <div class="formats">
-      <a href={item.webp} download={`${item.id}.webp`} class="webp">
-        WEBP
+      <a
+        href={item.webp}
+        download={`${item.id}.webp`}
+        class="webp"
+        aria-label={`Download Image: ${item.title}`}
+      >
+        <Icon name="image" size={16} />
+        <span>Image</span>
+        <Icon name="download" size={14} />
       </a>
       {item.pdf && (
-        <a href={item.pdf} download={`${item.id}.pdf`} class="pdf">
-          PDF
+        <a
+          href={item.pdf}
+          download={`${item.id}.pdf`}
+          class="pdf"
+          aria-label={`Download PDF: ${item.title}`}
+        >
+          <Icon name="document" size={16} />
+          <span>PDF</span>
+          <Icon name="download" size={14} />
         </a>
       )}
     </div>

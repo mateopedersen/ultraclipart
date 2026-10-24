@@ -25,15 +25,6 @@ export function renderCard(item: SearchCard): HTMLElement {
   body.append(link(item.title, detail, 'card-title'));
   const formats = document.createElement('div');
   formats.className = 'formats';
-  for (const [name, url] of [
-    ['WEBP', item.webp],
-    ['PDF', item.pdf],
-  ])
-    if (url) {
-      const a = link(name!, url, name!.toLowerCase());
-      a.download = `${item.id}.${name!.toLowerCase()}`;
-      formats.append(a);
-    }
   const actions = document.createElement('div');
   actions.className = 'card-actions';
   const action = (
@@ -67,6 +58,18 @@ export function renderCard(item: SearchCard): HTMLElement {
     a.append(svg, text);
     return a;
   };
+  for (const [label, url, extension, icon] of [
+    ['Image', item.webp, 'webp', 'image'],
+    ['PDF', item.pdf, 'pdf', 'document'],
+  ] as const) {
+    if (!url) continue;
+    const a = action(icon, label, url, extension);
+    a.download = `${item.id}.${extension}`;
+    a.setAttribute('aria-label', `Download ${label}: ${item.title}`);
+    const arrow = action('download', '', '#', '').querySelector('svg')!;
+    a.append(arrow);
+    formats.append(a);
+  }
   actions.append(
     item.editable === false
       ? action('view', 'View', detail, 'button')

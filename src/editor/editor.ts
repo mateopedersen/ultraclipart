@@ -1133,7 +1133,7 @@ function init(root: HTMLElement) {
         const pdf = target.value === 'pdf';
         q('[data-webp-options]').hidden = pdf;
         q('[data-pdf-options]').hidden = !pdf;
-        q('[data-action=download]').textContent = `↓ Download ${pdf ? 'CMYK PDF' : 'WEBP'}`;
+        q('[data-action=download]').textContent = `↓ Download ${pdf ? 'CMYK PDF' : 'Image'}`;
       } else if (target.matches('[data-import-svg]')) {
         const file = target.files?.[0];
         target.value = '';
