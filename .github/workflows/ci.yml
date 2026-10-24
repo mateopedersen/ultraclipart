@@ -11,13 +11,41 @@ concurrency:
   # Complete all three browser engines even when the next artwork wave arrives.
   cancel-in-progress: false
 jobs:
+  plan:
+    name: Select and verify affected checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      run_browser: ${{ steps.scope.outputs.run_browser }}
+      browser_suites: ${{ steps.scope.outputs.browser_suites }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Verify conservative scope policy
+        run: node --test tests/ci-plan.mjs
+      - name: Validate workflow and planner formatting
+        run: pnpm exec prettier --check .github/workflows/ci.yml scripts/ci-plan.mjs tests/ci-plan.mjs
+      - name: Select affected browser groups
+        id: scope
+        run: node scripts/ci-plan.mjs
   browser:
+    needs: plan
+    if: ${{ needs.plan.outputs.run_browser == 'true' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         engine: [chromium, firefox, webkit]
-        suite: [interface, catalog, catalog-extra, studio]
+        suite: ${{ fromJSON(needs.plan.outputs.browser_suites) }}
     # Match @playwright/test; browsers and OS libraries are already installed.
     # Pin the official image digest so a registry tag cannot change the runner.
     container:
@@ -142,7 +170,7 @@ jobs:
           retention-days: 14
   validate:
     name: validate (${{ matrix.engine }})
-    needs: browser
+    needs: [plan, browser]
     if: ${{ always() }}
     runs-on: ubuntu-latest
     strategy:
@@ -150,5 +178,15 @@ jobs:
       matrix:
         engine: [chromium, firefox, webkit]
     steps:
-      - name: Require every browser control group to succeed
-        run: test '${{ needs.browser.result }}' = success
+      - name: Require the selected checks to succeed
+        env:
+          PLAN_RESULT: ${{ needs.plan.result }}
+          RUN_BROWSER: ${{ needs.plan.outputs.run_browser }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
+        run: |
+          test "$PLAN_RESULT" = success
+          case "$RUN_BROWSER" in
+            true) test "$BROWSER_RESULT" = success ;;
+            false) test "$BROWSER_RESULT" = skipped ;;
+            *) exit 1 ;;
+          esac
