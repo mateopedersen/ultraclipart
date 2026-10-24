@@ -10,12 +10,24 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4335';
 const engine = process.env.UC_BROWSER || 'chromium';
 const topic = process.env.TOPIC || 'volleyball';
 const out = resolve(process.env.EVIDENCE_DIR || `reports/${topic}`, engine);
-const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url))).filter(
-  (a) => a.topic === topic,
+// A live release may precede locally staged collections. Bind expected search
+// results and downloads to that release, rather than silently mixing revisions.
+const expectedRevision = process.env.EXPECTED_REVISION;
+assert.ok(
+  !process.env.RELEASE_DATA_DIR || /^[0-9a-f]{40}$/.test(expectedRevision ?? ''),
+  'Release snapshots require an exact expected Git revision',
 );
-const publication = JSON.parse(
-  readFileSync(new URL('../../data/publication.json', import.meta.url)),
-);
+const readData = (name) =>
+  JSON.parse(
+    readFileSync(
+      process.env.RELEASE_DATA_DIR
+        ? resolve(process.env.RELEASE_DATA_DIR, name)
+        : new URL(`../../data/${name}`, import.meta.url),
+    ),
+  );
+const all = readData('art.json');
+const catalog = all.filter((a) => a.topic === topic);
+const publication = readData('publication.json');
 const expectedUrl = (a, kind) =>
   base.startsWith('https:')
     ? publication.files.find((f) => f.assetId === a.id && f.kind === kind).url
@@ -30,6 +42,7 @@ let page = await context.newPage();
 const report = {
   base,
   engine,
+  expectedRevision: expectedRevision ?? null,
   states: [],
   downloads: [],
   checkedPairs: 0,
@@ -41,6 +54,11 @@ try {
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto(base + `/clipart/${topic}/`);
+    if (expectedRevision)
+      await expect(page.locator('meta[name="build-revision"]')).toHaveAttribute(
+        'content',
+        expectedRevision,
+      );
     await expect(page.locator('.art-card')).toHaveCount(catalog.length);
     await page.evaluate(() => document.fonts.ready);
     const audit = await new AxeBuilder({ page })
@@ -99,11 +117,7 @@ try {
     report.checkedPairs++;
   }
   await page.goto(base + `/search/?q=${topic}`);
-  const all = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
-  const topics = [
-    ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics,
-    ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
-  ];
+  const topics = [...readData('topics.json').topics, ...readData('extra-topics.json')];
   const searchable = all.map((item) => ({
     ...item,
     cluster: topics.find((entry) => entry.slug === item.topic)?.cluster ?? '',
