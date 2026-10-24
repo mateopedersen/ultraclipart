@@ -62,7 +62,7 @@ jobs:
       # GitHub owns mounted workspace/home directories as uid 1001. Firefox
       # rejects a root process whose profile home belongs to another user.
       options: --user 1001
-    timeout-minutes: 60
+    timeout-minutes: 90
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
@@ -99,13 +99,17 @@ jobs:
             exit 1
           fi
           for engine in ${{ matrix.engine }}; do
-            if [ '${{ matrix.suite }}' = 'interface' ]; then
+            if [ '${{ matrix.suite }}' = 'interface-core' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
+            fi
+            if [ '${{ matrix.suite }}' = 'interface-artwork' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/artwork-details.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/related.mjs
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/sharing.mjs
+            fi
+            if [ '${{ matrix.suite }}' = 'interface-pages' ]; then
               BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
               BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/content.mjs
@@ -140,11 +144,13 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=tablet node tests/e2e/collection.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=speaker node tests/e2e/collection.mjs
             fi
-            if [ '${{ matrix.suite }}' = 'catalog-extra' ]; then
+            if [ '${{ matrix.suite }}' = 'catalog-extra-0' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=earbuds ALL_RASTER=1 EVIDENCE_DIR=reports/earbuds-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=printer ALL_RASTER=1 EVIDENCE_DIR=reports/printer-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=keyboard ALL_RASTER=1 EVIDENCE_DIR=reports/keyboard-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=scanner ALL_RASTER=1 EVIDENCE_DIR=reports/scanner-editor node tests/e2e/raster-editor.mjs
+            fi
+            if [ '${{ matrix.suite }}' = 'catalog-extra-1' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs

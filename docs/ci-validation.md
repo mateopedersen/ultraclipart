@@ -7,12 +7,14 @@ It never relies on a truncated API list or commit-message hints.
 | Change                                                                                             | Browser validation                                            |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Documentation or the CI planner/workflow only                                                      | Policy tests and workflow formatting; no product browser jobs |
-| Explicitly allowlisted artwork guide, related presentation, isolated listing styles or guide pages | Interface group in Chromium, Firefox and WebKit               |
-| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All seven groups in all three engines                         |
-| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All seven groups in all three engines                         |
+| Explicitly allowlisted artwork guide, related presentation, isolated listing styles or guide pages | All three interface groups in Chromium, Firefox and WebKit    |
+| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All ten groups in all three engines                           |
+| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All ten groups in all three engines                           |
 
-The interface group includes the original search, category, header, artwork-details,
-related, sharing, general site, refinement and content browser commands. It still runs
+The interface groups include the original search, category, header, artwork-details,
+related, sharing, general site, refinement and content browser commands. Splitting the
+long WebKit sequence and the catalog-extra exports keeps all commands within runner
+time limits; no case is skipped. Each group still runs
 formatting, type checks, a clean build, all unit tests and production CDN/header checks.
 Catalog and editor changes keep every existing download and export check. The 550 seasonal artwork export cases are partitioned into three disjoint groups of 184, 183 and 183 targets. The exact same per-artwork assertions run in every engine; the partition tests require complete coverage with no duplicates. Invalid or empty partitions fail. Other export groups retain their original target lists.
 

@@ -4,9 +4,12 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 export const ALL_SUITES = [
-  'interface',
+  'interface-core',
+  'interface-artwork',
+  'interface-pages',
   'catalog',
-  'catalog-extra',
+  'catalog-extra-0',
+  'catalog-extra-1',
   'studio',
   'catalog-seasonal-0',
   'catalog-seasonal-1',
@@ -75,7 +78,10 @@ export function selectSuites(changes, { forceFull = false } = {}) {
     return full(`Shared, catalog, editor or unclassified change: ${path}`);
   }
   return interfaceChanged
-    ? { suites: ['interface'], reason: 'Isolated page presentation: all three browser engines' }
+    ? {
+        suites: ['interface-core', 'interface-artwork', 'interface-pages'],
+        reason: 'Isolated page presentation: all three interface groups in every browser engine',
+      }
     : { suites: [], reason: 'Documentation or CI policy only: planner and workflow checks' };
 }
 
@@ -137,7 +143,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   if (process.env.GITHUB_OUTPUT)
     appendFileSync(
       process.env.GITHUB_OUTPUT,
-      `run_browser=${plan.suites.length > 0}\nbrowser_suites=${JSON.stringify(plan.suites.length ? plan.suites : ['interface'])}\n`,
+      `run_browser=${plan.suites.length > 0}\nbrowser_suites=${JSON.stringify(plan.suites.length ? plan.suites : ['interface-core'])}\n`,
     );
   if (process.env.GITHUB_STEP_SUMMARY)
     appendFileSync(

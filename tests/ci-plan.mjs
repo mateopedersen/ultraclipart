@@ -40,7 +40,38 @@ test('isolated artwork presentation keeps all interface browser checks', () => {
     'src/pages/guides/index.astro',
     'tests/e2e/related.mjs',
   ])
-    assert.deepEqual(selectSuites(modified(path)).suites, ['interface'], path);
+    assert.deepEqual(
+      selectSuites(modified(path)).suites,
+      ['interface-core', 'interface-artwork', 'interface-pages'],
+      path,
+    );
+});
+test('split workflow retains every interface command and catalog-extra export exactly once', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  for (const name of [
+    'search',
+    'categories',
+    'header',
+    'artwork-details',
+    'related',
+    'sharing',
+    'site',
+    'refinement',
+    'content',
+  ])
+    assert.equal(
+      workflow.split(`node tests/e2e/${name}.mjs`).length - 1,
+      1,
+      `Browser command ${name} must run once per engine`,
+    );
+  for (const topic of ['earbuds', 'printer', 'keyboard', 'scanner', 'tablet', 'speaker'])
+    assert.equal(
+      workflow.split(`RASTER_TOPICS=${topic} ALL_RASTER=1`).length - 1,
+      1,
+      `Export command ${topic} must run once per engine`,
+    );
+  assert.equal(workflow.split('SOURCE_COLLECTION=owner-book-pack-2026-10-24').length - 1, 1);
+  for (const suite of ALL_SUITES) assert.ok(workflow.includes(suite), suite);
 });
 test('global, editor, catalog, security, dependencies and unknown files always get full validation', () => {
   for (const path of [
