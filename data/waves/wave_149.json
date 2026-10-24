@@ -1,0 +1,306 @@
+{
+  "wave": "wave_149",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-leaf-umbrella",
+      "title": "Spider with a Leaf Umbrella",
+      "alt": "A playful spider holds a broad leaf overhead with one front leg while its other seven legs balance beside a tiny raindrop.",
+      "description": "A playful spider holds a broad leaf overhead with one front leg while its other seven legs balance beside a tiny raindrop. Useful for weather story cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_149/source/spider-leaf-umbrella-v2.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "3f153cd0e591121bdf03f274f2f04af441d33d8d16bfc49b69070b17c4ee1880",
+      "inputSignature": "af5276fea013dc9c183b52316e2e02b6efa0b1f1a8f228f48bf26eb76cae5031",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 947811,
+        "weightedCmykRmse": 1.1855
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1624831,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1144064,
+          "weightedCmykRmse": 0.829872
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1037738,
+          "weightedCmykRmse": 0.95751
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 947811,
+          "weightedCmykRmse": 1.1855
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        56,
+        26,
+        1181,
+        1228
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_149/exports/spider-leaf-umbrella.pdf",
+          "bytes": 947811,
+          "sha256": "1b536ac3c3d9e531015000a8f18a245cf0451617f189e5f935c6870c7474103b"
+        },
+        "webp": {
+          "path": "work/production/wave_149/exports/spider-leaf-umbrella.webp",
+          "bytes": 895616,
+          "sha256": "92f6bf53982617cc773b5e764b6117144365316d687319aa0d8342d4c6936c24"
+        },
+        "thumb": {
+          "path": "work/production/wave_149/exports/spider-leaf-umbrella-thumb.webp",
+          "bytes": 68932,
+          "sha256": "2571515e028163ccc27f9de2b9d4acfd9cf2fd39f657699783623eee6378fbc8"
+        }
+      },
+      "proofSha256": "a507bc5f037b7b561394848ea1d7e68275e325fe7f9c205392905cd483219b8c",
+      "pairMeanRgbDifference": 2.6612
+    },
+    {
+      "id": "spider-web-mender",
+      "title": "Spider Mending a Web",
+      "alt": "A smiling brown spider reaches two front legs toward dark silk threads in a wooden hoop, with six other jointed legs visible below its two-part body.",
+      "description": "A smiling brown spider reaches two front legs toward dark silk threads in a wooden hoop, with six other jointed legs visible below its two-part body. Useful for stories about making and repairing.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_149/source/spider-web-mender-v4.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "b5aa0c2ef91b5a0b819b88fc3e47f5750739df00a6751a3e2c5d0a486eda0fd3",
+      "inputSignature": "b05c9825335593cf101320bd39722eb0597759809b7bb11ebb0d6bbda3d5dddb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 924485,
+        "weightedCmykRmse": 1.78499
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1474183,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175895,
+          "weightedCmykRmse": 0.989366
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1082781,
+          "weightedCmykRmse": 1.18185
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 998944,
+          "weightedCmykRmse": 1.521615
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 924485,
+          "weightedCmykRmse": 1.78499
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        100,
+        151,
+        1166,
+        1020
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_149/exports/spider-web-mender.pdf",
+          "bytes": 924485,
+          "sha256": "c711c1d57843246162752fe5970425fa7680d3e24f479fe74244c5a97066eb56"
+        },
+        "webp": {
+          "path": "work/production/wave_149/exports/spider-web-mender.webp",
+          "bytes": 562662,
+          "sha256": "46a62b04804c60af34f3131b45ea5a9782683761d814b368c81fec5c940efcbd"
+        },
+        "thumb": {
+          "path": "work/production/wave_149/exports/spider-web-mender-thumb.webp",
+          "bytes": 56054,
+          "sha256": "425f245c9ee70bcbdeacdc6668e57d6429c7f234ed9c5e41111eedb8b9606912"
+        }
+      },
+      "proofSha256": "4ee836c60e6f50c19a710fa77ccbfd79eacc10b57b7e6484454dafb1ae9f0373",
+      "pairMeanRgbDifference": 1.75639
+    },
+    {
+      "id": "spider-silk-spool",
+      "title": "Spider beside a Thread Spool",
+      "alt": "A brown spider stands beside a wooden thread spool with eight distinct legs and a loose strand looping beside its body.",
+      "description": "A brown spider stands beside a wooden thread spool with eight distinct legs and a loose strand looping beside its body. Useful for making and building prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_149/source/spider-silk-spool-v3.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "9455d0b4553430e0e4f4923817c66b00766d47886fb76dfafbb67d2f1d895246",
+      "inputSignature": "04c81ba461c59c8eb68d7f2d3866e557689629b7223019fb717ef36070dfba5d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 972006,
+        "weightedCmykRmse": 1.43218
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1856645,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1308458,
+          "weightedCmykRmse": 0.83202
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1197119,
+          "weightedCmykRmse": 0.956821
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1079928,
+          "weightedCmykRmse": 1.156443
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 972006,
+          "weightedCmykRmse": 1.43218
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        17,
+        107,
+        1248,
+        1167
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_149/exports/spider-silk-spool.pdf",
+          "bytes": 972006,
+          "sha256": "b7d92435f5b96777328552dcea89b8a6ecd59b6963b59576dad58b766d12f77a"
+        },
+        "webp": {
+          "path": "work/production/wave_149/exports/spider-silk-spool.webp",
+          "bytes": 968180,
+          "sha256": "8fa5c74e9cd09d7d231e43091ee396498c09f7222078143bb2db91ca0c5f4b72"
+        },
+        "thumb": {
+          "path": "work/production/wave_149/exports/spider-silk-spool-thumb.webp",
+          "bytes": 71728,
+          "sha256": "18d383c1a5dfff38d32c86f8a5091b97f046e027344f11383b75a9a2a1dc56bd"
+        }
+      },
+      "proofSha256": "7f2b76691f7e7d8df449214673e870731bd70cddb7f60ec36c11f229858602bd",
+      "pairMeanRgbDifference": 2.16247
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual PDF contact reviewed: eight walking legs in all three scenes, distinct leaf umbrella, web mending and thread spool props, clean framing and colors. Screen proof only, no physical print proof.",
+  "createdAt": "2026-10-24T03:06:15.751Z"
+}

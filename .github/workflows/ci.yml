@@ -77,7 +77,8 @@ jobs:
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=skeleton node tests/e2e/collection.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=vampire node tests/e2e/collection.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=bat node tests/e2e/collection.mjs
-            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=spider node tests/e2e/collection.mjs
+            BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
             BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 node tests/e2e/raster-editor.mjs
             UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/editor node scripts/test-editor-browser.mjs

@@ -1,0 +1,61 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-flower-center",
+      "title": "Spider in a Daisy",
+      "composition": "One tiny spider rests at the center of a large white daisy, four legs spread to either side without hiding behind petals.",
+      "use": "garden stories",
+      "color": "Brown",
+      "prompt": "Create an original polished storybook clipart: One tiny spider rests at the center of a large white daisy, four legs spread to either side without hiding behind petals. One friendly spider with TWO body segments and EXACTLY EIGHT long jointed legs, FOUR pairs. Make all leg roots and separate tips visible in an overhead three-quarter composition: four on left and four on right, no occluded limbs, no antennae or human arms. Choose prop placement that does not hide legs; spider rests above prop, not inside it. Professional confident outlines, warm natural colors with subtle cel shading, thoughtful detailed but clean rendering. Complete composition centered with at least 10% empty transparent margin on every side. True alpha background and leg gaps. No glow, no surrounding shadow, no fuzzy aura, no lettering, no numbers, watermark or logo. Intended for garden stories."
+    },
+    {
+      "id": "spider-acorn-cup",
+      "title": "Spider beside an Acorn Cup",
+      "composition": "One spider leans toward an empty acorn cap, two front legs on the rim and the other six resting clearly outside.",
+      "use": "woodland crafts",
+      "color": "Brown",
+      "prompt": "Create an original polished storybook clipart: One spider leans toward an empty acorn cap, two front legs on the rim and the other six resting clearly outside. One friendly spider with TWO body segments and EXACTLY EIGHT long jointed legs, FOUR pairs. Make all leg roots and separate tips visible in an overhead three-quarter composition: four on left and four on right, no occluded limbs, no antennae or human arms. Choose prop placement that does not hide legs; spider rests above prop, not inside it. Professional confident outlines, warm natural colors with subtle cel shading, thoughtful detailed but clean rendering. Complete composition centered with at least 10% empty transparent margin on every side. True alpha background and leg gaps. No glow, no surrounding shadow, no fuzzy aura, no lettering, no numbers, watermark or logo. Intended for woodland crafts."
+    },
+    {
+      "id": "spider-bark-shelter",
+      "title": "Spider Under Curled Bark",
+      "composition": "One spider shelters under a small arch of curled bark, face and all eight legs visible through the open front.",
+      "use": "habitat discussion",
+      "color": "Gray",
+      "prompt": "Create an original polished storybook clipart: One spider shelters under a small arch of curled bark, face and all eight legs visible through the open front. One friendly spider with TWO body segments and EXACTLY EIGHT long jointed legs, FOUR pairs. Make all leg roots and separate tips visible in an overhead three-quarter composition: four on left and four on right, no occluded limbs, no antennae or human arms. Choose prop placement that does not hide legs; spider rests above prop, not inside it. Professional confident outlines, warm natural colors with subtle cel shading, thoughtful detailed but clean rendering. Complete composition centered with at least 10% empty transparent margin on every side. True alpha background and leg gaps. No glow, no surrounding shadow, no fuzzy aura, no lettering, no numbers, watermark or logo. Intended for habitat discussion."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "fresh-refinement-prompts.json",
+      "content": [
+        {
+          "id": "spider-flower-center",
+          "wave": 148,
+          "prompt": "Create one entirely NEW original premium storybook clipart. One small brown spider stands at the yellow center of a large white daisy viewed from above, full petals around it. EXACTLY EIGHT legs, FOUR PAIRS: left side four separated roots and legs at 10,9,8,7 oclock; right side four at2,3,4,5. All eight legs clearly traceable, two body segments, expressive friendly eyes. No occlusion, extra arms, antennae or pedipalps. Smooth designed color areas, confident dark contours, broad tasteful cel shading, a few fur tufts; NO microscopic noisy fur, photographic textures or 3D realism. Professional warm illustration, coherent props. Whole composition within central65% square with generous transparent empty margin. TRUE alpha background and gaps, no glow, haze, shadows, white sticker edge, words or numbers."
+        },
+        {
+          "id": "spider-acorn-cup",
+          "wave": 148,
+          "prompt": "Create one entirely NEW original premium storybook clipart. A russet spider in overhead view stands beside one empty textured acorn cup. Its two upper front legs rest on the near rim; remaining six spread clearly outside the cup. EXACTLY EIGHT legs, FOUR PAIRS: left side four separated roots and legs at 10,9,8,7 oclock; right side four at2,3,4,5. All eight legs clearly traceable, two body segments, expressive friendly eyes. No occlusion, extra arms, antennae or pedipalps. Smooth designed color areas, confident dark contours, broad tasteful cel shading, a few fur tufts; NO microscopic noisy fur, photographic textures or 3D realism. Professional warm illustration, coherent props. Whole composition within central65% square with generous transparent empty margin. TRUE alpha background and gaps, no glow, haze, shadows, white sticker edge, words or numbers."
+        },
+        {
+          "id": "spider-bark-shelter",
+          "wave": 148,
+          "prompt": "Create one entirely NEW original premium storybook clipart. A charcoal spider in nearly overhead view stands at the open front of one curled bark arch; the arch is behind its abdomen and does not hide any legs. EXACTLY EIGHT legs, FOUR PAIRS: left side four separated roots and legs at 10,9,8,7 oclock; right side four at2,3,4,5. All eight legs clearly traceable, two body segments, expressive friendly eyes. No occlusion, extra arms, antennae or pedipalps. Smooth designed color areas, confident dark contours, broad tasteful cel shading, a few fur tufts; NO microscopic noisy fur, photographic textures or 3D realism. Professional warm illustration, coherent props. Whole composition within central65% square with generous transparent empty margin. TRUE alpha background and gaps, no glow, haze, shadows, white sticker edge, words or numbers."
+        }
+      ]
+    },
+    {
+      "file": "refinement-next-prompts.json",
+      "content": [
+        {
+          "id": "spider-acorn-cup",
+          "wave": 148,
+          "prompt": "Preserve this exact appealing composition, all eight walking legs, proportions, facial expression and prop. Convert only the texture treatment to a polished professional clean vector-style storybook illustration: smooth solid colors and broad soft cel-shading bands, precise deliberate dark contours, beautiful designed warm color shapes. Remove every fine fur hair, speckle, grain and tiny repeated texture stroke. Use no more than a few broad tuft marks per body segment. The prop has elegant broad shading and clear material silhouette without granular noise. This is a finished high-quality illustration, not a rough icon. Keep every anatomical detail and all eight leg roots/joints/tips clear. Completely transparent background, no shadow, glow, white fringe, words or numbers. Generous full transparent margins."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "wave": "wave_148",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-flower-center",
+      "title": "Spider in a Daisy",
+      "alt": "One tiny spider rests at the center of a large white daisy, four legs spread to either side without hiding behind petals.",
+      "description": "One tiny spider rests at the center of a large white daisy, four legs spread to either side without hiding behind petals. Useful for garden stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_148/source/spider-flower-center-v2.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "097a8a7cb01be9f42c56d452e61eb589017396add47db644f87bfe5fe40608cb",
+      "inputSignature": "7288c571f1dadbe1dc94c470ce0c99a4edb9bf11148b19ec747e34a271ed542f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 628850,
+        "weightedCmykRmse": 0.818749
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1179979,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 628850,
+          "weightedCmykRmse": 0.818749
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        114,
+        113,
+        1153,
+        1123
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_148/exports/spider-flower-center.pdf",
+          "bytes": 628850,
+          "sha256": "364e013f4e07cce5c788dca9ac78769ca732ae977c3a3bb1a0605c29af7a15b2"
+        },
+        "webp": {
+          "path": "work/production/wave_148/exports/spider-flower-center.webp",
+          "bytes": 765264,
+          "sha256": "848ce2621c1889755453e0d644cd2c976f70916857b679806891e296b113362d"
+        },
+        "thumb": {
+          "path": "work/production/wave_148/exports/spider-flower-center-thumb.webp",
+          "bytes": 45520,
+          "sha256": "01920997384d5057912f07e11a9d19c99cabe18836bf04cdcbab655fff1f954d"
+        }
+      },
+      "proofSha256": "3b83b2cffa117af7d697a32389d2cf4a73198b81092a34ff7236025048724f4a",
+      "pairMeanRgbDifference": 1.11457
+    },
+    {
+      "id": "spider-acorn-cup",
+      "title": "Spider beside an Acorn Cup",
+      "alt": "A russet spider with eight long walking legs stands behind an empty acorn cup, its short mouth appendages near the rim.",
+      "description": "A russet spider stands behind an empty acorn cup. Useful for woodland crafts and imaginative nature stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_148/source/spider-acorn-cup-v3.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "9c5543e1dec7bba975e697e789da51de9669e54ed80891a26a28288ac969c242",
+      "inputSignature": "5ca102c5ad69af4460f94e0ac57f4a687e8acbae0e5c6fdd1632c0b4d75ac5cd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 949489,
+        "weightedCmykRmse": 0.954894
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1593987,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1051302,
+          "weightedCmykRmse": 0.831109
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 949489,
+          "weightedCmykRmse": 0.954894
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        39,
+        77,
+        1214,
+        1184
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_148/exports/spider-acorn-cup.pdf",
+          "bytes": 949489,
+          "sha256": "773b49150836c8925e1a387a9ff5215da78e9629fc4db5c505c7e5a7cdb5e43f"
+        },
+        "webp": {
+          "path": "work/production/wave_148/exports/spider-acorn-cup.webp",
+          "bytes": 843404,
+          "sha256": "db0be3f78d2ad2e629630953680acdaf890f5944e2beec8cdc59d36f762b3ebd"
+        },
+        "thumb": {
+          "path": "work/production/wave_148/exports/spider-acorn-cup-thumb.webp",
+          "bytes": 62952,
+          "sha256": "9caf3dcfee7d75d6449799cb49cf13dfbca2f1e73fd5b5767ba55c928945fcc6"
+        }
+      },
+      "proofSha256": "68c39e443e9a9c72f1ee9ea76807d3f1bc411623ab8449f0313374adc484bfad",
+      "pairMeanRgbDifference": 2.7062
+    },
+    {
+      "id": "spider-bark-shelter",
+      "title": "Spider Under Curled Bark",
+      "alt": "One spider shelters under a small arch of curled bark, face and all eight legs visible through the open front.",
+      "description": "One spider shelters under a small arch of curled bark, face and all eight legs visible through the open front. Useful for habitat discussion.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_148/source/spider-bark-shelter-v2.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "d84e4c7cb2c75dce4166926e89808dbf8df67f0d922de1e2f9357e26bef18cbe",
+      "inputSignature": "4c98925a033e0012e872995859d811ba6ae84b61e287be912060d91de27689e5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 913775,
+        "weightedCmykRmse": 1.161014
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1386973,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1007270,
+          "weightedCmykRmse": 0.963492
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 913775,
+          "weightedCmykRmse": 1.161014
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        208,
+        179,
+        1060,
+        1038
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_148/exports/spider-bark-shelter.pdf",
+          "bytes": 913775,
+          "sha256": "93b73887580e8d844aeb61043d2fd8bf9028be471e1385cdfc68bdaa94b2dd02"
+        },
+        "webp": {
+          "path": "work/production/wave_148/exports/spider-bark-shelter.webp",
+          "bytes": 695496,
+          "sha256": "008f1018f40aa23c944b1d3680f690b572f7db0069b47fa3843c3957877dabca"
+        },
+        "thumb": {
+          "path": "work/production/wave_148/exports/spider-bark-shelter-thumb.webp",
+          "bytes": 47370,
+          "sha256": "c862a460f05916cd8cbde12a0d8104692e6985f5e75ec0082aa3a0c0d7426bc0"
+        }
+      },
+      "proofSha256": "d5bf10a485eb78400f0849779dc41f7dc8e2a79e2a925a0419990aeb6f62e235",
+      "pairMeanRgbDifference": 1.39377
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and actual PDF contact personally reviewed: eight walking legs with natural short mouth pedipalps distinguished from legs; clear daisy, acorn cup and bark shelter compositions; clean alpha and preserved shading. Screen proof only.",
+  "createdAt": "2026-10-24T02:43:01.011Z"
+}

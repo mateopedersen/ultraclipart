@@ -1,0 +1,38 @@
+{
+  "wave": "wave_149",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-leaf-umbrella",
+      "title": "Spider with a Leaf Umbrella",
+      "alt": "A playful spider holds a broad leaf overhead with one front leg while its other seven legs balance beside a tiny raindrop.",
+      "description": "A playful spider holds a broad leaf overhead with one front leg while its other seven legs balance beside a tiny raindrop. Useful for weather story cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_149/source/spider-leaf-umbrella-v2.png"
+    },
+    {
+      "id": "spider-web-mender",
+      "title": "Spider Mending a Web",
+      "alt": "A smiling brown spider reaches two front legs toward dark silk threads in a wooden hoop, with six other jointed legs visible below its two-part body.",
+      "description": "A smiling brown spider reaches two front legs toward dark silk threads in a wooden hoop, with six other jointed legs visible below its two-part body. Useful for stories about making and repairing.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_149/source/spider-web-mender-v4.png"
+    },
+    {
+      "id": "spider-silk-spool",
+      "title": "Spider beside a Thread Spool",
+      "alt": "A brown spider stands beside a wooden thread spool with eight distinct legs and a loose strand looping beside its body.",
+      "description": "A brown spider stands beside a wooden thread spool with eight distinct legs and a loose strand looping beside its body. Useful for making and building prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_149/source/spider-silk-spool-v3.png"
+    }
+  ]
+}

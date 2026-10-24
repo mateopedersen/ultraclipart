@@ -1,0 +1,250 @@
+{
+  "wave": "wave_147",
+  "status": "CDN_VERIFIED",
+  "actualExportedDrawings": 3,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "spider-dew-observer",
+      "title": "Spider beside a Dewdrop",
+      "alt": "One small spider stands on a broad curved leaf, looking toward a single large round dewdrop near its edge.",
+      "description": "One small spider stands on a broad curved leaf, looking toward a single large round dewdrop near its edge. Useful for nature observation prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_147/source/spider-dew-observer.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "64ab36a15f4d0701327e4733ec0cab961d78d2bee0a091f271bb714169bad02d",
+      "inputSignature": "0eb4ebadafc15a832a70a69dd8631ea7e09416a180a99e7d82f779a6591280a5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 837893,
+        "weightedCmykRmse": 0.978617
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1173852,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 837893,
+          "weightedCmykRmse": 0.978617
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        20,
+        227,
+        1235,
+        1074
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_147/exports/spider-dew-observer.pdf",
+          "bytes": 837893,
+          "sha256": "6574bcba477b71f2a22f00113b6778a3ec39093c7129187f92a8ad8439d5f20f"
+        },
+        "webp": {
+          "path": "work/production/wave_147/exports/spider-dew-observer.webp",
+          "bytes": 712424,
+          "sha256": "8c0778c48d46ff4f7766a9953210412e6d4a1378e2f4777d95a63d2b47571cc1"
+        },
+        "thumb": {
+          "path": "work/production/wave_147/exports/spider-dew-observer-thumb.webp",
+          "bytes": 44320,
+          "sha256": "d22f7d92ab6165f474d0c968f86573d6306a7958d557a2096c7bacb46ad10f15"
+        }
+      },
+      "proofSha256": "73e4beef97321e9621519b3ac0149b2ee31ae5624e1dec443162e57e2de39240",
+      "pairMeanRgbDifference": 1.48727
+    },
+    {
+      "id": "spider-leaf-bridge",
+      "title": "Spider Crossing a Leaf Bridge",
+      "alt": "A spider crosses a narrow curled leaf stretched between two small pebbles, all eight legs visible on either side.",
+      "description": "A spider crosses a narrow curled leaf stretched between two small pebbles, all eight legs visible on either side. Useful for problem-solving stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_147/source/spider-leaf-bridge.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "e9163fb705d32732293b97746944107ef73f9803a84a76266592d73c44992d65",
+      "inputSignature": "06b6c43dba6e2d32fd6b3be5c909bba9e4d090c93792f992790027cfe86915a5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 917497,
+        "weightedCmykRmse": 1.004304
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1232749,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 917497,
+          "weightedCmykRmse": 1.004304
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        24,
+        276,
+        1246,
+        1043
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_147/exports/spider-leaf-bridge.pdf",
+          "bytes": 917497,
+          "sha256": "c5154cfc5ff7fb67b2a154ab809a98b5447bf3743f3597c5b2aca951cd470333"
+        },
+        "webp": {
+          "path": "work/production/wave_147/exports/spider-leaf-bridge.webp",
+          "bytes": 653044,
+          "sha256": "7333c8e284ec3bbbd596b42695138d6ad2ed1253a52cd6156adac1c2727af908"
+        },
+        "thumb": {
+          "path": "work/production/wave_147/exports/spider-leaf-bridge-thumb.webp",
+          "bytes": 46212,
+          "sha256": "646ce985b27c9ee770eeef7855cd847a28b10baee3c7b791fb9b929ef28aa3f6"
+        }
+      },
+      "proofSha256": "a40d67b6c22681430c1e30d4e6fb1a0cec955c1f6d96900ffdfdb8a493d4d8c5",
+      "pairMeanRgbDifference": 1.10749
+    },
+    {
+      "id": "spider-pebble-climb",
+      "title": "Spider on a Smooth Pebble",
+      "alt": "A friendly brown spider viewed from above stands on a blue-gray pebble with all eight legs clearly visible.",
+      "description": "A friendly brown spider viewed from above stands on a blue-gray pebble with all eight legs clearly visible. Useful for nature observation and counting activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_147/source/spider-pebble-climb-v5.png",
+      "topic": "spider",
+      "width": 1254,
+      "height": 1254,
+      "sourceType": "raster",
+      "sourceSha256": "01be2de9b49bac5d4d0acc0d2c1880fe896106de82942fc270e3f2b5b678c948",
+      "inputSignature": "506b7bd1848fdf3e0623d1eb23099f0b81c166b7bde168d93a73a6a341da0c21",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 890180,
+        "weightedCmykRmse": 0.844242
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1407871,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 890180,
+          "weightedCmykRmse": 0.844242
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": true,
+      "visibleBounds": [
+        48,
+        153,
+        1207,
+        1109
+      ],
+      "image": {
+        "width": 1254,
+        "height": 1254,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_147/exports/spider-pebble-climb.pdf",
+          "bytes": 890180,
+          "sha256": "b19f458c6b42d9bfcb9d09d77f0eb813e5492e676dffceeb342076ea9bf951a9"
+        },
+        "webp": {
+          "path": "work/production/wave_147/exports/spider-pebble-climb.webp",
+          "bytes": 778018,
+          "sha256": "3c624af7267f0b6524a01d6315a0ed0d3cfc9f0bf89fa7711966de12e4637162"
+        },
+        "thumb": {
+          "path": "work/production/wave_147/exports/spider-pebble-climb-thumb.webp",
+          "bytes": 52476,
+          "sha256": "e8dc66931760594c05ded09af87db424fcf3f1bf654cd5484444664668c1abab"
+        }
+      },
+      "proofSha256": "d174cfcfd5c8c5e6726cd476cf7af6355a707bba5e8d326f92f852e7ceba9307",
+      "pairMeanRgbDifference": 2.05305
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "screenReviewNotes": "Native sources and rendered PDF contact personally reviewed: eight walking legs, distinct dew observation, leaf bridge and smooth pebble scenes; clear contours and preserved colors. Screen proof only, no physical print proof.",
+  "createdAt": "2026-10-24T02:41:14.318Z"
+}

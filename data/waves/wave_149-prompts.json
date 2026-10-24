@@ -1,0 +1,71 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-leaf-umbrella",
+      "title": "Spider with a Leaf Umbrella",
+      "composition": "A playful spider holds a broad leaf overhead with one front leg while its other seven legs balance beside a tiny raindrop.",
+      "use": "weather story cards",
+      "color": "Gray",
+      "prompt": "Create ONE original polished illustrated clipart, not a photo or 3D render. A playful spider holds a broad leaf overhead with one front leg while its other seven legs balance beside a tiny raindrop. Show the complete spider from a high nearly overhead angle with two body segments, expressive eyes and small smile. EXACTLY EIGHT LEGS in FOUR PAIRS. Left side four clearly separated roots and legs spreading at 10,9,8,7 oclock. Right side four roots and legs at 2,3,4,5 oclock. All eight jointed legs traceable end to end, no hidden or merged legs. A front leg can touch the prop; do not add arms, hands, antennae or pedipalps. Painterly storybook personality with confident dark contours, smooth designed color shapes, a few broad fur tufts and gentle cel shading; NO tiny noisy fur textures or photorealism. Composition fits central65% square with generous clear margins. True transparent background and gaps; no glow, shadow, haze, white border, words or numbers. Useful for weather story cards."
+    },
+    {
+      "id": "spider-silk-spool",
+      "title": "Spider beside a Thread Spool",
+      "composition": "One spider stands beside a small wooden spool with a loose silk strand leading toward its abdomen; eight legs remain distinct.",
+      "use": "making and building prompts",
+      "color": "Purple",
+      "prompt": "Create ONE original polished illustrated clipart, not a photo or 3D render. One spider stands beside a small wooden spool with a loose silk strand leading toward its abdomen; eight legs remain distinct. Show the complete spider from a high nearly overhead angle with two body segments, expressive eyes and small smile. EXACTLY EIGHT LEGS in FOUR PAIRS. Left side four clearly separated roots and legs spreading at 10,9,8,7 oclock. Right side four roots and legs at 2,3,4,5 oclock. All eight jointed legs traceable end to end, no hidden or merged legs. A front leg can touch the prop; do not add arms, hands, antennae or pedipalps. Painterly storybook personality with confident dark contours, smooth designed color shapes, a few broad fur tufts and gentle cel shading; NO tiny noisy fur textures or photorealism. Composition fits central65% square with generous clear margins. True transparent background and gaps; no glow, shadow, haze, white border, words or numbers. Useful for making and building prompts."
+    },
+    {
+      "id": "spider-web-mender",
+      "title": "Spider Mending a Web",
+      "composition": "One spider reaches its two front legs toward a small gap in a freestanding oval web, six other legs resting visibly around the lower edge.",
+      "use": "repair stories",
+      "color": "Brown",
+      "prompt": "Create ONE original polished illustrated clipart, not a photo or 3D render. One spider reaches its two front legs toward a small gap in a freestanding oval web, six other legs resting visibly around the lower edge. Show the complete spider from a high nearly overhead angle with two body segments, expressive eyes and small smile. EXACTLY EIGHT LEGS in FOUR PAIRS. Left side four clearly separated roots and legs spreading at 10,9,8,7 oclock. Right side four roots and legs at 2,3,4,5 oclock. All eight jointed legs traceable end to end, no hidden or merged legs. A front leg can touch the prop; do not add arms, hands, antennae or pedipalps. Painterly storybook personality with confident dark contours, smooth designed color shapes, a few broad fur tufts and gentle cel shading; NO tiny noisy fur textures or photorealism. Composition fits central65% square with generous clear margins. True transparent background and gaps; no glow, shadow, haze, white border, words or numbers. Useful for repair stories."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "body-repair-prompts.json",
+      "content": [
+        {
+          "id": "spider-web-mender",
+          "prompt": "Fix only the spider body segmentation. Keep all EIGHT legs and their poses, the friendly expression, oval wooden hoop, dark charcoal web lines and completely transparent web holes exactly as now. A spider has two main body segments: one large rear abdomen and one front cephalothorax. Merge the separate smiling head and small chest below it into ONE continuous smooth front body segment with no neck or dividing chest contour. All eight legs attach to this single front segment. Keep the larger round abdomen behind. Preserve professional storybook finish, colors, transparency and margins. Do not add any new limbs or change the clean dark web."
+        }
+      ]
+    },
+    {
+      "file": "leaf-refinement-prompt.txt",
+      "content": "Use case: precise-object-edit. Refine this exact spider with leaf umbrella illustration into polished clean storybook clipart. Preserve all EIGHT walking legs, four per side, same large leaf and clear water drops, friendly face, two body segments and composition. Simplify microtexture into broader designed fur tufts and smooth rich layered cel shading; retain crisp outline, natural leaf veins and professional detail. No grain, no individual fine hairs. Increase clear margin so all artwork fits central75% of canvas without cropping. All background and gaps truly transparent, no colored fringe or white residue. Keep same pose and object relationships. No text."
+    },
+    {
+      "file": "refinement-next-prompts.json",
+      "content": [
+        {
+          "id": "spider-web-mender",
+          "wave": 149,
+          "prompt": "Create one original polished storybook illustration of a small smiling brown spider repairing an oval web in a slender wooden oval hoop beside it. Spider on left, hoop on right, full scene centered. Exactly eight legs: four left and four right, all fully traceable; two right front legs reach toward two loose dark web strands and remaining six spread visibly. Two body segments, no extra arms or antennae. Web consists ONLY of sparse DARK CHARCOAL single lines and entirely empty transparent holes, not white silk ropes or milky sheet. A small break in one web thread shows repair. Clean controlled outlined color shapes, broad tasteful cel shading, no photographic grain or microscopic fur. Warm inviting sophisticated storybook style. All within central65% square with clear empty alpha margins. True transparent background and web holes. No glow, haze, white coating, shadow, text or watermark."
+        }
+      ]
+    },
+    {
+      "file": "repair-prompts.json",
+      "content": [
+        {
+          "id": "spider-web-mender",
+          "prompt": "Change ONLY the web transparency. Preserve the brown spider exactly, including all EIGHT legs, expression and pose, and preserve the oval wooden web frame. Remove every milky white or gray patch, haze and filled area between the web strands. The web must consist solely of thin clean gray threads separated by fully transparent holes, with the central repair opening also transparent. Keep full framing, no cropped parts, no glow, no words, genuine alpha background. Do not add or remove legs."
+        }
+      ]
+    },
+    {
+      "file": "spider-silk-spool-smooth-prompt.txt",
+      "content": "Refine this exact illustration's surface finish. Preserve its eight separated jointed walking legs, two main body segments, face, all props, pose and colors. Replace ALL microscopic hairs and speckled surface strokes with smooth sculpted color planes and broad deliberate tuft shapes. Elegant clean ink contours, smooth rich layered cel shading, polished professional craft clipart. Keep full detail of eyes, joints and props; do not blur. Make composition comfortably framed with transparent margins all around. Actual alpha background and gaps, remove any stray color fringe outside silhouette. No text. Preserve exact eight-leg anatomy."
+    },
+    {
+      "file": "spool-refinement-prompt.txt",
+      "content": "Refine this exact professional spider and wooden thread spool illustration while preserving its composition and eight walking legs plus two tiny mouth palps. Keep spider proportions, eyes, strand loop and spool. Replace dense tiny fur strokes and speckled texture with thoughtfully drawn broad fur tufts and smooth layered cel shading. Clean crisp dark contours, rich natural brown colors and nice volume. The thread winds smoothly around the spool with a handful of broad detailed bands. Make artwork slightly more compact with ample transparent margin, preserve native canvas resolution. True transparent gaps and background without white residue or colored halo. No text. This is an illustration refinement, not a low resolution version."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "wave": "wave_147",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-dew-observer",
+      "title": "Spider beside a Dewdrop",
+      "alt": "One small spider stands on a broad curved leaf, looking toward a single large round dewdrop near its edge.",
+      "description": "One small spider stands on a broad curved leaf, looking toward a single large round dewdrop near its edge. Useful for nature observation prompts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_147/source/spider-dew-observer.png"
+    },
+    {
+      "id": "spider-leaf-bridge",
+      "title": "Spider Crossing a Leaf Bridge",
+      "alt": "A spider crosses a narrow curled leaf stretched between two small pebbles, all eight legs visible on either side.",
+      "description": "A spider crosses a narrow curled leaf stretched between two small pebbles, all eight legs visible on either side. Useful for problem-solving stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_147/source/spider-leaf-bridge.png"
+    },
+    {
+      "id": "spider-pebble-climb",
+      "title": "Spider on a Smooth Pebble",
+      "alt": "A friendly brown spider viewed from above stands on a blue-gray pebble with all eight legs clearly visible.",
+      "description": "A friendly brown spider viewed from above stands on a blue-gray pebble with all eight legs clearly visible. Useful for nature observation and counting activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_147/source/spider-pebble-climb-v5.png"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "wave": "wave_146",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-silk-descent",
+      "title": "Spider Descending on Silk",
+      "alt": "A friendly charcoal spider descends beneath one curved twig on a single silk thread, eight legs spread clearly with four on each side.",
+      "description": "A friendly charcoal spider descends beneath one curved twig on a single silk thread, eight legs spread clearly with four on each side. Useful for movement vocabulary.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_146/source/spider-silk-descent-v2.png"
+    },
+    {
+      "id": "spider-sideways-step",
+      "title": "Brown Spider from Above",
+      "alt": "A warm brown spider viewed from above with eight clearly separated jointed legs spread in four pairs.",
+      "description": "A warm brown spider viewed from above with eight clearly separated jointed legs spread in four pairs. Useful for counting activities and nature vocabulary.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_146/source/spider-sideways-step-v5.png",
+      "jpeg2000Resolutions": 5
+    },
+    {
+      "id": "spider-web-builder",
+      "title": "Spider Building a Corner Web",
+      "alt": "One plum-gray spider sits beside a compact triangular corner web and reaches one of its eight legs toward the unfinished outer thread.",
+      "description": "One plum-gray spider sits beside a compact triangular corner web and reaches one of its eight legs toward the unfinished outer thread. Useful for sequence activities.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_146/source/spider-web-builder-v4.png"
+    }
+  ]
+}

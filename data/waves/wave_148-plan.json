@@ -1,0 +1,38 @@
+{
+  "wave": "wave_148",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-flower-center",
+      "title": "Spider in a Daisy",
+      "alt": "One tiny spider rests at the center of a large white daisy, four legs spread to either side without hiding behind petals.",
+      "description": "One tiny spider rests at the center of a large white daisy, four legs spread to either side without hiding behind petals. Useful for garden stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_148/source/spider-flower-center-v2.png"
+    },
+    {
+      "id": "spider-acorn-cup",
+      "title": "Spider beside an Acorn Cup",
+      "alt": "A russet spider with eight long walking legs stands behind an empty acorn cup, its short mouth appendages near the rim.",
+      "description": "A russet spider stands behind an empty acorn cup. Useful for woodland crafts and imaginative nature stories.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_148/source/spider-acorn-cup-v3.png"
+    },
+    {
+      "id": "spider-bark-shelter",
+      "title": "Spider Under Curled Bark",
+      "alt": "One spider shelters under a small arch of curled bark, face and all eight legs visible through the open front.",
+      "description": "One spider shelters under a small arch of curled bark, face and all eight legs visible through the open front. Useful for habitat discussion.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_148/source/spider-bark-shelter-v2.png"
+    }
+  ]
+}

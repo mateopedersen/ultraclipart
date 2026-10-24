@@ -1,0 +1,69 @@
+{
+  "method": "builtin-image-generation",
+  "initial": [
+    {
+      "id": "spider-dew-observer",
+      "title": "Spider beside a Dewdrop",
+      "composition": "One small spider stands on a broad curved leaf, looking toward a single large round dewdrop near its edge.",
+      "use": "nature observation prompts",
+      "color": "Brown",
+      "prompt": "Use case: illustration-story. One original premium storybook clipart: One small spider stands on a broad curved leaf, looking toward a single large round dewdrop near its edge. Thoughtful composition for nature observation prompts. ONE spider, exactly EIGHT legs FOUR each side, ALL individually countable and attached to front body segment. Three-quarter overhead view with all leg roots and tips visible; compact articulated legs with clear spaces, no extra arms, no antennae. Two body segments, friendly expressive face, short fine fur drawn inside the outline only. Confident clean dark contours, tasteful warm natural colors and restrained CEL shading, polished illustration, not 3D. Entire subject plus complete prop fits middle 65 percent square with generous transparent margins, no cropped leaf tips. TRUE transparent background including between legs. NO glow, haze, drop shadow, white outline, floor, background rectangle, text, watermark. Do not add extra props."
+    },
+    {
+      "id": "spider-leaf-bridge",
+      "title": "Spider Crossing a Leaf Bridge",
+      "composition": "A spider crosses a narrow curled leaf stretched between two small pebbles, all eight legs visible on either side.",
+      "use": "problem-solving stories",
+      "color": "Gray",
+      "prompt": "Use case: illustration-story. One original premium storybook clipart: A spider crosses a narrow curled leaf stretched between two small pebbles, all eight legs visible on either side. Thoughtful composition for problem-solving stories. ONE spider, exactly EIGHT legs FOUR each side, ALL individually countable and attached to front body segment. Three-quarter overhead view with all leg roots and tips visible; compact articulated legs with clear spaces, no extra arms, no antennae. Two body segments, friendly expressive face, short fine fur drawn inside the outline only. Confident clean dark contours, tasteful warm natural colors and restrained CEL shading, polished illustration, not 3D. Entire subject plus complete prop fits middle 65 percent square with generous transparent margins, no cropped leaf tips. TRUE transparent background including between legs. NO glow, haze, drop shadow, white outline, floor, background rectangle, text, watermark. Do not add extra props."
+    },
+    {
+      "id": "spider-pebble-climb",
+      "title": "Spider Climbing a Pebble",
+      "composition": "A cheerful spider climbs the side of one smooth oval pebble, two front legs raised while the other six support its body.",
+      "use": "direction vocabulary",
+      "color": "Brown",
+      "prompt": "Use case: illustration-story. One original premium storybook clipart: A cheerful spider climbs the side of one smooth oval pebble, two front legs raised while the other six support its body. Thoughtful composition for direction vocabulary. ONE spider, exactly EIGHT legs FOUR each side, ALL individually countable and attached to front body segment. Three-quarter overhead view with all leg roots and tips visible; compact articulated legs with clear spaces, no extra arms, no antennae. Two body segments, friendly expressive face, short fine fur drawn inside the outline only. Confident clean dark contours, tasteful warm natural colors and restrained CEL shading, polished illustration, not 3D. Entire subject plus complete prop fits middle 65 percent square with generous transparent margins, no cropped leaf tips. TRUE transparent background including between legs. NO glow, haze, drop shadow, white outline, floor, background rectangle, text, watermark. Do not add extra props."
+    }
+  ],
+  "revisions": [
+    {
+      "file": "fresh-refinement-prompts.json",
+      "content": [
+        {
+          "id": "spider-pebble-climb",
+          "wave": 147,
+          "prompt": "Preserve this exact composition and all EIGHT spider legs, four per side, two body segments and complete oval pebble. Refine rendering into elegant professional storybook illustration with smooth color regions and designed cel shading. Replace tiny noisy fur strokes by a few broad warm fur tufts and smooth highlights; simplify stone grain into three subtle broad shaded regions with just a few small natural marks. Keep appealing character, detailed articulated legs and expressive eyes. Do not remove or add legs. Entire object and all tips fit well inside canvas with generous transparent margins. True transparency, no glow, no text."
+        }
+      ]
+    },
+    {
+      "file": "fresh-repair-v3-prompts.json",
+      "content": [
+        {
+          "id": "spider-pebble-climb",
+          "prompt": "Create ONE original polished storybook clipart of a cheerful honey-brown spider standing ON TOP of one small smooth blue-gray oval pebble, viewed directly from overhead. Spider body is entirely above pebble and legs extend outside its edges, all visible. TWO body segments and EXACTLY EIGHT jointed legs, FOUR pairs: four distinct legs left at 10,9,8,7 oclock and four right at 2,3,4,5 oclock. Show every root, joint and tip without any occlusion. Friendly round eyes, small smile. No pedipalps, no antennae or extra limbs. Professional clean outlines, detailed but controlled warm cel-shaded illustration, subtle natural stone texture. Complete image centered in middle 65% of square with generous clear alpha margins. TRUE transparent background, no surrounding haze, shadow, floor, glow, words or numbers."
+        }
+      ]
+    },
+    {
+      "file": "refinement-next-prompts.json",
+      "content": [
+        {
+          "id": "spider-pebble-climb",
+          "wave": 147,
+          "prompt": "Preserve this exact appealing composition, all eight walking legs, proportions, facial expression and prop. Convert only the texture treatment to a polished professional clean vector-style storybook illustration: smooth solid colors and broad soft cel-shading bands, precise deliberate dark contours, beautiful designed warm color shapes. Remove every fine fur hair, speckle, grain and tiny repeated texture stroke. Use no more than a few broad tuft marks per body segment. The prop has elegant broad shading and clear material silhouette without granular noise. This is a finished high-quality illustration, not a rough icon. Keep every anatomical detail and all eight leg roots/joints/tips clear. Completely transparent background, no shadow, glow, white fringe, words or numbers. Generous full transparent margins."
+        }
+      ]
+    },
+    {
+      "file": "repair-prompts.json",
+      "content": [
+        {
+          "id": "spider-pebble-climb",
+          "prompt": "Redraw this scene from a higher, almost top-down viewpoint so ALL EIGHT spider legs are visible. Keep the friendly warm brown spider climbing a single oval pebble, but use exactly FOUR clearly separated legs on EACH side, each attached to front body segment and traceable to its end. Two front legs reach toward the pebble top; six other legs support around its sides. Do not hide legs behind the rock or body. Eight legs total, no extra arms, no pedipalps. Recompose as needed while preserving storybook quality. Confident crisp dark outlines and gentle cel shading, transparent background, no glow or shadow. Fit complete stone and spider within central 70 percent of square canvas. No text."
+        }
+      ]
+    }
+  ]
+}

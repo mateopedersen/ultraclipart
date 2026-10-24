@@ -1,0 +1,38 @@
+{
+  "wave": "wave_150",
+  "topic": "spider",
+  "method": "builtin-image-generation",
+  "research": "data/research/spider-2026-10-24.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "spider-paint-palette",
+      "title": "Spider with a Paint Palette",
+      "alt": "One spider balances a small palette beside its body and holds a short brush with one front leg, seven other legs easy to count.",
+      "description": "One spider balances a small palette beside its body and holds a short brush with one front leg, seven other legs easy to count. Useful for personal art activity cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_150/source/spider-paint-palette.png"
+    },
+    {
+      "id": "spider-book-reader",
+      "title": "Spider Reading a Small Book",
+      "alt": "A spider stands behind a small open book, eight legs extending clearly around the sides and above the book edges.",
+      "description": "A spider stands behind a small open book, eight legs extending clearly around the sides and above the book edges. Useful for reading reward cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_150/source/spider-book-reader.png"
+    },
+    {
+      "id": "spider-letter-carrier",
+      "title": "Spider Carrying an Envelope",
+      "alt": "One spider holds a closed blank envelope with two raised front legs while six legs support it beneath.",
+      "description": "One spider holds a closed blank envelope with two raised front legs while six legs support it beneath. Useful for personal correspondence cards.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_150/source/spider-letter-carrier.png"
+    }
+  ]
+}
