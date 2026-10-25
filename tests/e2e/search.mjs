@@ -39,7 +39,13 @@ const report = { base, browser: engine, checks: [], accessibility: [], errors };
 const cards = () => page.locator('#search-results:not([hidden]) .art-card');
 const ready = () => expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
 try {
-  const response = await page.goto(`${base}/search/?q=pumpkin`);
+  await page.goto(`${base}/search/?q=classroom%20label&type=guide`);
+  await expect(
+    page.locator('#site-search-results a[href="/guides/make-a-classroom-label/"]'),
+  ).toBeVisible();
+  await expect(page.locator('#search-results')).toBeHidden();
+  report.checks.push('long-tail guide search finds the matching project instructions');
+  const response = await page.goto(`${base}/search/?q=pumpkin&type=artwork`);
   const html = await response.text();
   assert.equal(
     (html.match(/class="art-card"/g) ?? []).length,
