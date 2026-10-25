@@ -1,0 +1,587 @@
+{
+  "wave": "wave_233",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "harvest-harvest-picnic-crate",
+      "title": "Harvest Picnic with Garden Crate",
+      "alt": "A wooden crate of apples and pears sits on a plaid picnic blanket beside a bread loaf and ceramic jug.",
+      "description": "A wooden crate of apples and pears sits on a plaid picnic blanket beside a bread loaf and ceramic jug. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_233/source/harvest-harvest-picnic-crate.png",
+      "printMaxEdgePx": 770,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1427,
+      "height": 1102,
+      "pdfWidth": 770,
+      "pdfHeight": 595,
+      "sourceType": "raster",
+      "sourceSha256": "25f9c3090fd806269dc30f309565fe5ced10883827a4cad330c7bed24fe3a6f4",
+      "inputSignature": "6ddb806fb03c3224fe286344deb5a96f746dc183ccf9c4f2135cc48d879aa0ca",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 965915,
+        "weightedCmykRmse": 1.096728
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1216771,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1142819,
+          "weightedCmykRmse": 0.623734
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1095098,
+          "weightedCmykRmse": 0.760964
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1043714,
+          "weightedCmykRmse": 0.884556
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 965915,
+          "weightedCmykRmse": 1.096728
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        72,
+        50,
+        1344,
+        996
+      ],
+      "image": {
+        "width": 770,
+        "height": 595,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_233/exports/harvest-harvest-picnic-crate.pdf",
+          "bytes": 965915,
+          "sha256": "049701771e9c6e46dff711647b44dd8ec0407ea2f57bd5817a5d46311e0a1e50"
+        },
+        "webp": {
+          "path": "work/production/wave_233/exports/harvest-harvest-picnic-crate.webp",
+          "bytes": 1504954,
+          "sha256": "edb0ceb92abe8e51a221adddb6fedc0339f7650cc1e4a92cd72936833ff85fde"
+        },
+        "thumb": {
+          "path": "work/production/wave_233/exports/harvest-harvest-picnic-crate-thumb.webp",
+          "bytes": 80054,
+          "sha256": "63ea084e9f2ce62ea638c31891d282be722be68838c48379320bab133f143aad"
+        }
+      },
+      "proofSha256": "75a6fed6850bd698b2680a6ca6b5891ed46913df95b41ddc9a0e44a61328cab3",
+      "pairMeanRgbDifference": 3.53963
+    },
+    {
+      "id": "harvest-vegetable-root-cutaway",
+      "title": "Garden Root Crop Cutaway",
+      "alt": "A bounded soil cutaway shows a carrot, beet and radish with leaves above the soil and complete roots below.",
+      "description": "A bounded soil cutaway shows a carrot, beet and radish with leaves above the soil and complete roots below. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_233/source/harvest-vegetable-root-cutaway.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "2092a4f934d0569540745c5733c3b9550e55e3447d623d280ad375a91bb7df1d",
+      "inputSignature": "4cd023e37583ffd63acce0a56005a680e0e5c8c4d2796c1a0092f48203642d44",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 965767,
+        "weightedCmykRmse": 1.298133
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1328567,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1151052,
+          "weightedCmykRmse": 0.730355
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1103204,
+          "weightedCmykRmse": 0.873635
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1030225,
+          "weightedCmykRmse": 1.063139
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 965767,
+          "weightedCmykRmse": 1.298133
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        226,
+        35,
+        1354,
+        983
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_233/exports/harvest-vegetable-root-cutaway.pdf",
+          "bytes": 965767,
+          "sha256": "f3917708e4bc53dce05aa8cf48a2fb8e0cb1724d6b301666d9bee2604f5543cb"
+        },
+        "webp": {
+          "path": "work/production/wave_233/exports/harvest-vegetable-root-cutaway.webp",
+          "bytes": 1894288,
+          "sha256": "f9fbdce5601f5b4c6141c4feb954000a967aa1285e8a7e34b60a8351479a0c2e"
+        },
+        "thumb": {
+          "path": "work/production/wave_233/exports/harvest-vegetable-root-cutaway-thumb.webp",
+          "bytes": 69816,
+          "sha256": "eecaf3899b484513af4e0305a00716c14de107c12153b6fe2f7453f19ce37d73"
+        }
+      },
+      "proofSha256": "f8e0791445f3f27c035709f907a6297faf5ec968b8e165e9ba855a7632b7e9e0",
+      "pairMeanRgbDifference": 5.86986
+    },
+    {
+      "id": "harvest-outline-apple-picking",
+      "title": "Apple Picking Coloring Outline",
+      "alt": "A black-line coloring illustration shows a kneeling gardener picking an apple from a small tree into a basket.",
+      "description": "A black-line coloring illustration shows a kneeling gardener picking an apple from a small tree into a basket. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_233/source/harvest-outline-apple-picking.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "503a28643a6d9187eae1d7a16dd62e1002ab5077c2938bbed1fdf20b7009afba",
+      "inputSignature": "b34b1650bdb0a1cecdbccb6d215db0f273c56dfdd7fad429e2fb0253cf4440ca",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 955137,
+        "weightedCmykRmse": 1.144748
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1275659,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1080645,
+          "weightedCmykRmse": 0.786308
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1022488,
+          "weightedCmykRmse": 0.93766
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 955137,
+          "weightedCmykRmse": 1.144748
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        211,
+        46,
+        1187,
+        1096
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_233/exports/harvest-outline-apple-picking.pdf",
+          "bytes": 955137,
+          "sha256": "99b61e9ad405fbc947b98efcfa3261f82e69af8aadb2d69d488361bf77c97e69"
+        },
+        "webp": {
+          "path": "work/production/wave_233/exports/harvest-outline-apple-picking.webp",
+          "bytes": 864042,
+          "sha256": "e80d6f0f301acfa757e8be8e6d7592eef37116a83b9d4d8307e272ee495c41e1"
+        },
+        "thumb": {
+          "path": "work/production/wave_233/exports/harvest-outline-apple-picking-thumb.webp",
+          "bytes": 68456,
+          "sha256": "0d02f54b58d71e32dcc7e9f6ab9bdb695c44cc527fdbdaa00639e81d658f2a67"
+        }
+      },
+      "proofSha256": "4c62dc9ee4cf2a35c76278c6b49e4831485680a5a484b8d5a8a3e1c0a7d14f43",
+      "pairMeanRgbDifference": 7.08893
+    },
+    {
+      "id": "harvest-outline-grain-sheaf",
+      "title": "Grain Sheaf Coloring Outline",
+      "alt": "A black-line coloring illustration shows a tied wheat sheaf beside a grain scoop and an open grain sack.",
+      "description": "A black-line coloring illustration shows a tied wheat sheaf beside a grain scoop and an open grain sack. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_233/source/harvest-outline-grain-sheaf.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 910,
+      "pdfHeight": 832,
+      "sourceType": "raster",
+      "sourceSha256": "0456875c82b2bf1254feb7ebf9c1ea4a68daefd16148846fe4878ebeddc05bf5",
+      "inputSignature": "ac928f3eaa977a7814f495e20a63d7dff517279b7429f994a92584ce708773a6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973998,
+        "weightedCmykRmse": 1.342908
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1362649,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1164447,
+          "weightedCmykRmse": 0.744542
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1111056,
+          "weightedCmykRmse": 0.87698
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1033379,
+          "weightedCmykRmse": 1.056568
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973998,
+          "weightedCmykRmse": 1.342908
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        193,
+        36,
+        1149,
+        1168
+      ],
+      "image": {
+        "width": 910,
+        "height": 832,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_233/exports/harvest-outline-grain-sheaf.pdf",
+          "bytes": 973998,
+          "sha256": "d2175afce7f22ed0f5a770fc35b97ea427beb6c8f33f40a9409f7ce05be6945f"
+        },
+        "webp": {
+          "path": "work/production/wave_233/exports/harvest-outline-grain-sheaf.webp",
+          "bytes": 950342,
+          "sha256": "8dcb06d0a5712df2366755034d0d58471ff89d493d805a81b2645740a7812bbe"
+        },
+        "thumb": {
+          "path": "work/production/wave_233/exports/harvest-outline-grain-sheaf-thumb.webp",
+          "bytes": 79326,
+          "sha256": "e606593be4cd55f4246b66227931e0f8a5eebbe3fd0af991558ee332f50d6c30"
+        }
+      },
+      "proofSha256": "af3514abc61b0dbc3261880d13f781c8e6a0feb4962ff75ab009828befd6d096",
+      "pairMeanRgbDifference": 4.82548
+    },
+    {
+      "id": "harvest-outline-garden-wheelbarrow",
+      "title": "Harvest Wheelbarrow Coloring Outline",
+      "alt": "A black-line coloring illustration shows a single-wheel garden wheelbarrow filled with pumpkin, carrots and cabbage.",
+      "description": "A black-line coloring illustration shows a single-wheel garden wheelbarrow filled with pumpkin, carrots and cabbage. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_233/source/harvest-outline-garden-wheelbarrow.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1426,
+      "height": 1103,
+      "pdfWidth": 1000,
+      "pdfHeight": 773,
+      "sourceType": "raster",
+      "sourceSha256": "0dc6b5943e6942dc4076ad3e09ed26b01a709e1654b183a9942de30484e2fd85",
+      "inputSignature": "22b56cc5f6125ce74c6f157b9cf5e010355186ce3731597b43853278a9fcf32f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 898199,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 898199,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        134,
+        176,
+        1370,
+        993
+      ],
+      "image": {
+        "width": 1000,
+        "height": 773,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_233/exports/harvest-outline-garden-wheelbarrow.pdf",
+          "bytes": 898199,
+          "sha256": "c16cca8ab598f2204f08e761da49fc30ce2ac66814fc5f273dac7818c3f1a2ca"
+        },
+        "webp": {
+          "path": "work/production/wave_233/exports/harvest-outline-garden-wheelbarrow.webp",
+          "bytes": 626746,
+          "sha256": "32146a9f5699ecc93520140954474e7a431b66cee9873cacc376ec601393fea2"
+        },
+        "thumb": {
+          "path": "work/production/wave_233/exports/harvest-outline-garden-wheelbarrow-thumb.webp",
+          "bytes": 44560,
+          "sha256": "6bc3edfa1ac6398646c3904c063689d4a1a9443cf6b7b8a7d850c63e49c46725"
+        }
+      },
+      "proofSha256": "fdf45770c02d60968a0e8abab84ea77d4ebd4a9d310b421c3ffe2d37f3484e56",
+      "pairMeanRgbDifference": 5.75996
+    },
+    {
+      "id": "harvest-outline-farm-tractor",
+      "title": "Harvest Tractor Coloring Outline",
+      "alt": "A black-line coloring illustration shows a tractor pulling a cart with pumpkins and a straw bale.",
+      "description": "A black-line coloring illustration shows a tractor pulling a cart with pumpkins and a straw bale. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_233/source/harvest-outline-farm-tractor.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "381bc2c7378a79b733efa7976115fc99f5b6915abf289427636d39449b370f5f",
+      "inputSignature": "17af3d80343374417abd8a5838bbd705d938ae0079032db961fcdec0080fe3eb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 681724,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 681724,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        49,
+        241,
+        1490,
+        792
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_233/exports/harvest-outline-farm-tractor.pdf",
+          "bytes": 681724,
+          "sha256": "74e662825cb8052f99dad2ace48f363266cb6df749e7abcdc38639ce752d30ad"
+        },
+        "webp": {
+          "path": "work/production/wave_233/exports/harvest-outline-farm-tractor.webp",
+          "bytes": 881604,
+          "sha256": "f287ccdb25c80aab005655d56e71c686cef4690b43d9d90a4245e918542a6bc8"
+        },
+        "thumb": {
+          "path": "work/production/wave_233/exports/harvest-outline-farm-tractor-thumb.webp",
+          "bytes": 33948,
+          "sha256": "aa4254cd0b121ff8b722078902aae0defb8fdb78ff59eca24ef76ca7f3fb8de1"
+        }
+      },
+      "proofSha256": "3d4b44af6d6a3c1ebcc7084bc32dffe6a10ca855448d97f684032c1fa3088326",
+      "pairMeanRgbDifference": 6.85836
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T14:01:13.935473+00:00",
+  "screenReviewScope": "All six native CMYK PDF renders seen, with complete crop anatomy and clean readable colored scenes and coloring lines. Olive page retains the declared print size and quality floor; edited-PDF size still requires independent validation.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T14:01:16.237Z",
+  "cdnVerifiedAt": "2026-10-25T14:15:03.627Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T14:49:19.361258+00:00"
+}

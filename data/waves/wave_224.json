@@ -1,6 +1,6 @@
 {
   "wave": "wave_224",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 0,
   "screenReview": "PASS",
@@ -488,5 +488,8 @@
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "createdAt": "2026-10-25T12:54:11.250Z",
   "cdnVerifiedAt": "2026-10-25T13:14:54.387Z",
-  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED"
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "publishedVerifiedAt": "2026-10-25T14:49:19.361258+00:00",
+  "sourceRevision": "6c04483a40695410d96003a7ecf800b5ca8f105c",
+  "liveEvidence": "reports/cornucopia-live/chromium/report.json"
 }

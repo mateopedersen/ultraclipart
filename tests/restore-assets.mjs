@@ -179,3 +179,38 @@ test('a public-directory symlink cannot write outside the workspace', async () =
     rmSync(outside, { recursive: true, force: true });
   }
 });
+
+test('bounded parallel restoration checks every byte, honors its ceiling and rejects unsafe fan-out before network', async () => {
+  const f = fixture();
+  f.bodies.clear();
+  f.catalog = Array.from({ length: 12 }, (_, i) => artwork(`parallel-${i}`, f.bodies));
+  f.manifest = manifestFor(f.catalog);
+  let active = 0,
+    peak = 0,
+    requests = 0;
+  const fetcher = async (url) => {
+    active++;
+    peak = Math.max(peak, active);
+    requests++;
+    const file = f.manifest.files.find((entry) => entry.url === url);
+    await new Promise((resolve) => setTimeout(resolve, 2));
+    active--;
+    return new Response(f.bodies.get(file.path), { headers: { 'Content-Type': file.contentType } });
+  };
+  try {
+    for (const concurrency of [0, 17, 1.5, NaN])
+      await assert.rejects(restoreAssets({ ...f, fetcher, concurrency }), /concurrency/);
+    assert.equal(requests, 0);
+    const result = await restoreAssets({ ...f, fetcher, concurrency: 16 });
+    assert.deepEqual(result, { restored: 48, retained: 0 });
+    assert.equal(requests, 48);
+    assert.equal(peak, 16);
+    for (const [path, body] of f.bodies)
+      assert.deepEqual(readFileSync(join(f.root, 'public', path)), body);
+    const reused = await restoreAssets({ ...f, fetcher, concurrency: 16 });
+    assert.deepEqual(reused, { restored: 0, retained: 48 });
+    assert.equal(requests, 48);
+  } finally {
+    rmSync(f.root, { recursive: true, force: true });
+  }
+});
