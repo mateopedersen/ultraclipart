@@ -53,11 +53,20 @@ import type { Typography } from './smart/types';
 import type { StudioElement } from './elements';
 import { repeatSelection } from './repeat';
 import { studioScenes } from '../lib/studio-scenes';
+import { studioTemplates } from '../lib/studio-templates';
+import { mountColorFields } from './color-fields';
+import { mountInspector } from './inspector';
+import { textStyles, typographyDefaults } from './text-styles';
+import { mountTextStyles } from './text-style-library';
+import { fitNewText } from './smart/typography';
 
 type Bounds = { x: number; y: number; width: number; height: number };
 function init(root: HTMLElement) {
   const q = <T extends HTMLElement = HTMLElement>(s: string) => root.querySelector<T>(s)!;
   const qa = <T extends HTMLElement = HTMLElement>(s: string) => [...root.querySelectorAll<T>(s)];
+  const colorFields = mountColorFields(root);
+  const inspector = mountInspector(root);
+  mountTextStyles(root);
   const stage = q('.uc-stage'),
     canvas = q('.uc-canvas'),
     dialog = q<HTMLDialogElement>('[data-export-dialog]');
@@ -379,6 +388,10 @@ function init(root: HTMLElement) {
     }
     smart?.render();
     const l = currentLayer();
+    const background = doc().background;
+    if (isColor(background)) q<HTMLInputElement>('[data-bg-color]').value = background;
+    for (const button of qa<HTMLButtonElement>('[data-bg]'))
+      button.setAttribute('aria-pressed', String(button.dataset.bg === background));
     q('[data-selection]').textContent =
       selected.length > 1
         ? `${selected.length} linked or selected layers`
@@ -472,6 +485,8 @@ function init(root: HTMLElement) {
       writeTypography(l.typography);
       q<HTMLButtonElement>('[data-action=text]').textContent = 'Update selected text';
     } else q<HTMLButtonElement>('[data-action=text]').textContent = 'Add text to canvas';
+    colorFields.sync();
+    inspector.sync();
   }
   function select(id: string, add = false) {
     const layer = doc().layers.find((l) => l.id === id);
@@ -490,6 +505,7 @@ function init(root: HTMLElement) {
     render();
   }
   function panel(name: string) {
+    inspector.select(name);
     if (name === 'elements' && compositionTools && !artworkReady) {
       artworkReady = import('./artwork-library')
         .then((m) =>
@@ -525,18 +541,18 @@ function init(root: HTMLElement) {
     );
     q('[data-panel-title]').textContent = (
       {
-        region: 'Select & recolor a region',
+        region: 'Select & Recolor',
         studio: 'Studio Pro',
-        create: 'Build & draw',
-        elements: 'The element library',
-        canvas: 'Your canvas',
-        transform: 'Edit clipart',
-        color: 'Recolor elements',
+        create: 'Shapes & Drawing',
+        elements: 'Artwork & Vectors',
+        canvas: 'Canvas Size',
+        transform: 'Size & Position',
+        color: 'Element Colors',
         background: 'Background',
-        print: 'Black & white / print',
-        crop: 'Crop artwork',
-        layers: 'Artwork layers',
-        text: 'Text studio',
+        print: 'Print Settings',
+        crop: 'Crop Artwork',
+        layers: 'Layers',
+        text: 'Text & Typography',
       } as Record<string, string>
     )[name];
     smart?.onPanel(name);
@@ -560,18 +576,7 @@ function init(root: HTMLElement) {
     selected = [layerId];
     render();
   }
-  const typeDefaults: Typography = {
-    font: 'sans',
-    layout: 'straight',
-    radius: 150,
-    spacing: 0,
-    lineHeight: 1.2,
-    stroke: '#ffffff',
-    strokeWidth: 0,
-    shadow: false,
-    italic: false,
-    decoration: 'none',
-  };
+  const typeDefaults = typographyDefaults;
   const typeFields: Record<string, keyof Typography> = {
     font: 'font',
     layout: 'layout',
@@ -609,61 +614,23 @@ function init(root: HTMLElement) {
     return t;
   }
   function textPreset(name: string) {
-    const styles: Record<
-      string,
-      { text: string; size: number; bold: boolean; color: string; type: Partial<Typography> }
-    > = {
-      headline: {
-        text: 'MAKE IT YOURS',
-        size: 66,
-        bold: true,
-        color: '#17274f',
-        type: { spacing: 1 },
-      },
-      editorial: {
-        text: 'Something lovely',
-        size: 58,
-        bold: false,
-        color: '#9b4774',
-        type: { font: 'serif', italic: true },
-      },
-      badge: {
-        text: 'GOOD VIBES ONLY',
-        size: 36,
-        bold: true,
-        color: '#216bcb',
-        type: { layout: 'arc', spacing: 3, radius: 160 },
-      },
-      outline: {
-        text: 'HELLO',
-        size: 80,
-        bold: true,
-        color: '#f37baa',
-        type: { stroke: '#17274f', strokeWidth: 2, spacing: 2 },
-      },
-      typewriter: {
-        text: 'Once upon a time...',
-        size: 36,
-        bold: false,
-        color: '#354e6f',
-        type: { font: 'mono', lineHeight: 1.5 },
-      },
-      label: {
-        text: 'Made for you',
-        size: 40,
-        bold: true,
-        color: '#ffffff',
-        type: { stroke: '#216bcb', strokeWidth: 6, shadow: true },
-      },
-    };
-    const preset = styles[name];
+    const preset = textStyles.find((style) => style.id === name);
     if (!preset) return;
+    root.dataset.textStyle = name;
     if (!q<HTMLTextAreaElement>('[data-text]').value.trim())
       q<HTMLTextAreaElement>('[data-text]').value = preset.text;
     q<HTMLInputElement>('[data-text-size]').value = String(preset.size);
     q<HTMLInputElement>('[data-text-bold]').checked = preset.bold;
     q<HTMLInputElement>('[data-text-color]').value = preset.color;
-    writeTypography({ ...typeDefaults, ...preset.type });
+    writeTypography(preset.type);
+    q<HTMLSelectElement>('[data-text-align]').value = 'middle';
+    for (const button of qa<HTMLButtonElement>('[data-text-preset]'))
+      button.setAttribute('aria-pressed', String(button.dataset.textPreset === name));
+    colorFields.sync();
+    q('[data-text-chosen-style]').textContent = preset.name;
+    q<HTMLDetailsElement>('[data-text-style-picker]').open = false;
+    q<HTMLButtonElement>('[data-action=text]').focus({ preventScroll: true });
+    q('[data-action=text]').scrollIntoView({ block: 'nearest', behavior: 'instant' });
     status('Text style selected. Apply it to the selected text or add a new text layer.');
   }
   function arrange(action: string) {
@@ -746,6 +713,10 @@ function init(root: HTMLElement) {
     if (l.opacity !== 1)
       return status('Set the element opacity to 100% before separating overlapping parts.');
     const svg = sanitizeSvg(`<svg xmlns="${NS}" viewBox="0 0 256 256">${l.markup}</svg>`);
+    const serializer = new XMLSerializer();
+    const notices = [...svg.querySelectorAll('desc')]
+      .map((node) => serializer.serializeToString(node))
+      .join('');
     const primitives = [...svg.querySelectorAll('path,rect,circle,ellipse,line,polygon,polyline')];
     if (primitives.length < 2) return status('This vector already contains a single part.');
     const ids: string[] = [];
@@ -762,7 +733,7 @@ function init(root: HTMLElement) {
         ...clone(l),
         id: `part-${crypto.randomUUID()}`,
         label: `${l.label.slice(0, 60)} · ${i + 1}`,
-        markup: new XMLSerializer().serializeToString(branch),
+        markup: notices + serializer.serializeToString(branch),
       };
       delete part.group;
       ids.push(part.id);
@@ -1371,18 +1342,21 @@ function init(root: HTMLElement) {
       else {
         const newId = `text-${crypto.randomUUID()}`;
         modify((d) => {
-          d.layers.push({
-            kind: 'text',
-            id: newId,
-            label: 'Caption',
-            visible: true,
-            locked: false,
-            opacity: 1,
-            ...identity(),
-            x: (d.crop?.x || 0) + 24,
-            y: (d.crop?.y || 0) + (d.crop?.height || d.height) - 24,
-            ...textProps,
-          });
+          d.layers.push(
+            fitNewText(
+              {
+                kind: 'text',
+                id: newId,
+                label: 'Caption',
+                visible: true,
+                locked: false,
+                opacity: 1,
+                ...identity(),
+                ...textProps,
+              },
+              d.crop || { x: 0, y: 0, width: d.width, height: d.height },
+            ),
+          );
         });
         selected = [newId];
         render();
@@ -1533,6 +1507,7 @@ function init(root: HTMLElement) {
     load: () => q<HTMLInputElement>('[data-load]').click(),
     share: shareArtwork,
     export: exportOpen,
+    'export-inspector': exportOpen,
     'close-export': () => dialog.close(),
     download: saveExport,
   };
@@ -2186,6 +2161,51 @@ function init(root: HTMLElement) {
       await importAiTransfer();
       root.removeAttribute('aria-busy');
       qa('[inert]').forEach((el) => el.removeAttribute('inert'));
+      if (creator) {
+        const editorTool = workspaceParams.get('editor-tool'),
+          starter = studioTemplates.find((item) => item.id === workspaceParams.get('starter')),
+          scene = studioScenes.find((item) => item.id === workspaceParams.get('scene-view'));
+        if (
+          editorTool &&
+          qa<HTMLButtonElement>('.uc-tools [data-panel]').some(
+            (button) => button.dataset.panel === editorTool,
+          )
+        )
+          panel(editorTool);
+        const sourceButton = starter
+          ? document.querySelector<HTMLButtonElement>(`[data-creator-template="${starter.id}"]`)
+          : scene
+            ? document.querySelector<HTMLButtonElement>(`[data-studio-scene="${scene.id}"]`)
+            : null;
+        if (sourceButton) {
+          const disclosure = sourceButton.closest('details');
+          if (disclosure) disclosure.open = true;
+          sourceButton.focus({ preventScroll: true });
+          sourceButton.scrollIntoView({ block: 'center' });
+        }
+        const vector = workspaceParams.get('vector'),
+          style = workspaceParams.get('text-style'),
+          tool = workspaceParams.get('studio-tool');
+        if (vector && /^[a-z0-9-]{1,100}$/.test(vector)) {
+          panel('elements');
+          await libraryReady;
+          q<HTMLButtonElement>('[data-library-kind="vector"]').click();
+          q('[data-element-search]').scrollIntoView({ block: 'nearest' });
+        } else if (style && textStyles.some((preset) => preset.id === style)) {
+          panel('text');
+          textPreset(style);
+        } else if (
+          tool &&
+          [...q<HTMLSelectElement>('[data-studio-tool]').options].some(
+            (option) => option.value === tool,
+          )
+        ) {
+          panel('studio');
+          const picker = q<HTMLSelectElement>('[data-studio-tool]');
+          picker.value = tool;
+          picker.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }
     } catch (error) {
       status(error instanceof Error ? error.message : 'The artwork could not be opened.', true);
       qa<HTMLButtonElement>('button').forEach((b) => (b.disabled = true));

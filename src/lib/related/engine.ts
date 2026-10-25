@@ -1,7 +1,8 @@
+import { artworkCardSummary, CARD_SUMMARY_VERSION } from './summaries';
 import { normalize, safeAsset, type ArtworkInput, type Profile } from './normalize';
 import { companionSubjects, REGISTERED_TOPICS, TAXONOMY_VERSION } from './taxonomy';
 import { CLASSIFIER_VERSION } from './normalize';
-export const ALGORITHM_VERSION = 'uc-related-2';
+export const ALGORITHM_VERSION = 'uc-related-4';
 export const CANDIDATE_LIMIT = 240;
 export const BUCKET_LIMIT = 96;
 export const ALTERNATIVE_LIMIT = 56;
@@ -104,20 +105,7 @@ function keys(profile: Profile) {
 function card(result: Ranked, group: RelatedCard['group']): RelatedCard {
   const p = result.profile,
     item = p.item;
-  const reason =
-    group === 'collection'
-      ? 'From the same collection'
-      : group === 'companions'
-        ? result.reasons.includes('same_technique')
-          ? 'Matching technique & composition'
-          : 'Compatible style & composition'
-        : result.reasons.includes('same_technique')
-          ? 'Same subject & technique'
-          : result.reasons.includes('similar_composition')
-            ? 'Similar composition'
-            : result.reasons.includes('similar_style')
-              ? 'Similar drawing style'
-              : `More ${p.subject!.plural}`;
+  const reason = artworkCardSummary(item);
   return {
     id: item.id,
     title: item.title,
@@ -149,7 +137,7 @@ export class RelatedIndex {
       this.upsert(item);
   }
   get version() {
-    return `${ALGORITHM_VERSION}-${TAXONOMY_VERSION}-${CLASSIFIER_VERSION}-${this.digest.toString(16)}`;
+    return `${ALGORITHM_VERSION}-${CARD_SUMMARY_VERSION}-${TAXONOMY_VERSION}-${CLASSIFIER_VERSION}-${this.digest.toString(16)}`;
   }
   /** Idempotent revision gate also rejects a delayed classifier result after deletion. */
   upsert(item: ArtworkInput, expectedRevision = item.revision): boolean {
@@ -329,11 +317,14 @@ export class RelatedIndex {
       collectionRanked,
       SNAPSHOT_LIMIT - selected.length - chosenCompanions.length,
     );
+    const alternativesCards = selected.map((r) => card(r, 'alternatives'));
+    const companionCards = chosenCompanions.map((r) => card(r, 'companions'));
+    const collectionCards = collection.map((r) => card(r, 'collection'));
     return {
       ...empty,
-      alternatives: selected.map((r) => card(r, 'alternatives')),
-      companions: chosenCompanions.map((r) => card(r, 'companions')),
-      collection: collection.map((r) => card(r, 'collection')),
+      alternatives: alternativesCards,
+      companions: companionCards,
+      collection: collectionCards,
       examined: new Set([...candidates, ...collectionCandidates]).size,
     };
   }

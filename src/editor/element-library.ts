@@ -8,11 +8,14 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
   const list = pane.querySelector<HTMLElement>('[data-element-grid]')!;
   const count = pane.querySelector<HTMLElement>('[data-element-count]')!;
   const more = pane.querySelector<HTMLButtonElement>('[data-element-more]')!;
+  const previous = pane.querySelector<HTMLButtonElement>('[data-element-previous]')!;
+  const position = pane.querySelector<HTMLElement>('[data-element-page]')!;
+  const sort = pane.querySelector<HTMLSelectElement>('[data-element-sort]')!;
   const favoriteFilter = pane.querySelector<HTMLButtonElement>('[data-element-favorites]')!;
   const key = 'ultraclipart:element-favorites:v1';
   let favorites = new Set<string>(),
     onlyFavorites = false,
-    limit = 24;
+    page = 1;
   try {
     const saved = JSON.parse(localStorage.getItem(key) || '[]');
     if (Array.isArray(saved))
@@ -24,26 +27,48 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
     option.textContent = name;
     category.append(option);
   }
+  const fromSearch =
+    root.dataset.creator === 'true'
+      ? studioElements.find(
+          (element) => element.id === new URLSearchParams(location.search).get('vector'),
+        )
+      : undefined;
+  if (fromSearch) search.value = fromSearch.name;
   function render() {
     const words = search.value.toLowerCase().trim().split(/\s+/);
-    const featured = [...studioElements].sort(
-      (a, b) => Number(b.tags.includes('illustration')) - Number(a.tags.includes('illustration')),
-    );
+    const originals = studioElements
+      .filter((e) => !e.id.startsWith('tabler-'))
+      .sort(
+        (a, b) => Number(b.tags.includes('illustration')) - Number(a.tags.includes('illustration')),
+      );
+    const icons = studioElements.filter((e) => e.id.startsWith('tabler-'));
+    const featured = Array.from({ length: Math.max(originals.length, icons.length) }, (_, i) => [
+      originals[i],
+      icons[i],
+    ])
+      .flat()
+      .filter(Boolean) as StudioElement[];
     const matched = featured.filter(
       (e) =>
         (!category.value || e.category === category.value) &&
         (!onlyFavorites || favorites.has(e.id)) &&
         words.every((w) => `${e.name} ${e.category} ${e.tags}`.toLowerCase().includes(w)),
     );
+    if (sort.value === 'title') matched.sort((a, b) => a.name.localeCompare(b.name, 'en'));
+    if (fromSearch)
+      matched.sort((a, b) => Number(b.id === fromSearch.id) - Number(a.id === fromSearch.id));
+    const pages = Math.max(1, Math.ceil(matched.length / 24));
+    page = Math.min(page, pages);
     list.replaceChildren();
-    for (const element of matched.slice(0, limit)) {
+    for (const element of matched.slice((page - 1) * 24, page * 24)) {
       const card = document.createElement('div');
       card.className = 'uc-element-card';
+      if (element.id === fromSearch?.id) card.dataset.searchTarget = 'true';
       const button = document.createElement('button');
       button.type = 'button';
       button.dataset.element = element.id;
       button.setAttribute('aria-label', `Add ${element.name}`);
-      // Markup comes exclusively from the bundled, tested original element catalogue.
+      // Markup comes exclusively from the bundled, reviewed element catalogue.
       button.innerHTML = `<span class="uc-element-preview"><svg viewBox="0 0 256 256" width="104" height="104" aria-hidden="true">${element.markup}</svg></span>`;
       const name = document.createElement('span');
       name.textContent = element.name;
@@ -53,6 +78,7 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
       const favorite = document.createElement('button');
       favorite.type = 'button';
       favorite.className = 'uc-element-favorite';
+      favorite.dataset.elementFavorite = element.id;
       favorite.setAttribute('aria-label', `Favorite ${element.name}`);
       favorite.setAttribute('aria-pressed', String(favorites.has(element.id)));
       favorite.innerHTML =
@@ -64,25 +90,47 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
           localStorage.setItem(key, JSON.stringify([...favorites]));
         } catch {}
         render();
+        pane
+          .querySelector<HTMLButtonElement>(`[data-element-favorite="${element.id}"]`)
+          ?.focus({ preventScroll: true });
       });
       card.append(button, favorite);
       list.append(card);
     }
     count.textContent = matched.length
-      ? `${Math.min(limit, matched.length)} of ${matched.length} elements`
+      ? `${(page - 1) * 24 + 1}–${Math.min(page * 24, matched.length)} of ${matched.length.toLocaleString('en-US')} elements`
       : 'No matching elements. Try another word or collection.';
-    more.hidden = limit >= matched.length;
+    more.hidden = false;
+    more.disabled = page >= pages;
+    previous.disabled = page <= 1;
+    position.textContent = `${page} / ${pages}`;
     favoriteFilter.setAttribute('aria-pressed', String(onlyFavorites));
   }
   const reset = () => {
-    limit = 24;
+    page = 1;
     render();
   };
   search.addEventListener('input', reset);
   category.addEventListener('change', reset);
   more.addEventListener('click', () => {
-    limit += 24;
+    page++;
     render();
+    list.scrollIntoView({ block: 'start', behavior: 'instant' });
+  });
+  previous.addEventListener('click', () => {
+    if (page > 1) {
+      page--;
+      render();
+      list.scrollIntoView({ block: 'start', behavior: 'instant' });
+    }
+  });
+  sort.addEventListener('change', reset);
+  pane.querySelector('[data-element-clear]')!.addEventListener('click', () => {
+    search.value = '';
+    category.value = '';
+    sort.value = 'featured';
+    onlyFavorites = false;
+    reset();
   });
   favoriteFilter.addEventListener('click', () => {
     onlyFavorites = !onlyFavorites;

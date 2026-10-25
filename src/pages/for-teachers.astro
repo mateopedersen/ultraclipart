@@ -1,0 +1,716 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CatalogCount from '../components/CatalogCount.astro';
+import TeacherSymbol from '../components/TeacherSymbol.astro';
+import TeacherText from '../components/TeacherText.astro';
+import TeacherArrow from '../components/TeacherArrow.astro';
+import AnnotatedScreen from '../components/AnnotatedScreen.astro';
+import {
+  teacherPictures as pictures,
+  teacherPaths,
+  teacherCollections,
+  teacherScreens,
+} from '../lib/teacher-resources';
+import { structuredData, breadcrumbs } from '../lib/structured-data';
+import '../styles/for-teachers.css';
+const heroPictures = [pictures.globe, pictures.reading, pictures.geometry];
+const checklist = [
+  'The task and instructions are clear.',
+  'The pictures help explain or complete the task.',
+  'Text is readable at the size students will use.',
+  'The layout leaves enough space to respond.',
+  'The finished file and editable source are saved.',
+];
+---
+
+<Layout
+  title="Clipart for Teachers · Worksheets, Slides & Classroom Materials"
+  description="Prepare worksheets, teaching slides, classroom labels and visual instructions with UltraClipart. Find real artwork, practical steps, editing guides and a classroom preparation checklist."
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={structuredData(
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'For teachers', path: '/for-teachers/' },
+      ]),
+    )}
+  />
+  <div class="teachers-page">
+    <header class="tc-hero">
+      <div class="tc-hero-copy">
+        <p class="tc-breadcrumb">
+          <a href="/">UltraClipart</a>
+          <span aria-hidden="true">/</span> For teachers
+        </p>
+        <p class="tc-free-tag">
+          <strong>Free for teachers</strong>
+          <span>No account needed</span>
+        </p>
+        <h1>Clipart for your classroom</h1>
+        <p class="tc-intro">
+          Find pictures for your lessons and turn them into worksheets, presentations, labels, and
+          visual instructions.
+        </p>
+        <p class="tc-hero-description">Choose a material below for the steps and tools you need.</p>
+        <div class="tc-actions">
+          <a class="tc-button tc-button-primary" href="#teacher-materials">
+            Choose a task <TeacherArrow light size={31} />
+          </a>
+          <a class="tc-text-link" href="#teacher-library">
+            Browse artwork <TeacherArrow size={28} />
+          </a>
+        </div>
+        <p class="tc-license-note">
+          Free for personal and educational use. <a href="/license/">View the license</a>
+        </p>
+      </div>
+      <figure class="tc-library-desk">
+        <figcaption>
+          <TeacherSymbol kind="book" size={41} />
+          <span>
+            <strong>Examples from the library</strong>
+            <small>Open an illustration to explore it</small>
+          </span>
+        </figcaption>
+        <div class="tc-desk-art">
+          {heroPictures.map((item, index) => (
+            <a
+              class:list={['tc-desk-item', { 'tc-desk-feature': index === 0 }]}
+              href={`/art/${item.id}/`}
+            >
+              <img
+                src={item.thumb}
+                alt={item.alt}
+                width={item.width}
+                height={item.height}
+                fetchpriority={index === 0 ? 'high' : 'auto'}
+                decoding="async"
+              />
+              <span>
+                {item.label}
+                <TeacherArrow size={25} />
+              </span>
+            </a>
+          ))}
+        </div>
+        <p>Explore geography, reading, technology and other subjects for your teaching.</p>
+      </figure>
+    </header>
+
+    <nav class="tc-jump-links" aria-label="On this teacher page">
+      <a href="#teacher-materials">
+        <TeacherSymbol kind="steps" size={84} />
+        <span>
+          <strong>Teaching ideas</strong>
+          <small>Worksheets, slides, and labels</small>
+        </span>
+      </a>
+      <a href="#teacher-library">
+        <TeacherSymbol kind="book" size={84} />
+        <span>
+          <strong>Artwork library</strong>
+          <small>Browse by subject</small>
+        </span>
+      </a>
+      <a href="#teacher-walkthrough">
+        <TeacherSymbol kind="edit" size={84} />
+        <span>
+          <strong>How to use it</strong>
+          <small>Real interface examples</small>
+        </span>
+      </a>
+      <a href="#teacher-preparation">
+        <TeacherSymbol kind="print" size={84} />
+        <span>
+          <strong>Print and save</strong>
+          <small>Check and save your material</small>
+        </span>
+      </a>
+    </nav>
+
+    <section class="tc-free" aria-labelledby="teacher-free-title">
+      <TeacherSymbol kind="files" size={104} />
+      <div>
+        <h2 id="teacher-free-title">Free for teachers</h2>
+        <p>
+          Artwork downloads, the studio, Favorites boards, and the print size calculator are
+          <strong>free for personal and educational use.</strong> No account needed.
+        </p>
+        <p class="tc-free-license">
+          See the <a href="/license/">personal and educational license</a>.
+        </p>
+      </div>
+      <a class="tc-button tc-button-primary" href="/categories/">
+        Explore free artwork
+        <TeacherArrow light size={29} />
+      </a>
+    </section>
+
+    <section class="tc-start" aria-labelledby="teacher-start-title">
+      <div class="tc-section-heading">
+        <div>
+          <h2 id="teacher-start-title">How to use UltraClipart for teaching</h2>
+          <p>
+            Bring an illustration into the material you already use, or build the layout in the
+            studio.
+          </p>
+        </div>
+      </div>
+      <ol class="tc-start-flow">
+        <li>
+          <TeacherSymbol kind="book" size={108} />
+          <div>
+            <h3>
+              <span>1</span> Find artwork
+            </h3>
+            <p>
+              Browse a subject, open an artwork page and check the image, background and file
+              details.
+            </p>
+            <a href="/categories/">
+              Browse the library
+              <TeacherArrow size={24} />
+            </a>
+          </div>
+        </li>
+        <li>
+          <TeacherSymbol kind="edit" size={108} />
+          <div>
+            <h3>
+              <span>2</span> Adapt the layout
+            </h3>
+            <p>
+              Add instructions in your document or presentation, or use the studio for text, shapes
+              and layout.
+            </p>
+            <a href="/create/">
+              Open the free studio
+              <TeacherArrow size={24} />
+            </a>
+          </div>
+        </li>
+        <li>
+          <TeacherSymbol kind="download" size={108} />
+          <div>
+            <h3>
+              <span>3</span> Download your file
+            </h3>
+            <p>
+              Download an image for a compatible app or a PDF for printing. Check the finished file
+              before using it in class.
+            </p>
+            <a href="/guides/#guide-download">
+              Follow the download steps
+              <TeacherArrow size={24} />
+            </a>
+          </div>
+        </li>
+        <li>
+          <TeacherSymbol kind="boards" size={108} />
+          <div>
+            <h3>
+              <span>4</span> Save for next time
+            </h3>
+            <p>
+              Collect artwork in named boards. Save the editable project and a board backup for
+              later.
+            </p>
+            <a href="/favorites/">
+              Open free Favorites boards
+              <TeacherArrow size={24} />
+            </a>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="tc-materials" id="teacher-materials" aria-labelledby="teacher-materials-title">
+      <div class="tc-section-heading">
+        <div>
+          <h2 id="teacher-materials-title">What are you preparing?</h2>
+          <p>
+            Choose a task for practical steps, artwork suggestions and ways to adapt the material.
+          </p>
+        </div>
+      </div>
+      <nav class="tc-task-tabs" data-teacher-tasks aria-label="Types of teaching material">
+        {teacherPaths.map((path) => (
+          <a id={`teacher-task-${path.id}`} href={`#teacher-plan-${path.id}`} data-teacher-task>
+            <TeacherSymbol kind={path.icon} size={78} />
+            <span>{path.label}</span>
+          </a>
+        ))}
+      </nav>
+      <div class="tc-plans">
+        {teacherPaths.map((path) => (
+          <article
+            class="tc-plan"
+            id={`teacher-plan-${path.id}`}
+            data-teacher-plan
+            aria-labelledby={`teacher-plan-title-${path.id}`}
+          >
+            <header class="tc-plan-heading">
+              <div>
+                <h3 id={`teacher-plan-title-${path.id}`}>{path.title}</h3>
+                <p class="tc-plan-intro">
+                  <TeacherText text={path.intro} />
+                </p>
+              </div>
+              <button class="tc-copy-plan" type="button" data-copy-plan hidden>
+                <span>Copy these steps</span>
+                <TeacherArrow light size={26} />
+              </button>
+            </header>
+            <div class="tc-plan-layout">
+              <div class="tc-plan-method">
+                <ol class="tc-steps">
+                  {path.steps.map((step, index) => (
+                    <li>
+                      <span class="tc-step-number" aria-hidden="true">
+                        {index + 1}
+                      </span>
+                      <div>
+                        <h4>{step.title}</h4>
+                        <p>
+                          <TeacherText text={step.text} />
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+                <div class="tc-adapt">
+                  <strong>Adapt for your class</strong>
+                  <p>
+                    <TeacherText text={path.adapt} />
+                  </p>
+                </div>
+              </div>
+              <aside class="tc-plan-resources" aria-label={`${path.label} resources`}>
+                <h4>Artwork to explore</h4>
+                <div class="tc-plan-pictures">
+                  {path.pictures.map((item) => (
+                    <a href={`/art/${item.id}/`}>
+                      <img
+                        src={item.thumb}
+                        alt={item.alt}
+                        width={item.width}
+                        height={item.height}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <span>{item.label}</span>
+                    </a>
+                  ))}
+                </div>
+                <p class="tc-output">
+                  <strong>Finished material</strong>
+                  <span>
+                    <TeacherText text={path.output} />
+                  </span>
+                </p>
+                <a class="tc-button tc-button-primary" href={path.action.href}>
+                  {path.action.label}
+                  <TeacherArrow light size={28} />
+                </a>
+                <a class="tc-text-link" href={path.guide.href}>
+                  {path.guide.label}
+                  <TeacherArrow size={26} />
+                </a>
+                <p class="tc-final-check">
+                  <strong>Before using it</strong>
+                  <TeacherText text={path.check} />
+                </p>
+              </aside>
+            </div>
+            <div class="tc-copy-fallback" data-copy-fallback hidden>
+              <label for={`teacher-copy-text-${path.id}`}>
+                Your browser could not copy automatically. Select and copy the steps below.
+              </label>
+              <textarea id={`teacher-copy-text-${path.id}`} rows="8" readonly></textarea>
+            </div>
+            <p class="tc-copy-status" data-copy-status role="status" aria-live="polite"></p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="tc-examples" aria-labelledby="teacher-examples-title">
+      <div class="tc-section-heading">
+        <div>
+          <h2 id="teacher-examples-title">Classroom examples</h2>
+          <p>
+            Three layout ideas using real catalog artwork. Open the illustration to build your own
+            version.
+          </p>
+        </div>
+      </div>
+      <div class="tc-example-grid">
+        <article>
+          <div class="tc-example-stage tc-example-stage-paper">
+            <div class="tc-paper-example">
+              <span class="tc-paper-subject">Geography · observation</span>
+              <strong>What do you notice?</strong>
+              <div class="tc-observe-row">
+                <img
+                  src={pictures.earth.thumb}
+                  alt={pictures.earth.alt}
+                  width={pictures.earth.width}
+                  height={pictures.earth.height}
+                  loading="lazy"
+                />
+                <p>
+                  Name two things you can see.<span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </p>
+              </div>
+              <small>Name: __________________</small>
+            </div>
+          </div>
+          <div class="tc-example-copy">
+            <h3>Worksheet</h3>
+            <p>
+              Pair an image with a specific question and leave a useful response area. Add a word
+              bank when students need one.
+            </p>
+            <a class="tc-text-link" href={`/edit/${pictures.earth.id}/`}>
+              Use the Earth illustration
+              <TeacherArrow size={27} />
+            </a>
+          </div>
+        </article>
+        <article>
+          <div class="tc-example-stage tc-example-stage-label">
+            <div class="tc-label-example">
+              <img
+                src={pictures.reading.thumb}
+                alt={pictures.reading.alt}
+                width={pictures.reading.width}
+                height={pictures.reading.height}
+                loading="lazy"
+              />
+              <strong>Reading corner</strong>
+              <span>Choose a book. Find a place to read.</span>
+            </div>
+          </div>
+          <div class="tc-example-copy">
+            <h3>Classroom label</h3>
+            <p>
+              Use a familiar picture, a short title and consistent spacing. Check that the words are
+              readable where the label will go.
+            </p>
+            <a class="tc-text-link" href="/guides/make-a-classroom-label/">
+              Make a label step by step
+              <TeacherArrow size={27} />
+            </a>
+          </div>
+        </article>
+        <article>
+          <div class="tc-example-stage tc-example-stage-slide">
+            <div class="tc-slide-example">
+              <div>
+                <span>Music · discussion</span>
+                <strong>Describe the sound</strong>
+                <p>What words would you use?</p>
+              </div>
+              <img
+                src={pictures.trumpet.thumb}
+                alt={pictures.trumpet.alt}
+                width={pictures.trumpet.width}
+                height={pictures.trumpet.height}
+                loading="lazy"
+              />
+            </div>
+            <div class="tc-slide-stand" aria-hidden="true"></div>
+          </div>
+          <div class="tc-example-copy">
+            <h3>Teaching slide</h3>
+            <p>
+              Give the image and prompt enough room. Keep your written explanation in the
+              presentation so you can adapt it later.
+            </p>
+            <a class="tc-text-link" href={`/art/${pictures.trumpet.id}/`}>
+              Open the trumpet artwork
+              <TeacherArrow size={27} />
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="teacher-library" class="tc-library" aria-labelledby="teacher-library-title">
+      <div class="tc-section-heading">
+        <div>
+          <h2 id="teacher-library-title">Find artwork for your subject</h2>
+          <p>
+            These are starting points. Browse the full library for the topic and style your lesson
+            needs.
+          </p>
+        </div>
+        <a class="tc-text-link" href="/categories/">
+          All subjects
+          <TeacherArrow size={28} />
+        </a>
+      </div>
+      <div class="tc-collection-grid">
+        {teacherCollections.map((collection) => (
+          <a class="tc-collection" href={`/clipart/${collection.topic}/`}>
+            <div class="tc-collection-picture">
+              <img
+                src={collection.picture.thumb}
+                alt=""
+                width={collection.picture.width}
+                height={collection.picture.height}
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div>
+              <h3>{collection.label}</h3>
+              <p>{collection.use}</p>
+              <span>
+                <CatalogCount kind="topic" countKey={collection.topic} unit="illustration" />{' '}
+                <TeacherArrow size={26} />
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+      <div class="tc-outline-link">
+        <TeacherSymbol kind="botanical" size={88} />
+        <div>
+          <h3>Need an outline for an activity?</h3>
+          <p>
+            Browse Black & White, or follow the coloring guide for the editable Botanical sprig
+            starter.
+          </p>
+        </div>
+        <a class="tc-button" href="/black-and-white/">
+          Browse Black & White
+          <TeacherArrow size={27} />
+        </a>
+      </div>
+    </section>
+
+    <section
+      id="teacher-walkthrough"
+      class="tc-walkthrough"
+      aria-labelledby="teacher-walkthrough-title"
+    >
+      <div class="tc-section-heading">
+        <div>
+          <h2 id="teacher-walkthrough-title">See where to click</h2>
+          <p>Select a number on the screenshot to see the instructions for that control.</p>
+        </div>
+        <a class="tc-text-link" href="/guides/">
+          All walkthroughs
+          <TeacherArrow size={28} />
+        </a>
+      </div>
+      <AnnotatedScreen screen={teacherScreens[0]} />
+      <details class="tc-board-walkthrough">
+        <summary>
+          <TeacherSymbol kind="boards" size={72} />
+          <span>How to organize a teaching board</span>
+          <span class="tc-plus" aria-hidden="true">
+            +
+          </span>
+        </summary>
+        <AnnotatedScreen screen={teacherScreens[1]} />
+      </details>
+    </section>
+
+    <section
+      id="teacher-preparation"
+      class="tc-preparation"
+      aria-labelledby="teacher-preparation-title"
+    >
+      <div class="tc-section-heading">
+        <div>
+          <h2 id="teacher-preparation-title">Check your material</h2>
+          <p>Check the material at the size and in the format your students will actually use.</p>
+        </div>
+      </div>
+      <div class="tc-preparation-layout">
+        <div class="tc-checklist">
+          <div class="tc-checklist-heading">
+            <TeacherSymbol kind="steps" size={88} />
+            <div>
+              <h3>Preparation checklist</h3>
+              <p data-checklist-progress role="status" aria-live="polite">
+                Five things to check
+              </p>
+            </div>
+          </div>
+          <div class="tc-check-items">
+            {checklist.map((label, index) => (
+              <label>
+                <input type="checkbox" name={`teacher-check-${index}`} data-teacher-check />
+                <span>{label}</span>
+              </label>
+            ))}
+          </div>
+          <p class="tc-field-note">
+            Ticks stay on this page until you refresh. Use Print to keep your selected steps and
+            this checklist.
+          </p>
+          <button class="tc-button" type="button" data-print-teacher-plan hidden>
+            <TeacherSymbol kind="print" size={34} />
+            Print steps and checklist
+          </button>
+          <p class="tc-print-status" data-teacher-print-status role="status" aria-live="polite"></p>
+        </div>
+        <div class="tc-delivery-notes">
+          <article>
+            <TeacherSymbol kind="print" size={88} />
+            <div>
+              <h3>For a printed page</h3>
+              <p>
+                Check pixel dimensions with the print size calculator. For PDF, confirm the page
+                size and print scale in your PDF reader. Print one copy to check margins and small
+                details.
+              </p>
+              <a class="tc-text-link" href="/print-size/">
+                Check print dimensions
+                <TeacherArrow size={26} />
+              </a>
+            </div>
+          </article>
+          <article>
+            <TeacherSymbol kind="slides" size={88} />
+            <div>
+              <h3>For a screen or document</h3>
+              <p>
+                Keep instructions as real text in your document or presentation. Describe meaningful
+                images using your app’s alternative-text feature and explain the task in more than
+                one way.
+              </p>
+              <a class="tc-text-link" href="/guides/webp-pdf-and-editable-projects/">
+                Choose the right file
+                <TeacherArrow size={26} />
+              </a>
+            </div>
+          </article>
+          <article>
+            <TeacherSymbol kind="files" size={88} />
+            <div>
+              <h3>For next term</h3>
+              <p>
+                Choose <strong>Save project</strong> to keep an editable studio file. Export a
+                separate image or PDF for use in class. In Favorites, choose{' '}
+                <strong>Export backup</strong> to keep a separate copy of your boards.
+              </p>
+              <a class="tc-text-link" href="/favorites/">
+                Open your teaching boards
+                <TeacherArrow size={26} />
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+      <details class="tc-source-notes">
+        <summary>
+          Further reading on clear, accessible materials<span aria-hidden="true">+</span>
+        </summary>
+        <div>
+          <p>Guidance on choosing, explaining and adapting images for your students.</p>
+          <ul>
+            <li>
+              <a href="https://udlguidelines.cast.org/representation/">
+                CAST: multiple ways to represent information
+              </a>{' '}
+              — adaptable presentation, vocabulary and explanations.
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/tutorials/images/">
+                W3C WAI: using images accessibly
+              </a>{' '}
+              — meaningful alternatives and the role of images.
+            </li>
+            <li>
+              <a href="https://educationendowmentfoundation.org.uk/education-evidence/evidence-reviews/cognitive-Science-approaches-in-the-classroom">
+                EEF: cognitive science approaches in the classroom
+              </a>{' '}
+              — evidence and context for classroom approaches.
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section class="tc-questions" aria-labelledby="teacher-questions-title">
+      <h2 id="teacher-questions-title">Practical questions</h2>
+      <details>
+        <summary>
+          Can I use the artwork in teaching materials?<span aria-hidden="true">+</span>
+        </summary>
+        <p>
+          <strong>
+            UltraClipart catalog artwork and starters are free for personal and educational use.
+          </strong>{' '}
+          This includes classroom worksheets and student assignments. Commercial use and resale are
+          not permitted. Edited versions keep the same restrictions.{' '}
+          <a href="/license/">Read the full license</a> for the scope of permission.
+        </p>
+      </details>
+      <details>
+        <summary>
+          Which file should I download?<span aria-hidden="true">+</span>
+        </summary>
+        <p>
+          Choose <strong>Download Image</strong> to get a WebP image for a compatible document or
+          presentation app. Choose <strong>Download PDF</strong> for the printable document and
+          check its page size on the artwork page. In the studio, choose{' '}
+          <strong>Save project</strong> to keep an editable version.{' '}
+          <a href="/guides/#guide-download">See the download steps</a>.
+        </p>
+      </details>
+      <details>
+        <summary>
+          Can every detail inside an illustration be edited?<span aria-hidden="true">+</span>
+        </summary>
+        <p>
+          Many catalog illustrations open as one image layer. You can arrange the image and add
+          separate text or shapes, while details painted inside the image remain part of that layer.
+          The studio’s layered starters have separate editable shapes.{' '}
+          <a href="/guides/#guide-edit">See how layers work</a>.
+        </p>
+      </details>
+      <details>
+        <summary>
+          Are boards and projects synchronized between devices?<span aria-hidden="true">+</span>
+        </summary>
+        <p>
+          Favorites and studio recovery are stored in the current browser. Choose{' '}
+          <strong>Export backup</strong>
+          for your boards and <strong>Save project</strong> for your design, then keep the
+          downloaded files. You can restore a board backup or reopen a saved project on another
+          device.
+        </p>
+      </details>
+      <details>
+        <summary>
+          Does an export automatically make an accessible document?<span aria-hidden="true">+</span>
+        </summary>
+        <p>
+          A finished image is flattened. Keep real text, image descriptions and a logical reading
+          order in your source document or presentation. Check PDF accessibility in your authoring
+          app; exporting alone does not establish that a PDF is accessible.
+        </p>
+      </details>
+    </section>
+    <footer class="tc-footer">
+      <p>
+        Need help with a particular step? <a href="/guides/">Open the illustrated guides</a>.
+      </p>
+      <a class="tc-text-link" href="/contact/">
+        Contact UltraClipart
+        <TeacherArrow size={27} />
+      </a>
+    </footer>
+  </div>
+  <script>
+    import '../scripts/for-teachers';
+  </script>
+</Layout>

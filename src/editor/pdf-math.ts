@@ -76,6 +76,82 @@ export function lookupCmyk(hex: string, lut: ColorLut): [number, number, number,
   return out.map((v) => Math.max(0, Math.min(1, v))) as [number, number, number, number];
 }
 export type PathOp = { op: 'm' | 'l' | 'c' | 'h'; c: number[] };
+
+/** SVG endpoint arcs become cubic segments of at most a quarter turn. */
+function arcOperations(
+  fromX: number,
+  fromY: number,
+  toX: number,
+  toY: number,
+  radiusX: number,
+  radiusY: number,
+  rotation: number,
+  largeArc: boolean,
+  sweep: boolean,
+): PathOp[] {
+  if (fromX === toX && fromY === toY) return [];
+  let rx = Math.abs(radiusX),
+    ry = Math.abs(radiusY);
+  if (rx === 0 || ry === 0) return [{ op: 'l', c: [toX, toY] }];
+  const phi = ((rotation % 360) * Math.PI) / 180,
+    cos = Math.cos(phi),
+    sin = Math.sin(phi),
+    dx = (fromX - toX) / 2,
+    dy = (fromY - toY) / 2,
+    px = cos * dx + sin * dy,
+    py = -sin * dx + cos * dy;
+  let extent = (px / rx) ** 2 + (py / ry) ** 2;
+  if (!Number.isFinite(extent) || extent === 0)
+    throw new Error('The artwork contains an invalid elliptical arc.');
+  if (extent > 1) {
+    const correction = Math.sqrt(extent);
+    rx *= correction;
+    ry *= correction;
+    extent = (px / rx) ** 2 + (py / ry) ** 2;
+  }
+  const factor = (largeArc === sweep ? -1 : 1) * Math.sqrt(Math.max(0, (1 - extent) / extent)),
+    centerLocalX = (factor * rx * py) / ry,
+    centerLocalY = (-factor * ry * px) / rx,
+    centerX = cos * centerLocalX - sin * centerLocalY + (fromX + toX) / 2,
+    centerY = sin * centerLocalX + cos * centerLocalY + (fromY + toY) / 2,
+    start = Math.atan2((py - centerLocalY) / ry, (px - centerLocalX) / rx),
+    end = Math.atan2((-py - centerLocalY) / ry, (-px - centerLocalX) / rx);
+  let turn = end - start;
+  if (sweep && turn < 0) turn += 2 * Math.PI;
+  if (!sweep && turn > 0) turn -= 2 * Math.PI;
+  const segments = Math.max(1, Math.ceil(Math.abs(turn) / (Math.PI / 2))),
+    step = turn / segments,
+    tangent = (4 / 3) * Math.tan(step / 4),
+    point = (angle: number): [number, number] => [
+      centerX + cos * rx * Math.cos(angle) - sin * ry * Math.sin(angle),
+      centerY + sin * rx * Math.cos(angle) + cos * ry * Math.sin(angle),
+    ],
+    derivative = (angle: number): [number, number] => [
+      -cos * rx * Math.sin(angle) - sin * ry * Math.cos(angle),
+      -sin * rx * Math.sin(angle) + cos * ry * Math.cos(angle),
+    ];
+  const result: PathOp[] = [];
+  for (let segment = 0; segment < segments; segment++) {
+    const a = start + segment * step,
+      b = a + step,
+      p = point(a),
+      q = segment === segments - 1 ? [toX, toY] : point(b),
+      u = derivative(a),
+      v = derivative(b),
+      coordinates = [
+        p[0] + tangent * u[0],
+        p[1] + tangent * u[1],
+        q[0] - tangent * v[0],
+        q[1] - tangent * v[1],
+        q[0],
+        q[1],
+      ];
+    if (!coordinates.every(Number.isFinite))
+      throw new Error('The artwork contains an invalid elliptical arc.');
+    result.push({ op: 'c', c: coordinates });
+  }
+  return result;
+}
 export function parsePath(d: string): PathOp[] {
   const tokens = d.match(/[a-zA-Z]|[-+]?(?:\d*\.\d+|\d+\.?\d*)(?:e[-+]?\d+)?/gi) || [];
   const ops: PathOp[] = [];
@@ -124,6 +200,19 @@ export function parsePath(d: string): PathOp[] {
     } else if (upper === 'V') {
       y = num() + oy;
       ops.push({ op: 'l', c: [x, y] });
+    } else if (upper === 'A') {
+      const rx = num(),
+        ry = num(),
+        rotation = num(),
+        largeArc = num(),
+        sweep = num(),
+        toX = num() + ox,
+        toY = num() + oy;
+      if (![0, 1].includes(largeArc) || ![0, 1].includes(sweep))
+        throw new Error('The artwork contains an invalid elliptical arc flag.');
+      ops.push(...arcOperations(x, y, toX, toY, rx, ry, rotation, !!largeArc, !!sweep));
+      x = toX;
+      y = toY;
     } else if (upper === 'C') {
       const x1 = num() + ox,
         y1 = num() + oy,

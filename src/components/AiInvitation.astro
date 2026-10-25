@@ -1,5 +1,5 @@
 ---
-import { examples } from '../ai/presets';
+import { invitationExamples as examples } from '../ai/presets';
 import AiBuilderMark from './AiBuilderMark.astro';
 ---
 
@@ -10,28 +10,28 @@ import AiBuilderMark from './AiBuilderMark.astro';
         <AiBuilderMark id="home" size={60} />
       </span>
       <span>AI Clipart Builder</span>
-      <span class="ai-new-label">New</span>
+      <span class="ai-new-label">AI</span>
     </div>
     <h2 id="ai-invitation-title">
-      Imagine it. Describe it.
+      Create an Image
       <br />
-      <span>Create it with AI.</span>
+      <span>From Your Description</span>
     </h2>
     <p class="ai-invitation-description">
-      Turn your description into a new clipart image. Choose the look, explore your result, and make
-      every finishing touch your own in Studio.
+      Describe the subject and choose an illustration style. You can edit the generated image in
+      Clipart Studio afterward.
     </p>
     <form id="home-ai-form" action="/ai-clipart-generator/" method="get">
-      <label for="home-ai-prompt">What would you like to create?</label>
+      <label for="home-ai-prompt">Your Description</label>
       <textarea
         id="home-ai-prompt"
         maxlength="1200"
         rows="3"
-        placeholder="A tiny robot caring for a little green plant…"
+        placeholder="Describe the image you want to create"
         autocomplete="off"
       >{examples[1].prompt}</textarea>
       <div class="ai-invitation-form-bottom">
-        <span>Your words. A new starting point.</span>
+        <span>Choose a style in the builder.</span>
         <button type="submit">
           <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <path d="m14 3 1.9 5.1L21 10l-5.1 1.9L14 17l-1.9-5.1L7 10l5.1-1.9L14 3Z" fill="#FFF" />
@@ -40,7 +40,7 @@ import AiBuilderMark from './AiBuilderMark.astro';
               fill="#A8D3FF"
             />
           </svg>
-          Create with AI
+          Open AI Clipart Builder
           <svg
             width="18"
             height="18"
@@ -56,7 +56,7 @@ import AiBuilderMark from './AiBuilderMark.astro';
       </div>
     </form>
     <div class="ai-invitation-prompts" aria-label="Try an example idea">
-      <span>Need a little spark?</span>
+      <span>Try an Example:</span>
       {examples.slice(0, 3).map((e, i) => (
         <button type="button" data-home-ai-example={i}>
           {'image' in e && <img src={e.image} alt="" width="32" height="32" loading="lazy" />}
@@ -95,13 +95,17 @@ import AiBuilderMark from './AiBuilderMark.astro';
       </span>
     </div>
     <p class="ai-invitation-fine">
-      Review your idea before generating. Results can vary; refine the details in the editor.
+      Use an example to fill in your description, then choose a style in the builder. No account
+      needed. Current availability and daily limits are shown in the builder.
     </p>
+    <a class="ai-restored-ideas" href="/ai-clipart-generator/#ai-idea-library">
+      Browse All Example Ideas
+    </a>
   </div>
-  <div class="ai-invitation-art" aria-label="AI artwork ideas">
+  <div class="ai-invitation-art" aria-label="Example image ideas">
     <div class="ai-invitation-art-orbit" aria-hidden="true"></div>
     <div class="ai-artboard-label">
-      <span></span> YOUR IMAGINATION, TAKING SHAPE
+      <span></span> EXAMPLE IDEAS
     </div>
     <a
       class="ai-example-card ai-example-robot"
@@ -130,16 +134,16 @@ import AiBuilderMark from './AiBuilderMark.astro';
       </p>
       <img
         src="/ai-examples/garden-robot-1024.webp"
-        alt="A detailed silver and orange robot holding a green potted plant"
+        alt="Silver and orange robot holding a potted plant"
         width="640"
         height="640"
         loading="lazy"
         decoding="async"
       />
       <span class="ai-example-card-bottom">
-        Meet your next creation
+        A Gardening Robot
         <span>
-          Try this idea
+          Use This Example
           <svg
             width="14"
             height="14"
@@ -162,13 +166,13 @@ import AiBuilderMark from './AiBuilderMark.astro';
     >
       <img
         src="/ai-examples/baby-rabbit-1024.webp"
-        alt="A soft baby rabbit holding a yellow daisy"
+        alt="Baby rabbit holding a yellow daisy"
         width="320"
         height="320"
         loading="lazy"
         decoding="async"
       />
-      <span>Soft fur. Big personality.</span>
+      <span>A Rabbit With a Daisy</span>
     </a>
     <a
       class="ai-example-card ai-example-floral"
@@ -178,18 +182,18 @@ import AiBuilderMark from './AiBuilderMark.astro';
     >
       <img
         src="/ai-examples/floral-teacup-1024.webp"
-        alt="Pink peonies and white daisies in a pale green teacup"
+        alt="Flowers arranged in a pale green teacup"
         width="320"
         height="320"
         loading="lazy"
         decoding="async"
       />
-      <span>Flowers, with a little magic.</span>
+      <span>Flowers in a Teacup</span>
     </a>
   </div>
 </section>
 <script>
-  import { examples } from '../ai/presets';
+  import { invitationExamples as examples } from '../ai/presets';
   const form = document.querySelector<HTMLFormElement>('#home-ai-form');
   const input = document.querySelector<HTMLTextAreaElement>('#home-ai-prompt');
   let selectedStyle = 'realistic';
@@ -210,7 +214,10 @@ import AiBuilderMark from './AiBuilderMark.astro';
       );
       location.assign('/ai-clipart-generator/');
     } catch {
-      location.assign('/ai-clipart-generator/#idea=' + encodeURIComponent(input.value.trim()));
+      location.assign(
+        '/ai-clipart-generator/#' +
+          new URLSearchParams({ idea: input.value.trim(), style: selectedStyle }),
+      );
     }
   };
   form?.addEventListener('submit', (event) => {

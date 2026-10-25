@@ -1,0 +1,122 @@
+---
+import '../styles/annotated-screens.css';
+import TeacherText from './TeacherText.astro';
+import type { GuideScreen } from '../lib/guide-walkthroughs';
+interface Props {
+  screen: GuideScreen;
+  emphasizeControls?: boolean;
+}
+const { screen, emphasizeControls = false } = Astro.props;
+const crop = screen.crop ?? [0, 0, screen.width, screen.height];
+const [left, top, width, height] = crop;
+const arrowId = `guide-arrow-${screen.id}`;
+---
+
+<section
+  class="gm-demonstration"
+  data-screen={screen.id}
+  aria-labelledby={`screen-title-${screen.id}`}
+>
+  <h3 id={`screen-title-${screen.id}`}>{screen.title}</h3>
+  <div class="gm-screen-column">
+    <figure class="gm-screen-figure">
+      <div class="gm-screen-stage" style={`aspect-ratio:${width}/${height};`}>
+        <svg
+          class="gm-screen-image"
+          viewBox={crop.join(' ')}
+          role="img"
+          aria-labelledby={`image-title-${screen.id}`}
+        >
+          <title id={`image-title-${screen.id}`}>{screen.alt}</title>
+          <defs>
+            <marker
+              id={arrowId}
+              markerWidth="8"
+              markerHeight="8"
+              refX="6.5"
+              refY="4"
+              orient="auto"
+              markerUnits="strokeWidth"
+            >
+              <path d="M0 0 8 4 0 8 2 4Z" fill="#b94c2e" />
+            </marker>
+          </defs>
+          <image href={screen.src} x="0" y="0" width={screen.width} height={screen.height} />
+          {screen.steps.map((step, index) => {
+            const [px, py] = step.pin,
+              [tx, ty] = step.point;
+            const dx = tx - px,
+              dy = ty - py,
+              length = Math.hypot(dx, dy) || 1;
+            const sx = px + (dx / length) * 18,
+              sy = py + (dy / length) * 18;
+            const path = `M${sx} ${sy} L${tx} ${ty}`;
+            return (
+              <g
+                data-screen-target={step.number}
+                class:list={['gm-annotation', { 'is-active': index === 0 }]}
+                aria-hidden="true"
+              >
+                <rect
+                  x={step.box[0]}
+                  y={step.box[1]}
+                  width={step.box[2]}
+                  height={step.box[3]}
+                  rx="5"
+                  class="gm-target-box"
+                />
+                <path d={path} class="gm-arrow-halo" />
+                <path d={path} class="gm-pointer" marker-end={`url(#${arrowId})`} />
+              </g>
+            );
+          })}
+        </svg>
+        {screen.steps.map((step, index) => (
+          <button
+            class:list={['gm-screen-pin', { 'is-active': index === 0 }]}
+            type="button"
+            data-screen-select={step.number}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+            aria-label={`Highlight step ${step.number}: ${step.title}`}
+            aria-controls={`instruction-${screen.id}-${step.number}`}
+            style={`left:${((step.pin[0] - left) / width) * 100}%;top:${((step.pin[1] - top) / height) * 100}%;`}
+          >
+            {step.number}
+          </button>
+        ))}
+      </div>
+      <figcaption>
+        <span>{screen.caption}</span>
+        <a
+          href={screen.src}
+          target="_blank"
+          rel="noopener"
+          aria-label={`View full screenshot: ${screen.title} (opens in a new tab)`}
+        >
+          View full screenshot <span aria-hidden="true">↗</span>
+        </a>
+      </figcaption>
+    </figure>
+  </div>
+  <ol class="gm-screen-instructions" start={screen.steps[0].number}>
+    {screen.steps.map((step, index) => (
+      <li
+        id={`instruction-${screen.id}-${step.number}`}
+        data-screen-instruction={step.number}
+        class:list={{ 'is-active': index === 0 }}
+      >
+        <h4>
+          <button
+            type="button"
+            data-screen-select={step.number}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          >
+            <span aria-hidden="true">{step.number}</span>
+            {step.title}
+          </button>
+        </h4>
+        <p>{emphasizeControls ? <TeacherText text={step.text} /> : step.text}</p>
+      </li>
+    ))}
+  </ol>
+</section>

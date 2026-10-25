@@ -1,0 +1,73 @@
+---
+import { availableClusters, publishedArt, slugify, topicInCluster, topics } from '../lib/catalog';
+
+const topicBySlug = new Map(topics.map((topic) => [topic.slug, topic]));
+const categories = [
+  {
+    cluster: 'Animals & nature',
+    label: 'Animals',
+    detail: 'Pets & Wildlife',
+    image: 'baby-fennec-fox-watercolor-clipart',
+  },
+  {
+    cluster: 'Food & drink',
+    label: 'Food & Drink',
+    detail: 'Fruit, Meals & Treats',
+    image: 'strawberry-fruit-trio-realistic-clipart',
+  },
+  {
+    cluster: 'School & learning',
+    label: 'School',
+    detail: 'Books & Classroom Supplies',
+    image: 'school-backpack-filled-with-pencils-playful-clipart',
+  },
+  {
+    cluster: 'Technology & devices',
+    label: 'Technology',
+    detail: 'Devices & Accessories',
+    image: 'keyboard-rgb-gaming-keyboard',
+  },
+  {
+    cluster: 'Family & celebrations',
+    label: 'Family',
+    detail: 'Parents & Children',
+    image: 'baby-girl-with-pink-bow-clipart',
+  },
+  {
+    cluster: 'Nature & elements',
+    label: 'Nature',
+    detail: 'Earth & Natural Elements',
+    image: 'earth-clipart-atlantic-globe-natural-color',
+  },
+]
+  .filter((category) => availableClusters.includes(category.cluster))
+  .flatMap((category) => {
+    const matches = (item: (typeof publishedArt)[number]) => {
+      const topic = topicBySlug.get(item.topic);
+      return topic && topicInCluster(topic, category.cluster);
+    };
+    const image =
+      publishedArt.find((item) => item.id === category.image && matches(item)) ??
+      publishedArt.find((item) => matches(item) && item.alpha && !item.monochrome);
+    return image ? [{ ...category, key: slugify(category.cluster), image }] : [];
+  });
+---
+
+<div class="home-category-shortcuts">
+  <div class="home-category-heading">
+    <h2 id="home-category-links-title">Choose a Category</h2>
+  </div>
+  <nav class="home-quick-subjects" aria-labelledby="home-category-links-title">
+    {categories.map((category) => (
+      <a href={`/collection/${category.key}/`}>
+        <span class="home-category-picture">
+          <img src={category.image.thumb} alt="" width="48" height="48" decoding="async" />
+        </span>
+        <span class="home-category-copy">
+          <strong>{category.label}</strong>
+          <span>{category.detail}</span>
+        </span>
+      </a>
+    ))}
+  </nav>
+</div>

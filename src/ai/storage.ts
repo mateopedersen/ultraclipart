@@ -19,11 +19,31 @@ type StoredGeneration = Omit<Generation, 'original' | 'edited'> & {
 const MAX_AGE = 7 * 86400000;
 const database = () =>
   new Promise<IDBDatabase>((resolve, reject) => {
-    const req = indexedDB.open('ultraclipart-ai-history', 1);
-    req.onupgradeneeded = () => req.result.createObjectStore('images', { keyPath: 'id' });
-    req.onerror = () =>
+    let settled = false;
+    const fail = () => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timeout);
       reject(new Error('Local storage is unavailable. Download your work before leaving.'));
-    req.onsuccess = () => resolve(req.result);
+    };
+    const timeout = setTimeout(fail, 4000);
+    let req: IDBOpenDBRequest;
+    try {
+      req = indexedDB.open('ultraclipart-ai-history', 1);
+    } catch {
+      fail();
+      return;
+    }
+    req.onupgradeneeded = () => req.result.createObjectStore('images', { keyPath: 'id' });
+    req.onerror = req.onblocked = fail;
+    req.onsuccess = () => {
+      clearTimeout(timeout);
+      if (settled) req.result.close();
+      else {
+        settled = true;
+        resolve(req.result);
+      }
+    };
   });
 export async function history(
   action: 'read' | 'write' | 'clear',
@@ -40,7 +60,21 @@ export async function history(
     : undefined;
   const db = await database();
   return new Promise((resolve, reject) => {
-    const transaction = db.transaction('images', 'readwrite');
+    let transaction: IDBTransaction;
+    try {
+      transaction = db.transaction('images', 'readwrite');
+    } catch {
+      db.close();
+      reject(
+        new Error('This browser could not open image storage. Download your work to keep a copy.'),
+      );
+      return;
+    }
+    const timeout = setTimeout(() => {
+      try {
+        transaction.abort();
+      } catch {}
+    }, 8000);
     const store = transaction.objectStore('images');
     if (action === 'clear') store.clear();
     if (stored) store.put(stored);
@@ -76,10 +110,12 @@ export async function history(
       for (const r of all) if (!records.some((kept) => kept.id === r.id)) store.delete(r.id);
     };
     transaction.oncomplete = () => {
+      clearTimeout(timeout);
       db.close();
       resolve(records);
     };
-    transaction.onerror = () => {
+    transaction.onerror = transaction.onabort = () => {
+      clearTimeout(timeout);
       db.close();
       reject(new Error('This browser could not save the image. Download it to keep a copy.'));
     };

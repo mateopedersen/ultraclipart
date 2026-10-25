@@ -1,0 +1,35 @@
+---
+interface Props {
+  light?: boolean;
+  size?: number;
+}
+const { light = false, size = 38 } = Astro.props;
+---
+
+<svg
+  class="print-arrow"
+  width={size}
+  height={Math.round(size * 0.75)}
+  viewBox="0 0 64 48"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M9 23h25V11l23 17-23 17V33H9z" fill={light ? '#8baacc' : '#183f72'} />
+  <path d="M9 18h25V6l23 17-23 17V28H9z" fill={light ? '#f7fbff' : '#3e7ac2'} />
+  <path d="m34 6 23 17-5 .5L36 12v9H10l-1-3h25z" fill={light ? 'white' : '#81b1e7'} />
+  <path d="m57 23-23 17v5l23-17z" fill={light ? '#b9cee3' : '#25558e'} />
+  <path
+    d="M10 19h25V9"
+    stroke={light ? '#fff' : '#adcdf0'}
+    stroke-linejoin="round"
+    stroke-opacity=".7"
+  />
+</svg>
+<style>
+  .print-arrow {
+    display: block;
+    flex-shrink: 0;
+    overflow: visible;
+  }
+</style>

@@ -1,303 +1,55 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/home-showcase.css';
+import HomeShowcase from '../components/HomeShowcase.astro';
+import '../styles/home-alignment.css';
 import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
-import AiInvitation from '../components/AiInvitation.astro';
 import HomeBenefits from '../components/HomeBenefits.astro';
 import SeasonalShowcase from '../components/SeasonalShowcase.astro';
 import { art, newestArt, topics } from '../lib/catalog';
 import { diverseRecentArtwork } from '../lib/recent-artwork';
 import collectionCopy from '../../data/collection-copy.json';
-const picks = ['baby', 'heart', 'volleyball', 'winter'].filter((slug) =>
-  art.some((item) => item.topic === slug),
-);
-const heroFox = art.find((item) => item.id === 'baby-fennec-fox-watercolor-clipart')!;
-const heroHeart = art.find((item) => item.id === 'floral-heart-roses-wreath-clipart')!;
-const heroFruit = art.find((item) => item.id === 'strawberry-fruit-trio-realistic-clipart')!;
-const heroButterfly = art.find(
-  (item) => item.id === 'monarch-butterfly-open-wings-illustration-clipart',
-)!;
-const woodlandFox = art.find((item) => item.id === 'red-fox-wildflowers-botanical-clipart')!;
-const woodlandSquirrel = art.find((item) => item.id === 'squirrel-baby-watercolor-clipart')!;
-const woodlandHedgehog = art.find((item) => item.id === 'baby-hedgehog-watercolor-clipart')!;
-const quickSubjects = [
-  { label: 'Little animals', href: '/clipart/fox/', image: heroFox },
-  { label: 'Hearts & flowers', href: '/clipart/heart/', image: heroHeart },
-  { label: 'Food & fruit', href: '/search/?q=fruit', image: heroFruit },
-  { label: 'Nature', href: '/clipart/butterfly/', image: heroButterfly },
-];
 const categoryByTopic = new Map(topics.map((topic) => [topic.slug, topic.cluster]));
 const artworkById = new Map(art.map((item) => [item.id, item]));
 const recentPicks = diverseRecentArtwork(
   newestArt,
   (topic) => categoryByTopic.get(topic) ?? topic,
+  15,
 ).map((item) => {
   const copy = collectionCopy[item.topic as keyof typeof collectionCopy];
   const featuredId = copy?.featured[0];
   const featured = featuredId ? artworkById.get(featuredId) : undefined;
   // A newly added package should introduce its subject, rather than repeat the
   // same alphabetically first character pose across every new fruit category.
-  return featured?.createdAt === item.createdAt &&
-    featured.published !== false &&
-    featured.indexable !== false
+  return featured?.published !== false &&
+    featured?.indexable !== false &&
+    featured?.createdAt === item.createdAt
     ? featured
     : item;
 });
 ---
 
 <Layout
-  title="Beautiful Clipart for Your Creative Ideas"
-  description="Find detailed clipart for crafts, classrooms and personal projects. Explore the collection, customize artwork in Clipart Studio, or create a new idea with AI."
+  contentClass="home-page"
+  title="Clipart for Personal & Classroom Projects"
+  description="Browse clipart for cards, crafts and classrooms. Find flowers, food, school, sports, music and seasonal illustrations to download or edit in Clipart Studio."
 >
-  <section class="home-showcase" aria-labelledby="home-title">
-    <div class="home-showcase-copy">
-      <p class="home-showcase-kicker">
-        <span aria-hidden="true">
-          <svg width="23" height="23" viewBox="0 0 28 28" fill="none">
-            <path d="m3 17 11 6 11-6v4l-11 6L3 21v-4Z" fill="#3479C7" />
-            <path d="m3 13 11-6 11 6-11 6-11-6Z" fill="#8DC7FF" />
-            <path d="m3 9 11-6 11 6-11 6L3 9Z" fill="#DDF0FF" stroke="#4387CB" />
-            <path d="m8 9 4-4 4 5 3-2 3 2-8 4-6-4Z" fill="#5CBDA4" />
-          </svg>
-        </span>{' '}
-        A world of little details
-      </p>
-      <h1 id="home-title">
-        Beautiful clipart.
-        <br />
-        <span>Made for your ideas.</span>
-      </h1>
-      <p class="home-showcase-lead">
-        For the card they'll keep. The lesson they'll love. The little thing only you could make.
-      </p>
-      <form class="home-catalog-search" action="/search/" role="search" aria-label="Find clipart">
-        <label class="sr-only" for="search-q">
-          Search clipart
-        </label>
-        <svg
-          class="home-search-art"
-          width="27"
-          height="27"
-          viewBox="0 0 28 28"
-          fill="none"
-          aria-hidden="true"
-        >
-          <circle cx="11.5" cy="11.5" r="7.5" fill="#DFEEFF" stroke="#3B74BA" stroke-width="1.7" />
-          <path d="m17 17 7 7" stroke="#215B9F" stroke-width="3.8" stroke-linecap="round" />
-          <path
-            d="M7 11a4.5 4.5 0 0 1 4.5-4.5"
-            stroke="white"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
-        <input
-          id="search-q"
-          name="q"
-          type="search"
-          placeholder="What would you love to make?"
-          autocomplete="off"
-          maxlength="160"
-          list="home-subjects"
-        />
-        <button type="submit">
-          Find clipart
-          <svg
-            width="19"
-            height="19"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.8"
-            aria-hidden="true"
-          >
-            <path d="M4 12h15m-6-6 6 6-6 6" />
-          </svg>
-        </button>
-      </form>
-      <datalist id="home-subjects">
-        <option>Baby animals</option>
-        <option>Flowers</option>
-        <option>Butterfly</option>
-        <option>Christmas</option>
-        <option>Fruit</option>
-      </datalist>
-      <div class="home-quick-subjects" aria-label="Explore popular clipart subjects">
-        {quickSubjects.map((subject) => (
-          <a href={subject.href}>
-            <span>
-              <img src={subject.image.thumb} alt="" width="56" height="56" loading="lazy" />
-            </span>
-            <strong>{subject.label}</strong>
-            <svg
-              width="14"
-              height="14"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              aria-hidden="true"
-            >
-              <path d="m7 5 5 5-5 5" />
-            </svg>
-          </a>
-        ))}
-      </div>
-      <div class="home-use-note">
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.6"
-          aria-hidden="true"
-        >
-          <path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z" />
-          <path d="m8 12 3 3 5-6" />
-        </svg>
-        <span>Free for personal and educational projects.</span>
-        <a href="/license/">License</a>
-      </div>
+  <HomeShowcase />
+  <section class="home-recent" aria-labelledby="home-recent-title">
+    <div class="section-head">
+      <h2 id="home-recent-title">Recently Added</h2>
+      <a class="home-section-link" href="/new/">
+        View New Clipart
+      </a>
     </div>
-    <div
-      class="home-artboard home-gallery-stage"
-      aria-label="A little woodland story: fox, squirrel, hedgehog and butterfly clipart"
-    >
-      <div class="home-artboard-orbit" aria-hidden="true"></div>
-      <div class="home-artboard-caption">
-        <span></span> A little woodland story
-      </div>
-      <a
-        class="home-art-piece home-art-fox"
-        href={`/art/${woodlandFox.id}/`}
-        aria-label={`Explore ${woodlandFox.title}`}
-      >
-        <img
-          src="/home-art/woodland-fox-1024.webp"
-          srcset="/home-art/woodland-fox-640.webp 640w, /home-art/woodland-fox-1024.webp 1024w"
-          sizes="(max-width: 520px) 230px, 360px"
-          alt={woodlandFox.alt}
-          width="440"
-          height="440"
-          fetchpriority="high"
-        />
-        <div class="home-piece-title">
-          <strong>
-            Small friends.
-            <br />
-            Big adventures.
-          </strong>
-          <span>Bring a woodland tale to life</span>
-        </div>
-      </a>
-      <a
-        class="home-art-piece home-art-heart"
-        href={`/art/${woodlandSquirrel.id}/`}
-        aria-label={`Explore ${woodlandSquirrel.title}`}
-      >
-        <img
-          src="/home-art/woodland-squirrel-1024.webp"
-          srcset="/home-art/woodland-squirrel-640.webp 640w, /home-art/woodland-squirrel-1024.webp 1024w"
-          sizes="(max-width: 520px) 230px, 360px"
-          alt={woodlandSquirrel.alt}
-          width="440"
-          height="440"
-        />
-        <span>A curious little neighbor</span>
-      </a>
-      <a
-        class="home-art-piece home-art-fruit"
-        href={`/art/${woodlandHedgehog.id}/`}
-        aria-label={`Explore ${woodlandHedgehog.title}`}
-      >
-        <img
-          src="/home-art/woodland-hedgehog-1024.webp"
-          srcset="/home-art/woodland-hedgehog-640.webp 640w, /home-art/woodland-hedgehog-1024.webp 1024w"
-          sizes="(max-width: 520px) 230px, 360px"
-          alt={woodlandHedgehog.alt}
-          width="440"
-          height="440"
-        />
-        <span>A tiny forest companion</span>
-      </a>
-      <a
-        class="home-art-butterfly"
-        href={`/art/${heroButterfly.id}/`}
-        aria-label={`Explore ${heroButterfly.title}`}
-      >
-        <img
-          src="/home-art/butterfly-1024.webp"
-          srcset="/home-art/butterfly-640.webp 640w, /home-art/butterfly-1024.webp 1024w"
-          sizes="(max-width: 520px) 230px, 360px"
-          alt="Orange monarch butterfly with open wings"
-          width="440"
-          height="440"
-        />
-      </a>
-      <a class="home-artboard-link" href="/categories/">
-        <span>Explore the clipart collection</span>
-        <svg
-          width="21"
-          height="21"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.7"
-          aria-hidden="true"
-        >
-          <path d="M4 12h15m-6-6 6 6-6 6" />
-        </svg>
-      </a>
+    <p>A selection from the latest additions to the catalog.</p>
+    <div class="gallery home-recent-grid">
+      {recentPicks.slice(0, 15).map((item) => (
+        <Card item={item} />
+      ))}
     </div>
   </section>
-  <AiInvitation />
-  <div class="section-head">
-    <h2>Find your inspiration</h2>
-    <a href="/categories/">Browse subjects →</a>
-  </div>
-  <div class="topic-row">
-    {picks.map((t) => {
-      const a = art.find((a) => a.topic === t);
-      return (
-        <a class="topic-tile" href={`/clipart/${t}/`}>
-          {a ? (
-            <img src={a.thumb} alt="" width="100" height="90" loading="lazy" />
-          ) : (
-            <span class="topic-symbol">
-              <svg
-                viewBox="0 0 48 48"
-                width="40"
-                height="40"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <rect x="9" y="8" width="30" height="33" rx="5" />
-                <path d="M17 8V5m14 3V5M9 17h30M18 29h12m-6-6v12" />
-              </svg>
-            </span>
-          )}
-          {t.charAt(0).toUpperCase() + t.slice(1)}
-        </a>
-      );
-    })}
-  </div>
-  <div class="section-head">
-    <h2>Fresh from the sketchbook</h2>
-    <a href="/new/">Explore the collection →</a>
-  </div>
-  <p>Explore {art.length} illustrations for school, crafts and personal projects.</p>
-  <div class="gallery">
-    {recentPicks.map((item) => (
-      <Card item={item} />
-    ))}
-  </div>
-  <CreateInvitation />
   <SeasonalShowcase />
+  <CreateInvitation />
   <HomeBenefits />
 </Layout>

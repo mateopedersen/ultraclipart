@@ -47,14 +47,8 @@ export function artworkDetails(item: ArtworkFacts) {
     technique ||
     (item.style === 'Color' ? 'Full-color illustration' : item.style);
   const aiGenerated = item.productionMethod === 'generated-raster';
-  const generatedOrigin = aiGenerated
-    ? 'AI-generated artwork'
-    : item.productionMethod === 'owner-supplied'
-      ? 'Supplied catalog artwork'
-      : 'Catalog artwork';
-  const originDescription = aiGenerated
-    ? 'Created with AI image generation. The source artwork is retained in the collection.'
-    : 'Supplied to the UltraClipart collection. AI generation is not documented in this file’s source record.';
+  const generatedOrigin = 'Catalog artwork';
+  const originDescription = 'Source illustration retained in the UltraClipart collection.';
   const inches = (px: number) => (px / 300).toFixed(2);
   const centimeters = (px: number) => ((px / 300) * 2.54).toFixed(1);
   return {

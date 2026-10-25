@@ -8,6 +8,14 @@ export function getStaticPaths() {
 const { item } = Astro.props;
 ---
 
-<Layout title={`Edit ${item.title}`} noindex={true} wide={true}>
+<Layout
+  title={`Edit ${item.title}`}
+  noindex={true}
+  wide={true}
+  image={item.webp}
+  imageAlt={item.alt}
+  imageWidth={item.width}
+  imageHeight={item.height}
+>
   <Editor art={item} />
 </Layout>

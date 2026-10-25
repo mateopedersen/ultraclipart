@@ -1,0 +1,48 @@
+/* One arrow contract for every native single-choice dropdown, including future controls.
+   Keep these few invariants important: page/component background and padding shorthands
+   must not erase the icon or the text's reserved space. Other control styles stay local. */
+select:where(:not([multiple])):where(:not([size]), [size='0'], [size='1']) {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background-image:
+    url('/illustrations/actions/select-chevron.svg'),
+    var(--uc-select-surface-image, linear-gradient(transparent, transparent)) !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position:
+    right var(--uc-select-arrow-inset, 14px) center,
+    center !important;
+  background-size:
+    var(--uc-select-arrow-size, 16px) var(--uc-select-arrow-size, 16px),
+    100% 100% !important;
+  background-origin: padding-box !important;
+  padding-inline-end: calc(
+    var(--uc-select-arrow-inset, 14px) + var(--uc-select-arrow-size, 16px) +
+      var(--uc-select-arrow-gap, 12px)
+  ) !important;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+select:where(:not([multiple])):where(:not([size]), [size='0'], [size='1']):dir(rtl) {
+  background-position:
+    left var(--uc-select-arrow-inset, 14px) center,
+    center !important;
+}
+
+select:disabled {
+  cursor: not-allowed;
+}
+
+/* System colors may remove background images. Restore the OS arrow in that mode. */
+@media (forced-colors: active) {
+  select:where(:not([multiple])):where(:not([size]), [size='0'], [size='1']) {
+    -webkit-appearance: auto !important;
+    appearance: auto !important;
+    background-image: none !important;
+    padding-inline-end: 12px !important;
+  }
+}

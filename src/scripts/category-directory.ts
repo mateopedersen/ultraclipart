@@ -82,6 +82,11 @@ function readUrl() {
   limit = pageSize;
   filter(false);
 }
+document.addEventListener('ultraclipart:catalog-counts', () => {
+  if (sort.value !== 'count') return;
+  previousSort = '';
+  filter(false);
+});
 function clear() {
   input.value = '';
   group.value = '';

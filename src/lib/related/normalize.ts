@@ -8,8 +8,10 @@ import {
   TAXONOMY_VERSION,
   type Subject,
 } from './taxonomy';
+import { fingerprint } from '../cache-fingerprint';
+export { fingerprint } from '../cache-fingerprint';
 
-export const CLASSIFIER_VERSION = 'uc-metadata-3';
+export const CLASSIFIER_VERSION = 'uc-metadata-4';
 export type ColorMode = 'color' | 'monochrome' | 'unknown';
 export type Depiction = 'natural_object' | 'character' | 'scene' | 'unknown';
 export interface ArtworkInput {
@@ -71,6 +73,7 @@ const techniques: [string, string, RegExp][] = [
   ['crayon', 'textured_drawing', /\b(?:wax )?crayon\b/],
   ['pastel', 'textured_drawing', /\bpastel\b/],
   ['chalk', 'textured_drawing', /\bchalk\b/],
+  ['colored_pencil', 'textured_drawing', /\bcolou?red pencil\b/],
   ['pencil', 'textured_drawing', /\bpencil\b/],
   ['watercolor', 'watermedia', /\bwatercolou?r\b/],
   ['gouache', 'watermedia', /\bgouache\b/],
@@ -78,6 +81,7 @@ const techniques: [string, string, RegExp][] = [
   ['oil_painting', 'painting', /\boil painting\b/],
   ['airbrush', 'painting', /\bairbrush\b/],
   ['marker', 'drawing', /\bmarker\b/],
+  ['screenprint', 'printmaking', /\bscreen ?print(?:ing)?\b/],
   ['engraving', 'printmaking', /\bengraving\b/],
   ['woodcut', 'printmaking', /\bwoodcut\b/],
   ['linocut', 'printmaking', /\blinocut\b/],
@@ -92,10 +96,24 @@ const techniques: [string, string, RegExp][] = [
   ['embroidery', 'textile', /\bembroider(?:ed|y)\b/],
   ['mosaic', 'decorative', /\bmosaic\b/],
   ['stained_glass', 'decorative', /\bstained glass\b/],
+  ['folk_art', 'decorative', /\bfolk art\b/],
+  ['pixel_art', 'graphic', /\bpixel art\b/],
+  ['digital_painting', 'painting', /\bdigital paint(?:ing)?\b/],
+  ['clay', 'sculpture', /\b(?:clay|plasticine)\b/],
+  ['crochet', 'textile', /\bcrochet(?:ed)?\b/],
   ['cartoon', 'cartoon', /\b(?:cartoon|kawaii)\b/],
   ['realistic', 'realistic', /\b(?:realistic|photorealistic)\b/],
 ];
 const compositionRules: [string, RegExp][] = [
+  ['autumn_leaves', /\b(?:autumn|fall) leaves\b/],
+  ['floral', /\b(?:flowers?|floral|blossoms?)\b/],
+  ['wreath', /\bwreath\b/],
+  ['open_wings', /\b(?:open|spread|outstretched) wings\b|\bwings (?:open|spread|outstretched)\b/],
+  ['side_view', /\b(?:side view|profile view)\b/],
+  ['flying', /\b(?:flying|in flight)\b/],
+  ['perched', /\b(?:perched|perching)\b/],
+  ['border', /\b(?:border|frame layout)\b/],
+  ['geometric', /\b(?:geometric|low poly)\b/],
   ['whole_fruit', /\b(?:whole|uncut|intact|apples stand)\b/],
   ['dried_fruit', /\b(?:dried|dehydrated)\b/],
   ['fruit_rings', /\b(?:rings|wheels|rounds)\b/],
@@ -107,17 +125,6 @@ const compositionRules: [string, RegExp][] = [
   ['single', /\b(?:single|one |solitary|alone)\b/],
   ['group', /\b(?:pair|trio|group|three|two|cluster)\b/],
 ];
-/** Non-security fingerprint; cache identity only. Asset integrity remains SHA-256 in publication policy. */
-export function fingerprint(value: unknown): string {
-  const text = JSON.stringify(value);
-  let a = 2166136261,
-    b = 5381;
-  for (let i = 0; i < text.length; i++) {
-    a = Math.imul(a ^ text.charCodeAt(i), 16777619);
-    b = Math.imul(b, 33) ^ text.charCodeAt(i);
-  }
-  return (a >>> 0).toString(16).padStart(8, '0') + (b >>> 0).toString(16).padStart(8, '0');
-}
 export function safeAsset(value: unknown): value is string {
   if (typeof value !== 'string') return false;
   return (

@@ -1,4 +1,5 @@
-/** Original, local vector elements. No network, bitmap previews, or untrusted markup. */
+/** Local editable vectors: original artwork plus the reviewed MIT Tabler subset. */
+import tablerElements from '../../data/studio-tabler-elements.json';
 export interface StudioElement {
   id: string;
   name: string;
@@ -1244,5 +1245,8 @@ const extraObjects: [string, string, string][] = [
 ];
 for (const [name, category, markup] of extraObjects)
   add(category, name, markup, 'illustration object colorful');
-export const studioElements: readonly StudioElement[] = Object.freeze(items);
-export const elementCategories = [...new Set(items.map((i) => i.category))];
+export const studioElements: readonly StudioElement[] = Object.freeze([
+  ...items,
+  ...tablerElements,
+]);
+export const elementCategories = [...new Set(studioElements.map((i) => i.category))].sort();

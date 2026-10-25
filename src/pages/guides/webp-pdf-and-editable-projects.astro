@@ -29,7 +29,9 @@ import Guide from '../../layouts/Guide.astro';
         <tr>
           <td>Print a page</td>
           <td>PDF</td>
-          <td>Vector artwork laid out on the selected paper with CMYK colors.</td>
+          <td>
+            A printable document. Catalog page sizes and raster or vector content vary by file.
+          </td>
         </tr>
         <tr>
           <td>Reopen the editable layers</td>
@@ -41,10 +43,10 @@ import Guide from '../../layouts/Guide.astro';
   </div>
   <h2>WebP: a finished image with a pixel limit</h2>
   <p>
-    The catalog WebP downloads are 2,048 × 2,048 pixels. Their transparent surroundings let a
-    document's background show through. A checkerboard in the preview represents that empty area; it
-    is not a pattern printed into the illustration. Choosing a preview background on an artwork page
-    does not change the original download.
+    Image dimensions vary by artwork. Check Original resolution on the artwork page for the actual
+    width and height. Files marked Transparent background let your document’s background show
+    through. A checkerboard in the preview represents empty space; it is not printed into the image.
+    Changing the preview background does not change the original download.
   </p>
   <p>
     In the editor, background changes do affect your export. Keep the background transparent if you
@@ -62,17 +64,18 @@ import Guide from '../../layouts/Guide.astro';
   </p>
   <h2>PDF: a print layout with specific color assumptions</h2>
   <p>
-    Original catalog PDFs are laid out on US Letter. An editor export follows the paper,
-    orientation, margins, placement, crop, and visible layers you selected. Open Print setup before
-    exporting when you need A4 or a landscape page. Check the resulting PDF's page size in your
-    viewer and avoid accidentally applying a second “fit” operation in the print dialog.
+    Check the page dimensions listed for the catalog PDF you choose; not every download uses the
+    same paper size. A PDF can contain raster artwork, vector artwork or both. An editor export
+    follows your Print setup, including paper, orientation, margins and placement. Check the
+    downloaded PDF’s page size in your viewer, and avoid applying an unintended second “fit”
+    operation when printing.
   </p>
   <p>
-    Our PDF pipeline converts colors for GRACoL2006 Coated1v2 and writes process CMYK vector
-    content. The standard file limit is 1,000,000 bytes. The full ICC profile is not embedded in
-    these small PDFs; the file records an output condition. They are not certified PDF/X files. A
-    print shop that needs a different profile, bleed, or a PDF/X standard may require additional
-    preparation.
+    Vector studio exports use process CMYK shapes with the GRACoL2006 Coated1v2 output condition.
+    Catalog PDFs may contain raster images instead of separate vector shapes. The standard file
+    limit is 1,000,000 bytes. The full ICC profile is not embedded in these small PDFs; the file
+    records an output condition. They are not certified PDF/X files. A print shop that needs a
+    different profile, bleed, or a PDF/X standard may require additional preparation.
   </p>
   <p>
     Paper, ink, and printer settings affect the result. Bright screen colors can change in print,

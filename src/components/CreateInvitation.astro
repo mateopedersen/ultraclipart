@@ -1,13 +1,14 @@
 ---
 import { art } from '../lib/catalog';
+import NavigationArrow from './NavigationArrow.astro';
 const strawberry = art.find((item) => item.id === 'strawberry-fruit-trio-realistic-clipart')!;
 const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart')!;
 ---
 
 <section class="creative-projects" aria-labelledby="creative-projects-title">
   <div class="creative-projects-heading">
-    <p>From a little artwork to a finished idea</p>
-    <h2 id="creative-projects-title">Give it your own little twist.</h2>
+    <p>Projects & Editing</p>
+    <h2 id="creative-projects-title">Make a Card, Label or Coloring Page</h2>
   </div>
   <div class="creative-projects-grid">
     <a class="creative-studio-card" href="/create/#studio-workspace">
@@ -15,7 +16,7 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
         <div class="creative-scene-orbit"></div>
         <div class="creative-paper-back"></div>
         <div class="creative-paper">
-          <span class="creative-paper-label">A little homemade happiness</span>
+          <span class="creative-paper-label">Example Card</span>
           <strong>
             Freshly
             <br />
@@ -37,7 +38,7 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
             height="180"
             loading="lazy"
           />
-          <span class="creative-paper-caption">Made with a little imagination.</span>
+          <span class="creative-paper-caption">Fruit artwork and editable text</span>
         </div>
         <div class="creative-color-strip">
           <span></span>
@@ -59,19 +60,25 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
           >
             <path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5" />
           </svg>{' '}
-          Your finishing touches
+          Images & Text
         </span>
       </div>
       <div class="creative-studio-copy">
         <span class="creative-project-eyebrow">Clipart Studio</span>
-        <h3>
-          Your artwork.
-          <br />
-          Your kind of wonderful.
-        </h3>
+        <h3>Arrange Clipart on Your Own Canvas</h3>
         <p>Combine illustrations, add a few words and arrange every detail on your own canvas.</p>
         <span class="creative-project-action">
-          Start your design <span aria-hidden="true">↗</span>
+          <img
+            class="creative-project-action-icon"
+            src="/illustrations/footer/studio.svg"
+            alt=""
+            width="42"
+            height="42"
+            loading="lazy"
+            decoding="async"
+          />
+          <span class="creative-project-action-label">Start your design</span>
+          <NavigationArrow class="creative-project-action-arrow" size={28} light />
         </span>
         <small>No account needed · Edit in your browser</small>
       </div>
@@ -89,13 +96,13 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
               <br />
               corner
             </strong>
-            <span>little minds, big ideas</span>
+            <span>Choose a book and take a seat</span>
           </div>
           <div class="creative-mini-pencil"></div>
         </div>
         <div>
           <span class="creative-project-eyebrow">A classroom project</span>
-          <h3>A label with a little personality.</h3>
+          <h3>Make a Classroom Label</h3>
           <p>Make a clear, readable classroom label, step by step.</p>
           <span class="creative-guide-link">
             Make a classroom label <span aria-hidden="true">→</span>
@@ -117,7 +124,7 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
         </div>
         <div>
           <span class="creative-project-eyebrow">A hands-on activity</span>
-          <h3>A fresh page of possibilities.</h3>
+          <h3>Create a Coloring Activity</h3>
           <p>Turn the botanical starter into a simple coloring activity.</p>
           <span class="creative-guide-link">
             Follow the coloring guide <span aria-hidden="true">→</span>
@@ -700,5 +707,28 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
     .creative-projects a {
       transition: none;
     }
+  }
+  .creative-project-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: start;
+    gap: 9px;
+    min-height: 47px;
+    padding: 8px 13px;
+    border: 1px solid #205a9f;
+    border-radius: 8px;
+    background: #2869b4;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .creative-project-action-icon {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+  }
+  .creative-project-action {
+    max-width: 100%;
   }
 </style>

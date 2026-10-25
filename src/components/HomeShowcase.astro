@@ -1,0 +1,168 @@
+---
+import { publishedArt } from '../lib/catalog';
+import CatalogCount from './CatalogCount.astro';
+import HomeCategoryLinks from './HomeCategoryLinks.astro';
+import '../styles/home-showcase.css';
+
+const selection = [
+  {
+    key: 'flowers',
+    id: 'floral-heart-roses-wreath-clipart',
+    label: 'Rose Heart Wreath',
+    detail: 'For Cards & Invitations',
+    href: '/clipart/heart/',
+  },
+  {
+    key: 'food',
+    id: 'pizza-pepperoni-slice-watercolor-clipart',
+    label: 'Watercolor Pizza',
+    detail: '',
+    href: '/collection/food-drink/',
+  },
+  {
+    key: 'school',
+    id: 'school-backpack-filled-with-pencils-playful-clipart',
+    label: 'School Backpack',
+    detail: '',
+    href: '/collection/school-learning/',
+  },
+  {
+    key: 'music',
+    id: 'music-acoustic-guitar-watercolor-clipart',
+    label: 'Acoustic Guitar',
+    detail: 'Watercolor Illustration',
+    href: '/clipart/music/',
+  },
+  {
+    key: 'sports',
+    id: 'watercolor-blue-yellow-volleyball-clipart',
+    label: 'Volleyball',
+    detail: '',
+    href: '/collection/sports/',
+  },
+  {
+    key: 'nature',
+    id: 'leaf-autumn-maple-oak-birch-cluster-painted-illustration-clipart',
+    label: 'Autumn Leaves',
+    detail: '',
+    href: '/clipart/leaves/',
+  },
+  {
+    key: 'winter',
+    id: 'winter-knitted-mittens-on-cord',
+    label: 'Winter Mittens',
+    detail: '',
+    href: '/collection/christmas-winter/',
+  },
+].map((subject) => {
+  const image = publishedArt.find((item) => item.id === subject.id);
+  if (!image) throw new Error(`Missing homepage illustration: ${subject.id}`);
+  return { ...subject, image, href: `/art/${image.id}/` };
+});
+---
+
+<section class="home-showcase" aria-labelledby="home-title">
+  <div class="home-showcase-copy">
+    <h1 id="home-title">
+      Clipart for <span>Every Project</span>
+    </h1>
+    <p class="home-showcase-lead">
+      Explore flowers, food, school supplies, sports and more. Download an illustration for your
+      project, or combine artwork and text in Clipart Studio.
+    </p>
+    <form
+      class="home-catalog-search"
+      action="/search/"
+      role="search"
+      aria-label="Search UltraClipart"
+    >
+      <label class="sr-only" for="search-q">
+        Search UltraClipart
+      </label>
+      <svg
+        class="home-search-art"
+        width="26"
+        height="26"
+        viewBox="0 0 28 28"
+        fill="none"
+        aria-hidden="true"
+      >
+        <circle cx="11.5" cy="11.5" r="7.5" fill="#DFEEFF" stroke="#3B74BA" stroke-width="1.7" />
+        <path d="m17 17 7 7" stroke="#215B9F" stroke-width="3.8" stroke-linecap="round" />
+        <path
+          d="M7 11a4.5 4.5 0 0 1 4.5-4.5"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <input
+        id="search-q"
+        name="q"
+        type="search"
+        placeholder="What are you looking for?"
+        autocomplete="off"
+        maxlength="320"
+        list="home-subjects"
+      />
+      <button type="submit">Find Clipart</button>
+    </form>
+    <datalist id="home-subjects">
+      <option>Flowers for a card</option>
+      <option>School backpack</option>
+      <option>Watercolor pizza</option>
+      <option>Musical instruments</option>
+      <option>Volleyball</option>
+      <option>Winter mittens</option>
+      <option>Baby animals</option>
+    </datalist>
+    <HomeCategoryLinks />
+  </div>
+  <div class="home-collection-display" aria-labelledby="home-collection-title">
+    <div class="home-collection-heading">
+      <h2 id="home-collection-title">Selected From the Library</h2>
+      <span class="home-collection-total">
+        <CatalogCount kind="artworks" unit="illustration" />
+      </span>
+    </div>
+    <div class="home-collection-shelf">
+      {selection.map((subject, index) => (
+        <a class={`home-sample home-sample-${subject.key}`} href={subject.href}>
+          <span class="home-sample-picture">
+            <img
+              src={subject.image.thumb}
+              alt=""
+              width={subject.image.width}
+              height={subject.image.height}
+              fetchpriority={index === 0 ? 'high' : 'auto'}
+              decoding="async"
+            />
+          </span>
+          <span class="home-sample-caption">
+            <strong>{subject.label}</strong>
+            {subject.detail && <span>{subject.detail}</span>}
+          </span>
+        </a>
+      ))}
+    </div>
+    <a class="home-collection-link" href="/categories/">
+      <span>
+        <strong>Browse All Subjects</strong>
+        <span>
+          <CatalogCount kind="subjects" /> Subjects
+        </span>
+      </span>
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        aria-hidden="true"
+      >
+        <path d="M4 12h15m-6-6 6 6-6 6" />
+      </svg>
+    </a>
+  </div>
+</section>

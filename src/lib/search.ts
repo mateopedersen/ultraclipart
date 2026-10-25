@@ -1,3 +1,13 @@
+import { isMonochrome } from './monochrome.ts';
+import {
+  normalizeQuery,
+  oneEditAway,
+  queryTerms,
+  termVariants,
+  relevanceScore,
+  type TermMatch,
+} from './search-language.ts';
+export { normalizeQuery, oneEditAway, queryTerms } from './search-language.ts';
 export interface SearchArtwork {
   id: string;
   title: string;
@@ -12,6 +22,11 @@ export interface SearchArtwork {
   createdAt?: string;
   cluster?: string;
   published?: boolean;
+  monochrome?: boolean;
+  monochromeKind?: string | null;
+  collections?: string[];
+  keywords?: string[];
+  topicLabel?: string;
 }
 export interface SearchState {
   q: string;
@@ -23,6 +38,7 @@ export interface SearchState {
   sort: string;
   page: number;
   size: number;
+  type: string;
 }
 export const defaults: SearchState = {
   q: '',
@@ -34,75 +50,19 @@ export const defaults: SearchState = {
   sort: 'relevance',
   page: 1,
   size: 8,
+  type: 'all',
 };
-const aliases: Record<string, string> = {
-  leaves: 'leaf',
-  babies: 'baby',
-  snowmen: 'snowman',
-  presents: 'gift',
-  present: 'gift',
-  gifts: 'gift',
-  cherries: 'cherry',
-  starfruits: 'starfruit',
-  mulberries: 'mulberry',
-  kumquats: 'kumquat',
-  quinces: 'quince',
-  gooseberries: 'gooseberry',
-  blackberries: 'blackberry',
-  cranberries: 'cranberry',
-  strawberries: 'strawberry',
-  raspberries: 'raspberry',
-  blueberries: 'blueberry',
-  peaches: 'peach',
-  mangoes: 'mango',
-  figs: 'fig',
-  xmas: 'christmas',
-};
-const stopWords = new Set([
-  'clipart',
-  'clip',
-  'art',
-  'free',
-  'image',
-  'images',
-  'illustration',
-  'illustrations',
-  'download',
-  'downloads',
-  'the',
-  'a',
-  'an',
-  'and',
-  'of',
-  'with',
-  'page',
-  'pages',
-]);
-export function normalizeQuery(query: string): string[] {
-  return query
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[’']/g, '')
-    .replace(/\bstar[\s-]+fruits?\b/g, 'starfruit')
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim()
-    .split(/\s+/)
-    .filter((token) => token && !stopWords.has(token))
-    .map(
-      (token) =>
-        aliases[token] ??
-        (token.length > 4 && token.endsWith('s') && !token.endsWith('ss')
-          ? token.slice(0, -1)
-          : token),
-    );
-}
 export function parseState(params: URLSearchParams): SearchState {
   const choices = (key: string, allowed: string[], fallback = '') =>
     allowed.includes(params.get(key) ?? '') ? params.get(key)! : fallback;
   return {
-    q: (params.get('q') ?? '').trim().slice(0, 160),
-    style: choices('style', ['color', 'outline', 'watercolor', 'black & white']),
+    type: choices(
+      'type',
+      ['all', 'artwork', 'topic', 'collection', 'guide', 'tool', 'page', 'studio'],
+      'all',
+    ),
+    q: (params.get('q') ?? '').trim().slice(0, 320),
+    style: choices('style', ['color', 'outline', 'watercolor', 'black & white', 'silhouette']),
     color: choices('color', [
       'orange',
       'white',
@@ -115,6 +75,9 @@ export function parseState(params: URLSearchParams): SearchState {
       'green',
       'pink',
       'gray',
+      'multicolor',
+      'beige',
+      'gold',
     ]),
     format: choices('format', ['webp', 'pdf']),
     orientation: choices('orientation', ['square', 'portrait', 'landscape']),
@@ -131,85 +94,124 @@ export function stateParams(state: SearchState): URLSearchParams {
       params.set(key, String(value));
   return params;
 }
-export function oneEditAway(a: string, b: string): boolean {
-  if (a.length < 5 || Math.abs(a.length - b.length) > 1) return false;
-  let i = 0;
-  let j = 0;
-  let edits = 0;
-  while (i < a.length && j < b.length) {
-    if (a[i] === b[j]) {
-      i++;
-      j++;
-      continue;
-    }
-    if (++edits > 1) return false;
-    if (a.length >= b.length) i++;
-    if (b.length >= a.length) j++;
-  }
-  return edits + (i < a.length || j < b.length ? 1 : 0) <= 1;
+/** Field priorities shared by the in-memory and sharded search paths. */
+export function artworkSearchFields(item: SearchArtwork) {
+  const title = normalizeQuery(item.title);
+  const fields: [string, number][] = [
+    [item.title, 7],
+    [item.topicLabel || item.topic, 6],
+    [item.alt, 5],
+    [
+      `${item.style} ${item.color} ${item.orientation} ${(item.formats || []).join(' ')} ${item.alpha ? 'transparent cutout background' : item.alpha === false ? 'opaque background' : ''} ${item.monochrome ? 'monochrome black white' : ''}`,
+      4,
+    ],
+    [
+      item.description.split(
+        /\s+(?:Add this |Use this |Choose a |Both original |Allow space |Perfect for |Ideal for )/i,
+      )[0],
+      3,
+    ],
+    [(item.keywords || []).join(' '), 3],
+    [item.id.replaceAll('-', ' '), 4],
+    [`${item.cluster || ''} ${(item.collections || []).join(' ')}`, 2],
+  ];
+  const weights = new Map<string, number>();
+  for (const [text, weight] of fields)
+    for (const word of normalizeQuery(text))
+      weights.set(word, Math.max(weight, weights.get(word) || 0));
+  return { title, weights };
 }
-export function queryTerms(query: string) {
-  const monochromePhrase = /\b(?:black[\s-]*(?:and[\s-]*|&[\s-]*)?white|b\s*&\s*w)\b/gi;
-  const outlinePhrase = /\b(?:outline|coloring(?:\s+pages?)?)\b/gi;
-  const wantsOutline = outlinePhrase.test(query);
-  const wantsMonochrome = monochromePhrase.test(query);
-  const tokens = normalizeQuery(query.replace(outlinePhrase, ' ').replace(monochromePhrase, ' '));
-  return { wantsOutline, wantsMonochrome, tokens };
+export function artworkMatchesFilters(item: SearchArtwork, state: SearchState) {
+  const intent = queryTerms(state.q);
+  if (item.published === false) return false;
+  if (intent.wantsMonochrome && !isMonochrome(item)) return false;
+  if (
+    intent.wantsOutline &&
+    !(item.style.toLowerCase() === 'outline' || item.monochromeKind === 'outline')
+  )
+    return false;
+  if (intent.wantsTransparent && item.alpha !== true) return false;
+  if (state.style === 'black & white' && !isMonochrome(item)) return false;
+  if (
+    state.style === 'outline' &&
+    !(item.style.toLowerCase() === 'outline' || item.monochromeKind === 'outline')
+  )
+    return false;
+  if (
+    state.style === 'watercolor' &&
+    !normalizeQuery(`${item.style} ${item.title} ${item.alt}`).includes('watercolor')
+  )
+    return false;
+  if (
+    state.style &&
+    !['black & white', 'outline', 'watercolor'].includes(state.style) &&
+    item.style.toLowerCase() !== state.style
+  )
+    return false;
+  if (state.color && item.color.toLowerCase() !== state.color) return false;
+  if (state.orientation && item.orientation.toLowerCase() !== state.orientation) return false;
+  if (state.format && !item.formats?.some((f) => f.toLowerCase() === state.format)) return false;
+  if (state.background === 'transparent' && item.alpha !== true) return false;
+  if (state.background === 'opaque' && item.alpha !== false) return false;
+  return true;
 }
 export function searchArtwork<T extends SearchArtwork>(artwork: T[], state: SearchState) {
-  const { wantsOutline, wantsMonochrome, tokens } = queryTerms(state.q);
-  const seen = new Set<string>();
-  const ranked: { item: T; score: number; fuzzy: boolean }[] = [];
+  const { tokens, excluded } = queryTerms(state.q),
+    seen = new Set<string>();
+  const exact: { item: T; score: number; fuzzy: boolean }[] = [],
+    close: typeof exact = [];
   for (const item of artwork) {
-    if (seen.has(item.id)) continue;
+    if (seen.has(item.id) || !artworkMatchesFilters(item, state)) continue;
     seen.add(item.id);
-    const outline = item.style.toLowerCase() === 'outline';
-    if (wantsMonochrome && !['outline', 'black & white'].includes(item.style.toLowerCase()))
-      continue;
-    if ((wantsOutline && !outline) || (state.style && item.style.toLowerCase() !== state.style))
-      continue;
-    if (state.color && item.color.toLowerCase() !== state.color) continue;
-    if (state.orientation && item.orientation.toLowerCase() !== state.orientation) continue;
-    if (state.format && !item.formats?.some((format) => format.toLowerCase() === state.format))
-      continue;
-    if (state.background === 'transparent' && item.alpha !== true) continue;
-    if (state.background === 'opaque' && item.alpha !== false) continue;
-    const strong = normalizeQuery(`${item.topic} ${item.title}`);
-    const all = normalizeQuery(
-      `${item.topic} ${item.title} ${item.description} ${item.alt} ${item.cluster ?? ''}`,
-    );
-    let score = 0;
-    let fuzzy = false;
-    let matched = true;
-    for (const token of tokens) {
-      if (strong.includes(token)) score += 5;
-      else if (all.includes(token)) score += 2;
-      else if (all.some((word) => oneEditAway(token, word))) {
-        score += 1;
-        fuzzy = true;
-      } else {
-        matched = false;
-        break;
+    const { title, weights } = artworkSearchFields(item);
+    if (excluded.some((token) => termVariants(token).some((word) => weights.has(word)))) continue;
+    const matches: TermMatch[] = [];
+    for (const [index, token] of tokens.entries()) {
+      const variants = termVariants(token);
+      let words = variants.filter(
+          (word) => weights.has(word) && (tokens.length === 1 || weights.get(word)! >= 3),
+        ),
+        fuzzy = false;
+      if (!words.length) {
+        words = [...weights.keys()].filter(
+          (word) =>
+            (tokens.length === 1 || weights.get(word)! >= 3) &&
+            (oneEditAway(token, word) ||
+              (index === tokens.length - 1 && token.length >= 3 && word.startsWith(token))),
+        );
+        fuzzy = !!words.length;
       }
+      if (!words.length) break;
+      matches.push({
+        weight: Math.max(
+          ...words.map((word) => (weights.get(word) || 0) - (word === token ? 0 : 0.5)),
+        ),
+        fuzzy,
+        positions: title.flatMap((word, i) => (words.includes(word) ? [i] : [])),
+      });
     }
-    if (matched) ranked.push({ item, score, fuzzy });
+    if (matches.length === tokens.length) {
+      const fuzzy = matches.some((m) => m.fuzzy);
+      (fuzzy ? close : exact).push({ item, score: relevanceScore(matches), fuzzy });
+    }
   }
+  const ranked = exact.length ? exact : close;
   ranked.sort((a, b) =>
     state.sort === 'title'
       ? a.item.title.localeCompare(b.item.title, 'en')
       : state.sort === 'newest'
-        ? (b.item.createdAt ?? '').localeCompare(a.item.createdAt ?? '') ||
+        ? (b.item.createdAt || '').localeCompare(a.item.createdAt || '') ||
           a.item.title.localeCompare(b.item.title, 'en')
         : b.score - a.score || a.item.title.localeCompare(b.item.title, 'en'),
   );
-  const pages = Math.max(1, Math.ceil(ranked.length / state.size));
-  const page = Math.min(pages, Math.max(1, state.page));
+  const pages = Math.max(1, Math.ceil(ranked.length / state.size)),
+    page = Math.min(pages, Math.max(1, state.page));
   const selected = ranked.slice((page - 1) * state.size, page * state.size);
   return {
-    items: selected.map((result) => result.item),
+    items: selected.map((r) => r.item),
     total: ranked.length,
     pages,
     page,
-    hasFuzzyMatches: selected.some((result) => result.fuzzy),
+    hasFuzzyMatches: selected.some((r) => r.fuzzy),
   };
 }

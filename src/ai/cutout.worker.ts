@@ -7,6 +7,20 @@ self.onmessage = (
   }>,
 ) => {
   const { pixels, width, height, tolerance } = event.data;
+  if (
+    !Number.isInteger(width) ||
+    !Number.isInteger(height) ||
+    width < 1 ||
+    height < 1 ||
+    width > 4096 ||
+    height > 4096 ||
+    !(pixels instanceof Uint8ClampedArray) ||
+    pixels.length !== width * height * 4 ||
+    !Number.isFinite(tolerance) ||
+    tolerance < 0 ||
+    tolerance > 100
+  )
+    throw new Error('Invalid background cleanup image.');
   // Only remove a light background connected to an image edge. Interior whites stay intact.
   const count = width * height,
     seen = new Uint8Array(count),

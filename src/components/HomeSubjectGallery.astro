@@ -1,0 +1,61 @@
+---
+import { publishedArt as art } from '../lib/catalog';
+import CatalogCount from './CatalogCount.astro';
+import collectionCopy from '../../data/collection-copy.json';
+import ActionArrow from './TeacherArrow.astro';
+import '../styles/home-subject-gallery.css';
+const subjects = [
+  ['heart', 'Hearts & Flowers', 'floral-heart-roses-wreath-clipart'],
+  ['school', 'School'],
+  ['pizza', 'Pizza'],
+  ['music', 'Music'],
+  ['volleyball', 'Volleyball', 'watercolor-blue-yellow-volleyball-clipart'],
+  ['leaves', 'Leaves', 'leaf-autumn-maple-oak-birch-cluster-painted-illustration-clipart'],
+  ['baby', 'Baby'],
+  ['strawberry', 'Strawberries'],
+  ['earth', 'Earth'],
+  ['hat', 'Hats'],
+  ['winter', 'Winter', 'winter-knitted-mittens-on-cord'],
+  ['fox', 'Foxes'],
+].flatMap(([slug, label, imageId]) => {
+  const items = art.filter((item) => item.topic === slug);
+  const copy = collectionCopy[slug as keyof typeof collectionCopy];
+  const featured = copy?.featured.map((id) => items.find((item) => item.id === id)).find(Boolean);
+  const image = items.find((item) => item.id === imageId) ?? featured ?? items[0];
+  return image ? [{ slug, label, image }] : [];
+});
+---
+
+<section class="home-subject-gallery" aria-labelledby="home-subject-gallery-title">
+  <header class="hsg-heading">
+    <div>
+      <h2 id="home-subject-gallery-title">Browse by Subject</h2>
+      <p>From school and sports to food and flowers. Choose a subject to see the artwork.</p>
+    </div>
+    <a class="hsg-all" href="/categories/">
+      Browse all subjects
+      <ActionArrow light size={27} />
+    </a>
+  </header>
+  <div class="hsg-grid">
+    {subjects.map((subject) => (
+      <a class="hsg-subject" href={`/clipart/${subject.slug}/`}>
+        <span class="hsg-picture">
+          <img
+            src={subject.image.thumb}
+            alt=""
+            width={subject.image.width}
+            height={subject.image.height}
+            loading="lazy"
+            decoding="async"
+          />
+        </span>
+        <span class="hsg-caption">
+          <strong>{subject.label}</strong>
+          <CatalogCount kind="topic" countKey={subject.slug} unit="illustration" />
+          <ActionArrow size={24} />
+        </span>
+      </a>
+    ))}
+  </div>
+</section>

@@ -173,6 +173,16 @@ test('production route validates origin, session, Turnstile, inference and no-st
     assert.equal(r.status, 200);
     assert.match(r.headers.get('cache-control'), /no-store/);
     assert.equal((await r.json()).neurons, 175.8);
+    const after = await handleAi(
+      new Request(base + 'quota', { headers: { Cookie: cookie, 'CF-Connecting-IP': '192.0.2.1' } }),
+      env,
+    );
+    const afterQuota = await after.json();
+    assert.equal(afterQuota.visitorLimit, 2);
+    assert.ok(
+      Date.parse(afterQuota.cooldownUntil) > Date.now(),
+      'network cooldown must be returned to the UI',
+    );
     assert.equal((await handleAi(req(valid), env)).status, 429);
     assert.equal(
       (await handleAi(req(valid), { ...env, AI_GENERATION_ENABLED: 'false' })).status,

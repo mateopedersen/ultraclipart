@@ -27,6 +27,7 @@
 }
 .related-discovery h2 {
   margin: 0;
+  font-weight: 600;
   font-size: clamp(28px, 3vw, 38px);
   letter-spacing: -0.035em;
   line-height: 1.15;
@@ -41,17 +42,21 @@
 .related-collection {
   flex-shrink: 0;
   display: inline-flex;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
   color: #234f8e;
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  padding: 13px 17px;
+  padding: 10px 14px;
   border: 1px solid #c7d7ec;
+  border-bottom: 3px solid #adc5e3;
   border-radius: 12px;
-  background: white;
-  min-height: 46px;
+  background: linear-gradient(145deg, #fff, #edf5ff);
+  box-shadow:
+    inset 0 1px #fff,
+    0 3px 0 #e9f0f9;
+  min-height: 48px;
 }
 .related-filters {
   display: flex;
@@ -85,7 +90,7 @@
   font-size: 19px;
   line-height: 1.35;
   margin: 0 0 16px;
-  font-weight: 750;
+  font-weight: 600;
   color: #273d5c;
 }
 .related-grid {
@@ -94,6 +99,7 @@
   gap: 18px;
 }
 .related-card {
+  container: artwork-card / inline-size;
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -142,8 +148,9 @@
   flex-direction: column;
 }
 .related-card-title {
+  min-height: 2.8em;
   font-size: 15px;
-  font-weight: 750;
+  font-weight: 600;
   line-height: 1.45;
   color: #243952;
   text-decoration: none;
@@ -153,44 +160,26 @@
   text-decoration: underline;
 }
 .related-reason {
-  font-size: 12px;
-  color: #60718a;
+  font-size: 14px;
+  font-weight: 450;
+  min-height: 4.5em;
+  color: #415b78;
   line-height: 1.5;
   margin: 7px 0 17px;
 }
-.related-card-actions {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-top: auto;
+.related-card-actions.formats {
+  gap: 8px;
+  align-items: stretch;
   flex-wrap: wrap;
-}
-.related-card-actions a {
-  display: inline-flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  min-height: 42px;
-  padding: 8px;
-  border: 1px solid #dae4ef;
-  border-radius: 8px;
-  color: #315a8d;
-  font-size: 12px;
-  font-weight: 750;
-  text-decoration: none;
-  background: #f7faff;
-  box-sizing: border-box;
-}
-.related-card-actions a:hover {
-  background: #eaf2fd;
-  border-color: #a9c3e4;
+  margin: auto 0 0;
+  padding-top: 0;
 }
 .related-favorite {
   display: grid;
   place-items: center;
+  flex: 0 0 42px;
   width: 42px;
-  height: 42px;
+  min-height: 44px;
   padding: 0;
   border: 1px solid #dae4ef;
   border-radius: 8px;
@@ -274,6 +263,12 @@
   font-weight: 650;
   color: #315a8d;
 }
+.related-footer > a[data-related-end] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
 @media (max-width: 900px) {
   .related-heading-row {
     align-items: flex-start;
@@ -312,15 +307,6 @@
   .related-card-actions {
     gap: 5px;
   }
-  .related-card-actions a > span[aria-hidden='true'] {
-    display: none;
-  }
-  .related-card-actions a {
-    font-size: 11px;
-    gap: 4px;
-    padding: 6px;
-    min-height: 44px;
-  }
   .related-favorite {
     width: 36px;
     min-height: 44px;
@@ -330,7 +316,7 @@
     font-size: 13px;
   }
   .related-reason {
-    font-size: 11px;
+    font-size: 14px;
   }
   .related-collection {
     font-size: 13px;
@@ -345,9 +331,6 @@
   }
   .related-card-title {
     font-size: 16px;
-  }
-  .related-card-actions a {
-    font-size: 13px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -387,7 +370,7 @@
   min-height: 170px;
 }
 .related-companions[data-count='1'] .related-picture img {
-  max-height: 190px;
+  max-height: none;
 }
 .related-companions[data-count='2'] .related-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -470,4 +453,40 @@
   margin-top: 0;
   padding-top: 0;
   border-top: 0;
+}
+
+@container artwork-card (max-width: 230px) {
+  .related-card-actions.formats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .related-card-actions.formats .related-favorite {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 44px;
+  }
+}
+
+/* Horizontal companion cards have a narrower text column than their card frame. */
+.related-companions:is([data-count='1'], [data-count='2']) .related-card-actions.formats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.related-companions:is([data-count='1'], [data-count='2']) .related-card-actions.formats a {
+  flex-direction: column;
+  padding: 9px 4px;
+  gap: 5px;
+  min-height: 72px;
+}
+.related-companions:is([data-count='1'], [data-count='2'])
+  .related-card-actions.formats
+  .related-favorite {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+.related-card-copy {
+  min-width: 0;
+}
+.related-reason {
+  overflow-wrap: break-word;
 }

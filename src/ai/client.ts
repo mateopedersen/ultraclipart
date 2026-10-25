@@ -1,5 +1,18 @@
 import { examples, styles } from './presets';
+import { markSelectedIdea, mountIdeaLibrary, mountIngredientChoices } from './idea-controls';
+import type { ClipartIdea } from './ideas';
+import { mountChoicePickers } from './choice-picker';
+import { mountBuilderColors } from './color-controls';
+import { builderColorDescription } from './colors';
 import { history, type Generation } from './storage';
+import {
+  AiServiceError,
+  generationQuota,
+  quotaRetryAt,
+  readAiResponse,
+  type GenerationQuota,
+} from './api';
+import { incomingIdea } from './prompt-transfer';
 const root = document.querySelector<HTMLElement>('[data-ai-builder]');
 if (root) initialize(root);
 function initialize(root: HTMLElement) {
@@ -23,45 +36,29 @@ function initialize(root: HTMLElement) {
     stopped = false,
     activeURL = '',
     compare = false;
+  const choicePickers = mountChoicePickers(root, () => busy);
   let request: AbortController | undefined;
-  let quota:
-    | {
-        enabled: boolean;
-        remaining: number;
-        globalRemaining: number;
-        resetAt: string;
-        sitekey: string;
-        model: string;
-        cooldownUntil?: string | null;
-      }
-    | undefined;
+  let quota: GenerationQuota | undefined;
+  let quotaRequest: AbortController | undefined;
+  let quotaTimer: number | undefined;
+  let verificationLoad: Promise<void> | undefined;
+  let verificationKey = '';
+  let lastQuotaCheck = 0;
   let thumbnailURLs: string[] = [];
   const api = '/api/ai/clipart/';
   const ingredients = new Set<string>();
   const moods = new Set<string>();
   const swatches = new Set<string>();
-  const ingredientNames: Record<string, string> = {
-    cabin: 'a wooden cabin',
-    trees: 'pine trees',
-    fox: 'a little fox',
-  };
   const moodNames: Record<string, string> = {
     cozy: 'warm and cozy atmosphere',
     minimal: 'minimal uncluttered composition',
-  };
-  const colorNames: Record<string, string> = {
-    '#164e44': 'deep forest green',
-    '#e5532f': 'terracotta orange',
-    '#ffe7c9': 'warm cream',
-    '#58a6d6': 'sky blue',
-    '#f49a28': 'golden amber',
   };
   const composedIdea = () => {
     const details = [
       ingredients.size ? `Include: ${[...ingredients].join(', ')}.` : '',
       moods.size ? `Mood: ${[...moods].join(', ')}.` : '',
       swatches.size
-        ? `Accent colors: ${[...swatches].map((c) => colorNames[c] || c).join(', ')}.`
+        ? `Accent colors: ${[...swatches].map(builderColorDescription).join(', ')}.`
         : '',
     ].filter(Boolean);
     return [prompt.value.trim(), ...details].join(' ');
@@ -70,10 +67,14 @@ function initialize(root: HTMLElement) {
     ingredients.clear();
     moods.clear();
     swatches.clear();
+    colorControls.reset();
     root
-      .querySelectorAll<HTMLElement>('[data-ai-ingredient], [data-ai-mood], [data-ai-swatch]')
+      .querySelectorAll<HTMLElement>(
+        '[data-ai-ingredient-category], [data-ai-mood], [data-ai-swatch]',
+      )
       .forEach((b) => b.setAttribute('aria-pressed', 'false'));
-    root.querySelector('#ai-custom-ingredients')?.replaceChildren();
+    ingredientControls.reset();
+    markSelectedIdea(root);
   };
 
   const errorMessages: Record<string, string> = {
@@ -112,6 +113,12 @@ function initialize(root: HTMLElement) {
     request_too_large: 'This request is too large. Shorten the description before trying again.',
     unsupported_option:
       'A setting is no longer supported. Reload the page to use the current controls.',
+    service_not_configured:
+      'Image generation is not connected in this preview. Continue on the live AI Clipart Builder to create your image.',
+    invalid_service_response:
+      'The image service returned an unreadable response. Please check capacity again in a moment.',
+    invalid_color: 'Choose a valid background color and try again.',
+    invalid_request: 'Please check your description and settings, then try again.',
   };
 
   type Turnstile = {
@@ -150,7 +157,8 @@ function initialize(root: HTMLElement) {
     });
   };
   const count = () => {
-    element('ai-count').textContent = `${prompt.value.length} / 1200`;
+    element('ai-count').textContent = `${composedIdea().length} / 1200`;
+    updateButtons();
   };
   const selectStyle = () => {
     root
@@ -159,8 +167,12 @@ function initialize(root: HTMLElement) {
         button.setAttribute('aria-pressed', String(button.dataset.aiStyle === style.value)),
       );
     element('ai-style-note').textContent = styles.find(([id]) => id === style.value)?.[2] || '';
+    element('ai-selected-style').textContent = styles.find(([id]) => id === style.value)?.[1] || '';
+    choicePickers.refresh();
   };
   const updateButtons = () => {
+    choicePickers.refresh();
+    colorControls.refresh();
     generate.disabled =
       busy ||
       !navigator.onLine ||
@@ -168,11 +180,32 @@ function initialize(root: HTMLElement) {
       quota.remaining < 1 ||
       quota.globalRemaining < 1 ||
       !token ||
+      prompt.value.trim().length < 3 ||
+      composedIdea().length > 1200 ||
       Boolean(quota?.cooldownUntil && Date.parse(quota.cooldownUntil) > Date.now());
     generate.setAttribute('aria-busy', String(busy));
+    const generateLabel = root.querySelector<HTMLElement>('[data-ai-generate-label]');
+    if (generateLabel) generateLabel.textContent = busy ? 'Creating…' : 'Create My Clipart';
+    const needsVerification = Boolean(quota?.enabled && widget && !token && !busy);
+    const hint = root.querySelector<HTMLElement>('#ai-form-hint');
+    if (hint) {
+      hint.textContent = !prompt.value.trim()
+        ? 'Write a description or choose an example.'
+        : needsVerification
+          ? 'Complete the security check before creating.'
+          : composedIdea().length > 1200
+            ? 'Keep your description within 1,200 characters.'
+            : '';
+      hint.hidden = !hint.textContent;
+    }
+    const verificationLink = root.querySelector<HTMLButtonElement>('[data-ai-show-verification]');
+    if (verificationLink) verificationLink.hidden = !needsVerification;
+    const guidance = root.querySelector<HTMLElement>('.ai-form-guidance');
+    if (guidance) guidance.hidden = !hint?.textContent && !needsVerification;
+    element<HTMLButtonElement>('ai-refresh-quota').disabled = busy || !!quotaRequest;
     root
       .querySelectorAll<HTMLButtonElement>(
-        '[data-ai-ingredient], [data-ai-mood], [data-ai-swatch], [data-ai-theme], [data-ai-concept], [data-ai-style], [data-ai-add-ingredient]',
+        '[data-ai-ingredient], [data-ai-mood], [data-ai-swatch], [data-ai-style], [data-ai-add-ingredient], [data-ai-example], [data-ai-remove-ingredient]',
       )
       .forEach((button) => (button.disabled = busy));
     root
@@ -329,6 +362,11 @@ function initialize(root: HTMLElement) {
     );
   }
   function message(error: unknown) {
+    if (error instanceof AiServiceError)
+      return (
+        errorMessages[error.code] ||
+        'The image service could not finish this request. Please try again later.'
+      );
     return error instanceof Error
       ? error.message
       : 'Something went wrong. Your current image has been kept.';
@@ -338,23 +376,45 @@ function initialize(root: HTMLElement) {
     updateButtons();
     say(navigator.onLine ? 'error' : 'offline', message(error));
   }
-  async function loadTurnstile(sitekey: string) {
-    if (widget || !sitekey) return;
+  async function loadTurnstile(sitekey: string, reset = false) {
+    if (!sitekey) return;
+    if (widget && verificationKey !== sitekey) {
+      turnstile()?.remove(widget);
+      widget = '';
+      token = '';
+    }
+    if (widget) {
+      if (reset) {
+        token = '';
+        turnstile()?.reset(widget);
+      }
+      return;
+    }
     if (!turnstile())
-      await new Promise<void>((resolve, reject) => {
+      await (verificationLoad ??= new Promise<void>((resolve, reject) => {
         const script = document.createElement('script');
         script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
         script.async = true;
         script.defer = true;
-        script.onload = () => resolve();
-        script.onerror = () =>
+        const timeout = window.setTimeout(() => fail(), 12000);
+        const fail = () => {
+          window.clearTimeout(timeout);
+          script.remove();
           reject(
             new Error(
-              'Security verification could not load. Check your connection or browser privacy settings.',
+              'Security verification could not load. Check your connection, then check capacity again.',
             ),
           );
+        };
+        script.onload = () => {
+          window.clearTimeout(timeout);
+          resolve();
+        };
+        script.onerror = fail;
         document.head.append(script);
-      });
+      }).finally(() => {
+        verificationLoad = undefined;
+      }));
     const service = turnstile();
     if (!service) throw new Error('Security verification is not available. Reload to try again.');
     widget = service.render(element('ai-turnstile'), {
@@ -375,24 +435,42 @@ function initialize(root: HTMLElement) {
         updateButtons();
         say(
           'blocked',
-          'Security verification needs another try. Reload this page; your saved images will remain.',
+          'Security verification needs another try. Choose Check capacity to retry; your saved images will remain.',
         );
       },
     });
+    verificationKey = sitekey;
   }
-  async function refreshQuota() {
+  async function refreshQuota(
+    announce = true,
+    resetVerification = false,
+    recoverAvailability = false,
+  ) {
+    if (busy) {
+      if (!announce)
+        quotaTimer = window.setTimeout(
+          () => void refreshQuota(false, false, recoverAvailability),
+          5000,
+        );
+      return;
+    }
+    lastQuotaCheck = Date.now();
+    window.clearTimeout(quotaTimer);
+    quotaRequest?.abort();
+    const controller = new AbortController();
+    quotaRequest = controller;
+    const timeout = window.setTimeout(() => controller.abort(), 12000);
+    updateButtons();
     try {
-      const response = await fetch(api + 'quota', {
+      const response = await fetch(api + 'quota/', {
         credentials: 'same-origin',
         cache: 'no-store',
+        signal: controller.signal,
       });
-      if (!response.ok)
-        throw new Error(
-          'Generation is temporarily unavailable. You can still edit and download your saved images.',
-        );
-      quota = await response.json();
-      if (!quota || typeof quota.remaining !== 'number' || typeof quota.sitekey !== 'string')
-        throw new Error('Generation settings could not be loaded.');
+      const next = generationQuota(await readAiResponse(response));
+      if (controller.signal.aborted || quotaRequest !== controller) return;
+      quota = next;
+      element('ai-live-builder').hidden = true;
       const reset = new Date(quota.resetAt).toLocaleString(undefined, {
         weekday: 'short',
         hour: 'numeric',
@@ -400,32 +478,68 @@ function initialize(root: HTMLElement) {
         timeZoneName: 'short',
       });
       element('ai-quota').textContent =
-        `${quota.remaining} of 2 free generations left for you today. Shared capacity applies. Resets ${reset}.`;
+        `${quota.remaining} of ${quota.visitorLimit} free generations left for you today. Shared capacity applies. Resets ${reset}.`;
       if (!quota.enabled)
-        say(
-          'blocked',
-          'Generation is temporarily paused. Your saved images, downloads and Clipart Studio remain available.',
-        );
-      else if (quota.remaining < 1 || quota.globalRemaining < 1)
-        say(
-          'capacity-exhausted',
-          'Today’s free generation capacity is used up. Editing and downloads are still available.',
-        );
-      else {
-        await loadTurnstile(quota.sitekey);
-        if (quota.cooldownUntil && Date.parse(quota.cooldownUntil) > Date.now())
+        announce &&
           say(
             'blocked',
-            `Generation is briefly paused to protect free capacity. Try again after ${new Date(quota.cooldownUntil).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })}. Local editing remains available.`,
+            'Generation is temporarily paused. Your saved images, downloads and Clipart Studio remain available.',
+          );
+      else if (quota.remaining < 1 || quota.globalRemaining < 1)
+        announce &&
+          say(
+            'capacity-exhausted',
+            'Today’s free generation capacity is used up. Editing and downloads are still available.',
+          );
+      else {
+        await loadTurnstile(quota.sitekey, resetVerification);
+        if (controller.signal.aborted || quotaRequest !== controller) return;
+        if (quota.cooldownUntil && Date.parse(quota.cooldownUntil) > Date.now())
+          announce &&
+            say(
+              'blocked',
+              `Please wait until ${new Date(quota.cooldownUntil).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit', second: '2-digit' })} before creating another image. Local editing remains available.`,
+            );
+        else if (
+          announce ||
+          (recoverAvailability &&
+            ['blocked', 'capacity-exhausted', 'offline'].includes(stateLabel.dataset.state || ''))
+        )
+          say(
+            active ? 'ready' : 'idle',
+            active
+              ? 'Your current image is ready. You can edit, download or create another image.'
+              : 'Describe your idea, choose a style and create one image.',
           );
       }
+      const retryAt = quotaRetryAt(quota);
+      if (retryAt)
+        quotaTimer = window.setTimeout(
+          () => void refreshQuota(false, false, true),
+          Math.min(2147483647, Math.max(1000, retryAt - Date.now() + 500)),
+        );
     } catch (error) {
+      if (quotaRequest !== controller) return;
       quota = undefined;
-      say(navigator.onLine ? 'blocked' : 'offline', message(error));
+      if (announce)
+        say(
+          navigator.onLine ? 'blocked' : 'offline',
+          controller.signal.aborted
+            ? 'Checking capacity timed out. Check your connection and try again.'
+            : message(error),
+        );
+      element('ai-live-builder').hidden = !(
+        error instanceof AiServiceError &&
+        error.code === 'service_not_configured' &&
+        ['localhost', '127.0.0.1', '[::1]'].includes(location.hostname)
+      );
       element('ai-quota').textContent =
         'Capacity could not be checked. No generation has been requested.';
+    } finally {
+      window.clearTimeout(timeout);
+      if (quotaRequest === controller) quotaRequest = undefined;
+      updateButtons();
     }
-    updateButtons();
   }
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -460,7 +574,7 @@ function initialize(root: HTMLElement) {
         'generating',
         'The model is creating one image from your description. This can take a moment. Your previous work stays safe.',
       );
-      const response = await fetch(api + 'generate', {
+      const response = await fetch(api + 'generate/', {
         method: 'POST',
         credentials: 'same-origin',
         headers: { 'Content-Type': 'application/json' },
@@ -473,18 +587,7 @@ function initialize(root: HTMLElement) {
           turnstileToken: token,
         }),
       });
-      const result = await response.json();
-      if (!response.ok) {
-        const error =
-          typeof result.error === 'string'
-            ? result.error
-            : result.error?.message ||
-              result.message ||
-              'Generation could not finish. No automatic retry was made.';
-        if (response.status === 429) say('capacity-exhausted', errorMessages[error] || error);
-        else say(response.status === 403 ? 'blocked' : 'error', errorMessages[error] || error);
-        return;
-      }
+      const result = await readAiResponse(response);
       if (
         typeof result.image !== 'string' ||
         result.image.length > 12000000 ||
@@ -497,11 +600,12 @@ function initialize(root: HTMLElement) {
       const image = new Blob([bytes], { type: 'image/jpeg' });
       const item: Generation = {
         id: crypto.randomUUID(),
-        prompt: result.prompt || prompt.value.trim(),
-        composedPrompt: result.composedPrompt || '',
-        style: result.style || style.value,
-        model: result.model,
-        createdAt: result.createdAt,
+        prompt: typeof result.prompt === 'string' ? result.prompt : submittedIdea,
+        composedPrompt: typeof result.composedPrompt === 'string' ? result.composedPrompt : '',
+        style: typeof result.style === 'string' ? result.style : style.value,
+        model: typeof result.model === 'string' ? result.model : '',
+        createdAt:
+          typeof result.createdAt === 'string' ? result.createdAt : new Date().toISOString(),
         width: 1024,
         height: 1024,
         original: image,
@@ -522,7 +626,13 @@ function initialize(root: HTMLElement) {
       await persist();
     } catch (error) {
       say(
-        navigator.onLine ? 'error' : 'offline',
+        !navigator.onLine
+          ? 'offline'
+          : error instanceof AiServiceError && error.status === 429
+            ? 'capacity-exhausted'
+            : error instanceof AiServiceError && error.status === 403
+              ? 'blocked'
+              : 'error',
         request.signal.aborted
           ? stopped
             ? 'You stopped waiting. The server may already be generating, so this request can still count toward today’s limit. Your earlier images are safe.'
@@ -535,80 +645,81 @@ function initialize(root: HTMLElement) {
       token = '';
       element('ai-cancel').hidden = true;
       if (widget) turnstile()?.reset(widget);
-      await refreshQuota();
+      await refreshQuota(false);
       updateButtons();
     }
   });
-  element('ai-refresh-quota').addEventListener('click', () => void refreshQuota());
+  element('ai-refresh-quota').addEventListener('click', () => void refreshQuota(true, true));
+  element<HTMLAnchorElement>('ai-live-builder').addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = new URL('https://ultraclipart.com/ai-clipart-generator/');
+    target.hash = new URLSearchParams({ idea: composedIdea(), style: style.value }).toString();
+    location.assign(target.href);
+  });
   element('ai-cancel').addEventListener('click', () => {
     stopped = true;
     request?.abort();
   });
+  root.querySelector('[data-ai-show-verification]')?.addEventListener('click', () => {
+    const verification = element('ai-turnstile');
+    verification.scrollIntoView({ block: 'center', behavior: 'instant' });
+    verification.focus({ preventScroll: true });
+  });
   root.querySelectorAll<HTMLButtonElement>('[data-ai-style]').forEach((button) =>
     button.addEventListener('click', () => {
       style.value = button.dataset.aiStyle!;
+      markSelectedIdea(root);
       selectStyle();
     }),
   );
-  root.querySelectorAll<HTMLButtonElement>('[data-ai-ingredient]').forEach((button) =>
-    button.addEventListener('click', () => {
-      const key = button.dataset.aiIngredient!;
-      if (key === 'custom') {
-        const input = root.querySelector<HTMLInputElement>('#ai-ingredient-custom');
-        const panel = root.querySelector<HTMLElement>('#ai-custom-ingredient-panel');
-        if (panel) panel.hidden = false;
-        button.setAttribute('aria-expanded', 'true');
-        if (input) {
-          input.hidden = false;
-          input.focus();
-        }
-        return;
-      }
-      const value = ingredientNames[key];
-      if (!value) return;
-      ingredients.has(value) ? ingredients.delete(value) : ingredients.add(value);
-      button.setAttribute('aria-pressed', String(ingredients.has(value)));
-    }),
+  const ingredientControls = mountIngredientChoices(
+    root,
+    ingredients,
+    () => {
+      markSelectedIdea(root);
+      count();
+    },
+    () => busy,
   );
-  const addIngredient = () => {
-    const input = root.querySelector<HTMLInputElement>('#ai-ingredient-custom');
-    const value = input?.value.trim().slice(0, 80);
-    if (!value || ingredients.has(value) || ingredients.size >= 8) return;
-    ingredients.add(value);
-    const chip = document.createElement('button');
-    chip.type = 'button';
-    chip.textContent = value + ' ×';
-    chip.setAttribute('aria-label', 'Remove ingredient: ' + value);
-    chip.addEventListener('click', () => {
-      if (!busy) {
-        ingredients.delete(value);
-        chip.remove();
-      }
-    });
-    root.querySelector('#ai-custom-ingredients')?.append(chip);
-    input!.value = '';
-  };
-  root.querySelector('[data-ai-add-ingredient]')?.addEventListener('click', addIngredient);
-  root.querySelector('#ai-ingredient-custom')?.addEventListener('keydown', (event) => {
-    if ((event as KeyboardEvent).key === 'Enter') {
-      event.preventDefault();
-      addIngredient();
-    }
-  });
-  for (const [attribute, selected, names] of [
-    ['mood', moods, moodNames],
-    ['swatch', swatches, colorNames],
-  ] as const) {
-    root.querySelectorAll<HTMLButtonElement>(`[data-ai-${attribute}]`).forEach((button) =>
-      button.addEventListener('click', () => {
-        const key = button.getAttribute(`data-ai-${attribute}`)!;
-        const value = attribute === 'mood' ? names[key] : key;
-        if (!value) return;
-        selected.has(value) ? selected.delete(value) : selected.add(value);
-        button.setAttribute('aria-pressed', String(selected.has(value)));
-      }),
+  const colorControls = mountBuilderColors(root, swatches, count, () => busy);
+  function useExample(example: ClipartIdea) {
+    if (busy) return;
+    clearIngredients();
+    prompt.value = example.prompt;
+    style.value = example.style;
+    // A previous monochrome palette or bold outline must not override a new example's style.
+    element<HTMLSelectElement>('ai-palette').value = 'prompt';
+    element<HTMLSelectElement>('ai-composition').value = 'centered';
+    element<HTMLSelectElement>('ai-detail').value = 'balanced';
+    element<HTMLSelectElement>('ai-outline').value = 'none';
+    element<HTMLSelectElement>('ai-margin').value = 'standard';
+    count();
+    selectStyle();
+    markSelectedIdea(root, example.id);
+    prompt.focus({ preventScroll: true });
+    prompt.scrollIntoView({ block: 'center', behavior: 'instant' });
+    say(
+      'idle',
+      'Example description and style added. Change any details, then press Create My Clipart when ready.',
     );
   }
+  mountIdeaLibrary(root, useExample, () => busy);
+  root.querySelector('[data-ai-show-styles]')?.addEventListener('click', (event) => {
+    choicePickers.open(
+      style,
+      event.currentTarget instanceof HTMLElement ? event.currentTarget : undefined,
+    );
+  });
+  root.querySelectorAll<HTMLButtonElement>('[data-ai-mood]').forEach((button) =>
+    button.addEventListener('click', () => {
+      if (busy) return;
+      const value = moodNames[button.dataset.aiMood!];
+      if (!value) return;
+      moods.has(value) ? moods.delete(value) : moods.add(value);
+      button.setAttribute('aria-pressed', String(moods.has(value)));
+      count();
+    }),
+  );
   root.querySelectorAll<HTMLButtonElement>('[data-ai-view]').forEach((button) =>
     button.addEventListener('click', () => {
       const view = button.dataset.aiView!;
@@ -619,43 +730,6 @@ function initialize(root: HTMLElement) {
     }),
   );
   root.querySelector('#ai-concept-count')?.addEventListener('change', renderHistory);
-  const themes: Record<string, string> = {
-    animals:
-      'A lifelike baby deer standing beside wildflowers, gentle eyes, detailed soft fur, full body.',
-    florals: 'A graceful bouquet of pink peonies, orange daisies and delicate green leaves.',
-    holidays:
-      'A festive red ribbon bow with evergreen branches, pine cones and bright red berries.',
-    school: 'A cheerful school arrangement with colored pencils, three books and a red apple.',
-    food: 'A golden flaky croissant beside a porcelain teacup with delicate blue flowers.',
-    nature:
-      'A cozy wooden cabin nestled among tall pine trees, a winding path and warm golden sunlight.',
-  };
-  root.querySelectorAll<HTMLButtonElement>('[data-ai-theme]').forEach((button) =>
-    button.addEventListener('click', () => {
-      clearIngredients();
-      prompt.value = themes[button.dataset.aiTheme!] || '';
-      count();
-      prompt.focus();
-      say('idle', 'Theme added to your description. Choose your details, then create one image.');
-    }),
-  );
-  const conceptStyles = ['cut-paper', 'realistic', 'black-white', 'watercolor'];
-  root.querySelectorAll<HTMLButtonElement>('[data-ai-concept]').forEach((button) =>
-    button.addEventListener('click', () => {
-      clearIngredients();
-      prompt.value = themes.nature;
-      style.value = conceptStyles[Number(button.dataset.aiConcept)] || 'realistic';
-      count();
-      selectStyle();
-      root
-        .querySelectorAll('[data-ai-concept]')
-        .forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
-      say(
-        'idle',
-        'Example direction selected. Create your own image to enable editing and downloads.',
-      );
-    }),
-  );
   root.querySelectorAll<HTMLButtonElement>('[data-ai-step]').forEach((button) =>
     button.addEventListener('click', () => {
       if (button.dataset.aiStep === 'idea') {
@@ -672,20 +746,14 @@ function initialize(root: HTMLElement) {
       }
     }),
   );
-  prompt.addEventListener('input', count);
-  style.addEventListener('change', selectStyle);
-  root.querySelectorAll<HTMLButtonElement>('[data-ai-example]').forEach((button) =>
-    button.addEventListener('click', () => {
-      const example = examples[Number(button.dataset.aiExample)];
-      clearIngredients();
-      prompt.value = example.prompt;
-      style.value = example.style;
-      count();
-      selectStyle();
-      prompt.focus();
-      say('idle', 'Example prompt added. Make it your own, then generate one image.');
-    }),
-  );
+  prompt.addEventListener('input', () => {
+    markSelectedIdea(root);
+    count();
+  });
+  style.addEventListener('change', () => {
+    markSelectedIdea(root);
+    selectStyle();
+  });
   async function cutout() {
     const data = context.getImageData(0, 0, canvas.width, canvas.height),
       worker = new Worker(new URL('./cutout.worker.ts', import.meta.url), { type: 'module' });
@@ -728,13 +796,7 @@ function initialize(root: HTMLElement) {
   async function run(action: string) {
     if (busy) return;
     if (action === 'random') {
-      const example = examples[Math.floor(Math.random() * examples.length)];
-      clearIngredients();
-      prompt.value = example.prompt;
-      style.value = example.style;
-      count();
-      selectStyle();
-      prompt.focus();
+      useExample(examples[Math.floor(Math.random() * examples.length)]);
       return;
     }
     if (action === 'reset') {
@@ -1031,34 +1093,34 @@ function initialize(root: HTMLElement) {
     updateButtons();
   });
   window.addEventListener('online', () => void refreshQuota());
+  const checkReturnedPage = () => {
+    if (!document.hidden && !busy && Date.now() - lastQuotaCheck > 5000)
+      void refreshQuota(false, false, true);
+  };
+  window.addEventListener('focus', checkReturnedPage);
+  window.addEventListener('pageshow', checkReturnedPage);
+  document.addEventListener('visibilitychange', checkReturnedPage);
+  let storage: Storage | undefined;
   try {
-    const transfer = sessionStorage.getItem('ultraclipart-ai-prompt');
-    if (transfer) {
-      const saved = JSON.parse(transfer);
-      if (
-        typeof saved.prompt === 'string' &&
-        saved.prompt.length <= 1200 &&
-        Date.now() - saved.createdAt < 3600000
-      ) {
-        prompt.value = saved.prompt;
-        if (styles.some(([id]) => id === saved.style)) style.value = saved.style;
-      }
-      sessionStorage.removeItem('ultraclipart-ai-prompt');
-    }
-    // Fragment fallback is never sent to the server or used as executable markup.
-    const fragment = new URLSearchParams(location.hash.slice(1));
-    if (!prompt.value && fragment.has('idea'))
-      prompt.value = (fragment.get('idea') || '').slice(0, 1200);
-    if (fragment.has('idea')) window.history.replaceState(null, '', location.pathname);
+    storage = sessionStorage;
   } catch {
-    /* Generating and downloads still work without browser storage. */
+    /* Private-mode storage can be unavailable. */
   }
+  const transfer = incomingIdea(storage, location.hash);
+  if (transfer) {
+    prompt.value = transfer.prompt;
+    if (styles.some(([id]) => id === transfer.style)) style.value = transfer.style!;
+  }
+  if (new URLSearchParams(location.hash.slice(1)).has('idea'))
+    window.history.replaceState(window.history.state, '', location.pathname + location.search);
   count();
   selectStyle();
   updateButtons();
   void history('read')
     .then((items) => {
-      records = items;
+      records = [...new Map([...items, ...records].map((item) => [item.id, item])).values()]
+        .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+        .slice(0, 12);
       renderHistory();
     })
     .catch((error) => {

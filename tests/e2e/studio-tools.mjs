@@ -3,6 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { chooseSelectionTool } from '../helpers/creator.mjs';
 const engine = process.env.UC_BROWSER || 'chromium',
   base = process.env.BASE_URL || 'http://127.0.0.1:4351';
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/studio-tools', engine);
@@ -127,7 +128,7 @@ try {
     await open(a);
     const before = await pixelInfo();
     assert.ok(before.point);
-    await page.locator('[data-smart-tool]').selectOption(i % 2 ? 'wand' : 'smart');
+    await chooseSelectionTool(page, i % 2 ? 'wand' : 'smart');
     if (i % 2) {
       await page.locator('[data-contiguous]').uncheck();
       await page.locator('[data-distance]').selectOption('rgb');
@@ -232,12 +233,12 @@ try {
   await clickNative(source.point);
   assert.equal((await state()).layers[0].regions.at(-1).stage, 'after-effects');
   assert.notEqual((await pixelInfo()).alpha, coloring.alpha);
-  await page.locator('[data-smart-tool]').selectOption('restore');
+  await chooseSelectionTool(page, 'restore');
   await clickNative(source.point);
   assert.equal((await pixelInfo()).hash, coloring.hash);
   // Cloning/repair from a separate nearby source should change pixels, never the source bitmap.
   for (const brush of ['clone', 'repair']) {
-    await page.locator('[data-smart-tool]').selectOption(brush);
+    await chooseSelectionTool(page, brush);
     await change('[data-sample-x]', source.point.x + 40);
     await change('[data-sample-y]', source.point.y + 40);
     await clickNative(source.point);

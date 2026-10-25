@@ -1,0 +1,14 @@
+---
+import CatalogCount from './CatalogCount.astro';
+import { collectionCountTemplate } from '../lib/collection-count-copy';
+interface Props {
+  text: string;
+  topic: string;
+}
+const { text, topic } = Astro.props;
+const parts = collectionCountTemplate(text).split(/(\{\{artworkCount\}\})/);
+---
+
+{parts.map((part) =>
+  part === '{{artworkCount}}' ? <CatalogCount kind="topic" countKey={topic} /> : part,
+)}

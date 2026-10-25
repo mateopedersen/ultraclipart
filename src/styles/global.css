@@ -1,3 +1,6 @@
+@import './reader-type.css';
+@import './card-media.css';
+
 /* Locally installed Avenir is used without shipping a proprietary font file.
    The self-hosted, open-license Inter faces do not swap into an already laid-out
    page on a slow connection. The adjusted local fallback keeps similar metrics. */
@@ -70,6 +73,7 @@
   line-gap-override: 0%;
 }
 :root {
+  --font-ui: 'UltraClipart Sans', Arial, sans-serif;
   font-family: 'Avenir Next', Avenir, 'UltraClipart Sans', 'UltraClipart Fallback', sans-serif;
   color: #18233e;
   background: #fff;
@@ -85,6 +89,9 @@
 * {
   box-sizing: border-box;
 }
+[hidden] {
+  display: none !important;
+}
 body {
   margin: 0;
 }
@@ -97,7 +104,8 @@ a:hover {
 }
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 button,
@@ -389,7 +397,7 @@ p {
   display: block;
   color: var(--ink);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   min-height: 42px;
   line-height: 1.45;
   overflow-wrap: anywhere;
@@ -413,8 +421,8 @@ p {
   border-radius: 10px;
   background: #f5f8fc;
   color: #233d63;
-  font-size: 12px;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 1.2;
   font-weight: 650;
   text-decoration: none;
   transition:
@@ -422,7 +430,7 @@ p {
     border-color 0.16s ease,
     box-shadow 0.16s ease;
 }
-.formats a svg {
+.formats a :is(svg, .action-icon) {
   flex-shrink: 0;
 }
 .formats a:hover {
@@ -447,9 +455,11 @@ p {
     gap: 6px;
   }
   .formats a {
-    padding: 8px;
+    flex-direction: column;
+    padding: 9px 4px;
     gap: 5px;
-    font-size: 12px;
+    font-size: 16px;
+    min-height: 72px;
   }
 }
 .card-actions {
@@ -463,10 +473,10 @@ p {
   border-color: #ccdcf5;
   background: #edf4ff;
   color: #1558bb;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1;
-  height: 44px;
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.2;
+  min-height: 44px;
   min-width: 0;
   width: 100%;
   padding: 0 6px;
@@ -477,11 +487,11 @@ p {
   background: #deebff;
   border-color: #92b5eb;
 }
-.card-actions .button svg {
+.card-actions .button :is(svg, .action-icon) {
   display: block;
-  flex: 0 0 20px;
-  width: 20px;
-  height: 20px;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
 }
 .card-actions .button span {
   display: block;
@@ -493,7 +503,7 @@ p {
 }
 .collection-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 .collection-card {
@@ -516,7 +526,7 @@ p {
 }
 .benefits {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
   border-top: 1px solid var(--line);
   padding: 35px 0 0;
@@ -622,7 +632,7 @@ footer small {
 }
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
 }
 .category-card {
@@ -667,7 +677,7 @@ footer small {
 }
 .topic-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
 }
 .topic-links a {
@@ -690,6 +700,7 @@ footer small {
   font-size: 36px;
 }
 .preview {
+  position: relative;
   border-radius: 14px;
   aspect-ratio: 1.15;
   display: grid;
@@ -708,6 +719,9 @@ footer small {
     -12px 0;
 }
 .preview img {
+  position: absolute;
+  inset: 5%;
+  display: block;
   width: 90%;
   height: 90%;
   object-fit: contain;
@@ -780,7 +794,7 @@ footer small {
   font-weight: 400;
   line-height: 1.4;
 }
-.download-option > svg {
+.download-option > :is(svg, .action-icon) {
   flex-shrink: 0;
   color: #52647e;
 }
@@ -849,7 +863,7 @@ button[aria-pressed='true'] {
     font-size: 44px;
   }
   .gallery {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .catalog-grid .gallery {
     grid-template-columns: repeat(3, 1fr);
@@ -866,7 +880,7 @@ button[aria-pressed='true'] {
     display: none;
   }
   .topic-row {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .gallery,
   .category-grid,
@@ -1413,8 +1427,8 @@ button[aria-busy='true'],
   letter-spacing: -1px;
 }
 .guide-body {
-  font-size: 17px;
-  line-height: 1.85;
+  font-size: 20px;
+  line-height: 1.7;
 }
 .guide-body h2 {
   margin: 36px 0 12px;

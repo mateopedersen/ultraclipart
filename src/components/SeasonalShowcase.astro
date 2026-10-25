@@ -1,21 +1,18 @@
 ---
-import { art, topics, slugify, availableClusters, topicInCluster } from '../lib/catalog';
+import { publishedArt as art, slugify, availableClusters } from '../lib/catalog';
+import CatalogCount from './CatalogCount.astro';
 const seasons = [
   {
     cluster: 'Halloween',
-    label: 'Halloween',
-    title: 'A little magic. A little mischief.',
-    body: 'For treat bags, party invitations and autumn crafts.',
-    link: 'Find your Halloween favorites',
+    title: 'Halloween',
+    body: 'Pumpkins and party treats for invitations, decorations and treat bags.',
     tone: 'halloween',
     images: ['pumpkin-lantern-smile', 'halloween-treat-pail', 'halloween-caramel-apple'],
   },
   {
     cluster: 'Thanksgiving & Autumn',
-    label: 'Autumn & Thanksgiving',
-    title: 'Gather something lovely.',
-    body: 'Warm details for table settings and thoughtful thank-you notes.',
-    link: 'Explore the autumn collection',
+    title: 'Autumn & Thanksgiving',
+    body: 'Harvest artwork for table cards, autumn crafts and Thanksgiving activities.',
     tone: 'autumn',
     images: [
       'thanksgiving-harvest-door-wreath',
@@ -25,10 +22,8 @@ const seasons = [
   },
   {
     cluster: 'Christmas & Winter',
-    label: 'Winter',
-    title: 'Cozy up your next creation.',
-    body: 'Snowy scenes and little comforts for your winter projects.',
-    link: 'Discover winter artwork',
+    title: 'Christmas & Winter',
+    body: 'Snowy cabins, mittens and seasonal artwork for cards and classroom projects.',
     tone: 'winter',
     images: [
       'winter-snowy-timber-cabin',
@@ -38,10 +33,8 @@ const seasons = [
   },
   {
     cluster: "Valentine's Day",
-    label: 'Love & little gestures',
-    title: 'A little heart goes a long way.',
-    body: 'Flowers, handwritten wishes and something made with love.',
-    link: 'Explore heartfelt ideas',
+    title: "Valentine's Day",
+    body: 'Hearts, flowers and envelopes for handmade cards, gift tags and personal notes.',
     tone: 'love',
     images: [
       'floral-heart-roses-wreath-clipart',
@@ -58,19 +51,17 @@ const seasons = [
       if (!item) throw new Error(`Missing seasonal artwork: ${id}`);
       return item;
     }),
-    count: art.filter((a) => topics.some((t) => t.slug === a.topic && topicInCluster(t, s.cluster)))
-      .length,
   }));
 ---
 
 <section class="seasonal-showcase" aria-labelledby="seasonal-showcase-title">
   <div class="seasonal-heading">
     <div>
-      <p>A little inspiration for the occasion</p>
-      <h2 id="seasonal-showcase-title">Make the moment feel special.</h2>
+      <h2 id="seasonal-showcase-title">Seasonal Collections</h2>
+      <p>Artwork for holidays, seasonal crafts and classroom activities.</p>
     </div>
-    <a href="/collections/">
-      All collections <span aria-hidden="true">↗</span>
+    <a class="home-section-link" href="/collections/">
+      View All Collections
     </a>
   </div>
   <div class="seasonal-grid">
@@ -92,16 +83,18 @@ const seasons = [
               loading="lazy"
             />
           ))}
-          <span class="seasonal-count">{season.count} illustrations</span>
+          <span class="seasonal-count">
+            <CatalogCount
+              kind="collection-artworks"
+              countKey={slugify(season.cluster)}
+              unit="illustration"
+            />
+          </span>
         </div>
         <div class="seasonal-copy">
-          <span class="seasonal-label">{season.label}</span>
           <h3>{season.title}</h3>
           <p>{season.body}</p>
-          <span class="seasonal-link">
-            {season.link}
-            <span aria-hidden="true">→</span>
-          </span>
+          <span class="seasonal-link">{season.title} Clipart</span>
         </div>
       </a>
     ))}
@@ -437,6 +430,23 @@ const seasons = [
     .seasonal-showcase a,
     .seasonal-object {
       transition: none;
+    }
+  }
+
+  .seasonal-copy p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .seasonal-count {
+    font-size: 12px;
+  }
+  .seasonal-copy h3 {
+    min-height: 2.6em;
+    font-weight: 600;
+  }
+  @media (max-width: 800px) {
+    .seasonal-copy h3 {
+      min-height: 0;
     }
   }
 </style>

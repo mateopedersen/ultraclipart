@@ -1,4 +1,5 @@
 import { effectBounds } from './padding';
+import { ProTools } from './pro-tools';
 import type { SmartController } from './controller';
 import {
   clone,
@@ -33,7 +34,10 @@ export class StudioTools {
   private catalogue: (RasterAsset & { title?: string })[] = [];
   private effectId = '';
   private batch = 0;
+  private pro: ProTools;
+  private toolFilter = 'All';
   constructor(private editor: SmartController) {
+    this.pro = new ProTools(editor.host);
     editor.host.root.addEventListener('change', (event) => {
       const input = event.target as HTMLInputElement;
       if (!input.matches('[data-local-clipart]') || !input.files?.[0]) return;
@@ -43,6 +47,7 @@ export class StudioTools {
     });
     editor.host.root.addEventListener('input', (event) => {
       if ((event.target as Element).matches('[data-composer-search]')) this.list();
+      if ((event.target as Element).matches('[data-pro-search]')) this.filterTools();
     });
     editor.host.root.addEventListener('change', (event) => {
       if (
@@ -51,10 +56,23 @@ export class StudioTools {
         )
       )
         this.controls();
+      if ((event.target as Element).matches('[data-pro-canvas-mode]'))
+        editor.q('data-pro-format-label').hidden = editor.value('data-pro-canvas-mode') === 'trim';
     });
     editor.host.root.addEventListener('click', (event) => {
       const button = (event.target as Element).closest<HTMLButtonElement>('button');
       if (!button) return;
+      if (button.dataset.proOpen) {
+        editor.q<HTMLSelectElement>('data-studio-tool').value = button.dataset.proOpen;
+        this.show();
+        if (button.dataset.proOpen !== 'home')
+          editor.q('data-pro-heading').focus({ preventScroll: true });
+        editor.q('data-pro-active').scrollIntoView({ block: 'nearest', behavior: 'instant' });
+      }
+      if (button.dataset.proFilter) {
+        this.toolFilter = button.dataset.proFilter;
+        this.filterTools();
+      }
       if (button.dataset.effectSelect) {
         const e = editor.layer()?.effects?.find((e) => e.id === button.dataset.effectSelect);
         if (e) {
@@ -122,8 +140,30 @@ export class StudioTools {
           this.list();
         })
         .catch((error) => e.host.status(error.message, true));
+    e.q('data-pro-active').hidden = name === 'home';
+    e.q('data-pro-heading').textContent =
+      e.q<HTMLSelectElement>('data-studio-tool').selectedOptions[0]?.textContent || '';
+    const hasEffects = ['sticker', 'coloring', 'effects'].includes(name);
+    e.q('data-effects-title').hidden = !hasEffects;
+    e.q('data-effects-list').hidden = !hasEffects;
     this.controls();
     this.renderEffects();
+    e.host.root.dispatchEvent(new CustomEvent('uc:color-sync'));
+  }
+  private filterTools() {
+    const e = this.editor,
+      term = e.value('data-pro-search').trim().toLowerCase();
+    const cards = [...e.host.root.querySelectorAll<HTMLButtonElement>('[data-pro-group]')];
+    for (const card of cards)
+      card.hidden =
+        (this.toolFilter !== 'All' && card.dataset.proGroup !== this.toolFilter) ||
+        !card.dataset.proKeywords?.includes(term);
+    for (const button of e.host.root.querySelectorAll<HTMLButtonElement>('[data-pro-filter]'))
+      button.setAttribute('aria-pressed', String(button.dataset.proFilter === this.toolFilter));
+    const count = cards.filter((card) => !card.hidden).length;
+    e.q('data-pro-tool-count').textContent = count
+      ? `${count} tools`
+      : 'No tools match. Try another search or category.';
   }
   async addCatalogue(id: string) {
     if (!this.catalogue.length) this.catalogue = await rasterCatalog();
@@ -250,6 +290,10 @@ export class StudioTools {
   }
   renderEffects() {
     const e = this.editor;
+    const selected = e.host.committed().layers.filter((l) => e.host.selected().includes(l.id));
+    e.q('data-pro-context').textContent = selected.length
+      ? `${selected.length} selected · ${e.host.committed().layers.length} layers on the canvas`
+      : `${e.host.committed().layers.length} layers on the canvas · Select artwork to use layer tools.`;
     e.q('data-effects-list').replaceChildren(
       ...(e.layer()?.effects || []).map((effect) => {
         const row = document.createElement('div');
@@ -389,6 +433,7 @@ export class StudioTools {
   async action(action: string) {
     const e = this.editor,
       { host } = e;
+    if (this.pro.action(action)) return;
     if (action === 'sticker') {
       const effect = defaultEffect('sticker');
       Object.assign(effect, {

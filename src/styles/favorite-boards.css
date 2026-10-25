@@ -374,6 +374,8 @@
 }
 .boards-empty a {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-top: 10px;
   color: #245fae;
@@ -564,7 +566,8 @@
     flex: 1 1 100%;
   }
   .boards-toolbar label:not(.boards-search) {
-    flex: 1;
+    flex: 1 1 160px;
+    min-width: 0;
   }
   .boards-toolbar select {
     width: 100%;
@@ -614,7 +617,7 @@
     width: 100%;
   }
   .boards-toolbar label:not(.boards-search) {
-    min-width: 100px;
+    min-width: 0;
   }
   .boards-toolbar :is(input, select) {
     font-size: 13px;
