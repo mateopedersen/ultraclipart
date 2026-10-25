@@ -1,3 +1,4 @@
+import ownerCollectionContexts from '../../scripts/remaining-thirty-one-contexts.json';
 import {
   art,
   availableTopics,
@@ -89,6 +90,42 @@ const collectionStyle: Record<
     color: 'sand',
     subjects: ['money'],
   },
+  'Flags & countries': {
+    title: 'Flags & countries',
+    description: 'National colors, flag designs and country-themed details.',
+    color: 'ice',
+    subjects: ['american-flag', 'france-flag', 'mexico-flag'],
+  },
+  'Places & travel': {
+    title: 'Places & travel',
+    description: 'Landmarks, local food and little memories from a journey.',
+    color: 'sand',
+    subjects: ['paris', 'new-york', 'spain'],
+  },
+  'Transport & vehicles': {
+    title: 'Transport & vehicles',
+    description: 'Railway journeys, aircraft and electric-vehicle ideas.',
+    color: 'ice',
+    subjects: ['train', 'airplane', 'tesla'],
+  },
+  'Clothing & accessories': {
+    title: 'Clothing & accessories',
+    description: 'Everyday footwear, seasonal handwear and outfit details.',
+    color: 'peach',
+    subjects: ['shoe', 'glove', 'hat'],
+  },
+  'Space & science': {
+    title: 'Space & science',
+    description: 'Lunar details, red-planet exploration and imagined space scenes.',
+    color: 'lavender',
+    subjects: ['moon', 'mars', 'earth'],
+  },
+  'Technology & devices': {
+    title: 'Technology & devices',
+    description: 'Phones, household devices and familiar connected objects.',
+    color: 'ice',
+    subjects: ['iphone', 'samsung', 'smartphone'],
+  },
 };
 const preferred: Record<string, string> = {
   fox: 'baby-fennec-fox-watercolor-clipart',
@@ -101,6 +138,9 @@ const preferred: Record<string, string> = {
   fire: 'fire-crossed-logs-campfire-colored-pencil-clipart',
   school: 'school-students-reading-in-library-classic-clipart',
   book: 'book-children-reading-together-classic-clipart',
+  ...Object.fromEntries(
+    Object.entries(ownerCollectionContexts).map(([topic, context]) => [topic, context.cover]),
+  ),
 };
 const artworkByTopic = new Map<string, typeof art>();
 for (const item of art) {

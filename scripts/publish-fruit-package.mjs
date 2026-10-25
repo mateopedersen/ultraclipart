@@ -5,14 +5,17 @@ import {
   writeFileSync,
   existsSync,
   copyFileSync,
+  renameSync,
   openSync,
   closeSync,
+  statSync,
 } from 'node:fs';
 import { resolve, join } from 'node:path';
 import { spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { setTimeout as delay } from 'node:timers/promises';
-import { configuredToken } from './r2/cloudflare-api.mjs';
+import { configuredToken, refreshConfiguredLogin } from './r2/cloudflare-api.mjs';
+import { runPackagePipeline } from './package-pipeline.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const args = process.argv.slice(2);
@@ -46,59 +49,124 @@ async function run(script, args, log) {
     closeSync(fd);
   }
 }
-for (const topic of topics) {
-  const batch = join(stage, topic + '.r2-batch.json'),
-    catalog = join(stage, topic + '.catalog.next.json');
-  const journal = join(stage, topic + '.upload-journal.json'),
-    output = join(stage, topic + '.publication.next.json');
-  const deadline = Date.now() + 45 * 60_000;
+function paths(topic) {
+  return {
+    batch: join(stage, topic + '.r2-batch.json'),
+    catalog: join(stage, topic + '.catalog.next.json'),
+    journal: join(stage, topic + '.upload-journal.json'),
+    output: join(stage, topic + '.publication.next.json'),
+  };
+}
+function validJournal(path, batch) {
+  if (!existsSync(path)) return false;
+  const journal = read(path);
+  return (
+    journal.status === 'uploaded-and-byte-verified' &&
+    journal.batchSha256 === hash(batch) &&
+    journal.verifiedArtworkIds?.length ===
+      new Set(read(batch).map((object) => object.assetId)).size &&
+    journal.verifiedObjects?.length === read(batch).length
+  );
+}
+function saveJournal(source, target, batch, topic) {
+  if (!validJournal(source, batch)) throw new Error(`Incomplete upload journal: ${topic}`);
+  const temp = target + '.' + process.pid + '.tmp';
+  copyFileSync(source, temp);
+  renameSync(temp, target);
+}
+async function waitForPreparation(topic) {
+  const { batch, catalog } = paths(topic),
+    deadline = Date.now() + 45 * 60_000;
   while (!existsSync(batch) || !existsSync(catalog)) {
     if (Date.now() > deadline) throw new Error(`Intake preparation did not finish: ${topic}`);
     await delay(1000);
   }
-  if (existsSync(output)) {
-    const checkpoint = read(output);
-    if (
-      checkpoint.status !== 'verified' ||
-      !existsSync(journal) ||
-      read(journal).batchSha256 !== hash(batch)
-    )
-      throw new Error(`Invalid saved release: ${topic}`);
-    prior = output;
-    console.log(JSON.stringify({ topic, status: 'RESUMED_VERIFIED_RELEASE' }));
-    continue;
+}
+const refreshLogin = () =>
+  refreshConfiguredLogin({
+    refresh: () =>
+      run(
+        'node_modules/wrangler/bin/wrangler.js',
+        ['whoami'],
+        join(root, 'work/wrangler-refresh.log'),
+      ),
+    expiry: () => {
+      if (!process.env.WRANGLER_AUTH_FILE) return NaN;
+      const config = readFileSync(process.env.WRANGLER_AUTH_FILE, 'utf8');
+      return Date.parse(config.match(/^expiration_time\s*=\s*"([^"]+)"/m)?.[1] ?? '');
+    },
+  });
+async function uploadTopic(topic) {
+  await waitForPreparation(topic);
+  const { batch, journal } = paths(topic);
+  if (existsSync(journal)) {
+    if (!validJournal(journal, batch)) throw new Error(`Invalid saved upload: ${topic}`);
+    return;
+  }
+  // A previous coordinator can leave its verified child running. Never start a
+  // competing writer, and recover only that child's actual matching journal.
+  const deadline = Date.now() + 45 * 60_000;
+  while (existsSync(join(root, '.r2-ingest.lock'))) {
+    if (Date.now() > deadline) throw new Error('Another ingestion writer is still active');
+    await delay(1000);
+  }
+  const recovered = join(root, 'r2-ingest-journal.json');
+  if (validJournal(recovered, batch)) {
+    saveJournal(recovered, journal, batch, topic);
+    return;
   }
   if (!existsSync(journal)) {
     try {
       configuredToken();
     } catch {
-      await run(
-        'node_modules/wrangler/bin/wrangler.js',
-        ['whoami'],
-        join(root, 'work/wrangler-refresh.log'),
-      );
+      await refreshLogin();
     }
-    await run(
-      'scripts/r2/ingest.mjs',
-      [
-        batch,
-        '--transport',
-        'cloudflare-api',
-        '--workers',
-        '4',
-        '--max-account-bytes',
-        '10000000000000',
-        '--apply',
-      ],
-      join(stage, topic + '.upload.log'),
-    );
-    copyFileSync(join(root, 'r2-ingest-journal.json'), journal);
+    const uploadLog = join(stage, topic + '.upload.log');
+    for (let attempt = 0; ; attempt++) {
+      const offset = existsSync(uploadLog) ? statSync(uploadLog).size : 0;
+      try {
+        await run(
+          'scripts/r2/ingest.mjs',
+          [
+            batch,
+            '--transport',
+            'cloudflare-api',
+            '--workers',
+            '4',
+            '--max-account-bytes',
+            '10000000000000',
+            '--apply',
+          ],
+          uploadLog,
+        );
+        break;
+      } catch (error) {
+        const failure = readFileSync(uploadLog).subarray(offset).toString('utf8');
+        let expired = false;
+        try {
+          configuredToken();
+        } catch {
+          expired = true;
+        }
+        if (attempt === 1 || (!expired && !/HTTP 401|expires soon/.test(failure))) throw error;
+        await refreshLogin();
+        // A new ingestion attempt takes a fresh account inventory and reads back
+        // any successful prior writes. Never declare a partial wave complete.
+      }
+    }
+    saveJournal(join(root, 'r2-ingest-journal.json'), journal, batch, topic);
   }
-  if (
-    read(journal).status !== 'uploaded-and-byte-verified' ||
-    read(journal).batchSha256 !== hash(batch)
-  )
-    throw new Error(`Incomplete upload journal: ${topic}`);
+  if (!validJournal(journal, batch)) throw new Error(`Incomplete upload journal: ${topic}`);
+}
+async function verifyTopic(topic) {
+  const { batch, catalog, journal, output } = paths(topic);
+  if (!validJournal(journal, batch)) throw new Error(`Incomplete upload journal: ${topic}`);
+  if (existsSync(output)) {
+    if (read(output).status !== 'verified') throw new Error(`Invalid saved release: ${topic}`);
+    prior = output;
+    console.log(JSON.stringify({ topic, status: 'RESUMED_VERIFIED_RELEASE' }));
+    return;
+  }
   await run(
     'scripts/r2/prepare-publication.mjs',
     [
@@ -133,4 +201,5 @@ for (const topic of topics) {
     }),
   );
 }
+await runPackagePipeline(topics, uploadTopic, verifyTopic);
 console.log(JSON.stringify({ status: 'ALL_PACKAGE_RELEASES_VERIFIED', manifest: prior }));

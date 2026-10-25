@@ -25,7 +25,7 @@ const facts = artworkDetails(item);
 ---
 
 <Layout
-  title={item.title + ' Clipart'}
+  title={/\bclipart$/i.test(item.title.trim()) ? item.title : item.title + ' Clipart'}
   description={item.description}
   noindex={!item.indexable}
   image={item.webp}

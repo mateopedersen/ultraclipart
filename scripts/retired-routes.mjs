@@ -115,12 +115,16 @@ function compactCover(ids, protectedPaths, protectedSuffixes, root = '/*/') {
   ];
   const baseline = prefixCover(requiredPaths, protectedSuffixes).map((pattern) => root + pattern);
   const candidates = new Set(baseline),
-    names = [...ids].sort();
+    names = [...new Set(ids)].sort();
   let pairs = 0;
   for (let i = 0; i < names.length; i++)
     for (let j = i + 1; j < names.length && pairs++ < 8192; j++)
-      if (names[i].length <= 128 && names[j].length <= 128)
+      if (names[i].length <= 128 && names[j].length <= 128) {
         candidates.add(root + commonGlob(names[i], names[j]));
+        // Equal-length subsequences can differ by alignment. Propose both;
+        // the current-path filter below must still authorize either pattern.
+        candidates.add(root + commonGlob(names[j], names[i]));
+      }
   const safe = [...candidates]
     .filter((pattern) => pattern.length <= 100)
     .map((pattern) => ({ pattern, matcher: compilePattern(pattern) }))

@@ -4,7 +4,11 @@ import { createHash } from 'node:crypto';
 import { mkdtempSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { cloudflareTransport, configuredToken } from '../scripts/r2/cloudflare-api.mjs';
+import {
+  cloudflareTransport,
+  configuredToken,
+  refreshConfiguredLogin,
+} from '../scripts/r2/cloudflare-api.mjs';
 import { measureAccount, endpointFor, validateInventoryScope } from '../scripts/r2/inventory.mjs';
 const accountId = 'a'.repeat(32),
   now = 1000000,
@@ -388,4 +392,78 @@ test('fallback object enumeration rejects a repeated last key and cannot cross b
     ),
     /scope mismatch/,
   );
+});
+
+test('the final-minute login boundary waits for native refresh without changing the saved expiry', async () => {
+  for (const remaining of [35_000, 60_000]) {
+    let clock = 100_000,
+      expiry = clock + remaining,
+      calls = 0;
+    const waits = [];
+    const readToken = () => {
+      if (expiry <= clock + 60_000) throw Error('expires soon');
+      return 'valid';
+    };
+    const result = await refreshConfiguredLogin({
+      now: () => clock,
+      expiry: () => expiry,
+      readToken,
+      refresh: async () => {
+        calls++;
+        if (clock >= expiry) expiry = clock + 3_600_000;
+      },
+      wait: async (milliseconds) => {
+        assert.equal(expiry, 100_000 + remaining);
+        assert.ok(milliseconds <= 60_000);
+        waits.push(milliseconds);
+        clock += milliseconds;
+      },
+    });
+    assert.equal(result, 'valid');
+    assert.equal(calls, 2);
+    assert.equal(waits.length, 1);
+    assert.ok(expiry > clock + 60_000);
+  }
+});
+
+test('an already expired native login refreshes immediately', async () => {
+  let expiry = 99_000,
+    calls = 0;
+  assert.equal(
+    await refreshConfiguredLogin({
+      now: () => 100_000,
+      expiry: () => expiry,
+      readToken: () => {
+        if (expiry <= 160_000) throw Error('expired');
+        return 'valid';
+      },
+      refresh: async () => {
+        calls++;
+        expiry = 3_700_000;
+      },
+      wait: async () => {
+        throw Error('unnecessary wait');
+      },
+    }),
+    'valid',
+  );
+  assert.equal(calls, 1);
+});
+
+test('missing or invalid login state cannot turn into a successful refresh', async () => {
+  for (const expiry of [NaN, 3_700_000])
+    await assert.rejects(
+      refreshConfiguredLogin({
+        now: () => 100_000,
+        expiry: () => expiry,
+        readToken: () => {
+          throw Error('missing credentials');
+        },
+        refresh: async () => {},
+        wait: async () => {
+          throw Error('unexpected wait');
+        },
+      }),
+      /missing credentials/,
+    );
 });

@@ -26,6 +26,27 @@ export function configuredToken(env = process.env, now = Date.now()) {
   return token;
 }
 
+/** Wrangler refreshes expired tokens; our writer also rejects their last minute.
+ * Wait out that boundary without changing the saved expiry or accepting a short lease. */
+export async function refreshConfiguredLogin({
+  refresh,
+  expiry,
+  readToken = configuredToken,
+  wait = delay,
+  now = Date.now,
+}) {
+  await refresh();
+  try {
+    return readToken();
+  } catch (error) {
+    const remaining = expiry() - now();
+    if (!Number.isFinite(remaining) || remaining < 0 || remaining > 60_000) throw error;
+    await wait(Math.min(60_000, remaining + 1000));
+    await refresh();
+    return readToken();
+  }
+}
+
 /** Official Cloudflare REST transport for small, serial production waves.
  * The same account-wide planner/checksum journal governs both CLI transports.
  * No delete, bucket mutation, billing change or arbitrary API path is exposed. */

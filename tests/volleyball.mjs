@@ -53,9 +53,22 @@ test('volleyball searches include every design and distinguish monochrome, outli
     );
     assert.ok(loaded.items.every((a) => a.editable !== false));
   }
-  assert.equal(searchArtwork(data, { ...defaults, q: 'volleyball' }).total, 50);
-  assert.equal(searchArtwork(data, { ...defaults, q: 'black and white volleyball' }).total, 10);
-  assert.equal(searchArtwork(data, { ...defaults, q: 'volleyball outline' }).total, 3);
+  const catalogMatches = searchArtwork(data, { ...defaults, q: 'volleyball', size: data.length });
+  assert.deepEqual(
+    catalogMatches.items
+      .filter((a) => a.topic === 'volleyball')
+      .map((a) => a.id)
+      .sort(),
+    volleyball.map((a) => a.id).sort(),
+  );
+  // Other collections may legitimately depict volleyball too; these counts
+  // describe the inspected original pack, not a ceiling on the whole catalog.
+  assert.equal(searchArtwork(volleyball, { ...defaults, q: 'volleyball' }).total, 50);
+  assert.equal(
+    searchArtwork(volleyball, { ...defaults, q: 'black and white volleyball' }).total,
+    10,
+  );
+  assert.equal(searchArtwork(volleyball, { ...defaults, q: 'volleyball outline' }).total, 3);
 });
 test(
   'volleyball pages expose real downloads and image SEO with image editing and accurate image SEO',
