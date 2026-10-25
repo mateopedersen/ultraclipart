@@ -79,8 +79,8 @@ const collectionStyle: Record<
     subjects: ['boy', 'girl', 'hat'],
   },
   'Arts & entertainment': {
-    title: 'Music & movie moments',
-    description: 'Instruments, cinema details and a little creative rhythm.',
+    title: 'Arts & entertainment',
+    description: 'Music, movies, games and character-inspired illustrations.',
     color: 'rose',
     subjects: ['music', 'movie'],
   },
