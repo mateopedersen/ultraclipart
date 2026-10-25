@@ -108,7 +108,9 @@ const rest =
         accountId: parseEndpoint(endpoint).accountId,
         token: configuredToken(),
         writeBucket: process.env.R2_WRITE_BUCKET,
-        requestIntervalMs: 550,
+        // At most 1,001 starts per five minutes, leaving room below the shared
+        // 1,200-request API allowance for dashboard and deployment traffic.
+        requestIntervalMs: 300,
       })
     : null;
 async function aws(command, fields = [], requestEndpoint = endpoint) {
