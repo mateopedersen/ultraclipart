@@ -288,6 +288,10 @@ try {
   await catalogOpen(favoriteTrigger);
   await close(favoriteTrigger);
   await goto('/search/?q=volleyball');
+  // Static fallback cards are replaced once the requested query finishes.
+  // Bind the sharing assertions to the finished result, not an old fallback.
+  await expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
+  await expect(page.locator('#result-count')).toContainText('illustrations for “volleyball”');
   const searchTrigger = page.locator('#search-results [data-share-art]').first();
   await catalogOpen(searchTrigger);
   await close(searchTrigger);

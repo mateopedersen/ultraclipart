@@ -1,5 +1,6 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import { defaults, searchArtwork } from '../../src/lib/search.ts';
+import { primaryClusterForTopic } from '../../src/lib/topic-clusters.ts';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -120,7 +121,10 @@ try {
   const topics = [...readData('topics.json').topics, ...readData('extra-topics.json')];
   const searchable = all.map((item) => ({
     ...item,
-    cluster: topics.find((entry) => entry.slug === item.topic)?.cluster ?? '',
+    cluster: (() => {
+      const entry = topics.find((entry) => entry.slug === item.topic);
+      return entry ? primaryClusterForTopic(entry) : '';
+    })(),
   }));
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
