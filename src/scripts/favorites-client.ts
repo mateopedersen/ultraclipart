@@ -395,6 +395,9 @@ export function initFavorites() {
         page = 1;
         selected.clear();
         render();
+        document
+          .querySelector<HTMLButtonElement>(`[data-board="${active}"]`)
+          ?.focus({ preventScroll: true });
       }
       if (target.closest('[data-board-edit]')) openBoard(active);
       if (target.closest('[data-board-delete]')) {
@@ -430,7 +433,11 @@ export function initFavorites() {
       if (pick) {
         const id = pick.dataset.favoriteSelect!;
         selected.has(id) ? selected.delete(id) : selected.add(id);
-        render();
+        pick.textContent = selected.has(id) ? '✓ Selected' : 'Select design';
+        pick.setAttribute('aria-pressed', String(selected.has(id)));
+        const card = pick.closest<HTMLElement>('.art-card');
+        if (card) card.dataset.selected = String(selected.has(id));
+        q('#favorites-selected-count').textContent = `${selected.size} selected`;
       }
       if (target.closest('[data-dialog-close]'))
         target.closest<HTMLDialogElement>('dialog')?.close();

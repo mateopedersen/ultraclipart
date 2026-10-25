@@ -7,7 +7,9 @@ const engine = process.env.UC_BROWSER || 'chromium',
   output = `reports/footer/${engine}`;
 mkdirSync(output, { recursive: true });
 const browser = await { chromium, firefox, webkit }[engine].launch();
-const page = await browser.newPage();
+const context = await browser.newContext();
+await context.route('**/*', (route) => route.continue());
+const page = await context.newPage();
 const report = { engine, layouts: [], destinations: [], errors: [] };
 page.on('pageerror', (e) => report.errors.push(e.message));
 try {
