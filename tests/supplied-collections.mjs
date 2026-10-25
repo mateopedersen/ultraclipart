@@ -47,8 +47,8 @@ for (const topic of ['baby', 'heart']) {
         const detail = read(`dist/art/${a.id}/index.html`);
         assert.ok(html.includes(`/art/${a.id}/`));
         assert.ok(html.includes(`/edit/${a.id}/`));
-        assert.ok(detail.includes(`download="${a.id}.pdf"`));
-        assert.ok(detail.includes(`download="${a.id}.webp"`));
+        assert.ok(detail.includes(`href="/download/${a.id}/?format=pdf"`));
+        assert.ok(detail.includes(`href="/download/${a.id}/?format=webp"`));
         assert.match(detail, /ImageObject/);
         assert.ok(detail.includes(`https://ultraclipart.com/art/${a.id}/`));
         assert.ok(existsSync(new URL(`../dist/edit/${a.id}/index.html`, import.meta.url)));

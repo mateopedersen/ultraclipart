@@ -71,8 +71,8 @@ test(
     assert.ok(sitemap.includes('https://ultraclipart.com/clipart/volleyball/'));
     for (const a of volleyball) {
       const html = read(`dist/art/${a.id}/index.html`);
-      assert.ok(html.includes(`download="${a.id}.webp"`));
-      assert.ok(html.includes(`download="${a.id}.pdf"`));
+      assert.ok(html.includes(`href="/download/${a.id}/?format=webp"`));
+      assert.ok(html.includes(`href="/download/${a.id}/?format=pdf"`));
       assert.match(html, /"@type":"ImageObject"/);
       assert.match(html, /ICC-based CMYK/);
       assert.ok(images.includes(`/art/${a.id}/`));

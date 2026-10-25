@@ -8,7 +8,8 @@ interface Props {
 const snapshot = relatedIndex.snapshot(Astro.props.sourceId);
 const alternatives = snapshot.alternatives.slice(0, 8),
   companions = snapshot.companions.slice(0, 4);
-const hasCards = alternatives.length + companions.length > 0;
+const collection = snapshot.collection.slice(0, 12 - alternatives.length - companions.length);
+const hasCards = alternatives.length + companions.length + collection.length > 0;
 const mono = snapshot.alternatives.some((card) => card.monochrome);
 const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companions';
 ---
@@ -55,6 +56,11 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
             Black &amp; white
           </button>
         )}
+        {snapshot.collection.length > 0 && (
+          <button type="button" data-related-mode="collection" aria-pressed="false">
+            In this collection
+          </button>
+        )}
       </div>
       <div data-related-results>
         <div class="related-group" data-related-alternatives hidden={!alternatives.length}>
@@ -81,11 +87,30 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
             ))}
           </div>
         </div>
+        <div
+          class="related-group related-collection-group"
+          data-related-collection
+          hidden={!collection.length}
+        >
+          <div class="related-group-heading">
+            <h3>Explore this collection</h3>
+            <p>More reviewed designs from the same collection, ranked by style and composition.</p>
+          </div>
+          <div class="related-grid">
+            {collection.map((card) => (
+              <RelatedCard card={card} />
+            ))}
+          </div>
+        </div>
       </div>
+      <div class="related-scroll-trigger" data-related-sentinel aria-hidden="true"></div>
       <div class="related-footer">
         <button type="button" class="related-more" data-related-more hidden>
           Show more relevant clipart <span aria-hidden="true">＋</span>
         </button>
+        <p class="related-scroll-hint" data-related-scroll-hint hidden>
+          Keep scrolling to discover more, or use the button above.
+        </p>
         <p class="related-status" role="status" aria-live="polite" data-related-status></p>
         <a href={snapshot.category} data-related-end hidden>
           Continue exploring the collection <span aria-hidden="true">→</span>

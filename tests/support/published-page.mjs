@@ -39,3 +39,23 @@ export function readPublishedPage(item, kind) {
   assert.equal(createHash('sha256').update(body).digest('hex'), entry.sha256);
   return body.toString('utf8');
 }
+
+/** Assert the actual catalog image, not an incidental CDN string in bundled code. */
+let publishedImages;
+export function assertPublishedImage(item, html) {
+  const production = process.env.CF_PAGES === '1';
+  if (production)
+    publishedImages ??= new Map(
+      JSON.parse(readFileSync(join(root, 'data/publication.json'), 'utf8'))
+        .files.filter((file) => file.kind === 'webp')
+        .map((file) => [file.assetId, file.url]),
+    );
+  const source = production ? publishedImages.get(item.id) : item.webp;
+  assert.ok(source, `Missing verified image for ${item.id}`);
+  assert.ok(html.includes(`src="${source}"`), `Wrong displayed image for ${item.id}`);
+  const canonicalSource = new URL(source, 'https://ultraclipart.com').href;
+  assert.ok(
+    html.includes(`"contentUrl":"${canonicalSource}"`),
+    `Wrong structured image URL for ${item.id}`,
+  );
+}

@@ -97,8 +97,8 @@ test(
       assert.ok(html.includes(`https://ultraclipart.com/art/${item.id}/`));
       assert.ok(html.includes('ImageObject'));
       assert.ok(!html.includes('content="noindex'));
-      assert.ok(html.includes(`download="${item.id}.webp"`));
-      assert.ok(html.includes(`download="${item.id}.pdf"`));
+      assert.ok(html.includes(`href="/download/${item.id}/?format=webp"`));
+      assert.ok(html.includes(`href="/download/${item.id}/?format=pdf"`));
       assert.ok(pages.includes(`/art/${item.id}/`));
       assert.ok(images.includes(`/art/${item.id}/`));
       assert.ok(text(`edit/${item.id}/index.html`).includes('noindex'));

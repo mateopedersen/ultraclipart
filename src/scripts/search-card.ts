@@ -1,3 +1,4 @@
+import { downloadPageHref } from '../lib/download-route';
 import type { SearchCard } from '../lib/search-index';
 import { actionIcons, actionIconAccents } from '../lib/action-icons';
 export function renderCard(item: SearchCard): HTMLElement {
@@ -84,8 +85,7 @@ export function renderCard(item: SearchCard): HTMLElement {
     ['PDF', item.pdf, 'pdf', 'document'],
   ] as const) {
     if (!url) continue;
-    const a = action(icon, label, url, extension);
-    a.download = `${item.id}.${extension}`;
+    const a = action(icon, label, downloadPageHref(item.id, extension), extension);
     a.setAttribute('aria-label', `Download ${label}: ${item.title}`);
     formats.append(a);
   }

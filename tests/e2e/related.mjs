@@ -63,14 +63,14 @@ try {
       const root = page.locator('[data-related-root]');
       await expect(root).toHaveAttribute('data-ready', 'true');
       await expect(page.locator('[data-related-results]')).toBeVisible();
+      const count = await root.locator('.related-card').count();
+      assert.ok(count <= (width > 900 ? 12 : 6));
       await root.scrollIntoViewIfNeeded();
       assert.equal(
         await page.evaluate(() => document.documentElement.scrollWidth),
         width,
         `overflow ${id} ${width}`,
       );
-      const count = await root.locator('.related-card').count();
-      assert.ok(count <= (width > 900 ? 12 : 6));
       const layout = await root
         .locator('.related-grid:visible')
         .first()
@@ -78,23 +78,27 @@ try {
       assert.equal(layout, width > 900 ? 4 : width < 360 ? 1 : 2);
       const snapshot = await page.locator('[data-related-snapshot]').textContent();
       assert.ok(Buffer.byteLength(snapshot) < 64000);
-      await root.locator('img').evaluateAll(async (images) => {
-        await Promise.all(
-          images.map(async (img) => {
-            img.loading = 'eager';
-            await img.decode();
-          }),
-        );
-      });
-      assert.ok(
-        await root
-          .locator('img')
-          .evaluateAll((images) =>
-            images.every(
-              (img) => img.naturalWidth > 0 && getComputedStyle(img).objectFit === 'contain',
-            ),
-          ),
-      );
+      // Scrolling may append a new batch while the previous thumbnails decode.
+      // Check the live set repeatedly so every appended image is decoded too.
+      await expect
+        .poll(async () => {
+          await root.locator('img').evaluateAll(async (images) => {
+            await Promise.all(
+              images.map(async (img) => {
+                img.loading = 'eager';
+                await img.decode();
+              }),
+            );
+          });
+          return root
+            .locator('img')
+            .evaluateAll((images) =>
+              images.every(
+                (img) => img.naturalWidth > 0 && getComputedStyle(img).objectFit === 'contain',
+              ),
+            );
+        })
+        .toBe(true);
       const overlap = await root.locator('.related-card-actions').evaluateAll((rows) =>
         rows.some((row) => {
           const visible = [...row.children]
@@ -146,6 +150,46 @@ try {
       });
     }
   }
+  // A newly registered topic must render recommendations in static HTML and
+  // progressively append on real scrolling, without duplicates or focus theft.
+  const usb = 'usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement';
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(`${base}/art/${usb}/`, { waitUntil: 'networkidle' });
+    const root = page.locator('[data-related-root]');
+    await expect(root).toHaveAttribute('data-ready', 'true');
+    const before = await root.locator('.related-card').count();
+    assert.ok(before > 0 && before <= (width > 900 ? 12 : 6));
+    await page.locator('[data-related-mode="best"]').focus();
+    await page.locator('[data-related-sentinel]').scrollIntoViewIfNeeded();
+    await expect.poll(() => root.locator('.related-card').count()).toBeGreaterThan(before);
+    await expect(page.locator('[data-related-mode="best"]')).toBeFocused();
+    let previous = 0;
+    while (await page.locator('[data-related-more]').isVisible()) {
+      const count = await root.locator('.related-card').count();
+      assert.ok(count > previous);
+      previous = count;
+      await page.locator('[data-related-sentinel]').scrollIntoViewIfNeeded();
+      await expect.poll(() => root.locator('.related-card').count()).toBeGreaterThan(count);
+    }
+    const shown = await root
+      .locator('.related-card')
+      .evaluateAll((cards) => cards.map((c) => c.dataset.relatedId));
+    assert.equal(shown.length, 49);
+    assert.equal(new Set(shown).size, 49);
+    assert.ok(shown.every((id) => index.profiles.get(id).item.topic === 'usb-flash-drive'));
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    await expect(page.locator('[data-related-end]')).toBeVisible();
+    assert.ok(
+      await page.evaluate(() =>
+        window.relatedEvents.some((e) => e.event === 'show_more' && e.trigger === 'scroll'),
+      ),
+    );
+    await root.screenshot({ path: `${output}/usb-discovery-${width}.png` });
+  }
+  report.checks.push(
+    'All 49 USB alternatives load on desktop/mobile scroll; no duplicates, unrelated topics or focus theft',
+  );
   report.checks.push(
     'T20 responsive layouts, uncropped images, no control overlap',
     'T21 WCAG AA automated checks',
@@ -160,6 +204,7 @@ try {
   );
   await expect(page.locator('[data-related-companions]')).toBeHidden();
   while (await page.locator('[data-related-more]').isVisible()) {
+    await page.locator('[data-related-more]').focus();
     await page.locator('[data-related-more]').click();
     await expect(root).not.toHaveAttribute('aria-busy', 'true');
   }
@@ -210,13 +255,22 @@ try {
     'Favorites use existing storage',
   );
   // Actual file bytes and types, including the original download controls.
-  for (const selector of ['.detail-actions [download]', '[data-related-download]:visible']) {
+  for (const selector of ['.detail-actions .download-option', '[data-related-download]:visible']) {
     for (const link of await page
       .locator(selector)
       .all()
       .then((list) => list.slice(0, 2))) {
-      const url = await link.getAttribute('href'),
-        response = await context.request.get(new URL(url, base).href);
+      const entry = await link.getAttribute('href');
+      assert.ok(entry.startsWith('/download/'));
+      const landing = await context.request.get(new URL(entry, base).href);
+      assert.equal(landing.status(), 200);
+      const html = await landing.text();
+      const format = new URL(entry, base).searchParams.get('format');
+      const fileName = new URL(entry, base).pathname.split('/')[2] + '.' + format;
+      const tag = html.match(new RegExp(`<a[^>]+download="${fileName}"[^>]*>`))?.[0];
+      assert.ok(tag, fileName);
+      const url = tag.match(/href="([^"]+)"/)[1];
+      const response = await context.request.get(new URL(url, base).href);
       assert.equal(response.status(), 200);
       const body = await response.body(),
         pdf = url.includes('.pdf');
@@ -269,6 +323,7 @@ try {
       body: JSON.stringify({ version: 'new-publication' }),
     }),
   );
+  await page.locator('[data-related-more]').focus();
   await page.locator('[data-related-more]').click();
   await expect(page.locator('[data-related-results]')).toBeHidden();
   await expect(page.locator('[data-related-refresh]')).toBeVisible();
@@ -293,7 +348,7 @@ try {
   const staticLinks = await plain.locator('[data-related-root] [data-related-detail]').count();
   assert.ok(staticLinks >= 4);
   await expect(plain.locator('[data-related-controls]')).toBeHidden();
-  await expect(plain.locator('.detail-actions [download]')).toHaveCount(2);
+  await expect(plain.locator('.detail-actions a[href^="/download/"]')).toHaveCount(2);
   await nojs.close();
   report.checks.push('T24 server-rendered links and original downloads work without JavaScript');
   // A failed revalidation must cancel impressions that have not reached one second.

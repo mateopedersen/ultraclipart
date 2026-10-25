@@ -1,3 +1,5 @@
+import { verifiedSourceUrl } from '../editor/source-policy';
+
 const maxDownloadBytes = 16_000_000;
 const pending = new WeakSet<HTMLAnchorElement>();
 
@@ -6,11 +8,44 @@ const pending = new WeakSet<HTMLAnchorElement>();
 async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 30_000);
+  const station = link.hasAttribute('data-final-download');
+  const localStatus = station
+    ? link.parentElement?.querySelector<HTMLElement>('[data-download-status]')
+    : null;
+  const label = link.querySelector<HTMLElement>('[data-download-label]');
+  const originalLabel = label?.textContent || '';
+  const updateLocal = (message: string) => {
+    if (localStatus) {
+      localStatus.hidden = false;
+      localStatus.textContent = message;
+    }
+  };
   pending.add(link);
   link.setAttribute('aria-busy', 'true');
   status.hidden = false;
   status.textContent = 'Preparing your download…';
+  updateLocal('Preparing and checking your original file…');
+  if (label) label.textContent = 'Preparing download…';
   try {
+    if (station) {
+      const kind = link.dataset.finalDownload;
+      if (
+        (kind !== 'webp' && kind !== 'pdf') ||
+        !/^[a-z0-9]+(?:-[a-z0-9]+)*\.(webp|pdf)$/.test(link.download) ||
+        !link.download.endsWith(`.${kind}`)
+      )
+        throw new Error('Invalid download selection');
+      verifiedSourceUrl(
+        {
+          url: link.href,
+          bytes: Number(link.dataset.expectedBytes),
+          sha256: link.dataset.expectedSha256 || '',
+        },
+        kind,
+        location.origin,
+      );
+    }
+    const byteLimit = station ? Number(link.dataset.expectedBytes) : maxDownloadBytes;
     // Ordinary image previews may have populated the HTTP cache without CORS
     // headers. Fetch readable bytes again rather than reuse that opaque entry.
     const response = await fetch(link.href, {
@@ -19,7 +54,11 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
       mode: 'cors',
       cache: 'reload',
     });
-    if (!response.ok || new URL(response.url).origin !== 'https://assets.ultraclipart.com')
+    if (
+      !response.ok ||
+      new URL(response.url).origin !==
+        (station ? new URL(link.href).origin : 'https://assets.ultraclipart.com')
+    )
       throw new Error('Unavailable download');
     const type = response.headers.get('content-type')?.split(';')[0].trim().toLowerCase() ?? '';
     const extension = new URL(link.href).pathname.split('.').pop()?.toLowerCase() ?? '';
@@ -30,8 +69,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
     };
     if (type !== expectedTypes[extension]) throw new Error('Invalid download type');
     const declaredLength = Number(response.headers.get('content-length'));
-    if (declaredLength > maxDownloadBytes || !response.body)
-      throw new Error('Invalid download size');
+    if (declaredLength > byteLimit || !response.body) throw new Error('Invalid download size');
     const reader = response.body.getReader();
     const chunks: Uint8Array<ArrayBuffer>[] = [];
     let length = 0;
@@ -39,7 +77,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
       const { done, value } = await reader.read();
       if (done) break;
       length += value.byteLength;
-      if (length > maxDownloadBytes) {
+      if (length > byteLimit) {
         await reader.cancel();
         throw new Error('Invalid download size');
       }
@@ -62,7 +100,18 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
       (type === 'image/webp' && !(signature.startsWith('RIFF') && signature.slice(8) === 'WEBP'))
     )
       throw new Error('Invalid download contents');
-    const url = URL.createObjectURL(new Blob(chunks, { type }));
+    const blob = new Blob(chunks, { type });
+    const expectedBytes = Number(link.dataset.expectedBytes);
+    if (expectedBytes && length !== expectedBytes) throw new Error('File size changed');
+    const expectedHash = link.dataset.expectedSha256;
+    if (expectedHash) {
+      const digest = await crypto.subtle.digest('SHA-256', await blob.arrayBuffer());
+      const actual = [...new Uint8Array(digest)]
+        .map((byte) => byte.toString(16).padStart(2, '0'))
+        .join('');
+      if (actual !== expectedHash) throw new Error('File checksum changed');
+    }
+    const url = URL.createObjectURL(blob);
     const save = document.createElement('a');
     save.href = url;
     save.download = link.download || new URL(link.href).pathname.split('/').pop()!;
@@ -71,6 +120,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
     save.remove();
     setTimeout(() => URL.revokeObjectURL(url), 60_000);
     status.textContent = 'Your download is ready.';
+    updateLocal('Original file verified. Your download has started.');
     setTimeout(() => {
       if (status.textContent === 'Your download is ready.') status.hidden = true;
     }, 6000);
@@ -78,18 +128,31 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
     status.textContent =
       'The download could not finish. Check your connection and select the download again.';
     status.hidden = false;
+    updateLocal('We couldn’t verify this download. Refresh the page or try again.');
   } finally {
     clearTimeout(timeout);
     controller.abort();
     pending.delete(link);
     link.removeAttribute('aria-busy');
+    if (label) label.textContent = originalLabel;
   }
 }
 
 document.addEventListener('click', (event) => {
   const link =
     event.target instanceof Element ? event.target.closest<HTMLAnchorElement>('a[download]') : null;
-  if (!link || new URL(link.href).origin !== 'https://assets.ultraclipart.com') return;
+  if (
+    event.defaultPrevented ||
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey ||
+    !link ||
+    (!link.hasAttribute('data-final-download') &&
+      new URL(link.href).origin !== 'https://assets.ultraclipart.com')
+  )
+    return;
   event.preventDefault();
   if (pending.has(link)) return;
   const status = document.querySelector<HTMLElement>('#download-status');

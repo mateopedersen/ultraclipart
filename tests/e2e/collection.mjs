@@ -1,5 +1,6 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import { defaults, searchArtwork } from '../../src/lib/search.ts';
+import { primaryClusterForTopic } from '../../src/lib/topic-clusters.ts';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -111,8 +112,8 @@ try {
     assert.equal(await card.locator('a[href^="/edit/"]').count(), 1);
     for (const kind of ['webp', 'pdf'])
       assert.equal(
-        await card.locator(`a[download="${a.id}.${kind}"]`).evaluate((a) => a.href),
-        expectedUrl(a, kind),
+        await card.locator(`a[href$="?format=${kind}"]`).getAttribute('href'),
+        `/download/${a.id}/?format=${kind}`,
       );
     report.checkedPairs++;
   }
@@ -120,7 +121,10 @@ try {
   const topics = [...readData('topics.json').topics, ...readData('extra-topics.json')];
   const searchable = all.map((item) => ({
     ...item,
-    cluster: topics.find((entry) => entry.slug === item.topic)?.cluster ?? '',
+    cluster: (() => {
+      const entry = topics.find((entry) => entry.slug === item.topic);
+      return entry ? primaryClusterForTopic(entry) : '';
+    })(),
   }));
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
@@ -158,7 +162,12 @@ try {
     await expect(image).toHaveAttribute('alt', a.alt);
     await image.evaluate((img) => img.decode());
     for (const kind of ['webp', 'pdf']) {
-      const link = page.locator(`.detail-actions a[download="${a.id}.${kind}"]`);
+      await page.goto(`${base}/art/${a.id}/`);
+      const entry = page.locator(`.detail-actions a[href$="?format=${kind}"]`);
+      assert.equal(await entry.getAttribute('href'), `/download/${a.id}/?format=${kind}`);
+      await entry.click();
+      await page.waitForURL(`**/download/${a.id}/**`);
+      const link = page.locator(`[data-final-download="${kind}"]`);
       assert.equal(await link.evaluate((a) => a.href), expectedUrl(a, kind));
       const pending = page.waitForEvent('download');
       await link.click();

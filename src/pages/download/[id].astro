@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import RelatedArtwork from '../../components/RelatedArtwork.astro';
+import { art, topics } from '../../lib/catalog';
+import { formatFileSize } from '../../lib/artwork-details';
+import '../../styles/download-page.css';
+export function getStaticPaths() {
+  return art
+    .filter(
+      (item) =>
+        item.published &&
+        item.indexable &&
+        item.licenseStatus === 'OWNER_APPROVED_PERSONAL_EDUCATIONAL_ONLY' &&
+        item.reviewStatus === 'FORMAT_AND_PAIR_REVIEW_PASSED',
+    )
+    .map((item) => ({ params: { id: item.id }, props: { item } }));
+}
+const { item } = Astro.props;
+const topic = topics.find((topic) => topic.slug === item.topic)!;
+const files = [
+  {
+    format: 'webp',
+    label: 'Image',
+    icon: 'image',
+    url: item.webp,
+    meta: item.files.webp,
+    description: item.alpha
+      ? 'Transparent image for digital projects'
+      : 'Image for digital projects',
+    detail: `${item.width.toLocaleString('en-US')} × ${item.height.toLocaleString('en-US')} pixels`,
+  },
+  ...(item.pdf
+    ? [
+        {
+          format: 'pdf',
+          label: 'PDF',
+          icon: 'document',
+          url: item.pdf,
+          meta: item.files.pdf,
+          description: 'Printable document',
+          detail: `${item.pdfPage} · ${item.pdfColorSpace || 'CMYK'}`,
+        },
+      ]
+    : []),
+];
+---
+
+<Layout
+  title={`Download ${item.title} — Image & PDF`}
+  description={`Choose the verified original file for ${item.title}. Preview the artwork, check its exact file size, and download for personal and educational projects.`}
+  noindex={true}
+  image={item.webp}
+  imageAlt={item.alt}
+>
+  <nav class="download-breadcrumb" aria-label="Breadcrumb">
+    <a href={`/clipart/${item.topic}/`}>{topic.keyword}</a>
+    <span aria-hidden="true">/</span>
+    <a href={`/art/${item.id}/`}>Artwork details</a>
+    <span aria-hidden="true">/</span>
+    <span>Download</span>
+  </nav>
+  <section class="download-station" aria-labelledby="download-heading" data-download-station>
+    <div class="download-preview-panel">
+      <div class="download-preview">
+        <img
+          src={item.webp}
+          alt={item.alt}
+          width={item.width}
+          height={item.height}
+          fetchpriority="high"
+        />
+      </div>
+      <a class="download-back" href={`/art/${item.id}/`}>
+        <span aria-hidden="true">←</span> Back to this artwork
+      </a>
+    </div>
+    <div class="download-selection">
+      <p class="download-kicker">
+        <Icon name="image" size={18} /> Your creative toolkit
+      </p>
+      <h1 id="download-heading">
+        Make something
+        <br />
+        <span>wonderful.</span>
+      </h1>
+      <h2>{item.title}</h2>
+      <p class="download-lead">
+        Choose your original file. The image is ready for your digital projects; the PDF is a
+        separate, fixed-size document for printing.
+      </p>
+      <div class="download-files" aria-label="Available files">
+        {files.map((file) => (
+          <article class="download-file" data-download-format={file.format}>
+            <div class="download-file-heading">
+              <span class="download-format-icon">
+                <Icon name={file.icon as 'image' | 'document'} size={27} />
+              </span>
+              <div>
+                <h3>{file.label}</h3>
+                <p>{file.description}</p>
+              </div>
+              <span
+                class="download-file-size"
+                title={`${file.meta.bytes.toLocaleString('en-US')} bytes`}
+              >
+                {formatFileSize(file.meta.bytes)}
+              </span>
+            </div>
+            <p class="download-file-detail">{file.detail}</p>
+            <a
+              class="download-final"
+              data-final-download={file.format}
+              data-expected-bytes={file.meta.bytes}
+              data-expected-sha256={file.meta.sha256}
+              href={file.url}
+              download={`${item.id}.${file.format}`}
+            >
+              <Icon name="download" size={21} />
+              <span data-download-label>Download {file.label}</span>
+              <span aria-hidden="true">↓</span>
+            </a>
+            <p
+              class="download-progress"
+              data-download-status
+              role="status"
+              aria-live="polite"
+              hidden
+            />
+            <details class="download-technical">
+              <summary>Exact file information</summary>
+              <dl>
+                <div>
+                  <dt>File type</dt>
+                  <dd>{file.format === 'webp' ? 'WebP image' : 'PDF document'}</dd>
+                </div>
+                <div>
+                  <dt>Exact size</dt>
+                  <dd>{file.meta.bytes.toLocaleString('en-US')} bytes</dd>
+                </div>
+                <div>
+                  <dt>SHA-256</dt>
+                  <dd>
+                    <code>{file.meta.sha256}</code>
+                  </dd>
+                </div>
+              </dl>
+            </details>
+          </article>
+        ))}
+      </div>
+      <noscript>
+        <p class="download-permission">
+          Your browser may open the original file. Use its Save or Download control to keep a copy.
+        </p>
+      </noscript>
+      <p class="download-permission">
+        <Icon name="document" size={18} />
+        <span>
+          Free for personal &amp; educational use. <a href="/license/">Read the license</a>
+        </span>
+      </p>
+    </div>
+  </section>
+  <section class="download-project-notes" aria-labelledby="download-guide-heading">
+    <div>
+      <p class="download-kicker">A good start for your next idea</p>
+      <h2 id="download-guide-heading">
+        A few details,
+        <br />a better result.
+      </h2>
+    </div>
+    <article>
+      <span class="download-note-number">01</span>
+      <h3>For screens &amp; layouts</h3>
+      <p>
+        {item.alpha
+          ? 'The image keeps its transparent background. Place it over your own colors in a compatible design app.'
+          : 'Use the image in personal layouts, presentations and classroom projects.'}{' '}
+        Keep its proportions when resizing.
+      </p>
+    </article>
+    <article>
+      <span class="download-note-number">02</span>
+      <h3>For paper &amp; print</h3>
+      <p>
+        The PDF is a separate document. Choose actual size in your PDF reader and check your printer
+        margins. Print colors can differ from your screen.
+      </p>
+      <a href="/print-size/">
+        Check your print size <span aria-hidden="true">→</span>
+      </a>
+    </article>
+    <article>
+      <span class="download-note-number">03</span>
+      <h3>For your own creation</h3>
+      <p>
+        Add text, change your layout or build a personal composition in Clipart Studio. Export your
+        edited version from the editor.
+      </p>
+      <a href={`/edit/${item.id}/`}>
+        Open in Studio <span aria-hidden="true">→</span>
+      </a>
+    </article>
+  </section>
+  <!-- Only a configured ad provider may populate this separate mount. No fake ad,
+       third-party script, identifier or ad request is activated by this feature. -->
+  <aside class="download-ad-region" aria-label="Advertisements" data-download-ad-region hidden>
+    <p>Advertisements</p>
+    <div data-download-ad-slot></div>
+  </aside>
+  <RelatedArtwork sourceId={item.id} />
+  <script>
+    const selected = new URL(location.href).searchParams.get('format');
+    if (selected === 'webp' || selected === 'pdf') {
+      const card = document.querySelector<HTMLElement>(`[data-download-format="${selected}"]`);
+      if (card) {
+        card.dataset.selected = 'true';
+        document.querySelector('.download-files')?.prepend(card);
+      }
+    }
+  </script>
+</Layout>

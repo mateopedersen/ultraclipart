@@ -1,9 +1,10 @@
 ---
 interface Props {
   kind: string;
+  instance?: string;
 }
-const { kind } = Astro.props;
-const id = `header-art-${kind}`;
+const { kind, instance = 'header-art' } = Astro.props;
+const id = `${instance}-${kind}`;
 const fill = (name: string) => `url(#${id}-${name})`;
 ---
 

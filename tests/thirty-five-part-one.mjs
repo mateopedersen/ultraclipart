@@ -91,8 +91,13 @@ test(
       assert.ok(html.includes(`https://ultraclipart.com/art/${item.id}/`));
       assert.ok(html.includes('ImageObject'));
       assert.ok(!html.includes('content="noindex'));
-      assert.ok(html.includes(`download="${item.id}.webp"`));
-      assert.ok(html.includes(`download="${item.id}.pdf"`));
+      for (const format of ['webp', 'pdf']) {
+        assert.ok(html.includes(`href="/download/${item.id}/?format=${format}"`));
+        const download = text(`download/${item.id}/index.html`);
+        assert.ok(download.includes(`download="${item.id}.${format}"`));
+        assert.ok(download.includes(`data-expected-sha256="${item.files[format].sha256}"`));
+        assert.ok(download.includes(`data-expected-bytes="${item.files[format].bytes}"`));
+      }
       assert.ok(pages.includes(`/art/${item.id}/`));
       assert.ok(images.includes(`/art/${item.id}/`));
       assert.ok(text(`edit/${item.id}/index.html`).includes('noindex'));

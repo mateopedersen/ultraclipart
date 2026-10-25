@@ -1,11 +1,12 @@
 import { normalize, safeAsset, type ArtworkInput, type Profile } from './normalize';
-import { companionSubjects, TAXONOMY_VERSION } from './taxonomy';
+import { companionSubjects, REGISTERED_TOPICS, TAXONOMY_VERSION } from './taxonomy';
 import { CLASSIFIER_VERSION } from './normalize';
-export const ALGORITHM_VERSION = 'uc-related-1';
+export const ALGORITHM_VERSION = 'uc-related-2';
 export const CANDIDATE_LIMIT = 240;
 export const BUCKET_LIMIT = 96;
-export const SNAPSHOT_LIMIT = 40;
-export type Mode = 'best' | 'subject' | 'companions' | 'monochrome';
+export const ALTERNATIVE_LIMIT = 56;
+export const SNAPSHOT_LIMIT = ALTERNATIVE_LIMIT + 8;
+export type Mode = 'best' | 'subject' | 'companions' | 'monochrome' | 'collection';
 export interface RelatedCard {
   id: string;
   title: string;
@@ -16,7 +17,7 @@ export interface RelatedCard {
   href: string;
   reason: string;
   reasonCode: string;
-  group: 'alternatives' | 'companions';
+  group: 'alternatives' | 'companions' | 'collection';
   monochrome: boolean;
   technique?: string;
 }
@@ -36,6 +37,7 @@ export interface Snapshot {
   categoryLabel: string;
   alternatives: RelatedCard[];
   companions: RelatedCard[];
+  collection: RelatedCard[];
   examined: number;
   algorithm: string;
 }
@@ -103,17 +105,19 @@ function card(result: Ranked, group: RelatedCard['group']): RelatedCard {
   const p = result.profile,
     item = p.item;
   const reason =
-    group === 'companions'
-      ? result.reasons.includes('same_technique')
-        ? 'Matching technique & composition'
-        : 'Compatible style & composition'
-      : result.reasons.includes('same_technique')
-        ? 'Same subject & technique'
-        : result.reasons.includes('similar_composition')
-          ? 'Similar composition'
-          : result.reasons.includes('similar_style')
-            ? 'Similar drawing style'
-            : `More ${p.subject!.plural}`;
+    group === 'collection'
+      ? 'From the same collection'
+      : group === 'companions'
+        ? result.reasons.includes('same_technique')
+          ? 'Matching technique & composition'
+          : 'Compatible style & composition'
+        : result.reasons.includes('same_technique')
+          ? 'Same subject & technique'
+          : result.reasons.includes('similar_composition')
+            ? 'Similar composition'
+            : result.reasons.includes('similar_style')
+              ? 'Similar drawing style'
+              : `More ${p.subject!.plural}`;
   return {
     id: item.id,
     title: item.title,
@@ -164,7 +168,13 @@ export class RelatedIndex {
     this.revisions.set(item.id, profile.revision);
     if (item.published && item.topic) this.topics.add(item.topic);
     this.digest ^= BigInt(`0x${profile.fingerprint}`);
-    for (const key of keys(profile)) {
+    const postingKeys = [
+      ...keys(profile),
+      ...(profile.publicationEligible && REGISTERED_TOPICS.has(item.topic ?? '')
+        ? [`collection:${item.topic}`]
+        : []),
+    ];
+    for (const key of postingKeys) {
       const bucket = this.buckets.get(key) ?? [];
       // Bounded postings retain newly ingested items. Narrow style/composition postings preserve diversity.
       this.buckets.set(
@@ -176,7 +186,7 @@ export class RelatedIndex {
   }
   private removeFromIndex(profile: Profile) {
     this.digest ^= BigInt(`0x${profile.fingerprint}`);
-    for (const key of keys(profile)) {
+    for (const key of [...keys(profile), `collection:${profile.item.topic}`]) {
       const next = (this.buckets.get(key) ?? []).filter((id) => id !== profile.item.id);
       if (next.length) this.buckets.set(key, next);
       else this.buckets.delete(key);
@@ -212,10 +222,14 @@ export class RelatedIndex {
       categoryLabel,
       alternatives: [],
       companions: [],
+      collection: [],
       examined: 0,
       algorithm: ALGORITHM_VERSION,
     };
-    if (!source.eligible || !source.subject) return empty;
+    if (!source.publicationEligible) return empty;
+    const collectionCandidates = REGISTERED_TOPICS.has(source.item.topic ?? '')
+      ? (this.buckets.get(`collection:${source.item.topic}`) ?? []).slice(0, 64)
+      : [];
     const candidates = new Set<string>();
     let capacity = 160;
     const collect = (key: string, maximum: number) => {
@@ -224,15 +238,15 @@ export class RelatedIndex {
         candidates.add(id);
       }
     };
-    const subject = source.subject.id;
+    const subject = source.subject?.id;
     if (source.technique) collect(`${subject}:tech:${source.technique}`, 32);
     for (const comp of source.composition) collect(`${subject}:comp:${comp}`, 24);
     if (source.styleFamily) collect(`${subject}:family:${source.styleFamily}`, 32);
     collect(`${subject}:color:monochrome`, 20);
-    collect(subject, 64);
+    if (subject) collect(subject, 64);
     // Reserve the remaining bounded capacity for explicit companions.
-    capacity = CANDIDATE_LIMIT;
-    for (const partner of companionSubjects(source.subject)) {
+    capacity = CANDIDATE_LIMIT - collectionCandidates.length;
+    for (const partner of source.subject ? companionSubjects(source.subject) : []) {
       if (source.technique) collect(`${partner.id}:tech:${source.technique}`, 12);
       if (source.styleFamily) collect(`${partner.id}:family:${source.styleFamily}`, 8);
     }
@@ -270,23 +284,57 @@ export class RelatedIndex {
         }
       return selected.sort(sort);
     };
-    const selected = unique(alternatives, 32);
+    const selected = unique(alternatives, ALTERNATIVE_LIMIT);
     // Keep true monochrome choices available without claiming they are the default best matches.
     if (!selected.some((r) => r.profile.colorMode === 'monochrome')) {
       const mono = alternatives.find(
         (r) => r.profile.colorMode === 'monochrome' && !seen.has(r.profile.identity),
       );
       if (mono) {
-        if (selected.length >= 32) selected.pop();
+        if (selected.length >= ALTERNATIVE_LIMIT) selected.pop();
         selected.push(mono);
         seen.add(mono.profile.identity);
       }
     }
+    const chosenCompanions = unique(companions, 8);
+    // A reviewed collection is a separate discovery lane, not a claim that its
+    // scenes share an exact subject. This also covers newly registered topics
+    // and sparse seasonal subjects without assigning decorative words as primary.
+    const collectionRanked: Ranked[] = [];
+    for (const id of collectionCandidates) {
+      const p = this.profiles.get(id)!;
+      if (
+        !p.publicationEligible ||
+        p.item.topic !== source.item.topic ||
+        p.item.id === sourceId ||
+        seen.has(p.identity)
+      )
+        continue;
+      const shared = intersection(source.composition, p.composition);
+      collectionRanked.push({
+        profile: p,
+        tier: source.depiction === p.depiction ? 0 : 1,
+        score:
+          (source.technique && source.technique === p.technique
+            ? 240
+            : source.styleFamily && source.styleFamily === p.styleFamily
+              ? 110
+              : 0) +
+          shared.length * 40 +
+          (source.colorMode !== 'unknown' && source.colorMode === p.colorMode ? 60 : 0),
+        reasons: ['same_reviewed_collection'],
+      });
+    }
+    const collection = unique(
+      collectionRanked,
+      SNAPSHOT_LIMIT - selected.length - chosenCompanions.length,
+    );
     return {
       ...empty,
       alternatives: selected.map((r) => card(r, 'alternatives')),
-      companions: unique(companions, 8).map((r) => card(r, 'companions')),
-      examined: candidates.size,
+      companions: chosenCompanions.map((r) => card(r, 'companions')),
+      collection: collection.map((r) => card(r, 'collection')),
+      examined: new Set([...candidates, ...collectionCandidates]).size,
     };
   }
   getRelatedArtwork(
@@ -296,7 +344,7 @@ export class RelatedIndex {
     const mode = options.mode ?? 'best',
       limit = options.limit ?? 12;
     if (
-      !['best', 'subject', 'companions', 'monochrome'].includes(mode) ||
+      !['best', 'subject', 'companions', 'monochrome', 'collection'].includes(mode) ||
       !Number.isInteger(limit) ||
       limit < 1 ||
       limit > SNAPSHOT_LIMIT
@@ -324,20 +372,25 @@ export class RelatedIndex {
       offset = cursor.offset;
     }
     const list =
-      mode === 'companions'
-        ? snapshot.companions
-        : mode === 'monochrome'
-          ? snapshot.alternatives.filter((c) => c.monochrome)
-          : mode === 'subject'
-            ? snapshot.alternatives
-            : [
-                ...snapshot.alternatives.slice(0, 8),
-                ...snapshot.companions.slice(0, 4),
-                ...snapshot.alternatives.slice(8),
-                ...snapshot.companions.slice(4),
-              ];
+      mode === 'collection'
+        ? snapshot.collection
+        : mode === 'companions'
+          ? snapshot.companions
+          : mode === 'monochrome'
+            ? snapshot.alternatives.filter((c) => c.monochrome)
+            : mode === 'subject'
+              ? snapshot.alternatives
+              : [
+                  ...snapshot.alternatives.slice(0, 8),
+                  ...snapshot.companions.slice(0, 4),
+                  ...snapshot.alternatives.slice(8),
+                  ...snapshot.companions.slice(4),
+                  ...snapshot.collection,
+                ];
     const firstLimit =
-      mode === 'best' && offset === 0
+      mode === 'best' &&
+      offset === 0 &&
+      snapshot.alternatives.length + snapshot.companions.length > 0
         ? snapshot.alternatives.length
           ? Math.min(snapshot.alternatives.length, Math.ceil((limit * 2) / 3)) +
             Math.min(snapshot.companions.length, Math.floor(limit / 3))
@@ -350,6 +403,7 @@ export class RelatedIndex {
       version: snapshot.version,
       alternatives: cards.filter((c) => c.group === 'alternatives'),
       companions: cards.filter((c) => c.group === 'companions'),
+      collection: cards.filter((c) => c.group === 'collection'),
       hasMore: next < list.length,
       cursor:
         next < list.length

@@ -87,7 +87,9 @@ try {
   }
   violations.push(...(await page.evaluate(() => window.__csp)));
   await page.goto(`${base}/art/winter-arctic-fox-resting/`);
-  const original = page.locator('a[download][href$=".pdf"]').first();
+  await page.locator('.detail-actions a[href$="?format=pdf"]').click();
+  await page.waitForURL('**/download/winter-arctic-fox-resting/**');
+  const original = page.locator('[data-final-download="pdf"]');
   await expect(original).toBeVisible();
   if (!productionOrigin) {
     const localEvent = page.waitForEvent('download');

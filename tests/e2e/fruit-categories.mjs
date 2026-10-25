@@ -1,14 +1,12 @@
 import { chromium, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { clustersForTopic } from '../../src/lib/topic-clusters.ts';
 const read = (p) => JSON.parse(fs.readFileSync(p));
 const art = read('data/art.json'),
   topics = [...read('data/topics.json').topics, ...read('data/extra-topics.json')];
-const secondary = read('data/topic-clusters.json');
 const expected = topics.filter(
-  (t) =>
-    [t.cluster, ...(secondary[t.slug] ?? [])].includes('Food & drink') &&
-    art.some((a) => a.topic === t.slug),
+  (t) => clustersForTopic(t).includes('Food & drink') && art.some((a) => a.topic === t.slug),
 );
 const base = process.env.BASE_URL ?? 'http://127.0.0.1:4353';
 const browser = await chromium.launch(),

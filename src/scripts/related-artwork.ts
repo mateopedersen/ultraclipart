@@ -1,3 +1,4 @@
+import { downloadPageHref } from '../lib/download-route';
 import { FAVORITES_KEY, parseFavoriteIds, toggleStoredFavorite } from '../lib/favorites-storage';
 import type { Mode, RelatedCard, Snapshot } from '../lib/related/engine';
 export function initRelatedArtwork() {
@@ -23,12 +24,23 @@ export function initRelatedArtwork() {
     results = find('[data-related-results]');
   const refresh = find<HTMLAnchorElement>('[data-related-refresh]'),
     end = find('[data-related-end]');
+  const sentinel = find('[data-related-sentinel]'),
+    scrollHint = find('[data-related-scroll-hint]');
   let mode: Mode = 'best';
   function initialCount() {
     const mobile = matchMedia('(max-width: 900px)').matches;
     return mode === 'best'
       ? Math.min(snapshot.alternatives.length, mobile ? 4 : 8) +
-          Math.min(snapshot.companions.length, mobile ? 2 : 4)
+          Math.min(snapshot.companions.length, mobile ? 2 : 4) +
+          Math.min(
+            snapshot.collection.length,
+            Math.max(
+              0,
+              (mobile ? 6 : 12) -
+                Math.min(snapshot.alternatives.length, mobile ? 4 : 8) -
+                Math.min(snapshot.companions.length, mobile ? 2 : 4),
+            ),
+          )
       : mobile
         ? 6
         : 12;
@@ -159,36 +171,52 @@ export function initRelatedArtwork() {
       const format = link.dataset.relatedDownload as 'webp' | 'pdf',
         url = data[format];
       link.hidden = !url;
-      if (url) link.href = url;
+      if (url) link.href = downloadPageHref(data.id, format);
       else link.removeAttribute('href');
-      link.download = `${data.id}.${format}`;
+      link.removeAttribute('download');
       link.setAttribute(
         'aria-label',
-        `Download ${format === 'webp' ? 'WebP' : 'PDF'}: ${data.title}`,
+        `Download ${format === 'webp' ? 'Image' : 'PDF'}: ${data.title}`,
       );
     });
     if (failed.has(data.id)) imageError(node);
     return node;
   }
   function list() {
+    if (mode === 'collection') return snapshot.collection;
     if (mode === 'subject') return snapshot.alternatives;
     if (mode === 'companions') return snapshot.companions;
     if (mode === 'monochrome') return snapshot.alternatives.filter((card) => card.monochrome);
     const small = matchMedia('(max-width: 900px)').matches,
       a = small ? 4 : 8,
-      c = small ? 2 : 4;
+      c = small ? 2 : 4,
+      collectionCount = Math.min(
+        snapshot.collection.length,
+        Math.max(
+          0,
+          (small ? 6 : 12) -
+            Math.min(a, snapshot.alternatives.length) -
+            Math.min(c, snapshot.companions.length),
+        ),
+      );
     return [
       ...snapshot.alternatives.slice(0, a),
       ...snapshot.companions.slice(0, c),
+      ...snapshot.collection.slice(0, collectionCount),
       ...snapshot.alternatives.slice(a),
       ...snapshot.companions.slice(c),
+      ...snapshot.collection.slice(collectionCount),
     ];
   }
-  function render(append = false) {
+  function render(append = false, focusNew = false) {
     if (stale) return;
     const all = list(),
       visible = all.slice(0, count);
-    const groups = [find('[data-related-alternatives]'), find('[data-related-companions]')];
+    const groups = [
+      find('[data-related-alternatives]'),
+      find('[data-related-companions]'),
+      find('[data-related-collection]'),
+    ];
     if (!append) {
       observer?.disconnect();
       for (const timer of timers.values()) clearTimeout(timer);
@@ -200,7 +228,7 @@ export function initRelatedArtwork() {
     for (const card of visible) {
       if (displayed.has(card.id)) continue;
       const node = createCard(card),
-        group = groups[card.group === 'alternatives' ? 0 : 1];
+        group = groups[card.group === 'alternatives' ? 0 : card.group === 'companions' ? 1 : 2];
       group.querySelector('.related-grid')!.append(node);
       displayed.add(card.id);
       watch(node);
@@ -213,11 +241,76 @@ export function initRelatedArtwork() {
     });
     more.hidden = visible.length >= all.length;
     end.hidden = !more.hidden;
+    scrollHint.hidden = more.hidden || !scrollObserver;
     status.textContent = `${visible.length} relevant ${visible.length === 1 ? 'design' : 'designs'} shown${mode === 'monochrome' ? ' · black & white' : ''}.`;
     syncFavorites();
-    if (append && more.hidden)
+    if (append && more.hidden && focusNew)
       newlyAdded[0]?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
   }
+  // The sentinel follows the cards, so discovery progresses with the reader.
+  // A fresh downward scroll arms each batch; no runaway loading or focus theft.
+  let autoArmed = false,
+    lastScrollY = window.scrollY,
+    scrollFrame = 0;
+  const nearEnd = () => {
+    const box = sentinel.getBoundingClientRect();
+    return box.top <= window.innerHeight + 320 && box.bottom >= 0;
+  };
+  async function loadMore(automatic = false) {
+    if (
+      stale ||
+      more.hidden ||
+      results.hidden ||
+      document.hidden ||
+      root!.getAttribute('aria-busy') === 'true'
+    )
+      return;
+    // Keep the manual control stable for keyboard users and pointer activation.
+    // Automatic discovery resumes when the reader leaves that control.
+    if (
+      automatic &&
+      (more === document.activeElement ||
+        (matchMedia('(hover: hover)').matches && more.matches(':hover')))
+    )
+      return;
+    if (automatic && (!autoArmed || !nearEnd())) return;
+    autoArmed = false;
+    root!.setAttribute('aria-busy', 'true');
+    more.disabled = true;
+    try {
+      if (!(await ensureCurrent())) return;
+      count += matchMedia('(max-width: 900px)').matches ? 4 : 8;
+      render(true, !automatic);
+      emit('show_more', { displayed: displayed.size, trigger: automatic ? 'scroll' : 'button' });
+    } finally {
+      more.disabled = false;
+      root!.removeAttribute('aria-busy');
+    }
+  }
+  const scrollObserver =
+    typeof IntersectionObserver === 'undefined'
+      ? undefined
+      : new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) void loadMore(true);
+          },
+          { rootMargin: '0px 0px 320px 0px' },
+        );
+  scrollObserver?.observe(sentinel);
+  if (scrollObserver)
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (window.scrollY > lastScrollY) autoArmed = true;
+        lastScrollY = window.scrollY;
+        if (!scrollFrame)
+          scrollFrame = requestAnimationFrame(() => {
+            scrollFrame = 0;
+            if (autoArmed && nearEnd()) void loadMore(true);
+          });
+      },
+      { passive: true },
+    );
   async function ensureCurrent(): Promise<boolean> {
     if (stale) return false;
     if (request) return request;
@@ -238,6 +331,8 @@ export function initRelatedArtwork() {
           end.hidden = true;
           refresh.hidden = false;
           observer?.disconnect();
+          scrollObserver?.disconnect();
+          scrollHint.hidden = true;
           status.textContent = 'The collection has changed. Refresh to see current artwork.';
           return false;
         }
@@ -245,6 +340,7 @@ export function initRelatedArtwork() {
         return true;
       } catch {
         results.hidden = true;
+        scrollHint.hidden = true;
         more.hidden = true;
         end.hidden = true;
         observer?.disconnect();
@@ -273,7 +369,12 @@ export function initRelatedArtwork() {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
     const filter = target.closest<HTMLButtonElement>('[data-related-mode]');
-    if (filter || target.closest('[data-related-more]')) {
+    if (target.closest('[data-related-more]')) {
+      event.preventDefault();
+      await loadMore();
+      return;
+    }
+    if (filter) {
       event.preventDefault();
       if (root.getAttribute('aria-busy') === 'true') return;
       root.setAttribute('aria-busy', 'true');
@@ -288,10 +389,6 @@ export function initRelatedArtwork() {
           .forEach((b) => b.setAttribute('aria-pressed', String(b === filter)));
         render();
         emit('filter');
-      } else {
-        count += matchMedia('(max-width: 900px)').matches ? 4 : 8;
-        render(true);
-        emit('show_more', { displayed: displayed.size });
       }
       return;
     }
@@ -299,7 +396,10 @@ export function initRelatedArtwork() {
     if (!card) return;
     if (target.closest('[data-related-favorite]')) {
       try {
-        const ids = toggleStoredFavorite(localStorage, card.dataset.relatedId!);
+        const ids = toggleStoredFavorite(localStorage, card.dataset.relatedId!, {
+          title: card.querySelector('.related-card-title')?.textContent?.trim(),
+          thumb: card.querySelector('img')?.src,
+        });
         syncFavorites();
         status.textContent = ids.includes(card.dataset.relatedId!)
           ? 'Saved to your favorites.'

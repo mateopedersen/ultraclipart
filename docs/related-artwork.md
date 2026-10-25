@@ -24,7 +24,7 @@ Within each group the fixed maximum score is 1,000: subject 400, technique 240 (
 
 ## Bounded queries and updates
 
-`RelatedIndex` builds bounded subject/technique/composition/color postings (96 IDs per posting). Each query examines at most 240 candidates, reserving capacity for companions. A page snapshot contains at most 32 alternatives and 8 companions, never the whole catalog. Dense topics deliberately use a bounded shortlist; category browsing remains available for complete exploration.
+`RelatedIndex` builds bounded subject/technique/composition/color postings (96 IDs per posting). Each query examines at most 240 candidates, reserving capacity for companions. A page snapshot contains at most 56 exact-subject alternatives, 8 companions and reviewed same-collection discoveries within a shared 64-card ceiling, never the whole catalog. Dense topics deliberately use a bounded shortlist; category browsing remains available for complete exploration.
 
 `getRelatedArtwork(sourceId, {mode, cursor, limit})` validates identities, modes, limits and cursors. Cursors bind source, mode and version. Upserts reject older or conflicting same-revision content, are idempotent, update only affected postings, and preserve deletion tombstones. New equal-quality artwork can break ties by creation time; it does not need historic clicks.
 
@@ -54,3 +54,12 @@ Treat measured timings as local laboratory results, not production traffic stati
 ## Rollout and rollback
 
 Publish through the existing reviewed branch/CI and Cloudflare Pages process, preserving concurrent catalog additions. No new worker or paid service is required. Reverting the feature commit and rebuilding removes the new section and guide; it does not migrate or delete catalog assets. After publication verify the release marker, reference page, several subject pages, mobile layout and original downloads on the production hostname.
+
+
+## Registered collections and progressive discovery (2026-10-25)
+
+The registry comes from `data/topics.json` and `data/extra-topics.json`. A new registered topic gets an isolated collection identity with exact title/alt context; it is never assigned a guessed shared family or promoted from a decorative mention on a different topic. Existing ambiguous-subject rules remain in force.
+
+All publication-eligible items also enter a bounded exact-topic posting. A separate **Explore this collection** lane ranks remaining reviewed items from that same collection by known technique, composition and depiction. Its label makes a collection relationship explicit; it does not claim that different scenes are the same subject. Unknown or conflicting semantic metadata cannot enter exact-subject/fruit-companion results. Both source and candidate still require approved publication, indexability, license, pair review, revision and verified thumbnail/WebP metadata. Withdrawals invalidate the release version and remove both postings. Cross-group deduplication includes canonical identity and original file hashes.
+
+The browser appends batches of 8 on desktop or 4 on mobile when a new downward scroll reaches the discovery sentinel. It preserves focus, revalidates the release before each batch, stops at the bounded result set, and retains the accessible button if IntersectionObserver is unavailable. No full catalog is fetched in the browser. Collection browsing remains available at the end. Tests exhaust all current detail-page snapshots and explicitly scroll through every USB result at desktop/mobile widths.

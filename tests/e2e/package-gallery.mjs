@@ -86,8 +86,8 @@ try {
       );
       for (const kind of ['webp', 'pdf'])
         assert.equal(
-          await card.locator(`a[download="${art.id}.${kind}"]`).evaluate((link) => link.href),
-          url(art, kind),
+          await card.locator(`a[href$="?format=${kind}"]`).getAttribute('href'),
+          `/download/${art.id}/?format=${kind}`,
         );
     }
     for (const width of [320, 390, 768, 1440]) {
@@ -161,7 +161,12 @@ try {
     assert.equal(detail.status(), 200);
     await page.locator('#art-preview img').evaluate((image) => image.decode());
     for (const kind of ['webp', 'pdf']) {
-      const link = page.locator(`.detail-actions a[download="${art.id}.${kind}"]`);
+      await page.goto(`${base}/art/${art.id}/`);
+      const entry = page.locator(`.detail-actions a[href$="?format=${kind}"]`);
+      assert.equal(await entry.getAttribute('href'), `/download/${art.id}/?format=${kind}`);
+      await entry.click();
+      await page.waitForURL(`**/download/${art.id}/**`);
+      const link = page.locator(`[data-final-download="${kind}"]`);
       assert.equal(await link.evaluate((element) => element.href), url(art, kind));
       const pending = page.waitForEvent('download');
       await link.click();

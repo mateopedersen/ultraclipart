@@ -242,3 +242,14 @@ test('required check accepts skips only after a successful explicit no-browser p
         );
       }
 });
+
+test('superseded cancellations release queued finalizers while failures retain evidence and gates', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  const evidence = workflow.slice(workflow.indexOf('- name: Keep browser evidence'));
+  const gate = workflow.slice(workflow.indexOf('\n  validate:'));
+  assert.match(evidence, /if: \$\{\{ !cancelled\(\) \}\}/);
+  assert.match(gate, /if: \$\{\{ !cancelled\(\) \}\}/);
+  assert.doesNotMatch(gate, /if: \$\{\{ success\(\) \}\}/);
+  assert.match(workflow, /cancel-in-progress: \$\{\{ github.event_name == 'pull_request' \}\}/);
+  assert.match(workflow, /fail-fast: false/);
+});

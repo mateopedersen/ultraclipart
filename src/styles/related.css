@@ -312,6 +312,9 @@
   .related-card-actions {
     gap: 5px;
   }
+  .related-card-actions a > span[aria-hidden='true'] {
+    display: none;
+  }
   .related-card-actions a {
     font-size: 11px;
     gap: 4px;
@@ -441,4 +444,30 @@
   .related-companions[data-count='1'] .related-card {
     grid-template-columns: 85px minmax(0, 1fr);
   }
+}
+
+.related-scroll-trigger {
+  height: 1px;
+  pointer-events: none;
+}
+.related-scroll-hint {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #465870;
+}
+.related-more:disabled {
+  cursor: progress;
+  opacity: 0.7;
+}
+
+.related-collection-group {
+  margin-top: 32px;
+  padding-top: 28px;
+  border-top: 1px solid #d5dfec;
+}
+.related-collection-group:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
 }

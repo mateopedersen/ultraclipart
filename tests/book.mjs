@@ -4,7 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { bookMetadata } from '../scripts/book-copy.mjs';
 import { defaults, searchArtwork } from '../src/lib/search.ts';
-import { readPublishedPage } from './support/published-page.mjs';
+import { readPublishedPage, assertPublishedImage } from './support/published-page.mjs';
 
 const read = (path) => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const all = read('data/art.json');
@@ -73,7 +73,7 @@ test(
       assert.ok(pages.includes(`/art/${item.id}/`));
       assert.ok(images.includes(`/art/${item.id}/`));
       assert.ok(detail.includes('ImageObject'));
-      assert.ok(detail.includes('assets.ultraclipart.com'));
+      assertPublishedImage(item, detail);
       assert.ok(!detail.includes('content="noindex'));
       assert.ok(readPublishedPage(item, 'edit').includes(`data-art-id="${item.id}"`));
     }

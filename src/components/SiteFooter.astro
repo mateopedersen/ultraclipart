@@ -1,0 +1,242 @@
+---
+import '../styles/site-footer.css';
+import { art } from '../lib/catalog';
+const links = [
+  {
+    id: 'explore',
+    title: 'Discover',
+    subtitle: 'Find your next favorite',
+    icon: 'explore',
+    items: [
+      ['All topics', '/categories/'],
+      ['Collections', '/collections/'],
+      ['New clipart', '/new/'],
+      ['Black & White', '/black-and-white/'],
+      ['Your boards', '/favorites/'],
+    ],
+  },
+  {
+    id: 'create',
+    title: 'Make it yours',
+    subtitle: 'A little creative freedom',
+    icon: 'studio',
+    items: [
+      ['Clipart Studio', '/create/'],
+      ['AI Clipart Builder', '/ai-clipart-generator/'],
+      ['Project guides', '/guides/'],
+      ['Print size calculator', '/print-size/'],
+      ['For teachers', '/for-teachers/'],
+    ],
+  },
+  {
+    id: 'help',
+    title: 'Here to help',
+    subtitle: 'The useful little details',
+    icon: 'help',
+    items: [
+      ['FAQ', '/faq/'],
+      ['License', '/license/'],
+      ['Terms of use', '/terms/'],
+      ['Privacy', '/privacy/'],
+      ['Accessibility', '/accessibility/'],
+    ],
+  },
+  {
+    id: 'about',
+    title: 'Behind the art',
+    subtitle: 'Meet UltraClipart',
+    icon: 'boards',
+    items: [
+      ['About UltraClipart', '/about/'],
+      ['Contact us', '/contact/'],
+      ['Copyright & corrections', '/copyright/'],
+      ['Our creative process', '/editorial-process/'],
+    ],
+  },
+];
+const showcase = [
+  'apple-and-dried-rings-crayon-clipart',
+  'baby-fennec-fox-watercolor-clipart',
+  'floral-heart-roses-wreath-clipart',
+].flatMap((id) => {
+  const item = art.find((item) => item.id === id);
+  return item ? [item] : [];
+});
+const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
+---
+
+<footer class="site-footer" aria-label="Site footer">
+  <div class="site-footer-inner">
+    <section class="footer-invitation" aria-labelledby="footer-invitation-title">
+      <div class="footer-invitation-copy">
+        <p class="footer-eyebrow">
+          <span></span> Keep a little creativity close
+        </p>
+        <h2 id="footer-invitation-title">
+          Big ideas.
+          <br />
+          <span>Little works of art.</span>
+        </h2>
+        <p>Discover something lovely. Make it your own. Save a little inspiration for later.</p>
+        <div class="footer-invitation-actions">
+          <a class="footer-explore-button" href="/categories/">
+            <img
+              class="footer-action-object"
+              src={sculpture('explore')}
+              alt=""
+              width="60"
+              height="60"
+              loading="lazy"
+            />
+            <span>
+              <strong>Explore clipart</strong>
+              <small>Find your next favorite</small>
+            </span>
+            <img
+              class="footer-action-arrow"
+              src={sculpture('arrow')}
+              alt=""
+              width="34"
+              height="34"
+              loading="lazy"
+            />
+          </a>
+          <a class="footer-studio-button" href="/create/">
+            <img
+              class="footer-action-object"
+              src={sculpture('studio')}
+              alt=""
+              width="60"
+              height="60"
+              loading="lazy"
+            />
+            <span>
+              <strong>Open Clipart Studio</strong>
+              <small>Give it your own twist</small>
+            </span>
+            <img
+              class="footer-action-arrow"
+              src={sculpture('arrow')}
+              alt=""
+              width="34"
+              height="34"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="footer-creative-stage" aria-hidden="true">
+        <div class="footer-stage-light"></div>
+        <div class="footer-stage-floor"></div>
+        {showcase.map((item, i) => (
+          <div class={`footer-art-card footer-art-card-${i}`}>
+            <div class="footer-art-paper">
+              <img src={item.thumb} alt="" width="200" height="200" loading="lazy" />
+            </div>
+            <span>{['Made to inspire', 'A little wonder', 'Made with love'][i]}</span>
+          </div>
+        ))}
+        <img
+          class="footer-stage-palette"
+          src={sculpture('studio')}
+          alt=""
+          width="128"
+          height="128"
+          loading="lazy"
+        />
+        <img
+          class="footer-stage-heart"
+          src={sculpture('boards')}
+          alt=""
+          width="108"
+          height="108"
+          loading="lazy"
+        />
+        <span class="footer-stage-spark footer-stage-spark-one"></span>
+        <span class="footer-stage-spark footer-stage-spark-two"></span>
+      </div>
+    </section>
+    <div class="footer-brand-row">
+      <a class="brand footer-brand" href="/">
+        <img src="/logo.svg" width="40" height="44" alt="" />
+        <span>UltraClipart</span>
+      </a>
+      <p>
+        Original illustrations. <strong>Endless possibilities.</strong>
+      </p>
+      <a class="footer-board-link" href="/favorites/">
+        <img src={sculpture('boards')} alt="" width="53" height="53" loading="lazy" />
+        <span>
+          <strong>A home for your ideas</strong>
+          <small>Open your boards</small>
+        </span>
+        <img
+          class="footer-board-arrow"
+          src={sculpture('arrow')}
+          alt=""
+          width="30"
+          height="30"
+          loading="lazy"
+        />
+      </a>
+    </div>
+    <div class="footer-link-grid">
+      {links.map((group) => (
+        <details class={`footer-nav-card footer-nav-${group.id}`} data-footer-group open>
+          <summary>
+            <h3>
+              <img
+                class="footer-nav-object"
+                src={sculpture(group.icon)}
+                alt=""
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <span>
+                <strong id={`footer-${group.id}-title`}>{group.title}</strong>
+                <small>{group.subtitle}</small>
+              </span>
+              <span class="footer-group-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </h3>
+          </summary>
+          <nav aria-labelledby={`footer-${group.id}-title`}>
+            <ul>
+              {group.items.map(([label, href]) => (
+                <li>
+                  <a href={href}>
+                    <span>{label}</span>
+                    <img src={sculpture('arrow')} alt="" width="24" height="24" loading="lazy" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </details>
+      ))}
+    </div>
+    <div class="footer-bottom">
+      <p>© {new Date().getFullYear()} UltraClipart</p>
+      <span class="footer-license-note">A little art for personal &amp; educational projects.</span>
+      <a href="#page-top">
+        Back to top <img src={sculpture('arrow')} alt="" width="26" height="26" loading="lazy" />
+      </a>
+    </div>
+  </div>
+</footer>
+<script>
+  const footer = document.querySelector<HTMLElement>('.site-footer');
+  if (footer) {
+    const groups = [...footer.querySelectorAll<HTMLDetailsElement>('[data-footer-group]')];
+    const compact = matchMedia('(max-width: 600px)');
+    const arrange = () => {
+      for (const group of groups) group.open = !compact.matches;
+      footer.dataset.ready = 'true';
+    };
+    arrange();
+    compact.addEventListener('change', arrange);
+  }
+</script>
