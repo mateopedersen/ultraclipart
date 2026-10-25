@@ -12,6 +12,12 @@ const identities = read('data/identification/gta-six.json').artworks;
 test('six supplied GTA archives produce 300 reviewed, source-bound image/PDF pairs in five public subjects', () => {
   assert.equal(rows.length, 300);
   assert.equal(identities.length, 300);
+  assert.equal(
+    read('data/gta-six-review.json').identityReview.registrySha256,
+    createHash('sha256')
+      .update(readFileSync(new URL('../data/identification/gta-six.json', import.meta.url)))
+      .digest('hex'),
+  );
   assert.equal(new Set(rows.map((x) => x.id)).size, 300);
   assert.deepEqual(
     Object.fromEntries(
@@ -39,6 +45,7 @@ test('six supplied GTA archives produce 300 reviewed, source-bound image/PDF pai
       assert.equal(body.length, item.files[kind].bytes);
       assert.equal(createHash('sha256').update(body).digest('hex'), item.files[kind].sha256);
     }
+    if (record.catalogColor) assert.equal(item.color, record.catalogColor);
     assert.equal(item.discovery.cute, false);
     assert.equal(item.width, 1254);
     assert.equal(item.height, 1254);
@@ -55,6 +62,8 @@ test('GTA aliases and character names find every reviewed design without duplica
   for (const topic of Object.keys(packageContexts))
     assert.equal(topics.filter((x) => x.slug === topic).length, 1);
   assert.ok(!topics.some((x) => x.slug === 'gta-vi'));
+  const redirects = readFileSync(new URL('../public/_redirects', import.meta.url), 'utf8');
+  assert.match(redirects, /^\/clipart\/gta-vi\/? \/clipart\/gta-6\/ 301$/m);
   for (const [query, expected] of [
     ['Jason Duval', 50],
     ['Lucia Caminos', 50],
@@ -69,6 +78,12 @@ test(
   () => {
     const text = (p) => readFileSync(new URL('../dist/' + p, import.meta.url), 'utf8');
     const sitemap = text('sitemap-images.xml');
+    for (const topic of Object.keys(packageContexts)) {
+      const html = text('clipart/' + topic + '/index.html');
+      const count = rows.filter((item) => item.topic === topic).length;
+      assert.ok(html.includes(`"numberOfItems":${count}`), topic);
+      assert.ok(!html.includes('{{artworkCount}}'), topic);
+    }
     for (const item of rows) {
       const html = text('art/' + item.id + '/index.html');
       assert.ok(html.includes('https://ultraclipart.com/art/' + item.id + '/'));

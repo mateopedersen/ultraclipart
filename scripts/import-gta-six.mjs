@@ -149,12 +149,13 @@ for (const { topic: archiveTopic, folder } of mapping) {
         throw Error('Unverified pair: ' + id);
       const source = join(stage, 'extracted', folder);
       const repaired = extraction.repairs?.some((repair) => repair.id === id);
+      const metadata = packageMetadata(topic, id, checked.hashes.webp);
       const item = {
         id,
-        ...packageMetadata(topic, id, checked.hashes.webp),
+        ...metadata,
         discovery: packageDiscovery(id),
         topic,
-        color: await colorOf(join(source, 'webp', id + '.webp'), id),
+        color: metadata.color ?? (await colorOf(join(source, 'webp', id + '.webp'), id)),
         orientation: width === height ? 'Square' : width > height ? 'Landscape' : 'Portrait',
         width,
         height,

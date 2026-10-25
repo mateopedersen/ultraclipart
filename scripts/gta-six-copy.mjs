@@ -20,6 +20,7 @@ export function packageMetadata(topic, id, sourceSha256) {
   const checked = validateIdentification({ artwork: { id, ...metadata }, sourceBytes, record });
   return {
     ...metadata,
+    ...(record.catalogColor ? { color: record.catalogColor } : {}),
     style: record.style,
     visualStyle: record.visualStyle,
     productIdentity: checked.productIdentity,
@@ -35,7 +36,7 @@ export function packageCollectionCopy(topic, items) {
   const mono = ordered.find((x) => x.style === 'Black & White');
   if (mono) featured.push(mono.id);
   return {
-    description: `${items.length} ${c.label} fan-art clipart designs. Browse character illustrations and decorative compositions with transparent WebP and matching printable PDF downloads.`,
+    description: `{{artworkCount}} ${c.label} clipart designs: ${c.summary}. Choose transparent WebP images or matching printable PDFs for personal fan projects.`,
     lead: c.lead,
     intro: c.intro,
     featured,
