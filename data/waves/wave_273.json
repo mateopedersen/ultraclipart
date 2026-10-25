@@ -1,0 +1,570 @@
+{
+  "wave": "wave_273",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-winter-branching-tree",
+      "title": "Bare Maple Tree",
+      "alt": "A complete young bare maple tree has a textured gray brown trunk, distinct branching limbs and small buds above a tidy snowy earth base.",
+      "description": "A complete young bare maple tree has a textured gray brown trunk, distinct branching limbs and small buds above a tidy snowy earth base. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_273/source/maple-winter-branching-tree-v3.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "b3f9a0bd80b7405f762a1ec97b917c60632eee4c80c9b865eaf4efb1b54074b6",
+      "inputSignature": "2e6bddb7ef1094d27f451684433e85e55a78ed713015e93f3dfa093656bfbaad",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 839873,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 839873,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        15,
+        20,
+        1009,
+        1504
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_273/exports/maple-winter-branching-tree.pdf",
+          "bytes": 839873,
+          "sha256": "b6ad39efc2520dc3f41bcade4ae9fa77a9496c617a62b10695173e147227f4a8"
+        },
+        "webp": {
+          "path": "work/production/wave_273/exports/maple-winter-branching-tree.webp",
+          "bytes": 1045674,
+          "sha256": "927791dcd8b3adf9520f633a5526fb395ef20d50658b7970b1b686003f96c1fd"
+        },
+        "thumb": {
+          "path": "work/production/wave_273/exports/maple-winter-branching-tree-thumb.webp",
+          "bytes": 42104,
+          "sha256": "45047ef6ef181ffb04ec9a457622d62048369f75e28fd7f43fa7881e9e140b61"
+        }
+      },
+      "proofSha256": "6b449d60bd867191061596e1ba2c37b0199e59921b7617043a891f1d3f0075a3",
+      "pairMeanRgbDifference": 2.81776
+    },
+    {
+      "id": "maple-bark-and-young-twig",
+      "title": "Maple Bark and Leafy Twig",
+      "alt": "A curved piece of ridged gray bark rests beside a maple twig bearing two green lobed leaves, a bud and a paired winged seed.",
+      "description": "A curved piece of ridged gray bark rests beside a maple twig bearing two green lobed leaves, a bud and a paired winged seed. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_273/source/maple-bark-and-young-twig.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "94d5a8b9e03a2c58c3b65680ea74f1f9ec7e819e9b7678ce16928d657699ebe3",
+      "inputSignature": "82b83c71a3bd562213933311f524ab3519fd0b22b01d28a55d10bda752065ed0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 976385,
+        "weightedCmykRmse": 0.75044
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1105392,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 976385,
+          "weightedCmykRmse": 0.75044
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        28,
+        16,
+        1519,
+        1000
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_273/exports/maple-bark-and-young-twig.pdf",
+          "bytes": 976385,
+          "sha256": "3ad2a412eb2a51282e2094cf23210be11ca942a8f653a24b149af4ca61017175"
+        },
+        "webp": {
+          "path": "work/production/wave_273/exports/maple-bark-and-young-twig.webp",
+          "bytes": 1614874,
+          "sha256": "ad16524da341b4ea217ab33759b1ed215516c070d9f70f53d37930b4368cc0f1"
+        },
+        "thumb": {
+          "path": "work/production/wave_273/exports/maple-bark-and-young-twig-thumb.webp",
+          "bytes": 57826,
+          "sha256": "6a2d279d52ad52d5956361c5b1c3b8b6a77c873a15bd07b41818a1682802cdcc"
+        }
+      },
+      "proofSha256": "3e7d8c7adf3b78bc6c7245748c660ad870a624b354350496cf1ba9a7dfc4ab1e",
+      "pairMeanRgbDifference": 5.08634
+    },
+    {
+      "id": "maple-squirrel-maple-branch",
+      "title": "Squirrel on a Maple Branch",
+      "alt": "A gray squirrel grips a short maple branch and holds a paired winged seed in its forepaws beside two green maple leaves.",
+      "description": "A gray squirrel grips a short maple branch and holds a paired winged seed in its forepaws beside two green maple leaves. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_273/source/maple-squirrel-maple-branch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "97b4bc48643db7e303df45705f29fde84fc26848a56e7ba132cab4ba9680da6d",
+      "inputSignature": "d471597da61bf48957987a345567ca47f746fec922af1176d0ca94c91540575b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 949831,
+        "weightedCmykRmse": 1.071192
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1245849,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1070648,
+          "weightedCmykRmse": 0.743207
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1022370,
+          "weightedCmykRmse": 0.884927
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 949831,
+          "weightedCmykRmse": 1.071192
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        21,
+        31,
+        1517,
+        983
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_273/exports/maple-squirrel-maple-branch.pdf",
+          "bytes": 949831,
+          "sha256": "376ccc14fac4906bb82d87cd1ca0beb7643dd356d34cfee065f65096bf8f7cb9"
+        },
+        "webp": {
+          "path": "work/production/wave_273/exports/maple-squirrel-maple-branch.webp",
+          "bytes": 1835104,
+          "sha256": "476250d53b13c91d06eb73e4ef4318ce05b70ee72a8be8e9125e5af0206b9d6f"
+        },
+        "thumb": {
+          "path": "work/production/wave_273/exports/maple-squirrel-maple-branch-thumb.webp",
+          "bytes": 64190,
+          "sha256": "5e887a0bc785933e9878dde7c59f733b28915309eb6abfa934d889d702968e95"
+        }
+      },
+      "proofSha256": "ef2d3f31f615e14cc4e530f4906bf2402f291b42f62714f69b38f0a0acfb1445",
+      "pairMeanRgbDifference": 4.14768
+    },
+    {
+      "id": "maple-chipmunk-maple-seed",
+      "title": "Chipmunk with Maple Seeds",
+      "alt": "A striped chipmunk sits on a small mossy stone holding a paired maple seed, with more samaras and maple leaves at its feet.",
+      "description": "A striped chipmunk sits on a small mossy stone holding a paired maple seed, with more samaras and maple leaves at its feet. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_273/source/maple-chipmunk-maple-seed.png",
+      "printMaxEdgePx": 880,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 880,
+      "pdfHeight": 804,
+      "sourceType": "raster",
+      "sourceSha256": "c3847f6ea7e054f70c75929e655b1cb1da5df11848b3c30a1dddd87de42aa826",
+      "inputSignature": "7ff9e905b2809cf6c610aac919cb717d6712d65869284fef24823fab24492c1f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 996353,
+        "weightedCmykRmse": 1.292089
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1419553,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1198371,
+          "weightedCmykRmse": 0.727087
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1146449,
+          "weightedCmykRmse": 0.86223
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1068843,
+          "weightedCmykRmse": 1.051172
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 996353,
+          "weightedCmykRmse": 1.292089
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        9,
+        1302,
+        1181
+      ],
+      "image": {
+        "width": 880,
+        "height": 804,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_273/exports/maple-chipmunk-maple-seed.pdf",
+          "bytes": 996353,
+          "sha256": "65ae6edb3bcabcad5d5a5e8060da6fb1f94586e27867cfd98a7b44218ab76792"
+        },
+        "webp": {
+          "path": "work/production/wave_273/exports/maple-chipmunk-maple-seed.webp",
+          "bytes": 1662412,
+          "sha256": "7e61fdf1a74e7fa1e0a2f2d1b1b24706fe94555c887d5c623d7384e34cacf5c2"
+        },
+        "thumb": {
+          "path": "work/production/wave_273/exports/maple-chipmunk-maple-seed-thumb.webp",
+          "bytes": 89614,
+          "sha256": "d533f84f3ee1a804948f7d4861b8a3d7dada02730aceafcc173b08db06724655"
+        }
+      },
+      "proofSha256": "c45289e99c14c1d035b751f6b929831d82f33b84fdadb1ccbd30afcfee8e06a4",
+      "pairMeanRgbDifference": 2.66734
+    },
+    {
+      "id": "maple-ladybug-on-leaf",
+      "title": "Ladybug on a Maple Leaf",
+      "alt": "A small red ladybug crawls beside the central vein of a large green pointed maple leaf with a complete slender stem.",
+      "description": "A small red ladybug crawls beside the central vein of a large green pointed maple leaf with a complete slender stem. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_273/source/maple-ladybug-on-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "14af79dd910d04cbe6fb674a6747a13113bad24fd63cf02bcb9db85f3d2175dd",
+      "inputSignature": "d50e96eb273cbe201bc951c37913ece6d9d19911bdc4aeb4dd1223a2e910c83a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 942246,
+        "weightedCmykRmse": 0.911295
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1241819,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1005932,
+          "weightedCmykRmse": 0.770247
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 942246,
+          "weightedCmykRmse": 0.911295
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        30,
+        11,
+        1299,
+        1178
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_273/exports/maple-ladybug-on-leaf.pdf",
+          "bytes": 942246,
+          "sha256": "0402d06916c4d2b01e638c79294739ddc81c8a0ebd1745412dfb119cb893107f"
+        },
+        "webp": {
+          "path": "work/production/wave_273/exports/maple-ladybug-on-leaf.webp",
+          "bytes": 1273712,
+          "sha256": "184f7c3554a8ba8bd6f5174dba80f8a3d420e3858d7ecb86b3c6b18c96a8e5d3"
+        },
+        "thumb": {
+          "path": "work/production/wave_273/exports/maple-ladybug-on-leaf-thumb.webp",
+          "bytes": 62286,
+          "sha256": "f61cf08579a6974f1b68bd457ce717bfa1bc1c81ceb5481260808ce3a9e7f881"
+        }
+      },
+      "proofSha256": "cb42e913d802893777abe0e8c36a2d4501451be0a19627e566f63a7045078012",
+      "pairMeanRgbDifference": 5.98905
+    },
+    {
+      "id": "maple-dew-curled-leaf",
+      "title": "Curled Maple Leaf with Dew",
+      "alt": "A curled amber maple leaf has clear dew beads, fine branching veins and a curved slender stem.",
+      "description": "A curled amber maple leaf has clear dew beads, fine branching veins and a curved slender stem. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_273/source/maple-dew-curled-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "ef9dfdda11a8b1740b5c6b0778c41c520106c2e54a982613a4deb9ece3a4f5a5",
+      "inputSignature": "474100e755b28b0abbf06a48415f6ff3ecf838343594dbc72d7809b443396ee8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 939651,
+        "weightedCmykRmse": 1.106999
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1263297,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1081685,
+          "weightedCmykRmse": 0.780176
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1017531,
+          "weightedCmykRmse": 0.926488
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 939651,
+          "weightedCmykRmse": 1.106999
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        32,
+        21,
+        1295,
+        1147
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_273/exports/maple-dew-curled-leaf.pdf",
+          "bytes": 939651,
+          "sha256": "5f42d93ff8cf1d82217875fc5108f3ea7cd4922f44507c8361e5b1ed2f2c67ec"
+        },
+        "webp": {
+          "path": "work/production/wave_273/exports/maple-dew-curled-leaf.webp",
+          "bytes": 1150930,
+          "sha256": "290a1a48fc92de273e7311ec100320e052a4ec236fd15a523d02a369f19a8971"
+        },
+        "thumb": {
+          "path": "work/production/wave_273/exports/maple-dew-curled-leaf-thumb.webp",
+          "bytes": 65650,
+          "sha256": "6cbf4f7bd80a0d8c6645f1cafa3b578b0004c784bd90c38ca58680a7face006a"
+        }
+      },
+      "proofSha256": "1a1fb65bdc7e4fa840f74f0762441868b8698a4853cdedc503c4f16f613be84b",
+      "pairMeanRgbDifference": 3.34116
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T18:15:07.643678+00:00",
+  "screenReviewScope": "All native PDF proof compositions visually inspected. Final tree, wreath, sap tools and shack replacements verified against selected masters; no original held source selected.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:20.238Z"
+}

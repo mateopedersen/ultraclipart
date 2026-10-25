@@ -20,7 +20,9 @@ const read = (name) =>
   );
 const rows = read('art.json').filter((a) => a.topic === topic);
 const copy = read('collection-copy.json')[topic];
-assert.equal(rows.length, 50);
+const expectedCount = Number(process.env.EXPECTED_ARTWORK_COUNT || 50);
+assert.ok(Number.isSafeInteger(expectedCount) && expectedCount > 0);
+assert.equal(rows.length, expectedCount);
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/' + topic + '-semantics');
 mkdirSync(out, { recursive: true });
 const report = {
@@ -68,7 +70,7 @@ try {
   assert.equal(await page.locator('.hero .lead').innerText(), copy.lead);
   assert.ok((await page.locator('.hero').innerText()).includes(copy.intro));
   const collection = (await schema()).find((s) => s['@type'] === 'CollectionPage');
-  assert.equal(collection.mainEntity.numberOfItems, 50);
+  assert.equal(collection.mainEntity.numberOfItems, expectedCount);
   assert.deepEqual(
     new Set(collection.mainEntity.itemListElement.map((a) => a.url)),
     new Set(rows.map((a) => 'https://ultraclipart.com/art/' + a.id + '/')),

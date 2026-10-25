@@ -1,0 +1,556 @@
+{
+  "wave": "wave_282",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "leaves-heart-shaped-leaf",
+      "title": "Heart Shaped Green Leaf",
+      "alt": "A glossy deep green heart-shaped leaf shows a deep basal notch, gently arched branching veins and a long complete stalk.",
+      "description": "A glossy deep green heart-shaped leaf shows a deep basal notch, gently arched branching veins and a long complete stalk. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_282/source/leaves-heart-shaped-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "9bbea986296b051c0820f916e84c7889cfe0049c9d9bc7866df278a31809407b",
+      "inputSignature": "5f0bdb864ffe9033c7f9b1a8bdf641e94512a6054923ead5047e3379b60d8047",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 797531,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 797531,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        92,
+        138,
+        984,
+        1442
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_282/exports/leaves-heart-shaped-leaf.pdf",
+          "bytes": 797531,
+          "sha256": "80b9b89d2421fda3e01f6134b651a53ceadd9d5463253bb34e69ebb89629921a"
+        },
+        "webp": {
+          "path": "work/production/wave_282/exports/leaves-heart-shaped-leaf.webp",
+          "bytes": 1314968,
+          "sha256": "73cf2f87d04833e1dc4e239db0d5d9104ef624704446a2772a96f13c0d3eaf8f"
+        },
+        "thumb": {
+          "path": "work/production/wave_282/exports/leaves-heart-shaped-leaf-thumb.webp",
+          "bytes": 35902,
+          "sha256": "51d6caa2a08701e265a9bbe06cf9fda424b0965488b37f580639a51e336b3d38"
+        }
+      },
+      "proofSha256": "d786d7c89e642501f463ab4ee4dc2ee4d44e2657f907675bdbb1feeb49d1e0e6",
+      "pairMeanRgbDifference": 3.71365
+    },
+    {
+      "id": "leaves-water-lily-pad",
+      "title": "Water Lily Leaf",
+      "alt": "A broad green water lily leaf has a deep narrow basal notch and radiating veins, surrounded by a small bounded water ripple.",
+      "description": "A broad green water lily leaf has a deep narrow basal notch and radiating veins, surrounded by a small bounded water ripple. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_282/source/leaves-water-lily-pad.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "38c907c399d051286b88115eb01e61737671bc26328f91413380b2bcd0ee5b31",
+      "inputSignature": "a0c49021e10541ca74695db317d1be3d898ac87bdd3dabebfe8566d75d696f06",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 932974,
+        "weightedCmykRmse": 0.934163
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1262440,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1000392,
+          "weightedCmykRmse": 0.794048
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 932974,
+          "weightedCmykRmse": 0.934163
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        70,
+        181,
+        1262,
+        982
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_282/exports/leaves-water-lily-pad.pdf",
+          "bytes": 932974,
+          "sha256": "0102c4b7e5da33b89d420dfcaa47a64b25e9538465c8764803c94561e78c6efb"
+        },
+        "webp": {
+          "path": "work/production/wave_282/exports/leaves-water-lily-pad.webp",
+          "bytes": 1196012,
+          "sha256": "3ac4f246f74635ce9589a99516dc3c07d98d3fc2cf9929a53d7d914c96919d37"
+        },
+        "thumb": {
+          "path": "work/production/wave_282/exports/leaves-water-lily-pad-thumb.webp",
+          "bytes": 63816,
+          "sha256": "72aec7449e189eadffdf0922826daa457c743a255d6ef1d3989f981f9aa57045"
+        }
+      },
+      "proofSha256": "ceb6b6a94220946d6b184390315d2017a5a80115f418609dfcb88fddc37eda27",
+      "pairMeanRgbDifference": 3.14695
+    },
+    {
+      "id": "leaves-watercolor-greenery-mix",
+      "title": "Watercolor Greenery Spray",
+      "alt": "An airy greenery spray combines rounded blue-green eucalyptus leaves, a delicate fern frond and narrow olive-like leaves.",
+      "description": "An airy greenery spray combines rounded blue-green eucalyptus leaves, a delicate fern frond and narrow olive-like leaves. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Watercolor",
+      "source": "work/production/wave_282/source/leaves-watercolor-greenery-mix.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 949,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "4f90d4811a6c8d21ec7994d1b8d44cbdd0365a11f238cc180929da33e17d0748",
+      "inputSignature": "38347ef04eee682dc673f703999420a17c63722d646ed7d7f777453813d53bb6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 947169,
+        "weightedCmykRmse": 1.573891
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1369230,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1158079,
+          "weightedCmykRmse": 0.818816
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1091852,
+          "weightedCmykRmse": 0.980255
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1016209,
+          "weightedCmykRmse": 1.176047
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 947169,
+          "weightedCmykRmse": 1.573891
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        148,
+        58,
+        1149,
+        1229
+      ],
+      "image": {
+        "width": 949,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_282/exports/leaves-watercolor-greenery-mix.pdf",
+          "bytes": 947169,
+          "sha256": "3baca6c90e65adfc0b752baea582a4ba6e4f23b75fe73757eefebe9f323798f4"
+        },
+        "webp": {
+          "path": "work/production/wave_282/exports/leaves-watercolor-greenery-mix.webp",
+          "bytes": 1090288,
+          "sha256": "42b180b3e4f12601ee3f8fc12fb3d1dd1208a9a8b8d149dde8b99ca0742e305d"
+        },
+        "thumb": {
+          "path": "work/production/wave_282/exports/leaves-watercolor-greenery-mix-thumb.webp",
+          "bytes": 85060,
+          "sha256": "3ab8eba47668849e5c1a4fd89a0d5d1d16eabb013c3c5b2f05e4c3ae04a393ed"
+        }
+      },
+      "proofSha256": "8f275c971680c3713529918204a72ecc0422d6b77f6a91bbf7be8a8bff95cd82",
+      "pairMeanRgbDifference": 2.93551
+    },
+    {
+      "id": "leaves-laurel-crescent",
+      "title": "Laurel Leaf Crescent",
+      "alt": "Two slender leafy branches cross at their bases and curve upward into an open laurel crescent with a clear central space.",
+      "description": "Two slender leafy branches cross at their bases and curve upward into an open laurel crescent with a clear central space. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Watercolor",
+      "source": "work/production/wave_282/source/leaves-laurel-crescent.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "2e45d4532ab2e63c0141efd1455e857e04a042ca17f36701276748ce2e9a83f3",
+      "inputSignature": "c63d2f4e46675fb795775b3acf8e113ba210fb166b9bedf9ba93ce3cc0954976",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 980682,
+        "weightedCmykRmse": 1.206269
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1308164,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1116609,
+          "weightedCmykRmse": 0.843148
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1053221,
+          "weightedCmykRmse": 1.003381
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 980682,
+          "weightedCmykRmse": 1.206269
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        66,
+        107,
+        1271,
+        1102
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_282/exports/leaves-laurel-crescent.pdf",
+          "bytes": 980682,
+          "sha256": "ab298bd1bd25086963f356c5fb72fb7dc6dd40870b87b1037c00923229a2f1e0"
+        },
+        "webp": {
+          "path": "work/production/wave_282/exports/leaves-laurel-crescent.webp",
+          "bytes": 1008962,
+          "sha256": "1f4122e90cfd5ad3f6c06a469f6eb4c76c3b986bdd6003a7a1ee8484afe85ba6"
+        },
+        "thumb": {
+          "path": "work/production/wave_282/exports/leaves-laurel-crescent-thumb.webp",
+          "bytes": 71812,
+          "sha256": "8d20ea22429ad8933a89b28002a51b1cfbd620b9a6b3ef08c72d956a565f694d"
+        }
+      },
+      "proofSha256": "262f4ecce61bb5013c9546f5e154aba045dd751c4968e6437c1dacd5d7cb1c9c",
+      "pairMeanRgbDifference": 4.40586
+    },
+    {
+      "id": "leaves-eucalyptus-corner",
+      "title": "Eucalyptus Corner Decoration",
+      "alt": "Rounded blue-green eucalyptus leaves on fine brown twigs form an open corner with one upright and one horizontal arm.",
+      "description": "Rounded blue-green eucalyptus leaves on fine brown twigs form an open corner with one upright and one horizontal arm. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Watercolor",
+      "source": "work/production/wave_282/source/leaves-eucalyptus-corner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1310,
+      "height": 1200,
+      "pdfWidth": 1000,
+      "pdfHeight": 916,
+      "sourceType": "raster",
+      "sourceSha256": "5f4674566abd0ef4a0fc643cdaef5c34c9eaf0685c5a1855e840705beb947913",
+      "inputSignature": "490e80a8ad06452e88f91f2221cfa6eda7f7f6acfee18d84c9991b2e98ceadf3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 849206,
+        "weightedCmykRmse": 0.898755
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1031119,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 849206,
+          "weightedCmykRmse": 0.898755
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        36,
+        58,
+        1266,
+        1152
+      ],
+      "image": {
+        "width": 1000,
+        "height": 916,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_282/exports/leaves-eucalyptus-corner.pdf",
+          "bytes": 849206,
+          "sha256": "a8c79f34ff074e4bd11364c48c97ce05f8081240b77962ad47afe0b8a1f1d492"
+        },
+        "webp": {
+          "path": "work/production/wave_282/exports/leaves-eucalyptus-corner.webp",
+          "bytes": 833088,
+          "sha256": "02d5f2d2d78850c004882821e75fb711c9cf1219ef011d4476c50b949bb806bb"
+        },
+        "thumb": {
+          "path": "work/production/wave_282/exports/leaves-eucalyptus-corner-thumb.webp",
+          "bytes": 56870,
+          "sha256": "d6d8026e68b097f740aba7ed4be4e184c19146156621f3457b17f97983b23752"
+        }
+      },
+      "proofSha256": "0fc898751ba90b456f3bd1683880b934078eba15a405770b2fa06ac321c72165",
+      "pairMeanRgbDifference": 1.7472
+    },
+    {
+      "id": "leaves-tropical-leaf-header",
+      "title": "Tropical Leaves Header",
+      "alt": "A pleated fan palm leaf, a long banana leaf and a smaller split monstera leaf overlap in a shallow tropical arrangement.",
+      "description": "A pleated fan palm leaf, a long banana leaf and a smaller split monstera leaf overlap in a shallow tropical arrangement. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Watercolor",
+      "source": "work/production/wave_282/source/leaves-tropical-leaf-header.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "86d6471016a8fe018ebd6eddd81967c1ecce7cd68c5edad919a1ec3e98b0a306",
+      "inputSignature": "27c54b63dfe1f4e47be59858b4f47a574cbe810c9f241f69f72d9a81fedc45ca",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 892790,
+        "weightedCmykRmse": 0.795234
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1077768,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 892790,
+          "weightedCmykRmse": 0.795234
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        52,
+        1498,
+        935
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_282/exports/leaves-tropical-leaf-header.pdf",
+          "bytes": 892790,
+          "sha256": "632bddcd9833709c48a93fde78c85eb0d3bb85b48a06e7d92dde30912095cb60"
+        },
+        "webp": {
+          "path": "work/production/wave_282/exports/leaves-tropical-leaf-header.webp",
+          "bytes": 1514794,
+          "sha256": "c515822c481502a5ab29ef067664075e468ecb7075aea250764f3dc8fdff72a0"
+        },
+        "thumb": {
+          "path": "work/production/wave_282/exports/leaves-tropical-leaf-header-thumb.webp",
+          "bytes": 61502,
+          "sha256": "b1c25f1ea2dbf2293d3cd2cbfc68b819586e178d6848c959bc34ecc44b146c46"
+        }
+      },
+      "proofSha256": "33a4fc2a7fe686797756c31bd3c8497f5de91a62de29a9b5254d9bd08b267957",
+      "pairMeanRgbDifference": 4.327
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T20:25:10.611105+00:00",
+  "screenReviewScope": "All six actual CMYK PDF renders inspected against complete reviewed source compositions; natural metadata matched to visible forms and alpha framing checked.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:45:34.580Z"
+}

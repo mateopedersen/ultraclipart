@@ -1,0 +1,528 @@
+{
+  "wave": "wave_277",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-covered-sap-bucket",
+      "title": "Maple Tap and Sap Collection Tools",
+      "alt": "A complete covered galvanized sap bucket stands beside a hand brace drill, a loose tapping spile and folded work gloves.",
+      "description": "A complete covered galvanized sap bucket stands beside a hand brace drill, a loose tapping spile and folded work gloves. An original maple illustration for personal projects and classroom activities.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_277/source/maple-covered-sap-bucket-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "6295e17d9e04b711fd812bccd11a7ddc1893deaff77b9f751a760e9cf31bef64",
+      "inputSignature": "2ce522ca3a6a4804e4895cd880ae60043c78995b2793cdf7fd6a1a36996d1490",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 975648,
+        "weightedCmykRmse": 1.341288
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1509322,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1224739,
+          "weightedCmykRmse": 0.751507
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1152211,
+          "weightedCmykRmse": 0.890215
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055167,
+          "weightedCmykRmse": 1.069873
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 975648,
+          "weightedCmykRmse": 1.341288
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        17,
+        1288,
+        1171
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_277/exports/maple-covered-sap-bucket.pdf",
+          "bytes": 975648,
+          "sha256": "182d54e4b8ed540d400da5ee968b1ed73bbd8ed1138a45e2262bdcb03aca42f9"
+        },
+        "webp": {
+          "path": "work/production/wave_277/exports/maple-covered-sap-bucket.webp",
+          "bytes": 1331538,
+          "sha256": "bcc1ed7bcdf935252e28961504f93482cf5ea2a425ec23ac354a755b71d88c13"
+        },
+        "thumb": {
+          "path": "work/production/wave_277/exports/maple-covered-sap-bucket-thumb.webp",
+          "bytes": 68426,
+          "sha256": "578dca64a98e9617ff2a821aa7f077f4df701f3e2a05a97af5fa1690001f460e"
+        }
+      },
+      "proofSha256": "781ccb660709edeabfe9d00b91c0cf8b3876debb46885511aa595ea4d99a0fc8",
+      "pairMeanRgbDifference": 3.27424
+    },
+    {
+      "id": "maple-sugar-shack",
+      "title": "Maple Sugar Shack",
+      "alt": "A small timber sugar shack releases steam through a roof vent beside a woodpile and two leafless tapped trees on patchy snow.",
+      "description": "A small timber sugar shack releases steam through a roof vent beside a woodpile and two leafless tapped trees on patchy snow. An original maple illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_277/source/maple-sugar-shack-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "fbe96f0e5e297f21f41e0cd01200dcfba3d6942f652ba76985e4684f632f92d7",
+      "inputSignature": "1d939eae6346d52d37ff0b3293b79da7446c47d9d51f89d1bd446a5cfd8264e2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 947430,
+        "weightedCmykRmse": 0.761939
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1125826,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 947430,
+          "weightedCmykRmse": 0.761939
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        164,
+        65,
+        1385,
+        967
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_277/exports/maple-sugar-shack.pdf",
+          "bytes": 947430,
+          "sha256": "9f125be4f4a9d329f01f76bd89bd16d62b376ec011957477d1b730ef3d22b0aa"
+        },
+        "webp": {
+          "path": "work/production/wave_277/exports/maple-sugar-shack.webp",
+          "bytes": 1658752,
+          "sha256": "4d8278c18df686592e4e59919443c22d24fe36139297d3a1f057db6f2239be5e"
+        },
+        "thumb": {
+          "path": "work/production/wave_277/exports/maple-sugar-shack-thumb.webp",
+          "bytes": 59550,
+          "sha256": "1ed49cda1f45c745a901dd8bd94777cc0bfdaa992073805f0acdd49ebf17e82f"
+        }
+      },
+      "proofSha256": "2e5892562aeaed89110415f1657ec0255569c93560e4ae8f7db021fe5f9c729f",
+      "pairMeanRgbDifference": 4.92339
+    },
+    {
+      "id": "maple-syrup-evaporator",
+      "title": "Maple Syrup Evaporator",
+      "alt": "A shallow stainless steel evaporator pan rests on a closed metal firebox with a rear chimney and a small amount of steam.",
+      "description": "A shallow stainless steel evaporator pan rests on a closed metal firebox with a rear chimney and a small amount of steam. An original maple illustration for personal projects and classroom activities.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_277/source/maple-syrup-evaporator.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "8439f1f8c1d4ca107dd0d3d9aa9b94bffa64cf2dcd7d06180e97bf0d850d49a0",
+      "inputSignature": "f59ee1557ef548c36d8f53e5968ecb23791f1b204ade28666b6be478749526c7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 839939,
+        "weightedCmykRmse": 0.844473
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1088976,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 839939,
+          "weightedCmykRmse": 0.844473
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        171,
+        10,
+        1224,
+        1188
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_277/exports/maple-syrup-evaporator.pdf",
+          "bytes": 839939,
+          "sha256": "f0c01040109336f1bc52759ec1fcbacc0a934e66dbe5c19cf4c1baa4c5a6291b"
+        },
+        "webp": {
+          "path": "work/production/wave_277/exports/maple-syrup-evaporator.webp",
+          "bytes": 920326,
+          "sha256": "377afdee4ff04922c318e28395971f55bce7c51f63382e0ebbd1317253d0772a"
+        },
+        "thumb": {
+          "path": "work/production/wave_277/exports/maple-syrup-evaporator-thumb.webp",
+          "bytes": 42818,
+          "sha256": "c03336ce7353a6ccdd2b63e0656cb512478fa26a2a40c3979d62ac2339dade98"
+        }
+      },
+      "proofSha256": "9a22f08c109fbe543f8dda1db259698d20fddef437e15e895ebdd054ae5a31de",
+      "pairMeanRgbDifference": 1.95989
+    },
+    {
+      "id": "maple-amber-syrup-bottle",
+      "title": "Maple Syrup Bottle and Leaf",
+      "alt": "A clear handled glass bottle holds amber maple syrup beneath a plain dark cap beside one red maple leaf.",
+      "description": "A clear handled glass bottle holds amber maple syrup beneath a plain dark cap beside one red maple leaf. An original maple illustration for personal projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_277/source/maple-amber-syrup-bottle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1305,
+      "height": 1206,
+      "pdfWidth": 1000,
+      "pdfHeight": 924,
+      "sourceType": "raster",
+      "sourceSha256": "677762900191eb4d471bae976282207547c7c99cd25d3045117e8d62da7fd4a5",
+      "inputSignature": "56650fc816820b743ee07ce43fa277bce8fde13b2bf798539257a01447e6e331",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 735998,
+        "weightedCmykRmse": 0.810146
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1013855,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 735998,
+          "weightedCmykRmse": 0.810146
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        97,
+        47,
+        1295,
+        1172
+      ],
+      "image": {
+        "width": 1000,
+        "height": 924,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_277/exports/maple-amber-syrup-bottle.pdf",
+          "bytes": 735998,
+          "sha256": "f14efc9310cc7232a2f3abcb6762dda222a7b4ae0512494006c10906861b8207"
+        },
+        "webp": {
+          "path": "work/production/wave_277/exports/maple-amber-syrup-bottle.webp",
+          "bytes": 1049632,
+          "sha256": "464dfaf4cc079b3251bf275e72a8d923de2679fe725f670b6981a49d6c2ec470"
+        },
+        "thumb": {
+          "path": "work/production/wave_277/exports/maple-amber-syrup-bottle-thumb.webp",
+          "bytes": 57498,
+          "sha256": "d5747dc9aa9a572257b2672ad1cb65ba6a6517a11b7fcd06029295e2d5afa177"
+        }
+      },
+      "proofSha256": "f39f6e768540fb3e2e06c39005f1bd9e76d4f9b67b685204997acb1cd3261238",
+      "pairMeanRgbDifference": 5.03091
+    },
+    {
+      "id": "maple-pancakes-pitcher",
+      "title": "Pancakes with Maple Syrup",
+      "alt": "A stack of golden pancakes with butter and amber syrup sits on a cream plate beside a clear syrup pitcher and red maple leaf.",
+      "description": "A stack of golden pancakes with butter and amber syrup sits on a cream plate beside a clear syrup pitcher and red maple leaf. An original maple illustration for personal projects and classroom activities.",
+      "color": "Gold",
+      "style": "Color",
+      "source": "work/production/wave_277/source/maple-pancakes-pitcher.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "5a8789b145da09edd433a8309a87d2a1753e4c8ac955107532cbfc988cca7979",
+      "inputSignature": "2f2d906b02dde3df7644ab576c5c0088942ec303b2fbe092e9f9e8a48e5f103b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 951403,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 951403,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        80,
+        1524,
+        941
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_277/exports/maple-pancakes-pitcher.pdf",
+          "bytes": 951403,
+          "sha256": "2c493a75d80e7ea09a4f71529d3fdc9d089a2e0d6460666b2a13ccdd20f6e54c"
+        },
+        "webp": {
+          "path": "work/production/wave_277/exports/maple-pancakes-pitcher.webp",
+          "bytes": 1702570,
+          "sha256": "ee60a61ac43a9ff10f402e35cb7cfaa93709538649a02ab369f786edd2af3af8"
+        },
+        "thumb": {
+          "path": "work/production/wave_277/exports/maple-pancakes-pitcher-thumb.webp",
+          "bytes": 54848,
+          "sha256": "dd3aee21310516087e8a5b48635e8f3490cc6c5d825849dcbcdcb3a3ffb5d03c"
+        }
+      },
+      "proofSha256": "5c3fe091e8fb541d2ea9c7a38e6081a0b467d677dd9b749442e1a398797b35d3",
+      "pairMeanRgbDifference": 4.81491
+    },
+    {
+      "id": "maple-maple-sugar-candies",
+      "title": "Maple Leaf Sugar Candies",
+      "alt": "Five small molded maple leaf sugar candies rest on white parchment beside one red and gold maple leaf.",
+      "description": "Five small molded maple leaf sugar candies rest on white parchment beside one red and gold maple leaf. An original maple illustration for personal projects and classroom activities.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_277/source/maple-maple-sugar-candies.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d118cae66c530f348b20862d4ccc2ebd076aea70f7747900e63c64c9ceee482f",
+      "inputSignature": "1b6e765516edb84ac04dd422cc1fcf52715d1fba1f30895ed603f8925789e59a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 816665,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 816665,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        50,
+        57,
+        1507,
+        976
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_277/exports/maple-maple-sugar-candies.pdf",
+          "bytes": 816665,
+          "sha256": "3b86f811ff769a5e0f0163627bf28e7b6273cce385de431c0a9e6242fce25246"
+        },
+        "webp": {
+          "path": "work/production/wave_277/exports/maple-maple-sugar-candies.webp",
+          "bytes": 1598224,
+          "sha256": "661604e9559ae4ddc639ac3b23d3f84da8aeb3fa463c7125351b9d67999a8eeb"
+        },
+        "thumb": {
+          "path": "work/production/wave_277/exports/maple-maple-sugar-candies-thumb.webp",
+          "bytes": 45678,
+          "sha256": "755f1c84def1dde7ee4259be97d4ca72358aa572e52e9edaa8a25e4ab9e75a07"
+        }
+      },
+      "proofSha256": "7e1506c537a5f7201dd3827539c7246bce8d2e1545012a3c2cea5424865cc86c",
+      "pairMeanRgbDifference": 2.79772
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T18:15:07.643678+00:00",
+  "screenReviewScope": "All native PDF proof compositions visually inspected. Final tree, wreath, sap tools and shack replacements verified against selected masters; no original held source selected.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:22.150Z"
+}

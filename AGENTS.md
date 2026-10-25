@@ -185,3 +185,14 @@ visually inspect candidates. A changed filename or low similarity score alone is
 not proof of originality. Reuse existing topic URLs. Each accepted source maps to
 one WebP/PDF pair and one artwork entry. This applies to Labubu and every future
 keyword.
+
+## Generic characters need different identities and clothing
+
+Scenario changes alone are insufficient for generic character topics. Vary face
+shape, expression, hair or straw construction, headwear, clothing silhouette,
+materials, footwear and accessories. Do not repeat one base character with color
+swaps. Use a character-design matrix and inspect actual sources side by side;
+revisions keep their artwork IDs. Preserve identifying features for branded
+characters while varying appropriate poses, expressions, costumes and scenarios.
+Every keyword targets 50 independent, separately useful compositions. Apply the
+same identity-preserving variety review to objects and botanical subjects.

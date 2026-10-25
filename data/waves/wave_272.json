@@ -1,0 +1,563 @@
+{
+  "wave": "wave_272",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-winged-seed-pair",
+      "title": "Maple Winged Seed Pair",
+      "alt": "A mature maple seed pair has two plump joined seed chambers and delicate tan veined wings spread apart.",
+      "description": "A mature maple seed pair has two plump joined seed chambers and delicate tan veined wings spread apart. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_272/source/maple-winged-seed-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "59ac1dce65325d7d920021a83db278a2ca3edbe115964a0d8d28b929148565ea",
+      "inputSignature": "d33a37dc4603b4b6b296f7f48b4a6a797868d06c8cf4143965cb483e563c3249",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 684009,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 684009,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        25,
+        100,
+        1510,
+        890
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_272/exports/maple-winged-seed-pair.pdf",
+          "bytes": 684009,
+          "sha256": "9cda040d822f1303feedd9d79c0c5894569b93dbb1e2e23ef3d298ec0d09f239"
+        },
+        "webp": {
+          "path": "work/production/wave_272/exports/maple-winged-seed-pair.webp",
+          "bytes": 1294186,
+          "sha256": "529c6dff8d395f4608356dcf20aba31235251deee6a6cb2d8598dc00d0fcd17e"
+        },
+        "thumb": {
+          "path": "work/production/wave_272/exports/maple-winged-seed-pair-thumb.webp",
+          "bytes": 34608,
+          "sha256": "040100cf3741b4f2a47d880b83776384718ebef3ea6a736524532fd6b3bd2491"
+        }
+      },
+      "proofSha256": "bf00ffce1641fa6d03e0be953b1c27c142e92ed68b9e7953a58e3e18ac35a8bf",
+      "pairMeanRgbDifference": 1.96858
+    },
+    {
+      "id": "maple-hanging-samara-cluster",
+      "title": "Maple Samara Cluster",
+      "alt": "A drooping cluster of green and rose tinged maple winged seed pairs hangs from a twig beneath two lobed leaves.",
+      "description": "A drooping cluster of green and rose tinged maple winged seed pairs hangs from a twig beneath two lobed leaves. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_272/source/maple-hanging-samara-cluster.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "e3fe18e408954dbef36680c0d27f1e4170ce0ace76b3e106d1d4f6cf820a1d46",
+      "inputSignature": "c75f9d5406320bad0256d75a21dcdd9b226fd5fbf5484f3e86b4feb260464891",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994808,
+        "weightedCmykRmse": 1.306877
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1362302,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1200053,
+          "weightedCmykRmse": 0.741527
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1145023,
+          "weightedCmykRmse": 0.870445
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1064753,
+          "weightedCmykRmse": 1.043557
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994808,
+          "weightedCmykRmse": 1.306877
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        41,
+        33,
+        1290,
+        1118
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_272/exports/maple-hanging-samara-cluster.pdf",
+          "bytes": 994808,
+          "sha256": "4f709a47c1b34da74ad47d39df102f52013b465355c0694fa8469c89030b3fb1"
+        },
+        "webp": {
+          "path": "work/production/wave_272/exports/maple-hanging-samara-cluster.webp",
+          "bytes": 1256150,
+          "sha256": "622a4c0489a39012992d150f3a8c8f37948c5885e3c67993c5c376b1aea26f26"
+        },
+        "thumb": {
+          "path": "work/production/wave_272/exports/maple-hanging-samara-cluster-thumb.webp",
+          "bytes": 86258,
+          "sha256": "10db9ebb56eeab8ab58637cfb010a26b28dd07c16020660970e650136a6ea9f4"
+        }
+      },
+      "proofSha256": "0c773bad0a14dbd08230f2e3cce4c6cdc7175c1f66fb730888c87efc4120c951",
+      "pairMeanRgbDifference": 4.08357
+    },
+    {
+      "id": "maple-germinating-samara",
+      "title": "Sprouting Maple Seed",
+      "alt": "A single tan maple winged seed has a new ivory root emerging from its swollen seed chamber.",
+      "description": "A single tan maple winged seed has a new ivory root emerging from its swollen seed chamber. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_272/source/maple-germinating-samara.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "71ba0f322795d52c56734da71026b34922d24eeba8c5b2877cfa04788062b4b3",
+      "inputSignature": "65a39e5d47e9d9239b2c30d3083f110ea1bb3d4e0f05b72ff35d71c7f1d3b212",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 684617,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 684617,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        25,
+        102,
+        1507,
+        946
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_272/exports/maple-germinating-samara.pdf",
+          "bytes": 684617,
+          "sha256": "f54cbc5458fd8d99c6afbafb427eae2de04d77b7bd4196e0a69e046910aebdd8"
+        },
+        "webp": {
+          "path": "work/production/wave_272/exports/maple-germinating-samara.webp",
+          "bytes": 1295214,
+          "sha256": "004b192e10d8b85d99eecde2bbc90e6871f081dea529c828671731a2a4fbdada"
+        },
+        "thumb": {
+          "path": "work/production/wave_272/exports/maple-germinating-samara-thumb.webp",
+          "bytes": 36784,
+          "sha256": "c6ba7c3ac7f00064543a8d10311c1dfb2316206f08b2b864305ecfdae9134cd6"
+        }
+      },
+      "proofSha256": "6146e91f6f40f57dcb9e8d258997276f2ca52f06864284d25863f0d06aa0ad23",
+      "pairMeanRgbDifference": 1.785
+    },
+    {
+      "id": "maple-seedling-root-cutaway",
+      "title": "Maple Seedling and Roots",
+      "alt": "A small maple seedling has two low narrow cotyledons and two lobed true leaves above a cutaway soil mound and branching roots, with a paired samara beside it.",
+      "description": "A small maple seedling has two low narrow cotyledons and two lobed true leaves above a cutaway soil mound and branching roots, with a paired samara beside it. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_272/source/maple-seedling-root-cutaway.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 846,
+      "pdfHeight": 890,
+      "sourceType": "raster",
+      "sourceSha256": "bcf6a384ee6160b669e798cd7ddab5d3b44b92cce4343ea8aa0062c8095ff53e",
+      "inputSignature": "8dfde642afd5200916e4f3a02765b2658fccccd2bddbda8015abc96b82ef8b28",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962406,
+        "weightedCmykRmse": 1.353003
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1318932,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1159116,
+          "weightedCmykRmse": 0.74557
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1105728,
+          "weightedCmykRmse": 0.91293
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1024490,
+          "weightedCmykRmse": 1.103893
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962406,
+          "weightedCmykRmse": 1.353003
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        57,
+        21,
+        1200,
+        1261
+      ],
+      "image": {
+        "width": 846,
+        "height": 890,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_272/exports/maple-seedling-root-cutaway.pdf",
+          "bytes": 962406,
+          "sha256": "ac617363b9ac43cb40022ab739c7ef2136031c2a4cf9555b11ff03180435fd5a"
+        },
+        "webp": {
+          "path": "work/production/wave_272/exports/maple-seedling-root-cutaway.webp",
+          "bytes": 1324298,
+          "sha256": "ae083d7a7a09c5894993af50062ea3ed45c44062bab0621d8ed1f5b359b5f771"
+        },
+        "thumb": {
+          "path": "work/production/wave_272/exports/maple-seedling-root-cutaway-thumb.webp",
+          "bytes": 84086,
+          "sha256": "609a50018d24ebb71553f06e4462a5686d7d8fe2e67a6e1bd279abe225641928"
+        }
+      },
+      "proofSha256": "eda3bfeea880e29a18f69ea2b6478d824841d1e887d42078b9161b64c70ce3e9",
+      "pairMeanRgbDifference": 2.74825
+    },
+    {
+      "id": "maple-nursery-sapling",
+      "title": "Young Maple in a Nursery Pot",
+      "alt": "A young maple sapling with a slender woody trunk and opposite pairs of green lobed leaves grows in a plain black nursery pot.",
+      "description": "A young maple sapling with a slender woody trunk and opposite pairs of green lobed leaves grows in a plain black nursery pot. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_272/source/maple-nursery-sapling.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "32c480dde031ab65694fff152e43df89f965d95634a104a03821a571a3841fb8",
+      "inputSignature": "5528b7ebd36f9c8d3410dddd1b27a6faa373146da0a7038097f55d3bf77fb6d5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 987349,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 987349,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        61,
+        55,
+        999,
+        1499
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_272/exports/maple-nursery-sapling.pdf",
+          "bytes": 987349,
+          "sha256": "eb78c5ec62ba42c1e692762546a7b23b452af8044bbb2dd72eeba33b4e20af4e"
+        },
+        "webp": {
+          "path": "work/production/wave_272/exports/maple-nursery-sapling.webp",
+          "bytes": 1404236,
+          "sha256": "4ed17126fad3de4928ae6d1089c762540734718170f123be4dfdb25f142c9f39"
+        },
+        "thumb": {
+          "path": "work/production/wave_272/exports/maple-nursery-sapling-thumb.webp",
+          "bytes": 52034,
+          "sha256": "0d52b6d4a456b37b314baece60ad4e628174f18f1ea08436ffde0afe17816e88"
+        }
+      },
+      "proofSha256": "65cb7a52b8e9e841e12ef9a586c30033fd90de0407fbff58fe42ac35c58fb52c",
+      "pairMeanRgbDifference": 4.25773
+    },
+    {
+      "id": "maple-autumn-crown-tree",
+      "title": "Maple Tree in Autumn",
+      "alt": "A complete mature maple tree has a broad rounded crown of orange, red and gold leaves above a small leaf strewn grass base.",
+      "description": "A complete mature maple tree has a broad rounded crown of orange, red and gold leaves above a small leaf strewn grass base. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_272/source/maple-autumn-crown-tree.png",
+      "printMaxEdgePx": 790,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 750,
+      "pdfHeight": 790,
+      "sourceType": "raster",
+      "sourceSha256": "2b522fd2ea16992c726e2e3f9257ead042fa0326b7fe1983ae1ca2a426d3c0d6",
+      "inputSignature": "f7f25a4a0e60f0ae15ad7ebec89127bbeebf43ed0b6f874ea2cd0e5920882f88",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 972064,
+        "weightedCmykRmse": 1.161259
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1349178,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1162310,
+          "weightedCmykRmse": 0.660254
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1110482,
+          "weightedCmykRmse": 0.784818
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1045071,
+          "weightedCmykRmse": 0.95053
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 972064,
+          "weightedCmykRmse": 1.161259
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        8,
+        14,
+        1218,
+        1270
+      ],
+      "image": {
+        "width": 750,
+        "height": 790,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_272/exports/maple-autumn-crown-tree.pdf",
+          "bytes": 972064,
+          "sha256": "95e1eaa276660eb544e484c300953b96800aa4ad625488fd2c4d8613548909fa"
+        },
+        "webp": {
+          "path": "work/production/wave_272/exports/maple-autumn-crown-tree.webp",
+          "bytes": 2233194,
+          "sha256": "09a2373a5a87dc61ddcc8ffbdf0cee5ed9d6c8d07b15b7600d02127894495609"
+        },
+        "thumb": {
+          "path": "work/production/wave_272/exports/maple-autumn-crown-tree-thumb.webp",
+          "bytes": 133558,
+          "sha256": "83c0cf5a1e84753f1912b7fa12d06a46b851571a07f4f11682fcf46460808fb0"
+        }
+      },
+      "proofSha256": "8779752c4d7fc772406433e78a1aed850fa1315cf59a734d19eb5f50054361f4",
+      "pairMeanRgbDifference": 7.74769
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:54:35.412752+00:00",
+  "screenReviewScope": "All native CMYK PDF contact renders visually inspected: complete leaf and seed silhouettes, coherent growth structures, clean texture and line detail, no visible framing or compression defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:19.536Z"
+}
