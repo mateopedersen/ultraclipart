@@ -25,3 +25,9 @@ URLs or R2 media objects. Check the count during every publication. At or above
 completing the R2/Workers catalog transition before further growth. Do not buy a
 plan or change the architecture automatically. A daily thread monitor named
 "UltraClipart 85.000 dosya eşiği" also tracks this threshold.
+
+## Every keyword requires distinct compositions
+
+Persistent owner preference reaffirmed 2026-10-25: every published clipart must have a meaningfully different composition and useful purpose. Do not count a redraw, repair, crop/framing correction, recolor, export format or near-identical pose as a new original design. Repair versions keep the same artwork ID and creative brief; select and publish only one reviewed version, retaining rejected sources privately.
+
+Before each keyword, review its existing published, staged and queued artwork. Plan new compositions against all three. Before release, check exact download checksums and perceptual similarity both within the incoming collection and against the entire catalog. Visually inspect similarity candidates and repeated concepts; do not treat a filename change or a low perceptual match alone as proof of originality. Reuse the existing topic URL and do not create duplicate collection pages. Every accepted source must map to exactly one WebP/PDF pair and one artwork entry; count unique accepted artwork IDs only. Keep this rule for Labubu and every future keyword.

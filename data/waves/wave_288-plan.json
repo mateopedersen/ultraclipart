@@ -1,0 +1,33 @@
+{
+  "wave": "wave_288",
+  "topic": "leaves",
+  "method": "builtin-image-generation",
+  "research": "data/research/leaves-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "leaves-outline-shape-study",
+      "title": "Leaf Shapes Coloring Outline",
+      "alt": "Three separately arranged complete leaves form one balanced educational still life: one round shield leaf, one arrowhead blade and one long serrated blade, all petioles visible, clean black outlines, no labels or chart boxes.",
+      "description": "Three separately arranged complete leaves form one balanced educational still life: one round shield leaf, one arrowhead blade and one long serrated blade, all petioles visible, clean black outlines, no labels or chart boxes.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_288/source/leaves-outline-shape-study.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "leaves-outline-greenery-frame",
+      "title": "Greenery Frame Coloring Outline",
+      "alt": "One open oval frame of a fine connected twig decorated at two opposite corners with small fern pinnae and simple rounded leaves, independent clean black line art, large empty transparent center, no bow or shading.",
+      "description": "One open oval frame of a fine connected twig decorated at two opposite corners with small fern pinnae and simple rounded leaves, independent clean black line art, large empty transparent center, no bow or shading.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_288/source/leaves-outline-greenery-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

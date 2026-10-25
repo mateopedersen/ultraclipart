@@ -1,0 +1,33 @@
+{
+  "wave": "wave_279",
+  "topic": "maple",
+  "method": "builtin-image-generation",
+  "research": "data/research/maple-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "maple-outline-leaf-wreath",
+      "title": "Maple Wreath Coloring Outline",
+      "alt": "Black line art of an open circular twig wreath with six broad maple leaves and paired winged seeds.",
+      "description": "Black line art of an open circular twig wreath with six broad maple leaves and paired winged seeds. An original maple illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_279/source/maple-outline-leaf-wreath.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "maple-outline-syrup-breakfast",
+      "title": "Maple Breakfast Coloring Outline",
+      "alt": "Black line art of pancakes on a plate beside a syrup pitcher, plain capped bottle, maple leaf and paired winged seed.",
+      "description": "Black line art of pancakes on a plate beside a syrup pitcher, plain capped bottle, maple leaf and paired winged seed. An original maple illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_279/source/maple-outline-syrup-breakfast.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}
