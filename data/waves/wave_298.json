@@ -1,0 +1,633 @@
+{
+  "wave": "wave_298",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-classic-post",
+      "title": "Classic Garden Scarecrow",
+      "alt": "A traditional burlap-faced scarecrow is tied to a T-shaped wooden post, wearing a patched plaid shirt, denim overalls and a straw hat with straw projecting from its cuffs.",
+      "description": "A traditional burlap-faced scarecrow is tied to a T-shaped wooden post, wearing a patched plaid shirt, denim overalls and a straw hat with straw projecting from its cuffs. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_298/source/scarecrow-classic-post.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "e88d9b7867c16d0b6522303d1388bb9e060ec8fc3f3c4308f589d5854907becb",
+      "inputSignature": "bf3b95a2c1ff7570d15a41bc02981f00a9cccedb1a2d5fb0d4a4bd2c610fbe94",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 984057,
+        "weightedCmykRmse": 0.999537
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1227504,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1041993,
+          "weightedCmykRmse": 0.818061
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 984057,
+          "weightedCmykRmse": 0.999537
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        27,
+        15,
+        1119,
+        1355
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_298/exports/scarecrow-classic-post.pdf",
+          "bytes": 984057,
+          "sha256": "faf3d053b5a77ca2d9135b6e4951c53830259fb8fce4877bb45dc4e1618143cd"
+        },
+        "webp": {
+          "path": "work/production/wave_298/exports/scarecrow-classic-post.webp",
+          "bytes": 1180922,
+          "sha256": "f0595657a2d7896f25b96656b4fc801f4cc9799b2302462cfaf8167fab299085"
+        },
+        "thumb": {
+          "path": "work/production/wave_298/exports/scarecrow-classic-post-thumb.webp",
+          "bytes": 67354,
+          "sha256": "a5d4f86e1f3414ac82a3fe7e76b9715577fde138c4e26f541769cd974e32d261"
+        }
+      },
+      "proofSha256": "943bdb7932f60886b7805222714394fae5baf6f5a045bf678d0ee12440a63a22",
+      "pairMeanRgbDifference": 3.06276
+    },
+    {
+      "id": "scarecrow-pumpkin-basket",
+      "title": "Scarecrow with a Pumpkin Basket",
+      "alt": "A cream-faced scarecrow with closed embroidered eyes and a rust beret kneels in a quilted jacket and green corduroy outfit, holding a pumpkin over a woven harvest basket.",
+      "description": "A cream-faced scarecrow with closed embroidered eyes and a rust beret kneels in a quilted jacket and green corduroy outfit, holding a pumpkin over a woven harvest basket. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_298/source/scarecrow-pumpkin-basket-character-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 951,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "4831c30bae891e10d780045eaa96d3c375c1e3e51419e03904efd31f1eb92f65",
+      "inputSignature": "5bd07387da1bc3b6aef23322b42d35bdeb6b4abb0fe4ad91dc52c8e33f3aa00f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 991914,
+        "weightedCmykRmse": 1.399947
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1498152,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1223980,
+          "weightedCmykRmse": 0.763901
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1156816,
+          "weightedCmykRmse": 0.912467
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1064100,
+          "weightedCmykRmse": 1.101373
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 991914,
+          "weightedCmykRmse": 1.399947
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        68,
+        39,
+        1179,
+        1237
+      ],
+      "image": {
+        "width": 951,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_298/exports/scarecrow-pumpkin-basket.pdf",
+          "bytes": 991914,
+          "sha256": "34ab1fbf12fcf6ea50d6f7ec2b12666c4250cacef802c9217e5105d6ccbf2186"
+        },
+        "webp": {
+          "path": "work/production/wave_298/exports/scarecrow-pumpkin-basket.webp",
+          "bytes": 1437264,
+          "sha256": "edc9b61c2b98e82071011ddc321206c30be1264440f3d6f7d7cbac79fe5fae28"
+        },
+        "thumb": {
+          "path": "work/production/wave_298/exports/scarecrow-pumpkin-basket-thumb.webp",
+          "bytes": 78402,
+          "sha256": "27a06797b60c0e09784c77724972ab7b3440079edc591639cd1cf70e956add0e"
+        }
+      },
+      "proofSha256": "f31c9570bd9f03ec988be982144ea65acf9fef0c931dd66ca9de280ee0396a27",
+      "pairMeanRgbDifference": 4.55718
+    },
+    {
+      "id": "scarecrow-reading-hay-bale",
+      "title": "Scarecrow Reading on a Hay Bale",
+      "alt": "A long-faced linen scarecrow with round reading spectacles and a wool flat cap sits on a hay bale in a teal coat and plum trousers, reading a blue book.",
+      "description": "A long-faced linen scarecrow with round reading spectacles and a wool flat cap sits on a hay bale in a teal coat and plum trousers, reading a blue book. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_298/source/scarecrow-reading-hay-bale-character-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "91b5c65817cb3465051068fb4e02fd9e22b1c51df62d2152c3b3badab0ceebe4",
+      "inputSignature": "bc655084d956171b5b8bb764858ee52b36f59f6a4d47966849c3055562fad9b6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 953574,
+        "weightedCmykRmse": 1.477077
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1421065,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1171003,
+          "weightedCmykRmse": 0.794556
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1106989,
+          "weightedCmykRmse": 0.955145
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1020587,
+          "weightedCmykRmse": 1.151758
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 953574,
+          "weightedCmykRmse": 1.477077
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        99,
+        47,
+        1215,
+        1143
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_298/exports/scarecrow-reading-hay-bale.pdf",
+          "bytes": 953574,
+          "sha256": "86c40f69e1b854734816bb38ecaaf2a4e37965275a39cf6db3d56e4bb5d151cd"
+        },
+        "webp": {
+          "path": "work/production/wave_298/exports/scarecrow-reading-hay-bale.webp",
+          "bytes": 1306796,
+          "sha256": "638176e67792c4986887e64128b4f29be9ab8cc04c7dc4988280e28e783bfb76"
+        },
+        "thumb": {
+          "path": "work/production/wave_298/exports/scarecrow-reading-hay-bale-thumb.webp",
+          "bytes": 70004,
+          "sha256": "9ae76748bd5ec39bd569b46f0846c15ea2b5f59d245edf836c5c8699d10588db"
+        }
+      },
+      "proofSha256": "1a9abdf65483ccc03e0ce860832e2dc60fb08f8b6f17d4ba4476e9499a3735b9",
+      "pairMeanRgbDifference": 3.18632
+    },
+    {
+      "id": "scarecrow-painting-garden-sign",
+      "title": "Scarecrow Painting a Garden Sign",
+      "alt": "A freckled cloth scarecrow in an ochre knitted beanie, lavender painting smock and sage boots paints a pumpkin on a wooden garden sign.",
+      "description": "A freckled cloth scarecrow in an ochre knitted beanie, lavender painting smock and sage boots paints a pumpkin on a wooden garden sign. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_298/source/scarecrow-painting-garden-sign-character-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "0d24a02781b6021b7c31a6f5a1ec19dd744788eba4afaedd0927b6adf942c4bf",
+      "inputSignature": "ec9b8ebd4f92d9c5ffb83764933457850919533040f6dfa323438cf6436cddd2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994564,
+        "weightedCmykRmse": 1.38826
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1456841,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1219369,
+          "weightedCmykRmse": 0.757814
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1154909,
+          "weightedCmykRmse": 0.903561
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1065352,
+          "weightedCmykRmse": 1.088989
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994564,
+          "weightedCmykRmse": 1.38826
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        110,
+        41,
+        1118,
+        1265
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_298/exports/scarecrow-painting-garden-sign.pdf",
+          "bytes": 994564,
+          "sha256": "a9d2a79c6033ddf280f0f5eecd2526a3ae01a8abe42158ebf1abd02d469051e8"
+        },
+        "webp": {
+          "path": "work/production/wave_298/exports/scarecrow-painting-garden-sign.webp",
+          "bytes": 1390144,
+          "sha256": "7c8dd8db8925e8c9421170038e0d3bb6e32e51da6c1e159f7ac5ee26c4a688bf"
+        },
+        "thumb": {
+          "path": "work/production/wave_298/exports/scarecrow-painting-garden-sign-thumb.webp",
+          "bytes": 78990,
+          "sha256": "1cf9a32fefc459048fc9c48fd28e527d61f0d6bb415966b98f21aaa3b0a899a7"
+        }
+      },
+      "proofSha256": "164b7404ba8e8bcbd884846dc061c5919b474b968ebaa5e5025803a8110f3c16",
+      "pairMeanRgbDifference": 3.80748
+    },
+    {
+      "id": "scarecrow-harvest-wheelbarrow",
+      "title": "Scarecrow with a Harvest Wheelbarrow",
+      "alt": "A wooden-faced scarecrow in a black bowler, brick-red waistcoat and striped trousers pushes a wheelbarrow filled with gourds, corn and straw.",
+      "description": "A wooden-faced scarecrow in a black bowler, brick-red waistcoat and striped trousers pushes a wheelbarrow filled with gourds, corn and straw. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_298/source/scarecrow-harvest-wheelbarrow-character-v2.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1295,
+      "height": 1214,
+      "pdfWidth": 900,
+      "pdfHeight": 844,
+      "sourceType": "raster",
+      "sourceSha256": "0c75e69df4a8ae8971e5c2edc723bb1b47e0ec278b6e33aba5e5dd9c41e5d395",
+      "inputSignature": "07027409f778005f67f89c9c30fe383c2cabb63acaf8081cde91eed6eff7214f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 995233,
+        "weightedCmykRmse": 1.340541
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1355535,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1198236,
+          "weightedCmykRmse": 0.76127
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1143915,
+          "weightedCmykRmse": 0.892933
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1061896,
+          "weightedCmykRmse": 1.092828
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 995233,
+          "weightedCmykRmse": 1.340541
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        98,
+        9,
+        1280,
+        1180
+      ],
+      "image": {
+        "width": 900,
+        "height": 844,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_298/exports/scarecrow-harvest-wheelbarrow.pdf",
+          "bytes": 995233,
+          "sha256": "20412d24cd719a0eb836f2dab457c754a9a10b2171d3d4226b2d8864b87e744a"
+        },
+        "webp": {
+          "path": "work/production/wave_298/exports/scarecrow-harvest-wheelbarrow.webp",
+          "bytes": 1255098,
+          "sha256": "2d1683f7d3e1ab9d9a97bf618fcd1aae90242e31632d6115cd9aa5ff35ad8759"
+        },
+        "thumb": {
+          "path": "work/production/wave_298/exports/scarecrow-harvest-wheelbarrow-thumb.webp",
+          "bytes": 78134,
+          "sha256": "c1d77fc7dcc51996c63cbadc0938638faf2cea3f73f2a5c98681909da0f860cf"
+        }
+      },
+      "proofSha256": "bb05db59b1f94ddbbd161721d9e59000a5ba3f338ee362d6d53c06c795fbca32",
+      "pairMeanRgbDifference": 4.16156
+    },
+    {
+      "id": "scarecrow-sewing-shirt-patch",
+      "title": "Scarecrow Sewing a Shirt Patch",
+      "alt": "A raffia-haired scarecrow with mismatched sewn eyes wears a plum hat and shoulder cape while stitching a purple patch onto mustard bib trousers.",
+      "description": "A raffia-haired scarecrow with mismatched sewn eyes wears a plum hat and shoulder cape while stitching a purple patch onto mustard bib trousers. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_298/source/scarecrow-sewing-shirt-patch-character-v2.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 800,
+      "pdfHeight": 960,
+      "sourceType": "raster",
+      "sourceSha256": "67b7f295ebaa095687376dc8d0f5c58db7a3967b45eb6a527ea55ce8aed51db5",
+      "inputSignature": "116e88592b04830c266d0d03611ac298236897e368e387f4871c60e7a74ba2c6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 986313,
+        "weightedCmykRmse": 1.299243
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1439848,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1199933,
+          "weightedCmykRmse": 0.729926
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141869,
+          "weightedCmykRmse": 0.867458
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1058645,
+          "weightedCmykRmse": 1.048142
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 986313,
+          "weightedCmykRmse": 1.299243
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        91,
+        60,
+        1082,
+        1312
+      ],
+      "image": {
+        "width": 800,
+        "height": 960,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_298/exports/scarecrow-sewing-shirt-patch.pdf",
+          "bytes": 986313,
+          "sha256": "958ac147e6e209ff167460dc9657a335745a183e11ddc4a48ae6fa31a1cc53a8"
+        },
+        "webp": {
+          "path": "work/production/wave_298/exports/scarecrow-sewing-shirt-patch.webp",
+          "bytes": 1597836,
+          "sha256": "290945c1a09237fa5bc3b2347d0ae7450b34b7cd1d0c4456b65952ed02dbc30f"
+        },
+        "thumb": {
+          "path": "work/production/wave_298/exports/scarecrow-sewing-shirt-patch-thumb.webp",
+          "bytes": 78792,
+          "sha256": "637ebd464e97fb7224862059ffe24a69d7b1e91c757492ecbcdb8e7aacff1854"
+        }
+      },
+      "proofSha256": "8f28401db13bcf9a57fc32e46dcc7e4fb954c3df2ca03c4e3816720bafc27cc8",
+      "pairMeanRgbDifference": 4.9384
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T21:33:19.698Z",
+  "screenReviewScope": "Every selected native CMYK proof inspected against its reviewed source, character-design matrix and natural metadata. No repeated-character sibling counted as an additional original.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:33:19.811Z"
+}

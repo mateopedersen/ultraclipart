@@ -1,0 +1,618 @@
+{
+  "wave": "wave_303",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-blank-banner",
+      "title": "Scarecrow Holding a Blank Banner",
+      "alt": "Two differently dressed small scarecrows hold opposite corners of a blank cream banner, one in a burgundy tunic and sage cap and the other in a lavender blouse and ochre headwrap.",
+      "description": "Two differently dressed small scarecrows hold opposite corners of a blank cream banner, one in a burgundy tunic and sage cap and the other in a lavender blouse and ochre headwrap. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_303/source/scarecrow-blank-banner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c215595df329dd902b5782694cfb1bd9e80cb038ff6c1bdfb2f50f265c6d7ba8",
+      "inputSignature": "04d1d93ae84e40a1546ac82460783348847f29f2b1c7dd9e04b8e29ac565b942",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 983209,
+        "weightedCmykRmse": 1.010707
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1271108,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1106704,
+          "weightedCmykRmse": 0.702998
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1056168,
+          "weightedCmykRmse": 0.837089
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 983209,
+          "weightedCmykRmse": 1.010707
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        50,
+        31,
+        1495,
+        978
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_303/exports/scarecrow-blank-banner.pdf",
+          "bytes": 983209,
+          "sha256": "cde64d85e7b78d3fcaead397508737660c6729dfd5d90247a5c75601554eec8f"
+        },
+        "webp": {
+          "path": "work/production/wave_303/exports/scarecrow-blank-banner.webp",
+          "bytes": 1889318,
+          "sha256": "e10d1452977ac6dbb911d43b7e22318b3dbe9c7eebe3a9d6753c44f1413e9dd8"
+        },
+        "thumb": {
+          "path": "work/production/wave_303/exports/scarecrow-blank-banner-thumb.webp",
+          "bytes": 61260,
+          "sha256": "207d4910cb401d68d4f1ad77d7d917ee5f3fd1bacdaa33e490229ec87350e651"
+        }
+      },
+      "proofSha256": "36857402fd81a26e33a4db4834464fcc8792ed05423c842709ea731e292ad590",
+      "pairMeanRgbDifference": 4.15321
+    },
+    {
+      "id": "scarecrow-hayride-wagon",
+      "title": "Scarecrow in a Hayride Wagon",
+      "alt": "A softly smiling scarecrow in a charcoal hat and dusty rose sweater sits beside a pumpkin on hay inside a small four-wheel wooden wagon.",
+      "description": "A softly smiling scarecrow in a charcoal hat and dusty rose sweater sits beside a pumpkin on hay inside a small four-wheel wooden wagon. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_303/source/scarecrow-hayride-wagon.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 874,
+      "pdfHeight": 920,
+      "sourceType": "raster",
+      "sourceSha256": "88a5d2b4f656f70a75c10ee068c71124fe7273df9ff75674e00a6d799d75c85b",
+      "inputSignature": "14a2fe2790025769cec8f78c21f5ab73b0bf4823f6ff707f62bdb8fed4fd5496",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 996636,
+        "weightedCmykRmse": 1.34288
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1452890,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1213920,
+          "weightedCmykRmse": 0.750953
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1154784,
+          "weightedCmykRmse": 0.890686
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1067899,
+          "weightedCmykRmse": 1.078384
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 996636,
+          "weightedCmykRmse": 1.34288
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        26,
+        1198,
+        1249
+      ],
+      "image": {
+        "width": 874,
+        "height": 920,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_303/exports/scarecrow-hayride-wagon.pdf",
+          "bytes": 996636,
+          "sha256": "2d33c8e6f3017559bc0ca348c56e18f7003dbee989195975029f8300aeb45d9c"
+        },
+        "webp": {
+          "path": "work/production/wave_303/exports/scarecrow-hayride-wagon.webp",
+          "bytes": 1487214,
+          "sha256": "947babc9b292a3076b4092c94b6f64bc3c3b7dc3cd0776b9c8c4325685ba65a2"
+        },
+        "thumb": {
+          "path": "work/production/wave_303/exports/scarecrow-hayride-wagon-thumb.webp",
+          "bytes": 81210,
+          "sha256": "e08c00813a707dd5190969a26c95a8ab2aff0101bd0a90a3aee25a8988f4f43c"
+        }
+      },
+      "proofSha256": "91334f7eace3593dce2fc70516d499617537d05e37a602d0731d4389b9c8bd6e",
+      "pairMeanRgbDifference": 2.35003
+    },
+    {
+      "id": "scarecrow-pumpkin-stack-balancing",
+      "title": "Scarecrow beside Stacked Pumpkins",
+      "alt": "A narrow sack-faced scarecrow in a dark red hat and black cardigan steadies three differently sized orange pumpkins in a vertical stack.",
+      "description": "A narrow sack-faced scarecrow in a dark red hat and black cardigan steadies three differently sized orange pumpkins in a vertical stack. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_303/source/scarecrow-pumpkin-stack-balancing.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "d0671a9566c7f7c64db1225c03c7cb5f267509f0ee56b8456a6f7d947cfb46cc",
+      "inputSignature": "8e75ae11ff589a79c6f9d31aaf9fd61f422f0ddcadf758ad3c68db5cd5ce205b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 834429,
+        "weightedCmykRmse": 0.78727
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 998410,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 834429,
+          "weightedCmykRmse": 0.78727
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        55,
+        78,
+        986,
+        1418
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_303/exports/scarecrow-pumpkin-stack-balancing.pdf",
+          "bytes": 834429,
+          "sha256": "44a8d34af300658292a451c75e1ced18fb4785d0bf3a0d868aa0b3643792dd1f"
+        },
+        "webp": {
+          "path": "work/production/wave_303/exports/scarecrow-pumpkin-stack-balancing.webp",
+          "bytes": 1580474,
+          "sha256": "b632a05ada765fabf7d65c39cbff585ff0fa639d989cfd8674336c3e5218993b"
+        },
+        "thumb": {
+          "path": "work/production/wave_303/exports/scarecrow-pumpkin-stack-balancing-thumb.webp",
+          "bytes": 51896,
+          "sha256": "2fa55875aeec8cd16761e1b63a9e2e653317c3aa82d811f2d4939888d9d7ee36"
+        }
+      },
+      "proofSha256": "b98e647652a1b23ea2881fc73b0540adfda342845965a583a46832b66f294791",
+      "pairMeanRgbDifference": 4.15059
+    },
+    {
+      "id": "scarecrow-cider-stand",
+      "title": "Scarecrow at a Cider Stand",
+      "alt": "A small smiling scarecrow in a blue cloth cap and yellow apron fills a plain cup from an amber drink dispenser at a wooden stall with a blank overhead board.",
+      "description": "A small smiling scarecrow in a blue cloth cap and yellow apron fills a plain cup from an amber drink dispenser at a wooden stall with a blank overhead board. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_303/source/scarecrow-cider-stand.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1225,
+      "height": 1284,
+      "pdfWidth": 925,
+      "pdfHeight": 970,
+      "sourceType": "raster",
+      "sourceSha256": "c9cc52cbb8fc2c2a10d6aa812482a582664f7d575225aa161916492c6534f9d1",
+      "inputSignature": "90973ebc810e594c4bec131c4cff212be620d4ad1ed3a2a81cb26ec3aee7b3bb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979352,
+        "weightedCmykRmse": 1.29365
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1512676,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1231960,
+          "weightedCmykRmse": 0.72526
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1156286,
+          "weightedCmykRmse": 0.861511
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1061847,
+          "weightedCmykRmse": 1.033596
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979352,
+          "weightedCmykRmse": 1.29365
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        113,
+        13,
+        1114,
+        1231
+      ],
+      "image": {
+        "width": 925,
+        "height": 970,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_303/exports/scarecrow-cider-stand.pdf",
+          "bytes": 979352,
+          "sha256": "1f592ab29eb0222fbdf422f0724fd42851095a6ecda4d64ee45fae0def6f6dcd"
+        },
+        "webp": {
+          "path": "work/production/wave_303/exports/scarecrow-cider-stand.webp",
+          "bytes": 1567290,
+          "sha256": "dd55877f5b938eeb862bc0dd9253f940b16cee348017485294acbd10f13f71ca"
+        },
+        "thumb": {
+          "path": "work/production/wave_303/exports/scarecrow-cider-stand-thumb.webp",
+          "bytes": 84082,
+          "sha256": "02c4c660cc3f4db4ed3871661896e7b9ab6acefa8c351861003c209624e46593"
+        }
+      },
+      "proofSha256": "097eb33e0e9fd3b37efe85d7c7b757079b0e1ce785e7e96725a5b1ac10eb7766",
+      "pairMeanRgbDifference": 4.12656
+    },
+    {
+      "id": "scarecrow-garden-gate",
+      "title": "Scarecrow Opening a Garden Gate",
+      "alt": "A hessian-faced scarecrow in a brown cowboy hat and mauve duster holds open a short hinged garden gate beside a pumpkin vine.",
+      "description": "A hessian-faced scarecrow in a brown cowboy hat and mauve duster holds open a short hinged garden gate beside a pumpkin vine. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_303/source/scarecrow-garden-gate.png",
+      "printMaxEdgePx": 880,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 837,
+      "pdfHeight": 880,
+      "sourceType": "raster",
+      "sourceSha256": "616cd23a99e972debf461fd5207c2d9afcb7dd6476d4f86ebf9c4485ba6a352d",
+      "inputSignature": "874fbd55edaaaed8377df6d8cc1a822576bd94329b2474bc2e308e7836741d28",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 989605,
+        "weightedCmykRmse": 1.305717
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1388515,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1198795,
+          "weightedCmykRmse": 0.740126
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141776,
+          "weightedCmykRmse": 0.879064
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1061826,
+          "weightedCmykRmse": 1.058083
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 989605,
+          "weightedCmykRmse": 1.305717
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        59,
+        37,
+        1166,
+        1199
+      ],
+      "image": {
+        "width": 837,
+        "height": 880,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_303/exports/scarecrow-garden-gate.pdf",
+          "bytes": 989605,
+          "sha256": "eb1451caae0e0ed815f82af6187ab389a39fbc7ce994b2d43b069d5badfc04fc"
+        },
+        "webp": {
+          "path": "work/production/wave_303/exports/scarecrow-garden-gate.webp",
+          "bytes": 1488136,
+          "sha256": "98597ceaeb42c1a145011103f6762827079f96e02f43bfa057ab354c586d0c43"
+        },
+        "thumb": {
+          "path": "work/production/wave_303/exports/scarecrow-garden-gate-thumb.webp",
+          "bytes": 86014,
+          "sha256": "f4952edb684a2517a9a6dbd552b60399bd4db543097ee75dbf22c3758188fcfb"
+        }
+      },
+      "proofSha256": "5bbf498d05c09c18d4d7acfff57ebc0f9a1d40926340f4b4bd7067ef5d0c7fde",
+      "pairMeanRgbDifference": 2.21721
+    },
+    {
+      "id": "scarecrow-kite-tail-repair",
+      "title": "Scarecrow Repairing a Paper Lantern",
+      "alt": "A white-faced scarecrow in a pale blue hood and salmon knitted vest ties a handle onto an unlit paper lantern with twine.",
+      "description": "A white-faced scarecrow in a pale blue hood and salmon knitted vest ties a handle onto an unlit paper lantern with twine. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_303/source/scarecrow-kite-tail-repair.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1214,
+      "height": 1295,
+      "pdfWidth": 853,
+      "pdfHeight": 910,
+      "sourceType": "raster",
+      "sourceSha256": "21821b053e543d689ffe6d4460ff44fe978f1f504b30d669a816cede75f1f55c",
+      "inputSignature": "5bc90a0e7948906213939fd43cd3ec17cdfc9555b5c427b7a05efbf7cc7c0c0c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 965794,
+        "weightedCmykRmse": 1.302364
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1398856,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1178576,
+          "weightedCmykRmse": 0.733086
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1120994,
+          "weightedCmykRmse": 0.869429
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1036828,
+          "weightedCmykRmse": 1.057135
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 965794,
+          "weightedCmykRmse": 1.302364
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        36,
+        14,
+        1204,
+        1257
+      ],
+      "image": {
+        "width": 853,
+        "height": 910,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_303/exports/scarecrow-kite-tail-repair.pdf",
+          "bytes": 965794,
+          "sha256": "ada7431021fdce9a5b758bfd61ed21e0e7dc8ba4b1b7580b86b1342cefb0ab96"
+        },
+        "webp": {
+          "path": "work/production/wave_303/exports/scarecrow-kite-tail-repair.webp",
+          "bytes": 1479256,
+          "sha256": "9e00cb401e7fb91c8eacdeb8693b6af052e9fe22637c17a028a49dfcd26ebe0f"
+        },
+        "thumb": {
+          "path": "work/production/wave_303/exports/scarecrow-kite-tail-repair-thumb.webp",
+          "bytes": 83982,
+          "sha256": "0deb9494bebecc81ceada8acea7266ab7d8a67c027fda3b1ffd42040e4f8e2ae"
+        }
+      },
+      "proofSha256": "be8c24d48bf9563716eb6820d00f0563492aa93ae64d26f44198e74c64916d5e",
+      "pairMeanRgbDifference": 1.97906
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:44:33.800Z"
+}

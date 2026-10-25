@@ -1,0 +1,633 @@
+{
+  "wave": "wave_299",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 6,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-kite-in-breeze",
+      "title": "Scarecrow Flying a Kite",
+      "alt": "A narrow-faced scarecrow with a long cloth nose wears a blue cap, scarlet jacket and teal scarf while flying a small patchwork kite from a wooden reel.",
+      "description": "A narrow-faced scarecrow with a long cloth nose wears a blue cap, scarlet jacket and teal scarf while flying a small patchwork kite from a wooden reel. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_299/source/scarecrow-kite-in-breeze-character-v2.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 800,
+      "pdfHeight": 960,
+      "sourceType": "raster",
+      "sourceSha256": "295d41e94a9d5760b8dfb285b2451f6a9cbfe6a2811d3eb79c6b043d433bc8ea",
+      "inputSignature": "0a0f3c4bb9fd9bca727e8bf4f2b5d48510444e8d60a2bf4922565111e6576947",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976690,
+        "weightedCmykRmse": 1.387432
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1328529,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1174613,
+          "weightedCmykRmse": 0.75851
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1120025,
+          "weightedCmykRmse": 0.910346
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038100,
+          "weightedCmykRmse": 1.114888
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976690,
+          "weightedCmykRmse": 1.387432
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        164,
+        10,
+        1138,
+        1357
+      ],
+      "image": {
+        "width": 800,
+        "height": 960,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_299/exports/scarecrow-kite-in-breeze.pdf",
+          "bytes": 976690,
+          "sha256": "bb4c4f5f756e94285e0e6d828bd3e464e372d708ba6ec19783aae00cfa877f6f"
+        },
+        "webp": {
+          "path": "work/production/wave_299/exports/scarecrow-kite-in-breeze.webp",
+          "bytes": 1203016,
+          "sha256": "f34acbe74096522eb97185fdd044464d96b0cf9fcefe7ebad719a90153bedeef"
+        },
+        "thumb": {
+          "path": "work/production/wave_299/exports/scarecrow-kite-in-breeze-thumb.webp",
+          "bytes": 71486,
+          "sha256": "4f2fe7cf0174d95d0b5a1840476a3e9a6382bd59a3aed3478878e9ad0cc68863"
+        }
+      },
+      "proofSha256": "794deb06f6facd84b2b721dc454becb20d1d6a082b2f6c1076a525391363e534",
+      "pairMeanRgbDifference": 3.89885
+    },
+    {
+      "id": "scarecrow-watering-seedling",
+      "title": "Scarecrow Watering a Seedling",
+      "alt": "A braided raffia-haired scarecrow in a green sunbonnet, cream floral dress and coral apron pours water onto a small seedling from a galvanized can.",
+      "description": "A braided raffia-haired scarecrow in a green sunbonnet, cream floral dress and coral apron pours water onto a small seedling from a galvanized can. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_299/source/scarecrow-watering-seedling-character-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "74612f9128dd10c8a71f4272f73b728c7c2aff24efa0841c3fc8bc068715cae1",
+      "inputSignature": "8f3dd753acf2a0c5c1d74b4adb20e0dad49b4525ac53811d960ff96f1e22e6bb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 968512,
+        "weightedCmykRmse": 0.951044
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1284720,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1032253,
+          "weightedCmykRmse": 0.80801
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 968512,
+          "weightedCmykRmse": 0.951044
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        119,
+        12,
+        1152,
+        1286
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_299/exports/scarecrow-watering-seedling.pdf",
+          "bytes": 968512,
+          "sha256": "64c80fd54c4bdfb722224a84d66f5b8edb8cb9c49b711fb80a916cb196ef97f9"
+        },
+        "webp": {
+          "path": "work/production/wave_299/exports/scarecrow-watering-seedling.webp",
+          "bytes": 1187062,
+          "sha256": "9b307127815d2b9342d3a3d0eceace6c396017e1eea2ce37c9eacbc099edacb0"
+        },
+        "thumb": {
+          "path": "work/production/wave_299/exports/scarecrow-watering-seedling-thumb.webp",
+          "bytes": 69916,
+          "sha256": "074ae7b32c6d3368e03f29821beaa7c89a06961dfc5baafa15d11e153c0b859c"
+        }
+      },
+      "proofSha256": "ca668033dc788b793d42aa4d10a780d8e17a06d4ef2b0a4300380c0b56c48f87",
+      "pairMeanRgbDifference": 3.32975
+    },
+    {
+      "id": "scarecrow-crow-hand-perch",
+      "title": "Scarecrow and a Crow",
+      "alt": "A cross-stitch-eyed scarecrow in a blue felt hat and saffron poncho sits on a stump while a black crow perches on its outstretched mitten.",
+      "description": "A cross-stitch-eyed scarecrow in a blue felt hat and saffron poncho sits on a stump while a black crow perches on its outstretched mitten. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_299/source/scarecrow-crow-hand-perch-character-v2.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 775,
+      "pdfHeight": 930,
+      "sourceType": "raster",
+      "sourceSha256": "eb379f793e417ad504f2367c97223fdb966d0e2ff8b283cb6ea5f4ffad819c4d",
+      "inputSignature": "bd10ea4383e0707cd8a4bbc994cb1794159c2818589963e3a0b7c8461ef8cded",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 978325,
+        "weightedCmykRmse": 1.315215
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1365479,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1177233,
+          "weightedCmykRmse": 0.740121
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1125406,
+          "weightedCmykRmse": 0.878381
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1046671,
+          "weightedCmykRmse": 1.069763
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 978325,
+          "weightedCmykRmse": 1.315215
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        119,
+        47,
+        1102,
+        1305
+      ],
+      "image": {
+        "width": 775,
+        "height": 930,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_299/exports/scarecrow-crow-hand-perch.pdf",
+          "bytes": 978325,
+          "sha256": "b3e618739d9dde10d1088d5d3fd25f645c3516f7f037de2b481dfa566bb8aa1e"
+        },
+        "webp": {
+          "path": "work/production/wave_299/exports/scarecrow-crow-hand-perch.webp",
+          "bytes": 1488330,
+          "sha256": "cc94f724a8c76b296447705bfba7a39373724ae0bda6a91f7813543761f75823"
+        },
+        "thumb": {
+          "path": "work/production/wave_299/exports/scarecrow-crow-hand-perch-thumb.webp",
+          "bytes": 74964,
+          "sha256": "8915395ad3387b857b857c2cfe451f8096c0610ee705a947d5dd049cfc2bbb76"
+        }
+      },
+      "proofSha256": "43c2d008b7007a9142ac263be3fc04bc39aba11c78b2c55d2a2caf5913e845ca",
+      "pairMeanRgbDifference": 5.22201
+    },
+    {
+      "id": "scarecrow-sunflower-planter",
+      "title": "Scarecrow Planting a Seedling",
+      "alt": "A sleepy-eyed cloth scarecrow in a coral bucket hat and plum gardening apron lowers a leafy seedling into soil beside a trowel and empty pot.",
+      "description": "A sleepy-eyed cloth scarecrow in a coral bucket hat and plum gardening apron lowers a leafy seedling into soil beside a trowel and empty pot. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_299/source/scarecrow-sunflower-planter-character-v2.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 910,
+      "pdfHeight": 832,
+      "sourceType": "raster",
+      "sourceSha256": "335ba1608cba6f94866a661531cecc63ce8fac5158e1b6089d4b68ca696e38d5",
+      "inputSignature": "56c71cfa662d3a59e80d9e69f6b8274dcf03c6e9fd781044c488617b6509add7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 961308,
+        "weightedCmykRmse": 1.344842
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1351485,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1161356,
+          "weightedCmykRmse": 0.74628
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1108096,
+          "weightedCmykRmse": 0.8882
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1025928,
+          "weightedCmykRmse": 1.087399
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 961308,
+          "weightedCmykRmse": 1.344842
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        41,
+        42,
+        1281,
+        1153
+      ],
+      "image": {
+        "width": 910,
+        "height": 832,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_299/exports/scarecrow-sunflower-planter.pdf",
+          "bytes": 961308,
+          "sha256": "40ddf91a3223617c75f9f262069fbed675b24ee6c980b3a15549853ad5ee71d2"
+        },
+        "webp": {
+          "path": "work/production/wave_299/exports/scarecrow-sunflower-planter.webp",
+          "bytes": 1414702,
+          "sha256": "433982649e0efd97276f17a4af970e61de7f446a4ebf342b9bc5214d6797f874"
+        },
+        "thumb": {
+          "path": "work/production/wave_299/exports/scarecrow-sunflower-planter-thumb.webp",
+          "bytes": 76140,
+          "sha256": "6916b63732f3f146b29a3468c78ef128f94979db13bb4841cf263a73b02628d3"
+        }
+      },
+      "proofSha256": "a42fac0e2877737612febdf854c2f9ed7fe023c3983eebd74f4886229ab672c2",
+      "pairMeanRgbDifference": 2.30875
+    },
+    {
+      "id": "scarecrow-apple-orchard-crate",
+      "title": "Scarecrow Sorting Apples",
+      "alt": "A rectangular-faced scarecrow in a brown ear-flap cap, navy vest and ochre checked trousers moves a red apple between two wooden crates.",
+      "description": "A rectangular-faced scarecrow in a brown ear-flap cap, navy vest and ochre checked trousers moves a red apple between two wooden crates. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_299/source/scarecrow-apple-orchard-crate-character-v2.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1225,
+      "height": 1284,
+      "pdfWidth": 897,
+      "pdfHeight": 940,
+      "sourceType": "raster",
+      "sourceSha256": "ea6b0e10ae70a0da4dbcc74e9613df093ca64d51b0df78d4cc851a3dcf1be62c",
+      "inputSignature": "79acf31685d9d0ebac932ff77744ff179b30776ff075ed2f8eed4b10fbbbe32a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 992250,
+        "weightedCmykRmse": 1.344395
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1467975,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1212841,
+          "weightedCmykRmse": 0.749673
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1152029,
+          "weightedCmykRmse": 0.888832
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1061642,
+          "weightedCmykRmse": 1.077505
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 992250,
+          "weightedCmykRmse": 1.344395
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        28,
+        1215,
+        1246
+      ],
+      "image": {
+        "width": 897,
+        "height": 940,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_299/exports/scarecrow-apple-orchard-crate.pdf",
+          "bytes": 992250,
+          "sha256": "414a9c07354c47eccf4e856334b16f231d0a3cfcd8b8e53b701c98c2eb92ae52"
+        },
+        "webp": {
+          "path": "work/production/wave_299/exports/scarecrow-apple-orchard-crate.webp",
+          "bytes": 1525122,
+          "sha256": "3388b2ce781f1d0bd1df05805d1df664caa512821e1839a1eb77c8d8c186ee51"
+        },
+        "thumb": {
+          "path": "work/production/wave_299/exports/scarecrow-apple-orchard-crate-thumb.webp",
+          "bytes": 84302,
+          "sha256": "cd891669ba904090d3c54c334406c7cf0b3d1a511d8167482885dda1917bc21a"
+        }
+      },
+      "proofSha256": "65e4505e41a97ee7f69e6308a1d81b1e2036a70035e681625529abe0340d2a8b",
+      "pairMeanRgbDifference": 2.35402
+    },
+    {
+      "id": "scarecrow-corn-tie-bundle",
+      "title": "Scarecrow Tying Corn Stalks",
+      "alt": "A pale cloth scarecrow in a burgundy headscarf and green tunic crouches to tie twine around a bundle of dry corn stalks.",
+      "description": "A pale cloth scarecrow in a burgundy headscarf and green tunic crouches to tie twine around a bundle of dry corn stalks. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_299/source/scarecrow-corn-tie-bundle-character-v2.png",
+      "printMaxEdgePx": 810,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 810,
+      "pdfHeight": 740,
+      "sourceType": "raster",
+      "sourceSha256": "4412ab260d76de8d43977ca85eb33f0923acf09133d70cda9741302fb748e430",
+      "inputSignature": "97ec2d0dcce6a8b3f4af1c828532d59921f8309e28c5c8a22ab3b2b87233fc6f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 958330,
+        "weightedCmykRmse": 1.192742
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1354631,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1154101,
+          "weightedCmykRmse": 0.681398
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1100593,
+          "weightedCmykRmse": 0.817432
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1034765,
+          "weightedCmykRmse": 0.976509
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 958330,
+          "weightedCmykRmse": 1.192742
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        123,
+        5,
+        1273,
+        1186
+      ],
+      "image": {
+        "width": 810,
+        "height": 740,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_299/exports/scarecrow-corn-tie-bundle.pdf",
+          "bytes": 958330,
+          "sha256": "ee857b4ba9981f75011103a3651c1515121d9638b74a8f5402d08efa0a2a4b73"
+        },
+        "webp": {
+          "path": "work/production/wave_299/exports/scarecrow-corn-tie-bundle.webp",
+          "bytes": 1844372,
+          "sha256": "d6388570ceb6c47d64fe66057d942e85d65954f6398e7a9875ab7f043f377962"
+        },
+        "thumb": {
+          "path": "work/production/wave_299/exports/scarecrow-corn-tie-bundle-thumb.webp",
+          "bytes": 107562,
+          "sha256": "1411fb320c8c02311dec48ea41f045f6525ad0ad4881e5f3ddfb51715bab7a65"
+        }
+      },
+      "proofSha256": "f6f36d11cdd82e879ebe5c85d82e889ac16dfcb1346ea529a0bc6dbf338f71e6",
+      "pairMeanRgbDifference": 3.58752
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T21:33:20.076Z",
+  "screenReviewScope": "Every selected native CMYK proof inspected against its reviewed source, character-design matrix and natural metadata. No repeated-character sibling counted as an additional original.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:33:20.189Z"
+}

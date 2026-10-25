@@ -1,0 +1,510 @@
+{
+  "wave": "wave_305",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-paper-accordion-doll",
+      "title": "Accordion Paper Scarecrow",
+      "alt": "A smiling folded-paper scarecrow has a pointed green hat, burgundy shirt, blue accordion-fold legs and angular green shoes.",
+      "description": "A smiling folded-paper scarecrow has a pointed green hat, burgundy shirt, blue accordion-fold legs and angular green shoes. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_305/source/scarecrow-paper-accordion-doll.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "567c4d15d22fab3cc28a83d16571598739defec95a01d96265b595e94798d051",
+      "inputSignature": "2cf79305fe81f0f59eaea3f207bfe377900054a351efc644b0031a3083cef760",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 813242,
+        "weightedCmykRmse": 0.838155
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1000120,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 813242,
+          "weightedCmykRmse": 0.838155
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        59,
+        1110,
+        1330
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_305/exports/scarecrow-paper-accordion-doll.pdf",
+          "bytes": 813242,
+          "sha256": "90875118efaa03f813ceb3c6068643c139f002d4bd88131c18c91f2e257534f2"
+        },
+        "webp": {
+          "path": "work/production/wave_305/exports/scarecrow-paper-accordion-doll.webp",
+          "bytes": 966626,
+          "sha256": "f99a91a24b570555227850d475ac0f68be0b5c280abb09881c1b8bc6c80cc873"
+        },
+        "thumb": {
+          "path": "work/production/wave_305/exports/scarecrow-paper-accordion-doll-thumb.webp",
+          "bytes": 51166,
+          "sha256": "e77257c69a24b4d319275199f9dabd3e7fdd01822f56054c2f3cc3015d47ac87"
+        }
+      },
+      "proofSha256": "cf5dbff0999b9b0eb7d70743d941182c1e528df194d6ce4ad062cea625c92582",
+      "pairMeanRgbDifference": 2.90545
+    },
+    {
+      "id": "scarecrow-button-collage",
+      "title": "Button Collage Scarecrow",
+      "alt": "A round gray-faced patchwork scarecrow with rust yarn hair wears a patched ochre hat, burgundy waistcoat, mismatched green sleeves and checkered trousers.",
+      "description": "A round gray-faced patchwork scarecrow with rust yarn hair wears a patched ochre hat, burgundy waistcoat, mismatched green sleeves and checkered trousers. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_305/source/scarecrow-button-collage.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "54b4f94378417a18ca34a10bd02f2530c49dcee17e963c7d9f510fef9a5175de",
+      "inputSignature": "03d8cc4be87beaab56c223f311cb39746d3fe544cc0d27d85c42b540ec15588e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 924995,
+        "weightedCmykRmse": 1.093829
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1215666,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1044890,
+          "weightedCmykRmse": 0.750892
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 997297,
+          "weightedCmykRmse": 0.893752
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 924995,
+          "weightedCmykRmse": 1.093829
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        52,
+        1004,
+        1489
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_305/exports/scarecrow-button-collage.pdf",
+          "bytes": 924995,
+          "sha256": "7063e1b3b10183f9092d6ce2dda6120a193d30b13e02e096c2fe0766b555dc1c"
+        },
+        "webp": {
+          "path": "work/production/wave_305/exports/scarecrow-button-collage.webp",
+          "bytes": 1746036,
+          "sha256": "689cea785b386d6c94aba2806c4a74252182c0cf5ce21ec0e9044d16155b9772"
+        },
+        "thumb": {
+          "path": "work/production/wave_305/exports/scarecrow-button-collage-thumb.webp",
+          "bytes": 62702,
+          "sha256": "f49818ecb936066d37a6f2a2c009eaa3221e486630f540daa474334332009136"
+        }
+      },
+      "proofSha256": "4e1d868ac4a9d3781ebc46bbeffcb97b67a2498839e031d9b7f07d775f5f76af",
+      "pairMeanRgbDifference": 4.31305
+    },
+    {
+      "id": "scarecrow-outline-garden-cart",
+      "title": "Scarecrow Garden Cart Coloring Illustration",
+      "alt": "A long-faced scarecrow in a floppy hat, open patched jacket and tied loose trousers pulls a wooden garden cart carrying a coiled hose and flowerpot, drawn in black outlines.",
+      "description": "A long-faced scarecrow in a floppy hat, open patched jacket and tied loose trousers pulls a wooden garden cart carrying a coiled hose and flowerpot, drawn in black outlines. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-garden-cart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "e871c3a2a1744de490c9bb5d4e645836aef28cbe350adda9b1e8185206f826f6",
+      "inputSignature": "3b59c73bf9b86ce35349977449a188124c55362b72e93cf1618c1cd9f7043dea",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 349743,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 349743,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        26,
+        1296,
+        1175
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-garden-cart.pdf",
+          "bytes": 349743,
+          "sha256": "a9da3d297a687d7990902298562fe07861ebf1bcdbeaab4458f1cefdad4eb4d4"
+        },
+        "webp": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-garden-cart.webp",
+          "bytes": 700702,
+          "sha256": "f8265bf33c7c68f7dc73eb592f2f3220da4eb3cf10902f2899633eb82a13dad9"
+        },
+        "thumb": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-garden-cart-thumb.webp",
+          "bytes": 57992,
+          "sha256": "e33a8363dda34792f44e38250c192d31b3a7ea7e262d5714eeb7b4411d132b4c"
+        }
+      },
+      "proofSha256": "407186dc38e8cc6010a1961f9f7adc89b6b6a2a5461f174e4b6fe93373db6efa",
+      "pairMeanRgbDifference": 7.6467
+    },
+    {
+      "id": "scarecrow-outline-making-broom",
+      "title": "Scarecrow Tying a Straw Broom Coloring Illustration",
+      "alt": "A round straw-faced scarecrow wearing a paneled cap and patched shirt sits tying a straw broom beside a spool of twine, drawn in black outlines.",
+      "description": "A round straw-faced scarecrow wearing a paneled cap and patched shirt sits tying a straw broom beside a spool of twine, drawn in black outlines. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-making-broom.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "30a7cb7db2a69bbd353755d664967fd4366d4e0015f36c502227467dd79df3f5",
+      "inputSignature": "5c1272f67efcfca97ac01c3f4fa7ad3e2869a010c7d653c7bcca65402de72898",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 439643,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 439643,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        75,
+        1105,
+        1316
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-making-broom.pdf",
+          "bytes": 439643,
+          "sha256": "df52de24c576f45ce6379f53d04917f45daa45c686769ba7645d0b2068f64f34"
+        },
+        "webp": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-making-broom.webp",
+          "bytes": 1004712,
+          "sha256": "4dff55880b2b984401a9d1665f6bea2ad7e43de574e1521579ee29fc64e1cacf"
+        },
+        "thumb": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-making-broom-thumb.webp",
+          "bytes": 69392,
+          "sha256": "c863a98f0d6b6b24d8f67a56b9c029dbc996d0175358cd0348755b7663f67843"
+        }
+      },
+      "proofSha256": "d0807cde0ddf25b37ca985b19d620eceb66814598889b9947e3dab3bd959d637",
+      "pairMeanRgbDifference": 10.31689
+    },
+    {
+      "id": "scarecrow-outline-telescope",
+      "title": "Scarecrow with a Telescope Coloring Illustration",
+      "alt": "A smiling scarecrow with a drooping tassel cap and knitted cardigan looks through a telescope on a three-legged stand, drawn in black outlines.",
+      "description": "A smiling scarecrow with a drooping tassel cap and knitted cardigan looks through a telescope on a three-legged stand, drawn in black outlines. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-telescope.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "146d64898cafb2bdfdfb98da093caf599bd8f5c357fd194d0b9bd6bda079c239",
+      "inputSignature": "fbe9163f5a0a71616c6ee90a3b2065681046b9b8470cb26fa501385e8821f8fe",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 379904,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 379904,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        29,
+        1120,
+        1347
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-telescope.pdf",
+          "bytes": 379904,
+          "sha256": "2c687c2b987e19de34804c9c333c71426388f6db20c7fb0baec42d114ac0194d"
+        },
+        "webp": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-telescope.webp",
+          "bytes": 797006,
+          "sha256": "d16df597725dd6b1f6fe4a067a9284149c53f369f48a0f345edad66658894f38"
+        },
+        "thumb": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-telescope-thumb.webp",
+          "bytes": 63950,
+          "sha256": "4f71638c1f16db7fd992acfd558d2d678d9afff366c5139baacf709145de9103"
+        }
+      },
+      "proofSha256": "eb92c851415bd2e91315f9b5328f8c300e6e0aec7b329e5488dc11673e4cf019",
+      "pairMeanRgbDifference": 8.17247
+    },
+    {
+      "id": "scarecrow-outline-potting-table",
+      "title": "Scarecrow Potting Bench Coloring Illustration",
+      "alt": "A square stitched-face scarecrow in a tied headscarf, apron and rubber boots spoons soil into a flowerpot at a wooden potting bench, drawn in black outlines.",
+      "description": "A square stitched-face scarecrow in a tied headscarf, apron and rubber boots spoons soil into a flowerpot at a wooden potting bench, drawn in black outlines. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-potting-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "scarecrow",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 951,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "f99c37d0e21fe458ae61a1c9b4096c6ae64fdc6db67425ae15a168fbe96ad348",
+      "inputSignature": "cd94c2df70e22d7acda15ff30480adfaa836a17061f7ce98dc05a79e4b89b0c6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 342607,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 342607,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        110,
+        18,
+        1031,
+        1261
+      ],
+      "image": {
+        "width": 951,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-potting-table.pdf",
+          "bytes": 342607,
+          "sha256": "55a297cf434e6f1cd32d1643d69f7507b5f436e59cf42b20d1fe523fbbf7726b"
+        },
+        "webp": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-potting-table.webp",
+          "bytes": 699040,
+          "sha256": "b64df11cd236278257be1102ff23d8e3972b16a74062493bab647e8e7dd697bc"
+        },
+        "thumb": {
+          "path": "work/production/wave_305/exports/scarecrow-outline-potting-table-thumb.webp",
+          "bytes": 54826,
+          "sha256": "c7c60e02dd3c3985619c7288613f523af1e75a0f23ba388cd4bf519b43acc30c"
+        }
+      },
+      "proofSha256": "94b3cba68ed8189cec8c8e9f47ac5afe5eb07dcee6138db0d40e3d5871511e31",
+      "pairMeanRgbDifference": 6.9474
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:44:34.317Z"
+}

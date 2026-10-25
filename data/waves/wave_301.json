@@ -1,0 +1,563 @@
+{
+  "wave": "wave_301",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-measuring-growing-stalk",
+      "title": "Scarecrow Observing a Corn Plant",
+      "alt": "A pale canvas-faced scarecrow in a plum knit cap, olive jacket and burgundy boots kneels beside a young corn plant with a plain wooden measuring stick.",
+      "description": "A pale canvas-faced scarecrow in a plum knit cap, olive jacket and burgundy boots kneels beside a young corn plant with a plain wooden measuring stick. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_301/source/scarecrow-measuring-growing-stalk.png",
+      "printMaxEdgePx": 870,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 827,
+      "pdfHeight": 870,
+      "sourceType": "raster",
+      "sourceSha256": "77c850793b6e95b30963cb605d8588464e52c1cb83612a1f5656005d178ba6b6",
+      "inputSignature": "17b35b2d0d82c87fd26aedda81632d9a4d4386b520b4e40baa1788a079b3f819",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962578,
+        "weightedCmykRmse": 1.304567
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1362092,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1163857,
+          "weightedCmykRmse": 0.735169
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1109900,
+          "weightedCmykRmse": 0.873493
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1031543,
+          "weightedCmykRmse": 1.054567
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962578,
+          "weightedCmykRmse": 1.304567
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        38,
+        1200,
+        1253
+      ],
+      "image": {
+        "width": 827,
+        "height": 870,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_301/exports/scarecrow-measuring-growing-stalk.pdf",
+          "bytes": 962578,
+          "sha256": "7de2dba3227599b8e2835b95ca8c7dbdf5a8218d415998f0e54b91afda2991d5"
+        },
+        "webp": {
+          "path": "work/production/wave_301/exports/scarecrow-measuring-growing-stalk.webp",
+          "bytes": 1485190,
+          "sha256": "36fcbea87dd179b5d0865501efefd0b81d3d35a5627a050ff8d0c5a52f88f9a3"
+        },
+        "thumb": {
+          "path": "work/production/wave_301/exports/scarecrow-measuring-growing-stalk-thumb.webp",
+          "bytes": 92682,
+          "sha256": "5a3068537524a71307595da867a0209df08a4afb52779113de0fef0fcd7d6d65"
+        }
+      },
+      "proofSha256": "3c6d57364fd23eb394cc33f5ad92efe56f1ab0ec6e6eb96ad84b6530ca3f40f1",
+      "pairMeanRgbDifference": 2.87514
+    },
+    {
+      "id": "scarecrow-harvest-picnic",
+      "title": "Scarecrow Harvest Picnic",
+      "alt": "A curly twine-haired scarecrow in a woven visor and turquoise shirt sits on a checked blanket beside an open lunch box and water bottle.",
+      "description": "A curly twine-haired scarecrow in a woven visor and turquoise shirt sits on a checked blanket beside an open lunch box and water bottle. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_301/source/scarecrow-harvest-picnic.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "8d146c65ce2968d3f6081a5a857c6c17d0c52a73765a961dd3301e5e6561f34f",
+      "inputSignature": "80a7950695e79d39430765bd3552e347084246c7e108b630015d657ac4621187",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 974235,
+        "weightedCmykRmse": 1.35923
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1456542,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1196165,
+          "weightedCmykRmse": 0.756164
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1135146,
+          "weightedCmykRmse": 0.894306
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1043529,
+          "weightedCmykRmse": 1.087198
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 974235,
+          "weightedCmykRmse": 1.35923
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        33,
+        35,
+        1287,
+        1174
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_301/exports/scarecrow-harvest-picnic.pdf",
+          "bytes": 974235,
+          "sha256": "f7ee73371f2fd84cf8df15130c0b2b3ac4592e156390701a6eb855d82a8c9b54"
+        },
+        "webp": {
+          "path": "work/production/wave_301/exports/scarecrow-harvest-picnic.webp",
+          "bytes": 1519958,
+          "sha256": "c53e039699719c68f8973cfe47c8c30a986ab84c4a70a0f163f3b6b04b288183"
+        },
+        "thumb": {
+          "path": "work/production/wave_301/exports/scarecrow-harvest-picnic-thumb.webp",
+          "bytes": 80476,
+          "sha256": "f0deeeb049bf63dd1b7521cff9abd2d513fa007e6fef1a7b8b83a0aaa00d08d4"
+        }
+      },
+      "proofSha256": "d866c2b09e68a01ccb4fb95e354688934d2f45a9ceea9b1e57080c78a0cbf790",
+      "pairMeanRgbDifference": 2.29227
+    },
+    {
+      "id": "scarecrow-waving-puppet",
+      "title": "Scarecrow Hand Puppet",
+      "alt": "A handmade scarecrow hand puppet has a violet felt hat, a mint mitten body with a coral heart patch, plum sleeves and an open lower cuff.",
+      "description": "A handmade scarecrow hand puppet has a violet felt hat, a mint mitten body with a coral heart patch, plum sleeves and an open lower cuff. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_301/source/scarecrow-waving-puppet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "40004c3ac429874ca6d929ba6d88734e3233fc5e289e87dc584aca5566991974",
+      "inputSignature": "d074ed5176e8b894da2eb724870e9e72210c3e3186d2baada6007c2c52d613ed",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 932131,
+        "weightedCmykRmse": 1.382061
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1404898,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1153659,
+          "weightedCmykRmse": 0.751262
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1089440,
+          "weightedCmykRmse": 0.904857
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1000925,
+          "weightedCmykRmse": 1.089244
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 932131,
+          "weightedCmykRmse": 1.382061
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        29,
+        39,
+        1184,
+        1276
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_301/exports/scarecrow-waving-puppet.pdf",
+          "bytes": 932131,
+          "sha256": "5e478111aea8ab726027d1e66abb896c249e2ced4bf4ab96ef0b1ee1ec3a3fe4"
+        },
+        "webp": {
+          "path": "work/production/wave_301/exports/scarecrow-waving-puppet.webp",
+          "bytes": 1405204,
+          "sha256": "12a80402f90719265840d78f7d7e7fb48477fcd30fdb8062f3c132bc5afbf384"
+        },
+        "thumb": {
+          "path": "work/production/wave_301/exports/scarecrow-waving-puppet-thumb.webp",
+          "bytes": 72990,
+          "sha256": "b634ba918abbd3917edf0c1e6d34d1d3591e42a5df70eceae6a041f18dee33e0"
+        }
+      },
+      "proofSha256": "5829e8042498566dc9b833ed3735230ff38d1a7423f31329746887c6ac47fdda",
+      "pairMeanRgbDifference": 2.88223
+    },
+    {
+      "id": "scarecrow-clothespin-figure",
+      "title": "Clothespin Scarecrow Craft",
+      "alt": "A small wooden clothespin scarecrow wears a blue felt cone hat and burgundy vest above exposed peg legs on a plain round base.",
+      "description": "A small wooden clothespin scarecrow wears a blue felt cone hat and burgundy vest above exposed peg legs on a plain round base. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_301/source/scarecrow-clothespin-figure.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "fd788d2db0d1a4e65e1b4913cf6d60d4f4d4101372b40cb7f70137ff88e18ed4",
+      "inputSignature": "8f603b8ca7f249df372384df3cbcd6c4799d9ca5bf524f2f9d0349f44e7b5a98",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 739934,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 739934,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        72,
+        100,
+        984,
+        1445
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_301/exports/scarecrow-clothespin-figure.pdf",
+          "bytes": 739934,
+          "sha256": "59a1f078eea47a71b8be06ad11d2605f7fe75f17f72ef30135fd1292d2159ee7"
+        },
+        "webp": {
+          "path": "work/production/wave_301/exports/scarecrow-clothespin-figure.webp",
+          "bytes": 1342112,
+          "sha256": "1d03eff9f292bb73d627f29094c75953252ce2a4baa73537885b80ae4103ebc3"
+        },
+        "thumb": {
+          "path": "work/production/wave_301/exports/scarecrow-clothespin-figure-thumb.webp",
+          "bytes": 43070,
+          "sha256": "17f8d8f350fcdb96b0c781928bcadaaca37710d34c897d6ff396a2b440e71877"
+        }
+      },
+      "proofSha256": "3eefb57b4f6c2ca2da22147851a5d1bc6bf121e6fb9ae78cdb969636e77b0f85",
+      "pairMeanRgbDifference": 2.83908
+    },
+    {
+      "id": "scarecrow-paper-bag-puppet",
+      "title": "Paper Bag Scarecrow Puppet",
+      "alt": "A brown paper bag scarecrow puppet has unequal paper-circle eyes, a blue triangle nose, terracotta hat and a pale green paper pocket.",
+      "description": "A brown paper bag scarecrow puppet has unequal paper-circle eyes, a blue triangle nose, terracotta hat and a pale green paper pocket. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_301/source/scarecrow-paper-bag-puppet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "9bf38738c042ef8824d0ffd079fcc1dc991bdc1e31fed134b2997524d8641ffe",
+      "inputSignature": "ed70d214033aebb4495ddee93141d878a54fff4c32629fc45b4f1c4b1bfe6400",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 899145,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 899145,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        28,
+        156,
+        1004,
+        1383
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_301/exports/scarecrow-paper-bag-puppet.pdf",
+          "bytes": 899145,
+          "sha256": "e0de3f24b615e387251e199c97f9aeb85d693615a0316b663a7be9c18a014979"
+        },
+        "webp": {
+          "path": "work/production/wave_301/exports/scarecrow-paper-bag-puppet.webp",
+          "bytes": 1545488,
+          "sha256": "bd3db35677c77831878794f7f05d29d73c3115f0d15934386d4feaf5ba3d4f32"
+        },
+        "thumb": {
+          "path": "work/production/wave_301/exports/scarecrow-paper-bag-puppet-thumb.webp",
+          "bytes": 43216,
+          "sha256": "b33508423301f0de8e3f9d36c1d61ce80ef22b06edb1a3766c763762900e0e07"
+        }
+      },
+      "proofSha256": "1ab8260378ceabdebd5de5bdb1c195033f690d3b96c5ea38d1a1ff4672e23eb6",
+      "pairMeanRgbDifference": 2.59911
+    },
+    {
+      "id": "scarecrow-spoon-puppet",
+      "title": "Wooden Spoon Scarecrow",
+      "alt": "A wooden spoon scarecrow puppet has a painted face, raffia hair, navy bonnet and sleeves, a coral cape and a pale yellow tied collar.",
+      "description": "A wooden spoon scarecrow puppet has a painted face, raffia hair, navy bonnet and sleeves, a coral cape and a pale yellow tied collar. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_301/source/scarecrow-spoon-puppet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "121a1bd7e01aed530acfb6e5e6a2c07fe98ccc6be2390f06a34bb9cc0274bab8",
+      "inputSignature": "7c6cfacf4bc8a16c8690ac80e1c2dceed10da2b77b7c34b8ed6fa823f3660288",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 649565,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 649565,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        91,
+        83,
+        933,
+        1453
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_301/exports/scarecrow-spoon-puppet.pdf",
+          "bytes": 649565,
+          "sha256": "4f517788eec6b282433fa60cb8ef5e09538504a53bb99fa7b6da1993ceb6bcb4"
+        },
+        "webp": {
+          "path": "work/production/wave_301/exports/scarecrow-spoon-puppet.webp",
+          "bytes": 1196840,
+          "sha256": "49ec137bea889632daeaeabf4d6944e0cb5a3033479f6a22ce735fa9a56cb433"
+        },
+        "thumb": {
+          "path": "work/production/wave_301/exports/scarecrow-spoon-puppet-thumb.webp",
+          "bytes": 34180,
+          "sha256": "91b21e4193ccac362aee17aaa09788d42cef76ea7d2341ea154dab50087a918c"
+        }
+      },
+      "proofSha256": "0e851f39813310c2ae8496bde79cd6ba26b8118c7c3fd79c16519390690c074f",
+      "pairMeanRgbDifference": 1.81474
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T21:33:20.777Z",
+  "screenReviewScope": "Every selected native CMYK proof inspected against its reviewed source, character-design matrix and natural metadata. No repeated-character sibling counted as an additional original.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:33:20.888Z"
+}

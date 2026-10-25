@@ -1,0 +1,598 @@
+{
+  "wave": "wave_302",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-craft-stick-crossbar",
+      "title": "Craft Stick Scarecrow",
+      "alt": "Crossed wooden craft sticks support a small scarecrow with a green felt hat, rust felt shirt, pale yellow scarf and raffia hands.",
+      "description": "Crossed wooden craft sticks support a small scarecrow with a green felt hat, rust felt shirt, pale yellow scarf and raffia hands. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_302/source/scarecrow-craft-stick-crossbar.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "438c5ad42c95ec673c3e0305651e5cff7a0e976012a300d5430e84e6661e856c",
+      "inputSignature": "5057f95923b5fbc5f66e1848783dfc1e5fd9dfa9571ac4a33260401812d94eef",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 696355,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 696355,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        58,
+        996,
+        1500
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_302/exports/scarecrow-craft-stick-crossbar.pdf",
+          "bytes": 696355,
+          "sha256": "5e0029b0f951dd118612623dc4ffd83002e3f2d5e7ab11c68efeae0b19deb4f8"
+        },
+        "webp": {
+          "path": "work/production/wave_302/exports/scarecrow-craft-stick-crossbar.webp",
+          "bytes": 1204766,
+          "sha256": "3115795fe456ca99de9307e8e115a2cbec32dbbe2477e6200f3c0607813a3e19"
+        },
+        "thumb": {
+          "path": "work/production/wave_302/exports/scarecrow-craft-stick-crossbar-thumb.webp",
+          "bytes": 38404,
+          "sha256": "cecc5f096f7613b7e11842d823f9eabdaf4473d3c662a68454770b775890ad7e"
+        }
+      },
+      "proofSha256": "9d54dfd9599b66ddbd77deec56acf49e8bd1bdb75a775dbc5eb7431690173848",
+      "pairMeanRgbDifference": 1.86701
+    },
+    {
+      "id": "scarecrow-felt-magnet",
+      "title": "Felt Scarecrow Magnet",
+      "alt": "A terracotta felt scarecrow face has a stitched mustard hat, mixed yarn fringe and a teal collar, with a separate round black magnet beside it.",
+      "description": "A terracotta felt scarecrow face has a stitched mustard hat, mixed yarn fringe and a teal collar, with a separate round black magnet beside it. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_302/source/scarecrow-felt-magnet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "bf3f6684962de357f2b020b2b5668df0cccc2a52c70463acc1d27e7710ae5cce",
+      "inputSignature": "ce9b478da84f1e4f51970d8f1613202f0825f6f0fcc65643690e98789eb5ae8f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 936885,
+        "weightedCmykRmse": 1.12175
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1343958,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1090204,
+          "weightedCmykRmse": 0.7885
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1024831,
+          "weightedCmykRmse": 0.929169
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 936885,
+          "weightedCmykRmse": 1.12175
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        55,
+        83,
+        1215,
+        1112
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_302/exports/scarecrow-felt-magnet.pdf",
+          "bytes": 936885,
+          "sha256": "2bf4bea5d533076b0bef3ed7ef115cd0c63282d2a79d7b900d113097344eb641"
+        },
+        "webp": {
+          "path": "work/production/wave_302/exports/scarecrow-felt-magnet.webp",
+          "bytes": 1248808,
+          "sha256": "af5bb76eaafd7ff75bc049d89ac699a3a2d84ccb5307fcc35485c0179956bac0"
+        },
+        "thumb": {
+          "path": "work/production/wave_302/exports/scarecrow-felt-magnet-thumb.webp",
+          "bytes": 64454,
+          "sha256": "852ffc4cfab6154088f48ed0aec5ab6f2611686ccf42886a350f602c5b0c8b5a"
+        }
+      },
+      "proofSha256": "e7c9caf492a9c1d64fa1974b0b02aca1275d2db83c5e3a021e5a7e2dbf8e1799",
+      "pairMeanRgbDifference": 2.88562
+    },
+    {
+      "id": "scarecrow-knitted-doll",
+      "title": "Knitted Scarecrow Doll",
+      "alt": "A mint-faced knitted scarecrow doll sits in a coral bonnet, cream cardigan, teal romper and lavender shoes with raffia and yarn braids.",
+      "description": "A mint-faced knitted scarecrow doll sits in a coral bonnet, cream cardigan, teal romper and lavender shoes with raffia and yarn braids. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_302/source/scarecrow-knitted-doll.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1225,
+      "height": 1284,
+      "pdfWidth": 954,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "e4707380e48d2fe9c617dbb7ff48431913b1bf3a15d3fdc11d7bc0e9b05f86a7",
+      "inputSignature": "cd2b082c19ee50b76a22ce6ba2394f591c4179648b51ae54616ed49eeb900cbe",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 962163,
+        "weightedCmykRmse": 1.109657
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1423794,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1118328,
+          "weightedCmykRmse": 0.775266
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1050646,
+          "weightedCmykRmse": 0.916268
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 962163,
+          "weightedCmykRmse": 1.109657
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        173,
+        41,
+        1158,
+        1235
+      ],
+      "image": {
+        "width": 954,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_302/exports/scarecrow-knitted-doll.pdf",
+          "bytes": 962163,
+          "sha256": "e37d07f19836bba0fe718f89a8a6d1d108e0c55faae8b3a4588921b6cd1d2f09"
+        },
+        "webp": {
+          "path": "work/production/wave_302/exports/scarecrow-knitted-doll.webp",
+          "bytes": 1331802,
+          "sha256": "b52c81202d9cb8aa410f4a60e341e00b2f3cb6fdadebc8d09d2ae3d2f45ec6d6"
+        },
+        "thumb": {
+          "path": "work/production/wave_302/exports/scarecrow-knitted-doll-thumb.webp",
+          "bytes": 82522,
+          "sha256": "5d177f70e39453a9ccdd23398bd712460bdbe89d8037db50933e3a519e10818b"
+        }
+      },
+      "proofSha256": "7e70f6871e7d65f2a0195728b051ddab04017b8e92d53e101058c0b7b3ec32bc",
+      "pairMeanRgbDifference": 4.07944
+    },
+    {
+      "id": "scarecrow-tin-can-planter",
+      "title": "Tin Can Scarecrow Planter",
+      "alt": "A ribbed silver tin can becomes a smiling scarecrow planter with a blue fabric brim, raffia hair, small wire arms and green leaves growing through its open top.",
+      "description": "A ribbed silver tin can becomes a smiling scarecrow planter with a blue fabric brim, raffia hair, small wire arms and green leaves growing through its open top. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_302/source/scarecrow-tin-can-planter.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 940,
+      "pdfHeight": 859,
+      "sourceType": "raster",
+      "sourceSha256": "5facfb50cdd31d37c28ab3bab7d5d0470c2d5357d1acb8b2fa852cdbdc6a81ba",
+      "inputSignature": "31633f0f309da36492e8e33b3075d83cb59522faaf9961da2fc6a0df75104150",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 990463,
+        "weightedCmykRmse": 1.319617
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1432756,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1204550,
+          "weightedCmykRmse": 0.739853
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1146618,
+          "weightedCmykRmse": 0.873822
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1059599,
+          "weightedCmykRmse": 1.060337
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 990463,
+          "weightedCmykRmse": 1.319617
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        15,
+        14,
+        1301,
+        1175
+      ],
+      "image": {
+        "width": 940,
+        "height": 859,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_302/exports/scarecrow-tin-can-planter.pdf",
+          "bytes": 990463,
+          "sha256": "e248f0246ba0c3168010a71a9f5bd66c058e41cb360c8976ef8a6040669fcea9"
+        },
+        "webp": {
+          "path": "work/production/wave_302/exports/scarecrow-tin-can-planter.webp",
+          "bytes": 1537216,
+          "sha256": "e761b5bc5cd26aff758ccd6328adc9942d37cb03a4058c436760dfa4aa326b99"
+        },
+        "thumb": {
+          "path": "work/production/wave_302/exports/scarecrow-tin-can-planter-thumb.webp",
+          "bytes": 91852,
+          "sha256": "3510d94962e2d62c7a36caf059401ac7ad03354b73232d1b25aba5fe899e35eb"
+        }
+      },
+      "proofSha256": "b2136d80361103ad47e5e4d1e22b9b3ef529500e1a4c818c4543d966bdc3daf1",
+      "pairMeanRgbDifference": 2.96445
+    },
+    {
+      "id": "scarecrow-terracotta-doll",
+      "title": "Terracotta Pot Scarecrow",
+      "alt": "Small terracotta pots form a seated scarecrow body, hands and feet, tied with twine beneath a burlap head and green felt cap.",
+      "description": "Small terracotta pots form a seated scarecrow body, hands and feet, tied with twine beneath a burlap head and green felt cap. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_302/source/scarecrow-terracotta-doll.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1231,
+      "height": 1278,
+      "pdfWidth": 963,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "d415bf0c015e18c32d98d25bb0a1e4085465bff8a8d9e3ca1cc4a5a8aaefcd82",
+      "inputSignature": "fb13c360eb1332126d798b702e8b867445252a321d6b3cd625a659d347eaf52a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 983507,
+        "weightedCmykRmse": 1.138383
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1394651,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1136793,
+          "weightedCmykRmse": 0.797256
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1069232,
+          "weightedCmykRmse": 0.944685
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 983507,
+          "weightedCmykRmse": 1.138383
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        160,
+        21,
+        1141,
+        1211
+      ],
+      "image": {
+        "width": 963,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_302/exports/scarecrow-terracotta-doll.pdf",
+          "bytes": 983507,
+          "sha256": "0eaf9e8189eeeaf20e5e1bd2fe19e2c6c4c2a0a9da650ff430d53012a1cad6d9"
+        },
+        "webp": {
+          "path": "work/production/wave_302/exports/scarecrow-terracotta-doll.webp",
+          "bytes": 1235898,
+          "sha256": "b52ed3e546736ef575ccd2f3cea47d0fc963dbcdbaa41e97571efe9c35b59ec0"
+        },
+        "thumb": {
+          "path": "work/production/wave_302/exports/scarecrow-terracotta-doll-thumb.webp",
+          "bytes": 76842,
+          "sha256": "43a853583b6569e95aaf6584d676394760b975096a5d9ccc3492eb1337748cf3"
+        }
+      },
+      "proofSha256": "32c0b9c4e276c1f5890aa2ca7d27cf5d3b200f29de7d56aabc11cbce3090c635",
+      "pairMeanRgbDifference": 3.06065
+    },
+    {
+      "id": "scarecrow-patchwork-door-wreath",
+      "title": "Scarecrow Door Wreath",
+      "alt": "An open grapevine wreath holds a small orange-faced scarecrow doll in an aubergine jacket, with one teal-and-copper checked bow.",
+      "description": "An open grapevine wreath holds a small orange-faced scarecrow doll in an aubergine jacket, with one teal-and-copper checked bow. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_302/source/scarecrow-patchwork-door-wreath.png",
+      "printMaxEdgePx": 790,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1287,
+      "height": 1222,
+      "pdfWidth": 790,
+      "pdfHeight": 750,
+      "sourceType": "raster",
+      "sourceSha256": "18a2998bdf181c2bb4726c81a461828f769892ab3aa71ec718b6cfb2f345bd9f",
+      "inputSignature": "66a2ce7bafc64a83dc8d35d11b67b88fc2da75f00f3770e8867374238fb6019e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 974339,
+        "weightedCmykRmse": 1.239953
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1320581,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1153655,
+          "weightedCmykRmse": 0.703531
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1109118,
+          "weightedCmykRmse": 0.834979
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1043434,
+          "weightedCmykRmse": 1.017153
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 974339,
+          "weightedCmykRmse": 1.239953
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        33,
+        1259,
+        1189
+      ],
+      "image": {
+        "width": 790,
+        "height": 750,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_302/exports/scarecrow-patchwork-door-wreath.pdf",
+          "bytes": 974339,
+          "sha256": "8da9e9a9ffe39bc90c1dc6e10a73d270e2d1efef6066de17a99a5c5f87d3ffc7"
+        },
+        "webp": {
+          "path": "work/production/wave_302/exports/scarecrow-patchwork-door-wreath.webp",
+          "bytes": 1759594,
+          "sha256": "45b96ba1c4d8eadc7c65f1a42298298355134f08fbf68d2255121d4b53c5dde6"
+        },
+        "thumb": {
+          "path": "work/production/wave_302/exports/scarecrow-patchwork-door-wreath-thumb.webp",
+          "bytes": 104164,
+          "sha256": "2c329d0bbce733d1db227b56d3828d5e4bed1939b751592159bf28f1c5f41928"
+        }
+      },
+      "proofSha256": "d322e32912babdbf89c00e3feb289ab9622e9760f12b5401f26a8da8d87bb089",
+      "pairMeanRgbDifference": 7.79615
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T21:35:34.096Z",
+  "screenReviewScope": "All six actual CMYK proofs checked against distinct craft construction, materials, palette and face designs; no repeated base character counted as an extra original.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:44:33.501Z"
+}

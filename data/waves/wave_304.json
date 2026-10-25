@@ -1,0 +1,632 @@
+{
+  "wave": "wave_304",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "scarecrow-guitar-storytime",
+      "title": "Scarecrow with a Small Drum",
+      "alt": "A wooden-faced scarecrow in a maroon knit cap and teal jacket sits cross-legged, tapping a small hand drum resting on one knee.",
+      "description": "A wooden-faced scarecrow in a maroon knit cap and teal jacket sits cross-legged, tapping a small hand drum resting on one knee. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_304/source/scarecrow-guitar-storytime.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1206,
+      "height": 1304,
+      "pdfWidth": 842,
+      "pdfHeight": 910,
+      "sourceType": "raster",
+      "sourceSha256": "163a94b2f03d178b8df7550a048dc228e97347eb4d679b0ded84c286f07add8b",
+      "inputSignature": "09a05cd8fdf33c2d96fd967ff4bb63d6eb43289b2f70b7362060e5408577edea",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 963958,
+        "weightedCmykRmse": 1.323144
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1384185,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1168409,
+          "weightedCmykRmse": 0.736539
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1113653,
+          "weightedCmykRmse": 0.874851
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1030543,
+          "weightedCmykRmse": 1.064249
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 963958,
+          "weightedCmykRmse": 1.323144
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        51,
+        16,
+        1103,
+        1275
+      ],
+      "image": {
+        "width": 842,
+        "height": 910,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_304/exports/scarecrow-guitar-storytime.pdf",
+          "bytes": 963958,
+          "sha256": "88115e6ccf7aaf52061f9982196b21c697a223ee8780300c437958e06d4b0c94"
+        },
+        "webp": {
+          "path": "work/production/wave_304/exports/scarecrow-guitar-storytime.webp",
+          "bytes": 1514286,
+          "sha256": "1d85b03d8b5451d199e6134e029d7a96efee0631cc0508455675ffb6e301850f"
+        },
+        "thumb": {
+          "path": "work/production/wave_304/exports/scarecrow-guitar-storytime-thumb.webp",
+          "bytes": 80364,
+          "sha256": "a2c7925705c1ee0c58c49afb52c55aff977f217a17dac715f0628f01f1633424"
+        }
+      },
+      "proofSha256": "688dffd48b4c563d7410b29a79d7c48a1987c3f55992e9e4a442f1991d3884e3",
+      "pairMeanRgbDifference": 2.40934
+    },
+    {
+      "id": "scarecrow-harvest-bunting",
+      "title": "Scarecrow Hanging Harvest Bunting",
+      "alt": "A deep-brown crochet-faced scarecrow in a lavender headwrap and mustard jumpsuit attaches blank fabric bunting between two short wooden posts.",
+      "description": "A deep-brown crochet-faced scarecrow in a lavender headwrap and mustard jumpsuit attaches blank fabric bunting between two short wooden posts. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_304/source/scarecrow-harvest-bunting.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 949,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "0fa53fbcdda1aaf2a0a3767b03d2710b75c11d7722fba4cf11a986b8d1d0990c",
+      "inputSignature": "341327c8ec0f4bc750758f1dbea89355470f32221e101cae3db41cf5c13af5ba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976840,
+        "weightedCmykRmse": 1.477841
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1419269,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1201256,
+          "weightedCmykRmse": 0.792385
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1134823,
+          "weightedCmykRmse": 0.9484
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1049182,
+          "weightedCmykRmse": 1.140177
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976840,
+          "weightedCmykRmse": 1.477841
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        27,
+        1203,
+        1239
+      ],
+      "image": {
+        "width": 949,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_304/exports/scarecrow-harvest-bunting.pdf",
+          "bytes": 976840,
+          "sha256": "7e28dedee03479eec385da9d8b6a0904867932b19d49702c85a8851d66685a7f"
+        },
+        "webp": {
+          "path": "work/production/wave_304/exports/scarecrow-harvest-bunting.webp",
+          "bytes": 1183386,
+          "sha256": "8d9ce1b65e904c6d3c87111989753615781c6a0aeb44a4c0264d25c5be330b06"
+        },
+        "thumb": {
+          "path": "work/production/wave_304/exports/scarecrow-harvest-bunting-thumb.webp",
+          "bytes": 76460,
+          "sha256": "9f997335f33897100d55aee20d7a4adf3267200b02933bfa936a6bdcda82b3cc"
+        }
+      },
+      "proofSha256": "e7a802e064c4939c83300fdad0292a6b15e59d44c6d572a9815ff8b52584268e",
+      "pairMeanRgbDifference": 3.02831
+    },
+    {
+      "id": "scarecrow-wind-spinner",
+      "title": "Scarecrow and a Wind Spinner",
+      "alt": "A playful pink-faced scarecrow in an orange knitted cap and plum work apron sits on a stump holding a small folded garden pinwheel.",
+      "description": "A playful pink-faced scarecrow in an orange knitted cap and plum work apron sits on a stump holding a small folded garden pinwheel. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_304/source/scarecrow-wind-spinner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "249fe1adca69cc85a8ff9f3073d6660f5d8c440c6512b5925bbdbcc9a8ed5e56",
+      "inputSignature": "8f766ce03726b5fcba412495db3d82f26f6b6aeab42dfed2d0e2bd9a136b2db6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 949494,
+        "weightedCmykRmse": 1.103989
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1328045,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1090622,
+          "weightedCmykRmse": 0.773787
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1031889,
+          "weightedCmykRmse": 0.915762
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 949494,
+          "weightedCmykRmse": 1.103989
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        167,
+        38,
+        1053,
+        1334
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_304/exports/scarecrow-wind-spinner.pdf",
+          "bytes": 949494,
+          "sha256": "b242a0c7164b0db78b8533138206812b23793f8c6fb75d6065387fc1aa265213"
+        },
+        "webp": {
+          "path": "work/production/wave_304/exports/scarecrow-wind-spinner.webp",
+          "bytes": 1313404,
+          "sha256": "e77c180b709839a0b19e5a0a4453f4d928984ad0b7bd0b596e7c2cc868f36893"
+        },
+        "thumb": {
+          "path": "work/production/wave_304/exports/scarecrow-wind-spinner-thumb.webp",
+          "bytes": 73056,
+          "sha256": "04deb4ff52871f9b87ce25cec545ceff26318f1f3ad6f1af728fd2214d38de0a"
+        }
+      },
+      "proofSha256": "2b1998b39adb0b82787de52203d5d20c341131a8457fa60b2de38f99abcd920e",
+      "pairMeanRgbDifference": 4.46929
+    },
+    {
+      "id": "scarecrow-sorting-gourds",
+      "title": "Scarecrow Comparing Gourds",
+      "alt": "A rush-faced scarecrow in an olive woven hat and teal fringed poncho holds a pear-shaped gourd between a round gourd and a long curved-neck gourd.",
+      "description": "A rush-faced scarecrow in an olive woven hat and teal fringed poncho holds a pear-shaped gourd between a round gourd and a long curved-neck gourd. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_304/source/scarecrow-sorting-gourds.png",
+      "printMaxEdgePx": 880,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1230,
+      "height": 1278,
+      "pdfWidth": 847,
+      "pdfHeight": 880,
+      "sourceType": "raster",
+      "sourceSha256": "a4dbc262c94c551c264b0ff78f761ef430847072a2624439dc14ec964f1bb675",
+      "inputSignature": "163a0a1e78217d7d373921dc4b90e4e5cb518d4cd47c05b26591eacfddb2b2be",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 964270,
+        "weightedCmykRmse": 1.310631
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1392408,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1171068,
+          "weightedCmykRmse": 0.736553
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1115498,
+          "weightedCmykRmse": 0.873771
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1034637,
+          "weightedCmykRmse": 1.05743
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 964270,
+          "weightedCmykRmse": 1.310631
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        28,
+        1202,
+        1216
+      ],
+      "image": {
+        "width": 847,
+        "height": 880,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_304/exports/scarecrow-sorting-gourds.pdf",
+          "bytes": 964270,
+          "sha256": "2e31b4390af134e2c05e42a5be844bd1c9ec16d65446ef13d06b4d6470edfcd1"
+        },
+        "webp": {
+          "path": "work/production/wave_304/exports/scarecrow-sorting-gourds.webp",
+          "bytes": 1534006,
+          "sha256": "593d0ee33f4e3652a9b7b6d55bcf94e247e7384b0fd5ea5c47b56a31e83a0f4c"
+        },
+        "thumb": {
+          "path": "work/production/wave_304/exports/scarecrow-sorting-gourds-thumb.webp",
+          "bytes": 90846,
+          "sha256": "e7e948c3173cfffa740405e254463f048f7888650e84c353c2780be5e4caefdd"
+        }
+      },
+      "proofSha256": "c62e6ba2a8da6dac68d485953f8e7f8277a93c03a8cbb2cfff63d080d87bac6d",
+      "pairMeanRgbDifference": 2.95813
+    },
+    {
+      "id": "scarecrow-welcome-bench",
+      "title": "Scarecrow Resting on a Bench",
+      "alt": "A sleepy cloth-faced scarecrow in a weathered olive hat, brown jacket, cream waistcoat and striped trousers rests on a slatted wooden garden bench.",
+      "description": "A sleepy cloth-faced scarecrow in a weathered olive hat, brown jacket, cream waistcoat and striped trousers rests on a slatted wooden garden bench. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_304/source/scarecrow-welcome-bench.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "6e08963dcdfff67f627ae3fe881bc5d100f3f268a4805434fa53c8ccf2c8df08",
+      "inputSignature": "380b2405c8f4ae6b87d03d9412eb7830988afa5665cb36a0df161cd7dc8aae71",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 970708,
+        "weightedCmykRmse": 1.315832
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1395638,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1180222,
+          "weightedCmykRmse": 0.740852
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1122855,
+          "weightedCmykRmse": 0.879316
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1042415,
+          "weightedCmykRmse": 1.062262
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 970708,
+          "weightedCmykRmse": 1.315832
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        9,
+        1274,
+        1156
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_304/exports/scarecrow-welcome-bench.pdf",
+          "bytes": 970708,
+          "sha256": "a1ed633aeb5dab03f146f60178a32d73939329c22494123a2bffa4c4d24fe514"
+        },
+        "webp": {
+          "path": "work/production/wave_304/exports/scarecrow-welcome-bench.webp",
+          "bytes": 1413630,
+          "sha256": "4176a12eee2d6b2aae58c40c39e2839c78d0af00b780bbb8e060a29dea48086c"
+        },
+        "thumb": {
+          "path": "work/production/wave_304/exports/scarecrow-welcome-bench-thumb.webp",
+          "bytes": 82536,
+          "sha256": "3bac4200b5a2f376d8afe3845652a3564290df9fecaa8083c163ef819f49607b"
+        }
+      },
+      "proofSha256": "a117a533448d2b472e68c4aad33d44d88dd30fcdf5c5e6bb98b20fa5de853c08",
+      "pairMeanRgbDifference": 4.99278
+    },
+    {
+      "id": "scarecrow-head-tools-stilllife",
+      "title": "Scarecrow Making Supplies",
+      "alt": "A square burlap scarecrow head with one button eye sits beside a purple felt hat, a folded sage shirt with a yellow patch and a tied bundle of straw.",
+      "description": "A square burlap scarecrow head with one button eye sits beside a purple felt hat, a folded sage shirt with a yellow patch and a tied bundle of straw. An original scarecrow illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_304/source/scarecrow-head-tools-stilllife.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "scarecrow",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6af000cef00b28fdd05a74ce930b993bed49e088533f91979edd49d08482a85d",
+      "inputSignature": "4bfd584cb6a05df2778ef4f6ed66dff2913e8de66ec75876293579f154ece180",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 927077,
+        "weightedCmykRmse": 1.032231
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1256159,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1049586,
+          "weightedCmykRmse": 0.714987
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 999601,
+          "weightedCmykRmse": 0.85041
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 927077,
+          "weightedCmykRmse": 1.032231
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        51,
+        1517,
+        987
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_304/exports/scarecrow-head-tools-stilllife.pdf",
+          "bytes": 927077,
+          "sha256": "e2204b8a4d9059ad1ebc08564263666aa77f4b3a9764d87ad7eeebae044e03ed"
+        },
+        "webp": {
+          "path": "work/production/wave_304/exports/scarecrow-head-tools-stilllife.webp",
+          "bytes": 1881228,
+          "sha256": "095dbe22a0dddbf22eb387c865477a483d57c26b243089e23ddb8c2c9a210713"
+        },
+        "thumb": {
+          "path": "work/production/wave_304/exports/scarecrow-head-tools-stilllife-thumb.webp",
+          "bytes": 64308,
+          "sha256": "d95946ada0ba430ab4d1732b6065d9c02e2789aefda0c58b60997dc60e6bd7d6"
+        }
+      },
+      "proofSha256": "022beaf55ad8e185d6a464964f1c9276206a7e98224851a4ad6a9064f314dce1",
+      "pairMeanRgbDifference": 4.08634
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T21:44:34.064Z"
+}
