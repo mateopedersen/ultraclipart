@@ -80,8 +80,8 @@ const collectionStyle: Record<
     subjects: ['boy', 'girl', 'hat'],
   },
   'Arts & entertainment': {
-    title: 'Music & Movies',
-    description: 'Musical instruments, movie equipment and entertainment scenes.',
+    title: 'Arts & entertainment',
+    description: 'Music, movies, games and character-inspired illustrations.',
     color: 'rose',
     subjects: ['music', 'movie'],
   },
