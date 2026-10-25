@@ -63,14 +63,14 @@ try {
       const root = page.locator('[data-related-root]');
       await expect(root).toHaveAttribute('data-ready', 'true');
       await expect(page.locator('[data-related-results]')).toBeVisible();
+      const count = await root.locator('.related-card').count();
+      assert.ok(count <= (width > 900 ? 12 : 6));
       await root.scrollIntoViewIfNeeded();
       assert.equal(
         await page.evaluate(() => document.documentElement.scrollWidth),
         width,
         `overflow ${id} ${width}`,
       );
-      const count = await root.locator('.related-card').count();
-      assert.ok(count <= (width > 900 ? 12 : 6));
       const layout = await root
         .locator('.related-grid:visible')
         .first()
@@ -78,23 +78,27 @@ try {
       assert.equal(layout, width > 900 ? 4 : width < 360 ? 1 : 2);
       const snapshot = await page.locator('[data-related-snapshot]').textContent();
       assert.ok(Buffer.byteLength(snapshot) < 64000);
-      await root.locator('img').evaluateAll(async (images) => {
-        await Promise.all(
-          images.map(async (img) => {
-            img.loading = 'eager';
-            await img.decode();
-          }),
-        );
-      });
-      assert.ok(
-        await root
-          .locator('img')
-          .evaluateAll((images) =>
-            images.every(
-              (img) => img.naturalWidth > 0 && getComputedStyle(img).objectFit === 'contain',
-            ),
-          ),
-      );
+      // Scrolling may append a new batch while the previous thumbnails decode.
+      // Check the live set repeatedly so every appended image is decoded too.
+      await expect
+        .poll(async () => {
+          await root.locator('img').evaluateAll(async (images) => {
+            await Promise.all(
+              images.map(async (img) => {
+                img.loading = 'eager';
+                await img.decode();
+              }),
+            );
+          });
+          return root
+            .locator('img')
+            .evaluateAll((images) =>
+              images.every(
+                (img) => img.naturalWidth > 0 && getComputedStyle(img).objectFit === 'contain',
+              ),
+            );
+        })
+        .toBe(true);
       const overlap = await root.locator('.related-card-actions').evaluateAll((rows) =>
         rows.some((row) => {
           const visible = [...row.children]
@@ -250,13 +254,22 @@ try {
     'Favorites use existing storage',
   );
   // Actual file bytes and types, including the original download controls.
-  for (const selector of ['.detail-actions [download]', '[data-related-download]:visible']) {
+  for (const selector of ['.detail-actions .download-option', '[data-related-download]:visible']) {
     for (const link of await page
       .locator(selector)
       .all()
       .then((list) => list.slice(0, 2))) {
-      const url = await link.getAttribute('href'),
-        response = await context.request.get(new URL(url, base).href);
+      const entry = await link.getAttribute('href');
+      assert.ok(entry.startsWith('/download/'));
+      const landing = await context.request.get(new URL(entry, base).href);
+      assert.equal(landing.status(), 200);
+      const html = await landing.text();
+      const format = new URL(entry, base).searchParams.get('format');
+      const fileName = new URL(entry, base).pathname.split('/')[2] + '.' + format;
+      const tag = html.match(new RegExp(`<a[^>]+download="${fileName}"[^>]*>`))?.[0];
+      assert.ok(tag, fileName);
+      const url = tag.match(/href="([^"]+)"/)[1];
+      const response = await context.request.get(new URL(url, base).href);
       assert.equal(response.status(), 200);
       const body = await response.body(),
         pdf = url.includes('.pdf');
@@ -333,7 +346,7 @@ try {
   const staticLinks = await plain.locator('[data-related-root] [data-related-detail]').count();
   assert.ok(staticLinks >= 4);
   await expect(plain.locator('[data-related-controls]')).toBeHidden();
-  await expect(plain.locator('.detail-actions [download]')).toHaveCount(2);
+  await expect(plain.locator('.detail-actions a[href^="/download/"]')).toHaveCount(2);
   await nojs.close();
   report.checks.push('T24 server-rendered links and original downloads work without JavaScript');
   // A failed revalidation must cancel impressions that have not reached one second.

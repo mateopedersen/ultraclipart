@@ -62,7 +62,18 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
       (type === 'image/webp' && !(signature.startsWith('RIFF') && signature.slice(8) === 'WEBP'))
     )
       throw new Error('Invalid download contents');
-    const url = URL.createObjectURL(new Blob(chunks, { type }));
+    const blob = new Blob(chunks, { type });
+    const expectedBytes = Number(link.dataset.expectedBytes);
+    if (expectedBytes && length !== expectedBytes) throw new Error('File size changed');
+    const expectedHash = link.dataset.expectedSha256;
+    if (expectedHash) {
+      const digest = await crypto.subtle.digest('SHA-256', await blob.arrayBuffer());
+      const actual = [...new Uint8Array(digest)]
+        .map((byte) => byte.toString(16).padStart(2, '0'))
+        .join('');
+      if (actual !== expectedHash) throw new Error('File checksum changed');
+    }
+    const url = URL.createObjectURL(blob);
     const save = document.createElement('a');
     save.href = url;
     save.download = link.download || new URL(link.href).pathname.split('/').pop()!;

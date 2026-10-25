@@ -1,4 +1,5 @@
 ---
+import { downloadPageHref } from '../../lib/download-route';
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
 import RelatedArtwork from '../../components/RelatedArtwork.astro';
@@ -197,12 +198,12 @@ const facts = artworkDetails(item);
             <span>Edit Clipart</span>
           </a>
         )}
-        <a class="button download-option" href={item.webp} download={`${item.id}.webp`}>
+        <a class="button download-option" href={downloadPageHref(item.id, 'webp')}>
           <span class="download-symbol">
             <Icon name="image" size={22} />
           </span>
           <span class="download-copy">
-            <strong>Download WebP</strong>
+            <strong>Download Image</strong>
             <small>
               {item.alpha ? 'Transparent image for digital projects' : 'Image for digital projects'}
             </small>
@@ -217,7 +218,7 @@ const facts = artworkDetails(item);
           <Icon name="download" size={18} />
         </a>
         {item.pdf && (
-          <a class="button download-option" href={item.pdf} download={`${item.id}.pdf`}>
+          <a class="button download-option" href={downloadPageHref(item.id, 'pdf')}>
             <span class="download-symbol">
               <Icon name="document" size={22} />
             </span>

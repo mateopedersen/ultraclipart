@@ -1,3 +1,4 @@
+import { downloadPageHref } from '../lib/download-route';
 import { FAVORITES_KEY, parseFavoriteIds, toggleStoredFavorite } from '../lib/favorites-storage';
 import type { Mode, RelatedCard, Snapshot } from '../lib/related/engine';
 export function initRelatedArtwork() {
@@ -170,12 +171,12 @@ export function initRelatedArtwork() {
       const format = link.dataset.relatedDownload as 'webp' | 'pdf',
         url = data[format];
       link.hidden = !url;
-      if (url) link.href = url;
+      if (url) link.href = downloadPageHref(data.id, format);
       else link.removeAttribute('href');
-      link.download = `${data.id}.${format}`;
+      link.removeAttribute('download');
       link.setAttribute(
         'aria-label',
-        `Download ${format === 'webp' ? 'WebP' : 'PDF'}: ${data.title}`,
+        `Download ${format === 'webp' ? 'Image' : 'PDF'}: ${data.title}`,
       );
     });
     if (failed.has(data.id)) imageError(node);
@@ -188,13 +189,23 @@ export function initRelatedArtwork() {
     if (mode === 'monochrome') return snapshot.alternatives.filter((card) => card.monochrome);
     const small = matchMedia('(max-width: 900px)').matches,
       a = small ? 4 : 8,
-      c = small ? 2 : 4;
+      c = small ? 2 : 4,
+      collectionCount = Math.min(
+        snapshot.collection.length,
+        Math.max(
+          0,
+          (small ? 6 : 12) -
+            Math.min(a, snapshot.alternatives.length) -
+            Math.min(c, snapshot.companions.length),
+        ),
+      );
     return [
       ...snapshot.alternatives.slice(0, a),
       ...snapshot.companions.slice(0, c),
+      ...snapshot.collection.slice(0, collectionCount),
       ...snapshot.alternatives.slice(a),
       ...snapshot.companions.slice(c),
-      ...snapshot.collection,
+      ...snapshot.collection.slice(collectionCount),
     ];
   }
   function render(append = false, focusNew = false) {

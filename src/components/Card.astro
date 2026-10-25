@@ -1,4 +1,5 @@
 ---
+import { downloadPageHref } from '../lib/download-route';
 import Icon from './Icon.astro';
 import ShareButton from './ShareButton.astro';
 const { item } = Astro.props;
@@ -15,8 +16,8 @@ const { item } = Astro.props;
     </a>
     <div class="formats">
       <a
-        href={item.webp}
-        download={`${item.id}.webp`}
+        href={downloadPageHref(item.id, 'webp')}
+
         class="webp"
         aria-label={`Download Image: ${item.title}`}
       >
@@ -25,8 +26,8 @@ const { item } = Astro.props;
       </a>
       {item.pdf && (
         <a
-          href={item.pdf}
-          download={`${item.id}.pdf`}
+          href={downloadPageHref(item.id, 'pdf')}
+
           class="pdf"
           aria-label={`Download PDF: ${item.title}`}
         >

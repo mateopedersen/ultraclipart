@@ -119,8 +119,8 @@ test(
       );
       assert.ok(html.includes(`https://ultraclipart.com/art/${item.id}/`));
       assert.ok(html.includes(`/edit/${item.id}/`));
-      assert.ok(html.includes(`download="${item.id}.webp"`));
-      assert.ok(html.includes(`download="${item.id}.pdf"`));
+      assert.ok(html.includes(`href="/download/${item.id}/?format=webp"`));
+      assert.ok(html.includes(`href="/download/${item.id}/?format=pdf"`));
       assert.match(html, /ImageObject/);
       assert.ok(existsSync(new URL('../dist/edit/' + item.id + '/index.html', import.meta.url)));
     }

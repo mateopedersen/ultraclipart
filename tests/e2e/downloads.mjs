@@ -53,10 +53,18 @@ const status = page.locator('#download-status'),
   link = page.locator('[data-download-qa]');
 const cors = { 'access-control-allow-origin': origin };
 let pdf, webp;
-const setLink = async (url) =>
-  link.evaluate((element, value) => {
-    element.href = value;
-  }, url);
+const setLink = async (url) => {
+  const kind = url.endsWith('.webp') ? 'webp' : 'pdf';
+  const file = publication.files.find((file) => file.name === `winter-arctic-fox-resting.${kind}`);
+  await link.evaluate(
+    (element, value) => {
+      element.href = value.url;
+      element.dataset.expectedBytes = String(value.bytes);
+      element.dataset.expectedSha256 = value.sha256;
+    },
+    { url, bytes: file.bytes, sha256: file.sha256 },
+  );
+};
 const saveClick = async (name) => {
   const event = page.waitForEvent('download', { timeout: 30000 });
   await link.click();
@@ -78,6 +86,8 @@ try {
   expect(response.headers()['content-security-policy']).toContain(
     "connect-src 'self' https://assets.ultraclipart.com",
   );
+  await page.locator('.detail-actions a[href$="?format=pdf"]').click();
+  await page.waitForURL('**/download/winter-arctic-fox-resting/**');
   await page
     .locator('a[download][href$=".pdf"]')
     .first()

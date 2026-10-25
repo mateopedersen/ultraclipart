@@ -1,4 +1,5 @@
 ---
+import { downloadPageHref } from '../lib/download-route';
 import type { RelatedCard } from '../lib/related/engine';
 interface Props {
   card: RelatedCard;
@@ -25,16 +26,16 @@ const { card } = Astro.props;
     <p class="related-reason">{card.reason}</p>
     <div class="related-card-actions">
       <a
-        href={card.webp}
-        download={`${card.id}.webp`}
+        href={downloadPageHref(card.id, 'webp')}
+
         data-related-download="webp"
-        aria-label={`Download WebP: ${card.title}`}
+        aria-label={`Download Image: ${card.title}`}
       >
-        WebP <span aria-hidden="true">↓</span>
+        Image <span aria-hidden="true">↓</span>
       </a>
       <a
-        href={card.pdf}
-        download={`${card.id}.pdf`}
+        href={downloadPageHref(card.id, 'pdf')}
+
         data-related-download="pdf"
         aria-label={`Download PDF: ${card.title}`}
         hidden={!card.pdf}

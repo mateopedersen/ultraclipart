@@ -96,7 +96,7 @@ test(
         assert.ok(detail.includes(`https://ultraclipart.com/art/${item.id}/`));
         assert.match(detail, /ImageObject/);
         for (const kind of ['pdf', 'webp'])
-          assert.ok(detail.includes(`download="${item.id}.${kind}"`));
+          assert.ok(detail.includes(`href="/download/${item.id}/?format=${kind}"`));
         assert.ok(existsSync(new URL(`../dist/edit/${item.id}/index.html`, import.meta.url)));
       }
     }

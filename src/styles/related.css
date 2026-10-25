@@ -312,6 +312,9 @@
   .related-card-actions {
     gap: 5px;
   }
+  .related-card-actions a > span[aria-hidden='true'] {
+    display: none;
+  }
   .related-card-actions a {
     font-size: 11px;
     gap: 4px;

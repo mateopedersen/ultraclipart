@@ -434,6 +434,13 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
         const menu = header.querySelector<HTMLButtonElement>('.menu-button')!;
         const navigation = header.querySelector<HTMLElement>('#navigation')!;
         const mobile = window.matchMedia('(max-width: 1100px)');
+        const surprise = header.querySelector<HTMLAnchorElement>('.site-surprise-link')!;
+        const placeSurprise = () => {
+          if (mobile.matches) header.querySelector('.site-header-inner')!.append(surprise);
+          else
+            navigation.insertBefore(surprise, navigation.querySelector('.site-navigation-actions'));
+        };
+        placeSurprise();
         const disclosures = [...header.querySelectorAll<HTMLElement>('[data-nav-disclosure]')].map(
           (group) => ({
             group,
@@ -505,7 +512,10 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
         navigation
           .querySelectorAll<HTMLAnchorElement>('a')
           .forEach((link) => link.addEventListener('click', () => close()));
-        mobile.addEventListener('change', () => close());
+        mobile.addEventListener('change', () => {
+          close();
+          placeSurprise();
+        });
         window.addEventListener('pageshow', () => close());
       }
     </script>

@@ -194,8 +194,11 @@ try {
     readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8'),
   ).find((item) => item.id === 'winter-arctic-fox-resting');
   for (const format of ['webp', 'pdf']) {
+    await page.goto(`${base}/art/${original.id}/`);
+    await page.locator(`.detail-actions a[href$="?format=${format}"]`).click();
+    await page.waitForURL(`**/download/${original.id}/**`);
     const pending = page.waitForEvent('download');
-    await page.locator(`.detail-actions a[download="${original.id}.${format}"]`).click();
+    await page.locator(`[data-final-download="${format}"]`).click();
     const download = await pending;
     const path = resolve(dir, `original-winter-fox.${format}`);
     await download.saveAs(path);

@@ -107,6 +107,7 @@ jobs:
             if [ '${{ matrix.suite }}' = 'interface-artwork' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/artwork-details.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/related.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/download-page.mjs
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/sharing.mjs
             fi
             if [ '${{ matrix.suite }}' = 'interface-pages' ]; then
