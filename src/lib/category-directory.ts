@@ -24,10 +24,10 @@ const collectionStyle: Record<
     subjects: ['halloween', 'pumpkin', 'ghost'],
   },
   'Family & celebrations': {
-    title: 'Baby & celebrations',
+    title: 'Family & celebrations',
     description: 'Make the little moments memorable.',
     color: 'rose',
-    subjects: ['baby'],
+    subjects: ['baby', 'dad'],
   },
   'Christmas & Winter': {
     title: 'Winter wonder',
@@ -61,21 +61,21 @@ const collectionStyle: Record<
   },
   'Nature & elements': {
     title: 'Nature & elements',
-    description: 'Leaf shapes, flickering flames and details drawn from the natural world.',
+    description: 'Our planet, natural shapes and details drawn from the world around us.',
     color: 'sage',
-    subjects: ['leaves', 'fire', 'beach'],
+    subjects: ['leaves', 'earth', 'beach'],
   },
   'School & learning': {
     title: 'School & learning',
     description: 'School days, favorite stories and reading moments.',
     color: 'ice',
-    subjects: ['school', 'book'],
+    subjects: ['school', 'book', 'question-mark'],
   },
   'People & activities': {
     title: 'Everyday adventures',
     description: 'Curious minds, creative moments and characters in motion.',
     color: 'lavender',
-    subjects: ['boy', 'girl'],
+    subjects: ['boy', 'girl', 'hat'],
   },
   'Arts & entertainment': {
     title: 'Music & movie moments',
