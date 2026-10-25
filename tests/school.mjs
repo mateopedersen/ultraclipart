@@ -1,3 +1,4 @@
+import { assertPublishedImage } from './support/published-page.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -72,7 +73,7 @@ test(
       assert.ok(pages.includes(`/art/${item.id}/`));
       assert.ok(images.includes(`/art/${item.id}/`));
       assert.ok(detail.includes('ImageObject'));
-      assert.ok(detail.includes('assets.ultraclipart.com'));
+      assertPublishedImage(item, detail);
       assert.ok(!detail.includes('content="noindex'));
       assert.ok(existsSync(new URL(`../dist/edit/${item.id}/index.html`, import.meta.url)));
     }
