@@ -1,0 +1,202 @@
+{
+  "wave": "wave_252",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "fall-outline-baking-child",
+      "title": "Fall Baking Coloring Outline",
+      "alt": "A black-line coloring illustration shows a child in an apron stirring a bowl beside apple slices at a low counter.",
+      "description": "A black-line coloring illustration shows a child in an apron stirring a bowl beside apple slices at a low counter. An original illustration for personal fall projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_252/source/fall-outline-baking-child.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1368,
+      "height": 1149,
+      "pdfWidth": 1000,
+      "pdfHeight": 840,
+      "sourceType": "raster",
+      "sourceSha256": "4291b592bb0ab77b9351eccbb4139c72836015372f62dc5e325a1508f5fa7b38",
+      "inputSignature": "3c2295c1b955780f3f21ca942f973e0326ce4ec322320d049b95825305afb02d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 687241,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 687241,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        265,
+        48,
+        1103,
+        1104
+      ],
+      "image": {
+        "width": 1000,
+        "height": 840,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_252/exports/fall-outline-baking-child.pdf",
+          "bytes": 687241,
+          "sha256": "2b087e80d956a97db50f83f124a57691cfc3406ae029c50a994d05e2c6db34a6"
+        },
+        "webp": {
+          "path": "work/production/wave_252/exports/fall-outline-baking-child.webp",
+          "bytes": 448130,
+          "sha256": "6c7671c6acd9cdebe964da3875fa3a4d2491a63310a86cd6a5d7b0b3401a96a0"
+        },
+        "thumb": {
+          "path": "work/production/wave_252/exports/fall-outline-baking-child-thumb.webp",
+          "bytes": 36256,
+          "sha256": "cf718bada47ea5999b9a0a707627c2a1be2169e6a0422d853f290b9c653e142d"
+        }
+      },
+      "proofSha256": "322eda36da00a1b6660db64c5fa27f63dcb546d3fae41ae3bee363d5590b54e3",
+      "pairMeanRgbDifference": 4.90762
+    },
+    {
+      "id": "fall-outline-park-picnic",
+      "title": "Fall Park Picnic Coloring Outline",
+      "alt": "A black-line coloring illustration shows a picnic basket of sandwiches and apples on a checked blanket beneath a leaf branch.",
+      "description": "A black-line coloring illustration shows a picnic basket of sandwiches and apples on a checked blanket beneath a leaf branch. An original illustration for personal fall projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_252/source/fall-outline-park-picnic.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "ed8164b1f2c0ed728d4959ce2383983c616472d899d41b612e1e4c48e869e1ee",
+      "inputSignature": "9d5b93cd41d006827a11d69151e8dcbe4fa37e0cf68598a0bd0ad30ca5a64bd5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 939100,
+        "weightedCmykRmse": 1.365107
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1347099,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1144492,
+          "weightedCmykRmse": 0.763911
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1080217,
+          "weightedCmykRmse": 0.907259
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1003293,
+          "weightedCmykRmse": 1.08783
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 939100,
+          "weightedCmykRmse": 1.365107
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        107,
+        78,
+        1213,
+        1142
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_252/exports/fall-outline-park-picnic.pdf",
+          "bytes": 939100,
+          "sha256": "b9c76a8719082c747c5544c6b2c8bfbab48686d4309b98dac9200da8a13295d5"
+        },
+        "webp": {
+          "path": "work/production/wave_252/exports/fall-outline-park-picnic.webp",
+          "bytes": 742138,
+          "sha256": "86169e31331453b73c254d37e47ac720e20c26bec4562ecc233ed1f74ae44b0a"
+        },
+        "thumb": {
+          "path": "work/production/wave_252/exports/fall-outline-park-picnic-thumb.webp",
+          "bytes": 65668,
+          "sha256": "41e8f8679cce9b0814b9934863939a8e7fc7332b25a70090fe2f66acf46b3dbe"
+        }
+      },
+      "proofSha256": "8eb39bc59f755108c74421e938011a47de244454d4e9735afd66492a88a74c7c",
+      "pairMeanRgbDifference": 6.73835
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:34:39.408065+00:00",
+  "screenReviewScope": "Every selected native CMYK PDF render visually inspected for full framing, plausible natural anatomy, food and botanical detail, supported structures, independent compositions and readable outline contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:35:16.285Z",
+  "cdnVerifiedAt": "2026-10-25T15:51:29.162Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T16:11:23.963650+00:00"
+}

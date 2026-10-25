@@ -1,21 +1,27 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { shardRasterTargets } from '../scripts/ci-raster-shards.mjs';
+import { originalRasterTargets, shardRasterTargets } from '../scripts/ci-raster-shards.mjs';
 
 test('unsharded browser invocation retains its original exact target list', () => {
   const targets = [{ id: 'one' }, { id: 'two' }];
   assert.equal(shardRasterTargets(targets, {}), targets);
 });
 test('all seasonal catalog targets occur exactly once across the three CI shards', () => {
-  const topics = new Set(
-    'winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey'.split(
-      ',',
+  const topics = JSON.parse(
+    readFileSync(new URL('../data/topics.json', import.meta.url), 'utf8'),
+  ).topics;
+  const catalog = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url), 'utf8'));
+  const targets = originalRasterTargets(catalog, topics);
+  assert.deepEqual(
+    targets,
+    catalog.filter(
+      (item) =>
+        item.sourceType === 'raster' &&
+        item.productionMethod !== 'owner-supplied' &&
+        topics.some((topic) => topic.slug === item.topic),
     ),
   );
-  const targets = JSON.parse(
-    readFileSync(new URL('../data/art.json', import.meta.url), 'utf8'),
-  ).filter((item) => item.sourceType === 'raster' && topics.has(item.topic));
   assert.ok(targets.length >= 550, 'Keep all currently published seasonal artworks covered');
   const shards = [0, 1, 2].map((index) =>
     shardRasterTargets(targets, { RASTER_SHARD_COUNT: '3', RASTER_SHARD_INDEX: String(index) }),
@@ -35,11 +41,31 @@ test('all seasonal catalog targets occur exactly once across the three CI shards
   for (const index of [0, 1, 2])
     assert.ok(workflow.includes(`catalog-seasonal-${index}`), `Shard ${index} must be dispatched`);
   assert.ok(workflow.includes('export RASTER_SHARD_COUNT=3'));
-  assert.ok(
-    workflow.includes(
-      'RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey ALL_RASTER=1',
-    ),
+  assert.ok(workflow.includes('RASTER_ORIGINAL_TOPICS=1 ALL_RASTER=1'));
+});
+test('new planned topics enter editor coverage while owner packs and supplemental topics stay separate', () => {
+  const catalog = [
+    { id: 'new', topic: 'new-topic', sourceType: 'raster', productionMethod: 'generated-raster' },
+    { id: 'owner', topic: 'new-topic', sourceType: 'raster', productionMethod: 'owner-supplied' },
+    {
+      id: 'extra',
+      topic: 'extra-topic',
+      sourceType: 'raster',
+      productionMethod: 'generated-raster',
+    },
+    {
+      id: 'vector',
+      topic: 'new-topic',
+      sourceType: 'vector',
+      productionMethod: 'generated-vector',
+    },
+  ];
+  assert.deepEqual(
+    originalRasterTargets(catalog, [{ slug: 'new-topic' }]).map((art) => art.id),
+    ['new'],
   );
+  for (const topics of [[], [{ slug: 'same' }, { slug: 'same' }], [{ slug: '../escape' }], null])
+    assert.throws(() => originalRasterTargets(catalog, topics));
 });
 test('partitioning remains complete and balanced for non-divisible target counts', () => {
   for (const size of [3, 4, 50, 551, 1000]) {

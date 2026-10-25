@@ -198,7 +198,7 @@ jobs:
                 UC_CI_SUITE='${{ matrix.suite }}'
                 export RASTER_SHARD_COUNT=3
                 export RASTER_SHARD_INDEX="${UC_CI_SUITE##*-}"
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_ORIGINAL_TOPICS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
                 ;;
             esac
           done

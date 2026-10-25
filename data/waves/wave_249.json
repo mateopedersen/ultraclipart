@@ -1,0 +1,566 @@
+{
+  "wave": "wave_249",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "fall-hot-cocoa-tray",
+      "title": "Cocoa on a Cool Fall Day",
+      "alt": "Two ceramic mugs of cocoa, a saucer of oat biscuits and a folded rust napkin stand on a wooden serving tray.",
+      "description": "Two ceramic mugs of cocoa, a saucer of oat biscuits and a folded rust napkin stand on a wooden serving tray. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_249/source/fall-hot-cocoa-tray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d28f6b6eb0d9838ac724794b55b2843f80d1d19f38c1377183bff923cf3f901a",
+      "inputSignature": "de0b855b0fab36bcfaa10aefba92e84fd0dda4438016bd1c3e957eb7e0f63d07",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 800444,
+        "weightedCmykRmse": 0.783299
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 998058,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 800444,
+          "weightedCmykRmse": 0.783299
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        49,
+        54,
+        1509,
+        978
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_249/exports/fall-hot-cocoa-tray.pdf",
+          "bytes": 800444,
+          "sha256": "88b42744454cb9134f047de4b46f3d907fadeadd0354c0b317738e25254ad8a3"
+        },
+        "webp": {
+          "path": "work/production/wave_249/exports/fall-hot-cocoa-tray.webp",
+          "bytes": 1593174,
+          "sha256": "0df32b588fb73ca2fa364697b0c377fc595d1c57c712db1d2de823ba4b0e0526"
+        },
+        "thumb": {
+          "path": "work/production/wave_249/exports/fall-hot-cocoa-tray-thumb.webp",
+          "bytes": 45766,
+          "sha256": "7481ba430ae69ed48d81eaa600119a509d5108f4248b597dcf1885e5e03b695c"
+        }
+      },
+      "proofSha256": "db7c6662c223b4114d27a52463b0fc8b69eab5429a40729bd8b144cfaca0c8f8",
+      "pairMeanRgbDifference": 3.25255
+    },
+    {
+      "id": "fall-thermos-trail-snack",
+      "title": "Fall Hiking Flask and Snack",
+      "alt": "A stainless insulated flask and its cup lid stand beside an open cloth pouch holding an apple and trail mix, with two golden leaves below.",
+      "description": "A stainless insulated flask and its cup lid stand beside an open cloth pouch holding an apple and trail mix, with two golden leaves below. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_249/source/fall-thermos-trail-snack.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "bcbba3a7ea3259b9e6b31cf005ddc07fd4442f9d76923799cc7ab027e45c0067",
+      "inputSignature": "65420351d86c8d450c7386e146143ea8a35b078530565c983d3a07bf54ce204a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 931115,
+        "weightedCmykRmse": 0.819829
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1186876,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 931115,
+          "weightedCmykRmse": 0.819829
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        146,
+        64,
+        1280,
+        1127
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_249/exports/fall-thermos-trail-snack.pdf",
+          "bytes": 931115,
+          "sha256": "7dfd89ba2be820f30bf52eb3b825455b7f27fded9324c85cc1a6f17dfee1f974"
+        },
+        "webp": {
+          "path": "work/production/wave_249/exports/fall-thermos-trail-snack.webp",
+          "bytes": 1153398,
+          "sha256": "2a86feb06cb793d6e04602adcb7778f75a32338f5688a01c42303b0d3082cd45"
+        },
+        "thumb": {
+          "path": "work/production/wave_249/exports/fall-thermos-trail-snack-thumb.webp",
+          "bytes": 52914,
+          "sha256": "6306fa5117af20429205c073ed9fef745121c3add4fd73b8ddb784ecac8f6591"
+        }
+      },
+      "proofSha256": "85fac5254808b8671a5e1e0fb77c4d31102d0d612c66d6782988631d42c09d05",
+      "pairMeanRgbDifference": 3.64934
+    },
+    {
+      "id": "fall-community-cleanup",
+      "title": "Community Fall Cleanup",
+      "alt": "Two gloved adults use broad leaf scoops to fill a supported paper yard bag with dry autumn leaves.",
+      "description": "Two gloved adults use broad leaf scoops to fill a supported paper yard bag with dry autumn leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_249/source/fall-community-cleanup.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1302,
+      "height": 1208,
+      "pdfWidth": 960,
+      "pdfHeight": 891,
+      "sourceType": "raster",
+      "sourceSha256": "f2b24d07ab9fc0c5a44744d0c3a483824c75703e06a66ae752d493202750b17c",
+      "inputSignature": "beb0f1d65ffadf09f5c923798855c0db1bdc2420f0b1d7d0f46a0a36e0064fd7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976133,
+        "weightedCmykRmse": 1.37734
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1464850,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1202104,
+          "weightedCmykRmse": 0.768004
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1137500,
+          "weightedCmykRmse": 0.905928
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1047502,
+          "weightedCmykRmse": 1.088718
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976133,
+          "weightedCmykRmse": 1.37734
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        54,
+        6,
+        1258,
+        1198
+      ],
+      "image": {
+        "width": 960,
+        "height": 891,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_249/exports/fall-community-cleanup.pdf",
+          "bytes": 976133,
+          "sha256": "1c35b774de76d0e1dab6965878799e2fd462ddfbf86d27f253e283cd5ad7706a"
+        },
+        "webp": {
+          "path": "work/production/wave_249/exports/fall-community-cleanup.webp",
+          "bytes": 1430884,
+          "sha256": "863d45d80da5e4d9eb2a8ff876c0564d625306d1d5fa50b01f307ef20ffd0ed0"
+        },
+        "thumb": {
+          "path": "work/production/wave_249/exports/fall-community-cleanup-thumb.webp",
+          "bytes": 86460,
+          "sha256": "bd7f8497d3b98db469c5efc1182cf81f9cea72408d96eb47a17d1a281097cd78"
+        }
+      },
+      "proofSha256": "1f88cbd4059920d4684bbf8ef9a8713fc7c5325facdc8517d1ca8668f9b330d0",
+      "pairMeanRgbDifference": 2.39827
+    },
+    {
+      "id": "fall-football-backyard",
+      "title": "Backyard Fall Football Catch",
+      "alt": "Two children in plain sweaters toss a brown football across a small leaf-strewn lawn.",
+      "description": "Two children in plain sweaters toss a brown football across a small leaf-strewn lawn. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_249/source/fall-football-backyard.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7db6a72f3a96b644f9b1295d49f48b569de3c545668f8c8ede32bea829ee5781",
+      "inputSignature": "a8721e7d36ee3f57844b644c026bfcf772e26c6f7d819c0660989cb6231daa77",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 852887,
+        "weightedCmykRmse": 0.795019
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1007973,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 852887,
+          "weightedCmykRmse": 0.795019
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        78,
+        1517,
+        982
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_249/exports/fall-football-backyard.pdf",
+          "bytes": 852887,
+          "sha256": "682554a1a1060aeac6723a7b12e3c59472a6b593e8b907d0acf1d383acb420b3"
+        },
+        "webp": {
+          "path": "work/production/wave_249/exports/fall-football-backyard.webp",
+          "bytes": 1655934,
+          "sha256": "ee767490f0df8e5d91a4e98b1bb0ebb09325a0ef0b7a42f2c8e893740f666d9b"
+        },
+        "thumb": {
+          "path": "work/production/wave_249/exports/fall-football-backyard-thumb.webp",
+          "bytes": 57552,
+          "sha256": "55861c6a847299d6c828a2da93dd443cbab68b75d6d165022cd76ab22389b1da"
+        }
+      },
+      "proofSha256": "c526d1549239ec7f29b105607c2da2f8753fdb8d587e5d96756fcd69fcce44fb",
+      "pairMeanRgbDifference": 4.36936
+    },
+    {
+      "id": "fall-kite-flying",
+      "title": "Flying a Kite in Fall",
+      "alt": "An adult and child fly a warm-colored diamond kite above a small patch of fall leaves.",
+      "description": "An adult and child fly a warm-colored diamond kite above a small patch of fall leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_249/source/fall-kite-flying.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "2722005dd2c975c3f68e496b204983d10eedaa237275c58b5f198f56515be3e8",
+      "inputSignature": "3a80f7d1540b657cbf53b1e2f0ba4db962a88da3500515090b2e9dc690abd8b8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 976987,
+        "weightedCmykRmse": 0.819934
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1162238,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 976987,
+          "weightedCmykRmse": 0.819934
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        21,
+        19,
+        1125,
+        1355
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_249/exports/fall-kite-flying.pdf",
+          "bytes": 976987,
+          "sha256": "d2b771eed45a03577b5e3d3e91627b4db47ff8e10596d8a45143a7156989af3c"
+        },
+        "webp": {
+          "path": "work/production/wave_249/exports/fall-kite-flying.webp",
+          "bytes": 1095584,
+          "sha256": "e8c0094613dbd3f4d3a11d70edf8226545485345367f6fcdad4e1d40e471ea5b"
+        },
+        "thumb": {
+          "path": "work/production/wave_249/exports/fall-kite-flying-thumb.webp",
+          "bytes": 66916,
+          "sha256": "94c863ea1f1c8c4fd42dd3f62e5fcae227753b39b2466a30aeb6c916985de0b2"
+        }
+      },
+      "proofSha256": "e4334b07e8953dde98fbf8397d8be61e5dabc5bc305c66b976907c3035d187da",
+      "pairMeanRgbDifference": 3.95724
+    },
+    {
+      "id": "fall-porch-swing-reading",
+      "title": "Reading on a Fall Porch Swing",
+      "alt": "An adult reads on a wooden porch swing with a plaid throw, supported by a complete freestanding frame decorated with a few fall leaves.",
+      "description": "An adult reads on a wooden porch swing with a plaid throw, supported by a complete freestanding frame decorated with a few fall leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_249/source/fall-porch-swing-reading.png",
+      "printMaxEdgePx": 850,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 850,
+      "pdfHeight": 777,
+      "sourceType": "raster",
+      "sourceSha256": "9ca45a9abff6800710e9197b4183681685182ca6e3baa73f13e1d3caf600b4a7",
+      "inputSignature": "23676060c19d348955516d523f328405f6db7208ac7560b6f30d0b19356cbca8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 964054,
+        "weightedCmykRmse": 1.277281
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1349132,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1167384,
+          "weightedCmykRmse": 0.725192
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1110791,
+          "weightedCmykRmse": 0.862367
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038807,
+          "weightedCmykRmse": 1.031764
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 964054,
+          "weightedCmykRmse": 1.277281
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        8,
+        3,
+        1308,
+        1197
+      ],
+      "image": {
+        "width": 850,
+        "height": 777,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_249/exports/fall-porch-swing-reading.pdf",
+          "bytes": 964054,
+          "sha256": "b9f5c3354da80843e452ce614d0be2daa7e236a55937e7f4fb634d6bf1ca2d30"
+        },
+        "webp": {
+          "path": "work/production/wave_249/exports/fall-porch-swing-reading.webp",
+          "bytes": 1562834,
+          "sha256": "4970936ec5e00cd9503af8d8db802c3a18edd551f854834745f6e0d46917e653"
+        },
+        "thumb": {
+          "path": "work/production/wave_249/exports/fall-porch-swing-reading-thumb.webp",
+          "bytes": 98070,
+          "sha256": "6999b859cbd4062e0c28d428cf5d15fcea849064eb75fc5ce0591c7404f89f39"
+        }
+      },
+      "proofSha256": "463335a9984a479623286c2fb6036e273002e66d38137392893a445ca8b1e27b",
+      "pairMeanRgbDifference": 6.64488
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:34:39.405896+00:00",
+  "screenReviewScope": "Every selected native CMYK PDF render visually inspected for full framing, plausible natural anatomy, food and botanical detail, supported structures, independent compositions and readable outline contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:35:16.340Z",
+  "cdnVerifiedAt": "2026-10-25T15:51:29.162Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T16:11:23.963650+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "wave": "wave_252",
+  "topic": "fall",
+  "method": "builtin-image-generation",
+  "research": "data/research/fall-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "fall-outline-baking-child",
+      "title": "Fall Baking Coloring Outline",
+      "alt": "A black-line coloring illustration shows a child in an apron stirring a bowl beside apple slices at a low counter.",
+      "description": "A black-line coloring illustration shows a child in an apron stirring a bowl beside apple slices at a low counter. An original illustration for personal fall projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_252/source/fall-outline-baking-child.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "fall-outline-park-picnic",
+      "title": "Fall Park Picnic Coloring Outline",
+      "alt": "A black-line coloring illustration shows a picnic basket of sandwiches and apples on a checked blanket beneath a leaf branch.",
+      "description": "A black-line coloring illustration shows a picnic basket of sandwiches and apples on a checked blanket beneath a leaf branch. An original illustration for personal fall projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_252/source/fall-outline-park-picnic.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

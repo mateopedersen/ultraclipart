@@ -4,13 +4,21 @@ import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { chooseExportFormat } from '../helpers/export.mjs';
-import { shardRasterTargets } from '../../scripts/ci-raster-shards.mjs';
+import { originalRasterTargets, shardRasterTargets } from '../../scripts/ci-raster-shards.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
   engine = process.env.UC_BROWSER || 'chromium';
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
 mkdirSync(out, { recursive: true });
 const requestedIds = new Set((process.env.RASTER_IDS || '').split(',').filter(Boolean));
-const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url))).filter(
+const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
+const selection =
+  process.env.RASTER_ORIGINAL_TOPICS === '1'
+    ? originalRasterTargets(
+        catalog,
+        JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics,
+      )
+    : catalog;
+const art = selection.filter(
   (a) =>
     a.sourceType === 'raster' &&
     (!requestedIds.size || requestedIds.has(a.id)) &&

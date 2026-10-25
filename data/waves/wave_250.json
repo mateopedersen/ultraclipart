@@ -1,0 +1,552 @@
+{
+  "wave": "wave_250",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "fall-camper-leafy-campsite",
+      "title": "Small Camper in Fall",
+      "alt": "A compact cream and green travel trailer with a complete hitch and side wheel stands beside a folding chair on fallen leaves.",
+      "description": "A compact cream and green travel trailer with a complete hitch and side wheel stands beside a folding chair on fallen leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_250/source/fall-camper-leafy-campsite.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "76fa0f1dd2f85409f58027b5bf765a42c9f476b4617ff6531f52b0693eea68fc",
+      "inputSignature": "27938088918753267528c880fcdbaf6355a3b2ae835da5688938f7af3491e765",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 927779,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 927779,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        105,
+        103,
+        1440,
+        932
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_250/exports/fall-camper-leafy-campsite.pdf",
+          "bytes": 927779,
+          "sha256": "a5b530600fc0c6a4b5ede2ee3603adafc7e1f6b5c9be0411338a65179ef24d5b"
+        },
+        "webp": {
+          "path": "work/production/wave_250/exports/fall-camper-leafy-campsite.webp",
+          "bytes": 1461064,
+          "sha256": "2a95fd670ab27cad0de70e75bc0fc07bb9cf8d747babe6be6a4b371b68fc0720"
+        },
+        "thumb": {
+          "path": "work/production/wave_250/exports/fall-camper-leafy-campsite-thumb.webp",
+          "bytes": 45466,
+          "sha256": "83bfaedea34d2d6a00c1d706e962c74c55755cc62f61d41a3fa1c56bd55d851e"
+        }
+      },
+      "proofSha256": "3d5d06886d69cff91f23842c3cf61eaf6fc7be989afe7e99dc6306d226d329fd",
+      "pairMeanRgbDifference": 4.1208
+    },
+    {
+      "id": "fall-tent-lantern",
+      "title": "Fall Tent and Camping Lantern",
+      "alt": "An olive dome tent with an open flap stands beside a rolled sleeping mat and camping lantern on fall leaves.",
+      "description": "An olive dome tent with an open flap stands beside a rolled sleeping mat and camping lantern on fall leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_250/source/fall-tent-lantern.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "3018cdd69d93c6e49662d8282a0d8249e71f075942e5ca55a49fe7516a989e92",
+      "inputSignature": "a80aeed6f375f983a06ccf546871992382cb9b173211f66cb153ecb7c0a7b14e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 861836,
+        "weightedCmykRmse": 0.785237
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1067095,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 861836,
+          "weightedCmykRmse": 0.785237
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        76,
+        1480,
+        931
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_250/exports/fall-tent-lantern.pdf",
+          "bytes": 861836,
+          "sha256": "eb889b6d791cd228db0c7e3f3789a0a9e0ae0d3e257d88d4f163636b681b7704"
+        },
+        "webp": {
+          "path": "work/production/wave_250/exports/fall-tent-lantern.webp",
+          "bytes": 1602236,
+          "sha256": "898133faf91ea7c830ffed0987bb0c1f1666fae942c4bb9227a934f38d1dc412"
+        },
+        "thumb": {
+          "path": "work/production/wave_250/exports/fall-tent-lantern-thumb.webp",
+          "bytes": 49738,
+          "sha256": "ccb243428abca25a9f0a30b44a5b53c0a6c459222f4a4c6bb1645f78be4f1b0b"
+        }
+      },
+      "proofSha256": "19970740d7550b5a51d1661b5b56265e8a6358d64c53a40f9c08aacf6f8d5c3e",
+      "pairMeanRgbDifference": 4.23565
+    },
+    {
+      "id": "fall-covered-bridge-walkway",
+      "title": "Covered Footbridge in Fall",
+      "alt": "A timber covered footbridge has a visible open walkway, cross-braced rails and stone supports surrounded by amber leaves.",
+      "description": "A timber covered footbridge has a visible open walkway, cross-braced rails and stone supports surrounded by amber leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_250/source/fall-covered-bridge-walkway.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "ca34ca65fd0e8156a48732071ed1652d00f7ab13c09b68218036f339e3b85b40",
+      "inputSignature": "aaffedf29f1bea75eb7999856546524d5ab19a1019d362b0e5ac5da37939a82a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 990774,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 990774,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        166,
+        85,
+        1386,
+        944
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_250/exports/fall-covered-bridge-walkway.pdf",
+          "bytes": 990774,
+          "sha256": "78256417a3361714b175036db61be0bea7da9190bceca556139fdb05419f45e7"
+        },
+        "webp": {
+          "path": "work/production/wave_250/exports/fall-covered-bridge-walkway.webp",
+          "bytes": 1567676,
+          "sha256": "4a4bf61e86ac47e3fa93e72916fd1eff74b175597fa079e3f3674f6f48005204"
+        },
+        "thumb": {
+          "path": "work/production/wave_250/exports/fall-covered-bridge-walkway-thumb.webp",
+          "bytes": 49504,
+          "sha256": "ed0975911b79a03dcc3882396d3d0cf32b21a8db0375c848d38d662be1f566d1"
+        }
+      },
+      "proofSha256": "03ea2cdd7439d6e077fd49960088c6b939f36bc02f5c9ce782197f6e2d7472b1",
+      "pairMeanRgbDifference": 4.52585
+    },
+    {
+      "id": "fall-town-bookshop",
+      "title": "Small Bookshop in Fall",
+      "alt": "A small dark green bookshop facade has a window of blank-spined books, an open doorway and a restrained autumn leaf garland.",
+      "description": "A small dark green bookshop facade has a window of blank-spined books, an open doorway and a restrained autumn leaf garland. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_250/source/fall-town-bookshop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "c7f65fc54586819a7837381cc459fd81ddc7d211d80bdc51a7a3f40bc03dd0e1",
+      "inputSignature": "3df05b45d6b27fc3161796b78a499826e5b871c69a51da78381c9b51806b3f2a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 970712,
+        "weightedCmykRmse": 1.323577
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1525141,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1243750,
+          "weightedCmykRmse": 0.748599
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1160740,
+          "weightedCmykRmse": 0.884638
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1064355,
+          "weightedCmykRmse": 1.054699
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 970712,
+          "weightedCmykRmse": 1.323577
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        176,
+        62,
+        1179,
+        1104
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_250/exports/fall-town-bookshop.pdf",
+          "bytes": 970712,
+          "sha256": "20144c54d9e13e664b4c150b6634b54b0b93eedcc729c89264bdf54331111d33"
+        },
+        "webp": {
+          "path": "work/production/wave_250/exports/fall-town-bookshop.webp",
+          "bytes": 1386158,
+          "sha256": "cf977b155285f19118f485dc6a00344b6d4ade832ff2c6558e92c45d44b19f23"
+        },
+        "thumb": {
+          "path": "work/production/wave_250/exports/fall-town-bookshop-thumb.webp",
+          "bytes": 62786,
+          "sha256": "fb3fc9666c9191c7683210793172591d19defbb23ad96e3a3894da09bb828940"
+        }
+      },
+      "proofSha256": "a5f71d26e8045fe39d006b3ec8db3c0cdafbf651a329af02cb237d224ed9528c",
+      "pairMeanRgbDifference": 3.95017
+    },
+    {
+      "id": "fall-bakery-display",
+      "title": "Fall Bakery Window",
+      "alt": "A framed bakery display holds a tart, a plain loaf and cinnamon rolls on wooden shelves below a leaf garland.",
+      "description": "A framed bakery display holds a tart, a plain loaf and cinnamon rolls on wooden shelves below a leaf garland. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_250/source/fall-bakery-display.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "6132132fa2fb5178bfd56f67167bdf4b85eb4072f2584886c6b5a92070bbf7e1",
+      "inputSignature": "2dbc68ef94edd14a174504c69c2cabfe217c7d60bc5d01b1fbcdf1297d757a65",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 992014,
+        "weightedCmykRmse": 1.367139
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1519977,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1237742,
+          "weightedCmykRmse": 0.761598
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1168434,
+          "weightedCmykRmse": 0.903683
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1071872,
+          "weightedCmykRmse": 1.093526
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 992014,
+          "weightedCmykRmse": 1.367139
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        181,
+        75,
+        1134,
+        1122
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_250/exports/fall-bakery-display.pdf",
+          "bytes": 992014,
+          "sha256": "59102f6df0b3f692c311a18091c47402f93dbed260577ec594d96c4722585273"
+        },
+        "webp": {
+          "path": "work/production/wave_250/exports/fall-bakery-display.webp",
+          "bytes": 1458186,
+          "sha256": "09f82ffa0988cab9b9b9e9e5dc04a123862f24e268cea5fa9547b9ae007c0489"
+        },
+        "thumb": {
+          "path": "work/production/wave_250/exports/fall-bakery-display-thumb.webp",
+          "bytes": 71224,
+          "sha256": "19e08ae64ceea68a69de3ee1be6b7baf154242ec5b02e86c0313ee9fc6566b8d"
+        }
+      },
+      "proofSha256": "5757a2909a3b8ac7d3719041ebd397b9b4e9b3c802820e4762c8768b68e8c564",
+      "pairMeanRgbDifference": 3.91023
+    },
+    {
+      "id": "fall-community-bench",
+      "title": "Park Bench with Fall Plaid Throw",
+      "alt": "A dark green park bench holds a plaid throw, a closed book and a reusable mug above fallen golden leaves.",
+      "description": "A dark green park bench holds a plaid throw, a closed book and a reusable mug above fallen golden leaves. An original illustration for personal fall projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_250/source/fall-community-bench.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "fall",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "0c5bb75d8d94b65d9c4883f44b7fa099964b9ae03f22962a34c63a01effa2207",
+      "inputSignature": "b125eb608ea88aaad63c3306a8b78527f6f41cbdf15aee9d34a303e36fd81ec3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 937147,
+        "weightedCmykRmse": 0.78778
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1106964,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 937147,
+          "weightedCmykRmse": 0.78778
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        107,
+        99,
+        1428,
+        909
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_250/exports/fall-community-bench.pdf",
+          "bytes": 937147,
+          "sha256": "9391a0be3d2902fcb2f4d3aba75d8858f1ee05c12b89e683816271c2a1b477f1"
+        },
+        "webp": {
+          "path": "work/production/wave_250/exports/fall-community-bench.webp",
+          "bytes": 1604654,
+          "sha256": "143ee0ba90ecd31ebce6d15ab889a9ee7a0834caab09432c2d9add33d23289ef"
+        },
+        "thumb": {
+          "path": "work/production/wave_250/exports/fall-community-bench-thumb.webp",
+          "bytes": 56100,
+          "sha256": "ad8444e631357237b0b40beb6e8f221fbfc38476ff68eb036f6728103fed44cc"
+        }
+      },
+      "proofSha256": "a0ab36a068b69f3558bad3cab266568f554c1c74d612110028a9606457710069",
+      "pairMeanRgbDifference": 4.24983
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:34:39.406530+00:00",
+  "screenReviewScope": "Every selected native CMYK PDF render visually inspected for full framing, plausible natural anatomy, food and botanical detail, supported structures, independent compositions and readable outline contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:35:16.271Z",
+  "cdnVerifiedAt": "2026-10-25T15:51:29.162Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T16:11:23.963650+00:00"
+}
