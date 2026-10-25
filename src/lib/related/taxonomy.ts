@@ -1,5 +1,8 @@
-/** Explicit topic bindings: collection labels and URL slugs are not subject identities. */
-export const TAXONOMY_VERSION = 'uc-subjects-3';
+import catalogTopics from '../../../data/topics.json';
+import extraTopics from '../../../data/extra-topics.json';
+
+/** Explicit semantic bindings take precedence over isolated catalog collection identities. */
+export const TAXONOMY_VERSION = 'uc-subjects-4';
 export interface Subject {
   id: string;
   topic: string;
@@ -199,6 +202,32 @@ export const THEME_COLLECTIONS = new Set([
   'autumn',
   'fall',
 ]);
+/** New approved catalog topics get their own identity, never a guessed shared family.
+ * Keep them out of the title classifier: a decorative mention must not become a
+ * primary subject on another collection. Broad themes retain contextual classification.
+ */
+export const REGISTERED_TOPICS = new Set(
+  [...catalogTopics.topics, ...extraTopics].map((topic) => topic.slug),
+);
+export const CATALOG_SUBJECTS = new Map<string, Subject>(
+  [...catalogTopics.topics, ...extraTopics]
+    .filter((topic) => !BY_TOPIC.has(topic.slug) && !THEME_COLLECTIONS.has(topic.slug))
+    .map((topic) => {
+      const label = topic.keyword.replace(/\s+clipart$/i, '').trim();
+      return [
+        topic.slug,
+        {
+          id: `catalog.topic.${topic.slug}`,
+          topic: topic.slug,
+          label,
+          plural: `${label.toLowerCase()} designs`,
+          domain: 'catalog',
+          family: topic.slug,
+          terms: [...new Set([words(label), words(topic.slug)])],
+        },
+      ];
+    }),
+);
 export function words(value: string) {
   return value
     .normalize('NFKD')

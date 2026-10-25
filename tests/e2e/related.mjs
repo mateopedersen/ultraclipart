@@ -146,6 +146,46 @@ try {
       });
     }
   }
+  // A newly registered topic must render recommendations in static HTML and
+  // progressively append on real scrolling, without duplicates or focus theft.
+  const usb = 'usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement';
+  for (const width of [1440, 390]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(`${base}/art/${usb}/`, { waitUntil: 'networkidle' });
+    const root = page.locator('[data-related-root]');
+    await expect(root).toHaveAttribute('data-ready', 'true');
+    const before = await root.locator('.related-card').count();
+    assert.ok(before > 0 && before <= (width > 900 ? 12 : 6));
+    await page.locator('[data-related-mode="best"]').focus();
+    await page.locator('[data-related-sentinel]').scrollIntoViewIfNeeded();
+    await expect.poll(() => root.locator('.related-card').count()).toBeGreaterThan(before);
+    await expect(page.locator('[data-related-mode="best"]')).toBeFocused();
+    let previous = 0;
+    while (await page.locator('[data-related-more]').isVisible()) {
+      const count = await root.locator('.related-card').count();
+      assert.ok(count > previous);
+      previous = count;
+      await page.locator('[data-related-sentinel]').scrollIntoViewIfNeeded();
+      await expect.poll(() => root.locator('.related-card').count()).toBeGreaterThan(count);
+    }
+    const shown = await root
+      .locator('.related-card')
+      .evaluateAll((cards) => cards.map((c) => c.dataset.relatedId));
+    assert.equal(shown.length, 49);
+    assert.equal(new Set(shown).size, 49);
+    assert.ok(shown.every((id) => index.profiles.get(id).item.topic === 'usb-flash-drive'));
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+    await expect(page.locator('[data-related-end]')).toBeVisible();
+    assert.ok(
+      await page.evaluate(() =>
+        window.relatedEvents.some((e) => e.event === 'show_more' && e.trigger === 'scroll'),
+      ),
+    );
+    await root.screenshot({ path: `${output}/usb-discovery-${width}.png` });
+  }
+  report.checks.push(
+    'All 49 USB alternatives load on desktop/mobile scroll; no duplicates, unrelated topics or focus theft',
+  );
   report.checks.push(
     'T20 responsive layouts, uncropped images, no control overlap',
     'T21 WCAG AA automated checks',

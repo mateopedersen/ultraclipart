@@ -23,12 +23,23 @@ export function initRelatedArtwork() {
     results = find('[data-related-results]');
   const refresh = find<HTMLAnchorElement>('[data-related-refresh]'),
     end = find('[data-related-end]');
+  const sentinel = find('[data-related-sentinel]'),
+    scrollHint = find('[data-related-scroll-hint]');
   let mode: Mode = 'best';
   function initialCount() {
     const mobile = matchMedia('(max-width: 900px)').matches;
     return mode === 'best'
       ? Math.min(snapshot.alternatives.length, mobile ? 4 : 8) +
-          Math.min(snapshot.companions.length, mobile ? 2 : 4)
+          Math.min(snapshot.companions.length, mobile ? 2 : 4) +
+          Math.min(
+            snapshot.collection.length,
+            Math.max(
+              0,
+              (mobile ? 6 : 12) -
+                Math.min(snapshot.alternatives.length, mobile ? 4 : 8) -
+                Math.min(snapshot.companions.length, mobile ? 2 : 4),
+            ),
+          )
       : mobile
         ? 6
         : 12;
@@ -171,6 +182,7 @@ export function initRelatedArtwork() {
     return node;
   }
   function list() {
+    if (mode === 'collection') return snapshot.collection;
     if (mode === 'subject') return snapshot.alternatives;
     if (mode === 'companions') return snapshot.companions;
     if (mode === 'monochrome') return snapshot.alternatives.filter((card) => card.monochrome);
@@ -182,13 +194,18 @@ export function initRelatedArtwork() {
       ...snapshot.companions.slice(0, c),
       ...snapshot.alternatives.slice(a),
       ...snapshot.companions.slice(c),
+      ...snapshot.collection,
     ];
   }
-  function render(append = false) {
+  function render(append = false, focusNew = false) {
     if (stale) return;
     const all = list(),
       visible = all.slice(0, count);
-    const groups = [find('[data-related-alternatives]'), find('[data-related-companions]')];
+    const groups = [
+      find('[data-related-alternatives]'),
+      find('[data-related-companions]'),
+      find('[data-related-collection]'),
+    ];
     if (!append) {
       observer?.disconnect();
       for (const timer of timers.values()) clearTimeout(timer);
@@ -200,7 +217,7 @@ export function initRelatedArtwork() {
     for (const card of visible) {
       if (displayed.has(card.id)) continue;
       const node = createCard(card),
-        group = groups[card.group === 'alternatives' ? 0 : 1];
+        group = groups[card.group === 'alternatives' ? 0 : card.group === 'companions' ? 1 : 2];
       group.querySelector('.related-grid')!.append(node);
       displayed.add(card.id);
       watch(node);
@@ -213,11 +230,68 @@ export function initRelatedArtwork() {
     });
     more.hidden = visible.length >= all.length;
     end.hidden = !more.hidden;
+    scrollHint.hidden = more.hidden || !scrollObserver;
     status.textContent = `${visible.length} relevant ${visible.length === 1 ? 'design' : 'designs'} shown${mode === 'monochrome' ? ' · black & white' : ''}.`;
     syncFavorites();
-    if (append && more.hidden)
+    if (append && more.hidden && focusNew)
       newlyAdded[0]?.querySelector<HTMLAnchorElement>('a')?.focus({ preventScroll: true });
   }
+  // The sentinel follows the cards, so discovery progresses with the reader.
+  // A fresh downward scroll arms each batch; no runaway loading or focus theft.
+  let autoArmed = false,
+    lastScrollY = window.scrollY,
+    scrollFrame = 0;
+  const nearEnd = () => {
+    const box = sentinel.getBoundingClientRect();
+    return box.top <= window.innerHeight + 320 && box.bottom >= 0;
+  };
+  async function loadMore(automatic = false) {
+    if (
+      stale ||
+      more.hidden ||
+      results.hidden ||
+      document.hidden ||
+      root!.getAttribute('aria-busy') === 'true'
+    )
+      return;
+    if (automatic && (!autoArmed || !nearEnd())) return;
+    autoArmed = false;
+    root!.setAttribute('aria-busy', 'true');
+    more.disabled = true;
+    try {
+      if (!(await ensureCurrent())) return;
+      count += matchMedia('(max-width: 900px)').matches ? 4 : 8;
+      render(true, !automatic);
+      emit('show_more', { displayed: displayed.size, trigger: automatic ? 'scroll' : 'button' });
+    } finally {
+      more.disabled = false;
+      root!.removeAttribute('aria-busy');
+    }
+  }
+  const scrollObserver =
+    typeof IntersectionObserver === 'undefined'
+      ? undefined
+      : new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) void loadMore(true);
+          },
+          { rootMargin: '0px 0px 320px 0px' },
+        );
+  scrollObserver?.observe(sentinel);
+  if (scrollObserver)
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (window.scrollY > lastScrollY) autoArmed = true;
+        lastScrollY = window.scrollY;
+        if (!scrollFrame)
+          scrollFrame = requestAnimationFrame(() => {
+            scrollFrame = 0;
+            if (autoArmed && nearEnd()) void loadMore(true);
+          });
+      },
+      { passive: true },
+    );
   async function ensureCurrent(): Promise<boolean> {
     if (stale) return false;
     if (request) return request;
@@ -238,6 +312,8 @@ export function initRelatedArtwork() {
           end.hidden = true;
           refresh.hidden = false;
           observer?.disconnect();
+          scrollObserver?.disconnect();
+          scrollHint.hidden = true;
           status.textContent = 'The collection has changed. Refresh to see current artwork.';
           return false;
         }
@@ -245,6 +321,7 @@ export function initRelatedArtwork() {
         return true;
       } catch {
         results.hidden = true;
+        scrollHint.hidden = true;
         more.hidden = true;
         end.hidden = true;
         observer?.disconnect();
@@ -273,7 +350,12 @@ export function initRelatedArtwork() {
     const target = event.target instanceof Element ? event.target : null;
     if (!target) return;
     const filter = target.closest<HTMLButtonElement>('[data-related-mode]');
-    if (filter || target.closest('[data-related-more]')) {
+    if (target.closest('[data-related-more]')) {
+      event.preventDefault();
+      await loadMore();
+      return;
+    }
+    if (filter) {
       event.preventDefault();
       if (root.getAttribute('aria-busy') === 'true') return;
       root.setAttribute('aria-busy', 'true');
@@ -288,10 +370,6 @@ export function initRelatedArtwork() {
           .forEach((b) => b.setAttribute('aria-pressed', String(b === filter)));
         render();
         emit('filter');
-      } else {
-        count += matchMedia('(max-width: 900px)').matches ? 4 : 8;
-        render(true);
-        emit('show_more', { displayed: displayed.size });
       }
       return;
     }

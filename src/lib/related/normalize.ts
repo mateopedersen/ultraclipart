@@ -1,6 +1,7 @@
 import {
   BY_ID,
   BY_TOPIC,
+  CATALOG_SUBJECTS,
   THEME_COLLECTIONS,
   mentions,
   words,
@@ -8,7 +9,7 @@ import {
   type Subject,
 } from './taxonomy';
 
-export const CLASSIFIER_VERSION = 'uc-metadata-2';
+export const CLASSIFIER_VERSION = 'uc-metadata-3';
 export type ColorMode = 'color' | 'monochrome' | 'unknown';
 export type Depiction = 'natural_object' | 'character' | 'scene' | 'unknown';
 export interface ArtworkInput {
@@ -52,6 +53,7 @@ export interface Profile {
   colorMode: ColorMode;
   status: 'verified' | 'auto_classified' | 'unclassified' | 'needs_review';
   eligible: boolean;
+  publicationEligible: boolean;
   revision: number;
   fingerprint: string;
   evidence: {
@@ -129,7 +131,9 @@ export function normalize(item: ArtworkInput): Profile {
     text = words(`${item.title} ${item.alt ?? ''}`);
   const titled = mentions(item.title),
     named = mentions(`${item.title} ${item.alt ?? ''}`);
-  const topic = BY_TOPIC.get(item.topic ?? '');
+  const topic = BY_TOPIC.get(item.topic ?? '') ?? CATALOG_SUBJECTS.get(item.topic ?? '');
+  const catalogContext =
+    topic?.domain === 'catalog' && topic.terms.some((term) => ` ${text} `.includes(` ${term} `));
   const issues: string[] = [];
   let subject = topic,
     status: Profile['status'] = 'auto_classified';
@@ -157,14 +161,15 @@ export function normalize(item: ArtworkInput): Profile {
       (!firstPrimaryCandidate || topicMention.position < firstPrimaryCandidate.position)
         ? topicMention.subject
         : firstPrimaryCandidate?.subject;
-    const topicEvidence = named.some((m) => m.subject.id === topic?.id);
+    const topicEvidence = catalogContext || named.some((m) => m.subject.id === topic?.id);
     const speciesEquivalent = (a: string, b: string) =>
       a === b || (a === 'animal.mammal.elephant.young' && b === 'animal.mammal.elephant');
     if (topic && titlePrimary && !speciesEquivalent(topic.id, titlePrimary.id) && !topicEvidence) {
       status = 'needs_review';
       issues.push('topic_title_conflict');
     }
-    const explicit = named.some((m) => speciesEquivalent(subject!.id, m.subject.id));
+    const explicit =
+      catalogContext || named.some((m) => speciesEquivalent(subject!.id, m.subject.id));
     // Category is useful evidence, not proof. Ambiguous bare words need a subject-specific context.
     const supportedTurkey =
       subject.topic === 'turkey' &&
@@ -175,6 +180,9 @@ export function normalize(item: ArtworkInput): Profile {
       issues.push('subject_without_context');
     }
   }
+  if (catalogContext)
+    subjectEvidence =
+      'registered catalog collection + exact title/alt context; isolated collection identity';
   let depiction: Depiction = subject ? 'natural_object' : 'unknown';
   const otherDomains = named.filter(
     (m) => m.subject.id !== subject?.id && m.subject.domain !== subject?.domain,
@@ -243,9 +251,7 @@ export function normalize(item: ArtworkInput): Profile {
     .map(([tag]) => tag);
   const asset = (kind: 'thumb' | 'webp' | 'pdf') =>
     safeAsset(item[kind]) && !!item.files?.[kind]?.sha256 && item.files[kind].bytes > 0;
-  const eligible =
-    !!subject &&
-    ['auto_classified', 'verified'].includes(status) &&
+  const publicationEligible =
     item.published === true &&
     item.indexable === true &&
     item.recommendationEligible !== false &&
@@ -254,6 +260,8 @@ export function normalize(item: ArtworkInput): Profile {
     asset('webp') &&
     item.licenseStatus === 'OWNER_APPROVED_PERSONAL_EDUCATIONAL_ONLY' &&
     item.reviewStatus === 'FORMAT_AND_PAIR_REVIEW_PASSED';
+  const eligible =
+    publicationEligible && !!subject && ['auto_classified', 'verified'].includes(status);
   const secondary = named.filter((m) => m.subject.id !== subject?.id).map((m) => m.subject.id);
   const profile = {
     item,
@@ -271,6 +279,7 @@ export function normalize(item: ArtworkInput): Profile {
     colorMode,
     status,
     eligible,
+    publicationEligible,
     revision,
     evidence: {
       subject: subjectEvidence,

@@ -435,3 +435,81 @@ test('a musical keyboard stays a secondary mention rather than a computer subjec
   );
   assert.equal(vampire.subject.topic, 'vampire');
 });
+
+test('every published catalog page has reviewed, deduplicated discovery across all registered topics', () => {
+  for (const source of index.profiles.values()) {
+    if (!source.publicationEligible) continue;
+    const snapshot = index.snapshot(source.item.id);
+    const cards = [...snapshot.alternatives, ...snapshot.companions, ...snapshot.collection];
+    assert.ok(cards.length > 0, source.item.id);
+    assert.ok(cards.length <= SNAPSHOT_LIMIT);
+    assert.ok(snapshot.examined <= CANDIDATE_LIMIT);
+    assert.ok(Buffer.byteLength(JSON.stringify(snapshot)) < 64000);
+    const identities = new Set([source.identity]);
+    for (const card of cards) {
+      const candidate = index.profiles.get(card.id);
+      assert.ok(candidate.publicationEligible, card.id);
+      assert.ok(!identities.has(candidate.identity), card.id);
+      identities.add(candidate.identity);
+      if (card.group === 'collection') {
+        assert.equal(candidate.item.topic, source.item.topic);
+        assert.equal(card.reason, 'From the same collection');
+      }
+    }
+  }
+});
+test('new registered collections work without adding manual semantic aliases', () => {
+  for (const topic of [
+    'usb-flash-drive',
+    'washing-machine',
+    'smart-refrigerator',
+    'smartwatch',
+    'earbuds',
+    'electric-scooter',
+  ]) {
+    for (const source of catalog.filter((a) => a.topic === topic)) {
+      const snapshot = index.snapshot(source.id);
+      assert.equal(snapshot.alternatives.length + snapshot.collection.length, 49, source.id);
+      assert.equal(snapshot.companions.length, 0);
+    }
+  }
+});
+test('collection fallback never bypasses publication, withdrawal, file or license gates', () => {
+  const usb = catalog.find((a) => a.topic === 'usb-flash-drive');
+  for (const override of [
+    { published: false },
+    { indexable: false },
+    { recommendationEligible: false },
+    { files: {} },
+    { licenseStatus: 'REVOKED' },
+    { reviewStatus: 'FAILED' },
+  ]) {
+    const local = new RelatedIndex([
+      usb,
+      item('unsafe-usb', { ...usb, id: 'unsafe-usb', ...override }),
+    ]);
+    assert.deepEqual(local.snapshot(usb.id).collection, []);
+    assert.deepEqual(local.snapshot('unsafe-usb').collection, []);
+  }
+});
+test('collection-only pagination returns every candidate once and invalidates on removal', () => {
+  const source = catalog.find(
+    (a) => a.id === 'usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement',
+  );
+  let cursor,
+    collected = [];
+  do {
+    const page = index.getRelatedArtwork(source.id, { mode: 'collection', cursor, limit: 7 });
+    collected.push(...page.collection.map((card) => card.id));
+    cursor = page.cursor;
+  } while (cursor);
+  assert.equal(collected.length, 49);
+  assert.equal(new Set(collected).size, 49);
+  const local = new RelatedIndex(catalog.filter((a) => a.topic === source.topic));
+  const first = local.getRelatedArtwork(source.id, { mode: 'collection', limit: 1 });
+  local.remove(collected[0], 2);
+  assert.ok(!local.snapshot(source.id).collection.some((c) => c.id === collected[0]));
+  assert.throws(() =>
+    local.getRelatedArtwork(source.id, { mode: 'collection', cursor: first.cursor }),
+  );
+});
