@@ -306,7 +306,7 @@ test('explicit rate limits retry the rejected request after backoff', async () =
     accountId,
     token,
     writeBucket: 'ultraclipart-media',
-    fetcher: async (url, options) => {
+    fetcher: async (_url, options) => {
       observed.push({ method: options.method, condition: options.headers['If-None-Match'] });
       calls++;
       return calls === 1

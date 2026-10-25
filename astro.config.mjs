@@ -10,6 +10,7 @@ export default defineConfig({
   site: 'https://ultraclipart.com',
   output: 'static',
   trailingSlash: 'always',
+  devToolbar: { enabled: false },
   vite: {
     worker: { format: 'es' },
     define: {

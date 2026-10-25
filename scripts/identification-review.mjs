@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { reviewedProductMetadata } from './product-identity.mjs';
 
 /** Bind editorial identity and visible-subject metadata to the bytes actually inspected. */
 export function validateIdentification({ artwork, sourceBytes, record }) {
@@ -44,5 +45,33 @@ export function validateIdentification({ artwork, sourceBytes, record }) {
   }
   if (record.level === 'imagined-concept' && !/concept/i.test(artwork.title))
     fail('concept not identified in title');
-  return { identity: record.identity, sourceSha256: digest, level: record.level };
+  const reviewed = reviewedProductMetadata(
+    {
+      sourcePath: record.source,
+      sourceSha256: record.sourceSha256,
+      reviewedFromPixels: true,
+      subject: record.metadata.title,
+      caption: record.metadata.alt,
+      evidence: record.observedFeatures.join(' '),
+      reference: record.officialSources[0].url,
+      manufacturerDomains: record.manufacturerDomains,
+      brand: record.brand,
+      family: record.family ?? record.identity,
+      model: record.model ?? null,
+      kind:
+        record.level === 'character-family'
+          ? 'product-family'
+          : record.level === 'branded-scene'
+            ? 'brand-scene'
+            : record.level,
+      checkedAt: record.reviewedAt,
+    },
+    { sourceSha256: digest },
+  );
+  return {
+    identity: record.identity,
+    sourceSha256: digest,
+    level: record.level,
+    productIdentity: reviewed.productIdentity,
+  };
 }

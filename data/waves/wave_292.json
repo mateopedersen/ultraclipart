@@ -1,6 +1,6 @@
 {
   "wave": "wave_292",
-  "status": "AWAITING_CDN",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
   "actualExportedDrawings": 6,
   "resumed": 0,
   "screenReview": "PASS",
@@ -503,5 +503,12 @@
   "screenReviewedAt": "2026-10-25T18:49:20.240744+00:00",
   "screenReviewScope": "Every native PDF proof composition visually inspected against the chosen reviewed source, including complete ear/prop framing and observed character identity. No repaired sibling counted twice.",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
-  "createdAt": "2026-10-25T18:50:40.071Z"
+  "createdAt": "2026-10-25T19:28:17.470Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-10-25T19:47:52.982Z",
+    "scope": "All 50 selected compositions: WebP/PDF editing exports, unchanged source-image CMYK/alpha signatures, independent PDF rendering and all five visual proof sheets.",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "maximumEditedPdfBytes": 994986
+  }
 }
