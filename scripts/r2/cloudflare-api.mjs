@@ -46,7 +46,8 @@ export function cloudflareTransport({
   // A SHA is reusable only for an exact version seen in a fresh object list.
   // Never trust a filename or user-supplied SHA metadata as content verification.
   const listedVersions = new Map(),
-    verifiedVersions = new Map();
+    verifiedVersions = new Map(),
+    startAfterTokens = new Map();
   let cachedBytes = 0;
   const etag = (value) => (typeof value === 'string' ? value.replace(/^"|"$/g, '') : '');
   const version = (tag, size) => (tag && Number.isSafeInteger(size) ? `${tag}:${size}` : null);
@@ -173,18 +174,42 @@ export function cloudflareTransport({
       throw new Error('Invalid R2 bucket name');
     const objectsPath = `/r2/buckets/${bucket}/objects`;
     if (command === 'list-objects-v2') {
+      const fallback = startAfterTokens.get(cursor);
+      if (fallback) {
+        if (fallback.bucket !== bucket || fallback.jurisdiction !== jurisdiction)
+          throw new Error('Object continuation scope mismatch');
+        query.delete('cursor');
+        query.set('start_after', fallback.key);
+      }
       if (!cursor)
         for (const identity of listedVersions.keys())
           if (identity.startsWith(`${jurisdiction}/${bucket}/`)) listedVersions.delete(identity);
       const page = await json(objectsPath + '?' + query, jurisdiction);
       if (!Array.isArray(page.result) || page.result_info?.delimited?.length)
         throw new Error('Invalid or grouped object enumeration');
-      const next = page.result_info?.cursor;
-      if (
-        (page.result_info?.is_truncated === true && !next) ||
-        (!next && page.result.length >= 1000 && page.result_info?.is_truncated !== false)
-      )
+      let next = page.result_info?.cursor;
+      if (page.result_info?.is_truncated === true && !next)
         throw new Error('Incomplete object pagination');
+      if (fallback || (!next && page.result.length >= 1000)) {
+        let previous = fallback?.key;
+        for (const object of page.result) {
+          if (
+            typeof object.key !== 'string' ||
+            !object.key ||
+            (previous && Buffer.compare(Buffer.from(object.key), Buffer.from(previous)) <= 0)
+          )
+            throw new Error('Object pagination did not advance in key order');
+          previous = object.key;
+        }
+      }
+      // R2 can omit result_info on an exactly full terminal page. Never infer
+      // completion from that ambiguity: probe after the last key using the
+      // documented start_after parameter, and enumerate any remaining objects.
+      if (!next && page.result.length >= 1000 && page.result_info?.is_truncated !== false) {
+        const key = page.result.at(-1).key;
+        next = `uc-start-after:${digest(Buffer.from(`${jurisdiction}/${bucket}/${key}`))}`;
+        startAfterTokens.set(next, { key, bucket, jurisdiction });
+      }
       for (const object of page.result)
         listedVersions.set(
           `${jurisdiction}/${bucket}/${object.key}`,

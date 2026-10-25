@@ -1,0 +1,35 @@
+{
+  "wave": "wave_225",
+  "topic": "cornucopia",
+  "method": "builtin-image-generation",
+  "research": "data/research/cornucopia-2026-10-25.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "cornucopia-outline-squirrel",
+      "title": "Squirrel and Cornucopia Coloring Outline",
+      "alt": "A black-line coloring illustration shows a squirrel holding an acorn beside a cornucopia, acorns and an oak leaf.",
+      "description": "A black-line coloring illustration shows a squirrel holding an acorn beside a cornucopia, acorns and an oak leaf. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_225/source/cornucopia-outline-squirrel.png",
+      "printMaxEdgePx": 1000,
+      "printSeparation": "black-only",
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "cornucopia-outline-empty-horn",
+      "title": "Empty Woven Cornucopia Coloring Outline",
+      "alt": "A black-line coloring illustration shows an empty curved wicker cornucopia with a braided open rim and hollow interior.",
+      "description": "A black-line coloring illustration shows an empty curved wicker cornucopia with a braided open rim and hollow interior. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_225/source/cornucopia-outline-empty-horn.png",
+      "printMaxEdgePx": 1000,
+      "printSeparation": "black-only",
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

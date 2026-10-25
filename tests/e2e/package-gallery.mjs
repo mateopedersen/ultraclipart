@@ -11,9 +11,13 @@ const output = resolve(process.env.EVIDENCE_DIR ?? 'reports/animal-gallery', eng
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)));
 const catalog = read('../../data/art.json');
 const collectionId = process.env.SOURCE_COLLECTION || 'owner-animal-2026-10-23';
+const collectionIds = new Set(
+  process.env.SOURCE_COLLECTIONS?.split(',').filter(Boolean) || [collectionId],
+);
 const items = catalog.filter(
   (art) =>
-    art.sourceCollection === collectionId || art.replacesArtwork?.sourceCollection === collectionId,
+    collectionIds.has(art.sourceCollection) ||
+    collectionIds.has(art.replacesArtwork?.sourceCollection),
 );
 const topics = [...new Set(items.map((art) => art.topic))].sort();
 const manifest = read('../../data/publication.json');

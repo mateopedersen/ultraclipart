@@ -1,0 +1,621 @@
+{
+  "wave": "wave_218",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "cornucopia-grain-and-pulse-horn",
+      "title": "Cornucopia of Grain and Pulses",
+      "alt": "A burlap-wrapped cornucopia spills wheat and barley beside open pouches and separate piles of red beans and green lentils.",
+      "description": "A burlap-wrapped cornucopia spills wheat and barley beside open pouches and separate piles of red beans and green lentils. An original cornucopia illustration for personal harvest layouts and educational activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_218/source/cornucopia-grain-and-pulse-horn.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 980,
+      "pdfHeight": 653,
+      "sourceType": "raster",
+      "sourceSha256": "02c12dade50d73de8f8c1353e52b4ac9406474eeda8ef91ea42a0cf3e5343ea7",
+      "inputSignature": "403339cf97524d8880c9e71ec4d00129328796fa89be418bf61a483a3bc903a9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 951836,
+        "weightedCmykRmse": 1.237223
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1347965,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1146965,
+          "weightedCmykRmse": 0.70055
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1095195,
+          "weightedCmykRmse": 0.835627
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1024647,
+          "weightedCmykRmse": 1.008944
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 951836,
+          "weightedCmykRmse": 1.237223
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        50,
+        1496,
+        965
+      ],
+      "image": {
+        "width": 980,
+        "height": 653,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_218/exports/cornucopia-grain-and-pulse-horn.pdf",
+          "bytes": 951836,
+          "sha256": "34f5f607d1a2b16827daba8d9f2d0d758f4455678468e8add350bfbc5c6c0e0f"
+        },
+        "webp": {
+          "path": "work/production/wave_218/exports/cornucopia-grain-and-pulse-horn.webp",
+          "bytes": 2017972,
+          "sha256": "378c8137397af5474b57bbe3d257231ffc7302b1254f0509ed27d92978160a1c"
+        },
+        "thumb": {
+          "path": "work/production/wave_218/exports/cornucopia-grain-and-pulse-horn-thumb.webp",
+          "bytes": 74876,
+          "sha256": "bb49cc5d72e4c8165e53a4f307e5c91050dbd54bca3ad9da1d52a1f93bc3af37"
+        }
+      },
+      "proofSha256": "045608261975a876d8c01f80ca47e9c205d3472b9333ac9cf7473d021f385a4c",
+      "pairMeanRgbDifference": 4.12528
+    },
+    {
+      "id": "cornucopia-leafy-vegetable-horn",
+      "title": "Leafy Garden Harvest Cornucopia",
+      "alt": "A light wicker cornucopia holds cabbage, broccoli, zucchini and a red pepper, with a lettuce leaf and a radish in front.",
+      "description": "A light wicker cornucopia holds cabbage, broccoli, zucchini and a red pepper, with a lettuce leaf and a radish in front. An original cornucopia illustration for personal harvest layouts and educational activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_218/source/cornucopia-leafy-vegetable-horn.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 940,
+      "pdfHeight": 859,
+      "sourceType": "raster",
+      "sourceSha256": "219e09dcb472f26fc10afbd0582c705bf04263a4785fe1b6675ca98bee97a6bf",
+      "inputSignature": "477842c5c5939f6e1ec4bafc88a20dd9aa7159554388b636bda7f48947557187",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967434,
+        "weightedCmykRmse": 1.281866
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1461608,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1192432,
+          "weightedCmykRmse": 0.720039
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1130115,
+          "weightedCmykRmse": 0.852714
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1043123,
+          "weightedCmykRmse": 1.031709
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967434,
+          "weightedCmykRmse": 1.281866
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        14,
+        1304,
+        1188
+      ],
+      "image": {
+        "width": 940,
+        "height": 859,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_218/exports/cornucopia-leafy-vegetable-horn.pdf",
+          "bytes": 967434,
+          "sha256": "b6b44922a73de6cab799b2e50fb865e474594b65ede669c53fa1b40ba92f8fc5"
+        },
+        "webp": {
+          "path": "work/production/wave_218/exports/cornucopia-leafy-vegetable-horn.webp",
+          "bytes": 1637886,
+          "sha256": "f8daf3deb89fc602070974889db2ef9d48c3f4973b01c40efb47f5a9282ebdc3"
+        },
+        "thumb": {
+          "path": "work/production/wave_218/exports/cornucopia-leafy-vegetable-horn-thumb.webp",
+          "bytes": 85528,
+          "sha256": "ee3ed276ca4d0959a376780fd0a0cab6f8ce1511cb1176b7e5de351f4e92bc01"
+        }
+      },
+      "proofSha256": "f9f2845fd41fd8959233f3d4c0719b8f6e3583cdbb5a91cde6a3dc1452d7e83e",
+      "pairMeanRgbDifference": 4.37394
+    },
+    {
+      "id": "cornucopia-citrus-pomegranate-horn",
+      "title": "Citrus and Pomegranate Cornucopia",
+      "alt": "A reddish-brown cornucopia holds oranges, a lemon and an open pomegranate with dark green citrus leaves.",
+      "description": "A reddish-brown cornucopia holds oranges, a lemon and an open pomegranate with dark green citrus leaves. An original cornucopia illustration for personal harvest layouts and educational activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_218/source/cornucopia-citrus-pomegranate-horn.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f03f3180b63e75338b816de4e6b91da88213be69037158db872517ca0c6c920a",
+      "inputSignature": "436c8cb31cfe90be78641fb422976cafc2ae69e660574ac9ab6b7864951e001f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 876485,
+        "weightedCmykRmse": 0.748331
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1081779,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 876485,
+          "weightedCmykRmse": 0.748331
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        24,
+        1492,
+        976
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_218/exports/cornucopia-citrus-pomegranate-horn.pdf",
+          "bytes": 876485,
+          "sha256": "26c0035eb7d6a4e5eb61414d7735bd8239c4638b9d421ef90b5ab98f61fc55a8"
+        },
+        "webp": {
+          "path": "work/production/wave_218/exports/cornucopia-citrus-pomegranate-horn.webp",
+          "bytes": 1782748,
+          "sha256": "e85c296a4be4c8861137119391a1e417098bff76ebee62b14bf4ec2f046b585e"
+        },
+        "thumb": {
+          "path": "work/production/wave_218/exports/cornucopia-citrus-pomegranate-horn-thumb.webp",
+          "bytes": 57930,
+          "sha256": "89ae0b32c1336e02c1c599d6c60dc1c38818e8cc5bd8b07a59d3d132c2487a14"
+        }
+      },
+      "proofSha256": "0d68f57056b71520f4eba2b8a785856ec303844dc9bd9538b4d259f5800a8c7a",
+      "pairMeanRgbDifference": 6.1972
+    },
+    {
+      "id": "cornucopia-woodland-mushroom-horn",
+      "title": "Woodland Cornucopia with Mushrooms",
+      "alt": "A bark-textured cornucopia rests on moss with mushrooms, chestnuts, acorns and fern fronds.",
+      "description": "A bark-textured cornucopia rests on moss with mushrooms, chestnuts, acorns and fern fronds. An original cornucopia illustration for personal harvest layouts and educational activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_218/source/cornucopia-woodland-mushroom-horn.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 910,
+      "pdfHeight": 607,
+      "sourceType": "raster",
+      "sourceSha256": "4d1eca19862acdf4fcb14827bb1f6fd2690f8a06528a6553ef209e0a28c4be8d",
+      "inputSignature": "b28daa917803b39d8d642cc4caf081783a84df01879c98970f3786a06d64bba7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 964829,
+        "weightedCmykRmse": 1.188055
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1284046,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1140585,
+          "weightedCmykRmse": 0.68087
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1097300,
+          "weightedCmykRmse": 0.812347
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1035958,
+          "weightedCmykRmse": 0.991211
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 964829,
+          "weightedCmykRmse": 1.188055
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        56,
+        65,
+        1499,
+        991
+      ],
+      "image": {
+        "width": 910,
+        "height": 607,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_218/exports/cornucopia-woodland-mushroom-horn.pdf",
+          "bytes": 964829,
+          "sha256": "f407850bd434727a90b6732d20bf9a5d196e4ae09220de921e4378836700ecf5"
+        },
+        "webp": {
+          "path": "work/production/wave_218/exports/cornucopia-woodland-mushroom-horn.webp",
+          "bytes": 2141716,
+          "sha256": "8549ba631c153f5de4d5278baf021e6ca337cad7c4c9b4684e28e73e63c0421a"
+        },
+        "thumb": {
+          "path": "work/production/wave_218/exports/cornucopia-woodland-mushroom-horn-thumb.webp",
+          "bytes": 76626,
+          "sha256": "cb1a97cf4d36b45c08ae20da2a3f722b62c99b81ffceefa7e2fb108424e04438"
+        }
+      },
+      "proofSha256": "17e0dc9ba780e35f6eda7bdd3dc41c2c6932386e045d4a9cfb846e157017c0f3",
+      "pairMeanRgbDifference": 5.20073
+    },
+    {
+      "id": "cornucopia-farmhouse-centerpiece",
+      "title": "Cornucopia on a Round Harvest Board",
+      "alt": "A cornucopia filled with a pumpkin, pears, corn and grapes sits on a round wooden board beside tied wheat bundles.",
+      "description": "A cornucopia filled with a pumpkin, pears, corn and grapes sits on a round wooden board beside tied wheat bundles. An original cornucopia illustration for personal harvest layouts and educational activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_218/source/cornucopia-farmhouse-centerpiece.png",
+      "printMaxEdgePx": 810,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 810,
+      "pdfHeight": 675,
+      "sourceType": "raster",
+      "sourceSha256": "f8f20e2a88473da6aad840aa68f42887a22fe02d77af1b15dc06eec69247d075",
+      "inputSignature": "9197c564f17e7285f3a98c6071e6faab12d45fcd09f6a3d7268f4b3a708b534d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 946284,
+        "weightedCmykRmse": 1.155491
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1321326,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1135887,
+          "weightedCmykRmse": 0.663218
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1085124,
+          "weightedCmykRmse": 0.790791
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1024289,
+          "weightedCmykRmse": 0.950492
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 946284,
+          "weightedCmykRmse": 1.155491
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        12,
+        14,
+        1369,
+        1129
+      ],
+      "image": {
+        "width": 810,
+        "height": 675,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_218/exports/cornucopia-farmhouse-centerpiece.pdf",
+          "bytes": 946284,
+          "sha256": "ddc228576e96733729d03ded16a774a685bcecaf4271df5ac0c6364701728fba"
+        },
+        "webp": {
+          "path": "work/production/wave_218/exports/cornucopia-farmhouse-centerpiece.webp",
+          "bytes": 2026146,
+          "sha256": "1f9f53931ffb98f4ec4adf24e261f6728af755de1140f3623a4e28b586dd78da"
+        },
+        "thumb": {
+          "path": "work/production/wave_218/exports/cornucopia-farmhouse-centerpiece-thumb.webp",
+          "bytes": 100622,
+          "sha256": "885123b0cac87d7e7cc9d276d3faaa5ce44e8a63ccefe185194a795199a024ec"
+        }
+      },
+      "proofSha256": "a48da046175d476944cfaed081b7c34ac0f11b60ebfc8dc96af04d2498a05024",
+      "pairMeanRgbDifference": 8.48792
+    },
+    {
+      "id": "cornucopia-minimal-three-fruit-horn",
+      "title": "Minimal Cornucopia with Three Fruits",
+      "alt": "A terracotta cornucopia holds one pear, one apple and a small bunch of purple grapes with a few leaves.",
+      "description": "A terracotta cornucopia holds one pear, one apple and a small bunch of purple grapes with a few leaves. An original cornucopia illustration for personal harvest layouts and educational activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_218/source/cornucopia-minimal-three-fruit-horn.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f37506fcb69d16f63cc75635f1bc72abd2c793da336c777df62cf26e3f4e6836",
+      "inputSignature": "85b3e615806776f410abd939c140e5dbcfa9e8c2bc23a190408312a872b27991",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 963332,
+        "weightedCmykRmse": 1.121045
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1384300,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1118602,
+          "weightedCmykRmse": 0.790509
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1052737,
+          "weightedCmykRmse": 0.930498
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 963332,
+          "weightedCmykRmse": 1.121045
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        74,
+        59,
+        1288,
+        1113
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_218/exports/cornucopia-minimal-three-fruit-horn.pdf",
+          "bytes": 963332,
+          "sha256": "f3557d5ef45b892b6537b5b1d7b250f9dc921b91f8b4710aec4f91ef2afc6365"
+        },
+        "webp": {
+          "path": "work/production/wave_218/exports/cornucopia-minimal-three-fruit-horn.webp",
+          "bytes": 1285800,
+          "sha256": "5797cb3f48fb85d75f551df406aa087310a785ef67f1fbf8e89a10a5f74b6d63"
+        },
+        "thumb": {
+          "path": "work/production/wave_218/exports/cornucopia-minimal-three-fruit-horn-thumb.webp",
+          "bytes": 69082,
+          "sha256": "3ddb74ee57e1d46d6b9163bed7e22694a2db7fdd70260c259c97e5c1a3e879d8"
+        }
+      },
+      "proofSha256": "4bc62d51286d4e2179880c3f42afe22347dfc5f57d541c258c73ac4ab6877cd6",
+      "pairMeanRgbDifference": 3.9824
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T12:16:39.638623+00:00",
+  "screenReviewScope": "All six original masters and all six independent native CMYK PDF proofs visually reviewed: complete framing, matching contents, distinct practical arrangement. Lossless WebP source unchanged.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T12:54:09.618Z",
+  "cdnVerifiedAt": "2026-10-25T13:14:54.387Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED"
+}

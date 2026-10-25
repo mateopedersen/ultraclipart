@@ -92,7 +92,9 @@ if (process.env.CF_PAGES === '1') {
 const apiRoutes = ['/api/*', '/share/*'];
 // A small book collection pilot keeps existing artwork on static delivery.
 // Wider routing is enabled only after the new ingestion path is verified.
-const catalogRoutes = ['/art/book*', '/edit/book*'];
+// The hyphen leaves /clipart/book/ static. One shared rule covers both page
+// families, including the bookworm IDs in the same reviewed pilot collection.
+const catalogRoutes = ['/*t/book*-*'];
 const responseHeaders = Object.fromEntries(
   [...csp.split('/_astro/*')[0].matchAll(/^  ([\w-]+): (.+)$/gm)].map((match) => [
     match[1],

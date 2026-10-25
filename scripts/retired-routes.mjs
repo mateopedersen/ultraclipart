@@ -263,6 +263,22 @@ export function retirementPolicy(
       exclude: [...compactTopics.exclude, ...compactClusters.exclude],
     };
   }
+  // Covers for separate resource families can overlap. Remove a rule only
+  // when every reviewed retired URL it guards remains covered by another.
+  // The exhaustive static-resource and withdrawal checks below still apply.
+  const coverage = routes.include.map((pattern) => {
+    const matcher = compilePattern(pattern);
+    return { pattern, paths: exact.flatMap((path, index) => (matcher.test(path) ? [index] : [])) };
+  });
+  const counts = new Uint16Array(exact.length);
+  coverage.forEach((rule) => rule.paths.forEach((index) => counts[index]++));
+  const redundant = new Set();
+  for (const rule of [...coverage].sort((a, b) => a.paths.length - b.paths.length))
+    if (rule.paths.every((index) => counts[index] > 1)) {
+      redundant.add(rule.pattern);
+      rule.paths.forEach((index) => counts[index]--);
+    }
+  routes.include = routes.include.filter((pattern) => !redundant.has(pattern));
   if (exact.length < routes.include.length + routes.exclude.length)
     routes = { version: 1, include: exact, exclude: [] };
   if (

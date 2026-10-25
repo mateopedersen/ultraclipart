@@ -1,0 +1,622 @@
+{
+  "wave": "wave_217",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "cornucopia-braided-market-horn",
+      "title": "Braided Harvest Horn on a Linen Runner",
+      "alt": "A braided wicker cornucopia spills a pumpkin, apples, a pear, purple grapes and wheat onto a small linen runner.",
+      "description": "A braided wicker cornucopia spills a pumpkin, apples, a pear, purple grapes and wheat onto a small linen runner. An original cornucopia illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_217/source/cornucopia-braided-market-horn.png",
+      "printMaxEdgePx": 1000,
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "609cb78a9ccb01337fdd2c02d00bbf270cf952414f5b2b3d2e450f79e26d9fb3",
+      "inputSignature": "8ae8d51809a94827ef855d031a8cd787ad28e50791144850483d026e89f68601",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 963204,
+        "weightedCmykRmse": 1.229906
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1397508,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1168206,
+          "weightedCmykRmse": 0.696214
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1113085,
+          "weightedCmykRmse": 0.827255
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1039666,
+          "weightedCmykRmse": 0.996902
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 963204,
+          "weightedCmykRmse": 1.229906
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        16,
+        1513,
+        1007
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_217/exports/cornucopia-braided-market-horn.pdf",
+          "bytes": 963204,
+          "sha256": "9daf659fdbc024f8100b1ec947a186da36a54498423b33d6d869e8f915d8068f"
+        },
+        "webp": {
+          "path": "work/production/wave_217/exports/cornucopia-braided-market-horn.webp",
+          "bytes": 2162922,
+          "sha256": "56c04050e1d989e32ffe02290ed90142d552cff9ae09b0665073b92433687ce7"
+        },
+        "thumb": {
+          "path": "work/production/wave_217/exports/cornucopia-braided-market-horn-thumb.webp",
+          "bytes": 73224,
+          "sha256": "dd95a0d4c3ac312a1ceef35a1aa72f866dbb21f36d76f86415ddf01b2129a25a"
+        }
+      },
+      "proofSha256": "479d275b32a2b30c773ce6cd1fa35670d83fc4e99f3855cc99fcfc21dbc6b4e3",
+      "pairMeanRgbDifference": 6.84684
+    },
+    {
+      "id": "cornucopia-upright-orchard-horn",
+      "title": "Upright Orchard Cornucopia",
+      "alt": "An upright woven cornucopia in a wooden cradle holds apples, pears and leafy fruit branches beside a halved apple.",
+      "description": "An upright woven cornucopia in a wooden cradle holds apples, pears and leafy fruit branches beside a halved apple. An original cornucopia illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_217/source/cornucopia-upright-orchard-horn.png",
+      "printMaxEdgePx": 1000,
+      "topic": "cornucopia",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "fbbb628b323102df7de8e68baee868ae2469b2d3e5664062be2fea7dfc39598f",
+      "inputSignature": "ef2658083fb158118a9b878617e655948bc3084d9309a5dd15645f8454505b4e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 915994,
+        "weightedCmykRmse": 1.263846
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1319383,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1114307,
+          "weightedCmykRmse": 0.712604
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1059155,
+          "weightedCmykRmse": 0.847394
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 986563,
+          "weightedCmykRmse": 1.01489
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 915994,
+          "weightedCmykRmse": 1.263846
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        10,
+        1012,
+        1520
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_217/exports/cornucopia-upright-orchard-horn.pdf",
+          "bytes": 915994,
+          "sha256": "c3349a696906dd843e6d6dd88b6b5796a2f643eb25fc60659583a57a795ac6ec"
+        },
+        "webp": {
+          "path": "work/production/wave_217/exports/cornucopia-upright-orchard-horn.webp",
+          "bytes": 2021926,
+          "sha256": "c5673a7e82251047f9e4a40e1a1bdabbd12b05bca3fb99394c91d7714738ed9d"
+        },
+        "thumb": {
+          "path": "work/production/wave_217/exports/cornucopia-upright-orchard-horn-thumb.webp",
+          "bytes": 70710,
+          "sha256": "3e11dc164c62a2a7e01234b1726b82cb261ef61de38ff5525f5af86e4401e041"
+        }
+      },
+      "proofSha256": "238390ce9c4a0aa1e165c92bb1b30b3e2942c01b3599bacedf934992cfa5f46b",
+      "pairMeanRgbDifference": 6.46158
+    },
+    {
+      "id": "cornucopia-root-garden-horn",
+      "title": "Cornucopia of Root Vegetables",
+      "alt": "A long dark willow cornucopia spills carrots, a beet, radishes and a potato among autumn leaves.",
+      "description": "A long dark willow cornucopia spills carrots, a beet, radishes and a potato among autumn leaves. An original cornucopia illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_217/source/cornucopia-root-garden-horn.png",
+      "printMaxEdgePx": 1000,
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f6ef2050b8f622597f6247717ca1da7c47a7e1fe5c36d8495499b4474db42ead",
+      "inputSignature": "8bf7dc1d329d682df7054289b7c43bacb520309cf5d4537a6be794918b3c7967",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 955977,
+        "weightedCmykRmse": 1.25857
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1350822,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1148437,
+          "weightedCmykRmse": 0.710072
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1097443,
+          "weightedCmykRmse": 0.844478
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1024230,
+          "weightedCmykRmse": 1.023523
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 955977,
+          "weightedCmykRmse": 1.25857
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        41,
+        50,
+        1515,
+        981
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_217/exports/cornucopia-root-garden-horn.pdf",
+          "bytes": 955977,
+          "sha256": "90a8367d7e224cd6b840630178e74ddd33c65abfa42158202608321c9bedb201"
+        },
+        "webp": {
+          "path": "work/production/wave_217/exports/cornucopia-root-garden-horn.webp",
+          "bytes": 2038340,
+          "sha256": "0b38ed259f48e504f68c5af0682843f97baaf1632d0f6c8a022d18e2146024fc"
+        },
+        "thumb": {
+          "path": "work/production/wave_217/exports/cornucopia-root-garden-horn-thumb.webp",
+          "bytes": 73082,
+          "sha256": "ce07a450bed93a35744833d3067aff3309ca8b85086dceea24c739e532af6b88"
+        }
+      },
+      "proofSha256": "4600b0277feab8f1b49c00ddf67e5ca76241d430679981577979ee1260aa4185",
+      "pairMeanRgbDifference": 6.99806
+    },
+    {
+      "id": "cornucopia-squash-twig-horn",
+      "title": "Twig Cornucopia with Winter Squash",
+      "alt": "A rustic twig cornucopia holds butternut squash, an acorn squash and a white pumpkin beside autumn leaves and folded cloth.",
+      "description": "A rustic twig cornucopia holds butternut squash, an acorn squash and a white pumpkin beside autumn leaves and folded cloth. An original cornucopia illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_217/source/cornucopia-squash-twig-horn.png",
+      "printMaxEdgePx": 1000,
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "94402a6b52ea70dcae6cf03fff66a61eabad51e267b1efcf1021d39fe6f8287a",
+      "inputSignature": "dac413d643818ed4d63ee346b307f633331e104ec9d72edd4c8f9dd5818747cf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 964523,
+        "weightedCmykRmse": 1.022754
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1304844,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1089796,
+          "weightedCmykRmse": 0.716009
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1037420,
+          "weightedCmykRmse": 0.850213
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 964523,
+          "weightedCmykRmse": 1.022754
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        14,
+        1530,
+        1009
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_217/exports/cornucopia-squash-twig-horn.pdf",
+          "bytes": 964523,
+          "sha256": "12af14abd2b259667a1e1c2351bfaae1ec796c1d8d4df5c253bdd1cb1752261f"
+        },
+        "webp": {
+          "path": "work/production/wave_217/exports/cornucopia-squash-twig-horn.webp",
+          "bytes": 1984952,
+          "sha256": "3816c9d0239b56e80531e9983103fd6909b377bf6c51ede878a30782664cbc83"
+        },
+        "thumb": {
+          "path": "work/production/wave_217/exports/cornucopia-squash-twig-horn-thumb.webp",
+          "bytes": 68890,
+          "sha256": "210704f3b4c2c7b07533549c43421e7be2a80607ec8d04ae876c29ea39f5f623"
+        }
+      },
+      "proofSha256": "255eb3c56f2e3881caaa836a7059839f55c6394256a2e9505f9032fe716107c5",
+      "pairMeanRgbDifference": 7.12553
+    },
+    {
+      "id": "cornucopia-ceramic-fig-horn",
+      "title": "Ceramic Cornucopia with Figs and Grapes",
+      "alt": "A pale ceramic cornucopia on small feet holds green grapes and figs beside a cut fig with pink flesh.",
+      "description": "A pale ceramic cornucopia on small feet holds green grapes and figs beside a cut fig with pink flesh. An original cornucopia illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_217/source/cornucopia-ceramic-fig-horn.png",
+      "printMaxEdgePx": 1000,
+      "topic": "cornucopia",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f512318d61801cf3de2041571cdffac298e54a2b68fd8cd548a5cab07046059f",
+      "inputSignature": "eb48493cf73df4b0dcd7947166a39aeb4ef4d153c87970f465f702db47f84954",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 942149,
+        "weightedCmykRmse": 0.923052
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1282698,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1007484,
+          "weightedCmykRmse": 0.791488
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 942149,
+          "weightedCmykRmse": 0.923052
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        18,
+        25,
+        1297,
+        1176
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_217/exports/cornucopia-ceramic-fig-horn.pdf",
+          "bytes": 942149,
+          "sha256": "9ffae9104240ab4f8b8fdbaeec0efff509d4c2d4cdc62cb97510764cb262e419"
+        },
+        "webp": {
+          "path": "work/production/wave_217/exports/cornucopia-ceramic-fig-horn.webp",
+          "bytes": 1267006,
+          "sha256": "59509d7d7e456f1f7b315decd5b7fd8197e767c17a20940ccf095dbcbcaf1f7a"
+        },
+        "thumb": {
+          "path": "work/production/wave_217/exports/cornucopia-ceramic-fig-horn-thumb.webp",
+          "bytes": 76134,
+          "sha256": "25458dfe442c1a6f2510a0961358f338ab090f2f6b4ef71766119fa9f32a1dcf"
+        }
+      },
+      "proofSha256": "6b9c00a11fa75c25fa0646146c6f3736512d751a951102874443822db509bbbc",
+      "pairMeanRgbDifference": 4.14037
+    },
+    {
+      "id": "cornucopia-berry-filled-straw-horn",
+      "title": "Small Straw Horn Filled with Berries",
+      "alt": "A straw cornucopia holds blueberries, raspberries and strawberries over folded linen, with berry leaves and one sliced strawberry.",
+      "description": "A straw cornucopia holds blueberries, raspberries and strawberries over folded linen, with berry leaves and one sliced strawberry. An original cornucopia illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_217/source/cornucopia-berry-filled-straw-horn.png",
+      "printMaxEdgePx": 880,
+      "topic": "cornucopia",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 880,
+      "pdfHeight": 733,
+      "sourceType": "raster",
+      "sourceSha256": "ace88be60c7d40080f66c422ef238ef72a53258e2b24a895857e49b890e23dcc",
+      "inputSignature": "2354ceb42448cdf7bde889fde86f885d2dedc24a1ea8ea1529ed397c70297fc0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 977144,
+        "weightedCmykRmse": 1.217639
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1388439,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175232,
+          "weightedCmykRmse": 0.689277
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1123266,
+          "weightedCmykRmse": 0.821664
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1052151,
+          "weightedCmykRmse": 0.994279
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 977144,
+          "weightedCmykRmse": 1.217639
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        6,
+        10,
+        1367,
+        1137
+      ],
+      "image": {
+        "width": 880,
+        "height": 733,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_217/exports/cornucopia-berry-filled-straw-horn.pdf",
+          "bytes": 977144,
+          "sha256": "ec0620e2d5603bfe8faa958e8964968cfbaa82b0b0f3acaff80145aa8230c204"
+        },
+        "webp": {
+          "path": "work/production/wave_217/exports/cornucopia-berry-filled-straw-horn.webp",
+          "bytes": 1934506,
+          "sha256": "862386e088df1edd088811d577af184ab40c4ec6ce0a7ddc3e6b0d0fa4f22073"
+        },
+        "thumb": {
+          "path": "work/production/wave_217/exports/cornucopia-berry-filled-straw-horn-thumb.webp",
+          "bytes": 91768,
+          "sha256": "0eeddaac28617bec0cadfaa7fd3b9deb75e781e8fa76062334887a8bc22879f7"
+        }
+      },
+      "proofSha256": "40565ac4187557566a706e5cafe7e54f1f729abc7a374d917a73902d0088039b",
+      "pairMeanRgbDifference": 4.38562
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T12:04:08.374245+00:00",
+  "screenReviewScope": "All original masters and all six independent native PDF proofs visually inspected: complete framing, distinct horn forms and plausible contents. Native WebP remains lossless; PDF has a true 300ppi page at its declared pixel size.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T12:54:09.323Z",
+  "cdnVerifiedAt": "2026-10-25T13:14:54.387Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED"
+}

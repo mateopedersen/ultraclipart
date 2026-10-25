@@ -314,3 +314,78 @@ test('explicit rate limits retry the rejected request after backoff', async () =
   assert.equal(calls, 2);
   assert.deepEqual(observed[0], observed[1]);
 });
+
+test('a full page without pagination metadata is probed with start_after, including an empty terminal page', async () => {
+  for (const remainder of [0, 2]) {
+    const objects = Array.from({ length: 1000 }, (_, i) => ({
+      key: `art/${String(i).padStart(4, '0')}`,
+      size: i,
+      etag: `v${i}`,
+    }));
+    const seen = [];
+    const rest = cloudflareTransport({
+      accountId,
+      token,
+      fetcher: async (input) => {
+        const url = new URL(input);
+        seen.push(url);
+        if (url.searchParams.has('start_after')) {
+          assert.equal(url.searchParams.get('start_after'), 'art/0999');
+          assert.equal(url.searchParams.has('cursor'), false);
+          return json(
+            envelope(
+              Array.from({ length: remainder }, (_, i) => ({
+                key: `art/${1000 + i}`,
+                size: i,
+                etag: `next${i}`,
+              })),
+            ),
+          );
+        }
+        return json(envelope(objects));
+      },
+    });
+    const first = await rest.aws('list-objects-v2', ['--bucket', 'ultraclipart-media'], endpoint);
+    assert.equal(first.IsTruncated, true);
+    assert.equal(first.Contents.length, 1000);
+    const last = await rest.aws(
+      'list-objects-v2',
+      ['--bucket', 'ultraclipart-media', '--continuation-token', first.NextContinuationToken],
+      endpoint,
+    );
+    assert.equal(last.IsTruncated, false);
+    assert.equal(last.Contents.length, remainder);
+    assert.equal(seen.length, 2);
+  }
+});
+
+test('fallback object enumeration rejects a repeated last key and cannot cross buckets', async () => {
+  const objects = Array.from({ length: 1000 }, (_, i) => ({
+    key: `art/${String(i).padStart(4, '0')}`,
+    size: i,
+    etag: `v${i}`,
+  }));
+  const rest = cloudflareTransport({
+    accountId,
+    token,
+    fetcher: async (url) =>
+      json(envelope(url.includes('start_after=') ? [objects.at(-1)] : objects)),
+  });
+  const first = await rest.aws('list-objects-v2', ['--bucket', 'ultraclipart-media'], endpoint);
+  await assert.rejects(
+    rest.aws(
+      'list-objects-v2',
+      ['--bucket', 'ultraclipart-media', '--continuation-token', first.NextContinuationToken],
+      endpoint,
+    ),
+    /did not advance/,
+  );
+  await assert.rejects(
+    rest.aws(
+      'list-objects-v2',
+      ['--bucket', 'other-bucket', '--continuation-token', first.NextContinuationToken],
+      endpoint,
+    ),
+    /scope mismatch/,
+  );
+});
