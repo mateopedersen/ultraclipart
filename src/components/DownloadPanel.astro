@@ -1,0 +1,136 @@
+---
+import Icon from './Icon.astro';
+import '../styles/download-panel.css';
+---
+
+<template id="download-panel-template">
+  <dialog
+    id="download-dialog"
+    class="download-panel"
+    aria-labelledby="download-dialog-title"
+    tabindex="-1"
+  >
+    <button
+      type="button"
+      class="download-panel-close"
+      data-download-close
+      aria-label="Close download window"
+      autofocus
+    >
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        aria-hidden="true"
+      >
+        <path d="m6 6 12 12M6 18 18 6" />
+      </svg>
+    </button>
+    <div class="download-panel-page">
+      <header class="download-panel-heading">
+        <Icon name="download" size={48} />
+        <div>
+          <p class="download-panel-eyebrow">UltraClipart</p>
+          <h2 id="download-dialog-title">Download files</h2>
+        </div>
+      </header>
+      <p class="download-panel-loading" data-download-loading role="status">
+        Loading file details…
+      </p>
+      <div class="download-panel-error" data-download-error hidden>
+        <p role="alert">File details couldn’t be loaded. Check your connection and try again.</p>
+        <button type="button" data-download-retry>
+          Try again
+        </button>
+      </div>
+      <div data-download-content hidden>
+        <div class="download-panel-layout">
+          <div class="download-panel-preview">
+            <img data-download-preview width="480" height="480" alt="" />
+          </div>
+          <div class="download-panel-choice">
+            <h3 class="download-panel-artwork" data-download-artwork></h3>
+            <p class="download-panel-prompt">Choose the file you need.</p>
+            <div class="download-panel-formats" role="group" aria-label="Choose a file format">
+              <button type="button" data-download-select="webp" aria-pressed="false">
+                <Icon name="image" size={34} />
+                <span>
+                  <strong>Image</strong>
+                  <small>
+                    WebP · <span data-download-size="webp"></span>
+                  </small>
+                </span>
+                <span class="download-panel-check" aria-hidden="true">
+                  ✓
+                </span>
+              </button>
+              <button type="button" data-download-select="pdf" aria-pressed="false">
+                <Icon name="document" size={34} />
+                <span>
+                  <strong>PDF</strong>
+                  <small>
+                    Print file · <span data-download-size="pdf"></span>
+                  </small>
+                </span>
+                <span class="download-panel-check" aria-hidden="true">
+                  ✓
+                </span>
+              </button>
+            </div>
+            <p class="download-panel-description" data-download-description></p>
+            <p class="download-panel-dimensions" data-download-dimensions></p>
+            <div class="download-panel-save">
+              <a class="download-panel-final" data-final-download data-download-save>
+                <Icon name="download" size={28} />
+                <span data-download-label>Download Image</span>
+              </a>
+              <p
+                class="download-panel-progress"
+                data-download-status
+                role="status"
+                aria-live="polite"
+                hidden
+              ></p>
+              <p class="download-panel-license">
+                <strong>Free for personal and educational use.</strong>{' '}
+                <a href="/license/">View the license</a>
+              </p>
+            </div>
+            <details class="download-panel-technical">
+              <summary>File details</summary>
+              <dl>
+                <div>
+                  <dt>File name</dt>
+                  <dd data-download-filename></dd>
+                </div>
+                <div>
+                  <dt>Exact size</dt>
+                  <dd data-download-bytes></dd>
+                </div>
+                <div>
+                  <dt>SHA-256</dt>
+                  <dd>
+                    <code data-download-hash></code>
+                  </dd>
+                </div>
+              </dl>
+            </details>
+          </div>
+        </div>
+        <footer class="download-panel-footer">
+          <span>Original file. No account needed.</span>
+          <button type="button" data-download-close>
+            Close &amp; keep browsing <span aria-hidden="true">→</span>
+          </button>
+        </footer>
+      </div>
+    </div>
+  </dialog>
+</template>
+
+<script>
+  import '../scripts/download-panel';
+</script>

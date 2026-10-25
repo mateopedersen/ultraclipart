@@ -1,4 +1,5 @@
-import { art } from '../lib/catalog';
+import { publishedArt as art } from '../lib/catalog';
+import { featuredStudioIds } from '../lib/studio-artwork';
 export const prerender = true;
 export function GET() {
   return new Response(
@@ -10,6 +11,9 @@ export function GET() {
           title: a.title,
           topic: a.topic,
           style: a.style,
+          featured: featuredStudioIds.has(a.id),
+          createdAt: a.createdAt,
+          monochrome: a.monochrome,
           thumb: a.thumb,
           width: a.width,
           height: a.height,

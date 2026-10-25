@@ -1,42 +1,60 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { loadTypescript } from './helpers/typescript.mjs';
-const { downloadPageHref } = await loadTypescript('src/lib/download-route.ts');
+const { verifiedSourceUrl } = await loadTypescript('src/editor/source-policy.ts');
 const art = JSON.parse(readFileSync('data/art.json'));
 const publication = JSON.parse(readFileSync('data/publication.json'));
 const urls = new Map(publication.files.map((file) => [`${file.assetId}/${file.kind}`, file.url]));
-test('download routes bind an exact artwork and supported format; reject external and malformed input', () => {
-  assert.equal(
-    downloadPageHref('usb-flash-drive-example', 'webp'),
-    '/download/usb-flash-drive-example/?format=webp',
-  );
-  for (const id of ['../art', 'a?url=https://evil.example', '//evil.example', '', 'a%2fb'])
-    assert.throws(() => downloadPageHref(id, 'pdf'));
-  for (const format of ['html', 'zip', 'javascript:alert(1)', '', undefined])
-    assert.throws(() => downloadPageHref('apple-example', format));
+test('inline downloads accept verified originals and reject external or malformed selections', () => {
+  const file = { url: '/catalog/apple-example.webp', bytes: 123, sha256: 'a'.repeat(64) };
+  assert.equal(verifiedSourceUrl(file, 'webp', 'https://ultraclipart.com').pathname, file.url);
+  for (const url of [
+    'https://evil.example/a.webp',
+    '/catalog/../art.webp',
+    '/catalog/a.webp?url=evil',
+    '/catalog/a%2fb.webp',
+    'javascript:alert(1)',
+  ])
+    assert.throws(() => verifiedSourceUrl({ ...file, url }, 'webp', 'https://ultraclipart.com'));
+  for (const bytes of [0, -1, 16_000_001, NaN])
+    assert.throws(() => verifiedSourceUrl({ ...file, bytes }, 'webp', 'https://ultraclipart.com'));
 });
-test('every catalog download journey preserves exact original URLs, filenames, sizes and hashes', () => {
-  const sitemap = readFileSync('dist/sitemap-pages.xml', 'utf8');
-  assert.ok(!sitemap.includes('/download/'));
+test('every inline catalog journey preserves exact original URLs, filenames, sizes and hashes without download HTML pages', () => {
+  assert.ok(!existsSync('dist/download'));
+  assert.ok(!readFileSync('dist/sitemap-pages.xml', 'utf8').includes('/download/'));
+  assert.match(readFileSync('dist/_redirects', 'utf8'), /\/download\/\* \/art\/:splat 301/);
+  const manifest = JSON.parse(readFileSync('dist/search-data/manifest.json'));
+  const records = new Map(
+    readdirSync(`dist/search-data/${manifest.version}/items`)
+      .flatMap((name) =>
+        JSON.parse(readFileSync(`dist/search-data/${manifest.version}/items/${name}`)),
+      )
+      .map((item) => [item.id, item]),
+  );
   for (const item of art) {
-    const html = readFileSync(`dist/download/${item.id}/index.html`, 'utf8');
-    assert.ok(html.includes(`https://ultraclipart.com/download/${item.id}/`), item.id);
-    assert.match(html, /<meta name="robots" content="noindex,follow"/);
-    assert.ok(html.includes(item.title.replaceAll('&', '&amp;')), item.id);
-    assert.ok(html.includes('data-download-station'));
-    assert.ok(html.includes('data-download-ad-region hidden'));
+    const html = readFileSync(`dist/art/${item.id}/index.html`, 'utf8');
+    assert.ok(html.includes(`https://ultraclipart.com/art/${item.id}/`), item.id);
+    assert.ok(html.includes('id="download-panel-template"'));
+    assert.ok(html.includes('data-download-record'));
+    assert.ok(!html.includes('href="/download/'));
     assert.ok(!html.includes('adsbygoogle.js'));
+    const record = records.get(item.id);
+    assert.equal(record.download.width, item.width);
+    assert.equal(record.download.height, item.height);
     for (const format of ['webp', 'pdf']) {
       if (!item[format]) continue;
       const tag = html.match(new RegExp(`<a[^>]+download="${item.id}\\.${format}"[^>]*>`))?.[0];
       assert.ok(tag, `${item.id} ${format}`);
+      assert.ok(tag.includes(`data-download-open="${item.id}"`));
+      assert.ok(tag.includes(`data-download-format="${format}"`));
       assert.ok(
         tag.includes(`href="${urls.get(`${item.id}/${format}`)}"`) ||
           tag.includes(`href="${item[format]}"`),
       );
-      assert.ok(tag.includes(`data-expected-bytes="${item.files[format].bytes}"`));
-      assert.ok(tag.includes(`data-expected-sha256="${item.files[format].sha256}"`));
+      assert.equal(record.download.files[format].bytes, item.files[format].bytes);
+      assert.equal(record.download.files[format].sha256, item.files[format].sha256);
+      assert.ok([urls.get(`${item.id}/${format}`), item[format]].includes(record[format]));
     }
   }
 });

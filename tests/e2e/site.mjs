@@ -64,7 +64,7 @@ const states = [
     url: '/search/?q=pumpkin',
     prepare: async () => {
       await expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
-      await expect(page.locator('#result-count')).toContainText('illustrations for “pumpkin”');
+      await expect(page.locator('#result-count')).toContainText('for “pumpkin”');
     },
   },
   { name: '04-topic', url: '/clipart/winter/' },
@@ -195,8 +195,9 @@ try {
   ).find((item) => item.id === 'winter-arctic-fox-resting');
   for (const format of ['webp', 'pdf']) {
     await page.goto(`${base}/art/${original.id}/`);
-    await page.locator(`.detail-actions a[href$="?format=${format}"]`).click();
-    await page.waitForURL(`**/download/${original.id}/**`);
+    await page.locator(`.detail-actions a[data-download-format="${format}"]`).click();
+    await expect(page.locator(`#download-dialog [data-final-download="${format}"]`)).toBeVisible();
+    assert.equal(page.url(), `${base}/art/${original.id}/`);
     const pending = page.waitForEvent('download');
     await page.locator(`[data-final-download="${format}"]`).click();
     const download = await pending;

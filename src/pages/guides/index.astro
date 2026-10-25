@@ -1,57 +1,254 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import GuideSymbol from '../../components/TeacherSymbol.astro';
+import GuideText from '../../components/TeacherText.astro';
+import PrintArrow from '../../components/TeacherArrow.astro';
+import AnnotatedScreen from '../../components/AnnotatedScreen.astro';
+import { guideLessons } from '../../lib/guide-walkthroughs';
 import { guides } from '../../lib/guides';
-const displayGuides = guides;
+import type { GuideSymbolKind } from '../../components/GuideSymbol.astro';
+import { guideQuestions } from '../../lib/guide-paths';
+import { structuredData, breadcrumbs } from '../../lib/structured-data';
+import '../../styles/guides-hub.css';
+const topicNotes: Record<string, string> = {
+  download: 'Choose a file and save it',
+  edit: 'Change text, layers and layout',
+  print: 'Check paper, size and export',
+  boards: 'Save and organize your artwork',
+};
+const projectIcons: GuideSymbolKind[] = ['label', 'botanical', 'files'];
+const pageLinks: { href: string; label: string; icon: GuideSymbolKind }[] = [
+  { href: '#getting-started', label: 'Screen guides', icon: 'steps' },
+  { href: '#guided-projects', label: 'Project tutorials', icon: 'book' },
+  { href: '#file-choices', label: 'File types', icon: 'files' },
+  { href: '#common-questions', label: 'Questions', icon: 'help' },
+];
 ---
 
 <Layout
-  title="Clipart Project Guides"
-  description="Make a readable classroom label, prepare a coloring activity, choose the right file format, and calculate a practical print size with UltraClipart."
+  title="UltraClipart User Guide · Screenshots & Step-by-Step Help"
+  description="See where to click in UltraClipart. Follow real screenshots with numbered arrows to download images, edit a design, prepare a print and organize Favorites."
 >
-  <section class="hero">
-    <p class="eyebrow">A little guidance goes a long way</p>
-    <h1>Make something useful.</h1>
-    <p class="lead">Small projects, real files, and clear steps from first edit to final print.</p>
-    <p>
-      Each guide starts with something you can open here. Follow the steps, adjust the design for
-      your own project, and check the result before sharing or printing.
-    </p>
-  </section>
-  <div class="guide-grid">
-    {displayGuides.map((guide) => (
-      <article class="guide-card">
-        <a href={`/guides/${guide.slug}/`}>
-          <img src={guide.image} alt={guide.alt} width="800" height="600" loading="lazy" />
-          <div>
-            <p class="eyebrow">{guide.category}</p>
-            <h2>{guide.title}</h2>
-            <p>{guide.description}</p>
-            <span class="guide-link">Follow the guide →</span>
-          </div>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={structuredData(
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Project guides', path: '/guides/' },
+      ]),
+    )}
+  />
+  <div class="guide-manual">
+    <header class="gm-header">
+      <div class="gm-header-copy">
+        <p class="gm-breadcrumb">
+          <a href="/">UltraClipart</a>
+          <span aria-hidden="true">/</span> Guides
+        </p>
+        <h1>A guide to using UltraClipart</h1>
+        <p class="gm-lead">Find the right file, make your changes, and save your work.</p>
+        <p>
+          Follow the real screens below. Each numbered pointer shows the control to use and explains
+          what happens next.
+        </p>
+        <a class="gm-open-tool" href="#getting-started">
+          Choose a screen guide <PrintArrow light size={29} />
         </a>
-      </article>
-    ))}
-  </div>
-  <section class="guide-callout">
-    <div>
-      <p class="eyebrow">Before you print</p>
-      <h2>How big can this image be?</h2>
-      <p>
-        Check the relationship between pixels and inches, compare a design with your paper's usable
-        area, and avoid stretching it out of proportion.
+      </div>
+      <figure class="gm-header-screen">
+        <img
+          src="/home-art/studio-real-workspace.webp"
+          alt="UltraClipart Studio showing a lemon illustration, a text layer, and the editing controls beside the canvas."
+          width="1100"
+          height="914"
+          fetchpriority="high"
+        />
+        <figcaption>The working studio. The Edit guide below explains its controls.</figcaption>
+      </figure>
+    </header>
+    <nav class="gm-page-links" aria-label="On this page">
+      {pageLinks.map((link) => (
+        <a href={link.href}>
+          <GuideSymbol kind={link.icon} size={62} />
+          <span>{link.label}</span>
+          <PrintArrow size={25} />
+        </a>
+      ))}
+    </nav>
+    <section class="gm-lessons" aria-labelledby="getting-started">
+      <div class="gm-chooser-heading">
+        <h2 id="getting-started">Choose what you need help with</h2>
+        <p>
+          The numbers on each screen match the instructions beside it. Select a number to highlight
+          the control it explains.
+        </p>
+      </div>
+      <nav class="gm-topics" aria-label="Guide topic" data-guide-goals>
+        {guideLessons.map((lesson) => (
+          <a id={`task-${lesson.id}`} href={`#guide-${lesson.id}`} data-guide-goal={lesson.id}>
+            <GuideSymbol kind={lesson.icon} size={88} />
+            <span>
+              <strong>{lesson.label}</strong>
+              <small>{topicNotes[lesson.id]}</small>
+            </span>
+          </a>
+        ))}
+      </nav>
+      {guideLessons.map((lesson) => (
+        <section
+          class="gm-lesson"
+          id={`guide-${lesson.id}`}
+          aria-labelledby={`lesson-${lesson.id}`}
+          data-guide-panel={lesson.id}
+        >
+          <header class="gm-lesson-heading">
+            <div>
+              <h2 id={`lesson-${lesson.id}`}>{lesson.title}</h2>
+              <p>
+                <GuideText text={lesson.intro} />
+              </p>
+            </div>
+            <a class="gm-open-tool" href={lesson.action.href}>
+              {lesson.action.label}
+              <PrintArrow size={28} />
+            </a>
+          </header>
+          {lesson.screens.map((screen) => (
+            <AnnotatedScreen screen={screen} emphasizeControls />
+          ))}
+          <aside class="gm-lesson-note">
+            <strong>Keep in mind</strong>
+            <p>
+              <GuideText text={lesson.note} />
+            </p>
+          </aside>
+        </section>
+      ))}
+      <p class="gm-capture-note">
+        These are real interface examples. Artwork, file sizes and control positions can vary. Use
+        the links to open the working tools; screenshots show how to use them.
       </p>
-    </div>
-    <a class="button primary" href="/print-size/">
-      Open print size calculator
-    </a>
-  </section>
-  <section class="prose">
-    <h2>Choose your next step</h2>
-    <p>
-      Already have an idea? <a href="/create/">Start with a blank canvas</a>. Prefer an existing
-      drawing? <a href="/new/">Browse the available illustrations</a>. Our artwork and starter
-      templates are free for personal and educational projects under the{' '}
-      <a href="/license/">usage license</a>; commercial use is not permitted.
-    </p>
-  </section>
+    </section>
+    <section class="gm-projects" aria-labelledby="guided-projects">
+      <div class="gm-section-heading">
+        <h2 id="guided-projects">Work through a complete project</h2>
+        <p>For a longer walkthrough, start with one of these examples.</p>
+      </div>
+      <div class="gm-project-list">
+        {guides.map((guide, index) => (
+          <article>
+            <GuideSymbol kind={projectIcons[index]} size={94} />
+            <div>
+              <h3>
+                <a href={`/guides/${guide.slug}/`}>{guide.title}</a>
+              </h3>
+              <p>{guide.description}</p>
+            </div>
+            <a class="gm-project-link" href={`/guides/${guide.slug}/`}>
+              Read guide
+              <PrintArrow size={27} />
+            </a>
+          </article>
+        ))}
+        <article>
+          <GuideSymbol kind="book" size={94} />
+          <div>
+            <h3>
+              <a href="/for-teachers/">Prepare teaching materials</a>
+            </h3>
+            <p>
+              Find free artwork for worksheets, teaching slides, classroom labels and visual
+              instructions, with practical steps for adapting and reusing your materials.
+            </p>
+          </div>
+          <a class="gm-project-link" href="/for-teachers/">
+            For teachers
+            <PrintArrow size={27} />
+          </a>
+        </article>
+      </div>
+    </section>
+    <section class="gm-file-reference" aria-labelledby="file-choices">
+      <div class="gm-section-heading">
+        <h2 id="file-choices">Which file should you keep?</h2>
+        <p>
+          Use a finished file outside the studio. Keep a project file when you want to edit again.
+        </p>
+      </div>
+      <dl>
+        <div>
+          <dt>
+            <GuideSymbol kind="slides" size={82} />
+            <strong>
+              Image <span>WebP format</span>
+            </strong>
+          </dt>
+          <dd>
+            For documents and digital layouts. Check pixel dimensions and whether the artwork is
+            marked Transparent background.
+          </dd>
+        </div>
+        <div>
+          <dt>
+            <GuideSymbol kind="print" size={82} />
+            <strong>
+              PDF <span>Printable document</span>
+            </strong>
+          </dt>
+          <dd>
+            A separate printable document. Check its page dimensions and your print settings; PDF
+            content may be raster, vector or both.
+          </dd>
+        </div>
+        <div>
+          <dt>
+            <GuideSymbol kind="edit" size={82} />
+            <strong>
+              Project <span>Editable studio file</span>
+            </strong>
+          </dt>
+          <dd>
+            <GuideText text="The editable studio file from Save project. Reopen it with Open saved project; export an image or PDF separately for the finished design." />
+          </dd>
+        </div>
+      </dl>
+      <a class="gm-text-link" href="/guides/webp-pdf-and-editable-projects/">
+        Read the detailed file guide
+        <PrintArrow size={26} />
+      </a>
+    </section>
+    <section class="gm-questions" aria-labelledby="common-questions">
+      <div class="gm-section-heading">
+        <h2 id="common-questions">Common questions</h2>
+      </div>
+      {guideQuestions.map((question) => (
+        <details>
+          <summary>
+            {question.question}
+            <span aria-hidden="true">+</span>
+          </summary>
+          <div>
+            <p>
+              <GuideText text={question.answer} />
+            </p>
+            <a class="gm-text-link" href={question.href}>
+              {question.label}
+              <PrintArrow size={24} />
+            </a>
+          </div>
+        </details>
+      ))}
+    </section>
+    <footer class="gm-footer">
+      <p>
+        Catalog artwork is for personal and educational use.{' '}
+        <a href="/license/">Read the license</a>.
+      </p>
+      <a href="/contact/">Need more help?</a>
+    </footer>
+  </div>
+  <script>
+    import '../../scripts/guides-hub';
+  </script>
 </Layout>

@@ -1,32 +1,80 @@
 ---
-import { studioScenes } from '../lib/studio-scenes';
-import { art } from '../lib/catalog';
+import { studioScenes, studioSceneCategories } from '../lib/studio-scenes';
+import { publishedArt } from '../lib/catalog';
+const artworkById = new Map(publishedArt.map((item) => [item.id, item]));
+const categoryName = (id: string) => studioSceneCategories.find(([key]) => key === id)?.[1] || id;
 ---
 
-<section class="studio-scenes" aria-labelledby="scene-title">
+<section class="studio-scenes" data-studio-scenes aria-labelledby="scene-title">
   <div class="studio-section-heading">
     <div>
-      <p class="studio-kicker">START WITH THE DETAILS</p>
-      <h2 id="scene-title">Real artwork. Ready to make your own.</h2>
+      <h2 id="scene-title">Choose a Starting Design</h2>
+      <p class="studio-scene-intro">Technology, school, music, sport, celebrations and more.</p>
     </div>
-    <p>Every image and caption stays independently editable.</p>
+    <p>
+      Open a layout, change its words and arrange the pictures. Each artwork is one image layer; the
+      heading is a separate text layer.
+    </p>
   </div>
-  <div class="studio-scene-grid">
+  <div class="studio-scene-tools" data-scene-controls hidden>
+    <div class="studio-scene-filters" role="group" aria-label="Starting design subjects">
+      <button type="button" data-scene-category="all" aria-pressed="true">
+        All Designs <span>{studioScenes.length}</span>
+      </button>
+      {studioSceneCategories.map(([id, name]) => (
+        <button type="button" data-scene-category={id} aria-pressed="false">
+          {name}
+          <span>{studioScenes.filter((scene) => scene.category === id).length}</span>
+        </button>
+      ))}
+    </div>
+    <div class="studio-scene-search-row">
+      <label for="studio-scene-search">Find a Design</label>
+      <input
+        id="studio-scene-search"
+        type="search"
+        maxlength="100"
+        placeholder="Try robots, school or music"
+        aria-controls="studio-scene-grid"
+      />
+      <span id="studio-scene-count" role="status" aria-live="polite">
+        {studioScenes.length} editable designs
+      </span>
+    </div>
+  </div>
+  <div id="studio-scene-grid" class="studio-scene-grid">
     {studioScenes.map((scene) => (
-      <button data-studio-scene={scene.id}>
+      <button
+        type="button"
+        data-studio-scene={scene.id}
+        data-scene-subject={scene.category}
+        data-scene-search={`${scene.title} ${scene.caption} ${scene.description} ${categoryName(scene.category)} ${scene.items.map((item) => artworkById.get(item.id)?.title || '').join(' ')}`}
+        aria-label={`Open ${scene.title} in Studio`}
+        aria-describedby={`scene-description-${scene.id}`}
+      >
         <span
           class="studio-scene-preview"
           style={`background:${scene.background};color:${scene.color}`}
+          aria-hidden="true"
         >
           <b>{scene.caption}</b>
           {scene.items.map((item) => {
-            const a = art.find((a) => a.id === item.id)!;
+            const artwork = artworkById.get(item.id);
+            if (!artwork) throw new Error(`Starting design artwork is not published: ${item.id}`);
+            if (
+              item.x < 0 ||
+              item.y < 0 ||
+              item.width <= 0 ||
+              item.x + item.width > 1400 ||
+              item.y + (item.width * artwork.height) / artwork.width > 1000
+            )
+              throw new Error(`Starting design artwork exceeds the canvas: ${scene.id}/${item.id}`);
             return (
               <img
-                src={a.thumb}
+                src={artwork.thumb}
                 alt=""
-                width={a.width}
-                height={a.height}
+                width={artwork.width}
+                height={artwork.height}
                 loading="lazy"
                 decoding="async"
                 style={`left:${item.x / 14}%;top:${item.y / 10}%;width:${item.width / 14}%;`}
@@ -35,12 +83,311 @@ import { art } from '../lib/catalog';
           })}
         </span>
         <span class="studio-scene-label">
+          <span class="studio-scene-meta">
+            <span>{categoryName(scene.category)}</span>
+          </span>
           <strong>{scene.title}</strong>
-          <span>
-            {scene.items.length} {scene.items.length === 1 ? 'image' : 'images'} + text
+          <span class="studio-scene-description" id={`scene-description-${scene.id}`}>
+            {scene.description}
+          </span>
+          <span class="studio-scene-open">
+            Use This Design <span aria-hidden="true">→</span>
           </span>
         </span>
       </button>
     ))}
   </div>
+  <p class="studio-scene-empty" data-scene-empty hidden>
+    No designs match. Try a shorter word or choose All Designs.
+  </p>
+  <div class="studio-scene-footer">
+    <p>
+      Replace or recolor an image in Studio, then save an editable project. Undo restores the work
+      you had before opening a starter.
+    </p>
+    <button class="studio-scene-more" type="button" data-scene-more hidden>
+      Show More Designs
+    </button>
+  </div>
 </section>
+
+<style>
+  .studio-scenes [hidden] {
+    display: none !important;
+  }
+  .studio-scenes {
+    padding: 40px 0 24px;
+  }
+  .studio-scenes .studio-section-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 390px);
+    gap: 18px 30px;
+    align-items: end;
+    margin-bottom: 21px;
+  }
+  .studio-scenes h2 {
+    margin: 0 0 8px;
+    font-size: clamp(25px, 2.8vw, 34px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.6px;
+  }
+  .studio-scenes .studio-scene-intro {
+    margin: 0;
+    color: #46698f;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .studio-scenes .studio-section-heading > p {
+    max-width: none;
+    margin: 0;
+    color: #36567e;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+  .studio-scene-tools {
+    display: grid;
+    gap: 14px;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #cbdcf1;
+    border-radius: 14px;
+    background: #f3f8ff;
+  }
+  .studio-scene-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .studio-scene-filters button {
+    min-height: 44px;
+    padding: 8px 11px;
+    gap: 7px;
+    border: 1px solid #c1d6ef;
+    border-radius: 8px;
+    background: #fff;
+    color: #2a5688;
+    font: 600 13px/1.4 var(--font-ui);
+  }
+  .studio-scene-filters button span {
+    font-size: 11px;
+    font-weight: 400;
+  }
+  .studio-scene-filters button[aria-pressed='true'] {
+    background: #2866ad;
+    border-color: #245c9b;
+    color: #fff;
+    box-shadow: inset 0 1px #ffffff35;
+  }
+  .studio-scene-search-row {
+    display: grid;
+    grid-template-columns: auto minmax(180px, 400px) minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+  }
+  .studio-scene-search-row label {
+    color: #2a507d;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .studio-scene-search-row input {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 9px 12px;
+    border: 1px solid #b7cdea;
+    border-radius: 8px;
+    background: #fff;
+    color: #1e3d66;
+    font-size: 16px;
+  }
+  .studio-scene-search-row > span {
+    color: #3d6088;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right;
+  }
+  .studio-scene-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .studio-scene-grid > button {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    min-width: 0;
+    border: 1px solid #c7d9ef;
+    border-bottom: 3px solid #b6cce7;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #fff;
+    color: #1b375f;
+    text-align: left;
+    box-shadow: 0 3px 0 #edf3fb;
+  }
+  .studio-scene-grid > button:hover {
+    border-color: #7ba6dc;
+    box-shadow:
+      0 3px 0 #dfeaf8,
+      0 8px 18px #284e7c12;
+  }
+  .studio-scene-grid > button:focus-visible,
+  .studio-scene-tools :focus-visible,
+  .studio-scene-more:focus-visible {
+    outline: 3px solid #2572d5;
+    outline-offset: 4px;
+  }
+  .studio-scene-preview {
+    flex-shrink: 0;
+    width: 100%;
+    aspect-ratio: 1.4;
+    border-bottom: 1px solid #e4edf8;
+  }
+  .studio-scene-preview > b {
+    font-size: clamp(19px, 1.9vw, 28px);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .studio-scene-label {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 9px;
+    width: 100%;
+    padding: 16px;
+  }
+  .studio-scene-meta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px 10px;
+    color: #315984;
+    font-weight: 700;
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+  }
+  .studio-scene-label strong {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+  .studio-scene-label > .studio-scene-description {
+    display: block;
+    margin: 0 0 4px;
+    color: #36577e;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: normal;
+  }
+  .studio-scene-label > .studio-scene-open {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    margin-top: auto;
+    padding-top: 9px;
+    border-top: 1px solid #dfebf8;
+    color: #205eaa;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .studio-scene-open > span {
+    font-size: 21px;
+  }
+  .studio-scene-empty {
+    margin: 0;
+    padding: 22px;
+    border: 1px solid #d0dff2;
+    border-radius: 10px;
+    color: #456589;
+    background: #f6f9ff;
+  }
+  .studio-scene-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+  }
+  .studio-scene-footer > p {
+    max-width: 690px;
+    margin: 0;
+    color: #3c5d84;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .studio-scene-more {
+    min-height: 46px;
+    padding: 10px 16px;
+    border: 1px solid #1d5d9c;
+    border-bottom: 3px solid #194f86;
+    border-radius: 9px;
+    background: linear-gradient(#4384c9, #2866ad);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: normal;
+  }
+  @media (max-width: 1000px) {
+    .studio-scene-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .studio-scenes .studio-section-heading {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+    }
+    .studio-scene-preview > b {
+      font-size: 26px;
+    }
+  }
+  @media (max-width: 600px) {
+    .studio-scenes {
+      padding: 26px 0 20px;
+    }
+    .studio-scene-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+    }
+    .studio-scene-tools {
+      padding: 12px;
+    }
+    .studio-scene-filters {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 3px 3px 9px;
+    }
+    .studio-scene-filters button {
+      flex-shrink: 0;
+    }
+    .studio-scene-search-row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 6px;
+    }
+    .studio-scene-search-row > span {
+      text-align: left;
+    }
+    .studio-scene-preview > b {
+      font-size: clamp(23px, 6vw, 30px);
+    }
+    .studio-scene-footer {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+    }
+    .studio-scene-more {
+      width: 100%;
+    }
+  }
+</style>
+<script>
+  import '../scripts/studio-scenes';
+</script>

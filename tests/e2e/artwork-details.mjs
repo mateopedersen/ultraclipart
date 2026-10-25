@@ -66,7 +66,7 @@ try {
     const artworkClear = await page.locator('.home-benefit').evaluateAll((cards) =>
       cards.every((card) => {
         const image = card.querySelector('.home-benefit-art').getBoundingClientRect();
-        const copy = card.querySelector('.home-benefit-label').getBoundingClientRect();
+        const copy = card.querySelector('.home-benefit-copy').getBoundingClientRect();
         return image.bottom <= copy.top || image.right <= copy.left || image.left >= copy.right;
       }),
     );

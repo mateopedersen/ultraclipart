@@ -1,0 +1,44 @@
+---
+import Icon from './Icon.astro';
+interface Props {
+  id: string;
+  title: string;
+  webp: string;
+  pdf?: string;
+  related?: boolean;
+}
+const { id, title, webp, pdf, related = false } = Astro.props;
+---
+
+<div class:list={['formats', { 'related-card-actions': related }]}>
+  <a
+    class="webp"
+    href={webp}
+    download={`${id}.webp`}
+    data-download-open={id}
+    data-download-format="webp"
+    aria-expanded="false"
+    aria-controls="download-dialog"
+    data-related-download={related ? 'webp' : undefined}
+    aria-label={`Download Image: ${title}`}
+  >
+    <Icon name="image" size={28} />
+    <span>Image</span>
+  </a>
+  <a
+    class="pdf"
+    href={pdf}
+    download={`${id}.pdf`}
+    data-download-open={id}
+    data-download-format="pdf"
+    aria-expanded="false"
+    aria-controls="download-dialog"
+    data-related-download={related ? 'pdf' : undefined}
+    aria-label={`Download PDF: ${title}`}
+    hidden={!pdf}
+  >
+    <Icon name="document" size={28} />
+    <span>PDF</span>
+  </a>
+  <slot />
+</div>

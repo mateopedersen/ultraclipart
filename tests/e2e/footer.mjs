@@ -18,7 +18,7 @@ try {
       '/',
       '/favorites/',
       '/art/apple-and-dried-rings-crayon-clipart/',
-      '/download/usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement/?format=pdf',
+      '/art/usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement/',
     ]) {
       await page.setViewportSize({ width, height: 1000 });
       const response = await page.goto(base + route);
@@ -45,14 +45,14 @@ try {
         await groups.first().locator('summary').click();
         await expect(groups.first()).toHaveAttribute('open', '');
         await expect(
-          groups.first().getByRole('link', { name: 'Your boards', exact: true }),
+          groups.first().getByRole('link', { name: 'Your Boards', exact: true }),
         ).toBeVisible();
         await groups.first().locator('summary').focus();
         await page.keyboard.press('Enter');
         await expect(groups.first()).not.toHaveAttribute('open', '');
       }
       await expect(
-        footer.getByRole('link', { name: 'Your boards', exact: true, includeHidden: true }),
+        footer.getByRole('link', { name: 'Your Boards', exact: true, includeHidden: true }),
       ).toHaveAttribute('href', '/favorites/');
       const scan = await new AxeBuilder({ page })
         .setLegacyMode(engine === 'webkit')
@@ -80,7 +80,10 @@ try {
   const sculptures = await page
     .locator('.site-footer img[src^="/illustrations/footer/"]')
     .evaluateAll((images) => [...new Set(images.map((image) => image.getAttribute('src')))]);
-  assert.equal(sculptures.length, 5);
+  assert.deepEqual(
+    sculptures.sort(),
+    ['boards', 'explore', 'help', 'studio'].map((name) => `/illustrations/footer/${name}.svg`),
+  );
   for (const path of sculptures) {
     const response = await page.request.get(base + path);
     assert.equal(response.status(), 200, path);
@@ -100,7 +103,7 @@ try {
     await noJs.goto(base + '/');
     const footer = noJs.locator('.site-footer');
     await expect(footer.locator('[data-footer-group][open]')).toHaveCount(4);
-    await expect(footer.getByRole('link', { name: 'Your boards', exact: true })).toBeVisible();
+    await expect(footer.getByRole('link', { name: 'Your Boards', exact: true })).toBeVisible();
     await footer.locator('[data-footer-group]').first().locator('summary').click();
     await expect(footer.locator('[data-footer-group][open]')).toHaveCount(3);
   } finally {

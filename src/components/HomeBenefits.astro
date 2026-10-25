@@ -3,46 +3,39 @@ import HomeBenefitVisual from './HomeBenefitVisual.astro';
 const benefits = [
   {
     kind: 'license' as const,
-    label: 'Personal & classroom use',
-    title: 'Good art. Yours to use.',
-    body: 'Find something for your personal projects and teaching. Check the license before you begin.',
+    title: 'Personal & Classroom Use',
+    body: 'Catalog artwork is free for personal and educational projects. Read the license for usage limits.',
     href: '/license/',
-    link: 'Read the license',
+    link: 'Read the License',
   },
   {
     kind: 'formats' as const,
-    label: 'Two useful formats',
-    title: 'Digital or printed. Ready.',
-    body: 'Transparent WebP for your layout. Matching PDF for your printer. Choose the file that fits.',
+    title: 'Image & PDF Downloads',
+    body: 'Choose a WebP image for compatible apps or a PDF for printing. Check the file details before downloading.',
     href: '/guides/webp-pdf-and-editable-projects/',
-    link: 'Choose your file format',
+    link: 'Compare File Formats',
   },
   {
     kind: 'studio' as const,
-    label: 'Clipart Studio',
-    title: 'Make the details your own.',
-    body: 'Arrange artwork, add text and build your own composition in Clipart Studio.',
+    title: 'Edit in Clipart Studio',
+    body: 'Arrange illustrations, add text and adjust your layout in the browser. No account is needed.',
     href: '/create/',
     link: 'Open Clipart Studio',
   },
   {
     kind: 'privacy' as const,
-    label: 'Private by design',
-    title: 'Your project stays with you.',
-    body: 'Edit in your browser and save an editable copy. Publish a link only when you choose.',
+    title: 'Projects & Privacy',
+    body: 'Save an editable project to keep your layers. Creating a public share link is a separate, optional step.',
     href: '/privacy/',
-    link: 'About your privacy',
+    link: 'Read the Privacy Policy',
   },
 ];
 ---
 
 <section class="home-benefits" aria-labelledby="home-benefits-title">
   <div class="home-benefits-heading">
-    <div>
-      <p class="home-benefits-eyebrow">Made for everyday creativity</p>
-      <h2 id="home-benefits-title">Ready for the way you create.</h2>
-    </div>
-    <p>Find it. Make it yours. Take it with you.</p>
+    <h2 id="home-benefits-title">Using UltraClipart</h2>
+    <p>A guide to downloads, editing and using the artwork in your projects.</p>
   </div>
   <div class="home-benefits-grid">
     {benefits.map((benefit) => (
@@ -51,23 +44,9 @@ const benefits = [
           <HomeBenefitVisual kind={benefit.kind} />
         </div>
         <div class="home-benefit-copy">
-          <p class="home-benefit-label">{benefit.label}</p>
           <h3>{benefit.title}</h3>
           <p class="home-benefit-body">{benefit.body}</p>
-          <span class="home-benefit-link">
-            {benefit.link}
-            <svg
-              width="19"
-              height="19"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.8"
-              aria-hidden="true"
-            >
-              <path d="M4 12h15m-6-6 6 6-6 6" />
-            </svg>
-          </span>
+          <span class="home-benefit-link">{benefit.link}</span>
         </div>
       </a>
     ))}
@@ -76,19 +55,22 @@ const benefits = [
 
 <style>
   .home-benefits {
-    margin: 64px 0 20px;
-    padding: 36px;
+    --benefit-gap: 24px;
+    margin: 64px auto 20px;
+    padding: var(--benefit-gap);
+    padding-bottom: calc(var(--benefit-gap) + 5px);
     border: 1px solid #dce7f5;
     border-radius: 26px;
     background: #f5f7fa;
     box-shadow: inset 0 2px #fff;
   }
   .home-benefits-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 30px;
-    margin-bottom: 26px;
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    max-width: 640px;
+    margin: 0 auto var(--benefit-gap);
+    text-align: center;
   }
   .home-benefits-eyebrow {
     margin: 0 0 9px;
@@ -106,8 +88,8 @@ const benefits = [
     color: #142f56;
   }
   .home-benefits-heading > p {
-    max-width: 225px;
-    margin: 0 0 3px;
+    max-width: 100%;
+    margin: 0;
     color: #466282;
     font-size: 15px;
     line-height: 1.6;
@@ -115,7 +97,8 @@ const benefits = [
   .home-benefits-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 17px;
+    gap: var(--benefit-gap);
+    align-items: stretch;
   }
   .home-benefit {
     min-width: 0;
@@ -130,16 +113,14 @@ const benefits = [
       0 5px 0 #dfe9f5,
       0 13px 24px #234b7b08;
     transition:
-      transform 0.2s,
       box-shadow 0.2s,
       border-color 0.2s;
   }
   .home-benefit:hover {
-    transform: translateY(-5px);
     border-color: #90b6e6;
     box-shadow:
-      0 7px 0 #d5e3f5,
-      0 18px 25px #234b7b15;
+      0 5px 0 #d5e3f5,
+      0 13px 24px #234b7b15;
   }
   .home-benefit:focus-visible {
     outline: 3px solid #2572d5;
@@ -160,22 +141,18 @@ const benefits = [
     background: #e9eef6;
   }
   .home-benefit-privacy .home-benefit-art {
-    background: #eaf0e9;
+    background: #edf3fb;
   }
   .home-benefit-art :global(svg) {
     width: 100%;
     max-width: 240px;
     height: 220px;
-    transition: transform 0.2s;
-  }
-  .home-benefit:hover .home-benefit-art :global(svg) {
-    transform: translateY(-3px);
   }
   .home-benefit-copy {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 21px 20px 23px;
+    padding: 20px;
   }
   .home-benefit-label {
     margin: 0 0 9px;
@@ -186,6 +163,7 @@ const benefits = [
   }
   .home-benefit h3 {
     margin: 0 0 12px;
+    min-height: 2.6em;
     font:
       750 21px/1.3 'UltraClipart Sans',
       Arial,
@@ -215,11 +193,10 @@ const benefits = [
   }
   @media (max-width: 1100px) {
     .home-benefits {
-      padding: 27px;
+      --benefit-gap: 22px;
     }
     .home-benefits-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
     }
     .home-benefit-art {
       height: 220px;
@@ -231,21 +208,15 @@ const benefits = [
   }
   @media (max-width: 600px) {
     .home-benefits {
-      padding: 23px 15px;
+      --benefit-gap: 16px;
       margin-top: 42px;
       border-radius: 20px;
     }
-    .home-benefits-heading {
-      display: block;
-      padding: 0 5px;
-    }
     .home-benefits-heading > p {
       max-width: none;
-      margin: 13px 0 0;
     }
     .home-benefits-grid {
       grid-template-columns: 1fr;
-      gap: 21px;
     }
     .home-benefit {
       display: flex;
@@ -259,10 +230,11 @@ const benefits = [
       height: 230px;
     }
     .home-benefit-copy {
-      padding: 22px;
+      padding: 20px;
     }
     .home-benefit h3 {
       font-size: 20px;
+      min-height: 0;
     }
     .home-benefit-body {
       font-size: 14px;
@@ -285,5 +257,15 @@ const benefits = [
     .home-benefit-art :global(svg) {
       transition: none;
     }
+  }
+
+  .home-benefit-body {
+    font-size: 15px;
+  }
+  .home-benefit h3 {
+    font-weight: 600;
+  }
+  .home-benefits-heading > p {
+    font-size: 16px;
   }
 </style>

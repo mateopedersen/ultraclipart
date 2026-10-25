@@ -1,0 +1,25 @@
+---
+import type { GuideSymbolKind } from './GuideSymbol.astro';
+interface Props {
+  kind: GuideSymbolKind;
+  size?: number;
+}
+const { kind, size = 88 } = Astro.props;
+---
+
+<img
+  class="teacher-symbol"
+  src={`/illustrations/teachers/${kind}.svg`}
+  alt=""
+  width={size}
+  height={Math.round((size * 128) / 144)}
+  loading="lazy"
+  decoding="async"
+/>
+<style>
+  .teacher-symbol {
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+</style>

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'UltraClipart Reader';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('/fonts/source-sans-3/SourceSans3-Upright.woff2') format('woff2');
+}
+
+.reader-page {
+  --font-ui: 'UltraClipart Reader', 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font-ui);
+}
+.reader-page :is(.site-header, footer.site-footer) {
+  font-family: var(--font-ui);
+}
+.reader-page .site-header .site-surprise-link strong {
+  font-family: var(--font-ui);
+}

@@ -1,0 +1,70 @@
+{
+  "artworks": {
+    "featured": 500,
+    "subjects": 164,
+    "fullCatalog": 8200
+  },
+  "vectors": {
+    "total": 2000,
+    "uniqueIds": 2000,
+    "uniqueNames": 2000,
+    "uniqueMarkup": 2000,
+    "categories": 38,
+    "imported": 1724
+  },
+  "text": {
+    "styles": 60,
+    "categories": 10,
+    "uniqueIds": 60,
+    "uniqueTreatments": 60,
+    "fontFamilies": [
+      "sans",
+      "serif",
+      "mono"
+    ]
+  },
+  "studioPro": {
+    "tools": 16,
+    "newTools": [
+      "radial",
+      "layout",
+      "backdrop",
+      "canvas",
+      "preflight"
+    ],
+    "categories": [
+      "Design",
+      "Print",
+      "Artwork"
+    ],
+    "serverRenderedPanes": [
+      "home",
+      "radial",
+      "layout",
+      "backdrop",
+      "canvas",
+      "preflight",
+      "sticker",
+      "coloring",
+      "composer",
+      "patterns",
+      "effects",
+      "typography",
+      "palette",
+      "templates",
+      "variants",
+      "quality",
+      "trace"
+    ]
+  },
+  "preservation": {
+    "previousImported": 724,
+    "unchangedPreviousAssets": 724,
+    "newImported": 1000
+  },
+  "evidence": {
+    "type": "Source data and server markup audit; no browser interaction tests",
+    "browser": "Tool reports Local browser use disabled",
+    "publication": "Local only"
+  }
+}

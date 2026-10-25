@@ -1,27 +1,47 @@
 ---
 import '../styles/global.css';
+import '../styles/select-controls.css';
+import DownloadPanel from '../components/DownloadPanel.astro';
+import CookieNotice from '../components/CookieNotice.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AiBuilderMark from '../components/AiBuilderMark.astro';
 import '../styles/site-header.css';
+import '../styles/site-display-restoration.css';
+import '../styles/site-search.css';
 import HeaderIllustration from '../components/HeaderIllustration.astro';
+import BrowsePreview from '../components/BrowsePreview.astro';
 import { cuteSurpriseIndex } from '../lib/surprise-catalog';
 import { structuredData } from '../lib/structured-data';
+import { pageSocialImage } from '../lib/social-images';
 import regularFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
 import boldFont from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
 const {
-  title = 'Clipart made simple.',
+  title = 'Clipart for Personal & Classroom Projects',
   description = 'Explore original seasonal clipart. Edit colors and layers, then download WebP and printable PDF files.',
   noindex = false,
   wide = false,
+  contentClass = '',
   image = '',
   imageAlt = title,
+  imageWidth,
+  imageHeight,
+  socialPage = Astro.url.pathname,
 } = Astro.props;
+const socialImage = pageSocialImage(socialPage, {
+  src: image,
+  alt: imageAlt,
+  width: imageWidth,
+  height: imageHeight,
+});
+const socialImageUrl = new URL(socialImage.src, 'https://ultraclipart.com').href;
+const readingFont =
+  Astro.url.pathname === '/for-teachers/' || Astro.url.pathname.startsWith('/guides/');
 const surprisePicks = cuteSurpriseIndex.slice(0, 48);
 const browseLinks = [
   {
     label: 'Explore clipart',
     href: '/',
-    description: 'Find something for your next idea.',
+    description: 'Browse illustrations by subject.',
     icon: 'discover',
   },
   {
@@ -33,7 +53,7 @@ const browseLinks = [
   {
     label: 'Collections',
     href: '/collections/',
-    description: 'Thoughtful sets, ready to go together.',
+    description: 'Related subjects in one collection.',
     icon: 'layers',
   },
   {
@@ -71,7 +91,7 @@ const resourceLinks = [
   {
     label: 'About UltraClipart',
     href: '/about/',
-    description: 'A little more about our collection.',
+    description: 'Meet the team and learn about the site.',
     icon: 'info',
   },
 ];
@@ -93,8 +113,20 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preload" href={regularFont} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={boldFont} as="font" type="font/woff2" crossorigin />
+    {readingFont ? (
+      <link
+        rel="preload"
+        href="/fonts/source-sans-3/SourceSans3-Upright.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+      />
+    ) : (
+      <>
+        <link rel="preload" href={regularFont} as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href={boldFont} as="font" type="font/woff2" crossorigin />
+      </>
+    )}
     <meta name="viewport" content="width=device-width" />
     <meta name="build-revision" content={releaseRevision} />
     <title>{title} | UltraClipart</title>
@@ -105,15 +137,19 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
-    {image && (
-      <>
-        <meta property="og:image" content={new URL(image, 'https://ultraclipart.com').href} />
-        <meta property="og:image:alt" content={imageAlt} />
-        <meta name="twitter:image" content={new URL(image, 'https://ultraclipart.com').href} />
-        <meta name="twitter:image:alt" content={imageAlt} />
-      </>
-    )}
+    <meta property="og:site_name" content="UltraClipart" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:secure_url" content={socialImageUrl} />
+    <meta property="og:image:alt" content={socialImage.alt} />
+    {socialImage.type && <meta property="og:image:type" content={socialImage.type} />}
+    {socialImage.width && <meta property="og:image:width" content={String(socialImage.width)} />}
+    {socialImage.height && <meta property="og:image:height" content={String(socialImage.height)} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title + ' | UltraClipart'} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={socialImage.alt} />
     <meta name="theme-color" content="#2865D2" />
     <link rel="icon" href="/logo.svg" type="image/svg+xml" />
     <script
@@ -128,7 +164,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     />
     <slot name="head" />
   </head>
-  <body id="page-top">
+  <body id="page-top" class:list={{ 'reader-page': readingFont }}>
     <a class="skip" href="#main">
       Skip to content
     </a>
@@ -221,39 +257,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
                       </a>
                     ))}
                   </div>
-                  <a class="site-browse-feature" href="/categories/">
-                    <div>
-                      <img
-                        src="/ai-examples/reference-theme-animals.webp"
-                        width="180"
-                        height="180"
-                        alt=""
-                        loading="lazy"
-                      />
-                      <img
-                        src="/ai-examples/reference-theme-florals.webp"
-                        width="120"
-                        height="120"
-                        alt=""
-                        loading="lazy"
-                      />
-                    </div>
-                    <strong>A world of little details.</strong>
-                    <span>
-                      Find your next favorite{' '}
-                      <svg
-                        width="16"
-                        height="16"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        aria-hidden="true"
-                      >
-                        <path d="M4 10h12m-5-5 5 5-5 5" />
-                      </svg>
-                    </span>
-                  </a>
+                  <BrowsePreview />
                 </div>
               </div>
             </div>
@@ -376,15 +380,17 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
           <HeaderIllustration kind="surprise" />
           <span>
             <strong>Surprise me</strong>
-            <span>A little reason to smile</span>
+            <span>Open a random illustration</span>
           </span>
         </a>
       </div>
     </header>
-    <main id="main" class:list={['container', { wide }]}>
+    <main id="main" class:list={['container', contentClass, { wide }]}>
       <slot />
     </main>
+    <DownloadPanel />
     <SiteFooter />
+    <CookieNotice />
     <script>
       import { initCuteSurprise } from '../scripts/cute-surprise';
       initCuteSurprise();
@@ -482,6 +488,8 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     <p id="download-status" class="download-status" role="status" aria-live="polite" hidden></p>
     <script>
       import '../scripts/downloads';
+      import { initSearchSuggestions } from '../scripts/search-suggestions';
+      initSearchSuggestions();
     </script>
   </body>
 </html>

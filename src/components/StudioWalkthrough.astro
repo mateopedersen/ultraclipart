@@ -1,0 +1,443 @@
+---
+import { publishedArt } from '../lib/catalog';
+import CatalogCount from './CatalogCount.astro';
+const steps = [
+  {
+    number: '01',
+    label: 'CHOOSE ARTWORK',
+    title: 'Find an Image & Add It',
+    artwork: 'laptop-study-laptop-with-notebook-and-coffee',
+    artworkAlt: 'Laptop, notebook, coffee and plant artwork from the UltraClipart catalog.',
+    capture: {
+      src: '/home-art/studio-real-workspace.webp',
+      width: 1100,
+      height: 914,
+      crop: [89, 0, 111, 103],
+      label: 'Elements → Artwork',
+      alt: 'Elements control cropped from an actual Studio screenshot.',
+    },
+    intro: 'Choose a picture from the catalog or begin with one of the ready-made designs above.',
+    instructions: [
+      [
+        'Search the library',
+        'Open Elements, choose Artwork and search for a subject such as laptop, robot or guitar. Use Subject and Visual style to narrow the results.',
+      ],
+      [
+        'Add your picture',
+        'Select a thumbnail to place the image on the canvas. Each added picture is one image layer.',
+      ],
+      [
+        'Build the composition',
+        'Add another picture, choose Vector shapes or import your own PNG / WebP. Leave space for a heading.',
+      ],
+    ],
+    action: 'Explore the artwork library',
+    tool: 'elements',
+    secondary: 'Browse clipart by subject',
+    href: '/categories/',
+  },
+  {
+    number: '02',
+    label: 'ARRANGE & PERSONALIZE',
+    title: 'Edit Layers, Words & Colors',
+    artwork: 'robot-friendly-robot-reaching-out-to-say-hello',
+    artworkAlt: 'Imaginary silver-and-blue robot illustration from the UltraClipart catalog.',
+    capture: {
+      src: '/home-art/studio-real-workspace.webp',
+      width: 1100,
+      height: 914,
+      crop: [910, 0, 190, 103],
+      label: 'Layers & Text',
+      alt: 'Layers and Text controls cropped from an actual Studio screenshot.',
+    },
+    intro:
+      'Keep pictures, added text and shapes on separate layers so you can adjust them individually.',
+    instructions: [
+      [
+        'Arrange with Layers',
+        'Select a picture, move it and drag its corner handles to resize it. Use Layers to change which object appears in front.',
+      ],
+      [
+        'Add your own words',
+        'Open Text, write a heading and use Add / update text. Adjust the font, size, color or a text style.',
+      ],
+      [
+        'Refine the colors',
+        'Use the color picker or HEX entry for backgrounds and vectors. For a region inside a picture, use Smart Select. Undo reverses a change.',
+      ],
+    ],
+    action: 'Open the text studio',
+    tool: 'text',
+    secondary: 'Follow the classroom label guide',
+    href: '/guides/make-a-classroom-label/',
+  },
+  {
+    number: '03',
+    label: 'SAVE & DOWNLOAD',
+    title: 'Keep a Project & Export a File',
+    artwork: 'music-acoustic-guitar-watercolor-clipart',
+    artworkAlt: 'Watercolor acoustic guitar illustration from the UltraClipart catalog.',
+    capture: {
+      src: '/guide-screens/editor-toolbar.png',
+      width: 1440,
+      height: 1000,
+      crop: [1004, 94, 395, 101],
+      label: 'Save project & Export',
+      alt: 'Save project, Share and Export buttons cropped from an actual editor screenshot.',
+    },
+    intro:
+      'An editable project and a finished download serve different purposes. Keep the files you need.',
+    instructions: [
+      [
+        'Save an editable copy',
+        'Save project downloads a project file with its layers. Use Open saved project when you want to continue later.',
+      ],
+      [
+        'Prepare the output',
+        'For printing, set paper size, orientation and margins in Print / B&W. Export opens the Image and PDF choices.',
+      ],
+      [
+        'Download your design',
+        'Choose Image for WebP or PDF for a print document, check the filename and download. Keep the project copy for future edits.',
+      ],
+    ],
+    action: 'Open Print Tools',
+    tool: 'studio',
+    secondary: 'Compare image, PDF and project files',
+    href: '/guides/webp-pdf-and-editable-projects/',
+  },
+];
+const artworkById = new Map(publishedArt.map((item) => [item.id, item]));
+---
+
+<section id="studio-guide" class="studio-learning" aria-labelledby="guide-heading">
+  <header class="studio-learning-heading">
+    <h2 id="guide-heading">How to Use Clipart Studio</h2>
+    <p>
+      Find artwork, edit your design and save the right file in three steps. Explore{' '}
+      <CatalogCount kind="artworks" unit="artwork" /> across the full library.
+    </p>
+  </header>
+  <ol class="studio-learning-grid">
+    {steps.map((step) => {
+      const artwork = artworkById.get(step.artwork);
+      if (!artwork) throw new Error(`Studio walkthrough artwork is not published: ${step.artwork}`);
+      return (
+        <li>
+          <article class="studio-learning-card">
+            <figure class="studio-learning-visual">
+              <div class="studio-lesson-artwork">
+                <img
+                  src={artwork.thumb}
+                  alt={step.artworkAlt}
+                  width={artwork.width}
+                  height={artwork.height}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <a
+                class="studio-lesson-capture"
+                href={step.capture.src}
+                target="_blank"
+                rel="noopener"
+                aria-label={`View the original screenshot for ${step.capture.label} (opens in a new tab)`}
+              >
+                <svg viewBox={step.capture.crop.join(' ')} role="img" aria-label={step.capture.alt}>
+                  <image
+                    href={step.capture.src}
+                    x="0"
+                    y="0"
+                    width={step.capture.width}
+                    height={step.capture.height}
+                  />
+                </svg>
+                <span>
+                  {step.capture.label} <span aria-hidden="true">↗</span>
+                </span>
+              </a>
+              <figcaption class="studio-sr-only">
+                A published catalog example above a crop of real site controls. The artwork is
+                separate from the captured interface.
+              </figcaption>
+            </figure>
+            <div class="studio-learning-copy">
+              <span class="studio-step">
+                {step.number} · {step.label}
+              </span>
+              <h3>{step.title}</h3>
+              <p class="studio-lesson-intro">{step.intro}</p>
+              <ol class="studio-lesson-instructions">
+                {step.instructions.map(([title, text]) => (
+                  <li>
+                    <strong>{title}</strong>
+                    <p>{text}</p>
+                  </li>
+                ))}
+              </ol>
+              <div class="studio-learning-actions">
+                <a
+                  class="studio-learning-action"
+                  href="#studio-workspace"
+                  data-studio-launch={step.tool}
+                >
+                  {step.action}
+                </a>
+                <a class="studio-learning-secondary" href={step.href}>
+                  {step.secondary}
+                </a>
+              </div>
+            </div>
+          </article>
+        </li>
+      );
+    })}
+  </ol>
+  <p class="studio-lesson-capture-note">
+    The tool images are crops of real UltraClipart screenshots. Select one to view its original
+    capture; the artwork examples come from the published catalog.
+  </p>
+</section>
+
+<style>
+  .studio-learning {
+    padding: 40px 0;
+  }
+  .studio-learning-heading {
+    max-width: 880px;
+    margin-bottom: 24px;
+  }
+  .studio-learning-heading h2 {
+    font-size: clamp(28px, 3.2vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+    margin: 0 0 12px;
+  }
+  .studio-learning-heading > p:last-child {
+    max-width: 820px;
+    margin: 0;
+    font-size: 16px;
+    color: #36577f;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+  .studio-learning-grid {
+    gap: 20px;
+    align-items: stretch;
+  }
+  .studio-learning-card {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    border-color: #c9daee;
+    border-bottom: 3px solid #b5cce6;
+    box-shadow: 0 3px 0 #edf3fb;
+  }
+  .studio-learning-visual {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    align-items: stretch;
+    height: 305px;
+    min-height: 0;
+    padding: 12px;
+    gap: 10px;
+    background: linear-gradient(145deg, #f5f9ff, #e6effb);
+    border-bottom: 1px solid #d5e2f2;
+  }
+  .studio-lesson-artwork {
+    min-height: 0;
+    display: grid;
+    place-items: center;
+  }
+  .studio-lesson-artwork img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 168px;
+    object-fit: contain;
+    filter: drop-shadow(0 5px 3px #28476916);
+  }
+  .studio-lesson-capture {
+    display: grid;
+    gap: 6px;
+    padding: 7px 8px;
+    border: 1px solid #c5d7ec;
+    border-radius: 10px;
+    background: #fff;
+    color: #2d5483;
+    text-decoration: none;
+  }
+  .studio-lesson-capture svg {
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+  .studio-lesson-capture > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .studio-lesson-capture:hover {
+    border-color: #78a4da;
+  }
+  .studio-learning-copy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px;
+  }
+  .studio-learning-copy h3 {
+    min-height: 2.5em;
+    margin: 12px 0;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+  }
+  .studio-learning-copy .studio-lesson-intro {
+    flex: 0;
+    margin: 0 0 16px;
+    color: #36577e;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .studio-lesson-instructions {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    margin: 0 0 20px;
+    counter-reset: instruction;
+  }
+  .studio-lesson-instructions li {
+    position: relative;
+    min-width: 0;
+    padding-left: 25px;
+    counter-increment: instruction;
+  }
+  .studio-lesson-instructions li::before {
+    content: counter(instruction);
+    position: absolute;
+    top: 1px;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 21px;
+    border-radius: 5px;
+    background: #e6f0ff;
+    color: #2d64a5;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .studio-lesson-instructions strong {
+    display: block;
+    color: #264d7d;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+  .studio-learning-copy .studio-lesson-instructions p {
+    flex: 0;
+    color: #36577e;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.65;
+    margin: 0;
+  }
+  .studio-learning-actions {
+    --action-text-inset: 14px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: auto;
+  }
+  .studio-learning-actions .studio-learning-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 50px;
+    padding: 10px var(--action-text-inset);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .studio-learning-actions .studio-learning-secondary {
+    display: block;
+    min-height: 3.2em;
+    margin: 0;
+    padding: 0 var(--action-text-inset);
+    border-inline: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  .studio-lesson-capture-note {
+    margin: 20px 0 0;
+    max-width: 830px;
+    color: #3c5d84;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+  @media (max-width: 1100px) {
+    .studio-learning-grid {
+      gap: 14px;
+    }
+    .studio-learning-copy {
+      padding: 18px;
+    }
+    .studio-learning-copy h3 {
+      font-size: 22px;
+    }
+  }
+  @media (max-width: 950px) {
+    .studio-learning-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 20px;
+    }
+    .studio-learning-card {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.2fr);
+    }
+    .studio-learning-visual {
+      height: 100%;
+      min-height: 320px;
+    }
+    .studio-lesson-artwork img {
+      max-height: 200px;
+    }
+    .studio-learning-copy h3 {
+      min-height: 0;
+    }
+  }
+  @media (max-width: 600px) {
+    .studio-learning {
+      padding: 34px 0 28px;
+    }
+    .studio-learning-card {
+      display: flex;
+    }
+    .studio-learning-visual {
+      height: 305px;
+      min-height: 0;
+    }
+    .studio-lesson-artwork img {
+      max-height: 168px;
+    }
+    .studio-learning-copy {
+      padding: 20px;
+    }
+    .studio-learning-copy h3 {
+      font-size: 24px;
+    }
+    .studio-learning-actions .studio-learning-secondary {
+      min-height: 44px;
+    }
+  }
+</style>

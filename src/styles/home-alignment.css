@@ -1,0 +1,103 @@
+.home-page .section-head {
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 15px 24px;
+}
+.home-page a.home-section-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 8px 0;
+  color: #225e9e;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-color: #9bb9db;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.home-page a.home-section-link:hover {
+  color: #164c84;
+  text-decoration-color: currentColor;
+}
+.home-page a.home-section-link:focus-visible {
+  outline: 3px solid #2572d5;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+.home-page :is(.creative-projects-heading, .seasonal-heading) {
+  flex-wrap: wrap;
+  gap: 18px 27px;
+}
+.home-page .home-benefits .home-benefit-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.home-page .home-benefits .home-benefit {
+  display: flex;
+  flex-direction: column;
+}
+.home-page .creative-projects .creative-guide-card > div:last-child {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.home-page .creative-projects .creative-guide-link {
+  margin-top: auto;
+}
+@media (max-width: 520px) {
+  .home-page .home-catalog-search {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+  .home-page .home-catalog-search input {
+    flex-basis: calc(100% - 45px);
+  }
+  .home-page .home-catalog-search button {
+    width: 100%;
+  }
+  .home-page .home-catalog-search .home-search-art {
+    display: none;
+  }
+}
+.home-recent {
+  container-type: inline-size;
+}
+.home-recent .home-recent-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+.home-recent-grid > :nth-child(n + 7) {
+  display: none;
+}
+@container (min-width: 460px) {
+  .home-recent .home-recent-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@container (min-width: 700px) {
+  .home-recent .home-recent-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .home-recent-grid > :nth-child(-n + 9) {
+    display: flex;
+  }
+}
+@container (min-width: 940px) {
+  .home-recent .home-recent-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .home-recent-grid > :nth-child(-n + 12) {
+    display: flex;
+  }
+}
+@container (min-width: 1180px) {
+  .home-recent .home-recent-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .home-recent-grid > :nth-child(-n + 15) {
+    display: flex;
+  }
+}

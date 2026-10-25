@@ -1,48 +1,209 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { art } from '../lib/catalog';
-const printable = [
-  ...art.filter((a) => !a.layered && ['Outline', 'Black & White'].includes(a.style)),
-  ...art.filter((a) => a.layered),
-];
+import Card from '../components/Card.astro';
+import CatalogCount from '../components/CatalogCount.astro';
+import HeaderIllustration from '../components/HeaderIllustration.astro';
+import { blackAndWhiteArt } from '../lib/catalog';
+import { monochromeDirectory as directory } from '../lib/monochrome-library';
+import { getSearchBuild } from '../lib/search-build';
+import { cardMetadata } from '../lib/search-index';
+import '../styles/black-and-white.css';
+
+const initial = [...blackAndWhiteArt]
+  .sort((a, b) => b.createdAt.localeCompare(a.createdAt) || a.title.localeCompare(b.title, 'en'))
+  .slice(0, 24);
+const version = (await getSearchBuild()).manifest.version;
+const seed = { version, directory, items: initial.map(cardMetadata) };
+const number = (value: number) => value.toLocaleString('en-US');
 ---
 
-<Layout title="Black & White Clipart and Print Studio" noindex={true}>
-  <section class="hero">
-    <p class="eyebrow">The print studio</p>
-    <h1>
-      A fresh outline.
-      <br />A blank page of possibilities.
-    </h1>
-    <p class="lead">
-      Download a black-and-white drawing, or open layered artwork in the print studio.
-    </p>
+<Layout
+  title="Black & White Clipart"
+  description="Browse black-and-white clipart, line drawings, shaded illustrations and silhouettes. Find a subject, then download the original image or printable PDF."
+  noindex={true}
+>
+  <section class="bw-intro" aria-labelledby="bw-title">
+    <div>
+      <h1 id="bw-title">Black &amp; White Clipart</h1>
+      <p>
+        Line drawings, shaded illustrations and silhouettes for worksheets, coloring and everyday
+        projects. Choose a category or search for the subject you need.
+      </p>
+      <p class="bw-library-size">
+        <CatalogCount kind="printable" unit="illustration" /> <span aria-hidden="true">·</span>{' '}
+        Image &amp; PDF Downloads
+      </p>
+    </div>
+    <div class="bw-intro-art">
+      <HeaderIllustration kind="contrast" instance="bw-intro" />
+    </div>
   </section>
-  <div class="gallery print-gallery">
-    {printable.slice(0, 32).map((a) => (
-      <a class="art-card" href={a.layered ? `/edit/${a.id}/?mode=outline` : `/art/${a.id}/`}>
-        <div class="art-picture">
-          <img src={a.thumb} alt={a.alt} width="400" height="400" loading="lazy" />
+
+  <section class="bw-library" aria-label="Browse black and white clipart" data-bw-library>
+    <form class="bw-controls" id="bw-form" role="search" action="/black-and-white/">
+      <div class="bw-search-row">
+        <div class="bw-search-field">
+          <label for="bw-query">Search Black &amp; White Clipart</label>
+          <div class="bw-search-input">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              aria-hidden="true"
+            >
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m15.5 15.5 5 5" />
+            </svg>
+            <input
+              id="bw-query"
+              name="q"
+              type="search"
+              maxlength="160"
+              placeholder="Try butterfly, flowers or birthday"
+              autocomplete="off"
+            />
+          </div>
         </div>
-        <div class="card-body">
-          <h3 class="card-title">{a.title}</h3>
-          <p>{a.layered ? 'Open print studio →' : 'View downloads →'}</p>
+        <button class="primary bw-search-submit" type="submit">
+          Search Clipart
+        </button>
+      </div>
+      <div class="bw-filter-row">
+        <div>
+          <label for="bw-collection">Category</label>
+          <select id="bw-collection" name="collection">
+            <option value="">All Categories</option>
+            {directory.collections.map((collection) => (
+              <option value={collection.slug}>
+                {collection.label} ({number(collection.count)})
+              </option>
+            ))}
+          </select>
         </div>
-      </a>
-    ))}
-  </div>
-  <p class="notice">
-    Layered artwork opens in the print studio for outline and grayscale adjustments. Black-and-white
-    downloads open on their illustration page.
-  </p>
-  <div class="browse-more">
-    <p>
-      {printable.length > 32
-        ? `Showing 32 of ${printable.length} illustrations for print projects.`
-        : 'Choose a drawing for your next print project.'}
+        <div>
+          <label for="bw-topic">Subject</label>
+          <select id="bw-topic" name="topic">
+            <option value="">All Subjects</option>
+            {directory.topics.map((topic) => (
+              <option value={topic.slug}>
+                {topic.label} ({number(topic.count)})
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label for="bw-kind">Artwork Type</label>
+          <select id="bw-kind" name="kind">
+            <option value="">All Types</option>
+            {directory.kinds.map((kind) => (
+              <option value={kind.slug}>
+                {kind.label} ({number(kind.count)})
+              </option>
+            ))}
+          </select>
+        </div>
+        <button type="button" class="bw-reset" id="bw-reset">
+          Clear Filters
+        </button>
+      </div>
+    </form>
+
+    <div class="bw-results-heading" id="bw-results-heading" tabindex="-1">
+      <div>
+        <h2 id="bw-results-title">All Black &amp; White Clipart</h2>
+        <p id="bw-result-count" role="status" aria-live="polite" aria-atomic="true">
+          {initial.length
+            ? `1–${initial.length} of ${number(directory.total)} illustrations`
+            : '0 illustrations'}
+        </p>
+      </div>
+      <div class="bw-sort">
+        <label for="bw-sort">Sort By</label>
+        <select id="bw-sort">
+          <option value="newest">Newest First</option>
+          <option value="title">Name A–Z</option>
+          <option value="relevance">Best Match</option>
+        </select>
+      </div>
+    </div>
+    <p id="bw-loading" class="bw-message" role="status" hidden>
+      Finding black-and-white clipart…
     </p>
-    <a class="button primary" href="/search/">
-      Browse all clipart →
-    </a>
-  </div>
+    <div id="bw-error" class="bw-message bw-error" role="alert" hidden>
+      <p>The collection couldn’t be loaded. Your filters have been kept; try again.</p>
+      <button type="button" id="bw-retry">
+        Try Again
+      </button>
+    </div>
+    <p id="bw-close-matches" class="bw-message" hidden>
+      Showing close spelling matches for your search.
+    </p>
+    <div class="gallery bw-gallery" id="bw-results" aria-label="Clipart results">
+      {initial.map((item) => (
+        <Card item={item} />
+      ))}
+    </div>
+    <div class="bw-empty" id="bw-empty" hidden>
+      <h3>No Matching Clipart</h3>
+      <p>
+        Try a shorter search, choose another subject or clear your filters to see the full
+        black-and-white collection.
+      </p>
+      <button type="button" id="bw-show-all">
+        Show All Black &amp; White Clipart
+      </button>
+    </div>
+    <nav class="bw-pagination" aria-label="Black and white clipart pages" id="bw-pagination" hidden>
+      <button type="button" id="bw-previous" disabled>
+        Previous
+      </button>
+      <label for="bw-page">
+        Page{' '}
+        <input
+          id="bw-page"
+          type="number"
+          min="1"
+          max={Math.max(1, Math.ceil(directory.total / 24))}
+          value="1"
+          inputmode="numeric"
+          aria-label="Go to page"
+        />{' '}
+        <span id="bw-page-total">of {Math.ceil(directory.total / 24)}</span>
+      </label>
+      <button type="button" id="bw-next">
+        Next
+      </button>
+    </nav>
+    <noscript>
+      <p class="bw-message">
+        Enable JavaScript to search, filter and browse every page. The first 24 illustrations are
+        shown here. You can also browse the <a href="/categories/">subject directory</a>.
+      </p>
+    </noscript>
+  </section>
+
+  <aside class="bw-print-note" aria-label="Using black and white artwork">
+    <div>
+      <h2>Ready for Your Next Project</h2>
+      <p>
+        Choose <strong>Image</strong> for documents and presentations, or <strong>PDF</strong> for
+        printing. Shaded drawings and silhouettes are included too; choose <strong>Line Art</strong>{' '}
+        when you need an outline.
+      </p>
+    </div>
+    <p>
+      Free for personal and educational use. <a href="/license/">Read the License</a>
+    </p>
+  </aside>
+  <script
+    id="bw-seed"
+    type="application/json"
+    set:html={JSON.stringify(seed).replaceAll('<', '\\u003c')}
+  />
+  <script>
+    import '../scripts/black-and-white';
+  </script>
 </Layout>

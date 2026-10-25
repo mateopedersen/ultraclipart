@@ -104,7 +104,7 @@ try {
   }
   for (const a of catalog) {
     const card = page.locator(`.art-card[data-id="${a.id}"]`);
-    await expect(card.locator('img')).toHaveAttribute('alt', a.alt);
+    await expect(card.locator('.art-picture > img')).toHaveAttribute('alt', a.alt);
     await expect(card.getByRole('link', { name: 'Edit', exact: true })).toHaveAttribute(
       'href',
       `/edit/${a.id}/`,
@@ -112,8 +112,8 @@ try {
     assert.equal(await card.locator('a[href^="/edit/"]').count(), 1);
     for (const kind of ['webp', 'pdf'])
       assert.equal(
-        await card.locator(`a[href$="?format=${kind}"]`).getAttribute('href'),
-        `/download/${a.id}/?format=${kind}`,
+        await card.locator(`a[data-download-format="${kind}"]`).getAttribute('href'),
+        expectedUrl(a, kind),
       );
     report.checkedPairs++;
   }
@@ -128,9 +128,8 @@ try {
   }));
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
-  await expect(page.locator('#result-count')).toHaveText(
-    `${expected()} illustrations for “${topic}”`,
-  );
+  await expect(page.locator('#result-count')).toContainText(`${expected()} artworks`);
+  await expect(page.locator('#result-count')).toContainText(`for “${topic}”`);
   await expect(page.locator('#search-results .card-actions').first()).toContainText('Edit');
   for (const style of ['watercolor', 'black & white']) {
     await page.selectOption('#filter-style', style);
@@ -163,10 +162,11 @@ try {
     await image.evaluate((img) => img.decode());
     for (const kind of ['webp', 'pdf']) {
       await page.goto(`${base}/art/${a.id}/`);
-      const entry = page.locator(`.detail-actions a[href$="?format=${kind}"]`);
-      assert.equal(await entry.getAttribute('href'), `/download/${a.id}/?format=${kind}`);
+      const entry = page.locator(`.detail-actions a[data-download-format="${kind}"]`);
+      assert.equal(await entry.getAttribute('href'), expectedUrl(a, kind));
       await entry.click();
-      await page.waitForURL(`**/download/${a.id}/**`);
+      await expect(page.locator(`#download-dialog [data-final-download="${kind}"]`)).toBeVisible();
+      assert.equal(page.url(), `${base}/art/${a.id}/`);
       const link = page.locator(`[data-final-download="${kind}"]`);
       assert.equal(await link.evaluate((a) => a.href), expectedUrl(a, kind));
       const pending = page.waitForEvent('download');

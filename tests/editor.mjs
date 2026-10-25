@@ -139,7 +139,31 @@ test('relative, quadratic and smooth vector paths become exact cubic commands', 
   assert.deepEqual(p[1], { op: 'c', c: [2, 4, 4, 4, 6, 0] });
   assert.deepEqual(p[2], { op: 'c', c: [8, -4, 10, -4, 12, 0] });
   assert.throws(() => parsePath('M0 0 C2 3'), /incomplete/);
-  assert.throws(() => parsePath('M0 0 A10 10 0 0 0 20 20'), /does not support/);
+  assert.throws(() => parsePath('M0 0 R10 10'), /does not support/);
+});
+
+test('elliptical PDF arcs preserve endpoints, sweep, rotation and corrected radii', () => {
+  const near = (actual, expected) => assert.ok(Math.abs(actual - expected) < 1e-8);
+  const quarter = parsePath('M10 0 A10 10 0 0 1 0 10');
+  assert.equal(quarter.length, 2);
+  const k = (40 / 3) * Math.tan(Math.PI / 8);
+  quarter[1].c.forEach((n, i) => near(n, [10, k, k, 10, 0, 10][i]));
+  assert.deepEqual(parsePath('m10 0 a10 10 0 0 1 -10 10'), quarter);
+  const reverse = parsePath('M0 10 A10 10 0 0 0 10 0');
+  reverse[1].c.forEach((n, i) => near(n, [k, 10, 10, k, 10, 0][i]));
+  assert.equal(parsePath('M10 0 A10 10 0 1 1 0 10').length, 4);
+  const rotated = parsePath('M0 20 A20 10 90 0 1 -10 0');
+  rotated[1].c.forEach((n, i) => near(n, [-k, 20, -10, 2 * k, -10, 0][i]));
+  const corrected = parsePath('M0 0 A5 5 0 0 1 20 0');
+  near(corrected[1].c[4], 10);
+  near(corrected[1].c[5], -10);
+  assert.deepEqual(corrected.at(-1).c.slice(-2), [20, 0]);
+  assert.deepEqual(parsePath('M1 2 A0 4 0 0 1 3 4'), [
+    { op: 'm', c: [1, 2] },
+    { op: 'l', c: [3, 4] },
+  ]);
+  assert.equal(parsePath('M1 2 A4 4 0 0 1 1 2').length, 1);
+  assert.throws(() => parsePath('M0 0 A4 4 0 2 1 8 0'), /invalid.*flag/);
 });
 test('print layout preserves physical paper dimensions, margins, aspect ratio and crop', () => {
   const d = doc();

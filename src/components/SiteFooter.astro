@@ -1,56 +1,58 @@
 ---
 import '../styles/site-footer.css';
+import NavigationArrow from './NavigationArrow.astro';
 import { art } from '../lib/catalog';
 const links = [
   {
     id: 'explore',
-    title: 'Discover',
-    subtitle: 'Find your next favorite',
+    title: 'Browse Clipart',
+    subtitle: 'Topics & Collections',
     icon: 'explore',
     items: [
-      ['All topics', '/categories/'],
+      ['All Topics', '/categories/'],
       ['Collections', '/collections/'],
-      ['New clipart', '/new/'],
+      ['New Clipart', '/new/'],
       ['Black & White', '/black-and-white/'],
-      ['Your boards', '/favorites/'],
+      ['Your Boards', '/favorites/'],
     ],
   },
   {
     id: 'create',
-    title: 'Make it yours',
-    subtitle: 'A little creative freedom',
+    title: 'Tools & Guides',
+    subtitle: 'Editing & Tutorials',
     icon: 'studio',
     items: [
       ['Clipart Studio', '/create/'],
       ['AI Clipart Builder', '/ai-clipart-generator/'],
-      ['Project guides', '/guides/'],
-      ['Print size calculator', '/print-size/'],
-      ['For teachers', '/for-teachers/'],
+      ['Project Guides', '/guides/'],
+      ['Print Size Calculator', '/print-size/'],
+      ['For Teachers', '/for-teachers/'],
     ],
   },
   {
     id: 'help',
-    title: 'Here to help',
-    subtitle: 'The useful little details',
+    title: 'Help & Policies',
+    subtitle: 'Answers & Permissions',
     icon: 'help',
     items: [
       ['FAQ', '/faq/'],
       ['License', '/license/'],
-      ['Terms of use', '/terms/'],
+      ['Terms Of Use', '/terms/'],
       ['Privacy', '/privacy/'],
+      ['Cookie Policy', '/cookies/'],
       ['Accessibility', '/accessibility/'],
     ],
   },
   {
     id: 'about',
-    title: 'Behind the art',
-    subtitle: 'Meet UltraClipart',
+    title: 'About Us',
+    subtitle: 'Team & Contact',
     icon: 'boards',
     items: [
       ['About UltraClipart', '/about/'],
-      ['Contact us', '/contact/'],
-      ['Copyright & corrections', '/copyright/'],
-      ['Our creative process', '/editorial-process/'],
+      ['Contact Us', '/contact/'],
+      ['Copyright & Corrections', '/copyright/'],
+      ['Our Creative Process', '/editorial-process/'],
     ],
   },
 ];
@@ -62,124 +64,83 @@ const showcase = [
   const item = art.find((item) => item.id === id);
   return item ? [item] : [];
 });
+const showInvitation = Astro.url.pathname !== '/';
 const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
 ---
 
 <footer class="site-footer" aria-label="Site footer">
   <div class="site-footer-inner">
-    <section class="footer-invitation" aria-labelledby="footer-invitation-title">
-      <div class="footer-invitation-copy">
-        <p class="footer-eyebrow">
-          <span></span> Keep a little creativity close
-        </p>
-        <h2 id="footer-invitation-title">
-          Big ideas.
-          <br />
-          <span>Little works of art.</span>
-        </h2>
-        <p>Discover something lovely. Make it your own. Save a little inspiration for later.</p>
-        <div class="footer-invitation-actions">
-          <a class="footer-explore-button" href="/categories/">
-            <img
-              class="footer-action-object"
-              src={sculpture('explore')}
-              alt=""
-              width="60"
-              height="60"
-              loading="lazy"
-            />
-            <span>
-              <strong>Explore clipart</strong>
-              <small>Find your next favorite</small>
-            </span>
-            <img
-              class="footer-action-arrow"
-              src={sculpture('arrow')}
-              alt=""
-              width="34"
-              height="34"
-              loading="lazy"
-            />
-          </a>
-          <a class="footer-studio-button" href="/create/">
-            <img
-              class="footer-action-object"
-              src={sculpture('studio')}
-              alt=""
-              width="60"
-              height="60"
-              loading="lazy"
-            />
-            <span>
-              <strong>Open Clipart Studio</strong>
-              <small>Give it your own twist</small>
-            </span>
-            <img
-              class="footer-action-arrow"
-              src={sculpture('arrow')}
-              alt=""
-              width="34"
-              height="34"
-              loading="lazy"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="footer-creative-stage" aria-hidden="true">
-        <div class="footer-stage-light"></div>
-        <div class="footer-stage-floor"></div>
-        {showcase.map((item, i) => (
-          <div class={`footer-art-card footer-art-card-${i}`}>
-            <div class="footer-art-paper">
-              <img src={item.thumb} alt="" width="200" height="200" loading="lazy" />
-            </div>
-            <span>{['Made to inspire', 'A little wonder', 'Made with love'][i]}</span>
+    {showInvitation && (
+      <section
+        class="footer-invitation footer-dimensional-display"
+        aria-labelledby="footer-invitation-title"
+      >
+        <div class="footer-invitation-copy">
+          <h2 id="footer-invitation-title">
+            Clipart for <span>Your Projects</span>
+          </h2>
+          <p>
+            Download an image or printable PDF, or open Clipart Studio to add text and arrange your
+            own layout.
+          </p>
+          <div class="footer-invitation-actions">
+            <a class="footer-explore-button" href="/categories/">
+              <img
+                class="footer-action-object"
+                src={sculpture('explore')}
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+              <span>Browse Clipart</span>
+            </a>
+            <a class="footer-studio-button" href="/create/">
+              <img
+                class="footer-action-object"
+                src={sculpture('studio')}
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+              <span>Open Clipart Studio</span>
+            </a>
           </div>
-        ))}
-        <img
-          class="footer-stage-palette"
-          src={sculpture('studio')}
-          alt=""
-          width="128"
-          height="128"
-          loading="lazy"
-        />
-        <img
-          class="footer-stage-heart"
-          src={sculpture('boards')}
-          alt=""
-          width="108"
-          height="108"
-          loading="lazy"
-        />
-        <span class="footer-stage-spark footer-stage-spark-one"></span>
-        <span class="footer-stage-spark footer-stage-spark-two"></span>
-      </div>
-    </section>
-    <div class="footer-brand-row">
-      <a class="brand footer-brand" href="/">
-        <img src="/logo.svg" width="40" height="44" alt="" />
-        <span>UltraClipart</span>
-      </a>
-      <p>
-        Original illustrations. <strong>Endless possibilities.</strong>
-      </p>
-      <a class="footer-board-link" href="/favorites/">
-        <img src={sculpture('boards')} alt="" width="53" height="53" loading="lazy" />
-        <span>
-          <strong>A home for your ideas</strong>
-          <small>Open your boards</small>
-        </span>
-        <img
-          class="footer-board-arrow"
-          src={sculpture('arrow')}
-          alt=""
-          width="30"
-          height="30"
-          loading="lazy"
-        />
-      </a>
-    </div>
+        </div>
+        <div class="footer-creative-stage" aria-hidden="true">
+          <div class="footer-stage-light"></div>
+          <div class="footer-stage-floor"></div>
+          {showcase.map((item, i) => (
+            <div class={`footer-art-card footer-art-card-${i}`}>
+              <div class="footer-art-paper">
+                <img src={item.thumb} alt="" width="200" height="200" loading="lazy" />
+              </div>
+              <span>{['Fruit Illustrations', 'Animal Clipart', 'Hearts & Flowers'][i]}</span>
+            </div>
+          ))}
+          <img
+            class="footer-stage-palette"
+            src={sculpture('studio')}
+            alt=""
+            width="128"
+            height="128"
+            loading="lazy"
+          />
+          <img
+            class="footer-stage-heart"
+            src={sculpture('boards')}
+            alt=""
+            width="108"
+            height="108"
+            loading="lazy"
+          />
+          <span class="footer-stage-spark footer-stage-spark-one"></span>
+          <span class="footer-stage-spark footer-stage-spark-two"></span>
+        </div>
+      </section>
+    )}
+
     <div class="footer-link-grid">
       {links.map((group) => (
         <details class={`footer-nav-card footer-nav-${group.id}`} data-footer-group open>
@@ -209,7 +170,7 @@ const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
                 <li>
                   <a href={href}>
                     <span>{label}</span>
-                    <img src={sculpture('arrow')} alt="" width="24" height="24" loading="lazy" />
+                    <NavigationArrow size={24} />
                   </a>
                 </li>
               ))}
@@ -218,11 +179,24 @@ const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
         </details>
       ))}
     </div>
+    <div class="footer-brand-row">
+      <a class="brand footer-brand" href="/">
+        <img src="/logo.svg" width="40" height="44" alt="" />
+        <span>UltraClipart</span>
+      </a>
+      <p>
+        <strong>Clipart and design tools</strong> for classroom materials, crafts and personal
+        projects.
+      </p>
+    </div>
     <div class="footer-bottom">
       <p>© {new Date().getFullYear()} UltraClipart</p>
-      <span class="footer-license-note">A little art for personal &amp; educational projects.</span>
-      <a href="#page-top">
-        Back to top <img src={sculpture('arrow')} alt="" width="26" height="26" loading="lazy" />
+      <a href="/cookies/#cookie-preferences" data-cookie-settings>
+        Cookie Settings
+      </a>
+      <span class="footer-license-note">Artwork is free for personal and educational use.</span>
+      <a class="footer-back-top" href="#page-top">
+        Back To Top <NavigationArrow size={25} direction="up" light />
       </a>
     </div>
   </div>
