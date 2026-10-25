@@ -159,7 +159,7 @@ test('search ranks subject matches, allows a single typo on long words and refus
 });
 test('pagination clamps invalid pages and never duplicates result identities', () => {
   const first = search({ size: 8 });
-  const last = search({ page: 999, size: 8 });
+  const last = search({ page: Math.ceil(data.length / 8) + 1, size: 8 });
   assert.equal(first.items.length, 8);
   assert.equal(last.page, Math.ceil(data.length / 8));
   assert.equal(last.items.length, data.length % 8 || 8);
