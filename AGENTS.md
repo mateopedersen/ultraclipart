@@ -8,6 +8,10 @@ The project owner set this workflow on 2026-10-25:
 - Do not push to GitHub, create publication PRs, merge branches, deploy to Cloudflare, or change production until the human explicitly says to publish the current batch (for example, “canlıya al” or “deploya al”).
 - Earlier publication authorization applies only to its completed release, not to subsequent updates.
 
+The owner explicitly authorized publication of this accumulated batch on
+2026-10-26 and requested that publication proceed without another confirmation.
+That approval does not apply to later, unrelated changes.
+
 ## Approved site design — 2026-10-25
 
 - The owner approved the current For Teachers design and requested the same design for Guides.

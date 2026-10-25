@@ -277,15 +277,15 @@ export class SearchRepository {
             if (!eligible(id)) continue;
             const approximate = fuzzy && !variants[index].includes(word);
             const value: TermMatch = {
-              weight: approximate
-                ? Math.min(3, entry % 8)
-                : (entry % 8) - (word === tokens[index] ? 0 : 0.5),
+              weight: (entry % 8) - (word === tokens[index] ? 0 : 0.5),
               fuzzy: approximate,
               positions: positions.get(id) || [],
             };
             const previous = matches.get(id);
             if (!previous) matches.set(id, value);
-            else
+            else if (previous.fuzzy !== value.fuzzy) {
+              if (!value.fuzzy) matches.set(id, value);
+            } else
               matches.set(id, {
                 weight: Math.max(previous.weight, value.weight),
                 fuzzy: previous.fuzzy && value.fuzzy,

@@ -1,5 +1,5 @@
 /** Versioned together with the public index. No invented image labels or remote inference. */
-export const SEARCH_LANGUAGE_VERSION = '9-field-phrase-intent';
+export const SEARCH_LANGUAGE_VERSION = '10-consistent-fuzzy-field-weights';
 const groups = [
   ['gift', 'present', 'presents', 'gifts'],
   ['leaf', 'leaves'],
