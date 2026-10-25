@@ -8,8 +8,9 @@ permissions:
   contents: read
 concurrency:
   group: validate-${{ github.ref }}
-  # Complete all three browser engines even when the next artwork wave arrives.
-  cancel-in-progress: false
+  # New PR commits supersede older candidates. Main artwork waves still finish
+  # their complete browser matrices, so a busy publisher cannot starve production.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
   plan:
     name: Select and verify affected checks
@@ -103,6 +104,7 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorite-boards.mjs
             fi
             if [ '${{ matrix.suite }}' = 'interface-artwork' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/artwork-details.mjs
@@ -114,6 +116,7 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
               BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/content.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/footer.mjs
             fi
             if [ '${{ matrix.suite }}' = 'catalog' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/volleyball.mjs

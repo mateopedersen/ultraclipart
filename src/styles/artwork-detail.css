@@ -558,3 +558,43 @@
     transition: none;
   }
 }
+
+.art-fact-subject .art-collection-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  text-decoration: none;
+}
+.art-collection-link > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.art-collection-arrow {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d2e2f5;
+  border-radius: 9px;
+  background: #edf5ff;
+  color: #2863ad;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.art-collection-arrow svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+.art-collection-link:hover .art-collection-arrow {
+  background: #dfeeff;
+  border-color: #a8c6eb;
+}
+@media (prefers-reduced-motion: reduce) {
+  .art-collection-arrow {
+    transition: none;
+  }
+}

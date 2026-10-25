@@ -61,7 +61,10 @@ export function initArtDetail() {
   sync();
   button.addEventListener('click', () => {
     try {
-      const ids = toggleStoredFavorite(localStorage, id);
+      const ids = toggleStoredFavorite(localStorage, id, {
+        title: button.dataset.favoriteTitle,
+        thumb: button.dataset.favoriteThumb,
+      });
       render(ids);
       notify(
         ids.includes(id)

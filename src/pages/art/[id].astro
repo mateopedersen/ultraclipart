@@ -141,9 +141,22 @@ const facts = artworkDetails(item);
             <span>Collection</span>
           </dt>
           <dd>
-            <a href={`/clipart/${item.topic}/`}>
-              {topic.keyword}
-              <span aria-hidden="true"> ↗</span>
+            <a class="art-collection-link" href={`/clipart/${item.topic}/`}>
+              <span>{topic.keyword}</span>
+              <span class="art-collection-arrow" aria-hidden="true">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12h14m-6-6 6 6-6 6" />
+                </svg>
+              </span>
             </a>
             <small>More artwork on this subject</small>
           </dd>
@@ -237,7 +250,13 @@ const facts = artworkDetails(item);
           </a>
         )}
       </div>
-      <button data-favorite={item.id} aria-pressed="false" style="width:100%">
+      <button
+        data-favorite={item.id}
+        data-favorite-title={item.title}
+        data-favorite-thumb={item.thumb}
+        aria-pressed="false"
+        style="width:100%"
+      >
         ♡ Add to Favorites
       </button>
       <p id="favorite-status" role="status" aria-live="polite" hidden></p>

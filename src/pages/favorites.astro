@@ -1,42 +1,269 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import HeaderIllustration from '../components/HeaderIllustration.astro';
+import '../styles/favorite-boards.css';
 ---
 
-<Layout title="Your Favorites" noindex={true}>
-  <section class="hero">
-    <h1>Your little collection.</h1>
-    <p>Saved on this browser, just for you.</p>
+<Layout
+  title="Your Favorites & Creative Boards"
+  description="Organize your saved clipart into personal project boards. Add notes, see when you saved each illustration, and keep your creative ideas together."
+  noindex={true}
+>
+  <section class="boards-hero" aria-labelledby="boards-title">
+    <div>
+      <p class="boards-eyebrow">Your ideas, beautifully together</p>
+      <h1 id="boards-title">
+        A board for
+        <br />
+        <span>every little idea.</span>
+      </h1>
+      <p>
+        A birthday, a classroom project, something just for your child. Make a place for the things
+        you love.
+      </p>
+      <span class="boards-device-note">Saved on this device · No account needed</span>
+    </div>
+    <div class="boards-hero-art" aria-hidden="true">
+      <div class="boards-art-card">
+        <HeaderIllustration kind="layers" instance="boards-collect" />
+        <span>Collect</span>
+      </div>
+      <div class="boards-art-card">
+        <HeaderIllustration kind="surprise" instance="boards-imagine" />
+        <span>Imagine</span>
+      </div>
+      <div class="boards-art-card">
+        <HeaderIllustration kind="book" instance="boards-create" />
+        <span>Create</span>
+      </div>
+    </div>
   </section>
-  <p id="favorites-count" role="status" aria-live="polite" aria-atomic="true">
-    Opening your saved illustrations…
-  </p>
-  <div class="gallery" id="favorites" aria-busy="true"></div>
-  <div id="favorites-empty" class="empty" hidden>
-    <h2>Nothing saved yet.</h2>
-    <p>Tap “Add to Favorites” on any illustration to keep it here.</p>
-    <a href="/new/">Find your first favorite →</a>
+  <section class="boards-library" aria-label="Your creative boards">
+    <div class="boards-section-heading">
+      <div>
+        <h2>Your boards</h2>
+        <p>Give every project its own space.</p>
+      </div>
+      <button type="button" class="boards-primary" data-board-create>
+        <span aria-hidden="true">＋</span> Create board
+      </button>
+    </div>
+    <div id="board-list" class="board-list" role="group" aria-label="Choose a board"></div>
+    <div class="boards-quick-start" id="boards-quick-start" hidden>
+      <span>Start with an idea:</span>
+      <button type="button" data-board-preset="For my child">
+        For my child
+      </button>
+      <button type="button" data-board-preset="Birthday ideas">
+        Birthday ideas
+      </button>
+      <button type="button" data-board-preset="Classroom projects">
+        Classroom projects
+      </button>
+    </div>
+  </section>
+  <section class="boards-content" aria-labelledby="current-board-title">
+    <div class="boards-section-heading">
+      <div>
+        <p class="boards-eyebrow">Your saved collection</p>
+        <h2 id="current-board-title">All favorites</h2>
+        <p id="current-board-description"></p>
+      </div>
+      <div class="board-management" hidden>
+        <button type="button" data-board-edit>
+          Edit board
+        </button>
+        <button type="button" data-board-delete>
+          Delete board
+        </button>
+      </div>
+    </div>
+    <div class="boards-toolbar">
+      <label class="boards-search">
+        <span>Find a saved design</span>
+        <input
+          id="favorites-search"
+          type="search"
+          placeholder="Search titles, notes or subjects"
+          maxlength="120"
+        />
+      </label>
+      <label>
+        <span>Sort by</span>
+        <select id="favorites-sort">
+          <option value="newest">Recently saved</option>
+          <option value="oldest">Saved first</option>
+          <option value="title">Title A–Z</option>
+        </select>
+      </label>
+      <label>
+        <span>Saved</span>
+        <select id="favorites-date">
+          <option value="all">Any time</option>
+          <option value="7">Last 7 days</option>
+          <option value="30">Last 30 days</option>
+          <option value="unknown">Earlier saves</option>
+        </select>
+      </label>
+      <button type="button" id="favorites-select">
+        Select designs
+      </button>
+    </div>
+    <div id="favorites-bulk" class="favorites-bulk" hidden>
+      <strong id="favorites-selected-count">0 selected</strong>
+      <label>
+        <span class="boards-sr-only">Destination board</span>
+        <select id="favorites-bulk-board">
+          <option value="">Choose a board</option>
+        </select>
+      </label>
+      <button type="button" id="favorites-bulk-add">
+        Add to board
+      </button>
+      <button type="button" id="favorites-bulk-remove">
+        Remove from this board
+      </button>
+      <button type="button" id="favorites-bulk-delete">
+        Remove favorites
+      </button>
+    </div>
+    <p id="favorites-count" role="status" aria-live="polite" aria-atomic="true">
+      Opening your saved illustrations…
+    </p>
+    <div class="gallery favorite-board-gallery" id="favorites" aria-busy="true"></div>
+    <div id="favorites-empty" class="boards-empty" hidden>
+      <HeaderIllustration kind="surprise" instance="boards-empty" />
+      <h3>A little room for inspiration.</h3>
+      <p id="favorites-empty-copy">
+        Save an illustration you love, then organize it into a board for your next project.
+      </p>
+      <a href="/new/">
+        Find your next favorite <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div id="favorites-error" class="notice" hidden>
+      <p>Please check your connection and try again. Your saved list is still on this device.</p>
+      <button id="favorites-retry" type="button">
+        Try again
+      </button>
+    </div>
+    <p id="favorites-missing" class="notice" hidden>
+      Some saved illustrations are no longer available. Your other saved designs are shown here.
+    </p>
+    <nav id="favorites-pagination" class="pagination" aria-label="Favorite pages" hidden>
+      <button id="favorites-previous" type="button">
+        ← Previous
+      </button>
+      <span id="favorites-position" aria-live="polite"></span>
+      <button id="favorites-next" type="button">
+        Next →
+      </button>
+    </nav>
+  </section>
+  <div class="boards-backup">
+    <div>
+      <h2>Keep your ideas with you.</h2>
+      <p>
+        Export a backup of your boards, notes and saved dates. Import it in another browser to bring
+        your collection along.
+      </p>
+    </div>
+    <div>
+      <button type="button" id="boards-export">
+        Export backup
+      </button>
+      <button type="button" id="boards-import">
+        Import backup
+      </button>
+      <input type="file" accept="application/json,.json" id="boards-import-file" hidden />
+    </div>
   </div>
-  <div id="favorites-error" class="notice" hidden>
-    <p>Please check your connection and try again. Your saved list is still in this browser.</p>
-    <button id="favorites-retry" type="button">
-      Try again
-    </button>
-  </div>
-  <p id="favorites-missing" class="notice" hidden>
-    Some saved illustrations are no longer available. The rest of your collection is shown here.
-  </p>
-  <nav id="favorites-pagination" class="pagination" aria-label="Favorite pages" hidden>
-    <button id="favorites-previous" type="button">
-      ← Previous
-    </button>
-    <span id="favorites-position" aria-live="polite"></span>
-    <button id="favorites-next" type="button">
-      Next →
-    </button>
-  </nav>
+  <p id="boards-status" class="boards-status" role="status" aria-live="polite" hidden></p>
+  <button type="button" id="boards-undo" hidden>
+    Undo
+  </button>
+  <dialog id="board-dialog" class="boards-dialog" aria-labelledby="board-dialog-title">
+    <form id="board-form">
+      <div class="boards-dialog-heading">
+        <h2 id="board-dialog-title">Create a board</h2>
+        <button type="button" data-dialog-close aria-label="Close board settings">
+          ×
+        </button>
+      </div>
+      <p>A place for your next creative idea.</p>
+      <label>
+        Board name
+        <input name="title" required maxlength="80" placeholder="e.g. Olivia’s birthday" />
+      </label>
+      <label>
+        A little description
+        <textarea
+          name="description"
+          maxlength="240"
+          rows="2"
+          placeholder="What are you collecting these ideas for?"
+        ></textarea>
+      </label>
+      <label>
+        Board color
+        <select name="color">
+          <option value="blue">Ocean blue</option>
+          <option value="rose">Soft rose</option>
+          <option value="sage">Garden green</option>
+          <option value="gold">Warm honey</option>
+          <option value="lavender">Lavender</option>
+        </select>
+      </label>
+      <p class="boards-form-error" role="alert" hidden></p>
+      <div class="boards-dialog-actions">
+        <button type="button" data-dialog-close>
+          Cancel
+        </button>
+        <button type="submit" class="boards-primary">
+          Save board
+        </button>
+      </div>
+    </form>
+  </dialog>
+  <dialog
+    id="favorite-organize-dialog"
+    class="boards-dialog"
+    aria-labelledby="favorite-organize-title"
+  >
+    <form id="favorite-organize-form">
+      <div class="boards-dialog-heading">
+        <h2 id="favorite-organize-title">Organize this design</h2>
+        <button type="button" data-dialog-close aria-label="Close design settings">
+          ×
+        </button>
+      </div>
+      <p id="organize-artwork-title"></p>
+      <fieldset id="organize-board-options">
+        <legend>Save to boards</legend>
+      </fieldset>
+      <label>
+        A note for later
+        <textarea
+          name="note"
+          rows="3"
+          maxlength="500"
+          placeholder="An idea, a name, a color, a reminder…"
+        ></textarea>
+      </label>
+      <p class="boards-form-error" role="alert" hidden></p>
+      <div class="boards-dialog-actions">
+        <button type="button" id="organize-remove">
+          Remove favorite
+        </button>
+        <button type="submit" class="boards-primary">
+          Save changes
+        </button>
+      </div>
+    </form>
+  </dialog>
   <noscript>
     <p class="notice">
-      JavaScript is needed to open favorites saved in this browser. You can browse the{' '}
+      JavaScript is needed to open your private boards on this device. You can browse the{' '}
       <a href="/categories/">topic directory</a> without it.
     </p>
   </noscript>
@@ -45,13 +272,3 @@ import Layout from '../layouts/Layout.astro';
   import { initFavorites } from '../scripts/favorites-client';
   initFavorites();
 </script>
-<style>
-  #favorites-pagination[hidden],
-  #favorites[hidden] {
-    display: none !important;
-  }
-  button:disabled {
-    cursor: default;
-    opacity: 0.45;
-  }
-</style>

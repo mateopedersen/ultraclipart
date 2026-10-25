@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import SiteFooter from '../components/SiteFooter.astro';
 import AiBuilderMark from '../components/AiBuilderMark.astro';
 import '../styles/site-header.css';
 import HeaderIllustration from '../components/HeaderIllustration.astro';
@@ -127,7 +128,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     />
     <slot name="head" />
   </head>
-  <body>
+  <body id="page-top">
     <a class="skip" href="#main">
       Skip to content
     </a>
@@ -383,48 +384,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     <main id="main" class:list={['container', { wide }]}>
       <slot />
     </main>
-    <footer>
-      <div class="footer-inner">
-        <div>
-          <a class="brand" href="/">
-            <img src="/logo.svg" width="38" height="42" alt="" />
-            UltraClipart
-          </a>
-          <p>
-            A little inspiration.
-            <br />A world of possibilities.
-          </p>
-          <small>Editable clipart for everyday creativity.</small>
-        </div>
-        <div>
-          <strong>Explore</strong>
-          <a href="/categories/">All topics</a>
-          <a href="/collections/">Collections</a>
-          <a href="/new/">New clipart</a>
-          <a href="/create/">Create your own</a>
-          <a href="/ai-clipart-generator/">AI Clipart Builder</a>
-          <a href="/black-and-white/">Black & White</a>
-        </div>
-        <div>
-          <strong>Help & information</strong>
-          <a href="/guides/">Project guides</a>
-          <a href="/print-size/">Print size calculator</a>
-          <a href="/faq/">FAQ</a>
-          <a href="/license/">License</a>
-          <a href="/terms/">Terms of use</a>
-          <a href="/privacy/">Privacy</a>
-          <a href="/accessibility/">Accessibility</a>
-        </div>
-        <div>
-          <strong>Let's make it better</strong>
-          <a href="/about/">About UltraClipart</a>
-          <a href="/contact/">Contact us</a>
-          <a href="/copyright/">Copyright & corrections</a>
-          <a href="/editorial-process/">Our creative process</a>
-          <p>© {new Date().getFullYear()} UltraClipart</p>
-        </div>
-      </div>
-    </footer>
+    <SiteFooter />
     <script>
       import { initCuteSurprise } from '../scripts/cute-surprise';
       initCuteSurprise();

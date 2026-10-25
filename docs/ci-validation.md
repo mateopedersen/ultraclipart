@@ -40,3 +40,6 @@ asset checksums and the final production smoke checks are independent gates and 
 
 Elapsed time depends on queue availability, cache state, catalog size and the affected scope;
 this policy reduces unnecessary work rather than promising a fixed deployment duration.
+
+
+New commits to the same pull request supersede and cancel the earlier PR candidate, so outdated browser jobs do not block its current checks. Main-branch publications still complete their browser matrices. No suite or validation gate is removed. Board, download-page and footer regressions run in all three browser engines with their corresponding interface groups.

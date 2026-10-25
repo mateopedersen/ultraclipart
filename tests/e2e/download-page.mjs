@@ -4,13 +4,20 @@ import { createHash } from 'node:crypto';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const engine = process.env.UC_BROWSER || 'chromium';
-const base = process.env.BASE_URL || 'http://127.0.0.1:4381';
+const upstream = process.env.BASE_URL || 'http://127.0.0.1:4381';
+const base = 'https://ultraclipart.com';
 const catalog = JSON.parse(readFileSync('data/art.json'));
 const output = `reports/download-page/${engine}`;
 mkdirSync(output, { recursive: true });
 const browser = await { chromium, firefox, webkit }[engine].launch();
 const context = await browser.newContext({ acceptDownloads: true });
 await context.route('**/*', (route) => route.continue());
+if (upstream !== base)
+  await context.route(`${base}/**`, async (route) => {
+    const url = new URL(route.request().url());
+    const response = await route.fetch({ url: `${upstream}${url.pathname}${url.search}` });
+    await route.fulfill({ response });
+  });
 const page = await context.newPage();
 const report = { engine, base, layouts: [], downloads: [], errors: [], adRequests: [] };
 page.on('pageerror', (e) => report.errors.push(e.message));
@@ -96,6 +103,12 @@ try {
   );
   await expect(page.locator('[data-final-download]')).toHaveCount(2);
   const nojs = await browser.newContext({ javaScriptEnabled: false });
+  if (upstream !== base)
+    await nojs.route(`${base}/**`, async (route) => {
+      const url = new URL(route.request().url());
+      const response = await route.fetch({ url: `${upstream}${url.pathname}${url.search}` });
+      await route.fulfill({ response });
+    });
   const plain = await nojs.newPage();
   await plain.goto(`${base}/art/apple-and-dried-rings-crayon-clipart/`);
   await plain.locator('.detail-actions a[href$="?format=pdf"]').click();

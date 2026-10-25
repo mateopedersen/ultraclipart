@@ -388,7 +388,10 @@ export function initRelatedArtwork() {
     if (!card) return;
     if (target.closest('[data-related-favorite]')) {
       try {
-        const ids = toggleStoredFavorite(localStorage, card.dataset.relatedId!);
+        const ids = toggleStoredFavorite(localStorage, card.dataset.relatedId!, {
+          title: card.querySelector('.related-card-title')?.textContent?.trim(),
+          thumb: card.querySelector('img')?.src,
+        });
         syncFavorites();
         status.textContent = ids.includes(card.dataset.relatedId!)
           ? 'Saved to your favorites.'
