@@ -1,12 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { availableClusters, availableTopics, art, slugify, topicInCluster } from '../lib/catalog';
+import CatalogCount from '../components/CatalogCount.astro';
+import {
+  availableClusters,
+  availableTopics,
+  publishedArt as art,
+  slugify,
+  topicInCluster,
+} from '../lib/catalog';
 ---
 
-<Layout title="Seasonal Clipart Collections">
+<Layout
+  title="Clipart Collections"
+  description="Browse related clipart subjects together, from animals and food to holidays and classroom materials."
+>
   <section class="hero">
-    <h1>Made for the moment.</h1>
-    <p class="lead">Discover a season, start a project, make something yours.</p>
+    <h1>Clipart Collections</h1>
+    <p class="lead">
+      Browse related subjects together, from animals and food to holidays and classroom materials.
+    </p>
   </section>
   <div class="category-grid">
     {availableClusters.map((c) => {
@@ -18,9 +30,15 @@ import { availableClusters, availableTopics, art, slugify, topicInCluster } from
             {items[0] ? <img src={items[0].thumb} alt="" width="200" height="150" /> : c.charAt(0)}
           </div>
           <div>
-            <h3>{c} →</h3>
+            <h3>{c}</h3>
             <p>
-              {items.length} illustrations · {ts.length} available topics
+              <CatalogCount kind="collection-artworks" countKey={slugify(c)} unit="illustration" />{' '}
+              ·{' '}
+              <CatalogCount
+                kind="collection-subjects"
+                countKey={slugify(c)}
+                unit="available topic"
+              />
             </p>
           </div>
         </a>

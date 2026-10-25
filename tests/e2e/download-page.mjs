@@ -30,34 +30,29 @@ try {
     ]) {
       await page.setViewportSize({ width, height: 1000 });
       const item = catalog.find((a) => a.id === id);
-      const response = await page.goto(`${base}/download/${id}/?format=pdf`, {
+      const response = await page.goto(`${base}/art/${id}/`, {
         waitUntil: 'networkidle',
       });
       assert.equal(response.status(), 200);
       await expect(page.locator('h1')).toHaveCount(1);
-      await expect(page.locator('[data-download-format]').first()).toHaveAttribute(
-        'data-download-format',
-        'pdf',
-      );
-      await expect(page.locator('[data-download-format="pdf"]')).toHaveAttribute(
-        'data-selected',
-        'true',
-      );
-      await expect(page.locator('[data-download-ad-region]')).toBeHidden();
-      assert.equal(await page.locator('[data-final-download]').count(), 2);
+      const originalUrl = page.url();
+      await page.locator('.detail-actions [data-download-format="pdf"]').click();
+      await expect(page.locator('#download-dialog')).toBeVisible();
+      await expect(page.locator('#download-dialog [data-final-download="pdf"]')).toBeVisible();
+      assert.equal(page.url(), originalUrl);
+      assert.equal(await page.locator('[data-final-download]').count(), 1);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
       assert.equal(
         await page.locator('link[rel="canonical"]').getAttribute('href'),
-        `https://ultraclipart.com/download/${id}/`,
+        `https://ultraclipart.com/art/${id}/`,
       );
       assert.equal(
         await page.locator('meta[name="robots"]').getAttribute('content'),
-        'noindex,follow',
+        'index,follow',
       );
       const axe = await new AxeBuilder({ page })
         .setLegacyMode(engine === 'webkit')
-        .include('.download-station')
-        .include('.download-project-notes')
+        .include('#download-dialog')
         .withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
         .analyze();
       assert.deepEqual(
@@ -65,7 +60,8 @@ try {
         [],
       );
       for (const format of ['webp', 'pdf']) {
-        const link = page.locator(`[data-final-download="${format}"]`);
+        await page.locator(`#download-dialog [data-download-select="${format}"]`).click();
+        const link = page.locator(`#download-dialog [data-final-download="${format}"]`);
         await expect(link).toHaveAttribute('data-expected-bytes', String(item.files[format].bytes));
         await expect(link).toHaveAttribute('data-expected-sha256', item.files[format].sha256);
         const box = await link.boundingBox();
@@ -97,19 +93,21 @@ try {
         await page.screenshot({ path: `${output}/download-${width}.png`, fullPage: false });
       report.layouts.push({ id, width, accessibilityViolations: 0 });
     }
-  // Gallery entry and related cards share the same route contract.
-  await page.goto(`${base}/art/apple-and-dried-rings-crayon-clipart/`);
-  const entry = page.locator('.detail-actions a[href$="?format=webp"]');
-  await entry.click();
-  await page.waitForURL('**/download/apple-and-dried-rings-crayon-clipart/**');
-  await expect(page.locator('[data-download-format]').first()).toHaveAttribute(
-    'data-download-format',
-    'webp',
-  );
+  // The original page address, including its query and hash, is preserved.
   await page.goto(
-    `${base}/download/apple-and-dried-rings-crayon-clipart/?format=%22%3E%3Cscript%3E`,
+    `${base}/art/apple-and-dried-rings-crayon-clipart/?format=%22%3E%3Cscript%3E#main`,
   );
-  await expect(page.locator('[data-final-download]')).toHaveCount(2);
+  const originalUrl = page.url();
+  const entry = page.locator('.detail-actions a[data-download-format="webp"]');
+  await entry.click();
+  await expect(page.locator('#download-dialog [data-final-download="webp"]')).toBeVisible();
+  assert.equal(page.url(), originalUrl);
+  await page.locator('[data-download-close]').click();
+  await expect(page.locator('#download-dialog')).toHaveCount(0);
+  await expect(entry).toBeFocused();
+  assert.equal(page.url(), originalUrl);
+  await entry.click();
+  await expect(page.locator('#download-dialog [data-final-download="webp"]')).toBeVisible();
   // A CDN file must download with its original name rather than opening as an image.
   const original = page.locator('[data-final-download="webp"]'),
     item = catalog.find((a) => a.id === 'apple-and-dried-rings-crayon-clipart'),
@@ -182,9 +180,12 @@ try {
   const nojs = await browser.newContext({ javaScriptEnabled: false });
   const plain = await nojs.newPage();
   await plain.goto(`${base}/art/apple-and-dried-rings-crayon-clipart/`);
-  await plain.locator('.detail-actions a[href$="?format=pdf"]').click();
-  await plain.waitForURL('**/download/apple-and-dried-rings-crayon-clipart/**');
-  await expect(plain.locator('[data-final-download]')).toHaveCount(2);
+  const fallback = plain.locator('.detail-actions a[data-download-format="pdf"]');
+  await expect(fallback).toHaveAttribute('download', 'apple-and-dried-rings-crayon-clipart.pdf');
+  const fallbackUrl = await fallback.getAttribute('href');
+  assert.ok(fallbackUrl.endsWith('.pdf'));
+  assert.ok(!fallbackUrl.includes('/download/'));
+  assert.equal((await nojs.request.get(new URL(fallbackUrl, base).href)).status(), 200);
   await nojs.close();
   assert.deepEqual(report.adRequests, []);
   assert.deepEqual(report.errors, []);

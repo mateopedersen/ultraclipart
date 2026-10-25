@@ -1,14 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { art, newestArt } from '../lib/catalog';
+import CatalogCount from '../components/CatalogCount.astro';
+import { newestArt } from '../lib/catalog';
 ---
 
-<Layout title="New Clipart" noindex={true}>
+<Layout
+  title="New Clipart"
+  description="Browse the latest illustrations added to UltraClipart. Open each artwork to see its image, printable PDF and editing options."
+  noindex={true}
+>
   <section class="hero">
-    <p class="eyebrow">The growing collection</p>
-    <h1>Fresh from the sketchbook.</h1>
-    <p>{art.length} illustrations for your next personal or classroom project.</p>
+    <h1>New Clipart</h1>
+    <p>
+      Browse the latest illustrations added to the catalog. Open an image to see its files and
+      editing options.
+    </p>
   </section>
   <div class="gallery">
     {newestArt.slice(0, 32).map((item) => (
@@ -17,12 +24,10 @@ import { art, newestArt } from '../lib/catalog';
   </div>
   <div class="browse-more">
     <p>
-      {art.length > 32
-        ? `Showing 32 of ${art.length} illustrations. Use search to explore the full collection.`
-        : 'Find the right subject, color or style for your next project.'}
+      Browse all <CatalogCount kind="artworks" unit="illustration" /> using search.
     </p>
     <a class="button primary" href="/search/?sort=newest">
-      Explore all clipart →
+      Browse All Clipart
     </a>
   </div>
 </Layout>

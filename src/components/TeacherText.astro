@@ -1,0 +1,39 @@
+---
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+const controls = [
+  'Download Image',
+  'Download PDF',
+  'Save project',
+  'Open saved project',
+  'Export backup',
+  'Import backup',
+  'Create board',
+  'Add / update caption',
+  'Learning label',
+  'Black & White',
+  'Favorites',
+  'Layers',
+  'Text',
+  'Organize',
+  'PDF',
+  'WebP',
+];
+const pattern = new RegExp(
+  `(${controls.map((label) => label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`,
+  'g',
+);
+const parts = text.split(pattern);
+---
+
+{parts.map((part) =>
+  controls.includes(part) ? <strong class="teacher-control-name">{part}</strong> : part,
+)}
+<style>
+  .teacher-control-name {
+    font-weight: 650;
+    color: inherit;
+  }
+</style>

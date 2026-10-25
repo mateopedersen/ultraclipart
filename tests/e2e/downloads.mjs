@@ -88,8 +88,9 @@ try {
   expect(response.headers()['content-security-policy']).toContain(
     "connect-src 'self' https://assets.ultraclipart.com",
   );
-  await page.locator('.detail-actions a[href$="?format=pdf"]').click();
-  await page.waitForURL('**/download/winter-arctic-fox-resting/**');
+  await page.locator('.detail-actions a[data-download-format="pdf"]').click();
+  await expect(page.locator('#download-dialog [data-final-download="pdf"]')).toBeVisible();
+  expect(page.url()).toBe(`${origin}/art/winter-arctic-fox-resting/`);
   await page
     .locator('a[download][href$=".pdf"]')
     .first()

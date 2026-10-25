@@ -1,5 +1,5 @@
 ---
-import { downloadPageHref } from '../lib/download-route';
+import CardFileActions from './CardFileActions.astro';
 import type { RelatedCard } from '../lib/related/engine';
 interface Props {
   card: RelatedCard;
@@ -24,24 +24,7 @@ const { card } = Astro.props;
       {card.title}
     </a>
     <p class="related-reason">{card.reason}</p>
-    <div class="related-card-actions">
-      <a
-        href={downloadPageHref(card.id, 'webp')}
-
-        data-related-download="webp"
-        aria-label={`Download Image: ${card.title}`}
-      >
-        Image <span aria-hidden="true">↓</span>
-      </a>
-      <a
-        href={downloadPageHref(card.id, 'pdf')}
-
-        data-related-download="pdf"
-        aria-label={`Download PDF: ${card.title}`}
-        hidden={!card.pdf}
-      >
-        PDF <span aria-hidden="true">↓</span>
-      </a>
+    <CardFileActions id={card.id} title={card.title} webp={card.webp} pdf={card.pdf} related>
       <button
         type="button"
         class="related-favorite"
@@ -62,6 +45,6 @@ const { card } = Astro.props;
           <path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8Z" />
         </svg>
       </button>
-    </div>
+    </CardFileActions>
   </div>
 </article>

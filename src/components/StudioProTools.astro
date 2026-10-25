@@ -1,0 +1,252 @@
+---
+import StudioIcon from './StudioIcon.astro';
+import { proTools as tools } from '../editor/smart/pro-catalog';
+---
+
+<div data-studio-pane="home" class="uc-pro-home">
+  <div class="uc-pro-welcome">
+    <StudioIcon name="studio" size={42} />
+    <div>
+      <h3>Your Studio Toolkit</h3>
+      <p>Build a layout, finish the artwork, prepare it for print.</p>
+    </div>
+  </div>
+  <div class="uc-pro-shortcuts">
+    <button data-open-panel="elements">Add Artwork</button>
+    <button data-open-panel="text">Text Styles</button>
+    <button data-open-panel="layers">Select Layers</button>
+  </div>
+  <label>
+    Find a Tool
+    <input data-pro-search type="search" placeholder="Sticker, background, spiral…" />
+  </label>
+  <div class="uc-pro-filters" role="group" aria-label="Tool categories">
+    {['All', 'Design', 'Artwork', 'Print'].map((name) => (
+      <button data-pro-filter={name} aria-pressed={name === 'All'}>
+        {name}
+      </button>
+    ))}
+  </div>
+  <p class="uc-hint" data-pro-tool-count aria-live="polite">
+    {tools.length} tools
+  </p>
+  <div class="uc-pro-tools">
+    {tools.map((tool) => (
+      <button
+        data-pro-open={tool.id}
+        data-pro-group={tool.category}
+        data-pro-keywords={`${tool.name} ${tool.copy}`.toLowerCase()}
+      >
+        <StudioIcon name={tool.icon} size={32} />
+        <strong>{tool.name}</strong>
+        <span>{tool.copy}</span>
+        {tool.badge && <small>{tool.badge}</small>}
+      </button>
+    ))}
+  </div>
+</div>
+<div data-studio-pane="radial" hidden>
+  <p class="uc-hint">
+    Select a motif or linked group. Copies form a new ring or spiral and fit inside the canvas.
+  </p>
+  <div class="uc-pro-illustration" aria-hidden="true">
+    <svg viewBox="0 0 300 110">
+      <circle cx="150" cy="55" r="34" fill="none" stroke="#afc8e9" stroke-width="1.5" />
+      {Array.from({ length: 10 }, (_, i) => (
+        <ellipse
+          cx="150"
+          cy="17"
+          rx="7"
+          ry="12"
+          fill={i % 2 ? '#8eb8ed' : '#356caa'}
+          transform={`rotate(${i * 36} 150 55)`}
+        />
+      ))}
+      <circle cx="150" cy="55" r="10" fill="#e1ecfa" />
+    </svg>
+  </div>
+  <label>
+    Arrangement
+    <select data-pro-orbit>
+      <option value="ring">Circular Ring</option>
+      <option value="spiral">Growing Spiral</option>
+    </select>
+  </label>
+  <div class="uc-row">
+    <label>
+      Copies
+      <input data-pro-copies type="number" min="2" max="48" value="12" />
+    </label>
+    <label>
+      Radius
+      <input data-pro-radius type="number" min="20" max="1800" value="220" />
+    </label>
+  </div>
+  <div class="uc-row">
+    <label>
+      Sweep (°)
+      <input data-pro-sweep type="number" min="15" max="360" value="360" />
+    </label>
+    <label>
+      Start Angle (°)
+      <input data-pro-start type="number" min="-360" max="360" value="-90" />
+    </label>
+  </div>
+  <label>
+    Copy Rotation
+    <select data-pro-rotate>
+      <option value="follow">Follow the Curve</option>
+      <option value="upright">Keep Upright</option>
+    </select>
+  </label>
+  <label>
+    Original Selection
+    <select data-pro-source>
+      <option value="replace">Replace with the Arrangement</option>
+      <option value="keep">Keep Original Layers</option>
+    </select>
+  </label>
+  <button class="uc-primary" data-smart-action="pro-radial">
+    Create Arrangement
+  </button>
+  <p class="uc-hint">
+    Each copy is a linked group. Lower the sweep to make an open fan. The entire arrangement can be
+    undone in one step.
+  </p>
+</div>
+<div data-studio-pane="layout" hidden>
+  <p class="uc-hint">
+    Select several items. Each item, or linked group, fits into its own cell without changing its
+    proportions.
+  </p>
+  <div class="uc-pro-illustration" aria-hidden="true">
+    <svg viewBox="0 0 300 100">
+      {[0, 1, 2, 3, 4, 5].map((i) => (
+        <rect
+          x={72 + (i % 3) * 54}
+          y={12 + Math.floor(i / 3) * 42}
+          width="46"
+          height="34"
+          rx="5"
+          fill={i % 2 ? '#d7e7fa' : '#90b7e8'}
+          stroke="#5783b7"
+        />
+      ))}
+    </svg>
+  </div>
+  <label>
+    Columns
+    <input data-pro-columns type="number" min="1" max="12" value="3" />
+  </label>
+  <div class="uc-row">
+    <label>
+      Gap (px)
+      <input data-pro-gap type="number" min="0" max="200" value="24" />
+    </label>
+    <label>
+      Outer Margin (px)
+      <input data-pro-margin type="number" min="0" max="300" value="32" />
+    </label>
+  </div>
+  <button class="uc-primary" data-smart-action="pro-layout">
+    Arrange Selected Items
+  </button>
+  <p class="uc-hint">
+    Uses layer order, back to front. Hidden and locked items stay in place. Select every part of a
+    linked group.
+  </p>
+</div>
+<div data-studio-pane="backdrop" hidden>
+  <p class="uc-hint">
+    Build a full-canvas vector background. It stays editable as a separate layer behind the artwork.
+  </p>
+  <label>
+    Pattern or Frame
+    <select data-pro-backdrop>
+      <option value="dots">Polka Dots</option>
+      <option value="checks">Checkerboard</option>
+      <option value="stripes">Vertical Stripes</option>
+      <option value="diamonds">Diamonds</option>
+      <option value="confetti">Confetti</option>
+      <option value="grid">Graph Paper</option>
+      <option value="frame">Rounded Frame</option>
+      <option value="double-frame">Double Frame</option>
+    </select>
+  </label>
+  <div class="uc-row">
+    <label>
+      Ink Color
+      <input data-pro-ink type="color" value="#afcbea" />
+    </label>
+    <label>
+      Paper Color
+      <input data-pro-paper type="color" value="#f5f9ff" />
+    </label>
+  </div>
+  <div class="uc-row">
+    <label>
+      Spacing / Inset
+      <input data-pro-tile type="number" min="16" max="240" value="64" />
+    </label>
+    <label>
+      Dot / Line Size
+      <input data-pro-motif-size type="number" min="1" max="40" value="6" />
+    </label>
+  </div>
+  <button class="uc-primary" data-smart-action="pro-backdrop">
+    Apply Background
+  </button>
+  <p class="uc-hint">
+    Applying again replaces the previous Studio background. Use Recolor or Separate Parts for
+    further vector edits.
+  </p>
+</div>
+<div data-studio-pane="canvas" hidden>
+  <p class="uc-hint">
+    Prepare another format without stretching your design. Artwork is centered with the padding you
+    choose.
+  </p>
+  <label>
+    Operation
+    <select data-pro-canvas-mode>
+      <option value="fit">Fit Artwork to a Format</option>
+      <option value="trim">Trim Canvas to Artwork</option>
+    </select>
+  </label>
+  <label data-pro-format-label>
+    New Format
+    <select data-pro-canvas-size>
+      <option value="square">Square · 1080 × 1080</option>
+      <option value="portrait">Portrait · 1080 × 1350</option>
+      <option value="story">Story · 1080 × 1920</option>
+      <option value="landscape">Landscape · 1920 × 1080</option>
+      <option value="a4">A4 · Actual Print Size</option>
+      <option value="letter">US Letter · Actual Print Size</option>
+    </select>
+  </label>
+  <label>
+    Padding (px)
+    <input data-pro-padding type="number" min="0" max="500" value="32" />
+  </label>
+  <button class="uc-primary" data-smart-action="pro-canvas">
+    Fit Canvas
+  </button>
+  <p class="uc-hint">
+    Unlock layers first. The crop is cleared; alternate hidden layers follow the same transform.
+    Reapply a Studio background after resizing.
+  </p>
+</div>
+<div data-studio-pane="preflight" hidden>
+  <p class="uc-hint">Review every visible layer against the export boundary before downloading.</p>
+  <button class="uc-primary" data-smart-action="pro-preflight">
+    Review Canvas
+  </button>
+  <div data-pro-report class="uc-pro-report" role="status" aria-live="polite">
+    <p>The report appears here. Run it again after editing the artwork.</p>
+  </div>
+  <div class="uc-pro-shortcuts">
+    <button data-pro-open="canvas">Open Canvas Fit</button>
+    <button data-pro-open="quality">Inspect an Image</button>
+    <button data-action="export-inspector">Download Options</button>
+  </div>
+</div>

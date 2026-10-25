@@ -1,5 +1,6 @@
 ---
 import RelatedCard from './RelatedCard.astro';
+import NavigationArrow from './NavigationArrow.astro';
 import { relatedIndex } from '../lib/related/service';
 import '../styles/related.css';
 interface Props {
@@ -26,7 +27,7 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
       </p>
     </div>
     <a class="related-collection" href={snapshot.category}>
-      {snapshot.categoryLabel} <span aria-hidden="true">→</span>
+      <span>{snapshot.categoryLabel}</span> <NavigationArrow size={32} dimensional />
     </a>
   </div>
   {hasCards && (
@@ -113,7 +114,7 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
         </p>
         <p class="related-status" role="status" aria-live="polite" data-related-status></p>
         <a href={snapshot.category} data-related-end hidden>
-          Continue exploring the collection <span aria-hidden="true">→</span>
+          <span>Continue exploring the collection</span> <NavigationArrow size={32} dimensional />
         </a>
         <a href={`/art/${snapshot.sourceId}/`} data-related-refresh hidden>
           Refresh artwork recommendations <span aria-hidden="true">↻</span>

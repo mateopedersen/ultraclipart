@@ -1,11 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PrintDeskIcon from '../components/PrintDeskIcon.astro';
+import PrintArrow from '../components/PrintArrow.astro';
 import { structuredData, breadcrumbs } from '../lib/structured-data';
+import '../styles/print-size.css';
 ---
 
 <Layout
-  title="Clipart Print Size Calculator"
-  description="Calculate pixels per inch, preserve your artwork's proportions, and check whether an image fits US Letter or A4 with your chosen margins. No upload required."
+  title="Print Size Calculator · Pixels, PPI & Paper Fit"
+  description="Convert image pixels to inches, centimeters or millimeters. Preview paper fit, preserve proportions and compare print sizes at 150, 300 or 600 PPI. No upload needed."
 >
   <script
     slot="head"
@@ -18,278 +21,483 @@ import { structuredData, breadcrumbs } from '../lib/structured-data';
       ]),
     )}
   />
-  <section class="hero">
-    <p class="eyebrow">A practical printing companion</p>
-    <h1>A good fit, before you print.</h1>
-    <p class="lead">Turn pixels into a sensible size on paper.</p>
-    <p>
-      Enter the dimensions of your exported image. The calculator keeps its proportions and checks
-      the whole canvas, including transparent space. Your files stay on your device; no upload is
-      needed.
-    </p>
-  </section>
-  <section class="print-calculator" aria-labelledby="calculator-heading">
-    <div>
-      <h2 id="calculator-heading">Your image and paper</h2>
-      <form id="print-calculator-form">
-        <fieldset>
-          <legend>Image dimensions</legend>
-          <div class="print-fields">
-            <label>
-              Width in pixels
-              <input
-                name="pixelsWide"
-                type="number"
-                min="1"
-                max="100000"
-                step="1"
-                required
-                value="2048"
-                inputmode="numeric"
-              />
-            </label>
-            <label>
-              Height in pixels
-              <input
-                name="pixelsHigh"
-                type="number"
-                min="1"
-                max="100000"
-                step="1"
-                required
-                value="2048"
-                inputmode="numeric"
-              />
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Desired size</legend>
-          <div class="print-fields">
-            <label>
-              Printed width
-              <input
-                name="printWidth"
-                type="number"
-                min="0.01"
-                max="12700"
-                step="any"
-                required
-                value="4"
-                inputmode="decimal"
-              />
-            </label>
-            <label>
-              Units
-              <select name="units">
-                <option value="in">Inches</option>
-                <option value="mm">Millimeters</option>
-              </select>
-            </label>
-          </div>
-          <p>The height is calculated from your image's proportions.</p>
-        </fieldset>
-        <fieldset>
-          <legend>Paper and margins</legend>
-          <div class="print-fields">
-            <label>
-              Paper
-              <select name="paper">
-                <option value="letter">US Letter · 8.5 × 11 in</option>
-                <option value="a4">A4 · 210 × 297 mm</option>
-              </select>
-            </label>
-            <label>
-              Margins (inches)
-              <input
-                name="margin"
-                type="number"
-                min="0"
-                max="2"
-                step="any"
-                required
-                value="0.5"
-                inputmode="decimal"
-              />
-            </label>
-          </div>
-          <label class="print-check">
-            <input name="landscape" type="checkbox" /> Landscape orientation
-          </label>
-        </fieldset>
-        <button class="button primary" type="submit">
-          Calculate print size
-        </button>
-      </form>
-    </div>
-    <div class="print-result-panel">
-      <p class="eyebrow">Your result</p>
-      <div id="print-result" role="status" aria-live="polite" aria-atomic="true">
-        <h2>4 × 4 inches</h2>
-        <p>
-          <strong>512 pixels per inch</strong>
+  <div class="print-tool">
+    <header class="print-hero">
+      <div>
+        <p class="print-breadcrumb">
+          <a href="/guides/">Project guides</a>
+          <span>/</span>Printing tools
         </p>
-        <p>Fits inside a 7.5 × 10 inch usable area on US Letter with half-inch margins.</p>
+        <h1>Print size calculator</h1>
+        <p class="print-intro">
+          See how large your image will print and whether it fits your paper.
+        </p>
       </div>
-      <p id="print-error" role="alert" hidden></p>
-      <button id="print-fit" type="button" hidden>
-        Use largest size that fits
-      </button>
-      <p class="print-result-note">
-        This is a size calculation, not a quality certification. Printer settings, artwork details,
-        and viewing distance still matter.
-      </p>
-      <noscript>
-        <p>
-          The example above uses a 2,048 × 2,048 pixel image. Enable JavaScript to calculate other
-          sizes, or divide pixels by the desired width in inches yourself.
+      <PrintDeskIcon kind="printer" id="print-header-printer" size={172} />
+    </header>
+
+    <section class="print-workspace" aria-labelledby="calculator-heading">
+      <div class="print-controls">
+        <div class="print-section-head">
+          <PrintDeskIcon kind="ruler" id="print-control-ruler" size={68} />
+          <div>
+            <h2 id="calculator-heading">Print settings</h2>
+            <p>Enter the pixel dimensions from your image file.</p>
+          </div>
+        </div>
+        <p id="print-import-note" class="print-import-note" hidden>
+          These dimensions are from your selected image. Change them if you have cropped or resized
+          it.
         </p>
-      </noscript>
-    </div>
-  </section>
-  <article class="prose">
-    <h2>Read the number correctly</h2>
-    <p>
-      Pixels per inch (ppi) describes how densely an image's pixels are placed on paper. It is
-      different from a printer's dots-per-inch setting. A 2,048-pixel image placed four inches wide
-      has 512 ppi; the same file placed eight inches wide has 256 ppi. Nothing in the file has
-      changed.
-    </p>
-    <p>
-      Around 300 ppi is a common starting point for detailed prints viewed closely, but it is not a
-      universal pass/fail line. Ask your printer for its requirements. Adobe's{' '}
-      <a href="https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/resize-adjust-resolution/printed-image-resolution.html">
-        explanation of printed image resolution
-      </a>{' '}
-      describes the relationship between pixels and physical size.
-    </p>
-    <h2>Why the visible drawing can be smaller</h2>
-    <p>
-      The full exported canvas includes its transparent edges. A four-inch-wide image may contain a
-      pumpkin that is only three inches wide inside that canvas. Crop empty space in the editor if
-      exact visual size matters, then calculate again using the new export's dimensions. This
-      calculator cannot see where the visible shapes begin.
-    </p>
-    <h2>Paper fit is not a printer guarantee</h2>
-    <p>
-      The calculation subtracts your chosen margins from the page size. Your printer may require a
-      larger nonprinting area. “Use largest size that fits” preserves proportions and stays inside
-      that calculated area; it does not add bleed, cut lines, or printer calibration. Measure a test
-      print before producing repeated labels or cards.
-    </p>
-    <h2>What about vector PDFs?</h2>
-    <p>
-      A vector shape is not limited by a fixed raster pixel count in the same way. Use the studio's
-      Print setup controls for paper, placement, and margins when exporting PDF. The calculator is
-      primarily for WebP and other raster images you place in another document. Read{' '}
-      <a href="/guides/webp-pdf-and-editable-projects/">our file format guide</a> for the CMYK
-      assumptions and PDF limitations.
-    </p>
-    <p>
-      <a class="button" href="/create/">
-        Open the creative studio
+        <form id="print-calculator-form">
+          <fieldset>
+            <legend>
+              Image size <span>Pixels</span>
+            </legend>
+            <div class="print-input-grid">
+              <label>
+                Width
+                <input
+                  name="pixelsWide"
+                  type="number"
+                  min="1"
+                  max="100000"
+                  step="1"
+                  required
+                  value="2048"
+                  inputmode="numeric"
+                />
+              </label>
+              <span class="print-times" aria-hidden="true">
+                ×
+              </span>
+              <label>
+                Height
+                <input
+                  name="pixelsHigh"
+                  type="number"
+                  min="1"
+                  max="100000"
+                  step="1"
+                  required
+                  value="2048"
+                  inputmode="numeric"
+                />
+              </label>
+            </div>
+            <p class="print-help">Include the full image, even transparent borders.</p>
+          </fieldset>
+          <fieldset>
+            <legend>Size on paper</legend>
+            <div class="print-field-grid">
+              <label>
+                Set size by
+                <select name="sizeBy">
+                  <option value="width">Width</option>
+                  <option value="height">Height</option>
+                </select>
+              </label>
+              <label>
+                Units
+                <select name="units">
+                  <option value="in">Inches</option>
+                  <option value="cm">Centimeters</option>
+                  <option value="mm">Millimeters</option>
+                </select>
+              </label>
+              <label class="print-size-field">
+                <span id="print-size-label">Width on paper</span>
+                <input
+                  name="printWidth"
+                  aria-describedby="print-ratio-note"
+                  type="number"
+                  min="0.000001"
+                  max="500"
+                  step="any"
+                  required
+                  value="4"
+                  inputmode="decimal"
+                />
+              </label>
+              <div class="print-linked-size">
+                <span id="print-linked-label">Height (calculated)</span>
+                <output id="print-linked-value">4 in</output>
+              </div>
+            </div>
+            <p id="print-ratio-note" class="print-help">
+              The other side adjusts automatically to keep the image in proportion.
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Paper & margins</legend>
+            <div class="print-field-grid">
+              <label class="print-paper-field">
+                Paper size
+                <select name="paper">
+                  <option value="letter">US Letter · 8.5 × 11 in</option>
+                  <option value="a4">A4 · 210 × 297 mm</option>
+                  <option value="a5">A5 · 148 × 210 mm</option>
+                  <option value="a3">A3 · 297 × 420 mm</option>
+                  <option value="legal">US Legal · 8.5 × 14 in</option>
+                  <option value="photo4x6">Photo · 4 × 6 in</option>
+                  <option value="photo5x7">Photo · 5 × 7 in</option>
+                  <option value="photo8x10">Photo · 8 × 10 in</option>
+                </select>
+              </label>
+              <label>
+                <span id="print-margin-label">Margin per side (in)</span>
+                <input
+                  name="margin"
+                  type="number"
+                  min="0"
+                  max="2"
+                  step="any"
+                  required
+                  value="0.5"
+                  inputmode="decimal"
+                />
+              </label>
+            </div>
+            <label class="print-orientation">
+              <input name="landscape" type="checkbox" />
+              <span>
+                Landscape <small>Paper in horizontal orientation</small>
+              </span>
+              <span class="print-orientation-model" aria-hidden="true">
+                <span></span>
+              </span>
+            </label>
+          </fieldset>
+          <button class="print-primary" type="submit">
+            Calculate print size <PrintArrow light size={36} />
+          </button>
+          <p class="print-help print-live-note">Results update as you type.</p>
+        </form>
+      </div>
+
+      <div class="print-preview-panel">
+        <div class="print-section-head">
+          <div>
+            <h2>Paper preview</h2>
+            <p>Your image, centered within the margins.</p>
+          </div>
+          <span class="print-preview-scale">Not actual size</span>
+        </div>
+        <div id="print-preview-content">
+          <figure class="print-paper-figure">
+            <svg
+              id="print-paper-preview"
+              viewBox="0 0 400 365"
+              role="img"
+              aria-labelledby="print-diagram-title print-diagram-desc"
+            >
+              <title id="print-diagram-title">Image centered on US Letter paper</title>
+              <desc id="print-diagram-desc">
+                A 4 inch square image fits within half-inch margins. Diagram is not actual size.
+              </desc>
+              <defs>
+                <linearGradient id="print-preview-sheet" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#fff" />
+                  <stop offset="1" stop-color="#e9edf2" />
+                </linearGradient>
+                <linearGradient id="print-metal" x1="0" y1="0" x2="0" y2="1">
+                  <stop stop-color="#fcfdff" />
+                  <stop offset=".48" stop-color="#d7dfe7" />
+                  <stop offset=".55" stop-color="#f0f3f7" />
+                  <stop offset="1" stop-color="#b1bdcb" />
+                </linearGradient>
+                <filter id="print-soft-shadow" x="-30%" y="-30%" width="170%" height="170%">
+                  <feGaussianBlur stdDeviation="4" />
+                </filter>
+                <pattern
+                  id="print-preview-grid"
+                  width="12"
+                  height="12"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect width="12" height="12" fill="#d9eaff" />
+                  <path d="M0 0h6v6H0zm6 6h6v6H6z" fill="#c8dff8" />
+                </pattern>
+                <clipPath id="print-paper-clip">
+                  <rect id="print-clip-rect" x="84" y="24" width="232" height="300" rx="4" />
+                </clipPath>
+              </defs>
+              <rect
+                id="print-paper-shadow"
+                x="89"
+                y="31"
+                width="232"
+                height="300"
+                rx="5"
+                fill="#263a52"
+                opacity=".2"
+                filter="url(#print-soft-shadow)"
+              />
+              <rect
+                id="print-paper-edge"
+                x="86"
+                y="27"
+                width="232"
+                height="300"
+                rx="2"
+                fill="#c0cad5"
+                stroke="#aebbc9"
+              />
+              <rect
+                id="print-paper-layer"
+                x="85"
+                y="25"
+                width="232"
+                height="300"
+                rx="2"
+                fill="#eff2f6"
+                stroke="#d3dbe4"
+              />
+              <rect
+                id="print-paper-rect"
+                x="84"
+                y="24"
+                width="232"
+                height="300"
+                rx="4"
+                fill="url(#print-preview-sheet)"
+                stroke="#a8bfd9"
+                stroke-width="1.5"
+              />
+              <g clip-path="url(#print-paper-clip)">
+                <rect
+                  id="print-image-rect"
+                  x="145"
+                  y="119"
+                  width="109"
+                  height="109"
+                  rx="2"
+                  fill="url(#print-preview-grid)"
+                  stroke="#2865ad"
+                  stroke-width="2"
+                />
+                <g
+                  id="print-image-icon"
+                  transform="translate(200 174)"
+                  fill="none"
+                  stroke="#34669c"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                >
+                  <rect x="-16" y="-13" width="32" height="26" rx="3" />
+                  <circle cx="7" cy="-5" r="3" />
+                  <path d="m-14 10 10-12 8 9 5-5 6 8" />
+                </g>
+              </g>
+              <rect
+                id="print-margin-rect"
+                x="98"
+                y="38"
+                width="204"
+                height="272"
+                fill="none"
+                stroke="#6c8daf"
+                stroke-dasharray="5 5"
+              />
+              <rect
+                id="print-top-ruler"
+                x="84"
+                y="4"
+                width="232"
+                height="14"
+                rx="1"
+                fill="url(#print-metal)"
+                stroke="#aab6c4"
+                stroke-width=".6"
+              />
+              <rect
+                id="print-left-ruler"
+                x="62"
+                y="24"
+                width="14"
+                height="300"
+                rx="1"
+                fill="url(#print-metal)"
+                stroke="#aab6c4"
+                stroke-width=".6"
+              />
+              <g
+                id="print-ruler-ticks"
+                fill="#4b5d72"
+                stroke="#6a7b8e"
+                stroke-width=".7"
+                aria-hidden="true"
+              ></g>
+              <text
+                id="print-page-caption"
+                x="200"
+                y="351"
+                text-anchor="middle"
+                fill="#3e5879"
+                font-size="13"
+                font-weight="700"
+              >
+                US Letter · 8.5 × 11 in
+              </text>
+            </svg>
+            <figcaption>
+              <span class="print-legend-image"></span>Image canvas{' '}
+              <span class="print-legend-margin"></span>Margins{' '}
+              <small>Diagram only. Check the dimensions shown below.</small>
+            </figcaption>
+          </figure>
+          <div id="print-result" role="status" aria-live="polite" aria-atomic="true">
+            <p class="print-eyebrow">Your print size</p>
+            <h3>4 × 4 inches</h3>
+            <p class="print-density">
+              <strong>512 pixels per inch</strong>
+            </p>
+            <p class="print-fit-status" data-fits="true">
+              Fits inside the 7.5 × 10 inches print area.
+            </p>
+            <p class="print-quality-note">
+              300 PPI or higher. Print a sample to check small details.
+            </p>
+          </div>
+        </div>
+        <p id="print-error" role="alert" hidden></p>
+        <div class="print-fit-actions">
+          <button id="print-fit" class="print-secondary" type="button" hidden>
+            Use largest size that fits <PrintArrow size={30} />
+          </button>
+          <button id="print-rotate" class="print-text-button" type="button" hidden>
+            Rotate the paper to fit
+          </button>
+        </div>
+        <p class="print-result-caution">
+          Your printer may need wider margins. Check its settings before printing.
+        </p>
+        <noscript>
+          <p>
+            The example above uses a 2,048 × 2,048 pixel image. Enable JavaScript to calculate other
+            sizes, or divide pixels by the desired width in inches yourself.
+          </p>
+        </noscript>
+      </div>
+    </section>
+
+    <section class="print-reference" aria-labelledby="print-reference-heading">
+      <div class="print-reference-heading">
+        <div>
+          <h2 id="print-reference-heading">Compare print sizes</h2>
+        </div>
+        <p>The same image prints smaller at a higher PPI. Choose a size to try it on your paper.</p>
+      </div>
+      <p id="print-reference-empty" class="print-help" hidden>
+        Enter valid pixel dimensions above to see reference sizes.
+      </p>
+      <div id="print-reference-cards" class="print-reference-cards">
+        {[
+          { ppi: 150, label: 'Larger size' },
+          { ppi: 300, label: 'Commonly used for printing' },
+          { ppi: 600, label: 'Smaller size, higher density' },
+        ].map(({ ppi, label }) => (
+          <article class:list={['print-density-card', { 'print-density-featured': ppi === 300 }]}>
+            <p>{label}</p>
+            <h3>
+              {ppi} <span>PPI</span>
+            </h3>
+            <output id={`print-reference-${ppi}`}>
+              {(2048 / ppi).toFixed(2)} × {(2048 / ppi).toFixed(2)} in
+            </output>
+            <button type="button" data-print-ppi={ppi}>
+              Use this size <PrintArrow size={30} />
+            </button>
+          </article>
+        ))}
+      </div>
+      <p class="print-help">
+        These sizes include transparent borders. PPI alone does not guarantee print quality.
+      </p>
+    </section>
+
+    <section class="print-guide" aria-labelledby="print-guide-heading">
+      <h2 id="print-guide-heading">Before you print</h2>
+      <div class="print-guide-grid">
+        <article>
+          <PrintDeskIcon kind="ruler" id="print-guide-resolution" size={82} />
+          <h3>PPI and DPI</h3>
+          <p>
+            PPI is the number of image pixels printed per inch. DPI is a printer setting. Changing
+            DPI alone does not add detail to your image.
+          </p>
+          <p class="print-formula">Print width = pixel width ÷ PPI</p>
+        </article>
+        <article>
+          <PrintDeskIcon kind="paper" id="print-guide-canvas" size={82} />
+          <h3>Transparent borders</h3>
+          <p>
+            The measurement includes empty space around the drawing. Crop the image first if the
+            artwork itself needs to match an exact size.
+          </p>
+        </article>
+        <article>
+          <PrintDeskIcon kind="printer" id="print-guide-output" size={82} />
+          <h3>Print at 100%</h3>
+          <p>
+            Choose Actual size or 100% in the print dialog. Fit to page will resize the image. Print
+            one copy and measure it before making more.
+          </p>
+        </article>
+      </div>
+      <details class="print-method">
+        <summary>
+          Calculation details and sources <span aria-hidden="true">+</span>
+        </summary>
+        <div>
+          <p>
+            Height follows the original width-to-height ratio. Paper fit subtracts the selected
+            margin from all four sides. The largest fit uses whichever limit—width or height—is
+            reached first. Measurements are calculated before display rounding.
+          </p>
+          <p>
+            One inch equals exactly 25.4 mm. A4 is 210 × 297 mm, A5 is 148 × 210 mm and A3 is 297 ×
+            420 mm. US Letter is 8.5 × 11 inches. A margin of zero only checks page geometry; it
+            does not mean your printer supports borderless printing.
+          </p>
+          <p>
+            300 PPI is a common reference for detailed prints viewed closely, not a universal
+            pass/fail rule. Ask your print provider about its requirements. This calculator is for
+            raster images; a PDF can contain vector artwork, raster artwork or both.
+          </p>
+          <ul>
+            <li>
+              <a href="https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/resize-adjust-resolution/image-size-resolution-and-resampling.html">
+                Adobe: image size, resolution and resampling
+              </a>
+            </li>
+            <li>
+              <a href="https://www.nist.gov/pml/owm/si-units-length">NIST: SI units of length</a>
+            </li>
+            <li>
+              <a href="https://support.hp.com/in-en/document/bpq04022">HP: paper dimensions</a>
+            </li>
+            <li>
+              <a href="https://publications.lexmark.com/publications/lexmark_hardware/Paper_and_Specialty_Media_Guide/html/en/GUID-3fcca8c6-5c8b-4d33-bb3a-c30908594b07-en.html">
+                Lexmark: supported paper sizes
+              </a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+    <aside class="print-next">
+      <div>
+        <h2>Edit your layout</h2>
+        <p>Place your image, add text and save your design.</p>
+      </div>
+      <a href="/create/">
+        Open the studio <PrintArrow size={32} />
       </a>
-    </p>
-  </article>
+      <a href="/guides/webp-pdf-and-editable-projects/">File format guide</a>
+    </aside>
+  </div>
   <script>
-    import { calculatePrintSize, type PrintInput } from '../lib/print-size';
-    const form = document.querySelector<HTMLFormElement>('#print-calculator-form')!;
-    const result = document.querySelector<HTMLElement>('#print-result')!;
-    const error = document.querySelector<HTMLElement>('#print-error')!;
-    const fit = document.querySelector<HTMLButtonElement>('#print-fit')!;
-    const field = (name: string) =>
-      form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement;
-    const number = (value: number) =>
-      new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(value);
-    let last: ReturnType<typeof calculatePrintSize> | undefined;
-    let previousUnits = 'in';
-    function render() {
-      if (!form.checkValidity()) {
-        last = undefined;
-        fit.hidden = true;
-        result.hidden = true;
-        error.textContent = 'Complete the fields with valid dimensions to calculate a size.';
-        error.hidden = false;
-        return;
-      }
-      try {
-        const computed = calculatePrintSize({
-          pixelsWide: Number(field('pixelsWide').value),
-          pixelsHigh: Number(field('pixelsHigh').value),
-          widthInches:
-            Number(field('printWidth').value) / (field('units').value === 'mm' ? 25.4 : 1),
-          paper: field('paper').value as PrintInput['paper'],
-          landscape: (field('landscape') as HTMLInputElement).checked,
-          marginInches: Number(field('margin').value),
-        });
-        last = computed;
-        const scale = field('units').value === 'mm' ? 25.4 : 1,
-          unit = scale === 1 ? 'inches' : 'millimeters';
-        const heading = document.createElement('h2');
-        heading.textContent = `${number(computed.widthInches * scale)} × ${number(computed.heightInches * scale)} ${unit}`;
-        const density = document.createElement('p');
-        const strong = document.createElement('strong');
-        strong.textContent = `${number(computed.ppi)} pixels per inch`;
-        density.append(strong);
-        const fitText = document.createElement('p');
-        fitText.textContent = `${computed.fits ? 'Fits' : 'Does not fit'} inside the ${number(computed.usableWidth * scale)} × ${number(computed.usableHeight * scale)} ${unit} usable paper area.`;
-        const note = document.createElement('p');
-        note.textContent =
-          computed.ppi < 300
-            ? 'Below 300 ppi at this size. Check a proof at the intended viewing distance or use a smaller size.'
-            : 'At least 300 ppi at this size. Still check fine details and text in a print proof.';
-        result.replaceChildren(heading, density, fitText, note);
-        result.hidden = false;
-        error.hidden = true;
-        fit.hidden = false;
-      } catch (cause) {
-        last = undefined;
-        result.hidden = true;
-        fit.hidden = true;
-        error.textContent =
-          cause instanceof Error ? cause.message : 'Check the dimensions and try again.';
-        error.hidden = false;
-      }
-    }
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      render();
-    });
-    form.addEventListener('change', (event) => {
-      if (event.target === field('units')) {
-        const current = field('units').value;
-        const value = Number(field('printWidth').value);
-        if (field('printWidth').value && Number.isFinite(value))
-          field('printWidth').value = String(
-            Number(
-              (
-                value *
-                (current === 'mm' && previousUnits === 'in'
-                  ? 25.4
-                  : current === 'in' && previousUnits === 'mm'
-                    ? 1 / 25.4
-                    : 1)
-              ).toFixed(6),
-            ),
-          );
-        previousUnits = current;
-      }
-      render();
-    });
-    form.addEventListener('input', () => {
-      if (last) {
-        result.hidden = true;
-        fit.hidden = true;
-        last = undefined;
-      }
-    });
-    fit.addEventListener('click', () => {
-      if (!last) return;
-      field('printWidth').value = String(
-        Math.floor(last.fitWidth * (field('units').value === 'mm' ? 25.4 : 1) * 1e6) / 1e6,
-      );
-      render();
-    });
-    render();
+    import '../scripts/print-size';
   </script>
 </Layout>

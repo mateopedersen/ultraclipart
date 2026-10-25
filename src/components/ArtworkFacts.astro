@@ -17,9 +17,7 @@ const facts = artworkDetails(item);
       <p>Your creative toolkit</p>
       <h2 id="artwork-facts-title">Know your files.</h2>
     </div>
-    <a href="/guides/webp-pdf-and-editable-projects/">
-      A guide to your files <span aria-hidden="true">↗</span>
-    </a>
+    <a href="/guides/webp-pdf-and-editable-projects/">A guide to your files</a>
   </div>
   <div class="artwork-facts-grid">
     <article class="file-fact file-fact-image">
@@ -96,7 +94,7 @@ const facts = artworkDetails(item);
               </dd>
             </div>
           </dl>
-          <a href="/print-size/">
+          <a href={`/print-size/?width=${item.width}&height=${item.height}`}>
             Check your print size <span aria-hidden="true">→</span>
           </a>
         </details>
@@ -107,7 +105,7 @@ const facts = artworkDetails(item);
         <FileGuideIllustration kind="edit" thumb={item.thumb} />
         <span class="file-fact-format">Studio</span>
       </div>
-      <h3>Make it yours</h3>
+      <h3>Edit This Illustration</h3>
       <p class="file-fact-primary">
         {item.layered ? `${layers.length} editable layers` : 'One image layer'}
       </p>

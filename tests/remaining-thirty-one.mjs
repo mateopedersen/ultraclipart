@@ -9,6 +9,9 @@ import { cuteConfidence } from '../src/lib/cute-discovery.ts';
 import { artworkDetails } from '../src/lib/artwork-details.ts';
 const read = (path) => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const art = read('data/art.json');
+const verifiedFiles = new Map(
+  read('data/publication.json').files.map((file) => [`${file.assetId}/${file.kind}`, file.url]),
+);
 const items = art.filter((x) => x.sourceCollection === 'owner-remaining-thirty-one-2026-10-25');
 const topics = Object.keys(packageContexts);
 test('new greetings and ordinary objects do not enter cute discovery through keyword matches', () => {
@@ -153,11 +156,15 @@ test(
       assert.equal(imageSchema.encodingFormat, 'image/webp');
       assert.ok(!html.includes('content="noindex'));
       for (const format of ['webp', 'pdf']) {
-        assert.ok(html.includes(`href="/download/${item.id}/?format=${format}"`));
-        const download = text(`download/${item.id}/index.html`);
-        assert.ok(download.includes(`download="${item.id}.${format}"`));
-        assert.ok(download.includes(`data-expected-sha256="${item.files[format].sha256}"`));
-        assert.ok(download.includes(`data-expected-bytes="${item.files[format].bytes}"`));
+        const tag = html.match(new RegExp(`<a[^>]+download="${item.id}\\.${format}"[^>]*>`))?.[0];
+        assert.ok(tag, `${item.id} ${format}`);
+        assert.ok(tag.includes(`data-download-open="${item.id}"`));
+        assert.ok(tag.includes(`data-download-format="${format}"`));
+        assert.ok(
+          [verifiedFiles.get(`${item.id}/${format}`), item[format]].some((url) =>
+            tag.includes(`href="${url}"`),
+          ),
+        );
       }
       assert.ok(pages.includes(`/art/${item.id}/`));
       assert.ok(images.includes(`/art/${item.id}/`));

@@ -1,5 +1,17 @@
-import { normalizeQuery, type SearchArtwork } from './search.ts';
+import { normalizeQuery, artworkSearchFields, type SearchArtwork } from './search.ts';
+import { isMonochrome, type MonochromeDirectory } from './monochrome.ts';
 
+export interface DownloadDetails {
+  width: number;
+  height: number;
+  alpha: boolean;
+  pdfPage: string;
+  pdfColorSpace: string;
+  files: {
+    webp: { bytes: number; sha256: string };
+    pdf?: { bytes: number; sha256: string };
+  };
+}
 export interface SearchCard {
   id: string;
   title: string;
@@ -8,6 +20,7 @@ export interface SearchCard {
   webp: string;
   pdf?: string;
   editable?: boolean;
+  download?: DownloadDetails;
 }
 export interface SearchTopic {
   slug: string;
@@ -23,6 +36,10 @@ export interface SearchManifest {
   lexiconLengths: number[];
   facets: string[];
   topics: SearchTopic[];
+  monochrome?: MonochromeDirectory;
+  ranking?: number;
+  lexiconInitials?: string[];
+  site?: string;
 }
 export interface RankedPage {
   ids: string[];
@@ -55,6 +72,7 @@ export function cardMetadata(item: SearchArtwork & SearchCard): SearchCard {
     webp: item.webp,
     ...(item.pdf ? { pdf: item.pdf } : {}),
     ...(item.editable === false ? { editable: false } : {}),
+    ...(item.download ? { download: item.download } : {}),
   };
 }
 export function buildSearchIndex(
@@ -69,6 +87,7 @@ export function buildSearchIndex(
   const files = new Map<string, unknown>();
   const buckets = new Map<string, Record<string, number[]>>();
   const lexicons = new Map<number, Set<string>>();
+  const initials = new Map<string, Set<string>>();
   const facets = new Map<string, number[]>();
   const locations = new Map<string, Record<string, number>>();
   const addFacet = (name: string, ordinal: number) => {
@@ -81,26 +100,36 @@ export function buildSearchIndex(
     const location = locations.get(key) ?? Object.create(null);
     location[item.id] = ordinal;
     locations.set(key, location);
-    const strong = new Set(normalizeQuery(`${item.topic} ${item.title}`));
-    const words = new Set(
-      normalizeQuery(
-        `${item.topic} ${item.title} ${item.description} ${item.alt} ${item.cluster ?? ''}`,
-      ),
-    );
-    for (const word of words) {
+    const { title, weights } = artworkSearchFields(item);
+    for (const [word, weight] of weights) {
       const key = tokenBucket(word),
         bucket = buckets.get(key) ?? Object.create(null);
-      // One integer stores the ordinal and exact-match weight (5 or 2).
-      (bucket[word] ??= []).push(ordinal * 8 + (strong.has(word) ? 5 : 2));
+      (bucket[word] ??= []).push(ordinal * 8 + weight);
+      const positions = title.flatMap((value, i) => (value === word && i < 64 ? [i] : []));
+      if (positions.length)
+        (bucket['^' + word] ??= []).push(...positions.map((position) => ordinal * 64 + position));
       buckets.set(key, bucket);
       const vocabulary = lexicons.get(word.length) ?? new Set<string>();
       vocabulary.add(word);
       lexicons.set(word.length, vocabulary);
+      const initial = initials.get(word[0]) ?? new Set<string>();
+      initial.add(word);
+      initials.set(word[0], initial);
     }
     for (const key of ['style', 'color', 'orientation'] as const)
       addFacet(`${key}/${item[key].toLowerCase()}`, ordinal);
-    if (['outline', 'black & white'].includes(item.style.toLowerCase()))
+    if (
+      item.style.toLowerCase() !== 'watercolor' &&
+      normalizeQuery(`${item.title} ${item.alt}`).includes('watercolor')
+    )
+      addFacet('style/watercolor', ordinal);
+    if (item.style.toLowerCase() === 'outline' || item.monochromeKind === 'outline')
+      addFacet('print/outline', ordinal);
+    if (isMonochrome(item)) {
       addFacet('print/monochrome', ordinal);
+      if (item.monochromeKind) addFacet(`monochrome-kind/${item.monochromeKind}`, ordinal);
+    }
+    for (const collection of item.collections ?? []) addFacet(`collection/${collection}`, ordinal);
     for (const format of new Set(item.formats?.map((value) => value.toLowerCase()) ?? []))
       addFacet(`format/${format}`, ordinal);
     if (typeof item.alpha === 'boolean')
@@ -123,6 +152,8 @@ export function buildSearchIndex(
   }
   for (const [length, words] of lexicons)
     files.set(`${version}/lexicon/${length}`, [...words].sort());
+  for (const [initial, words] of initials)
+    files.set(`${version}/prefix/${initial}`, [...words].sort());
   for (const [name, ordinals] of facets) files.set(`${version}/facets/${name}`, ordinals);
   const titleOrder = items.map((_, i) => i);
   const newestOrder = [...titleOrder].sort(
@@ -150,6 +181,8 @@ export function buildSearchIndex(
     );
   const manifest: SearchManifest = {
     schema: 1,
+    ranking: 2,
+    lexiconInitials: [...initials.keys()].sort(),
     version,
     total: items.length,
     pageChunk: SEARCH_CHUNK,

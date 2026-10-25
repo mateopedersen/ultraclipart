@@ -1,0 +1,25 @@
+---
+import { catalogStatistics } from '../lib/catalog-statistics';
+import { catalogCountValue, formatCatalogCount } from '../lib/catalog-counts';
+import type { CatalogCountKind, CatalogCountUnit } from '../lib/catalog-counts';
+interface Props {
+  kind: CatalogCountKind;
+  countKey?: string;
+  unit?: CatalogCountUnit;
+}
+const { kind, countKey, unit } = Astro.props;
+const value = catalogCountValue(catalogStatistics, kind, countKey);
+---
+
+<span
+  data-catalog-count={kind}
+  data-catalog-key={countKey}
+  data-catalog-unit={unit}
+  data-catalog-version={catalogStatistics.version}
+>
+  {formatCatalogCount(value, unit)}
+</span>
+
+<script>
+  import '../scripts/catalog-counts';
+</script>

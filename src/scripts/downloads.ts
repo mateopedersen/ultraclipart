@@ -2,12 +2,38 @@ import { verifiedSourceUrl } from '../editor/source-policy';
 
 const maxDownloadBytes = 16_000_000;
 const pending = new WeakSet<HTMLAnchorElement>();
+const transfers = new WeakMap<
+  HTMLAnchorElement,
+  { controller: AbortController; cancelled: boolean }
+>();
+
+export function cancelDownloadsWithin(root: HTMLElement) {
+  root.querySelectorAll<HTMLAnchorElement>('a[download]').forEach((link) => {
+    const transfer = transfers.get(link);
+    if (!transfer) return;
+    transfer.cancelled = true;
+    transfer.controller.abort();
+    transfers.delete(link);
+    pending.delete(link);
+    link.removeAttribute('aria-busy');
+    const status = document.querySelector<HTMLElement>('#download-status');
+    if (status?.textContent === 'Preparing your download…') status.hidden = true;
+  });
+}
 
 // Cross-origin links ignore the HTML download attribute. Fetch through the
 // explicitly allowed CDN and save a local Blob, with bounded time and memory.
 async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 30_000);
+  const transfer = { controller, cancelled: false };
+  transfers.set(link, transfer);
+  // Keep the selection immutable during the request, even when a panel closes.
+  const source = link.href;
+  const filename = link.download;
+  const kind = link.dataset.finalDownload;
+  const expectedBytes = Number(link.dataset.expectedBytes);
+  const expectedHash = link.dataset.expectedSha256;
   const station = link.hasAttribute('data-final-download');
   const localStatus = station
     ? link.parentElement?.querySelector<HTMLElement>('[data-download-status]')
@@ -15,7 +41,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
   const label = link.querySelector<HTMLElement>('[data-download-label]');
   const originalLabel = label?.textContent || '';
   const updateLocal = (message: string) => {
-    if (localStatus) {
+    if (localStatus && !transfer.cancelled && link.isConnected) {
       localStatus.hidden = false;
       localStatus.textContent = message;
     }
@@ -28,27 +54,26 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
   if (label) label.textContent = 'Preparing download…';
   try {
     if (station) {
-      const kind = link.dataset.finalDownload;
       if (
         (kind !== 'webp' && kind !== 'pdf') ||
-        !/^[a-z0-9]+(?:-[a-z0-9]+)*\.(webp|pdf)$/.test(link.download) ||
-        !link.download.endsWith(`.${kind}`)
+        !/^[a-z0-9]+(?:-[a-z0-9]+)*\.(webp|pdf)$/.test(filename) ||
+        !filename.endsWith(`.${kind}`)
       )
         throw new Error('Invalid download selection');
       verifiedSourceUrl(
         {
-          url: link.href,
-          bytes: Number(link.dataset.expectedBytes),
-          sha256: link.dataset.expectedSha256 || '',
+          url: source,
+          bytes: expectedBytes,
+          sha256: expectedHash || '',
         },
         kind,
         location.origin,
       );
     }
-    const byteLimit = station ? Number(link.dataset.expectedBytes) : maxDownloadBytes;
+    const byteLimit = station ? expectedBytes : maxDownloadBytes;
     // Ordinary image previews may have populated the HTTP cache without CORS
     // headers. Fetch readable bytes again rather than reuse that opaque entry.
-    const response = await fetch(link.href, {
+    const response = await fetch(source, {
       signal: controller.signal,
       credentials: 'omit',
       mode: 'cors',
@@ -57,11 +82,11 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
     if (
       !response.ok ||
       new URL(response.url).origin !==
-        (station ? new URL(link.href).origin : 'https://assets.ultraclipart.com')
+        (station ? new URL(source).origin : 'https://assets.ultraclipart.com')
     )
       throw new Error('Unavailable download');
     const type = response.headers.get('content-type')?.split(';')[0].trim().toLowerCase() ?? '';
-    const extension = new URL(link.href).pathname.split('.').pop()?.toLowerCase() ?? '';
+    const extension = new URL(source).pathname.split('.').pop()?.toLowerCase() ?? '';
     const expectedTypes: Record<string, string> = {
       pdf: 'application/pdf',
       webp: 'image/webp',
@@ -101,9 +126,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
     )
       throw new Error('Invalid download contents');
     const blob = new Blob(chunks, { type });
-    const expectedBytes = Number(link.dataset.expectedBytes);
     if (expectedBytes && length !== expectedBytes) throw new Error('File size changed');
-    const expectedHash = link.dataset.expectedSha256;
     if (expectedHash) {
       const digest = await crypto.subtle.digest('SHA-256', await blob.arrayBuffer());
       const actual = [...new Uint8Array(digest)]
@@ -111,10 +134,11 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
         .join('');
       if (actual !== expectedHash) throw new Error('File checksum changed');
     }
+    if (controller.signal.aborted) throw new Error('Download cancelled');
     const url = URL.createObjectURL(blob);
     const save = document.createElement('a');
     save.href = url;
-    save.download = link.download || new URL(link.href).pathname.split('/').pop()!;
+    save.download = filename || new URL(source).pathname.split('/').pop()!;
     document.body.append(save);
     save.click();
     save.remove();
@@ -125,6 +149,7 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
       if (status.textContent === 'Your download is ready.') status.hidden = true;
     }, 6000);
   } catch {
+    if (transfer.cancelled) return;
     status.textContent =
       'The download could not finish. Check your connection and select the download again.';
     status.hidden = false;
@@ -132,9 +157,12 @@ async function downloadFile(link: HTMLAnchorElement, status: HTMLElement) {
   } finally {
     clearTimeout(timeout);
     controller.abort();
-    pending.delete(link);
-    link.removeAttribute('aria-busy');
-    if (label) label.textContent = originalLabel;
+    if (transfers.get(link) === transfer) {
+      transfers.delete(link);
+      pending.delete(link);
+      link.removeAttribute('aria-busy');
+      if (label) label.textContent = originalLabel;
+    }
   }
 }
 
@@ -149,6 +177,7 @@ document.addEventListener('click', (event) => {
     event.shiftKey ||
     event.altKey ||
     !link ||
+    link.hasAttribute('data-download-open') ||
     (!link.hasAttribute('data-final-download') &&
       new URL(link.href).origin !== 'https://assets.ultraclipart.com')
   )

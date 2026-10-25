@@ -16,6 +16,16 @@ export const styles = {
   pastel: 'Refined pastel illustration with soft harmonious colors',
   doodle: 'Playful hand-drawn doodle with clean intentional lines',
   'cut-paper': 'Layered cut-paper illustration with subtle paper texture',
+  gouache:
+    'Gouache-style illustration with opaque matte color, visible brushwork and layered paint',
+  'colored-pencil':
+    'Colored-pencil illustration with visible pencil strokes, layered pigment and fine paper grain',
+  woodcut:
+    'Woodcut-style ink illustration with carved contours, textured marks and controlled hatching',
+  'clay-3d':
+    'Dimensional clay-style illustration with softly sculpted forms, matte material, gentle directional light and grounding shadows',
+  comic:
+    'Comic illustration with confident ink contours, expressive shapes and restrained halftone shading; no speech bubbles or lettering',
 } as const;
 export type StyleId = keyof typeof styles;
 export interface PromptOptions {

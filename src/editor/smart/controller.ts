@@ -265,7 +265,7 @@ export class SmartController {
           ? 'Draw around the desired region. Release to close the selection.'
           : brush
             ? 'Paint on the image. The original is preserved; Undo reverses each stroke.'
-            : 'Click a connected color region. Smart Select uses local color and edges; similar neighboring parts may need manual refinement.';
+            : 'Tap a connected color area. Use Brush or Lasso to refine similar neighboring parts.';
   }
   render() {
     for (const button of this.host.root.querySelectorAll<HTMLButtonElement>(
@@ -290,6 +290,13 @@ export class SmartController {
           return o;
         }),
     );
+    if (!picker.options.length) picker.append(new Option('Add an image to use these tools', ''));
+    picker.disabled = !this.host.committed().layers.some((item) => item.kind === 'raster');
+    this.q('data-region-empty').hidden = !!layer;
+    for (const controls of this.host.root.querySelectorAll<HTMLFieldSetElement>(
+      '[data-region-needs-image]',
+    ))
+      controls.disabled = !layer || layer.locked || !layer.visible;
     const region = this.region();
     if (this.regionId && !region) this.regionId = '';
     if (region && this.shownRegion !== region.id) {
@@ -713,6 +720,7 @@ export class SmartController {
       this.host.root.dataset.propertiesCollapsed = String(
         this.host.root.dataset.propertiesCollapsed !== 'true',
       );
+      this.host.root.dispatchEvent(new CustomEvent('uc:inspector-collapse'));
       return;
     }
     if (action === 'clear' || action === 'new-region') {

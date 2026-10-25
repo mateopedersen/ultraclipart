@@ -14,36 +14,35 @@ export const styles = [
   ['pastel', 'Pastel', 'Gentle color · soft detail'],
   ['doodle', 'Doodle', 'Playful lines · spontaneous shapes'],
   ['cut-paper', 'Cut paper', 'Layered paper · subtle depth'],
+  ['gouache', 'Gouache', 'Opaque paint · matte brush texture'],
+  ['colored-pencil', 'Colored pencil', 'Visible pencil strokes · layered pigment'],
+  ['woodcut', 'Woodcut', 'Carved lines · textured ink'],
+  ['clay-3d', 'Clay 3D', 'Sculpted forms · soft material and shadows'],
+  ['comic', 'Comic illustration', 'Confident ink · expressive shapes'],
 ] as const;
-export const examples = [
+export { examples } from './ideas';
+
+// These three existing homepage images have their own matching prompt transfers.
+export const invitationExamples = [
   {
-    label: 'A little wildflower',
+    label: 'A Rabbit With a Daisy',
     prompt:
       'A realistic baby rabbit holding a yellow daisy, detailed soft fur, warm gentle eyes, full body, centered on a clean white background, with space around the subject.',
     style: 'realistic',
     image: '/ai-examples/baby-rabbit-320.webp',
-    alt: 'A detailed baby rabbit with a yellow daisy',
   },
   {
-    label: 'A friendly invention',
+    label: 'A Gardening Robot',
     prompt:
-      'A silver and orange robot holding a potted plant, carefully detailed metal surfaces, friendly rounded features, full body, clean white background.',
+      'A silver and orange imaginary robot holding a potted plant, carefully detailed metal surfaces, friendly rounded features, full body, clean white background.',
     style: 'realistic',
     image: '/ai-examples/garden-robot-320.webp',
-    alt: 'A silver and orange robot holding a potted plant',
   },
   {
-    label: 'A cup of flowers',
+    label: 'A Cup of Flowers',
     prompt:
       'Pink peonies and white daisies arranged in a pale green teacup, delicate realistic petals, soft natural light, isolated on a clean white background.',
     style: 'realistic',
     image: '/ai-examples/floral-teacup-320.webp',
-    alt: 'Pink peonies and white daisies in a pale green teacup',
-  },
-  {
-    label: 'A classroom classic',
-    prompt:
-      'A red school bus seen from the side, carefully drawn wheels and windows, thick clean outline, centered with generous white space.',
-    style: 'vector',
   },
 ] as const;

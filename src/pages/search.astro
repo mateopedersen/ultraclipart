@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { art, topics } from '../lib/catalog';
+import CatalogCount from '../components/CatalogCount.astro';
+import { publishedArt as art, topics } from '../lib/catalog';
 import { defaults, searchArtwork } from '../lib/search';
 import { cardMetadata } from '../lib/search-index';
 import { getSearchBuild } from '../lib/search-build';
+import { searchKindLabels } from '../lib/site-search';
+import '../styles/site-search.css';
 const initial = searchArtwork(art, defaults);
 const seed = {
   version: (await getSearchBuild()).manifest.version,
@@ -15,7 +18,7 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
 ---
 
 <Layout
-  title="Search Clipart"
+  title="Search UltraClipart"
   description="Find original clipart by subject, style, color and format. Explore editable artwork with transparent WebP and printable PDF downloads."
   noindex={true}
 >
@@ -23,8 +26,10 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
     if (location.search) document.documentElement.setAttribute('data-search-pending', '');
   </script>
   <section class="hero search-hero">
-    <p class="eyebrow">Find your next little inspiration</p>
-    <h1>Search clipart.</h1>
+    <h1>Search UltraClipart</h1>
+    <p>
+      Describe the subject, action, style or color. Find artwork, guides and tools in one place.
+    </p>
     <form id="catalog-search" class="searchbox" action="/search/" role="search">
       <span aria-hidden="true">⌕</span>
       <label class="sr-only" for="search-query">
@@ -34,8 +39,8 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
         id="search-query"
         name="q"
         type="search"
-        maxlength="160"
-        placeholder="Try winter, baby or heart…"
+        maxlength="320"
+        placeholder="Try father cradling a newborn, or make a classroom label…"
         autocomplete="off"
         list="search-topics"
       />
@@ -53,9 +58,17 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
       · <a href="/search/?q=sunflower">Sunflower</a> · <a href="/search/?q=heart">Heart</a>
     </p>
   </section>
-  <div class="catalog-grid">
-    <aside class="filters" aria-label="Filter illustrations">
-      <h2>Refine your search</h2>
+  <div class="search-kind-tabs" role="group" aria-label="Search result type">
+    {Object.entries(searchKindLabels).map(([kind, label]) => (
+      <button type="button" data-search-kind={kind} aria-pressed={kind === 'all'}>
+        {label}
+        <span></span>
+      </button>
+    ))}
+  </div>
+  <div class="catalog-grid" id="search-layout">
+    <aside class="filters" id="artwork-filters" aria-label="Filter illustrations">
+      <h2>Filter Artwork</h2>
       <div>
         <label for="filter-style">Style</label>
         <select id="filter-style" data-filter="style">
@@ -111,7 +124,7 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
           {art.length} illustrations
         </p>
         <div class="sort-control">
-          <label for="search-sort">Sort by</label>
+          <label for="search-sort">Sort Artwork</label>
           <select id="search-sort">
             <option value="relevance">Relevance</option>
             <option value="title">Name A–Z</option>
@@ -124,13 +137,32 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
           Finding illustrations…
         </p>
         <p id="close-matches" class="notice" hidden>
-          Showing close spelling matches. Check each illustration to find the subject you need.
+          Showing spelling corrections or word completions. Review the results for the details you
+          need.
+        </p>
+        <p class="notice" id="no-exact-artwork" hidden>
+          No artwork matches every requested detail. Any related artwork below is labeled
+          separately.
         </p>
         <div class="gallery" id="search-results">
           {initial.items.map((item) => (
             <Card item={item} />
           ))}
         </div>
+        <section id="site-search-section" hidden aria-labelledby="site-search-title">
+          <h2 id="site-search-title">Pages, Tools &amp; Studio Elements</h2>
+          <div class="site-search-list" id="site-search-results"></div>
+          <button type="button" id="site-search-more">
+            Show More Results
+          </button>
+        </section>
+        <section id="search-related" hidden aria-labelledby="search-related-title">
+          <h2 id="search-related-title">Related Artwork</h2>
+          <p>
+            These match part of your description. The unmatched words are listed under each result.
+          </p>
+          <div class="gallery" id="search-related-results"></div>
+        </section>
         <div id="search-error" class="notice" hidden>
           <p>Please check your connection and try again. Your search and filters have been kept.</p>
           <button id="search-retry" type="button">
@@ -138,7 +170,7 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
           </button>
         </div>
         <div id="search-empty" class="empty" hidden>
-          <h2>No illustrations found yet.</h2>
+          <h2>No complete matches found.</h2>
           <p id="empty-description">
             Try a broader subject or reset your filters. Our collection is still growing.
           </p>
@@ -159,7 +191,7 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
         </button>
       </nav>
       <div class="page-size">
-        <label for="search-size">Illustrations per page</label>
+        <label for="search-size">Results per page</label>
         <select id="search-size">
           <option value="8">8</option>
           <option value="16">16</option>
@@ -177,9 +209,9 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
         </p>
       </noscript>
       <p class="notice">
-        {art.length} original illustrations are available in the collection. Filters describe the
-        existing artwork; color drawings are not labeled as black & white. Personal and educational
-        use is free. <a href="/license/">Read the license.</a>
+        <CatalogCount kind="artworks" /> original illustrations are available in the collection.
+        Filters describe the existing artwork; color drawings are not labeled as black & white.
+        Personal and educational use is free. <a href="/license/">Read the license.</a>
       </p>
     </section>
   </div>

@@ -55,7 +55,6 @@ Treat measured timings as local laboratory results, not production traffic stati
 
 Publish through the existing reviewed branch/CI and Cloudflare Pages process, preserving concurrent catalog additions. No new worker or paid service is required. Reverting the feature commit and rebuilding removes the new section and guide; it does not migrate or delete catalog assets. After publication verify the release marker, reference page, several subject pages, mobile layout and original downloads on the production hostname.
 
-
 ## Registered collections and progressive discovery (2026-10-25)
 
 The registry comes from `data/topics.json` and `data/extra-topics.json`. A new registered topic gets an isolated collection identity with exact title/alt context; it is never assigned a guessed shared family or promoted from a decorative mention on a different topic. Existing ambiguous-subject rules remain in force.
@@ -63,3 +62,17 @@ The registry comes from `data/topics.json` and `data/extra-topics.json`. A new r
 All publication-eligible items also enter a bounded exact-topic posting. A separate **Explore this collection** lane ranks remaining reviewed items from that same collection by known technique, composition and depiction. Its label makes a collection relationship explicit; it does not claim that different scenes are the same subject. Unknown or conflicting semantic metadata cannot enter exact-subject/fruit-companion results. Both source and candidate still require approved publication, indexability, license, pair review, revision and verified thumbnail/WebP metadata. Withdrawals invalidate the release version and remove both postings. Cross-group deduplication includes canonical identity and original file hashes.
 
 The browser appends batches of 8 on desktop or 4 on mobile when a new downward scroll reaches the discovery sentinel. It preserves focus, revalidates the release before each batch, stops at the bounded result set, and retains the accessible button if IntersectionObserver is unavailable. No full catalog is fetched in the browser. Collection browsing remains available at the end. Tests exhaust all current detail-page snapshots and explicitly scroll through every USB result at desktop/mobile widths.
+
+## Artwork captions — 2026-10-25
+
+All card descriptions pass through `artworkCardSummary` in `src/lib/related/summaries.ts`. The 8,200 existing, individually edited captions in `data/artwork-card-summaries.json` remain preferred when their source signatures match. Each is at most 125 characters and describes the candidate's scene, object, arrangement or documented technique. Generic collection labels and similarity templates have been removed from the caption path. Existing group headings and reason codes continue to explain and record the recommendation relationship. Ranking, eligibility, deduplication and progressive discovery remain unchanged.
+
+### Automatic captions for future artwork
+
+New artwork requires **no caption dictionary entry, per-topic template or separate generation command**. The same server-side path calls `automaticArtworkSummary` from `src/lib/artwork-summary.ts` whenever an edited caption is absent or stale. All import routes converge on this path through the catalog and related index, including the initial HTML, filtered results and later discovery batches.
+
+The automatic formatter reads the artwork's own description, alt text and title. It prefers a complete descriptive sentence, excludes usage instructions and generic collection claims, removes a repeated title prefix in alt text, and can omit file/background boilerplate. If needed it selects a whole descriptive phrase at a punctuation or modifier boundary. A concise title is the final factual fallback. It never analyzes the image pixels, invents details, appends a shared collection label, or cuts at an arbitrary character count. If the supplied metadata cannot provide any complete caption within 125 characters, the build identifies that artwork for a concise source description instead of publishing broken copy.
+
+Existing captions carry the fingerprint of their source revision, title, description and alt text. `artworkSummarySource` rejects stale copy after a source edit, so revised records automatically use current metadata. Optional editorial overrides can still be added to the dictionary with the matching signature; automatic captions do not need to be saved there. All source metadata should describe the actual image accurately. The formatter cannot create missing visual information.
+
+The snapshot version includes both the caption dictionary fingerprint and `AUTO_SUMMARY_VERSION`. Bump the formatter version when changing its output rules so an open browser cannot mix old and new generated captions. The dictionary and formatter run only on the server during the normal static build; browsers receive only selected snapshot text, with no new API call, model dependency or full-catalog download. Descriptions wrap naturally and are never hidden by a line clamp or shortened with ellipses.

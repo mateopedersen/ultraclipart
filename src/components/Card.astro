@@ -1,5 +1,5 @@
 ---
-import { downloadPageHref } from '../lib/download-route';
+import CardFileActions from './CardFileActions.astro';
 import Icon from './Icon.astro';
 import ShareButton from './ShareButton.astro';
 const { item } = Astro.props;
@@ -14,31 +14,10 @@ const { item } = Astro.props;
     <a class="card-title" href={`/art/${item.id}/`}>
       {item.title}
     </a>
-    <div class="formats">
-      <a
-        href={downloadPageHref(item.id, 'webp')}
-
-        class="webp"
-        aria-label={`Download Image: ${item.title}`}
-      >
-        <Icon name="image" size={20} />
-        <span>Image</span>
-      </a>
-      {item.pdf && (
-        <a
-          href={downloadPageHref(item.id, 'pdf')}
-
-          class="pdf"
-          aria-label={`Download PDF: ${item.title}`}
-        >
-          <Icon name="document" size={20} />
-          <span>PDF</span>
-        </a>
-      )}
-    </div>
+    <CardFileActions id={item.id} title={item.title} webp={item.webp} pdf={item.pdf} />
     <div class="card-actions">
       <a class="button" href={item.editable === false ? `/art/${item.id}/` : `/edit/${item.id}/`}>
-        <Icon name={item.editable === false ? 'view' : 'edit'} size={20} />
+        <Icon name={item.editable === false ? 'view' : 'edit'} size={28} />
         <span>{item.editable === false ? 'View' : 'Edit'}</span>
       </a>
     </div>

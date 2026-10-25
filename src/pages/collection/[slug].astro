@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CatalogCount from '../../components/CatalogCount.astro';
 import Card from '../../components/Card.astro';
 import {
-  art,
+  publishedArt as art,
   availableTopics,
   availableClusters,
   slugify,
@@ -16,13 +17,25 @@ const ts = availableTopics.filter((t) => topicInCluster(t, cluster));
 const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
 ---
 
-<Layout title={cluster + ' Clipart Collection'} noindex={true}>
+<Layout
+  title={cluster + ' Clipart Collection'}
+  description={`Browse ${cluster.toLowerCase()} clipart subjects. Open an illustration to see its image, printable PDF and editing options.`}
+  noindex={true}
+  image={items[0]?.webp}
+  imageAlt={items[0]?.alt}
+  imageWidth={items[0]?.width}
+  imageHeight={items[0]?.height}
+>
   <section class="hero">
-    <p class="eyebrow">Seasonal sketchbook</p>
     <h1>{cluster}</h1>
-    <p class="lead">A collection of moments worth making.</p>
+    <p class="lead">
+      Browse the subjects in this collection or open an illustration below to see its files.
+    </p>
     <p>
-      {items.length} illustrations available · {ts.length} available topics.
+      <CatalogCount kind="collection-artworks" countKey={slugify(cluster)} unit="illustration" />{' '}
+      available ·{' '}
+      <CatalogCount kind="collection-subjects" countKey={slugify(cluster)} unit="available topic" />
+      .
     </p>
     <div class="chips" aria-label="Topics in this collection">
       {ts.map((t) => (
@@ -39,18 +52,18 @@ const items = art.filter((a) => ts.some((t) => t.slug === a.topic));
   ) : (
     <div class="empty">
       <h2>In preparation</h2>
-      <p>Original artwork for this collection is still being developed.</p>
-      <a href="/new/">Explore available artwork →</a>
+      <p>No illustrations are available in this collection yet.</p>
+      <a href="/new/">Browse Available Artwork</a>
     </div>
   )}
   <div class="browse-more">
     <p>
-      {items.length > 32
-        ? `Showing 32 of ${items.length} illustrations. Choose a topic above to explore more.`
-        : 'Explore related subjects above, or find your next idea in the full collection.'}
+      Explore{' '}
+      <CatalogCount kind="collection-artworks" countKey={slugify(cluster)} unit="illustration" /> in
+      this collection. Choose a topic above to see its artwork.
     </p>
     <a class="button primary" href="/search/">
-      Search all clipart →
+      Search All Clipart
     </a>
   </div>
 </Layout>

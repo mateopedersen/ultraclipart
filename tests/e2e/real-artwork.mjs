@@ -3,6 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { PDFDocument } from 'pdf-lib';
+import { chooseScene } from '../helpers/creator.mjs';
 const engine = process.env.UC_BROWSER || 'chromium',
   base = process.env.BASE_URL || 'http://127.0.0.1:4353',
   out = path.resolve(process.env.EVIDENCE_DIR || 'reports/real-artwork', engine);
@@ -29,14 +30,14 @@ try {
   const studioCatalog = JSON.parse(
     await fs.readFile(path.resolve('dist/studio-catalog.json'), 'utf8'),
   );
-  const realisticCount = studioCatalog.filter((item) => item.id.includes('realistic')).length;
-  expect(realisticCount).toBeGreaterThan(0);
+  const featuredCount = studioCatalog.filter((item) => item.featured).length;
+  expect(featuredCount).toBe(500);
+  await panel('elements');
   await expect(page.locator('[data-artwork-count]')).toHaveText(
-    `${Math.min(24, realisticCount)} of ${realisticCount.toLocaleString()} artworks`,
+    `1–${Math.min(24, featuredCount)} of ${featuredCount.toLocaleString()} artworks`,
   );
-  await page.locator('[data-artwork-search]').fill('strawberry');
-  await expect(page.locator('[data-artwork]')).toHaveCount(1);
-  await page.locator('[data-artwork]').click();
+  await page.locator('[data-artwork-search]').fill('Strawberry Fruit Trio Realistic');
+  await page.locator('[data-artwork="strawberry-fruit-trio-realistic-clipart"]').click();
   await expect(page.locator('[data-status]')).toContainText('independent image layer');
   let d = await state();
   expect(d.layers[0].kind).toBe('raster');
@@ -88,7 +89,7 @@ try {
     ['wildlife-collection', 4],
     ['best-friends', 3],
   ]) {
-    await page.locator(`[data-studio-scene="${id}"]`).click();
+    await chooseScene(page, id);
     await expect(page.locator('[data-status]')).toContainText(
       'Every image and caption is editable',
       { timeout: 60000 },
@@ -108,13 +109,13 @@ try {
     await new Promise((r) => setTimeout(r, 900));
     await route.continue();
   });
-  await page.locator('[data-studio-scene=fresh-strawberries]').click();
+  await chooseScene(page, 'fresh-strawberries');
   await action('reset').click();
   await page.waitForTimeout(1300);
   expect((await state()).layers.length).toBe(0);
   await page.unroute('**/strawberry-fruit-trio-realistic-clipart.webp');
   checks.push('Reset cancels a pending scene load without replacing newer work');
-  await page.locator('[data-studio-scene=woodland-welcome]').click();
+  await chooseScene(page, 'woodland-welcome');
   await expect(page.locator('[data-status]')).toContainText('Every image and caption is editable');
   const saved = page.waitForEvent('download');
   await action('save').click();

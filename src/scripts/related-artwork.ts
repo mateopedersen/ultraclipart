@@ -1,4 +1,3 @@
-import { downloadPageHref } from '../lib/download-route';
 import { FAVORITES_KEY, parseFavoriteIds, toggleStoredFavorite } from '../lib/favorites-storage';
 import type { Mode, RelatedCard, Snapshot } from '../lib/related/engine';
 export function initRelatedArtwork() {
@@ -171,9 +170,12 @@ export function initRelatedArtwork() {
       const format = link.dataset.relatedDownload as 'webp' | 'pdf',
         url = data[format];
       link.hidden = !url;
-      if (url) link.href = downloadPageHref(data.id, format);
+      if (url) link.href = url;
       else link.removeAttribute('href');
-      link.removeAttribute('download');
+      link.download = `${data.id}.${format}`;
+      link.dataset.downloadOpen = data.id;
+      link.dataset.downloadFormat = format;
+      link.setAttribute('aria-expanded', 'false');
       link.setAttribute(
         'aria-label',
         `Download ${format === 'webp' ? 'Image' : 'PDF'}: ${data.title}`,

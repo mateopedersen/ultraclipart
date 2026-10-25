@@ -1,4 +1,6 @@
-import { oneEditAway, queryTerms, type SearchState } from './search.ts';
+import { oneEditAway, queryTerms, normalizeQuery, type SearchState } from './search.ts';
+import { termVariants, relevanceScore, type TermMatch } from './search-language.ts';
+import type { SiteSearchEntry } from './site-search.ts';
 import {
   tokenBucket,
   type RankedPage,
@@ -46,11 +48,14 @@ export interface RemoteResults {
   page: number;
   hasFuzzyMatches: boolean;
   manifest: SearchManifest;
+  relatedItems?: SearchCard[];
+  relatedMissing?: Record<string, string[]>;
 }
 export class SearchRepository {
   private loader: JsonLoader;
   private cache = new Map<string, unknown>();
   private cards = new Map<string, SearchCard>();
+  private siteCache = new Map<string, SiteSearchEntry[]>();
   private pending = new Map<string, { signal?: AbortSignal; value: Promise<unknown> }>();
   private generation = 0;
   constructor(loader: JsonLoader = browserLoader) {
@@ -63,6 +68,7 @@ export class SearchRepository {
     this.generation++;
     this.cache.clear();
     this.cards.clear();
+    this.siteCache.clear();
     this.pending.clear();
   }
   private async json<T>(path: string, signal?: AbortSignal): Promise<T> {
@@ -100,6 +106,8 @@ export class SearchRepository {
       result.schema !== 1 ||
       !Number.isInteger(result.total) ||
       result.total < 0 ||
+      (result.site !== undefined && result.site !== 'site') ||
+      (result.ranking !== undefined && result.ranking !== 2) ||
       !/^[a-z0-9-]+$/.test(result.version) ||
       (result.cardChunk !== undefined &&
         (!Number.isInteger(result.cardChunk) || result.cardChunk < 1 || result.cardChunk > 32))
@@ -171,19 +179,32 @@ export class SearchRepository {
     const current = await this.manifest(signal);
     return current.version === manifest.version ? items : load(current);
   }
-  async search(state: SearchState, signal?: AbortSignal): Promise<RemoteResults> {
+  private async performSearch(
+    state: SearchState,
+    signal?: AbortSignal,
+    scope: readonly string[] = [],
+  ): Promise<RemoteResults> {
     const manifest = await this.manifest(signal),
-      { tokens, wantsOutline, wantsMonochrome } = queryTerms(state.q);
+      { tokens, excluded, wantsOutline, wantsMonochrome, wantsTransparent } = queryTerms(state.q);
     const facetNames = (['style', 'color', 'format', 'orientation', 'background'] as const)
       .filter((key) => state[key])
-      .map((key) => `${key}/${state[key]}`);
-    if (wantsOutline && !facetNames.includes('style/outline')) facetNames.push('style/outline');
+      .map((key) =>
+        key === 'style' && state.style === 'black & white'
+          ? 'print/monochrome'
+          : key === 'style' && state.style === 'outline' && manifest.ranking === 2
+            ? 'print/outline'
+            : `${key}/${state[key]}`,
+      );
+    facetNames.push(...scope);
+    if (wantsOutline) facetNames.push(manifest.ranking === 2 ? 'print/outline' : 'style/outline');
+    if (wantsTransparent && !facetNames.includes('background/transparent'))
+      facetNames.push('background/transparent');
     if (wantsMonochrome) facetNames.push('print/monochrome');
     const pagination = (total: number) => {
       const pages = Math.max(1, Math.ceil(total / state.size));
       return { total, pages, page: Math.min(pages, Math.max(1, state.page)) };
     };
-    if (!tokens.length && !facetNames.length) {
+    if (!tokens.length && !facetNames.length && !excluded.length) {
       const meta = pagination(manifest.total),
         start = (meta.page - 1) * state.size,
         end = Math.min(start + state.size, manifest.total);
@@ -224,55 +245,137 @@ export class SearchRepository {
     );
     if (allowedSets.some((set) => set.size === 0))
       return { ...pagination(0), items: [], hasFuzzyMatches: false, manifest };
-    const lengths = new Set(
-      tokens
-        .filter((token) => token.length >= 5)
-        .flatMap((token) => [token.length - 1, token.length, token.length + 1]),
-    );
-    const dictionaries = await mapLimit(
-      manifest.lexiconLengths.filter((length) => lengths.has(length)),
-      (length) => this.json<string[]>(this.path(manifest, `lexicon/${length}`), signal),
-    );
-    const vocabulary = dictionaries.flat();
-    const expansions = tokens.map((token) => ({
-      token,
-      words: [token, ...vocabulary.filter((word) => word !== token && oneEditAway(token, word))],
-    }));
-    const bucketNames = [
-      ...new Set(expansions.flatMap((expansion) => expansion.words.map(tokenBucket))),
-    ];
-    const fetched = await mapLimit(bucketNames, (key) =>
-      this.json<Record<string, number[]>>(this.path(manifest, `tokens/${key}`), signal),
-    );
-    const buckets = new Map(bucketNames.map((name, index) => [name, fetched[index]]));
-    const termMaps = expansions.map(({ token, words }) => {
-      const matches = new Map<number, number>();
-      for (const word of words)
-        for (const entry of buckets.get(tokenBucket(word))?.[word] ?? []) {
-          const ordinal = Math.floor(entry / 8),
-            score = word === token ? entry % 8 : 1;
-          matches.set(ordinal, Math.max(matches.get(ordinal) ?? 0, score));
+    const loaded = new Map<string, Record<string, number[]>>();
+    const loadWords = async (words: string[]) => {
+      const keys = [...new Set(words.map(tokenBucket))].filter((key) => !loaded.has(key));
+      const values = await mapLimit(keys, (key) =>
+        this.json<Record<string, number[]>>(this.path(manifest, `tokens/${key}`), signal),
+      );
+      keys.forEach((key, i) => loaded.set(key, values[i]));
+    };
+    const variants = tokens.map(termVariants);
+    const excludedWords = excluded.flatMap(termVariants);
+    await loadWords([...variants.flat(), ...excludedWords]);
+    const denied = new Set<number>();
+    for (const word of excludedWords)
+      for (const entry of loaded.get(tokenBucket(word))?.[word] || [])
+        denied.add(Math.floor(entry / 8));
+    const eligible = (id: number) => !denied.has(id) && allowedSets.every((set) => set.has(id));
+    const mapsFor = (expansions: string[][], fuzzy = false) =>
+      expansions.map((words, index) => {
+        const matches = new Map<number, TermMatch>();
+        for (const word of words) {
+          const bucket = loaded.get(tokenBucket(word));
+          const positions = new Map<number, number[]>();
+          for (const entry of bucket?.['^' + word] || []) {
+            const id = Math.floor(entry / 64);
+            positions.set(id, [...(positions.get(id) || []), entry % 64]);
+          }
+          for (const entry of bucket?.[word] || []) {
+            if (tokens.length > 1 && entry % 8 < 3) continue;
+            const id = Math.floor(entry / 8);
+            if (!eligible(id)) continue;
+            const approximate = fuzzy && !variants[index].includes(word);
+            const value: TermMatch = {
+              weight: (entry % 8) - (word === tokens[index] ? 0 : 0.5),
+              fuzzy: approximate,
+              positions: positions.get(id) || [],
+            };
+            const previous = matches.get(id);
+            if (!previous) matches.set(id, value);
+            else if (previous.fuzzy !== value.fuzzy) {
+              if (!value.fuzzy) matches.set(id, value);
+            } else
+              matches.set(id, {
+                weight: Math.max(previous.weight, value.weight),
+                fuzzy: previous.fuzzy && value.fuzzy,
+                positions: [...new Set([...previous.positions, ...value.positions])],
+              });
+          }
         }
-      return matches;
-    });
-    let candidates: number[];
-    if (termMaps.length)
-      candidates = [
-        ...termMaps.reduce((small, set) => (set.size < small.size ? set : small)).keys(),
-      ];
-    else
-      candidates = allowedSets.length
-        ? [...allowedSets.reduce((small, set) => (set.size < small.size ? set : small))]
-        : [];
-    const ranked = candidates
-      .filter(
-        (id) => allowedSets.every((set) => set.has(id)) && termMaps.every((map) => map.has(id)),
-      )
-      .map((id) => ({
-        id,
-        score: termMaps.reduce((sum, map) => sum + map.get(id)!, 0),
-        fuzzy: termMaps.some((map) => map.get(id) === 1),
-      }));
+        return matches;
+      });
+    const rank = (maps: Map<number, TermMatch>[]) => {
+      const candidates = maps.length
+        ? [...maps.reduce((small, map) => (map.size < small.size ? map : small)).keys()]
+        : allowedSets.length
+          ? [...allowedSets.reduce((small, set) => (set.size < small.size ? set : small))]
+          : Array.from({ length: manifest.total }, (_, i) => i);
+      return candidates
+        .filter((id) => eligible(id) && maps.every((map) => map.has(id)))
+        .map((id) => {
+          const matches = maps.map((map) => map.get(id)!);
+          return {
+            id,
+            score: relevanceScore(matches),
+            fuzzy: matches.some((match) => match.fuzzy),
+          };
+        });
+    };
+    let termMaps = mapsFor(variants),
+      ranked = rank(termMaps);
+    // An exact search does not pay for spelling dictionaries, nor mix in misspellings.
+    if (!ranked.length && tokens.length) {
+      const lengths = new Set(
+        tokens
+          .filter((token) => token.length >= 4)
+          .flatMap((token) => [token.length - 1, token.length, token.length + 1]),
+      );
+      const dictionaries = await mapLimit(
+        manifest.lexiconLengths.filter((length) => lengths.has(length)),
+        (length) => this.json<string[]>(this.path(manifest, `lexicon/${length}`), signal),
+      );
+      const last = tokens[tokens.length - 1];
+      const prefix =
+        last.length >= 3 && manifest.lexiconInitials?.includes(last[0])
+          ? await this.json<string[]>(this.path(manifest, `prefix/${last[0]}`), signal)
+          : [];
+      const vocabulary = [...new Set([...dictionaries.flat(), ...prefix])];
+      const expanded = variants.map((words, i) => [
+        ...words,
+        ...vocabulary
+          .filter(
+            (word) =>
+              !words.includes(word) &&
+              (oneEditAway(tokens[i], word) ||
+                (i === tokens.length - 1 && tokens[i].length >= 3 && word.startsWith(tokens[i]))),
+          )
+          .sort(
+            (a, b) =>
+              Math.abs(a.length - tokens[i].length) - Math.abs(b.length - tokens[i].length) ||
+              a.localeCompare(b),
+          )
+          .slice(0, 16),
+      ]);
+      await loadWords(expanded.flat());
+      termMaps = mapsFor(expanded, true);
+      ranked = rank(termMaps);
+    }
+    let related: { id: number; score: number; missing: string[] }[] = [];
+    if (!ranked.length && tokens.length >= 3) {
+      const topicWords = new Set(manifest.topics.flatMap((topic) => normalizeQuery(topic.keyword)));
+      const anchors = tokens.flatMap((token, i) => (topicWords.has(token) ? [i] : []));
+      const candidates = new Set(termMaps.flatMap((map) => [...map.keys()]));
+      related = [...candidates]
+        .filter(eligible)
+        .flatMap((id) => {
+          const matches = termMaps.flatMap((map) => (map.has(id) ? [map.get(id)!] : []));
+          if (
+            matches.length < Math.max(2, Math.ceil(tokens.length * 0.65)) ||
+            !anchors.every((i) => termMaps[i].has(id))
+          )
+            return [];
+          return [
+            {
+              id,
+              score: matches.length * 20 + relevanceScore(matches),
+              missing: tokens.filter((_, i) => !termMaps[i].has(id)),
+            },
+          ];
+        })
+        .sort((a, b) => b.score - a.score || a.id - b.id)
+        .slice(0, 8);
+    }
     let newestRank: Map<number, number> | undefined;
     if (state.sort === 'newest') {
       const order = await this.json<number[]>(this.path(manifest, 'order/newest'), signal);
@@ -287,21 +390,87 @@ export class SearchRepository {
     );
     const meta = pagination(ranked.length),
       selected = ranked.slice((meta.page - 1) * state.size, meta.page * state.size);
-    const idChunks = [...new Set(selected.map((item) => Math.floor(item.id / manifest.pageChunk)))];
-    const idPages = await mapLimit(idChunks, (index) =>
-      this.json<string[]>(this.path(manifest, `ids/${index}`), signal),
-    );
-    const lookup = new Map(idChunks.map((chunk, index) => [chunk, idPages[index]]));
-    const ids = selected.map(
-      (item) => lookup.get(Math.floor(item.id / manifest.pageChunk))![item.id % manifest.pageChunk],
-    );
+    const resolve = async (ordinals: number[]) => {
+      const chunks = [...new Set(ordinals.map((id) => Math.floor(id / manifest.pageChunk)))];
+      const pages = await mapLimit(chunks, (index) =>
+        this.json<string[]>(this.path(manifest, `ids/${index}`), signal),
+      );
+      const lookup = new Map(chunks.map((chunk, i) => [chunk, pages[i]]));
+      return mapLimit(ordinals, (id) =>
+        this.item(
+          lookup.get(Math.floor(id / manifest.pageChunk))![id % manifest.pageChunk],
+          manifest,
+          signal,
+          id,
+        ),
+      );
+    };
+    const items = await resolve(selected.map((item) => item.id));
+    const relatedItems = await resolve(related.map((item) => item.id));
     return {
       ...meta,
-      items: await mapLimit(ids, (id, index) =>
-        this.item(id, manifest, signal, selected[index].id),
-      ),
+      items,
       hasFuzzyMatches: selected.some((item) => item.fuzzy),
       manifest,
+      relatedItems,
+      relatedMissing: Object.fromEntries(
+        relatedItems.map((item, i) => [item.id, related[i].missing]),
+      ),
     };
+  }
+  async siteEntries(manifest: SearchManifest, signal?: AbortSignal): Promise<SiteSearchEntry[]> {
+    if (signal?.aborted) throw new DOMException('Request cancelled', 'AbortError');
+    const cached = this.siteCache.get(manifest.version);
+    if (cached) return cached;
+    let current = manifest,
+      entries: SiteSearchEntry[];
+    try {
+      entries = current.site
+        ? await this.json<SiteSearchEntry[]>(this.path(current, current.site), signal)
+        : [];
+    } catch (error) {
+      if (!(error instanceof SearchHttpError) || ![404, 410].includes(error.status)) throw error;
+      this.clear();
+      current = await this.manifest(signal);
+      entries = current.site
+        ? await this.json<SiteSearchEntry[]>(this.path(current, current.site), signal)
+        : [];
+    }
+    if (
+      !Array.isArray(entries) ||
+      entries.some(
+        (entry) =>
+          !entry ||
+          typeof entry.title !== 'string' ||
+          typeof entry.text !== 'string' ||
+          typeof entry.description !== 'string' ||
+          !['topic', 'collection', 'guide', 'tool', 'page', 'studio'].includes(entry.kind) ||
+          typeof entry.href !== 'string' ||
+          !/^\/(?!\/)[^\s\\]*$/.test(entry.href),
+      )
+    )
+      throw new Error('The page directory could not be read.');
+    this.siteCache.set(current.version, entries);
+    if (this.siteCache.size > 2) this.siteCache.delete(this.siteCache.keys().next().value!);
+    return entries;
+  }
+  async search(
+    state: SearchState,
+    signal?: AbortSignal,
+    scope: readonly string[] = [],
+  ): Promise<RemoteResults> {
+    try {
+      return await this.performSearch(state, signal, scope);
+    } catch (error) {
+      if (
+        error instanceof SearchHttpError &&
+        [404, 410].includes(error.status) &&
+        !signal?.aborted
+      ) {
+        this.clear();
+        return this.performSearch(state, signal, scope);
+      }
+      throw error;
+    }
   }
 }

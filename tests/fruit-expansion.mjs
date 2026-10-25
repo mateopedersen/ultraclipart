@@ -126,7 +126,7 @@ test(
         assert.ok(collection.includes(`/edit/${item.id}/`));
         assert.ok(existsSync(new URL(`../dist/edit/${item.id}/index.html`, import.meta.url)));
         for (const kind of ['pdf', 'webp'])
-          assert.ok(detail.includes(`href="/download/${item.id}/?format=${kind}"`));
+          assert.ok(detail.includes(`download="${item.id}.${kind}"`));
       }
     }
   },

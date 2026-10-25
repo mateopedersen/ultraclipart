@@ -1,5 +1,7 @@
 ---
 import StudioIcon from './StudioIcon.astro';
+import StudioProTools from './StudioProTools.astro';
+import { proTools } from '../editor/smart/pro-catalog';
 const sliders = [
   ['hue', 'Hue', -180, 180, 0],
   ['saturation', 'Saturation', -100, 100, 0],
@@ -14,235 +16,315 @@ const sliders = [
   data-pane="region"
   id="uc-pane-region"
   role="region"
-  aria-label="Smart Selection Engine"
+  aria-label="Select and recolor an image area"
   hidden
 >
   <p class="uc-hint" data-region-tutorial>
-    Click the part you want to recolor. Refine the selection, choose a color, then download your
-    clipart.
+    Select an image, mark the area you want, then choose its color.
   </p>
-  <label>
-    Image to edit<select data-smart-source aria-label="Image to edit"></select>
-  </label>
-  <label>
-    Selection tool
-    <select data-smart-tool>
-      <option value="smart">Smart Select</option>
-      <option value="wand">Magic Wand</option>
-      <option value="lasso">Freehand lasso</option>
-      <option value="polygon">Polygon lasso</option>
-      <option value="brush">Selection brush</option>
-      <option value="erase">Precision eraser</option>
-      <option value="restore">Restore source brush</option>
-      <option value="clone">Clone stamp</option>
-      <option value="repair">Local repair</option>
-    </select>
-  </label>
-  <p data-smart-help class="uc-hint">
-    Click a connected color region. Smart Select uses local color and edges; refine the mask when
-    neighboring parts are similar.
-  </p>
-  <hr />
-  <label>
-    Region name
-    <input data-region-name maxlength="100" value="Selected region" />
-  </label>
-  <div class="uc-row">
-    <label>
-      Color
-      <input data-region-color type="color" value="#326acb" />
-    </label>
-    <label>
-      Method
-      <select data-region-mode>
-        <option value="replace">Replace color</option>
-        <option value="tint">Tint region</option>
-        <option value="adjust">Adjust only</option>
-      </select>
-    </label>
-  </div>
-  <details>
-    <summary>Color adjustments</summary>
-    {sliders.map(([key, label, min, max, value]) => (
-      <label>
-        {label}
-        <input
-          data-adjust={key}
-          aria-label={String(label)}
-          type="range"
-          min={min}
-          max={max}
-          value={value}
-        />
-      </label>
-    ))}
-    <label class="uc-check">
-      <input data-region-grayscale type="checkbox" /> Grayscale region
-    </label>
-  </details>
-  <div class="uc-row">
-    <button data-smart-action="apply" class="uc-primary">
-      Save region
-    </button>
-    <button data-smart-action="compare" aria-pressed="false">
-      Before / after
+  <div class="uc-region-empty" data-region-empty hidden>
+    <StudioIcon name="region" size={42} />
+    <h3>Add an Image to Begin</h3>
+    <p>
+      Regional editing works on image layers. Add artwork, then select the part you want to change.
+    </p>
+    <button data-open-panel="elements" aria-controls="uc-pane-elements">
+      Open Artwork Library
     </button>
   </div>
-  <button data-smart-action="reset-region">Reset adjustment</button>
-  <div class="uc-row">
+  <section class="uc-inspector-section">
+    <header>
+      <span>1</span>
+      <h3>Select an Area</h3>
+    </header>
     <label>
-      Mode
-      <select data-mask-mode>
-        <option value="replace">New selection</option>
-        <option value="add">Add</option>
-        <option value="subtract">Subtract</option>
-      </select>
+      Image Layer<select data-smart-source aria-label="Image to edit"></select>
     </label>
-    <label>
-      Show overlay
-      <input data-mask-overlay type="checkbox" checked />
-    </label>
-  </div>
-  <div data-wand-controls>
-    <label>
-      Tolerance <output data-tolerance-value>24</output>
-      <input type="range" min="1" max="100" value="24" data-tolerance />
-    </label>
-    <label class="uc-check">
-      <input data-contiguous type="checkbox" checked /> Contiguous region
-    </label>
-    <div class="uc-row">
+    <fieldset data-region-needs-image class="uc-region-controls">
+      <div class="uc-selection-tools" role="group" aria-label="Selection tools">
+        <button data-selection-tool="smart" aria-pressed="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="m5 3 15 10-7 1-3 7-5-18Z" />
+            <path d="M17 2v5m-2-3h5" />
+          </svg>
+          Smart Select
+        </button>
+        <button data-selection-tool="wand" aria-pressed="false">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="m4 20 13-13 3 3L7 23m5-11 3 3M5 2v6M2 5h6M19 1v4m-2-2h4" />
+          </svg>
+          Magic Wand
+        </button>
+        <button data-selection-tool="brush" aria-pressed="false">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M14 3 5 15l5 4L22 6l-8-3ZM5 15c-5 0-4 5-4 6 4 0 8 1 9-2M13 5l6 5" />
+          </svg>
+          Brush
+        </button>
+        <button data-selection-tool="lasso" aria-pressed="false">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <ellipse cx="12" cy="9" rx="9" ry="6" stroke-dasharray="3 2" />
+            <path d="M7 14c-4 9 9 9 10 4" />
+          </svg>
+          Lasso
+        </button>
+      </div>
+      <details class="uc-control-details">
+        <summary>More Selection Tools</summary>
+        <label>
+          Tool
+          <select data-smart-tool>
+            <option value="smart">Smart Select</option>
+            <option value="wand">Magic Wand</option>
+            <option value="lasso">Freehand Lasso</option>
+            <option value="polygon">Polygon Lasso</option>
+            <option value="brush">Selection Brush</option>
+            <option value="erase">Precision Eraser</option>
+            <option value="restore">Restore Source Brush</option>
+            <option value="clone">Clone Stamp</option>
+            <option value="repair">Local Repair</option>
+          </select>
+        </label>
+      </details>
+      <p data-smart-help class="uc-hint">
+        Tap a connected color area. Use the brush or lasso to refine the edges.
+      </p>
+      <div class="uc-row">
+        <label>
+          Selection Mode
+          <select data-mask-mode>
+            <option value="replace">New Selection</option>
+            <option value="add">Add to Selection</option>
+            <option value="subtract">Subtract</option>
+          </select>
+        </label>
+        <label class="uc-check">
+          <input data-mask-overlay type="checkbox" checked />
+          Show Overlay
+        </label>
+      </div>
+      <div data-wand-controls>
+        <label>
+          Tolerance <output data-tolerance-value>24</output>
+          <input type="range" min="1" max="100" value="24" data-tolerance />
+        </label>
+        <details class="uc-control-details">
+          <summary>Color Matching</summary>
+          <label class="uc-check">
+            <input data-contiguous type="checkbox" checked />
+            Connected Pixels Only
+          </label>
+          <div class="uc-row">
+            <label>
+              Color Distance
+              <select data-distance>
+                <option value="perceptual">Perceptual</option>
+                <option value="rgb">RGB</option>
+              </select>
+            </label>
+            <label>
+              Connectivity
+              <select data-connectivity>
+                <option value="4">4 Neighbors</option>
+                <option value="8">8 Neighbors</option>
+              </select>
+            </label>
+          </div>
+        </details>
+      </div>
+      <div data-brush-controls hidden>
+        <label>
+          Brush Size
+          <input data-brush-size type="range" min="1" max="256" value="30" />
+        </label>
+        <label>
+          Hardness
+          <input data-brush-hardness type="range" min="0" max="100" value="70" />
+        </label>
+      </div>
+      <div data-clone-controls hidden>
+        <p class="uc-hint">
+          Alt-click a clean source point, then paint the destination. You can also enter the source
+          coordinates below.
+        </p>
+        <div class="uc-row">
+          <label>
+            Source X<input data-sample-x type="number" min="0" value="0" />
+          </label>
+          <label>
+            Source Y<input data-sample-y type="number" min="0" value="0" />
+          </label>
+        </div>
+      </div>
+      <div class="uc-row">
+        <button data-smart-action="finish-polygon">Finish Polygon</button>
+        <button data-smart-action="clear">Clear Selection</button>
+      </div>
+      <details data-advanced-selection class="uc-control-details">
+        <summary>Refine Edges &amp; Coordinates</summary>
+        <div class="uc-row">
+          <label>
+            Radius (px)
+            <input data-refine-radius type="number" min="1" max="64" value="2" />
+          </label>
+          <label>
+            Operation
+            <select data-refine-kind>
+              <option value="grow">Expand</option>
+              <option value="shrink">Contract</option>
+              <option value="holes">Fill Holes</option>
+              <option value="smooth">Smooth</option>
+              <option value="feather">Feather</option>
+              <option value="edge">Remove Edge Spill</option>
+            </select>
+          </label>
+        </div>
+        <button data-smart-action="refine">Refine Selection</button>
+        <div class="uc-row">
+          <label>
+            Selection X<input data-point-x type="number" min="0" value="0" />
+          </label>
+          <label>
+            Selection Y<input data-point-y type="number" min="0" value="0" />
+          </label>
+        </div>
+        <button data-smart-action="select-point">Select at Coordinates</button>
+        <button data-smart-action="all">Select Opaque Artwork</button>
+        <p class="uc-hint">Arrow keys move the selection cursor. Enter selects; Escape cancels.</p>
+      </details>
+    </fieldset>
+  </section>
+  <fieldset data-region-needs-image class="uc-region-controls">
+    <section class="uc-inspector-section">
+      <header>
+        <span>2</span>
+        <h3>Choose a Color</h3>
+      </header>
       <label>
-        Color distance
-        <select data-distance>
-          <option value="perceptual">Perceptual (OKLab)</option>
-          <option value="rgb">RGB</option>
+        Region Color
+        <input data-region-color type="color" value="#326acb" />
+      </label>
+      <label>
+        Color Method
+        <select data-region-mode>
+          <option value="replace">Replace Color</option>
+          <option value="tint">Tint Region</option>
+          <option value="adjust">Adjust Only</option>
         </select>
       </label>
+      <details class="uc-control-details">
+        <summary>Brightness, Contrast &amp; More</summary>
+        {sliders.map(([key, label, min, max, value]) => (
+          <label>
+            {label}
+            <input
+              data-adjust={key}
+              aria-label={String(label)}
+              type="range"
+              min={min}
+              max={max}
+              value={value}
+            />
+          </label>
+        ))}
+        <label class="uc-check">
+          <input data-region-grayscale type="checkbox" />
+          Grayscale Region
+        </label>
+      </details>
       <label>
-        Connectivity
-        <select data-connectivity>
-          <option value="4">4 neighbors</option>
-          <option value="8">8 neighbors</option>
-        </select>
+        Region Name
+        <input data-region-name maxlength="100" value="Selected region" />
       </label>
-    </div>
-  </div>
-  <div data-brush-controls hidden>
-    <label>
-      Brush size (source pixels)
-      <input data-brush-size type="range" min="1" max="256" value="30" />
-    </label>
-    <label>
-      Hardness
-      <input data-brush-hardness type="range" min="0" max="100" value="70" />
-    </label>
-    <p class="uc-hint">
-      Size follows the original image, including when zoomed. Pen pressure adjusts coverage.
-    </p>
-  </div>
-  <div data-clone-controls hidden>
-    <p class="uc-hint">
-      Alt-click a clean source point, then paint the destination. Repair also matches nearby
-      brightness; check the result closely.
-    </p>
-    <div class="uc-row">
+      <div class="uc-region-actions">
+        <button data-smart-action="apply" class="uc-primary">
+          Save Region
+        </button>
+        <button data-smart-action="compare" aria-pressed="false">
+          Before / After
+        </button>
+      </div>
+      <button data-smart-action="reset-region" class="uc-subtle-action">
+        Reset Color Adjustment
+      </button>
+    </section>
+    <details class="uc-extract-object uc-control-details">
+      <summary>Copy Selection to a New Layer</summary>
+      <p class="uc-hint">
+        Copy the selected visible pixels into a separate, movable image layer. Saved effects are
+        included.
+      </p>
       <label>
-        Sample X<input data-sample-x type="number" min="0" value="0" />
+        Layer Name
+        <input data-extract-name maxlength="100" value="Extracted object" />
       </label>
-      <label>
-        Sample Y<input data-sample-y type="number" min="0" value="0" />
+      <label class="uc-check">
+        <input data-extract-remove type="checkbox" />
+        Remove from Source
       </label>
-    </div>
-  </div>
-  <div class="uc-row">
-    <button data-smart-action="finish-polygon">Finish polygon</button>
-    <button data-smart-action="clear">Clear selection</button>
-  </div>
-  <details data-advanced-selection>
-    <summary>Precision &amp; edge refinement</summary>
-    <div class="uc-row">
-      <label>
-        Radius (px)
-        <input data-refine-radius type="number" min="1" max="64" value="2" />
-      </label>
-      <label>
-        Operation
-        <select data-refine-kind>
-          <option value="grow">Expand</option>
-          <option value="shrink">Contract</option>
-          <option value="holes">Fill holes</option>
-          <option value="smooth">Smooth</option>
-          <option value="feather">Feather</option>
-          <option value="edge">Remove edge spill</option>
-        </select>
-      </label>
-    </div>
-    <button data-smart-action="refine">Refine mask</button>
-    <div class="uc-row">
-      <label>
-        Selection X<input data-point-x type="number" min="0" value="0" />
-      </label>
-      <label>
-        Selection Y<input data-point-y type="number" min="0" value="0" />
-      </label>
-    </div>
-    <button data-smart-action="select-point">Select at coordinates</button>
-    <button data-smart-action="all">Select opaque artwork</button>
-    <p class="uc-hint">
-      On the canvas, arrow keys position the selection cursor, Enter selects, +/− zoom, and Escape
-      cancels a gesture.
-    </p>
-  </details>
-  <details class="uc-extract-object">
-    <summary>Extract an independent object</summary>
-    <p class="uc-hint">
-      Select the object above, then copy its visible pixels into a separate transparent image layer.
-      Saved color and effect changes are included.
-    </p>
-    <label>
-      New layer name
-      <input data-extract-name maxlength="100" value="Extracted object" />
-    </label>
-    <label class="uc-check">
-      <input data-extract-remove type="checkbox" />
-      Remove the selected pixels from the source
-    </label>
-    <button data-smart-action="extract-layer" class="uc-primary">
-      <StudioIcon name="layers" />
-      Extract selection as layer
-    </button>
-    <p class="uc-hint">
-      Move, resize, recolor and rotate the new layer independently. Source removal stays reversible
-      with its saved mask or Undo.
-    </p>
-  </details>
-  <h3>Saved regions</h3>
-  <p class="uc-hint">
-    Masks adjust pixels inside their source image. They move with that image; use Extract selection
-    as layer to create a separate cut-out object.
-  </p>
-  <div data-regions class="uc-region-list"></div>
-  <button data-smart-action="new-region">New region</button>
+      <button data-smart-action="extract-layer" class="uc-primary">
+        <StudioIcon name="layers" size={22} />
+        Create Separate Layer
+      </button>
+    </details>
+    <details class="uc-control-details" open>
+      <summary>Saved Regions</summary>
+      <div data-regions class="uc-region-list"></div>
+      <button data-smart-action="new-region">New Region</button>
+      <p class="uc-hint">
+        Saved regions stay with the source image. Use a separate layer to move a cutout
+        independently.
+      </p>
+    </details>
+  </fieldset>
 </div>
 <div data-pane="studio" id="uc-pane-studio" role="region" aria-label="Studio Pro tools" hidden>
-  <label>
-    Creative tool
+  <div class="uc-pro-intro">
+    <h3>Studio Pro</h3>
+    <span>{proTools.length} Tools</span>
+  </div>
+  <p class="uc-hint" data-pro-context>
+    Select artwork on the canvas to begin.
+  </p>
+  <label class="uc-pro-switch">
+    Workspace
     <select data-studio-tool>
-      <option value="sticker">Sticker Maker</option>
-      <option value="coloring">Coloring Page Maker</option>
-      <option value="composer">Multi-Clipart Composer</option>
-      <option value="patterns">Pattern &amp; Texture</option>
-      <option value="effects">Effects Studio</option>
-      <option value="typography">Advanced Typography</option>
-      <option value="palette">Color Palettes</option>
-      <option value="templates">Printable Templates</option>
-      <option value="variants">Multi-Variant Export</option>
-      <option value="quality">Quality Inspector</option>
-      <option value="trace">Monochrome SVG Trace</option>
+      <option value="home">All Tools</option>
+      {proTools.map((tool) => (
+        <option value={tool.id}>{tool.name}</option>
+      ))}
     </select>
   </label>
-  <div data-studio-pane="sticker">
+  <div class="uc-pro-active" data-pro-active hidden>
+    <button data-pro-open="home">All Tools</button>
+    <h3 data-pro-heading tabindex="-1"></h3>
+  </div>
+  <StudioProTools />
+  <div data-studio-pane="sticker" hidden>
     <h3>Follow the artwork silhouette</h3>
     <p class="uc-hint">
       Select an image layer. Border and shadow remain editable. The canvas expands to keep their

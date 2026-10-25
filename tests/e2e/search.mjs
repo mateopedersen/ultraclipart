@@ -39,16 +39,21 @@ const report = { base, browser: engine, checks: [], accessibility: [], errors };
 const cards = () => page.locator('#search-results:not([hidden]) .art-card');
 const ready = () => expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
 try {
-  const response = await page.goto(`${base}/search/?q=pumpkin`);
+  await page.goto(`${base}/search/?q=classroom%20label&type=guide`);
+  await expect(
+    page.locator('#site-search-results a[href="/guides/make-a-classroom-label/"]'),
+  ).toBeVisible();
+  await expect(page.locator('#search-results')).toBeHidden();
+  report.checks.push('long-tail guide search finds the matching project instructions');
+  const response = await page.goto(`${base}/search/?q=pumpkin&type=artwork`);
   const html = await response.text();
   assert.equal(
     (html.match(/class="art-card"/g) ?? []).length,
     8,
     'initial HTML is capped at eight cards',
   );
-  await expect(page.locator('#result-count')).toHaveText(
-    `${pumpkinCount} ${pumpkinCount === 1 ? 'illustration' : 'illustrations'} for “pumpkin”`,
-  );
+  await expect(page.locator('#result-count')).toContainText(`${pumpkinCount} artworks`);
+  await expect(page.locator('#result-count')).toContainText('for “pumpkin”');
   await expect(cards()).toHaveCount(pumpkin.items.length);
   assert.deepEqual(
     await cards().evaluateAll((nodes) => nodes.map((node) => node.dataset.id)),
@@ -147,9 +152,8 @@ try {
   ).toHaveCount(1);
   release();
   await page.unroute(slow);
-  await expect(page.locator('#result-count')).toHaveText(
-    `${cardinalCount} ${cardinalCount === 1 ? 'illustration' : 'illustrations'} for “cardinal”`,
-  );
+  await expect(page.locator('#result-count')).toContainText(`${cardinalCount} artworks`);
+  await expect(page.locator('#result-count')).toContainText('for “cardinal”');
   report.checks.push('outdated request cannot overwrite newer results');
   // Favorites have no catalog cards in HTML. Small ID-location tables resolve
   // their bounded metadata chunks without loading the search/ranking index.

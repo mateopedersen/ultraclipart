@@ -6,6 +6,7 @@ const { RelatedIndex, rank, CANDIDATE_LIMIT, SNAPSHOT_LIMIT } = await loadTypesc
   'src/lib/related/engine.ts',
 );
 const { normalize } = await loadTypescript('src/lib/related/normalize.ts');
+const { artworkCardSummary } = await loadTypescript('src/lib/related/summaries.ts');
 const catalog = JSON.parse(readFileSync('data/art.json'));
 const index = new RelatedIndex(catalog);
 const appleId = 'apple-and-dried-rings-crayon-clipart';
@@ -453,7 +454,7 @@ test('every published catalog page has reviewed, deduplicated discovery across a
       identities.add(candidate.identity);
       if (card.group === 'collection') {
         assert.equal(candidate.item.topic, source.item.topic);
-        assert.equal(card.reason, 'From the same collection');
+        assert.equal(card.reason, artworkCardSummary(candidate.item));
       }
     }
   }

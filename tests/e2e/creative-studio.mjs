@@ -9,7 +9,16 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4353',
   engine = process.env.UC_BROWSER || 'chromium';
 const out = path.resolve(process.env.EVIDENCE_DIR || 'reports/creative-studio', engine);
 await fs.mkdir(out, { recursive: true });
-const source = await fs.readFile(new URL('../../src/editor/elements.ts', import.meta.url), 'utf8');
+const icons = await fs.readFile(
+  new URL('../../data/studio-tabler-elements.json', import.meta.url),
+  'utf8',
+);
+const source = (
+  await fs.readFile(new URL('../../src/editor/elements.ts', import.meta.url), 'utf8')
+).replace(
+  "import tablerElements from '../../data/studio-tabler-elements.json';",
+  `const tablerElements = ${icons};`,
+);
 const { studioElements } = await import(
   'data:text/javascript;base64,' +
     Buffer.from(stripTypeScriptTypes(source, { mode: 'transform' })).toString('base64')
@@ -55,13 +64,13 @@ try {
   await page.screenshot({ path: path.join(out, 'page-desktop.png') });
   await page.locator('[data-studio-launch=elements]').first().click();
   await page.locator('[data-library-kind=vector]').click();
-  await expect(page.locator('[data-element-count]')).toHaveText('24 of 276 elements');
+  await expect(page.locator('[data-element-count]')).toHaveText('1–24 of 2,000 elements');
   expect(await page.locator('[data-element]').count()).toBe(24);
   await page.locator('[data-element-search]').fill('rainbow');
-  await expect(page.locator('[data-element]')).toHaveCount(1);
-  await page.locator('[data-element]').click();
+  await expect(page.locator('[data-element]').first()).toBeVisible();
+  await page.locator('[data-element]').first().click();
   expect((await state()).layers).toHaveLength(1);
-  await page.locator('.uc-element-favorite').click();
+  await page.locator('.uc-element-favorite').first().click();
   await page.locator('[data-element-search]').fill('');
   await page.locator('[data-element-favorites]').click();
   await expect(page.locator('[data-element]')).toHaveCount(1);
@@ -140,7 +149,7 @@ try {
     background: 'transparent',
     crop: null,
     print: { paper: 'letter', orientation: 'portrait', margin: 0.5, scale: 'fit' },
-    layers: studioElements.map((e, i) => ({
+    layers: studioElements.slice(0, 276).map((e, i) => ({
       id: `e-${i}`,
       label: e.name,
       kind: 'vector',

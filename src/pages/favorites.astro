@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeaderIllustration from '../components/HeaderIllustration.astro';
+import NavigationArrow from '../components/NavigationArrow.astro';
 import '../styles/favorite-boards.css';
 ---
 
@@ -11,15 +12,14 @@ import '../styles/favorite-boards.css';
 >
   <section class="boards-hero" aria-labelledby="boards-title">
     <div>
-      <p class="boards-eyebrow">Your ideas, beautifully together</p>
       <h1 id="boards-title">
-        A board for
+        Organize Your
         <br />
-        <span>every little idea.</span>
+        <span>Saved Clipart</span>
       </h1>
       <p>
-        A birthday, a classroom project, something just for your child. Make a place for the things
-        you love.
+        Keep illustrations together by project. Create boards, add notes and find your saved artwork
+        when you need it.
       </p>
       <span class="boards-device-note">Saved on this device · No account needed</span>
     </div>
@@ -30,7 +30,7 @@ import '../styles/favorite-boards.css';
       </div>
       <div class="boards-art-card">
         <HeaderIllustration kind="surprise" instance="boards-imagine" />
-        <span>Imagine</span>
+        <span>Organize</span>
       </div>
       <div class="boards-art-card">
         <HeaderIllustration kind="book" instance="boards-create" />
@@ -42,7 +42,7 @@ import '../styles/favorite-boards.css';
     <div class="boards-section-heading">
       <div>
         <h2>Your boards</h2>
-        <p>Give every project its own space.</p>
+        <p>Create a separate board for each project.</p>
       </div>
       <button type="button" class="boards-primary" data-board-create>
         <span aria-hidden="true">＋</span> Create board
@@ -133,12 +133,12 @@ import '../styles/favorite-boards.css';
     <div class="gallery favorite-board-gallery" id="favorites" aria-busy="true"></div>
     <div id="favorites-empty" class="boards-empty" hidden>
       <HeaderIllustration kind="surprise" instance="boards-empty" />
-      <h3>A little room for inspiration.</h3>
+      <h3>No Saved Artwork Yet</h3>
       <p id="favorites-empty-copy">
         Save an illustration you love, then organize it into a board for your next project.
       </p>
       <a href="/new/">
-        Find your next favorite <span aria-hidden="true">→</span>
+        <span>Find your next favorite</span> <NavigationArrow size={28} />
       </a>
     </div>
     <div id="favorites-error" class="notice" hidden>
@@ -196,7 +196,7 @@ import '../styles/favorite-boards.css';
         <input name="title" required maxlength="80" placeholder="e.g. Olivia’s birthday" />
       </label>
       <label>
-        A little description
+        Description
         <textarea
           name="description"
           maxlength="240"

@@ -52,13 +52,15 @@ test('built internal links and images resolve to real output files', { skip: !bu
   for (const file of pages) {
     const html = readFileSync(file, 'utf8');
     const label = relative(dist, file);
-    for (const tag of tags(html, 'a')) {
+    // Inert download/share templates receive their source only when opened.
+    const rendered = html.replace(/<template\b[^>]*>[\s\S]*?<\/template>/gi, '');
+    for (const tag of tags(rendered, 'a')) {
       const href = attribute(tag, 'href');
       if (!href?.startsWith('/') || href.startsWith('//')) continue;
       const url = new URL(href.replaceAll('&amp;', '&'), 'https://ultraclipart.com');
       assert.ok(routeExists(decodeURIComponent(url.pathname)), `broken link ${href} in ${label}`);
     }
-    for (const tag of tags(html, 'img')) {
+    for (const tag of tags(rendered, 'img')) {
       assert.notEqual(attribute(tag, 'alt'), undefined, `missing ALT in ${label}`);
       assert.ok(
         Number(attribute(tag, 'width')) > 0 && Number(attribute(tag, 'height')) > 0,

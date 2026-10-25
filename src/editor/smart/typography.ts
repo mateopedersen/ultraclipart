@@ -1,5 +1,37 @@
 import type { TextLayer } from '../model';
 const NS = 'http://www.w3.org/2000/svg';
+/** Center new text using its rendered shape, so rings and long titles do not start off-canvas. */
+export function fitNewText(
+  layer: TextLayer,
+  area: { x: number; y: number; width: number; height: number },
+) {
+  const svg = document.createElementNS(NS, 'svg'),
+    group = document.createElementNS(NS, 'g');
+  svg.style.cssText = 'position:fixed;left:-20000px;top:0;visibility:hidden;pointer-events:none';
+  group.append(...textNodes(layer));
+  svg.append(group);
+  document.body.append(svg);
+  try {
+    const b = group.getBBox(),
+      padding = Math.min(24, area.width / 8, area.height / 8);
+    const stroke = layer.typography?.strokeWidth || 0;
+    const scale = Math.min(
+      1,
+      (area.width - padding * 2) / Math.max(1, b.width + stroke * 2),
+      (area.height - padding * 2) / Math.max(1, b.height + stroke * 2),
+    );
+    if (scale < 0.01)
+      throw new Error(
+        'This text is too long for the canvas. Use fewer words or a smaller font size.',
+      );
+    layer.scaleX = layer.scaleY = scale;
+    layer.x = area.x + area.width / 2 - (b.x + b.width / 2) * scale;
+    layer.y = area.y + area.height / 2 - (b.y + b.height / 2) * scale;
+  } finally {
+    svg.remove();
+  }
+  return layer;
+}
 export function textNodes(layer: TextLayer): SVGElement[] {
   const t = layer.typography,
     nodes: SVGElement[] = [],

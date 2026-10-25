@@ -3,6 +3,9 @@ import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import collectionCopy from '../../../data/collection-copy.json';
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
+import CatalogCount from '../../components/CatalogCount.astro';
+import CollectionCountCopy from '../../components/CollectionCountCopy.astro';
+import { resolveCollectionCountCopy } from '../../lib/collection-count-copy';
 import { availableTopics, topicArt, slugify, clustersForTopic } from '../../lib/catalog';
 export function getStaticPaths() {
   return availableTopics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
@@ -24,11 +27,13 @@ const related = availableTopics
 const title = topic.keyword.replace('clipart', 'Clipart');
 const isVolleyball = topic.slug === 'volleyball';
 const hasEditable = items.some((item) => item.layered);
-const description =
+const description = resolveCollectionCountCopy(
   copy?.description ??
-  (isVolleyball
-    ? 'Download 50 volleyball illustrations: players, beach scenes, balls, team celebrations and black-and-white designs. Transparent WebP and CMYK PDF files.'
-    : `Explore ${items.length} ${topic.keyword.toLowerCase()} illustrations for personal and educational projects. Download WebP and PDF files${hasEditable ? ' or customize layered artwork' : ''}.`);
+    (isVolleyball
+      ? `Download ${items.length} volleyball illustrations: players, beach scenes, balls, team celebrations and black-and-white designs. Transparent WebP and CMYK PDF files.`
+      : `Explore ${items.length} ${topic.keyword.toLowerCase()} illustrations for personal and educational projects. Download WebP and PDF files${hasEditable ? ' or customize layered artwork' : ''}.`),
+  topic.slug,
+);
 ---
 
 <Layout
@@ -36,6 +41,8 @@ const description =
   description={description}
   image={items[0]?.webp}
   imageAlt={items[0]?.alt}
+  imageWidth={items[0]?.width}
+  imageHeight={items[0]?.height}
   noindex={!topicReady}
 >
   <script
@@ -91,22 +98,21 @@ const description =
       <a href={`/collection/${slugify(topic.cluster)}/`}>{topic.cluster}</a>
     </div>
     <h1>{title}</h1>
-    <p class="lead">
-      {copy?.lead ??
-        (isVolleyball
-          ? 'A little team spirit for your next project.'
-          : 'Little details for your next creative project.')}
-    </p>
     <p>
-      {copy?.intro ??
-        (isVolleyball
-          ? 'Explore 50 volleyball illustrations, from beach-side rallies and player poses to cheerful mascots, trophies and black-and-white drawings. Choose a design for personal team journals, PE worksheets, classroom activities or sports-themed crafts.'
-          : items.length
-            ? items
-                .slice(0, 3)
-                .map((a) => a.description)
-                .join(' ')
-            : `Our ${topic.keyword.toLowerCase()} collection is in preparation. Explore the related subjects below while original illustrations are developed and checked.`)}
+      <CollectionCountCopy
+        topic={topic.slug}
+        text={
+          copy?.intro ??
+          (isVolleyball
+            ? 'Explore volleyball illustrations, from beach-side rallies and player poses to cheerful mascots, trophies and black-and-white drawings. Choose a design for personal team journals, PE worksheets, classroom activities or sports-themed crafts.'
+            : items.length
+              ? items
+                  .slice(0, 3)
+                  .map((a) => a.description)
+                  .join(' ')
+              : `No illustrations are available for ${topic.keyword.toLowerCase()} yet. Browse a related subject below.`)
+        }
+      />
     </p>
     <div class="chips">
       {clustersForTopic(topic)
@@ -131,7 +137,7 @@ const description =
   </section>
   <div class="section-head">
     <h2>
-      {items.length} {items.length === 1 ? 'illustration' : 'illustrations'}
+      <CatalogCount kind="topic" countKey={topic.slug} unit="illustration" />
     </h2>
     <a href="/license/">Personal & educational use</a>
   </div>
@@ -143,7 +149,7 @@ const description =
     </div>
   ) : (
     <div class="empty">
-      <h2>Good things take a little drawing.</h2>
+      <h2>No Artwork Available Yet</h2>
       <p>No artwork has been released for this topic yet.</p>
       <a class="button primary" href="/new/">
         Explore available artwork
