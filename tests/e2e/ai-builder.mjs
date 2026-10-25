@@ -30,7 +30,7 @@ try {
       .jpeg({ quality: 95 })
       .toBuffer()
   ).toString('base64');
-  await page.route('**/api/ai/clipart/quota', (route) =>
+  await page.route(/\/api\/ai\/clipart\/quota\/?$/, (route) =>
     route.fulfill({
       json: {
         enabled: true,
@@ -53,11 +53,11 @@ try {
   let calls = 0;
   let lastBody;
   let responseStatus = 200;
-  await page.route('**/api/ai/clipart/generate', async (route) => {
+  await page.route(/\/api\/ai\/clipart\/generate\/?$/, async (route) => {
     calls++;
     lastBody = route.request().postDataJSON();
     if (responseStatus !== 200)
-      return route.fulfill({ status: responseStatus, json: { error: 'Test capacity message' } });
+      return route.fulfill({ status: responseStatus, json: { error: 'capacity_or_rate_limit' } });
     return route.fulfill({
       json: {
         image,
@@ -273,7 +273,7 @@ try {
   assert.equal(fullAxe.violations.length, 0, JSON.stringify(report.contrast));
   responseStatus = 429;
   await page.locator('#ai-generate').click();
-  await page.locator('#ai-status').filter({ hasText: 'Test capacity message' }).waitFor();
+  await page.locator('#ai-status').filter({ hasText: 'Please wait one minute' }).waitFor();
   assert.equal(calls, 3);
   assert.ok(await page.locator('#ai-canvas').isVisible());
   report.checks.push('429 has honest error, retains old image, no retry');

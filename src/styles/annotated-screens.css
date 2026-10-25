@@ -1,0 +1,208 @@
+.gm-demonstration {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(290px, 1fr);
+  gap: 16px 32px;
+  align-items: start;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #d9e2ec;
+}
+.gm-screen-column {
+  min-width: 0;
+}
+.gm-demonstration > h3 {
+  grid-column: 1 / -1;
+  font-size: 18px;
+  margin: 0;
+}
+.gm-screen-figure {
+  margin: 0;
+}
+.gm-screen-stage {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #c5d3e2;
+  border-radius: 7px;
+  background: #f7f9fc;
+  box-shadow: 0 3px 0 #e7edf3;
+}
+.gm-screen-image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.gm-annotation {
+  opacity: 0.35;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+.gm-annotation.is-active {
+  opacity: 1;
+}
+.gm-target-box {
+  fill: #b94c2e07;
+  stroke: var(--gm-mark);
+  stroke-width: 2.5;
+  vector-effect: non-scaling-stroke;
+}
+.gm-arrow-halo {
+  fill: none;
+  stroke: white;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+.gm-pointer {
+  fill: none;
+  stroke: var(--gm-mark);
+  stroke-width: 2.2px;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+:is(.guide-manual, .teachers-page) .gm-screen-pin {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  background: #8c5e50;
+  box-shadow:
+    0 1px 0 #672c1d,
+    0 2px 6px #49302635;
+  color: white;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 1;
+}
+:is(.guide-manual, .teachers-page) .gm-screen-pin.is-active,
+:is(.guide-manual, .teachers-page) .gm-screen-pin:hover {
+  background: var(--gm-mark);
+}
+.gm-screen-figure figcaption {
+  padding-top: 17px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #536a82;
+}
+.gm-screen-figure figcaption > span {
+  display: block;
+}
+.gm-screen-figure figcaption > a {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 7px;
+  text-decoration: underline;
+}
+.gm-screen-instructions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gm-screen-instructions li {
+  border-left: 3px solid transparent;
+  padding: 0 0 0 13px;
+  margin-bottom: 22px;
+}
+.gm-screen-instructions li.is-active {
+  border-color: #b65c42;
+}
+.gm-screen-instructions li:last-child {
+  margin-bottom: 0;
+}
+.gm-screen-instructions h4 {
+  margin: 0 0 9px;
+}
+:is(.guide-manual, .teachers-page) .gm-screen-instructions h4 button {
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  gap: 10px;
+  min-height: 30px;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #284765;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+}
+.gm-screen-instructions h4 button > span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gm-mark);
+  flex-shrink: 0;
+}
+.gm-screen-instructions p {
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0;
+  max-width: 55ch;
+}
+
+@media (max-width: 1000px) {
+  .gm-demonstration {
+    grid-template-columns: minmax(0, 1.3fr) minmax(260px, 1fr);
+    gap: 16px 23px;
+  }
+  :is(.guide-manual, .teachers-page) .gm-screen-instructions h4 button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 760px) {
+  .gm-demonstration {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-bottom: 29px;
+    padding-bottom: 29px;
+  }
+  .gm-screen-instructions {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+  .gm-screen-instructions li {
+    margin: 0;
+  }
+  :is(.guide-manual, .teachers-page) .gm-screen-instructions h4 button {
+    font-size: 17px;
+  }
+}
+@media (max-width: 500px) {
+  .gm-screen-instructions {
+    gap: 22px;
+  }
+  .gm-screen-instructions p {
+    font-size: 16px;
+  }
+  :is(.guide-manual, .teachers-page) .gm-screen-pin {
+    width: 29px;
+    min-width: 29px;
+    height: 29px;
+    min-height: 29px;
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gm-annotation {
+    transition: none;
+  }
+}

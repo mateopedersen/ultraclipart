@@ -260,16 +260,15 @@ try {
       .locator(selector)
       .all()
       .then((list) => list.slice(0, 2))) {
-      const entry = await link.getAttribute('href');
-      assert.ok(entry.startsWith('/download/'));
-      const landing = await context.request.get(new URL(entry, base).href);
-      assert.equal(landing.status(), 200);
-      const html = await landing.text();
-      const format = new URL(entry, base).searchParams.get('format');
-      const fileName = new URL(entry, base).pathname.split('/')[2] + '.' + format;
-      const tag = html.match(new RegExp(`<a[^>]+download="${fileName}"[^>]*>`))?.[0];
-      assert.ok(tag, fileName);
-      const url = tag.match(/href="([^"]+)"/)[1];
+      const format = await link.getAttribute('data-download-format');
+      const id = await link.getAttribute('data-download-open');
+      assert.equal(await link.getAttribute('download'), `${id}.${format}`);
+      const before = page.url();
+      await link.click();
+      const final = page.locator(`#download-dialog [data-final-download="${format}"]`);
+      await expect(final).toBeVisible();
+      assert.equal(page.url(), before);
+      const url = await final.getAttribute('href');
       const response = await context.request.get(new URL(url, base).href);
       assert.equal(response.status(), 200);
       const body = await response.body(),
@@ -348,7 +347,7 @@ try {
   const staticLinks = await plain.locator('[data-related-root] [data-related-detail]').count();
   assert.ok(staticLinks >= 4);
   await expect(plain.locator('[data-related-controls]')).toBeHidden();
-  await expect(plain.locator('.detail-actions a[href^="/download/"]')).toHaveCount(2);
+  await expect(plain.locator('.detail-actions a[data-download-open][download]')).toHaveCount(2);
   await nojs.close();
   report.checks.push('T24 server-rendered links and original downloads work without JavaScript');
   // A failed revalidation must cancel impressions that have not reached one second.

@@ -3,18 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Editor from '../components/Editor.astro';
 import StudioStarters from '../components/StudioStarters.astro';
 import SceneStarters from '../components/SceneStarters.astro';
-import { art as catalogue } from '../lib/catalog';
+import StudioWalkthrough from '../components/StudioWalkthrough.astro';
+import StudioIcon from '../components/StudioIcon.astro';
+import { proTools } from '../editor/smart/pro-catalog';
+import { publishedArt as catalogue } from '../lib/catalog';
+import { featuredStudioArt } from '../lib/studio-artwork';
 
 import { studioElements } from '../editor/elements';
+import { textStyles } from '../editor/text-styles';
 import { structuredData, breadcrumbs } from '../lib/structured-data';
 import '../styles/creator.css';
 
 const heroArt = [
-  'strawberry-fruit-trio-realistic-clipart',
-  'holland-lop-rabbit-standing-realistic-clipart',
-  'baby-elephant-standing-realistic-clipart',
+  'laptop-study-laptop-with-notebook-and-coffee',
+  'robot-friendly-robot-reaching-out-to-say-hello',
+  'music-acoustic-guitar-watercolor-clipart',
 ].map((id) => catalogue.find((a) => a.id === id)!);
-const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' };
+const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
 ---
 
 <Layout
@@ -48,6 +53,10 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
           'High-resolution clipart library',
           'Layered image and vector composition',
           'Regional recoloring and masks',
+          'Editable text style library',
+          'Radial and spiral arrangements',
+          'Automatic grid layouts and patterned backgrounds',
+          'Canvas fitting and export boundary review',
           'Curved text and typography',
           'Sticker and coloring page tools',
           'WebP and CMYK PDF export',
@@ -57,40 +66,46 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
     />
   </Fragment>
   <div class="creator-page">
-    <section class="studio-intro" aria-labelledby="studio-title">
+    <section class="studio-intro studio-welcome" aria-labelledby="studio-title">
       <div class="studio-intro-copy">
-        <p class="studio-kicker">
-          <span class="studio-live-dot" aria-hidden="true"></span> ULTRACLIPART CREATIVE STUDIO
-        </p>
         <h1 id="studio-title">
-          Create with
-          <br />
-          <span>every detail.</span>
+          Welcome to <span>Studio.</span>
         </h1>
         <p>
-          Natural textures. Beautiful cutouts. Build your own composition with high-resolution
-          artwork and precise editing tools.
+          A place to put your ideas together. Choose artwork, add your words and arrange every
+          layer. Save a project to continue later, or download a finished design.
         </p>
         <div class="studio-intro-meta">
-          <span>{catalogue.length.toLocaleString()} artworks</span>
-          <span>{studioElements.length} vector elements</span>
-          <span>No account needed</span>
-          <a href="#studio-starters">Explore templates</a>
+          <div>
+            <strong>{featuredStudioArt.length.toLocaleString('en-US')}</strong>
+            <span>Featured artworks</span>
+          </div>
+          <div>
+            <strong>{studioElements.length.toLocaleString('en-US')}</strong>
+            <span>Vector elements</span>
+          </div>
+          <div>
+            <strong>{textStyles.length}</strong>
+            <span>Text styles</span>
+          </div>
+        </div>
+        <div class="studio-welcome-links">
+          <a href="#studio-starters">Start with a ready-made design</a>
+          <a href="#studio-guide">See how it works</a>
         </div>
       </div>
       <div class="studio-intro-art studio-real-art" aria-hidden="true">
         <div class="studio-real-composition">
-          <span class="studio-real-caption">Made with the artwork you can edit.</span>
-          {heroArt.map((a, i) => (
-            <img
-              src={a.thumb}
-              alt=""
-              width={a.width}
-              height={a.height}
-              class={`studio-real-object studio-real-object-${i}`}
-            />
-          ))}
-          <span class="studio-real-detail">Texture. Light. Every little detail.</span>
+          <div class="studio-artwork-samples">
+            {heroArt.map((a, i) => (
+              <figure>
+                <div>
+                  <img src={a.thumb} alt="" width={a.width} height={a.height} />
+                </div>
+                <figcaption>{['Everyday Life', 'Imagination', 'Music'][i]}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -98,15 +113,15 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
       <a href="#studio-workspace" data-studio-launch="elements">
         <img src={heroArt[0].thumb} alt="" width="70" height="70" />
         <span>
-          <strong>Explore real details</strong>
-          <small>High-resolution artwork library</small>
+          <strong>Choose Artwork</strong>
+          <small>Search the library and add a picture</small>
         </span>
       </a>
       <a href="#studio-workspace" data-studio-launch="create">
         <img src={heroArt[1].thumb} alt="" width="70" height="70" />
         <span>
-          <strong>Build your composition</strong>
-          <small>Image copies, drawing &amp; shapes</small>
+          <strong>Draw & Add Shapes</strong>
+          <small>Make something from a blank canvas</small>
         </span>
       </a>
       <a href="#studio-workspace" data-studio-launch="text">
@@ -114,25 +129,23 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
           Aa
         </span>
         <span>
-          <strong>Make your words matter</strong>
-          <small>Type styles, curves &amp; outlines</small>
+          <strong>Add Text</strong>
+          <small>{textStyles.length} editable styles, curves &amp; outlines</small>
         </span>
       </a>
-      <a href="#studio-starters">
-        <img src={heroArt[2].thumb} alt="" width="70" height="70" />
+      <a href="#studio-workspace" data-studio-launch="studio">
+        <StudioIcon name="studio" size={48} />
         <span>
-          <strong>Start with a composition</strong>
-          <small>Real artwork, editable layouts</small>
+          <strong>Open Studio Pro</strong>
+          <small>{proTools.length} tools for layout, artwork &amp; print</small>
         </span>
       </a>
     </nav>
-    <section id="studio-workspace" class="studio-workspace-shell" aria-label="Creative workspace">
-      <div class="studio-workspace-label">
-        <span>
-          <span class="studio-live-dot" aria-hidden="true"></span> YOUR WORKSPACE
-        </span>
-        <a href="#studio-privacy">Saved locally · About your work</a>
-      </div>
+    <section
+      id="studio-workspace"
+      class="studio-workspace-shell"
+      aria-labelledby="studio-workspace-title"
+    >
       <Editor creator art={workspace} />
     </section>
 
@@ -143,134 +156,12 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
         <StudioStarters />
       </details>
     </div>
-    <section id="studio-guide" class="studio-learning" aria-labelledby="guide-heading">
-      <header class="studio-learning-heading">
-        <p class="studio-kicker">FROM FIRST IDEA TO FINISHED CLIPART</p>
-        <h2 id="guide-heading">
-          Create it. Make it yours.
-          <br />
-          <span>Bring it to life.</span>
-        </h2>
-        <p>
-          A clipart maker for thoughtful details: choose your artwork, customize every layer, then
-          prepare a file for your next project.
-        </p>
-      </header>
-      <ol class="studio-learning-grid">
-        <li>
-          <article class="studio-learning-card">
-            <figure class="studio-learning-visual studio-learning-pieces">
-              <img
-                src={heroArt[0].thumb}
-                alt="Detailed strawberries with green leaves, ready to add as a clipart image layer"
-                width="440"
-                height="440"
-                loading="lazy"
-              />
-              <span class="studio-visual-tag">Your starting point</span>
-            </figure>
-            <div class="studio-learning-copy">
-              <span class="studio-step">01 · CHOOSE &amp; COMPOSE</span>
-              <h3>Build with beautiful artwork.</h3>
-              <p>
-                Explore {catalogue.length.toLocaleString()} artworks, add your own images, or start
-                with {studioElements.length} editable vector elements. Combine individual pieces
-                into something personal.
-              </p>
-              <a
-                class="studio-learning-action"
-                href="#studio-workspace"
-                data-studio-launch="elements"
-              >
-                Explore the artwork library <span aria-hidden="true">↗</span>
-              </a>
-              <a class="studio-learning-secondary" href="/categories/">
-                Browse clipart by subject
-              </a>
-            </div>
-          </article>
-        </li>
-        <li>
-          <article class="studio-learning-card">
-            <figure class="studio-learning-visual studio-learning-edit">
-              <div class="studio-selection-frame">
-                <img
-                  src={heroArt[1].thumb}
-                  alt="Rabbit artwork inside a selection frame, illustrating independent image editing"
-                  width="440"
-                  height="440"
-                  loading="lazy"
-                />
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-                <i aria-hidden="true"></i>
-              </div>
-              <span class="studio-visual-tag">Every layer, your way</span>
-            </figure>
-            <div class="studio-learning-copy">
-              <span class="studio-step">02 · REFINE &amp; PERSONALIZE</span>
-              <h3>Give every detail a purpose.</h3>
-              <p>
-                Arrange layers, recolor selected regions and add editable text. Try curved
-                lettering, outlines and shadows. Undo a change whenever you need to.
-              </p>
-              <a class="studio-learning-action" href="#studio-workspace" data-studio-launch="text">
-                Open the text studio <span aria-hidden="true">↗</span>
-              </a>
-              <a class="studio-learning-secondary" href="/guides/make-a-classroom-label/">
-                Follow the classroom label guide
-              </a>
-            </div>
-          </article>
-        </li>
-        <li>
-          <article class="studio-learning-card">
-            <figure class="studio-learning-visual studio-learning-print">
-              <div class="studio-paper-preview" aria-hidden="true">
-                <b>A little adventure</b>
-                <img src={heroArt[2].thumb} alt="" width="440" height="440" loading="lazy" />
-                <span>Made by you</span>
-              </div>
-              <span class="studio-visual-tag">Ready for your project</span>
-              <figcaption class="studio-sr-only">
-                Example of a printable card made with elephant clipart and an editable caption
-              </figcaption>
-            </figure>
-            <div class="studio-learning-copy">
-              <span class="studio-step">03 · EXPORT &amp; CREATE</span>
-              <h3>Take your idea off the screen.</h3>
-              <p>
-                Make stickers, coloring activities and printable layouts. Download a WebP image or
-                CMYK PDF, and keep an editable project for your next visit.
-              </p>
-              <a
-                class="studio-learning-action"
-                href="#studio-workspace"
-                data-studio-launch="studio"
-              >
-                Open print &amp; create <span aria-hidden="true">↗</span>
-              </a>
-              <a class="studio-learning-secondary" href="/guides/webp-pdf-and-editable-projects/">
-                Compare image, PDF and project files
-              </a>
-            </div>
-          </article>
-        </li>
-      </ol>
-    </section>
+    <StudioWalkthrough />
     <section class="studio-answers" aria-labelledby="studio-answers-heading">
       <div>
-        <p class="studio-kicker">A FEW USEFUL ANSWERS</p>
-        <h2 id="studio-answers-heading">
-          Your first project,
-          <br />
-          with confidence.
-        </h2>
+        <h2 id="studio-answers-heading">Studio Questions</h2>
         <p>Clear choices for creating, saving and printing your clipart.</p>
-        <a href="/guides/">
-          See all project guides <span aria-hidden="true">↗</span>
-        </a>
+        <a href="/guides/">See All Project Guides</a>
       </div>
       <div class="studio-answer-list">
         <details open>
@@ -284,8 +175,8 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
         <details>
           <summary>Can I make stickers and coloring pages?</summary>
           <p>
-            Yes. Print &amp; Create includes sticker borders, coloring-page controls and printable
-            layouts. Complex images may need manual cleanup. Review your output before printing; the{' '}
+            Yes. Studio Pro includes sticker borders, coloring-page controls and printable layouts.
+            Complex images may need manual cleanup. Review your output before printing; the{' '}
             <a href="/print-size/">print size calculator</a> helps you choose a suitable size.
           </p>
         </details>
@@ -321,7 +212,7 @@ const workspace = { id: 'my-clipart', title: 'Let’s make something.', svg: '' 
         <a href="/privacy/">How local editing works</a>
       </article>
       <article>
-        <span class="studio-step">CREATE WITH CONFIDENCE</span>
+        <span class="studio-step">Artwork Permissions</span>
         <h2>Know what you can use.</h2>
         <p>
           Your original work remains yours. UltraClipart artwork and templates are for personal and

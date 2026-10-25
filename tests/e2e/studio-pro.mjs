@@ -291,6 +291,7 @@ try {
     'Edited WebP and lossless CMYK PDF downloaded. Large PDF option was explicitly selected for the detailed raster.',
   );
   await page.locator('[data-work-mode=print]').click();
+  await page.locator('[data-studio-tool]').selectOption('sticker');
   await action('sticker');
   await expect(page.locator('[data-effects-list]')).toContainText('sticker');
   await settle();

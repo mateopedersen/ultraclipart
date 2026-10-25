@@ -1,4 +1,5 @@
 ---
+import { featuredStudioArt } from '../lib/studio-artwork';
 import { studioElements } from '../editor/elements';
 ---
 
@@ -19,8 +20,8 @@ import { studioElements } from '../editor/elements';
   </div>
   <div data-library-view="artwork">
     <p class="uc-hint">
-      Original-resolution cutouts with natural texture, light and detail. Add an image, then refine
-      its regions or combine it with others.
+      Start with {featuredStudioArt.length.toLocaleString('en-US')} featured artworks, or search the
+      full catalog. Select a thumbnail to add it to your canvas.
     </p>
     <label>
       Search artwork
@@ -31,12 +32,20 @@ import { studioElements } from '../editor/elements';
         autocomplete="off"
       />
     </label>
+    <div class="uc-library-scope" role="group" aria-label="Artwork collection">
+      <button data-artwork-scope="featured" aria-pressed="true">
+        Featured <span data-featured-count>{featuredStudioArt.length.toLocaleString('en-US')}</span>
+      </button>
+      <button data-artwork-scope="all" aria-pressed="false">
+        All Artwork
+      </button>
+    </div>
     <div class="uc-row">
       <label>
         Visual style
         <select data-artwork-style>
-          <option value="realistic">Realistic</option>
           <option value="">All styles</option>
+          <option value="realistic">Realistic</option>
           <option value="Watercolor">Watercolor</option>
           <option value="Color">Color illustration</option>
           <option value="Outline">Line art</option>
@@ -50,13 +59,30 @@ import { studioElements } from '../editor/elements';
         </select>
       </label>
     </div>
+    <div class="uc-library-options">
+      <label>
+        Sort By
+        <select data-artwork-sort>
+          <option value="featured">Recommended</option>
+          <option value="title">Name A–Z</option>
+          <option value="newest">Newest</option>
+        </select>
+      </label>
+      <button data-artwork-clear>Clear Filters</button>
+    </div>
     <p class="uc-hint" data-artwork-count aria-live="polite">
       Loading the artwork library…
     </p>
     <div class="uc-artwork-grid" data-artwork-grid></div>
-    <button class="uc-library-more" data-artwork-more hidden>
-      Show 24 more artworks
-    </button>
+    <div class="uc-library-pagination">
+      <button data-artwork-previous disabled>
+        Previous
+      </button>
+      <span data-artwork-page></span>
+      <button data-artwork-more hidden>
+        Next
+      </button>
+    </div>
     <button class="uc-upload-art" data-action="open-import">
       Import your own PNG / WebP
     </button>
@@ -67,8 +93,22 @@ import { studioElements } from '../editor/elements';
   </div>
   <div data-library-view="vector" hidden>
     <div class="uc-library-intro">
-      <span class="uc-library-count">{studioElements.length} original vectors</span>
-      <p>Small pieces. Big possibilities. Add any element, then make it yours.</p>
+      <span class="uc-library-count">
+        {studioElements.length.toLocaleString('en-US')} Editable Vectors
+      </span>
+      <p>
+        Illustrations, shapes and icons. Add an element, then change its colors, size and position.
+      </p>
+    </div>
+    <div class="uc-library-options">
+      <label>
+        Sort By
+        <select data-element-sort>
+          <option value="featured">Recommended</option>
+          <option value="title">Name A–Z</option>
+        </select>
+      </label>
+      <button data-element-clear>Clear Filters</button>
     </div>
     <label class="uc-search-field">
       Find an element
@@ -98,12 +138,24 @@ import { studioElements } from '../editor/elements';
       Open the library to load elements.
     </p>
     <div class="uc-element-grid" data-element-grid></div>
-    <button data-element-more class="uc-library-more" hidden>
-      Show 24 more
-    </button>
+    <div class="uc-library-pagination">
+      <button data-element-previous disabled>
+        Previous
+      </button>
+      <span data-element-page></span>
+      <button data-element-more hidden>
+        Next
+      </button>
+    </div>
     <p class="uc-hint">
       Each element becomes an editable vector layer. Use Recolor for individual colors, or Separate
       parts in Layers.
+    </p>
+    <p class="uc-hint uc-library-license">
+      Includes Tabler Icons.{' '}
+      <a href="/licenses/tabler-icons-MIT.txt" target="_blank" rel="noopener">
+        MIT License
+      </a>
     </p>
   </div>
 </div>

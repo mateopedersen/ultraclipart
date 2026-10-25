@@ -1,0 +1,2477 @@
+{
+  "version": 1,
+  "renderer": "SVG compositions, local Inter typography and existing approved artwork; no image model generation",
+  "fonts": [
+    {
+      "weight": 400,
+      "sha256": "e20fa0b4fd2dd26e4d14b3ac3cc922509c3a63fa5e910e90c614544aa042dd45",
+      "family": "Inter"
+    },
+    {
+      "weight": 600,
+      "sha256": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd",
+      "family": "Inter"
+    },
+    {
+      "weight": 700,
+      "sha256": "7c5ed5655730de337704d3fc94628515cd7e3d8d32368871709bf56ac0397e7a",
+      "family": "Inter"
+    }
+  ],
+  "pages": {
+    "home": {
+      "route": "/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "6acd3afcbef1ab9afe9989a40189f8dda9e500d8c76aad0a3c8b4d9468fdce56",
+      "sources": [
+        {
+          "path": "public/catalog/heart/floral-heart-roses-wreath-clipart.webp",
+          "sha256": "b79ae752dc0be2aa79ae2871d0835f40d7ea620753209ac9f3fd905c74553b3a"
+        },
+        {
+          "path": "public/catalog/leaves/leaf-autumn-maple-oak-birch-cluster-painted-illustration-clipart.webp",
+          "sha256": "3d29be9a1cfdf9508712d7325dacb4db00f81bb86ff02655ad658a9c3ae61bbf"
+        },
+        {
+          "path": "public/catalog/music/music-acoustic-guitar-watercolor-clipart.webp",
+          "sha256": "4b93bc82fe44d29a197ed812900b8cd607b5555e07a7d561afcde8ce4b1d3d37"
+        },
+        {
+          "path": "public/catalog/pizza/pizza-pepperoni-slice-watercolor-clipart.webp",
+          "sha256": "039eebac54ff7ae943419ac37405eb4cbdd06ba539dfbd7dfbb32fe451d3548c"
+        },
+        {
+          "path": "public/catalog/school/school-backpack-filled-with-pencils-playful-clipart.webp",
+          "sha256": "7027934f046f1cc28b6ec2c67df02223a91670ed526e019facd33a44b3e2130a"
+        },
+        {
+          "path": "public/catalog/volleyball/watercolor-blue-yellow-volleyball-clipart.webp",
+          "sha256": "35e3bc19c9b575ec622d91cd22a726586449cad5817db7231d166f35ad234e6b"
+        },
+        {
+          "path": "public/catalog/wave_034/winter-knitted-mittens-on-cord.webp",
+          "sha256": "f9cc3e044ae4e837eaa04e4d659957db183b784a45d8d17d03af7fbd123a883d"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Clipart for",
+          "x": 56,
+          "y": 170,
+          "width": 278.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Every Project",
+          "x": 56,
+          "y": 238.44,
+          "width": 373,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Flowers, food, school and sports.",
+          "x": 58,
+          "y": 354,
+          "width": 365,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Find artwork for your next design.",
+          "x": 58,
+          "y": 392,
+          "width": 369.5,
+          "height": 24.5,
+          "size": 25
+        },
+        {
+          "text": "Hearts & Flowers",
+          "x": 627.5,
+          "y": 343,
+          "width": 137,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Food & Drink",
+          "x": 823.5,
+          "y": 211,
+          "width": 106,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "School",
+          "x": 1020.5,
+          "y": 211,
+          "width": 56,
+          "height": 13.5,
+          "size": 17
+        },
+        {
+          "text": "Music",
+          "x": 853.25,
+          "y": 478,
+          "width": 46.5,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Sports",
+          "x": 1022,
+          "y": 346,
+          "width": 53,
+          "height": 17,
+          "size": 17
+        },
+        {
+          "text": "Botanicals",
+          "x": 653.75,
+          "y": 478,
+          "width": 84.5,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Winter",
+          "x": 1022.25,
+          "y": 478,
+          "width": 52.5,
+          "height": 13,
+          "size": 17
+        }
+      ]
+    },
+    "studio": {
+      "route": "/create/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "15cd5cb334b5c0a448a5a68720d068834c57233b03b73ef6f28052ff0442578c",
+      "sources": [
+        {
+          "path": "public/catalog/strawberry/strawberry-fruit-trio-realistic-clipart.webp",
+          "sha256": "750311440409a705209eb673fa780eaaf8bf1f7cf38c0cfb956c29b14117f5f8"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Clipart",
+          "x": 56,
+          "y": 170,
+          "width": 183.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Studio",
+          "x": 56,
+          "y": 238.44,
+          "width": 179.5,
+          "height": 45.5,
+          "size": 59
+        },
+        {
+          "text": "Artwork, shapes and editable text.",
+          "x": 58,
+          "y": 354,
+          "width": 376.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Build your design in the browser.",
+          "x": 58,
+          "y": 392,
+          "width": 359.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Freshly Picked",
+          "x": 754,
+          "y": 151,
+          "width": 224,
+          "height": 30.5,
+          "size": 32
+        },
+        {
+          "text": "Design example",
+          "x": 802.25,
+          "y": 483,
+          "width": 127.5,
+          "height": 17,
+          "size": 18
+        },
+        {
+          "text": "Aa",
+          "x": 600.5,
+          "y": 335,
+          "width": 53,
+          "height": 32,
+          "size": 43
+        }
+      ]
+    },
+    "ai-builder": {
+      "route": "/ai-clipart-generator/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "d559782d8308b5404037302896582b00b8ee022af0992787b9457a725adbe87b",
+      "sources": [
+        {
+          "path": "public/ai-examples/baby-rabbit-640.webp",
+          "sha256": "9470969a33e39ffa4ebfa3da57eb73414e72b1d967c84d8d9d1cca8a80714e03"
+        },
+        {
+          "path": "public/ai-examples/floral-teacup-640.webp",
+          "sha256": "f3108d07c9e143ed50ca9e87e955c880b68f19f72066f188201fa20eb126476d"
+        },
+        {
+          "path": "public/ai-examples/garden-robot-640.webp",
+          "sha256": "30447c3e846137494acfcaa5a85ba5ee92727202839c8e29f6ae98d1c9431659"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "AI Clipart",
+          "x": 56,
+          "y": 170,
+          "width": 260.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Builder",
+          "x": 56,
+          "y": 238.44,
+          "width": 198,
+          "height": 44.5,
+          "size": 59
+        },
+        {
+          "text": "Describe an image.",
+          "x": 58,
+          "y": 354,
+          "width": 212.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Choose an illustration style.",
+          "x": 58,
+          "y": 392,
+          "width": 304,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "A gardening robot",
+          "x": 695.25,
+          "y": 478,
+          "width": 163.5,
+          "height": 18.5,
+          "size": 19
+        },
+        {
+          "text": "Example Ideas",
+          "x": 819.5,
+          "y": 539,
+          "width": 117,
+          "height": 17,
+          "size": 18
+        }
+      ]
+    },
+    "categories": {
+      "route": "/categories/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "ac06fe524051a9d7a11964b33373b6923c1992200fa9faf4b1427f216e198e8a",
+      "sources": [
+        {
+          "path": "public/catalog/earth/earth-clipart-classroom-globe-wooden-stand.webp",
+          "sha256": "a80d2f6de49083f87de02417c446c11ef1273a05c118ae748c35b42fc65e3726"
+        },
+        {
+          "path": "public/catalog/fox/baby-fennec-fox-watercolor-clipart.webp",
+          "sha256": "9fdda59dfc350b5357dc8303f47c1bf5093887da982646a64973f98c8e0b8621"
+        },
+        {
+          "path": "public/catalog/leaves/leaf-arching-fern-frond-botanical-illustration-clipart.webp",
+          "sha256": "df326dbfbc965a6d025e0eea92e2f01f505c094ca4ba2f0c72037688f41dad27"
+        },
+        {
+          "path": "public/catalog/music/music-acoustic-guitar-watercolor-clipart.webp",
+          "sha256": "4b93bc82fe44d29a197ed812900b8cd607b5555e07a7d561afcde8ce4b1d3d37"
+        },
+        {
+          "path": "public/catalog/school/school-backpack-filled-with-pencils-classic-clipart.webp",
+          "sha256": "3c135ace06155b3c53574b1e9f84eea74296d928a73ad9f05029feb6c4279d0d"
+        },
+        {
+          "path": "public/catalog/strawberry/strawberry-fruit-trio-realistic-clipart.webp",
+          "sha256": "750311440409a705209eb673fa780eaaf8bf1f7cf38c0cfb956c29b14117f5f8"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Browse",
+          "x": 56,
+          "y": 170,
+          "width": 207.5,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "by Subject",
+          "x": 56,
+          "y": 238.44,
+          "width": 294.5,
+          "height": 57,
+          "size": 59
+        },
+        {
+          "text": "Animals, plants, food, school",
+          "x": 58,
+          "y": 354,
+          "width": 318,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "and more clipart categories.",
+          "x": 58,
+          "y": 392,
+          "width": 307.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Animals",
+          "x": 650.25,
+          "y": 291,
+          "width": 65.5,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Plants",
+          "x": 848.25,
+          "y": 291,
+          "width": 49.5,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Food",
+          "x": 1043,
+          "y": 291,
+          "width": 40,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "School",
+          "x": 655,
+          "y": 496,
+          "width": 56,
+          "height": 13.5,
+          "size": 17
+        },
+        {
+          "text": "Music",
+          "x": 849.75,
+          "y": 496,
+          "width": 46.5,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Nature",
+          "x": 1036.75,
+          "y": 496,
+          "width": 52.5,
+          "height": 13,
+          "size": 17
+        }
+      ]
+    },
+    "collections": {
+      "route": "/collections/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "54c7738567e621e902426cd0e863a5e4520a19828048258124b0a0e5f152c35a",
+      "sources": [
+        {
+          "path": "public/catalog/heart/floral-heart-roses-wreath-clipart.webp",
+          "sha256": "b79ae752dc0be2aa79ae2871d0835f40d7ea620753209ac9f3fd905c74553b3a"
+        },
+        {
+          "path": "public/catalog/wave_022/pumpkin-lantern-smile.webp",
+          "sha256": "391e6d2a1e1393a0527985a2c3f0f69a69c5e8ec6596cc088e3cf8f4a5639901"
+        },
+        {
+          "path": "public/catalog/wave_047/winter-snowy-timber-cabin.webp",
+          "sha256": "6410f1b0320f54b8fed055232a4a66bed69f3ea6fe79506443c1670115aa015b"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Clipart",
+          "x": 56,
+          "y": 170,
+          "width": 183.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Collections",
+          "x": 56,
+          "y": 238.44,
+          "width": 314,
+          "height": 45,
+          "size": 59
+        },
+        {
+          "text": "Related subjects together.",
+          "x": 58,
+          "y": 354,
+          "width": 286.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Browse by theme or occasion.",
+          "x": 58,
+          "y": 392,
+          "width": 333,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Halloween",
+          "x": 633.5,
+          "y": 459,
+          "width": 101,
+          "height": 16,
+          "size": 21
+        },
+        {
+          "text": "Winter",
+          "x": 838.75,
+          "y": 423,
+          "width": 64.5,
+          "height": 16,
+          "size": 21
+        },
+        {
+          "text": "Hearts",
+          "x": 1026.75,
+          "y": 459,
+          "width": 62.5,
+          "height": 16,
+          "size": 21
+        }
+      ]
+    },
+    "black-and-white": {
+      "route": "/black-and-white/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "0cf0ff40eb39c2ad8347b2fc8be4aa445178d3389bcbc63b032af07803deef21",
+      "sources": [
+        {
+          "path": "public/catalog/book/book-and-feather-quill-black-and-white-clipart.webp",
+          "sha256": "19cc31f4a28eae606bb0dea909595bff424138181bc6d41c9ae7c939c2c0c9c5"
+        },
+        {
+          "path": "public/catalog/leaves/leaf-fern-unfurling-frond-black-and-white-woodcut-clipart.webp",
+          "sha256": "b85d10bc2aefb0d8151fc85da4adc4280dabf4d76881c7d103dbdbbfdf990b91"
+        },
+        {
+          "path": "public/catalog/music/music-violin-with-bow-black-and-white-engraving-clipart.webp",
+          "sha256": "bb9cbe696c22b543a0ce3e6ec0bb5b4ebf51f7625f4826f7d8a8aec8f2748e51"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Black & White",
+          "x": 56,
+          "y": 170,
+          "width": 388,
+          "height": 44.5,
+          "size": 59
+        },
+        {
+          "text": "Clipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 183.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Line art, shaded drawings",
+          "x": 58,
+          "y": 354,
+          "width": 286,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "and silhouettes.",
+          "x": 58,
+          "y": 392,
+          "width": 173,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "Botanical Ink",
+          "x": 675.75,
+          "y": 486,
+          "width": 96.5,
+          "height": 13,
+          "size": 17
+        }
+      ]
+    },
+    "teachers": {
+      "route": "/for-teachers/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "b20c3cfdf32dfda6ee8309b91872f73f4a3b3cbe41b7d01ee78ac3b8d3d64269",
+      "sources": [
+        {
+          "path": "public/catalog/book/book-children-reading-together-classic-clipart.webp",
+          "sha256": "139f27752808f36e8f8c29172844a9ffe06e94db342e9f5af0384d132e4406e7"
+        },
+        {
+          "path": "public/catalog/earth/earth-clipart-classroom-globe-wooden-stand.webp",
+          "sha256": "a80d2f6de49083f87de02417c446c11ef1273a05c118ae748c35b42fc65e3726"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "For",
+          "x": 56,
+          "y": 170,
+          "width": 90,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "Teachers",
+          "x": 56,
+          "y": 238.44,
+          "width": 253,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "Pictures for worksheets,",
+          "x": 58,
+          "y": 354,
+          "width": 264,
+          "height": 22.5,
+          "size": 25
+        },
+        {
+          "text": "slides and classroom labels.",
+          "x": 58,
+          "y": 392,
+          "width": 311.5,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "Our World",
+          "x": 672.75,
+          "y": 139,
+          "width": 138.5,
+          "height": 23,
+          "size": 29
+        },
+        {
+          "text": "Name",
+          "x": 629,
+          "y": 190,
+          "width": 44,
+          "height": 13,
+          "size": 17
+        },
+        {
+          "text": "Reading",
+          "x": 968,
+          "y": 191,
+          "width": 110,
+          "height": 27.5,
+          "size": 29
+        },
+        {
+          "text": "Corner",
+          "x": 976.25,
+          "y": 228,
+          "width": 93.5,
+          "height": 22.5,
+          "size": 29
+        },
+        {
+          "text": "Choose a Book",
+          "x": 961.75,
+          "y": 484,
+          "width": 122.5,
+          "height": 14,
+          "size": 18
+        }
+      ]
+    },
+    "guides": {
+      "route": "/guides/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "fa752dbae9fec7e4b77a1aea3a02688926afea464ab0c58df8aed4377a74a16f",
+      "sources": [
+        {
+          "path": "public/guide-screens/editor-toolbar.png",
+          "sha256": "1a1b8ed86ac036a4f8f2ccd53d92a36d7bf1074d539b84593757936b7f1229d1"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "UltraClipart",
+          "x": 56,
+          "y": 170,
+          "width": 316.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "User Guide",
+          "x": 56,
+          "y": 238.44,
+          "width": 310,
+          "height": 45.5,
+          "size": 59
+        },
+        {
+          "text": "Real screens.",
+          "x": 58,
+          "y": 354,
+          "width": 149.5,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "Step-by-step instructions.",
+          "x": 58,
+          "y": 392,
+          "width": 280.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "1  Download",
+          "x": 640,
+          "y": 547,
+          "width": 104,
+          "height": 13.5,
+          "size": 18
+        },
+        {
+          "text": "2  Edit",
+          "x": 839.25,
+          "y": 547,
+          "width": 53.5,
+          "height": 14,
+          "size": 18
+        },
+        {
+          "text": "3  Print",
+          "x": 1009.5,
+          "y": 547,
+          "width": 61,
+          "height": 14,
+          "size": 18
+        }
+      ]
+    },
+    "print-size": {
+      "route": "/print-size/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "3f152d8d6aecf8312ea3e64e8a7aaeec25f6520b0e8f4bd9886a297738a9afd6",
+      "sources": [
+        {
+          "path": "public/catalog/lemon/lemon-whole-and-cut-fruit-realistic-clipart.webp",
+          "sha256": "c8fe73ef4caa08f1bc2fe972fc29bf09fcdc6be5fb879a64acadd8c2db790a85"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Print Size",
+          "x": 56,
+          "y": 170,
+          "width": 263.5,
+          "height": 45.5,
+          "size": 59
+        },
+        {
+          "text": "Calculator",
+          "x": 56,
+          "y": 238.44,
+          "width": 285.5,
+          "height": 45,
+          "size": 59
+        },
+        {
+          "text": "Turn pixel dimensions",
+          "x": 58,
+          "y": 354,
+          "width": 243,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "into a size on paper.",
+          "x": 58,
+          "y": 392,
+          "width": 221.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Print Layout",
+          "x": 844.5,
+          "y": 135,
+          "width": 145,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Size on Paper",
+          "x": 860.75,
+          "y": 491,
+          "width": 112.5,
+          "height": 17.5,
+          "size": 18
+        },
+        {
+          "text": "Pixels",
+          "x": 626.5,
+          "y": 335,
+          "width": 53,
+          "height": 14.5,
+          "size": 19
+        }
+      ]
+    },
+    "about": {
+      "route": "/about/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "5039eb21f7836badac3e60de6da71f9656519d6092927cfa2b49d0df3aff4011",
+      "sources": [
+        {
+          "path": "public/catalog/heart/floral-heart-roses-wreath-clipart.webp",
+          "sha256": "b79ae752dc0be2aa79ae2871d0835f40d7ea620753209ac9f3fd905c74553b3a"
+        },
+        {
+          "path": "public/catalog/leaves/leaf-arching-fern-frond-botanical-illustration-clipart.webp",
+          "sha256": "df326dbfbc965a6d025e0eea92e2f01f505c094ca4ba2f0c72037688f41dad27"
+        },
+        {
+          "path": "public/catalog/lemon/lemon-whole-and-cut-fruit-realistic-clipart.webp",
+          "sha256": "c8fe73ef4caa08f1bc2fe972fc29bf09fcdc6be5fb879a64acadd8c2db790a85"
+        },
+        {
+          "path": "public/illustrations/builder/palette.svg",
+          "sha256": "c183ce95057b7789d703a146450439e1debc118fe1dd07fc67d10879c7c58d5d"
+        },
+        {
+          "path": "public/illustrations/builder/pencil.svg",
+          "sha256": "332721b6e9d890a769ee72fb6eb98a32b76690a2700bbe7329a6d9c8011c87b6"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "About",
+          "x": 56,
+          "y": 170,
+          "width": 168,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "UltraClipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 316.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "A clipart library and design tools",
+          "x": 58,
+          "y": 354,
+          "width": 354.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "for everyday projects.",
+          "x": 58,
+          "y": 392,
+          "width": 238.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "UltraClipart",
+          "x": 784.75,
+          "y": 341,
+          "width": 160.5,
+          "height": 29,
+          "size": 30
+        },
+        {
+          "text": "Library & Studio",
+          "x": 798.25,
+          "y": 386,
+          "width": 133.5,
+          "height": 18.5,
+          "size": 19
+        }
+      ]
+    },
+    "new": {
+      "route": "/new/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "02c10986182c9d6009f66f4d94f01dc515b13e7e6c7e585453483d2f467b4ade",
+      "sources": [
+        {
+          "path": "public/catalog/air-conditioner/air-conditioner-artist-studio.webp",
+          "sha256": "303c69aae66ef35000cc35b147a23b8d403a24039c1676310808970d7ec5aaaa"
+        },
+        {
+          "path": "public/catalog/dad/dad-clipart-dad-hobby-still-life.webp",
+          "sha256": "38ba8fe3f8f5dba6fdcb5dd31db15f495415d856f80cc3092cdc42fb03a37683"
+        },
+        {
+          "path": "public/catalog/earth/earth-clipart-atlantic-globe-natural-color.webp",
+          "sha256": "d8e92e0afba0a27263c495823c77a3f96a6ceeb4a9b27d1acb093bec32883de3"
+        },
+        {
+          "path": "public/catalog/microwave/microwave-adult-loading-bowl.webp",
+          "sha256": "8f4b3dea8387d7fb4c62e61bd3080bf8b455d4a7ee646ece34fa5c1a6d8fde48"
+        },
+        {
+          "path": "public/catalog/security-camera/security-camera-bicycle-parking-rack-with-a-security-camera.webp",
+          "sha256": "98c53ece98a67fcd06b7d199191fff6843df74b8b2e390680be2ebdadd25ec29"
+        },
+        {
+          "path": "public/catalog/smart-doorbell/smart-doorbell-accessible-press.webp",
+          "sha256": "1023b557559cc8d8a2a5aa85a91b3024b653fe4a2d5ca8ae160c0238059ec104"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "New",
+          "x": 56,
+          "y": 170,
+          "width": 117,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "Clipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 183.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "The latest illustrations",
+          "x": 58,
+          "y": 354,
+          "width": 242.5,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "added to the catalog.",
+          "x": 58,
+          "y": 392,
+          "width": 232,
+          "height": 24,
+          "size": 25
+        }
+      ]
+    },
+    "favorites": {
+      "route": "/favorites/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "5d1e8b70144d7d062c315fc9a464ffeb9521c260e09412a0fad723a77f05d777",
+      "sources": [
+        {
+          "path": "public/catalog/book/book-and-feather-quill-playful-clipart.webp",
+          "sha256": "1c689d79c18cd9502ee7423e4514166f4a45d2fe3500c701a98bf467e9916331"
+        },
+        {
+          "path": "public/catalog/book/book-children-reading-together-classic-clipart.webp",
+          "sha256": "139f27752808f36e8f8c29172844a9ffe06e94db342e9f5af0384d132e4406e7"
+        },
+        {
+          "path": "public/catalog/earth/earth-clipart-classroom-globe-wooden-stand.webp",
+          "sha256": "a80d2f6de49083f87de02417c446c11ef1273a05c118ae748c35b42fc65e3726"
+        },
+        {
+          "path": "public/catalog/heart/floral-heart-roses-wreath-clipart.webp",
+          "sha256": "b79ae752dc0be2aa79ae2871d0835f40d7ea620753209ac9f3fd905c74553b3a"
+        },
+        {
+          "path": "public/catalog/school/school-backpack-filled-with-pencils-classic-clipart.webp",
+          "sha256": "3c135ace06155b3c53574b1e9f84eea74296d928a73ad9f05029feb6c4279d0d"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Your Saved",
+          "x": 56,
+          "y": 170,
+          "width": 316.5,
+          "height": 45.5,
+          "size": 59
+        },
+        {
+          "text": "Clipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 183.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Organize artwork in boards.",
+          "x": 58,
+          "y": 354,
+          "width": 306.5,
+          "height": 24.5,
+          "size": 25
+        },
+        {
+          "text": "Keep notes with your pictures.",
+          "x": 58,
+          "y": 392,
+          "width": 333,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Classroom",
+          "x": 684.25,
+          "y": 146,
+          "width": 106.5,
+          "height": 16,
+          "size": 21
+        },
+        {
+          "text": "Cards",
+          "x": 988.5,
+          "y": 195,
+          "width": 58,
+          "height": 16,
+          "size": 21
+        },
+        {
+          "text": "Example Boards",
+          "x": 811,
+          "y": 543,
+          "width": 130,
+          "height": 17,
+          "size": 18
+        }
+      ]
+    },
+    "search": {
+      "route": "/search/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "0f376ac84a3c29522188e17004db48c3a43598d8636e0d128e5104624f7d3643",
+      "sources": [
+        {
+          "path": "public/catalog/book/book-and-feather-quill-playful-clipart.webp",
+          "sha256": "1c689d79c18cd9502ee7423e4514166f4a45d2fe3500c701a98bf467e9916331"
+        },
+        {
+          "path": "public/catalog/fox/baby-fennec-fox-watercolor-clipart.webp",
+          "sha256": "9fdda59dfc350b5357dc8303f47c1bf5093887da982646a64973f98c8e0b8621"
+        },
+        {
+          "path": "public/catalog/music/music-acoustic-guitar-watercolor-clipart.webp",
+          "sha256": "4b93bc82fe44d29a197ed812900b8cd607b5555e07a7d561afcde8ce4b1d3d37"
+        },
+        {
+          "path": "public/catalog/strawberry/strawberry-fruit-trio-realistic-clipart.webp",
+          "sha256": "750311440409a705209eb673fa780eaaf8bf1f7cf38c0cfb956c29b14117f5f8"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Search",
+          "x": 56,
+          "y": 170,
+          "width": 192,
+          "height": 45.5,
+          "size": 59
+        },
+        {
+          "text": "UltraClipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 316.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Find a subject, an action,",
+          "x": 58,
+          "y": 354,
+          "width": 275.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "a guide or an editing tool.",
+          "x": 58,
+          "y": 392,
+          "width": 279.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Find a Subject",
+          "x": 671,
+          "y": 153,
+          "width": 170,
+          "height": 26,
+          "size": 27
+        }
+      ]
+    },
+    "contact": {
+      "route": "/contact/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "76fc7e183558ffa753429f3e7c87857ea631efffe2149606d88712119c508648",
+      "sources": [
+        {
+          "path": "public/illustrations/actions/contact.svg",
+          "sha256": "f0ace1df3b385665987c9ac1a6591a893b79f484d1ee3229d58f7d8d3cf1a2c3"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Contact",
+          "x": 56,
+          "y": 170,
+          "width": 216,
+          "height": 45,
+          "size": 59
+        },
+        {
+          "text": "UltraClipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 316.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Questions, corrections",
+          "x": 58,
+          "y": 354,
+          "width": 249,
+          "height": 22.5,
+          "size": 25
+        },
+        {
+          "text": "and feedback.",
+          "x": 58,
+          "y": 392,
+          "width": 155,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "ultraclipart@gmail.com",
+          "x": 737.25,
+          "y": 500,
+          "width": 263.5,
+          "height": 23.5,
+          "size": 24
+        },
+        {
+          "text": "Questions",
+          "x": 644.25,
+          "y": 140,
+          "width": 105.5,
+          "height": 18,
+          "size": 22
+        },
+        {
+          "text": "Feedback",
+          "x": 1008.25,
+          "y": 168,
+          "width": 99.5,
+          "height": 16.5,
+          "size": 22
+        }
+      ]
+    },
+    "faq": {
+      "route": "/faq/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "52daf9916013b65e1016a00e7f158fcb4889310483a42096735638b6a996a7c9",
+      "sources": [
+        {
+          "path": "public/illustrations/actions/document.svg",
+          "sha256": "01d2171adebd822ed40e11b04ccf9d69b3b5d47a8fd1efca613d3d4bdfd94177"
+        },
+        {
+          "path": "public/illustrations/actions/edit.svg",
+          "sha256": "b411a393139c0b9a0496555f3aaa3377143c49a65a27fd51415d5d93c1ba2c0f"
+        },
+        {
+          "path": "public/illustrations/actions/image.svg",
+          "sha256": "292c6701b4f752365636acf261ca844d602e035f0389196e15901e3ed59c1eb0"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Questions",
+          "x": 56,
+          "y": 170,
+          "width": 284.5,
+          "height": 47.5,
+          "size": 59
+        },
+        {
+          "text": "& Answers",
+          "x": 56,
+          "y": 238.44,
+          "width": 298.5,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "Help with downloading,",
+          "x": 58,
+          "y": 354,
+          "width": 254.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "editing and saving your work.",
+          "x": 58,
+          "y": 392,
+          "width": 323,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "?",
+          "x": 640,
+          "y": 131,
+          "width": 137.5,
+          "height": 201.5,
+          "size": 277
+        },
+        {
+          "text": "Image Downloads",
+          "x": 929,
+          "y": 193,
+          "width": 177.5,
+          "height": 20.5,
+          "size": 21
+        },
+        {
+          "text": "Printable PDFs",
+          "x": 929,
+          "y": 315,
+          "width": 147.5,
+          "height": 16,
+          "size": 21
+        },
+        {
+          "text": "Editing Your Design",
+          "x": 929,
+          "y": 437,
+          "width": 196.5,
+          "height": 20.5,
+          "size": 21
+        }
+      ]
+    },
+    "classroom-label": {
+      "route": "/guides/make-a-classroom-label/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "70baa14bbb743799ffe5a029b535990710c3f58a99e8ed34ab0abc13ff34d309",
+      "sources": [
+        {
+          "path": "public/catalog/book/book-and-feather-quill-playful-clipart.webp",
+          "sha256": "1c689d79c18cd9502ee7423e4514166f4a45d2fe3500c701a98bf467e9916331"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        },
+        {
+          "path": "public/studio/school-label.svg",
+          "sha256": "3a65f0f7d53bb30c941da572e9ba3b3bae21133727663a2ce4cce3c456e5a05a"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Make a",
+          "x": 56,
+          "y": 170,
+          "width": 175,
+          "height": 40,
+          "size": 54
+        },
+        {
+          "text": "Classroom Label",
+          "x": 56,
+          "y": 232.64,
+          "width": 429.5,
+          "height": 41.5,
+          "size": 54
+        },
+        {
+          "text": "Choose a starter. Add text.",
+          "x": 58,
+          "y": 354,
+          "width": 293.5,
+          "height": 19.5,
+          "size": 25
+        },
+        {
+          "text": "Check the layout at print size.",
+          "x": 58,
+          "y": 392,
+          "width": 326.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Reading",
+          "x": 714,
+          "y": 270,
+          "width": 106.5,
+          "height": 27,
+          "size": 28
+        },
+        {
+          "text": "Corner",
+          "x": 714,
+          "y": 321,
+          "width": 90,
+          "height": 22,
+          "size": 28
+        },
+        {
+          "text": "Example Using the Learning Label",
+          "x": 733.75,
+          "y": 542,
+          "width": 272.5,
+          "height": 17,
+          "size": 18
+        }
+      ]
+    },
+    "coloring-activity": {
+      "route": "/guides/turn-clipart-into-a-coloring-activity/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "e76002e7e7b2ee83fd20a60e71769be0becdfdb688000200b9a34089d190c14f",
+      "sources": [
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        },
+        {
+          "path": "public/studio/botanical-sprig.svg",
+          "sha256": "dea2a3e3569452f2a0160f024c9236d46cd23a2269491cbb2ddfafd11509f920"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Make a",
+          "x": 56,
+          "y": 170,
+          "width": 169,
+          "height": 38.5,
+          "size": 52
+        },
+        {
+          "text": "Coloring Activity",
+          "x": 56,
+          "y": 230.32,
+          "width": 413,
+          "height": 50,
+          "size": 52
+        },
+        {
+          "text": "Turn a botanical starter",
+          "x": 58,
+          "y": 354,
+          "width": 258,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "into a printable outline.",
+          "x": 58,
+          "y": 392,
+          "width": 249.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Color",
+          "x": 699.5,
+          "y": 477,
+          "width": 61,
+          "height": 18.5,
+          "size": 24
+        },
+        {
+          "text": "Outline",
+          "x": 968.75,
+          "y": 477,
+          "width": 80.5,
+          "height": 18.5,
+          "size": 24
+        }
+      ]
+    },
+    "download-formats": {
+      "route": "/guides/webp-pdf-and-editable-projects/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "9102f29ab54a6cd3eb8ed279cec84e3f9109dd6deed7834731677bd93410ffb1",
+      "sources": [
+        {
+          "path": "public/illustrations/actions/document.svg",
+          "sha256": "01d2171adebd822ed40e11b04ccf9d69b3b5d47a8fd1efca613d3d4bdfd94177"
+        },
+        {
+          "path": "public/illustrations/actions/edit.svg",
+          "sha256": "b411a393139c0b9a0496555f3aaa3377143c49a65a27fd51415d5d93c1ba2c0f"
+        },
+        {
+          "path": "public/illustrations/actions/image.svg",
+          "sha256": "292c6701b4f752365636acf261ca844d602e035f0389196e15901e3ed59c1eb0"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Which File",
+          "x": 56,
+          "y": 170,
+          "width": 259,
+          "height": 39,
+          "size": 52
+        },
+        {
+          "text": "Should You Save?",
+          "x": 56,
+          "y": 230.32,
+          "width": 448.5,
+          "height": 40,
+          "size": 52
+        },
+        {
+          "text": "WebP images, printable PDFs",
+          "x": 58,
+          "y": 354,
+          "width": 334.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "and editable project files.",
+          "x": 58,
+          "y": 392,
+          "width": 275,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "WebP",
+          "x": 643.75,
+          "y": 343,
+          "width": 76.5,
+          "height": 21,
+          "size": 28
+        },
+        {
+          "text": "Image",
+          "x": 654.25,
+          "y": 399,
+          "width": 55.5,
+          "height": 20.5,
+          "size": 21
+        },
+        {
+          "text": "PDF",
+          "x": 843.5,
+          "y": 343,
+          "width": 53,
+          "height": 20.5,
+          "size": 28
+        },
+        {
+          "text": "Print",
+          "x": 849.5,
+          "y": 399,
+          "width": 41,
+          "height": 16,
+          "size": 21
+        },
+        {
+          "text": "Project",
+          "x": 1011.75,
+          "y": 343,
+          "width": 92.5,
+          "height": 27,
+          "size": 28
+        },
+        {
+          "text": "Layers",
+          "x": 1027.75,
+          "y": 399,
+          "width": 60.5,
+          "height": 20.5,
+          "size": 21
+        }
+      ]
+    },
+    "license": {
+      "route": "/license/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "e068585c89962c06966b58be26ab51fe7605a02bd2838a67fd865a085983f441",
+      "sources": [
+        {
+          "path": "public/catalog/book/book-and-feather-quill-playful-clipart.webp",
+          "sha256": "1c689d79c18cd9502ee7423e4514166f4a45d2fe3500c701a98bf467e9916331"
+        },
+        {
+          "path": "public/catalog/heart/floral-heart-roses-wreath-clipart.webp",
+          "sha256": "b79ae752dc0be2aa79ae2871d0835f40d7ea620753209ac9f3fd905c74553b3a"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Artwork",
+          "x": 56,
+          "y": 170,
+          "width": 222,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "License",
+          "x": 56,
+          "y": 238.44,
+          "width": 215,
+          "height": 44.5,
+          "size": 59
+        },
+        {
+          "text": "Read the permissions",
+          "x": 58,
+          "y": 354,
+          "width": 240.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "for catalog artwork.",
+          "x": 58,
+          "y": 392,
+          "width": 212,
+          "height": 24.5,
+          "size": 25
+        },
+        {
+          "text": "Personal &",
+          "x": 721.75,
+          "y": 263,
+          "width": 154.5,
+          "height": 23,
+          "size": 30
+        },
+        {
+          "text": "Educational Use",
+          "x": 683.5,
+          "y": 308,
+          "width": 231,
+          "height": 23,
+          "size": 30
+        }
+      ]
+    },
+    "privacy": {
+      "route": "/privacy/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "6bb5fa22b3ef7aff902f2c7a928175ad3cb8c4a38371f8d8c5bb57a557d4058d",
+      "sources": [
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Privacy &",
+          "x": 56,
+          "y": 170,
+          "width": 264.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Your Data",
+          "x": 56,
+          "y": 238.44,
+          "width": 272,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "Local editing, cloud generation",
+          "x": 58,
+          "y": 354,
+          "width": 338,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "and saved work explained.",
+          "x": 58,
+          "y": 392,
+          "width": 294.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Browser",
+          "x": 647.5,
+          "y": 492,
+          "width": 75,
+          "height": 14.5,
+          "size": 19
+        },
+        {
+          "text": "AI Service",
+          "x": 824,
+          "y": 492,
+          "width": 92,
+          "height": 15,
+          "size": 19
+        },
+        {
+          "text": "Saved Files",
+          "x": 1003.25,
+          "y": 492,
+          "width": 103.5,
+          "height": 15,
+          "size": 19
+        }
+      ]
+    },
+    "cookies": {
+      "route": "/cookies/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "7c188c09db964beb3e5d9adce8495c2e132ddfdb80650bef2eed25503341b574",
+      "sources": [
+        {
+          "path": "public/illustrations/actions/cookies.svg",
+          "sha256": "31b53159d19b3e9071c6b92613b40d86049de39374968a6c4ab7fe485b387a58"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Cookies &",
+          "x": 56,
+          "y": 170,
+          "width": 285.5,
+          "height": 45,
+          "size": 59
+        },
+        {
+          "text": "Your Privacy",
+          "x": 56,
+          "y": 238.44,
+          "width": 355.5,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "See what this site stores.",
+          "x": 58,
+          "y": 354,
+          "width": 276,
+          "height": 19.5,
+          "size": 25
+        },
+        {
+          "text": "Review your cookie choices.",
+          "x": 58,
+          "y": 392,
+          "width": 312.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "Necessary Cookies",
+          "x": 634.5,
+          "y": 492,
+          "width": 189,
+          "height": 20.5,
+          "size": 21
+        },
+        {
+          "text": "Your Privacy Settings",
+          "x": 899.75,
+          "y": 492,
+          "width": 214.5,
+          "height": 21,
+          "size": 21
+        }
+      ]
+    },
+    "terms": {
+      "route": "/terms/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "66e2555970fb9e3a57371caaed425e8a0067aab4dfcde761d2903a5299919b0e",
+      "sources": [
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Terms",
+          "x": 56,
+          "y": 170,
+          "width": 170.5,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "of Use",
+          "x": 56,
+          "y": 238.44,
+          "width": 177.5,
+          "height": 44.5,
+          "size": 59
+        },
+        {
+          "text": "Using the site, artwork",
+          "x": 58,
+          "y": 354,
+          "width": 246.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "and creative tools.",
+          "x": 58,
+          "y": 392,
+          "width": 201,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "Terms of Use",
+          "x": 745,
+          "y": 158,
+          "width": 193,
+          "height": 24,
+          "size": 31
+        },
+        {
+          "text": "Using UltraClipart",
+          "x": 681,
+          "y": 254,
+          "width": 184.5,
+          "height": 21.5,
+          "size": 22
+        },
+        {
+          "text": "Artwork & Creative Tools",
+          "x": 681,
+          "y": 439,
+          "width": 228,
+          "height": 16,
+          "size": 21
+        }
+      ]
+    },
+    "copyright": {
+      "route": "/copyright/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "31cf7d095d2360bf5cc3d3bc4d73fcc22ece10b6d268db81ebd5f5d5c1c4ff8d",
+      "sources": [
+        {
+          "path": "public/illustrations/actions/contact.svg",
+          "sha256": "f0ace1df3b385665987c9ac1a6591a893b79f484d1ee3229d58f7d8d3cf1a2c3"
+        },
+        {
+          "path": "public/illustrations/actions/document.svg",
+          "sha256": "01d2171adebd822ed40e11b04ccf9d69b3b5d47a8fd1efca613d3d4bdfd94177"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Copyright &",
+          "x": 56,
+          "y": 170,
+          "width": 334,
+          "height": 56.5,
+          "size": 59
+        },
+        {
+          "text": "Corrections",
+          "x": 56,
+          "y": 238.44,
+          "width": 327,
+          "height": 45,
+          "size": 59
+        },
+        {
+          "text": "Report a rights concern",
+          "x": 58,
+          "y": 354,
+          "width": 258,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "or a factual error.",
+          "x": 58,
+          "y": 392,
+          "width": 188,
+          "height": 19,
+          "size": 25
+        },
+        {
+          "text": "©",
+          "x": 738.5,
+          "y": 171,
+          "width": 119,
+          "height": 119,
+          "size": 165
+        },
+        {
+          "text": "Copyright & Corrections",
+          "x": 661.75,
+          "y": 392,
+          "width": 276.5,
+          "height": 23.5,
+          "size": 24
+        }
+      ]
+    },
+    "accessibility": {
+      "route": "/accessibility/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "447c973c9f1076d79960bc847667b406c3e79b839d1894abcf661f457d95565b",
+      "sources": [
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Accessibility",
+          "x": 56,
+          "y": 170,
+          "width": 335,
+          "height": 52,
+          "size": 55
+        },
+        {
+          "text": "Keyboard controls, readable",
+          "x": 58,
+          "y": 354,
+          "width": 312,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "layouts and ways to get help.",
+          "x": 58,
+          "y": 392,
+          "width": 320.5,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "Tab",
+          "x": 723.25,
+          "y": 209,
+          "width": 59.5,
+          "height": 27,
+          "size": 36
+        },
+        {
+          "text": "Enter",
+          "x": 941.5,
+          "y": 209,
+          "width": 89,
+          "height": 27,
+          "size": 36
+        },
+        {
+          "text": "Visible Keyboard Focus",
+          "x": 723.75,
+          "y": 371,
+          "width": 304.5,
+          "height": 26,
+          "size": 27
+        }
+      ]
+    },
+    "creative-process": {
+      "route": "/editorial-process/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "066cd04dbe588707c46cfd2c8ee92985ddde906a08bcf9b75c99f9b605b05cbc",
+      "sources": [
+        {
+          "path": "public/catalog/fox/baby-fennec-fox-watercolor-clipart.webp",
+          "sha256": "9fdda59dfc350b5357dc8303f47c1bf5093887da982646a64973f98c8e0b8621"
+        },
+        {
+          "path": "public/illustrations/actions/document.svg",
+          "sha256": "01d2171adebd822ed40e11b04ccf9d69b3b5d47a8fd1efca613d3d4bdfd94177"
+        },
+        {
+          "path": "public/illustrations/actions/edit.svg",
+          "sha256": "b411a393139c0b9a0496555f3aaa3377143c49a65a27fd51415d5d93c1ba2c0f"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Finding &",
+          "x": 56,
+          "y": 170,
+          "width": 267,
+          "height": 56,
+          "size": 59
+        },
+        {
+          "text": "Using Clipart",
+          "x": 56,
+          "y": 238.44,
+          "width": 362.5,
+          "height": 56.5,
+          "size": 59
+        },
+        {
+          "text": "Choose an image.",
+          "x": 58,
+          "y": 354,
+          "width": 201,
+          "height": 24.5,
+          "size": 25
+        },
+        {
+          "text": "Edit it and save the file you need.",
+          "x": 58,
+          "y": 392,
+          "width": 366,
+          "height": 24,
+          "size": 25
+        },
+        {
+          "text": "1  Find",
+          "x": 648,
+          "y": 417,
+          "width": 72,
+          "height": 17.5,
+          "size": 23
+        },
+        {
+          "text": "2  Edit",
+          "x": 837.5,
+          "y": 417,
+          "width": 69,
+          "height": 17.5,
+          "size": 23
+        },
+        {
+          "text": "3  Save",
+          "x": 1020.25,
+          "y": 417,
+          "width": 79.5,
+          "height": 18,
+          "size": 23
+        }
+      ]
+    },
+    "not-found": {
+      "route": "/404/",
+      "rendererSha": "d65ec6069a50672f99564b52215558313d950233c43462ea00e9e13dc6f51488",
+      "outputSha256": "73c0bb6fb49947dd096c6bd94c1ad6bb646863b1217991651327735867c0f92f",
+      "sources": [
+        {
+          "path": "public/catalog/butterfly/blue-morpho-butterfly-flying-illustration-clipart.webp",
+          "sha256": "a2dda292f5c63a1fbe148852ee117fa3bcfd17303266b75599cef85c6c4be5b9"
+        },
+        {
+          "path": "public/catalog/fox/baby-fennec-fox-watercolor-clipart.webp",
+          "sha256": "9fdda59dfc350b5357dc8303f47c1bf5093887da982646a64973f98c8e0b8621"
+        },
+        {
+          "path": "public/logo.svg",
+          "sha256": "f28bf4bd03000a1adcc5c195ec34be0cd9e75459a9c75da43b6dbdbfe1710d7d"
+        }
+      ],
+      "text": [
+        {
+          "text": "UltraClipart",
+          "x": 101,
+          "y": 47,
+          "width": 155,
+          "height": 28,
+          "size": 29
+        },
+        {
+          "text": "ultraclipart.com",
+          "x": 58,
+          "y": 565,
+          "width": 139.5,
+          "height": 20,
+          "size": 21
+        },
+        {
+          "text": "Page",
+          "x": 56,
+          "y": 170,
+          "width": 135.5,
+          "height": 55.5,
+          "size": 59
+        },
+        {
+          "text": "Not Found",
+          "x": 56,
+          "y": 238.44,
+          "width": 287,
+          "height": 44,
+          "size": 59
+        },
+        {
+          "text": "Search for an illustration",
+          "x": 58,
+          "y": 354,
+          "width": 268.5,
+          "height": 19.5,
+          "size": 25
+        },
+        {
+          "text": "or browse a subject instead.",
+          "x": 58,
+          "y": 392,
+          "width": 310.5,
+          "height": 23.5,
+          "size": 25
+        },
+        {
+          "text": "404",
+          "x": 709.5,
+          "y": 174,
+          "width": 303,
+          "height": 138,
+          "size": 188
+        }
+      ]
+    }
+  }
+}

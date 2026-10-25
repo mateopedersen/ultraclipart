@@ -1,0 +1,45 @@
+---
+import { publishedArt } from '../lib/catalog';
+import CatalogCount from './CatalogCount.astro';
+
+// A small selection of real catalog artwork, resolved through the same approved
+// asset map as the gallery. A withdrawn feature falls back within its subject.
+const choices = [
+  ['floral-heart-roses-wreath-clipart', 'heart'],
+  ['strawberry-fruit-trio-realistic-clipart', 'strawberry'],
+  ['music-acoustic-guitar-watercolor-clipart', 'music'],
+  ['school-backpack-filled-with-pencils-playful-clipart', 'school'],
+  ['robot-friendly-robot-reaching-out-to-say-hello', 'robot'],
+  ['watercolor-blue-yellow-volleyball-clipart', 'volleyball'],
+  ['pizza-pepperoni-slice-watercolor-clipart', 'pizza'],
+  ['book-and-feather-quill-playful-clipart', 'book'],
+  ['leaf-autumn-maple-oak-birch-cluster-painted-illustration-clipart', 'leaves'],
+  ['earth-clipart-classroom-globe-wooden-stand', 'earth'],
+  ['baby-fennec-fox-watercolor-clipart', 'fox'],
+  ['winter-knitted-mittens-on-cord', 'winter'],
+];
+const artwork = choices.flatMap(([id, topic]) => {
+  const item =
+    publishedArt.find((item) => item.id === id) ??
+    publishedArt.find((item) => item.topic === topic && item.alpha && !item.monochrome);
+  return item ? [item] : [];
+});
+---
+
+<a class="site-browse-feature" href="/categories/" aria-label="Browse All Clipart Categories">
+  <div class="site-browse-preview-copy">
+    <strong>Explore the Library</strong>
+    <span>School, Food, Music &amp; More</span>
+  </div>
+  <div class="site-browse-preview-art" aria-hidden="true">
+    {artwork.map((item) => (
+      <span class="site-browse-preview-tile">
+        <img src={item.thumb} width="120" height="120" alt="" loading="lazy" decoding="async" />
+      </span>
+    ))}
+  </div>
+  <span class="site-browse-preview-action">Browse All Subjects</span>
+  <span class="site-browse-preview-count">
+    <CatalogCount kind="subjects" /> Subjects
+  </span>
+</a>

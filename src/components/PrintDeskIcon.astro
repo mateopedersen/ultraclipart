@@ -1,0 +1,148 @@
+---
+interface Props {
+  kind: 'printer' | 'ruler' | 'paper';
+  id: string;
+  size?: number;
+}
+const { kind, id, size = 72 } = Astro.props;
+---
+
+<svg
+  width={size}
+  height={Math.round(size * 0.8)}
+  viewBox="0 0 120 96"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+  class="print-desk-icon"
+>
+  <defs>
+    <linearGradient
+      id={`${id}-silver`}
+      x1="15"
+      y1="30"
+      x2="90"
+      y2="83"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" />
+      <stop offset=".36" stop-color="#f0f3f7" />
+      <stop offset="1" stop-color="#b2bdcb" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-face`}
+      x1="33"
+      y1="43"
+      x2="80"
+      y2="85"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#395779" />
+      <stop offset="1" stop-color="#182f4d" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-paper`}
+      x1="35"
+      y1="8"
+      x2="78"
+      y2="76"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="white" />
+      <stop offset="1" stop-color="#e0e6ee" />
+    </linearGradient>
+    <linearGradient id={`${id}-steel`} x1="0" y1="30" x2="0" y2="62" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fcfdff" />
+      <stop offset=".23" stop-color="#e4eaf1" />
+      <stop offset=".48" stop-color="#bec9d5" />
+      <stop offset=".52" stop-color="#e1e7ee" />
+      <stop offset="1" stop-color="#a8b5c4" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-blue`}
+      x1="35"
+      y1="25"
+      x2="73"
+      y2="69"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#75b6f3" />
+      <stop offset="1" stop-color="#275d9c" />
+    </linearGradient>
+    <radialGradient id={`${id}-shadow`}>
+      <stop stop-color="#1b304a" stop-opacity=".23" />
+      <stop offset="1" stop-color="#1b304a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <ellipse cx="61" cy="84" rx="54" ry="9" fill={`url(#${id}-shadow)`} />
+  {kind === 'printer' && (
+    <>
+      <path d="m17 36 15-10h61l12 12-13 10H24z" fill={`url(#${id}-silver)`} stroke="#9cabbc" />
+      <path d="M34 8h49l5 40H30z" fill="#a3afbe" />
+      <path d="M32 6h48l5 39H28z" fill={`url(#${id}-paper)`} stroke="#b7c2cf" />
+      <path d="M41 16h27m-26 6h31" stroke="#bcc9d7" stroke-width="2" stroke-linecap="round" />
+      <path d="M25 33h64" stroke="#78899d" stroke-width="4" stroke-linecap="round" />
+      <path
+        d="m17 37 13 8h62l13-8v35l-13 9H30l-13-8z"
+        fill={`url(#${id}-silver)`}
+        stroke="#a5b2c1"
+      />
+      <path d="m92 45 13-8v35l-13 9z" fill="#a3b0c0" />
+      <path d="M30 46h61v31H30z" fill={`url(#${id}-face)`} />
+      <path d="M39 55h45v8H39z" fill="#0d2038" />
+      <path d="M40 57h42l5 25H34z" fill="#a5b1c0" />
+      <path d="M41 56h40l5 24H35z" fill={`url(#${id}-paper)`} stroke="#b4becb" />
+      <path d="M44 60h32l2 13H41z" fill={`url(#${id}-blue)`} />
+      <path d="m44 71 8-8 8 7 6-5 9 7" fill="#e8f0f8" />
+      <circle cx="69" cy="63" r="2" fill="#ffde91" />
+      <path d="m19 39 12 8h58" stroke="white" stroke-opacity=".8" />
+      <rect x="86" y="36" width="8" height="3" rx="1.5" fill="#68897f" />
+      <path d="M32 79v3h8m43-3v3h8" stroke="#7b8a9d" stroke-width="2" />
+    </>
+  )}
+  {kind === 'ruler' && (
+    <g transform="rotate(-22 60 48)">
+      <path d="M9 39h101v27H9z" fill="#8190a2" />
+      <rect
+        x="8"
+        y="32"
+        width="101"
+        height="29"
+        rx="3"
+        fill={`url(#${id}-steel)`}
+        stroke="#8b9aab"
+      />
+      <path d="M11 33h94" stroke="white" stroke-width="1.5" />
+      {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((tick) => (
+        <path
+          d={`M${20 + tick * 9} 33v${tick % 2 === 0 ? 13 : 7}`}
+          stroke="#46566d"
+          stroke-width="1.1"
+        />
+      ))}
+      <circle cx="16" cy="53" r="2" fill="#a2aebc" stroke="#6a7c90" />
+      <path d="M33 53h49" stroke="#ecf1f7" stroke-width="1.5" />
+      <path d="M11 62h94" stroke="#718396" />
+    </g>
+  )}
+  {kind === 'paper' && (
+    <g transform="rotate(-8 60 45)">
+      <path d="m30 15 46-1 16 17v47H30z" fill="#a7b5c5" />
+      <path d="M25 9h47l17 17v48H25z" fill={`url(#${id}-paper)`} stroke="#afbdcc" />
+      <path d="M72 9v18h17" fill="#d5dfeb" stroke="#afbdcc" />
+      <path d="m73 11 13 14H73z" fill="#f8fbff" />
+      <rect x="35" y="34" width="43" height="28" rx="2" fill={`url(#${id}-blue)`} />
+      <circle cx="66" cy="42" r="4" fill="#f4cf82" />
+      <path d="m38 58 10-15 11 13 6-7 10 9" fill="#e7f1f8" />
+      <path d="M35 68h24m4 0h11" stroke="#a4b7cd" stroke-width="2" stroke-linecap="round" />
+      <path d="M28 12v59" stroke="white" stroke-width="2" />
+    </g>
+  )}
+</svg>
+<style>
+  .print-desk-icon {
+    display: block;
+    flex-shrink: 0;
+    overflow: visible;
+  }
+</style>

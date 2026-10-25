@@ -1,33 +1,49 @@
-<div class="uc-text-presets" aria-label="Text styles">
-  <button data-text-preset="headline">
-    <b>MAKE IT</b>
-    <span>Headline</span>
-  </button>
-  <button data-text-preset="editorial">
-    <b>Lovely</b>
-    <span>Editorial</span>
-  </button>
-  <button data-text-preset="badge">
-    <b>GOOD VIBES</b>
-    <span>Curved</span>
-  </button>
-  <button data-text-preset="outline">
-    <b>HELLO</b>
-    <span>Outlined</span>
-  </button>
-  <button data-text-preset="typewriter">
-    <b>Once upon</b>
-    <span>Typewriter</span>
-  </button>
-  <button data-text-preset="label">
-    <b>Made for you</b>
-    <span>Label</span>
-  </button>
-</div>
-<p class="uc-hint">Choose a style, then type your words. Select existing text to edit it.</p>
+---
+import { textStyles, textStyleCategories } from '../editor/text-styles';
+---
+
 <label>
-  Your text<textarea data-text rows="3" maxlength="500" placeholder="Make it your own"></textarea>
+  Your text<textarea data-text rows="3" maxlength="500" placeholder="Enter your text"></textarea>
 </label>
+<details class="uc-control-details uc-text-style-library" data-text-style-picker>
+  <summary>
+    <span data-text-chosen-style>Choose a Text Style</span>
+    <small>{textStyles.length} Styles</small>
+  </summary>
+  <p class="uc-hint">
+    Choose a style for your text. You can edit the words, font and colors afterward.
+  </p>
+  <label>
+    Find a Style
+    <input data-text-style-search type="search" placeholder="Outline, retro, curved…" />
+  </label>
+  <label>
+    Style Collection
+    <select data-text-style-category>
+      <option value="">All Styles</option>
+      {textStyleCategories.map((name) => (
+        <option value={name}>{name}</option>
+      ))}
+    </select>
+  </label>
+  <div class="uc-text-presets" data-text-style-grid></div>
+  <div class="uc-library-pagination">
+    <button data-text-style-previous type="button">
+      Previous
+    </button>
+    <span data-text-style-count aria-live="polite"></span>
+    <button data-text-style-next type="button">
+      Next
+    </button>
+  </div>
+</details>
+<div class="uc-text-actions">
+  <button class="uc-primary" data-action="text">
+    Add / update text
+  </button>
+  <button data-action="new-text">Add as new layer</button>
+</div>
+
 <div class="uc-row">
   <label>
     Typeface
@@ -114,12 +130,7 @@
     <input data-text-shadow type="checkbox" /> Soft offset shadow
   </label>
 </details>
-<div class="uc-text-actions">
-  <button class="uc-primary" data-action="text">
-    Add / update text
-  </button>
-  <button data-action="new-text">Add as new layer</button>
-</div>
+
 <p class="uc-hint">
   Text stays editable in your project. Image exports support your browser’s characters; PDF uses
   standard Latin print fonts. Check the print proof for font differences.

@@ -1,0 +1,46 @@
+---
+interface Props {
+  size?: number;
+  class?: string;
+  light?: boolean;
+  direction?: 'right' | 'up';
+  dimensional?: boolean;
+}
+const {
+  size = 32,
+  class: className,
+  light = false,
+  direction = 'right',
+  dimensional = false,
+} = Astro.props;
+---
+
+<img
+  class:list={['navigation-arrow', { 'navigation-arrow-up': direction === 'up' }, className]}
+  src={
+    dimensional
+      ? '/illustrations/actions/arrow-right-dimensional.svg'
+      : light
+        ? '/illustrations/actions/arrow-right-light.svg'
+        : '/illustrations/actions/arrow-right.svg'
+  }
+  alt=""
+  aria-hidden="true"
+  width={size}
+  height={size}
+  loading="lazy"
+  decoding="async"
+  draggable="false"
+/>
+
+<style>
+  .navigation-arrow {
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+    user-select: none;
+  }
+  .navigation-arrow-up {
+    transform: rotate(-90deg);
+  }
+</style>

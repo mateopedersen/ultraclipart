@@ -1,6 +1,5 @@
-import { downloadPageHref } from '../lib/download-route';
 import type { SearchCard } from '../lib/search-index';
-import { actionIcons, actionIconAccents } from '../lib/action-icons';
+import { actionIconAssets } from '../lib/action-icons';
 export function renderCard(item: SearchCard): HTMLElement {
   const article = document.createElement('article');
   article.className = 'art-card';
@@ -41,43 +40,23 @@ export function renderCard(item: SearchCard): HTMLElement {
   const actions = document.createElement('div');
   actions.className = 'card-actions';
   const action = (
-    kind: keyof typeof actionIcons,
+    kind: keyof typeof actionIconAssets,
     label: string,
     href: string,
     className: string,
   ) => {
     const a = link('', href, className);
-    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-    for (const [name, value] of Object.entries({
-      width: '20',
-      height: '20',
-      viewBox: '0 0 24 24',
-      fill: 'none',
-      stroke: 'currentColor',
-      'stroke-width': '1.7',
-      'stroke-linecap': 'round',
-      'stroke-linejoin': 'round',
-      'aria-hidden': 'true',
-      focusable: 'false',
-    }))
-      svg.setAttribute(name, value);
-    const accent = actionIconAccents[kind];
-    if (accent) {
-      const fill = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      fill.setAttribute('d', accent);
-      fill.setAttribute('fill', 'currentColor');
-      fill.setAttribute('fill-opacity', '0.14');
-      fill.setAttribute('stroke', 'none');
-      svg.append(fill);
-    }
-    for (const d of actionIcons[kind]) {
-      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-      path.setAttribute('d', d);
-      svg.append(path);
-    }
+    const icon = document.createElement('img');
+    icon.src = actionIconAssets[kind];
+    icon.alt = '';
+    icon.className = 'action-icon';
+    icon.width = 28;
+    icon.height = 28;
+    icon.decoding = 'async';
+    icon.setAttribute('aria-hidden', 'true');
     const text = document.createElement('span');
     text.textContent = label;
-    a.append(svg, text);
+    a.append(icon, text);
     return a;
   };
   for (const [label, url, extension, icon] of [
@@ -85,7 +64,12 @@ export function renderCard(item: SearchCard): HTMLElement {
     ['PDF', item.pdf, 'pdf', 'document'],
   ] as const) {
     if (!url) continue;
-    const a = action(icon, label, downloadPageHref(item.id, extension), extension);
+    const a = action(icon, label, url, extension);
+    a.download = `${item.id}.${extension}`;
+    a.dataset.downloadOpen = item.id;
+    a.dataset.downloadFormat = extension;
+    a.setAttribute('aria-expanded', 'false');
+    a.setAttribute('aria-controls', 'download-dialog');
     a.setAttribute('aria-label', `Download ${label}: ${item.title}`);
     formats.append(a);
   }

@@ -1,0 +1,188 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { cookieRecords, deviceRecords, COOKIE_CHOICE_DAYS } from '../lib/cookie-policy';
+---
+
+<Layout
+  title="Cookie Policy"
+  description="See which cookies and browser storage UltraClipart uses, why they are needed, how long they last and how to manage your choices."
+>
+  <article class="cookie-policy">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true"> / </span>
+      <span aria-current="page">Cookie Policy</span>
+    </nav>
+    <header class="cookie-policy-hero">
+      <div>
+        <h1>Cookie Policy</h1>
+        <p>
+          A clear look at the cookies that protect the site, the work saved on your device and the
+          choices available to you.
+        </p>
+        <small>Last reviewed: October 25, 2026</small>
+      </div>
+      <div class="cookie-policy-hero-art" aria-hidden="true">
+        <img src="/illustrations/actions/cookies.svg" width="205" height="205" alt="" />
+      </div>
+    </header>
+    <section id="cookie-preferences" aria-labelledby="cookie-choice-title">
+      <h2 id="cookie-choice-title">Your Cookie Choices</h2>
+      <p>
+        UltraClipart currently uses necessary cookies for security, requested services and
+        remembering this notice. Advertising and analytics cookies are not enabled. You can continue
+        browsing with necessary cookies only.
+      </p>
+      <div class="cookie-policy-actions">
+        <button type="button" data-cookie-choice="accepted">
+          Accept Cookies
+        </button>
+        <button type="button" data-cookie-choice="necessary">
+          Necessary Only
+        </button>
+        <a href="#cookie-preferences" data-cookie-settings>
+          View Cookie Settings
+        </a>
+      </div>
+      <p class="cookie-policy-note">
+        Both choices keep advertising and analytics disabled. Accepting covers the necessary cookies
+        described here; it does not give permission for future tracking. We do not treat scrolling,
+        closing a page or continuing to browse as consent.
+      </p>
+      <p data-cookie-choice-summary></p>
+      <noscript>
+        <p>
+          Cookie settings need JavaScript. Only necessary cookies are used; you can also manage them
+          through your browser’s site settings.
+        </p>
+      </noscript>
+    </section>
+    <section aria-labelledby="cookie-register-title">
+      <h2 id="cookie-register-title">Cookies Used by This Site</h2>
+      <p>
+        A cookie is a small record your browser can send back to this site. These application
+        cookies have the following specific purposes.
+      </p>
+      <div class="cookie-register">
+        {cookieRecords.map((entry) => (
+          <article>
+            <h3>{entry.name}</h3>
+            <p class="cookie-provider">{entry.provider}</p>
+            <p>{entry.purpose}</p>
+            <dl>
+              <dt>Duration</dt>
+              <dd>{entry.duration}</dd>
+              <dt>When it is used</dt>
+              <dd>{entry.when}</dd>
+            </dl>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section id="device-storage" aria-labelledby="cookie-device-title">
+      <h2 id="cookie-device-title">Work Saved on Your Device</h2>
+      <p>
+        Browser storage is different from a cookie, but it also matters for privacy. The features
+        below keep information locally when you use them. They do not send your boards, project
+        files or local history to an advertising or analytics service.
+      </p>
+      <div class="cookie-register cookie-device-register">
+        {deviceRecords.map((entry) => (
+          <article>
+            <h3>{entry.name}</h3>
+            <p class="cookie-provider">{entry.technology} · This browser</p>
+            <p>{entry.purpose}</p>
+            <dl>
+              <dt>Duration</dt>
+              <dd>{entry.duration}</dd>
+            </dl>
+          </article>
+        ))}
+      </div>
+      <p class="cookie-policy-note">
+        Choosing Necessary Only does not delete Favorites, boards or projects. Clearing all site
+        data in your browser can remove that work and public-link removal keys. Download project
+        files and export a Favorites backup before clearing data you want to keep.
+      </p>
+    </section>
+    <section aria-labelledby="cookie-security-title">
+      <h2 id="cookie-security-title">Hosting and Security Checks</h2>
+      <p>
+        Cloudflare delivers and protects this website. The Builder and public-link tools use
+        Turnstile security checks. Cloudflare may apply security mechanisms according to the hosting
+        and challenge configuration; any such security cookies are separate from advertising or
+        analytics.
+      </p>
+      <p>
+        Loading the site and these services sends ordinary connection information to the hosting
+        provider. Our region check uses only Cloudflare’s approximate country result to decide
+        whether to show the notice. It does not request your device’s location, return your IP
+        address to the page or store a country profile.
+      </p>
+      <p>
+        For details about request processing and the services you choose, read our{' '}
+        <a href="/privacy/">Privacy Policy</a> and{' '}
+        <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare’s Privacy Policy</a>.
+      </p>
+    </section>
+    <section aria-labelledby="cookie-region-title">
+      <h2 id="cookie-region-title">Where and How Long the Notice Appears</h2>
+      <p>
+        The initial strip is shown outside the United States. If the country cannot be established,
+        including in a local preview, the strip is shown as well. VPNs and network routing can
+        affect this approximate result. Cookie Settings and this policy remain available to
+        everyone.
+      </p>
+      <p>
+        We remember either choice for {COOKIE_CHOICE_DAYS} days on this browser. The notice appears
+        again when the record expires, is cleared or no longer matches the current policy version.
+        If your browser blocks this record, the notice may reappear on later pages. A saved choice
+        never authorizes an unrelated new purpose.
+      </p>
+    </section>
+    <section aria-labelledby="cookie-control-title">
+      <h2 id="cookie-control-title">Review or Change Your Choice</h2>
+      <p>
+        Open Cookie Settings in the footer of any page to review the current setup or choose
+        Necessary Only. You can also remove cookies through your browser’s site settings. Blocking
+        essential security cookies can prevent protected Builder or public-link requests from
+        working.
+      </p>
+      <p>
+        There are no optional tracking services to activate in the current settings. If a new
+        purpose requiring consent is introduced, it will need a specific choice before it is
+        enabled.
+      </p>
+      <div class="cookie-policy-actions">
+        <a href="#cookie-preferences" data-cookie-settings>
+          Open Cookie Settings
+        </a>
+        <a href="/privacy/">Read the Privacy Policy</a>
+      </div>
+    </section>
+    <section aria-labelledby="cookie-reference-title">
+      <h2 id="cookie-reference-title">Guidance Behind This Policy</h2>
+      <p>
+        Our current approach distinguishes necessary services from optional tracking, explains
+        device storage and keeps the choices easy to reach. Relevant guidance includes the{' '}
+        <a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/">
+          ICO’s storage and access guidance, finalized April 29, 2026
+        </a>
+        ,{' '}
+        <a href="https://cnil.fr/fr/cookies-et-autres-traceurs/que-dit-la-loi">
+          CNIL’s cookie guidance
+        </a>{' '}
+        and the{' '}
+        <a href="https://www.kvkk.gov.tr/Icerik/7353/Cerez-Uygulamalari-Hakkinda-Rehber">
+          Turkish authority’s cookie guidance, July 2025
+        </a>
+        .
+      </p>
+      <p>
+        Questions about this policy or your information:{' '}
+        <a href="mailto:ultraclipart@gmail.com">ultraclipart@gmail.com</a>. UltraClipart is the
+        operator of this site.
+      </p>
+    </section>
+  </article>
+</Layout>

@@ -1,5 +1,7 @@
 ---
 import Layout from './Layout.astro';
+import GuideArrow from '../components/TeacherArrow.astro';
+import '../styles/guide-article.css';
 import { structuredData, breadcrumbs } from '../lib/structured-data';
 import { guides } from '../lib/guides';
 const { slug } = Astro.props;
@@ -30,5 +32,13 @@ const guide = guides.find((item) => item.slug === slug)!;
     <div class="guide-body">
       <slot />
     </div>
+    <nav class="guide-next-actions" aria-label="Continue learning">
+      <a href="/guides/">
+        All guides <GuideArrow light />
+      </a>
+      <a href="/create/#studio-workspace">
+        Open Clipart Studio <GuideArrow light />
+      </a>
+    </nav>
   </article>
 </Layout>

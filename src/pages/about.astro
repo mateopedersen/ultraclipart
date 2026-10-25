@@ -1,0 +1,387 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CatalogCount from '../components/CatalogCount.astro';
+import AboutSymbol from '../components/TeacherSymbol.astro';
+import ActionArrow from '../components/TeacherArrow.astro';
+import type { GuideSymbolKind } from '../components/GuideSymbol.astro';
+import { publishedArt as art } from '../lib/catalog';
+import collectionCopy from '../../data/collection-copy.json';
+import { breadcrumbs, structuredData } from '../lib/structured-data';
+import '../styles/about.css';
+const pictureFor = (topic: string) => {
+  const copy = collectionCopy[topic as keyof typeof collectionCopy];
+  return (
+    art.find((item) => item.id === copy?.featured[0]) ?? art.find((item) => item.topic === topic)!
+  );
+};
+const examples = [
+  { image: pictureFor('apple'), label: 'For a classroom activity' },
+  { image: pictureFor('heart'), label: 'For a personal card' },
+  { image: pictureFor('earth'), label: 'For an idea worth explaining' },
+];
+const tools: { icon: GuideSymbolKind; title: string; body: string; label: string; href: string }[] =
+  [
+    {
+      icon: 'download',
+      title: 'Find an image. Choose your file.',
+      body: 'Browse by subject or search for an idea. Open the artwork page to see its background, dimensions, file size, and available downloads.',
+      label: 'Explore the artwork',
+      href: '/categories/',
+    },
+    {
+      icon: 'edit',
+      title: 'Make it fit your project.',
+      body: 'Use Clipart Studio to add text, arrange images, and adjust your layout. Save an editable project when you want to continue later.',
+      label: 'Open Clipart Studio',
+      href: '/create/#studio-workspace',
+    },
+    {
+      icon: 'boards',
+      title: 'Keep the ideas you want to use.',
+      body: 'Save artwork to Favorites and organize it into named boards. Add notes and keep separate collections for a class, a celebration, or your next project.',
+      label: 'Open Favorites',
+      href: '/favorites/',
+    },
+  ];
+const founders = [
+  {
+    name: 'Melih',
+    portrait: '/team/melih-cartoon-v3.webp',
+    alt: 'Face-only cartoon portrait of Melih, co-founder of UltraClipart.',
+    caption: 'Design & Creative Direction',
+    story:
+      'Melih leads the design of UltraClipart, from the way artwork is presented to the details of each page. He enjoys working with illustration and making the site clear enough that people can find a picture and start using it without a long explanation.',
+  },
+  {
+    name: 'Mustafa',
+    portrait: '/team/mustafa-cartoon-v4.webp',
+    alt: 'Face-only cartoon portrait of Mustafa, co-founder of UltraClipart.',
+    caption: 'Software & Infrastructure',
+    story:
+      'Mustafa builds the software and infrastructure behind UltraClipart. His work connects the catalog, editor, downloads and saved boards. He enjoys solving the practical problems behind those tools so people can concentrate on their designs.',
+  },
+];
+const process = [
+  {
+    title: 'A useful subject comes first',
+    body: 'The library covers animals, food, nature, celebrations, school, technology, and everyday objects. Subject pages bring related illustrations together so you can compare different treatments.',
+  },
+  {
+    title: 'File details belong beside the artwork',
+    body: 'Each artwork page shows the available files and their recorded details. Image dimensions, background information, and print measurements help you decide which version to use.',
+  },
+  {
+    title: 'Editing should be clear about what is editable',
+    body: 'A downloaded image can be one raster layer. Layered starters can contain separate objects. In Studio, added text and shapes are editable; saving a project keeps the structure of your current design.',
+  },
+  {
+    title: 'There should be a way to ask or report a problem',
+    body: 'If an image, description, download, or control needs attention, send us its page address and explain what happened. Copyright concerns and accessibility feedback are welcome too.',
+  },
+];
+---
+
+<Layout
+  title="About UltraClipart · Our Library, Tools & Purpose"
+  description="Meet UltraClipart: an independent clipart library for personal and educational projects. Learn why we built it, what you can make, and how the artwork and tools work."
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={structuredData({
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
+      name: 'About UltraClipart',
+      url: 'https://ultraclipart.com/about/',
+      description: 'The purpose, artwork library, and creative tools behind UltraClipart.',
+      breadcrumb: breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'About UltraClipart', path: '/about/' },
+      ]),
+    })}
+  />
+  <article class="about-page">
+    <header class="about-hero">
+      <div class="about-hero-copy">
+        <nav class="about-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">About UltraClipart</span>
+        </nav>
+        <p class="about-eyebrow">About UltraClipart</p>
+        <h1>
+          About <span>UltraClipart</span>
+        </h1>
+        <p class="about-intro">
+          We're an <strong>independent clipart library</strong> for personal projects and education,
+          with tools to help you use the artwork.
+        </p>
+        <p>
+          A worksheet, a birthday card, a classroom label, or a slide that needs a clear picture.
+          Find an illustration, make it fit, and save the version you need.
+        </p>
+        <div class="about-actions">
+          <a class="about-button" href="/categories/">
+            Browse the library <ActionArrow light size={28} />
+          </a>
+          <a class="about-button" href="#about-purpose">
+            Why we built it <ActionArrow light size={28} />
+          </a>
+        </div>
+        <p class="about-free">
+          <strong>Catalog artwork is free for personal and educational use.</strong>{' '}
+          <a href="/license/">See the license</a>
+        </p>
+      </div>
+      <figure class="about-artwork">
+        <figcaption>
+          <AboutSymbol kind="book" size={64} />
+          <span>
+            <strong>Examples From the Library</strong>
+            <span>Examples from the UltraClipart library</span>
+          </span>
+        </figcaption>
+        <div class="about-artwork-grid">
+          {examples.map((example) => (
+            <a href={`/art/${example.image.id}/`}>
+              <span class="about-picture">
+                <img
+                  src={example.image.thumb}
+                  alt={example.image.alt}
+                  width={400}
+                  height={400}
+                  decoding="async"
+                />
+              </span>
+              <span>{example.label}</span>
+            </a>
+          ))}
+        </div>
+      </figure>
+    </header>
+    <dl class="about-library-facts" aria-label="The current library">
+      <div>
+        <dt>
+          <CatalogCount kind="artworks" />
+        </dt>
+        <dd>illustrations in the catalog</dd>
+      </div>
+      <div>
+        <dt>
+          <CatalogCount kind="subjects" />
+        </dt>
+        <dd>subjects with artwork to explore</dd>
+      </div>
+      <div>
+        <dt>Image + PDF</dt>
+        <dd>digital images and printable files</dd>
+      </div>
+    </dl>
+    <section class="about-purpose" id="about-purpose" aria-labelledby="about-purpose-title">
+      <div>
+        <p class="about-eyebrow">Why we're here</p>
+        <h2 id="about-purpose-title">Why We Built UltraClipart</h2>
+      </div>
+      <div class="about-story">
+        <p>
+          We built UltraClipart because{' '}
+          <strong>finding a picture is often only the first task.</strong> You may also need to add
+          a name, leave room for instructions, check a print size or save a few images for later.
+        </p>
+        <p>
+          That's why the library sits alongside an editor, Favorites boards, a print size
+          calculator, and practical guides. You can find the artwork and work through those next
+          steps in the same place.
+        </p>
+        <p>
+          Our focus is everyday use:{' '}
+          <strong>useful pictures, clear file information, and tools you can understand.</strong>
+        </p>
+      </div>
+    </section>
+    <section class="about-team" id="about-team" aria-labelledby="about-team-title">
+      <header class="about-section-heading">
+        <p class="about-eyebrow">The people behind UltraClipart</p>
+        <h2 id="about-team-title">Meet the Co-Founders</h2>
+        <p>
+          Melih and Mustafa are building an independent library for personal projects and education.
+        </p>
+      </header>
+      <div class="about-founder-grid">
+        {founders.map((founder) => (
+          <article
+            class="about-founder-card"
+            aria-labelledby={`founder-${founder.name.toLowerCase()}`}
+          >
+            <figure class="about-founder-portrait">
+              <img
+                src={founder.portrait}
+                alt={founder.alt}
+                width="640"
+                height="640"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
+            <div class="about-founder-copy">
+              <div class="about-founder-heading">
+                <h3 id={`founder-${founder.name.toLowerCase()}`}>{founder.name}</h3>
+                <p class="about-founder-role">Co-Founder</p>
+              </div>
+              <h4>{founder.caption}</h4>
+              <p>{founder.story}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="about-tools" aria-labelledby="about-tools-title">
+      <header class="about-section-heading">
+        <h2 id="about-tools-title">What you can do here</h2>
+        <p>Start with the part of your project you need help with.</p>
+      </header>
+      <div class="about-tool-grid">
+        {tools.map((tool) => (
+          <article>
+            <AboutSymbol kind={tool.icon} size={102} />
+            <h3>{tool.title}</h3>
+            <p>{tool.body}</p>
+            <a class="about-button" href={tool.href}>
+              {tool.label}
+              <ActionArrow light size={26} />
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="about-people" aria-labelledby="about-people-title">
+      <header class="about-section-heading">
+        <h2 id="about-people-title">For personal projects and the classroom</h2>
+        <p>The same illustration can play a different part in each person's work.</p>
+      </header>
+      <div class="about-people-grid">
+        <article>
+          <AboutSymbol kind="steps" size={90} />
+          <div>
+            <h3>For teachers and learning</h3>
+            <p>
+              Add pictures to worksheets, teaching slides, labels, visual reminders, and discussion
+              prompts. The teacher page brings together{' '}
+              <strong>classroom ideas, real artwork, and preparation steps.</strong>
+            </p>
+            <p>
+              <strong>Personal and educational use of the catalog is free.</strong> Choose material
+              that fits your students and check one finished copy before class.
+            </p>
+            <a class="about-button" href="/for-teachers/">
+              Visit For Teachers <ActionArrow light size={26} />
+            </a>
+          </div>
+        </article>
+        <article>
+          <AboutSymbol kind="label" size={90} />
+          <div>
+            <h3>For something you're making yourself</h3>
+            <p>
+              Make a personal greeting card, scrapbook page, party invitation, gift label, or a
+              family activity. Add your own words and keep a project file if you want to change it
+              later.
+            </p>
+            <p>
+              Use boards to gather ideas by occasion or person, so{' '}
+              <strong>your next project has a place to begin.</strong>
+            </p>
+            <a class="about-button" href="/guides/">
+              See how to use the site <ActionArrow light size={26} />
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="about-process" aria-labelledby="about-process-title">
+      <header class="about-section-heading">
+        <h2 id="about-process-title">How the Library Works</h2>
+        <p>What you can expect from the artwork pages, files and editing tools.</p>
+      </header>
+      <ol>
+        {process.map((step, index) => (
+          <li>
+            <span class="about-step-number" aria-hidden="true">
+              {index + 1}
+            </span>
+            <div>
+              <h3>{step.title}</h3>
+              <p>{step.body}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+    <section class="about-support" aria-labelledby="about-support-title">
+      <AboutSymbol kind="help" size={105} />
+      <div>
+        <h2 id="about-support-title">Help with the next step</h2>
+        <p>
+          The <a href="/guides/">Guides</a> use real site screens to explain downloading, editing,
+          printing, and organizing artwork. The <a href="/print-size/">print size calculator</a>{' '}
+          helps you work from an image's pixel dimensions to a physical size.
+        </p>
+        <p>
+          For a new image from a written idea, try{' '}
+          <a href="/ai-clipart-generator/">AI Clipart Builder</a>.{' '}
+          <strong>AI generation is a separate tool with daily capacity limits.</strong> The builder
+          shows its current availability and usage information.
+        </p>
+      </div>
+    </section>
+    <section class="about-use" aria-labelledby="about-use-title">
+      <AboutSymbol kind="files" size={98} />
+      <div>
+        <h2 id="about-use-title">Free to use for personal and educational projects</h2>
+        <p>
+          You can download, edit, and print catalog artwork for those purposes without paying.{' '}
+          <strong>Commercial use and resale as clipart are not permitted.</strong> Editing an
+          illustration does not remove its catalog license.
+        </p>
+        <p>
+          Your original work, imported materials, and images from the Builder have different
+          considerations. The license page explains the distinctions.
+        </p>
+        <a class="about-button" href="/license/">
+          Read the full license <ActionArrow light size={26} />
+        </a>
+      </div>
+    </section>
+    <footer class="about-contact" id="about-contact">
+      <div>
+        <h2>Have a question or a suggestion?</h2>
+        <p>
+          Tell us what you're trying to make. For a correction or a problem, include the page
+          address so we can find the right artwork or tool.
+        </p>
+      </div>
+      <div class="about-contact-actions">
+        <a class="about-button about-contact-primary" href="/contact/">
+          <img
+            class="about-contact-icon"
+            src="/illustrations/actions/contact.svg"
+            alt=""
+            width="52"
+            height="46"
+            loading="lazy"
+            decoding="async"
+          />
+          <span>Contact UltraClipart</span>
+          <ActionArrow light size={25} />
+        </a>
+        <a class="about-contact-secondary" href="/copyright/">
+          <span class="about-contact-mark" aria-hidden="true">
+            ©
+          </span>
+          <span>Copyright and corrections</span>
+          <ActionArrow size={25} />
+        </a>
+      </div>
+    </footer>
+  </article>
+</Layout>

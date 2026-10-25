@@ -1,3 +1,17 @@
+/** Cached, colored SVG objects shared by server-rendered and dynamic buttons. */
+export const actionIconAssets = {
+  image: '/illustrations/actions/image.svg',
+  document: '/illustrations/actions/document.svg',
+  edit: '/illustrations/actions/edit.svg',
+  view: '/illustrations/actions/view.svg',
+  download: '/illustrations/actions/download.svg',
+} as const;
+export function actionIconAsset(name: string): string | undefined {
+  return Object.hasOwn(actionIconAssets, name)
+    ? actionIconAssets[name as keyof typeof actionIconAssets]
+    : undefined;
+}
+
 /** Shared geometry keeps server-rendered and dynamic card actions identical. */
 export const actionIcons = {
   image: [

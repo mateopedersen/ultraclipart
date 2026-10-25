@@ -107,7 +107,8 @@ export async function translateDescription(binding, description) {
     Object.keys(result).some((key) => !['allowed', 'englishPrompt'].includes(key))
   )
     throw new ProviderError('translation_unavailable');
-  if (result.allowed !== true) throw new ProviderError('content_blocked', 422);
+  if (result.allowed === false) throw new ProviderError('content_blocked', 422);
+  if (result.allowed !== true) throw new ProviderError('translation_unavailable');
   if (
     typeof result.englishPrompt !== 'string' ||
     result.englishPrompt.trim().length < 3 ||

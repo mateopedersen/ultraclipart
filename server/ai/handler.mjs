@@ -291,7 +291,10 @@ export async function handleAi(request, env, context) {
           .catch(() => {}),
       );
       const usage = await env.AI_DB.prepare(
-        `SELECT COUNT(*) AS total,COALESCE(SUM(reserved),0) AS neurons,COALESCE(SUM(visitor=?2),0) AS visitor,COALESCE(SUM(network=?3),0) AS network FROM ai_jobs WHERE day=?1`,
+        `SELECT COUNT(*) AS total,COALESCE(SUM(reserved),0) AS neurons,COALESCE(SUM(visitor=?2),0) AS visitor,COALESCE(SUM(network=?3),0) AS network,
+         COALESCE(MAX(CASE WHEN network=?3 THEN created+60000 ELSE 0 END),0) AS network_cooldown,
+         COALESCE(MAX(CASE WHEN visitor=?2 AND status IN ('running','uncertain') THEN lease ELSE 0 END),0) AS visitor_cooldown
+         FROM ai_jobs WHERE day=?1`,
       )
         .bind(who.day, who.visitor, who.network)
         .first();
@@ -313,11 +316,21 @@ export async function handleAi(request, env, context) {
             Math.min(config.visitor - usage.visitor, 4 - usage.network, globalRemaining),
           ),
           globalRemaining,
+          visitorLimit: config.visitor,
           resetAt,
           sitekey: env.TURNSTILE_SITEKEY,
           model: MODEL,
           cooldownUntil:
-            circuit?.blocked_until > now ? new Date(circuit.blocked_until).toISOString() : null,
+            Math.max(circuit?.blocked_until || 0, usage.network_cooldown, usage.visitor_cooldown) >
+            now
+              ? new Date(
+                  Math.max(
+                    circuit?.blocked_until || 0,
+                    usage.network_cooldown,
+                    usage.visitor_cooldown,
+                  ),
+                ).toISOString()
+              : null,
         },
         200,
         who.cookie,

@@ -1,0 +1,43 @@
+<dialog
+  class="ai-choice-dialog"
+  id="ai-choice-dialog"
+  aria-labelledby="ai-choice-title"
+  aria-describedby="ai-choice-description"
+>
+  <header class="ai-choice-header">
+    <div>
+      <h2 id="ai-choice-title">Choose an Option</h2>
+      <p id="ai-choice-description">Choose an option to apply it.</p>
+    </div>
+    <button class="ai-choice-close" type="button" data-ai-choice-close aria-label="Close selection">
+      <span aria-hidden="true">×</span>
+    </button>
+  </header>
+  <div class="ai-choice-search" data-ai-choice-search-panel>
+    <label class="sr-only" for="ai-choice-search">
+      Search options
+    </label>
+    <input
+      id="ai-choice-search"
+      type="search"
+      placeholder="Search options"
+      autocomplete="off"
+      enterkeyhint="search"
+    />
+  </div>
+  <div class="ai-choice-scroll">
+    <div
+      class="ai-choice-options"
+      role="group"
+      aria-labelledby="ai-choice-title"
+      data-ai-choice-options
+    ></div>
+    <p class="ai-choice-empty" data-ai-choice-empty hidden>
+      No matching options. Try a different word.
+    </p>
+  </div>
+  <footer class="ai-choice-footer">
+    <span data-ai-choice-count role="status" aria-live="polite"></span>
+    <span>Choose an Option to Apply It</span>
+  </footer>
+</dialog>

@@ -1,0 +1,140 @@
+---
+import '../styles/cookies.css';
+---
+
+<aside id="cookie-notice" class="cookie-notice" aria-labelledby="cookie-notice-title" hidden>
+  <div class="cookie-strip-inner">
+    <img
+      class="cookie-strip-art"
+      src="/illustrations/actions/cookies.svg"
+      width="88"
+      height="88"
+      alt=""
+    />
+    <div class="cookie-strip-copy">
+      <h2 id="cookie-notice-title">Cookies &amp; Your Privacy</h2>
+      <p>
+        We use necessary cookies for security and the tools you choose. No advertising or analytics
+        cookies are enabled. <a href="/cookies/">Cookie Policy</a>
+      </p>
+    </div>
+    <div class="cookie-strip-controls">
+      <div class="cookie-strip-actions">
+        <button type="button" data-cookie-choice="accepted">
+          Accept Cookies
+        </button>
+        <button type="button" data-cookie-choice="necessary">
+          Necessary Only
+        </button>
+      </div>
+      <a href="/cookies/#cookie-preferences" data-cookie-settings>
+        View Cookie Settings
+      </a>
+    </div>
+  </div>
+</aside>
+
+<dialog
+  id="cookie-settings-dialog"
+  class="cookie-dialog"
+  aria-labelledby="cookie-settings-title"
+  aria-describedby="cookie-settings-description"
+>
+  <div class="cookie-dialog-heading">
+    <img src="/illustrations/actions/cookies.svg" width="76" height="76" alt="" />
+    <div>
+      <p>UltraClipart</p>
+      <h2 id="cookie-settings-title">Your Cookie Settings</h2>
+    </div>
+    <form method="dialog">
+      <button class="cookie-dialog-close" aria-label="Close cookie settings" autofocus>
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          aria-hidden="true"
+        >
+          <path d="m6 6 12 12M6 18 18 6" />
+        </svg>
+      </button>
+    </form>
+  </div>
+  <div class="cookie-dialog-body">
+    <p id="cookie-settings-description">
+      Here’s what this site currently uses. You can read the full{' '}
+      <a href="/cookies/">Cookie Policy</a> at any time.
+    </p>
+    <section class="cookie-category">
+      <div>
+        <h3>Necessary Cookies</h3>
+        <span class="cookie-category-required">Always Active</span>
+      </div>
+      <p>
+        Remembering this notice and protecting Builder and public-sharing requests. These cookies
+        support the services you request.
+      </p>
+    </section>
+    <section class="cookie-category">
+      <div>
+        <h3>Your Saved Work</h3>
+        <span class="cookie-category-local">On Your Device</span>
+      </div>
+      <p>
+        Favorites, boards, project recovery and recent results use browser storage when you use
+        those features. Cookie choices do not delete your artwork.{' '}
+        <a href="/cookies/#device-storage">See storage details</a>.
+      </p>
+    </section>
+    <div class="cookie-unused">
+      <span>
+        <svg
+          width="19"
+          height="19"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          aria-hidden="true"
+        >
+          <path d="m5 12 4 4L19 6" />
+        </svg>
+        No Advertising Cookies
+      </span>
+      <span>
+        <svg
+          width="19"
+          height="19"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          aria-hidden="true"
+        >
+          <path d="m5 12 4 4L19 6" />
+        </svg>
+        No Analytics Cookies
+      </span>
+    </div>
+    <p class="cookie-current-setup">
+      Both choices below keep advertising and analytics disabled. Accepting applies to the necessary
+      cookies described here, without authorizing new tracking.
+    </p>
+    <p class="cookie-choice-summary" data-cookie-choice-summary></p>
+  </div>
+  <div class="cookie-dialog-footer">
+    <button type="button" data-cookie-choice="accepted">
+      Accept Cookies
+    </button>
+    <button type="button" data-cookie-choice="necessary">
+      Necessary Only
+    </button>
+  </div>
+</dialog>
+<p id="cookie-feedback" class="sr-only" role="status" aria-live="polite"></p>
+<script>
+  import { initCookieNotice } from '../scripts/cookies';
+  initCookieNotice();
+</script>

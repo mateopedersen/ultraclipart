@@ -18,7 +18,7 @@ try {
       '/',
       '/favorites/',
       '/art/apple-and-dried-rings-crayon-clipart/',
-      '/download/usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement/?format=pdf',
+      '/art/usb-flash-drive-artist-usb-drive-and-sketchbook-arrangement/',
     ]) {
       await page.setViewportSize({ width, height: 1000 });
       const response = await page.goto(base + route);

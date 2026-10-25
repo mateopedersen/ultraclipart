@@ -86,8 +86,8 @@ try {
       );
       for (const kind of ['webp', 'pdf'])
         assert.equal(
-          await card.locator(`a[href$="?format=${kind}"]`).getAttribute('href'),
-          `/download/${art.id}/?format=${kind}`,
+          await card.locator(`a[data-download-format="${kind}"]`).getAttribute('href'),
+          url(art, kind),
         );
     }
     for (const width of [320, 390, 768, 1440]) {
@@ -162,10 +162,11 @@ try {
     await page.locator('#art-preview img').evaluate((image) => image.decode());
     for (const kind of ['webp', 'pdf']) {
       await page.goto(`${base}/art/${art.id}/`);
-      const entry = page.locator(`.detail-actions a[href$="?format=${kind}"]`);
-      assert.equal(await entry.getAttribute('href'), `/download/${art.id}/?format=${kind}`);
+      const entry = page.locator(`.detail-actions a[data-download-format="${kind}"]`);
+      assert.equal(await entry.getAttribute('href'), url(art, kind));
       await entry.click();
-      await page.waitForURL(`**/download/${art.id}/**`);
+      await expect(page.locator(`#download-dialog [data-final-download="${kind}"]`)).toBeVisible();
+      assert.equal(page.url(), `${base}/art/${art.id}/`);
       const link = page.locator(`[data-final-download="${kind}"]`);
       assert.equal(await link.evaluate((element) => element.href), url(art, kind));
       const pending = page.waitForEvent('download');

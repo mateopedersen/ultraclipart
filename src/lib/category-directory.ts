@@ -1,11 +1,12 @@
 import {
-  art,
+  publishedArt as art,
   availableTopics,
   availableClusters,
   slugify,
   clustersForTopic,
   topicInCluster,
 } from './catalog';
+import { catalogStatistics } from './catalog-statistics';
 
 const collectionStyle: Record<
   string,
@@ -13,79 +14,79 @@ const collectionStyle: Record<
 > = {
   'Animals & nature': {
     title: 'Animals & nature',
-    description: 'Little creatures. Big personalities.',
+    description: 'Wild animals, pets, farm animals and insects.',
     color: 'sage',
     subjects: ['fox', 'butterfly', 'baby-elephant'],
   },
   Halloween: {
     title: 'Halloween',
-    description: 'A little spooky. A lot of fun.',
+    description: 'Pumpkins, ghosts, costumes and Halloween activities.',
     color: 'peach',
     subjects: ['halloween', 'pumpkin', 'ghost'],
   },
   'Family & celebrations': {
     title: 'Family & celebrations',
-    description: 'Make the little moments memorable.',
+    description: 'Babies, parents and family activities.',
     color: 'rose',
     subjects: ['baby', 'dad'],
   },
   'Christmas & Winter': {
-    title: 'Winter wonder',
-    description: 'Cozy characters for chilly days.',
+    title: 'Christmas & Winter',
+    description: 'Snowy scenes, winter clothing and seasonal characters.',
     color: 'ice',
     subjects: ['winter', 'penguin'],
   },
   "Valentine's Day": {
     title: 'Hearts & love',
-    description: 'A thoughtful touch for someone special.',
+    description: 'Hearts, flowers, cards and caring gestures.',
     color: 'rose',
     subjects: ['heart'],
   },
   Sports: {
     title: 'Sports & play',
-    description: 'Players, game-day details and bright moments in motion.',
+    description: 'Sports equipment, players and team activities.',
     color: 'lavender',
     subjects: ['volleyball', 'basketball'],
   },
   'Thanksgiving & Autumn': {
     title: 'Autumn & gratitude',
-    description: 'Warm colors and harvest-time details.',
+    description: 'Autumn leaves, harvest decorations and Thanksgiving scenes.',
     color: 'sand',
     subjects: ['thanksgiving', 'squirrel'],
   },
   'Food & drink': {
-    title: 'Food & fresh ideas',
-    description: 'Fresh fruit, favorite treats and playful kitchen inspiration.',
+    title: 'Food & Drink',
+    description: 'Fruit, baked treats and other food illustrations.',
     color: 'peach',
     subjects: ['apple', 'pizza', 'cookie'],
   },
   'Nature & elements': {
     title: 'Nature & elements',
-    description: 'Our planet, natural shapes and details drawn from the world around us.',
+    description: 'Earth, leaves, beaches and natural elements.',
     color: 'sage',
     subjects: ['leaves', 'earth', 'beach'],
   },
   'School & learning': {
     title: 'School & learning',
-    description: 'School days, favorite stories and reading moments.',
+    description: 'School supplies, classrooms, books and reading scenes.',
     color: 'ice',
     subjects: ['school', 'book', 'question-mark'],
   },
   'People & activities': {
-    title: 'Everyday adventures',
-    description: 'Curious minds, creative moments and characters in motion.',
+    title: 'People & Activities',
+    description: 'People reading, playing, working and taking part in everyday activities.',
     color: 'lavender',
     subjects: ['boy', 'girl', 'hat'],
   },
   'Arts & entertainment': {
-    title: 'Music & movie moments',
-    description: 'Instruments, cinema details and a little creative rhythm.',
+    title: 'Music & Movies',
+    description: 'Musical instruments, movie equipment and entertainment scenes.',
     color: 'rose',
     subjects: ['music', 'movie'],
   },
   'Business & money': {
-    title: 'Money & little lessons',
-    description: 'Coins, savings and familiar details for learning about money.',
+    title: 'Money & Saving',
+    description: 'Coins, banknotes and saving illustrations for classroom activities.',
     color: 'sand',
     subjects: ['money'],
   },
@@ -119,7 +120,7 @@ export const categorySubjects = availableTopics
     return {
       ...topic,
       name: name[0].toUpperCase() + name.slice(1),
-      count: items.length,
+      count: catalogStatistics.topics[topic.slug] ?? 0,
       sample,
       group: slugify(topic.cluster),
       groups: clustersForTopic(topic).map(slugify),
@@ -155,7 +156,7 @@ export const categoryCollections = availableClusters
       slug: slugify(cluster),
       subjects,
       previews: previews.slice(0, 3),
-      count: subjects.reduce((sum, s) => sum + s.count, 0),
+      count: catalogStatistics.collections[slugify(cluster)]?.artworks ?? 0,
     };
   })
   .sort(

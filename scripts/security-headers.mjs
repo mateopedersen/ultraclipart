@@ -47,7 +47,7 @@ const searchVersion = JSON.parse(
 ).version;
 writeFileSync(
   join(dist, '_headers'),
-  `${csp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n/search-data/manifest.json\n  Cache-Control: no-cache\n`,
+  `${csp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n`,
 );
 
 if (process.env.CF_PAGES === '1') {
@@ -140,9 +140,10 @@ await bundleWorker({
     contents: `import {handleAi} from './server/ai/handler.mjs';
 import {handleShare} from './server/share/handler.mjs';
 import {handleCatalogPage} from './server/catalog/pages.mjs';
+import {handleCookieRegion} from './server/cookies/region.mjs';
 const retired = ${retiredWorker};
 const catalogOptions = ${JSON.stringify({ pageHeaders: responseHeaders, editorHeaders, withdrawnIds, revision: releaseRevision() })};
-export default {fetch(request, env, context) { const path = new URL(request.url).pathname; return path.startsWith('/api/ai/') ? handleAi(request, env, context) : path.startsWith('/api/share/') || path.startsWith('/share/') ? handleShare(request, env, context) : path.startsWith('/art/') || path.startsWith('/edit/') ? handleCatalogPage(request, env, retired, catalogOptions) : retired.fetch(request, env); }};`,
+export default {fetch(request, env, context) { const path = new URL(request.url).pathname; return path === '/api/cookie-region.json' ? handleCookieRegion(request) : path.startsWith('/api/ai/') ? handleAi(request, env, context) : path.startsWith('/api/share/') || path.startsWith('/share/') ? handleShare(request, env, context) : path.startsWith('/art/') || path.startsWith('/edit/') ? handleCatalogPage(request, env, retired, catalogOptions) : retired.fetch(request, env); }};`,
     resolveDir: root,
     sourcefile: 'worker-entry.js',
   },

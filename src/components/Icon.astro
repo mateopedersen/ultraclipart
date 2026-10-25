@@ -1,5 +1,5 @@
 ---
-import { actionIcons, actionIconAccents } from '../lib/action-icons';
+import { actionIcons, actionIconAccents, actionIconAsset } from '../lib/action-icons';
 interface Props {
   name: string;
   size?: number;
@@ -21,22 +21,35 @@ const paths: Record<string, readonly string[]> = {
   redo: ['m16 4 5 5-5 5M21 9H10a6 6 0 0 0 0 12'],
 };
 const accent = actionIconAccents[name as keyof typeof actionIcons];
+const asset = actionIconAsset(name);
 ---
 
-<svg
-  width={size}
-  height={size}
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="1.7"
-  stroke-linecap="round"
-  stroke-linejoin="round"
-  aria-hidden="true"
-  focusable="false"
->
-  {accent && <path d={accent} fill="currentColor" fill-opacity="0.14" stroke="none" />}
-  {(paths[name] ?? paths.document).map((d) => (
-    <path d={d} />
-  ))}
-</svg>
+{asset ? (
+  <img
+    class="action-icon"
+    src={asset}
+    alt=""
+    width={size}
+    height={size}
+    decoding="async"
+    aria-hidden="true"
+  />
+) : (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+    focusable="false"
+  >
+    {accent && <path d={accent} fill="currentColor" fill-opacity="0.14" stroke="none" />}
+    {(paths[name] ?? paths.document).map((d) => (
+      <path d={d} />
+    ))}
+  </svg>
+)}

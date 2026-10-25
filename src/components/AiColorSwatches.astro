@@ -1,0 +1,21 @@
+---
+interface Props {
+  colors: readonly (readonly [string, string])[];
+}
+const { colors } = Astro.props;
+---
+
+<div class="ai-paint-grid" role="group" aria-label="Accent colors">
+  {colors.map(([color, name]) => (
+    <button
+      type="button"
+      data-ai-swatch={color}
+      title={`${name} · ${color.toUpperCase()}`}
+      aria-label={`Use ${name} accent color`}
+      aria-pressed="false"
+      style={`--swatch:${color}`}
+    >
+      <span aria-hidden="true"></span>
+    </button>
+  ))}
+</div>

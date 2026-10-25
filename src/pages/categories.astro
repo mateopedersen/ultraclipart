@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CatalogCount from '../components/CatalogCount.astro';
+import { catalogStatistics } from '../lib/catalog-statistics';
 import DiscoveryIcon from '../components/DiscoveryIcon.astro';
 import { categoryCollections, categorySubjects } from '../lib/category-directory';
 import { breadcrumbs, structuredData } from '../lib/structured-data';
 import '../styles/categories.css';
-const total = categorySubjects.reduce((sum, subject) => sum + subject.count, 0);
+const total = catalogStatistics.totals.artworks;
 const letters = [...new Set(categorySubjects.map((topic) => topic.name[0].toUpperCase()))].sort();
 const heroSubjects = ['fox', 'baby', 'butterfly', 'heart']
   .map((slug) => categorySubjects.find((s) => s.slug === slug))
@@ -37,12 +39,7 @@ const schema = {
 };
 ---
 
-<Layout
-  title={title}
-  description={description}
-  image={heroSubjects[0]?.sample.thumb}
-  imageAlt="Explore illustrated clipart categories on UltraClipart"
->
+<Layout title={title} description={description}>
   <script slot="head" type="application/ld+json" set:html={structuredData(schema)} />
   <div class="category-discovery">
     <nav class="discovery-breadcrumb" aria-label="Breadcrumb">
@@ -53,13 +50,13 @@ const schema = {
     <section class="discovery-hero" aria-labelledby="discovery-title">
       <div class="discovery-intro">
         <h1 id="discovery-title">
-          Great clipart.
+          Browse Clipart
           <br />
-          <span>Endless ideas.</span>
+          <span>by Subject</span>
         </h1>
         <p class="discovery-lead">
-          Find the perfect animals, celebrations and everyday favorites for your next personal or
-          classroom project.
+          Choose a subject or collection to see its illustrations. Use the search below to find a
+          topic by name.
         </p>
         <form
           class="discovery-search"
@@ -93,8 +90,14 @@ const schema = {
           <a href="/new/">See what's new</a>
         </div>
         <p class="discovery-stats">
-          <strong>{total.toLocaleString('en-US')}</strong> illustrations{' '}
-          <span aria-hidden="true">·</span> <strong>{categorySubjects.length}</strong> subjects{' '}
+          <strong>
+            <CatalogCount kind="artworks" />
+          </strong>{' '}
+          illustrations <span aria-hidden="true">·</span>{' '}
+          <strong>
+            <CatalogCount kind="subjects" />
+          </strong>{' '}
+          subjects{' '}
         </p>
       </div>
       <div class="discovery-moodboard" aria-label="A few ideas to get you started">
@@ -128,7 +131,8 @@ const schema = {
           <h2 id="collections-title">Explore by collection</h2>
         </div>
         <a href="#topic-directory">
-          All {categorySubjects.length} subjects <DiscoveryIcon name="library" size={24} />
+          All <CatalogCount kind="subjects" unit="subject" />{' '}
+          <DiscoveryIcon name="library" size={24} />
         </a>
       </div>
       <div class="discovery-collection-grid">
@@ -159,10 +163,17 @@ const schema = {
                 <h3>{collection.title}</h3>
               </div>
               <p>
-                {collection.subjects.length}{' '}
-                {collection.subjects.length === 1 ? 'subject' : 'subjects'}{' '}
-                <span aria-hidden="true">·</span> {collection.count.toLocaleString('en-US')}{' '}
-                illustrations
+                <CatalogCount
+                  kind="collection-subjects"
+                  countKey={collection.slug}
+                  unit="subject"
+                />{' '}
+                <span aria-hidden="true">·</span>{' '}
+                <CatalogCount
+                  kind="collection-artworks"
+                  countKey={collection.slug}
+                  unit="illustration"
+                />
               </p>
               <span class="collection-cta">
                 <span class="action-glyph">
@@ -274,7 +285,9 @@ const schema = {
               <div class="subject-label">
                 <div>
                   <h3>{subject.name}</h3>
-                  <span class="subject-count">{subject.count} illustrations</span>
+                  <span class="subject-count">
+                    <CatalogCount kind="topic" countKey={subject.slug} unit="illustration" />
+                  </span>
                 </div>
                 <DiscoveryIcon name="arrow" size={26} />
               </div>
@@ -306,14 +319,14 @@ const schema = {
         <DiscoveryIcon name="studio" size={40} />
       </div>
       <div>
-        <h2 id="discovery-create-title">Make something uniquely yours.</h2>
+        <h2 id="discovery-create-title">Edit Your Clipart in Studio</h2>
         <p>
           Choose a subject, personalize your artwork in the editor, then download an image or
           printable PDF for your personal or classroom project.
         </p>
       </div>
       <a href="/create/">
-        Open creative studio <DiscoveryIcon name="arrow" size={24} />
+        Open Clipart Studio <DiscoveryIcon name="arrow" size={24} />
       </a>
     </section>
   </div>

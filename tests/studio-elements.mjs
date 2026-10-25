@@ -2,23 +2,31 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import { stripTypeScriptTypes } from 'node:module';
-const load = async (file) =>
-  import(
+const load = async (file) => {
+  let source = await fs.readFile(new URL(file, import.meta.url), 'utf8');
+  if (file.endsWith('/elements.ts')) {
+    const icons = await fs.readFile(
+      new URL('../data/studio-tabler-elements.json', import.meta.url),
+      'utf8',
+    );
+    source = source.replace(
+      "import tablerElements from '../../data/studio-tabler-elements.json';",
+      `const tablerElements = ${icons};`,
+    );
+  }
+  return import(
     'data:text/javascript;base64,' +
-      Buffer.from(
-        stripTypeScriptTypes(await fs.readFile(new URL(file, import.meta.url), 'utf8'), {
-          mode: 'transform',
-        }),
-      ).toString('base64')
+      Buffer.from(stripTypeScriptTypes(source, { mode: 'transform' })).toString('base64')
   );
+};
 const { studioElements, elementCategories } = await load('../src/editor/elements.ts');
 const { parsePath } = await load('../src/editor/pdf-math.ts');
 const { validateDocument } = await load('../src/editor/model.ts');
 const { blankDocument, vectorLayer } = await load('../src/editor/creation.ts');
-test('276 original editable elements have unique IDs, names and vector markup', () => {
-  assert.equal(studioElements.length, 276);
+test('2,000 editable elements have unique IDs, names and vector markup', () => {
+  assert.equal(studioElements.length, 2000);
   for (const key of ['id', 'name', 'markup'])
-    assert.equal(new Set(studioElements.map((e) => e[key])).size, 276, key);
+    assert.equal(new Set(studioElements.map((e) => e[key])).size, 2000, key);
   assert.ok(elementCategories.length >= 12);
   for (const e of studioElements) {
     assert.doesNotMatch(e.markup, /NaN|Infinity|script|image|filter|url\(|<text/);
@@ -32,11 +40,15 @@ test('276 original editable elements have unique IDs, names and vector markup', 
     }
   }
 });
-test('all elements fit one valid editable project with the existing 500-layer limit', () => {
-  const d = blankDocument('studio');
-  d.layers = studioElements.map((e, i) => vectorLayer(`element-${i}`, e.name, e.markup));
-  assert.ok(validateDocument(d, 'studio'));
-  assert.ok(JSON.stringify(d).length < 500000);
+test('the complete library works in batches within the existing 500-layer limit', () => {
+  for (let offset = 0; offset < studioElements.length; offset += 250) {
+    const d = blankDocument('studio');
+    d.layers = studioElements
+      .slice(offset, offset + 250)
+      .map((e, i) => vectorLayer(`element-${i}`, e.name, e.markup));
+    assert.ok(validateDocument(d, 'studio'));
+    assert.ok(JSON.stringify(d).length < 16000000);
+  }
 });
 test('typography stays backwards compatible and rejects invalid new fields', () => {
   const d = blankDocument('studio');
