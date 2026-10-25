@@ -1,0 +1,616 @@
+{
+  "wave": "wave_259",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pilgrim-wooden-shallop-boat",
+      "title": "Pilgrim Shore Boat",
+      "alt": "A wooden open shore boat with two oars rests at a small landing beside water and a thatched cottage.",
+      "description": "A wooden open shore boat with two oars rests at a small landing beside water and a thatched cottage. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_259/source/pilgrim-wooden-shallop-boat.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "3785929389a43ef9d913d7bd54f056ed4b179f25843d8b55058db81987276c11",
+      "inputSignature": "277277195f3ff9e64c9534d1beb141ef6b48130896313fcc9595b373655dc7fc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 938780,
+        "weightedCmykRmse": 1.286408
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1337928,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1136543,
+          "weightedCmykRmse": 0.726762
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1083742,
+          "weightedCmykRmse": 0.863479
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1010660,
+          "weightedCmykRmse": 1.045335
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 938780,
+          "weightedCmykRmse": 1.286408
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        79,
+        45,
+        1461,
+        973
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_259/exports/pilgrim-wooden-shallop-boat.pdf",
+          "bytes": 938780,
+          "sha256": "bff220e26aa1dbf57bdc6167fd00de90ed22bbb5f8486807e71cf64f37311ff5"
+        },
+        "webp": {
+          "path": "work/production/wave_259/exports/pilgrim-wooden-shallop-boat.webp",
+          "bytes": 1869738,
+          "sha256": "cd9e931d62ad59138564a2b19e0ea02677ddb869d50f65d800e6305fe8f3d11f"
+        },
+        "thumb": {
+          "path": "work/production/wave_259/exports/pilgrim-wooden-shallop-boat-thumb.webp",
+          "bytes": 64568,
+          "sha256": "ecf91f1490d199b45094b677dea5ac864927071d3470c5fb011a4fb37f525cfc"
+        }
+      },
+      "proofSha256": "a4ac5615357b8b781c0ccd0eaab9eb28a2494641c304b22a015ba13d5aeecc1b",
+      "pairMeanRgbDifference": 4.26956
+    },
+    {
+      "id": "pilgrim-clapboard-house",
+      "title": "Pilgrim Clapboard House",
+      "alt": "A small clapboard cottage with a steep thatched roof, timber chimney, shuttered window and wooden stool stands on a compact earth base.",
+      "description": "A small clapboard cottage with a steep thatched roof, timber chimney, shuttered window and wooden stool stands on a compact earth base. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_259/source/pilgrim-clapboard-house.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d8e8fc156a035daade6d70bf17972e337bdd8a7e384171c7c6afd1c244771e54",
+      "inputSignature": "75dff82853b31b9c1f7434710946965efcee6429484d62911ae5bddb103315d2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 926957,
+        "weightedCmykRmse": 0.77109
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1122866,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 926957,
+          "weightedCmykRmse": 0.77109
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        192,
+        33,
+        1356,
+        968
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_259/exports/pilgrim-clapboard-house.pdf",
+          "bytes": 926957,
+          "sha256": "b6f69d70d694253d3e0a2e2066665a531cec734cc2492a183631143d4ef4dec6"
+        },
+        "webp": {
+          "path": "work/production/wave_259/exports/pilgrim-clapboard-house.webp",
+          "bytes": 1684650,
+          "sha256": "45cef6eee51d10f4b9616604ad64f74b418f2531eeab707431bd1e32f63ab406"
+        },
+        "thumb": {
+          "path": "work/production/wave_259/exports/pilgrim-clapboard-house-thumb.webp",
+          "bytes": 51366,
+          "sha256": "4a8c59388280404c410c9b99cb43ed884e571b0e411e9450a1bf5ce71493a002"
+        }
+      },
+      "proofSha256": "7d52d352f018b1b8a07e2aae10ff2f6b660c561e63316130b2e56853f661ddbb",
+      "pairMeanRgbDifference": 3.64922
+    },
+    {
+      "id": "pilgrim-house-section",
+      "title": "Pilgrim Single Room Home Cutaway",
+      "alt": "A cutaway timber cottage shows a hearth, bed, wooden table, stools and a ladder leading to a loft beneath a thatched roof.",
+      "description": "A cutaway timber cottage shows a hearth, bed, wooden table, stools and a ladder leading to a loft beneath a thatched roof. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_259/source/pilgrim-house-section.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 930,
+      "pdfHeight": 850,
+      "sourceType": "raster",
+      "sourceSha256": "bac4c7e797475899d04f1d2d24d58073aba8bb0c42f63d14f2e253dfee5c5ec6",
+      "inputSignature": "a7d7ebd29db01217b3648f68c269b9fab460d251d236a8e47a6af71ace6becfb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 981002,
+        "weightedCmykRmse": 1.336104
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1442441,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1201869,
+          "weightedCmykRmse": 0.747599
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141794,
+          "weightedCmykRmse": 0.8849
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1056055,
+          "weightedCmykRmse": 1.072997
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 981002,
+          "weightedCmykRmse": 1.336104
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        65,
+        81,
+        1253,
+        1119
+      ],
+      "image": {
+        "width": 930,
+        "height": 850,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_259/exports/pilgrim-house-section.pdf",
+          "bytes": 981002,
+          "sha256": "1af26d613e7f59ecae38350ba1cf0ea75f3ef9609c4d4023a92a4258cf09da1b"
+        },
+        "webp": {
+          "path": "work/production/wave_259/exports/pilgrim-house-section.webp",
+          "bytes": 1439508,
+          "sha256": "af55320cb5faf3c773fc72b99697d06f4e7713e2fcae157e91e40f75c5e55b53"
+        },
+        "thumb": {
+          "path": "work/production/wave_259/exports/pilgrim-house-section-thumb.webp",
+          "bytes": 72592,
+          "sha256": "5e4705149b2e8baa29a16ab75917636ee3eed07c3f694f3e6d411e35ea5fbe59"
+        }
+      },
+      "proofSha256": "af9abaf0765ca6985fc83baf96da97545b438d346eaa753bab920bdb10953d21",
+      "pairMeanRgbDifference": 4.07627
+    },
+    {
+      "id": "pilgrim-timber-garden-gate",
+      "title": "Pilgrim Garden Gate and Path",
+      "alt": "An open wooden garden gate and short fence sections border a small earth path with leafy plants.",
+      "description": "An open wooden garden gate and short fence sections border a small earth path with leafy plants. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_259/source/pilgrim-timber-garden-gate.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6ce22a46590dc557cf7aae1a3d411a15b6b72ce0febdc0b6e0875b19d3202082",
+      "inputSignature": "1374f126b45f817f683fa63f15aeb993aba84f119d714773d9d705d68cb4c4cc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 936964,
+        "weightedCmykRmse": 1.306459
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1316371,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1127083,
+          "weightedCmykRmse": 0.733788
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1077143,
+          "weightedCmykRmse": 0.873796
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1004596,
+          "weightedCmykRmse": 1.059935
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 936964,
+          "weightedCmykRmse": 1.306459
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        31,
+        151,
+        1512,
+        916
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_259/exports/pilgrim-timber-garden-gate.pdf",
+          "bytes": 936964,
+          "sha256": "20c6028e2694316683b146c3dae03ebadd2568ff1463f529a82fbe6ca5d345cd"
+        },
+        "webp": {
+          "path": "work/production/wave_259/exports/pilgrim-timber-garden-gate.webp",
+          "bytes": 1897728,
+          "sha256": "938d8cf00568ef3514de4cd8618060392091576f766fc6f18529ab5d25d4e7af"
+        },
+        "thumb": {
+          "path": "work/production/wave_259/exports/pilgrim-timber-garden-gate-thumb.webp",
+          "bytes": 62392,
+          "sha256": "58b457a5a2ed96219c543d049ef5bd4f7683404fb9dd7e5da715c66f85437c40"
+        }
+      },
+      "proofSha256": "b6996e20509770d4cd9e74e5876d8debc6eabc0cda29c1951f1dfd56af570d25",
+      "pairMeanRgbDifference": 4.64779
+    },
+    {
+      "id": "pilgrim-plain-felt-hat",
+      "title": "Pilgrim Felt Hat and Linen Collar",
+      "alt": "A plain brown felt hat and cream linen collar rest on a wooden bench beside a small cottage, barrel and firewood.",
+      "description": "A plain brown felt hat and cream linen collar rest on a wooden bench beside a small cottage, barrel and firewood. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_259/source/pilgrim-plain-felt-hat.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c98811684345dfd1d69c799c09953c228eb06b9da10249638631ec7e2ceac02a",
+      "inputSignature": "c4215c6295616db0f1763863b680ba5e7dfefd5d6847d87a64c0dc09c17febcc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 971085,
+        "weightedCmykRmse": 1.019581
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1291324,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1100739,
+          "weightedCmykRmse": 0.713123
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1043717,
+          "weightedCmykRmse": 0.849124
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 971085,
+          "weightedCmykRmse": 1.019581
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        29,
+        52,
+        1515,
+        993
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_259/exports/pilgrim-plain-felt-hat.pdf",
+          "bytes": 971085,
+          "sha256": "5f4a23270f65105bb27f8b72b2c7b4d6f897fc9188da0f13a508219ec1170a99"
+        },
+        "webp": {
+          "path": "work/production/wave_259/exports/pilgrim-plain-felt-hat.webp",
+          "bytes": 1804612,
+          "sha256": "9a7d6b4a2fe179a63a2016645896262871c95a41c7f843e4db2416c1b5b9140f"
+        },
+        "thumb": {
+          "path": "work/production/wave_259/exports/pilgrim-plain-felt-hat-thumb.webp",
+          "bytes": 59774,
+          "sha256": "07514d99a7d72a99e77e00b92e5b95972ca5ba49817adaf6845677d8a08d2c0a"
+        }
+      },
+      "proofSha256": "4fe70fdf5c166d4a975abe91abc2f58998016538474d57429740b08ee58e05ba",
+      "pairMeanRgbDifference": 4.34886
+    },
+    {
+      "id": "pilgrim-latchet-shoes",
+      "title": "Pilgrim Latchet Shoes and Stockings",
+      "alt": "A pair of low brown leather latchet shoes tied with leather thongs sits beside rolled undyed wool stockings and folded linen.",
+      "description": "A pair of low brown leather latchet shoes tied with leather thongs sits beside rolled undyed wool stockings and folded linen. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_259/source/pilgrim-latchet-shoes-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "393105daf262d16fc34e437c6b2b4e9c3962fb0367d3a52fc4d8e50a1421de25",
+      "inputSignature": "7491826aef2faad855c813e0644d1fa7505ee1d356c49e03dd94af35c3784286",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 962937,
+        "weightedCmykRmse": 0.857681
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1227557,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1017915,
+          "weightedCmykRmse": 0.721326
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 962937,
+          "weightedCmykRmse": 0.857681
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        27,
+        23,
+        1519,
+        976
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_259/exports/pilgrim-latchet-shoes.pdf",
+          "bytes": 962937,
+          "sha256": "a4159bc74f00dbe174039bf67089802cfabf414284e4a41527f7408373daa78e"
+        },
+        "webp": {
+          "path": "work/production/wave_259/exports/pilgrim-latchet-shoes.webp",
+          "bytes": 1855430,
+          "sha256": "e05fb986e09ce32f2a75cd761c462e1847fe4b8d588e9a866e2dfdb56f5e841b"
+        },
+        "thumb": {
+          "path": "work/production/wave_259/exports/pilgrim-latchet-shoes-thumb.webp",
+          "bytes": 53572,
+          "sha256": "e5dcce410529e277e92f02cbb2cc56a239da200aad6b7cb0df785e49b585f6d4"
+        }
+      },
+      "proofSha256": "417c16ab3f1b6d2350c9752bf99a9a4997ba96bdea2f6a2d6c6a1415f969b3cb",
+      "pairMeanRgbDifference": 3.43845
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T16:52:11.268063+00:00",
+  "screenReviewScope": "All six native PDF renders inspected: complete boat, cottage, coherent cutaway and garden gate, accurate hat still life and corrected low-cut tied footwear.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T16:52:13.762Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/pilgrim-editor/chromium/preflight.json",
+    "proofContacts": "reports/pilgrim-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:23:19.254128+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; intended duplicated/rotated/partly transparent test image is present only in the first editor scenario."
+  },
+  "publishedRevision": "635da8e8be0cbc75c1736208d28eb60678d38309",
+  "liveEvidence": "reports/pilgrim-live/chromium/report.json"
+}

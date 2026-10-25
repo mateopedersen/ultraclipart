@@ -1,0 +1,36 @@
+{
+  "wave": "wave_297",
+  "topic": "labubu",
+  "method": "builtin-image-generation",
+  "research": "data/research/labubu-2026-10-25.json",
+  "identityReview": "data/identification/labubu.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "labubu-outline-rocking-horse",
+      "title": "Labubu on a Rocking Horse Coloring Outline",
+      "alt": "Labubu sits on a small wooden rocking horse and holds the front handles above two complete curved rockers in a black coloring drawing.",
+      "description": "Labubu sits on a small wooden rocking horse and holds the front handles above two complete curved rockers in a black coloring drawing. A Labubu fan-art illustration for playtime coloring and other personal or educational layouts.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_297/source/labubu-outline-rocking-horse.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "labubu-outline-wheelbarrow",
+      "title": "Labubu with a Wheelbarrow Coloring Outline",
+      "alt": "Labubu grips both handles of a one-wheel wheelbarrow filled with pumpkins, drawn with clear black coloring contours and open spaces.",
+      "description": "Labubu grips both handles of a one-wheel wheelbarrow filled with pumpkins, drawn with clear black coloring contours and open spaces. A Labubu fan-art illustration for harvest activity coloring and other personal or educational layouts.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_297/source/labubu-outline-wheelbarrow.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

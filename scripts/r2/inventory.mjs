@@ -136,122 +136,164 @@ export async function measureAccount({
   if (!['s3-list-buckets', 'cloudflare-api-list-buckets'].includes(enumerationSource))
     throw new Error('Unknown bucket enumeration transport');
   const { accountId } = parseEndpoint(endpoint);
-  const observedAt = now(),
-    jurisdictions = [],
-    buckets = [];
-  for (const jurisdiction of JURISDICTIONS) {
-    const scopeEndpoint = endpointFor(accountId, jurisdiction);
-    const names = [],
-      seenNames = new Set(),
-      seenBucketTokens = new Set();
-    let bucketToken,
-      expectedBucketCount,
-      proof = { source: enumerationSource };
-    try {
-      do {
-        const page = await aws(
-          'list-buckets',
-          ['--no-paginate', ...(bucketToken ? ['--continuation-token', bucketToken] : [])],
-          scopeEndpoint,
-        );
-        if (!Array.isArray(page.Buckets)) throw new Error('Missing bucket enumeration');
-        if (page.TotalCount !== undefined) {
-          if (
-            !Number.isSafeInteger(page.TotalCount) ||
-            page.TotalCount < 0 ||
-            (expectedBucketCount !== undefined && expectedBucketCount !== page.TotalCount)
-          )
-            throw new Error('Bucket count changed or is invalid');
-          expectedBucketCount = page.TotalCount;
-        }
-        for (const bucket of page.Buckets) {
-          if (!bucket.Name || seenNames.has(bucket.Name))
-            throw new Error('Duplicate or invalid bucket listing');
-          seenNames.add(bucket.Name);
-          names.push(bucket.Name);
-        }
-        bucketToken = page.ContinuationToken ?? page.NextContinuationToken;
-        if (
-          (page.IsTruncated === true && !bucketToken) ||
-          (bucketToken && (typeof bucketToken !== 'string' || seenBucketTokens.has(bucketToken)))
-        )
-          throw new Error('Incomplete or looping bucket enumeration');
-        if (bucketToken) seenBucketTokens.add(bucketToken);
-      } while (bucketToken);
-      if (expectedBucketCount !== undefined && names.length !== expectedBucketCount)
-        throw new Error('Incomplete bucket roster');
-    } catch {
-      // A failure or permission denial is never evidence that a jurisdiction is empty.
-      if (!proveAbsent || names.length)
-        throw new Error(`Cannot inventory ${jurisdiction}; all-jurisdiction occupancy is unknown`);
-      proof = await proveAbsent(accountId, jurisdiction);
-      if (
-        !['cloudflare-api-empty', 'cloudflare-entitlement-disabled'].includes(proof?.source) ||
-        (proof.source === 'cloudflare-api-empty' && proof.totalCount !== 0) ||
-        proof.accountId !== accountId ||
-        proof.jurisdiction !== jurisdiction
-      )
-        throw new Error('Invalid live absence proof');
-    }
-    for (const name of names) {
-      const objects = [],
-        seenTokens = new Set();
-      let token;
-      do {
-        const page = await aws(
-          'list-objects-v2',
-          [
-            '--bucket',
-            name,
-            '--max-keys',
-            '1000',
-            '--no-paginate',
-            ...(token ? ['--continuation-token', token] : []),
-          ],
-          scopeEndpoint,
-        );
-        if (page.IsTruncated !== true && page.IsTruncated !== false)
-          throw new Error('Uncertain bucket pagination');
-        if (page.Contents !== undefined && !Array.isArray(page.Contents))
-          throw new Error('Invalid object inventory');
-        const entries = page.Contents ?? [];
-        // Read-only hash checks are independent. Bound concurrency to four so
-        // resumed waves fit the freshness window without a request burst.
-        for (let offset = 0; offset < entries.length; offset += 4) {
-          const measured = await Promise.all(
-            entries.slice(offset, offset + 4).map(async (entry) => {
-              const object = { key: entry.Key, bytes: entry.Size };
-              if (
-                batch.some(
-                  (candidate) =>
-                    jurisdictionOf(candidate) === jurisdiction &&
-                    candidate.bucket === name &&
-                    candidate.key === entry.Key,
-                )
-              )
-                object.sha256 = (
-                  await aws('head-object', ['--bucket', name, '--key', entry.Key], scopeEndpoint)
-                ).Metadata?.sha256;
-              return object;
-            }),
+  const observedAt = now();
+  // Jurisdictions and separate buckets are independent reads. Keep pagination
+  // serial within each roster, preserve the common observation start, and wait
+  // for every sibling before accepting or rejecting the complete inventory.
+  const scopeResults = await Promise.allSettled(
+    JURISDICTIONS.map(async (jurisdiction) => {
+      const scopeEndpoint = endpointFor(accountId, jurisdiction);
+      const names = [],
+        seenNames = new Set(),
+        seenBucketTokens = new Set();
+      let bucketToken,
+        expectedBucketCount,
+        proof = { source: enumerationSource };
+      try {
+        do {
+          const page = await aws(
+            'list-buckets',
+            ['--no-paginate', ...(bucketToken ? ['--continuation-token', bucketToken] : [])],
+            scopeEndpoint,
           );
-          objects.push(...measured);
-        }
-        token = page.IsTruncated ? page.NextContinuationToken : undefined;
-        if (page.IsTruncated && (!token || typeof token !== 'string' || seenTokens.has(token)))
-          throw new Error('Incomplete or looping bucket pagination');
-        if (token) seenTokens.add(token);
-      } while (token);
-      buckets.push({ name, jurisdiction, complete: true, objects });
+          if (!Array.isArray(page.Buckets)) throw new Error('Missing bucket enumeration');
+          if (page.TotalCount !== undefined) {
+            if (
+              !Number.isSafeInteger(page.TotalCount) ||
+              page.TotalCount < 0 ||
+              (expectedBucketCount !== undefined && expectedBucketCount !== page.TotalCount)
+            )
+              throw new Error('Bucket count changed or is invalid');
+            expectedBucketCount = page.TotalCount;
+          }
+          for (const bucket of page.Buckets) {
+            if (!bucket.Name || seenNames.has(bucket.Name))
+              throw new Error('Duplicate or invalid bucket listing');
+            seenNames.add(bucket.Name);
+            names.push(bucket.Name);
+          }
+          bucketToken = page.ContinuationToken ?? page.NextContinuationToken;
+          if (
+            (page.IsTruncated === true && !bucketToken) ||
+            (bucketToken && (typeof bucketToken !== 'string' || seenBucketTokens.has(bucketToken)))
+          )
+            throw new Error('Incomplete or looping bucket enumeration');
+          if (bucketToken) seenBucketTokens.add(bucketToken);
+        } while (bucketToken);
+        if (expectedBucketCount !== undefined && names.length !== expectedBucketCount)
+          throw new Error('Incomplete bucket roster');
+      } catch {
+        // A failure or permission denial is never evidence that a jurisdiction is empty.
+        if (!proveAbsent || names.length)
+          throw new Error(
+            `Cannot inventory ${jurisdiction}; all-jurisdiction occupancy is unknown`,
+          );
+        proof = await proveAbsent(accountId, jurisdiction);
+        if (
+          !['cloudflare-api-empty', 'cloudflare-entitlement-disabled'].includes(proof?.source) ||
+          (proof.source === 'cloudflare-api-empty' && proof.totalCount !== 0) ||
+          proof.accountId !== accountId ||
+          proof.jurisdiction !== jurisdiction
+        )
+          throw new Error('Invalid live absence proof');
+      }
+      return { jurisdiction, endpoint: scopeEndpoint, complete: true, buckets: names, proof };
+    }),
+  );
+  const failedScope = scopeResults.find((result) => result.status === 'rejected');
+  if (failedScope) throw failedScope.reason;
+  const jurisdictions = scopeResults.map((result) => {
+    if (result.status === 'rejected') throw result.reason;
+    return result.value;
+  });
+  const roster = jurisdictions.flatMap((scope) =>
+    scope.buckets.map((name) => ({
+      name,
+      jurisdiction: scope.jurisdiction,
+      scopeEndpoint: scope.endpoint,
+    })),
+  );
+  // Across bucket workers, no more than four content hash reads may be active.
+  let activeHashes = 0;
+  const hashWaiters = [];
+  async function checkedHead(fields, scopeEndpoint) {
+    if (activeHashes >= 4) await new Promise((accept) => hashWaiters.push(accept));
+    else activeHashes++;
+    try {
+      return await aws('head-object', fields, scopeEndpoint);
+    } finally {
+      if (hashWaiters.length) hashWaiters.shift()();
+      else activeHashes--;
     }
-    jurisdictions.push({
-      jurisdiction,
-      endpoint: scopeEndpoint,
-      complete: true,
-      buckets: names,
-      proof,
-    });
   }
+  const buckets = new Array(roster.length);
+  let cursor = 0;
+  const bucketResults = await Promise.allSettled(
+    Array.from({ length: Math.min(4, roster.length) }, async () => {
+      while (cursor < roster.length) {
+        const index = cursor++,
+          { name, jurisdiction, scopeEndpoint } = roster[index];
+        const objects = [],
+          seenTokens = new Set();
+        let token;
+        do {
+          const page = await aws(
+            'list-objects-v2',
+            [
+              '--bucket',
+              name,
+              '--max-keys',
+              '1000',
+              '--no-paginate',
+              ...(token ? ['--continuation-token', token] : []),
+            ],
+            scopeEndpoint,
+          );
+          if (page.IsTruncated !== true && page.IsTruncated !== false)
+            throw new Error('Uncertain bucket pagination');
+          if (page.Contents !== undefined && !Array.isArray(page.Contents))
+            throw new Error('Invalid object inventory');
+          const entries = page.Contents ?? [];
+          // Read-only hash checks are independent. Bound concurrency to four so
+          // resumed waves fit the freshness window without a request burst.
+          for (let offset = 0; offset < entries.length; offset += 4) {
+            const measured = await Promise.allSettled(
+              entries.slice(offset, offset + 4).map(async (entry) => {
+                const object = { key: entry.Key, bytes: entry.Size };
+                if (
+                  batch.some(
+                    (candidate) =>
+                      jurisdictionOf(candidate) === jurisdiction &&
+                      candidate.bucket === name &&
+                      candidate.key === entry.Key,
+                  )
+                )
+                  object.sha256 = (
+                    await checkedHead(['--bucket', name, '--key', entry.Key], scopeEndpoint)
+                  ).Metadata?.sha256;
+                return object;
+              }),
+            );
+            const failedHash = measured.find((result) => result.status === 'rejected');
+            if (failedHash) throw failedHash.reason;
+            objects.push(
+              ...measured.map((result) => {
+                if (result.status === 'rejected') throw result.reason;
+                return result.value;
+              }),
+            );
+          }
+          token = page.IsTruncated ? page.NextContinuationToken : undefined;
+          if (page.IsTruncated && (!token || typeof token !== 'string' || seenTokens.has(token)))
+            throw new Error('Incomplete or looping bucket pagination');
+          if (token) seenTokens.add(token);
+        } while (token);
+        buckets[index] = { name, jurisdiction, complete: true, objects };
+      }
+    }),
+  );
+  const failedBucket = bucketResults.find((result) => result.status === 'rejected');
+  if (failedBucket) throw failedBucket.reason;
   const inventory = {
     schemaVersion: 2,
     scopeVersion: SCOPE_VERSION,

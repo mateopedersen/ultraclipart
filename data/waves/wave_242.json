@@ -1,0 +1,554 @@
+{
+  "wave": "wave_242",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "autumn-child-leaf-crown",
+      "title": "Child Wearing an Autumn Leaf Crown",
+      "alt": "A child wears a red and golden leaf crown and carries a canvas nature bag while dressed in an olive jacket and jeans.",
+      "description": "A child wears a red and golden leaf crown and carries a canvas nature bag while dressed in an olive jacket and jeans. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_242/source/autumn-child-leaf-crown.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "a4354c3a513a96848139cc483cae15df1e42cd39deba79a58f6ba6f91272d22c",
+      "inputSignature": "80a5d09b00a39e3c70e6340b4e8815efee32f3990b8d7e04f1baaab3ce020d85",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 739851,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 739851,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        281,
+        38,
+        798,
+        1482
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_242/exports/autumn-child-leaf-crown.pdf",
+          "bytes": 739851,
+          "sha256": "f8007c7b13edc13d6de7c55b7889bdcedcd79e839e2a0fe1fa159ee730d86805"
+        },
+        "webp": {
+          "path": "work/production/wave_242/exports/autumn-child-leaf-crown.webp",
+          "bytes": 1260266,
+          "sha256": "1b02e8e1d33efe8bbf3466487b2a21a8e203a8dc4a55ed3e830218dad59bc2a2"
+        },
+        "thumb": {
+          "path": "work/production/wave_242/exports/autumn-child-leaf-crown-thumb.webp",
+          "bytes": 38012,
+          "sha256": "cc43096643957e68e8347e2e46e4654b0c828494f809a505c334f9bd4229b320"
+        }
+      },
+      "proofSha256": "48f3c763db3189dd8f24dfc72786398fb1ab3060d1d643a9cbbd28910eb4d9c4",
+      "pairMeanRgbDifference": 2.52156
+    },
+    {
+      "id": "autumn-nature-walk-bicycle",
+      "title": "Autumn Nature Walk with a Bicycle",
+      "alt": "An adult and a child examine a red leaf beside a small red bicycle on a bounded patch of fallen leaves.",
+      "description": "An adult and a child examine a red leaf beside a small red bicycle on a bounded patch of fallen leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_242/source/autumn-nature-walk-bicycle.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 931,
+      "pdfHeight": 980,
+      "sourceType": "raster",
+      "sourceSha256": "b3b11d3ba02f44dedb50df2609dc67a524b3a985f3401c197dea7ab54b33f7d3",
+      "inputSignature": "3030931b2c32b78b149f9c8ea62437cae8af042105d25227aefe87dc16dce096",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 978262,
+        "weightedCmykRmse": 1.466631
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1448854,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1199114,
+          "weightedCmykRmse": 0.797196
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1134816,
+          "weightedCmykRmse": 0.94944
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1048450,
+          "weightedCmykRmse": 1.145375
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 978262,
+          "weightedCmykRmse": 1.466631
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        28,
+        37,
+        1194,
+        1234
+      ],
+      "image": {
+        "width": 931,
+        "height": 980,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_242/exports/autumn-nature-walk-bicycle.pdf",
+          "bytes": 978262,
+          "sha256": "3dc36f76a11556d57c60ddaf3923c484dece6239afe98a17c2dd72da11f3d597"
+        },
+        "webp": {
+          "path": "work/production/wave_242/exports/autumn-nature-walk-bicycle.webp",
+          "bytes": 1338770,
+          "sha256": "3af4f0a0bbb14aaec3b2f8f615dbc2e01951b61b5af45bf99c136efe3b986088"
+        },
+        "thumb": {
+          "path": "work/production/wave_242/exports/autumn-nature-walk-bicycle-thumb.webp",
+          "bytes": 83174,
+          "sha256": "e8654de227c31b02241ec68583add2df15792f7388066778304701b37d54ee19"
+        }
+      },
+      "proofSha256": "50bea6c2c60bbf60eb68447bb0a163ea9eb0c1d2afd51d9a5dd4c283c18adbce",
+      "pairMeanRgbDifference": 2.2452
+    },
+    {
+      "id": "autumn-outline-standing-fox",
+      "title": "Autumn Fox Coloring Outline",
+      "alt": "A black-line coloring illustration shows a fox standing beside a low leaf branch, a smooth stone and fallen leaves.",
+      "description": "A black-line coloring illustration shows a fox standing beside a low leaf branch, a smooth stone and fallen leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_242/source/autumn-outline-standing-fox.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1350,
+      "height": 1165,
+      "pdfWidth": 1000,
+      "pdfHeight": 863,
+      "sourceType": "raster",
+      "sourceSha256": "d634d02153c3025ab5c96553adc29e1d46ba93f3300472fd8366284c87c96d7f",
+      "inputSignature": "93379c64d1a9e94a4c9a4bdef05864bf0a51d29b2bcf50b1c1074d12476e61a0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 859761,
+        "weightedCmykRmse": 0.789658
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1062400,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 859761,
+          "weightedCmykRmse": 0.789658
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        51,
+        29,
+        1316,
+        1125
+      ],
+      "image": {
+        "width": 1000,
+        "height": 863,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_242/exports/autumn-outline-standing-fox.pdf",
+          "bytes": 859761,
+          "sha256": "8ed0e0738f56e39bcf6c3ca8791f0fb08e1935ad1ea50a1e03f26c5dff0c8039"
+        },
+        "webp": {
+          "path": "work/production/wave_242/exports/autumn-outline-standing-fox.webp",
+          "bytes": 641058,
+          "sha256": "d35b8e4f1896c0963417783453a839d5f71880811127581247b87583d7b89680"
+        },
+        "thumb": {
+          "path": "work/production/wave_242/exports/autumn-outline-standing-fox-thumb.webp",
+          "bytes": 53838,
+          "sha256": "ee7ee5889056adadef1e56ad58e44277435d893c627df338c8acfdbfec6eae45"
+        }
+      },
+      "proofSha256": "9ab09963e0d017dec2783cfe5cbf8a869a8c726a06c7101caf74830c1c7a00eb",
+      "pairMeanRgbDifference": 5.08811
+    },
+    {
+      "id": "autumn-outline-fawn-leaves",
+      "title": "Fawn and Autumn Leaves Coloring Outline",
+      "alt": "A black-line coloring illustration shows a resting spotted fawn beside a fern and scattered autumn leaves.",
+      "description": "A black-line coloring illustration shows a resting spotted fawn beside a fern and scattered autumn leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_242/source/autumn-outline-fawn-leaves.png",
+      "printMaxEdgePx": 860,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 860,
+      "pdfHeight": 717,
+      "sourceType": "raster",
+      "sourceSha256": "cbb51bb10d907dc8bbebc504ceab6ccd449646ebc0c8542cb0a9fab35a1ce49a",
+      "inputSignature": "1a1d8bbd3e60e6255e0ff00346cd082d2a5b97a594de67a241f2482a6942a847",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 992394,
+        "weightedCmykRmse": 1.447559
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1262832,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1145767,
+          "weightedCmykRmse": 0.78274
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1102173,
+          "weightedCmykRmse": 0.946163
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1035864,
+          "weightedCmykRmse": 1.158605
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 992394,
+          "weightedCmykRmse": 1.447559
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        121,
+        1299,
+        1043
+      ],
+      "image": {
+        "width": 860,
+        "height": 717,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_242/exports/autumn-outline-fawn-leaves.pdf",
+          "bytes": 992394,
+          "sha256": "eb36ef4df8c484723f32c33667ce6d879393988086838c54d002a6e9839f3ae9"
+        },
+        "webp": {
+          "path": "work/production/wave_242/exports/autumn-outline-fawn-leaves.webp",
+          "bytes": 919958,
+          "sha256": "cdfe71ab9c86e81258f2dca0dce695b34ba555caefb309966be842b369823e98"
+        },
+        "thumb": {
+          "path": "work/production/wave_242/exports/autumn-outline-fawn-leaves-thumb.webp",
+          "bytes": 98810,
+          "sha256": "396a20e30506441c36de3a068c5c571d7fdbd5e4d100b725494afbc19e217ecb"
+        }
+      },
+      "proofSha256": "d86f32c7d947e7f348da8dd9e64d3d304e360462ef358b3d07b8ba5de974ca63",
+      "pairMeanRgbDifference": 3.06297
+    },
+    {
+      "id": "autumn-outline-bird-table",
+      "title": "Autumn Bird Table Coloring Outline",
+      "alt": "A black-line coloring illustration shows a small bird perched at a roofed wooden feeding table above fallen leaves.",
+      "description": "A black-line coloring illustration shows a small bird perched at a roofed wooden feeding table above fallen leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_242/source/autumn-outline-bird-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "776eb4eafcc515536399543c18a419877714b2c37406b5ad299157f7dabe3e36",
+      "inputSignature": "ed602abb198da5279ccd72083c85db6f1a9d905bef92e74b0c1a45d539b6103d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 793808,
+        "weightedCmykRmse": 0.850476
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1000471,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 793808,
+          "weightedCmykRmse": 0.850476
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        279,
+        63,
+        1077,
+        1148
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_242/exports/autumn-outline-bird-table.pdf",
+          "bytes": 793808,
+          "sha256": "6e48ed40889767af7dca6425d965a813a4e29aea4457d87952e99f993f6aae73"
+        },
+        "webp": {
+          "path": "work/production/wave_242/exports/autumn-outline-bird-table.webp",
+          "bytes": 594778,
+          "sha256": "0d7de540877736fdded8cfa5bc9d2ed09069284ea41e64eb22ea43fdd1068434"
+        },
+        "thumb": {
+          "path": "work/production/wave_242/exports/autumn-outline-bird-table-thumb.webp",
+          "bytes": 50226,
+          "sha256": "c3e1e3845e91964fa8f7b150ab6230eeb90108207f319ce2a832749a7940f23c"
+        }
+      },
+      "proofSha256": "e57553a992a0aa314c24b222f83bcd4ebfe94d12ae89552f91f7300b289dee09",
+      "pairMeanRgbDifference": 4.63576
+    },
+    {
+      "id": "autumn-outline-leaf-branch",
+      "title": "Autumn Leaf Branch Coloring Outline",
+      "alt": "A black-line coloring illustration shows a diagonal oak branch bearing lobed leaves and two acorns.",
+      "description": "A black-line coloring illustration shows a diagonal oak branch bearing lobed leaves and two acorns. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_242/source/autumn-outline-leaf-branch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "42282d816226caf3a8d5204692353320083ab286fdc22c643030e5c6607ce7a1",
+      "inputSignature": "1addeb88c7f688b04ed65d77d2d857e7d39f38d8d56a90d21369a63f68ac92cb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 920467,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 920467,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        180,
+        33,
+        1401,
+        993
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_242/exports/autumn-outline-leaf-branch.pdf",
+          "bytes": 920467,
+          "sha256": "7c656c9214ddcfad87e3719f646a4af7342e8b3eb70ef9ba05b581cc7ba9c8fb"
+        },
+        "webp": {
+          "path": "work/production/wave_242/exports/autumn-outline-leaf-branch.webp",
+          "bytes": 1037928,
+          "sha256": "a7b9f4a089494ba9f6ba00524f9fc9c062ce4feb979e8780d2483ebdd7311a18"
+        },
+        "thumb": {
+          "path": "work/production/wave_242/exports/autumn-outline-leaf-branch-thumb.webp",
+          "bytes": 52738,
+          "sha256": "40a31beb51f8c60d2150473ce579990eab09c7c22806d97049fcf19cb4df4e4e"
+        }
+      },
+      "proofSha256": "bf0c376ec2f12ebdc3038854aed0001b7191cbf6fd11f09d2b49bed5fe723585",
+      "pairMeanRgbDifference": 4.51508
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:00:55.131471+00:00",
+  "screenReviewScope": "All native CMYK PDF renders visually inspected. Pressed leaves and page decorations fully framed; cottage supports, animal anatomy, natural hands and bicycle occlusion coherent; all independent coloring outlines readable.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:00:55.575Z",
+  "cdnVerifiedAt": "2026-10-25T15:12:17.333Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T15:33:19.662093+00:00",
+  "publishedRevision": "a2905145eb4c5d5ddcb0b0c2ea0c85800875b2b0",
+  "liveVerification": "reports/autumn-live/chromium/report.json"
+}

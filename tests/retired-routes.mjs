@@ -208,10 +208,39 @@ test('compact retirement patterns protect every built HTML alias and static reso
   const withdrawn = JSON.parse(
     readFileSync(new URL('../data/retired-artwork.json', import.meta.url)),
   );
-  const policy = retirementPolicy(topics, art, withdrawn, paths, 98);
+  // Reserve two API/share rules and one shared book-pilot rule.
+  const policy = retirementPolicy(topics, art, withdrawn, paths, 97);
   const invokes = (path) =>
     policy.routes.include.some((pattern) => matches(pattern, path)) &&
     !policy.routes.exclude.some((pattern) => matches(pattern, path));
   for (const path of paths) assert.equal(invokes(path), false, path);
   for (const path of policy.retired) assert.equal(invokes(path), true, path);
+});
+
+test('the shared book pilot rule covers both page families while every other current static resource bypasses it', () => {
+  const dist = new URL('../dist/', import.meta.url);
+  const routes = JSON.parse(readFileSync(new URL('_routes.json', dist)));
+  const rule = '/*t/book*-*';
+  assert.ok(routes.include.includes(rule));
+  assert.ok(routes.include.length + routes.exclude.length <= 100);
+  const books = art.filter((item) => item.topic === 'book');
+  const bookIds = new Set(books.map((item) => item.id));
+  for (const item of books) {
+    for (const family of ['art', 'edit'])
+      for (const suffix of ['', '/', '/index.html'])
+        assert.equal(matches(rule, `/${family}/${item.id}${suffix}`), true);
+  }
+  assert.equal(matches(rule, '/clipart/book/'), false);
+  const directory = fileURLToPath(dist);
+  const walk = (path) =>
+    readdirSync(path, { withFileTypes: true }).flatMap((entry) => {
+      const child = join(path, entry.name);
+      return entry.isDirectory() ? walk(child) : [child];
+    });
+  for (const file of walk(directory)) {
+    const path = '/' + relative(directory, file);
+    const id = /^\/(?:art|edit)\/([^/]+)\//.exec(path)?.[1];
+    if (bookIds.has(id)) continue;
+    assert.equal(matches(rule, path), false, path);
+  }
 });

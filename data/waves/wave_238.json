@@ -1,0 +1,617 @@
+{
+  "wave": "wave_238",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "autumn-stone-wall-ivy",
+      "title": "Stone Wall with Red Autumn Ivy",
+      "alt": "A short weathered stone wall carries red autumn ivy above a row of fallen golden leaves.",
+      "description": "A short weathered stone wall carries red autumn ivy above a row of fallen golden leaves. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_238/source/autumn-stone-wall-ivy.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "99526d6bc1708cbe4b058b58efd82a6ae451b1f42dcc9b15dbd51ce36ec5e87c",
+      "inputSignature": "b9e54a33614ccb53736d6909574d6e6043f63ea7310908374c842defb27ed7d1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 963221,
+        "weightedCmykRmse": 1.097648
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1235143,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1083302,
+          "weightedCmykRmse": 0.729609
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1035804,
+          "weightedCmykRmse": 0.893584
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 963221,
+          "weightedCmykRmse": 1.097648
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        63,
+        173,
+        1484,
+        848
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_238/exports/autumn-stone-wall-ivy.pdf",
+          "bytes": 963221,
+          "sha256": "26a65960889cdd975a5d02c51cd9346ee8329834a32c2df0129121142c1ae2ef"
+        },
+        "webp": {
+          "path": "work/production/wave_238/exports/autumn-stone-wall-ivy.webp",
+          "bytes": 1877884,
+          "sha256": "87c6ea721bdcb33f40f982998a21773773916aa8dc3e2764cdbf658edee8ee90"
+        },
+        "thumb": {
+          "path": "work/production/wave_238/exports/autumn-stone-wall-ivy-thumb.webp",
+          "bytes": 58152,
+          "sha256": "1f7c17996ce099026371151d40f690b929ad6ca64007f5923811ebc1a20115ff"
+        }
+      },
+      "proofSha256": "655d07ee1392181e95375fc1e69edf9c4f8ffbf63e7b2b64514f1dcfa03b4a3f",
+      "pairMeanRgbDifference": 4.86512
+    },
+    {
+      "id": "autumn-woodland-step-path",
+      "title": "Woodland Steps in Autumn Leaves",
+      "alt": "Timber-edged woodland steps rise through autumn leaves, roots, stones and copper ferns.",
+      "description": "Timber-edged woodland steps rise through autumn leaves, roots, stones and copper ferns. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_238/source/autumn-woodland-step-path.png",
+      "printMaxEdgePx": 750,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 750,
+      "pdfHeight": 685,
+      "sourceType": "raster",
+      "sourceSha256": "b204563d23c758385ada556cb1ed90d95202fe8daaeb6149c25850953b2631d6",
+      "inputSignature": "5defd60938e894d38126075a60f215ed65764d6012ccbd837622f24c98a40e55",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 972562,
+        "weightedCmykRmse": 1.165174
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1315571,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1147636,
+          "weightedCmykRmse": 0.664811
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1105538,
+          "weightedCmykRmse": 0.792598
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1048195,
+          "weightedCmykRmse": 0.962157
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 972562,
+          "weightedCmykRmse": 1.165174
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        8,
+        39,
+        1300,
+        1170
+      ],
+      "image": {
+        "width": 750,
+        "height": 685,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_238/exports/autumn-woodland-step-path.pdf",
+          "bytes": 972562,
+          "sha256": "de51f58b1e4cc907d780a3cd13b20bc4410c8c7ded0a72294cb82fbf3310c619"
+        },
+        "webp": {
+          "path": "work/production/wave_238/exports/autumn-woodland-step-path.webp",
+          "bytes": 2199268,
+          "sha256": "47425cad19f54cb8f7aa51c1aa631ab87afa0d21bdd791613c2e5fdad286db1d"
+        },
+        "thumb": {
+          "path": "work/production/wave_238/exports/autumn-woodland-step-path-thumb.webp",
+          "bytes": 115072,
+          "sha256": "84d65506e6756516bb52655db5fae777716b3829ba4676f8b1d7b41553591e13"
+        }
+      },
+      "proofSha256": "32040094e21993fbc295f6c9fe51a296196149c30a13603e549f04ea37ea4f4c",
+      "pairMeanRgbDifference": 7.44681
+    },
+    {
+      "id": "autumn-russet-fern-fronds",
+      "title": "Russet Fern and Fallen Leaves",
+      "alt": "Three russet fern fronds lie diagonally over a smooth grey stone beside amber leaves and a curled frond.",
+      "description": "Three russet fern fronds lie diagonally over a smooth grey stone beside amber leaves and a curled frond. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_238/source/autumn-russet-fern-fronds.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 890,
+      "pdfHeight": 813,
+      "sourceType": "raster",
+      "sourceSha256": "4db9b77c5b02328dfd66686848802d2385297a33c4e0ba9a356e42df451b532b",
+      "inputSignature": "f40605653ee5bb9168554cbd7ca47a1213a0b3fce82be4e115b11d209bfe231f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 961708,
+        "weightedCmykRmse": 1.369764
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1333904,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1153175,
+          "weightedCmykRmse": 0.760026
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1101627,
+          "weightedCmykRmse": 0.904551
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1023233,
+          "weightedCmykRmse": 1.099336
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 961708,
+          "weightedCmykRmse": 1.369764
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        92,
+        34,
+        1253,
+        1143
+      ],
+      "image": {
+        "width": 890,
+        "height": 813,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_238/exports/autumn-russet-fern-fronds.pdf",
+          "bytes": 961708,
+          "sha256": "14ece49eee140171491be6b14d265f1cf1bbb6d9cae6fdd7614cddb998472c47"
+        },
+        "webp": {
+          "path": "work/production/wave_238/exports/autumn-russet-fern-fronds.webp",
+          "bytes": 1482584,
+          "sha256": "c3f4f387c4c57c9d05bc01de59d5ca67fb3d551c4982c7482760825080d4a916"
+        },
+        "thumb": {
+          "path": "work/production/wave_238/exports/autumn-russet-fern-fronds-thumb.webp",
+          "bytes": 87892,
+          "sha256": "6e6f01265918797754eae409b26b507cf45345abdffaafefe6fd3acd44154b16"
+        }
+      },
+      "proofSha256": "1eb936cfa23217c11404608320f698f2dc9b148ad21787ae4ac20a96be307537",
+      "pairMeanRgbDifference": 2.67284
+    },
+    {
+      "id": "autumn-gourd-leaf-stilllife",
+      "title": "Autumn Gourds and Copper Leaves",
+      "alt": "Three ornamental gourds rest on an oval wooden tray beside an oak twig, acorns and copper leaves.",
+      "description": "Three ornamental gourds rest on an oval wooden tray beside an oak twig, acorns and copper leaves. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_238/source/autumn-gourd-leaf-stilllife.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1a864b743748c67566aa33b4ec8973582b6496993c80c3ffd6e0dd7652ed0dd0",
+      "inputSignature": "31d87714c832d57cf97386b3092380e344fcc64c741cd3d404137614872e0fc3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 889452,
+        "weightedCmykRmse": 0.768151
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1072204,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 889452,
+          "weightedCmykRmse": 0.768151
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        105,
+        82,
+        1462,
+        912
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_238/exports/autumn-gourd-leaf-stilllife.pdf",
+          "bytes": 889452,
+          "sha256": "e0ab57c59f9b2930277d6de3aec8ead88c3b07ab61abf025b103f4b5e55223c6"
+        },
+        "webp": {
+          "path": "work/production/wave_238/exports/autumn-gourd-leaf-stilllife.webp",
+          "bytes": 1705170,
+          "sha256": "22917275e405744f9174f7711322fcaa2576de6894de5b7ca749417e092c412e"
+        },
+        "thumb": {
+          "path": "work/production/wave_238/exports/autumn-gourd-leaf-stilllife-thumb.webp",
+          "bytes": 55304,
+          "sha256": "75f09cee6a56ba0a72dc82c78b2b20f567012940eb8ded0bceae3eb9f5d1ccbf"
+        }
+      },
+      "proofSha256": "1059c81315117d78d6bb976da4da74114249a111dab0e2b39c9664603ffb2b01",
+      "pairMeanRgbDifference": 5.02879
+    },
+    {
+      "id": "autumn-leaf-window-garland",
+      "title": "Window Frame with Autumn Leaf Garland",
+      "alt": "A freestanding painted wooden window frame has empty panes and a red-and-gold leaf garland along its upper left edge.",
+      "description": "A freestanding painted wooden window frame has empty panes and a red-and-gold leaf garland along its upper left edge. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_238/source/autumn-leaf-window-garland.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "c398318d3f792070384557ad9daca2673ddc5100b86c0531e40c8f6cf613da76",
+      "inputSignature": "387ccc600f06c40254b127a19812e7d351d3cbf31feed2d0fbceb486020aada5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 955967,
+        "weightedCmykRmse": 1.143726
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1279416,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1096195,
+          "weightedCmykRmse": 0.790719
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1032324,
+          "weightedCmykRmse": 0.943879
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 955967,
+          "weightedCmykRmse": 1.143726
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        139,
+        51,
+        1228,
+        1116
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_238/exports/autumn-leaf-window-garland.pdf",
+          "bytes": 955967,
+          "sha256": "f217bf4ce5f2d1e43688043fa3924f3432ce4310798b823f994af300e84f91d9"
+        },
+        "webp": {
+          "path": "work/production/wave_238/exports/autumn-leaf-window-garland.webp",
+          "bytes": 1087206,
+          "sha256": "6f1fe313d20f33efa48d500b0f27699468c58b6526773c545fdd63474cb8efc6"
+        },
+        "thumb": {
+          "path": "work/production/wave_238/exports/autumn-leaf-window-garland-thumb.webp",
+          "bytes": 67872,
+          "sha256": "354d15b71d1a48e20bea230fd77f3a403bd5e1b31cf23dc7fb7bf8e3761dfeb1"
+        }
+      },
+      "proofSha256": "ec2fdc67a82e138f37910d2fa3b6b735d8357e770d184c369011cf597c45a9a1",
+      "pairMeanRgbDifference": 3.40757
+    },
+    {
+      "id": "autumn-reading-chair-leaves",
+      "title": "Garden Reading Chair in Autumn",
+      "alt": "A wicker garden chair with a mustard throw stands beside a small tea table, potted flowers and autumn leaves.",
+      "description": "A wicker garden chair with a mustard throw stands beside a small tea table, potted flowers and autumn leaves. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_238/source/autumn-reading-chair-leaves.png",
+      "printMaxEdgePx": 820,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 749,
+      "pdfHeight": 820,
+      "sourceType": "raster",
+      "sourceSha256": "fa6ae9128854f663479db6135ead8a19682c389871b33147d90e031db1562f02",
+      "inputSignature": "e551d74b4d3e2f7384646f9da477106ae03017a0c4b49c2ec55004caea8b525d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979510,
+        "weightedCmykRmse": 1.235022
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1355561,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1164987,
+          "weightedCmykRmse": 0.698653
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1117292,
+          "weightedCmykRmse": 0.833359
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1049566,
+          "weightedCmykRmse": 1.009073
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979510,
+          "weightedCmykRmse": 1.235022
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        7,
+        78,
+        1194,
+        1198
+      ],
+      "image": {
+        "width": 749,
+        "height": 820,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_238/exports/autumn-reading-chair-leaves.pdf",
+          "bytes": 979510,
+          "sha256": "07151b64c6d973058fa1e73eafa7f1da4ac316007dd0ad2d6d24b7e47a8934f7"
+        },
+        "webp": {
+          "path": "work/production/wave_238/exports/autumn-reading-chair-leaves.webp",
+          "bytes": 1908666,
+          "sha256": "be09a0b4dca13c12fb27c81e5a4a250d0b7fec2b78754c4a11ad3089d80a231a"
+        },
+        "thumb": {
+          "path": "work/production/wave_238/exports/autumn-reading-chair-leaves-thumb.webp",
+          "bytes": 108720,
+          "sha256": "938b5617e4e9934cb6e8b4d7e1696fab4fbaf9126b6ae511243da524ddf9aa9b"
+        }
+      },
+      "proofSha256": "2d40e59a605366c0929f3a05d42a56b29f16fae1dbd832d1b81a14a3b9f2feee",
+      "pairMeanRgbDifference": 4.37164
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T14:49:19.361258+00:00",
+  "screenReviewScope": "Every native CMYK PDF render visually inspected for complete framing, botanical and structural coherence, distinct compositions and clean transparent contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:00:55.540Z",
+  "cdnVerifiedAt": "2026-10-25T15:12:17.333Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T15:33:19.662093+00:00",
+  "publishedRevision": "a2905145eb4c5d5ddcb0b0c2ea0c85800875b2b0",
+  "liveVerification": "reports/autumn-live/chromium/report.json"
+}

@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 import { validateEditorSource } from '../src/lib/artwork-source.ts';
 import { validateBatch } from './r2/plan.mjs';
 import { replacementFor, mergeGeneratedWave } from './replacement-contract.mjs';
+import { validateIdentification } from './identification-review.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const wave = process.argv[2];
@@ -25,6 +26,7 @@ if (
   throw new Error('A complete rendered and visually reviewed wave is required');
 const hash = (body) => createHash('sha256').update(body).digest('hex');
 const replacementReview = plan.replacementReview ? await read(plan.replacementReview) : null;
+const identification = plan.identityReview ? await read(plan.identityReview) : null;
 const createdAt = new Date().toISOString();
 const batch = [],
   imported = [];
@@ -49,8 +51,16 @@ for (const row of report.artworks) {
     row.pairMeanRgbDifference >= 18
   )
     throw new Error('Incomplete source verification');
-  if (hash(await readFile(join(root, meta.source))) !== row.sourceSha256)
+  const sourceBytes = await readFile(join(root, meta.source));
+  if (hash(sourceBytes) !== row.sourceSha256)
     throw new Error('Master image changed after preflight');
+  if (plan.identityReview) {
+    validateIdentification({
+      artwork: meta,
+      sourceBytes,
+      record: identification?.artworks?.find((item) => item.id === row.id),
+    });
+  }
   for (const [key, value] of Object.entries(meta))
     if (JSON.stringify(row[key]) !== JSON.stringify(value))
       throw new Error(`Artwork metadata changed after preflight: ${row.id}/${key}`);

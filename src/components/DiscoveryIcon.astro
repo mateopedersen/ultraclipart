@@ -3,7 +3,25 @@ interface Props {
   name: string;
   size?: number;
 }
-const { name, size = 32 } = Astro.props;
+const { name: requestedName, size = 32 } = Astro.props;
+// New subject groups keep a visible collection symbol until they have a bespoke icon.
+const name = [
+  'animals-nature',
+  'halloween',
+  'family-celebrations',
+  'christmas-winter',
+  'valentine-s-day',
+  'sports',
+  'thanksgiving-autumn',
+  'search',
+  'arrow',
+  'find',
+  'folder',
+  'library',
+  'studio',
+].includes(requestedName)
+  ? requestedName
+  : 'folder';
 ---
 
 <svg

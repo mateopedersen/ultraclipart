@@ -157,3 +157,27 @@ For all vehicle, device and other branded-product imports, follow `docs/content/
 ## Artwork navigation arrows — latest local refinement
 
 - Artwork collection links and related-artwork navigation use the dimensional blue arrow asset through `NavigationArrow` with `dimensional`. Keep its beveled face, extruded side and grounding shadow. Collection arrows have a shaded circular surround, visible keyboard focus and reduced-motion behavior. Preserve destinations and file/edit actions; unrelated shared arrows keep their existing asset.
+
+## Pages growth warning
+
+The owner requests a warning when a production Cloudflare Pages deployment reaches
+85,000 files, ahead of the 100,000-file ceiling. Count actual deployment files
+after production exclusions and verified R2 offload, rather than artwork records,
+URLs or R2 media objects. Check on every release. At or above 85,000, report the
+verified count and revision and recommend completing the R2/Workers catalog
+transition before further growth. Do not buy a plan or change architecture
+automatically. The daily thread monitor "UltraClipart 85.000 dosya eşiği"
+also tracks this threshold.
+
+## Distinct compositions for every keyword
+
+Every published clipart must have a meaningfully different composition and use.
+A redraw, repair, crop, reframing, recolor, export format or near-identical pose
+does not count as another original design. Keep repairs under the same artwork ID
+and creative brief; publish one reviewed version. Compare new work with published,
+staged and queued artwork before release. Check exact download hashes and perceptual
+similarity both within the incoming collection and against the entire catalog, then
+visually inspect candidates. A changed filename or low similarity score alone is
+not proof of originality. Reuse existing topic URLs. Each accepted source maps to
+one WebP/PDF pair and one artwork entry. This applies to Labubu and every future
+keyword.

@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "status": "FORMAT_AND_PAIR_REVIEW_PASSED",
+  "scope": "Two additional component views; preserve each original 50-artwork technology collection.",
+  "reviewedAt": "2026-10-25T11:32:35.956790+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false,
+  "baseArtworksPreserved": 8300,
+  "additionalArtworks": 2,
+  "files": [
+    {
+      "id": "tablet-exploded-internal-assemblies",
+      "topic": "tablet",
+      "print": {
+        "width": 953,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7549727468669445,
+        "renderMeanDifference": 2.4725130208333335
+      },
+      "webp": {
+        "path": "work/technology-intake/new-webp/tablet-exploded-internal-assemblies.webp",
+        "bytes": 1011052,
+        "sha256": "b541c53d25b7c074441b6570e757a6a4ede482b0569cfe0e270646c5068b10fe"
+      },
+      "pdf": {
+        "path": "work/technology-intake/component-extension/tablet-exploded-internal-assemblies/artwork.pdf",
+        "bytes": 926719,
+        "sha256": "c560e70074569804755fa37d64ed7b0044299bbde8be39d147cb27761fdb9ec3"
+      },
+      "sourcePngSha256": "080443ce84af25a931404261be15f9c07d932c94c68d2967e1b33c89b482a2c3",
+      "proofSha256": "4ebb259d142a00f5a7c45f1a6d21725d51420264f4f25a62417a4d24c9bcae11"
+    },
+    {
+      "id": "security-camera-exploded-bullet-components",
+      "topic": "security-camera",
+      "print": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0,
+        "renderMeanDifference": 2.1475520833333333
+      },
+      "webp": {
+        "path": "work/technology-intake/new-webp/security-camera-exploded-bullet-components-v2.webp",
+        "bytes": 1068356,
+        "sha256": "fa78d752355f015c03791879d4e9c12fc7d7ca5f8fb7a1caf7c79a85368054cb"
+      },
+      "pdf": {
+        "path": "work/technology-intake/component-extension/security-camera-exploded-bullet-components/artwork.pdf",
+        "bytes": 660597,
+        "sha256": "6a6942d612624b2391134485fc84ad3ebace24d143264e9fa05391fe120fea75"
+      },
+      "sourcePngSha256": "7c5665afae239bf6e1b07177e8f7701069d4176758c6b3241968de5b59f93fd3",
+      "proofSha256": "1e9433cb7b3330e059b077239fee8571f42c457f132933bac9da82cf467be60d"
+    }
+  ]
+}

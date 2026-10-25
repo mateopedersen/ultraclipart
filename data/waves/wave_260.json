@@ -1,0 +1,518 @@
+{
+  "wave": "wave_260",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pilgrim-kitchen-tableware",
+      "title": "Pilgrim Kitchen Tableware",
+      "alt": "A wooden trencher and spoon sit beside an earthenware mug, round loaf and folded linen cloth.",
+      "description": "A wooden trencher and spoon sit beside an earthenware mug, round loaf and folded linen cloth. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_260/source/pilgrim-kitchen-tableware.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "ac1819fef0b4a364743328b9aa3a1cadc228a863ed3af1544cd44f13c0765542",
+      "inputSignature": "e21eed0629af49016d8ebdb9475dab378a2ee60b7a389740f8a24fb297eac574",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 970287,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 970287,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        168,
+        1500,
+        913
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_260/exports/pilgrim-kitchen-tableware.pdf",
+          "bytes": 970287,
+          "sha256": "491b63e5b2fb4ae757bfc40ccb9ede004e7ed92a317dcfd4e85263a05787928b"
+        },
+        "webp": {
+          "path": "work/production/wave_260/exports/pilgrim-kitchen-tableware.webp",
+          "bytes": 1565774,
+          "sha256": "b342de2b4b41fed2962d6b188fc24ed313ecccbb6c251f22c131c0fd64e7db83"
+        },
+        "thumb": {
+          "path": "work/production/wave_260/exports/pilgrim-kitchen-tableware-thumb.webp",
+          "bytes": 43750,
+          "sha256": "e22784274c83bad722fa38d92847afeecadb547a0534ea19ffc10e4dd52dafcc"
+        }
+      },
+      "proofSha256": "108dab437d198d1e69ad8b9d27212de6e87e84a46b90e40a59ea62b814108084",
+      "pairMeanRgbDifference": 3.23257
+    },
+    {
+      "id": "pilgrim-travel-chest-blanket",
+      "title": "Pilgrim Sea Chest and Wool Blanket",
+      "alt": "A closed wooden travel chest with iron fittings stands beside a rolled wool blanket and an earthenware jug.",
+      "description": "A closed wooden travel chest with iron fittings stands beside a rolled wool blanket and an earthenware jug. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_260/source/pilgrim-travel-chest-blanket.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "831899201ba135b390f5b1bc7a3944cc2927ed016af6bcae62178a2334c34ad3",
+      "inputSignature": "b260eeca8d3beab212db36e41ebe48630e67d4d24b8d91cd1a1e2001debb61e3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 991550,
+        "weightedCmykRmse": 0.966291
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1300854,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1055675,
+          "weightedCmykRmse": 0.807073
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 991550,
+          "weightedCmykRmse": 0.966291
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        128,
+        247,
+        1182,
+        1022
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_260/exports/pilgrim-travel-chest-blanket.pdf",
+          "bytes": 991550,
+          "sha256": "1fb1567e138a3483a7bc1efc77ee94d1c506c7c9f8c49196739a804b8f50ffc3"
+        },
+        "webp": {
+          "path": "work/production/wave_260/exports/pilgrim-travel-chest-blanket.webp",
+          "bytes": 1148228,
+          "sha256": "f02bea27b826d73dd7d0cfee702a7fcd1fc290f0666cc0fd570018005e1b98d0"
+        },
+        "thumb": {
+          "path": "work/production/wave_260/exports/pilgrim-travel-chest-blanket-thumb.webp",
+          "bytes": 56730,
+          "sha256": "f18674a94f40562374cc6618c8f19e79f28b61ca570cc6b3ebbffac4a9cab760"
+        }
+      },
+      "proofSha256": "7901c36c31361cd2587a23b2c7a002673f3dd5b1229d2c8299d2940cca484df7",
+      "pairMeanRgbDifference": 2.42726
+    },
+    {
+      "id": "pilgrim-outline-gardener",
+      "title": "Pilgrim Gardener Coloring Outline",
+      "alt": "Black line art of a woman in a linen coif and apron gathering root vegetables into a basket in a small garden patch.",
+      "description": "Black line art of a woman in a linen coif and apron gathering root vegetables into a basket in a small garden patch. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_260/source/pilgrim-outline-gardener.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "5294fc01682d46c01608f6e22920e14d91a311cd316fc8224d4e90041fd400ee",
+      "inputSignature": "65f26f01f98337f667f260d6db0b273214a9af2380554d9b5e940936ea13dbc3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 894555,
+        "weightedCmykRmse": 0.790594
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1149360,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 894555,
+          "weightedCmykRmse": 0.790594
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        56,
+        74,
+        1274,
+        1107
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-gardener.pdf",
+          "bytes": 894555,
+          "sha256": "867f89c6a0c8a96a7553ef72ec9c66b215ded6235b204ea98c742893a4e7ad90"
+        },
+        "webp": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-gardener.webp",
+          "bytes": 720716,
+          "sha256": "dd4ff1cbcaed4cf7c1cd31ed0258048eb95442e187c7e8511988d5530bd19cb4"
+        },
+        "thumb": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-gardener-thumb.webp",
+          "bytes": 56412,
+          "sha256": "da6aee9484502d782ab45c0a05c61ee9ace99d580d44bc3a5cb13b2dbb2d25c2"
+        }
+      },
+      "proofSha256": "520a897b626a8ed7ef8d449cc8e68d34e49a01df33e19d583816e3d321ad630f",
+      "pairMeanRgbDifference": 6.61129
+    },
+    {
+      "id": "pilgrim-outline-family-reading",
+      "title": "Pilgrim Home Reading Coloring Outline",
+      "alt": "Black line art of a seated woman sharing an open book with a standing child in period clothing.",
+      "description": "Black line art of a seated woman sharing an open book with a standing child in period clothing. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_260/source/pilgrim-outline-family-reading.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1295,
+      "height": 1215,
+      "pdfWidth": 1000,
+      "pdfHeight": 938,
+      "sourceType": "raster",
+      "sourceSha256": "311fb8e6fae898c624c36a4e8d3e1fdb1aae525e0380b13a8e146f784b72f6af",
+      "inputSignature": "94c05cbea697ca1d15eaf87a9651682ab9846c5cad0e629b8c016779c688b2a7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 736331,
+        "weightedCmykRmse": 0.798772
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1015469,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 736331,
+          "weightedCmykRmse": 0.798772
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        157,
+        67,
+        1142,
+        1147
+      ],
+      "image": {
+        "width": 1000,
+        "height": 938,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-family-reading.pdf",
+          "bytes": 736331,
+          "sha256": "117daa8f9ba0f79ca97a17a6a2fc04472c7846c1956cd6625cb1944dc2654331"
+        },
+        "webp": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-family-reading.webp",
+          "bytes": 638838,
+          "sha256": "9c516a3d716be629db66ee25a8c97033b4b3429a8095c2fec65da0cff47a04f7"
+        },
+        "thumb": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-family-reading-thumb.webp",
+          "bytes": 46928,
+          "sha256": "8498d2585bd35f66edb1464ced59dab90117c1eef9ddf5ae3012175c64d8fe70"
+        }
+      },
+      "proofSha256": "d6520cfa54f7995b984d265850133051ddf8bd4af6f957fec312b9cadeecae8d",
+      "pairMeanRgbDifference": 6.04745
+    },
+    {
+      "id": "pilgrim-outline-carpenter-tools",
+      "title": "Pilgrim Carpenter Tools Coloring Outline",
+      "alt": "Black line art of a wooden carpenter workbench with a hand plane, mallet, square, board and wood shavings.",
+      "description": "Black line art of a wooden carpenter workbench with a hand plane, mallet, square, board and wood shavings. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_260/source/pilgrim-outline-carpenter-tools.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "8ed21862aa98c15cc150a26258573acb971e9c6ac837bf995ff1d03735deaaea",
+      "inputSignature": "2b5b55ec88df3e0f516f514bda082274300e64ce26be86acc65399e91fee176d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 733869,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 733869,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        216,
+        200,
+        1353,
+        949
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-carpenter-tools.pdf",
+          "bytes": 733869,
+          "sha256": "b43daa22bdb681d10559c0411899ecc558fe99dc1fc372097d35e72fd384a219"
+        },
+        "webp": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-carpenter-tools.webp",
+          "bytes": 970776,
+          "sha256": "e32b5effd70a45bb8eee0e58e096638ff53f935c6ca190c0761442352c6c577c"
+        },
+        "thumb": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-carpenter-tools-thumb.webp",
+          "bytes": 36996,
+          "sha256": "49f46f9d709ef71855c1872858417a2ee867e920fb8b4047f1b632d532fdec3b"
+        }
+      },
+      "proofSha256": "243ba1bb4737d1c973c5942e29e3619d55173e5f3942290aa18a34a3fb497bb1",
+      "pairMeanRgbDifference": 5.20117
+    },
+    {
+      "id": "pilgrim-outline-cloth-doll-child",
+      "title": "Pilgrim Child and Toy Coloring Outline",
+      "alt": "Black line art of a child holding a cloth doll beside a small wooden stool and hoop.",
+      "description": "Black line art of a child holding a cloth doll beside a small wooden stool and hoop. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_260/source/pilgrim-outline-cloth-doll-child.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "8d1121de6abd387e926aa8bb697bbaa1e8aa5a82623f228313694ad1b1f53c4a",
+      "inputSignature": "9484b8906c2c1848443a408c3bb0b929837b331a99d345ee0542b4710fd79278",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 715798,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 715798,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        104,
+        131,
+        955,
+        1416
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-cloth-doll-child.pdf",
+          "bytes": 715798,
+          "sha256": "c1ff73a6961857572d6f77d531cca982af4206e68175df0860dea45b943f2f2a"
+        },
+        "webp": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-cloth-doll-child.webp",
+          "bytes": 898984,
+          "sha256": "32071b9af4538a340d27ed78982209e55aaa0cec8b2c265a08017a3bc4414304"
+        },
+        "thumb": {
+          "path": "work/production/wave_260/exports/pilgrim-outline-cloth-doll-child-thumb.webp",
+          "bytes": 36644,
+          "sha256": "af00e16bdede8e385080fe6699c68cbee6d82e12be493afd97aef3f0dfc58c82"
+        }
+      },
+      "proofSha256": "36a98f785177fff14f385f1ce4ab9f7bf0a851641f7cfd94e923362955c1d16e",
+      "pairMeanRgbDifference": 5.4198
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T16:50:11.969603+00:00",
+  "screenReviewScope": "All eight native PDF renders inspected. Complete line art, coherent tools, natural figures, period-style vessel and trestle supports; no text or framing defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T16:52:14.143Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/pilgrim-editor/chromium/preflight.json",
+    "proofContacts": "reports/pilgrim-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:23:19.254128+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; intended duplicated/rotated/partly transparent test image is present only in the first editor scenario."
+  },
+  "publishedRevision": "635da8e8be0cbc75c1736208d28eb60678d38309",
+  "liveEvidence": "reports/pilgrim-live/chromium/report.json"
+}

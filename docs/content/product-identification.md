@@ -9,3 +9,12 @@ Owner preference, 2026-10-25; applies to every UltraClipart import and branded-p
 - Keep wording natural, specific to visible features and useful to clipart users. Keep the reviewed identity consistent across heading, alt, description and image schema.
 - Bind each identification review to the original image's SHA-256, record the reviewed identity and official source URLs, and record the review date. A replacement image with a different checksum requires a new review before reusing its identity metadata.
 - Search consumes reviewed metadata; search aliases and rankings must not rewrite or infer product identities.
+
+## Current importer checks
+
+Use `scripts/product-identity.mjs` for branded imports. Its review levels are
+`recognized-product`, `product-family`, `brand-scene` and `imagined-concept`.
+Only `recognized-product` may carry an exact model. The reviewed Tesla, iPhone
+and Samsung examples are in `scripts/remaining-product-identities.json`, each
+bound to its inspected source image checksum and official reference. The importer
+must reject a missing review or changed source image.

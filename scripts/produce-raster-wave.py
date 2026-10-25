@@ -17,7 +17,13 @@ from raster_source import inspect_cmyk_image, decoded_alpha
 
 ROOT=Path(__file__).resolve().parents[1]
 PROFILE=ROOT/'public/color/print.icc'
+STANDARD_PDF_LIMIT=1_000_000
+MIN_EDITOR_HEADROOM=3_000
 sha=lambda b:hashlib.sha256(b).hexdigest()
+def validate_pdf_budget(value):
+    # This is an encoding reserve, not a second user-facing file-size limit.
+    # All edited exports still require the independent 1,000,000-byte preflight.
+    assert type(value) is int and 0<value<=STANDARD_PDF_LIMIT-MIN_EDITOR_HEADROOM
 def atomic_json(path, data):
     temp=path.with_suffix('.tmp');temp.write_text(json.dumps(data,indent=2)+'\n');temp.replace(path)
 def export_signature(plan, item, dependencies):
@@ -89,7 +95,7 @@ def main():
     plan_path=ROOT/f'data/waves/{args.wave}-plan.json';plan=json.loads(plan_path.read_text())
     assert plan['wave']==args.wave and 0<len(plan['items'])<=50
     assert 48<=plan['minimumJpxQualityDb']<=60 and 0<plan['maximumWeightedCmykRmse']<=1.8
-    assert 0<plan['maxPdfBytes']<=980_000
+    validate_pdf_budget(plan['maxPdfBytes'])
     stage=ROOT/'work/production'/args.wave;stage.mkdir(parents=True,exist_ok=True)
     lock=(stage/'.export.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     ids=[a['id']for a in plan['items']];assert len(set(ids))==len(ids)

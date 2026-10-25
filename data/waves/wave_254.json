@@ -1,0 +1,602 @@
+{
+  "wave": "wave_254",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pilgrim-man-hoeing-field",
+      "title": "Pilgrim Man Using a Field Hoe",
+      "alt": "A man in a brown doublet and green breeches uses an iron-bladed wooden-handled hoe in a small planted soil bed.",
+      "description": "A man in a brown doublet and green breeches uses an iron-bladed wooden-handled hoe in a small planted soil bed. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_254/source/pilgrim-man-hoeing-field.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1225,
+      "height": 1284,
+      "pdfWidth": 906,
+      "pdfHeight": 950,
+      "sourceType": "raster",
+      "sourceSha256": "4bdd8dacba4a3c5c6d3f73aaeec7079fefd30a2f2bc55b1d580f5eb366c6983d",
+      "inputSignature": "cab6b6a29e252da10840a9e928c85441feff8aa994e99814411e6437f6da54bb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 983138,
+        "weightedCmykRmse": 1.410108
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1403603,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1201378,
+          "weightedCmykRmse": 0.778141
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1140595,
+          "weightedCmykRmse": 0.925205
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1051871,
+          "weightedCmykRmse": 1.117064
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 983138,
+          "weightedCmykRmse": 1.410108
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        55,
+        20,
+        1172,
+        1260
+      ],
+      "image": {
+        "width": 906,
+        "height": 950,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_254/exports/pilgrim-man-hoeing-field.pdf",
+          "bytes": 983138,
+          "sha256": "5d34a93f6d05bf88e05a66b4790ceb74c41d7a5ff12a8f4c71275b871ed9ba12"
+        },
+        "webp": {
+          "path": "work/production/wave_254/exports/pilgrim-man-hoeing-field.webp",
+          "bytes": 1208226,
+          "sha256": "352b7a560b8dd5666e23b5acb82587a6723f282e5fcbcbd0656e1fb24a956986"
+        },
+        "thumb": {
+          "path": "work/production/wave_254/exports/pilgrim-man-hoeing-field-thumb.webp",
+          "bytes": 77028,
+          "sha256": "42d63df1da02e1612e24660abc9bd1c8a0292ef933a963ff6f8b164fea897967"
+        }
+      },
+      "proofSha256": "92a106c8482de87aefd26254c3d42cbc237536869ee314fec79c75371841989d",
+      "pairMeanRgbDifference": 4.36711
+    },
+    {
+      "id": "pilgrim-woman-weeding-herbs",
+      "title": "Pilgrim Woman Weeding an Herb Bed",
+      "alt": "A woman in a muted red waistcoat, grey petticoat and linen coif kneels to weed a sage and parsley bed beside a basket.",
+      "description": "A woman in a muted red waistcoat, grey petticoat and linen coif kneels to weed a sage and parsley bed beside a basket. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_254/source/pilgrim-woman-weeding-herbs.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "4cb493d117816dfbf033bd990ab03f4765b003b30558e5d8c20dd12a57fc192f",
+      "inputSignature": "3046f6495d89de3173b736fc881676ed0ca7d7772cae29a1a89321530f22ca99",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 945028,
+        "weightedCmykRmse": 1.117961
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1317612,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1084999,
+          "weightedCmykRmse": 0.775178
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1026493,
+          "weightedCmykRmse": 0.928961
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 945028,
+          "weightedCmykRmse": 1.117961
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        71,
+        53,
+        1284,
+        1076
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_254/exports/pilgrim-woman-weeding-herbs.pdf",
+          "bytes": 945028,
+          "sha256": "40bc46868360980b69da4c4d61ea7e9401a35aa68b5f5efb1ff285bddfbb261d"
+        },
+        "webp": {
+          "path": "work/production/wave_254/exports/pilgrim-woman-weeding-herbs.webp",
+          "bytes": 1311732,
+          "sha256": "b770864ebe1c98d60a6de482b117653471a36f7b38d5d8379439291c1a5f0598"
+        },
+        "thumb": {
+          "path": "work/production/wave_254/exports/pilgrim-woman-weeding-herbs-thumb.webp",
+          "bytes": 64542,
+          "sha256": "0bb6eb842364381a275f40bd3d175dd9db2ef60f9c03f17443b1195816627556"
+        }
+      },
+      "proofSha256": "4e43b07dadd3374c61d3b154a3ccf535e4e9a4502784c55b9502263e2f4ba3ce",
+      "pairMeanRgbDifference": 4.26131
+    },
+    {
+      "id": "pilgrim-child-sowing-seed",
+      "title": "Pilgrim Child Sowing Garden Seeds",
+      "alt": "A kneeling child in blue wool clothing drops seeds into a shallow garden furrow beside a cloth seed pouch.",
+      "description": "A kneeling child in blue wool clothing drops seeds into a shallow garden furrow beside a cloth seed pouch. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_254/source/pilgrim-child-sowing-seed.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 960,
+      "pdfHeight": 877,
+      "sourceType": "raster",
+      "sourceSha256": "3f66382da92f34fa158e3932688e47e461f9c2a13c451f50422c3790595d4dd0",
+      "inputSignature": "8e7c4e3156ccc50dadba47195572a1e8443617dc925969962f9ce2b5b53601a4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976314,
+        "weightedCmykRmse": 1.371842
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1443212,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1199219,
+          "weightedCmykRmse": 0.765806
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1137897,
+          "weightedCmykRmse": 0.906222
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1047784,
+          "weightedCmykRmse": 1.099562
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976314,
+          "weightedCmykRmse": 1.371842
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        24,
+        29,
+        1287,
+        1173
+      ],
+      "image": {
+        "width": 960,
+        "height": 877,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_254/exports/pilgrim-child-sowing-seed.pdf",
+          "bytes": 976314,
+          "sha256": "3dd857f020f9d280d6e04cb77ada87aa0f2d5a3c42ebb739d921760cfbfab18f"
+        },
+        "webp": {
+          "path": "work/production/wave_254/exports/pilgrim-child-sowing-seed.webp",
+          "bytes": 1354970,
+          "sha256": "55d5b6fcfb27780beb3915d4b15ce519e97b159eeb7c6a9203e4bc368e1c0fff"
+        },
+        "thumb": {
+          "path": "work/production/wave_254/exports/pilgrim-child-sowing-seed-thumb.webp",
+          "bytes": 74742,
+          "sha256": "fb251859a522bc66c3ed391973d75b9a5d19d602e7515df916eac2fbd3f8c3f7"
+        }
+      },
+      "proofSha256": "b5ed23171ed5f78c791e39494219fa1ad0ef2262e2efdcf85876bd8c04690cbb",
+      "pairMeanRgbDifference": 2.42734
+    },
+    {
+      "id": "pilgrim-woman-gathering-cabbage",
+      "title": "Pilgrim Woman Gathering Cabbage",
+      "alt": "A woman in ochre and brown clothing places a cabbage into a basket beside two plants in a bounded bed.",
+      "description": "A woman in ochre and brown clothing places a cabbage into a basket beside two plants in a bounded bed. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_254/source/pilgrim-woman-gathering-cabbage.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 951,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "48bb3f3a6bbec7dc754ea9664eeba996e9d500fb5ebc8214d927409149ad2642",
+      "inputSignature": "6fc00e03f4c112d926d7bb06a710edb298634ce1c9af9e7ca98279795babb07e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 967490,
+        "weightedCmykRmse": 0.830409
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1220375,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 967490,
+          "weightedCmykRmse": 0.830409
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        169,
+        33,
+        1152,
+        1233
+      ],
+      "image": {
+        "width": 951,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_254/exports/pilgrim-woman-gathering-cabbage.pdf",
+          "bytes": 967490,
+          "sha256": "4fed381f48e642d110a7a399065bdc08a85745dc89094d56252c11767cf733ae"
+        },
+        "webp": {
+          "path": "work/production/wave_254/exports/pilgrim-woman-gathering-cabbage.webp",
+          "bytes": 1081766,
+          "sha256": "9d3cea72842a1b85ebbacbdc87029e7a345d8eb228e5c07dd26ce2330681dc4c"
+        },
+        "thumb": {
+          "path": "work/production/wave_254/exports/pilgrim-woman-gathering-cabbage-thumb.webp",
+          "bytes": 60648,
+          "sha256": "f66fb65f09b74b823012479edf4ceb8d61279ff5d9d1d624b9784fb2642b8d9a"
+        }
+      },
+      "proofSha256": "71af8dc7c6d44c7b0ad4968d85f2bb234347267a9f751800ccd77a6535801d11",
+      "pairMeanRgbDifference": 3.5595
+    },
+    {
+      "id": "pilgrim-man-stacking-firewood",
+      "title": "Pilgrim Man Stacking Firewood",
+      "alt": "A man in a green doublet and tan breeches stacks split firewood beside a wooden sawhorse.",
+      "description": "A man in a green doublet and tan breeches stacks split firewood beside a wooden sawhorse. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_254/source/pilgrim-man-stacking-firewood.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4716e7e3b0be28cfec333aba5ea3ffd1d58cfd6e12131a074ae4105333fa561d",
+      "inputSignature": "0ebbe1f91db2a69cb51e6446fe602382a1e89c5aff389095d8a3088a6731c7e0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 791298,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 791298,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        207,
+        81,
+        1387,
+        931
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_254/exports/pilgrim-man-stacking-firewood.pdf",
+          "bytes": 791298,
+          "sha256": "674dba7ece7d0213248b1d1ab979d96ad091eb4b992493ac136d7083c84cacdd"
+        },
+        "webp": {
+          "path": "work/production/wave_254/exports/pilgrim-man-stacking-firewood.webp",
+          "bytes": 1259960,
+          "sha256": "29c77662ddcf4252d14e18e6856bd3477f2a842f6951494fc22a918e3af6c815"
+        },
+        "thumb": {
+          "path": "work/production/wave_254/exports/pilgrim-man-stacking-firewood-thumb.webp",
+          "bytes": 40100,
+          "sha256": "c644d8b0e86ffbe4777e1628bb2d13e7a70e87c65f1609ccd7863407a4257f74"
+        }
+      },
+      "proofSha256": "12c07f6b1b285a060d6efab1173398a16dd52a793d03c1cf47b621595e797ac3",
+      "pairMeanRgbDifference": 3.26062
+    },
+    {
+      "id": "pilgrim-child-feeding-hens",
+      "title": "Pilgrim Child Feeding Hens",
+      "alt": "A child in a rust waistcoat, brown petticoat and linen coif scatters grain from a bowl for two hens.",
+      "description": "A child in a rust waistcoat, brown petticoat and linen coif scatters grain from a bowl for two hens. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_254/source/pilgrim-child-feeding-hens.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "5cadce67b15364746cef362689cfc9c2947c4006a0a2b885733f9cfb619b6d86",
+      "inputSignature": "364ac60ac5d14325e6c9683adb5c734884e7aa7eec9c8e9176308b275764b81e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 983379,
+        "weightedCmykRmse": 1.363328
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1457614,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1210475,
+          "weightedCmykRmse": 0.762143
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1146696,
+          "weightedCmykRmse": 0.901338
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055670,
+          "weightedCmykRmse": 1.089178
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 983379,
+          "weightedCmykRmse": 1.363328
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        18,
+        21,
+        1293,
+        1169
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_254/exports/pilgrim-child-feeding-hens.pdf",
+          "bytes": 983379,
+          "sha256": "7095331a786ab4b5c09bef34d9cf51af81c6747e053b2faed8c70c49010bde45"
+        },
+        "webp": {
+          "path": "work/production/wave_254/exports/pilgrim-child-feeding-hens.webp",
+          "bytes": 1359016,
+          "sha256": "cd54e2f0757e5283068e9b8d008e5af8d1ead562eadf8c9d13f57abeea8c3516"
+        },
+        "thumb": {
+          "path": "work/production/wave_254/exports/pilgrim-child-feeding-hens-thumb.webp",
+          "bytes": 79626,
+          "sha256": "169ac2b478e41c9b3ec2cc12253f6aa91faed56b0c33e81fa3d101a1e86406bf"
+        }
+      },
+      "proofSha256": "f3fe220b68af9ef0d0ec8b816d760da11a03f474b38794f7709d3ca46f36fa18",
+      "pairMeanRgbDifference": 2.44451
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T16:21:08.109833+00:00",
+  "screenReviewScope": "Every native CMYK PDF render visually inspected for coherent historical materials, natural hands and tool contacts, full anatomy and framing, supported tables and stools, readable detail and distinct compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T16:52:11.952Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/pilgrim-editor/chromium/preflight.json",
+    "proofContacts": "reports/pilgrim-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:23:19.254128+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; intended duplicated/rotated/partly transparent test image is present only in the first editor scenario."
+  },
+  "publishedRevision": "635da8e8be0cbc75c1736208d28eb60678d38309",
+  "liveEvidence": "reports/pilgrim-live/chromium/report.json"
+}

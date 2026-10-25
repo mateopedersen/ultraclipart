@@ -13,6 +13,7 @@
     "preview": "astro preview --host 127.0.0.1",
     "check": "node scripts/restore-assets.mjs && astro check",
     "test": "node --test tests/*.mjs",
+    "test:release": "node --test --test-concurrency=2 tests/catalog.mjs tests/csp.mjs tests/publication.mjs tests/retired-routes.mjs",
     "deploy": "node scripts/deploy.mjs",
     "format": "prettier --write \"src/**/*.{astro,ts,css}\" \"tests/**/*.mjs\" \"scripts/**/*.mjs\" \"server/**/*.mjs\" astro.config.mjs",
     "format:check": "prettier --check \"src/**/*.{astro,ts,css}\" \"tests/**/*.mjs\" \"scripts/**/*.mjs\" \"server/**/*.mjs\" astro.config.mjs"

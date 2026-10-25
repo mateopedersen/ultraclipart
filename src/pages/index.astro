@@ -6,26 +6,27 @@ import Card from '../components/Card.astro';
 import CreateInvitation from '../components/CreateInvitation.astro';
 import HomeBenefits from '../components/HomeBenefits.astro';
 import SeasonalShowcase from '../components/SeasonalShowcase.astro';
-import { art, newestArt } from '../lib/catalog';
+import { art, newestArt, topics } from '../lib/catalog';
+import { diverseRecentArtwork } from '../lib/recent-artwork';
 import collectionCopy from '../../data/collection-copy.json';
-const recentSubjects = new Set<string>();
+const categoryByTopic = new Map(topics.map((topic) => [topic.slug, topic.cluster]));
 const artworkById = new Map(art.map((item) => [item.id, item]));
-const recentPicks = newestArt
-  .filter((item) => {
-    if (recentSubjects.has(item.topic)) return false;
-    recentSubjects.add(item.topic);
-    return true;
-  })
-  .map((item) => {
-    const copy = collectionCopy[item.topic as keyof typeof collectionCopy];
-    const featuredId = copy?.featured[0];
-    const featured = featuredId ? artworkById.get(featuredId) : undefined;
-    // A newly added package should introduce its subject, rather than repeat the
-    // same alphabetically first character pose across every new fruit category.
-    return featured?.published && featured.indexable && featured.createdAt === item.createdAt
-      ? featured
-      : item;
-  });
+const recentPicks = diverseRecentArtwork(
+  newestArt,
+  (topic) => categoryByTopic.get(topic) ?? topic,
+  15,
+).map((item) => {
+  const copy = collectionCopy[item.topic as keyof typeof collectionCopy];
+  const featuredId = copy?.featured[0];
+  const featured = featuredId ? artworkById.get(featuredId) : undefined;
+  // A newly added package should introduce its subject, rather than repeat the
+  // same alphabetically first character pose across every new fruit category.
+  return featured?.published !== false &&
+    featured?.indexable !== false &&
+    featured?.createdAt === item.createdAt
+    ? featured
+    : item;
+});
 ---
 
 <Layout

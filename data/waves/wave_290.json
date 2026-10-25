@@ -1,0 +1,528 @@
+{
+  "wave": "wave_290",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "labubu-garden-watering",
+      "title": "Labubu Watering a Plant",
+      "alt": "Labubu kneels beside a terracotta pot, tipping a small green watering can toward the soil around a leafy seedling.",
+      "description": "Labubu kneels beside a terracotta pot, tipping a small green watering can toward the soil around a leafy seedling. A Labubu fan-art illustration for garden journals and other personal or educational layouts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_290/source/labubu-garden-watering.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1230,
+      "height": 1278,
+      "pdfWidth": 962,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "05bb06a369f3435c5687757db60969fbf91ad982aadb5fddd7cc1fdad914e729",
+      "inputSignature": "1eb1fd8e15929ee3604acea3f5042e08dbf75197c5042ddf3bdc61ab330421f0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 942752,
+        "weightedCmykRmse": 1.389653
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1459220,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1178522,
+          "weightedCmykRmse": 0.772066
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1110510,
+          "weightedCmykRmse": 0.908756
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1017936,
+          "weightedCmykRmse": 1.095965
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 942752,
+          "weightedCmykRmse": 1.389653
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        142,
+        4,
+        1137,
+        1262
+      ],
+      "image": {
+        "width": 962,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_290/exports/labubu-garden-watering.pdf",
+          "bytes": 942752,
+          "sha256": "a4bee876c39d5954b10c54473f63a2aa68bdead4165e74b60196c61f3b955136"
+        },
+        "webp": {
+          "path": "work/production/wave_290/exports/labubu-garden-watering.webp",
+          "bytes": 1344362,
+          "sha256": "5cafaeee92136d1f469474d6dc0c03148d4268b143486cbad745c9fd516f984a"
+        },
+        "thumb": {
+          "path": "work/production/wave_290/exports/labubu-garden-watering-thumb.webp",
+          "bytes": 77686,
+          "sha256": "b342c4cce0d7c0fb0d15c3fbe64f7014b3c3c16d63c6eb998001c0c86db1459e"
+        }
+      },
+      "proofSha256": "462968eddd097afdaf8dc10d5636e853dc0b606e688fe4a24e7b1b119e54d3fa",
+      "pairMeanRgbDifference": 3.13483
+    },
+    {
+      "id": "labubu-rain-umbrella",
+      "title": "Labubu with an Umbrella",
+      "alt": "Labubu wears yellow rain boots and holds a coral umbrella above the pointed blue ears while stepping through a small puddle.",
+      "description": "Labubu wears yellow rain boots and holds a coral umbrella above the pointed blue ears while stepping through a small puddle. A Labubu fan-art illustration for weather activities and other personal or educational layouts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_290/source/labubu-rain-umbrella.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 949,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "8a4e0851a85a88974c11ec6f563fe2709bd1e2601fbbb321a5e216e0cd9be8f0",
+      "inputSignature": "e00eabf24990cb522142cf70abfb93029fa3b82088d6a2e1b21016179e3c0b67",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 844862,
+        "weightedCmykRmse": 0.805775
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1124317,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 844862,
+          "weightedCmykRmse": 0.805775
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        154,
+        9,
+        1097,
+        1274
+      ],
+      "image": {
+        "width": 949,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_290/exports/labubu-rain-umbrella.pdf",
+          "bytes": 844862,
+          "sha256": "0f56fec8dac2b43d572a3f8cd4ba562680fc34192f49b55223b5f3532c82d41f"
+        },
+        "webp": {
+          "path": "work/production/wave_290/exports/labubu-rain-umbrella.webp",
+          "bytes": 1142054,
+          "sha256": "6eb0d163c60c2c83b8097e2ee0e2834ed77713a19d5ccf33c614f2ef9051c808"
+        },
+        "thumb": {
+          "path": "work/production/wave_290/exports/labubu-rain-umbrella-thumb.webp",
+          "bytes": 68988,
+          "sha256": "f817f59d80e3e8c12c4ca61f671712e525b393de32145cfc25de4284447e47a6"
+        }
+      },
+      "proofSha256": "bf0a666047f41690196e2944419f669c29208ea13deaa5eba3c91b7b0d39bd25",
+      "pairMeanRgbDifference": 2.79108
+    },
+    {
+      "id": "labubu-backpack-walk",
+      "title": "Labubu with a Backpack",
+      "alt": "Labubu walks with caramel fur and one foot lifted, holding the straps of a small teal backpack.",
+      "description": "Labubu walks with caramel fur and one foot lifted, holding the straps of a small teal backpack. A Labubu fan-art illustration for school journals and other personal or educational layouts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_290/source/labubu-backpack-walk-framing-v3.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "ca025217dfabff4f26dc4817bff22518760cc800c31f39d9a8b04f7c43144bc6",
+      "inputSignature": "3a8c0b50105248e4653b9bdb2a01b5c4c417b28d0ee0741edfd52ef8204bb1f6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 899168,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 899168,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        178,
+        68,
+        904,
+        1435
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_290/exports/labubu-backpack-walk.pdf",
+          "bytes": 899168,
+          "sha256": "7df8e180ee5d8f55f5d30bea4b6fd7b560a8ac0f62b639faf8e8727dc35db33f"
+        },
+        "webp": {
+          "path": "work/production/wave_290/exports/labubu-backpack-walk.webp",
+          "bytes": 1397800,
+          "sha256": "005c54cd6d0073fe2269a756e7cb1159ec33aebdcae00a8934f14bb5d80bc8ce"
+        },
+        "thumb": {
+          "path": "work/production/wave_290/exports/labubu-backpack-walk-thumb.webp",
+          "bytes": 44246,
+          "sha256": "408c0367953e6d43158758d78c7e053f271ee2c622125565dfcf613fdc614588"
+        }
+      },
+      "proofSha256": "f1423bfae972d00da4e14a13bf67edc3be923ef3aaf6e3738a7418ea4d246b15",
+      "pairMeanRgbDifference": 3.55449
+    },
+    {
+      "id": "labubu-kite-flying",
+      "title": "Labubu Flying a Kite",
+      "alt": "Labubu holds a string attached to a pastel diamond kite with a bow decorated tail, raising one foot in a playful stance.",
+      "description": "Labubu holds a string attached to a pastel diamond kite with a bow decorated tail, raising one foot in a playful stance. A Labubu fan-art illustration for outdoor activity cards and other personal or educational layouts.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_290/source/labubu-kite-flying.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "7e553c9da34bb101619d61ea0a43fbc88b4d0991da24c0af4918dd2385e2f3ee",
+      "inputSignature": "ecf079a422afde9bd65779b0a4c5347ee75cf734945b6d05a8a7e9751d6bb8a8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 909924,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 909924,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        47,
+        65,
+        1019,
+        1461
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_290/exports/labubu-kite-flying.pdf",
+          "bytes": 909924,
+          "sha256": "6cdc4fc392eb2ca1671aa1a49ba51a9f99a496c24740e82f0203b8dd4c1932d0"
+        },
+        "webp": {
+          "path": "work/production/wave_290/exports/labubu-kite-flying.webp",
+          "bytes": 1520900,
+          "sha256": "f1c54047b1a716591fae725b6a963b5df2e708771dee3bb750343b90fcd31571"
+        },
+        "thumb": {
+          "path": "work/production/wave_290/exports/labubu-kite-flying-thumb.webp",
+          "bytes": 52480,
+          "sha256": "9f75d032695e3e67d7fcf0dc8376fea98a620b43b95bbe3374fb3799d195a759"
+        }
+      },
+      "proofSha256": "599fbccb586f1166ad68b1afd831750c4d860b75666863fd6851257df2d7bf1b",
+      "pairMeanRgbDifference": 2.65458
+    },
+    {
+      "id": "labubu-skateboard-balance",
+      "title": "Labubu on a Skateboard",
+      "alt": "Labubu balances with bent knees and outstretched arms on a mint green skateboard, with lavender fur and pointed ears.",
+      "description": "Labubu balances with bent knees and outstretched arms on a mint green skateboard, with lavender fur and pointed ears. A Labubu fan-art illustration for personal stickers and other personal or educational layouts.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_290/source/labubu-skateboard-balance-teeth-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1230,
+      "height": 1278,
+      "pdfWidth": 962,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "be42a942d4c77d4be8305801ee5d89b7ab4f219500ece315b1f559fc3638c6a9",
+      "inputSignature": "e64afef58b14bfae537e8342274b3b3c4647aa3ac5fbf82124fb28c72c7cc262",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 892846,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 892846,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        235,
+        13,
+        1077,
+        1260
+      ],
+      "image": {
+        "width": 962,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_290/exports/labubu-skateboard-balance.pdf",
+          "bytes": 892846,
+          "sha256": "7af59a7fdd03fd594b11ebb2438d2751c6be65f6d9871f1799d36ce6df89d561"
+        },
+        "webp": {
+          "path": "work/production/wave_290/exports/labubu-skateboard-balance.webp",
+          "bytes": 865900,
+          "sha256": "b4ba7233b0d959ede285602689e293f696ce4608bbbda49e0cf3a2c653248cec"
+        },
+        "thumb": {
+          "path": "work/production/wave_290/exports/labubu-skateboard-balance-thumb.webp",
+          "bytes": 52776,
+          "sha256": "c727ee65a664787fafe8a30b3c898b40dea09ab5931b975d57cb1312d2c87692"
+        }
+      },
+      "proofSha256": "93af2519d70025f8be2d7e32650a6dbbbba1472a00ac6e8d19b66cd294eca797",
+      "pairMeanRgbDifference": 2.48802
+    },
+    {
+      "id": "labubu-scooter-ride",
+      "title": "Labubu Riding a Scooter",
+      "alt": "Labubu grips the coral handles of a kick scooter, standing on the deck with one cream furry leg extended behind.",
+      "description": "Labubu grips the coral handles of a kick scooter, standing on the deck with one cream furry leg extended behind. A Labubu fan-art illustration for playtime cards and other personal or educational layouts.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_290/source/labubu-scooter-ride.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1246,
+      "height": 1262,
+      "pdfWidth": 987,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "f58a4729fed098f51a038968ca6e4eb48c8c34697aeb7555ed145f9ab11011b5",
+      "inputSignature": "bea5d301e378dff4288ce254d465ed51200e3b9624f9fa3d91ec62124603c880",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 856736,
+        "weightedCmykRmse": 0.81095
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1084899,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 856736,
+          "weightedCmykRmse": 0.81095
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        224,
+        17,
+        1019,
+        1227
+      ],
+      "image": {
+        "width": 987,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_290/exports/labubu-scooter-ride.pdf",
+          "bytes": 856736,
+          "sha256": "e965d989cee93145161044446758c5ab04f7afcb27903027e89c66c81f5a5f1d"
+        },
+        "webp": {
+          "path": "work/production/wave_290/exports/labubu-scooter-ride.webp",
+          "bytes": 965984,
+          "sha256": "3037bb424499b59d8d9459e0035d50805dd9b5583558bee3fba3ab70543dab46"
+        },
+        "thumb": {
+          "path": "work/production/wave_290/exports/labubu-scooter-ride-thumb.webp",
+          "bytes": 60452,
+          "sha256": "e3af090afdde81b4ecdca1dad294824b905048c191a50909773a510df67cdc1e"
+        }
+      },
+      "proofSha256": "bc266eaa5ec0ab8b95e0fe817ce615c28454e72e77ea566428d15cc6f384c03b",
+      "pairMeanRgbDifference": 2.50202
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T18:49:20.240744+00:00",
+  "screenReviewScope": "Every native PDF proof composition visually inspected against the chosen reviewed source, including complete ear/prop framing and observed character identity. No repaired sibling counted twice.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T19:28:16.613Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-10-25T19:47:52.982Z",
+    "scope": "All 50 selected compositions: WebP/PDF editing exports, unchanged source-image CMYK/alpha signatures, independent PDF rendering and all five visual proof sheets.",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "maximumEditedPdfBytes": 994986
+  }
+}

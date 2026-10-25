@@ -1,0 +1,33 @@
+{
+  "wave": "wave_261",
+  "topic": "pilgrim",
+  "method": "builtin-image-generation",
+  "research": "data/research/pilgrim-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pilgrim-outline-sailing-vessel",
+      "title": "Pilgrim Sailing Vessel Coloring Outline",
+      "alt": "Black line art of a complete period sailing vessel with three principal masts, open sails, rigging and a small water base.",
+      "description": "Black line art of a complete period sailing vessel with three principal masts, open sails, rigging and a small water base. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_261/source/pilgrim-outline-sailing-vessel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "pilgrim-outline-cooking-table",
+      "title": "Pilgrim Cooking Table Coloring Outline",
+      "alt": "Black line art of a complete wooden trestle table with a bowl, loaf and spoon beside a simple herb drying rack.",
+      "description": "Black line art of a complete wooden trestle table with a bowl, loaf and spoon beside a simple herb drying rack. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_261/source/pilgrim-outline-cooking-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

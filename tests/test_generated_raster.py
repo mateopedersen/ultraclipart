@@ -10,6 +10,11 @@ spec=importlib.util.spec_from_file_location('producer',ROOT/'scripts/produce-ras
 producer=importlib.util.module_from_spec(spec);spec.loader.exec_module(producer)
 
 class GeneratedRasterContract(unittest.TestCase):
+    def test_native_pdf_budget_reserves_editor_space_below_the_owner_limit(self):
+        for budget in [980000,995913,997000]:producer.validate_pdf_budget(budget)
+        for budget in [0,-1,997001,1000000,True,997000.0]:
+            with self.subTest(budget=budget),self.assertRaises(AssertionError):
+                producer.validate_pdf_budget(budget)
     def test_lossless_alpha_repacking_roundtrips_through_pdf_decoder(self):
         # Transparent, near-transparent and near-opaque contours must all survive.
         alpha=Image.new('L',(101,73));alpha.putdata([(i*37+i//101)%256 for i in range(101*73)])

@@ -1,6 +1,7 @@
 type ArtworkFacts = {
   id: string;
   style: string;
+  visualStyle?: string;
   width: number;
   height: number;
   productionMethod?: string;
@@ -34,14 +35,17 @@ const techniques: [RegExp, string][] = [
   [/pixel-art/, 'Pixel art'],
   [/low-poly|geometric/, 'Geometric illustration'],
   [/storybook/, 'Storybook illustration'],
-  [/cartoon|kawaii/, 'Character illustration'],
+  [/cartoon|kawaii/, 'Cartoon illustration'],
   [/screenprint|risograph/, 'Print illustration'],
   [/silhouette/, 'Silhouette'],
 ];
 
 export function artworkDetails(item: ArtworkFacts) {
   const technique = techniques.find(([pattern]) => pattern.test(item.id))?.[1];
-  const style = technique ?? (item.style === 'Color' ? 'Full-color illustration' : item.style);
+  const style =
+    item.visualStyle?.trim() ||
+    technique ||
+    (item.style === 'Color' ? 'Full-color illustration' : item.style);
   const aiGenerated = item.productionMethod === 'generated-raster';
   const generatedOrigin = 'Catalog artwork';
   const originDescription = 'Source illustration retained in the UltraClipart collection.';

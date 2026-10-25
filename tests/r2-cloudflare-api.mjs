@@ -4,7 +4,11 @@ import { createHash } from 'node:crypto';
 import { mkdtempSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { cloudflareTransport, configuredToken } from '../scripts/r2/cloudflare-api.mjs';
+import {
+  cloudflareTransport,
+  configuredToken,
+  refreshConfiguredLogin,
+} from '../scripts/r2/cloudflare-api.mjs';
 import { measureAccount, endpointFor, validateInventoryScope } from '../scripts/r2/inventory.mjs';
 const accountId = 'a'.repeat(32),
   now = 1000000,
@@ -302,7 +306,7 @@ test('explicit rate limits retry the rejected request after backoff', async () =
     accountId,
     token,
     writeBucket: 'ultraclipart-media',
-    fetcher: async (url, options) => {
+    fetcher: async (_url, options) => {
       observed.push({ method: options.method, condition: options.headers['If-None-Match'] });
       calls++;
       return calls === 1
@@ -313,4 +317,153 @@ test('explicit rate limits retry the rejected request after backoff', async () =
   await transport.aws('list-buckets', [], endpoint);
   assert.equal(calls, 2);
   assert.deepEqual(observed[0], observed[1]);
+});
+
+test('a full page without pagination metadata is probed with start_after, including an empty terminal page', async () => {
+  for (const remainder of [0, 2]) {
+    const objects = Array.from({ length: 1000 }, (_, i) => ({
+      key: `art/${String(i).padStart(4, '0')}`,
+      size: i,
+      etag: `v${i}`,
+    }));
+    const seen = [];
+    const rest = cloudflareTransport({
+      accountId,
+      token,
+      fetcher: async (input) => {
+        const url = new URL(input);
+        seen.push(url);
+        if (url.searchParams.has('start_after')) {
+          assert.equal(url.searchParams.get('start_after'), 'art/0999');
+          assert.equal(url.searchParams.has('cursor'), false);
+          return json(
+            envelope(
+              Array.from({ length: remainder }, (_, i) => ({
+                key: `art/${1000 + i}`,
+                size: i,
+                etag: `next${i}`,
+              })),
+            ),
+          );
+        }
+        return json(envelope(objects));
+      },
+    });
+    const first = await rest.aws('list-objects-v2', ['--bucket', 'ultraclipart-media'], endpoint);
+    assert.equal(first.IsTruncated, true);
+    assert.equal(first.Contents.length, 1000);
+    const last = await rest.aws(
+      'list-objects-v2',
+      ['--bucket', 'ultraclipart-media', '--continuation-token', first.NextContinuationToken],
+      endpoint,
+    );
+    assert.equal(last.IsTruncated, false);
+    assert.equal(last.Contents.length, remainder);
+    assert.equal(seen.length, 2);
+  }
+});
+
+test('fallback object enumeration rejects a repeated last key and cannot cross buckets', async () => {
+  const objects = Array.from({ length: 1000 }, (_, i) => ({
+    key: `art/${String(i).padStart(4, '0')}`,
+    size: i,
+    etag: `v${i}`,
+  }));
+  const rest = cloudflareTransport({
+    accountId,
+    token,
+    fetcher: async (url) =>
+      json(envelope(url.includes('start_after=') ? [objects.at(-1)] : objects)),
+  });
+  const first = await rest.aws('list-objects-v2', ['--bucket', 'ultraclipart-media'], endpoint);
+  await assert.rejects(
+    rest.aws(
+      'list-objects-v2',
+      ['--bucket', 'ultraclipart-media', '--continuation-token', first.NextContinuationToken],
+      endpoint,
+    ),
+    /did not advance/,
+  );
+  await assert.rejects(
+    rest.aws(
+      'list-objects-v2',
+      ['--bucket', 'other-bucket', '--continuation-token', first.NextContinuationToken],
+      endpoint,
+    ),
+    /scope mismatch/,
+  );
+});
+
+test('the final-minute login boundary waits for native refresh without changing the saved expiry', async () => {
+  for (const remaining of [35_000, 60_000]) {
+    let clock = 100_000,
+      expiry = clock + remaining,
+      calls = 0;
+    const waits = [];
+    const readToken = () => {
+      if (expiry <= clock + 60_000) throw Error('expires soon');
+      return 'valid';
+    };
+    const result = await refreshConfiguredLogin({
+      now: () => clock,
+      expiry: () => expiry,
+      readToken,
+      refresh: async () => {
+        calls++;
+        if (clock >= expiry) expiry = clock + 3_600_000;
+      },
+      wait: async (milliseconds) => {
+        assert.equal(expiry, 100_000 + remaining);
+        assert.ok(milliseconds <= 60_000);
+        waits.push(milliseconds);
+        clock += milliseconds;
+      },
+    });
+    assert.equal(result, 'valid');
+    assert.equal(calls, 2);
+    assert.equal(waits.length, 1);
+    assert.ok(expiry > clock + 60_000);
+  }
+});
+
+test('an already expired native login refreshes immediately', async () => {
+  let expiry = 99_000,
+    calls = 0;
+  assert.equal(
+    await refreshConfiguredLogin({
+      now: () => 100_000,
+      expiry: () => expiry,
+      readToken: () => {
+        if (expiry <= 160_000) throw Error('expired');
+        return 'valid';
+      },
+      refresh: async () => {
+        calls++;
+        expiry = 3_700_000;
+      },
+      wait: async () => {
+        throw Error('unnecessary wait');
+      },
+    }),
+    'valid',
+  );
+  assert.equal(calls, 1);
+});
+
+test('missing or invalid login state cannot turn into a successful refresh', async () => {
+  for (const expiry of [NaN, 3_700_000])
+    await assert.rejects(
+      refreshConfiguredLogin({
+        now: () => 100_000,
+        expiry: () => expiry,
+        readToken: () => {
+          throw Error('missing credentials');
+        },
+        refresh: async () => {},
+        wait: async () => {
+          throw Error('unexpected wait');
+        },
+      }),
+      /missing credentials/,
+    );
 });

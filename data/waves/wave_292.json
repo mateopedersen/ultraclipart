@@ -1,0 +1,514 @@
+{
+  "wave": "wave_292",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "labubu-cozy-mug",
+      "title": "Labubu Holding a Warm Mug",
+      "alt": "Labubu holds a terracotta mug with curling steam in both hands, wearing a cream knitted scarf over dusty blue fur.",
+      "description": "Labubu holds a terracotta mug with curling steam in both hands, wearing a cream knitted scarf over dusty blue fur. A Labubu fan-art illustration for cozy journals and other personal or educational layouts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_292/source/labubu-cozy-mug-teeth-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "01ec30fc4b7aace0a24175dfc6cdc83b53d848695c65fa95ce3228a666387738",
+      "inputSignature": "663d0fa28ee43851d523c082037e3679fdf0ad978dcabf53f70036cf5fa63bd3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 973130,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 973130,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        184,
+        17,
+        986,
+        1344
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_292/exports/labubu-cozy-mug.pdf",
+          "bytes": 973130,
+          "sha256": "d6eab7103fa71cb8f260b5e1e3fe44f7fccc9315eeaf9aea7c896591bf083a77"
+        },
+        "webp": {
+          "path": "work/production/wave_292/exports/labubu-cozy-mug.webp",
+          "bytes": 997698,
+          "sha256": "49e54cbfaeb092311ce28c23e03f366fbf5ab52d3fd350d34b9abc1e9f7ed743"
+        },
+        "thumb": {
+          "path": "work/production/wave_292/exports/labubu-cozy-mug-thumb.webp",
+          "bytes": 51716,
+          "sha256": "2c88df135c1f5050374ba85e6317b3f79d7769c403e7a7c84f218c0a2f44de7c"
+        }
+      },
+      "proofSha256": "277ccd8eafe29018974394855bc63d908ea77410701f85c853729e52ec776e78",
+      "pairMeanRgbDifference": 2.67547
+    },
+    {
+      "id": "labubu-snowball-scarf",
+      "title": "Labubu with a Snowball",
+      "alt": "Labubu holds a small snowball between teal mittens, wearing a matching patterned scarf and standing on a little snow patch.",
+      "description": "Labubu holds a small snowball between teal mittens, wearing a matching patterned scarf and standing on a little snow patch. A Labubu fan-art illustration for winter cards and other personal or educational layouts.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_292/source/labubu-snowball-scarf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "9846cc1d28aaebd519f2e4b1e56ce1fd427a99141a9f2c7c8902e79e8e202cbd",
+      "inputSignature": "154f93d43fcfeb35af0a5d935369df485ee6ba529d07042b35aa2b09ccec0a09",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 945052,
+        "weightedCmykRmse": 0.711239
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1151162,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 945052,
+          "weightedCmykRmse": 0.711239
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        66,
+        5,
+        1020,
+        1525
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_292/exports/labubu-snowball-scarf.pdf",
+          "bytes": 945052,
+          "sha256": "8a71741239be0bbcea4c225d50e9f547985b94a8cac3c1c9acb4f3a097123f44"
+        },
+        "webp": {
+          "path": "work/production/wave_292/exports/labubu-snowball-scarf.webp",
+          "bytes": 1799226,
+          "sha256": "9319a018a50b80ffd072df3a6fddc6abe745eae46dd651e1cecc61c6c8df9c9e"
+        },
+        "thumb": {
+          "path": "work/production/wave_292/exports/labubu-snowball-scarf-thumb.webp",
+          "bytes": 64108,
+          "sha256": "329096c991014ebb206eeb18906c0e42e6c7a5d34b3efd14ba81c6518cbd942c"
+        }
+      },
+      "proofSha256": "b29ce3f55948a845fb9d79ff45b4dbee8e03ace5469634c985380fbc7b175717",
+      "pairMeanRgbDifference": 4.34474
+    },
+    {
+      "id": "labubu-autumn-leaves",
+      "title": "Labubu with Autumn Leaves",
+      "alt": "Labubu carries a small bunch of red and golden maple leaves, stepping forward beside one loose curled leaf.",
+      "description": "Labubu carries a small bunch of red and golden maple leaves, stepping forward beside one loose curled leaf. A Labubu fan-art illustration for fall journals and other personal or educational layouts.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_292/source/labubu-autumn-leaves.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "db9b4cee4709e06e5530cc75ac9cffd4384460a78ac7be22fee3e74e1f3dc38b",
+      "inputSignature": "b68385a993cda3f8b44f4fbcd5564651978e4d840760cc6b8bcb3b44f3bf0bbb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 931427,
+        "weightedCmykRmse": 0.729426
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1141828,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 931427,
+          "weightedCmykRmse": 0.729426
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        5,
+        954,
+        1515
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_292/exports/labubu-autumn-leaves.pdf",
+          "bytes": 931427,
+          "sha256": "f46e62c35e61100d13af174530c803b2001948e1c25291f94080f96aee72b46d"
+        },
+        "webp": {
+          "path": "work/production/wave_292/exports/labubu-autumn-leaves.webp",
+          "bytes": 1808972,
+          "sha256": "1f22786c5acf1c94d7aab7a2bdcd8912f754ecc286160fcbd283f96e1d36eb31"
+        },
+        "thumb": {
+          "path": "work/production/wave_292/exports/labubu-autumn-leaves-thumb.webp",
+          "bytes": 59188,
+          "sha256": "27f1d29203e9692b2731a6f48839465f80e517f74294664d4917f1458d84248c"
+        }
+      },
+      "proofSha256": "80fd3bca04d482f5da9d940d09b835d2eab93a8825b21d144c786da4d122559f",
+      "pairMeanRgbDifference": 3.86572
+    },
+    {
+      "id": "labubu-pumpkin-lantern",
+      "title": "Labubu with a Pumpkin Lantern",
+      "alt": "Labubu wears a short black cape and carries a glowing carved pumpkin lantern by its curved handle, lifting one foot.",
+      "description": "Labubu wears a short black cape and carries a glowing carved pumpkin lantern by its curved handle, lifting one foot. A Labubu fan-art illustration for personal Halloween cards and other personal or educational layouts.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_292/source/labubu-pumpkin-lantern-teeth-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "53842252f7e4351cadb7de0b7a32538f1334b0aaf39c49a17a2eac3818d720d0",
+      "inputSignature": "53c83a8ef762d1585b2eaae64f33d07c715d3044502c61bb20e46492441eb3af",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 908320,
+        "weightedCmykRmse": 0.783558
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1174671,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 908320,
+          "weightedCmykRmse": 0.783558
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        15,
+        1100,
+        1340
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_292/exports/labubu-pumpkin-lantern.pdf",
+          "bytes": 908320,
+          "sha256": "a8d23cfec2c76900e6bf0f48c4efa71bd4fd23fd8ca3fad62ea925ef911b94fe"
+        },
+        "webp": {
+          "path": "work/production/wave_292/exports/labubu-pumpkin-lantern.webp",
+          "bytes": 1095770,
+          "sha256": "fceb67cb8e3aef96dbde4f2e225763a9bff83a21dbd4bac7d188234c162fef3b"
+        },
+        "thumb": {
+          "path": "work/production/wave_292/exports/labubu-pumpkin-lantern-thumb.webp",
+          "bytes": 52658,
+          "sha256": "29e7d3c4a95391321d152c841782684bcdb61c423ea55b2ee789b928bc694b1d"
+        }
+      },
+      "proofSha256": "1fef553160f51b6a325347528b79f293c085a06bec61b4b02cdf7fc481190a59",
+      "pairMeanRgbDifference": 3.05197
+    },
+    {
+      "id": "labubu-santa-gift-sack",
+      "title": "Labubu with a Holiday Gift Sack",
+      "alt": "Labubu wears a red cape with white trim and carries a brown sack filled with wrapped presents, greenery and pinecones.",
+      "description": "Labubu wears a red cape with white trim and carries a brown sack filled with wrapped presents, greenery and pinecones. A Labubu fan-art illustration for holiday cards and other personal or educational layouts.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_292/source/labubu-santa-gift-sack.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "77b97e05ba5d48bb5ef2d7fb10befaa197e896ac7c618cd56f5523dcee1e197a",
+      "inputSignature": "3bddb49fdd532a8e436f17b961014f5327afa1f4eb8ac2af0bbe88cf6defd0cc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 870316,
+        "weightedCmykRmse": 0.766612
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1125091,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 870316,
+          "weightedCmykRmse": 0.766612
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        84,
+        16,
+        1029,
+        1355
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_292/exports/labubu-santa-gift-sack.pdf",
+          "bytes": 870316,
+          "sha256": "d17442444a09ae46c67091f14ea7e11ddc03f74fba34647c26cac928fd51522b"
+        },
+        "webp": {
+          "path": "work/production/wave_292/exports/labubu-santa-gift-sack.webp",
+          "bytes": 1285030,
+          "sha256": "2cf2812c9f54a3570d9a4cf28ccf996303d695637f1da94af1509c8b02120f3b"
+        },
+        "thumb": {
+          "path": "work/production/wave_292/exports/labubu-santa-gift-sack-thumb.webp",
+          "bytes": 60230,
+          "sha256": "ac70fcfbaf7a98879ee812996c9adc67b49f1068c1e3139abde5fd993e259c9d"
+        }
+      },
+      "proofSha256": "a5c74273d501267202d630473a7c3b6801caef7e09d177ff9d1c674787f546a5",
+      "pairMeanRgbDifference": 3.46442
+    },
+    {
+      "id": "labubu-party-balloons",
+      "title": "Labubu with Party Balloons",
+      "alt": "Labubu holds three strings connected to teal, gold and coral balloons above the pointed pink ears.",
+      "description": "Labubu holds three strings connected to teal, gold and coral balloons above the pointed pink ears. A Labubu fan-art illustration for birthday invitations and other personal or educational layouts.",
+      "color": "Pink",
+      "style": "Color",
+      "source": "work/production/wave_292/source/labubu-party-balloons.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "labubu",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "04870f413768c1e315991417a29c65a536a28d90b54296f92750b3deb67054d3",
+      "inputSignature": "af81abd91e2c56c02d140688fe293b115ce2ea9e605ba3c281f39ce5f9720d31",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 763210,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 763210,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        43,
+        942,
+        1490
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_292/exports/labubu-party-balloons.pdf",
+          "bytes": 763210,
+          "sha256": "aaed5cc2ddf4dca21a818778e7e8e6e32b90c2651e0b95ae384d167734aa94e4"
+        },
+        "webp": {
+          "path": "work/production/wave_292/exports/labubu-party-balloons.webp",
+          "bytes": 1448716,
+          "sha256": "841b0c2e507e207fe22e4fef70562755c10ba5b45b49762feedd3a43bcd0dd93"
+        },
+        "thumb": {
+          "path": "work/production/wave_292/exports/labubu-party-balloons-thumb.webp",
+          "bytes": 47788,
+          "sha256": "2f888d5a86efa6a1e9e332946a050a2a20454f910341a83bc071a1dceba77a18"
+        }
+      },
+      "proofSha256": "2a0652724a67d32ad8a5d7b2d985ff0039a25c5a8d2435d697cfc968debed1e9",
+      "pairMeanRgbDifference": 2.49387
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T18:49:20.240744+00:00",
+  "screenReviewScope": "Every native PDF proof composition visually inspected against the chosen reviewed source, including complete ear/prop framing and observed character identity. No repaired sibling counted twice.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T19:28:17.470Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "reviewedAt": "2026-10-25T19:47:52.982Z",
+    "scope": "All 50 selected compositions: WebP/PDF editing exports, unchanged source-image CMYK/alpha signatures, independent PDF rendering and all five visual proof sheets.",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "maximumEditedPdfBytes": 994986
+  }
+}

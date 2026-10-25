@@ -1,0 +1,576 @@
+{
+  "wave": "wave_230",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "harvest-gardener-tomato-basket",
+      "title": "Gardener Picking Ripe Tomatoes",
+      "alt": "A gardener picks a ripe tomato from a staked plant beside a basket on a wooden stool.",
+      "description": "A gardener picks a ripe tomato from a staked plant beside a basket on a wooden stool. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_230/source/harvest-gardener-tomato-basket.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1295,
+      "height": 1214,
+      "pdfWidth": 1000,
+      "pdfHeight": 937,
+      "sourceType": "raster",
+      "sourceSha256": "1691d17fddcaa7290f3e625c230e69db274c33bdbf5ccb774df720c4cda214bb",
+      "inputSignature": "1ea952a117255967afbe06de0cd22ccd61dd0e2bea7d483d87af490681079aba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979046,
+        "weightedCmykRmse": 1.516777
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1439076,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1196158,
+          "weightedCmykRmse": 0.806658
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1130258,
+          "weightedCmykRmse": 0.966675
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1049226,
+          "weightedCmykRmse": 1.17955
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979046,
+          "weightedCmykRmse": 1.516777
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        228,
+        49,
+        1098,
+        1117
+      ],
+      "image": {
+        "width": 1000,
+        "height": 937,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_230/exports/harvest-gardener-tomato-basket.pdf",
+          "bytes": 979046,
+          "sha256": "31a5df76e6c4b7ecfc32feb6c7058a9ce6bfc5cbc2d38f0d4bfbdaa9df96a6e1"
+        },
+        "webp": {
+          "path": "work/production/wave_230/exports/harvest-gardener-tomato-basket.webp",
+          "bytes": 1331594,
+          "sha256": "46f8aabef2e4df52d3dc19c10b2f221a01329ba06ac248b17606bd47f6448e82"
+        },
+        "thumb": {
+          "path": "work/production/wave_230/exports/harvest-gardener-tomato-basket-thumb.webp",
+          "bytes": 83548,
+          "sha256": "71e1f7056ec6beab4fc27a1250165717d040f79ae54d8d88c255f01f00a4da87"
+        }
+      },
+      "proofSha256": "ed1252e1d7f610935593ebe65836adb1936933dea06e1e3f467934b6647f519f",
+      "pairMeanRgbDifference": 4.79709
+    },
+    {
+      "id": "harvest-harvest-wheelbarrow",
+      "title": "Wheelbarrow of Root Vegetables",
+      "alt": "A single-wheel metal garden wheelbarrow holds carrots, beets and turnips, with work gloves over its rim.",
+      "description": "A single-wheel metal garden wheelbarrow holds carrots, beets and turnips, with work gloves over its rim. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_230/source/harvest-harvest-wheelbarrow.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "991f5820b4c9a5205aeec3d635b8ac245cfebbdbc0e64db7987b1b4818d6bae0",
+      "inputSignature": "0d1f80d3262cc524ca0716c792be60d1656259537ac07d9f63c0baaf463412de",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 933899,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 933899,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        178,
+        95,
+        1359,
+        939
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_230/exports/harvest-harvest-wheelbarrow.pdf",
+          "bytes": 933899,
+          "sha256": "216d0f03e63def048bf322d5a6c9b5dceb049475c6ef2602e53f45fb555631fc"
+        },
+        "webp": {
+          "path": "work/production/wave_230/exports/harvest-harvest-wheelbarrow.webp",
+          "bytes": 1437394,
+          "sha256": "53c0a5d1c1533711cdbfd36a5f26deff01c1b27d392e3416885b63ea60bb91e7"
+        },
+        "thumb": {
+          "path": "work/production/wave_230/exports/harvest-harvest-wheelbarrow-thumb.webp",
+          "bytes": 46040,
+          "sha256": "7323ac01528721daacd15c78b3ea0f4cda277e09fa05d339af0a070b1dedab64"
+        }
+      },
+      "proofSha256": "3d30464fadff8aeb7c28c14efc2f39b3f3cdbba0d4b1e7088fc594d2de1f3722",
+      "pairMeanRgbDifference": 4.02909
+    },
+    {
+      "id": "harvest-onion-braid",
+      "title": "Braided Onions Drying",
+      "alt": "A braid of dry golden onions hangs from a freestanding wooden drying frame.",
+      "description": "A braid of dry golden onions hangs from a freestanding wooden drying frame. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_230/source/harvest-onion-braid.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1287,
+      "height": 1222,
+      "pdfWidth": 930,
+      "pdfHeight": 883,
+      "sourceType": "raster",
+      "sourceSha256": "513d9b8a2da8dc7914267d438be27f0d73ab43343929912aa533be4549278efe",
+      "inputSignature": "5d069490ad88c556feacaa22193b6f874f220bfafb5e525582940065d557941d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 964540,
+        "weightedCmykRmse": 1.415711
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1352956,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1174189,
+          "weightedCmykRmse": 0.782133
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1116162,
+          "weightedCmykRmse": 0.923877
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1032024,
+          "weightedCmykRmse": 1.113794
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 964540,
+          "weightedCmykRmse": 1.415711
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        113,
+        45,
+        1180,
+        1147
+      ],
+      "image": {
+        "width": 930,
+        "height": 883,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_230/exports/harvest-onion-braid.pdf",
+          "bytes": 964540,
+          "sha256": "e8f7bfc41163a6d8cb4a6372ffe9be94002c34394f75ee97fb2d40d855eebd02"
+        },
+        "webp": {
+          "path": "work/production/wave_230/exports/harvest-onion-braid.webp",
+          "bytes": 1196500,
+          "sha256": "011243775e389d7293dd51f59f1c0ced857d95ea96707053ac79ee3a8580e7b1"
+        },
+        "thumb": {
+          "path": "work/production/wave_230/exports/harvest-onion-braid-thumb.webp",
+          "bytes": 80488,
+          "sha256": "cf6c8b6282a6f8c92f36bffdf896dd29586b35a08e5ecb0461acdcaf1ddc2f7d"
+        }
+      },
+      "proofSha256": "41adb92edd96727fa6247f85d0951b7177a622bb42f6069eaaeeb46a55954b8e",
+      "pairMeanRgbDifference": 1.81053
+    },
+    {
+      "id": "harvest-garlic-curing-rack",
+      "title": "Garlic on a Drying Rack",
+      "alt": "Harvested garlic bulbs with dry stems rest on a small wooden mesh drying rack.",
+      "description": "Harvested garlic bulbs with dry stems rest on a small wooden mesh drying rack. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_230/source/harvest-garlic-curing-rack.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "25dc6466a1a28a7d77689bef515d24b84bc89c62147ef66b24b4d73b52a8bd34",
+      "inputSignature": "479b32aa7594eaabf9ffff9021aa0daf974eaf111cf4aec0b3ba299c528e18dc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 840263,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 840263,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        257,
+        95,
+        1291,
+        931
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_230/exports/harvest-garlic-curing-rack.pdf",
+          "bytes": 840263,
+          "sha256": "67e94249b57bd4d4f016978a0350301b0c51a0b1940fefa049b6968a1c74fa82"
+        },
+        "webp": {
+          "path": "work/production/wave_230/exports/harvest-garlic-curing-rack.webp",
+          "bytes": 1373210,
+          "sha256": "dd3552a8a724df87a2e437d583c57b7a8fb54e77db7897d628ecbc94b69e0870"
+        },
+        "thumb": {
+          "path": "work/production/wave_230/exports/harvest-garlic-curing-rack-thumb.webp",
+          "bytes": 42694,
+          "sha256": "9541fde305c58dea96be59aa7115d704e4160d879bd5c3f542f24c72351a4359"
+        }
+      },
+      "proofSha256": "8719bb6e787069e3f4d465e2c02413e6be7193e56c3b22186549105fda266d05",
+      "pairMeanRgbDifference": 3.10437
+    },
+    {
+      "id": "harvest-walnut-harvest-basket",
+      "title": "Walnut Harvest Basket",
+      "alt": "A wire basket of whole walnuts sits beside green walnut husks, a split shell and a folded cloth.",
+      "description": "A wire basket of whole walnuts sits beside green walnut husks, a split shell and a folded cloth. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_230/source/harvest-walnut-harvest-basket.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "b35176edcd919ed0d1dbe6220168d1336cb7f118a849c92e67affd000572c585",
+      "inputSignature": "53199de6d6e10d98d4ed7d5fe0d7748db8fb60ebc550c82dd3a056f7a3955254",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 950037,
+        "weightedCmykRmse": 1.427819
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1421569,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1170598,
+          "weightedCmykRmse": 0.776375
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1106367,
+          "weightedCmykRmse": 0.929909
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1018783,
+          "weightedCmykRmse": 1.117412
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 950037,
+          "weightedCmykRmse": 1.427819
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        89,
+        144,
+        1263,
+        1107
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_230/exports/harvest-walnut-harvest-basket.pdf",
+          "bytes": 950037,
+          "sha256": "84b43085af01e29757fd824a9bacd4f6527ebeeb0121142a9389d88112d50e0f"
+        },
+        "webp": {
+          "path": "work/production/wave_230/exports/harvest-walnut-harvest-basket.webp",
+          "bytes": 1362168,
+          "sha256": "04c2c5fcd092a89e66dffd0f1b8d905e3246b7d19d90b8f7681616f1093e846f"
+        },
+        "thumb": {
+          "path": "work/production/wave_230/exports/harvest-walnut-harvest-basket-thumb.webp",
+          "bytes": 72488,
+          "sha256": "155d7ada62b905fae09edab94e3390998452ad4337faf1afeb9dc35be8892eeb"
+        }
+      },
+      "proofSha256": "69b5d4d8e84d7635ce189c06fe309b20e00c5a94a6a60bae87d1bdf86cc9e844",
+      "pairMeanRgbDifference": 4.77728
+    },
+    {
+      "id": "harvest-chestnut-husk",
+      "title": "Chestnuts and Open Spiny Husk",
+      "alt": "Shiny pointed sweet chestnuts lie beside an open densely spined chestnut bur and a serrated leaf.",
+      "description": "Shiny pointed sweet chestnuts lie beside an open densely spined chestnut bur and a serrated leaf. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_230/source/harvest-chestnut-husk-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "14013f64857ca533b5be5cf40370709fb0472b5e8afbc1fa566b0e711536620a",
+      "inputSignature": "8e583940090b6e13c4be3b64a9483f98c7f53bb40824e0845aadcfca1e621e01",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 838915,
+        "weightedCmykRmse": 0.779035
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1008816,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 838915,
+          "weightedCmykRmse": 0.779035
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        138,
+        51,
+        1398,
+        939
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_230/exports/harvest-chestnut-husk.pdf",
+          "bytes": 838915,
+          "sha256": "26f9cda48a4e19800c121ec2735e9818e0a977a29ea2391ea3b025f3ab4da5b2"
+        },
+        "webp": {
+          "path": "work/production/wave_230/exports/harvest-chestnut-husk.webp",
+          "bytes": 1680546,
+          "sha256": "578c80060d2c734c7a01b9324afd687a687d587bf9d709f6ea8e73d822e5140b"
+        },
+        "thumb": {
+          "path": "work/production/wave_230/exports/harvest-chestnut-husk-thumb.webp",
+          "bytes": 53070,
+          "sha256": "20154f4e2bad451a48c128e8503935cf434cf67919cb451204450cdcb291c605"
+        }
+      },
+      "proofSha256": "70cdb319469156948be3168e11b163d617625b067d187b9194a32277df56a8ae",
+      "pairMeanRgbDifference": 4.80957
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T13:47:22.014832+00:00",
+  "screenReviewScope": "All six native CMYK PDF renders seen, including corrected Castanea bur, intact gardener anatomy and coherent drying supports.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T14:01:15.407Z",
+  "cdnVerifiedAt": "2026-10-25T14:15:03.627Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T14:49:19.361258+00:00",
+  "publishedVerifiedAt": "2026-10-25T15:13:53.709098+00:00",
+  "sourceRevision": "a905ff85554dc662b2a30c99c7869c9b52179386",
+  "liveEvidence": "reports/harvest-live/chromium/report.json"
+}

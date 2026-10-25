@@ -13,6 +13,7 @@ export default defineConfig({
   site: 'https://ultraclipart.com',
   output: 'static',
   trailingSlash: 'always',
+  devToolbar: { enabled: false },
   vite: {
     plugins: [aiPreviewNotice()],
     server: {

@@ -1,0 +1,35 @@
+{
+  "wave": "wave_234",
+  "topic": "harvest",
+  "method": "builtin-image-generation",
+  "research": "data/research/harvest-2026-10-25.json",
+  "maxPdfBytes": 980000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "harvest-outline-family-sorting",
+      "title": "Family Harvest Sorting Coloring Outline",
+      "alt": "A black-line coloring illustration shows a standing adult and seated child sorting apples and carrots into baskets at a round table.",
+      "description": "A black-line coloring illustration shows a standing adult and seated child sorting apples and carrots into baskets at a round table. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_234/source/harvest-outline-family-sorting.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "harvest-outline-produce-crate",
+      "title": "Mixed Harvest Crate Coloring Outline",
+      "alt": "A black-line coloring illustration shows a slatted wooden produce crate filled with pumpkin, sweet corn, carrots and an apple.",
+      "description": "A black-line coloring illustration shows a slatted wooden produce crate filled with pumpkin, sweet corn, carrots and an apple. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_234/source/harvest-outline-produce-crate.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

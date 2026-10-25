@@ -17,7 +17,7 @@ export const infoPages: Record<
       ],
       [
         'Questions about a use',
-        'If a proposed use falls outside personal or educational projects, ask ultraclipart@gmail.com before using the artwork. This license applies to the original UltraClipart artwork, not to third-party software or fonts, which retain their own licenses.',
+        'If a proposed use falls outside personal or educational projects, ask ultraclipart@gmail.com before using the artwork. This license applies to the original UltraClipart artwork, not to third-party software or fonts, which retain their own licenses. Third-party characters, brand names and logos retain their owners’ rights; these terms do not grant rights in those properties or imply endorsement.',
       ],
       [
         'Images from the Builder',

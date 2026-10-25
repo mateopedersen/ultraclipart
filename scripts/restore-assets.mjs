@@ -73,7 +73,9 @@ export async function downloadAsset(file, fetcher = fetch, pause = delay) {
 
 /** Restore only hash-pinned catalog bytes from the approved public CDN.
  * Art binaries stay out of Git. A clean checkout needs no account credentials. */
-export async function restoreAssets({ root, catalog, manifest, fetcher = fetch }) {
+export async function restoreAssets({ root, catalog, manifest, fetcher = fetch, concurrency = 8 }) {
+  if (!Number.isSafeInteger(concurrency) || concurrency < 1 || concurrency > 16)
+    throw new Error('Asset restore concurrency must be an integer from 1 to 16');
   const files = validateManifest(manifest),
     expected = catalogFiles(catalog);
   if (expected.length !== files.size) throw new Error('Catalog and publication differ');
@@ -119,7 +121,7 @@ export async function restoreAssets({ root, catalog, manifest, fetcher = fetch }
     }
   }
   const results = await Promise.allSettled(
-    Array.from({ length: Math.min(8, expected.length) }, worker),
+    Array.from({ length: Math.min(concurrency, expected.length) }, worker),
   );
   const failed = results.find((result) => result.status === 'rejected');
   if (failed) throw failed.reason;
@@ -129,6 +131,13 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   const root = resolve(import.meta.dirname, '..'),
     read = (name) => JSON.parse(readFileSync(join(root, 'data', name)));
   console.log(
-    await restoreAssets({ root, catalog: read('art.json'), manifest: read('publication.json') }),
+    await restoreAssets({
+      root,
+      catalog: read('art.json'),
+      manifest: read('publication.json'),
+      // Public CDN reads, not authenticated R2 API calls. Each object retains
+      // its 16 MB bound, MIME/hash checks and atomic write before build use.
+      concurrency: process.env.CF_PAGES === '1' ? 16 : 8,
+    }),
   );
 }

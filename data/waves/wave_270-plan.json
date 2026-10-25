@@ -1,0 +1,33 @@
+{
+  "wave": "wave_270",
+  "topic": "acorn",
+  "method": "builtin-image-generation",
+  "research": "data/research/acorn-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "acorn-outline-oak-spray",
+      "title": "Oak Branch Coloring Outline",
+      "alt": "Black line art of a connected oak twig bearing three hanging acorns and four lobed leaves.",
+      "description": "Black line art of a connected oak twig bearing three hanging acorns and four lobed leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_270/source/acorn-outline-oak-spray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "acorn-outline-wreath",
+      "title": "Acorn Wreath Coloring Outline",
+      "alt": "Black line art of an open center twig wreath with four acorn clusters and broad lobed oak leaves.",
+      "description": "Black line art of an open center twig wreath with four acorn clusters and broad lobed oak leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_270/source/acorn-outline-wreath.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

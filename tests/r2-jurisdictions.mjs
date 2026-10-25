@@ -21,6 +21,54 @@ const batch = ['pdf', 'svg', 'thumbnail', 'webp'].map((kind) => ({
   sha256: hash,
 }));
 const jurisdictionFrom = (url) => JURISDICTIONS.find((j) => endpointFor(accountId, j) === url);
+test(
+  'independent scope and bucket reads overlap without changing proof order or observation time',
+  { timeout: 2000 },
+  async () => {
+    let started = 0,
+      release;
+    const scopesReady = new Promise((accept) => {
+      release = accept;
+    });
+    let activeBuckets = 0,
+      maximumBuckets = 0;
+    const inventory = await measureAccount({
+      endpoint,
+      batch: [],
+      now: () => now,
+      aws: async (command, _args, url) => {
+        const jurisdiction = jurisdictionFrom(url);
+        if (command === 'list-buckets') {
+          if (++started === JURISDICTIONS.length) release();
+          await scopesReady;
+          return {
+            Buckets: jurisdiction === 'default' ? [{ Name: 'first' }, { Name: 'second' }] : [],
+          };
+        }
+        assert.equal(command, 'list-objects-v2');
+        maximumBuckets = Math.max(maximumBuckets, ++activeBuckets);
+        await new Promise((accept) => setTimeout(accept, 10));
+        activeBuckets--;
+        return { IsTruncated: false, Contents: [{ Key: 'unrelated.webp', Size: 123 }] };
+      },
+    });
+    assert.equal(started, JURISDICTIONS.length);
+    assert.equal(maximumBuckets, 2);
+    assert.equal(inventory.observedAt, now);
+    assert.deepEqual(
+      inventory.jurisdictions.map((scope) => scope.jurisdiction),
+      JURISDICTIONS,
+    );
+    assert.deepEqual(
+      inventory.buckets.map((bucket) => bucket.name),
+      ['first', 'second'],
+    );
+    assert.equal(
+      inventory.buckets.reduce((n, bucket) => n + bucket.objects[0].bytes, 0),
+      246,
+    );
+  },
+);
 function adapter(extra = {}) {
   const calls = [];
   const aws = (command, args, url) => {
@@ -181,4 +229,88 @@ test('object errors in a known populated jurisdiction cannot use an absence over
     /Denied object listing/,
   );
   assert.equal(absenceCalls, 0);
+});
+
+test('content verification stays bounded to four reads across independent buckets', async () => {
+  const names = ['one', 'two', 'three', 'four'];
+  const candidates = names.flatMap((bucket) =>
+    Array.from({ length: 3 }, (_, n) => ({
+      bucket,
+      key: 'image-' + n + '.webp',
+      bytes: 100,
+      sha256: hash,
+    })),
+  );
+  let active = 0,
+    peak = 0,
+    reads = 0;
+  const inventory = await measureAccount({
+    endpoint,
+    batch: candidates,
+    now: () => now,
+    aws: async (command, _args, url) => {
+      if (command === 'list-buckets')
+        return {
+          Buckets: jurisdictionFrom(url) === 'default' ? names.map((Name) => ({ Name })) : [],
+        };
+      if (command === 'list-objects-v2')
+        return {
+          IsTruncated: false,
+          Contents: Array.from({ length: 3 }, (_, n) => ({
+            Key: 'image-' + n + '.webp',
+            Size: 100,
+          })),
+        };
+      assert.equal(command, 'head-object');
+      peak = Math.max(peak, ++active);
+      reads++;
+      await new Promise((accept) => setTimeout(accept, 5));
+      active--;
+      return { Metadata: { sha256: hash } };
+    },
+  });
+  assert.equal(peak, 4);
+  assert.equal(reads, 12);
+  assert.equal(active, 0);
+  assert.ok(
+    inventory.buckets.every((bucket) => bucket.objects.every((object) => object.sha256 === hash)),
+  );
+});
+
+test('an unsuccessful content check waits for sibling reads and never returns a partial inventory', async () => {
+  let active = 0,
+    finished = 0;
+  const candidates = Array.from({ length: 4 }, (_, n) => ({
+    bucket: 'media',
+    key: 'image-' + n + '.webp',
+    bytes: 100,
+    sha256: hash,
+  }));
+  await assert.rejects(
+    measureAccount({
+      endpoint,
+      batch: candidates,
+      aws: async (command, args, url) => {
+        if (command === 'list-buckets')
+          return { Buckets: jurisdictionFrom(url) === 'default' ? [{ Name: 'media' }] : [] };
+        if (command === 'list-objects-v2')
+          return {
+            IsTruncated: false,
+            Contents: candidates.map((x) => ({ Key: x.key, Size: x.bytes })),
+          };
+        active++;
+        try {
+          if (args[args.indexOf('--key') + 1] === 'image-0.webp') throw Error('Hash read failed');
+          await new Promise((accept) => setTimeout(accept, 10));
+          finished++;
+          return { Metadata: { sha256: hash } };
+        } finally {
+          active--;
+        }
+      },
+    }),
+    /Hash read failed/,
+  );
+  assert.equal(active, 0);
+  assert.equal(finished, 3);
 });

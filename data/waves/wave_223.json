@@ -1,0 +1,645 @@
+{
+  "wave": "wave_223",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "cornucopia-hedgehog-forest-horn",
+      "title": "Hedgehog and Woodland Cornucopia",
+      "alt": "A small hedgehog sniffs a chestnut beside a bark-textured cornucopia with acorns, oak leaves and a fern.",
+      "description": "A small hedgehog sniffs a chestnut beside a bark-textured cornucopia with acorns, oak leaves and a fern. An original cornucopia illustration for personal woodland stories and educational harvest projects.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_223/source/cornucopia-hedgehog-forest-horn.png",
+      "printMaxEdgePx": 780,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 780,
+      "pdfHeight": 713,
+      "sourceType": "raster",
+      "sourceSha256": "a5df528571032a84c2d0af2fcd04765916789e23bdb8ecc9dba568626ca6ea6b",
+      "inputSignature": "ca43b32487368d80e9cd0b7ba5ee8d0108b7cd5f014a19d1326dc28eaaa75634",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 961320,
+        "weightedCmykRmse": 1.187892
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1312444,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1141940,
+          "weightedCmykRmse": 0.68051
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1095863,
+          "weightedCmykRmse": 0.813801
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1034284,
+          "weightedCmykRmse": 0.980189
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 961320,
+          "weightedCmykRmse": 1.187892
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        32,
+        41,
+        1296,
+        1158
+      ],
+      "image": {
+        "width": 780,
+        "height": 713,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_223/exports/cornucopia-hedgehog-forest-horn.pdf",
+          "bytes": 961320,
+          "sha256": "707a46a684b73edcf1bc9856946f3f17c24d8e6defdc4f90cb8057b6624c5299"
+        },
+        "webp": {
+          "path": "work/production/wave_223/exports/cornucopia-hedgehog-forest-horn.webp",
+          "bytes": 1871944,
+          "sha256": "024ae5c2364dad757b306671d0ff3800da9b45920cbde5f93461f30a51fd9ab3"
+        },
+        "thumb": {
+          "path": "work/production/wave_223/exports/cornucopia-hedgehog-forest-horn-thumb.webp",
+          "bytes": 112914,
+          "sha256": "464f9c9241da4488a6e0cee31c7c236e40a6dd40d1f48d3c60f8a3c90b5b2d90"
+        }
+      },
+      "proofSha256": "0fea779c7a36ef1e536a98c5727c9f46c201eb8e8f4c75cb5ccb495fdd6d88cc",
+      "pairMeanRgbDifference": 5.05255
+    },
+    {
+      "id": "cornucopia-songbird-wheat-horn",
+      "title": "Songbird on a Wheat Cornucopia",
+      "alt": "A small brown songbird perches on the braided rim of a cornucopia holding wheat and seed pods.",
+      "description": "A small brown songbird perches on the braided rim of a cornucopia holding wheat and seed pods. An original cornucopia illustration for personal woodland stories and educational harvest projects.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_223/source/cornucopia-songbird-wheat-horn.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 950,
+      "pdfHeight": 633,
+      "sourceType": "raster",
+      "sourceSha256": "c5190e68a2e7d0c65491087e304f2d62c4ee0ab72d638952a57312040f1db8d1",
+      "inputSignature": "6d44dfe3d19e24578e0a809d40c8c6900c40a9cabc9c851d50c5a696344bc47a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 966869,
+        "weightedCmykRmse": 1.207673
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1319216,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1151927,
+          "weightedCmykRmse": 0.691459
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1104988,
+          "weightedCmykRmse": 0.827016
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038527,
+          "weightedCmykRmse": 1.008559
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 966869,
+          "weightedCmykRmse": 1.207673
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        29,
+        31,
+        1523,
+        1006
+      ],
+      "image": {
+        "width": 950,
+        "height": 633,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_223/exports/cornucopia-songbird-wheat-horn.pdf",
+          "bytes": 966869,
+          "sha256": "005e2fba9ae37ada1c926732d35147083d5ec98d84ee9926eef50569a85d6a49"
+        },
+        "webp": {
+          "path": "work/production/wave_223/exports/cornucopia-songbird-wheat-horn.webp",
+          "bytes": 2046492,
+          "sha256": "c00ba457eb5e7b754fd2ebeac9e5dd03f331d6e3504f45ccba2d4e5f77ff2ac2"
+        },
+        "thumb": {
+          "path": "work/production/wave_223/exports/cornucopia-songbird-wheat-horn-thumb.webp",
+          "bytes": 76214,
+          "sha256": "c419a4d62978178cdb9de4ed9609e88704fd822f699ada6a59e57c2fc36dce98"
+        }
+      },
+      "proofSha256": "764be17ea1abf59941e1d03f87cad4ea8484e45b846fd0e4ef9e14d21fa4b9c5",
+      "pairMeanRgbDifference": 6.42028
+    },
+    {
+      "id": "cornucopia-mouse-berry-horn",
+      "title": "Wood Mouse Peeking from a Cornucopia",
+      "alt": "A wood mouse peeks from a wicker cornucopia among acorns, berries and autumn leaves, with its tail curved along the rim.",
+      "description": "A wood mouse peeks from a wicker cornucopia among acorns, berries and autumn leaves, with its tail curved along the rim. An original cornucopia illustration for personal woodland stories and educational harvest projects.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_223/source/cornucopia-mouse-berry-horn.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "18a8ad41add3697ac03972e56b70fd3d13c781a37d9e8df29110f72dab4792b9",
+      "inputSignature": "45387e26c6cc084eba019a98fca9edede1dcffb6d44cf23f82764783a2924cf9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 942123,
+        "weightedCmykRmse": 1.256608
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1355448,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1141045,
+          "weightedCmykRmse": 0.709272
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1088308,
+          "weightedCmykRmse": 0.844088
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1015159,
+          "weightedCmykRmse": 1.023345
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 942123,
+          "weightedCmykRmse": 1.256608
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        12,
+        1518,
+        1007
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_223/exports/cornucopia-mouse-berry-horn.pdf",
+          "bytes": 942123,
+          "sha256": "4d53504232e79aab5563fa3e5d62f396cf7f39ae558867017470f8f8f4df5de9"
+        },
+        "webp": {
+          "path": "work/production/wave_223/exports/cornucopia-mouse-berry-horn.webp",
+          "bytes": 2048602,
+          "sha256": "2c6c75195d790adfb651a0ad1be4b2b0f4b0915b135a5eec6f99346dbf0ce93a"
+        },
+        "thumb": {
+          "path": "work/production/wave_223/exports/cornucopia-mouse-berry-horn-thumb.webp",
+          "bytes": 66358,
+          "sha256": "e2bd796801d39043e85f79a8e44440da6d4f26698fca273fb397bd1aeebe7a21"
+        }
+      },
+      "proofSha256": "ec7e3a2431ae1e0673a990099ad54457e06bb4043237c49bc3e4d5e3c35705e0",
+      "pairMeanRgbDifference": 6.31343
+    },
+    {
+      "id": "cornucopia-fox-harvest-rest",
+      "title": "Resting Fox Beside a Straw Cornucopia",
+      "alt": "A red fox sleeps curled beside an empty straw cornucopia on a small patch of autumn leaves.",
+      "description": "A red fox sleeps curled beside an empty straw cornucopia on a small patch of autumn leaves. An original cornucopia illustration for personal woodland stories and educational harvest projects.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_223/source/cornucopia-fox-harvest-rest.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6cb92d28e432b79410799ec5540a5f22017168445d52e9f9576c3bbffb385c09",
+      "inputSignature": "ae542d53f066d122e3eb37206e2f42ad60742289ee33a5b19e5b6fb9ecf94f56",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 954919,
+        "weightedCmykRmse": 1.25116
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1370537,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1155267,
+          "weightedCmykRmse": 0.706526
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1102602,
+          "weightedCmykRmse": 0.841614
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1029221,
+          "weightedCmykRmse": 1.018066
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 954919,
+          "weightedCmykRmse": 1.25116
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        24,
+        19,
+        1510,
+        981
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_223/exports/cornucopia-fox-harvest-rest.pdf",
+          "bytes": 954919,
+          "sha256": "6bf2ddbc9b4238942c74059e7e5ca1024eabfe2cda0860963eb8eb8add2488b5"
+        },
+        "webp": {
+          "path": "work/production/wave_223/exports/cornucopia-fox-harvest-rest.webp",
+          "bytes": 2134784,
+          "sha256": "335135e4ab84787d419295b3dbba0d2686cdf8cca56d4f7ad3106e508ffc1022"
+        },
+        "thumb": {
+          "path": "work/production/wave_223/exports/cornucopia-fox-harvest-rest-thumb.webp",
+          "bytes": 65556,
+          "sha256": "5bd23ddf38b76d2218d73f016e8dd241917cc865953b1f455387b48b54ddc994"
+        }
+      },
+      "proofSha256": "eaad365bbfd03878c03edd4ea2067c52d8be3646a62034ba0854e2ce583b7ab6",
+      "pairMeanRgbDifference": 5.0027
+    },
+    {
+      "id": "cornucopia-sunflower-dahlia-horn",
+      "title": "Sunflower and Dahlia Cornucopia",
+      "alt": "A dark wicker cornucopia holds a sunflower, burgundy dahlias, wheat and green foliage beside one detached petal.",
+      "description": "A dark wicker cornucopia holds a sunflower, burgundy dahlias, wheat and green foliage beside one detached petal. An original cornucopia illustration for personal woodland stories and educational harvest projects.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_223/source/cornucopia-sunflower-dahlia-horn.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4c37bfc816cb585b9b4aab0983167c6b2c3c1dd62890ed1ee3f27c09f6286606",
+      "inputSignature": "6c401407af66d7f808c17d122d78df811dd15b9217eadc7b150c1e48e5f4e675",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 978496,
+        "weightedCmykRmse": 1.04343
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1298423,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1100128,
+          "weightedCmykRmse": 0.732068
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1051010,
+          "weightedCmykRmse": 0.863905
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 978496,
+          "weightedCmykRmse": 1.04343
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        31,
+        42,
+        1513,
+        975
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_223/exports/cornucopia-sunflower-dahlia-horn.pdf",
+          "bytes": 978496,
+          "sha256": "ad5f0b6bfe7b3eae27937b58ea29e2de770370fee9c189ae65bd9c89217000eb"
+        },
+        "webp": {
+          "path": "work/production/wave_223/exports/cornucopia-sunflower-dahlia-horn.webp",
+          "bytes": 1907470,
+          "sha256": "853fb817dcb8a23dc8054a7c92ea733388e79184db9e735bcd3ef8a122fa4ed0"
+        },
+        "thumb": {
+          "path": "work/production/wave_223/exports/cornucopia-sunflower-dahlia-horn-thumb.webp",
+          "bytes": 70336,
+          "sha256": "4eae3828a3520cad1f18eb74d98b982e26aafc80612e3f628337369034f29b22"
+        }
+      },
+      "proofSha256": "155adb623f287fc1c7f301cb2fa61a20a3ce5b8ed86dcfa11c698a34abb1b235",
+      "pairMeanRgbDifference": 5.70183
+    },
+    {
+      "id": "cornucopia-white-pottery-arrangement",
+      "title": "White Pottery Cornucopia Arrangement",
+      "alt": "A matte white ceramic cornucopia with cream flowers, seed heads and a green pear rests on a low wooden plinth.",
+      "description": "A matte white ceramic cornucopia with cream flowers, seed heads and a green pear rests on a low wooden plinth. An original cornucopia illustration for personal woodland stories and educational harvest projects.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_223/source/cornucopia-white-pottery-arrangement.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cornucopia",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f5ec6e0d4afd0572a9ad374df19c1d670043caec56133defda4a9ef202ab2fee",
+      "inputSignature": "5f07d3be8c06020e2f3bec0f2a88203549bedb9890f9cf4fd828ccf15d7173c3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973280,
+        "weightedCmykRmse": 1.354693
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1472981,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1214596,
+          "weightedCmykRmse": 0.75787
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1144021,
+          "weightedCmykRmse": 0.886656
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1050927,
+          "weightedCmykRmse": 1.074556
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973280,
+          "weightedCmykRmse": 1.354693
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        51,
+        1280,
+        1159
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_223/exports/cornucopia-white-pottery-arrangement.pdf",
+          "bytes": 973280,
+          "sha256": "32417bac363b87b9f98ac3f874b0bf6d82d9cd6f0bbafed11ee9c83bb023edcd"
+        },
+        "webp": {
+          "path": "work/production/wave_223/exports/cornucopia-white-pottery-arrangement.webp",
+          "bytes": 1335690,
+          "sha256": "52a39bd1746143160beb3b92b4872099e44332790a768e2e40e7a4a78a5fc566"
+        },
+        "thumb": {
+          "path": "work/production/wave_223/exports/cornucopia-white-pottery-arrangement-thumb.webp",
+          "bytes": 83258,
+          "sha256": "ac32a58e3795185d0df19060b567f2e2ff2f58be80dd2e085be25706400ec32d"
+        }
+      },
+      "proofSha256": "2f07ba620fabe9d3a252fc4c693c5c3988921734006820fa4e3900bddb049174",
+      "pairMeanRgbDifference": 3.67069
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T12:33:13.375390+00:00",
+  "screenReviewScope": "All six original masters and final native CMYK proofs visually inspected: coherent animals and botanicals, full framing and distinct useful compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T12:54:10.992Z",
+  "cdnVerifiedAt": "2026-10-25T13:14:54.387Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "publishedVerifiedAt": "2026-10-25T14:49:19.361258+00:00",
+  "sourceRevision": "6c04483a40695410d96003a7ecf800b5ca8f105c",
+  "liveEvidence": "reports/cornucopia-live/chromium/report.json"
+}

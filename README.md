@@ -1,133 +1,67 @@
 # UltraClipart
 
-An English-language, static-first Astro 7.4.2 clipart catalog with a layered SVG browser editor, transparent WebP downloads, and process-CMYK vector PDF exports. TypeScript, small browser modules, Inter, and Cloudflare Pages keep the application lightweight.
+An English-language Astro 7 and TypeScript clipart catalog, online editor and blank creation studio. Cloudflare Pages serves the application; immutable catalog media lives in R2 Standard. Inter is distributed under its open font license.
 
-**31 original illustrations across 23 topics are available in this release.** This includes the ten initial designs and 21 independently composed drawings in the first production wave. The supplied taxonomy retains all 110 topics and a target of 5,500 distinct drawings: **5,469 remain undrawn**; no topic is complete at 50. Review records distinguish AI screen review from human approval. Production and review notes are kept in repository records, not displayed on the website or inside the illustrations.
+## Catalog and production records
 
-The owner-supplied Volleyball collection adds **50 designs**, bringing the public catalog to **81 illustrations across 24 populated topics**. Its original transparent 1,382px WebPs and embedded-profile CMYK PDFs are preserved byte for byte. They are raster downloads, so their cards offer View and Download and do not invent layered editor sources. Volleyball is a supplemental topic; these files do not reduce the original 5,500-drawing target. The intake evidence records all 50 independently rendered PDF/WebP matches, original checksums and four-channel ICC profiles. Standard PDFs stay below 1,000,000 bytes.
+`data/art.json` describes actual catalog artwork. `data/publication.json` binds every published representation to its exact byte count, SHA-256, immutable CDN URL, MIME type and verification evidence. Planned subjects are not presented as completed artwork.
 
-## Run locally
+The original plan is 110 topics with 50 generated illustrations per topic. `data/production-queue.json` records prepared catalog counts and remaining topic targets. Owner-supplied packages and the separate technology supplement are excluded from the 5,500 generated-artwork target. A prepared catalog row is not evidence that its deployment has passed live verification; retain the exact release revision and browser evidence when recording a completed publication.
 
-Use Node.js 24 and pnpm 11.25.0. The package's minimum Node version is 22.23.4.
+## Development and checks
+
+Use the Node and pnpm versions pinned in `package.json` and the workflow.
 
 ```sh
-corepack enable
-corepack prepare pnpm@11.25.0 --activate
 pnpm install --frozen-lockfile
-node scripts/restore-assets.mjs
-pnpm dev
-```
-
-Open the local URL printed by Astro. Main commands:
-
-```sh
 pnpm check
+pnpm dev
 pnpm build
 pnpm test
-pnpm exec astro preview
 ```
 
-`pnpm test` checks keyword parity, real file signatures and hashes, search, editor document behavior, SEO output, and R2 budgeting/ingestion logic. Build before running tests that inspect generated HTML. Browser checks are separate from unit checks:
+Check and build restore missing catalog media from the public CDN. Restoration verifies content type, size and SHA-256, confines writes to `public/`, and rejects changed local sources. Builds need no R2 write credentials. Browser checks in `tests/e2e/` cover responsive layouts, keyboard access, search, studio/editor operations and actual downloads.
+
+The full unit suite and type checks run locally before publication and in GitHub Actions. The generated-artwork editor matrix selects all raster artwork belonging to the original topic plan, excluding supplied packages, then partitions every selected artwork once across three shards. Newly populated original topics enter coverage automatically. Supplied-package and supplemental-artwork suites remain separate.
+
+## Artwork and exports
+
+SVG sources retain editable vector layers. Raster sources retain one intact image layer; added text, shapes and other editor elements are separate editable layers. Moving, cropping, transforming, saving projects and editing added elements must not be described as independent vector editing of a flattened illustration.
+
+Generated native WebP preserves the selected source RGBA pixels losslessly. Supplied originals retain their verified bytes. Standard PDF files must remain below 1,000,000 bytes. Raster print exports use real four-channel CMYK data and a registered GRACoL output condition; the full ICC profile is referenced rather than embedded. Each artwork exposes its actual print-page dimensions. Physical print proofs are distinct from screen-render checks.
+
+Production plans and evidence live in `data/briefs/`, `data/research/`, `data/waves/` and ignored local staging directories. Review every selected master and rendered PDF, verify PDF/WebP pairing, check for exact and perceptual duplicates against the existing catalog, and inspect the final edited exports before publication. Source-only files and held variants do not count as finished artwork.
+
+## R2 publication
+
+Use the guarded uploader in `scripts/r2/`; see [the R2 runbook](docs/r2-ingestion.md). It measures the authorized account inventory, enforces the configured storage budget, uploads immutable content-addressed objects and reads every object back to verify its bytes. Public-CDN verification then checks the complete new representation set before creating a candidate manifest. Upload success alone does not grant editorial approval or prove live publication.
+
+The source ZIPs, private working PNGs and credentials are not committed. PNG masters are not catalog downloads. Do not delete source archives or held repair evidence as part of publishing a replacement.
+
+## Deployment
+
+The public GitHub repository connects to the `ultraclipart` Cloudflare Pages project on `main`. The output directory is `dist`. Use this hosting build command:
 
 ```sh
-pnpm exec playwright install chromium
-# With the development or preview server running:
-BASE_URL=http://127.0.0.1:4321 node tests/e2e/search.mjs
-BASE_URL=http://127.0.0.1:4321 node tests/e2e/site.mjs
-BASE_URL=http://127.0.0.1:4321 node tests/e2e/refinement.mjs
+pnpm build && pnpm test:release
 ```
 
-Set `BASE_URL` to the actual server address. Browser evidence is generated under `reports/`. A local passing result does not prove a deployed domain works.
+The hosting release gate checks catalog identities, every declared asset representation, immutable publication mapping, generated output, CSP and retired-route isolation. It retains the existing full-byte verification. The full unit suite, type checks and browser suites remain in local publication and GitHub CI; repeating the entire suite inside the hosting container previously exhausted its build time limit after all tests had passed.
 
-The full-site browser suite checks all ten reference workflows at desktop, tablet and mobile sizes, accessibility scans, category filtering, favorites, dialog keyboard behavior and informational routes. It defaults to Chromium; set `TEST_BROWSER=firefox` or `TEST_BROWSER=webkit` after installing that Playwright browser. `.github/workflows/ci.yml` runs locked installation, type checks, build, tests and Chromium, Firefox and WebKit browser/editor checks on pull requests and pushes to `main`.
+Keep `NODE_VERSION`, `PNPM_VERSION` and telemetry settings aligned with the repository. Cloudflare sets `CF_PAGES=1`, which selects verified immutable CDN URLs. Keep `PAGES_WRANGLER_MAJOR_VERSION=4` aligned with the account's supported file ceiling. The build validates actual output count and route limits. Never infer a paid plan or raise limits by changing the validation constant.
 
-## Creative Studio
-
-`/create/` is a local browser workspace. It starts from a blank canvas or one of six editable studio templates. The templates are separate from catalog production counts. Users can combine eight parameterized shapes, draw smooth vector strokes, add text, resize the canvas, import supported SVGs, manage named layers, save an editable project, and export transparent WebP or process-CMYK vector PDF. Existing transform, grouping, crop, print-layout and undo tools share the same document model as the catalog editor.
-
-SVG imports use an explicit vector-element and attribute allowlist, finite geometry limits, and document/layer/path bounds. External resources, scripts and unsupported rendering features are rejected. Project recovery stays in browser storage; users should save a project file for a separate copy. The site does not upload user artwork or call a paid image API. Original user work remains theirs; UltraClipart starter templates follow the site's personal and educational use license.
-
-The creator suite exercises blank and template workflows, drawing cancellation, shape controls, imports, undo, exports and responsive accessibility:
-
-```sh
-UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/creator.mjs
-```
-
-## Art production and resuming
-
-The ten pilot illustrations are original AI-assisted, code-drawn vectors with named editable groups. There is no stock artwork or screenshot tracing. The checked-in small pilot is for development and review; a full catalog belongs in R2, not Git. Revision 2 improves all ten existing works without inflating the drawing count: 107 named editable layers, with composition and material details recorded in `data/art-revision-history.json`.
-
-Install Python 3.12+, create a virtual environment, and install the pinned art dependencies. Poppler's `pdftoppm` is needed only for screen proofs.
-
-```sh
-python3 -m venv .venv-art
-.venv-art/bin/python -m pip install -r scripts/requirements-art.txt
-.venv-art/bin/python scripts/art-create.py
-.venv-art/bin/python scripts/art-export.py
-.venv-art/bin/python scripts/art-preflight.py
-.venv-art/bin/python scripts/art-plan.py
-.venv-art/bin/python scripts/art-proofs.py
-```
-
-These commands rebuild the existing pilot; they do not invent another 5,469 finished drawings. `data/production-queue.json` records actual generated assets, pending reviews, and all topic targets. `data/briefs/` contains 450 **draft** concept rows for the nine represented topics. Review and refine briefs before drawing the next minibatch. The initial pilot preceded the full draft briefs; that limitation is recorded rather than hidden.
-
-See [the reproducible art pipeline](scripts/ART-PIPELINE.txt) for optional executable overrides and file locations. `data/art-preflight.json` records structural and file checks. `data/art-visual-review.json` records an **AI-agent screen review**, not human or physical-print approval.
-
-Original downloads use lossless 2048 × 2048 WebP with alpha. PDFs contain actual CMYK vector painting operations. LittleCMS converts sRGB to GRACoL2006_Coated1v2; exact neutral colors preserve pure K. PDFs identify the registered print condition, while the full ICC profile is referenced rather than embedded because its size exceeds the 1,000,000-byte PDF cap. The licensed profile and terms are in `public/color/`. No PDF/X certification or universal printer/paper color match is claimed. Browser edited exports use the same sampled color transform, subject to their recorded fidelity tests.
-
-Current catalog preflight: 124 representations totaling 2,779,456 local bytes; maximum PDF 6,272 bytes; zero PDFs above the cap. These are local measurements, not R2 usage.
-
-## R2 and deployment
-
-[scripts/r2](scripts/r2/) is the supported automated R2 ingestion path. The small initial pilot and its revised immutable snapshot were uploaded through the authorized Cloudflare dashboard and then checked byte-for-byte through the public CDN; automated waves must use the guarded uploader. Read the [R2 runbook](docs/r2-ingestion.md) before use. It requires an owner-authorized, activated R2 Standard account, an existing bucket, existing authorized REST login or S3 credentials, and full-account inventory access. It does not activate subscriptions or configure billing.
-
-```sh
-node scripts/r2/make-batch.mjs BUCKET --pilot --output work/r2-batch.json
-node scripts/r2/ingest.mjs work/r2-batch.json
-# After reviewing the measured inventory and batch:
-node scripts/r2/ingest.mjs work/r2-batch.json --apply
-```
-
-The first command only writes a local batch; the second reads remote inventory without uploading. `--pilot` explicitly selects unapproved preview assets and does not grant publication approval. The uploader verifies remote SHA-256 values, checkpoints completed file groups, resumes the same batch, and enforces the aggregate 8 GB ingestion stop. It cannot cap externally generated request charges or coordinate unrelated uploaders. Never commit credentials or journals.
-
-Connect this repository to a new Cloudflare Pages project named `ultraclipart`, using the repository root and production branch `main`. Set the build command to `pnpm check && pnpm build && pnpm test` and the output directory to `dist`. Pages publishes the successful build automatically; its Git integration does not need a separate deploy command or a new account-wide API token.
-
-Set build variables `NODE_VERSION=24.19.0`, `PNPM_VERSION=11.25.0`, and `ASTRO_TELEMETRY_DISABLED=1`. Cloudflare sets `CF_PAGES=1`: production then reads `data/publication.json`, checks every catalog file against the verified CDN snapshot and compiles each verified immutable file URL into HTML and search data. A missing, incomplete or changed release fails the build. A dashboard `PUBLIC_ASSET_BASE` cannot override this release record. Local and CI builds restore exact catalog assets from the public CDN. A narrow Pages Function returns a real 404 for retired empty collection routes; other pages and assets are static. No runtime R2/D1 binding is used.
-
-For an optional manual deployment using an already authorized local Cloudflare session (the command rebuilds in production mode and requires publication, type, build and unit-test gates before uploading):
+For an authorized manual publication:
 
 ```sh
 pnpm deploy
 ```
 
-Production output excludes duplicate pilot files only after confirming that every reference uses the verified CDN. Content-addressed search shards receive immutable cache headers; the small manifest revalidates. An exact post-build file-count guard enforces the 20,000-file Pages Free limit. The 5,500-item synthetic search fixture currently projects 17,720 files and downloads 9,589 bytes of JSON for a cold eight-result browse; this is a scale test, not a claim that 5,500 drawings exist. See [search architecture](docs/SEARCH-ARCHITECTURE.txt).
+This restores and verifies assets, runs type checks, rebuilds production output, verifies any R2-hosted catalog pages, checks headers and runs the full unit suite before uploading. It does not publish a stale existing `dist/` folder. Keep the resulting deployment bound to its exact Git revision and test the apex-domain release afterward.
 
-`wrangler.jsonc` declares the Pages project and `pages_build_output_dir: "./dist"`. The build generates the exact inline-script CSP hashes in `dist/_headers`, and `dist/404.html` provides the missing-page response. Custom-domain DNS, R2 activation, account metrics, and live smoke-test evidence must be verified in the actual accounts; configuration files and this README are not proof of a successful deployment. Current verified deployment status belongs in the delivery report. See the official [Astro deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/), [Pages configuration](https://developers.cloudflare.com/pages/functions/wrangler-configuration/), and [build version settings](https://developers.cloudflare.com/pages/configuration/build-image/).
+The application also uses narrowly scoped Pages Functions for unavailable routes, project sharing, guarded generation endpoints and selected R2-hosted catalog pages. Bindings and explicit server quotas are declared in `wrangler.jsonc`; no client receives account credentials.
 
-After deployment, read-only smoke checks compare all built routes and their resources with the live site, and the complete pilot CDN files with the verified local hashes. The CDN check reads the verified per-file publication map:
+## License and public content
 
-```sh
-BASE_URL=https://ultraclipart.com node scripts/smoke-live.mjs
-node scripts/smoke-cdn.mjs
-BASE_URL=https://ultraclipart.com node tests/e2e/site.mjs
-```
+Artwork is free for personal and educational use. Commercial use and resale as clipart are prohibited. Contact: ultraclipart@gmail.com.
 
-HTTP and CDN results are saved in `reports/live/`. A passing HTTP check does not replace browser execution under the deployed security policy. `scripts/audit-performance.mjs` records lab LCP/CLS, build sizes and configured versus observed headers; it does not measure field Core Web Vitals or claim INP.
-
-## Rights, review, and remaining work
-
-The owner approved **free personal and educational use**; commercial use and resale as clipart are prohibited. Contact: [ultraclipart@gmail.com](mailto:ultraclipart@gmail.com). This policy is not a human art-quality signoff. Inter is bundled under its open font license; no proprietary Avenir webfont is distributed.
-
-Remaining work includes the 5,469 undrawn designs, review and production publication gates, source-informed cultural/religious artwork review, physical print proofing, and any browser/device or live-account checks not backed by saved evidence. No Search Console verification, traffic, ranking, artist credential, review, or storage total is fabricated.
-
-Further implementation decisions and official-source research: [requirements](docs/requirements.md), [research](docs/research.md).
-
-## Content readiness
-
-The 110-subject production plan remains intact. Public topic and collection routes now require actual artwork; planned subjects in the directory are opt-in labels without empty destinations. Three practical guides and a browser-local print-size calculator help visitors finish real projects. Composition-specific artwork notes are separate repository records. The notes' layer metadata is tested against source SVGs. See `docs/CONTENT-READINESS.txt` for official Google sources, implemented controls, and pending owner/human editorial review. No AdSense approval, minimum content count, or advertising integration is claimed.
-
-## Production wave 001
-
-Original drawing recipes live in `scripts/waves/`; exported production binaries live in R2. `scripts/restore-assets.mjs` restores missing build inputs from the hash-pinned publication manifest without credentials, rejects changed local files and confines writes to public/. Both check and build run it automatically. The 21 new drawings use 6–10 named layers, lossless 2048px WebP, and vector CMYK PDF. Their composition notes and screen-review records are in `data/artwork-notes.json` and `data/waves/wave_001.json`. Human approval and physical printing are not claimed.
-
-The browser tests use the actual growing catalog for counts and pagination. `scripts/sync-production-queue.mjs` refreshes the 110-topic progress ledger; avoid the historical pilot planner after adding new waves. New artwork is not complete until all four representations pass export, R2 readback and public CDN hash/MIME/CORS checks. A successful upload alone never grants editorial approval.
+Public titles, ALT text, structured data and counts must describe the actual image and available files. Preserve working canonical URLs when replacing artwork. Do not invent artist identities, reviews, licenses, search rankings, advertising acceptance or human/physical-print approval. Production annotations belong in repository evidence, not in the artwork or public gallery.

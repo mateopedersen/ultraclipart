@@ -1,0 +1,597 @@
+{
+  "wave": "wave_232",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "harvest-honey-harvest-frame",
+      "title": "Honey Harvest Frame and Jar",
+      "alt": "A wooden frame of honeycomb stands beside an unlabelled honey jar, a wooden dipper and small flowers.",
+      "description": "A wooden frame of honeycomb stands beside an unlabelled honey jar, a wooden dipper and small flowers. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_232/source/harvest-honey-harvest-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "a8736af9a5444dd7dac219ce5f7c04e800b671d1a58020ad283b2edac7261828",
+      "inputSignature": "94d8188f545c69854875f7725aae6d772a6a8eca8fda253fe31075adb3f98e16",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 934548,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 934548,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        65,
+        77,
+        1498,
+        937
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_232/exports/harvest-honey-harvest-frame.pdf",
+          "bytes": 934548,
+          "sha256": "e7192cda7cee5726f96c32b4b23812c62ac50e07bc2ef205a49322860b6d5a5f"
+        },
+        "webp": {
+          "path": "work/production/wave_232/exports/harvest-honey-harvest-frame.webp",
+          "bytes": 1655848,
+          "sha256": "5b6109496af4a40b86e8a93d806c25fde2558aaf7f3f7f2abdfa69d9f97da33e"
+        },
+        "thumb": {
+          "path": "work/production/wave_232/exports/harvest-honey-harvest-frame-thumb.webp",
+          "bytes": 52816,
+          "sha256": "a5dd8d913cb505df3ca6c97e48c6d6b9c1dab7009cf836a1164dcfd6e3545658"
+        }
+      },
+      "proofSha256": "7cde052967ed47aa86ab3af4e9f10beccb62c84b2f48cfe6bd5f26bac68dc15a",
+      "pairMeanRgbDifference": 4.32841
+    },
+    {
+      "id": "harvest-maple-sap-bucket",
+      "title": "Maple Sap Collection Bucket",
+      "alt": "A metal spile in a maple trunk drips sap into a hanging metal bucket beneath its partly open protective lid.",
+      "description": "A metal spile in a maple trunk drips sap into a hanging metal bucket beneath its partly open protective lid. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_232/source/harvest-maple-sap-bucket-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1240,
+      "height": 1269,
+      "pdfWidth": 977,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "fce948adc2bbe6a70da804bac3ef8ad0aae836f5a0a990ad3c9d2e308ed268f9",
+      "inputSignature": "ac0e45e8eaec074dd651c438718a6c6b988d447114c36e302b56824d9c3057ea",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 913434,
+        "weightedCmykRmse": 1.473391
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1420131,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1142141,
+          "weightedCmykRmse": 0.793138
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1073599,
+          "weightedCmykRmse": 0.95222
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 985230,
+          "weightedCmykRmse": 1.155635
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 913434,
+          "weightedCmykRmse": 1.473391
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        183,
+        31,
+        1140,
+        1241
+      ],
+      "image": {
+        "width": 977,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_232/exports/harvest-maple-sap-bucket.pdf",
+          "bytes": 913434,
+          "sha256": "083072f15c81816afbdbaf0d2f09f4f77e1a57157f969b3e8690c89030e00f48"
+        },
+        "webp": {
+          "path": "work/production/wave_232/exports/harvest-maple-sap-bucket.webp",
+          "bytes": 1268868,
+          "sha256": "a78c822b9ed10cf4b500b9287db6680fcd96e531c49890579e6f64df2dc85e55"
+        },
+        "thumb": {
+          "path": "work/production/wave_232/exports/harvest-maple-sap-bucket-thumb.webp",
+          "bytes": 69976,
+          "sha256": "3641cdae806cd419d154a4cf643502bebf0dc7037323ec580a70fc7b0b77dd80"
+        }
+      },
+      "proofSha256": "02b07cb6b0e9e779f48c6716c26b294c1f8b578b13882887a9bd14dca28b22da",
+      "pairMeanRgbDifference": 4.17207
+    },
+    {
+      "id": "harvest-winnowing-grain-tray",
+      "title": "Winnowing Grain in a Shallow Tray",
+      "alt": "A shallow woven winnowing tray holds elongated wheat kernels beside wheat heads, a burlap sack and folded cloth.",
+      "description": "A shallow woven winnowing tray holds elongated wheat kernels beside wheat heads, a burlap sack and folded cloth. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_232/source/harvest-winnowing-grain-tray-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1c9e002c4d744d7a61a790c3a9d9796fe1bfb6c1b3c98a0495c0f7f2e28a401e",
+      "inputSignature": "6e4ac82f6678f577b845a051e69971563c723765bf6fcafee1e96939cab91a12",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 910871,
+        "weightedCmykRmse": 1.228116
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1332940,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1112614,
+          "weightedCmykRmse": 0.694814
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1058254,
+          "weightedCmykRmse": 0.827243
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 985174,
+          "weightedCmykRmse": 0.997432
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 910871,
+          "weightedCmykRmse": 1.228116
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        78,
+        1525,
+        978
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_232/exports/harvest-winnowing-grain-tray.pdf",
+          "bytes": 910871,
+          "sha256": "a055cd60cd3aa08b26cd4dc2d9bea4c3d7da6f77af61f79b521b03d485ae59b1"
+        },
+        "webp": {
+          "path": "work/production/wave_232/exports/harvest-winnowing-grain-tray.webp",
+          "bytes": 2148776,
+          "sha256": "91e51b2271728e207c0fd9dba6e3f002940aa002a0efa76c5631ec4ccc982ce6"
+        },
+        "thumb": {
+          "path": "work/production/wave_232/exports/harvest-winnowing-grain-tray-thumb.webp",
+          "bytes": 72842,
+          "sha256": "79c1540d86e7a048546d4a714bb97f3627a12552dd90cc4501663d9e671b2816"
+        }
+      },
+      "proofSha256": "a93c9a5b92cf5e0ce12d0412738a3b5a29bab2c943113a15f672f23679861115",
+      "pairMeanRgbDifference": 6.07796
+    },
+    {
+      "id": "harvest-sack-grain-scoop",
+      "title": "Open Burlap Grain Sack and Scoop",
+      "alt": "An open burlap sack of wheat kernels holds a wooden scoop, with a few kernels scattered at its base.",
+      "description": "An open burlap sack of wheat kernels holds a wooden scoop, with a few kernels scattered at its base. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_232/source/harvest-sack-grain-scoop.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1226,
+      "height": 1283,
+      "pdfWidth": 850,
+      "pdfHeight": 890,
+      "sourceType": "raster",
+      "sourceSha256": "01e5810a6a12bd1a5068ed85931869463ffd3730eaad686f2840fc5dd5c73106",
+      "inputSignature": "7d44be183515613e0cc44f916728c0cf5414845018587e947dee52220da2bfd3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 945985,
+        "weightedCmykRmse": 1.329816
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1367894,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1149351,
+          "weightedCmykRmse": 0.73597
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1095573,
+          "weightedCmykRmse": 0.885031
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1012960,
+          "weightedCmykRmse": 1.082158
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 945985,
+          "weightedCmykRmse": 1.329816
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        71,
+        58,
+        1178,
+        1210
+      ],
+      "image": {
+        "width": 850,
+        "height": 890,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_232/exports/harvest-sack-grain-scoop.pdf",
+          "bytes": 945985,
+          "sha256": "3bc930c7fa909599b4803d6d6d0dafdf903b6e7b1f43a88914829ab38341989a"
+        },
+        "webp": {
+          "path": "work/production/wave_232/exports/harvest-sack-grain-scoop.webp",
+          "bytes": 1525740,
+          "sha256": "16ba5f37f238edfb03a22b9bf964275f3dbac55ab982fdd15b1778b8d19c06b2"
+        },
+        "thumb": {
+          "path": "work/production/wave_232/exports/harvest-sack-grain-scoop-thumb.webp",
+          "bytes": 83348,
+          "sha256": "34694e74dfcd3f5504875689f5eabdd4d65e73a83a88c099ae28ec3b9b2fae52"
+        }
+      },
+      "proofSha256": "278543fceeee69b518497b019d392825f5db672018dd0cfd00a9be59ae75d546",
+      "pairMeanRgbDifference": 4.61556
+    },
+    {
+      "id": "harvest-harvest-bunting-craft",
+      "title": "Harvest Paper Bunting Craft",
+      "alt": "Six small harvest pennants with wheat, apple and carrot motifs hang from a curved string on wooden clothespins.",
+      "description": "Six small harvest pennants with wheat, apple and carrot motifs hang from a curved string on wooden clothespins. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_232/source/harvest-harvest-bunting-craft.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "9dd814807a92b74775cff1a7c3adf029d686da3f065c9219d66fe30593e7b62d",
+      "inputSignature": "e8c1131ced99c91ec112c0541c8b5b248b226d39db6210bea6b257a5fcad5ace",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 684157,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 684157,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        180,
+        1511,
+        812
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_232/exports/harvest-harvest-bunting-craft.pdf",
+          "bytes": 684157,
+          "sha256": "c6c44c6608f4b4640d85c7926656c0ad802756818d637755609db071cf904b45"
+        },
+        "webp": {
+          "path": "work/production/wave_232/exports/harvest-harvest-bunting-craft.webp",
+          "bytes": 1286372,
+          "sha256": "800b9cd52a34cab4a0d37dbb4b48672e8e98ba6cdbec9775568402c08fc818dd"
+        },
+        "thumb": {
+          "path": "work/production/wave_232/exports/harvest-harvest-bunting-craft-thumb.webp",
+          "bytes": 39354,
+          "sha256": "60421c344deecec23f0c5d199916977ca678812992330f7f02e73661763b7efb"
+        }
+      },
+      "proofSha256": "4418fbb93c45d920f395dea8c98974a12f12cb48a5d4c7619b808bd78ebc4799",
+      "pairMeanRgbDifference": 2.66665
+    },
+    {
+      "id": "harvest-harvest-leaf-produce-wreath",
+      "title": "Harvest Produce and Grain Wreath",
+      "alt": "An open-center straw and grapevine wreath has a small cluster of squash, apples, wheat and autumn leaves.",
+      "description": "An open-center straw and grapevine wreath has a small cluster of squash, apples, wheat and autumn leaves. An original illustration for personal harvest projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_232/source/harvest-harvest-leaf-produce-wreath.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "harvest",
+      "width": 1234,
+      "height": 1275,
+      "pdfWidth": 861,
+      "pdfHeight": 890,
+      "sourceType": "raster",
+      "sourceSha256": "8aa30b1e44d03e02c6f0f1a78cfb4338866f7810d8d630fd357daa55f2cf2277",
+      "inputSignature": "5191b8e9a1b01d5701a14d1b3eec836b1f9c2563a57cb97e417753e644a1d1b5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 948838,
+        "weightedCmykRmse": 1.432822
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1337028,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1139691,
+          "weightedCmykRmse": 0.770121
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1085627,
+          "weightedCmykRmse": 0.926692
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1007764,
+          "weightedCmykRmse": 1.11472
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 948838,
+          "weightedCmykRmse": 1.432822
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        73,
+        97,
+        1219,
+        1191
+      ],
+      "image": {
+        "width": 861,
+        "height": 890,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_232/exports/harvest-harvest-leaf-produce-wreath.pdf",
+          "bytes": 948838,
+          "sha256": "f823b9c4663b25b4c3eb12fa5cd48033792c54626fe964c20e030d3680c5a322"
+        },
+        "webp": {
+          "path": "work/production/wave_232/exports/harvest-harvest-leaf-produce-wreath.webp",
+          "bytes": 1410730,
+          "sha256": "92a1a468cfe224cf24138aab74ab33b6315a8a6e83397fd26ddfdb4588317462"
+        },
+        "thumb": {
+          "path": "work/production/wave_232/exports/harvest-harvest-leaf-produce-wreath-thumb.webp",
+          "bytes": 93660,
+          "sha256": "bb511e54b62c57f09355527a9519355b3902cf0e27c42f3c9e4bea68a8245e53"
+        }
+      },
+      "proofSha256": "16923c5ac37f99d6da5e15bcde4bd70e676948d58309ee7c37027690a1bf0540",
+      "pairMeanRgbDifference": 3.02286
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T13:54:51.205571+00:00",
+  "screenReviewScope": "Every native CMYK PDF render visually inspected. Corrected sap flows into the open bucket, wheat kernels remain elongated; complete decorative scenes and distinct coloring outlines have coherent framing and anatomy.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T14:01:15.973Z",
+  "cdnVerifiedAt": "2026-10-25T14:15:03.627Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T14:49:19.361258+00:00",
+  "publishedVerifiedAt": "2026-10-25T15:13:53.709098+00:00",
+  "sourceRevision": "a905ff85554dc662b2a30c99c7869c9b52179386",
+  "liveEvidence": "reports/harvest-live/chromium/report.json"
+}

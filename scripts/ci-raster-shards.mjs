@@ -1,3 +1,21 @@
+/** Keep future generated topics in the original plan covered automatically. */
+export function originalRasterTargets(catalog, topics) {
+  if (!Array.isArray(catalog) || !Array.isArray(topics) || topics.length === 0)
+    throw new Error('Original raster selection requires a catalog and topic plan');
+  const slugs = new Set(topics.map((topic) => topic?.slug));
+  if (
+    slugs.size !== topics.length ||
+    [...slugs].some((slug) => !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug ?? ''))
+  )
+    throw new Error('Original topic identities must be unique valid slugs');
+  return catalog.filter(
+    (art) =>
+      art.sourceType === 'raster' &&
+      art.productionMethod !== 'owner-supplied' &&
+      slugs.has(art.topic),
+  );
+}
+
 /** Partition the complete target list, never the checks performed on each target. */
 export function shardRasterTargets(targets, env = process.env) {
   const count = env.RASTER_SHARD_COUNT;

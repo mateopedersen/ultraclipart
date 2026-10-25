@@ -155,6 +155,10 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=scanner ALL_RASTER=1 EVIDENCE_DIR=reports/scanner-editor node tests/e2e/raster-editor.mjs
             fi
             if [ '${{ matrix.suite }}' = 'catalog-extra-1' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=labubu ALL_RASTER=1 EVIDENCE_DIR=reports/labubu-editor node tests/e2e/raster-editor.mjs
+              if [ "$engine" = 'chromium' ]; then
+                BASE_URL=http://127.0.0.1:4321 TOPIC=labubu EVIDENCE_DIR=reports/labubu-semantics node tests/e2e/collection-semantics.mjs
+              fi
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
@@ -198,7 +202,7 @@ jobs:
                 UC_CI_SUITE='${{ matrix.suite }}'
                 export RASTER_SHARD_COUNT=3
                 export RASTER_SHARD_INDEX="${UC_CI_SUITE##*-}"
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=winter,halloween,pumpkin,ghost,witch,skeleton,vampire,bat,spider,thanksgiving,turkey ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_ORIGINAL_TOPICS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
                 ;;
             esac
           done
