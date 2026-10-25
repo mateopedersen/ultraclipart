@@ -204,6 +204,7 @@ try {
   );
   await expect(page.locator('[data-related-companions]')).toBeHidden();
   while (await page.locator('[data-related-more]').isVisible()) {
+    await page.locator('[data-related-more]').focus();
     await page.locator('[data-related-more]').click();
     await expect(root).not.toHaveAttribute('aria-busy', 'true');
   }
@@ -322,6 +323,7 @@ try {
       body: JSON.stringify({ version: 'new-publication' }),
     }),
   );
+  await page.locator('[data-related-more]').focus();
   await page.locator('[data-related-more]').click();
   await expect(page.locator('[data-related-results]')).toBeHidden();
   await expect(page.locator('[data-related-refresh]')).toBeVisible();

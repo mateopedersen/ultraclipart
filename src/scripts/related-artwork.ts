@@ -265,6 +265,14 @@ export function initRelatedArtwork() {
       root!.getAttribute('aria-busy') === 'true'
     )
       return;
+    // Keep the manual control stable for keyboard users and pointer activation.
+    // Automatic discovery resumes when the reader leaves that control.
+    if (
+      automatic &&
+      (more === document.activeElement ||
+        (matchMedia('(hover: hover)').matches && more.matches(':hover')))
+    )
+      return;
     if (automatic && (!autoArmed || !nearEnd())) return;
     autoArmed = false;
     root!.setAttribute('aria-busy', 'true');
