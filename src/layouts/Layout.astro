@@ -315,18 +315,6 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
               </div>
             </div>
           </div>
-          <a
-            class="site-surprise-link"
-            href={`/art/${surprisePicks[0].id}/`}
-            data-surprise-art={JSON.stringify(surprisePicks)}
-            data-surprise-source={`/surprise-picks.json?v=${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
-          >
-            <HeaderIllustration kind="surprise" />
-            <span>
-              <strong>Surprise me</strong>
-              <span>A little reason to smile</span>
-            </span>
-          </a>
           <div class="site-navigation-actions">
             <a href="/create/" class="site-studio-link" aria-current={current('/create/')}>
               <svg width="23" height="23" viewBox="0 0 28 28" fill="none" aria-hidden="true">
@@ -378,6 +366,18 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
             </a>
           </div>
         </nav>
+        <a
+          class="site-surprise-link"
+          href={`/art/${surprisePicks[0].id}/`}
+          data-surprise-art={JSON.stringify(surprisePicks)}
+          data-surprise-source={`/surprise-picks.json?v=${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
+        >
+          <HeaderIllustration kind="surprise" />
+          <span>
+            <strong>Surprise me</strong>
+            <span>A little reason to smile</span>
+          </span>
+        </a>
       </div>
     </header>
     <main id="main" class:list={['container', { wide }]}>

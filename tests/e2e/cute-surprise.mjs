@@ -6,7 +6,10 @@ const { cuteConfidence } = await loadTypescript('src/lib/cute-discovery.ts');
 const all = JSON.parse(await readFile('data/art.json', 'utf8'));
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
 const browser = await chromium.launch();
-const context = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
+const context = await browser.newContext({
+  viewport: { width: 1440, height: 1000 },
+  hasTouch: true,
+});
 const page = await context.newPage();
 const report = { visited: [], fallback: false, noJavascript: false, errors: [] };
 page.on('pageerror', (e) => report.errors.push(e.message));
@@ -30,6 +33,21 @@ try {
     report.visited.push(id);
     await expect(page.locator('main h1')).toBeVisible();
   }
+  for (const width of [1024, 768, 390, 320]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto(base, { waitUntil: 'networkidle' });
+    const link = page.locator('.site-surprise-link');
+    await expect(link).toBeVisible();
+    await expect(page.locator('#navigation')).toBeHidden();
+    const box = await link.boundingBox();
+    assert.ok(box.height >= 44 && box.x >= 0 && box.x + box.width <= width);
+    await link.tap();
+    await page.waitForURL('**/art/**');
+    assert.ok(cuteConfidence(all.find((x) => page.url().includes('/' + x.id + '/'))) >= 68);
+    await expect(page.locator('.site-surprise-link')).toBeVisible();
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
+  }
+  report.mobile = true;
   const offline = await browser.newContext({ viewport: { width: 1440, height: 1000 } });
   const fallback = await offline.newPage();
   await fallback.route('**/surprise-picks.json*', (r) => r.abort());

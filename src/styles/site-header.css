@@ -453,7 +453,20 @@
 }
 @media (max-width: 1320px) {
   .site-header .site-surprise-link {
-    display: none;
+    flex: 0 1 180px;
+    min-width: 150px;
+    gap: 5px;
+    padding-right: 10px;
+  }
+  .site-header .site-surprise-link > .header-illustration {
+    width: 42px;
+    height: 48px;
+  }
+  .site-header .site-surprise-link strong {
+    font-size: 14px;
+  }
+  .site-header .site-surprise-link > span > span {
+    font-size: 11px;
   }
   .site-header .site-header-inner {
     gap: 24px;
@@ -816,5 +829,54 @@
 @media (prefers-reduced-motion: reduce) {
   .site-header * {
     transition: none !important;
+  }
+}
+
+/* The same real discovery link stays visible outside the collapsed mobile menu. */
+@media (max-width: 1100px) {
+  .site-header .site-header-inner {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .site-header .site-surprise-link {
+    order: 3;
+    flex: 1 1 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 2px 14px;
+    gap: 10px;
+    border-radius: 11px;
+  }
+  .site-header .site-surprise-link > .header-illustration {
+    width: 46px;
+    height: 46px;
+    margin: -3px 0;
+  }
+  .site-header .site-surprise-link > span {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 10px;
+    white-space: normal;
+  }
+  .site-header .site-surprise-link strong {
+    font-size: 15px;
+    font-weight: 750;
+  }
+  .site-header .site-surprise-link > span > span {
+    margin: 0;
+    font-size: 12px;
+  }
+  .site-header #navigation.site-navigation {
+    max-height: calc(100dvh - 150px);
+  }
+}
+@media (max-width: 359px) {
+  .site-header .site-surprise-link > span {
+    display: block;
+  }
+  .site-header .site-surprise-link > span > span {
+    font-size: 11px;
   }
 }

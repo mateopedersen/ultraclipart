@@ -114,6 +114,8 @@ try {
       await checkBounds('.site-header', `${route} header ${width}`);
       if (mobile) await expect(navigation).toBeHidden();
       else await expect(navigation).toBeVisible();
+      await expect(header.locator('.site-surprise-link')).toBeVisible();
+      await checkBounds('.site-surprise-link', `Surprise me ${route} ${width}`);
       const current = await navigation
         .locator('a[aria-current="page"]')
         .evaluateAll((links) => links.map((link) => new URL(link.href).pathname));
