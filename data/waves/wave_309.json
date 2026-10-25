@@ -1,0 +1,569 @@
+{
+  "wave": "wave_309",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "gourd-bottle-vine-trellis",
+      "title": "Bottle Gourd on a Small Trellis",
+      "alt": "A compact wooden A-frame trellis supports a climbing vine with two pale green bottle gourds, broad heart-shaped leaves and one open white flower.",
+      "description": "A compact wooden A-frame trellis supports a climbing vine with two pale green bottle gourds, broad heart-shaped leaves and one open white flower. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_309/source/gourd-bottle-vine-trellis.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1214,
+      "height": 1295,
+      "pdfWidth": 881,
+      "pdfHeight": 940,
+      "sourceType": "raster",
+      "sourceSha256": "f00f6434eb7b3be9655005f454dc3c2dc0660ba0b915e8cbb3b2c63b4d52d56c",
+      "inputSignature": "c976cfcfc32ee1de9e6441ca44a83f3e270c6b7563f9c31618b465ef66e0c49e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 987736,
+        "weightedCmykRmse": 1.381643
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1420544,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1201478,
+          "weightedCmykRmse": 0.773634
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141345,
+          "weightedCmykRmse": 0.908964
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1054469,
+          "weightedCmykRmse": 1.091666
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 987736,
+          "weightedCmykRmse": 1.381643
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        77,
+        34,
+        1172,
+        1254
+      ],
+      "image": {
+        "width": 881,
+        "height": 940,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_309/exports/gourd-bottle-vine-trellis.pdf",
+          "bytes": 987736,
+          "sha256": "a410db30c01d375ebd4e0f5279c864197373b27f242ef460a5848a62645ca6cf"
+        },
+        "webp": {
+          "path": "work/production/wave_309/exports/gourd-bottle-vine-trellis.webp",
+          "bytes": 1336262,
+          "sha256": "f3287b7eb9598e16017a66564b7293f55ffcad1436146b062bcd1685a0f6b05d"
+        },
+        "thumb": {
+          "path": "work/production/wave_309/exports/gourd-bottle-vine-trellis-thumb.webp",
+          "bytes": 91526,
+          "sha256": "c84f9c0172b5741e3f8581f758e9580bd1a801b6eb243f98143d0906e5f8308e"
+        }
+      },
+      "proofSha256": "f959e952184d22a68fe35d10f12f3c1bcbf2e8a33a0c72b893fb527e93f71b24",
+      "pairMeanRgbDifference": 2.25417
+    },
+    {
+      "id": "gourd-flower-and-tendril",
+      "title": "Gourd Flower and Tendril",
+      "alt": "A bottle-gourd vine segment has one open white five-lobed flower, a closed green bud, two heart-shaped leaves and a coiled tendril.",
+      "description": "A bottle-gourd vine segment has one open white five-lobed flower, a closed green bud, two heart-shaped leaves and a coiled tendril. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_309/source/gourd-flower-and-tendril.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f3b61dc2c0fc4156b2a525a09347aba05b0bd8d374949d69c00638a0a25f97c9",
+      "inputSignature": "327c3f6b0925b2d4928c338ae9d9be832fbcecd657f75deb8b9cf6d0e943f2f9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 938042,
+        "weightedCmykRmse": 1.124465
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1334650,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1083848,
+          "weightedCmykRmse": 0.787623
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1019750,
+          "weightedCmykRmse": 0.926169
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 938042,
+          "weightedCmykRmse": 1.124465
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        97,
+        68,
+        1254,
+        1148
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_309/exports/gourd-flower-and-tendril.pdf",
+          "bytes": 938042,
+          "sha256": "466519bdb4595507f357abfb9ff2217ae49992dc637d9316ed07528fb205ff35"
+        },
+        "webp": {
+          "path": "work/production/wave_309/exports/gourd-flower-and-tendril.webp",
+          "bytes": 1295760,
+          "sha256": "e1e56a0c5be24ee6e16cf295b2d4b6fd951dcb536b7b3631f1c30923598767e0"
+        },
+        "thumb": {
+          "path": "work/production/wave_309/exports/gourd-flower-and-tendril-thumb.webp",
+          "bytes": 76720,
+          "sha256": "601dda2ea28a320830a7874177a785d87188026d14cd49f1267e0130a0a5bb7f"
+        }
+      },
+      "proofSha256": "2d863e8639795e0cf63cca1ec1b871960161a12f5094695c458c61ac59e4cce2",
+      "pairMeanRgbDifference": 2.80413
+    },
+    {
+      "id": "gourd-seedling-roots",
+      "title": "Gourd Seedling with Roots",
+      "alt": "A young gourd seedling with two oval cotyledons and one pointed true leaf grows above a small soil cutaway showing branching roots.",
+      "description": "A young gourd seedling with two oval cotyledons and one pointed true leaf grows above a small soil cutaway showing branching roots. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_309/source/gourd-seedling-roots.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 921,
+      "pdfHeight": 970,
+      "sourceType": "raster",
+      "sourceSha256": "fa11d55b8619d523b6001678a7a9cbea3512b30030216f43e700e982abae84dc",
+      "inputSignature": "0dc45b821f803f52c5103ca327538b5526ea7decd5ef55ffac78a0847f7a4dff",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 977463,
+        "weightedCmykRmse": 1.459262
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1418633,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1194087,
+          "weightedCmykRmse": 0.787857
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1131296,
+          "weightedCmykRmse": 0.947288
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1043861,
+          "weightedCmykRmse": 1.136114
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 977463,
+          "weightedCmykRmse": 1.459262
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        117,
+        65,
+        1160,
+        1254
+      ],
+      "image": {
+        "width": 921,
+        "height": 970,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_309/exports/gourd-seedling-roots.pdf",
+          "bytes": 977463,
+          "sha256": "4bec9cec13bf04cae6e2b92639b6471439acc82691d7d1009e2bebc48f1a5f7f"
+        },
+        "webp": {
+          "path": "work/production/wave_309/exports/gourd-seedling-roots.webp",
+          "bytes": 1236324,
+          "sha256": "37f0e59ba47c5d008d0705cb405cfa9231bafbb454550ca9bac58e1c65dc963e"
+        },
+        "thumb": {
+          "path": "work/production/wave_309/exports/gourd-seedling-roots-thumb.webp",
+          "bytes": 76152,
+          "sha256": "0529be158e144fc80acff5b47fe7e1fabc126adcb21b601cce219714d0e8d878"
+        }
+      },
+      "proofSha256": "e81fad152a2faf043056917cdc98a83889d560a9d1e4efc0220c59260c431a2c",
+      "pairMeanRgbDifference": 1.96653
+    },
+    {
+      "id": "gourd-germinating-seed",
+      "title": "Germinating Gourd Seed",
+      "alt": "A ridged pale tan gourd seed opens at one end around a curved white root and a short folded green shoot.",
+      "description": "A ridged pale tan gourd seed opens at one end around a curved white root and a short folded green shoot. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_309/source/gourd-germinating-seed.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1200,
+      "height": 1311,
+      "pdfWidth": 915,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "9d3e3ce1b623db8064f9481f6b1c3f3dadb49e2a23a94e4773634bf86158c6fa",
+      "inputSignature": "0b038ddce522bc1f16fa488e9f7899cee772df6b64650bf802f19147e9e181e2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 996885,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 996885,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        96,
+        1175,
+        1233
+      ],
+      "image": {
+        "width": 915,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_309/exports/gourd-germinating-seed.pdf",
+          "bytes": 996885,
+          "sha256": "77efcb27bf37f3946c20565d90086e7c4d153643c637a4d6a606745de6ca57d5"
+        },
+        "webp": {
+          "path": "work/production/wave_309/exports/gourd-germinating-seed.webp",
+          "bytes": 994018,
+          "sha256": "0f11bb6c73d0989e726baca30d73c82b92de7458583ed554c74f3788941a0809"
+        },
+        "thumb": {
+          "path": "work/production/wave_309/exports/gourd-germinating-seed-thumb.webp",
+          "bytes": 55250,
+          "sha256": "87b750a90945c3d22599e37672faf96139d514252d9c45a488238ecb0cc2fd5d"
+        }
+      },
+      "proofSha256": "4b9aedef7b99e700b1d2266ab044aa4303de1ba18392d8ee4c982c7a3df2bf79",
+      "pairMeanRgbDifference": 1.91168
+    },
+    {
+      "id": "gourd-open-shell-seeds",
+      "title": "Opened Dry Gourd and Seeds",
+      "alt": "An opened dry tan gourd reveals fibrous inner pith and pale flat seeds, with its removed stemmed lid and loose seeds beside it.",
+      "description": "An opened dry tan gourd reveals fibrous inner pith and pale flat seeds, with its removed stemmed lid and loose seeds beside it. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_309/source/gourd-open-shell-seeds.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "7487ec21fba1d338fe6a4a3b86a08ea9dee1e25d7ed277885c551287fa34899b",
+      "inputSignature": "caa67245f50434bb6f465bc058c9c24810da49fb72f2393a979092e39ba07a84",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 964008,
+        "weightedCmykRmse": 0.791673
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1203536,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 964008,
+          "weightedCmykRmse": 0.791673
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        112,
+        129,
+        1261,
+        1101
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_309/exports/gourd-open-shell-seeds.pdf",
+          "bytes": 964008,
+          "sha256": "9afa90d145f07ce39de3e03bb61e37cb7eccc4a9477fcbe9e736ddc52aff27a1"
+        },
+        "webp": {
+          "path": "work/production/wave_309/exports/gourd-open-shell-seeds.webp",
+          "bytes": 1194484,
+          "sha256": "5af241780505b8b10914361d1bc65f22b79915955b314b3135cc08520f378672"
+        },
+        "thumb": {
+          "path": "work/production/wave_309/exports/gourd-open-shell-seeds-thumb.webp",
+          "bytes": 62622,
+          "sha256": "0999af7605fba7d187d32a2df5ad6a13390e1a9062f10c17b98694628b6437e6"
+        }
+      },
+      "proofSha256": "670f3667d044cc0f393c6758b2b1a40a4b81bf7cfddc1a3a5735edfa4ae866da",
+      "pairMeanRgbDifference": 2.20539
+    },
+    {
+      "id": "gourd-peeled-luffa",
+      "title": "Partly Peeled Luffa Sponge",
+      "alt": "A dry brown luffa fruit is partly peeled to reveal a pale fibrous sponge and dark seeds within its open end.",
+      "description": "A dry brown luffa fruit is partly peeled to reveal a pale fibrous sponge and dark seeds within its open end. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_309/source/gourd-peeled-luffa.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "9b25ad53f05b533f974253504d220f76f442e1e823f2921b5efdc2dcc4592932",
+      "inputSignature": "97b564d8221b190ae20539b0038d8b67a7915ccdd32a93b646af6a8fa08707db",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 842243,
+        "weightedCmykRmse": 0.77976
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1018421,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 842243,
+          "weightedCmykRmse": 0.77976
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        65,
+        981,
+        1470
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_309/exports/gourd-peeled-luffa.pdf",
+          "bytes": 842243,
+          "sha256": "3409f720ff80eccdf78af28f22b7926fc0d84a13e0b989295e91d5a978064d7b"
+        },
+        "webp": {
+          "path": "work/production/wave_309/exports/gourd-peeled-luffa.webp",
+          "bytes": 1607628,
+          "sha256": "dc8351b7f66a58f2b44c395900355a7f2edf8b478260d706ff51a61e4f8b06bb"
+        },
+        "thumb": {
+          "path": "work/production/wave_309/exports/gourd-peeled-luffa-thumb.webp",
+          "bytes": 50968,
+          "sha256": "e4c046daf6eb4b19abc45200a20a2f3c801b9766ee65c7bd17b6039d265a3acc"
+        }
+      },
+      "proofSha256": "cec82d703797805aa8baab0233b5c50f54bfe4938204fa3aaf0cdd94218141c5",
+      "pairMeanRgbDifference": 3.08836
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T22:14:29.366Z"
+}

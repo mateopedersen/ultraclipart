@@ -67,8 +67,7 @@ try {
   await page.goto(base + '/clipart/' + topic + '/', { waitUntil: 'domcontentloaded' });
   await assertHead('/clipart/' + topic + '/', copy.description);
   assert.equal(await page.locator('h1').count(), 1);
-  assert.equal(await page.locator('.hero .lead').innerText(), copy.lead);
-  assert.ok((await page.locator('.hero').innerText()).includes(copy.intro));
+  await expect(page.locator('.hero > p')).toHaveText(copy.intro);
   const collection = (await schema()).find((s) => s['@type'] === 'CollectionPage');
   assert.equal(collection.mainEntity.numberOfItems, expectedCount);
   assert.deepEqual(

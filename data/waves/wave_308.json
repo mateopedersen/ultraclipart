@@ -1,0 +1,576 @@
+{
+  "wave": "wave_308",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "gourd-crown-horns",
+      "title": "Crown-Shaped Ornamental Gourd",
+      "alt": "A cream-and-green striped ornamental gourd has a flattened center and a ring of projecting crown-like lobes around its sides.",
+      "description": "A cream-and-green striped ornamental gourd has a flattened center and a ring of projecting crown-like lobes around its sides. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_308/source/gourd-crown-horns.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "cf733804ad9384fb933f664f997cb4c9ece138313aec10679c91e0eab2e8fc0b",
+      "inputSignature": "594284bd4f014f5691a4b3dffe3e938ab03eb02403eb32c0ca7c2d90f85cc12f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 958133,
+        "weightedCmykRmse": 0.924348
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1291395,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1022358,
+          "weightedCmykRmse": 0.782519
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 958133,
+          "weightedCmykRmse": 0.924348
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        86,
+        98,
+        1229,
+        1075
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_308/exports/gourd-crown-horns.pdf",
+          "bytes": 958133,
+          "sha256": "1f41befcb7b7e49bd747f1527a7980567e92fbd8591cd53d1f4e80a52c5b0cad"
+        },
+        "webp": {
+          "path": "work/production/wave_308/exports/gourd-crown-horns.webp",
+          "bytes": 1250718,
+          "sha256": "0eca55734daaa96376358dcb2de33258e5ae06e898bb424422dfb5b5d35e5f2f"
+        },
+        "thumb": {
+          "path": "work/production/wave_308/exports/gourd-crown-horns-thumb.webp",
+          "bytes": 65948,
+          "sha256": "cce95a72f978683b107ae25cadebe3519663ab98513c4510b14c24aa45130b2d"
+        }
+      },
+      "proofSha256": "01d8479098650a02866f17e904f6f708c56542d783d92f89047c9e6f5db1e840",
+      "pairMeanRgbDifference": 3.74988
+    },
+    {
+      "id": "gourd-egg-in-straw-nest",
+      "title": "Egg-Shaped Gourds in Straw",
+      "alt": "Three pale cream egg-shaped gourds with curved dry stems rest in a shallow woven straw nest.",
+      "description": "Three pale cream egg-shaped gourds with curved dry stems rest in a shallow woven straw nest. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_308/source/gourd-egg-in-straw-nest.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "8e12f547748e180e6953f37bdd5a93ff648549c1cf86cb2cba47017b532117cb",
+      "inputSignature": "4febbfdacfc23667e9c936cef8c3414bbebc068aab52a9dcb8e2cda74e3f240d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976965,
+        "weightedCmykRmse": 1.266585
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1503307,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1221188,
+          "weightedCmykRmse": 0.715753
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1151102,
+          "weightedCmykRmse": 0.844129
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1059374,
+          "weightedCmykRmse": 1.015064
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976965,
+          "weightedCmykRmse": 1.266585
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        54,
+        56,
+        1292,
+        1158
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_308/exports/gourd-egg-in-straw-nest.pdf",
+          "bytes": 976965,
+          "sha256": "5682c92263e6b99ac92630638979555cdf83ff268182b3e57b19c509b40f95bd"
+        },
+        "webp": {
+          "path": "work/production/wave_308/exports/gourd-egg-in-straw-nest.webp",
+          "bytes": 1653658,
+          "sha256": "bf5f9403a8212b1f8620f2f496367944b30094ac69d1fa32008c90e60439f86b"
+        },
+        "thumb": {
+          "path": "work/production/wave_308/exports/gourd-egg-in-straw-nest-thumb.webp",
+          "bytes": 85326,
+          "sha256": "516fafaa7782b3e7ee7f07be7da70872ca12cc68ec48afa67f492463078a4236"
+        }
+      },
+      "proofSha256": "b97da0630860e2ca1cb7783f7aa9ab42e7b2c998e6e9d5298909736d1fa53d23",
+      "pairMeanRgbDifference": 2.41234
+    },
+    {
+      "id": "gourd-club-form",
+      "title": "Club-Shaped Gourd",
+      "alt": "A long light green gourd widens from a slim stem end into a broad rounded end with subtle surface ribs.",
+      "description": "A long light green gourd widens from a slim stem end into a broad rounded end with subtle surface ribs. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_308/source/gourd-club-form.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7e5b464d56a6e761387d5c3c8f15c3e91499761335e841bf3e367849d73ee1cd",
+      "inputSignature": "5658414e68a2966be51faf83cf6d2d2e8197bb75b88c5d5372f28d2692fa44b0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 535942,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 535942,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        39,
+        1493,
+        994
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_308/exports/gourd-club-form.pdf",
+          "bytes": 535942,
+          "sha256": "e27977c6acb6089f2eadd6650cc187468063a007c0e153b02ccfae7c5604014e"
+        },
+        "webp": {
+          "path": "work/production/wave_308/exports/gourd-club-form.webp",
+          "bytes": 1060588,
+          "sha256": "a311d4d00cd561e211e23858793529be54b3faa51faea06d5acb0f241a1cb7e0"
+        },
+        "thumb": {
+          "path": "work/production/wave_308/exports/gourd-club-form-thumb.webp",
+          "bytes": 27278,
+          "sha256": "d1a656a41ca65bdf90f4727049ea6e892876331241ad97adb371e1a278a59e13"
+        }
+      },
+      "proofSha256": "cf6407449fe78244b196ce07db10164b9e1c2254ae3fcca57078e9205e86b3c3",
+      "pairMeanRgbDifference": 1.31958
+    },
+    {
+      "id": "gourd-coiled-snake",
+      "title": "Coiled Long Gourd",
+      "alt": "A dry tan long gourd curves into an open spiral, with its tapering end separate from the curled woody stem.",
+      "description": "A dry tan long gourd curves into an open spiral, with its tapering end separate from the curled woody stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_308/source/gourd-coiled-snake.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "c14969024ae8c303a571142073b77bef2b6a57d273e02e8fef9ecca8d7944175",
+      "inputSignature": "961487cf876b5d18cfabb9730b4e34652cc8fa061504156e1e30da9fd9024f1f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 975278,
+        "weightedCmykRmse": 1.419713
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1361598,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1198713,
+          "weightedCmykRmse": 0.781754
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1134401,
+          "weightedCmykRmse": 0.917929
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1047842,
+          "weightedCmykRmse": 1.09849
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 975278,
+          "weightedCmykRmse": 1.419713
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        47,
+        1281,
+        1143
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_308/exports/gourd-coiled-snake.pdf",
+          "bytes": 975278,
+          "sha256": "7ff665704f4b62dc243d8073f7b70cf8356bd859d6b0c6b6a87df1ba54d0eb12"
+        },
+        "webp": {
+          "path": "work/production/wave_308/exports/gourd-coiled-snake.webp",
+          "bytes": 981840,
+          "sha256": "ed24946e0f872e6705e3e8364aa5683ac9f5303cf9a252b4e03d6e454ee4292b"
+        },
+        "thumb": {
+          "path": "work/production/wave_308/exports/gourd-coiled-snake-thumb.webp",
+          "bytes": 62676,
+          "sha256": "e8d6fdf3d00add1acf71079d6b9ac85b5d850713fa8634645e64857932f42947"
+        }
+      },
+      "proofSha256": "cb57c5172452038670aa9e1a1cc57846bd0f03caf5ef6dbcd68525dba925c27d",
+      "pairMeanRgbDifference": 1.88958
+    },
+    {
+      "id": "gourd-apple-form",
+      "title": "Apple-Shaped Gourd",
+      "alt": "A broad reddish-brown apple-shaped cured gourd has a shallow top hollow, mottled shell and thick rough stem.",
+      "description": "A broad reddish-brown apple-shaped cured gourd has a shallow top hollow, mottled shell and thick rough stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_308/source/gourd-apple-form.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1261,
+      "height": 1247,
+      "pdfWidth": 950,
+      "pdfHeight": 939,
+      "sourceType": "raster",
+      "sourceSha256": "fcf0b194d4822ed3afdf4de2afa6e8fa630cb40dd747b42b24b1c5ee2695e2be",
+      "inputSignature": "b42758a6c40cf6f095a80bfe099081d792176bd234969762dbee92ab257f9098",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973008,
+        "weightedCmykRmse": 1.323814
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1515549,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1225626,
+          "weightedCmykRmse": 0.744595
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1150810,
+          "weightedCmykRmse": 0.884139
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055512,
+          "weightedCmykRmse": 1.062521
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973008,
+          "weightedCmykRmse": 1.323814
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        64,
+        51,
+        1197,
+        1201
+      ],
+      "image": {
+        "width": 950,
+        "height": 939,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_308/exports/gourd-apple-form.pdf",
+          "bytes": 973008,
+          "sha256": "4202b9ba29dd09f99a338e3b374d1152ee28a078289eb3ab502d09a42142c44a"
+        },
+        "webp": {
+          "path": "work/production/wave_308/exports/gourd-apple-form.webp",
+          "bytes": 1543556,
+          "sha256": "f7aaf60361e16cb37c92d3823eae470399c8a43f94eba4d398d4520a5148b65f"
+        },
+        "thumb": {
+          "path": "work/production/wave_308/exports/gourd-apple-form-thumb.webp",
+          "bytes": 76302,
+          "sha256": "f0efdd09b9cc81c022357d2dc649890ae05b94cdabdf77d0907309fa2e800ef5"
+        }
+      },
+      "proofSha256": "eee92d098fe7076c33ef6969a363c029c52263e610ffe049186a1878cf98138a",
+      "pairMeanRgbDifference": 2.47262
+    },
+    {
+      "id": "gourd-luffa-fruit",
+      "title": "Ribbed Luffa Gourd",
+      "alt": "A dark green elongated luffa gourd has strong lengthwise ridges, a slender stem and a dried blossom at its tapered end.",
+      "description": "A dark green elongated luffa gourd has strong lengthwise ridges, a slender stem and a dried blossom at its tapered end. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_308/source/gourd-luffa-fruit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "ebbe87c46358af789069ec47dd30d6fc16d2287a52ffdc01ff112d9db1b8416a",
+      "inputSignature": "517666f20ac5d29eab284860df016e16f85aba1d1a4c74c7f2610f1c7f0acfd6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 811071,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 811071,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        106,
+        58,
+        1261,
+        1137
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_308/exports/gourd-luffa-fruit.pdf",
+          "bytes": 811071,
+          "sha256": "7e2e5e4e937abb49113e67ce1efc18fce2fd2f973030df016601543cd86e8258"
+        },
+        "webp": {
+          "path": "work/production/wave_308/exports/gourd-luffa-fruit.webp",
+          "bytes": 646902,
+          "sha256": "971b35296ab76b0ecb224be79242c1be9804cef19dfef3eb9458405a6ce6aaab"
+        },
+        "thumb": {
+          "path": "work/production/wave_308/exports/gourd-luffa-fruit-thumb.webp",
+          "bytes": 36600,
+          "sha256": "754cc5c69b8d97384e6a56ebe7ed246a57661b70b13d2dfb44aec2f91035a5d9"
+        }
+      },
+      "proofSha256": "ef777933b0709351c1f049371108b5b24d26e020091cda4bddf70c5e2b3ca263",
+      "pairMeanRgbDifference": 1.45822
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T22:14:29.000Z"
+}

@@ -161,6 +161,7 @@ jobs:
                 BASE_URL=http://127.0.0.1:4321 TOPIC=maple EVIDENCE_DIR=reports/maple-semantics node tests/e2e/collection-semantics.mjs
                 BASE_URL=http://127.0.0.1:4321 TOPIC=leaves EXPECTED_ARTWORK_COUNT=100 EVIDENCE_DIR=reports/leaves-semantics node tests/e2e/collection-semantics.mjs
                 BASE_URL=http://127.0.0.1:4321 TOPIC=scarecrow EVIDENCE_DIR=reports/scarecrow-semantics node tests/e2e/collection-semantics.mjs
+                BASE_URL=http://127.0.0.1:4321 TOPIC=gourd EVIDENCE_DIR=reports/gourd-semantics node tests/e2e/collection-semantics.mjs
               fi
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs

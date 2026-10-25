@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { loadTypescript } from './helpers/typescript.mjs';
+import { readPublishedPage } from './support/published-page.mjs';
 const { verifiedSourceUrl } = await loadTypescript('src/editor/source-policy.ts');
 const art = JSON.parse(readFileSync('data/art.json'));
 const publication = JSON.parse(readFileSync('data/publication.json'));
@@ -33,7 +34,7 @@ test('every inline catalog journey preserves exact original URLs, filenames, siz
       .map((item) => [item.id, item]),
   );
   for (const item of art) {
-    const html = readFileSync(`dist/art/${item.id}/index.html`, 'utf8');
+    const html = readPublishedPage(item, 'art');
     assert.ok(html.includes(`https://ultraclipart.com/art/${item.id}/`), item.id);
     assert.ok(html.includes('id="download-panel-template"'));
     assert.ok(html.includes('data-download-record'));

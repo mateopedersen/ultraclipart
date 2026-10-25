@@ -1,0 +1,492 @@
+{
+  "wave": "wave_307",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "gourd-bottle-pair-lobed",
+      "title": "Bottle Gourd",
+      "alt": "A pale green speckled bottle gourd has two rounded chambers, a narrow waist and a curved brown stem.",
+      "description": "A pale green speckled bottle gourd has two rounded chambers, a narrow waist and a curved brown stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_307/source/gourd-bottle-pair-lobed.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "2f5efff30cf21375f21cc1c326458ad40097f7792d93063f3811c5012e57cd08",
+      "inputSignature": "567b12ec8df468c909afd45f8d3a42de80a47aeac3bdb0fa7210ea873cde77bf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 681052,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 681052,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        120,
+        49,
+        906,
+        1486
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_307/exports/gourd-bottle-pair-lobed.pdf",
+          "bytes": 681052,
+          "sha256": "f11b008d8b9be797f0786a52c8c5f3448884eb27957e255fc3feffa501e12393"
+        },
+        "webp": {
+          "path": "work/production/wave_307/exports/gourd-bottle-pair-lobed.webp",
+          "bytes": 1273330,
+          "sha256": "2a2e479d9a08a7645fdfa4e539a23e44d187a89e9b6f54516836b417d029801e"
+        },
+        "thumb": {
+          "path": "work/production/wave_307/exports/gourd-bottle-pair-lobed-thumb.webp",
+          "bytes": 31802,
+          "sha256": "89c7cfd710026008a4f3b75cc7090ff87ab8a5981b31ca32f26705236e915f7d"
+        }
+      },
+      "proofSha256": "1b12776e99aedda0c77fcc964009320f03bfa6003c51a9280c0e87525667748c",
+      "pairMeanRgbDifference": 1.7623
+    },
+    {
+      "id": "gourd-swan-neck",
+      "title": "Curved-Neck Gourd",
+      "alt": "A dark green cream-mottled gourd has a rounded base, a long S-curved neck and a hooked dry stem.",
+      "description": "A dark green cream-mottled gourd has a rounded base, a long S-curved neck and a hooked dry stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_307/source/gourd-swan-neck.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "be585a268b00abf81ea3ea819f2635c3ac5e81b9bac8cd61682dc4afd5f808eb",
+      "inputSignature": "e1a5fae088a3d670c81e44a84ab3ac87df2e61e1d297461d943f830dd4f4dfa5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 951135,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 951135,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        152,
+        78,
+        929,
+        1466
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_307/exports/gourd-swan-neck.pdf",
+          "bytes": 951135,
+          "sha256": "f13077b0a9b860719589fadc5e398ba740add1713b6473a3883bc6d826091dd2"
+        },
+        "webp": {
+          "path": "work/production/wave_307/exports/gourd-swan-neck.webp",
+          "bytes": 1461476,
+          "sha256": "7607227de9b09fe84f193835951c89574b78a3d46fdf38217f66ee487d1ff4f3"
+        },
+        "thumb": {
+          "path": "work/production/wave_307/exports/gourd-swan-neck-thumb.webp",
+          "bytes": 46224,
+          "sha256": "c79a3876e31a007835d503201d0cd0b975fc5ef50a2010702de11ff3ac46d182"
+        }
+      },
+      "proofSha256": "d02bb43259853f0b4d0b2c14177a67c65cafb3de4636fc7dd6543af42ed0bd5e",
+      "pairMeanRgbDifference": 4.26449
+    },
+    {
+      "id": "gourd-flattened-canteen",
+      "title": "Flattened Canteen Gourd",
+      "alt": "A flattened golden-tan canteen gourd is shown at an angle with a shallow rounded body and curved woody stem.",
+      "description": "A flattened golden-tan canteen gourd is shown at an angle with a shallow rounded body and curved woody stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_307/source/gourd-flattened-canteen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "94aa367c70c87eabfe089dcf62acaf8287e1c347e89da6f8cde2653b57339c78",
+      "inputSignature": "f2bc8a967f87d78e0f72f539e14506dac53494144bd7a57ce51eff9bcdc19963",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 895239,
+        "weightedCmykRmse": 0.83212
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1128894,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 895239,
+          "weightedCmykRmse": 0.83212
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        259,
+        46,
+        1090,
+        1153
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_307/exports/gourd-flattened-canteen.pdf",
+          "bytes": 895239,
+          "sha256": "9c8041784e67edd9dd201534275b60c65578e6e630c9c0a0fd46385498b23a62"
+        },
+        "webp": {
+          "path": "work/production/wave_307/exports/gourd-flattened-canteen.webp",
+          "bytes": 1094046,
+          "sha256": "cf890c9a72a5258b66cc5e8a2cfed5507e21a9fe94882a95617998d32473f614"
+        },
+        "thumb": {
+          "path": "work/production/wave_307/exports/gourd-flattened-canteen-thumb.webp",
+          "bytes": 52162,
+          "sha256": "0220c1e92ea430801ad62e1b05d8f72fb6618a427026ee5a78d9b2c6d85f12ea"
+        }
+      },
+      "proofSha256": "e1c648d46f81983f6ddb7d80f1f561b2c3a35eb97192d05f381fbc1470b19811",
+      "pairMeanRgbDifference": 2.00048
+    },
+    {
+      "id": "gourd-long-dipper",
+      "title": "Long Dipper Gourd",
+      "alt": "A cured tan dipper gourd lies diagonally with a very long narrow neck, a small rounded bulb and an intact curling stem.",
+      "description": "A cured tan dipper gourd lies diagonally with a very long narrow neck, a small rounded bulb and an intact curling stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_307/source/gourd-long-dipper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "fc0eb20d1ae7d5e037b5e9b2fc7dc922894df65146205d020542e4581bd9f2b5",
+      "inputSignature": "1161509daa3e58d2a0bb9a7ff0913d76011a673bd84417246f181977fdccd9ca",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 295890,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 295890,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        111,
+        112,
+        1448,
+        938
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_307/exports/gourd-long-dipper.pdf",
+          "bytes": 295890,
+          "sha256": "f1e04d5286b07ba9b89b4637995696865af5e589e5a8f28dba222aeea8bed233"
+        },
+        "webp": {
+          "path": "work/production/wave_307/exports/gourd-long-dipper.webp",
+          "bytes": 790024,
+          "sha256": "8d0478a265618fcf925cc981e16c2205b51ddd65a37eb213ff1cc53d3704e4db"
+        },
+        "thumb": {
+          "path": "work/production/wave_307/exports/gourd-long-dipper-thumb.webp",
+          "bytes": 18332,
+          "sha256": "ee088164793a14400776c5643618fc5c3022b1f8bc58c303308f9746308afa7b"
+        }
+      },
+      "proofSha256": "7589775beae426ef4b19c9499add91dc58728d7972fb647cee9346400cbe2a39",
+      "pairMeanRgbDifference": 0.74017
+    },
+    {
+      "id": "gourd-broad-kettle",
+      "title": "Broad Kettle Gourd",
+      "alt": "A broad mottled brown kettle-shaped gourd has a large rounded body, a short narrow neck and a rough curved stem.",
+      "description": "A broad mottled brown kettle-shaped gourd has a large rounded body, a short narrow neck and a rough curved stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_307/source/gourd-broad-kettle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1236,
+      "height": 1272,
+      "pdfWidth": 972,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "8575ebb36fdb5f16886f242c83909a3d8ef9317655389153d077791c45b215a9",
+      "inputSignature": "e23374cb1ce97a5468ffc4566292163e15cc09666cda0d214f2e8fdb6dc8af3a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 993784,
+        "weightedCmykRmse": 0.811771
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1232917,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 993784,
+          "weightedCmykRmse": 0.811771
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        173,
+        57,
+        1082,
+        1218
+      ],
+      "image": {
+        "width": 972,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_307/exports/gourd-broad-kettle.pdf",
+          "bytes": 993784,
+          "sha256": "0bbd3e6d766261df97fd123c3bb768ba411862f08d96e873e69103b9944fc923"
+        },
+        "webp": {
+          "path": "work/production/wave_307/exports/gourd-broad-kettle.webp",
+          "bytes": 1085890,
+          "sha256": "c5aad59c06e8238e56dd56a3ba6adad42ad4526081f0ac1747b8df376c9b11dd"
+        },
+        "thumb": {
+          "path": "work/production/wave_307/exports/gourd-broad-kettle-thumb.webp",
+          "bytes": 60740,
+          "sha256": "f215bec76c779b1f05a512ab5e010d364855f006c5091f6db61f5cf6cf22e151"
+        }
+      },
+      "proofSha256": "22b6753eb0d37b25de4e4a38aed42cf3938e3bb9edf364668c1e5b71ca2066e1",
+      "pairMeanRgbDifference": 2.14461
+    },
+    {
+      "id": "gourd-ribbed-pear",
+      "title": "Warty Pear Gourd",
+      "alt": "A green-and-yellow pear-shaped ornamental gourd has strong vertical ribs, raised rounded warts and a short dry stem.",
+      "description": "A green-and-yellow pear-shaped ornamental gourd has strong vertical ribs, raised rounded warts and a short dry stem. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_307/source/gourd-ribbed-pear.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "1db8735daf6f289d1d7d823f664b868b9a12d47a1d0486c6979bd63f04f5106e",
+      "inputSignature": "87ae357b841a7a2dc39101c4241d9df4dbc30346799c32e040dd8ed2c9f1146e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 906573,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 906573,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        158,
+        67,
+        999,
+        1306
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_307/exports/gourd-ribbed-pear.pdf",
+          "bytes": 906573,
+          "sha256": "0ea4f807e1c6fd4feb9b37576c110121af08513734d515ceff6e7d105a704913"
+        },
+        "webp": {
+          "path": "work/production/wave_307/exports/gourd-ribbed-pear.webp",
+          "bytes": 1030420,
+          "sha256": "cfc3b0acc9ad0f7bc9dd6287c66488eb3f7d57f9602d86215d4a703e35520431"
+        },
+        "thumb": {
+          "path": "work/production/wave_307/exports/gourd-ribbed-pear-thumb.webp",
+          "bytes": 51024,
+          "sha256": "6d191168910925271fbc246d3ddb5802f4e14eeb9c30a683d6f1a04ea55f653d"
+        }
+      },
+      "proofSha256": "e84ae52f7e38f1ad5e49aba1a42a8d3e931b7d462eac3b6bba2568ccb0217592",
+      "pairMeanRgbDifference": 3.46237
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T22:14:28.586Z"
+}

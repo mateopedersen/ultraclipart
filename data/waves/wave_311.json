@@ -1,0 +1,541 @@
+{
+  "wave": "wave_311",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "gourd-woven-rim-bowl",
+      "title": "Gourd Bowl with a Woven Rim",
+      "alt": "An open tan gourd-shell bowl has a teal-and-cream woven rim secured with visible cream stitches.",
+      "description": "An open tan gourd-shell bowl has a teal-and-cream woven rim secured with visible cream stitches. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_311/source/gourd-woven-rim-bowl.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "ffc57d030c027137edcc8ba534e596c8aaa93d5a0fb0f0f792ecac6d8ebabf41",
+      "inputSignature": "0ed5dcadbe767429e24484432239ada7685927ae529d8665ccb581dec8fb2a75",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 948747,
+        "weightedCmykRmse": 0.756301
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1242643,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 948747,
+          "weightedCmykRmse": 0.756301
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        78,
+        122,
+        1304,
+        1038
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_311/exports/gourd-woven-rim-bowl.pdf",
+          "bytes": 948747,
+          "sha256": "446cd4de8357e2455700702cb2e16d13ec40cf1a646e8129146583d7c56b2fa6"
+        },
+        "webp": {
+          "path": "work/production/wave_311/exports/gourd-woven-rim-bowl.webp",
+          "bytes": 1443550,
+          "sha256": "290fe7ab78848cd43332a5eb549bc013c1d01d1bda087b957cbfb7292e319302"
+        },
+        "thumb": {
+          "path": "work/production/wave_311/exports/gourd-woven-rim-bowl-thumb.webp",
+          "bytes": 62612,
+          "sha256": "20a75f3dd83e39351da12ba17f5522420d92e6842d9d318deec7d20725e093b3"
+        }
+      },
+      "proofSha256": "92c2b9274b2186cd9119b3bda4c2a0f1409342274c7169cbde98b510a5982ea3",
+      "pairMeanRgbDifference": 3.52393
+    },
+    {
+      "id": "gourd-lidded-storage",
+      "title": "Lidded Gourd Container",
+      "alt": "A round brown gourd container has an open empty interior and a separate fitted lid with a braided loop handle.",
+      "description": "A round brown gourd container has an open empty interior and a separate fitted lid with a braided loop handle. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_311/source/gourd-lidded-storage.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "8ed6018de819fd3a1167a429c0d32232a9fdd6ff15310de411accb66dcf8407c",
+      "inputSignature": "95cdb35463a4044175b7be4d2e55772a0b39411efc2433e0e3bde22abc8452d9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 978612,
+        "weightedCmykRmse": 1.059811
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1452181,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1150588,
+          "weightedCmykRmse": 0.743718
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1074246,
+          "weightedCmykRmse": 0.881952
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 978612,
+          "weightedCmykRmse": 1.059811
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        71,
+        43,
+        1254,
+        1154
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_311/exports/gourd-lidded-storage.pdf",
+          "bytes": 978612,
+          "sha256": "9ced1754c63e3622e75c763c3c5e7c3ac07b585ff49b1ec92387efb071b39bb5"
+        },
+        "webp": {
+          "path": "work/production/wave_311/exports/gourd-lidded-storage.webp",
+          "bytes": 1469570,
+          "sha256": "e953984c89300151f822c6798fd3dbeb9d8215ebed326cd377ca7e91221a9797"
+        },
+        "thumb": {
+          "path": "work/production/wave_311/exports/gourd-lidded-storage-thumb.webp",
+          "bytes": 70690,
+          "sha256": "5f02450c9d103adbf1ef7e569b0228687a5f58971c8bf62503cab654da782da3"
+        }
+      },
+      "proofSha256": "64484c9e429e720ca9e0d8636ad292fcaf42b594c82e41f7c6b099d33facace8",
+      "pairMeanRgbDifference": 3.16862
+    },
+    {
+      "id": "gourd-pierced-lantern",
+      "title": "Pierced Gourd Lantern",
+      "alt": "A tan gourd lantern has geometric and flower-shaped cutouts, a separate round base and an unlit battery LED light.",
+      "description": "A tan gourd lantern has geometric and flower-shaped cutouts, a separate round base and an unlit battery LED light. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_311/source/gourd-pierced-lantern.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "ac150a382217b7dac5eb9fd34fd789264711d536472fe6279618208068c1b246",
+      "inputSignature": "5ca6cef212180e416317040514858dcafb4685b7ad02236a4862df58df395340",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 906362,
+        "weightedCmykRmse": 0.815554
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1130117,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 906362,
+          "weightedCmykRmse": 0.815554
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        117,
+        20,
+        1093,
+        1258
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_311/exports/gourd-pierced-lantern.pdf",
+          "bytes": 906362,
+          "sha256": "32407f0ea22598f5d31e4dd86b8552c74dc8bb951226e65855f3380fa3f8a120"
+        },
+        "webp": {
+          "path": "work/production/wave_311/exports/gourd-pierced-lantern.webp",
+          "bytes": 1048082,
+          "sha256": "e43188c16a48372fbccd9b4cf1a8654bfca1409ca1ece954f302076f9207e61b"
+        },
+        "thumb": {
+          "path": "work/production/wave_311/exports/gourd-pierced-lantern-thumb.webp",
+          "bytes": 56516,
+          "sha256": "af6f4ba6d6d5f1a9aff4e0013447784853767ce083e068085f5e41c1d7e653cd"
+        }
+      },
+      "proofSha256": "7036954fca6f2910d1eb2d4998b5fbc81c11dea016ab4e4db3365a8f2891e8b2",
+      "pairMeanRgbDifference": 2.69311
+    },
+    {
+      "id": "gourd-basket-handle",
+      "title": "Gourd Basket with an Arched Handle",
+      "alt": "A shallow green-mottled gourd-shell basket holds a folded blue cloth beneath a curved wooden handle tied at both sides.",
+      "description": "A shallow green-mottled gourd-shell basket holds a folded blue cloth beneath a curved wooden handle tied at both sides. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_311/source/gourd-basket-handle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "2ae5786225d2af644158991e87381c509bd7189c7996712edcab6ec219a28a67",
+      "inputSignature": "3d7fceef8eb74de241c744f91537b84fafb6cc1d8f1aa590fd9df73e9f7d12fa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 944788,
+        "weightedCmykRmse": 1.099726
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1347363,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1096941,
+          "weightedCmykRmse": 0.775177
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1031830,
+          "weightedCmykRmse": 0.909846
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 944788,
+          "weightedCmykRmse": 1.099726
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        121,
+        48,
+        1213,
+        1151
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_311/exports/gourd-basket-handle.pdf",
+          "bytes": 944788,
+          "sha256": "04bd36980bc199780db95dba057dc4e0fdccbf2ab8cbe5373a8ac11deee0cc45"
+        },
+        "webp": {
+          "path": "work/production/wave_311/exports/gourd-basket-handle.webp",
+          "bytes": 1306992,
+          "sha256": "6458d7a713204c360f09d12b61e28b599aa7da032a60c074716a007cace31163"
+        },
+        "thumb": {
+          "path": "work/production/wave_311/exports/gourd-basket-handle-thumb.webp",
+          "bytes": 69122,
+          "sha256": "999047cf69ee838055b1a3ffcd2add4f1a748d4c0ea298a3183e15bccbb33407"
+        }
+      },
+      "proofSha256": "c924046f15788e48c4a5dce9cb94a86e0aa6c0181f27a358fa893713aac98693",
+      "pairMeanRgbDifference": 2.9464
+    },
+    {
+      "id": "gourd-brush-holder",
+      "title": "Gourd Brush Holder",
+      "alt": "A hollow gourd painted cobalt blue around its lower half holds three different paintbrushes and one sharpened pencil.",
+      "description": "A hollow gourd painted cobalt blue around its lower half holds three different paintbrushes and one sharpened pencil. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_311/source/gourd-brush-holder.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "20ab3a544319c253ede04855ba7571aaa65236b65059e7230ba104277730ce3e",
+      "inputSignature": "577e756bd064dcf5bc20e9be4926bbba4a68cfe2a34fdf6c1fd544b6b984502c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 982336,
+        "weightedCmykRmse": 0.802062
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1208666,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 982336,
+          "weightedCmykRmse": 0.802062
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        97,
+        35,
+        1109,
+        1280
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_311/exports/gourd-brush-holder.pdf",
+          "bytes": 982336,
+          "sha256": "30c2d8ca0513ed33c4e7732ee5bf09f1d22de7c9fb31d6868e1d33f6598681cf"
+        },
+        "webp": {
+          "path": "work/production/wave_311/exports/gourd-brush-holder.webp",
+          "bytes": 1132566,
+          "sha256": "91299c1ab3e253b3e6bde335df5c032c4206992c6139e4c6b96bced2a7581ac1"
+        },
+        "thumb": {
+          "path": "work/production/wave_311/exports/gourd-brush-holder-thumb.webp",
+          "bytes": 61074,
+          "sha256": "aa8327f02e1c9d2dec30702372cd1c5a66c405d177d4c55d16dc2047888909df"
+        }
+      },
+      "proofSha256": "6f8596debcafcf56f49d940cb2c285cb0f075430cf8b92ca63f08f1f726c8b07",
+      "pairMeanRgbDifference": 3.36417
+    },
+    {
+      "id": "gourd-dried-stem-vase",
+      "title": "Gourd Vase with Dried Grasses",
+      "alt": "A tall warm brown gourd vase holds airy dried grasses and a small round seed head.",
+      "description": "A tall warm brown gourd vase holds airy dried grasses and a small round seed head. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_311/source/gourd-dried-stem-vase.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gourd",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "a27fb542f4d743560ac7bbee1e6d343a8e3a36421f3576125aea68249a106873",
+      "inputSignature": "1dffcd5cc964e729d54f99b1458b419167869aeb0255d54f069c2be94cc65ac6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 694337,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 694337,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        109,
+        35,
+        959,
+        1476
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_311/exports/gourd-dried-stem-vase.pdf",
+          "bytes": 694337,
+          "sha256": "8fcfa6f1c229739c2ee4553e19b60e96caf852c133f9d18ab4e0188b760e728f"
+        },
+        "webp": {
+          "path": "work/production/wave_311/exports/gourd-dried-stem-vase.webp",
+          "bytes": 1181654,
+          "sha256": "d39d13eb0a2801ae65ba5d044383d258e35bf51c02a73d684ef4ed49fd57ed8f"
+        },
+        "thumb": {
+          "path": "work/production/wave_311/exports/gourd-dried-stem-vase-thumb.webp",
+          "bytes": 44830,
+          "sha256": "cd89c6365dbfa65a8bbe19621a7705a93f5eba65aa970d17d3c6aa97a6f43048"
+        }
+      },
+      "proofSha256": "eb906697009c2b80035b61949b694c42103cef771cdbae0521ac96b658983141",
+      "pairMeanRgbDifference": 1.51012
+    }
+  ],
+  "deferred": [],
+  "screenReviewScope": "All six native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T22:35:00.876Z"
+}

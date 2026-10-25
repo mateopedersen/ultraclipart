@@ -1,0 +1,35 @@
+{
+  "wave": "wave_315",
+  "topic": "gourd",
+  "method": "builtin-image-generation",
+  "research": "data/research/gourd-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gourd-outline-flower-wreath",
+      "title": "Gourd Vine Wreath Coloring Illustration",
+      "alt": "An open oval wreath of curling gourd vines, heart-shaped leaves and flowers has two small bottle gourds hanging from its lower edge, drawn in black outlines.",
+      "description": "An open oval wreath of curling gourd vines, heart-shaped leaves and flowers has two small bottle gourds hanging from its lower edge, drawn in black outlines. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_315/source/gourd-outline-flower-wreath.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "gourd-outline-hollowing-shell",
+      "title": "Gourd Shell Craft Coloring Illustration",
+      "alt": "An opened gourd shell rests beside its separate stemmed lid, a short wooden scraping spoon and a coiled cord, drawn in black outlines.",
+      "description": "An opened gourd shell rests beside its separate stemmed lid, a short wooden scraping spoon and a coiled cord, drawn in black outlines. An original gourd illustration for personal designs and classroom seasonal activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_315/source/gourd-outline-hollowing-shell.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

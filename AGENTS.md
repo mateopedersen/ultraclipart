@@ -196,3 +196,5 @@ revisions keep their artwork IDs. Preserve identifying features for branded
 characters while varying appropriate poses, expressions, costumes and scenarios.
 Every keyword targets 50 independent, separately useful compositions. Apply the
 same identity-preserving variety review to objects and botanical subjects.
+
+The target is 50 independent cliparts, not 50 variants of a shared base. Vary the color palette together with clothing, silhouette, materials, face and composition where applicable. Each artwork must work independently and have its own visual concept. Apply this principle logically to objects, plants and future non-character keywords while keeping the subject accurate. Review all selected artwork together; repeated base silhouettes, outfits or merely alternate media/palettes require replacement before release.
