@@ -1,6 +1,6 @@
 {
   "wave": "wave_227",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 4,
   "screenReview": "PASS",
@@ -632,5 +632,8 @@
   "createdAt": "2026-10-25T14:01:14.528Z",
   "cdnVerifiedAt": "2026-10-25T14:15:03.627Z",
   "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
-  "editorExportProofReviewedAt": "2026-10-25T14:49:19.361258+00:00"
+  "editorExportProofReviewedAt": "2026-10-25T14:49:19.361258+00:00",
+  "publishedVerifiedAt": "2026-10-25T15:13:53.709098+00:00",
+  "sourceRevision": "a905ff85554dc662b2a30c99c7869c9b52179386",
+  "liveEvidence": "reports/harvest-live/chromium/report.json"
 }

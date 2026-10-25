@@ -1,0 +1,202 @@
+{
+  "wave": "wave_243",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "autumn-outline-boots-umbrella",
+      "title": "Autumn Boots and Umbrella Coloring Outline",
+      "alt": "A black-line coloring illustration shows a rubber boot lying beside an open umbrella and three fallen leaves.",
+      "description": "A black-line coloring illustration shows a rubber boot lying beside an open umbrella and three fallen leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_243/source/autumn-outline-boots-umbrella.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "12ea7d274d32ce2a09ac3492c86948542afdc6bcefb9c1dcf04986d009f631a6",
+      "inputSignature": "355fe02d3fcdf4d8bb29ed53565b1758ec552a89c606e9311e3331d66d4aa5ca",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 919471,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 919471,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        32,
+        15,
+        1507,
+        990
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_243/exports/autumn-outline-boots-umbrella.pdf",
+          "bytes": 919471,
+          "sha256": "4c878c9e1e9cc7209327816a63eb02b683f0e0411c689f2239a59fc11e9ac642"
+        },
+        "webp": {
+          "path": "work/production/wave_243/exports/autumn-outline-boots-umbrella.webp",
+          "bytes": 1031380,
+          "sha256": "139b3eb16e7ef91b9255d560221f8001ef753d9b276b82068a8070a87d7269bc"
+        },
+        "thumb": {
+          "path": "work/production/wave_243/exports/autumn-outline-boots-umbrella-thumb.webp",
+          "bytes": 51954,
+          "sha256": "0454eb1be134470107f7217346831d5b703b15978b59674cf90adddc162d4e68"
+        }
+      },
+      "proofSha256": "5b7f1544bb3c29d4585be64b8d8724eb0d3e18d470fbe750564bfdaf735ba9d5",
+      "pairMeanRgbDifference": 4.71829
+    },
+    {
+      "id": "autumn-outline-child-leaves",
+      "title": "Child Collecting Autumn Leaves Coloring Outline",
+      "alt": "A black-line coloring illustration shows a kneeling child placing a large leaf into an open cloth bag.",
+      "description": "A black-line coloring illustration shows a kneeling child placing a large leaf into an open cloth bag. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_243/source/autumn-outline-child-leaves.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "752575c1ea000ad69c541dc573048cdec31681f2614f45f141095ad76f8752bd",
+      "inputSignature": "3d365895ec31fb339eb9b4028cd41d8837c79cd72ec6ec5c768a9b8c0c21dab3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 975216,
+        "weightedCmykRmse": 1.654189
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1248785,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1129047,
+          "weightedCmykRmse": 0.88043
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1070903,
+          "weightedCmykRmse": 1.080749
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1015668,
+          "weightedCmykRmse": 1.328784
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 975216,
+          "weightedCmykRmse": 1.654189
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        56,
+        73,
+        1088,
+        1302
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_243/exports/autumn-outline-child-leaves.pdf",
+          "bytes": 975216,
+          "sha256": "47f5c6e9f863f2948db8a9bcc367de65dc6d87f5b63c6f3a0be4e283bc916450"
+        },
+        "webp": {
+          "path": "work/production/wave_243/exports/autumn-outline-child-leaves.webp",
+          "bytes": 581456,
+          "sha256": "87450490c5ba770ded7f2bd1aa2708cd3a9abb351728535c9385cf9048606b47"
+        },
+        "thumb": {
+          "path": "work/production/wave_243/exports/autumn-outline-child-leaves-thumb.webp",
+          "bytes": 78770,
+          "sha256": "fae772221015cb5619cabf981feee961dcad3bfb3aba2b959eae2531ccff97b1"
+        }
+      },
+      "proofSha256": "e65ef247bec8ea2249576d0cda1f607bbb70948f78055a68043be72f9f632f9a",
+      "pairMeanRgbDifference": 5.37198
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:00:55.131471+00:00",
+  "screenReviewScope": "All native CMYK PDF renders visually inspected. Pressed leaves and page decorations fully framed; cottage supports, animal anatomy, natural hands and bicycle occlusion coherent; all independent coloring outlines readable.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:00:55.610Z",
+  "cdnVerifiedAt": "2026-10-25T15:12:17.333Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T15:33:19.662093+00:00"
+}

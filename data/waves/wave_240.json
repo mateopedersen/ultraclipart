@@ -1,0 +1,559 @@
+{
+  "wave": "wave_240",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "autumn-pressed-leaf-books",
+      "title": "Pressed Autumn Leaf Study",
+      "alt": "A wooden leaf press with brass wing nuts holds a sheet of pressed golden birch leaves and a russet oak leaf beside a cream ribbon.",
+      "description": "A wooden leaf press with brass wing nuts holds a sheet of pressed golden birch leaves and a russet oak leaf beside a cream ribbon. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_240/source/autumn-pressed-leaf-books.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c2b2dab3489044d77dafb500f556ec2d8b43fbd3bf7202d57093947c9768fef4",
+      "inputSignature": "3a335e9dd94d9968a15207a4334105966ed11782a1f5660277d274d7a8e7974e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 868480,
+        "weightedCmykRmse": 0.753437
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1061991,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 868480,
+          "weightedCmykRmse": 0.753437
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        18,
+        1485,
+        994
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_240/exports/autumn-pressed-leaf-books.pdf",
+          "bytes": 868480,
+          "sha256": "c8db21563a2f936f362a0a568efd9bd2783549915bb7d4eefe2626580f1555ca"
+        },
+        "webp": {
+          "path": "work/production/wave_240/exports/autumn-pressed-leaf-books.webp",
+          "bytes": 1760604,
+          "sha256": "3e6436e7d301c289230ece644160982e2800d9bbd9dacbf989f7b33448cafbdd"
+        },
+        "thumb": {
+          "path": "work/production/wave_240/exports/autumn-pressed-leaf-books-thumb.webp",
+          "bytes": 52954,
+          "sha256": "58834a1fa584f9268f7e3a16cad180f2ca61368d2261671fb01fae9150c03c85"
+        }
+      },
+      "proofSha256": "ac0cc4fcfed05f95d0f2bddf501f164fe4b0d82e2f7ee4dba6d3c49a2ecb0522",
+      "pairMeanRgbDifference": 4.04294
+    },
+    {
+      "id": "autumn-leaf-sketchbook",
+      "title": "Autumn Leaf Sketchbook and Pencils",
+      "alt": "An open sketchbook shows maple and oak leaf studies beside colored pencils, a loose russet leaf and a curling berry twig.",
+      "description": "An open sketchbook shows maple and oak leaf studies beside colored pencils, a loose russet leaf and a curling berry twig. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_240/source/autumn-leaf-sketchbook.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7dda132cdfa77b6395af96993a7926da654bb6dddf49fd84ca2263bc17738e83",
+      "inputSignature": "15b07a30d57e554b4a093473e2f879409f56d34769068ddf3fcf91d9e27e76dc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 984730,
+        "weightedCmykRmse": 0.725709
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1196360,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 984730,
+          "weightedCmykRmse": 0.725709
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        70,
+        6,
+        1481,
+        1004
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_240/exports/autumn-leaf-sketchbook.pdf",
+          "bytes": 984730,
+          "sha256": "835eedb6db33f65052553b0585cafb0b2173b499dbfed4f857496ea27b9fa49d"
+        },
+        "webp": {
+          "path": "work/production/wave_240/exports/autumn-leaf-sketchbook.webp",
+          "bytes": 1821232,
+          "sha256": "4de9f35ea7eb5fa85880bf67dfe298acdbcc4bb539992cae76f4af26e35e3711"
+        },
+        "thumb": {
+          "path": "work/production/wave_240/exports/autumn-leaf-sketchbook-thumb.webp",
+          "bytes": 64696,
+          "sha256": "51a5b0f33a351ed1a2a4062c6be39daef8f6205a02c755e67c26728a986c4952"
+        }
+      },
+      "proofSha256": "1e3c7cae91e25df103b0fdfcd7ef0cf32a590820c35f064feb9c3866720e3809",
+      "pairMeanRgbDifference": 4.53872
+    },
+    {
+      "id": "autumn-birch-leaf-wreath",
+      "title": "Golden Birch Leaf Wreath",
+      "alt": "A circular wreath of white birch twigs and golden leaves has a small red berry cluster near its lower edge.",
+      "description": "A circular wreath of white birch twigs and golden leaves has a small red berry cluster near its lower edge. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_240/source/autumn-birch-leaf-wreath.png",
+      "printMaxEdgePx": 850,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1310,
+      "height": 1200,
+      "pdfWidth": 850,
+      "pdfHeight": 779,
+      "sourceType": "raster",
+      "sourceSha256": "37f357eaf5778c9088933754912eaa13edb25b21273d640069f0d9fe33baec85",
+      "inputSignature": "d085f370b5d5f1e534981b5e4485cca11c15b329c3ce4640e9166195c8dbd728",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 975226,
+        "weightedCmykRmse": 1.338927
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1267663,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1152999,
+          "weightedCmykRmse": 0.743032
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1105851,
+          "weightedCmykRmse": 0.885487
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1033762,
+          "weightedCmykRmse": 1.080921
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 975226,
+          "weightedCmykRmse": 1.338927
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        31,
+        1290,
+        1180
+      ],
+      "image": {
+        "width": 850,
+        "height": 779,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_240/exports/autumn-birch-leaf-wreath.pdf",
+          "bytes": 975226,
+          "sha256": "4dd9efcb2a60ae68eb1c918243928c5d1db2a59534cfad6a3454d8bbb9add7eb"
+        },
+        "webp": {
+          "path": "work/production/wave_240/exports/autumn-birch-leaf-wreath.webp",
+          "bytes": 1269502,
+          "sha256": "732ed7ae961c3d605500026e8aa035e2fd851024115847dc69753208a44d0254"
+        },
+        "thumb": {
+          "path": "work/production/wave_240/exports/autumn-birch-leaf-wreath-thumb.webp",
+          "bytes": 100600,
+          "sha256": "52832ecf18021f970ddd5e692a074ef498097426210ea602b4f157fc650e94de"
+        }
+      },
+      "proofSha256": "9ffd60de87b973b4d59f114926d4be29c8623fbf341cea460dd6ac298e357392",
+      "pairMeanRgbDifference": 5.62894
+    },
+    {
+      "id": "autumn-leaf-corner-arrangement",
+      "title": "Autumn Leaf Corner Decoration",
+      "alt": "An L-shaped decoration combines copper oak leaves, golden birch leaves, acorns, fine twigs and a fern tip.",
+      "description": "An L-shaped decoration combines copper oak leaves, golden birch leaves, acorns, fine twigs and a fern tip. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_240/source/autumn-leaf-corner-arrangement.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "02b403f9dff3090652d6c754ed8ea7509271ea46149be20f07e45a4189b5ca2e",
+      "inputSignature": "9cffeaa46b9f46ee010710088060dfa247eae62091cc111448036f5f4c821e58",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 964889,
+        "weightedCmykRmse": 0.991089
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1220834,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1028169,
+          "weightedCmykRmse": 0.825398
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 964889,
+          "weightedCmykRmse": 0.991089
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        7,
+        1305,
+        1184
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_240/exports/autumn-leaf-corner-arrangement.pdf",
+          "bytes": 964889,
+          "sha256": "44118a8cb1e58d946b37709cfba8664a0dfaf36be0e4e2a865c86d7e25706c1b"
+        },
+        "webp": {
+          "path": "work/production/wave_240/exports/autumn-leaf-corner-arrangement.webp",
+          "bytes": 1121910,
+          "sha256": "74a7c9e809b4ef5b1447bc180069c68dd53c7d2633f699ea0cc42ad2eaa62350"
+        },
+        "thumb": {
+          "path": "work/production/wave_240/exports/autumn-leaf-corner-arrangement-thumb.webp",
+          "bytes": 71192,
+          "sha256": "d1f5e04e8663b16e67bdaa95d064b7b72f3e9698e901d5f648129c52cc7139eb"
+        }
+      },
+      "proofSha256": "8dcdff49cb3100569f5d6a5933999e0bd818d5b4087060ca359dbcdc62d89e61",
+      "pairMeanRgbDifference": 3.5518
+    },
+    {
+      "id": "autumn-vine-oval-frame",
+      "title": "Autumn Vine Oval Frame",
+      "alt": "A tall oval grapevine frame carries burgundy leaves and dark grape clusters along its left side.",
+      "description": "A tall oval grapevine frame carries burgundy leaves and dark grape clusters along its left side. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_240/source/autumn-vine-oval-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "67962a5e7044744832745a330d673ac1f79e79a8685ed880740b9aa90c8cee76",
+      "inputSignature": "88f2f3e700bd37c2c4b142aed10c2944bd60dbcf79f7136af5b6a3d2b47b0945",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 963430,
+        "weightedCmykRmse": 1.131851
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1242458,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1081643,
+          "weightedCmykRmse": 0.776059
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1034625,
+          "weightedCmykRmse": 0.93369
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 963430,
+          "weightedCmykRmse": 1.131851
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        14,
+        1019,
+        1506
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_240/exports/autumn-vine-oval-frame.pdf",
+          "bytes": 963430,
+          "sha256": "2ea66d65e49d4bbd8383955660fbc06a8381453ff463dcdc5bd8f859304f2421"
+        },
+        "webp": {
+          "path": "work/production/wave_240/exports/autumn-vine-oval-frame.webp",
+          "bytes": 1750288,
+          "sha256": "d1e78ad017d2f130f68f3f4f7801a1de85fe2ffb66a7c71d28538bff526d339f"
+        },
+        "thumb": {
+          "path": "work/production/wave_240/exports/autumn-vine-oval-frame-thumb.webp",
+          "bytes": 70678,
+          "sha256": "1dbb5533ab09fdc50826c7a084d2fdecee91be8d4ff553bbb8b4da53c80b0412"
+        }
+      },
+      "proofSha256": "027561fd2ed9093ba944a8bbcb5cd270716cfb921d5292bad810ff551da601d2",
+      "pairMeanRgbDifference": 5.83354
+    },
+    {
+      "id": "autumn-foliage-page-arch",
+      "title": "Arch of Autumn Foliage",
+      "alt": "A curved overhead arch of red and golden leaves, berries and slender twigs leaves an open space below.",
+      "description": "A curved overhead arch of red and golden leaves, berries and slender twigs leaves an open space below. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_240/source/autumn-foliage-page-arch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d2ff862a5281dc04a9a434a1227e31e5e682801ae18a8eee5fb5a14d6033af82",
+      "inputSignature": "37645273a71c4e282a72ea9a027f25cb26e3217de75e93f9b48d7cf4672aa366",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 948140,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 948140,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        12,
+        1531,
+        1010
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_240/exports/autumn-foliage-page-arch.pdf",
+          "bytes": 948140,
+          "sha256": "5cb4e19cd928ca7dc2cb8cf2ead8ce12ebea1a22ddd2a0d36c74fa17bcf589c3"
+        },
+        "webp": {
+          "path": "work/production/wave_240/exports/autumn-foliage-page-arch.webp",
+          "bytes": 1509598,
+          "sha256": "efe282a8cb6a70635c7709c93911dff882febb0b5f0c5a052c2dc1cd26ed49b3"
+        },
+        "thumb": {
+          "path": "work/production/wave_240/exports/autumn-foliage-page-arch-thumb.webp",
+          "bytes": 61092,
+          "sha256": "9367fb31cc3338921d0170b93eec4760ec0ed15126b625f578af80228a6d8bd0"
+        }
+      },
+      "proofSha256": "15418947deb8871d1e375924ae512286a15560a2b387c0eedf9af22a62b8c984",
+      "pairMeanRgbDifference": 4.51017
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:00:55.131471+00:00",
+  "screenReviewScope": "All native CMYK PDF renders visually inspected. Pressed leaves and page decorations fully framed; cottage supports, animal anatomy, natural hands and bicycle occlusion coherent; all independent coloring outlines readable.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:00:55.576Z",
+  "cdnVerifiedAt": "2026-10-25T15:12:17.333Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T15:33:19.662093+00:00"
+}

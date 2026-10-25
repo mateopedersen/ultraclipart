@@ -1,0 +1,531 @@
+{
+  "wave": "wave_235",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "autumn-fox-hollow-log",
+      "title": "Fox Listening Beside a Hollow Log",
+      "alt": "A seated red fox watches a drifting oak leaf beside a mossy hollow log and fallen autumn leaves.",
+      "description": "A seated red fox watches a drifting oak leaf beside a mossy hollow log and fallen autumn leaves. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_235/source/autumn-fox-hollow-log.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7ddee70892e456b9b597f6483345f1662ece311c789e7c415ab65d5263186fcd",
+      "inputSignature": "304eddc1af5eb610769b071bdf73689bad7c3a0b62b1a08e632c0d73608c89df",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 773784,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 773784,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        250,
+        73,
+        1356,
+        910
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_235/exports/autumn-fox-hollow-log.pdf",
+          "bytes": 773784,
+          "sha256": "9594bd8b9aea9858b64e38b93a71bd14663ee76efdbdd73011d56333ff9eed4b"
+        },
+        "webp": {
+          "path": "work/production/wave_235/exports/autumn-fox-hollow-log.webp",
+          "bytes": 1287476,
+          "sha256": "f1a4d368a4e2fa8f6706ce885a740607cdcf738ba846657d2223e8c34a246ca2"
+        },
+        "thumb": {
+          "path": "work/production/wave_235/exports/autumn-fox-hollow-log-thumb.webp",
+          "bytes": 39930,
+          "sha256": "c1c353e40b87cd7072753537fecd3f973ecad44eb01ba10363d84f55826654bb"
+        }
+      },
+      "proofSha256": "0dd4394d053d68645e51c28b6eb44a7e915ba5b121ac077f0da91fe90210e74d",
+      "pairMeanRgbDifference": 2.80254
+    },
+    {
+      "id": "autumn-doe-fawn-birch",
+      "title": "Doe and Fawn in Golden Birch Leaves",
+      "alt": "A doe stands behind a spotted fawn between two small golden birch saplings on a leaf-covered patch.",
+      "description": "A doe stands behind a spotted fawn between two small golden birch saplings on a leaf-covered patch. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_235/source/autumn-doe-fawn-birch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c6602e07ab9651ae640eba3adcf9fec28a07f33b115a152928e85ac8c1a3002c",
+      "inputSignature": "0f8ee301728cf07d1ca389b43525724a765d9f45f34c6753f42bf6cfdef1a303",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 942019,
+        "weightedCmykRmse": 0.789928
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1090759,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 942019,
+          "weightedCmykRmse": 0.789928
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        290,
+        22,
+        1247,
+        996
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_235/exports/autumn-doe-fawn-birch.pdf",
+          "bytes": 942019,
+          "sha256": "cd6fab68204e89e4b84803d7dda8ff23af2ff9c36be96ba4ab99cf8ad91f2d22"
+        },
+        "webp": {
+          "path": "work/production/wave_235/exports/autumn-doe-fawn-birch.webp",
+          "bytes": 1574864,
+          "sha256": "7e6be3d96c6647a4a2d7b31d3fd89891a276c2077dc6de0920e60716efa57481"
+        },
+        "thumb": {
+          "path": "work/production/wave_235/exports/autumn-doe-fawn-birch-thumb.webp",
+          "bytes": 69704,
+          "sha256": "1a015e7cea2d09751d707b022571f94369d30ea125e23e9924a886d82c8f5cd5"
+        }
+      },
+      "proofSha256": "6ef9da910a30ad76ac80008ffc20ecb7bc943140360743070c7790f9b68edb1e",
+      "pairMeanRgbDifference": 4.5065
+    },
+    {
+      "id": "autumn-badger-beech-path",
+      "title": "Badger on a Beech Leaf Path",
+      "alt": "A striped-faced badger sniffs a beech nut beside an exposed root and copper leaves.",
+      "description": "A striped-faced badger sniffs a beech nut beside an exposed root and copper leaves. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_235/source/autumn-badger-beech-path.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "a39e2f35d6df4433b881ad659e79747c1dc96ff86fc80327f13c96f5d04b2efd",
+      "inputSignature": "9814b45e7aaf0166ef519ef6390c61953392dc0a91656fcaf535f26f09b2539d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 918275,
+        "weightedCmykRmse": 1.106157
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1193407,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1037971,
+          "weightedCmykRmse": 0.744987
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 990784,
+          "weightedCmykRmse": 0.901093
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 918275,
+          "weightedCmykRmse": 1.106157
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        44,
+        146,
+        1493,
+        915
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_235/exports/autumn-badger-beech-path.pdf",
+          "bytes": 918275,
+          "sha256": "2d7463c49436b16b33940fae3da34a32578eb12c12644142d005ae44c4e3e4b2"
+        },
+        "webp": {
+          "path": "work/production/wave_235/exports/autumn-badger-beech-path.webp",
+          "bytes": 1755836,
+          "sha256": "28e9de0992515a7812ac4e2114d467ccee0df736574b715e703f960982c15914"
+        },
+        "thumb": {
+          "path": "work/production/wave_235/exports/autumn-badger-beech-path-thumb.webp",
+          "bytes": 54050,
+          "sha256": "bee5a135c5da1eb1b6ce2331fa51ce07206e105c99dd5fa41880efa899ee54db"
+        }
+      },
+      "proofSha256": "55015e9bb1b902df67da6bd7718152fad61e8235eaee34e2471a980f1f8420bf",
+      "pairMeanRgbDifference": 3.70556
+    },
+    {
+      "id": "autumn-hedgehog-leaf-shelter",
+      "title": "Hedgehog Beneath a Fallen Leaf",
+      "alt": "A hedgehog shelters beneath a curled autumn leaf beside chestnut burs and a small twig.",
+      "description": "A hedgehog shelters beneath a curled autumn leaf beside chestnut burs and a small twig. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_235/source/autumn-hedgehog-leaf-shelter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "bbfa580bbf5657edef7ccc2913132b77a80bcd180391cb7b189dc06d08d0d792",
+      "inputSignature": "07cd2d107d2d08fdcdce9661382cb6d2b4273e8c82b8d8a53448af85ed89ef55",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 928559,
+        "weightedCmykRmse": 1.0955
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1163785,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1047932,
+          "weightedCmykRmse": 0.732362
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1000761,
+          "weightedCmykRmse": 0.888175
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 928559,
+          "weightedCmykRmse": 1.0955
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        46,
+        162,
+        1502,
+        871
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_235/exports/autumn-hedgehog-leaf-shelter.pdf",
+          "bytes": 928559,
+          "sha256": "d1df48dcf993e99816c941e9cc6d58903a5f900388d02d3bfaf599cd24c2f946"
+        },
+        "webp": {
+          "path": "work/production/wave_235/exports/autumn-hedgehog-leaf-shelter.webp",
+          "bytes": 1645106,
+          "sha256": "634825d1d0af2e497e451774722aac1cd92265718a9bd1bcbf7009b43a3185a8"
+        },
+        "thumb": {
+          "path": "work/production/wave_235/exports/autumn-hedgehog-leaf-shelter-thumb.webp",
+          "bytes": 51268,
+          "sha256": "99c519a78b1a092a5c06ff33ec195a139b69dda743d119c8967af62bf36c66cd"
+        }
+      },
+      "proofSha256": "c95fe0fadac7fd0affce47f3af18c7065d2668e843d5fa5b538ac089c6078e3d",
+      "pairMeanRgbDifference": 4.07357
+    },
+    {
+      "id": "autumn-chipmunk-stump",
+      "title": "Chipmunk on an Autumn Stump",
+      "alt": "A striped chipmunk holds a seed while standing on a low stump beside an amber fern and oak leaves.",
+      "description": "A striped chipmunk holds a seed while standing on a low stump beside an amber fern and oak leaves. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_235/source/autumn-chipmunk-stump.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "0dc229dbadfc0287008e1879c0cb8b38e4cd022065a55de0aa0f8709ede05f40",
+      "inputSignature": "e0fb65233a5349043487fbe89f549ad697b1b83068e5467add10b6b770cb6b5f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 974022,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 974022,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        188,
+        65,
+        1363,
+        962
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_235/exports/autumn-chipmunk-stump.pdf",
+          "bytes": 974022,
+          "sha256": "06148669be7d17f3a299ced89371299023aabde2079ea4e45665f8258b2402d2"
+        },
+        "webp": {
+          "path": "work/production/wave_235/exports/autumn-chipmunk-stump.webp",
+          "bytes": 1570946,
+          "sha256": "ffc868b0a440a821396a50fc82ee637a117be1b95111a332d80d1d956736718c"
+        },
+        "thumb": {
+          "path": "work/production/wave_235/exports/autumn-chipmunk-stump-thumb.webp",
+          "bytes": 52052,
+          "sha256": "76a1c4a40ec83d8a1b194fcfabca49262efad928bbafd9766df698493d93e860"
+        }
+      },
+      "proofSha256": "1a5af4ba78477e1fdee1e49bc2a7baaccd7b05318cec6874024228e6c61a55a1",
+      "pairMeanRgbDifference": 3.66923
+    },
+    {
+      "id": "autumn-owl-birch-perch",
+      "title": "Owl on a Birch Branch",
+      "alt": "A tawny owl grips a short birch branch with golden leaves, with its wings folded and tail fully visible.",
+      "description": "A tawny owl grips a short birch branch with golden leaves, with its wings folded and tail fully visible. An original illustration for personal autumn crafts and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_235/source/autumn-owl-birch-perch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6df907f74724e466a346837574ecddab49fd4ecfc9a898bfe9bf860002763663",
+      "inputSignature": "16055009da2413366be0f710a2503d1a195c460fd903dc37c74c94a744ded342",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 739088,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 739088,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        386,
+        60,
+        1283,
+        945
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_235/exports/autumn-owl-birch-perch.pdf",
+          "bytes": 739088,
+          "sha256": "2ebdae81a2d0b29307b6ae3f26bb48b42a764a97b9f4e3499e5f27c4eddc8904"
+        },
+        "webp": {
+          "path": "work/production/wave_235/exports/autumn-owl-birch-perch.webp",
+          "bytes": 1287078,
+          "sha256": "aa8908e2c33776b3e010ad0d23b83582cedf731a423cffa4655122e0b7cb69fc"
+        },
+        "thumb": {
+          "path": "work/production/wave_235/exports/autumn-owl-birch-perch-thumb.webp",
+          "bytes": 40628,
+          "sha256": "41090798cec1194146ce1f3731ec2c77208551d7e928b1afd057b6103972086e"
+        }
+      },
+      "proofSha256": "f87b4222be996e57c9115e08452515e0a6e854de72d6d98cbb877b5718423779",
+      "pairMeanRgbDifference": 3.577
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T14:13:09.360581+00:00",
+  "screenReviewScope": "All six actual native CMYK PDF proof renders visually inspected; intact wildlife anatomy, fur, bark, leaves and complete full framing.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:00:55.569Z",
+  "cdnVerifiedAt": "2026-10-25T15:12:17.333Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T15:33:19.662093+00:00"
+}

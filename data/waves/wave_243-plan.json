@@ -1,0 +1,33 @@
+{
+  "wave": "wave_243",
+  "topic": "autumn",
+  "method": "builtin-image-generation",
+  "research": "data/research/autumn-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "autumn-outline-boots-umbrella",
+      "title": "Autumn Boots and Umbrella Coloring Outline",
+      "alt": "A black-line coloring illustration shows a rubber boot lying beside an open umbrella and three fallen leaves.",
+      "description": "A black-line coloring illustration shows a rubber boot lying beside an open umbrella and three fallen leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_243/source/autumn-outline-boots-umbrella.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "autumn-outline-child-leaves",
+      "title": "Child Collecting Autumn Leaves Coloring Outline",
+      "alt": "A black-line coloring illustration shows a kneeling child placing a large leaf into an open cloth bag.",
+      "description": "A black-line coloring illustration shows a kneeling child placing a large leaf into an open cloth bag. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_243/source/autumn-outline-child-leaves.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

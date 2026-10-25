@@ -1,0 +1,587 @@
+{
+  "wave": "wave_241",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "autumn-horizontal-leaf-border",
+      "title": "Long Autumn Leaf Border",
+      "alt": "A low horizontal border combines red maple and golden oak leaves with three acorns and fine twigs.",
+      "description": "A low horizontal border combines red maple and golden oak leaves with three acorns and fine twigs. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_241/source/autumn-horizontal-leaf-border.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1774,
+      "height": 887,
+      "pdfWidth": 1000,
+      "pdfHeight": 500,
+      "sourceType": "raster",
+      "sourceSha256": "c0b336e33c14a6e5c9f2efe939f20ea49fd7fdd65a278a6883aa1bdd562a6905",
+      "inputSignature": "69ff67f0aa1b4375f92c08c0d2cbf7430541cfbcdcf8a60fe172a45c5ac1805b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 743768,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 743768,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        99,
+        1725,
+        802
+      ],
+      "image": {
+        "width": 1000,
+        "height": 500,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_241/exports/autumn-horizontal-leaf-border.pdf",
+          "bytes": 743768,
+          "sha256": "b32ec54668d6a7eb01a4e61c6c4c89e42d322b39336282adc541c10ff3fad082"
+        },
+        "webp": {
+          "path": "work/production/wave_241/exports/autumn-horizontal-leaf-border.webp",
+          "bytes": 1260142,
+          "sha256": "365ac5340c650fb2e951d2f6f7a6886a23eaf8b744e4f1694b47d864eaea8240"
+        },
+        "thumb": {
+          "path": "work/production/wave_241/exports/autumn-horizontal-leaf-border-thumb.webp",
+          "bytes": 40672,
+          "sha256": "c0dc8846c2dca9b0972674367a9231c148bd1891d4cc8ff56505dd4e24e5e536"
+        }
+      },
+      "proofSha256": "8c6efe306abe07695b8c895dead7b479570d2073454fa3b8899b67e386413fee",
+      "pairMeanRgbDifference": 5.79382
+    },
+    {
+      "id": "autumn-paper-layered-hills",
+      "title": "Layered Autumn Hills Illustration",
+      "alt": "A layered paper-style landscape shows amber hills, red-leaved trees and a narrow stream flowing around smooth stones.",
+      "description": "A layered paper-style landscape shows amber hills, red-leaved trees and a narrow stream flowing around smooth stones. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_241/source/autumn-paper-layered-hills.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "faf67308296148866d3d3335c4ecbfc11b40224ee702011962a4418db353d197",
+      "inputSignature": "d4ef67dc1ba47179ec5ffd1bcc7c26c76586f0321d6415fc3fb8236d7daa0325",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 958110,
+        "weightedCmykRmse": 0.886914
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1209431,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1009765,
+          "weightedCmykRmse": 0.747824
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 958110,
+          "weightedCmykRmse": 0.886914
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        86,
+        22,
+        1454,
+        994
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_241/exports/autumn-paper-layered-hills.pdf",
+          "bytes": 958110,
+          "sha256": "fdb927bdb19d9eab45a330172f1d0be94a613380fc7bd16a4a679752926b51db"
+        },
+        "webp": {
+          "path": "work/production/wave_241/exports/autumn-paper-layered-hills.webp",
+          "bytes": 1907240,
+          "sha256": "95c9051f2fbc04e876c0a1b38e89e135d55b6a6964f73b26fcef914ca117b019"
+        },
+        "thumb": {
+          "path": "work/production/wave_241/exports/autumn-paper-layered-hills-thumb.webp",
+          "bytes": 63870,
+          "sha256": "0be214eec265cbfab0654f9abd03af933c97826a7d9d6e3043ff54f3261c52d5"
+        }
+      },
+      "proofSha256": "e12a021568f01c0f4f8d76f962c2f2d7916ce79e2746d546d829381e275a4b18",
+      "pairMeanRgbDifference": 4.79156
+    },
+    {
+      "id": "autumn-cottage-porch-leaves",
+      "title": "Small Cottage Porch in Autumn",
+      "alt": "A timber cottage has a sheltered porch, wicker chair, yellow potted flowers, stone steps and a red climbing vine.",
+      "description": "A timber cottage has a sheltered porch, wicker chair, yellow potted flowers, stone steps and a red climbing vine. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_241/source/autumn-cottage-porch-leaves.png",
+      "printMaxEdgePx": 820,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 820,
+      "pdfHeight": 749,
+      "sourceType": "raster",
+      "sourceSha256": "4a2aff38b41ccfdfe81647622e35243552ad0e884153c542808ebb5ab9e7b89f",
+      "inputSignature": "339d7478e92b30e625b07eaf963ccabe59159a7991ac922f6375533f7ccc7cd6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 971690,
+        "weightedCmykRmse": 1.211218
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1386449,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1177972,
+          "weightedCmykRmse": 0.691862
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1122108,
+          "weightedCmykRmse": 0.819127
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1054011,
+          "weightedCmykRmse": 0.979282
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 971690,
+          "weightedCmykRmse": 1.211218
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        24,
+        1295,
+        1130
+      ],
+      "image": {
+        "width": 820,
+        "height": 749,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_241/exports/autumn-cottage-porch-leaves.pdf",
+          "bytes": 971690,
+          "sha256": "cdcc05c782a714394ce02036329237b2c662f3423adc32fef4e33f625222df3b"
+        },
+        "webp": {
+          "path": "work/production/wave_241/exports/autumn-cottage-porch-leaves.webp",
+          "bytes": 1965152,
+          "sha256": "75031d375ba736d3cd362aaea2615c24b012a162df59dfe0fce3e26a289ebf89"
+        },
+        "thumb": {
+          "path": "work/production/wave_241/exports/autumn-cottage-porch-leaves-thumb.webp",
+          "bytes": 100202,
+          "sha256": "c49449f460dc0deb476add85eeab85d454f32f37211d80cb794eea31e9061379"
+        }
+      },
+      "proofSha256": "4c4a14f2625b589aacf89d42e2b69cf56bd4f042eaa2f7c61121489c37b1239b",
+      "pairMeanRgbDifference": 4.57156
+    },
+    {
+      "id": "autumn-cider-jug-apples",
+      "title": "Warm Cider Jug and Autumn Apples",
+      "alt": "A ceramic cider jug and two cups stand on a round wooden board beside apples, cinnamon and a curl of steam.",
+      "description": "A ceramic cider jug and two cups stand on a round wooden board beside apples, cinnamon and a curl of steam. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_241/source/autumn-cider-jug-apples.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "67800cf98b075ab7aab0172a18f07b9111582fe5d6a7e68f9a4269ae584d1746",
+      "inputSignature": "54b4107e44ce3f6c59531b202c83fd4bedbb2646e54ebd33798d4b48958a8572",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 925252,
+        "weightedCmykRmse": 0.773249
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1184027,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 925252,
+          "weightedCmykRmse": 0.773249
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        98,
+        100,
+        1305,
+        1072
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_241/exports/autumn-cider-jug-apples.pdf",
+          "bytes": 925252,
+          "sha256": "ed852882997ea81125480d61a998ed457f20e09acfc69d475208799e616bd617"
+        },
+        "webp": {
+          "path": "work/production/wave_241/exports/autumn-cider-jug-apples.webp",
+          "bytes": 1310296,
+          "sha256": "99b8cb9a7f0999359510fabe7632a837f5573afa0163d67b2ba4a595d3616dd3"
+        },
+        "thumb": {
+          "path": "work/production/wave_241/exports/autumn-cider-jug-apples-thumb.webp",
+          "bytes": 58556,
+          "sha256": "25a3708f72aebd883406e330d6bf7fb278732b04a80babd3b3ded4ad066ec7bb"
+        }
+      },
+      "proofSha256": "24e1b06fd2c54fb567a6275bb0022e40d7ec9987047fcc36eda9bb5499510fc3",
+      "pairMeanRgbDifference": 3.18502
+    },
+    {
+      "id": "autumn-mouse-leaf-umbrella",
+      "title": "Mouse Beneath a Leaf Umbrella",
+      "alt": "A small mouse holds a curled amber leaf over its head beside an acorn and fallen leaves.",
+      "description": "A small mouse holds a curled amber leaf over its head beside an acorn and fallen leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_241/source/autumn-mouse-leaf-umbrella.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1218,
+      "height": 1292,
+      "pdfWidth": 848,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "59f29480aed0e5baace34a2248ac89f6187767d7dc084db6bdc729e7f0a02640",
+      "inputSignature": "91326aebaa702e50fa218198b1331b5b04f4a56282175c5564c52e0a4a590b82",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967807,
+        "weightedCmykRmse": 1.275647
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1364334,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1183408,
+          "weightedCmykRmse": 0.727565
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1123616,
+          "weightedCmykRmse": 0.858331
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041299,
+          "weightedCmykRmse": 1.028392
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967807,
+          "weightedCmykRmse": 1.275647
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        27,
+        24,
+        1198,
+        1263
+      ],
+      "image": {
+        "width": 848,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_241/exports/autumn-mouse-leaf-umbrella.pdf",
+          "bytes": 967807,
+          "sha256": "ed66f7b696d50e24e08ea944369084cf83309101491fde314fff75bf5bc5405d"
+        },
+        "webp": {
+          "path": "work/production/wave_241/exports/autumn-mouse-leaf-umbrella.webp",
+          "bytes": 1371228,
+          "sha256": "d2d0adc409f743834364335f7e495943b84b2ad75ad4528f7699c0a3f93db27a"
+        },
+        "thumb": {
+          "path": "work/production/wave_241/exports/autumn-mouse-leaf-umbrella-thumb.webp",
+          "bytes": 83660,
+          "sha256": "629eb8df8cb95d7e67dcdc8e0e1448a7fa606a52abb2c2d252b0f51483d24d55"
+        }
+      },
+      "proofSha256": "310dc743e43cdeee2f92fe3b7899988463d76eb7d663bdf24e7c57625cd3ff22",
+      "pairMeanRgbDifference": 4.26222
+    },
+    {
+      "id": "autumn-cat-blanket-basket",
+      "title": "Cat in a Cozy Autumn Basket",
+      "alt": "A tabby cat curls in an oval wicker basket lined with a mustard knitted blanket beside fallen maple leaves.",
+      "description": "A tabby cat curls in an oval wicker basket lined with a mustard knitted blanket beside fallen maple leaves. An original illustration for personal seasonal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_241/source/autumn-cat-blanket-basket.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "autumn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "a7560c4415a2c73e5df369ba2c7d803c3cb71caefdd26f824a694e8c1653c8e8",
+      "inputSignature": "e81e248b74dd927270b0c7b887f7792774caf7c9d7b0781f9f171af68862df6c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 942399,
+        "weightedCmykRmse": 1.234286
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1368458,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1147130,
+          "weightedCmykRmse": 0.696362
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1092598,
+          "weightedCmykRmse": 0.83014
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1019289,
+          "weightedCmykRmse": 1.005497
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 942399,
+          "weightedCmykRmse": 1.234286
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        10,
+        1506,
+        1006
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_241/exports/autumn-cat-blanket-basket.pdf",
+          "bytes": 942399,
+          "sha256": "11b84d7548721ce49925248d51c82163037c5341c6dfaaed01cd055d0f11b0d6"
+        },
+        "webp": {
+          "path": "work/production/wave_241/exports/autumn-cat-blanket-basket.webp",
+          "bytes": 2085360,
+          "sha256": "68ce92f7b2b24514fe1a7f7da3b881365aed565b2d6bf95ac9e726baa03fca25"
+        },
+        "thumb": {
+          "path": "work/production/wave_241/exports/autumn-cat-blanket-basket-thumb.webp",
+          "bytes": 67814,
+          "sha256": "2f1cc3007765c62c7ec5460ff16a29599118a4db3e43c894dd1d366205bb5169"
+        }
+      },
+      "proofSha256": "ac4a1d4ac3e20e1cc05beb83a5bec5f9372feed60bd99c46ef2f9d734e4cfbe6",
+      "pairMeanRgbDifference": 5.96449
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T15:00:55.131471+00:00",
+  "screenReviewScope": "All native CMYK PDF renders visually inspected. Pressed leaves and page decorations fully framed; cottage supports, animal anatomy, natural hands and bicycle occlusion coherent; all independent coloring outlines readable.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T15:00:55.597Z",
+  "cdnVerifiedAt": "2026-10-25T15:12:17.333Z",
+  "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
+  "editorExportProofReviewedAt": "2026-10-25T15:33:19.662093+00:00"
+}
