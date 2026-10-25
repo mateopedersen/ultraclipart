@@ -6244,7 +6244,7 @@
       "Room scenes, monitoring displays and accessories offer options for personal home planning pages, school technology projects and presentations about connected devices. These are illustrations, rather than installation diagrams or promises about camera coverage.",
       "Use the transparent WebP in a digital layout, or choose its matching CMYK PDF for printing. In the editor, the original artwork stays intact while you add your own text and shapes as separate elements."
     ],
-    "print": "Every standard PDF is independently checked for a real four-channel CMYK image, embedded print profile and a file size below 1,000,000 bytes. Preserve the artwork proportions when resizing and preview your own print layout before printing.",
+    "print": "Every standard PDF is independently checked for a real four-channel CMYK image, registered GRACoL print output condition and a file size below 1,000,000 bytes. Preserve the artwork proportions when resizing and preview your own print layout before printing.",
     "related": [
       "webcam",
       "wifi-router",
@@ -6291,7 +6291,7 @@
       "An exploded indoor-unit view separates major assemblies such as the filters, heat exchanger, cross-flow blower, drain tray and housing. It is a generic component illustration; exact part shapes and assembly details vary by model. Use manufacturer documentation for model-specific servicing.",
       "Choose transparent WebP artwork for digital layouts and the matching CMYK PDF for print projects. The editor preserves the original illustration as one intact layer while your text and shapes remain separate."
     ],
-    "print": "Standard PDFs are independently checked for a real four-channel CMYK image, embedded print profile, preserved transparency and a file size below 1,000,000 bytes. Keep the original proportions when placing an illustration in your own print layout.",
+    "print": "Standard PDFs are independently checked for a real four-channel CMYK image, registered GRACoL print output condition, preserved transparency and a file size below 1,000,000 bytes. Keep the original proportions when placing an illustration in your own print layout.",
     "related": [
       "smart-refrigerator",
       "washing-machine",
@@ -6339,7 +6339,7 @@
       "Component illustrations separate the outer housing, door, glass turntable, support ring and drive coupler. These are generic visual references, and individual appliance construction varies by model. The black line drawings also work in educational activity sheets.",
       "Download transparent WebP for digital layouts or the matching CMYK PDF for print. In the editor, the original illustration remains one intact layer; text and shapes that you add stay separate."
     ],
-    "print": "Each standard PDF is checked for a real four-channel CMYK image, an embedded print profile, matching artwork and a file size below 1,000,000 bytes. The transparent WebP retains the exported source pixels. Keep the original proportions when placing a design in a print layout.",
+    "print": "Each standard PDF is checked for a real four-channel CMYK image, a registered GRACoL print output condition, matching artwork and a file size below 1,000,000 bytes. The transparent WebP retains the exported source pixels. Keep the original proportions when placing a design in a print layout.",
     "related": [
       "smart-refrigerator",
       "washing-machine",
@@ -6387,7 +6387,7 @@
       "The parts illustrations show a mounting plate, angled bracket, removable battery, chime, camera board and front housing. The exploded view is a generic educational reference; the construction and wiring of individual devices vary. The outline versions provide a simpler choice for personal worksheets.",
       "Use transparent WebP in digital layouts or the matching CMYK PDF in print projects. The editor keeps the original illustration as one intact layer while the text and shapes you add remain separate."
     ],
-    "print": "Each standard PDF is checked for a real four-channel CMYK image, an embedded print profile, matching artwork and a file size below 1,000,000 bytes. Transparent WebP preserves the exported source pixels. Keep the artwork in its original proportions and choose a print size suited to its resolution.",
+    "print": "Each standard PDF is checked for a real four-channel CMYK image, a registered GRACoL print output condition, matching artwork and a file size below 1,000,000 bytes. Transparent WebP preserves the exported source pixels. Keep the artwork in its original proportions and choose a print size suited to its resolution.",
     "related": [
       "security-camera",
       "smart-speaker",
@@ -6395,6 +6395,54 @@
       "smartphone",
       "tablet",
       "robot"
+    ]
+  },
+  "3d-printer": {
+    "description": "Explore 50 3D printer clipart designs: filament and resin printers, maker desks, classroom scenes, printed models, component views and technical outlines. Download transparent WebP or matching CMYK PDF for personal and educational projects.",
+    "lead": "Find a clear 3D printer illustration for a maker project, a classroom activity or a technology presentation.",
+    "intro": "Compare recognizable printer forms and practical uses, from a compact cantilever machine to an enclosed filament printer or a resin printer with a raised platform. Browse whole devices, workstations, people making things and separated component illustrations.",
+    "featured": [
+      "3d-printer-orange-open-frame-filament-printer",
+      "3d-printer-delta-tower",
+      "3d-printer-resin-open-platform",
+      "3d-printer-teacher-and-student",
+      "3d-printer-exploded-fdm-assembly",
+      "3d-printer-extruder-drive-v2"
+    ],
+    "chips": [
+      {
+        "label": "Filament printers",
+        "query": "3d printer filament"
+      },
+      {
+        "label": "Resin printers",
+        "query": "3d printer resin"
+      },
+      {
+        "label": "Maker workstations",
+        "query": "3d printer maker"
+      },
+      {
+        "label": "Component views",
+        "query": "3d printer exploded"
+      }
+    ],
+    "heading": "3D printer illustrations for making, learning and explaining",
+    "paragraphs": [
+      "Choose a whole-device illustration when you want the printer itself to be easy to recognize. The collection includes open gantries, compact cantilever machines, a three-tower delta printer, enclosed printers and resin machines with translucent covers. These forms show different ways a printer can support and move its build platform.",
+      "Maker desks, classroom carts and prototype benches add useful project context. A teacher and student examine a lattice cube, a designer shows a bracket model, and a wheelchair user holds a printed phone stand. Match a scene to the activity in your personal presentation or classroom sheet.",
+      "Printed objects include a gear, a vase, architectural models, small bridges and practical replacement parts. Resin scenes show a build platform above a vat and models on a curing turntable. Filament and resin printers are represented with their different visible structures.",
+      "Component views separate the frame, heated bed, rails, hotend, build sheet and nozzle. A cutaway follows filament between a drive wheel and an idler, while other drawings focus on a lead screw or belt-driven carriage. These generic educational illustrations show major parts; exact construction differs between machines.",
+      "Use black line drawings for a simpler classroom handout or a color illustration for a personal layout. Transparent WebP works in digital projects, and the matching CMYK PDF is prepared for print. The original artwork stays one intact layer in the editor; your added text and shapes remain separate."
+    ],
+    "print": "Each standard PDF is checked for a genuine four-channel CMYK image, a registered GRACoL print output condition, matching artwork and a size below 1,000,000 bytes. Transparent WebP preserves the exported source pixels. Keep the original proportions and choose a print size appropriate to the image resolution.",
+    "related": [
+      "printer",
+      "scanner",
+      "desktop-computer",
+      "laptop",
+      "robot",
+      "tablet"
     ]
   }
 }

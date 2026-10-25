@@ -1,0 +1,1413 @@
+{
+  "schema": 1,
+  "collection": "technology-recovery-2026-10-24",
+  "topic": "3d-printer",
+  "count": 50,
+  "reviewedAt": "2026-10-25T10:46:40.563Z",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false,
+  "originalPdfsProvided": false,
+  "originalWebpBytesPreserved": true,
+  "files": [
+    {
+      "id": "3d-printer-orange-open-frame-filament-printer",
+      "productionMethod": "owner-supplied",
+      "print": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.346056697809451,
+        "renderMeanDifference": 4.0012109375
+      },
+      "sourcePngSha256": "1b4cca83a16fe2f44704ba6b46177b5e2d1526afc66c260702f74db3a358acc1",
+      "proofSha256": "e6a5c42165f29aabb5bc2a214ba4ba5d668150837f0712926efa0cd84a290ac5",
+      "webp": {
+        "bytes": 422892,
+        "sha256": "669806a896f7e6b19b9118b3876de9e09f0214ff09bd092d79145f4713c219bb"
+      },
+      "pdf": {
+        "bytes": 905574,
+        "sha256": "04ca362e9bac2a2398eabc39b0ef968536a9523fb6def024482c26be62e13702"
+      }
+    },
+    {
+      "id": "3d-printer-enclosed-corexy",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.9159898494574071,
+        "renderMeanDifference": 3.4663932291666666
+      },
+      "sourcePngSha256": "78ffa374e5d449ae043825670a7f1d77bd58aa6f46411eafd5e21704ea7b5569",
+      "proofSha256": "377748fd2d1400b85f4b0b9ecbb70481f204d6e3f55f0fc5d344987669019392",
+      "webp": {
+        "bytes": 1018672,
+        "sha256": "abf01e1ad956c8d401c7495dd76f0a5c2455ec9439d6c7364a360e0b63592b82"
+      },
+      "pdf": {
+        "bytes": 904025,
+        "sha256": "0a04931d0f2ac1b5f87120c066ab6dee71017edf3e6db928bb9b33b0b5019f53"
+      }
+    },
+    {
+      "id": "3d-printer-compact-cantilever",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8703851864984488,
+        "renderMeanDifference": 3.3565494791666666
+      },
+      "sourcePngSha256": "f997a6fc689f6fff884d5af46862d26d7aa7873a1e2c97c090c10f61f4a5511d",
+      "proofSha256": "3ebfda582433c47df9e736a26655f826737a173ef0b9eaf42bdb48dcae9f6dc0",
+      "webp": {
+        "bytes": 738670,
+        "sha256": "d77bcd85a5fa150fcdadf5b628cc226b12075d3a76e2ddb80f2cccfa2c6787f4"
+      },
+      "pdf": {
+        "bytes": 705541,
+        "sha256": "3c5092b6e5f843bb58e446c8664662e3692c005f3b7cc263de99d54ce9b511ab"
+      }
+    },
+    {
+      "id": "3d-printer-delta-tower",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.9200764152337298,
+        "renderMeanDifference": 3.934921875
+      },
+      "sourcePngSha256": "b8c548537bb2ae9bb168239a351f6e96df615d003514daaa44559536eb3a3267",
+      "proofSha256": "bce06e876416aacdde63f412ca7100ed75ba0eaa25329737b71cf53da118896b",
+      "webp": {
+        "bytes": 653746,
+        "sha256": "74170837c50c5c3d7973fbd3c86cd6e150868ea7886d034dad141fe1707f6a27"
+      },
+      "pdf": {
+        "bytes": 798377,
+        "sha256": "c78ca649fe9ef4b988ff272547fefefc199ad47bc8d721bf59fcc8a53bda23b6"
+      }
+    },
+    {
+      "id": "3d-printer-resin-orange-cover",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7823980565663631,
+        "renderMeanDifference": 3.6185546875
+      },
+      "sourcePngSha256": "8a528fd2e2adf203d0ed937ebea5a9f5c60d782fe981f115a481e0299746c09d",
+      "proofSha256": "2d0d3591deec1a0ae95cb8a26c6477db735a4754693e3949430c0ff81ed7d57c",
+      "webp": {
+        "bytes": 836494,
+        "sha256": "2be0d16cea307e32728209c84902a59856c8ee0eb6f79221751eeb7baa721865"
+      },
+      "pdf": {
+        "bytes": 637378,
+        "sha256": "9ff89e7601e93f995a1e93568b718dea6ffbcc1d24b3d987a172ab92328fa3ec"
+      }
+    },
+    {
+      "id": "3d-printer-resin-open-platform",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8196094386196314,
+        "renderMeanDifference": 3.7108984375
+      },
+      "sourcePngSha256": "f0a7afaceb03b2a07be3e7d5a2f9f8872c3726131b2f9d5bd964779ac768b697",
+      "proofSha256": "f9dd1a29db635076229a3df0669eaf5fe157a17875c5458e559c9055515790d4",
+      "webp": {
+        "bytes": 854788,
+        "sha256": "6c31c3dd8a0e9c84a9158df73e322bb431046c10ba1c3a80cbefd0fa5d94effd"
+      },
+      "pdf": {
+        "bytes": 803858,
+        "sha256": "6789bc2e7d95e28686ffce5b46ed2037a5488e922594d2b76ff5caefa5f62e76"
+      }
+    },
+    {
+      "id": "3d-printer-dual-extruder",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.13607597823677,
+        "renderMeanDifference": 5.103828125
+      },
+      "sourcePngSha256": "b45da340c707b6c7c49fb6763e5d8ca513723369c4ff42bc5f60a33773f0bdd9",
+      "proofSha256": "d2b62eb6111dca5e8e6b93954865776b6f1d96cb3e1abad9c54dbb5954a5f32d",
+      "webp": {
+        "bytes": 944426,
+        "sha256": "dca2e39991d673cae253ff707cfd2eaa5d61184d6093dce7b887c17cef8cf9a4"
+      },
+      "pdf": {
+        "bytes": 898729,
+        "sha256": "272bdd4cc795a987733167dce9c67e5286d1215393d08d04732a810eebce7dfe"
+      }
+    },
+    {
+      "id": "3d-printer-multicolor-feed",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.9381235204391829,
+        "renderMeanDifference": 4.2708203125
+      },
+      "sourcePngSha256": "3e62a72c56b927f73fa86902e072f1ab2d966c884dc021c4b9521ab854bb3c7c",
+      "proofSha256": "e3b469de68dab8d6691e40fd312dcdbaa42e32253234827eedc81c784dcb242e",
+      "webp": {
+        "bytes": 1012908,
+        "sha256": "df4d9c35957d8e02131ea70ff6d5fb177bbdf11ee7a5cf4d4cba6e199a95b545"
+      },
+      "pdf": {
+        "bytes": 896578,
+        "sha256": "6fe0fb49dc270751bc6666e1a523679ccdc20225694248bbb734ad5c92f6f9a6"
+      }
+    },
+    {
+      "id": "3d-printer-compact-enclosed",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7957779656315319,
+        "renderMeanDifference": 2.8446223958333334
+      },
+      "sourcePngSha256": "667e1251bfc7a5b162c205905461bcb32f1b0fe37aa9d4bf3c10bacfb3339b0b",
+      "proofSha256": "d3e37a2100f8783416704197a35ead8cbb3dd1a6354560d13ab238f68f1a9a1b",
+      "webp": {
+        "bytes": 850452,
+        "sha256": "a0568026963f18be297418f6b1109893a20abc8e3efc418e3d4fa9f66bb71e54"
+      },
+      "pdf": {
+        "bytes": 675255,
+        "sha256": "17ab7bec2aa7f9e97de00f1168242ab9f5dfbaee2358b051e4c5cf2c4d5cb445"
+      }
+    },
+    {
+      "id": "3d-printer-large-format-frame",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.413389346021083,
+        "renderMeanDifference": 5.466809895833333
+      },
+      "sourcePngSha256": "e1ac4342466268aa3cf6c34cbbe51b06a9b66ca1f534f90c5f88fc6edc20c458",
+      "proofSha256": "308fce18116081596e6032551d748d0f4f0df3e86e2904a9a2d2315be70d4c8a",
+      "webp": {
+        "bytes": 1020916,
+        "sha256": "7afd94e9fda3542c999e838d2471a7e138a4b0d83332aca3d75087a97ba6b584"
+      },
+      "pdf": {
+        "bytes": 968890,
+        "sha256": "e2023225d0bf12385c3167314b02d947b2244031de346145e2d14835713cc3ed"
+      }
+    },
+    {
+      "id": "3d-printer-miniature-dental-resin",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.791533084312521,
+        "renderMeanDifference": 4.7973828125
+      },
+      "sourcePngSha256": "8bb299d9b09a07df67af9ed5fa5eb266757ea76e75b5d75093bbf60f4731b930",
+      "proofSha256": "e02221890fbfa5839ae9d1f89f1d5ad30eeca6f05ac432387c3590712f9c1b31",
+      "webp": {
+        "bytes": 912594,
+        "sha256": "629ccf02a03bd56fd5d4824db97117d0ce231a9418b9797b962e172d7143cbeb"
+      },
+      "pdf": {
+        "bytes": 736247,
+        "sha256": "c0c9634a06504ea4813d7ae1388acfad48b8e47069573fb86c2a560dbe6b658e"
+      }
+    },
+    {
+      "id": "3d-printer-maker-workbench",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8061874016424114,
+        "renderMeanDifference": 3.6156510416666667
+      },
+      "sourcePngSha256": "01b8ce13d4d821379cc090a29a856866311b96e3d9dbac4fbcc27c36de31bd46",
+      "proofSha256": "6e8874d65fcba448c9cf0779f65ece6025fcd397326e60d62664e6ddc3bfd98a",
+      "webp": {
+        "bytes": 1050532,
+        "sha256": "084c1e1829804decdef7652ae3fca8b696ea189a2bea1b1197b753811cee2123"
+      },
+      "pdf": {
+        "bytes": 929068,
+        "sha256": "9523faa5c4724cb275c75117b985b75ab70d9d76dc803c5eb9ec8320b87e81aa"
+      }
+    },
+    {
+      "id": "3d-printer-school-stem-cart",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8225978455790449,
+        "renderMeanDifference": 3.8874739583333335
+      },
+      "sourcePngSha256": "0e008bb666a04afd01a9ecd64cc44b87cadfc16df565cc9ace5ecd67a3423aa5",
+      "proofSha256": "6d9fd0f164be300bf607377fc8ed61296b14a919976bf45a1977ab309ff18ea0",
+      "webp": {
+        "bytes": 918222,
+        "sha256": "da347d721eeadeae48fc0bb447e33ace3a3a1ce17f0f603af4470b0c27615be5"
+      },
+      "pdf": {
+        "bytes": 891043,
+        "sha256": "d8693d20132c0746033d993f2cb3b46fea3be9bc911dcb13b4f83d5dcccccf3f"
+      }
+    },
+    {
+      "id": "3d-printer-library-makerspace",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.834861951935582,
+        "renderMeanDifference": 3.6150130208333335
+      },
+      "sourcePngSha256": "a079171985f93f3315cdf84d6e41b0bd4605e61223fa1e192db20204abd53c37",
+      "proofSha256": "9fdf006b39fa11d19d1e1d86626943e0bcd649c06da52d48ede4669d7c32d4b3",
+      "webp": {
+        "bytes": 964612,
+        "sha256": "ff40c3383e6e981cb79c07e4bf266ee181a08cb089e5565b00951921ea585f8f"
+      },
+      "pdf": {
+        "bytes": 966654,
+        "sha256": "cbfff12f15bb92786e24cbc0ee3073939b53fe611f18df9633dfddfeb445a687"
+      }
+    },
+    {
+      "id": "3d-printer-home-office",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8533937854946535,
+        "renderMeanDifference": 4.175950520833333
+      },
+      "sourcePngSha256": "55280ff07fb8025386208d351d25aabc43e1b6f81cad0fd904509043c1e51c74",
+      "proofSha256": "d1b8d7ed47c2f74cf3f240b65f4c5c8218749c8b4cf21b5a0fa3dd5633263f58",
+      "webp": {
+        "bytes": 898732,
+        "sha256": "0295244e928a5c55568a4b5b8930706a368531ab7f7518574e3d5c0028b49c26"
+      },
+      "pdf": {
+        "bytes": 978883,
+        "sha256": "c0fb7b9c94c5b025eeb61794def9e38d6136714fb1ca3d825a9b8b8125c01f74"
+      }
+    },
+    {
+      "id": "3d-printer-engineering-prototype",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7942207848120546,
+        "renderMeanDifference": 3.0856510416666665
+      },
+      "sourcePngSha256": "0f297a8ff3dca4f304e24ea67aede8c08dfeb13399c3befa03f17e2370c6118e",
+      "proofSha256": "4d22f1f7b083b839e19bfb20d8b53d1f95ee366e6746a4af22da44b5ce8755bc",
+      "webp": {
+        "bytes": 1004532,
+        "sha256": "9d961d772425813823c4a451a78ed08eb80dfa1d046576e9d7aee588157eeb73"
+      },
+      "pdf": {
+        "bytes": 872646,
+        "sha256": "9b301735d74bc4c81402ff7da507b2d830ca7b6ab04bd515f6a212bc208be120"
+      }
+    },
+    {
+      "id": "3d-printer-architectural-model",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.799267803466681,
+        "renderMeanDifference": 3.4066536458333334
+      },
+      "sourcePngSha256": "3035d90183c26bb02dbf0729965021466ec1c242988a62f71b264148b73f3274",
+      "proofSha256": "7d56594cfa4b1b2e58f95f4e6e3d70814140759239004587d0a35ec602642929",
+      "webp": {
+        "bytes": 943524,
+        "sha256": "bd3ec4cfde32ab365876b89f064093e9fa2709ba828e7b034ca334c2e8fb59e7"
+      },
+      "pdf": {
+        "bytes": 861661,
+        "sha256": "34f7277f6135319bd7a9d1b440e1e98167517d22bcf074e41530ad3adc1c62f6"
+      }
+    },
+    {
+      "id": "3d-printer-hobby-miniatures",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7730498503023746,
+        "renderMeanDifference": 4.321041666666667
+      },
+      "sourcePngSha256": "7db69eecd9cb2eb1e53c4b9fc594e9bf9ad1a97d62d4ffbac27abd423702df6d",
+      "proofSha256": "1ce71b567d018b7e9945c858c029ea6dfab6cc2b4fd4ce1839d7b067a158b2c0",
+      "webp": {
+        "bytes": 968436,
+        "sha256": "8ffb8af61fa166b1a78ffe1e302c942a84d5d37b2cc9fa645ef792e0b561b461"
+      },
+      "pdf": {
+        "bytes": 772749,
+        "sha256": "63e194fcb57c219ec3faaff7ff60f8c4af241d7fd5c0a7c44c093e49b9eb08df"
+      }
+    },
+    {
+      "id": "3d-printer-repair-parts",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8803475517738516,
+        "renderMeanDifference": 3.566484375
+      },
+      "sourcePngSha256": "c2fecb4d97178b67feb5f1a0c07dfe3851008ff63f2977ac92522f554af3100a",
+      "proofSha256": "d7a3b548f0348f1cb01ea7129f6db81d72fe76c59d37a076f64209f5dfba514a",
+      "webp": {
+        "bytes": 818434,
+        "sha256": "aa40a12db701aca6856e9bc69be284f71a764bf62bee4f527c7182be48f9056f"
+      },
+      "pdf": {
+        "bytes": 883432,
+        "sha256": "8aa0cc53004300b3593f46893ab0914537dffcbdfd96212c70faedd7886d4958"
+      }
+    },
+    {
+      "id": "3d-printer-filament-storage-station",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8350858701839552,
+        "renderMeanDifference": 3.344921875
+      },
+      "sourcePngSha256": "28470c9f34bc260e75e5fc5faaeebead77143c0109fdbe82ee88ef9b1623f50b",
+      "proofSha256": "069f1725e9bc593f5cde4791e01ce2629a5047d584f85ededa79512f0fab6b4e",
+      "webp": {
+        "bytes": 880054,
+        "sha256": "79bec84cc18350e29e647fbab8dc4ca593a6c770df8ee862e710cd7e2774678b"
+      },
+      "pdf": {
+        "bytes": 818247,
+        "sha256": "dc07fbd8ea00140bd74f4b3192ed1d29dd80925faa552d9ae416be9fdbccc264"
+      }
+    },
+    {
+      "id": "3d-printer-print-farm-pair",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8309443532682924,
+        "renderMeanDifference": 3.7365755208333336
+      },
+      "sourcePngSha256": "bb332e5c29f17816d5c06c2eb233137f38757bdf1cde4dba8c5407a0d5a525ae",
+      "proofSha256": "a0cebc07d100f94a96489bb2c6a69a6e3a0a43dd4a9b49cc706f1d217be473fe",
+      "webp": {
+        "bytes": 825888,
+        "sha256": "1be8d537124585273920c3ee714d88cec863a6616127638d21ced04d3534cca0"
+      },
+      "pdf": {
+        "bytes": 881374,
+        "sha256": "71d9bf8bb75e709ce48f0a5a1f319e04769359e52947c66533334062284b81a6"
+      }
+    },
+    {
+      "id": "3d-printer-adult-monitoring-print",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0,
+        "renderMeanDifference": 2.7783203125
+      },
+      "sourcePngSha256": "5a6c1e611bb74d38ece261f576830687f71b201dbf6ea9ff7f5717871ed2f376",
+      "proofSha256": "86db11c58fecb84960efca50f05d26d2fab1136db54697acd02185b48e76bf9b",
+      "webp": {
+        "bytes": 661552,
+        "sha256": "9a41ca727f47dcafdb78da3951007897155a40e8f10ff316862ba840a73b2147"
+      },
+      "pdf": {
+        "bytes": 921535,
+        "sha256": "b1a3cf5e5b677d8871841a673c36cad87744fda854c17a9f8856dd4b6b80ff22"
+      }
+    },
+    {
+      "id": "3d-printer-designer-with-tablet",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.1579715123699035,
+        "renderMeanDifference": 4.359140625
+      },
+      "sourcePngSha256": "ef2ec4c4affde7f3f6f203f8b8b7a3ff07748db2d852ccdc1e6715794cb04a8d",
+      "proofSha256": "a6d42e8f7875347cf75934345aa14f9b35cfea24bb6f3a42121036fa09748d05",
+      "webp": {
+        "bytes": 1004472,
+        "sha256": "0bf8680944a647d24bca7f703ac1af1d0bc563951a7788933ef33a7fe9b1022a"
+      },
+      "pdf": {
+        "bytes": 968106,
+        "sha256": "e007a44e8a882011dfc52bb34ba96072eacdd4172bc822c6951ccf3008172321"
+      }
+    },
+    {
+      "id": "3d-printer-teacher-and-student",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8701540015410845,
+        "renderMeanDifference": 3.1947135416666668
+      },
+      "sourcePngSha256": "dcd0aff319e9d69c7ed37af27041e578377b0cb4f5e8ddbfe40c072d9ada6d79",
+      "proofSha256": "94e149f5baca97b4a2d47c504a65c4e6a8724f84600287898072a6c8da2a860d",
+      "webp": {
+        "bytes": 821118,
+        "sha256": "d60fb336a43f22425c1c5e2365a91a87e310bbfc8e1a14789c7627da97c475dc"
+      },
+      "pdf": {
+        "bytes": 825294,
+        "sha256": "80f60076885073a312c401755f48005f5b24ee9a617196ab47019a2c83a8bc6c"
+      }
+    },
+    {
+      "id": "3d-printer-wheelchair-maker",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.1429127295716943,
+        "renderMeanDifference": 3.6611067708333334
+      },
+      "sourcePngSha256": "b7e584490cbb1e9e545a34531201960b64a7c0266e60169e744c66b9a7aecd5b",
+      "proofSha256": "93e0c587eb07261825a47110f3e330843105f07ad17947ed0e1b44c1df49110c",
+      "webp": {
+        "bytes": 1070144,
+        "sha256": "2f4e3031f631776a8760bde9b3f0129755bc67e2074549371e06fd3a16120a53"
+      },
+      "pdf": {
+        "bytes": 925465,
+        "sha256": "642b8373aab6fff390d273ebba59746076ecd5724122266a9518d43b6f497bf3"
+      }
+    },
+    {
+      "id": "3d-printer-spool-change",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.1416853927545594,
+        "renderMeanDifference": 4.294309895833333
+      },
+      "sourcePngSha256": "b3ff99296145937ddca12ba0dc8c3f2f3100929f6ed4313d421086b4c6355e40",
+      "proofSha256": "b481871558fadb52d492ef985cf647f6fa353feed59e6d682e056288096f2dbe",
+      "webp": {
+        "bytes": 1033768,
+        "sha256": "aa617864ceb54a224b04ea222094fe785c76e3bc9f9d8854e0ba59f76b696fbb"
+      },
+      "pdf": {
+        "bytes": 975580,
+        "sha256": "5ea1758ed0cc07c554447cafc6c4dd7961b40f2ab895eb8f7c069681b39898ac"
+      }
+    },
+    {
+      "id": "3d-printer-flexible-plate-removal",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8842385576891454,
+        "renderMeanDifference": 2.9605598958333332
+      },
+      "sourcePngSha256": "30a22e40a8260c7af51d90e3dc2936a790b0d0cbd7fe4071f4190d57013191b4",
+      "proofSha256": "b886f0a537c6b2dc9e77fc57a983171165cc7597ee38b8447335b63105aa7c9c",
+      "webp": {
+        "bytes": 750930,
+        "sha256": "b3eff4a4acfb46a7c4e84ca5d50666f2ee39a23f5ff88100f0711a75d4771ee5"
+      },
+      "pdf": {
+        "bytes": 848163,
+        "sha256": "08a12854cbd97c752dfdc5ccf8196ba5fb58b486d8cb1d0455ba1d836f7791b0"
+      }
+    },
+    {
+      "id": "3d-printer-assembly-workbench",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.9782852077624778,
+        "renderMeanDifference": 3.8850520833333335
+      },
+      "sourcePngSha256": "e939a73644333102a64d7684582d8235801e37ba5f2c8273cc865aef420610c4",
+      "proofSha256": "790bd59000a9044bf00fc1c923ef149cb81daf4133afb2554040d3652c075ed9",
+      "webp": {
+        "bytes": 947038,
+        "sha256": "cd96f258c662550f2c865b7d9a9d3a627e34e79971bc7abb3d56e4023021bf20"
+      },
+      "pdf": {
+        "bytes": 945631,
+        "sha256": "5b2d950724eb374f86699917d7a97cf1f1d4742a8227e583d8e42bcf654ad246"
+      }
+    },
+    {
+      "id": "3d-printer-quality-measurement",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.3706867623314574,
+        "renderMeanDifference": 3.8629296875
+      },
+      "sourcePngSha256": "c075a6b45de6ff1fd172fc886fb5fc24539849c6907207aed9073dcb3fe2a0ee",
+      "proofSha256": "9f9c05c8733cc79cdcd1a60eff401eea71592dc1f934254234496f79d1c588e1",
+      "webp": {
+        "bytes": 958572,
+        "sha256": "0983a65b1f4be95bda93a65f8fa685c57beeb999ba3d547d800801232947c57a"
+      },
+      "pdf": {
+        "bytes": 942973,
+        "sha256": "d20457e386cb51312ca5c490f947c7e47ce573d5ed6ac9cead30792858f27a0e"
+      }
+    },
+    {
+      "id": "3d-printer-resin-ppe-workstation",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8343767509625807,
+        "renderMeanDifference": 3.3832161458333334
+      },
+      "sourcePngSha256": "c2c9a124e90bb63ee210ac63eb288526f944c3f508c26c68433e714f98332c97",
+      "proofSha256": "ec2ab77f4e0b56eada21883badaa86f962aa65323fe92d1fc5c4c46ff39cf27d",
+      "webp": {
+        "bytes": 925970,
+        "sha256": "aea928997ef1c872cc4c5c1b931a567d04eb532411e61143280150b984688a4d"
+      },
+      "pdf": {
+        "bytes": 954204,
+        "sha256": "896bf9ac74afbb61781e143e529e56eca4f8d3b0b6e5f5eb2e02ff1403c15e46"
+      }
+    },
+    {
+      "id": "3d-printer-packing-finished-print-v2",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0,
+        "renderMeanDifference": 2.2236067708333334
+      },
+      "sourcePngSha256": "122cce2c3ed866ca6d19598554b03afd6d2b2d5f4a3ef17dc7a3b8bd8c97f61d",
+      "proofSha256": "2771988ffc82e5f03629f123432bf835aaff7031b990af465434cf90dd3e61c4",
+      "webp": {
+        "bytes": 497432,
+        "sha256": "9c64d196a1c0fac3365caf9a3e888c56338599fa98c3e7c63c0de58557f30013"
+      },
+      "pdf": {
+        "bytes": 716397,
+        "sha256": "8f550054c97c2d2d580d55f92d8ee8693ca00ddf1f23f79c8850ed624293ad9a"
+      }
+    },
+    {
+      "id": "3d-printer-exploded-fdm-assembly",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.4677328482353753,
+        "renderMeanDifference": 4.610364583333333
+      },
+      "sourcePngSha256": "65f091b7ea4eee74fe0b17d50efefd7f0d6c322f6cc3974d8ea1efe087e96b7d",
+      "proofSha256": "c9771c7cb73d6cb27feb2c0bf4d58cadbaf7f67d6b419a0785920096b08a483d",
+      "webp": {
+        "bytes": 943116,
+        "sha256": "39acab45642ecd9f60e4eda1cfaa299b15e4a9e091192babcd5d7668e5ce0b59"
+      },
+      "pdf": {
+        "bytes": 931534,
+        "sha256": "d2ca50145a298c7e803d0e1e8a7ee3220afc39a6da1c98ae83faf576a9a6ca98"
+      }
+    },
+    {
+      "id": "3d-printer-exploded-hotend",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0,
+        "renderMeanDifference": 2.1221223958333333
+      },
+      "sourcePngSha256": "7a5d56bcb2ee4abbcebe2895b2c476ddb275dfca78c776265e3ac57f95646369",
+      "proofSha256": "48d170c11472516ddae2c91cf4d97dff57648dc6537ce156f36581df29fb837c",
+      "webp": {
+        "bytes": 506508,
+        "sha256": "1c6fa87a1fb5183424c31e848a79f8c0b0c7f980affd86a2ce1242846ee58ffa"
+      },
+      "pdf": {
+        "bytes": 753466,
+        "sha256": "f1fe41234a2f78d83074767cffd9ebd708aa34e556ad6f98e7e20c528b22d151"
+      }
+    },
+    {
+      "id": "3d-printer-build-plate-stack",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8156958943321908,
+        "renderMeanDifference": 3.1455989583333333
+      },
+      "sourcePngSha256": "d52ced7cd02c3e3920b18ddfabeb1a2cd36d13838f0c42da7bcb689912d33078",
+      "proofSha256": "09f5763b750f9970166eb403632d48b45943ef25c8f3eb0ea4040b36959b8eab",
+      "webp": {
+        "bytes": 924392,
+        "sha256": "7d8d033370109703666c996c922fffd9caac82fa733e1bbb002786ee1f18ba6a"
+      },
+      "pdf": {
+        "bytes": 957579,
+        "sha256": "6763b6b6f3dcd353a1405197dfd110a6a67d1e2c6828159911d75afb765e3f1c"
+      }
+    },
+    {
+      "id": "3d-printer-extruder-drive-v2",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8522481056698198,
+        "renderMeanDifference": 3.4328645833333336
+      },
+      "sourcePngSha256": "178975003e92c0f6096262829e55968a4b5bacacd4187a8144f1dc79e5e564ae",
+      "proofSha256": "4aae47c7d3cba67b9e79206ad590d59d10ff56792cf60ff369235e15e0708083",
+      "webp": {
+        "bytes": 900174,
+        "sha256": "99dfcb7047e0eb3806d8eadc7871ac302f813cc907407bca5c38850763a291c4"
+      },
+      "pdf": {
+        "bytes": 906231,
+        "sha256": "8cfa2525cdcf933510129b3664d3cca00245b9bb346b80f143d4a76b85abd248"
+      }
+    },
+    {
+      "id": "3d-printer-belt-and-pulley",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0,
+        "renderMeanDifference": 2.8935677083333333
+      },
+      "sourcePngSha256": "609ac06417ff63bbfb47ef4cccab752e33d44e04db459c7b4f1b14b05d64e503",
+      "proofSha256": "b35d8402da745745976c97bf1a0c71b6bc1cece999f6399ea6b4bfb411d50c43",
+      "webp": {
+        "bytes": 614168,
+        "sha256": "4079d218104e25bf2e30f2ac50fb5e1e3338702bd176c53db06526694514f5ed"
+      },
+      "pdf": {
+        "bytes": 918352,
+        "sha256": "d7471dd90b9202ef2d7628888ea29dc5630e573f8f7ab453e5452375c71104d5"
+      }
+    },
+    {
+      "id": "3d-printer-nozzle-kit",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8647363229004875,
+        "renderMeanDifference": 3.0644921875
+      },
+      "sourcePngSha256": "8d010f19b5da500804be8c0842cb23a82738c30068ff9cfcf3fbfb653a17d3ff",
+      "proofSha256": "4e3c2f011fa2676aa559553ef1beae4a7345ccef5ea196e3d649d9ec21e26b95",
+      "webp": {
+        "bytes": 897462,
+        "sha256": "256028adba46886b211df4bea6c9e85f45c0bd3af9ee82bbd4a94e1939a8479e"
+      },
+      "pdf": {
+        "bytes": 822960,
+        "sha256": "85adb14860b81144a64fda08ea9a70e5dfca80bdd9295d483009a9a3c8cac85e"
+      }
+    },
+    {
+      "id": "3d-printer-resin-vat-platform",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7888212631134004,
+        "renderMeanDifference": 4.167083333333333
+      },
+      "sourcePngSha256": "7200d6345a0ce3f1229a51501bc492e086950afa62c6d4588084ef159eb3d507",
+      "proofSha256": "33bf8abe7dce64477cc9546d703f9a5f701463a7a5c3f40efbaebaf856145448",
+      "webp": {
+        "bytes": 941540,
+        "sha256": "cbf80a1a849515c87add0fd977fd48905d6ea66874205710cb1d7da43f82a5f4"
+      },
+      "pdf": {
+        "bytes": 869208,
+        "sha256": "24a8c6d29bccb9a4e03e3d98aafb027df21e2fe0caff9d37ac6eb9a3b17a0e0f"
+      }
+    },
+    {
+      "id": "3d-printer-filament-guide-path",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.86692194470775,
+        "renderMeanDifference": 3.855169270833333
+      },
+      "sourcePngSha256": "57be6cb4190bbd52df8f2219e9384c4e7ab4533d8d99ebc7ce5cea46986b524f",
+      "proofSha256": "3728148b75d2c09cb01d0b2fdd5fbafbac583bf41c74541778b8567dd6462240",
+      "webp": {
+        "bytes": 805122,
+        "sha256": "f51ee17720688c1392402ec6f30ee4f43bfb4325ce0b25718e7751f03bb1595b"
+      },
+      "pdf": {
+        "bytes": 944750,
+        "sha256": "b86ec689a2208c39087516b900fb8d54657a81904adcec4308eb33877ec4d501"
+      }
+    },
+    {
+      "id": "3d-printer-print-head-replacement",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8962165735984274,
+        "renderMeanDifference": 4.238411458333333
+      },
+      "sourcePngSha256": "aec21ec6bc1fbe51ebd0a921d27af1b810d326be4a92464c0a0b6a7608c1cd5c",
+      "proofSha256": "fc1134961c1bdf6e68f50f7683e0e3f57c4ffda0a682258a62571a09d0877bdf",
+      "webp": {
+        "bytes": 1086832,
+        "sha256": "469999c00ff890c8b0ee8983c973f26bbd030ab611a398dd67fb32e6d883fb1b"
+      },
+      "pdf": {
+        "bytes": 948593,
+        "sha256": "6309c4b409b951d2f4a7dab5acae4866472dbebe36f624d029ffcd35fe6565de"
+      }
+    },
+    {
+      "id": "3d-printer-z-axis-leadscrew",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.9120031712529562,
+        "renderMeanDifference": 3.7932942708333335
+      },
+      "sourcePngSha256": "2c24ac52e86447e0e660747504f73b74e30c8ea1570b6651f913ecae230789ab",
+      "proofSha256": "0a678ca8cc040de577a8b278f4abb61bda29f955dc3eb0335f6017a3ec0300dd",
+      "webp": {
+        "bytes": 696376,
+        "sha256": "2a21ee3558200720fd648d83f4b816328c919dbd4dac1180d39a3e9ee01654e5"
+      },
+      "pdf": {
+        "bytes": 891626,
+        "sha256": "f750a13a9d36adbb53c1c57bdcccf9dcf472c7417b13217069f2c0634f6c740e"
+      }
+    },
+    {
+      "id": "3d-printer-printed-gear-v2",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7747644420332286,
+        "renderMeanDifference": 3.8120963541666666
+      },
+      "sourcePngSha256": "f7cd4fdf2df950a8b478d612a3b3d5eb63ba638279e03bdb4ffc0422eb5caadf",
+      "proofSha256": "7630a7c8a83b2b27aea16968464455b8ea310b129de5e80203e3636deac688b0",
+      "webp": {
+        "bytes": 961586,
+        "sha256": "e380a527b0387f51e58d1a038b943ad890ab8f0748cf58453c2751ea60571448"
+      },
+      "pdf": {
+        "bytes": 959505,
+        "sha256": "749b8f1a86bcc551aea162121b1386bed842d7f4777c63a0edab66c0805da67e"
+      }
+    },
+    {
+      "id": "3d-printer-vase-print",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 1.2610932793224572,
+        "renderMeanDifference": 3.569596354166667
+      },
+      "sourcePngSha256": "b2ee3abab6b883c1382ffbc7b69e549345981d20517f4df874778d77fe0ad5ca",
+      "proofSha256": "58ce84be8050164de7a50be20051edd31bd6cca716b55f6fb666d04edbbd460c",
+      "webp": {
+        "bytes": 1127594,
+        "sha256": "09e066fd43f38bc5a9aa998ee4a210f17d880238d1ee26220d6e83cc1dd44a49"
+      },
+      "pdf": {
+        "bytes": 853241,
+        "sha256": "7381fab21db99d4ee4124910d767d1bc5aa73c4c20fe0b71ac0af2cb542b6db2"
+      }
+    },
+    {
+      "id": "3d-printer-bridge-test-model",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8747878941433712,
+        "renderMeanDifference": 3.1851822916666666
+      },
+      "sourcePngSha256": "5370389ab86b8848edd42e9f03162a2112d410955a76eac752e0cfccb48f585d",
+      "proofSha256": "05db76caca8303155952ccf84fc5815d90d7a9ebbd58b8588a8c978bae71fcd1",
+      "webp": {
+        "bytes": 834014,
+        "sha256": "4486697ab600ea2fd344253db27d523ac83f4cb8a3f0d8a00552e5fb320fdf70"
+      },
+      "pdf": {
+        "bytes": 899531,
+        "sha256": "6d734b061f01b0441b075d9326f22008af538e2562ada958b0b6ec6a9e083887"
+      }
+    },
+    {
+      "id": "3d-printer-outline-open-frame",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.9054483767914683,
+        "renderMeanDifference": 5.009635416666667
+      },
+      "sourcePngSha256": "817ad674de76b052bad4e49dfd2810f79f59135f658046a82c15f41f1800e736",
+      "proofSha256": "ef163d7647ea1a789917060161a3dc5c35a2a1f6b3f522a397f38e0acaecfbd5",
+      "webp": {
+        "bytes": 732830,
+        "sha256": "8bdc1882ad165b19b6c12f9c34ce0a2818a0af3db4bdc715d4adbc7fe0f7739c"
+      },
+      "pdf": {
+        "bytes": 963559,
+        "sha256": "1ff1276a6144c97a3b423c6eba5cb0cdcf99241c1eb457c430c7b10992359b91"
+      }
+    },
+    {
+      "id": "3d-printer-outline-enclosed",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.7372002346653503,
+        "renderMeanDifference": 5.8156119791666665
+      },
+      "sourcePngSha256": "e297fa5ffe81a5b94f58b202daa6d390b3e889f305d8dcf7d9e3ec27acdfd1e8",
+      "proofSha256": "9e19423025538393a816d4befcaec1ca58123fea36dafd30e18c7ab7362adc4b",
+      "webp": {
+        "bytes": 835380,
+        "sha256": "b4fe3b6a055f762beed7d4e87ccc1a9ed7372e4ca4eddfae841dca1e02218eff"
+      },
+      "pdf": {
+        "bytes": 891008,
+        "sha256": "6baa41ab3ac080cdbeee83be77c5adf37ce9c75bc8f1a93f53a8add91e30d430"
+      }
+    },
+    {
+      "id": "3d-printer-resin-printer-with-clear-vat",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.793828383459254,
+        "renderMeanDifference": 3.8217708333333333
+      },
+      "sourcePngSha256": "3a54b0ade48a74bcb6c10af636929ed2cf1a11caaadf2dd992d20294e3695fc6",
+      "proofSha256": "8af6acc3388bae8f19a514a399e900c6aa31090b51d28bb8de41cc30a4f049e0",
+      "webp": {
+        "bytes": 850350,
+        "sha256": "6b394d0e2c2db8d7e1aa3422835ab5facc14e50931edae39e4a996024ab9e8dc"
+      },
+      "pdf": {
+        "bytes": 687660,
+        "sha256": "96ed250b099bdbe64bfd4f3717c763e13dad4a8a8d0b162aa76efbbf43a2b37e"
+      }
+    },
+    {
+      "id": "3d-printer-compact-cart-with-two-spools",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8503173540282083,
+        "renderMeanDifference": 3.6158463541666666
+      },
+      "sourcePngSha256": "81b9f8cf2a88702f5035a3da61ff0c808a535aa4268d4d63ef9c575974272307",
+      "proofSha256": "9dacb69e4d86a488e70fa511715c42b67c6d9b685ac93c8f325940cae522c5f8",
+      "webp": {
+        "bytes": 862864,
+        "sha256": "5b5ac9f1947c6d6c1686fd5cd0549d679a09a3d6e11f26dcd1bb4b3c6e7515a8"
+      },
+      "pdf": {
+        "bytes": 860557,
+        "sha256": "a6c1e591db21f771ee6d4fd00fb4128907cee5a44d0737a7bf8c0fbfe38e55ca"
+      }
+    },
+    {
+      "id": "3d-printer-outline-exploded-hotend",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0,
+        "renderMeanDifference": 2.7154296875
+      },
+      "sourcePngSha256": "d8b0b8bf8c0e8bf4bd8ddaf729ac0ce92f84a2bdd1313c66b20b017de74bfa3f",
+      "proofSha256": "6ba01abd75aaaf50e994ca6f7199535c331ce32da51b725724bb15c97e5f2eaf",
+      "webp": {
+        "bytes": 363044,
+        "sha256": "5ebc1194df8decb1eb7b774db7e41433df8d044a562874cd6a1e0e6941843488"
+      },
+      "pdf": {
+        "bytes": 619213,
+        "sha256": "758757c73d0725bef01db9623a076e11e81268c2e086ab76eb11e74b1fd1fce6"
+      }
+    },
+    {
+      "id": "3d-printer-white-maker-desk-and-laptop",
+      "productionMethod": "generated-raster",
+      "print": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006",
+        "pixelsPerInch": 300,
+        "weightedCmykRmse": 0.8474840282253607,
+        "renderMeanDifference": 3.364596354166667
+      },
+      "sourcePngSha256": "f1ea1087c6f1b1d6c7fac82ea504f06ac7b858640b16bd9e1f391d356205fde8",
+      "proofSha256": "2995a170e89e1b7b11ae3e95a1142226a3b3028bed6dd446d47395eef0bc8656",
+      "webp": {
+        "bytes": 694690,
+        "sha256": "f528d9bce5c33cef77a6ee8c06af70bf0ad7b00031eddb05d80ac3a65141aa7a"
+      },
+      "pdf": {
+        "bytes": 730504,
+        "sha256": "d6a575ba6a5f648cb970a93a9c4098b929d5cba8aab6e6037addf515b421fb4b"
+      }
+    }
+  ]
+}
