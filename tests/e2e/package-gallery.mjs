@@ -83,7 +83,7 @@ try {
     });
     for (const art of expected) {
       const card = page.locator(`.art-card[data-id="${art.id}"]`);
-      await expect(card.locator('img')).toHaveAttribute('alt', art.alt);
+      await expect(card.locator('.art-picture > img')).toHaveAttribute('alt', art.alt);
       await expect(card.getByRole('link', { name: 'Edit', exact: true })).toHaveAttribute(
         'href',
         `/edit/${art.id}/`,

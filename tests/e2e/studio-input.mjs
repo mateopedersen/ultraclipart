@@ -2,6 +2,7 @@ import { chromium, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { chooseSelectionTool } from '../helpers/creator.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4351',
   out = resolve('reports/studio-input');
 mkdirSync(out, { recursive: true });
@@ -29,7 +30,7 @@ try {
     timeout: 45000,
   });
   await page.locator('button[data-work-mode=advanced]').tap();
-  await page.locator('[data-smart-tool]').selectOption('brush');
+  await chooseSelectionTool(page, 'brush');
   await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
   const point = await page.locator('[data-layer="original-image"]').evaluate((g) => {
     const p = new DOMPoint(691, 691).matrixTransform(g.getScreenCTM());

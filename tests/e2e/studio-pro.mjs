@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadTypescript } from '../helpers/typescript.mjs';
 import { chooseExportFormat } from '../helpers/export.mjs';
+import { chooseSelectionTool } from '../helpers/creator.mjs';
 const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const base = process.env.BASE_URL || 'http://127.0.0.1:4350',
   engine = process.env.UC_BROWSER || 'chromium',
@@ -51,7 +52,7 @@ async function saveProject(name) {
 }
 async function polygon(points, mode = 'replace') {
   await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
-  await page.locator('[data-smart-tool]').selectOption('polygon');
+  await chooseSelectionTool(page, 'polygon');
   await page.locator('[data-mask-mode]').selectOption(mode);
   for (const [x, y] of points) {
     const pt = await page.locator('.uc-canvas [data-layer="original-image"]').evaluate(
@@ -225,7 +226,7 @@ try {
   project = await saveProject('baby-dress-project');
   assert.equal(project.layers[0].regions.length, 2);
   await action('new-region');
-  await page.locator('[data-smart-tool]').selectOption('brush');
+  await chooseSelectionTool(page, 'brush');
   await change('[data-brush-size]', '14');
   await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
   const iris = await page.locator('.uc-canvas [data-layer="original-image"]').evaluate((g) => {

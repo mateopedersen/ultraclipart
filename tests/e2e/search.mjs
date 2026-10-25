@@ -46,9 +46,8 @@ try {
     8,
     'initial HTML is capped at eight cards',
   );
-  await expect(page.locator('#result-count')).toHaveText(
-    `${pumpkinCount} ${pumpkinCount === 1 ? 'illustration' : 'illustrations'} for “pumpkin”`,
-  );
+  await expect(page.locator('#result-count')).toContainText(`${pumpkinCount} artworks`);
+  await expect(page.locator('#result-count')).toContainText('for “pumpkin”');
   await expect(cards()).toHaveCount(pumpkin.items.length);
   assert.deepEqual(
     await cards().evaluateAll((nodes) => nodes.map((node) => node.dataset.id)),
@@ -147,9 +146,8 @@ try {
   ).toHaveCount(1);
   release();
   await page.unroute(slow);
-  await expect(page.locator('#result-count')).toHaveText(
-    `${cardinalCount} ${cardinalCount === 1 ? 'illustration' : 'illustrations'} for “cardinal”`,
-  );
+  await expect(page.locator('#result-count')).toContainText(`${cardinalCount} artworks`);
+  await expect(page.locator('#result-count')).toContainText('for “cardinal”');
   report.checks.push('outdated request cannot overwrite newer results');
   // Favorites have no catalog cards in HTML. Small ID-location tables resolve
   // their bounded metadata chunks without loading the search/ranking index.

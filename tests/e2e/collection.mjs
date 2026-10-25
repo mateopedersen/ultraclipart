@@ -104,7 +104,7 @@ try {
   }
   for (const a of catalog) {
     const card = page.locator(`.art-card[data-id="${a.id}"]`);
-    await expect(card.locator('img')).toHaveAttribute('alt', a.alt);
+    await expect(card.locator('.art-picture > img')).toHaveAttribute('alt', a.alt);
     await expect(card.getByRole('link', { name: 'Edit', exact: true })).toHaveAttribute(
       'href',
       `/edit/${a.id}/`,
@@ -128,9 +128,8 @@ try {
   }));
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
-  await expect(page.locator('#result-count')).toHaveText(
-    `${expected()} illustrations for “${topic}”`,
-  );
+  await expect(page.locator('#result-count')).toContainText(`${expected()} artworks`);
+  await expect(page.locator('#result-count')).toContainText(`for “${topic}”`);
   await expect(page.locator('#search-results .card-actions').first()).toContainText('Edit');
   for (const style of ['watercolor', 'black & white']) {
     await page.selectOption('#filter-style', style);

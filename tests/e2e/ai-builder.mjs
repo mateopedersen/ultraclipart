@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import sharp from 'sharp';
 import { chromium, firefox, webkit } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { examples, featuredIngredientIds } from '../../src/ai/ideas.ts';
 const name = process.env.BROWSER || 'chromium';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
 const output = `${process.env.EVIDENCE_DIR || 'reports/ai-builder'}/${name}`;
@@ -74,17 +75,16 @@ try {
   });
   await page.goto(base + '/');
   await page.screenshot({ path: `${output}/homepage.png`, fullPage: false });
-  await page.locator('#home-ai-prompt').fill('A small rabbit with a yellow daisy — 黄色, Türkçe');
-  await page.locator('#home-ai-form button').click();
+  assert.equal(await page.locator('#home-ai-form').count(), 0);
+  await page.locator('.site-header a[href="/ai-clipart-generator/"]').click();
   await page.waitForURL('**/ai-clipart-generator/');
+  await page.locator('#ai-prompt').fill('A small rabbit with a yellow daisy — 黄色, Türkçe');
   assert.equal(
     await page.locator('#ai-prompt').inputValue(),
     'A small rabbit with a yellow daisy — 黄色, Türkçe',
   );
   assert.equal(calls, 0);
-  report.checks.push(
-    'Homepage exact Unicode transfer; no automatic inference; catalog search retained',
-  );
+  report.checks.push('Header Builder entry, exact Unicode draft and no automatic inference');
   assert.equal(
     await page.locator('link[rel=canonical]').getAttribute('href'),
     'https://ultraclipart.com/ai-clipart-generator/',
@@ -93,19 +93,28 @@ try {
   assert.equal(await page.locator('.ai-faq details').count(), 7);
   await page.screenshot({ path: `${output}/builder-empty.png`, fullPage: true });
   const originalDescription = await page.locator('#ai-prompt').inputValue();
-  await page.locator('[data-ai-theme=nature]').click();
-  assert.match(await page.locator('#ai-prompt').inputValue(), /cabin.*pine trees/i);
+  await page.locator('#ai-empty [data-ai-example="reading"]').click();
+  assert.equal(
+    await page.locator('#ai-prompt').inputValue(),
+    examples.find((x) => x.id === 'reading').prompt,
+  );
   assert.equal(calls, 0);
-  await page.locator('[data-ai-concept="0"]').click();
+  await page.locator('[data-ai-style="cut-paper"]').click();
   assert.equal(await page.locator('#ai-style').inputValue(), 'cut-paper');
-  await page.locator('[data-ai-concept="1"]').click();
+  await page.locator('[data-ai-show-styles]').click();
+  assert.equal(await page.locator('#ai-choice-dialog [data-ai-choice-value]').count(), 20);
+  await page.locator('#ai-choice-dialog [data-ai-choice-value="clay-3d"]').click();
+  assert.equal(await page.locator('#ai-style').inputValue(), 'clay-3d');
+  await page.locator('[data-ai-show-styles]').click();
+  await page.locator('#ai-choice-dialog [data-ai-choice-value="realistic"]').click();
   assert.equal(await page.locator('#ai-style').inputValue(), 'realistic');
   assert.equal(calls, 0);
   await page.locator('[data-ai-view=list]').click();
   assert.equal(await page.locator('#ai-concept-board').getAttribute('data-view'), 'list');
   await page.locator('[data-ai-view=grid]').click();
   assert.equal(await page.locator('#ai-concept-board').getAttribute('data-view'), 'grid');
-  for (const ingredient of ['cabin', 'trees', 'fox']) {
+  const ingredients = featuredIngredientIds.slice(0, 3);
+  for (const ingredient of ingredients) {
     await page.locator(`[data-ai-ingredient=${ingredient}]`).click();
     assert.equal(
       await page.locator(`[data-ai-ingredient=${ingredient}]`).getAttribute('aria-pressed'),
@@ -115,10 +124,11 @@ try {
   await page.locator('[data-ai-ingredient=custom]').click();
   await page.locator('#ai-ingredient-custom').fill('tiny mushrooms');
   await page.locator('[data-ai-add-ingredient]').click();
-  await page
-    .getByRole('button', { name: 'Remove ingredient: tiny mushrooms', exact: true })
-    .click();
-  assert.equal(await page.locator('#ai-custom-ingredients button').count(), 0);
+  await page.getByRole('button', { name: 'Remove detail: tiny mushrooms', exact: true }).click();
+  assert.equal(
+    await page.getByRole('button', { name: 'Remove detail: tiny mushrooms', exact: true }).count(),
+    0,
+  );
   await page.locator('#ai-ingredient-custom').fill('three blue balloons');
   await page.locator('[data-ai-add-ingredient]').click();
   await page.locator('[data-ai-mood=cozy]').click();
@@ -126,7 +136,7 @@ try {
   await page.locator('#ai-prompt').fill(originalDescription);
   await page.locator('#ai-transparent').uncheck();
   report.checks.push(
-    'Theme and concept inspiration fill description/style without inference; ingredient add/remove, mood, palette and grid/list controls work',
+    'Catalog example, 20-style dialog, ingredient add/remove, mood, color and grid/list controls work without inference',
   );
   await page.locator('#ai-generate').click();
   await page.locator('#ai-canvas').waitFor({ state: 'visible' });
@@ -136,9 +146,7 @@ try {
   assert.equal(lastBody.turnstileToken, 'fixture-token');
   assert.ok(lastBody.prompt.startsWith(originalDescription));
   for (const detail of [
-    'a wooden cabin',
-    'pine trees',
-    'a little fox',
+    ...ingredients.map((id) => examples.find((x) => x.id === id).ingredient),
     'three blue balloons',
     'Mood: warm and cozy atmosphere',
     'Accent colors:',
@@ -224,9 +232,11 @@ try {
   );
   assert.equal(calls, 2);
   assert.ok((await pixels()).transparent > 0);
-  await page.locator('#ai-concept-count').selectOption('2');
+  await page.locator('#ai-concept-count-trigger').click();
+  await page.locator('#ai-choice-dialog [data-ai-choice-value="2"]').click();
   assert.equal(await page.locator('#ai-concepts button').count(), 2);
-  await page.locator('#ai-concept-count').selectOption('8');
+  await page.locator('#ai-concept-count-trigger').click();
+  await page.locator('#ai-choice-dialog [data-ai-choice-value="8"]').click();
   assert.equal(await page.locator('#ai-concepts button').count(), 2);
   await page.locator('#ai-concepts button').nth(1).click();
   await page.waitForFunction(() => document.querySelector('#ai-canvas').width === 512);

@@ -64,7 +64,7 @@ const states = [
     url: '/search/?q=pumpkin',
     prepare: async () => {
       await expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
-      await expect(page.locator('#result-count')).toContainText('illustrations for “pumpkin”');
+      await expect(page.locator('#result-count')).toContainText('for “pumpkin”');
     },
   },
   { name: '04-topic', url: '/clipart/winter/' },
