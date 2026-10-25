@@ -1,7 +1,7 @@
 import contexts from './gta-six-contexts.json' with { type: 'json' };
 import reviews from '../data/identification/gta-six.json' with { type: 'json' };
 import { validateIdentification } from './identification-review.mjs';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 export const packageContexts = contexts;
 export const packageDiscovery = () => ({ cute: false });
@@ -10,7 +10,13 @@ export function packageMetadata(topic, id, sourceSha256) {
   if (!record || (sourceSha256 && record.sourceSha256 !== sourceSha256))
     throw Error('Missing or changed GTA source review: ' + id);
   const metadata = record.metadata;
-  const sourceBytes = readFileSync(resolve(import.meta.dirname, '..', record.source));
+  const root = resolve(import.meta.dirname, '..');
+  const original = resolve(root, record.source);
+  // Clean CI checkouts restore the unchanged reviewed WebP from the verified CDN;
+  // private owner ZIPs are not required to validate published metadata.
+  const sourceBytes = readFileSync(
+    existsSync(original) ? original : resolve(root, 'public/catalog', topic, id + '.webp'),
+  );
   const checked = validateIdentification({ artwork: { id, ...metadata }, sourceBytes, record });
   return {
     ...metadata,

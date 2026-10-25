@@ -1,0 +1,28 @@
+{
+  "reviewedAt": "2026-10-26",
+  "publisher": "Rockstar Games",
+  "purpose": "Source-specific identification and editorial constraints for six owner-supplied fan-art packages",
+  "findings": [
+    "GTA 6 and Grand Theft Auto VI are the same game; the two owner archives share the gta-6 topic rather than creating competing collection URLs.",
+    "Rockstar identifies Jason Duval and Lucia Caminos. Original supplied character images were compared visually with the official character page; metadata calls these stylized interpretations inspired by those characters, not official character sheets or confirmed mission depictions.",
+    "The official site identifies Cal Hampton, Boobie Ike, Dre'Quan Priest, Real Dimez, Raul Bautista and Brian Heder. Their supplied fan scenes are described by visible clothing, equipment, pose and setting without inventing a mission or storyline.",
+    "Rockstar names Vice City, Leonida Keys, Port Gellhorn, Ambrosia, Grassrivers and Mount Kalaga National Park. Supplied map art invents coastlines, streets and layouts. Every map title says Concept and the description rejects official-map or navigation claims.",
+    "Legacy artwork spans different series titles. Official Rockstar game pages, manuals and original GTA V character artwork support the reference vocabulary; stylized character renderings retain inspired qualifiers.",
+    "Download lettering is a visible part of some emblem illustrations. Metadata explicitly distinguishes those images and PDFs from a game installer.",
+    "Illustrated sports cars, motorcycles, boats and camera/phone props are described generically. No manufacturer model, engine specification or released gameplay feature is inferred from their silhouettes."
+  ],
+  "sources": [
+    "https://www.rockstargames.com/VI",
+    "https://www.rockstargames.com/VI/only-in-leonida/jason",
+    "https://www.rockstargames.com/VI/only-in-leonida/lucia",
+    "https://www.rockstargames.com/VI/downloads/artwork-wallpapers",
+    "https://media.rockstargames.com/rockstargames-newsite/img/manuals/en_us/GTA_SA_PS3_MANUAL_ENG.pdf",
+    "https://media.rockstargames.com/rockstargames-newsite/img/manuals/en_us/GTATrilogy_GTAVC_PS2_Manual_M01.pdf",
+    "https://www.rockstargames.com/img/manuals/en_us/GTATrilogy_GTAIII_PS2_Manual_M01.pdf",
+    "https://www.rockstargames.com/newswire/article/25o2411819aok8/original-gtav-artwork-michael-franklin-trevor.html",
+    "https://www.rockstargames.com/games/episodesfromlibertycity"
+  ],
+  "sourceBoundRegistry": "data/identification/gta-six.json",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false
+}
