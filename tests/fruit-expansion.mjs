@@ -1,3 +1,4 @@
+import { assertPublishedImage } from './support/published-page.mjs';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -120,7 +121,7 @@ test(
         assert.ok(images.includes(`https://ultraclipart.com/art/${item.id}/`));
         assert.ok(detail.includes(`https://ultraclipart.com/art/${item.id}/`));
         assert.match(detail, /ImageObject/);
-        assert.match(detail, /assets\.ultraclipart\.com/);
+        assertPublishedImage(item, detail);
         assert.doesNotMatch(detail, /content="noindex/);
         assert.ok(collection.includes(`/edit/${item.id}/`));
         assert.ok(existsSync(new URL(`../dist/edit/${item.id}/index.html`, import.meta.url)));
