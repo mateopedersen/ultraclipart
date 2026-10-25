@@ -43,3 +43,5 @@ this policy reduces unnecessary work rather than promising a fixed deployment du
 
 
 New commits to the same pull request supersede and cancel the earlier PR candidate, so outdated browser jobs do not block its current checks. Main-branch publications still complete their browser matrices. No suite or validation gate is removed. Board, download-page and footer regressions run in all three browser engines with their corresponding interface groups.
+
+Evidence uploads and final validation gates use `!cancelled()` rather than `always()`: a deliberately cancelled old candidate releases queued finalizers. Actual failures still upload reports and reach the unchanged strict validation gate. A cancelled candidate cannot provide a successful current-head validation.

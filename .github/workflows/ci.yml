@@ -207,7 +207,9 @@ jobs:
           CF_PAGES=1 pnpm build
           CF_PAGES=1 pnpm exec node --test tests/catalog.mjs tests/csp.mjs tests/publication.mjs
       - name: Keep browser evidence and preview log
-        if: always()
+        # Failed checks still upload evidence. Superseded cancelled candidates
+        # must release their runner instead of scheduling cancellation cleanup.
+        if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
           name: browser-evidence-${{ matrix.engine }}-${{ matrix.suite }}
@@ -216,7 +218,9 @@ jobs:
   validate:
     name: validate (${{ matrix.engine }})
     needs: [plan, browser]
-    if: ${{ always() }}
+    # Run after failed dependencies too, but do not hold the next candidate
+    # behind queued finalizers for a deliberately cancelled older PR run.
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
