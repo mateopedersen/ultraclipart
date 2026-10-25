@@ -48,7 +48,7 @@ await page.route(`${origin}/**`, async (route) => {
     response = await route.fetch({ url: `${upstream}${url.pathname}${url.search}` });
   await route.fulfill({ response });
 });
-const fixture = 'https://assets.ultraclipart.com/__download-qa/';
+const fixture = 'https://assets.ultraclipart.com/download-qa/';
 const status = page.locator('#download-status'),
   link = page.locator('[data-download-qa]');
 const cors = { 'access-control-allow-origin': origin };
@@ -61,8 +61,10 @@ const setLink = async (url) => {
       element.href = value.url;
       element.dataset.expectedBytes = String(value.bytes);
       element.dataset.expectedSha256 = value.sha256;
+      element.dataset.finalDownload = value.kind;
+      element.download = `winter-arctic-fox-resting.${value.kind}`;
     },
-    { url, bytes: file.bytes, sha256: file.sha256 },
+    { url, bytes: file.bytes, sha256: file.sha256, kind },
   );
 };
 const saveClick = async (name) => {

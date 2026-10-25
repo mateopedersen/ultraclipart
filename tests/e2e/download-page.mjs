@@ -6,20 +6,15 @@ import { join } from 'node:path';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const engine = process.env.UC_BROWSER || 'chromium';
-const upstream = process.env.BASE_URL || 'http://127.0.0.1:4381';
-const base = 'https://ultraclipart.com';
+const base = process.env.BASE_URL || 'http://127.0.0.1:4381';
 const catalog = JSON.parse(readFileSync('data/art.json'));
+const publication = JSON.parse(readFileSync('data/publication.json'));
 const output = `reports/download-page/${engine}`;
 mkdirSync(output, { recursive: true });
 const browser = await { chromium, firefox, webkit }[engine].launch();
 const context = await browser.newContext({ acceptDownloads: true });
+// Repeated viewport cases must request fresh HTML rather than conditional cache responses.
 await context.route('**/*', (route) => route.continue());
-if (upstream !== base)
-  await context.route(`${base}/**`, async (route) => {
-    const url = new URL(route.request().url());
-    const response = await route.fetch({ url: `${upstream}${url.pathname}${url.search}` });
-    await route.fulfill({ response });
-  });
 const page = await context.newPage();
 const report = { engine, base, layouts: [], downloads: [], errors: [], adRequests: [] };
 page.on('pageerror', (e) => report.errors.push(e.message));
@@ -115,13 +110,76 @@ try {
     `${base}/download/apple-and-dried-rings-crayon-clipart/?format=%22%3E%3Cscript%3E`,
   );
   await expect(page.locator('[data-final-download]')).toHaveCount(2);
-  const nojs = await browser.newContext({ javaScriptEnabled: false });
-  if (upstream !== base)
-    await nojs.route(`${base}/**`, async (route) => {
-      const url = new URL(route.request().url());
-      const response = await route.fetch({ url: `${upstream}${url.pathname}${url.search}` });
-      await route.fulfill({ response });
+  // A CDN file must download with its original name rather than opening as an image.
+  const original = page.locator('[data-final-download="webp"]'),
+    item = catalog.find((a) => a.id === 'apple-and-dried-rings-crayon-clipart'),
+    source = publication.files.find((file) => file.assetId === item.id && file.kind === 'webp').url,
+    originalBytes = readFileSync('public' + item.webp),
+    cors = { 'Access-Control-Allow-Origin': new URL(base).origin };
+  let sourceRequests = 0;
+  const validSource = (route) => {
+    sourceRequests++;
+    return route.fulfill({
+      status: 200,
+      contentType: 'image/webp',
+      headers: cors,
+      body: originalBytes,
     });
+  };
+  await context.route(source, validSource);
+  await original.evaluate((link, url) => {
+    link.href = url;
+  }, source);
+  const remoteEvents = [];
+  const trackRemote = (download) => remoteEvents.push(download);
+  page.on('download', trackRemote);
+  const remoteDownload = page.waitForEvent('download');
+  await original.click();
+  const downloaded = await remoteDownload,
+    remoteDir = mkdtempSync(join(tmpdir(), 'ultraclipart-cdn-download-'));
+  try {
+    const saved = join(remoteDir, `${item.id}.webp`);
+    assert.equal(downloaded.suggestedFilename(), `${item.id}.webp`);
+    await downloaded.saveAs(saved);
+    assert.equal(
+      createHash('sha256').update(readFileSync(saved)).digest('hex'),
+      item.files.webp.sha256,
+    );
+  } finally {
+    await downloaded.delete();
+    rmSync(remoteDir, { recursive: true, force: true });
+  }
+  assert.equal(sourceRequests, 1, 'One click must fetch the original exactly once');
+  assert.equal(remoteEvents.length, 1, 'One click must create exactly one download');
+  page.off('download', trackRemote);
+  // Corrupt CDN bytes must never be handed to the browser download manager.
+  const unexpected = [];
+  const track = (download) => unexpected.push(download);
+  page.on('download', track);
+  const corruptSource = (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: 'image/webp',
+      headers: cors,
+      body: Buffer.alloc(item.files.webp.bytes),
+    });
+  await context.route(source, corruptSource);
+  await original.click();
+  await expect(page.locator('[data-download-format="webp"] [data-download-status]')).toContainText(
+    'We couldn’t verify this download',
+  );
+  assert.equal(unexpected.length, 0);
+  await expect(original).not.toHaveAttribute('aria-busy', 'true');
+  await context.unroute(source, corruptSource);
+  const retry = page.waitForEvent('download');
+  await original.click();
+  await (await retry).delete();
+  await context.unroute(source, validSource);
+  page.off('download', track);
+  await expect(page.locator('[data-download-format="webp"] [data-download-status]')).toContainText(
+    'Original file verified',
+  );
+  const nojs = await browser.newContext({ javaScriptEnabled: false });
   const plain = await nojs.newPage();
   await plain.goto(`${base}/art/apple-and-dried-rings-crayon-clipart/`);
   await plain.locator('.detail-actions a[href$="?format=pdf"]').click();

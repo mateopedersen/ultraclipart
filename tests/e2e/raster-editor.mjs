@@ -1,7 +1,7 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
-import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { chooseExportFormat } from '../helpers/export.mjs';
 import { shardRasterTargets } from '../../scripts/ci-raster-shards.mjs';
@@ -67,15 +67,47 @@ async function commitInput(selector, value) {
 async function save(kind, id) {
   await page.locator('[data-action=export]').click();
   await chooseExportFormat(page, kind);
-  const pending = page.waitForEvent('download', { timeout: 60000 });
-  await page.locator('[data-action=download]').click();
-  const result = await pending;
-  const path = resolve(out, `${id}-edited.${kind}`);
-  await result.saveAs(path);
-  assert.ok(statSync(path).size > 1000);
-  if (kind === 'pdf') assert.ok(statSync(path).size <= 1_000_000);
-  await page.locator('[data-action=close-export]').click();
-  return { id, kind, bytes: statSync(path).size, path };
+  const button = page.locator('[data-action=download]'),
+    status = page.locator('[data-export-status]'),
+    observed = [],
+    capture = (download) => observed.push(download);
+  let defaultBlockedBytes;
+  page.on('download', capture);
+  try {
+    if (kind === 'pdf') await page.locator('[data-allow-large-pdf]').uncheck();
+    await button.click();
+    await expect(button).toBeEnabled({ timeout: 90000 });
+    const message = await status.textContent(),
+      limit = message.match(/This edited PDF is ([\d,]+) bytes, above the 1,000,000-byte limit/);
+    if (limit) {
+      assert.equal(kind, 'pdf');
+      defaultBlockedBytes = Number(limit[1].replaceAll(',', ''));
+      assert.ok(defaultBlockedBytes > 1_000_000, `${id}: ${message}`);
+      assert.equal(observed.length, 0, 'The default PDF limit must block the download');
+      await page.locator('[data-allow-large-pdf]').check();
+      await expect(page.locator('[data-allow-large-pdf]')).toBeChecked();
+      await button.click();
+      await expect(button).toBeEnabled({ timeout: 90000 });
+    }
+    await expect(status).toContainText(`Your edited ${kind.toUpperCase()} is ready`);
+    const result = observed[0] || (await page.waitForEvent('download', { timeout: 60000 }));
+    assert.equal(await result.failure(), null);
+    const path = resolve(out, `${id}-edited.${kind}`);
+    await result.saveAs(path);
+    const bytes = readFileSync(path);
+    assert.ok(bytes.length > 1000);
+    if (kind === 'pdf') {
+      assert.equal(bytes.subarray(0, 5).toString(), '%PDF-');
+      if (!defaultBlockedBytes) assert.ok(bytes.length <= 1_000_000);
+    } else {
+      assert.equal(bytes.subarray(0, 4).toString(), 'RIFF');
+      assert.equal(bytes.subarray(8, 12).toString(), 'WEBP');
+    }
+    await page.locator('[data-action=close-export]').click();
+    return { id, kind, bytes: bytes.length, path, defaultBlockedBytes };
+  } finally {
+    page.off('download', capture);
+  }
 }
 try {
   for (const [index, a] of targets.entries()) {

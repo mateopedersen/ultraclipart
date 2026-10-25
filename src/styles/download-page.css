@@ -179,6 +179,13 @@
   opacity: 0.75;
   cursor: progress;
 }
+.download-progress {
+  margin: 10px 0 0;
+  color: #294c76;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.6;
+}
 .download-technical {
   margin-top: 12px;
   font-size: 12px;

@@ -117,9 +117,16 @@ const files = [
               download={`${item.id}.${file.format}`}
             >
               <Icon name="download" size={21} />
-              <span>Download {file.label}</span>
+              <span data-download-label>Download {file.label}</span>
               <span aria-hidden="true">↓</span>
             </a>
+            <p
+              class="download-progress"
+              data-download-status
+              role="status"
+              aria-live="polite"
+              hidden
+            />
             <details class="download-technical">
               <summary>Exact file information</summary>
               <dl>
@@ -142,6 +149,11 @@ const files = [
           </article>
         ))}
       </div>
+      <noscript>
+        <p class="download-permission">
+          Your browser may open the original file. Use its Save or Download control to keep a copy.
+        </p>
+      </noscript>
       <p class="download-permission">
         <Icon name="document" size={18} />
         <span>
