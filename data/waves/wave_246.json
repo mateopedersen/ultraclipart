@@ -1,6 +1,6 @@
 {
   "wave": "wave_246",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 3,
   "screenReview": "PASS",
@@ -555,5 +555,7 @@
   "createdAt": "2026-10-25T15:35:16.299Z",
   "cdnVerifiedAt": "2026-10-25T15:51:29.162Z",
   "editorExportProofReview": "PASS_ALL_FIVE_RENDER_CONTACT_SHEETS_VISUALLY_REVIEWED",
-  "editorExportProofReviewedAt": "2026-10-25T16:11:23.963650+00:00"
+  "editorExportProofReviewedAt": "2026-10-25T16:11:23.963650+00:00",
+  "publishedRevision": "a2905145eb4c5d5ddcb0b0c2ea0c85800875b2b0",
+  "liveVerification": "reports/fall-live/chromium/report.json"
 }

@@ -1,0 +1,544 @@
+{
+  "wave": "wave_266",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "acorn-mail-carrier-character",
+      "title": "Acorn Carrying a Letter",
+      "alt": "A smiling acorn character carries a blank envelope with a green ribbon and a small leaf shoulder bag.",
+      "description": "A smiling acorn character carries a blank envelope with a green ribbon and a small leaf shoulder bag. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_266/source/acorn-mail-carrier-character.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "79ab1bdc2c464e44f4763e4279313487e75beb0f7da6b56b6ec97bda35142036",
+      "inputSignature": "73340b6c2c61fab5d2be246d32b3fc824cf55b4aa4ac6bc68620f61788217325",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 928864,
+        "weightedCmykRmse": 1.095857
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1360696,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1086820,
+          "weightedCmykRmse": 0.772094
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1018752,
+          "weightedCmykRmse": 0.908936
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 928864,
+          "weightedCmykRmse": 1.095857
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        1,
+        1305,
+        1161
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_266/exports/acorn-mail-carrier-character.pdf",
+          "bytes": 928864,
+          "sha256": "51e74c7e6d31568cc03555ff1a7a32f2b18e5585e0e91b3cf34af5bb6a723add"
+        },
+        "webp": {
+          "path": "work/production/wave_266/exports/acorn-mail-carrier-character.webp",
+          "bytes": 1266256,
+          "sha256": "f7d3aae14ba6bab23b47fa8f5be3d3bda6a42cafa728bcdf345e58a129dd60a3"
+        },
+        "thumb": {
+          "path": "work/production/wave_266/exports/acorn-mail-carrier-character-thumb.webp",
+          "bytes": 69386,
+          "sha256": "0b064bce2b1b2284d313d3d865287852007a6f8522beb6796a233e0e86266d75"
+        }
+      },
+      "proofSha256": "bf5a708b5eb661fb2474974cc48351f32105c0d6a82c46c550d5fdface0bf7e4",
+      "pairMeanRgbDifference": 4.34819
+    },
+    {
+      "id": "acorn-celebrating-pair",
+      "title": "Two Acorn Friends Celebrating",
+      "alt": "Two cheerful acorn friends with round and slender bodies meet their raised hands in a high five.",
+      "description": "Two cheerful acorn friends with round and slender bodies meet their raised hands in a high five. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_266/source/acorn-celebrating-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4028865a7d0f9e75cf90f8041969ff857bd5a2a8f0c2331f9cf053a17fd93876",
+      "inputSignature": "7db47646c242551485c4c798808b76bb954d4479e3660b8d090a313d2a972224",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 842200,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 842200,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        128,
+        38,
+        1440,
+        965
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_266/exports/acorn-celebrating-pair.pdf",
+          "bytes": 842200,
+          "sha256": "f16c8d60171001e5877e1c6c128d7a6b7bc0e3fb19cbb42fc0d4fcab941f1b49"
+        },
+        "webp": {
+          "path": "work/production/wave_266/exports/acorn-celebrating-pair.webp",
+          "bytes": 1439170,
+          "sha256": "26a05fbb2f9231e1d918161a28e8c3766da6f9dbafbb6b4ab5da4b22f2ff9909"
+        },
+        "thumb": {
+          "path": "work/production/wave_266/exports/acorn-celebrating-pair-thumb.webp",
+          "bytes": 45558,
+          "sha256": "e92e9583951e9e9e04bf001d263091e19d52bc83824bbb190349588132b7e570"
+        }
+      },
+      "proofSha256": "263bcd80aa2ff8710a03678a7bb4f5b38fe4b64e0392f9150de1ea483ee57fd9",
+      "pairMeanRgbDifference": 4.77695
+    },
+    {
+      "id": "acorn-flat-rounded-symbol",
+      "title": "Simple Rounded Acorn",
+      "alt": "A bold caramel acorn has a rounded pointed nut, dark brown scalloped cap and curved stem with a clean dark outline.",
+      "description": "A bold caramel acorn has a rounded pointed nut, dark brown scalloped cap and curved stem with a clean dark outline. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_266/source/acorn-flat-rounded-symbol.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1263,
+      "height": 1246,
+      "pdfWidth": 1000,
+      "pdfHeight": 987,
+      "sourceType": "raster",
+      "sourceSha256": "9c28d2cd6cb1a7d0b68c8ec2be1c2b31a2e8aa7538d842e9c56af3ea8acf54b2",
+      "inputSignature": "a472e74d2fe2dc50480a610e6fab37c04fc91be8bf80568bf2f2facba896e5c7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 764388,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 764388,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        171,
+        21,
+        1104,
+        1208
+      ],
+      "image": {
+        "width": 1000,
+        "height": 987,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_266/exports/acorn-flat-rounded-symbol.pdf",
+          "bytes": 764388,
+          "sha256": "c1143877b2835820242c83372c45100c3c9abdcbd8b9e7b75ee464ed168f5fb0"
+        },
+        "webp": {
+          "path": "work/production/wave_266/exports/acorn-flat-rounded-symbol.webp",
+          "bytes": 540820,
+          "sha256": "82508233cced0b6b9577600b01d67010e8814b7a9ce6554910b216d94d153a9a"
+        },
+        "thumb": {
+          "path": "work/production/wave_266/exports/acorn-flat-rounded-symbol-thumb.webp",
+          "bytes": 33714,
+          "sha256": "f6c4d08192a6322503253ed5117c00be35690fe020672fd670e0c2689cc25b9c"
+        }
+      },
+      "proofSha256": "fe8a9d2c111a807ce55251e31b49666705af00dc6e803b4edbdef7596941b35f",
+      "pairMeanRgbDifference": 2.77068
+    },
+    {
+      "id": "acorn-flat-oak-leaf-pair",
+      "title": "Simple Acorn and Oak Leaf",
+      "alt": "A golden acorn with a dark outlined textured cap sits in front of one olive green lobed oak leaf.",
+      "description": "A golden acorn with a dark outlined textured cap sits in front of one olive green lobed oak leaf. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_266/source/acorn-flat-oak-leaf-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1230,
+      "height": 1278,
+      "pdfWidth": 962,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "c5b3f0800f69626ac06210edf5c9457ee4900e73fb141f26a22021d1404b9d6d",
+      "inputSignature": "f83d42bf74dfe112c431b332e08e9047731e30ebac46d6917513cebd9d68688f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 977946,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 977946,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        49,
+        57,
+        1203,
+        1182
+      ],
+      "image": {
+        "width": 962,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_266/exports/acorn-flat-oak-leaf-pair.pdf",
+          "bytes": 977946,
+          "sha256": "d6961be17e8e99b0e40abfe44ecde5921574f01b88407b94f29675e7468892be"
+        },
+        "webp": {
+          "path": "work/production/wave_266/exports/acorn-flat-oak-leaf-pair.webp",
+          "bytes": 763698,
+          "sha256": "ae6266920f968050130987ef76e07e02d9b83f376b2b0fe2a5c49bbd4e9d98ef"
+        },
+        "thumb": {
+          "path": "work/production/wave_266/exports/acorn-flat-oak-leaf-pair-thumb.webp",
+          "bytes": 47514,
+          "sha256": "09340aeb87c8c6b1505e564ec899bde7aa6fe54cc4b39fde53c36493ecf5da91"
+        }
+      },
+      "proofSha256": "69c7e9c2f1a2677e15f45f2a4439075758b94cbf171d11a17e135fccbef8f5e6",
+      "pairMeanRgbDifference": 4.74509
+    },
+    {
+      "id": "acorn-folk-botanical",
+      "title": "Folk Art Acorn Branch",
+      "alt": "Two brown acorns join a decorative folk art branch with rust, olive and ochre oak leaves and small berries.",
+      "description": "Two brown acorns join a decorative folk art branch with rust, olive and ochre oak leaves and small berries. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_266/source/acorn-folk-botanical.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3a450c6c3c3e7a983afdc1d3c8e9761d7a4d9f557a9b5af1eb0cf42585edbaa8",
+      "inputSignature": "38fbb19da1ac1e4c9031b33c8e9f41df496a590427018021cc30eef5ff49f847",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 950088,
+        "weightedCmykRmse": 1.444017
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1425177,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1179890,
+          "weightedCmykRmse": 0.803411
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1114431,
+          "weightedCmykRmse": 0.940032
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1024151,
+          "weightedCmykRmse": 1.134516
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 950088,
+          "weightedCmykRmse": 1.444017
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        50,
+        43,
+        1282,
+        1129
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_266/exports/acorn-folk-botanical.pdf",
+          "bytes": 950088,
+          "sha256": "597d3f39c636a45c95ab7ae4caf137e99e5419a3d1554876caa752525bc17959"
+        },
+        "webp": {
+          "path": "work/production/wave_266/exports/acorn-folk-botanical.webp",
+          "bytes": 1248426,
+          "sha256": "394550f3411854d62e60f3ccf6a2be73bb789868c34a389615ff3a904ad91be4"
+        },
+        "thumb": {
+          "path": "work/production/wave_266/exports/acorn-folk-botanical-thumb.webp",
+          "bytes": 76362,
+          "sha256": "7d375ba6b6ee90005e58e5324fbd8f9fcdd826cdc0e07a76ac798f485abbd237"
+        }
+      },
+      "proofSha256": "1e088713d9987348f12cdfa455293975fd0e88a29eb2441a303c94a03796e3bf",
+      "pairMeanRgbDifference": 4.21445
+    },
+    {
+      "id": "acorn-paper-cut-acorn",
+      "title": "Layered Paper Acorn",
+      "alt": "A layered paper style golden acorn has overlapping brown cap scales and one small green oak leaf.",
+      "description": "A layered paper style golden acorn has overlapping brown cap scales and one small green oak leaf. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_266/source/acorn-paper-cut-acorn.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1328,
+      "height": 1184,
+      "pdfWidth": 1000,
+      "pdfHeight": 892,
+      "sourceType": "raster",
+      "sourceSha256": "858c5a31783e76699e942aed4624abc03c1a6b33e05dda8cf4f10958c087d586",
+      "inputSignature": "a8eddb9e255dad0b2e833edb308d00568cfb21db1e36e9654aa39c4dbdba3bbb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 823616,
+        "weightedCmykRmse": 0.823302
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1079626,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 823616,
+          "weightedCmykRmse": 0.823302
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        166,
+        49,
+        1297,
+        1130
+      ],
+      "image": {
+        "width": 1000,
+        "height": 892,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_266/exports/acorn-paper-cut-acorn.pdf",
+          "bytes": 823616,
+          "sha256": "fdd566e2a2dbea5b1e292ab2f8c4e08fc828e521ca982ee0f533495890c7a0fd"
+        },
+        "webp": {
+          "path": "work/production/wave_266/exports/acorn-paper-cut-acorn.webp",
+          "bytes": 1436912,
+          "sha256": "966487ae553fac8ea4c524dcedbb9a700ed6bcb0fefae9afa7d64303a887b80e"
+        },
+        "thumb": {
+          "path": "work/production/wave_266/exports/acorn-paper-cut-acorn-thumb.webp",
+          "bytes": 46854,
+          "sha256": "5d244ad0c3bc18ed6ce696e4e9f4f8aebd0f99672a327e1ce66474f3937f2a24"
+        }
+      },
+      "proofSha256": "924a9aaa08d9a240e3b890bed969a5bf0835d99c5a5de4a6f023b0a67300e9c8",
+      "pairMeanRgbDifference": 3.04109
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:17:07.181039+00:00",
+  "screenReviewScope": "Every native PDF render visually inspected: complete material/character silhouettes, independent clear outlines, open wreath/frame centers, correct replacement pouch and intact sprouting nut. No visible framing or compression defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T17:17:08.928Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/acorn-editor/chromium/preflight.json",
+    "proofContacts": "reports/acorn-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:41:22.143986+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; original artwork, profile and alpha preserved. Duplicate/opacity image manipulation occurs only in the intended first editor test scenario."
+  }
+}

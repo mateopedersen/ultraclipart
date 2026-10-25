@@ -1,0 +1,530 @@
+{
+  "wave": "wave_255",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pilgrim-kneading-bread",
+      "title": "Pilgrim Woman Kneading Bread",
+      "alt": "A woman in a blue waistcoat, linen coif and apron kneads a round of dough at a complete wooden trestle table.",
+      "description": "A woman in a blue waistcoat, linen coif and apron kneads a round of dough at a complete wooden trestle table. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_255/source/pilgrim-kneading-bread.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "94907687a3dec29e95efd54b94f58e36d9e978041be576f102ca74b832d9d25e",
+      "inputSignature": "748eee0760e06c1a6cf9acca9f4aa8493ef951f0041c301503b14a8b9defdb06",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 835101,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 835101,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        63,
+        93,
+        989,
+        1448
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_255/exports/pilgrim-kneading-bread.pdf",
+          "bytes": 835101,
+          "sha256": "8489234e499c999e21a09ab178b1c8fca047af046d632a382c8a2ec795355b49"
+        },
+        "webp": {
+          "path": "work/production/wave_255/exports/pilgrim-kneading-bread.webp",
+          "bytes": 1344778,
+          "sha256": "6997f2549c31e7eab7d695254947a36ea4d43809576e8230a513d5a92ae16dcf"
+        },
+        "thumb": {
+          "path": "work/production/wave_255/exports/pilgrim-kneading-bread-thumb.webp",
+          "bytes": 42404,
+          "sha256": "11ba9f9b416110d518f756d5bbdbcdc78625e8caf6637c446b4bbe99db975e3b"
+        }
+      },
+      "proofSha256": "45c644df8a7212f19ead048b7949b8b3115520fd1355307a820675660506baaa",
+      "pairMeanRgbDifference": 3.13528
+    },
+    {
+      "id": "pilgrim-stirring-hearth-pot",
+      "title": "Pilgrim Cooking Pot at the Hearth",
+      "alt": "A woman in muted red and brown clothing stirs an iron cooking pot beside a small bounded masonry hearth and wooden table.",
+      "description": "A woman in muted red and brown clothing stirs an iron cooking pot beside a small bounded masonry hearth and wooden table. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_255/source/pilgrim-stirring-hearth-pot.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "a33f20aaffbed7db1b03cebb650c370b1ca5a918be53d93c8dfb05cbc263abea",
+      "inputSignature": "8e5c3505c36d2c0c161e43928cac034c1199509fb14edbd268cd611586ece12e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 995134,
+        "weightedCmykRmse": 0.983976
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1280730,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1059052,
+          "weightedCmykRmse": 0.820007
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 995134,
+          "weightedCmykRmse": 0.983976
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        107,
+        92,
+        1289,
+        1111
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_255/exports/pilgrim-stirring-hearth-pot.pdf",
+          "bytes": 995134,
+          "sha256": "b6e6d702b8492b9b1c120e1e631c7284cfbf17396cd5201fcfb1275e30d34409"
+        },
+        "webp": {
+          "path": "work/production/wave_255/exports/pilgrim-stirring-hearth-pot.webp",
+          "bytes": 1067186,
+          "sha256": "c9ef419137b44eb65ac845dfb132f078b33e21bc25689deffab270e20263f2be"
+        },
+        "thumb": {
+          "path": "work/production/wave_255/exports/pilgrim-stirring-hearth-pot-thumb.webp",
+          "bytes": 61604,
+          "sha256": "ba50ffa4fcef031a5137edf4f3e28a560856fdad3ac1e014f9c173e41628429d"
+        }
+      },
+      "proofSha256": "4e5df371202ccf8203dc7bf6380bca218193e9952aeff0e4f26ef5dec7d053aa",
+      "pairMeanRgbDifference": 3.25263
+    },
+    {
+      "id": "pilgrim-pounding-corn-mortar",
+      "title": "Pilgrim Preparing Cornmeal",
+      "alt": "A woman in an ochre waistcoat and linen coif uses a long wooden pestle in a tall wooden mortar containing dried corn.",
+      "description": "A woman in an ochre waistcoat and linen coif uses a long wooden pestle in a tall wooden mortar containing dried corn. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_255/source/pilgrim-pounding-corn-mortar.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "876a488022fad70c1db106351f92c2fe70c0c15dd824a8ca6798837dd3d631db",
+      "inputSignature": "427c6353a7a53ef1c16784cdb85db6b64c959db468ec5335fe8810aa7177ed2b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 853863,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 853863,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        215,
+        49,
+        930,
+        1298
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_255/exports/pilgrim-pounding-corn-mortar.pdf",
+          "bytes": 853863,
+          "sha256": "ed0c71af1e7039fdeb9b9395cc40330e9948afb868785f37c54eae6287843428"
+        },
+        "webp": {
+          "path": "work/production/wave_255/exports/pilgrim-pounding-corn-mortar.webp",
+          "bytes": 820602,
+          "sha256": "978dccb2b19836c539ff92f44a4bd02222eee1e4183611ebc20663b19d83c5f8"
+        },
+        "thumb": {
+          "path": "work/production/wave_255/exports/pilgrim-pounding-corn-mortar-thumb.webp",
+          "bytes": 41070,
+          "sha256": "77b7e49fa8ea9d1b78443d97d32fbb3f940f899f0c4445edee3458bceb024911"
+        }
+      },
+      "proofSha256": "637edf7d4b25fbf1f1a467828efc3f10a11f1e3307434a5321c39520a5a541b1",
+      "pairMeanRgbDifference": 1.96381
+    },
+    {
+      "id": "pilgrim-herb-mortar-table",
+      "title": "Pilgrim Herb Preparation Table",
+      "alt": "A woman in a brown waistcoat and linen coif uses a small stone mortar and pestle at a wooden table beside sage, an earthenware bowl and folded linen.",
+      "description": "A woman in a brown waistcoat and linen coif uses a small stone mortar and pestle at a wooden table beside sage, an earthenware bowl and folded linen. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_255/source/pilgrim-herb-mortar-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1379,
+      "height": 1141,
+      "pdfWidth": 1000,
+      "pdfHeight": 827,
+      "sourceType": "raster",
+      "sourceSha256": "3c6247d44b002f7bb9b1a1a318972830dc5f694e5047a927f8af1181567b4ca6",
+      "inputSignature": "7079b42cb501f5ece20997eefc3c7835e7f3f768af737b185f5a4166b8f875f3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 837974,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 837974,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        277,
+        9,
+        1132,
+        1127
+      ],
+      "image": {
+        "width": 1000,
+        "height": 827,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_255/exports/pilgrim-herb-mortar-table.pdf",
+          "bytes": 837974,
+          "sha256": "4394ae76a840e993c49d5bd8435b6d96cf6396c69ac58d9791a7582764b2bdbf"
+        },
+        "webp": {
+          "path": "work/production/wave_255/exports/pilgrim-herb-mortar-table.webp",
+          "bytes": 735248,
+          "sha256": "2756738e8d2afa291eed85eab6c23869add5e1b510bc489af3ca92e36db3232f"
+        },
+        "thumb": {
+          "path": "work/production/wave_255/exports/pilgrim-herb-mortar-table-thumb.webp",
+          "bytes": 39620,
+          "sha256": "1dd62f353c5bec3e0d6c24777a49feef6979a0f24ebe9225aa73af320a822f38"
+        }
+      },
+      "proofSha256": "eeb1665af4163384f0252e3ddd994072a298983f26b4a3fe0876112a6aa5a675",
+      "pairMeanRgbDifference": 2.66319
+    },
+    {
+      "id": "pilgrim-woman-mending-linen",
+      "title": "Pilgrim Woman Mending Linen",
+      "alt": "A seated woman in a brown waistcoat, blue petticoat and linen coif mends linen beside a small thread spool on a wooden table.",
+      "description": "A seated woman in a brown waistcoat, blue petticoat and linen coif mends linen beside a small thread spool on a wooden table. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_255/source/pilgrim-woman-mending-linen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 949,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "ab9b7674231c705bfe023e622640ccf1b921f57cbe39857e89236f8f749a054e",
+      "inputSignature": "247795e84ea936104d85e48b3c2b38e6dd463f54577786a21c4566e0012680a9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 949631,
+        "weightedCmykRmse": 1.139656
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1333435,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1099845,
+          "weightedCmykRmse": 0.80848
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1033430,
+          "weightedCmykRmse": 0.949341
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 949631,
+          "weightedCmykRmse": 1.139656
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        143,
+        39,
+        1100,
+        1206
+      ],
+      "image": {
+        "width": 949,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_255/exports/pilgrim-woman-mending-linen.pdf",
+          "bytes": 949631,
+          "sha256": "e63bdd3495f3cdf24297f511634baf28869a598a5c5ecca252a86181e73d0a5f"
+        },
+        "webp": {
+          "path": "work/production/wave_255/exports/pilgrim-woman-mending-linen.webp",
+          "bytes": 1064934,
+          "sha256": "952896f2f1f0e968c06bf348996d2f86897bb00f4d09b38f069a941a2b7b72bf"
+        },
+        "thumb": {
+          "path": "work/production/wave_255/exports/pilgrim-woman-mending-linen-thumb.webp",
+          "bytes": 63000,
+          "sha256": "25e78f6a0bee870cd9e44f129c528e52cb2ff815a5f7af73f69ca29102d4d310"
+        }
+      },
+      "proofSha256": "bf9e287a257d23cd95cd9011656f599edd41c8b888f67f595f87ce39d858139f",
+      "pairMeanRgbDifference": 3.04905
+    },
+    {
+      "id": "pilgrim-man-mending-shoe",
+      "title": "Pilgrim Shoemaker at a Low Bench",
+      "alt": "A seated man in a russet doublet works on a plain leather latchet shoe at a low wooden cobbler bench beside a last and simple tools.",
+      "description": "A seated man in a russet doublet works on a plain leather latchet shoe at a low wooden cobbler bench beside a last and simple tools. An original historical illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_255/source/pilgrim-man-mending-shoe.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1292,
+      "height": 1217,
+      "pdfWidth": 1000,
+      "pdfHeight": 942,
+      "sourceType": "raster",
+      "sourceSha256": "6fdb2a4d527c72dbbd6f0ea7117acb754ebe92a63b29d042916fa21e920ca5db",
+      "inputSignature": "625a4e546680aeb48e3834f776035264cbcae98e44ac01c2a8f41e42ce50b979",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 933881,
+        "weightedCmykRmse": 0.856092
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1143895,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 933881,
+          "weightedCmykRmse": 0.856092
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        266,
+        27,
+        1153,
+        1174
+      ],
+      "image": {
+        "width": 1000,
+        "height": 942,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_255/exports/pilgrim-man-mending-shoe.pdf",
+          "bytes": 933881,
+          "sha256": "5cf3783d2e8fc8db2d2af0088cbe0e5d28bd86dcd37fe3c3790c127e8b0742e4"
+        },
+        "webp": {
+          "path": "work/production/wave_255/exports/pilgrim-man-mending-shoe.webp",
+          "bytes": 909550,
+          "sha256": "052d34f327e2c5dc3203f5e3abaea1f2d884aa5071a1ab3298198b5627fb5bdb"
+        },
+        "thumb": {
+          "path": "work/production/wave_255/exports/pilgrim-man-mending-shoe-thumb.webp",
+          "bytes": 57894,
+          "sha256": "f02bc248d8245bb0621785a7784d5a3e930b671c54709cd0b44bd0112829d358"
+        }
+      },
+      "proofSha256": "f19ed715dac043af7e79f9ade5df01f9fe53914f97541216412065f84ee9b230",
+      "pairMeanRgbDifference": 3.41773
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T16:21:08.109833+00:00",
+  "screenReviewScope": "Every native CMYK PDF render visually inspected for coherent historical materials, natural hands and tool contacts, full anatomy and framing, supported tables and stools, readable detail and distinct compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T16:52:12.285Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/pilgrim-editor/chromium/preflight.json",
+    "proofContacts": "reports/pilgrim-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:23:19.254128+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; intended duplicated/rotated/partly transparent test image is present only in the first editor scenario."
+  }
+}

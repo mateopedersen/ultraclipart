@@ -1,0 +1,579 @@
+{
+  "wave": "wave_268",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "acorn-horizontal-garland",
+      "title": "Acorn and Leaf Garland",
+      "alt": "A wide shallow curved twig garland carries a row of hanging acorns and small green gold oak leaves.",
+      "description": "A wide shallow curved twig garland carries a row of hanging acorns and small green gold oak leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_268/source/acorn-horizontal-garland.png",
+      "printMaxEdgePx": 1502,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 2172,
+      "height": 724,
+      "pdfWidth": 1502,
+      "pdfHeight": 501,
+      "sourceType": "raster",
+      "sourceSha256": "a3fe1943db73b732599a301514fd4367ca8ad2d1ec61b54e17026cea5fe00983",
+      "inputSignature": "65faa15539e24955eced6ce306418e7238faa1edc87a954e0f2675e5fbad02aa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 966794,
+        "weightedCmykRmse": 0.813269
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1152706,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 966794,
+          "weightedCmykRmse": 0.813269
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        25,
+        40,
+        2156,
+        659
+      ],
+      "image": {
+        "width": 1502,
+        "height": 501,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_268/exports/acorn-horizontal-garland.pdf",
+          "bytes": 966794,
+          "sha256": "2e9623c895d2bf1eb2228deb08df5c39c2dc9256b55cf2ce51ea122964141945"
+        },
+        "webp": {
+          "path": "work/production/wave_268/exports/acorn-horizontal-garland.webp",
+          "bytes": 1220830,
+          "sha256": "73dbbdecf45416ce4343c72fffc3828a97591f527273b5771848018ea698ed46"
+        },
+        "thumb": {
+          "path": "work/production/wave_268/exports/acorn-horizontal-garland-thumb.webp",
+          "bytes": 35942,
+          "sha256": "259d9c14c4167ee94be6376b5663ec2dddb28b0a462be28afb99dfe409ac654e"
+        }
+      },
+      "proofSha256": "4c72ee684aea5bb20c2a66f61a071939452f0d9b65d67e51738abba430a6deef",
+      "pairMeanRgbDifference": 2.83322
+    },
+    {
+      "id": "acorn-oval-frame",
+      "title": "Oval Acorn Frame",
+      "alt": "A thin oval twig frame has acorns and golden oak leaves at its upper left and lower right around an open center.",
+      "description": "A thin oval twig frame has acorns and golden oak leaves at its upper left and lower right around an open center. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_268/source/acorn-oval-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "a12d2cfb37d92d9ed748838fec8d8799c1d8d0034928eca33c42e8a5d8d4b0be",
+      "inputSignature": "70177d4a40f00b05a8f609c844aefcf9f15eaaddb98729ab9f38b3fe495d1e05",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 807175,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 807175,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        15,
+        13,
+        1008,
+        1523
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_268/exports/acorn-oval-frame.pdf",
+          "bytes": 807175,
+          "sha256": "43097fdb1514799e827d61b8b83aabc01a7401f253897ccf98db9f6066b0922b"
+        },
+        "webp": {
+          "path": "work/production/wave_268/exports/acorn-oval-frame.webp",
+          "bytes": 1295870,
+          "sha256": "c90454d89f2ef9b36a008cd3087869e3293235d287b4d3aff0fb0ec5024c447b"
+        },
+        "thumb": {
+          "path": "work/production/wave_268/exports/acorn-oval-frame-thumb.webp",
+          "bytes": 48772,
+          "sha256": "ee4a0c73811283349913c0a4fdfb08a32e3303d6a60374752a6e0114d204d3dd"
+        }
+      },
+      "proofSha256": "b594ecdb65006d8f13bfc0f7abe239a1409dad2b8fc02e40d62fa57ec1ef2e58",
+      "pairMeanRgbDifference": 3.36195
+    },
+    {
+      "id": "acorn-squirrel-burying-nut",
+      "title": "Squirrel Burying an Acorn",
+      "alt": "A gray squirrel crouches and presses an acorn into a small earth hollow with its forepaws beside fallen oak leaves.",
+      "description": "A gray squirrel crouches and presses an acorn into a small earth hollow with its forepaws beside fallen oak leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_268/source/acorn-squirrel-burying-nut.png",
+      "printMaxEdgePx": 870,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 870,
+      "pdfHeight": 725,
+      "sourceType": "raster",
+      "sourceSha256": "94299717bb66889b6750353d4a44e77263c5cabc1ebc0e0b5ad779a3e8604780",
+      "inputSignature": "fa3d6b24ca347d4029431ded5ae37d5354ad93b197f3ee42f01e9cbe5eb96f5d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 964955,
+        "weightedCmykRmse": 1.259081
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1336140,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1152876,
+          "weightedCmykRmse": 0.71363
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1105597,
+          "weightedCmykRmse": 0.851276
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1036068,
+          "weightedCmykRmse": 1.040603
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 964955,
+          "weightedCmykRmse": 1.259081
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        77,
+        15,
+        1327,
+        1125
+      ],
+      "image": {
+        "width": 870,
+        "height": 725,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_268/exports/acorn-squirrel-burying-nut.pdf",
+          "bytes": 964955,
+          "sha256": "7987068dfbc734d89e9edb67ce92b36ec982152c0674aa18030f8c5615aeffcb"
+        },
+        "webp": {
+          "path": "work/production/wave_268/exports/acorn-squirrel-burying-nut.webp",
+          "bytes": 1656630,
+          "sha256": "4689aadfdc1fbacaf660dc883cd03394743d89a8187e1e1b3a07e9915958c38c"
+        },
+        "thumb": {
+          "path": "work/production/wave_268/exports/acorn-squirrel-burying-nut-thumb.webp",
+          "bytes": 82988,
+          "sha256": "dcdd84b1bd55585183501168ec0317ffd765e87610ead204fcf7a3864f06cab0"
+        }
+      },
+      "proofSha256": "6d4cc3fa22765e3890f1d593774d5b27b7cabb7790f0a56543aedf3931698e56",
+      "pairMeanRgbDifference": 5.6802
+    },
+    {
+      "id": "acorn-jay-holding-nut",
+      "title": "Blue Jay Carrying an Acorn",
+      "alt": "A blue jay holds an acorn in its beak while gripping a short bare twig with both feet.",
+      "description": "A blue jay holds an acorn in its beak while gripping a short bare twig with both feet. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_268/source/acorn-jay-holding-nut.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "26ba36c8f927eecb9c7f5bc4d2e12521057f559ab415f61c3d111dc0f8552f3a",
+      "inputSignature": "f87dd66561cd73b910ea287aa6dd61993f90737a22c2fef9f9fbfb584383d678",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 767474,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 767474,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        115,
+        8,
+        1435,
+        1002
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_268/exports/acorn-jay-holding-nut.pdf",
+          "bytes": 767474,
+          "sha256": "ea860fa7eabf100e2129ab073e4f321eceaed4b3c690a7341536009e381ee8ce"
+        },
+        "webp": {
+          "path": "work/production/wave_268/exports/acorn-jay-holding-nut.webp",
+          "bytes": 1248452,
+          "sha256": "aa0be4df67dc2adfb8486678d24404871355735f1c5d7377a1d2d93ef37efa28"
+        },
+        "thumb": {
+          "path": "work/production/wave_268/exports/acorn-jay-holding-nut-thumb.webp",
+          "bytes": 39804,
+          "sha256": "860b9c90520d2a8d74973a63f1d2f2f46d233cd97b566d94439a32aab7dd9f97"
+        }
+      },
+      "proofSha256": "ff439b9986c0a3bdbdc5c0b59b0696836c5fca28cb2932bcb7754909279f7643",
+      "pairMeanRgbDifference": 2.99101
+    },
+    {
+      "id": "acorn-chipmunk-cache",
+      "title": "Chipmunk and Acorn Cache",
+      "alt": "A chipmunk peeks from a hollow mossy log beside a small cache of capped acorns and fallen oak leaves.",
+      "description": "A chipmunk peeks from a hollow mossy log beside a small cache of capped acorns and fallen oak leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_268/source/acorn-chipmunk-cache.png",
+      "printMaxEdgePx": 860,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 860,
+      "pdfHeight": 717,
+      "sourceType": "raster",
+      "sourceSha256": "2a22b30c5e3a585bf84ec6298aece49c370419209ee5888ddb40c0652b3ac16d",
+      "inputSignature": "8bcd7c95531e782f48c85243f47b732d079021647de500d5449deb06bd25bfb1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976322,
+        "weightedCmykRmse": 1.208177
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1369507,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1176565,
+          "weightedCmykRmse": 0.691354
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1123540,
+          "weightedCmykRmse": 0.824514
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055504,
+          "weightedCmykRmse": 0.992284
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976322,
+          "weightedCmykRmse": 1.208177
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        38,
+        50,
+        1342,
+        1106
+      ],
+      "image": {
+        "width": 860,
+        "height": 717,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_268/exports/acorn-chipmunk-cache.pdf",
+          "bytes": 976322,
+          "sha256": "23a13b6872ba848da89e38ed695d6f8f6fb4d591b4164a8f6d26f47cbed9f59f"
+        },
+        "webp": {
+          "path": "work/production/wave_268/exports/acorn-chipmunk-cache.webp",
+          "bytes": 1754872,
+          "sha256": "eec49b510d605d930271144dc968a89051a06db256f7aca970ebb96d37a7f640"
+        },
+        "thumb": {
+          "path": "work/production/wave_268/exports/acorn-chipmunk-cache-thumb.webp",
+          "bytes": 88050,
+          "sha256": "6498a9366da8c24831e5691eca95938e3b92d499d6ca53d1961374e9ca4a38bd"
+        }
+      },
+      "proofSha256": "b44453a1a97cc61a8f6919763a9342b34c5514265ca6e48f25ef10400fff680f",
+      "pairMeanRgbDifference": 3.67531
+    },
+    {
+      "id": "acorn-mouse-nibbling",
+      "title": "Woodland Mouse with an Acorn",
+      "alt": "A brown woodland mouse holds a partly nibbled acorn in its forepaws beside an oak leaf, with its long tail visible.",
+      "description": "A brown woodland mouse holds a partly nibbled acorn in its forepaws beside an oak leaf, with its long tail visible. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_268/source/acorn-mouse-nibbling.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "398840d73a7b9247b6e6171f63c6e193b7137cb05fc5f0891950766fdc5f9b7c",
+      "inputSignature": "3a32df09e090bd28f7f4b1be619c97e30a1c3837125717d049677615e8b255ae",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 995211,
+        "weightedCmykRmse": 1.418185
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1453000,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1220166,
+          "weightedCmykRmse": 0.77613
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1155665,
+          "weightedCmykRmse": 0.921405
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1064659,
+          "weightedCmykRmse": 1.109827
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 995211,
+          "weightedCmykRmse": 1.418185
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        46,
+        1286,
+        1144
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_268/exports/acorn-mouse-nibbling.pdf",
+          "bytes": 995211,
+          "sha256": "940b45907b7c54e3acee5dec83a4483989df475113528f9dc60d05551932d587"
+        },
+        "webp": {
+          "path": "work/production/wave_268/exports/acorn-mouse-nibbling.webp",
+          "bytes": 1251580,
+          "sha256": "8006b59b0662bbdbb9e97f2ca2eec3ce4818a606e543676aa8b5024e1435ca7a"
+        },
+        "thumb": {
+          "path": "work/production/wave_268/exports/acorn-mouse-nibbling-thumb.webp",
+          "bytes": 73622,
+          "sha256": "b672dda60d65812c431c0ebd4f1a483c63f8b6796481e5c354a0c51e2e4128e0"
+        }
+      },
+      "proofSha256": "ed064c45296f583353d8c6bdc49a3873d0a899a0cb9b6e1752927a659d110f68",
+      "pairMeanRgbDifference": 2.91978
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:19:05.441769+00:00",
+  "screenReviewScope": "All six CMYK native PDF renders visually inspected. Complete wide garland, open oval frame, natural squirrel/jay/chipmunk/mouse anatomy and coherent acorn contact. Wide garland preserves a 500 pixel short print edge with actual dimensions reported.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T17:19:05.539Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/acorn-editor/chromium/preflight.json",
+    "proofContacts": "reports/acorn-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:41:22.143986+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; original artwork, profile and alpha preserved. Duplicate/opacity image manipulation occurs only in the intended first editor test scenario."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "wave": "wave_261",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pilgrim-outline-sailing-vessel",
+      "title": "Pilgrim Sailing Vessel Coloring Outline",
+      "alt": "Black line art of a complete period sailing vessel with three principal masts, open sails, rigging and a small water base.",
+      "description": "Black line art of a complete period sailing vessel with three principal masts, open sails, rigging and a small water base. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_261/source/pilgrim-outline-sailing-vessel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "41a8145f7a1522e201baffe5176e84f2b092fe0912532a2d7a2d7de01c93cfe3",
+      "inputSignature": "534c8e41a5f159e94bb7f3bb6745d498964b33dc3f43edc551c5b66aea70fbcb",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 911604,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 911604,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        121,
+        59,
+        1408,
+        903
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_261/exports/pilgrim-outline-sailing-vessel.pdf",
+          "bytes": 911604,
+          "sha256": "d1d603d3c01f08e3fa77df48be2dde2154823e5288fce18e70eaf6bf40e34ca0"
+        },
+        "webp": {
+          "path": "work/production/wave_261/exports/pilgrim-outline-sailing-vessel.webp",
+          "bytes": 1054792,
+          "sha256": "ba4cb3e6a6477c8051479976a37a25399466217ee073dd4b30f1e9db191619c8"
+        },
+        "thumb": {
+          "path": "work/production/wave_261/exports/pilgrim-outline-sailing-vessel-thumb.webp",
+          "bytes": 48130,
+          "sha256": "859b904f6b10a784313db4dad046d2208920356c2d08c88f106862cda2e988bb"
+        }
+      },
+      "proofSha256": "9d74685bb0cec703e8e857115e079c75a10a5c29a98fc05e299ee4a7190f6528",
+      "pairMeanRgbDifference": 5.65616
+    },
+    {
+      "id": "pilgrim-outline-cooking-table",
+      "title": "Pilgrim Cooking Table Coloring Outline",
+      "alt": "Black line art of a complete wooden trestle table with a bowl, loaf and spoon beside a simple herb drying rack.",
+      "description": "Black line art of a complete wooden trestle table with a bowl, loaf and spoon beside a simple herb drying rack. An original historical illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_261/source/pilgrim-outline-cooking-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pilgrim",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "0b82fe7f527554f8fc4b5336a7ba60c7ac0a618a3a03106934c8f55373850420",
+      "inputSignature": "85678dffba725d9d8fabc89a5c12ab838addc5ed5f5ce77f0489cbc6db97b0ad",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 753611,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 753611,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        88,
+        136,
+        1444,
+        918
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_261/exports/pilgrim-outline-cooking-table.pdf",
+          "bytes": 753611,
+          "sha256": "b1b3a7978aa3b712a86e8f4dd56e152192bc2ff0fd918fafb4c6fd7c42cb962b"
+        },
+        "webp": {
+          "path": "work/production/wave_261/exports/pilgrim-outline-cooking-table.webp",
+          "bytes": 986132,
+          "sha256": "ad62fba185bc51f1d67f2f04af0c46ca0641c8dede6b9e99ef4f1d273cd835c2"
+        },
+        "thumb": {
+          "path": "work/production/wave_261/exports/pilgrim-outline-cooking-table-thumb.webp",
+          "bytes": 41954,
+          "sha256": "171a7afb39df3015f6098c338eb6f57c91c2c0b9cf24912197edfa8ef9c27f59"
+        }
+      },
+      "proofSha256": "5e35fce0633de9a105dbbd69bc0d6a08fb9d344412fd9e927923161441033c66",
+      "pairMeanRgbDifference": 5.8156
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T16:50:11.969603+00:00",
+  "screenReviewScope": "All eight native PDF renders inspected. Complete line art, coherent tools, natural figures, period-style vessel and trestle supports; no text or framing defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T16:52:14.474Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/pilgrim-editor/chromium/preflight.json",
+    "proofContacts": "reports/pilgrim-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:23:19.254128+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; intended duplicated/rotated/partly transparent test image is present only in the first editor scenario."
+  }
+}

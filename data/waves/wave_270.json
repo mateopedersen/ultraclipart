@@ -1,0 +1,208 @@
+{
+  "wave": "wave_270",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 2,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "acorn-outline-oak-spray",
+      "title": "Oak Branch Coloring Outline",
+      "alt": "Black line art of a connected oak twig bearing three hanging acorns and four lobed leaves.",
+      "description": "Black line art of a connected oak twig bearing three hanging acorns and four lobed leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_270/source/acorn-outline-oak-spray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "05581e66900837ad4fb968ed373ba4c585e893038fd7accd6eb2bb0cf9f38587",
+      "inputSignature": "6053191ecd6a82df34cd23ee48c31020f002bf713f8e8465fb32fca67805f42a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 827977,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 827977,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        44,
+        12,
+        1497,
+        957
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_270/exports/acorn-outline-oak-spray.pdf",
+          "bytes": 827977,
+          "sha256": "d017e7fad2feacbbd2a69c80e503f7e9041f0841d68ef67e0afc0a779d89b69c"
+        },
+        "webp": {
+          "path": "work/production/wave_270/exports/acorn-outline-oak-spray.webp",
+          "bytes": 951874,
+          "sha256": "eeeb18c73474ce265e93241589325ffa81abc34da126c528be864db362b45add"
+        },
+        "thumb": {
+          "path": "work/production/wave_270/exports/acorn-outline-oak-spray-thumb.webp",
+          "bytes": 42516,
+          "sha256": "b8e35e128fc516fa6a0c4f2b67a3bc252cb8dd533a5418810bb6ff858f68302b"
+        }
+      },
+      "proofSha256": "f055b3c776a6282862e301b531be782140647dca2a8c45965fe90b34bbe9e323",
+      "pairMeanRgbDifference": 7.21361
+    },
+    {
+      "id": "acorn-outline-wreath",
+      "title": "Acorn Wreath Coloring Outline",
+      "alt": "Black line art of an open center twig wreath with four acorn clusters and broad lobed oak leaves.",
+      "description": "Black line art of an open center twig wreath with four acorn clusters and broad lobed oak leaves. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_270/source/acorn-outline-wreath.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 970,
+      "pdfHeight": 970,
+      "sourceType": "raster",
+      "sourceSha256": "8f30ec4b3443fe58a3aeefe681bf0f432b4c21b1bdc318e015833cdb76250834",
+      "inputSignature": "18a8c9e22235015e36c0db5827bba0cf8fecd96366efbd2ce9c3759be749b4d5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 974346,
+        "weightedCmykRmse": 1.386429
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1401399,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1181906,
+          "weightedCmykRmse": 0.7753
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1115980,
+          "weightedCmykRmse": 0.918258
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038354,
+          "weightedCmykRmse": 1.107455
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 974346,
+          "weightedCmykRmse": 1.386429
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        50,
+        1228,
+        1205
+      ],
+      "image": {
+        "width": 970,
+        "height": 970,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_270/exports/acorn-outline-wreath.pdf",
+          "bytes": 974346,
+          "sha256": "a03fe8de17404f2fc5c9e55573106c81bba742f56db7a019142dac4725c32ee9"
+        },
+        "webp": {
+          "path": "work/production/wave_270/exports/acorn-outline-wreath.webp",
+          "bytes": 782702,
+          "sha256": "0705a6955ed034c77cbc00d8d21ed3f59def0a411ac0c5c8cffffb134e1d0d8c"
+        },
+        "thumb": {
+          "path": "work/production/wave_270/exports/acorn-outline-wreath-thumb.webp",
+          "bytes": 76694,
+          "sha256": "05140c6ed8eef261b1bdfc2c4e84b2f9307b4f517f7c8d7984bd00649723a227"
+        }
+      },
+      "proofSha256": "05c3de68b9bbb9c00002e5d7d30d0b0e42597a32c8c8382e9cb647bd93e4b199",
+      "pairMeanRgbDifference": 3.87665
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:17:07.181039+00:00",
+  "screenReviewScope": "Every native PDF render visually inspected: complete material/character silhouettes, independent clear outlines, open wreath/frame centers, correct replacement pouch and intact sprouting nut. No visible framing or compression defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T17:17:09.931Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/acorn-editor/chromium/preflight.json",
+    "proofContacts": "reports/acorn-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:41:22.143986+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; original artwork, profile and alpha preserved. Duplicate/opacity image manipulation occurs only in the intended first editor test scenario."
+  }
+}

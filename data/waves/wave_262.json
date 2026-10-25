@@ -1,0 +1,614 @@
+{
+  "wave": "wave_262",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "acorn-single-chestnut",
+      "title": "Single Chestnut Brown Acorn",
+      "alt": "A single glossy chestnut brown acorn has a pale overlapping scale cup, short woody stalk and pointed nut tip.",
+      "description": "A single glossy chestnut brown acorn has a pale overlapping scale cup, short woody stalk and pointed nut tip. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_262/source/acorn-single-white-oak.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "185a556cb9d5340f183ee906c313b0a9195a99305cbdbb3416f876aea0025ef9",
+      "inputSignature": "031854c1cf0f3120f26ff3487af7cae76a341313d0e43727360c18ffc7f811e2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 868041,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 868041,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        134,
+        76,
+        889,
+        1440
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_262/exports/acorn-single-chestnut.pdf",
+          "bytes": 868041,
+          "sha256": "a8824acc7bcf0ed2567226167c339dbe0a70c90bd23f20ba8c11c7cf11d5d0b5"
+        },
+        "webp": {
+          "path": "work/production/wave_262/exports/acorn-single-chestnut.webp",
+          "bytes": 1492726,
+          "sha256": "36689cdc95bb203f021d62008413c7f37ea0e0a6601908a2aa208e869ea680b6"
+        },
+        "thumb": {
+          "path": "work/production/wave_262/exports/acorn-single-chestnut-thumb.webp",
+          "bytes": 42124,
+          "sha256": "d082054074e00dcf3c0cb85564d9448d8bf23a1da265dc3a955fc449af0f9f86"
+        }
+      },
+      "proofSha256": "a2e3e31d3223083698fcc2ca6f4666593b037e593ed8f65d7a21125c059064f1",
+      "pairMeanRgbDifference": 3.51387
+    },
+    {
+      "id": "acorn-fringed-cup",
+      "title": "Fringed Cup Acorn",
+      "alt": "A round golden brown acorn sits in a deep woody cup with long curled fringes and a short rough stalk.",
+      "description": "A round golden brown acorn sits in a deep woody cup with long curled fringes and a short rough stalk. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_262/source/acorn-fringed-bur-oak.png",
+      "printMaxEdgePx": 880,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1273,
+      "height": 1236,
+      "pdfWidth": 880,
+      "pdfHeight": 854,
+      "sourceType": "raster",
+      "sourceSha256": "c5b7af7a618f79434f8fb22bdfa05bd6555c94f881a5521af017f762ad5fa5b9",
+      "inputSignature": "cfc22e02fd67094fcf1ea1ec05c873ab089248b0e57b254d086b4c49f8a57f80",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962752,
+        "weightedCmykRmse": 1.313225
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1410709,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175866,
+          "weightedCmykRmse": 0.738885
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1118249,
+          "weightedCmykRmse": 0.874313
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1036412,
+          "weightedCmykRmse": 1.055143
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962752,
+          "weightedCmykRmse": 1.313225
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        19,
+        1242,
+        1207
+      ],
+      "image": {
+        "width": 880,
+        "height": 854,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_262/exports/acorn-fringed-cup.pdf",
+          "bytes": 962752,
+          "sha256": "5568dbdd0d95c8a4764901b2047d8b8024445d38bc9769a9155ae3f660e00dbe"
+        },
+        "webp": {
+          "path": "work/production/wave_262/exports/acorn-fringed-cup.webp",
+          "bytes": 1580500,
+          "sha256": "9a0c4801ace76dde35494f58ae5c6f43d056fe3f1964ae0fba9388c0976cdc9f"
+        },
+        "thumb": {
+          "path": "work/production/wave_262/exports/acorn-fringed-cup-thumb.webp",
+          "bytes": 91958,
+          "sha256": "8fb8621e464249a720db4eac1a71e7c60e66d5d86889a50feb7ba84e3668ad1e"
+        }
+      },
+      "proofSha256": "2f05f9b7cb7752a76395b1bdca8588c3fe4475fbc177cf2d08f4bd547857d75c",
+      "pairMeanRgbDifference": 3.0222
+    },
+    {
+      "id": "acorn-pointed-leaf-twig",
+      "title": "Acorn Twig with Pointed Leaves",
+      "alt": "Two rounded brown acorns hang from a short branching twig between two pointed green oak leaves.",
+      "description": "Two rounded brown acorns hang from a short branching twig between two pointed green oak leaves. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_262/source/acorn-red-oak-twig.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "4bdc4816d8efcc5659d388c7bd285094eca8fa9f754f883bb716d2f5c54e0211",
+      "inputSignature": "e0f83289131e1aa87bf785c36846475454774b10fc4ba3232cf03ea8c80d1e17",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 965381,
+        "weightedCmykRmse": 1.43885
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1360256,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1176221,
+          "weightedCmykRmse": 0.773013
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1115760,
+          "weightedCmykRmse": 0.93458
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1031602,
+          "weightedCmykRmse": 1.124152
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 965381,
+          "weightedCmykRmse": 1.43885
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        12,
+        13,
+        1296,
+        1178
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_262/exports/acorn-pointed-leaf-twig.pdf",
+          "bytes": 965381,
+          "sha256": "fce1c79a970dd1e76c74f40d776d668d1943432b94c3515f37e4a48fb1ffe647"
+        },
+        "webp": {
+          "path": "work/production/wave_262/exports/acorn-pointed-leaf-twig.webp",
+          "bytes": 1206766,
+          "sha256": "31110a544f212e1b685593160364c1b7daa21ef64e15ccf8db8907325dae7ddf"
+        },
+        "thumb": {
+          "path": "work/production/wave_262/exports/acorn-pointed-leaf-twig-thumb.webp",
+          "bytes": 72012,
+          "sha256": "83f78b9f7bdf088fd2541252de29b4aed4931454910765ef04005e1e0c00c321"
+        }
+      },
+      "proofSha256": "895d1e1bafc9b1afb31f15b1fc5bba6f6b571ac9f02cb0bc93d94af37db60900",
+      "pairMeanRgbDifference": 3.03576
+    },
+    {
+      "id": "acorn-long-nut-rounded-leaf",
+      "title": "Long Acorn and Lobed Leaf",
+      "alt": "A long slender golden brown acorn with a small scaly cup lies beside a deeply rounded-lobed green oak leaf.",
+      "description": "A long slender golden brown acorn with a small scaly cup lies beside a deeply rounded-lobed green oak leaf. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_262/source/acorn-valley-oak-long-nut.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "0c7c867bad3129a283263845ba68b88a6e4ed273fe9bca7a1866d656e4abb833",
+      "inputSignature": "52d9e33079695c635f9c87ed3f242b0ed666cc6a478c9cff45eb87989c70279b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 947877,
+        "weightedCmykRmse": 1.112882
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1359222,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1099040,
+          "weightedCmykRmse": 0.777303
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1034676,
+          "weightedCmykRmse": 0.919689
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 947877,
+          "weightedCmykRmse": 1.112882
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        79,
+        23,
+        1280,
+        1169
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_262/exports/acorn-long-nut-rounded-leaf.pdf",
+          "bytes": 947877,
+          "sha256": "23a107db61309f7667ac58e734cc5691abaecc95397bb52c93b174d3f847d2b7"
+        },
+        "webp": {
+          "path": "work/production/wave_262/exports/acorn-long-nut-rounded-leaf.webp",
+          "bytes": 1302702,
+          "sha256": "92be1cf0705311a292d799908875ab7790835301ae6b7203ae066c491203700e"
+        },
+        "thumb": {
+          "path": "work/production/wave_262/exports/acorn-long-nut-rounded-leaf-thumb.webp",
+          "bytes": 69506,
+          "sha256": "29f56f98d9975843a914b9bbf85853d4dc4b2515d11271dcf93ee00b153ffa32"
+        }
+      },
+      "proofSha256": "e939c1162c4711c880e438085a8dc718d945384f4397dea70782db772a418254",
+      "pairMeanRgbDifference": 4.68159
+    },
+    {
+      "id": "acorn-glossy-leaf-cluster",
+      "title": "Acorns and Glossy Leaves",
+      "alt": "Three tapered brown acorns in textured cups join a compact twig with glossy pointed green leaves.",
+      "description": "Three tapered brown acorns in textured cups join a compact twig with glossy pointed green leaves. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_262/source/acorn-coast-live-oak.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "a5c0dbfc4df5088c83a13773a0ad1bdb8d66853402729e9ab48ab70e9123aab3",
+      "inputSignature": "d61f1e19461508a3d5cee7718a94631a5ca94700dba6cea6a7fe9418ab8e5470",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 963802,
+        "weightedCmykRmse": 1.418041
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1407695,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1181031,
+          "weightedCmykRmse": 0.780078
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1120545,
+          "weightedCmykRmse": 0.926923
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1031860,
+          "weightedCmykRmse": 1.122623
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 963802,
+          "weightedCmykRmse": 1.418041
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        79,
+        65,
+        1267,
+        1134
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_262/exports/acorn-glossy-leaf-cluster.pdf",
+          "bytes": 963802,
+          "sha256": "f6a9534676f0d3719a9b989e3a5c374a6987fb2ed06d77eb07807b639444e3e2"
+        },
+        "webp": {
+          "path": "work/production/wave_262/exports/acorn-glossy-leaf-cluster.webp",
+          "bytes": 1299684,
+          "sha256": "9f72646660e1e0fc7fb775cee28480ee6ce5866369c1b1bd12635efbbd91d40f"
+        },
+        "thumb": {
+          "path": "work/production/wave_262/exports/acorn-glossy-leaf-cluster-thumb.webp",
+          "bytes": 74900,
+          "sha256": "7c0cbe01d890c09d93e7bd67a94588272188f60d7c6315d8a88cb0e9c29a77d9"
+        }
+      },
+      "proofSha256": "59774afffaf50ece3576db3516215285e40ca47689dd42c13f2482ed0f712b2f",
+      "pairMeanRgbDifference": 2.9496
+    },
+    {
+      "id": "acorn-blue-green-sprig",
+      "title": "Acorn with Blue Green Oak Leaves",
+      "alt": "One golden brown acorn hangs from a short twig with three rounded-lobed blue green oak leaves.",
+      "description": "One golden brown acorn hangs from a short twig with three rounded-lobed blue green oak leaves. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_262/source/acorn-blue-oak-sprig.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "9272fb042c545c93a218305006ad7e75975e5f40d971419067591cf24e0f4498",
+      "inputSignature": "516bb56026f1628b4c31e589b0e5a6c2fc03e258f2c81ce1c6da4523722ce921",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 927083,
+        "weightedCmykRmse": 1.162308
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1305751,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1071281,
+          "weightedCmykRmse": 0.808244
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1007557,
+          "weightedCmykRmse": 0.957864
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 927083,
+          "weightedCmykRmse": 1.162308
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        13,
+        14,
+        1306,
+        1180
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_262/exports/acorn-blue-green-sprig.pdf",
+          "bytes": 927083,
+          "sha256": "47609cbe1d9191ae482354e74c48517920e74328c504e3d9b8984acfbca607e2"
+        },
+        "webp": {
+          "path": "work/production/wave_262/exports/acorn-blue-green-sprig.webp",
+          "bytes": 1160580,
+          "sha256": "91f6e305083bddd38bde24a635cdecd4bea15f6b4ec0ad46d3d54012972fa5d0"
+        },
+        "thumb": {
+          "path": "work/production/wave_262/exports/acorn-blue-green-sprig-thumb.webp",
+          "bytes": 65656,
+          "sha256": "a65626d1e7a34d3bcbd2a646b87fbbb98f44a5eb2423401c73448996c38d976e"
+        }
+      },
+      "proofSha256": "4c293ce047848e674d88ccabb28b77cd14e680fb3ef5e444c6071524c6aee634",
+      "pairMeanRgbDifference": 3.11015
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:01:14.012553+00:00",
+  "screenReviewScope": "All six native CMYK PDF renders inspected and compared with selected sources: complete natural nut/cup silhouettes, leaf structure, root and seed anatomy, no frame cropping or visible compression defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T17:17:07.329Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/acorn-editor/chromium/preflight.json",
+    "proofContacts": "reports/acorn-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:41:22.143986+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; original artwork, profile and alpha preserved. Duplicate/opacity image manipulation occurs only in the intended first editor test scenario."
+  }
+}

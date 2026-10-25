@@ -1,0 +1,593 @@
+{
+  "wave": "wave_264",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "acorn-watercolor-pair",
+      "title": "Watercolor Acorn Pair",
+      "alt": "Two brown acorns of different sizes rest on a curled russet oak leaf in a warm watercolor illustration.",
+      "description": "Two brown acorns of different sizes rest on a curled russet oak leaf in a warm watercolor illustration. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_264/source/acorn-watercolor-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "b55cc0c765f1492d0582ac35400c491412a491c14b1ff9596acb1b374da98730",
+      "inputSignature": "909fce61dd5c438b6c7dc2571215c8ec4c3d1620493b3dc5f04145d55a01f0f1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 931341,
+        "weightedCmykRmse": 0.756893
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1107153,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 931341,
+          "weightedCmykRmse": 0.756893
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        101,
+        80,
+        1493,
+        953
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_264/exports/acorn-watercolor-pair.pdf",
+          "bytes": 931341,
+          "sha256": "24e80462d37fbe217110e50adf119a0526fce31aeb22125715dcefc3ed7f8f52"
+        },
+        "webp": {
+          "path": "work/production/wave_264/exports/acorn-watercolor-pair.webp",
+          "bytes": 1792418,
+          "sha256": "320e9a62abab3b45d9bc796e0fd9c21ea47a77d1ad87fe070aaef5ed617b0015"
+        },
+        "thumb": {
+          "path": "work/production/wave_264/exports/acorn-watercolor-pair-thumb.webp",
+          "bytes": 53780,
+          "sha256": "210bbd93d500d8c8067d6b03ee6db37fe77dfe44f58231558caeab5f33a222de"
+        }
+      },
+      "proofSha256": "d51037fe3a3caa00f0a1acb1dd0a0aa7fd314c99aa6282fabab4ac6c7ebfe130",
+      "pairMeanRgbDifference": 3.9167
+    },
+    {
+      "id": "acorn-watercolor-sprig",
+      "title": "Watercolor Oak Sprig and Acorns",
+      "alt": "Three hanging acorns join an airy diagonal oak twig with lobed yellow green leaves painted in watercolor.",
+      "description": "Three hanging acorns join an airy diagonal oak twig with lobed yellow green leaves painted in watercolor. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_264/source/acorn-watercolor-sprig.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 980,
+      "pdfHeight": 896,
+      "sourceType": "raster",
+      "sourceSha256": "6237ba0a13b197c3207e1b7c4ecb3c71751523708a5d2fda4bfc8525cecebaa9",
+      "inputSignature": "3aec5eb1453e287cfdce7d37df9acef43a2dd75c7c056b95cbab78e65a0dbfd5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 968545,
+        "weightedCmykRmse": 1.346614
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1432894,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1189983,
+          "weightedCmykRmse": 0.745638
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1127801,
+          "weightedCmykRmse": 0.881246
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038833,
+          "weightedCmykRmse": 1.064715
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 968545,
+          "weightedCmykRmse": 1.346614
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        7,
+        7,
+        1310,
+        1190
+      ],
+      "image": {
+        "width": 980,
+        "height": 896,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_264/exports/acorn-watercolor-sprig.pdf",
+          "bytes": 968545,
+          "sha256": "cff19227c27e725b7c30dc9dabaf0a5b1f2aacb61f75fc522fa882cef99ae261"
+        },
+        "webp": {
+          "path": "work/production/wave_264/exports/acorn-watercolor-sprig.webp",
+          "bytes": 1498230,
+          "sha256": "7ea53d8edb0a8d83f4a15711ab562e93f451e7d0fc578cb4d4acaeb5a72931e5"
+        },
+        "thumb": {
+          "path": "work/production/wave_264/exports/acorn-watercolor-sprig-thumb.webp",
+          "bytes": 88210,
+          "sha256": "210eaf0e30a654f4bb6c2717bb5171cf95c5802d62bb3ac833971786edd4d2d0"
+        }
+      },
+      "proofSha256": "4fff534f4718802d8d5aded07a971f177fbf050f9eba265bd97e2cc32512c4d2",
+      "pairMeanRgbDifference": 2.65276
+    },
+    {
+      "id": "acorn-ink-wash-study",
+      "title": "Ink and Wash Acorn Study",
+      "alt": "A golden brown acorn hangs from a short curved twig beside a slender yellow oak leaf in an ink and wash illustration.",
+      "description": "A golden brown acorn hangs from a short curved twig beside a slender yellow oak leaf in an ink and wash illustration. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_264/source/acorn-ink-wash-study.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "e01c7717c5c25837e93b72c5da0191a98730f62d1e05f648b00f8f5c5be42807",
+      "inputSignature": "6b72ef010361b610c8b666547c6404bf17357fab5d046defd4441fdad03f35e9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 963174,
+        "weightedCmykRmse": 1.115404
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1321735,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1109707,
+          "weightedCmykRmse": 0.775107
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1045490,
+          "weightedCmykRmse": 0.934568
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 963174,
+          "weightedCmykRmse": 1.115404
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        172,
+        88,
+        1258,
+        1088
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_264/exports/acorn-ink-wash-study.pdf",
+          "bytes": 963174,
+          "sha256": "779e85cb976f1d9dd9fd79d50d1ffad92d5e285da2f4cbef80c83fa59112ae17"
+        },
+        "webp": {
+          "path": "work/production/wave_264/exports/acorn-ink-wash-study.webp",
+          "bytes": 1248864,
+          "sha256": "2e76b0cbada06059998fa99484d4eecb91296420a6de292c11428f07f7beea0b"
+        },
+        "thumb": {
+          "path": "work/production/wave_264/exports/acorn-ink-wash-study-thumb.webp",
+          "bytes": 65496,
+          "sha256": "6ee44e415035d90124743b8e79fb8982ddee78da538a59fafb062ece120b030c"
+        }
+      },
+      "proofSha256": "7e0b711581ffb623cb079998a63544137cba196a8fbd0afc0b9e4b3f5cb2ab49",
+      "pairMeanRgbDifference": 3.45117
+    },
+    {
+      "id": "acorn-vintage-engraved",
+      "title": "Engraved Acorn and Oak Leaf",
+      "alt": "A fine brown engraved oak twig carries an elongated acorn and a large curled lobed leaf with detailed hatching.",
+      "description": "A fine brown engraved oak twig carries an elongated acorn and a large curled lobed leaf with detailed hatching. An original acorn illustration for personal projects, nature activities and seasonal classroom materials.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_264/source/acorn-vintage-engraved.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1211,
+      "height": 1299,
+      "pdfWidth": 830,
+      "pdfHeight": 890,
+      "sourceType": "raster",
+      "sourceSha256": "2e1c68fe72d928bf96ce575e1d36d0a76d7e63abbca9e908d7a1687f6ff7237a",
+      "inputSignature": "10f7eb2be8adf9f42ef0f13f8dcaa321465ba891a20fb84d0add56a73681e43b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994833,
+        "weightedCmykRmse": 1.384534
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1349037,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1185932,
+          "weightedCmykRmse": 0.745371
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1133666,
+          "weightedCmykRmse": 0.916593
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1053114,
+          "weightedCmykRmse": 1.124335
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994833,
+          "weightedCmykRmse": 1.384534
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        152,
+        14,
+        1192,
+        1203
+      ],
+      "image": {
+        "width": 830,
+        "height": 890,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_264/exports/acorn-vintage-engraved.pdf",
+          "bytes": 994833,
+          "sha256": "c45e6d064783f8abd4875ec898a761d6c99b8f9f457d55305687398bbe56a65e"
+        },
+        "webp": {
+          "path": "work/production/wave_264/exports/acorn-vintage-engraved.webp",
+          "bytes": 1423708,
+          "sha256": "a77a8c96b31b3f1ae6fda4bb05d61b9b60baedc20d06f7704010743cfc1113ab"
+        },
+        "thumb": {
+          "path": "work/production/wave_264/exports/acorn-vintage-engraved-thumb.webp",
+          "bytes": 72438,
+          "sha256": "c26973dfaf1418313aaa556cf891005ea6e16641db7556f8596ee5a7670e108c"
+        }
+      },
+      "proofSha256": "027c1767aaa2a8468b3dd64243683a4fb781dc6aef7daff698d1a943d1681c68",
+      "pairMeanRgbDifference": 2.15092
+    },
+    {
+      "id": "acorn-gouache-golden-nut",
+      "title": "Gouache Acorn with Golden Leaves",
+      "alt": "A warm golden acorn with a brown scaly cap sits between two mustard oak leaves in a textured gouache illustration.",
+      "description": "A warm golden acorn with a brown scaly cap sits between two mustard oak leaves in a textured gouache illustration. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_264/source/acorn-gouache-golden-nut.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4e947bf3689547a1230e9a8ed68788656a52adecfe03bbe99bdd6a8dac7abc16",
+      "inputSignature": "79a865bb9dbad7087bab8a86eaa5c9398ad08f4b4b92af26e0a1896c43b7c9d5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 954154,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 954154,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        67,
+        44,
+        1502,
+        966
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_264/exports/acorn-gouache-golden-nut.pdf",
+          "bytes": 954154,
+          "sha256": "5bd92d3948378dce2f836d5d34434899dfd4046c7be9dbe934c12cc593c89049"
+        },
+        "webp": {
+          "path": "work/production/wave_264/exports/acorn-gouache-golden-nut.webp",
+          "bytes": 1642476,
+          "sha256": "f51db2bf1b2b20ba21f05ff7f36bef9c1a8f3cd2b42927cdb51031974c187309"
+        },
+        "thumb": {
+          "path": "work/production/wave_264/exports/acorn-gouache-golden-nut-thumb.webp",
+          "bytes": 47302,
+          "sha256": "b25c4ce581e8df1ed6571ba379078f194ec335388ec1d39e53940dbd51aaf6dd"
+        }
+      },
+      "proofSha256": "160af1d534334b19b796b28297171ee3b557243e0baffdeb705d0092a4c677e7",
+      "pairMeanRgbDifference": 4.87604
+    },
+    {
+      "id": "acorn-colored-pencil-nut",
+      "title": "Colored Pencil Acorn",
+      "alt": "A chestnut acorn with a curved stalk and green brown scaly cap is drawn with fine layered colored pencil strokes.",
+      "description": "A chestnut acorn with a curved stalk and green brown scaly cap is drawn with fine layered colored pencil strokes. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_264/source/acorn-colored-pencil-nut.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1303,
+      "height": 1207,
+      "pdfWidth": 1000,
+      "pdfHeight": 926,
+      "sourceType": "raster",
+      "sourceSha256": "f678ded260c67a25e441d718b4ecc2eed875eee43c8b17a5c5c7887e1d108452",
+      "inputSignature": "a9736a4ca74ed3b8217e64c8d40afe2691dd14247ab2696185755d5c6e3939c4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 970657,
+        "weightedCmykRmse": 1.138398
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1384512,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1123641,
+          "weightedCmykRmse": 0.785992
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1058392,
+          "weightedCmykRmse": 0.942124
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 970657,
+          "weightedCmykRmse": 1.138398
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        178,
+        113,
+        1208,
+        1109
+      ],
+      "image": {
+        "width": 1000,
+        "height": 926,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_264/exports/acorn-colored-pencil-nut.pdf",
+          "bytes": 970657,
+          "sha256": "2a9d92ab0cb5024925b482b3eee7b7d3ed8f5bc2a50fd2f01b3e51fb90a6cb2c"
+        },
+        "webp": {
+          "path": "work/production/wave_264/exports/acorn-colored-pencil-nut.webp",
+          "bytes": 1342024,
+          "sha256": "a25b1ce1561197d9f8f2b45d51c0ad255aa9937990cd5dd39fb8d084ca60e8b4"
+        },
+        "thumb": {
+          "path": "work/production/wave_264/exports/acorn-colored-pencil-nut-thumb.webp",
+          "bytes": 64044,
+          "sha256": "4300ed4ccd1c990a28e3dd1bd2a5ae5ac8c54e12e36b6eba9f8ebe46db041814"
+        }
+      },
+      "proofSha256": "f007e907dadea3af75c8cf7a9b460d15dfb432e3f301f99ea4ac4208128b25d9",
+      "pairMeanRgbDifference": 3.33157
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:12:55.278536+00:00",
+  "screenReviewScope": "All six native CMYK PDF renders visually inspected for full frames, crisp textures and coherent character expressions, leaf/book/umbrella and tool contacts.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T17:17:08.092Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/acorn-editor/chromium/preflight.json",
+    "proofContacts": "reports/acorn-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:41:22.143986+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; original artwork, profile and alpha preserved. Duplicate/opacity image manipulation occurs only in the intended first editor test scenario."
+  }
+}

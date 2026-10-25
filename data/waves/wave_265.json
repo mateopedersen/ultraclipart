@@ -1,0 +1,530 @@
+{
+  "wave": "wave_265",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "acorn-smiling-leaf-cap",
+      "title": "Smiling Acorn with Leaf Cap",
+      "alt": "A smiling caramel acorn character opens both small arms beneath a brown scaly cap with a green oak leaf.",
+      "description": "A smiling caramel acorn character opens both small arms beneath a brown scaly cap with a green oak leaf. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_265/source/acorn-smiling-leaf-cap.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1239,
+      "height": 1269,
+      "pdfWidth": 976,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "6b05ab296ec87d20248c183834e899b4fa6f765ba76242f1396aad17eb4829d3",
+      "inputSignature": "d9aab770fa260633836b4abcd3e8e85d00ac120e120583b7ffba53984b1a04df",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 898510,
+        "weightedCmykRmse": 0.785445
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1231358,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 898510,
+          "weightedCmykRmse": 0.785445
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        37,
+        1213,
+        1210
+      ],
+      "image": {
+        "width": 976,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_265/exports/acorn-smiling-leaf-cap.pdf",
+          "bytes": 898510,
+          "sha256": "e3ac7954c5eeff692673d94df23f22611afdb2a882deab7539140545a64e8885"
+        },
+        "webp": {
+          "path": "work/production/wave_265/exports/acorn-smiling-leaf-cap.webp",
+          "bytes": 1185320,
+          "sha256": "5717c55f1e7f9db47a9ad2b7574493235857e1dd67be3bbcffe8a11c8d69ee6c"
+        },
+        "thumb": {
+          "path": "work/production/wave_265/exports/acorn-smiling-leaf-cap-thumb.webp",
+          "bytes": 64858,
+          "sha256": "c9302560523ee639b330a00e196c7fa3960867dddc2c12423817cecf72c4b428"
+        }
+      },
+      "proofSha256": "4893e94fee181748fd35943935bba09f84fa4249341abe99cf662e773803933b",
+      "pairMeanRgbDifference": 4.73081
+    },
+    {
+      "id": "acorn-reading-storybook",
+      "title": "Acorn Reading a Book",
+      "alt": "A cheerful acorn character sits on a curled orange oak leaf and holds an open blue book in both hands.",
+      "description": "A cheerful acorn character sits on a curled orange oak leaf and holds an open blue book in both hands. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_265/source/acorn-reading-storybook.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "e41614119945ab09b3321aa3391b8422610cc6b510dd333e7f91beff50398ef3",
+      "inputSignature": "a64285740ff54e5bd30e5febba5422d4bced6fabca503818141ae7ce635e1191",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 926989,
+        "weightedCmykRmse": 0.78785
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1219715,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 926989,
+          "weightedCmykRmse": 0.78785
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        6,
+        7,
+        1307,
+        1192
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_265/exports/acorn-reading-storybook.pdf",
+          "bytes": 926989,
+          "sha256": "f5dc2c492ce3a4e1fbf36a4f0db035f0cb527653dd6da6d56b0365d09174b6c2"
+        },
+        "webp": {
+          "path": "work/production/wave_265/exports/acorn-reading-storybook.webp",
+          "bytes": 1243662,
+          "sha256": "81b31e68e16ff4ef86024ab87dc704325c8b5d34798f102adb4ef91b62a795f9"
+        },
+        "thumb": {
+          "path": "work/production/wave_265/exports/acorn-reading-storybook-thumb.webp",
+          "bytes": 63088,
+          "sha256": "4ef149505a7e557414a27bbcbed1e11f852215063e200c351b79a6552e1b9fe9"
+        }
+      },
+      "proofSha256": "0e0b2d5dc4770bae584dbee35b23388064d0dd53338164bb31edf20bd940cd58",
+      "pairMeanRgbDifference": 4.0363
+    },
+    {
+      "id": "acorn-sleeping-curled-leaf",
+      "title": "Sleeping Acorn in an Oak Leaf",
+      "alt": "A small acorn character sleeps with closed eyes and folded hands inside a curled golden oak leaf.",
+      "description": "A small acorn character sleeps with closed eyes and folded hands inside a curled golden oak leaf. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_265/source/acorn-sleeping-curled-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "b7d899f9dc44566732f0159e6b589c28c316824cc42426156669f9c6a9f1a6aa",
+      "inputSignature": "1369c94bcf042156c32106fe5b14607b7238d4a7a1ef88b27967575ad4550f5a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 850899,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 850899,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        116,
+        23,
+        1439,
+        1002
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_265/exports/acorn-sleeping-curled-leaf.pdf",
+          "bytes": 850899,
+          "sha256": "327f9e36cd4cb95caea864d1faaa601b2836684f5795024adac6cb83acebe3c9"
+        },
+        "webp": {
+          "path": "work/production/wave_265/exports/acorn-sleeping-curled-leaf.webp",
+          "bytes": 1524866,
+          "sha256": "714e762d3f4f43d16b33678fad99ea3bf61c91d5e063331c673a60c5a85bbc5c"
+        },
+        "thumb": {
+          "path": "work/production/wave_265/exports/acorn-sleeping-curled-leaf-thumb.webp",
+          "bytes": 44794,
+          "sha256": "bbd3ed1e19ff08eefc93c8ed420a9bc5bfeae9de7e9162a48b3fb8ea18a9212e"
+        }
+      },
+      "proofSha256": "32c54a48deeb16040c2d9fee7ddbae8d92e6d0b1699b634e1c95681f33cd7e77",
+      "pairMeanRgbDifference": 4.70951
+    },
+    {
+      "id": "acorn-rainy-leaf-umbrella",
+      "title": "Acorn with a Leaf Umbrella",
+      "alt": "A cheerful acorn character holds a green oak leaf overhead as an umbrella beside three blue raindrops.",
+      "description": "A cheerful acorn character holds a green oak leaf overhead as an umbrella beside three blue raindrops. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_265/source/acorn-rainy-leaf-umbrella.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1225,
+      "height": 1284,
+      "pdfWidth": 954,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "880a9d886074c021d45ccdb008632630c8bd92fab7c102208698c3953517151b",
+      "inputSignature": "5ca00430599d94c3e17c284f450ffe728f5fbfdcabeb2497f294cd07eaa7ecc8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 959849,
+        "weightedCmykRmse": 0.930391
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1325034,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1028932,
+          "weightedCmykRmse": 0.794463
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 959849,
+          "weightedCmykRmse": 0.930391
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        64,
+        23,
+        1200,
+        1258
+      ],
+      "image": {
+        "width": 954,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_265/exports/acorn-rainy-leaf-umbrella.pdf",
+          "bytes": 959849,
+          "sha256": "4f53b91c3c07933d38e8e99d45a866e8dcd2b2f254ee9acee01cf469db110f50"
+        },
+        "webp": {
+          "path": "work/production/wave_265/exports/acorn-rainy-leaf-umbrella.webp",
+          "bytes": 1192840,
+          "sha256": "f6c3eee75c9d70ec34c85cee08b9fdc93f908a37f620f002aba07a5c16e2056a"
+        },
+        "thumb": {
+          "path": "work/production/wave_265/exports/acorn-rainy-leaf-umbrella-thumb.webp",
+          "bytes": 73116,
+          "sha256": "160a975975b5dca70ce098644b1f99adf882e9002741d633acd1b08dd1a9a1fc"
+        }
+      },
+      "proofSha256": "259e4077a99990c0bdc8139160031cc15d34b25e9288fc610f4383aafa5e1bba",
+      "pairMeanRgbDifference": 5.08417
+    },
+    {
+      "id": "acorn-painter-character",
+      "title": "Acorn Painting an Oak Leaf",
+      "alt": "An acorn character paints a green oak leaf on a small wooden easel beside a closed green paint pot.",
+      "description": "An acorn character paints a green oak leaf on a small wooden easel beside a closed green paint pot. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_265/source/acorn-painter-character.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "8be7cdd561ea86f6bda648dfd32b919e4fca8d271b235cfea97f37616e2f1716",
+      "inputSignature": "9fc708709e3b6085518f7e468051c755b797abe4ef265b3235357093cc78441f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 883036,
+        "weightedCmykRmse": 0.815583
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1149711,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 883036,
+          "weightedCmykRmse": 0.815583
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        73,
+        118,
+        1268,
+        1097
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_265/exports/acorn-painter-character.pdf",
+          "bytes": 883036,
+          "sha256": "7f1495e569529fc344b45d68b3416ba315fabf53406830d3a6bd821a7206a25c"
+        },
+        "webp": {
+          "path": "work/production/wave_265/exports/acorn-painter-character.webp",
+          "bytes": 1105402,
+          "sha256": "5efd304ede6f50e8c76508e09828d43136102020f181869c3b7f682bf0ed44cf"
+        },
+        "thumb": {
+          "path": "work/production/wave_265/exports/acorn-painter-character-thumb.webp",
+          "bytes": 60746,
+          "sha256": "0e9e46285e4ca2c5c4c5307af987ade1f3b646c4b02a34d630b4df6554c02ae2"
+        }
+      },
+      "proofSha256": "60248c702e20bfaa2d7365f8ed608753c6ed128178337a083ddbd6f1842b39ba",
+      "pairMeanRgbDifference": 4.46119
+    },
+    {
+      "id": "acorn-gardener-character",
+      "title": "Acorn Gardener with a Seedling",
+      "alt": "An acorn character kneels and waters a small oak seedling in a terracotta pot with a green watering can.",
+      "description": "An acorn character kneels and waters a small oak seedling in a terracotta pot with a green watering can. An original acorn illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_265/source/acorn-gardener-character.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "acorn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f44d6649582b6b38024b1d972eced959c553037ba35a02af680ae256b70f3cb4",
+      "inputSignature": "b9e6c9311aedbdb580228fbd4756af74528ec58f60bf324378f9886358ab898b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 911815,
+        "weightedCmykRmse": 0.82301
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1174407,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 911815,
+          "weightedCmykRmse": 0.82301
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        150,
+        34,
+        1219,
+        1163
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_265/exports/acorn-gardener-character.pdf",
+          "bytes": 911815,
+          "sha256": "4c35acc14d73319dfe1eeb0db854e546642347d43ef7997bb0aff6821017e2cd"
+        },
+        "webp": {
+          "path": "work/production/wave_265/exports/acorn-gardener-character.webp",
+          "bytes": 1102432,
+          "sha256": "f19edf0e398b7af9ecbc790621b86028275d328e42224715c6fa9e8706e14850"
+        },
+        "thumb": {
+          "path": "work/production/wave_265/exports/acorn-gardener-character-thumb.webp",
+          "bytes": 63708,
+          "sha256": "a02aa311a66d965b1f5d0513c287330be38512dffb3343551231fa926bb3d716"
+        }
+      },
+      "proofSha256": "a9ad7ebfe85cebe242378cb60b1621c823ba6ee38e5db465cf922cb9875091e3",
+      "pairMeanRgbDifference": 4.12794
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:12:55.279239+00:00",
+  "screenReviewScope": "All six native CMYK PDF renders visually inspected for full frames, crisp textures and coherent character expressions, leaf/book/umbrella and tool contacts.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T17:17:08.490Z",
+  "editorExportReview": {
+    "status": "PASS",
+    "evidence": "reports/acorn-editor/chromium/preflight.json",
+    "proofContacts": "reports/acorn-editor/chromium/proof-contact-1.png through proof-contact-5.png",
+    "reviewedAt": "2026-10-25T17:41:22.143986+00:00",
+    "reviewerType": "AI_AGENT_NOT_HUMAN",
+    "sourceImageAndProfileUnchanged": true,
+    "scope": "All 50 edited PDF contact renders visually inspected after independent CMYK preflight; original artwork, profile and alpha preserved. Duplicate/opacity image manipulation occurs only in the intended first editor test scenario."
+  }
+}
