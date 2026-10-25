@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
-import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { readFileSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 const engine = process.env.UC_BROWSER || 'chromium';
@@ -78,11 +80,22 @@ try {
           await link.click();
           const download = await next;
           assert.equal(download.suggestedFilename(), `${id}.${format}`);
-          const bytes = readFileSync(await download.path());
-          assert.equal(bytes.length, item.files[format].bytes);
-          assert.equal(createHash('sha256').update(bytes).digest('hex'), item.files[format].sha256);
-          await download.delete();
-          report.downloads.push({ id, format, bytes: bytes.length });
+          const tempDir = mkdtempSync(join(tmpdir(), 'ultraclipart-download-page-'));
+          try {
+            const savedFile = join(tempDir, `${id}.${format}`);
+            await download.saveAs(savedFile);
+            const bytes = readFileSync(savedFile);
+            assert.equal(await download.failure(), null);
+            assert.equal(bytes.length, item.files[format].bytes);
+            assert.equal(
+              createHash('sha256').update(bytes).digest('hex'),
+              item.files[format].sha256,
+            );
+            report.downloads.push({ id, format, bytes: bytes.length });
+          } finally {
+            await download.delete().catch(() => {});
+            rmSync(tempDir, { recursive: true, force: true });
+          }
         }
       }
       if (id.startsWith('usb-') && [1440, 390].includes(width))
