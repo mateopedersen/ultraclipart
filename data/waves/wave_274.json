@@ -1,0 +1,528 @@
+{
+  "wave": "wave_274",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 6,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-leaf-water-ripple",
+      "title": "Maple Leaf on Water Ripples",
+      "alt": "A red maple leaf floats on a small bounded blue gray water patch with gentle circular ripples.",
+      "description": "A red maple leaf floats on a small bounded blue gray water patch with gentle circular ripples. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_274/source/maple-leaf-water-ripple.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "987811830568a051781cb071c24777b6998a8bce374e4643cdda30e7e7327088",
+      "inputSignature": "eb3b0ce7ad1579a3a33a78bd0436e005d271aaea5f7e78d28ca8750bc3db9a49",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 976697,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 976697,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        124,
+        17,
+        1493,
+        1001
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_274/exports/maple-leaf-water-ripple.pdf",
+          "bytes": 976697,
+          "sha256": "2cfbeedcb81cb69f1b320b183e733bb17e991656537fec4dc155c4831e782955"
+        },
+        "webp": {
+          "path": "work/production/wave_274/exports/maple-leaf-water-ripple.webp",
+          "bytes": 1649558,
+          "sha256": "e71baf874a52bd2bf39bcd661d7baf2077b5179956c8c55a7aabcea6d8f6d44e"
+        },
+        "thumb": {
+          "path": "work/production/wave_274/exports/maple-leaf-water-ripple-thumb.webp",
+          "bytes": 55110,
+          "sha256": "ed0f552300cd7182c20777b49b517b26cadee50e95fb79d362e3d8e21a1db920"
+        }
+      },
+      "proofSha256": "e99687cb1d7dc5b8690289e4f3b018ea9a7b49d6b155110d465ae293be86b3de",
+      "pairMeanRgbDifference": 4.15495
+    },
+    {
+      "id": "maple-leaf-moss-root",
+      "title": "Maple Leaf on a Mossy Root",
+      "alt": "A golden maple leaf rests on a small curved mossy root beside several tan winged maple seeds.",
+      "description": "A golden maple leaf rests on a small curved mossy root beside several tan winged maple seeds. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_274/source/maple-leaf-moss-root.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 950,
+      "pdfHeight": 868,
+      "sourceType": "raster",
+      "sourceSha256": "649890382aad114813e8fc78ca027503bf3d953a9f05314f1b7ee9670b2428fb",
+      "inputSignature": "b66f5d855fcbf7491908bed23eae700e4e371d319e28737d760e428d7c031616",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979022,
+        "weightedCmykRmse": 1.341149
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1433122,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1194843,
+          "weightedCmykRmse": 0.746811
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1136076,
+          "weightedCmykRmse": 0.886264
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1047273,
+          "weightedCmykRmse": 1.073217
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979022,
+          "weightedCmykRmse": 1.341149
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        19,
+        13,
+        1291,
+        1184
+      ],
+      "image": {
+        "width": 950,
+        "height": 868,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_274/exports/maple-leaf-moss-root.pdf",
+          "bytes": 979022,
+          "sha256": "618614b2fc6af420831d39ee5806b6130a8874644e8581f84dc79e08de3a4f16"
+        },
+        "webp": {
+          "path": "work/production/wave_274/exports/maple-leaf-moss-root.webp",
+          "bytes": 1560044,
+          "sha256": "a3b792e99dd422163e1d7050db32e35f56f4b3fc6ea5d1071432b7a333dc9c84"
+        },
+        "thumb": {
+          "path": "work/production/wave_274/exports/maple-leaf-moss-root-thumb.webp",
+          "bytes": 84020,
+          "sha256": "41e26668dc4bfb6fdae0a299bc850bd09b2e483f1aaa87c89dcae6da216acb29"
+        }
+      },
+      "proofSha256": "b4f883c5a9cd34c8f858e81820bf9cc66855c1ee8aeefb05ec86e6fbe276104a",
+      "pairMeanRgbDifference": 4.25911
+    },
+    {
+      "id": "maple-watercolor-spray",
+      "title": "Watercolor Maple Leaf Spray",
+      "alt": "Three green, amber and russet maple leaves join a slender diagonal twig with a hanging seed pair in a watercolor illustration.",
+      "description": "Three green, amber and russet maple leaves join a slender diagonal twig with a hanging seed pair in a watercolor illustration. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_274/source/maple-watercolor-spray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "cf724c5d25a84b52fd08c2f07c51601398caae76c28fb8261b2f3fff54eccf91",
+      "inputSignature": "6c31f0c789545441ee9d017f79fa83ccdcfffbbe0fb8cfce72ca0056e193ff18",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 958668,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 958668,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        64,
+        22,
+        1528,
+        980
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_274/exports/maple-watercolor-spray.pdf",
+          "bytes": 958668,
+          "sha256": "9bc3dc09159fe2b7c8a65e0b2029eb3d783676a875217b73c7684623731ea12b"
+        },
+        "webp": {
+          "path": "work/production/wave_274/exports/maple-watercolor-spray.webp",
+          "bytes": 1504762,
+          "sha256": "bc8d4534a9d2ccc0ff86de3c120787918cea8141aec8bd42cd3d80446a52ee51"
+        },
+        "thumb": {
+          "path": "work/production/wave_274/exports/maple-watercolor-spray-thumb.webp",
+          "bytes": 53518,
+          "sha256": "a47daed170c2658c11f9753f1389b53c567d182fd2b9874bd1867c7d60b0ead7"
+        }
+      },
+      "proofSha256": "d6ed41860a5dfc65775389cf1cb8874f1033d510452cc78e5eeee5f02a9eddc6",
+      "pairMeanRgbDifference": 3.40095
+    },
+    {
+      "id": "maple-branch-bird-nest",
+      "title": "Maple Branch with a Bird Nest",
+      "alt": "A forked maple branch supports an empty woven bird nest beside fresh green leaves, small buds and a pair of green winged seeds.",
+      "description": "A forked maple branch supports an empty woven bird nest beside fresh green leaves, small buds and a pair of green winged seeds. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_274/source/maple-branch-bird-nest.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "90f362f41fc581901ce5dca2a53554f3d219d7ef131caabb8c8f57b3a28086f3",
+      "inputSignature": "fa36dcfd9bb54ed50f0a35cd68de9a94b105a6b33846d0a26fd37c2374c19f75",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 930999,
+        "weightedCmykRmse": 1.18478
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1240869,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1065363,
+          "weightedCmykRmse": 0.826841
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1001893,
+          "weightedCmykRmse": 0.996824
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 930999,
+          "weightedCmykRmse": 1.18478
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        18,
+        1310,
+        1172
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_274/exports/maple-branch-bird-nest.pdf",
+          "bytes": 930999,
+          "sha256": "a65795fb6b163bc35cabf8c56c33310117cd701f0412cb7dde0735dfee4c3918"
+        },
+        "webp": {
+          "path": "work/production/wave_274/exports/maple-branch-bird-nest.webp",
+          "bytes": 995142,
+          "sha256": "d751885bda1647594ad33dbd2ee5e32e350f7e652866c8d00a14702aebb3c0d8"
+        },
+        "thumb": {
+          "path": "work/production/wave_274/exports/maple-branch-bird-nest-thumb.webp",
+          "bytes": 70148,
+          "sha256": "945def199648d7486870abd8da28ef27df5ef795dfb36179484c67f159afc72e"
+        }
+      },
+      "proofSha256": "12d68ea940e74e10502a4c22bc90bc7ae6f53b03444d6ea0a796196285758261",
+      "pairMeanRgbDifference": 3.35901
+    },
+    {
+      "id": "maple-engraved-branch",
+      "title": "Engraved Maple Branch",
+      "alt": "Two lobed maple leaves and a hanging paired samara attach to a curved twig in a fine brown botanical engraving.",
+      "description": "Two lobed maple leaves and a hanging paired samara attach to a curved twig in a fine brown botanical engraving. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_274/source/maple-engraved-branch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c4e28260039f3605a8329e0b4491429c73fda2e76318640accd78ed411faa9bb",
+      "inputSignature": "bb6bcbe4aff9c295c374b66fb2c5c4fac29e60268936bf9ded1f34796275418a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 985670,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 985670,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        34,
+        55,
+        1502,
+        966
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_274/exports/maple-engraved-branch.pdf",
+          "bytes": 985670,
+          "sha256": "4bef84ce9552d32c1cefd18e0815051805613fc148fb5a5fdd00fb51f1c036d5"
+        },
+        "webp": {
+          "path": "work/production/wave_274/exports/maple-engraved-branch.webp",
+          "bytes": 1580816,
+          "sha256": "0ed81f0b06620182500e858af0e16956251909d15c78211fed0932a353e4bc43"
+        },
+        "thumb": {
+          "path": "work/production/wave_274/exports/maple-engraved-branch-thumb.webp",
+          "bytes": 51874,
+          "sha256": "69f220c7b71d7424808860836a86ae3166d23f4ef73a002cb8f2b8e768d03ca7"
+        }
+      },
+      "proofSha256": "65aaf1dc18d560b6c5a956370afa26bf8df028959c264cbb6893ca71a3a5c972",
+      "pairMeanRgbDifference": 3.22685
+    },
+    {
+      "id": "maple-pencil-crossed-leaves",
+      "title": "Colored Pencil Maple Leaves",
+      "alt": "A broad golden maple leaf and a smaller narrow crimson maple leaf cross at their long stems in a colored pencil illustration.",
+      "description": "A broad golden maple leaf and a smaller narrow crimson maple leaf cross at their long stems in a colored pencil illustration. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_274/source/maple-pencil-crossed-leaves.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7a4645d950337a60686d30e6d570b8291877390854abce9e9de1e78de0f7a6b0",
+      "inputSignature": "f16981ccf69e57e6aa346074c5f207a88fd952323435a6342f7ed79f62345c41",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 884278,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 884278,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        98,
+        5,
+        1455,
+        1015
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_274/exports/maple-pencil-crossed-leaves.pdf",
+          "bytes": 884278,
+          "sha256": "3769980acb6ee8b527fe78d8b5484516360d35079ca94e205eb3601d99e91248"
+        },
+        "webp": {
+          "path": "work/production/wave_274/exports/maple-pencil-crossed-leaves.webp",
+          "bytes": 1625390,
+          "sha256": "49c09568bddf547e2fd0988cf7cf048d44ca26d227a384b4ac1d0b37d2c33d9a"
+        },
+        "thumb": {
+          "path": "work/production/wave_274/exports/maple-pencil-crossed-leaves-thumb.webp",
+          "bytes": 48754,
+          "sha256": "c6d300b5e97f2cffe5c9be44f14689c46b99bee46adecdff949e2dc105da04c3"
+        }
+      },
+      "proofSha256": "73ad24014c09d975ca886bc5791c6b7a499b33afd6f522613b6e9957e9ff5cc0",
+      "pairMeanRgbDifference": 3.12504
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T20:39:18.841Z",
+  "screenReviewScope": "Every selected native CMYK PDF proof visually reviewed against complete source composition and natural metadata.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:20.952Z"
+}

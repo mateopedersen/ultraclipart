@@ -1,0 +1,35 @@
+{
+  "wave": "wave_306",
+  "topic": "scarecrow",
+  "method": "builtin-image-generation",
+  "research": "data/research/scarecrow-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "scarecrow-outline-cookie-cutters",
+      "title": "Scarecrow Cookie Craft Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_306/source/scarecrow-outline-cookie-cutters.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "scarecrow-outline-patchwork-quilt",
+      "title": "Scarecrow with a Patchwork Quilt Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_306/source/scarecrow-outline-patchwork-quilt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

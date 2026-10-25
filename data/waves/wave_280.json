@@ -1,0 +1,528 @@
+{
+  "wave": "wave_280",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "leaves-asymmetric-begonia",
+      "title": "Asymmetric Patterned Leaf",
+      "alt": "A silver patterned green leaf has an off-center base, finely toothed edges and a small curled section revealing its burgundy underside.",
+      "description": "A silver patterned green leaf has an off-center base, finely toothed edges and a small curled section revealing its burgundy underside. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_280/source/leaves-asymmetric-begonia.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "ac1b1b173e15a808b9be2c1ed379b24ac8b3eba319c57cf69b1a3c62d5bc5e83",
+      "inputSignature": "7059e597bddcdfe72bc41ab2569b855c1227017cbbb0c86faf42d1119a8f3589",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 971686,
+        "weightedCmykRmse": 1.438411
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1453524,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1194898,
+          "weightedCmykRmse": 0.781692
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1130172,
+          "weightedCmykRmse": 0.936562
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038964,
+          "weightedCmykRmse": 1.131845
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 971686,
+          "weightedCmykRmse": 1.438411
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        59,
+        69,
+        1264,
+        1136
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_280/exports/leaves-asymmetric-begonia.pdf",
+          "bytes": 971686,
+          "sha256": "853b793cd946e831e8e33fb925f03e9d800f955f317674a1fec68a74df3846e5"
+        },
+        "webp": {
+          "path": "work/production/wave_280/exports/leaves-asymmetric-begonia.webp",
+          "bytes": 1316250,
+          "sha256": "6734a563017385192ae1dae219195c08e9164c4b72a0bf9f750c72da2e91a450"
+        },
+        "thumb": {
+          "path": "work/production/wave_280/exports/leaves-asymmetric-begonia-thumb.webp",
+          "bytes": 69686,
+          "sha256": "981e6addfe6d250971d643e2b3feac0657b59fa7390f2175cbe8134b73d603e7"
+        }
+      },
+      "proofSha256": "378da701103fa6ccc2005ea672e3d26fae08a6cd19e48c2a2aa5da5bf131dae4",
+      "pairMeanRgbDifference": 3.90935
+    },
+    {
+      "id": "leaves-delicate-leaf-skeleton",
+      "title": "Leaf Skeleton",
+      "alt": "A delicate pale tan leaf skeleton shows a complete oval outline, a dense branching vein network and a slender curved brown stalk.",
+      "description": "A delicate pale tan leaf skeleton shows a complete oval outline, a dense branching vein network and a slender curved brown stalk. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_280/source/leaves-delicate-leaf-skeleton.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "4d3b004c556b9aa1053859becf49de8f968a4eb71ab18629a48c10062f9cdc65",
+      "inputSignature": "e37682d706a23a003902193ea8b509632214b3db083dfa5fbe6cddac7eed0e9d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 984291,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 984291,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        101,
+        81,
+        936,
+        1464
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_280/exports/leaves-delicate-leaf-skeleton.pdf",
+          "bytes": 984291,
+          "sha256": "caa285ecc40e1c077db6d9bdde2e08a9d4a52dc3174cbf808cf506f915b7bc08"
+        },
+        "webp": {
+          "path": "work/production/wave_280/exports/leaves-delicate-leaf-skeleton.webp",
+          "bytes": 1613046,
+          "sha256": "a0cba50b1fe9d33a13ed2da4d7d6fcad90e8304630ae4efca1231c0b76f1b1be"
+        },
+        "thumb": {
+          "path": "work/production/wave_280/exports/leaves-delicate-leaf-skeleton-thumb.webp",
+          "bytes": 52736,
+          "sha256": "4d1a635770e7239c8ba2f45436f9e9af903d7f41592a601caade4d15cf13c3ca"
+        }
+      },
+      "proofSha256": "63a659d69e63bbfcf4aefa021e08a1bfaf3ebf1e002aee140431a6c860da043a",
+      "pairMeanRgbDifference": 2.62046
+    },
+    {
+      "id": "leaves-unfurling-tropical-leaf",
+      "title": "Unfurling Tropical Leaf",
+      "alt": "A tall rolled green leaf unfurls in a loose spiral beside a smaller pointed shoot, with both stalks joining at the base.",
+      "description": "A tall rolled green leaf unfurls in a loose spiral beside a smaller pointed shoot, with both stalks joining at the base. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_280/source/leaves-unfurling-tropical-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "b0e573f8d8a466345922efb5c6e5d41d9fae1ccf457ad380e694bcbfe310bb3b",
+      "inputSignature": "e9656f681efebb8b34271dd662359ef7ddae40c69d26dc7cb9f97afd6527762a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 384051,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 384051,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        356,
+        115,
+        753,
+        1443
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_280/exports/leaves-unfurling-tropical-leaf.pdf",
+          "bytes": 384051,
+          "sha256": "f7664480361063c67583aab4e9c9f686fa038eb03715e56fec322fa084e4874d"
+        },
+        "webp": {
+          "path": "work/production/wave_280/exports/leaves-unfurling-tropical-leaf.webp",
+          "bytes": 903994,
+          "sha256": "f0a0fd5f065a096f3810f5062d4e86be96b13834139743aa4c99a55c6a491cb6"
+        },
+        "thumb": {
+          "path": "work/production/wave_280/exports/leaves-unfurling-tropical-leaf-thumb.webp",
+          "bytes": 21660,
+          "sha256": "ead05914c87a7874f3c178016515beb14d457c2f68ba3ac5bb817a731f63b129"
+        }
+      },
+      "proofSha256": "db9399d7bb1cc6b1a9dbd9ba14778117189605810cbe4396e3084c4f44fe2c04",
+      "pairMeanRgbDifference": 1.69344
+    },
+    {
+      "id": "leaves-pressed-leaf-journal",
+      "title": "Pressed Leaves in a Nature Journal",
+      "alt": "An open cream nature journal displays a golden ginkgo leaf on the left page and a pressed fern and slender leaf on the right.",
+      "description": "An open cream nature journal displays a golden ginkgo leaf on the left page and a pressed fern and slender leaf on the right. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_280/source/leaves-pressed-leaf-journal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "9e5a04c3221bbe0c6eb5ee0756cdea759d21b8e0f04e9f5478c69f3d37949126",
+      "inputSignature": "146677f4876c0455537d28f8df35dd81246aceb5eb385a4bca40e645df0f66a6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 835766,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 835766,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        187,
+        146,
+        1349,
+        886
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_280/exports/leaves-pressed-leaf-journal.pdf",
+          "bytes": 835766,
+          "sha256": "c20a42b51c5cb5b8fa13e442386f8483817065f2b504655841b5c04cc4f20090"
+        },
+        "webp": {
+          "path": "work/production/wave_280/exports/leaves-pressed-leaf-journal.webp",
+          "bytes": 1488454,
+          "sha256": "e2a91c49f7f9a192e1df6a9b468eeb3678e719c980fbd764e6cbb71c30b4d702"
+        },
+        "thumb": {
+          "path": "work/production/wave_280/exports/leaves-pressed-leaf-journal-thumb.webp",
+          "bytes": 29748,
+          "sha256": "9f419ca124c9bd760a8fc064d511a934a941ae3d20115772dd302b6a24c034e7"
+        }
+      },
+      "proofSha256": "8eeaf50968150368c676520babed315d1dfed2a0efc3448732faddcfbb03683e",
+      "pairMeanRgbDifference": 3.11194
+    },
+    {
+      "id": "leaves-leaf-rubbing-crayons",
+      "title": "Leaf Rubbing Activity",
+      "alt": "A veined green leaf rests beside a cream paper sheet bearing a green crayon rubbing, with two short green crayons below it.",
+      "description": "A veined green leaf rests beside a cream paper sheet bearing a green crayon rubbing, with two short green crayons below it. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_280/source/leaves-leaf-rubbing-crayons.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c21a320242cdde8d826b7d968f389f0d701498a3c341d640b7ee7cf3e811bb83",
+      "inputSignature": "d4063b2b9d9688b99adc88465921942c77422fe81b702b0b5481475af8a5dff2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 895336,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 895336,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        181,
+        34,
+        1392,
+        981
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_280/exports/leaves-leaf-rubbing-crayons.pdf",
+          "bytes": 895336,
+          "sha256": "350450d8d8e4212639ce06925795d105fee32a7dc6a462e9981a5a3ca676f0ba"
+        },
+        "webp": {
+          "path": "work/production/wave_280/exports/leaves-leaf-rubbing-crayons.webp",
+          "bytes": 1555070,
+          "sha256": "16ab63327f6a05bbc7f1f501803789a05aabfa28a2d53ec342628a7ff8499fc2"
+        },
+        "thumb": {
+          "path": "work/production/wave_280/exports/leaves-leaf-rubbing-crayons-thumb.webp",
+          "bytes": 43858,
+          "sha256": "c51ad588648433447a98ec7042e6df8d8797bf8cd1afd4f25162904e9b53ee14"
+        }
+      },
+      "proofSha256": "00857be95b154b43902e4c11ea304b33c87a58faae72636199686bb9d1544586",
+      "pairMeanRgbDifference": 3.93473
+    },
+    {
+      "id": "leaves-taro-rain-drop",
+      "title": "Leaf with a Water Drop",
+      "alt": "A broad glossy shield-shaped green leaf curves toward a clear water drop resting near its radiating central veins.",
+      "description": "A broad glossy shield-shaped green leaf curves toward a clear water drop resting near its radiating central veins. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_280/source/leaves-taro-rain-drop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "b31bf99e2a8863ef4aef5d75523cd923d78fd36e0d59b4a33cd3baf6f8997faa",
+      "inputSignature": "d88c42aabf2eb33188c285f17629a9eb9dbd2fef69126ca9ac2dd6e2730b070d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 956642,
+        "weightedCmykRmse": 1.105709
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1373702,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1114329,
+          "weightedCmykRmse": 0.778208
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1047954,
+          "weightedCmykRmse": 0.918855
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 956642,
+          "weightedCmykRmse": 1.105709
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        106,
+        49,
+        1245,
+        1139
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_280/exports/leaves-taro-rain-drop.pdf",
+          "bytes": 956642,
+          "sha256": "c6936fda5c3f5ef6eeb714e766edfbd54dfa8e5a3095f925ac8b5652aa1adf99"
+        },
+        "webp": {
+          "path": "work/production/wave_280/exports/leaves-taro-rain-drop.webp",
+          "bytes": 1230376,
+          "sha256": "b93bf8ed6ed09f8c893c7283eafd001843c358ab70d180e03d62475143703f43"
+        },
+        "thumb": {
+          "path": "work/production/wave_280/exports/leaves-taro-rain-drop-thumb.webp",
+          "bytes": 60346,
+          "sha256": "3d9a43cfe8b013bf8db1a68f83c8abad4655ec539a7d2d01f35a70e68dc1a7a6"
+        }
+      },
+      "proofSha256": "ce628af55d351fae1ede705ee0411d6e1372d88e91d9ec1195688692b9d03335",
+      "pairMeanRgbDifference": 3.1918
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T20:05:47.180Z",
+  "screenReviewScope": "Every native PDF proof visually inspected against the reviewed source, including full leaf and prop framing; actual description checked before final export.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:45:33.647Z"
+}

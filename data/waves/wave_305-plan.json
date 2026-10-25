@@ -1,0 +1,81 @@
+{
+  "wave": "wave_305",
+  "topic": "scarecrow",
+  "method": "builtin-image-generation",
+  "research": "data/research/scarecrow-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "scarecrow-paper-accordion-doll",
+      "title": "Accordion Paper Scarecrow",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_305/source/scarecrow-paper-accordion-doll.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-button-collage",
+      "title": "Button Collage Scarecrow",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_305/source/scarecrow-button-collage.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-outline-garden-cart",
+      "title": "Scarecrow Garden Cart Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-garden-cart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "scarecrow-outline-making-broom",
+      "title": "Scarecrow Tying a Straw Broom Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-making-broom.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "scarecrow-outline-telescope",
+      "title": "Scarecrow with a Telescope Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-telescope.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "scarecrow-outline-potting-table",
+      "title": "Scarecrow Potting Bench Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_305/source/scarecrow-outline-potting-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

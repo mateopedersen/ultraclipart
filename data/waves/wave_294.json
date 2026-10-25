@@ -1,6 +1,6 @@
 {
   "wave": "wave_294",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 0,
   "screenReview": "PASS",
@@ -510,5 +510,7 @@
     "scope": "All 50 selected compositions: WebP/PDF editing exports, unchanged source-image CMYK/alpha signatures, independent PDF rendering and all five visual proof sheets.",
     "reviewerType": "AI_AGENT_NOT_HUMAN",
     "maximumEditedPdfBytes": 994986
-  }
+  },
+  "publishedRevision": "71a2c8075d84fed456153745bd3c72ddc0020fe8",
+  "liveVerifiedAt": "2026-10-25T20:41:59.054Z"
 }

@@ -1,0 +1,493 @@
+{
+  "wave": "wave_275",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-paper-pinwheel",
+      "title": "Maple Leaf Pinwheel",
+      "alt": "Four folded red-orange maple leaf paper blades meet at a small wooden pinwheel hub on a straight wooden handle.",
+      "description": "Four folded red-orange maple leaf paper blades meet at a small wooden pinwheel hub on a straight wooden handle. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_275/source/maple-paper-pinwheel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "7732477d54eb99690eb3f20e5e365f88872fc53171d4bb5afb31ff137a80d263",
+      "inputSignature": "2869796b6d0a980a83182bcdd3b4ebe05edce8ee40f32dac0c1ea361caa76fed",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 599585,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 599585,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        51,
+        43,
+        1000,
+        1480
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_275/exports/maple-paper-pinwheel.pdf",
+          "bytes": 599585,
+          "sha256": "26be2c48a6304590f1675072bd819c3bc1307c81feaa7c6144c6277cd04bc2c5"
+        },
+        "webp": {
+          "path": "work/production/wave_275/exports/maple-paper-pinwheel.webp",
+          "bytes": 1216434,
+          "sha256": "a550583d75d214e5a45e88231510c2f4ea142d6e37912576df83301da8efa28d"
+        },
+        "thumb": {
+          "path": "work/production/wave_275/exports/maple-paper-pinwheel-thumb.webp",
+          "bytes": 32396,
+          "sha256": "c42876ecaa6d16e5cb65c6d23b6a611213e6a691c40620fd17b76f3e5ee9f780"
+        }
+      },
+      "proofSha256": "51cdafd05db66319e427ebcc19308cf7087cf34550e77dd0ccf15019f605e972",
+      "pairMeanRgbDifference": 1.83072
+    },
+    {
+      "id": "maple-leaf-kite",
+      "title": "Maple Leaf Kite",
+      "alt": "An orange-red maple-leaf-shaped kite shows crossed wooden struts, a short curved flying line and a long ribbon tail with three bows.",
+      "description": "An orange-red maple-leaf-shaped kite shows crossed wooden struts, a short curved flying line and a long ribbon tail with three bows. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_275/source/maple-leaf-kite-framing-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "e4d9ff22c1222ba8fcea92ff65ee1466e66a2d4db40394a0674cb21718984da5",
+      "inputSignature": "3528d248e38aa514faa3a7cb76a58947fb5c9788cd10c75acc4e439a6a65df44",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 694716,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 694716,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        71,
+        93,
+        1116,
+        1299
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_275/exports/maple-leaf-kite.pdf",
+          "bytes": 694716,
+          "sha256": "a5a34216fb5853536457bcfd43aee8f95aaa3457b6af8b2616ff54df7169efb4"
+        },
+        "webp": {
+          "path": "work/production/wave_275/exports/maple-leaf-kite.webp",
+          "bytes": 598718,
+          "sha256": "559ead8a1357e1f0ebb8eacb8a9beef71487f76ff50fc13a076cac0fe135279c"
+        },
+        "thumb": {
+          "path": "work/production/wave_275/exports/maple-leaf-kite-thumb.webp",
+          "bytes": 38606,
+          "sha256": "182fb4abfe48b414597e8915fd22889e8417d855ba9d4be3033f67e07ac989d3"
+        }
+      },
+      "proofSha256": "35030e1531da26a3fbadb4fa5829c0a13846a3e4baac212c0116c284cc2818d4",
+      "pairMeanRgbDifference": 2.38143
+    },
+    {
+      "id": "maple-layered-paper-leaf",
+      "title": "Layered Paper Maple Leaf",
+      "alt": "A maple leaf is formed from layered orange and red paper with crisp pointed lobes, folded veins and a slender stem.",
+      "description": "A maple leaf is formed from layered orange and red paper with crisp pointed lobes, folded veins and a slender stem. An original maple illustration for personal projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_275/source/maple-layered-paper-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1301,
+      "height": 1209,
+      "pdfWidth": 1000,
+      "pdfHeight": 929,
+      "sourceType": "raster",
+      "sourceSha256": "0af904e0edc3350a9017898b6023bb3c0ac2fa2d5be6800d77292ac2eac06fb2",
+      "inputSignature": "4228a6fdaae646e5ea2dad31abc84d520b5cdda1ee745d5a9ff02da9f0a1b98d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 860905,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 860905,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        66,
+        19,
+        1236,
+        1192
+      ],
+      "image": {
+        "width": 1000,
+        "height": 929,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_275/exports/maple-layered-paper-leaf.pdf",
+          "bytes": 860905,
+          "sha256": "e64dc040484de0e7242c85f974624c5266c58c8862148eaee261e7ace2c7cf7b"
+        },
+        "webp": {
+          "path": "work/production/wave_275/exports/maple-layered-paper-leaf.webp",
+          "bytes": 907206,
+          "sha256": "64593d592f30848f05dacdb46e421dd9f84f7c4dbe4b183310fbf1b0bccce88b"
+        },
+        "thumb": {
+          "path": "work/production/wave_275/exports/maple-layered-paper-leaf-thumb.webp",
+          "bytes": 46074,
+          "sha256": "2edada297e6cbc31d4d5309cb152070cb12126c961396bdd3465b1221ac283dc"
+        }
+      },
+      "proofSha256": "5465511fce1fd128314fba44a706b179f84300a70c4036eb21a6dbcdc9cdb1a4",
+      "pairMeanRgbDifference": 3.06025
+    },
+    {
+      "id": "maple-felt-leaf-ornament",
+      "title": "Felt Maple Leaf Ornament",
+      "alt": "A rust orange felt maple leaf ornament has stitched golden veins, blanket stitched edges and a complete twine hanging loop.",
+      "description": "A rust orange felt maple leaf ornament has stitched golden veins, blanket stitched edges and a complete twine hanging loop. An original maple illustration for personal projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_275/source/maple-felt-leaf-ornament.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1230,
+      "height": 1279,
+      "pdfWidth": 962,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "b337add6fbd2c7eb18aaed8038a686aa7c6466b768180b27bf719a6a00634adc",
+      "inputSignature": "b14c6f46e0d30b21fc9c9277d88975784b46cbb6ca92ca728f811f7d323692bc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 958486,
+        "weightedCmykRmse": 0.803164
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1211179,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 958486,
+          "weightedCmykRmse": 0.803164
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        19,
+        1200,
+        1260
+      ],
+      "image": {
+        "width": 962,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_275/exports/maple-felt-leaf-ornament.pdf",
+          "bytes": 958486,
+          "sha256": "46a7acb3b0815d465e1df47d6179895a53b9b8294b0a8385a5f316ba0a981feb"
+        },
+        "webp": {
+          "path": "work/production/wave_275/exports/maple-felt-leaf-ornament.webp",
+          "bytes": 1208332,
+          "sha256": "d0c9ec99e69bd301f1f4a7f5ed1afe4fab8f6a456d777413f5611f895f39679e"
+        },
+        "thumb": {
+          "path": "work/production/wave_275/exports/maple-felt-leaf-ornament-thumb.webp",
+          "bytes": 68020,
+          "sha256": "13ba96219d545cc4494743f6a233f107541085802edfed6c065af07163c2cfcf"
+        }
+      },
+      "proofSha256": "fe3db77d5c76716bb3e27f4f21650331c5b4bdfd8ee788b29bed87f9dbbf759c",
+      "pairMeanRgbDifference": 4.67687
+    },
+    {
+      "id": "maple-pressed-leaf-frame",
+      "title": "Framed Maple Leaf",
+      "alt": "A pressed red maple leaf is displayed in a small brass edged hanging frame with a complete fine chain.",
+      "description": "A pressed red maple leaf is displayed in a small brass edged hanging frame with a complete fine chain. An original maple illustration for personal projects and classroom activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_275/source/maple-pressed-leaf-glass.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "e9f0105ad38fa6c25ba96c8626e5149e75831ee7252bb691956294d0c2a84a7e",
+      "inputSignature": "125b619caf27a3c3daea1257024cc832334340dc36ba933a17cc7c5179069053",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 895146,
+        "weightedCmykRmse": 0.800608
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1028062,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 895146,
+          "weightedCmykRmse": 0.800608
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        99,
+        8,
+        931,
+        1466
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_275/exports/maple-pressed-leaf-frame.pdf",
+          "bytes": 895146,
+          "sha256": "7cd6d938da17ff94b1aede0e4f295858e624dd1d127a182d2e061e5e3ea5cbf0"
+        },
+        "webp": {
+          "path": "work/production/wave_275/exports/maple-pressed-leaf-frame.webp",
+          "bytes": 1477758,
+          "sha256": "637d82c2a2c3cf5f0fdb69377ca1dd580616012370f97fe372443281f493fc3c"
+        },
+        "thumb": {
+          "path": "work/production/wave_275/exports/maple-pressed-leaf-frame-thumb.webp",
+          "bytes": 53700,
+          "sha256": "69b06436851c569e8e8604e89019a0c574b940c3bf1445391acb37ad2f513ef3"
+        }
+      },
+      "proofSha256": "7ca4e9ebe3735ca1cfe5a9fe38d44433a46ed6b5ebd5d523f93113b2eb4f7f9b",
+      "pairMeanRgbDifference": 4.09857
+    },
+    {
+      "id": "maple-carved-wood-leaf",
+      "title": "Carved Wooden Maple Leaf",
+      "alt": "A carved wooden maple leaf ornament has shallow incised veins, natural wood grain and a small cord hanging loop.",
+      "description": "A carved wooden maple leaf ornament has shallow incised veins, natural wood grain and a small cord hanging loop. An original maple illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_275/source/maple-carved-wood-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3aece83fa8dc68e99fbe5b88e2d3d024e2d70f147bf8ccf0f955f46083f5064b",
+      "inputSignature": "d5926bb8898281c52a9710ca2d7a3dd6c835d50ead242e0645c52af3d0256285",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 894696,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 894696,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        193,
+        7,
+        1120,
+        1182
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_275/exports/maple-carved-wood-leaf.pdf",
+          "bytes": 894696,
+          "sha256": "0d9de2ffe1b1ace0b4bf8613a3feee00da75cbff40fdd379f3014eeb37eeda34"
+        },
+        "webp": {
+          "path": "work/production/wave_275/exports/maple-carved-wood-leaf.webp",
+          "bytes": 813884,
+          "sha256": "8e26288c204ee58a3970805c0c0cbff1da798bef88de3bb41e6ffb6bd90c315b"
+        },
+        "thumb": {
+          "path": "work/production/wave_275/exports/maple-carved-wood-leaf-thumb.webp",
+          "bytes": 44430,
+          "sha256": "f36d3b5b400b900c0e96d48e53e18e085be6b0c490815b0341065ffe828a52e4"
+        }
+      },
+      "proofSha256": "39c18980aee06e00248981887ada629a3b5f212acb8bff40030ebdb6d7e5a68e",
+      "pairMeanRgbDifference": 2.32396
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T20:39:18.847Z",
+  "screenReviewScope": "Every selected native CMYK PDF proof visually reviewed against complete source composition and natural metadata.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:21.378Z"
+}

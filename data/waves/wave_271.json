@@ -1,0 +1,542 @@
+{
+  "wave": "wave_271",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-scarlet-leaf",
+      "title": "Scarlet Maple Leaf",
+      "alt": "A broad scarlet maple leaf has pointed serrated lobes, warm orange patches, branching veins and a complete slender stem.",
+      "description": "A broad scarlet maple leaf has pointed serrated lobes, warm orange patches, branching veins and a complete slender stem. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_271/source/maple-scarlet-leaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1301,
+      "height": 1209,
+      "pdfWidth": 1000,
+      "pdfHeight": 929,
+      "sourceType": "raster",
+      "sourceSha256": "385c1d75b9e763f2a4995dd74f535fc8f53fa4452332dce4047e10a118c94dc9",
+      "inputSignature": "e26cf47f60b7f30a73602ae1bfb03e0c95c99b7223318734f84ecaebd9746ef8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 843934,
+        "weightedCmykRmse": 0.797814
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1084788,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 843934,
+          "weightedCmykRmse": 0.797814
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        11,
+        1283,
+        1198
+      ],
+      "image": {
+        "width": 1000,
+        "height": 929,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_271/exports/maple-scarlet-leaf.pdf",
+          "bytes": 843934,
+          "sha256": "c29d55056c61df8100198b1fe4a5ece7eae22bb8f63cba4cbe3102339dc2a43b"
+        },
+        "webp": {
+          "path": "work/production/wave_271/exports/maple-scarlet-leaf.webp",
+          "bytes": 1194302,
+          "sha256": "673b80c212b1184f76fd2eeb895edd57d8feee4ebc785b1fc326e1acbcb9c4c2"
+        },
+        "thumb": {
+          "path": "work/production/wave_271/exports/maple-scarlet-leaf-thumb.webp",
+          "bytes": 59714,
+          "sha256": "8446459463161390ef7df495b346a960ce3309d96e1a6eefdbefa4b12575d852"
+        }
+      },
+      "proofSha256": "838edb9c104ee6c2098d006cb1c1868f7c24b06ad0db7e5efebcfc2165cc98ce",
+      "pairMeanRgbDifference": 3.99519
+    },
+    {
+      "id": "maple-silver-leaf-sprig",
+      "title": "Deeply Lobed Maple Leaves",
+      "alt": "A short maple twig carries two deeply lobed leaves, one showing a pale underside, beside a paired winged seed and small bud.",
+      "description": "A short maple twig carries two deeply lobed leaves, one showing a pale underside, beside a paired winged seed and small bud. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_271/source/maple-silver-leaf-sprig.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d87cf6d1b2a5bb27e321a90ce33a6e948f64f23256b03a75236344e28e70ae27",
+      "inputSignature": "9033a7ebab5a5c60e81f243f16857ce5ad006cdd349b6f1dda12f765a5e3a001",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 996754,
+        "weightedCmykRmse": 0.904792
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1155880,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1043992,
+          "weightedCmykRmse": 0.752636
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 996754,
+          "weightedCmykRmse": 0.904792
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        9,
+        1513,
+        1007
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_271/exports/maple-silver-leaf-sprig.pdf",
+          "bytes": 996754,
+          "sha256": "d31ffa726aff82f9d08b9e9e54f1161c0e8d7d65e3c907df36728e38e0c92d8a"
+        },
+        "webp": {
+          "path": "work/production/wave_271/exports/maple-silver-leaf-sprig.webp",
+          "bytes": 1563008,
+          "sha256": "2044cfa631d56c24c8a40e7357e6ac70bbbb696e0766c5ab9070283b38d0a8e5"
+        },
+        "thumb": {
+          "path": "work/production/wave_271/exports/maple-silver-leaf-sprig-thumb.webp",
+          "bytes": 58528,
+          "sha256": "b5c9c285f214f23dd32ac8148498b6516795006ba152d44e5471c4d4a444664b"
+        }
+      },
+      "proofSha256": "0a682cc9ecde0b0410f79ba88761e16ea8eb292974a2bc1c01021bd6571dcec8",
+      "pairMeanRgbDifference": 4.71346
+    },
+    {
+      "id": "maple-delicate-seven-lobed",
+      "title": "Delicate Maple Leaf Spray",
+      "alt": "Three narrow burgundy maple leaves and a pink paired winged seed attach to a slender reddish twig.",
+      "description": "Three narrow burgundy maple leaves and a pink paired winged seed attach to a slender reddish twig. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_271/source/maple-delicate-seven-lobed.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "70c2a3960b0c29eb303eb0178011b06dead6b8b7b3c1c1e8fdc72f1aa5d0feb4",
+      "inputSignature": "99dcf5bdc382de7552cebdd8ab378ddd18804bc30ae992df2506658e9f065a1e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 970434,
+        "weightedCmykRmse": 1.044164
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1206978,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1034074,
+          "weightedCmykRmse": 0.859372
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 970434,
+          "weightedCmykRmse": 1.044164
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        18,
+        9,
+        1292,
+        1183
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_271/exports/maple-delicate-seven-lobed.pdf",
+          "bytes": 970434,
+          "sha256": "8dbdce8c38fdc0dbb80953edd9233345e222848cf446b23367afe0379fb63a6b"
+        },
+        "webp": {
+          "path": "work/production/wave_271/exports/maple-delicate-seven-lobed.webp",
+          "bytes": 945634,
+          "sha256": "2df1521b91c49e5e964fccb112043e913625d35cf2a96624fbea6cb9a14ba0b8"
+        },
+        "thumb": {
+          "path": "work/production/wave_271/exports/maple-delicate-seven-lobed-thumb.webp",
+          "bytes": 64790,
+          "sha256": "ed93c8ab5821dd09c9086d70735aa0656f3a13d7db19aa68aec20e3267f0bb99"
+        }
+      },
+      "proofSha256": "4955426b766607402202e4b95ef490f9d218d92a96ca57b388a71be5fd55d49d",
+      "pairMeanRgbDifference": 3.49261
+    },
+    {
+      "id": "maple-fresh-opposite-leaves",
+      "title": "Maple Twig with Fresh Leaves",
+      "alt": "Two fresh green pointed maple leaves grow opposite one another on a short twig with a new terminal bud.",
+      "description": "Two fresh green pointed maple leaves grow opposite one another on a short twig with a new terminal bud. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_271/source/maple-fresh-opposite-leaves.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1402,
+      "height": 1122,
+      "pdfWidth": 1000,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "43bf066fff5b921b9a9936c112a5646159f4f29a0cc497519e6cbc0426e00f70",
+      "inputSignature": "83cdf783507cbdf739f9b50bd3f2f3c23d187fc724f1be60fa567466cde8e16f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 988072,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 988072,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        51,
+        1400,
+        1084
+      ],
+      "image": {
+        "width": 1000,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_271/exports/maple-fresh-opposite-leaves.pdf",
+          "bytes": 988072,
+          "sha256": "fb18821125c908dd1fbfc071206e89251e3bf840ac68c4ed2dcc0e38f41e740e"
+        },
+        "webp": {
+          "path": "work/production/wave_271/exports/maple-fresh-opposite-leaves.webp",
+          "bytes": 915390,
+          "sha256": "ebefdecc9bfd81bf069364a300e88251ea51f053194c57df4bb499ba32c01756"
+        },
+        "thumb": {
+          "path": "work/production/wave_271/exports/maple-fresh-opposite-leaves-thumb.webp",
+          "bytes": 51076,
+          "sha256": "be11f0b2111676fdab67a67f2ebf8868fd42fb722dd31c8c10fa25f6d78bb9bf"
+        }
+      },
+      "proofSha256": "b6937c2bbc87bda9a7af25fbd68756619f72892f3d55d79547bdc4615b6889cc",
+      "pairMeanRgbDifference": 5.29537
+    },
+    {
+      "id": "maple-opening-leaf-buds",
+      "title": "Opening Maple Buds",
+      "alt": "Two opposite reddish maple buds open into folded miniature green leaves on a short woody twig.",
+      "description": "Two opposite reddish maple buds open into folded miniature green leaves on a short woody twig. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_271/source/maple-opening-leaf-buds.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "826d1010985642784124746d806ae6515ebe5ecae024102dc7d532dbb62874b6",
+      "inputSignature": "d93f4650869597f0a23f1b3bef839418532f1235428e75fdc60b6ce3fb295b74",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 975446,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 975446,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        34,
+        1273,
+        1170
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_271/exports/maple-opening-leaf-buds.pdf",
+          "bytes": 975446,
+          "sha256": "a4bd15336bc3d702f5ea18ca18f7a87ea4f4301fc71fc54181982219ca7185be"
+        },
+        "webp": {
+          "path": "work/production/wave_271/exports/maple-opening-leaf-buds.webp",
+          "bytes": 865868,
+          "sha256": "c34ea6e8aa65c17a8cdf3512079cca94e36db1c24a2cf1da169893277a3b95fe"
+        },
+        "thumb": {
+          "path": "work/production/wave_271/exports/maple-opening-leaf-buds-thumb.webp",
+          "bytes": 53468,
+          "sha256": "6afac404e002aa1060c3ccd1df02bc17545ead0b83bf0409e01bd50632a14a94"
+        }
+      },
+      "proofSha256": "b478df6b37b8028fb8584c64f22e1e2006ba03e765d1777dca24fb5a52aa2723",
+      "pairMeanRgbDifference": 3.38269
+    },
+    {
+      "id": "maple-spring-flower-cluster",
+      "title": "Maple Spring Flower Cluster",
+      "alt": "Small clusters of delicate red maple flowers and unopened buds grow on a short bare twig.",
+      "description": "Small clusters of delicate red maple flowers and unopened buds grow on a short bare twig. An original maple illustration for personal projects and classroom nature activities.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_271/source/maple-spring-flower-cluster.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1345,
+      "height": 1170,
+      "pdfWidth": 1000,
+      "pdfHeight": 870,
+      "sourceType": "raster",
+      "sourceSha256": "215c6e8d0dc9164aed128e8a2206be2fafa3ac6335f03e0c485447ea7b9ac571",
+      "inputSignature": "129224c4ac21134ac03a56e9b9ced7156a8485f7e8182597ebcf460ef640ffef",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994051,
+        "weightedCmykRmse": 1.55453
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1370721,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1196675,
+          "weightedCmykRmse": 0.813007
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1135658,
+          "weightedCmykRmse": 0.974048
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1059833,
+          "weightedCmykRmse": 1.167429
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994051,
+          "weightedCmykRmse": 1.55453
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        59,
+        44,
+        1313,
+        1128
+      ],
+      "image": {
+        "width": 1000,
+        "height": 870,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_271/exports/maple-spring-flower-cluster.pdf",
+          "bytes": 994051,
+          "sha256": "438a54ed69e835fa846fbf48efad0240f9187118e86a84d66d5f53baa2665fb9"
+        },
+        "webp": {
+          "path": "work/production/wave_271/exports/maple-spring-flower-cluster.webp",
+          "bytes": 1163096,
+          "sha256": "913285e32188649c0e75ecf7e9e1bcdabdf2b568c502939c3d9cb628b32df56b"
+        },
+        "thumb": {
+          "path": "work/production/wave_271/exports/maple-spring-flower-cluster-thumb.webp",
+          "bytes": 82154,
+          "sha256": "d3d64292f08c168a8ec3557a604430d4dbafb829f095820e3cfc8864b15bde17"
+        }
+      },
+      "proofSha256": "f79f3b374db7a596858184ef40a9d22f1267b81dd85bccc0f8012d0e15e2271d",
+      "pairMeanRgbDifference": 4.81602
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T17:54:35.412752+00:00",
+  "screenReviewScope": "All native CMYK PDF contact renders visually inspected: complete leaf and seed silhouettes, coherent growth structures, clean texture and line detail, no visible framing or compression defects.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:19.117Z"
+}

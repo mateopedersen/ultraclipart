@@ -1,0 +1,77 @@
+{
+  "wave": "wave_300",
+  "topic": "scarecrow",
+  "method": "builtin-image-generation",
+  "research": "data/research/scarecrow-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "scarecrow-leaf-rake",
+      "title": "Scarecrow Raking Leaves",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_300/source/scarecrow-leaf-rake.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-lantern-evening",
+      "title": "Scarecrow Carrying a Lantern",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_300/source/scarecrow-lantern-evening.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-umbrella-rainboots",
+      "title": "Scarecrow with an Umbrella",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_300/source/scarecrow-umbrella-rainboots.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-snow-scarf",
+      "title": "Scarecrow in a Winter Scarf",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_300/source/scarecrow-snow-scarf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-birdhouse-post",
+      "title": "Scarecrow Hanging a Birdhouse",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_300/source/scarecrow-birdhouse-post.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "scarecrow-seed-packet-tray",
+      "title": "Scarecrow Starting Seeds",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_300/source/scarecrow-seed-packet-tray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

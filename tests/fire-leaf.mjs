@@ -85,7 +85,8 @@ test(
     for (const topic of ['fire', 'leaves']) {
       const html = text(`clipart/${topic}/index.html`);
       assert.ok(html.includes(`https://ultraclipart.com/clipart/${topic}/`));
-      assert.ok(html.includes('"numberOfItems":50'));
+      const publishedCount = all.filter((item) => item.topic === topic).length;
+      assert.ok(html.includes(`"numberOfItems":${publishedCount}`));
       for (const item of items.filter((x) => x.topic === topic)) {
         const detail = text(`art/${item.id}/index.html`);
         assert.ok(pages.includes(`/art/${item.id}/`));

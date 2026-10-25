@@ -1,0 +1,511 @@
+{
+  "wave": "wave_287",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "leaves-leaf-venation-comparison",
+      "title": "Leaf Vein Patterns",
+      "alt": "Three separate green leaves compare parallel veins in a narrow blade, pinnate veins in an oval blade and radiating veins in a lobed blade.",
+      "description": "Three separate green leaves compare parallel veins in a narrow blade, pinnate veins in an oval blade and radiating veins in a lobed blade. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_287/source/leaves-leaf-venation-comparison.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c20744b9ae9a2b25eb4b517228cd0367d57a4d78e5b2b52148294def7e817e50",
+      "inputSignature": "a4ded2e0901be907c37883e68c79e06dd4cfc86344bf90a6989daff0c1a5c758",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 810658,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 810658,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        104,
+        37,
+        1494,
+        981
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_287/exports/leaves-leaf-venation-comparison.pdf",
+          "bytes": 810658,
+          "sha256": "d8742425491bb3683fdf20f5136ccc772a4fff5d5b55b8bffa0faf42fb8bfa13"
+        },
+        "webp": {
+          "path": "work/production/wave_287/exports/leaves-leaf-venation-comparison.webp",
+          "bytes": 1384408,
+          "sha256": "c02e08f1c29235457dbd753f1e8a9b72d477f43353f0f83cedad43e465a642d2"
+        },
+        "thumb": {
+          "path": "work/production/wave_287/exports/leaves-leaf-venation-comparison-thumb.webp",
+          "bytes": 44938,
+          "sha256": "c98144fa9883e100a13fe2321450567e7f85b93f9e4856d711557d40ba777d12"
+        }
+      },
+      "proofSha256": "e92afc60a003d1199278417ba553a54d36aa2dddb66117050b593d10616be044",
+      "pairMeanRgbDifference": 3.431
+    },
+    {
+      "id": "leaves-wooden-botanical-press",
+      "title": "Wooden Botanical Press",
+      "alt": "A small wooden botanical press has four corner bolts and cream blotting-paper layers, with a fern specimen visible inside and a wing nut beside it.",
+      "description": "A small wooden botanical press has four corner bolts and cream blotting-paper layers, with a fern specimen visible inside and a wing nut beside it. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_287/source/leaves-wooden-botanical-press.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "leaves",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "d9516e06fcb310606eb0ccce47553cbc20cd8519201ad2fe8d21aba03c68c43b",
+      "inputSignature": "93a36386c67dacc1bf0c62dd0dfe9e40a087af65b2dac89a686acbcffa1ead48",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 938281,
+        "weightedCmykRmse": 1.325331
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1466784,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175640,
+          "weightedCmykRmse": 0.739713
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1106346,
+          "weightedCmykRmse": 0.878667
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1010975,
+          "weightedCmykRmse": 1.061677
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 938281,
+          "weightedCmykRmse": 1.325331
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        66,
+        1268,
+        1142
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_287/exports/leaves-wooden-botanical-press.pdf",
+          "bytes": 938281,
+          "sha256": "2ec7e15e817d37a50a6e256027d0c918f89b15ec927967d69f1ccb5eaa84d74f"
+        },
+        "webp": {
+          "path": "work/production/wave_287/exports/leaves-wooden-botanical-press.webp",
+          "bytes": 1487970,
+          "sha256": "cbdba62898f1d2a18a22180674545620beabadae015f1b325e4bdc614037d1a4"
+        },
+        "thumb": {
+          "path": "work/production/wave_287/exports/leaves-wooden-botanical-press-thumb.webp",
+          "bytes": 69334,
+          "sha256": "ea42e36abf2bdbb7edb90d4f5c5e4d9e6f124306c9e3ef9be5489b3c9fcd03dd"
+        }
+      },
+      "proofSha256": "88317641196a3a28c71435eb91bb6c1bd0b748b54bc49d78af548872cbe59df6",
+      "pairMeanRgbDifference": 2.78847
+    },
+    {
+      "id": "leaves-outline-leafcutter-ant",
+      "title": "Leafcutter Ant Coloring Illustration",
+      "alt": "A stylized leafcutter ant grips a curved leaf stalk in its mandibles, with two antennae and six visible jointed legs, drawn in clear black outlines.",
+      "description": "A stylized leafcutter ant grips a curved leaf stalk in its mandibles, with two antennae and six visible jointed legs, drawn in clear black outlines. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_287/source/leaves-outline-leafcutter-ant-anatomy-v3.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "630a2c5eb68ee82feb3e59046c1d4796d59a7d649a03b4bb7900d6eb37e80151",
+      "inputSignature": "7106ef7d762937c557869a40c4c720fe826029430539fdb1bef30f7a6bd2aa60",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 166356,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 166356,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        26,
+        1494,
+        997
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_287/exports/leaves-outline-leafcutter-ant.pdf",
+          "bytes": 166356,
+          "sha256": "017e32cd6a62493840333245a1324a55fd872ce66e5e3ee436c6e00d85ebc09e"
+        },
+        "webp": {
+          "path": "work/production/wave_287/exports/leaves-outline-leafcutter-ant.webp",
+          "bytes": 798020,
+          "sha256": "0c888151ec1b85444e65091a76f982c5934fd7a17d14794613498a711559e2ed"
+        },
+        "thumb": {
+          "path": "work/production/wave_287/exports/leaves-outline-leafcutter-ant-thumb.webp",
+          "bytes": 29552,
+          "sha256": "31bccf8f4225bccd669207d6c09645d38ce81378ee5ba68ac27d295ba7952485"
+        }
+      },
+      "proofSha256": "bf5f7d6cc8c0b1f93976187837f2ccecdf1ba613ee655e05c3998d307cb3106f",
+      "pairMeanRgbDifference": 4.10908
+    },
+    {
+      "id": "leaves-outline-rolled-leaf-shelter",
+      "title": "Rolled Leaf Shelter Coloring Illustration",
+      "alt": "A small cartoon caterpillar peeks from a rolled leaf on a short twig above one open leaf, drawn in clean black outlines.",
+      "description": "A small cartoon caterpillar peeks from a rolled leaf on a short twig above one open leaf, drawn in clean black outlines. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_287/source/leaves-outline-rolled-leaf-shelter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "leaves",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "abd0fcc4ca74885309d3d704b0868d68a467716505cc1c8500beb0037e6f550e",
+      "inputSignature": "306da62b41378757c2d4615181f130461eae5ee8c68b67af381a92128ae92f52",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 231764,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 231764,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        145,
+        69,
+        1197,
+        1136
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_287/exports/leaves-outline-rolled-leaf-shelter.pdf",
+          "bytes": 231764,
+          "sha256": "7c4a1b6515c9dfb5521734a1f370c6d6b24d80cfd686454ddc5829fad7d1df5e"
+        },
+        "webp": {
+          "path": "work/production/wave_287/exports/leaves-outline-rolled-leaf-shelter.webp",
+          "bytes": 417324,
+          "sha256": "c14c0dca341f575ac2426c20d9d23b3ee8710ae7eab6514abb098d40ca3d87ed"
+        },
+        "thumb": {
+          "path": "work/production/wave_287/exports/leaves-outline-rolled-leaf-shelter-thumb.webp",
+          "bytes": 35510,
+          "sha256": "b6397962cdf3fa1d5ea2a58ac412669c125044c06b7f4d0cdc994a4eef5f4577"
+        }
+      },
+      "proofSha256": "abf454af348fdd9945cb4d53aeacc972d3c8b89a2f8a9e3c8075fc303aa12272",
+      "pairMeanRgbDifference": 3.85683
+    },
+    {
+      "id": "leaves-outline-leaf-drying-rack",
+      "title": "Leaf Drying Rack Coloring Illustration",
+      "alt": "A small freestanding wooden rack holds three different leaves by clothespins on a curved cord, drawn in clear black outlines.",
+      "description": "A small freestanding wooden rack holds three different leaves by clothespins on a curved cord, drawn in clear black outlines. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_287/source/leaves-outline-leaf-drying-rack.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "35ebffa27ec27f688bbe40d82b02ab025beaffa5991d97bb1332ee7f021e74b8",
+      "inputSignature": "5dca06afa095951fcfe7839e7705b2ab8810b0fef7b4403939a8af8f0c584ef7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 232985,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 232985,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        47,
+        83,
+        1489,
+        947
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_287/exports/leaves-outline-leaf-drying-rack.pdf",
+          "bytes": 232985,
+          "sha256": "dfbe00dd5cb06cccf6de1400379472b0310a6d5ebbe132568ad29198b98f8853"
+        },
+        "webp": {
+          "path": "work/production/wave_287/exports/leaves-outline-leaf-drying-rack.webp",
+          "bytes": 972586,
+          "sha256": "af91fdd8661f6da135e72ac93e7c81e46f3bca72444ed1173bd3400ae3d805c3"
+        },
+        "thumb": {
+          "path": "work/production/wave_287/exports/leaves-outline-leaf-drying-rack-thumb.webp",
+          "bytes": 41796,
+          "sha256": "80266e1d405721e5dde7360d21b15abdfa8655686069412fc41dfd44c50c95c1"
+        }
+      },
+      "proofSha256": "a5bb29e2ba66f3f36634e803aa0e60a1bd923f06dfb0dd7044d9ab56309be0bc",
+      "pairMeanRgbDifference": 6.47636
+    },
+    {
+      "id": "leaves-outline-woven-leaf-crown",
+      "title": "Leaf Crown Coloring Illustration",
+      "alt": "A braided leaf crown has an open oval band and five upright broad leaf points across its front, drawn in black outlines.",
+      "description": "A braided leaf crown has an open oval band and five upright broad leaf points across its front, drawn in black outlines. A botanical clipart illustration for personal designs and classroom nature activities.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_287/source/leaves-outline-woven-leaf-crown.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "leaves",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "a829ac8f41c3be0af188e4a7709ed06ba2e2aa89f707802416bb6eb4d3267e1e",
+      "inputSignature": "49b168112f11ac294f4cda30b053973d01e05dd0684049d49c6db369dfc93622",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 255507,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 255507,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        77,
+        82,
+        1460,
+        908
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_287/exports/leaves-outline-woven-leaf-crown.pdf",
+          "bytes": 255507,
+          "sha256": "04cfb2c19eaf9181c8648b0a7f9b2fe77364ba46075e8bc3f0ef807dc09b93fa"
+        },
+        "webp": {
+          "path": "work/production/wave_287/exports/leaves-outline-woven-leaf-crown.webp",
+          "bytes": 967054,
+          "sha256": "95e1314895f6007fef1449500377119fe59ceb8371aa776723ab3f4f3bc8e60d"
+        },
+        "thumb": {
+          "path": "work/production/wave_287/exports/leaves-outline-woven-leaf-crown-thumb.webp",
+          "bytes": 42042,
+          "sha256": "8280f7c7be91b714f01b7047434e4d719ed172a2df0fd9c5a1583fc0cc5e0847"
+        }
+      },
+      "proofSha256": "2931147c4c4feb4f799e4ed57ce5c9aa781494866ae3e70fddd3b10ed421e510",
+      "pairMeanRgbDifference": 8.47899
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T20:44:14.854Z",
+  "screenReviewScope": "All six native CMYK proofs visually inspected against their reviewed sources, including complete craft framing, leaf comparison forms and accepted six-legged stylized ant.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:45:37.026Z"
+}

@@ -1,0 +1,535 @@
+{
+  "wave": "wave_276",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "maple-autumn-leaf-wreath",
+      "title": "Maple Leaf Wreath",
+      "alt": "An open circular twig wreath carries amber and russet maple leaves with a small cluster of paired winged seeds.",
+      "description": "An open circular twig wreath carries amber and russet maple leaves with a small cluster of paired winged seeds. An original maple illustration for personal projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_276/source/maple-autumn-leaf-wreath-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1295,
+      "height": 1215,
+      "pdfWidth": 1000,
+      "pdfHeight": 938,
+      "sourceType": "raster",
+      "sourceSha256": "2d13275b888a4a365136b0bc57a99ac374726891b767986864031bd730cc1a3e",
+      "inputSignature": "ed897700a59c93e41e505dc114dc55840f28509df03eba221ab984f500a04593",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 934640,
+        "weightedCmykRmse": 1.482508
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1375377,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1151451,
+          "weightedCmykRmse": 0.79227
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1085616,
+          "weightedCmykRmse": 0.942226
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1007193,
+          "weightedCmykRmse": 1.138003
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 934640,
+          "weightedCmykRmse": 1.482508
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        64,
+        39,
+        1227,
+        1146
+      ],
+      "image": {
+        "width": 1000,
+        "height": 938,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_276/exports/maple-autumn-leaf-wreath.pdf",
+          "bytes": 934640,
+          "sha256": "eba8932635e4c1719108411ff13bf7f42ada94c4819e1ecfd6601770f221430d"
+        },
+        "webp": {
+          "path": "work/production/wave_276/exports/maple-autumn-leaf-wreath.webp",
+          "bytes": 1299692,
+          "sha256": "b6eca24ffbf4afcbf8fedea0214430d03d6b8268eb94f2848bd8412baa4a45f4"
+        },
+        "thumb": {
+          "path": "work/production/wave_276/exports/maple-autumn-leaf-wreath-thumb.webp",
+          "bytes": 86008,
+          "sha256": "06b6541b7604275732bc18f258545a544d7258c5e35bbe30de55f623b12a8a62"
+        }
+      },
+      "proofSha256": "510afbed52fa080946efffce0a6a3a4a0c499aa9dfce205aebf963bf49ac8051",
+      "pairMeanRgbDifference": 4.29486
+    },
+    {
+      "id": "maple-corner-botanical",
+      "title": "Maple Leaf Corner Decoration",
+      "alt": "An L shaped maple corner spray combines pointed gold and russet leaves, fine twigs and small buds around an open inner corner.",
+      "description": "An L shaped maple corner spray combines pointed gold and russet leaves, fine twigs and small buds around an open inner corner. An original maple illustration for personal projects and classroom activities.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_276/source/maple-corner-botanical.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "67a92ce5c6443b5d59004ac7c2379b6c38392384ccaee2cc5e92b0cd2edeb607",
+      "inputSignature": "bbc22a699a480a2301a961f29e71b244e8d866bf2735c1393dcc9b88bcf403dc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 946145,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 946145,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        16,
+        1294,
+        1185
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_276/exports/maple-corner-botanical.pdf",
+          "bytes": 946145,
+          "sha256": "e4e7927e03d463499eb97f83704e806754892360326c04a0191013fefcdd835a"
+        },
+        "webp": {
+          "path": "work/production/wave_276/exports/maple-corner-botanical.webp",
+          "bytes": 807546,
+          "sha256": "309fe7ed32165d3a3d607777b6f96d93a16ea94e9974086cab49c9872d6723ae"
+        },
+        "thumb": {
+          "path": "work/production/wave_276/exports/maple-corner-botanical-thumb.webp",
+          "bytes": 59512,
+          "sha256": "67d132b065fd3474eadfff8b3ad6c965c019ee1420516073fae17ace8cc56009"
+        }
+      },
+      "proofSha256": "bc1cdfff2af7876e4aad7fe348b6bdbcc6f594bd4f5712e50257516a864a7df8",
+      "pairMeanRgbDifference": 2.67262
+    },
+    {
+      "id": "maple-vertical-leaf-border",
+      "title": "Vertical Maple Leaf Border",
+      "alt": "A tall narrow maple twig carries several green lobed leaves, fresh buds and paired winged seeds.",
+      "description": "A tall narrow maple twig carries several green lobed leaves, fresh buds and paired winged seeds. An original maple illustration for personal projects and classroom activities.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_276/source/maple-vertical-leaf-border.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "363e86f83b3894c042a9621d4298390edaf8865e65333c18926ef296f784e764",
+      "inputSignature": "524d190a14a2f6f43fc9d7c6e5724e3ffdd4895634980f08b6c254b059885159",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 605599,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 605599,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        200,
+        9,
+        827,
+        1526
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_276/exports/maple-vertical-leaf-border.pdf",
+          "bytes": 605599,
+          "sha256": "f93b409415b14a2c4575c1f32c82c632658e4aba535d884226030d87de3e7b34"
+        },
+        "webp": {
+          "path": "work/production/wave_276/exports/maple-vertical-leaf-border.webp",
+          "bytes": 1124260,
+          "sha256": "ab26ddd8cda8abad2053e4db5186ab4970ff7a3b3282696255d165df1cb5629f"
+        },
+        "thumb": {
+          "path": "work/production/wave_276/exports/maple-vertical-leaf-border-thumb.webp",
+          "bytes": 42726,
+          "sha256": "11ebcc076a262357643087026e904187216b7b71dd41cef23fcb6abb39200c90"
+        }
+      },
+      "proofSha256": "bf02597511c20d496f49417ced1841ba6fd0f451300258d8e46a4fd662dc182b",
+      "pairMeanRgbDifference": 2.88862
+    },
+    {
+      "id": "maple-wide-leaf-garland",
+      "title": "Maple Leaf Garland",
+      "alt": "A wide gently curved twig garland carries five green, gold and red maple leaves with paired winged seeds between them.",
+      "description": "A wide gently curved twig garland carries five green, gold and red maple leaves with paired winged seeds between them. An original maple illustration for personal projects and classroom activities.",
+      "color": "Multicolor",
+      "style": "Color",
+      "source": "work/production/wave_276/source/maple-wide-leaf-garland.png",
+      "printMaxEdgePx": 1502,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 2172,
+      "height": 724,
+      "pdfWidth": 1502,
+      "pdfHeight": 501,
+      "sourceType": "raster",
+      "sourceSha256": "0938729312cd3445a0d24713e39d578bbc6cedb1b0709ed28a8911e5da6f364c",
+      "inputSignature": "6527d767edbfae6d512bc41fbace3d4d4a57107319594e630fb1aaa01726cd2d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 949885,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 949885,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        68,
+        2156,
+        623
+      ],
+      "image": {
+        "width": 1502,
+        "height": 501,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_276/exports/maple-wide-leaf-garland.pdf",
+          "bytes": 949885,
+          "sha256": "2662f4da7f72413ca29bb1bedde52089d0f859cc4f8ebea022a3cfd3e232a026"
+        },
+        "webp": {
+          "path": "work/production/wave_276/exports/maple-wide-leaf-garland.webp",
+          "bytes": 912270,
+          "sha256": "a5c3179c9c0974fc45fedffc8b135bea59e2320db8586cc1c35e388f2dd0f72e"
+        },
+        "thumb": {
+          "path": "work/production/wave_276/exports/maple-wide-leaf-garland-thumb.webp",
+          "bytes": 30774,
+          "sha256": "8b82bd9024fd056e6837aabca2f8cbbb490ab669ba8d41a033d4e25f84c1634e"
+        }
+      },
+      "proofSha256": "5acd1847dedae8de3194e0ddd992df44f1cd8f326b2d2fe7c8a5ee3e9b67a50c",
+      "pairMeanRgbDifference": 2.16919
+    },
+    {
+      "id": "maple-open-maple-frame",
+      "title": "Maple Leaf Oval Frame",
+      "alt": "A thin oval twig frame has golden maple leaves and paired seeds at its upper right and lower left around a large open center.",
+      "description": "A thin oval twig frame has golden maple leaves and paired seeds at its upper right and lower left around a large open center. An original maple illustration for personal projects and classroom activities.",
+      "color": "Gold",
+      "style": "Color",
+      "source": "work/production/wave_276/source/maple-open-maple-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "06c750a0b61074b6f2ccd7eaadeb235d7a8789ff511a5d9af515ddf980b0d629",
+      "inputSignature": "cd0af11abf5b9eaa3a9445ca6dfa71f931f6cf9bd1662d52fe5043d6740382c0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 852120,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 852120,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        32,
+        1013,
+        1508
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_276/exports/maple-open-maple-frame.pdf",
+          "bytes": 852120,
+          "sha256": "e28cb3a09d3bebb65d4ae60364e895ade7a54ae25206bc3cc7f2190a15bd4b15"
+        },
+        "webp": {
+          "path": "work/production/wave_276/exports/maple-open-maple-frame.webp",
+          "bytes": 1237164,
+          "sha256": "82edeeb0556d1f6603fc7d0c5becee7a4f68325b01155709fa84b67f52fadfc1"
+        },
+        "thumb": {
+          "path": "work/production/wave_276/exports/maple-open-maple-frame-thumb.webp",
+          "bytes": 49090,
+          "sha256": "e1964c624400e02cae2d25d3c1d557ea46ce44c450a97deb0ab3c528fdf991c6"
+        }
+      },
+      "proofSha256": "7d3e44f887048f16beecd5e30276c7271093977680ed520f5e8f7bfa202a7ee6",
+      "pairMeanRgbDifference": 3.02769
+    },
+    {
+      "id": "maple-sap-bucket-tree",
+      "title": "Maple Tree with a Sap Bucket",
+      "alt": "A complete leafless maple tree stands on a small snowy base with one metal sap bucket hanging from a trunk spile.",
+      "description": "A complete leafless maple tree stands on a small snowy base with one metal sap bucket hanging from a trunk spile. An original maple illustration for personal projects and classroom activities.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_276/source/maple-sap-bucket-tree.png",
+      "printMaxEdgePx": 750,
+      "alphaCompression": "zopfli",
+      "topic": "maple",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 712,
+      "pdfHeight": 750,
+      "sourceType": "raster",
+      "sourceSha256": "7c8d9751384e08241f273eed7a3b508a19e6a4d45e0d665ba43253dec140ddab",
+      "inputSignature": "d1ab7500d635056af646b6cbb545a2480f1d83319b3e83c2d44a64023d6ffb10",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 955958,
+        "weightedCmykRmse": 1.32006
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1229360,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1110811,
+          "weightedCmykRmse": 0.727671
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1072871,
+          "weightedCmykRmse": 0.861044
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1013767,
+          "weightedCmykRmse": 1.050786
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 955958,
+          "weightedCmykRmse": 1.32006
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        19,
+        1204,
+        1268
+      ],
+      "image": {
+        "width": 712,
+        "height": 750,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_276/exports/maple-sap-bucket-tree.pdf",
+          "bytes": 955958,
+          "sha256": "1371b12aed29edc26434c3b4d51a97334511d44346a4ab8f1ec56a4a37b51ad2"
+        },
+        "webp": {
+          "path": "work/production/wave_276/exports/maple-sap-bucket-tree.webp",
+          "bytes": 1307508,
+          "sha256": "01384dddbe29069f51af92166b1eb3d5b0832e9ccc584b9332a53d3687ea6c9c"
+        },
+        "thumb": {
+          "path": "work/production/wave_276/exports/maple-sap-bucket-tree-thumb.webp",
+          "bytes": 120296,
+          "sha256": "3020ffae9853e18dc540350fced3934c7c0b9d3107842f4c28be1212a2a6f3ed"
+        }
+      },
+      "proofSha256": "27a9774da3826e8a93eb8ce9d246f6ab9555c3d2771f3afc8e6edad03db18e7b",
+      "pairMeanRgbDifference": 4.97962
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-25T18:15:07.643678+00:00",
+  "screenReviewScope": "All native PDF proof compositions visually inspected. Final tree, wreath, sap tools and shack replacements verified against selected masters; no original held source selected.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-25T20:39:21.757Z"
+}
