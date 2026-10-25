@@ -25,6 +25,7 @@ try {
       assert.equal(response.status(), 200);
       const footer = page.locator('.site-footer');
       await expect(footer).toHaveCount(1);
+      await expect(footer).toHaveAttribute('data-ready', 'true');
       await footer.scrollIntoViewIfNeeded();
       await footer.locator('img').evaluateAll(async (images) =>
         Promise.all(
@@ -37,10 +38,22 @@ try {
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), width);
       const bounds = await footer.boundingBox();
       assert.ok(bounds.x >= 0 && bounds.x + bounds.width <= width + 1);
-      await expect(footer.getByRole('link', { name: 'Your boards', exact: true })).toHaveAttribute(
-        'href',
-        '/favorites/',
-      );
+      const groups = footer.locator('[data-footer-group]');
+      await expect(groups).toHaveCount(4);
+      assert.equal(await footer.locator('[data-footer-group][open]').count(), width > 600 ? 4 : 0);
+      if (width <= 600) {
+        await groups.first().locator('summary').click();
+        await expect(groups.first()).toHaveAttribute('open', '');
+        await expect(
+          groups.first().getByRole('link', { name: 'Your boards', exact: true }),
+        ).toBeVisible();
+        await groups.first().locator('summary').focus();
+        await page.keyboard.press('Enter');
+        await expect(groups.first()).not.toHaveAttribute('open', '');
+      }
+      await expect(
+        footer.getByRole('link', { name: 'Your boards', exact: true, includeHidden: true }),
+      ).toHaveAttribute('href', '/favorites/');
       const scan = await new AxeBuilder({ page })
         .setLegacyMode(engine === 'webkit')
         .include('.site-footer')
@@ -64,8 +77,35 @@ try {
     assert.equal(response.status(), 200, path);
     report.destinations.push(path);
   }
+  const sculptures = await page
+    .locator('.site-footer img[src^="/illustrations/footer/"]')
+    .evaluateAll((images) => [...new Set(images.map((image) => image.getAttribute('src')))]);
+  assert.equal(sculptures.length, 5);
+  for (const path of sculptures) {
+    const response = await page.request.get(base + path);
+    assert.equal(response.status(), 200, path);
+    assert.match(response.headers()['content-type'], /^image\/svg\+xml/);
+    const svg = await response.text();
+    assert.match(svg, /<(linear|radial)Gradient/);
+    assert.doesNotMatch(svg, /<script|<image|\bonload\s*=/i);
+  }
   await page.locator('.site-footer a[href="#page-top"]').click();
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeLessThan(5);
+  const noJsContext = await browser.newContext({
+    javaScriptEnabled: false,
+    viewport: { width: 390, height: 900 },
+  });
+  try {
+    const noJs = await noJsContext.newPage();
+    await noJs.goto(base + '/');
+    const footer = noJs.locator('.site-footer');
+    await expect(footer.locator('[data-footer-group][open]')).toHaveCount(4);
+    await expect(footer.getByRole('link', { name: 'Your boards', exact: true })).toBeVisible();
+    await footer.locator('[data-footer-group]').first().locator('summary').click();
+    await expect(footer.locator('[data-footer-group][open]')).toHaveCount(3);
+  } finally {
+    await noJsContext.close();
+  }
   assert.deepEqual(report.errors, []);
   report.status = 'passed';
   console.log(JSON.stringify(report));

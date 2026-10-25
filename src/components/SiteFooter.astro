@@ -1,10 +1,12 @@
 ---
 import '../styles/site-footer.css';
+import { art } from '../lib/catalog';
 const links = [
   {
     id: 'explore',
-    title: 'Explore the library',
-    icon: 'grid',
+    title: 'Discover',
+    subtitle: 'Find your next favorite',
+    icon: 'explore',
     items: [
       ['All topics', '/categories/'],
       ['Collections', '/collections/'],
@@ -15,8 +17,9 @@ const links = [
   },
   {
     id: 'create',
-    title: 'Make something yours',
-    icon: 'edit',
+    title: 'Make it yours',
+    subtitle: 'A little creative freedom',
+    icon: 'studio',
     items: [
       ['Clipart Studio', '/create/'],
       ['AI Clipart Builder', '/ai-clipart-generator/'],
@@ -27,7 +30,8 @@ const links = [
   },
   {
     id: 'help',
-    title: 'A little help',
+    title: 'Here to help',
+    subtitle: 'The useful little details',
     icon: 'help',
     items: [
       ['FAQ', '/faq/'],
@@ -39,8 +43,9 @@ const links = [
   },
   {
     id: 'about',
-    title: 'Behind the artwork',
-    icon: 'heart',
+    title: 'Behind the art',
+    subtitle: 'Meet UltraClipart',
+    icon: 'boards',
     items: [
       ['About UltraClipart', '/about/'],
       ['Contact us', '/contact/'],
@@ -49,51 +54,107 @@ const links = [
     ],
   },
 ];
+const showcase = [
+  'apple-and-dried-rings-crayon-clipart',
+  'baby-fennec-fox-watercolor-clipart',
+  'floral-heart-roses-wreath-clipart',
+].flatMap((id) => {
+  const item = art.find((item) => item.id === id);
+  return item ? [item] : [];
+});
+const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
 ---
 
 <footer class="site-footer" aria-label="Site footer">
   <div class="site-footer-inner">
     <section class="footer-invitation" aria-labelledby="footer-invitation-title">
       <div class="footer-invitation-copy">
-        <p class="footer-eyebrow">A little inspiration. A world of possibilities.</p>
-        <h2 id="footer-invitation-title">
-          Your next idea
-          <br />
-          starts with a <span>little spark.</span>
-        </h2>
-        <p>
-          Find an illustration you love. Give it your own twist. Make something that feels like you.
+        <p class="footer-eyebrow">
+          <span></span> Keep a little creativity close
         </p>
+        <h2 id="footer-invitation-title">
+          Big ideas.
+          <br />
+          <span>Little works of art.</span>
+        </h2>
+        <p>Discover something lovely. Make it your own. Save a little inspiration for later.</p>
         <div class="footer-invitation-actions">
           <a class="footer-explore-button" href="/categories/">
-            Explore clipart{' '}
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M5 12h14m-6-6 6 6-6 6" />
-            </svg>
+            <img
+              class="footer-action-object"
+              src={sculpture('explore')}
+              alt=""
+              width="60"
+              height="60"
+              loading="lazy"
+            />
+            <span>
+              <strong>Explore clipart</strong>
+              <small>Find your next favorite</small>
+            </span>
+            <img
+              class="footer-action-arrow"
+              src={sculpture('arrow')}
+              alt=""
+              width="34"
+              height="34"
+              loading="lazy"
+            />
           </a>
           <a class="footer-studio-button" href="/create/">
-            Open Clipart Studio <span aria-hidden="true">→</span>
+            <img
+              class="footer-action-object"
+              src={sculpture('studio')}
+              alt=""
+              width="60"
+              height="60"
+              loading="lazy"
+            />
+            <span>
+              <strong>Open Clipart Studio</strong>
+              <small>Give it your own twist</small>
+            </span>
+            <img
+              class="footer-action-arrow"
+              src={sculpture('arrow')}
+              alt=""
+              width="34"
+              height="34"
+              loading="lazy"
+            />
           </a>
         </div>
       </div>
-      <img
-        class="footer-creative-art"
-        src="/illustrations/creative-desk.svg"
-        width="380"
-        height="250"
-        alt=""
-        loading="lazy"
-      />
+      <div class="footer-creative-stage" aria-hidden="true">
+        <div class="footer-stage-light"></div>
+        <div class="footer-stage-floor"></div>
+        {showcase.map((item, i) => (
+          <div class={`footer-art-card footer-art-card-${i}`}>
+            <div class="footer-art-paper">
+              <img src={item.thumb} alt="" width="200" height="200" loading="lazy" />
+            </div>
+            <span>{['Made to inspire', 'A little wonder', 'Made with love'][i]}</span>
+          </div>
+        ))}
+        <img
+          class="footer-stage-palette"
+          src={sculpture('studio')}
+          alt=""
+          width="128"
+          height="128"
+          loading="lazy"
+        />
+        <img
+          class="footer-stage-heart"
+          src={sculpture('boards')}
+          alt=""
+          width="108"
+          height="108"
+          loading="lazy"
+        />
+        <span class="footer-stage-spark footer-stage-spark-one"></span>
+        <span class="footer-stage-spark footer-stage-spark-two"></span>
+      </div>
     </section>
     <div class="footer-brand-row">
       <a class="brand footer-brand" href="/">
@@ -101,102 +162,81 @@ const links = [
         <span>UltraClipart</span>
       </a>
       <p>
-        Little details.
-        <br />
-        <strong>Endless ways to create.</strong>
+        Original illustrations. <strong>Endless possibilities.</strong>
       </p>
       <a class="footer-board-link" href="/favorites/">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.7"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M20.5 5a5 5 0 0 0-7.1 0L12 6.4 10.6 5a5 5 0 0 0-7.1 7.1L12 21l8.5-8.9a5 5 0 0 0 0-7.1Z" />
-        </svg>
-        <span>Keep your ideas together</span>
-        <span aria-hidden="true">→</span>
+        <img src={sculpture('boards')} alt="" width="53" height="53" loading="lazy" />
+        <span>
+          <strong>A home for your ideas</strong>
+          <small>Open your boards</small>
+        </span>
+        <img
+          class="footer-board-arrow"
+          src={sculpture('arrow')}
+          alt=""
+          width="30"
+          height="30"
+          loading="lazy"
+        />
       </a>
     </div>
     <div class="footer-link-grid">
       {links.map((group) => (
-        <nav aria-labelledby={`footer-${group.id}-title`}>
-          <h3 id={`footer-${group.id}-title`}>
-            <span class="footer-group-symbol" aria-hidden="true">
-              <svg
-                width="19"
-                height="19"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                {group.icon === 'grid' ? (
-                  <>
-                    <rect x="3" y="3" width="7" height="7" rx="2" />
-                    <rect x="14" y="3" width="7" height="7" rx="2" />
-                    <rect x="3" y="14" width="7" height="7" rx="2" />
-                    <rect x="14" y="14" width="7" height="7" rx="2" />
-                  </>
-                ) : group.icon === 'edit' ? (
-                  <>
-                    <path d="m14 5 4 4M4 20l5-1L21 7a2.8 2.8 0 0 0-4-4L5 15l-1 5Z" />
-                  </>
-                ) : group.icon === 'help' ? (
-                  <>
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 4m0 3h.01" />
-                  </>
-                ) : (
-                  <path d="M20.5 5a5 5 0 0 0-7.1 0L12 6.4 10.6 5a5 5 0 0 0-7.1 7.1L12 21l8.5-8.9a5 5 0 0 0 0-7.1Z" />
-                )}
-              </svg>
-            </span>
-            {group.title}
-          </h3>
-          <ul>
-            {group.items.map(([label, href]) => (
-              <li>
-                <a href={href}>
-                  <span>{label}</span>
-                  <span class="footer-link-chevron" aria-hidden="true">
-                    ›
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <details class={`footer-nav-card footer-nav-${group.id}`} data-footer-group open>
+          <summary>
+            <h3>
+              <img
+                class="footer-nav-object"
+                src={sculpture(group.icon)}
+                alt=""
+                width="64"
+                height="64"
+                loading="lazy"
+              />
+              <span>
+                <strong id={`footer-${group.id}-title`}>{group.title}</strong>
+                <small>{group.subtitle}</small>
+              </span>
+              <span class="footer-group-toggle" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </h3>
+          </summary>
+          <nav aria-labelledby={`footer-${group.id}-title`}>
+            <ul>
+              {group.items.map(([label, href]) => (
+                <li>
+                  <a href={href}>
+                    <span>{label}</span>
+                    <img src={sculpture('arrow')} alt="" width="24" height="24" loading="lazy" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </details>
       ))}
     </div>
     <div class="footer-bottom">
       <p>© {new Date().getFullYear()} UltraClipart</p>
-      <span class="footer-license-note">
-        <span aria-hidden="true">✓</span> Personal &amp; educational creativity
-      </span>
+      <span class="footer-license-note">A little art for personal &amp; educational projects.</span>
       <a href="#page-top">
-        Back to top{' '}
-        <svg
-          width="15"
-          height="15"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          aria-hidden="true"
-        >
-          <path d="M12 19V5m-6 6 6-6 6 6" />
-        </svg>
+        Back to top <img src={sculpture('arrow')} alt="" width="26" height="26" loading="lazy" />
       </a>
     </div>
   </div>
 </footer>
+<script>
+  const footer = document.querySelector<HTMLElement>('.site-footer');
+  if (footer) {
+    const groups = [...footer.querySelectorAll<HTMLDetailsElement>('[data-footer-group]')];
+    const compact = matchMedia('(max-width: 600px)');
+    const arrange = () => {
+      for (const group of groups) group.open = !compact.matches;
+      footer.dataset.ready = 'true';
+    };
+    arrange();
+    compact.addEventListener('change', arrange);
+  }
+</script>
