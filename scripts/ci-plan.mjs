@@ -48,6 +48,9 @@ const interfaceTests = new Set(
     'content',
   ].map((name) => `tests/e2e/${name}.mjs`),
 );
+// These tests change no shipped editor code; retain the complete Studio group
+// in every browser plus the mandatory shared unit and production checks.
+const studioTests = new Set(['tests/e2e/studio-tools.mjs', 'tests/smart-selection.mjs']);
 const policyFiles = new Set([
   '.github/workflows/ci.yml',
   'scripts/ci-plan.mjs',
@@ -62,7 +65,8 @@ export function selectSuites(changes, { forceFull = false } = {}) {
   if (forceFull) return full('Manual run or unavailable comparison: full validation');
   if (!Array.isArray(changes) || changes.length === 0)
     return full('Empty or unavailable change list: full validation');
-  let interfaceChanged = false;
+  let interfaceChanged = false,
+    studioTestsChanged = false;
   for (const change of changes) {
     const { path, status } = change ?? {};
     if (typeof path !== 'string' || !/^[AMDT]$/.test(status ?? ''))
@@ -70,6 +74,10 @@ export function selectSuites(changes, { forceFull = false } = {}) {
     if (policyFiles.has(path) || documentation(path)) continue;
     // Deletions/type changes may remove an import relied on by another page.
     if (!['A', 'M'].includes(status)) return full('Runtime deletion/type change: full validation');
+    if (studioTests.has(path)) {
+      studioTestsChanged = true;
+      continue;
+    }
     if (
       interfaceFiles.has(path) ||
       interfaceTests.has(path) ||
@@ -80,6 +88,14 @@ export function selectSuites(changes, { forceFull = false } = {}) {
     }
     return full(`Shared, catalog, editor or unclassified change: ${path}`);
   }
+  if (studioTestsChanged)
+    return {
+      suites: [
+        ...(interfaceChanged ? ['interface-core', 'interface-artwork', 'interface-pages'] : []),
+        'studio',
+      ],
+      reason: 'Isolated Studio test changes: complete Studio checks in every browser engine',
+    };
   return interfaceChanged
     ? {
         suites: ['interface-core', 'interface-artwork', 'interface-pages'],

@@ -330,6 +330,49 @@ test('sticker borders survive source edges without resampling and post-coloring 
   );
 });
 
+test('a wider restore stroke exactly repairs erased coloring pixels despite native pointer quantization', () => {
+  const src = image(96, 96);
+  for (let i = 0; i < src.data.length; i += 4) {
+    src.data[i] = (i * 17) % 256;
+    src.data[i + 1] = (i * 13) % 256;
+    src.data[i + 2] = (i * 7) % 256;
+  }
+  const coloring = { ...types.defaultEffect('coloring'), id: 'lines' };
+  const baseline = effects.renderPixels(src, [], [coloring]);
+  for (const offset of [-2.5, 0, 2.5]) {
+    const erased = new Uint8Array(96 * 96),
+      restored = new Uint8Array(96 * 96),
+      center = { x: 48.35, y: 47.8 },
+      rounded = { x: center.x + offset, y: center.y - offset };
+    pixels.brushMask(erased, 96, 96, center, center, 25, 1);
+    pixels.brushMask(restored, 96, 96, rounded, rounded, 32, 1);
+    assert(erased.some(Boolean));
+    for (let i = 0; i < erased.length; i++) if (erased[i]) assert.equal(restored[i], 255);
+    const erase = region(erased, 96, 96, { stage: 'after-effects', operation: 'erase' });
+    assert.notDeepEqual(effects.renderPixels(src, [erase], [coloring]), baseline);
+    if (offset) {
+      const equalSize = new Uint8Array(96 * 96);
+      pixels.brushMask(equalSize, 96, 96, rounded, rounded, 25, 1);
+      assert.notDeepEqual(
+        effects.renderPixels(
+          src,
+          [erase, region(equalSize, 96, 96, { stage: 'after-effects', operation: 'restore' })],
+          [coloring],
+        ),
+        baseline,
+      );
+    }
+    assert.deepEqual(
+      effects.renderPixels(
+        src,
+        [erase, region(restored, 96, 96, { stage: 'after-effects', operation: 'restore' })],
+        [coloring],
+      ),
+      baseline,
+    );
+  }
+});
+
 test('SVG line tracing produces actual paths, retains holes, and rejects colored artwork', async () => {
   const { traceLineArt } = await loadTypescript('src/editor/smart/trace.ts');
   const src = image(12, 12);
