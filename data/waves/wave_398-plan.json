@@ -1,0 +1,78 @@
+{
+  "topic": "kwanzaa",
+  "method": "builtin-image-generation",
+  "research": "data/research/kwanzaa-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "wave": "wave_398",
+  "items": [
+    {
+      "id": "kwanzaa-seed-saving-gift",
+      "title": "Seed Box with a Ribbon-Tied Notebook",
+      "alt": "A divided wooden box holds corn kernels, speckled beans and pale seeds beside kraft envelopes and a tied cream notebook.",
+      "description": "Three wooden compartments separate yellow kernels, speckled beans and pale seeds. Blank envelopes and a cream notebook tied with red, black and green cord complete the small seed-saving gift.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_398/source/kwanzaa-seed-saving-gift.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-unity-hands",
+      "title": "Three Hands Joined Above a Woven Cloth",
+      "alt": "Three adult hands with cream, teal and rust-patterned cuffs overlap above a small red, black and green woven cloth.",
+      "description": "Three differently dressed arms meet in a stack of hands. Cream fabric, teal sleeves and a rust-patterned cuff provide distinct textures above a small striped woven cloth.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_398/source/kwanzaa-unity-hands.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-goblet-drum",
+      "title": "Rope-Laced Wooden Hand Drum",
+      "alt": "A wooden goblet-shaped drum has a pale drumhead, red, black and green lacing and a striped carrying strap.",
+      "description": "Rope lacing runs from a pale drumhead down the tapered wooden body. Carved geometric details mark the lower section, while a striped strap curves beside the complete drum.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_398/source/kwanzaa-goblet-drum.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-percussion-group",
+      "title": "Three Seated Percussion Players",
+      "alt": "Three seated musicians play a goblet drum, a round shaker and a frame drum beneath red, black and green pennants.",
+      "description": "A woman in a mustard dress plays a tall hand drum beside a gray-bearded musician holding a round shaker. A younger player in plum completes the group with a frame drum; each sits on a separate stool.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_398/source/kwanzaa-percussion-group.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-poetry-reading",
+      "title": "Reading Behind a Cloth-Draped Lectern",
+      "alt": "A woman with long locs reads an open book behind a wooden lectern draped with striped cloth and fitted with a microphone.",
+      "description": "An open book rests in the reader\u2019s hands above a wooden lectern. Her cream blouse and long navy skirt contrast with the red, black and green drape, while an angled microphone points toward her.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_398/source/kwanzaa-poetry-reading.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-celebration-dancer",
+      "title": "Dancer with a Flowing Striped Sash",
+      "alt": "A dancer in a teal top and flowing rust skirt extends her arms as a red, black and green sash trails beside her.",
+      "description": "A long rust skirt sweeps around the dancer\u2019s legs beneath a fitted teal top. Her raised arms and trailing striped sash create a wide, open silhouette, with black flats visible below the hem.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_398/source/kwanzaa-celebration-dancer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

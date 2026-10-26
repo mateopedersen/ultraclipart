@@ -1,7 +1,7 @@
 {
   "version": 4,
   "targetBasis": "GENERATED_ARTWORKS_IN_ORIGINAL_110_TOPICS",
-  "productionPausedByOwner": true,
+  "productionPausedByOwner": false,
   "states": [
     "CREATIVE_BRIEF",
     "DRAWN_SVG",
@@ -17,17 +17,17 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 1472,
+  "generatedArtworkCount": 1502,
   "suppliedArtworkCount": 10730,
-  "originalTopicArtworkCount": 1820,
+  "originalTopicArtworkCount": 1850,
   "supplementalArtworkCount": 11184,
-  "qualityApprovedArtworkCount": 1820,
+  "qualityApprovedArtworkCount": 1850,
   "supplementalApprovedArtworkCount": 11184,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 13004,
-  "remainingToDraw": 4028,
-  "nextAction": "New image generation is paused until the owner explicitly resumes it. Import and publish supplied packages after verification.",
+  "availableArtworkCount": 13034,
+  "remainingToDraw": 3998,
+  "nextAction": "Publish the reviewed Kwanzaa completion: 50 accepted drawings, 30 new original IDs. Hanukkah production is in progress; inspect actual source images, culturally accurate symbols, distinct characters and kippot, then export and publish only passing originals.",
   "topics": [
     {
       "topic": "halloween",
@@ -723,11 +723,11 @@
       "keyword": "Kwanzaa clipart",
       "wave": "W3",
       "target": 50,
-      "generated": 20,
+      "generated": 50,
       "supplied": 0,
-      "available": 20,
-      "approved": 20,
-      "remainingToDraw": 30,
+      "available": 50,
+      "approved": 50,
+      "remainingToDraw": 0,
       "briefStatus": "50_COMPOSITIONS_REVIEWED",
       "briefPath": "data/briefs/kwanzaa.json"
     },
@@ -144505,5 +144505,7 @@
       "publicationBlocked": false,
       "sha256": "07ecbad0becb38ba54aede8540b527fd93e2b48d1926a085238bf6d1388d0de4"
     }
-  ]
+  ],
+  "verifiedPublishedGeneratedArtworkCount": 1472,
+  "acceptedAwaitingRelease": 30
 }

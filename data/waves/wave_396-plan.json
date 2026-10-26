@@ -6,29 +6,17 @@
   "maxPdfBytes": 997000,
   "minimumJpxQualityDb": 48,
   "maximumWeightedCmykRmse": 1.8,
-  "items": [
+  "items": [],
+  "deferred": [
     {
       "id": "kwanzaa-outline-poetry-listening",
-      "title": "Listening to Community Poetry Coloring Scene",
-      "alt": "Listening to Community Poetry Coloring Scene.",
-      "description": "SOURCE_REVIEW_REQUIRED",
-      "color": "Black",
-      "style": "Outline",
-      "source": "work/production/wave_396/source/kwanzaa-outline-poetry-listening.png",
-      "printMaxEdgePx": 1000,
-      "alphaCompression": "zopfli"
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
     },
     {
       "id": "kwanzaa-outline-basket-garden",
-      "title": "Carrying a Community Harvest Coloring Scene",
-      "alt": "Carrying a Community Harvest Coloring Scene.",
-      "description": "SOURCE_REVIEW_REQUIRED",
-      "color": "Black",
-      "style": "Outline",
-      "source": "work/production/wave_396/source/kwanzaa-outline-basket-garden.png",
-      "printMaxEdgePx": 1000,
-      "alphaCompression": "zopfli"
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
     }
-  ],
-  "deferred": []
+  ]
 }
