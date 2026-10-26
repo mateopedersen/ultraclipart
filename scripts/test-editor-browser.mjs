@@ -48,8 +48,8 @@ try {
   await change('[data-hex]', '#9a52d1');
   await action('apply-color').click();
   let s = await state();
-  expect(s.layers[1].markup).toContain('#9a52d1');
-  expect(s.layers[0].markup).not.toContain('#9a52d1');
+  expect(s.layers[1].markup).toMatch(/fill="#9a52d1"/i);
+  expect(s.layers[0].markup).not.toMatch(/fill="#9a52d1"/i);
   passed.push('semantic recolor changes only selected matching paint');
   await page.screenshot({ path: new URL('07-recolor-desktop.png', out).pathname, fullPage: true });
   await panel('transform');

@@ -8,24 +8,37 @@ It never relies on a truncated API list or commit-message hints.
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
 | Documentation or the CI planner/workflow only                                                      | Policy tests and workflow formatting; no product browser jobs |
 | Explicitly allowlisted artwork guide, related presentation, isolated listing styles or guide pages | All three interface groups in Chromium, Firefox and WebKit    |
-| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All eleven groups in all three engines                        |
-| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All eleven groups in all three engines                        |
+| Editor, catalog, shared layout, global styles, dependencies, security or any unclassified path     | All thirteen groups in all three engines                      |
+| Manual run, missing commit, empty/invalid diff or a runtime deletion/type change                   | All thirteen groups in all three engines                      |
 
 The interface groups include the original search, category, header, artwork-details,
 related, sharing, general site, refinement and content browser commands. Splitting the
-long WebKit sequence and the catalog-extra exports keeps all commands within runner
-time limits; no case is skipped. Each group still runs
-formatting, type checks, a clean build, all unit tests and production CDN/header checks.
-Catalog and editor changes keep every existing download and export check. The 550 seasonal artwork export cases are partitioned into three disjoint groups of 184, 183 and 183 targets. The exact same per-artwork assertions run in every engine; the partition tests require complete coverage with no duplicates. Invalid or empty partitions fail. Other export groups retain their original target lists.
+long WebKit sequence and the catalog-extra exports keeps the work bounded without
+omitting cases. Each browser group builds its own clean artifact and runs its
+selected interaction checks. Formatting, type checks, a normal build and all Node
+unit tests run once in the shared source job. The production job independently
+builds with the verified CDN mapping and runs the catalog, CSP, publication and
+retired-route checks. Both jobs use the same pinned container and Node version as
+the browsers and remain mandatory dependencies of every final validation gate.
+
+Catalog and editor changes keep every existing download and export check. All
+eligible original-plan seasonal artworks are partitioned into three disjoint
+groups. Every subject representative, every PDF with less than 5 KB of remaining
+headroom, and the largest PDF are retained in two separate representative groups.
+The exact same per-artwork assertions run in each engine. Partition tests require
+complete coverage with no duplicates; invalid or empty partitions fail. Labubu,
+tablet, speaker and replacement checks keep their complete target lists in their
+existing group. Target counts follow the current catalog rather than a fixed
+historical count.
 
 This is a conservative allowlist. Before adding a file to the smaller scope, inspect
 its consumers and add policy regression tests. An unknown file always receives the full suite.
 The manual **Run workflow** button always requests full validation.
 
 The stable `validate (chromium)`, `validate (firefox)` and `validate (webkit)` checks
-remain present. They fail if the planner fails, a selected browser group fails, or an
-unexpected skip occurs. A browser skip is accepted only after a successful explicit
-no-product-change plan.
+remain present. They fail if the planner, shared source job, production job or any
+selected browser group fails. Skips are accepted only when a successful explicit
+no-product-change plan skips all three product-validation stages.
 
 ## Avoid repeating successful jobs
 
@@ -40,7 +53,6 @@ asset checksums and the final production smoke checks are independent gates and 
 
 Elapsed time depends on queue availability, cache state, catalog size and the affected scope;
 this policy reduces unnecessary work rather than promising a fixed deployment duration.
-
 
 New commits to the same pull request supersede and cancel the earlier PR candidate, so outdated browser jobs do not block its current checks. Main-branch publications still complete their browser matrices. No suite or validation gate is removed. Board, download-page and footer regressions run in all three browser engines with their corresponding interface groups.
 

@@ -67,6 +67,39 @@ test('new planned topics enter editor coverage while owner packs and supplementa
   for (const topics of [[], [{ slug: 'same' }, { slug: 'same' }], [{ slug: '../escape' }], null])
     assert.throws(() => originalRasterTargets(catalog, topics));
 });
+test('both representative shards retain every subject and every near-limit PDF exactly once', () => {
+  const art = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url), 'utf8')).filter(
+    (item) => item.sourceType === 'raster',
+  );
+  const candidates = [
+    ...[...new Set(art.map((item) => item.topic))].map((topic) =>
+      art.find((item) => item.topic === topic),
+    ),
+    ...art.filter((item) => item.files.pdf.bytes > 995000),
+    [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+  ].filter(Boolean);
+  const targets = [...new Map(candidates.map((item) => [item.id, item])).values()];
+  const shards = [0, 1].map((index) =>
+    shardRasterTargets(targets, {
+      RASTER_SHARD_COUNT: '2',
+      RASTER_SHARD_INDEX: String(index),
+    }),
+  );
+  assert.deepEqual(
+    shards
+      .flat()
+      .map((item) => item.id)
+      .sort(),
+    targets.map((item) => item.id).sort(),
+  );
+  assert.equal(new Set(shards.flat().map((item) => item.id)).size, targets.length);
+  assert.ok(Math.abs(shards[0].length - shards[1].length) <= 1);
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  for (const suite of ['catalog-extra-3', 'catalog-extra-4']) assert.ok(workflow.includes(suite));
+  for (const index of [0, 1]) assert.ok(workflow.includes(`export RASTER_SHARD_INDEX=${index}`));
+  assert.ok(workflow.includes('export RASTER_SHARD_COUNT=2'));
+  assert.equal(workflow.split('RASTER_PER_TOPIC=1').length - 1, 1);
+});
 test('partitioning remains complete and balanced for non-divisible target counts', () => {
   for (const size of [3, 4, 50, 551, 1000]) {
     const targets = Array.from({ length: size }, (_, id) => ({ id }));
