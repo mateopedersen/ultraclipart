@@ -1,3 +1,9 @@
+# Artwork-specific writing — latest owner direction, 2026-10-26
+
+Read `docs/content/artwork-editorial.md` for all catalog work. Inspect each actual image before writing a natural, specific title/H1, alt and description; do not derive prose from filenames, reuse a category-wide usage paragraph, or append repeated download instructions. Describe the actual composition and visible details without invented facts, credentials or human-authorship claims. User-facing download labels use Image, while actual file formats/MIME remain accurate. All new or changed entries require a source-bound editorial review; changed image hashes invalidate approval. The automatic resolver may remove known boilerplate but must never pretend to have inspected unseen pixels. The legacy baseline is a finite migration ledger, not permission to approve future imports. Keep the exact review backlog honest. This editorial batch is explicitly authorized for publication by the owner.
+
+Category pages follow the same principle: one concise, topic-specific introduction describing actual available drawings and helping visitors choose. Use `data/editorial/collections.json` and `collectionIntroduction`; never restore long SEO essays or repeated download/print/license/editor paragraphs beneath every gallery. Technical guidance belongs in the shared file guide and artwork facts. `scripts/collection-editorial.mjs` verifies every published topic's unique introduction against its current catalog and example-image hashes; a new topic or changed source requires a checked summary. Do not meet a supposed Google word count or invent expert authority. These concise summaries are checked against catalog records; that is not a claim that every underlying image has been newly visually reviewed.
+
 # Check existing content before every new production topic — 2026-10-26
 
 Latest explicit owner direction: do not draw a topic that already has content.

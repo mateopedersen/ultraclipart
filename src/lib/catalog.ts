@@ -1,6 +1,8 @@
 import source from '../../data/topics.json';
 import illustrations from '../../data/art.json';
 import extraTopics from '../../data/extra-topics.json';
+import editorialReviews from '../../data/editorial/reviews.json';
+import { resolveArtworkCopy } from '../../scripts/artwork-editorial.mjs';
 import { validateEditorSource } from './artwork-source';
 import { auditMonochrome } from '../../scripts/monochrome-catalog.mjs';
 import type { MonochromeKind } from './monochrome';
@@ -14,8 +16,10 @@ type AssetKind = 'svg' | 'webp' | 'pdf' | 'thumb';
 type PublishedAssets = Record<string, Record<AssetKind, string>>;
 const publishedAssets = import.meta.env.PUBLIC_ASSET_URLS as PublishedAssets | null;
 const monochromeAudit = await auditMonochrome(illustrations);
+const reviewedCopy = new Map(editorialReviews.artworks.map((entry) => [entry.id, entry]));
 export const art = illustrations.map((item) => ({
   ...item,
+  ...resolveArtworkCopy(item, reviewedCopy.get(item.id)),
   monochrome: monochromeAudit.get(item.id)?.monochrome === true,
   monochromeKind: (monochromeAudit.get(item.id)?.kind ?? null) as MonochromeKind | null,
   editable: true,

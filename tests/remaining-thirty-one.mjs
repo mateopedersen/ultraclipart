@@ -7,8 +7,12 @@ import { defaults, searchArtwork } from '../src/lib/search.ts';
 import { primaryClusterForTopic, clustersForTopic } from '../src/lib/topic-clusters.ts';
 import { cuteConfidence } from '../src/lib/cute-discovery.ts';
 import { artworkDetails } from '../src/lib/artwork-details.ts';
+import { resolveArtworkCopy } from '../scripts/artwork-editorial.mjs';
 const read = (path) => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const art = read('data/art.json');
+const editorialReviews = new Map(
+  read('data/editorial/reviews.json').artworks.map((row) => [row.id, row]),
+);
 const verifiedFiles = new Map(
   read('data/publication.json').files.map((file) => [`${file.assetId}/${file.kind}`, file.url]),
 );
@@ -149,8 +153,9 @@ test(
       ]
         .map((match) => JSON.parse(match[1]))
         .find((schema) => schema['@type'] === 'ImageObject');
-      assert.equal(imageSchema.name, item.title, item.id);
-      assert.equal(imageSchema.description, item.description, item.id);
+      const publicCopy = resolveArtworkCopy(item, editorialReviews.get(item.id));
+      assert.equal(imageSchema.name, publicCopy.title, item.id);
+      assert.equal(imageSchema.description, publicCopy.description, item.id);
       assert.equal(imageSchema.width, item.width);
       assert.equal(imageSchema.height, item.height);
       assert.equal(imageSchema.encodingFormat, 'image/webp');

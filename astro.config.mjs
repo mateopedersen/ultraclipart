@@ -5,6 +5,12 @@ import { readPublication } from './scripts/publication-policy.mjs';
 import { releaseRevision } from './scripts/release-revision.mjs';
 import { aiPreviewNotice } from './scripts/ai-preview.mjs';
 import { productionPublicAssets } from './scripts/production-public-assets.mjs';
+import { readEditorialAudit } from './scripts/artwork-editorial.mjs';
+import { readCollectionAudit } from './scripts/collection-editorial.mjs';
+
+// Run for dev, check and direct Astro builds, not only the npm publication command.
+readEditorialAudit(import.meta.dirname);
+readCollectionAudit(import.meta.dirname);
 
 // The checked release, rather than a mutable dashboard value, selects production media.
 const production = process.env.CF_PAGES === '1';

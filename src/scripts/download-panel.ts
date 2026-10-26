@@ -104,7 +104,7 @@ function select(format: Format) {
     root,
     '[data-download-description]',
     format === 'webp'
-      ? `${details.alpha ? 'Transparent WebP image' : 'WebP image'} for documents, presentations and compatible design apps.`
+      ? `${details.alpha ? 'Transparent image' : 'Image'} for documents, presentations and compatible design apps.`
       : 'A separate PDF document for printing. Choose Actual size in your PDF reader.',
   );
   text(

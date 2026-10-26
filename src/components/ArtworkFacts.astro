@@ -23,7 +23,7 @@ const facts = artworkDetails(item);
     <article class="file-fact file-fact-image">
       <div class="file-fact-top">
         <FileGuideIllustration kind="image" thumb={item.thumb} />
-        <span class="file-fact-format">WebP</span>
+        <span class="file-fact-format">Image</span>
       </div>
       <h3>Ready for your screen</h3>
       <p class="file-fact-primary">
@@ -55,7 +55,7 @@ const facts = artworkDetails(item);
           </div>
         </dl>
         <p>
-          Choose WebP for digital layouts, presentations and placing the artwork over your own
+          Choose Image for digital layouts, presentations and placing the artwork over your own
           background.
         </p>
       </details>
@@ -139,9 +139,8 @@ const facts = artworkDetails(item);
           License essentials <span aria-hidden="true">＋</span>
         </summary>
         <p>
-          {item.pdf ? 'WebP image and PDF document included.' : 'WebP image included.'} Use it in
-          your personal and classroom projects. Commercial use and resale as clipart are not
-          permitted.
+          {item.pdf ? 'Image and PDF document included.' : 'Image included.'} Use it in your
+          personal and classroom projects. Commercial use and resale as clipart are not permitted.
         </p>
         <a href="/license/">
           Read the full license <span aria-hidden="true">→</span>
@@ -159,7 +158,7 @@ const facts = artworkDetails(item);
         <dd>{item.id}</dd>
       </div>
       <div>
-        <dt>WebP file size</dt>
+        <dt>Image file size</dt>
         <dd>{item.files.webp.bytes.toLocaleString('en-US')} bytes</dd>
       </div>
       {item.pdf && (
