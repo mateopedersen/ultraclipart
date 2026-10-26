@@ -1,0 +1,562 @@
+{
+  "wave": "wave_347",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-ceramic-pendant",
+      "title": "Sunflower Ceramic Pendant",
+      "alt": "Glossy sunflower-shaped pendant on a complete brown cord with a small metal clasp.",
+      "description": "Glossy sunflower-shaped pendant on a complete brown cord with a small metal clasp. Use the flower jewelry in a personal craft journal or a classroom comparison of decorative objects.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_347/source/sunflower-ceramic-pendant.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "904993f0f07ce68326419efc8e21cd0e100a54241615bd2c9a058cfa640b075e",
+      "inputSignature": "cd6f6d8186a7eb4652994497810e350c53eac1e03d8dce9f1f80b44110dafbca",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 865817,
+        "weightedCmykRmse": 0.868579
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1014688,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 865817,
+          "weightedCmykRmse": 0.868579
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        37,
+        1272,
+        1146
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_347/exports/sunflower-ceramic-pendant.pdf",
+          "bytes": 865817,
+          "sha256": "04c2876c68ee16446bda6990d268c5d42b03673146b3eb9085b7306859a1a30a"
+        },
+        "webp": {
+          "path": "work/production/wave_347/exports/sunflower-ceramic-pendant.webp",
+          "bytes": 772894,
+          "sha256": "417e920b208264970e68ec0599d5edb62eed75d6c175fa08ddaddff2043591f1"
+        },
+        "thumb": {
+          "path": "work/production/wave_347/exports/sunflower-ceramic-pendant-thumb.webp",
+          "bytes": 52354,
+          "sha256": "e2934d9895d2cb5274b4629b0cd2948e0db52497c31c92b64742d8a8e0a0d258"
+        }
+      },
+      "proofSha256": "3bcf4b51a293bf26a4c17ed1187f255dabc760c91102c427827281b730622fb7",
+      "pairMeanRgbDifference": 2.78582
+    },
+    {
+      "id": "sunflower-quilt-patch",
+      "title": "Sunflower Quilt Patch",
+      "alt": "Square quilt patch with stitched sunflower petals, checked center, green leaves and blue fabric binding.",
+      "description": "Square quilt patch with stitched sunflower petals, checked center, green leaves and blue fabric binding. The separate fabric pieces suit a classroom texture discussion or a personal sewing project page.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_347/source/sunflower-quilt-patch.png",
+      "printMaxEdgePx": 850,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 850,
+      "pdfHeight": 850,
+      "sourceType": "raster",
+      "sourceSha256": "be9fedac850a5ca10b14c596407d69a6091a6e42e83b97194855e66ef026524b",
+      "inputSignature": "c3b98a30ec3d3ac8dd8740965635da79d8496d333757829a173421609fb43536",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976727,
+        "weightedCmykRmse": 1.202727
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1426194,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1195581,
+          "weightedCmykRmse": 0.679794
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1137644,
+          "weightedCmykRmse": 0.80816
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1058349,
+          "weightedCmykRmse": 0.980539
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976727,
+          "weightedCmykRmse": 1.202727
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        118,
+        122,
+        1157,
+        1143
+      ],
+      "image": {
+        "width": 850,
+        "height": 850,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_347/exports/sunflower-quilt-patch.pdf",
+          "bytes": 976727,
+          "sha256": "6d97ad7554be9c64a55a8cd2cfdfe9bfafe170735b0fcd5bd83c437c7029dcea"
+        },
+        "webp": {
+          "path": "work/production/wave_347/exports/sunflower-quilt-patch.webp",
+          "bytes": 1913676,
+          "sha256": "e888ed0f521531edf9a6142dc94a16afa3b4ed46a1a92787d05d321be2a3d1c0"
+        },
+        "thumb": {
+          "path": "work/production/wave_347/exports/sunflower-quilt-patch-thumb.webp",
+          "bytes": 81854,
+          "sha256": "e18bc446488aca25651002b1a12607036b1a01ff9cb36c9d527544dd073bd4a1"
+        }
+      },
+      "proofSha256": "8a7b3a0a812f5afa1508a2f598a8bda7c32cc239159e87ec37f715801e917337",
+      "pairMeanRgbDifference": 6.51229
+    },
+    {
+      "id": "sunflower-wooden-stamp",
+      "title": "Sunflower Rubber Stamp",
+      "alt": "Sunflower block stamp beside a golden ink impression on a small card and an open mustard ink pad.",
+      "description": "Sunflower block stamp beside a golden ink impression on a small card and an open mustard ink pad. Use the tool and impression in a classroom printmaking activity or a personal craft notebook.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_347/source/sunflower-wooden-stamp.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4db3dce88420eec242b4f39a210def02f36fb3f2f6177a3632c2bbdcaf0d9bc0",
+      "inputSignature": "4800fb984c63f143cccde51484c8761f2c6cc715cf13fd299347cb319ca28746",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 920392,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 920392,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        74,
+        95,
+        1492,
+        1015
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_347/exports/sunflower-wooden-stamp.pdf",
+          "bytes": 920392,
+          "sha256": "40a28eba992c8c53c34cf9ee16ea0c97763a109ce1e475511e485cf54c18a3e8"
+        },
+        "webp": {
+          "path": "work/production/wave_347/exports/sunflower-wooden-stamp.webp",
+          "bytes": 1583474,
+          "sha256": "31b5f416e36951337fdc84a2146bb7f6aad8ccad791120a9769974e5b7757f00"
+        },
+        "thumb": {
+          "path": "work/production/wave_347/exports/sunflower-wooden-stamp-thumb.webp",
+          "bytes": 49224,
+          "sha256": "17357a2f13c53653c9cab186be37743a21d4f46be61caedbaa35061413622edb"
+        }
+      },
+      "proofSha256": "81d6ffc13c29d032964b066a2c3dcbc8c838caad0f6175cea22b457dcbb5471a",
+      "pairMeanRgbDifference": 4.13163
+    },
+    {
+      "id": "sunflower-mosaic-coaster",
+      "title": "Sunflower Mosaic Coaster",
+      "alt": "Round sunflower mosaic coaster with yellow and brown tiles, cream grout and three loose tile chips.",
+      "description": "Round sunflower mosaic coaster with yellow and brown tiles, cream grout and three loose tile chips. The visible tile pieces suit a classroom materials comparison or a personal mosaic project page.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_347/source/sunflower-mosaic-coaster.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "d5cede5ce4529aa9ba30fd84dcc1a8006691722c68f75f954992a9b278525d98",
+      "inputSignature": "96e5eda2d427abfba8eabc59a2da05a5faaeb7b9095a5cb36ae24f6a8eec9160",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 962933,
+        "weightedCmykRmse": 0.861172
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1360290,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1036620,
+          "weightedCmykRmse": 0.727423
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 962933,
+          "weightedCmykRmse": 0.861172
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        56,
+        64,
+        1264,
+        1146
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_347/exports/sunflower-mosaic-coaster.pdf",
+          "bytes": 962933,
+          "sha256": "2ef49701f1e0869be918754e8446f1839ce4132f03578eb08796b14c2b7d7252"
+        },
+        "webp": {
+          "path": "work/production/wave_347/exports/sunflower-mosaic-coaster.webp",
+          "bytes": 1606234,
+          "sha256": "845e5e871258bd545ea1f685dfa43ec260b0e60ed89238b50d657e8bc591d769"
+        },
+        "thumb": {
+          "path": "work/production/wave_347/exports/sunflower-mosaic-coaster-thumb.webp",
+          "bytes": 68852,
+          "sha256": "19caec3ef5db67c3c533873bb8ff0c97020ac1f0b36ac42b6b4af56ae52506cb"
+        }
+      },
+      "proofSha256": "2669b31af80c365592dd3810c1b4516e2c0039abfd765162008bcb24012b0955",
+      "pairMeanRgbDifference": 4.24827
+    },
+    {
+      "id": "sunflower-botanical-notebook",
+      "title": "Sunflower Notebook Cover",
+      "alt": "Closed cream cloth notebook with a painted sunflower sprig, navy elastic band and fabric bookmark.",
+      "description": "Closed cream cloth notebook with a painted sunflower sprig, navy elastic band and fabric bookmark. Use the decorated book in a personal stationery layout or a classroom nature-journal activity.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_347/source/sunflower-botanical-notebook.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "6a7e0f88b876ccfda25bb017eec0dee44df308edf02a2c6861194b94878a967d",
+      "inputSignature": "c49b30ee4835100e4c3acf1f9f5182c6f2f12212ff12e8b9bcf8bb78d2428bf5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 994227,
+        "weightedCmykRmse": 0.759621
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1250774,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 994227,
+          "weightedCmykRmse": 0.759621
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        154,
+        61,
+        1208,
+        1170
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_347/exports/sunflower-botanical-notebook.pdf",
+          "bytes": 994227,
+          "sha256": "610c5d502ede5a91e5671ec0e52e66a67bcb7b105cac2c9419f8f6a6665a0b0a"
+        },
+        "webp": {
+          "path": "work/production/wave_347/exports/sunflower-botanical-notebook.webp",
+          "bytes": 1393822,
+          "sha256": "97e1484be3af77882d743256530e87e265bb7f654c981320d1f51aa1050c3e26"
+        },
+        "thumb": {
+          "path": "work/production/wave_347/exports/sunflower-botanical-notebook-thumb.webp",
+          "bytes": 63920,
+          "sha256": "fcd41b75564685ac1ff965b663be50c531f7f4b426d9ddc59ce4ee98e3fd6729"
+        }
+      },
+      "proofSha256": "93c1c06195d344f8998f9c7f1abf92661206265073035a5f277aff440a966766",
+      "pairMeanRgbDifference": 3.03076
+    },
+    {
+      "id": "sunflower-straw-hat",
+      "title": "Straw Hat with Sunflowers",
+      "alt": "Wide-brimmed woven straw hat with a teal ribbon and small sunflowers tucked into the hatband.",
+      "description": "Wide-brimmed woven straw hat with a teal ribbon and small sunflowers tucked into the hatband. The complete garden accessory suits a personal summer invitation or a classroom clothing card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_347/source/sunflower-straw-hat.png",
+      "printMaxEdgePx": 880,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 880,
+      "pdfHeight": 804,
+      "sourceType": "raster",
+      "sourceSha256": "7f9acd31639dda9643e72740f9ef6465decc12b6e5451f668c3849f27e406b79",
+      "inputSignature": "1f4a44964126eb09777caa92250cabb7995008fd68daf0fcff60026132357ca5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 960112,
+        "weightedCmykRmse": 1.24149
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1399001,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1168161,
+          "weightedCmykRmse": 0.698558
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1113284,
+          "weightedCmykRmse": 0.834689
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1035886,
+          "weightedCmykRmse": 1.010637
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 960112,
+          "weightedCmykRmse": 1.24149
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        14,
+        70,
+        1292,
+        1145
+      ],
+      "image": {
+        "width": 880,
+        "height": 804,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_347/exports/sunflower-straw-hat.pdf",
+          "bytes": 960112,
+          "sha256": "1d8f1c10a5cbecb25471b345682953f900fb1de99a2309ffad619c29fd4a60af"
+        },
+        "webp": {
+          "path": "work/production/wave_347/exports/sunflower-straw-hat.webp",
+          "bytes": 1889010,
+          "sha256": "ece2a16d9cf7d4e0a7b78dd2492fbf65cde3b7bda167ab0a56028bb1465bc4b1"
+        },
+        "thumb": {
+          "path": "work/production/wave_347/exports/sunflower-straw-hat-thumb.webp",
+          "bytes": 87520,
+          "sha256": "a2f202cf0db9a1c0352fb32b0427dac6362471a3b2c9ec3775a3c13b73724906"
+        }
+      },
+      "proofSha256": "762dfcdf372fce2f5ca59994e7cf7bf62d52f8522ed8cd774ebb4db836d78d82",
+      "pairMeanRgbDifference": 2.49693
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP comparisons visually reviewed; full framing including repaired stamp card and feeder loop, coherent objects and independent scenes. Repairs remain the same artwork IDs.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:46.150Z"
+}

@@ -1,0 +1,33 @@
+{
+  "wave": "wave_360",
+  "topic": "football",
+  "method": "builtin-image-generation",
+  "research": "data/research/football-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "football-outline-invitation-frame",
+      "title": "Football Invitation Frame",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_360/source/football-outline-invitation-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-outline-groundkeeper",
+      "title": "Marking a Football Field",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_360/source/football-outline-groundkeeper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

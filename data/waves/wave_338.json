@@ -1,0 +1,527 @@
+{
+  "wave": "wave_338",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-butter-tarts",
+      "title": "Open Butter Tart with Raisins",
+      "alt": "Single open butter tart with dark raisins, glossy amber filling and a small missing notch on a paper liner.",
+      "description": "Single open butter tart with dark raisins, glossy amber filling and a small missing notch on a paper liner. Use this individual tart in a personal dessert journal or a classroom comparison of open and covered pastries.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_338/source/pie-butter-tarts.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 920,
+      "pdfHeight": 841,
+      "sourceType": "raster",
+      "sourceSha256": "e6aac9c9f700ae2a21b20e8a3c28af4d277e4549f43395d781e62cbc62b9eb03",
+      "inputSignature": "6e64631fe9f810afd99e8cb38de65721cbecce054e5afc295b9343b7cc5ec21a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 989009,
+        "weightedCmykRmse": 1.241488
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1481650,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1220920,
+          "weightedCmykRmse": 0.703613
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1154487,
+          "weightedCmykRmse": 0.838089
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1070506,
+          "weightedCmykRmse": 1.006862
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 989009,
+          "weightedCmykRmse": 1.241488
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        33,
+        77,
+        1294,
+        1123
+      ],
+      "image": {
+        "width": 920,
+        "height": 841,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_338/exports/pie-butter-tarts.pdf",
+          "bytes": 989009,
+          "sha256": "84aaf653aeecbf6c827c699ec67317514937838ac73a39c21b41849a62bef3d4"
+        },
+        "webp": {
+          "path": "work/production/wave_338/exports/pie-butter-tarts.webp",
+          "bytes": 1756306,
+          "sha256": "baca85ee1a59f2a9373575a600f986d59a287d31cec957fbebf72db013dee926"
+        },
+        "thumb": {
+          "path": "work/production/wave_338/exports/pie-butter-tarts-thumb.webp",
+          "bytes": 91092,
+          "sha256": "414cbd87533fe43ceb53ea1732eecb5d64f2a55fe035f9a8f857f80fc2fd512e"
+        }
+      },
+      "proofSha256": "9261d1427de2cc36a9b6dc729da6418b464edb855f3ae91bff114f65fca95e55",
+      "pairMeanRgbDifference": 3.37728
+    },
+    {
+      "id": "pie-cheese-onion-pie",
+      "title": "Cheese and Onion Pie",
+      "alt": "Rectangular cheese and onion pie with vented golden pastry and a cut end in a cream ceramic dish.",
+      "description": "Rectangular cheese and onion pie with vented golden pastry and a cut end in a cream ceramic dish. The loaf-shaped savory pie suits a personal baking journal or a classroom pastry-shape comparison.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_338/source/pie-cheese-onion-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1c9903ce3669f7dd421579722eb04097f6e9c58b5a6e75ee8889f93a0bb0a97d",
+      "inputSignature": "601dcd5b98346f88ce6ac3b274165711c7b31c0397c077333b5914ef99714e7f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 951355,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 951355,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        44,
+        59,
+        1501,
+        970
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_338/exports/pie-cheese-onion-pie.pdf",
+          "bytes": 951355,
+          "sha256": "cf19d3b47e2921327bd2a201424e87af1cb4f1bee314e5cb1f8006ddec5e69d8"
+        },
+        "webp": {
+          "path": "work/production/wave_338/exports/pie-cheese-onion-pie.webp",
+          "bytes": 1655854,
+          "sha256": "7f3b3b9a2e352445733935a4494411600c9dd4e376a83600da948a4de4013de4"
+        },
+        "thumb": {
+          "path": "work/production/wave_338/exports/pie-cheese-onion-pie-thumb.webp",
+          "bytes": 53106,
+          "sha256": "20db17c8d3c135909485267bd218e12a5c4a9b4b6a0253ee2c3d280cd8ae47ae"
+        }
+      },
+      "proofSha256": "94d8c561154e8f0b544c18c49f30d0a36be3fd8ff65f254afee461f43cbc3c8d",
+      "pairMeanRgbDifference": 3.90894
+    },
+    {
+      "id": "pie-pear-tart",
+      "title": "Pear Tart",
+      "alt": "Crescent-shaped pear tart with fanned fruit slices and almond flakes on a dark slate board.",
+      "description": "Crescent-shaped pear tart with fanned fruit slices and almond flakes on a dark slate board. Use the curved dessert in a personal autumn menu or a classroom fruit vocabulary activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_338/source/pie-pear-tart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6a0b9721dcfb9fae07af02d7f9c5bbb98f52b7326971b6a8147bbff40ada3f58",
+      "inputSignature": "685e7095fe17bddbcd88c2ce37512c1e9a5e479f32bf9f7ffe5a08f929156701",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 976363,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 976363,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        98,
+        57,
+        1452,
+        980
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_338/exports/pie-pear-tart.pdf",
+          "bytes": 976363,
+          "sha256": "ec627f7a2ae1494590a82cdb67aa17951657fc73835d196e7221bb118b1d2d61"
+        },
+        "webp": {
+          "path": "work/production/wave_338/exports/pie-pear-tart.webp",
+          "bytes": 1641480,
+          "sha256": "d029c0eb560b00651bb80da7d1b1defbb71e6bd7453af61d0e728d34113874e4"
+        },
+        "thumb": {
+          "path": "work/production/wave_338/exports/pie-pear-tart-thumb.webp",
+          "bytes": 47030,
+          "sha256": "5e0f19544a9111e46eef76133f69595a88f0d9e7a13911d8100d67694d05183c"
+        }
+      },
+      "proofSha256": "ce5a3736ecca4719c20106393e4d9767a118ad6c935502b1041c2081a2c5deba",
+      "pairMeanRgbDifference": 3.7407
+    },
+    {
+      "id": "pie-molasses-crumb-slice",
+      "title": "Molasses Crumb Pie Slice",
+      "alt": "Dark molasses crumb pie wedge with a golden pastry base and loose crumbs on parchment.",
+      "description": "Dark molasses crumb pie wedge with a golden pastry base and loose crumbs on parchment. The visible crumb topping suits a classroom texture-description task or a personal dessert journal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_338/source/pie-molasses-crumb-slice.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "e828b4708462792d9ddbac1118c13b790f178004cf85e1c1b9e3c2a3bc00eaeb",
+      "inputSignature": "7e2926fc471f2b6c52b25fa93c03fbde86b01a0532a3e9f9f04f27e0c95c9054",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 983687,
+        "weightedCmykRmse": 0.723609
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1191109,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 983687,
+          "weightedCmykRmse": 0.723609
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        60,
+        58,
+        1503,
+        965
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_338/exports/pie-molasses-crumb-slice.pdf",
+          "bytes": 983687,
+          "sha256": "c9716bb407f43e091f61d6317dd6509e16857a40fc6a897b0c33e4233d2c3330"
+        },
+        "webp": {
+          "path": "work/production/wave_338/exports/pie-molasses-crumb-slice.webp",
+          "bytes": 1961430,
+          "sha256": "3a15a65cf3f98479f9953d3e07a7db64ee2ef0b82ddd6e52603d31b4f7183022"
+        },
+        "thumb": {
+          "path": "work/production/wave_338/exports/pie-molasses-crumb-slice-thumb.webp",
+          "bytes": 61880,
+          "sha256": "2391ba1e0c2624f0bd46ab3439c5bca890959f5d6631f03317e14c6444be37e5"
+        }
+      },
+      "proofSha256": "6ea1b0f20128c9dfa93b4cb2723a30d329199704c9bebe6728567e45b49123f4",
+      "pairMeanRgbDifference": 4.66565
+    },
+    {
+      "id": "pie-frozen-berry-pie-slice",
+      "title": "Frozen Berry Pie Slice",
+      "alt": "Pink frozen berry pie slice with a crumb base and raspberries on a white dessert plate.",
+      "description": "Pink frozen berry pie slice with a crumb base and raspberries on a white dessert plate. Add this chilled dessert to a personal summer menu or a classroom food temperature activity.",
+      "color": "Pink",
+      "style": "Color",
+      "source": "work/production/wave_338/source/pie-frozen-berry-pie-slice.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "5926edf07b3c75af6299258899780776e218d26066438eb7dafb4b718a717a2b",
+      "inputSignature": "9b866096a8249cd5e1830ba025326fc1830c2a72d971ca8d6acc0c952bafd80a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 906680,
+        "weightedCmykRmse": 0.761367
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1197903,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 906680,
+          "weightedCmykRmse": 0.761367
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        30,
+        125,
+        1283,
+        1103
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_338/exports/pie-frozen-berry-pie-slice.pdf",
+          "bytes": 906680,
+          "sha256": "006c1c1862c411a70c7404cfc91aa166f82905cfaba4296de07545c07032f19c"
+        },
+        "webp": {
+          "path": "work/production/wave_338/exports/pie-frozen-berry-pie-slice.webp",
+          "bytes": 1334924,
+          "sha256": "6d34920472f1b41ab569f9c01a78c78b4316f5b513e3f80c44ebbe36bac13468"
+        },
+        "thumb": {
+          "path": "work/production/wave_338/exports/pie-frozen-berry-pie-slice-thumb.webp",
+          "bytes": 66800,
+          "sha256": "fea0fdab87199adcc93bc3f94bec97b210f18681132621d0eb55d36a906c81bd"
+        }
+      },
+      "proofSha256": "1d372258d5699a60c8e84a55bc4ad171cfd84249a7002043332506a74d2c3beb",
+      "pairMeanRgbDifference": 3.16503
+    },
+    {
+      "id": "pie-rolling-dough",
+      "title": "Rolling Pie Dough",
+      "alt": "Two hands in gathered sage sleeves rolling a round piece of dough with a wooden pin on a pastry mat.",
+      "description": "Two hands in gathered sage sleeves rolling a round piece of dough with a wooden pin on a pastry mat. Use the preparation action in a classroom baking sequence or a personal pastry instruction sheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_338/source/pie-rolling-dough.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "3284639541c17129fc0558720e5a6a49376a00667e588a6232a4912f318a5424",
+      "inputSignature": "32ec2f39025f6523dce4ea111865945a7ec7b33395557b968c494c44a4a64088",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 901403,
+        "weightedCmykRmse": 0.686311
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1103123,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 901403,
+          "weightedCmykRmse": 0.686311
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        94,
+        21,
+        1504,
+        994
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_338/exports/pie-rolling-dough.pdf",
+          "bytes": 901403,
+          "sha256": "4b4bdba468f2b6bf6117ecd4b049d591c65a3461687aac5945d877b976c8a2f8"
+        },
+        "webp": {
+          "path": "work/production/wave_338/exports/pie-rolling-dough.webp",
+          "bytes": 1848688,
+          "sha256": "31c21bcaa72c34da32aa54b4e8b8f7cd37b805434e6fcf05f7a02851d5f619d2"
+        },
+        "thumb": {
+          "path": "work/production/wave_338/exports/pie-rolling-dough-thumb.webp",
+          "bytes": 53838,
+          "sha256": "e84e30224aca964b02823adfef836ee2ee09317b97fc9511288a95fd0f205ee9"
+        }
+      },
+      "proofSha256": "dacdee466b9fb6b3d971dada0aa3c010a25f9793e22c80fde6089d05312a1c1b",
+      "pairMeanRgbDifference": 2.86589
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proofs visually reviewed; full tools/cuffs, coherent food structure and distinct scenes. Outline fraction puzzle shows three fitted quarters and one separate quarter.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:22.090Z"
+}

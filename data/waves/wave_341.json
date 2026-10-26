@@ -1,0 +1,541 @@
+{
+  "wave": "wave_341",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-pastry-cutout-tools",
+      "title": "Pastry Cutout Tools",
+      "alt": "Leaf, star and flower pastry cutters beside matching dough shapes on a wooden board.",
+      "description": "Leaf, star and flower pastry cutters beside matching dough shapes on a wooden board. Use the tool-and-shape arrangement in a classroom matching game or a personal pastry decoration guide.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_341/source/pie-pastry-cutout-tools.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "8192fd532ab8efeb22f7b2688a713651ec35c07eafe389bd2c9c5d0ad0b1a39b",
+      "inputSignature": "be3f67031942fb0831bf4fa4ce95f396e07ff6f2f877cb0b87192355d545fc83",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 833325,
+        "weightedCmykRmse": 0.747166
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1042696,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 833325,
+          "weightedCmykRmse": 0.747166
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        97,
+        125,
+        1493,
+        919
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_341/exports/pie-pastry-cutout-tools.pdf",
+          "bytes": 833325,
+          "sha256": "ae449dd8a0266989b22331710481394699cfb3f01224b08c623aa3fe0b81fb69"
+        },
+        "webp": {
+          "path": "work/production/wave_341/exports/pie-pastry-cutout-tools.webp",
+          "bytes": 1724742,
+          "sha256": "057db6baa758f83afbb6439c940f1c423850bf76922f4d2dbb5e1eba54f3693f"
+        },
+        "thumb": {
+          "path": "work/production/wave_341/exports/pie-pastry-cutout-tools-thumb.webp",
+          "bytes": 47954,
+          "sha256": "106e5078b60a89414dc069a399bcfda6507c8cafb572748a574c21c22016b3f3"
+        }
+      },
+      "proofSha256": "d6c484f7aa4d3b8a1526fb761058ab8b8e2a81a510799a8eb635dcead223902a",
+      "pairMeanRgbDifference": 3.42164
+    },
+    {
+      "id": "pie-insulated-pie-tote",
+      "title": "Fabric Pie Tote",
+      "alt": "Open navy quilted pie tote with loop handles and a golden lattice pie visible inside.",
+      "description": "Open navy quilted pie tote with loop handles and a golden lattice pie visible inside. This soft carrier suits a personal picnic packing list or a classroom object vocabulary activity.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_341/source/pie-insulated-pie-tote.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1330,
+      "height": 1183,
+      "pdfWidth": 930,
+      "pdfHeight": 827,
+      "sourceType": "raster",
+      "sourceSha256": "c09cf8514b41df27f93cb50d5a7a709842a8f9049d178f73c9456372689f1b84",
+      "inputSignature": "963be54f5b050cebbdbb22c57f821dd7c7f03286f56ccaef16e8a0ca6c04ddde",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 987917,
+        "weightedCmykRmse": 1.236582
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1480575,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1226385,
+          "weightedCmykRmse": 0.705341
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1156408,
+          "weightedCmykRmse": 0.839315
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1072951,
+          "weightedCmykRmse": 1.001596
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 987917,
+          "weightedCmykRmse": 1.236582
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        44,
+        31,
+        1293,
+        1130
+      ],
+      "image": {
+        "width": 930,
+        "height": 827,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_341/exports/pie-insulated-pie-tote.pdf",
+          "bytes": 987917,
+          "sha256": "aa74755331e5c19ab56795032d6aedaa9d50e684b693048841a3be01fd685397"
+        },
+        "webp": {
+          "path": "work/production/wave_341/exports/pie-insulated-pie-tote.webp",
+          "bytes": 1647342,
+          "sha256": "da392f38a03bbf7e9eef99ae0f4825db8131df3dc5049953a5682dd80caefe22"
+        },
+        "thumb": {
+          "path": "work/production/wave_341/exports/pie-insulated-pie-tote-thumb.webp",
+          "bytes": 81594,
+          "sha256": "e0ea7c77c659c87ef97bddb9ed9e803f820e8b1d11af3e46c8b01538aafe1d98"
+        }
+      },
+      "proofSha256": "f4fac538f095ad949724cf88ae87dacbeb23a59266d14a6a75354ab2a2ae79c2",
+      "pairMeanRgbDifference": 2.70334
+    },
+    {
+      "id": "pie-outline-child-decorating",
+      "title": "Decorating a Pie Coloring Illustration",
+      "alt": "Black-and-white child with braided pigtails and a baker cap decorating a pie while standing on a low step.",
+      "description": "Black-and-white child with braided pigtails and a baker cap decorating a pie while standing on a low step. Color the child's outfit and pastry leaves separately in a classroom baking activity.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_341/source/pie-outline-child-decorating.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1226,
+      "height": 1283,
+      "pdfWidth": 956,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "3821c0020e2d14caca79c382e99b5d64e3e1e50eb9589feb0182ce2bc69fae2c",
+      "inputSignature": "2be912b590bb5d11f9dbc825226617d86781af93862dcfde7dfd47cca03915f3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 928184,
+        "weightedCmykRmse": 0.77606
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1191081,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 928184,
+          "weightedCmykRmse": 0.77606
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        32,
+        13,
+        1159,
+        1269
+      ],
+      "image": {
+        "width": 956,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_341/exports/pie-outline-child-decorating.pdf",
+          "bytes": 928184,
+          "sha256": "222189ad4c621316602ee1637e3892b2f32f0a4c47291c3ae9bdaeaffe2f5025"
+        },
+        "webp": {
+          "path": "work/production/wave_341/exports/pie-outline-child-decorating.webp",
+          "bytes": 738670,
+          "sha256": "f6bb477efb929940fbb44b314f2d227bb01eac234a6e43752852c3316aa9def2"
+        },
+        "thumb": {
+          "path": "work/production/wave_341/exports/pie-outline-child-decorating-thumb.webp",
+          "bytes": 63376,
+          "sha256": "0a22fbe1fe58eb29824e32785b571b1f934b00439a37d1d04fa6805b09a788c7"
+        }
+      },
+      "proofSha256": "280e70dbfdf73d686225477b10627d30d95a1192f018a7740d9da72ef20b9564",
+      "pairMeanRgbDifference": 6.32235
+    },
+    {
+      "id": "pie-outline-baker-rack",
+      "title": "Baker and Cooling Rack Coloring Illustration",
+      "alt": "Black-and-white older baker with glasses, oven mitts and a long apron placing a pie on a two-shelf rack.",
+      "description": "Black-and-white older baker with glasses, oven mitts and a long apron placing a pie on a two-shelf rack. Use the complete character and rack in a classroom bakery scene or a personal coloring page.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_341/source/pie-outline-baker-rack.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "c4f05d39965925692983249cbc0beb2470fbf71d5878e777741f7879b27a6d56",
+      "inputSignature": "90f8488d92d5bec19673f110f93fc9047c7c9624fa9df91e3ecaf624591f5888",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 973711,
+        "weightedCmykRmse": 0.768003
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1235402,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 973711,
+          "weightedCmykRmse": 0.768003
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        75,
+        9,
+        1242,
+        1174
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_341/exports/pie-outline-baker-rack.pdf",
+          "bytes": 973711,
+          "sha256": "d4fe39da11e471526126589fcb1e59a2332437d2bdaca58e0fc30ac77fc4ee92"
+        },
+        "webp": {
+          "path": "work/production/wave_341/exports/pie-outline-baker-rack.webp",
+          "bytes": 772786,
+          "sha256": "002875b633beaa9f880d79ed80b297732e2737249e384b42e16fccf8fdadf0d6"
+        },
+        "thumb": {
+          "path": "work/production/wave_341/exports/pie-outline-baker-rack-thumb.webp",
+          "bytes": 63608,
+          "sha256": "b0c4ba9b309d23db42bb0861280d55af2322deb006ae501a27aed69f7c8cc273"
+        }
+      },
+      "proofSha256": "86a62d7ea6b6249b63cc6ceaaf1b135053eb5ff9ada342a9733c9a4fcbf6c461",
+      "pairMeanRgbDifference": 6.55223
+    },
+    {
+      "id": "pie-outline-serving-slice",
+      "title": "Serving Pie Coloring Illustration",
+      "alt": "Black-and-white cuffed hands lifting a pie wedge with a triangular server while holding a knife beside the cut.",
+      "description": "Black-and-white cuffed hands lifting a pie wedge with a triangular server while holding a knife beside the cut. The serving action suits a classroom sequence sheet or a personal pie-themed coloring page.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_341/source/pie-outline-serving-slice.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "d3d3fa99352bcad59d6b1fe085611ce524ee383837827668fc3163a6ffabf566",
+      "inputSignature": "d3666de13e441e507faeb0324b4068f7210156b890443746d0fab504a1515400",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 995109,
+        "weightedCmykRmse": 0.75434
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1265800,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 995109,
+          "weightedCmykRmse": 0.75434
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        9,
+        1296,
+        1194
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_341/exports/pie-outline-serving-slice.pdf",
+          "bytes": 995109,
+          "sha256": "ffb890f4c3ec60ae68505411eda7b88b189886a3cd463fdb90c8310ad4ee6aa5"
+        },
+        "webp": {
+          "path": "work/production/wave_341/exports/pie-outline-serving-slice.webp",
+          "bytes": 822058,
+          "sha256": "4796a8eddb5cfd1bc23ca19c03aefccbc9f4b2fc2a4d7a1df0aaaaf387079fdc"
+        },
+        "thumb": {
+          "path": "work/production/wave_341/exports/pie-outline-serving-slice-thumb.webp",
+          "bytes": 59348,
+          "sha256": "dfde27bbde661c437d0d9bd6c11df801b0ef2e69aadd540d23d1ab02ce6a709c"
+        }
+      },
+      "proofSha256": "d47c9c18fe1c28dbe713764fd85ccdd784919e9d19d33fd9ca4d6ad1bc51f40f",
+      "pairMeanRgbDifference": 5.20816
+    },
+    {
+      "id": "pie-outline-baking-bench",
+      "title": "Pie Baking Bench Coloring Illustration",
+      "alt": "Black-and-white wooden baking bench with a pastry tin, bowl, rolling pin, brush cup and hanging towel.",
+      "description": "Black-and-white wooden baking bench with a pastry tin, bowl, rolling pin, brush cup and hanging towel. Color individual baking tools or label them in a classroom vocabulary exercise.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_341/source/pie-outline-baking-bench.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "25430af3326abea8826db6b728242229b07850e1a1d975a5633eef3a92b2ee6a",
+      "inputSignature": "5a72cf384a75dee4e4a59852f6cec6100105cf71a3c5914635ecd712db1e96e4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 925891,
+        "weightedCmykRmse": 0.714246
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1227410,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 925891,
+          "weightedCmykRmse": 0.714246
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        45,
+        58,
+        1354,
+        1132
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_341/exports/pie-outline-baking-bench.pdf",
+          "bytes": 925891,
+          "sha256": "9b29c9ab7c51129e8eb70724db0e5871d50ec81bf3323dcbed5f090c93d99c53"
+        },
+        "webp": {
+          "path": "work/production/wave_341/exports/pie-outline-baking-bench.webp",
+          "bytes": 891630,
+          "sha256": "91b2ac1693bcb3b5293782f4e6464107d85ba72aa09928098d6fce6ec02a99e2"
+        },
+        "thumb": {
+          "path": "work/production/wave_341/exports/pie-outline-baking-bench-thumb.webp",
+          "bytes": 59488,
+          "sha256": "171e66e14bdf7fb7dc476d90c9fbecb02f00f2d3aaf67226556c80928fa760c1"
+        }
+      },
+      "proofSha256": "3c2f52a94c3f0735e7c3598109ee0a13794d92c0b9614b77851dde7a86b40ef6",
+      "pairMeanRgbDifference": 6.85042
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proofs visually reviewed; full tools/cuffs, coherent food structure and distinct scenes. Outline fraction puzzle shows three fitted quarters and one separate quarter.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:23.384Z"
+}

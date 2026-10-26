@@ -1,6 +1,6 @@
 {
   "wave": "wave_329",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 5,
   "screenReview": "PASS",
@@ -566,5 +566,7 @@
   "screenReviewedAt": "2026-10-26T01:26:21.642337+00:00",
   "screenReviewScope": "All six native CMYK PDF renders inspected for distinct material/plant subjects, coherent complete structures, clean contours and bounded framing.",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
-  "createdAt": "2026-10-26T01:33:08.196Z"
+  "createdAt": "2026-10-26T01:33:08.196Z",
+  "liveRevision": "486658ff8d3af38490579518881b870a96781c75",
+  "liveVerifiedAt": "2026-10-26T03:34:04.526108+00:00"
 }

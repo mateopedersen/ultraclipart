@@ -1,0 +1,583 @@
+{
+  "wave": "wave_350",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-seedling-tray",
+      "title": "Sunflower Seedling Tray",
+      "alt": "Six-cell fiber nursery tray with small sunflower seedlings and one plain wooden marker.",
+      "description": "Six-cell fiber nursery tray with small sunflower seedlings and one plain wooden marker. The varied seedlings suit a classroom growing observation or a personal sowing checklist.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_350/source/sunflower-seedling-tray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6c7ce01c5b5d326bf49f8d6fddb66984d50c64ade79c909f007a6d22360e057c",
+      "inputSignature": "c5c159d3d0fe9814a5bc1af3881e835cab3836f6a7662e5c71f743371f0dcae0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 993910,
+        "weightedCmykRmse": 0.887729
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1238772,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1041416,
+          "weightedCmykRmse": 0.744954
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 993910,
+          "weightedCmykRmse": 0.887729
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        100,
+        18,
+        1433,
+        1003
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_350/exports/sunflower-seedling-tray.pdf",
+          "bytes": 993910,
+          "sha256": "982f1155b734d96393d8621657ed4d9bf0f384011737078986409fba324647c5"
+        },
+        "webp": {
+          "path": "work/production/wave_350/exports/sunflower-seedling-tray.webp",
+          "bytes": 1848996,
+          "sha256": "db8c0cfa1a8392686d0533d005dedf7b585b3a4cab57b9b711d395ff62b96d6c"
+        },
+        "thumb": {
+          "path": "work/production/wave_350/exports/sunflower-seedling-tray-thumb.webp",
+          "bytes": 61012,
+          "sha256": "5057c1fc78c1aa903408971e37f667e91043429db9d09472f99702025cc1c927"
+        }
+      },
+      "proofSha256": "28b93774b984b3dcbb74d200c59d9b8594a953854d97b5a827bda01b9e447d86",
+      "pairMeanRgbDifference": 4.49936
+    },
+    {
+      "id": "sunflower-foil-balloon",
+      "title": "Sunflower Foil Balloon",
+      "alt": "Golden sunflower-shaped foil balloon with a textured dark center, curled blue ribbon and small gold weight.",
+      "description": "Golden sunflower-shaped foil balloon with a textured dark center, curled blue ribbon and small gold weight. Use the complete party decoration in a personal celebration invitation or a classroom materials comparison.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_350/source/sunflower-foil-balloon.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "c026b408fcd9a56fcb6836431f9d0eed30b2325a266502dc430bc0ea99746310",
+      "inputSignature": "a0683eca501c0feccc6a8c33ca53f478cf7fb5e5610c0c001a79895a264046b3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 913144,
+        "weightedCmykRmse": 0.794938
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1193795,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 913144,
+          "weightedCmykRmse": 0.794938
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        62,
+        24,
+        1143,
+        1288
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_350/exports/sunflower-foil-balloon.pdf",
+          "bytes": 913144,
+          "sha256": "925e16e12553d2ff79da70b49b258a73175197d3b918f91e1ce7e7dad2e79374"
+        },
+        "webp": {
+          "path": "work/production/wave_350/exports/sunflower-foil-balloon.webp",
+          "bytes": 1264222,
+          "sha256": "a1fe8ee6be4c19815349af75840f512624425f7cfac5937e8d4712e027d7cd5b"
+        },
+        "thumb": {
+          "path": "work/production/wave_350/exports/sunflower-foil-balloon-thumb.webp",
+          "bytes": 69976,
+          "sha256": "e60240146dad492f67c6e1c8b3f020948355d498d8d60a3998b003e871a87d1f"
+        }
+      },
+      "proofSha256": "aaa7a1533e26d9589f8815e0a4e4ff9a7b72fcf64ad39abf46010716090ded4d",
+      "pairMeanRgbDifference": 4.53855
+    },
+    {
+      "id": "sunflower-outline-children-watering",
+      "title": "Children Watering Sunflowers",
+      "alt": "Black-and-white children beside a sunflower bed, one pouring a watering can while the other watches.",
+      "description": "Black-and-white children beside a sunflower bed, one pouring a watering can while the other watches. Color their different outfits and use the scene in a classroom plant-care activity.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_350/source/sunflower-outline-children-watering.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 960,
+      "pdfHeight": 877,
+      "sourceType": "raster",
+      "sourceSha256": "c7e906b0085478bf46219d75e9ed882d0d679f2bc10237dd8c93a0f4f99108aa",
+      "inputSignature": "b09181c9bc2a55aef7d5c6b5de318b29bf560ed99fb283cfebd1732b13943f91",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973556,
+        "weightedCmykRmse": 1.249002
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1446844,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1189361,
+          "weightedCmykRmse": 0.720664
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1129443,
+          "weightedCmykRmse": 0.842501
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1043074,
+          "weightedCmykRmse": 1.00236
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973556,
+          "weightedCmykRmse": 1.249002
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        61,
+        11,
+        1273,
+        1166
+      ],
+      "image": {
+        "width": 960,
+        "height": 877,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_350/exports/sunflower-outline-children-watering.pdf",
+          "bytes": 973556,
+          "sha256": "49bfdfaa35b356f78c879b8ce38f8f7f3a2d266a9fe99ffa1231d6e2bf93a306"
+        },
+        "webp": {
+          "path": "work/production/wave_350/exports/sunflower-outline-children-watering.webp",
+          "bytes": 972438,
+          "sha256": "813eaa1caf814452a17ffa7095700f6fc2ea2a8ba9f3b58dcb736bb1f885e2fd"
+        },
+        "thumb": {
+          "path": "work/production/wave_350/exports/sunflower-outline-children-watering-thumb.webp",
+          "bytes": 80230,
+          "sha256": "55e5d6f605f8ad8515c44ffd3025f31063d13c997361ea3c727981cdf5ae52a7"
+        }
+      },
+      "proofSha256": "fae7d330efb6c04ccdcd4393e4245bb6d8695be95b8a5d4dc696b943c37dc47f",
+      "pairMeanRgbDifference": 4.25511
+    },
+    {
+      "id": "sunflower-outline-garden-fence",
+      "title": "Sunflower Garden Fence",
+      "alt": "Black-and-white sunflowers behind a short picket fence with a small pot and curved stepping stones.",
+      "description": "Black-and-white sunflowers behind a short picket fence with a small pot and curved stepping stones. The bounded garden suits a classroom coloring page or a personal summer scene.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_350/source/sunflower-outline-garden-fence.png",
+      "printMaxEdgePx": 820,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 820,
+      "pdfHeight": 749,
+      "sourceType": "raster",
+      "sourceSha256": "3251d8bf13d808886abca77d2737f8dc8718e23418c74261d891a3c8431e1f97",
+      "inputSignature": "a928c433017f0f2a4bbc6341ffbb1b1020bc100794638b40a39b2e0530590b57",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 977197,
+        "weightedCmykRmse": 1.192921
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1352009,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1159233,
+          "weightedCmykRmse": 0.681704
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1114017,
+          "weightedCmykRmse": 0.807039
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1046225,
+          "weightedCmykRmse": 0.97023
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 977197,
+          "weightedCmykRmse": 1.192921
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        27,
+        15,
+        1284,
+        1184
+      ],
+      "image": {
+        "width": 820,
+        "height": 749,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_350/exports/sunflower-outline-garden-fence.pdf",
+          "bytes": 977197,
+          "sha256": "da92d7b08cf4ae9bfb5f8ba4dfc3aa7f5116aed82189bdb9fdde88bdac4c1424"
+        },
+        "webp": {
+          "path": "work/production/wave_350/exports/sunflower-outline-garden-fence.webp",
+          "bytes": 1227944,
+          "sha256": "af37c9e5f23fa9a94cb72b11f6681028f3db43ea16a1997b1c2607741ddc4c17"
+        },
+        "thumb": {
+          "path": "work/production/wave_350/exports/sunflower-outline-garden-fence-thumb.webp",
+          "bytes": 97912,
+          "sha256": "6ef29cec5ffb8277098ccef7310429f46cb53aa3556fb1f4f91fdacb75cb7f0f"
+        }
+      },
+      "proofSha256": "f240a7ab2d227841f1f3c6b5a40c70fb9e7128503a8cad614aa0c89afd857b05",
+      "pairMeanRgbDifference": 5.82892
+    },
+    {
+      "id": "sunflower-outline-flower-crown",
+      "title": "Making a Sunflower Crown",
+      "alt": "Black-and-white seated young adult making a sunflower crown at a table with loose flowers and thread.",
+      "description": "Black-and-white seated young adult making a sunflower crown at a table with loose flowers and thread. Use the complete craft scene in a classroom coloring activity or a personal craft journal.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_350/source/sunflower-outline-flower-crown.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1214,
+      "height": 1295,
+      "pdfWidth": 937,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "a0c4930a0ff3de1e84230d15429ac1bd15ed98e0b163a480e5146ad234714840",
+      "inputSignature": "c6b3e53b5725bd687e7f6ddab15884509d443a697b78ffca9a7ad9a701dadcac",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 925957,
+        "weightedCmykRmse": 1.075234
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1358295,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1070324,
+          "weightedCmykRmse": 0.761442
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1004568,
+          "weightedCmykRmse": 0.890806
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 925957,
+          "weightedCmykRmse": 1.075234
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        29,
+        1163,
+        1222
+      ],
+      "image": {
+        "width": 937,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_350/exports/sunflower-outline-flower-crown.pdf",
+          "bytes": 925957,
+          "sha256": "36e8eb9c291fffc49af6834ded24049e04b44929a68dc66ea3dd30a24b8a156d"
+        },
+        "webp": {
+          "path": "work/production/wave_350/exports/sunflower-outline-flower-crown.webp",
+          "bytes": 888622,
+          "sha256": "717ad7df9d8f8f34ac4f8ff2317828623f73c687b8cb83c260c195a47f5a74e6"
+        },
+        "thumb": {
+          "path": "work/production/wave_350/exports/sunflower-outline-flower-crown-thumb.webp",
+          "bytes": 68362,
+          "sha256": "e378fb8aada0ea5c8f2f263f5752bb7c995092115f0d8872c66f1b06c9c47d16"
+        }
+      },
+      "proofSha256": "9ecf469fcd0660208025b8be08651c66240fb207a793328b2190c072b8592788",
+      "pairMeanRgbDifference": 6.63085
+    },
+    {
+      "id": "sunflower-outline-growth-sequence",
+      "title": "Sunflower Growth Sequence",
+      "alt": "Black-and-white row of four pots showing sunflower growth from a germinating seed to a flowering plant with roots visible.",
+      "description": "Black-and-white row of four pots showing sunflower growth from a germinating seed to a flowering plant with roots visible. Use the separate stages in a classroom sequencing activity and add your own observations beside them.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_350/source/sunflower-outline-growth-sequence.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "2f214c3ac8631c3680bdf7cd4d2be690db9eee8929f2112ff07872dfef36ef32",
+      "inputSignature": "eb75474147cb674f5fb850a8a6915248951675be1366427f640735596be11d00",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 946442,
+        "weightedCmykRmse": 0.761549
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1099867,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 946442,
+          "weightedCmykRmse": 0.761549
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        26,
+        1495,
+        944
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_350/exports/sunflower-outline-growth-sequence.pdf",
+          "bytes": 946442,
+          "sha256": "8c650ecf74740495a6039f7169f368e32468bcfa2f4facbc925e23b8e5b38aa1"
+        },
+        "webp": {
+          "path": "work/production/wave_350/exports/sunflower-outline-growth-sequence.webp",
+          "bytes": 1295648,
+          "sha256": "29c7486a7a320dfaa6943ee7603ebe0a6d12e8b19958c970304f80269020fe8c"
+        },
+        "thumb": {
+          "path": "work/production/wave_350/exports/sunflower-outline-growth-sequence-thumb.webp",
+          "bytes": 55932,
+          "sha256": "c49e8ef0368f446fa5e41c753284089fb7318faffccd8d93978fce8356e56cec"
+        }
+      },
+      "proofSha256": "1b6c621a69d2fba54e59e91d5a948c28fa870621ef0d5853923cf85f4baddc7a",
+      "pairMeanRgbDifference": 7.92634
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP comparisons visually reviewed; full framing including repaired stamp card and feeder loop, coherent objects and independent scenes. Repairs remain the same artwork IDs.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:48.762Z"
+}

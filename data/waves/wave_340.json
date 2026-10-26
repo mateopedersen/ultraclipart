@@ -1,0 +1,541 @@
+{
+  "wave": "wave_340",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-blue-pie-plate",
+      "title": "Blue Ceramic Pie Plate",
+      "alt": "Empty white ceramic pie dish with blue floral decoration resting on folded blue gingham cloth.",
+      "description": "Empty white ceramic pie dish with blue floral decoration resting on folded blue gingham cloth. The open center can hold a short classroom label or sit beside a personal pie recipe heading.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_340/source/pie-blue-pie-plate.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "dd7f9232aee4512a45bd2e18f465d4e365f00caf91416a4e6c5e69cb1f665463",
+      "inputSignature": "c490cdc0eaf85078bcf76d860635f9349fe22ad3b34e23c2cd08e372f5c2be1c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 913707,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 913707,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        77,
+        85,
+        1477,
+        994
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_340/exports/pie-blue-pie-plate.pdf",
+          "bytes": 913707,
+          "sha256": "54c940aa263ca026aadad708bf83da3a300b53f458e8fda930efa8735ba8c807"
+        },
+        "webp": {
+          "path": "work/production/wave_340/exports/pie-blue-pie-plate.webp",
+          "bytes": 1569614,
+          "sha256": "6a203ced4aa4bbcb822bd0c64d0f210d8e871e6e3173d0dc3da48c7a1c0b77ca"
+        },
+        "thumb": {
+          "path": "work/production/wave_340/exports/pie-blue-pie-plate-thumb.webp",
+          "bytes": 46054,
+          "sha256": "09f234d4e1a0ef201be6082ed4aabd811960b7393a6a80756055a54521691ba7"
+        }
+      },
+      "proofSha256": "b7edf0326dca9f9df6a8ad105cc96922b748a9930d0361f60deea8c10b66e839",
+      "pairMeanRgbDifference": 3.85896
+    },
+    {
+      "id": "pie-pie-server",
+      "title": "Pie Server and Fork",
+      "alt": "Wooden-handled triangular pie server and silver fork on a folded burgundy napkin with a few crumbs.",
+      "description": "Wooden-handled triangular pie server and silver fork on a folded burgundy napkin with a few crumbs. Add the serving tools to a personal dessert layout or a classroom utensil vocabulary card.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_340/source/pie-pie-server.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1346,
+      "height": 1168,
+      "pdfWidth": 1000,
+      "pdfHeight": 868,
+      "sourceType": "raster",
+      "sourceSha256": "24eacdf1f34b639721a350d21f97ab1f0d80b5cffba61ae1e052f3a1c8498719",
+      "inputSignature": "61ccc701fc5d9dfc2a83b14f3ba60a4c6ab8fe9091fd296b2532fa4172021f85",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 948886,
+        "weightedCmykRmse": 0.945995
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1257918,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1009489,
+          "weightedCmykRmse": 0.788458
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 948886,
+          "weightedCmykRmse": 0.945995
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        64,
+        68,
+        1307,
+        1109
+      ],
+      "image": {
+        "width": 1000,
+        "height": 868,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_340/exports/pie-pie-server.pdf",
+          "bytes": 948886,
+          "sha256": "8eeb5ed49a0534595fb816858a359ce6fa15577b6f3690da556d9edf30a3be9d"
+        },
+        "webp": {
+          "path": "work/production/wave_340/exports/pie-pie-server.webp",
+          "bytes": 1258748,
+          "sha256": "b2486c420de105774be1406776758e0338e58a781c12d79a63251fcb464f95be"
+        },
+        "thumb": {
+          "path": "work/production/wave_340/exports/pie-pie-server-thumb.webp",
+          "bytes": 52440,
+          "sha256": "faaa2ade13e530bc9b0b2aef188623c4e2501e6aebcac337f264b487fcacb11e"
+        }
+      },
+      "proofSha256": "128e5d497b6c7d793ba43bd3a599277b5fd068f30fdbeb085e64feb2db5117eb",
+      "pairMeanRgbDifference": 4.17079
+    },
+    {
+      "id": "pie-ceramic-pie-bird",
+      "title": "Ceramic Pie Bird",
+      "alt": "Glossy black ceramic pie bird with an open beak and hollow base beside small pastry leaves.",
+      "description": "Glossy black ceramic pie bird with an open beak and hollow base beside small pastry leaves. Use the unusual baking tool in a classroom object-matching task or a personal pastry notebook.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_340/source/pie-ceramic-pie-bird.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "ad22bab189f5eccbd0b5303eceadf101360f1eab3e590635b472919f0e17d7f2",
+      "inputSignature": "458212af6a5a06aaee70ec05ea1bd2013a5a193949d14b92e7c4938e282468d4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 860535,
+        "weightedCmykRmse": 0.858892
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1081085,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 860535,
+          "weightedCmykRmse": 0.858892
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        183,
+        127,
+        1175,
+        1123
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_340/exports/pie-ceramic-pie-bird.pdf",
+          "bytes": 860535,
+          "sha256": "94f7a21969356162fb837d5efb899788641a72961ae4abc1ac1794071583e4c4"
+        },
+        "webp": {
+          "path": "work/production/wave_340/exports/pie-ceramic-pie-bird.webp",
+          "bytes": 922210,
+          "sha256": "02fb8d55aaed86d9f7ccdd3bddc76efca4707ee1d60931be58fc835a1c26705c"
+        },
+        "thumb": {
+          "path": "work/production/wave_340/exports/pie-ceramic-pie-bird-thumb.webp",
+          "bytes": 51794,
+          "sha256": "5727d73dbd46da4f2c5f1456571f5916c7d3394e0bd3bf4a0fcf8fe16d0fe57b"
+        }
+      },
+      "proofSha256": "c391343776788fdc71823c23f112c7ee3e5174a1d48f7f1d0e8f685bcaec5ec3",
+      "pairMeanRgbDifference": 2.97871
+    },
+    {
+      "id": "pie-covered-pie-carrier",
+      "title": "Covered Pie Carrier",
+      "alt": "Mint-green round pie carrier with a clear domed lid, top handle and a lattice pie inside.",
+      "description": "Mint-green round pie carrier with a clear domed lid, top handle and a lattice pie inside. This enclosed carrier suits a personal picnic checklist or a classroom discussion of food containers.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_340/source/pie-covered-pie-carrier.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f0955336eb57d6d555226959d8654792ad2ebd0fe4219656ca7d4a9fb953d4c6",
+      "inputSignature": "659c9e6bb959cdc47c8d65aa7e5eec9c62ee5d8b7e622fa642162278bd64c735",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 994746,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 994746,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        65,
+        47,
+        1475,
+        967
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_340/exports/pie-covered-pie-carrier.pdf",
+          "bytes": 994746,
+          "sha256": "9ebf23aff931edeed4a94273cac56ec4a3e01e267d41ef2bdf1252f5e203fd85"
+        },
+        "webp": {
+          "path": "work/production/wave_340/exports/pie-covered-pie-carrier.webp",
+          "bytes": 1689076,
+          "sha256": "f69b4fd54009e092113ec783f44aaa441ba89b4e8a61e7b5a1eeb17aeb19d02c"
+        },
+        "thumb": {
+          "path": "work/production/wave_340/exports/pie-covered-pie-carrier-thumb.webp",
+          "bytes": 52780,
+          "sha256": "58423b245a087f0e9c121b3925559f0f10a9c0f9075f1bcabce06f7d75508f7f"
+        }
+      },
+      "proofSha256": "f4ef8b022c58e6c47d404667513fd53550862df27cc77417a7b0ad20bcfb3de4",
+      "pairMeanRgbDifference": 3.63376
+    },
+    {
+      "id": "pie-window-pie-box",
+      "title": "Windowed Pie Gift Box",
+      "alt": "Partly open kraft pie box with a clear round lid window, teal ribbon and a cherry lattice pie inside.",
+      "description": "Partly open kraft pie box with a clear round lid window, teal ribbon and a cherry lattice pie inside. Use the gift-style packaging in a personal bake-sharing invitation or a classroom container activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_340/source/pie-window-pie-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "84874424d0a1e11af40d8a2ae1a9257a157036628a36fed93f16b3973766d25a",
+      "inputSignature": "3947092a58cc9783b1d43fae8e5d1ce54d9176cb3328a347b9e69d2842a2f088",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 975569,
+        "weightedCmykRmse": 1.039103
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1462287,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1154483,
+          "weightedCmykRmse": 0.732607
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1069905,
+          "weightedCmykRmse": 0.871132
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 975569,
+          "weightedCmykRmse": 1.039103
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        99,
+        36,
+        1285,
+        1180
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_340/exports/pie-window-pie-box.pdf",
+          "bytes": 975569,
+          "sha256": "a05e4f5e978e53d17df3cc84a88a48e7094262c598331ccb856b8e625e0684e7"
+        },
+        "webp": {
+          "path": "work/production/wave_340/exports/pie-window-pie-box.webp",
+          "bytes": 1461862,
+          "sha256": "c458ac12c4fc83f63ebc6cf2881b8407e94e3a092e5e5d0deaabe9c250402a9c"
+        },
+        "thumb": {
+          "path": "work/production/wave_340/exports/pie-window-pie-box-thumb.webp",
+          "bytes": 69506,
+          "sha256": "b83b991a2d4b6780e5a028db620bf5cb88a691f0c5b95a9aa18e2d55a5f6edb1"
+        }
+      },
+      "proofSha256": "04f012bd27c514c4f8eda4fdacd942590fec575a0e8137b85d2c068697f7e0d6",
+      "pairMeanRgbDifference": 3.15972
+    },
+    {
+      "id": "pie-heart-pie-pops",
+      "title": "Heart-Shaped Pie Pops",
+      "alt": "Three heart-shaped berry hand pies on short wooden sticks, one opened at the edge, resting on parchment.",
+      "description": "Three heart-shaped berry hand pies on short wooden sticks, one opened at the edge, resting on parchment. The small pastry pops suit a personal celebration layout or a classroom counting card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_340/source/pie-heart-pie-pops.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1363,
+      "height": 1154,
+      "pdfWidth": 1000,
+      "pdfHeight": 847,
+      "sourceType": "raster",
+      "sourceSha256": "6b50fe45c3f35ed5085483436a78d5565a7ba8c845a8d5f3cb69b7eddcc87416",
+      "inputSignature": "9429124ac56a06b1b8b76781e380eb866f8c0d05c28fc95615a62b8149f81c39",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 941886,
+        "weightedCmykRmse": 1.022228
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1365048,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1098280,
+          "weightedCmykRmse": 0.712086
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1029022,
+          "weightedCmykRmse": 0.84585
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 941886,
+          "weightedCmykRmse": 1.022228
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        54,
+        62,
+        1329,
+        1096
+      ],
+      "image": {
+        "width": 1000,
+        "height": 847,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_340/exports/pie-heart-pie-pops.pdf",
+          "bytes": 941886,
+          "sha256": "32835ea962742c5be5602745ed5e8adcfaedc67a7b4118f501272261c2435130"
+        },
+        "webp": {
+          "path": "work/production/wave_340/exports/pie-heart-pie-pops.webp",
+          "bytes": 1637894,
+          "sha256": "145f39f50aa65d323621b788f8b9054bac35aa17cf1960d3876c63c1acfb5839"
+        },
+        "thumb": {
+          "path": "work/production/wave_340/exports/pie-heart-pie-pops-thumb.webp",
+          "bytes": 72558,
+          "sha256": "043ba0ad2a94e9475868d77c837f30c2e6a2a4f3c5d61e19329fc49d8791833a"
+        }
+      },
+      "proofSha256": "a921cc3069b93fcba28fc0eafc80f8c6499fb546a1ad259c7711e8871e54df55",
+      "pairMeanRgbDifference": 3.71691
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proofs visually reviewed; full tools/cuffs, coherent food structure and distinct scenes. Outline fraction puzzle shows three fitted quarters and one separate quarter.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:23.039Z"
+}

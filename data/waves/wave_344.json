@@ -1,0 +1,611 @@
+{
+  "wave": "wave_344",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-leaf-and-lens",
+      "title": "Sunflower Leaf and Hand Lens",
+      "alt": "Broad green toothed sunflower leaf beside a brass hand lens that enlarges its branching veins.",
+      "description": "Broad green toothed sunflower leaf beside a brass hand lens that enlarges its branching veins. Use the leaf-and-tool arrangement in a classroom observation task or a nature notebook.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_344/source/sunflower-leaf-and-lens.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "94d61d4bfa55704f921e8db620f1841182fff58c8b80a570c8bafc8c37130929",
+      "inputSignature": "9467154e51de119da7ada6adeacb3247a4558bd7c49c6825ea2d12a0e5db7aa1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 947217,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 947217,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        186,
+        60,
+        1445,
+        924
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_344/exports/sunflower-leaf-and-lens.pdf",
+          "bytes": 947217,
+          "sha256": "a18a0d5f3c06dfef744f3a6ce75aed8e6227a365484542cf29172dc848984b8e"
+        },
+        "webp": {
+          "path": "work/production/wave_344/exports/sunflower-leaf-and-lens.webp",
+          "bytes": 1581278,
+          "sha256": "37734120639eee29d5ba1ee0faed0c2bb0c477ef140e34e07f4aeab2d5ea96dc"
+        },
+        "thumb": {
+          "path": "work/production/wave_344/exports/sunflower-leaf-and-lens-thumb.webp",
+          "bytes": 43826,
+          "sha256": "2d337682d706fc43922c57d052053f234edf3884348a2cececb5ed6bacb6200f"
+        }
+      },
+      "proofSha256": "1f944cbac0e1d854a4f584a0afe73cb1bb4536935b7753dfd92bbb2202db28d9",
+      "pairMeanRgbDifference": 3.37637
+    },
+    {
+      "id": "sunflower-finch-seed-head",
+      "title": "Small Finch on a Sunflower",
+      "alt": "Small brown finch perched beneath a drooping sunflower seed head with dry petals and leaves.",
+      "description": "Small brown finch perched beneath a drooping sunflower seed head with dry petals and leaves. This wildlife scene suits a classroom seed-dispersal discussion or a personal garden illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_344/source/sunflower-finch-seed-head.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "cd5f0a67f37621531e5d5dcefffefbc53b320e680a8253ebf5a2f36df86bc1c8",
+      "inputSignature": "70b3f3d1faebd5cc16894fe48725ea64e4e196caa0a56b7e76093dd1d467827e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 957570,
+        "weightedCmykRmse": 1.103404
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1243790,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1077570,
+          "weightedCmykRmse": 0.750225
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1030318,
+          "weightedCmykRmse": 0.902197
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 957570,
+          "weightedCmykRmse": 1.103404
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        49,
+        19,
+        1010,
+        1507
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_344/exports/sunflower-finch-seed-head.pdf",
+          "bytes": 957570,
+          "sha256": "f6072a54f6da5332204f0c1139ea399d3cd46c3010f5ae30dd26a3a2bb170e9e"
+        },
+        "webp": {
+          "path": "work/production/wave_344/exports/sunflower-finch-seed-head.webp",
+          "bytes": 1768800,
+          "sha256": "5240f1c7f5002103c872db088eaaf5042e3cf75106547b7e7d8eb1400337210d"
+        },
+        "thumb": {
+          "path": "work/production/wave_344/exports/sunflower-finch-seed-head-thumb.webp",
+          "bytes": 71082,
+          "sha256": "26b21b32744df927ee2f4c7ca740c810560a8bb4b4e662fb2896ad90faac56a7"
+        }
+      },
+      "proofSha256": "dcb07e292b493b6a3fcc47e970cffcb3d98715f8e4548c2b9d0164a8376793b6",
+      "pairMeanRgbDifference": 4.31393
+    },
+    {
+      "id": "sunflower-butterfly-blossom",
+      "title": "Butterfly beside a Sunflower",
+      "alt": "Orange-and-brown butterfly hovering beside a side-facing sunflower on a short leafy stem.",
+      "description": "Orange-and-brown butterfly hovering beside a side-facing sunflower on a short leafy stem. Use the flower-and-insect scene in a classroom pollinator activity or a personal garden page.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_344/source/sunflower-butterfly-blossom.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "1d20d726c1082be13896386840645c2323f060f50a1142d6de8a6dcf42f3441c",
+      "inputSignature": "ca5266101a07fc72b8544b8205b1d423ab4a02909ae09ec50ba42727bf20ff51",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 938415,
+        "weightedCmykRmse": 1.429501
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1406740,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1157031,
+          "weightedCmykRmse": 0.782938
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1092539,
+          "weightedCmykRmse": 0.922579
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1008179,
+          "weightedCmykRmse": 1.117476
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 938415,
+          "weightedCmykRmse": 1.429501
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        33,
+        15,
+        1287,
+        1188
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_344/exports/sunflower-butterfly-blossom.pdf",
+          "bytes": 938415,
+          "sha256": "f74de356fbad0b459bfb7dbf2522cf2bbb8a3a5e122f200e8c677b4f0f3bb8b3"
+        },
+        "webp": {
+          "path": "work/production/wave_344/exports/sunflower-butterfly-blossom.webp",
+          "bytes": 1349304,
+          "sha256": "6208fed028313010d99121b5a080aa423c362d4a5d4e8a783e13ebfc8828d753"
+        },
+        "thumb": {
+          "path": "work/production/wave_344/exports/sunflower-butterfly-blossom-thumb.webp",
+          "bytes": 84578,
+          "sha256": "c9aef3a484730068940e600d0b796112c8dab3c659538510891bf25861222f00"
+        }
+      },
+      "proofSha256": "8a6e685a44b456eaab29056262303e8cb93818d38bac160723aed9959f67721d",
+      "pairMeanRgbDifference": 4.06642
+    },
+    {
+      "id": "sunflower-ladybird-leaf",
+      "title": "Ladybird on a Sunflower Leaf",
+      "alt": "Red ladybird on a broad green sunflower leaf beneath a tightly closed flower bud.",
+      "description": "Red ladybird on a broad green sunflower leaf beneath a tightly closed flower bud. The bud and leaf view suits a classroom garden observation card or a personal nature journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_344/source/sunflower-ladybird-leaf.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1227,
+      "height": 1282,
+      "pdfWidth": 890,
+      "pdfHeight": 930,
+      "sourceType": "raster",
+      "sourceSha256": "6d92ef5ec9ca79c7b545c898dd58cf9b187ed97b10db85d38f2253bd6c0d1985",
+      "inputSignature": "37e3caa71892ab54589c8e82007fd1bf5cfdd06261ac54e608cb575ca671e91e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 982346,
+        "weightedCmykRmse": 1.408488
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1384840,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1191118,
+          "weightedCmykRmse": 0.770203
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1132471,
+          "weightedCmykRmse": 0.919225
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1046331,
+          "weightedCmykRmse": 1.109508
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 982346,
+          "weightedCmykRmse": 1.408488
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        104,
+        15,
+        1180,
+        1260
+      ],
+      "image": {
+        "width": 890,
+        "height": 930,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_344/exports/sunflower-ladybird-leaf.pdf",
+          "bytes": 982346,
+          "sha256": "8f6ba308110ce4c983dd7db7e68c331ec6473504df167e30b56f731b5f8193bc"
+        },
+        "webp": {
+          "path": "work/production/wave_344/exports/sunflower-ladybird-leaf.webp",
+          "bytes": 1258522,
+          "sha256": "41e09abdc8803d5ae074d8faddfd959277f3cc20afcea7f98de4818a02bbe267"
+        },
+        "thumb": {
+          "path": "work/production/wave_344/exports/sunflower-ladybird-leaf-thumb.webp",
+          "bytes": 82724,
+          "sha256": "f63271caf9bf4c8f806bd2a0f72885a1bf6ea42a77da4f0ea00a1de27c662c80"
+        }
+      },
+      "proofSha256": "b1e7a850a548157579eec080574223b064258309ca8032abf4c252daeb66646b",
+      "pairMeanRgbDifference": 2.28389
+    },
+    {
+      "id": "sunflower-miniature-field",
+      "title": "Sunflower Field Vignette",
+      "alt": "Rows of sunflowers receding behind a short wooden gate with a narrow path between the plants.",
+      "description": "Rows of sunflowers receding behind a short wooden gate with a narrow path between the plants. Use this bounded garden scene in a classroom summer display or a personal garden invitation.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_344/source/sunflower-miniature-field.png",
+      "printMaxEdgePx": 870,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 870,
+      "pdfHeight": 580,
+      "sourceType": "raster",
+      "sourceSha256": "1ac195519215264c86eae0e7ea0b1d5632fa26d85b6bafe8541b8c885a50e539",
+      "inputSignature": "e4e6a44122032d4b8b3e1d4a9a23c51af49cf44d2b0a77c0bc41b572b7024ea1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 981621,
+        "weightedCmykRmse": 1.112277
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1338413,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1169409,
+          "weightedCmykRmse": 0.640243
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1119922,
+          "weightedCmykRmse": 0.763698
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1063580,
+          "weightedCmykRmse": 0.919586
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 981621,
+          "weightedCmykRmse": 1.112277
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        25,
+        31,
+        1505,
+        991
+      ],
+      "image": {
+        "width": 870,
+        "height": 580,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_344/exports/sunflower-miniature-field.pdf",
+          "bytes": 981621,
+          "sha256": "1627b2e881c8b0920b54fa75e6bb6499272b82208e9d347dad9926361a3001da"
+        },
+        "webp": {
+          "path": "work/production/wave_344/exports/sunflower-miniature-field.webp",
+          "bytes": 2439372,
+          "sha256": "010660bf790095586d9c55ad9dd2cd24d9bdb7997fb39bc064a786bdd72e5290"
+        },
+        "thumb": {
+          "path": "work/production/wave_344/exports/sunflower-miniature-field-thumb.webp",
+          "bytes": 91904,
+          "sha256": "94e306612e1b32f04e4b22bf3159e944d66f7b7ae031af2066ac334599f31501"
+        }
+      },
+      "proofSha256": "19936832dccc47bbbc8abc5c4620864e6cc25ee2cc9b1ea7a991ab5b6d7cc9a4",
+      "pairMeanRgbDifference": 5.26335
+    },
+    {
+      "id": "sunflower-kraft-bouquet",
+      "title": "Wrapped Sunflower Bouquet",
+      "alt": "Three sunflowers and green foliage wrapped in brown kraft paper with a cream fabric bow.",
+      "description": "Three sunflowers and green foliage wrapped in brown kraft paper with a cream fabric bow. Add the wrapped bouquet to a personal gift card or a classroom discussion of flower arrangements.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_344/source/sunflower-kraft-bouquet.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 893,
+      "pdfHeight": 940,
+      "sourceType": "raster",
+      "sourceSha256": "687c2156d2cbcf84fac4d1101e8a7aca0819272a9c0c950e0c0a8c804579a347",
+      "inputSignature": "baa26570f851ed794f744b9f3ce596492d721094393f95ca6fd458d4d1b5a254",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 986682,
+        "weightedCmykRmse": 1.259688
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1511960,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1225068,
+          "weightedCmykRmse": 0.710239
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1157154,
+          "weightedCmykRmse": 0.843427
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1066694,
+          "weightedCmykRmse": 1.015484
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 986682,
+          "weightedCmykRmse": 1.259688
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        7,
+        2,
+        1221,
+        1283
+      ],
+      "image": {
+        "width": 893,
+        "height": 940,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_344/exports/sunflower-kraft-bouquet.pdf",
+          "bytes": 986682,
+          "sha256": "fef3e143bea2aa26a450e45e67fc490e1e07e8e6246b19515e9f0be87b932ff3"
+        },
+        "webp": {
+          "path": "work/production/wave_344/exports/sunflower-kraft-bouquet.webp",
+          "bytes": 1733768,
+          "sha256": "a5618a79a0479a8dffb21a773925485a3a7330ce10633d8c75146a1846827b63"
+        },
+        "thumb": {
+          "path": "work/production/wave_344/exports/sunflower-kraft-bouquet-thumb.webp",
+          "bytes": 90924,
+          "sha256": "e510604aef3bdf6c362fb5c1c591ceb2a8c06b29a1f691d33bbb9e2ca05c135e"
+        }
+      },
+      "proofSha256": "16f15fa48d0324c818cc5acfcae3c9da17b9a4fa4e099511294b35a3871af114",
+      "pairMeanRgbDifference": 3.05354
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proof comparisons visually reviewed; accurate botanical structure, full framing and separate useful compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:43.500Z"
+}

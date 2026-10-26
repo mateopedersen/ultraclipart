@@ -1,0 +1,590 @@
+{
+  "wave": "wave_345",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-single-bottle",
+      "title": "Sunflower in a Glass Bottle",
+      "alt": "Single sunflower with two broad leaves in a narrow clear blue-green bottle showing the submerged stem.",
+      "description": "Single sunflower with two broad leaves in a narrow clear blue-green bottle showing the submerged stem. The tall arrangement suits a personal table-place card or a classroom still-life activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_345/source/sunflower-single-bottle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "2e0e648acb47beb29acec906a56546f6008e1105da02a7d4de300113176f21d3",
+      "inputSignature": "129b833bd24aa7bd7f19b9db99a16b70e1113f4c83b432e44fb61ff137dedfd8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 777433,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 777433,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        130,
+        40,
+        982,
+        1480
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_345/exports/sunflower-single-bottle.pdf",
+          "bytes": 777433,
+          "sha256": "7fde15bcebfdf9214ac8979daa4cf8d106b990bb269aa1a349ed4537c21d9a0f"
+        },
+        "webp": {
+          "path": "work/production/wave_345/exports/sunflower-single-bottle.webp",
+          "bytes": 1406040,
+          "sha256": "6eb39b1c11b4893dc308140d9f96c123b6ddeba04c6ca359eebe4c1950ed02a3"
+        },
+        "thumb": {
+          "path": "work/production/wave_345/exports/sunflower-single-bottle-thumb.webp",
+          "bytes": 45546,
+          "sha256": "90e9333000e85d8a0c5f5304c476020ee2a6de45e050478591eb569f79d8981e"
+        }
+      },
+      "proofSha256": "0cb5800e1a2c9ac48c77b4345a7dffee6c1379c7c9b91f710da3aefab4bc810d",
+      "pairMeanRgbDifference": 2.79288
+    },
+    {
+      "id": "sunflower-market-bucket",
+      "title": "Sunflower Market Bucket",
+      "alt": "Asymmetrical bunch of sunflowers on tall leafy stems in a galvanized metal flower bucket.",
+      "description": "Asymmetrical bunch of sunflowers on tall leafy stems in a galvanized metal flower bucket. Use the open market arrangement in a classroom flower-shop scene or a personal garden layout.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_345/source/sunflower-market-bucket.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 875,
+      "pdfHeight": 920,
+      "sourceType": "raster",
+      "sourceSha256": "70cdaf8a7bf0e0e87eb90f29a62fd5d6c7d7ff8835fcfe2c0975aa575ee857c1",
+      "inputSignature": "cce93f4f9fc2837b7eaf00429314abfb304c1cbec5d03f50df2a9044ac992353",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994320,
+        "weightedCmykRmse": 1.299312
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1454163,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1212026,
+          "weightedCmykRmse": 0.730566
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1152843,
+          "weightedCmykRmse": 0.867102
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1065940,
+          "weightedCmykRmse": 1.044843
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994320,
+          "weightedCmykRmse": 1.299312
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        8,
+        1199,
+        1262
+      ],
+      "image": {
+        "width": 875,
+        "height": 920,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_345/exports/sunflower-market-bucket.pdf",
+          "bytes": 994320,
+          "sha256": "57bff7bd53de27c0d2739e10be07899d244c236ace70ba70adcd6762b2af65c8"
+        },
+        "webp": {
+          "path": "work/production/wave_345/exports/sunflower-market-bucket.webp",
+          "bytes": 1641470,
+          "sha256": "7b88e587aed2360ebdcd8834aafcab861e57cdc31b36cd23df54d59b1169bc2c"
+        },
+        "thumb": {
+          "path": "work/production/wave_345/exports/sunflower-market-bucket-thumb.webp",
+          "bytes": 101048,
+          "sha256": "af2d210ec6fbe39e0f67806ceb5d152da61a97722d07898ee122f81ec755155a"
+        }
+      },
+      "proofSha256": "0faf825ae49fabc99ab95752fbe18b53a3ec9ea98e3191dc1ed0be763edda22b",
+      "pairMeanRgbDifference": 5.17484
+    },
+    {
+      "id": "sunflower-half-wreath",
+      "title": "Sunflower Grapevine Wreath",
+      "alt": "Round grapevine wreath with a crescent of sunflowers and leaves and a burgundy bow.",
+      "description": "Round grapevine wreath with a crescent of sunflowers and leaves and a burgundy bow. The open center allows a short personal message or a classroom seasonal label.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_345/source/sunflower-half-wreath.png",
+      "printMaxEdgePx": 800,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 800,
+      "pdfHeight": 731,
+      "sourceType": "raster",
+      "sourceSha256": "26c4d5e85ea7911784f2966f2194d32cb292964aa05ce8170a2ec7298856ac08",
+      "inputSignature": "85b02625d92a67ddb83744c79f80836f588624a97b05fa7bf1cfa384e8230ae4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 970687,
+        "weightedCmykRmse": 1.225723
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1322588,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1152704,
+          "weightedCmykRmse": 0.698336
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1105742,
+          "weightedCmykRmse": 0.82724
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041314,
+          "weightedCmykRmse": 0.997288
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 970687,
+          "weightedCmykRmse": 1.225723
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        24,
+        7,
+        1303,
+        1183
+      ],
+      "image": {
+        "width": 800,
+        "height": 731,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_345/exports/sunflower-half-wreath.pdf",
+          "bytes": 970687,
+          "sha256": "460b39c579a6b3fcb7c622d89e7a76f5e6f5f384f25945beb7459ffd1ce4d28e"
+        },
+        "webp": {
+          "path": "work/production/wave_345/exports/sunflower-half-wreath.webp",
+          "bytes": 1805496,
+          "sha256": "613b2d79c8e400e26677b23503ddf9f39e14151cdc114a86100e1f0b1e32b5c2"
+        },
+        "thumb": {
+          "path": "work/production/wave_345/exports/sunflower-half-wreath-thumb.webp",
+          "bytes": 107978,
+          "sha256": "3ee56dc81b4f0043b181e72a6cb0cb27effaa7191e87bc3133a7ff33e1dfed01"
+        }
+      },
+      "proofSha256": "6a37e7500120a22b7f4e333f6826f7e0ba94092d9e8420b20e4470ec18664d8c",
+      "pairMeanRgbDifference": 7.78828
+    },
+    {
+      "id": "sunflower-heart-frame",
+      "title": "Heart-Shaped Sunflower Frame",
+      "alt": "Thin heart-shaped wire frame with sunflowers and leaves on opposite corners around a clear center.",
+      "description": "Thin heart-shaped wire frame with sunflowers and leaves on opposite corners around a clear center. Place a personal invitation message inside the open heart or use it in a classroom card-making activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_345/source/sunflower-heart-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "49bd382ebeb8b4848991bba0a4c6ee37d2ebeba3208c943e906be0bbbbc7f4aa",
+      "inputSignature": "d8da498108846d271bb158fffa6ac31f4f97a332b13d546e836f173c8086e706",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 942307,
+        "weightedCmykRmse": 1.515797
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1361248,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1148228,
+          "weightedCmykRmse": 0.804039
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1084228,
+          "weightedCmykRmse": 0.958523
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1008308,
+          "weightedCmykRmse": 1.160595
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 942307,
+          "weightedCmykRmse": 1.515797
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        10,
+        4,
+        1308,
+        1193
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_345/exports/sunflower-heart-frame.pdf",
+          "bytes": 942307,
+          "sha256": "300668b3e7c258522b58fe098353f7a34f09c70834d0fb7e14895a4be47303f9"
+        },
+        "webp": {
+          "path": "work/production/wave_345/exports/sunflower-heart-frame.webp",
+          "bytes": 1219912,
+          "sha256": "5c195550f9c2d95dcf41ebfd3a97194307353f8065dcccdabf2bb4b3100b09d4"
+        },
+        "thumb": {
+          "path": "work/production/wave_345/exports/sunflower-heart-frame-thumb.webp",
+          "bytes": 84026,
+          "sha256": "87cce07b88476337d1008b2c89d7e2257399e0bd1ef7368d9a252d3e719a95ed"
+        }
+      },
+      "proofSha256": "4f96a57a1c83d8e98ab211c3633660affb48e2b85f0d2479aa69cd81460dbe55",
+      "pairMeanRgbDifference": 4.80718
+    },
+    {
+      "id": "sunflower-corner-arrangement",
+      "title": "Sunflower Corner Arrangement",
+      "alt": "L-shaped corner arrangement of sunflowers, broad leaves and airy seed grasses around a clear page area.",
+      "description": "L-shaped corner arrangement of sunflowers, broad leaves and airy seed grasses around a clear page area. Use the corner in a personal invitation or a classroom nature display while leaving room for readable text.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_345/source/sunflower-corner-arrangement.png",
+      "printMaxEdgePx": 870,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 870,
+      "pdfHeight": 795,
+      "sourceType": "raster",
+      "sourceSha256": "2e06cbd6a912932a8ad8919e59a4f2defbcd29404db607a05b14e393fda71587",
+      "inputSignature": "e3a1c02829c902eebcea2b286da8d33e0255630cd35d19acd6ed3154f0452e6a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962363,
+        "weightedCmykRmse": 1.289383
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1336383,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1153828,
+          "weightedCmykRmse": 0.732318
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1103671,
+          "weightedCmykRmse": 0.861796
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1028202,
+          "weightedCmykRmse": 1.048505
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962363,
+          "weightedCmykRmse": 1.289383
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        10,
+        10,
+        1298,
+        1186
+      ],
+      "image": {
+        "width": 870,
+        "height": 795,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_345/exports/sunflower-corner-arrangement.pdf",
+          "bytes": 962363,
+          "sha256": "bf6ea497d35d72ce0cc46060815ad45b5861cb5a585e637c1163469591822a1a"
+        },
+        "webp": {
+          "path": "work/production/wave_345/exports/sunflower-corner-arrangement.webp",
+          "bytes": 1588742,
+          "sha256": "f7cf675662b1f60b0abb3d178d9de81e74df3cd124053605248a07162bf057e4"
+        },
+        "thumb": {
+          "path": "work/production/wave_345/exports/sunflower-corner-arrangement-thumb.webp",
+          "bytes": 101138,
+          "sha256": "eb16e69c4d2b7a5459e62fdc48fb2a9bffa0d909fd621441ebb5ce78490e757d"
+        }
+      },
+      "proofSha256": "acd30199dfcc86009f59c01e26f2a3b06689ea31917068bff5c38e19f62b05fd",
+      "pairMeanRgbDifference": 2.8749
+    },
+    {
+      "id": "sunflower-horizontal-garland",
+      "title": "Hanging Sunflower Garland",
+      "alt": "Five small sunflowers and green leaves arranged along a shallow hanging twine garland with tied end loops.",
+      "description": "Five small sunflowers and green leaves arranged along a shallow hanging twine garland with tied end loops. Place the long floral garland above a personal heading or across a classroom activity sheet.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_345/source/sunflower-horizontal-garland.png",
+      "printMaxEdgePx": 1002,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1774,
+      "height": 887,
+      "pdfWidth": 1002,
+      "pdfHeight": 501,
+      "sourceType": "raster",
+      "sourceSha256": "cafce532fb3a02c6e132fcd9011717f274bdce4b0e9897654c1aa97faeea6eab",
+      "inputSignature": "c1243d09cf3dacac993b40bca1ac3d6014a30918550431046e1642d1462e1231",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 503267,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 503267,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        31,
+        128,
+        1748,
+        728
+      ],
+      "image": {
+        "width": 1002,
+        "height": 501,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_345/exports/sunflower-horizontal-garland.pdf",
+          "bytes": 503267,
+          "sha256": "d7e979845bdcc7bce0bfb237b3aebc5a38a3c5dbab25ad21249625e80d8dec97"
+        },
+        "webp": {
+          "path": "work/production/wave_345/exports/sunflower-horizontal-garland.webp",
+          "bytes": 743174,
+          "sha256": "cab39321e23be732dbf51bb1891ed7d75dc61ff15fe3b24c63b4c90acb7eeb29"
+        },
+        "thumb": {
+          "path": "work/production/wave_345/exports/sunflower-horizontal-garland-thumb.webp",
+          "bytes": 34056,
+          "sha256": "9ac8ab1f3f90075d94d5a67abfcf4e00f4a08e06e5fa6ee3e6b5e2545ca51a2c"
+        }
+      },
+      "proofSha256": "a37d8f093093acb8132b96ac0494fd359596f9369bc58c3c878e1fa40c72b47f",
+      "pairMeanRgbDifference": 1.54281
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proof comparisons visually reviewed; accurate botanical structure, full framing and separate useful compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:44.730Z"
+}

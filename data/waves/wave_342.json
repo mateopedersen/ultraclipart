@@ -1,0 +1,184 @@
+{
+  "wave": "wave_342",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-outline-bake-sale",
+      "title": "Pie Stall Coloring Illustration",
+      "alt": "Black-and-white bake-sale stall with two pies, a bakery box, bunting and a blank hanging sign.",
+      "description": "Black-and-white bake-sale stall with two pies, a bakery box, bunting and a blank hanging sign. Add a short classroom message to the blank sign and color the awning for a personal activity.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_342/source/pie-outline-bake-sale.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "86ea2422722da4eb24f66dc84698e18a8c12d5570254d6c3f9f4739954585f65",
+      "inputSignature": "ce43c79ffb07c64711fb0e3f721f25a515aad0abae1433766860a786f49b91bf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 944385,
+        "weightedCmykRmse": 0.704041
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1218600,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 944385,
+          "weightedCmykRmse": 0.704041
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        18,
+        45,
+        1356,
+        1109
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_342/exports/pie-outline-bake-sale.pdf",
+          "bytes": 944385,
+          "sha256": "ea1d764191c04ee8a25d70e78dd0ae57c99216521fca6181cd7872d75b884a71"
+        },
+        "webp": {
+          "path": "work/production/wave_342/exports/pie-outline-bake-sale.webp",
+          "bytes": 855932,
+          "sha256": "e09e2cdeee8b28247f5a1a8cc1186ae58351da3212d1978b25efa1426a71f86a"
+        },
+        "thumb": {
+          "path": "work/production/wave_342/exports/pie-outline-bake-sale-thumb.webp",
+          "bytes": 64516,
+          "sha256": "7d210329125bab75c565328d138451195fd4a8ef2e572de0bfbb8fa0ef433f54"
+        }
+      },
+      "proofSha256": "53b783a624de95a2c32d3198aed0ab0921c38f348f1ff4736db1e49cb1e44519",
+      "pairMeanRgbDifference": 6.18851
+    },
+    {
+      "id": "pie-outline-fraction-puzzle",
+      "title": "Pie Fraction Puzzle Coloring Illustration",
+      "alt": "Black-and-white round wooden pie puzzle with three fitted quarter pieces and a fourth piece beside the board.",
+      "description": "Black-and-white round wooden pie puzzle with three fitted quarter pieces and a fourth piece beside the board. Use the four equal parts in a classroom fractions activity or a pie-themed coloring task.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_342/source/pie-outline-fraction-puzzle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "acfc670ff3ce30cc6c9e7d6a16b14992d479b4323186eb085afea7c0f446b8fb",
+      "inputSignature": "9226bceed57d23334a7de18554dc7f4c1b1ffa2500da2670bc2b775408158dc5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 850177,
+        "weightedCmykRmse": 0.741371
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1174124,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 850177,
+          "weightedCmykRmse": 0.741371
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        34,
+        63,
+        1278,
+        1149
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_342/exports/pie-outline-fraction-puzzle.pdf",
+          "bytes": 850177,
+          "sha256": "a54d16937cd166322636317cff2a29a74fc8d48854c0d02ca4e79c5f5c0ac140"
+        },
+        "webp": {
+          "path": "work/production/wave_342/exports/pie-outline-fraction-puzzle.webp",
+          "bytes": 761296,
+          "sha256": "dc0bb4fb2ae8800bafbc19fb585047441ae7f451c641ec1c339ee9630486459f"
+        },
+        "thumb": {
+          "path": "work/production/wave_342/exports/pie-outline-fraction-puzzle-thumb.webp",
+          "bytes": 53652,
+          "sha256": "247dfcc019474655f3780a177d631c01f64cc276145bcd3378a7e2fa11685a36"
+        }
+      },
+      "proofSha256": "ee1099f15e838feb337b6daaf93045b341144867f65052264b3c66826b1726a0",
+      "pairMeanRgbDifference": 6.77214
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proofs visually reviewed; full tools/cuffs, coherent food structure and distinct scenes. Outline fraction puzzle shows three fitted quarters and one separate quarter.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:23.730Z"
+}

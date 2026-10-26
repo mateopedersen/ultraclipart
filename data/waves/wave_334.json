@@ -1,0 +1,576 @@
+{
+  "wave": "wave_334",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-cherry-lattice-pie",
+      "title": "Cherry Lattice Pie",
+      "alt": "Golden lattice cherry pie in a fluted white dish on a rectangular wire cooling rack.",
+      "description": "Golden lattice cherry pie in a fluted white dish on a rectangular wire cooling rack. Use this whole dessert in a baking vocabulary card or a personal pie-themed recipe cover.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_334/source/pie-cherry-lattice-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f93a2757b187c44847a876bdc7663474a6f4692e8c26a629ed7f083872cb2cfe",
+      "inputSignature": "0cb90a0a844c9f9f45f4d902b65238c4aa56e1db3ade350cc30c1e3fc22ee631",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 971924,
+        "weightedCmykRmse": 1.00245
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1315981,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1100031,
+          "weightedCmykRmse": 0.703252
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1044409,
+          "weightedCmykRmse": 0.839359
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 971924,
+          "weightedCmykRmse": 1.00245
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        74,
+        36,
+        1463,
+        959
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_334/exports/pie-cherry-lattice-pie.pdf",
+          "bytes": 971924,
+          "sha256": "b2719123cd704b9b1eeaffad6c6c40d0d9d905bbfc37a982971188b2b9ddb580"
+        },
+        "webp": {
+          "path": "work/production/wave_334/exports/pie-cherry-lattice-pie.webp",
+          "bytes": 2018736,
+          "sha256": "3a8c95152c6eb5ba2f6daec212f32a7bb80623edc350502276a0ec436a514bbf"
+        },
+        "thumb": {
+          "path": "work/production/wave_334/exports/pie-cherry-lattice-pie-thumb.webp",
+          "bytes": 70054,
+          "sha256": "46463304e7b95f7714fdbe8d12f38985c5f2d26e7c87a3b59fceb51175a76bd2"
+        }
+      },
+      "proofSha256": "34b64d45697bce35f981945f4b07f40c8954e0b468591bf600c3b547d60e47b2",
+      "pairMeanRgbDifference": 6.39943
+    },
+    {
+      "id": "pie-apple-cut-pie",
+      "title": "Apple Pie with a Cut Wedge",
+      "alt": "Double-crust apple pie with a separate cut wedge showing apple slices on a wooden board.",
+      "description": "Double-crust apple pie with a separate cut wedge showing apple slices on a wooden board. The exposed filling suits a classroom food description task or a personal apple-pie recipe page.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_334/source/pie-apple-cut-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4230253505da42e7b6a873cb145a27d7dfff772096e2e493db214f685acbc75d",
+      "inputSignature": "a989c40fec613b9fdfa0726c402432ce8b9a88d24025c9906bd7a0a4c7b1bfc6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 928099,
+        "weightedCmykRmse": 1.20574
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1371302,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1139642,
+          "weightedCmykRmse": 0.683528
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1080708,
+          "weightedCmykRmse": 0.812996
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1007263,
+          "weightedCmykRmse": 0.976566
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 928099,
+          "weightedCmykRmse": 1.20574
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        47,
+        1492,
+        981
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_334/exports/pie-apple-cut-pie.pdf",
+          "bytes": 928099,
+          "sha256": "684da3578f9df0a8572ad60e72aa6f1bba2489b49dcc614354020f386669d5f4"
+        },
+        "webp": {
+          "path": "work/production/wave_334/exports/pie-apple-cut-pie.webp",
+          "bytes": 2235014,
+          "sha256": "50f678e4c2f39914debf4c880bd682ca7c3cccec5c4e557ad43ba89ebeb78d12"
+        },
+        "thumb": {
+          "path": "work/production/wave_334/exports/pie-apple-cut-pie-thumb.webp",
+          "bytes": 67802,
+          "sha256": "2a46ab3008bbe1f712e7737564fa4ef98770ac0fa2bfdafe6f27af13e304683a"
+        }
+      },
+      "proofSha256": "a53c503a90f6ad46772d3dfe9e3ff17ee4034bef6b404e3b6d4b1553f4ab5b8f",
+      "pairMeanRgbDifference": 5.00529
+    },
+    {
+      "id": "pie-blueberry-hand-pies",
+      "title": "Square Blueberry Hand Pies",
+      "alt": "Two square blueberry hand pies with crimped edges, an open corner and loose blueberries on parchment.",
+      "description": "Two square blueberry hand pies with crimped edges, an open corner and loose blueberries on parchment. Place these portable pastries beside a picnic menu heading or a food vocabulary label.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_334/source/pie-blueberry-hand-pies.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "aab7607fd3dbf351701527f15930e0afd22ab61b0a092e3e76113a223811edd4",
+      "inputSignature": "5baf49877c680bec8e5878649b45ea168431325200c82f7c8350fff2ef5dfc0c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 969375,
+        "weightedCmykRmse": 0.714962
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1182244,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 969375,
+          "weightedCmykRmse": 0.714962
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        31,
+        1491,
+        986
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_334/exports/pie-blueberry-hand-pies.pdf",
+          "bytes": 969375,
+          "sha256": "5da80b58d3f066b575dab272ba081f9013a82bf1a3fc1e95437bfe36b47a0183"
+        },
+        "webp": {
+          "path": "work/production/wave_334/exports/pie-blueberry-hand-pies.webp",
+          "bytes": 1994952,
+          "sha256": "d3727c6b154efa06f45a51873041cbaee1ad7b4fec176261c9fc23a37de47034"
+        },
+        "thumb": {
+          "path": "work/production/wave_334/exports/pie-blueberry-hand-pies-thumb.webp",
+          "bytes": 61432,
+          "sha256": "1e8eee7c956e8fb254d1b4a173d80f5c59388c186a82c2a7366ac702a9d313b5"
+        }
+      },
+      "proofSha256": "55b9fdfa951868f76c4b5c5b24bdeb0b2296a3f29ad5bd53bef1e30fba4ab71f",
+      "pairMeanRgbDifference": 4.12855
+    },
+    {
+      "id": "pie-whole-pumpkin-pie",
+      "title": "Whole Pumpkin Custard Pie",
+      "alt": "Whole orange pumpkin pie with a crimped crust and a ring of seeds on folded navy cloth.",
+      "description": "Whole orange pumpkin pie with a crimped crust and a ring of seeds on folded navy cloth. This complete pie suits an autumn dessert layout or a classroom harvest-food activity.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_334/source/pie-whole-pumpkin-pie.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "17a2891e9d24e27ccfcf75046f30107f7749f6c2570e562dfe81252a20b99013",
+      "inputSignature": "aa03ccc1911d9a6fe57f421a00940d9ece0e9d02889d3c0f80c2f0649259e5c9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994462,
+        "weightedCmykRmse": 1.215199
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1472878,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1227032,
+          "weightedCmykRmse": 0.690637
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1160704,
+          "weightedCmykRmse": 0.820959
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1079851,
+          "weightedCmykRmse": 0.984388
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994462,
+          "weightedCmykRmse": 1.215199
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        82,
+        1279,
+        1152
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_334/exports/pie-whole-pumpkin-pie.pdf",
+          "bytes": 994462,
+          "sha256": "483a5d60f27288bb04cbbf0fcc1e840a20f954743fafb2499ba40f198e70c9c2"
+        },
+        "webp": {
+          "path": "work/production/wave_334/exports/pie-whole-pumpkin-pie.webp",
+          "bytes": 1861668,
+          "sha256": "f3cc9db41aeb1ef8391d5c038b77f8bdcb36770847cbc795ff6e308cea83fc48"
+        },
+        "thumb": {
+          "path": "work/production/wave_334/exports/pie-whole-pumpkin-pie-thumb.webp",
+          "bytes": 86070,
+          "sha256": "02a3e846175026346832e827c5df9adbd98b5b91c1b117d573fecfe115419dc6"
+        }
+      },
+      "proofSha256": "c63c78a56b0b67ed97214b210b94c9aedf2486ab55c6586f8e9aca5bd9612b26",
+      "pairMeanRgbDifference": 5.63234
+    },
+    {
+      "id": "pie-pecan-pie-wedge",
+      "title": "Pecan Pie Wedge",
+      "alt": "Pecan pie wedge with glossy nuts and amber filling on a turquoise plate beside a silver fork.",
+      "description": "Pecan pie wedge with glossy nuts and amber filling on a turquoise plate beside a silver fork. Use the plated serving in a dessert menu exercise or a personal baking journal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_334/source/pie-pecan-pie-wedge.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "87e7e5d251a809527275b2bcca939a2607cca169041bf20c42a05782e861f310",
+      "inputSignature": "ef223c69d7522a858ffa7329bf58564863c4b1c257310c9b1cc268fb9149aabc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 885820,
+        "weightedCmykRmse": 0.770564
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1073484,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 885820,
+          "weightedCmykRmse": 0.770564
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        99,
+        70,
+        1504,
+        962
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_334/exports/pie-pecan-pie-wedge.pdf",
+          "bytes": 885820,
+          "sha256": "9143c995ac7d9b7b1fb1539db5d4b48cecbd68678c6b14f75d0b558b4fb29d65"
+        },
+        "webp": {
+          "path": "work/production/wave_334/exports/pie-pecan-pie-wedge.webp",
+          "bytes": 1763500,
+          "sha256": "5200824adb83b3e5299e866fdd709d2d9726bad42df13d1c9bd43235cab7944e"
+        },
+        "thumb": {
+          "path": "work/production/wave_334/exports/pie-pecan-pie-wedge-thumb.webp",
+          "bytes": 55782,
+          "sha256": "7ff7ddc02ab71250f92f59b672b9a0862e5cbdc9bb4a10038c835fc88d6d8f1f"
+        }
+      },
+      "proofSha256": "939ce6ac1cf13e2b69b89ba7edb1ec26aa68e2ae395c5a49bbd632e0aaa76c72",
+      "pairMeanRgbDifference": 4.74231
+    },
+    {
+      "id": "pie-lemon-meringue-half",
+      "title": "Lemon Meringue Pie",
+      "alt": "Cut lemon meringue pie with yellow filling and toasted peaks in a glass dish beside lemon peel curls.",
+      "description": "Cut lemon meringue pie with yellow filling and toasted peaks in a glass dish beside lemon peel curls. The visible pastry, curd and meringue layers suit a classroom food description activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_334/source/pie-lemon-meringue-half.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "8726eb16a9f583b763e2c3a1644655e77139078a12465630e5b0c42b653cfffb",
+      "inputSignature": "3c289b940ae5bf63dd3c9d63143418db3bb5e867924ad9dc5f1b6495ca4a987b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 853155,
+        "weightedCmykRmse": 0.730101
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1055673,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 853155,
+          "weightedCmykRmse": 0.730101
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        42,
+        1500,
+        923
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_334/exports/pie-lemon-meringue-half.pdf",
+          "bytes": 853155,
+          "sha256": "afeea497e70e12890e54c13cfa41dc0acd1c5e40af08c31bed7ac98e7dd3dfd7"
+        },
+        "webp": {
+          "path": "work/production/wave_334/exports/pie-lemon-meringue-half.webp",
+          "bytes": 1878924,
+          "sha256": "bb0272a1fa2c14d552a6ca590f155976f4508e62c46eacfa48823ec2fc53e537"
+        },
+        "thumb": {
+          "path": "work/production/wave_334/exports/pie-lemon-meringue-half-thumb.webp",
+          "bytes": 58408,
+          "sha256": "086f124f46cfcb1f3fa2975cebdb70aa757a4d919dba3d84c13c4d9b9a446895"
+        }
+      },
+      "proofSha256": "f710ad0da7afd056111bf120d3dfc6315f9b8f9271cdf55e51e12a367989c8d3",
+      "pairMeanRgbDifference": 4.26593
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All six source and native PDF/WebP proof comparisons visually inspected; full framing, coherent food layers and distinct compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:20.191Z"
+}

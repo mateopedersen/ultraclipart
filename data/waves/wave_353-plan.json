@@ -1,0 +1,77 @@
+{
+  "wave": "wave_353",
+  "topic": "football",
+  "method": "builtin-image-generation",
+  "research": "data/research/football-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "football-whistle-penalty-flag",
+      "title": "Whistle and Penalty Flag",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_353/source/football-whistle-penalty-flag.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-end-zone-pylon",
+      "title": "End-Zone Corner Pylon",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_353/source/football-end-zone-pylon.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-goal-post",
+      "title": "Football Goal Post",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_353/source/football-goal-post.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-miniature-field",
+      "title": "Football Field Vignette",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_353/source/football-miniature-field.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-chain-markers",
+      "title": "Sideline Chain Markers",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_353/source/football-chain-markers.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-sideline-bench",
+      "title": "Football Sideline Bench",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_353/source/football-sideline-bench.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

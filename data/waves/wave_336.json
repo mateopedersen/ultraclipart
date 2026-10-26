@@ -1,0 +1,520 @@
+{
+  "wave": "wave_336",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-blackberry-pie-jars",
+      "title": "Blackberry Pie Jars",
+      "alt": "Two open glass dessert jars with crumb bases, blackberries and cream beside a lid and loose berries.",
+      "description": "Two open glass dessert jars with crumb bases, blackberries and cream beside a lid and loose berries. These individual crumb desserts suit a personal picnic menu or a classroom lesson on food containers.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_336/source/pie-blackberry-pie-jars.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "3374f2c19fe9e56d9400c547dac37cfcd305f9f0bd1a1b38db8ac58048adc036",
+      "inputSignature": "a283d90c4d518247f552e019b4600f352a5200a600a9dd8ef00e4e371080e850",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 914426,
+        "weightedCmykRmse": 0.762508
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1097622,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 914426,
+          "weightedCmykRmse": 0.762508
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        73,
+        90,
+        1482,
+        929
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_336/exports/pie-blackberry-pie-jars.pdf",
+          "bytes": 914426,
+          "sha256": "5fb48534cd408cbe25c4900818d3f295f75e8c8ed7caf89026b8150ac121295f"
+        },
+        "webp": {
+          "path": "work/production/wave_336/exports/pie-blackberry-pie-jars.webp",
+          "bytes": 1676122,
+          "sha256": "effdeed92a8cb970060ab34f7de65afd1d1d83a1e55c0d7897e432a73b884043"
+        },
+        "thumb": {
+          "path": "work/production/wave_336/exports/pie-blackberry-pie-jars-thumb.webp",
+          "bytes": 57016,
+          "sha256": "328efbf127335726cd5736bcd64820ab29de6088c9dd446e703d4e5387a33d2c"
+        }
+      },
+      "proofSha256": "86e39746f6b1356af5d13ab9b0578cea1ba889b04ff20b88adba2c7807807c5d",
+      "pairMeanRgbDifference": 4.65507
+    },
+    {
+      "id": "pie-apple-turnover",
+      "title": "Apple Turnover",
+      "alt": "Golden triangular apple turnover with fork-crimped edges and visible apple filling on folded linen.",
+      "description": "Golden triangular apple turnover with fork-crimped edges and visible apple filling on folded linen. Use this folded pastry as a food vocabulary illustration or a personal snack-menu accent.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_336/source/pie-apple-turnover.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "40e69e2ce21b1f3913e4410aaf06fc44a7e16dfb631f35669e2d2ec95097159e",
+      "inputSignature": "5a73d97438d9d73c24437cd1eb3f2c7f3682bca52d2e6b9dbd6e6344e265e85a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 889531,
+        "weightedCmykRmse": 0.724255
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1083419,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 889531,
+          "weightedCmykRmse": 0.724255
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        57,
+        64,
+        1481,
+        958
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_336/exports/pie-apple-turnover.pdf",
+          "bytes": 889531,
+          "sha256": "b416778181e38b9b228acfc20f328f4e8a3f6bde41dd8f593e04399a52ad1aa2"
+        },
+        "webp": {
+          "path": "work/production/wave_336/exports/pie-apple-turnover.webp",
+          "bytes": 1842268,
+          "sha256": "71359b0527465a4aa044d0d413d4c9ad3891c49f0df71f8bf9a036a30f400d6d"
+        },
+        "thumb": {
+          "path": "work/production/wave_336/exports/pie-apple-turnover-thumb.webp",
+          "bytes": 57394,
+          "sha256": "a44f43184a710a3e2aa0f50bbdde95dc36cf9e03596d9543ecbf10e96ad03f7f"
+        }
+      },
+      "proofSha256": "9a5e74a3b3b57f7a1fba8e6cbb024e8199959dde69dfae69b282f5fccd7337e5",
+      "pairMeanRgbDifference": 4.15354
+    },
+    {
+      "id": "pie-chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "alt": "Lattice-topped chicken pot pie in a blue handled dish with an open section showing chicken and vegetables.",
+      "description": "Lattice-topped chicken pot pie in a blue handled dish with an open section showing chicken and vegetables. Place the savory pie beside a comfort-food journal entry or a classroom meal-planning activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_336/source/pie-chicken-pot-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6c9affcb220d205462ed2f25826540c24066914ba8d6291a59d981a1acd9564d",
+      "inputSignature": "fa78e3c825a066663f8976a8069f84662b4ffed12925a6d6fdb58cdeeb3209d6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 907113,
+        "weightedCmykRmse": 0.74006
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1110993,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 907113,
+          "weightedCmykRmse": 0.74006
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        127,
+        1516,
+        916
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_336/exports/pie-chicken-pot-pie.pdf",
+          "bytes": 907113,
+          "sha256": "66be69edfb6cdf45834c1aa92324432aadf50ce7d42c4861380a3037816067e5"
+        },
+        "webp": {
+          "path": "work/production/wave_336/exports/pie-chicken-pot-pie.webp",
+          "bytes": 1767432,
+          "sha256": "f2916afac755466fa225500976012749bd61e24d3d2edc654261841b8995c21f"
+        },
+        "thumb": {
+          "path": "work/production/wave_336/exports/pie-chicken-pot-pie-thumb.webp",
+          "bytes": 55536,
+          "sha256": "c03ef1b719f86777b7c7b7b27283be1e701c446d6d427511ca38d5c7ae794fa7"
+        }
+      },
+      "proofSha256": "769ceb63fb80cce523c7a83f128791bfd8b05bc8a7d81b522909bc4cd9d83579",
+      "pairMeanRgbDifference": 4.60443
+    },
+    {
+      "id": "pie-raised-meat-pie",
+      "title": "Raised Meat Pie",
+      "alt": "Tall meat pie with a woven pastry top and a separate cut wedge on a wooden handled board.",
+      "description": "Tall meat pie with a woven pastry top and a separate cut wedge on a wooden handled board. The deep pastry walls and exposed filling suit a classroom comparison of savory and sweet pies.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_336/source/pie-raised-meat-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "9a483e7cde0b22dc3db64b03e36bc282b7384db775409f6af8f4744f31868d4d",
+      "inputSignature": "9207fed6cafc1626b45e0aeb5f536c5c6e2a773d0630ef6f5ab469a389ec007d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 940222,
+        "weightedCmykRmse": 0.84107
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1216393,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 997541,
+          "weightedCmykRmse": 0.706626
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 940222,
+          "weightedCmykRmse": 0.84107
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        60,
+        58,
+        1502,
+        987
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_336/exports/pie-raised-meat-pie.pdf",
+          "bytes": 940222,
+          "sha256": "8cda05019af911252367d4c15004ca067e7fb56a283650bdc1fe5d2b3b12c425"
+        },
+        "webp": {
+          "path": "work/production/wave_336/exports/pie-raised-meat-pie.webp",
+          "bytes": 2000724,
+          "sha256": "ed8fb05d936bf0831ecc4641f7626074fdec4a607e87f94c2715f0acf449fbb4"
+        },
+        "thumb": {
+          "path": "work/production/wave_336/exports/pie-raised-meat-pie-thumb.webp",
+          "bytes": 62902,
+          "sha256": "b3fe65b63968ec96ff11e0cbd920b2302010da96a67548ee3d7695f3704a78b7"
+        }
+      },
+      "proofSha256": "657af53c7abe7bff0fc3182d3615b2eb87383f0c5534a93da3ebb84c72a3778b",
+      "pairMeanRgbDifference": 4.70841
+    },
+    {
+      "id": "pie-shepherds-pie-pan",
+      "title": "Shepherds Pie in a Pan",
+      "alt": "Mashed-potato-topped savory pie in a copper handled pan with an open portion revealing minced filling and vegetables.",
+      "description": "Mashed-potato-topped savory pie in a copper handled pan with an open portion revealing minced filling and vegetables. The exposed filling suits a classroom meal vocabulary card or a personal comfort-food menu.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_336/source/pie-shepherds-pie-pan.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "cbeb14710269559e685ab45cda7dc7946f5a89375c54ef5ec0dc2590f1e17e1f",
+      "inputSignature": "f21db37351f10a841b25a2a629f47abdaf28eb67511c93c607256b18c63bfa7d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 832155,
+        "weightedCmykRmse": 0.757891
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1028163,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 832155,
+          "weightedCmykRmse": 0.757891
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        61,
+        109,
+        1498,
+        908
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_336/exports/pie-shepherds-pie-pan.pdf",
+          "bytes": 832155,
+          "sha256": "dc699d892daa3ad23e3f54598a7c62c41fdc757820909798d2a436cb98df7d31"
+        },
+        "webp": {
+          "path": "work/production/wave_336/exports/pie-shepherds-pie-pan.webp",
+          "bytes": 1796258,
+          "sha256": "2b5a34b4b2956631647fead37ab8fbe39f4f9910f4f885a120d72df7f2e6ed90"
+        },
+        "thumb": {
+          "path": "work/production/wave_336/exports/pie-shepherds-pie-pan-thumb.webp",
+          "bytes": 54268,
+          "sha256": "00e7afc2c4b0f55f15945efcac899f2459c0a661604baae785f996f09f0199e0"
+        }
+      },
+      "proofSha256": "b34dc8d8c0780c0dcb803883ba18db5c30aa879801334992443ee071a4604d33",
+      "pairMeanRgbDifference": 4.30423
+    },
+    {
+      "id": "pie-fish-pie",
+      "title": "Fish Pie",
+      "alt": "Fish pie in a pink rectangular dish with a browned potato topping and a serving opening showing fish and peas.",
+      "description": "Fish pie in a pink rectangular dish with a browned potato topping and a serving opening showing fish and peas. Add the rectangular casserole to a personal meal plan or a classroom discussion of savory dishes.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_336/source/pie-fish-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "fe1b0a5447de3a470de9bfc2903aefaa6ef03b03f71e738da5ae01d141b13682",
+      "inputSignature": "6f43e5836ac14b1d80d9ca0651e5f67e300ad98fb6bd2c511b5e61424d8e3ebc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 986781,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 986781,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        79,
+        107,
+        1521,
+        952
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_336/exports/pie-fish-pie.pdf",
+          "bytes": 986781,
+          "sha256": "ebfbc02e771acd1c711ae278d41e83d192eceafd891a0886ef9588d804fd9a76"
+        },
+        "webp": {
+          "path": "work/production/wave_336/exports/pie-fish-pie.webp",
+          "bytes": 1793316,
+          "sha256": "4fc0f939916f9907a547b54b35320eb79aa4fe5402dbc914ff6f0a93c78e4e80"
+        },
+        "thumb": {
+          "path": "work/production/wave_336/exports/pie-fish-pie-thumb.webp",
+          "bytes": 55140,
+          "sha256": "21521e5c891519c9a50fff560d095e6309a96a5353430ee7122e177082efbfef"
+        }
+      },
+      "proofSha256": "4963003a9382863ea83a8d3bae0382626c6b7756b59d803761908f99887a2725",
+      "pairMeanRgbDifference": 4.16435
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All six selected source and native PDF/WebP comparisons visually reviewed; correct filling, full framing and independent compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:21.048Z"
+}
