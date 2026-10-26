@@ -1,0 +1,549 @@
+{
+  "wave": "wave_320",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-straw-plait-dolly",
+      "title": "Plaited Wheat Straw Ornament",
+      "alt": "A plaited straw harvest ornament forms an open loop below a woven waist and three upright wheat heads.",
+      "description": "A plaited straw harvest ornament forms an open loop below a woven waist and three upright wheat heads. The open woven loop works as an isolated harvest-craft illustration.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_320/source/wheat-straw-plait-dolly.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "edc2ae5f950b897ac939b7dcad59ef428f4eff037b74d177b6e637190c91c446",
+      "inputSignature": "c43f501c0165cc19fac773b32c9835ed33960ff9525731d2ae54b386d38b7f7d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 922400,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 922400,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        17,
+        994,
+        1498
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_320/exports/wheat-straw-plait-dolly.pdf",
+          "bytes": 922400,
+          "sha256": "556cd591f4645b3195a33f3195c03b8ab32edce3e295492ebcddf869cbf1c42a"
+        },
+        "webp": {
+          "path": "work/production/wave_320/exports/wheat-straw-plait-dolly.webp",
+          "bytes": 1344732,
+          "sha256": "a3f7be30e251bb07bc8f7cc8d2488832c82e46062923d9fd8305e2d1e2dc4b1d"
+        },
+        "thumb": {
+          "path": "work/production/wave_320/exports/wheat-straw-plait-dolly-thumb.webp",
+          "bytes": 60996,
+          "sha256": "1cf65051d54d16527d931d21f8a3763640cc56d111afb22aaef4f823ee59c77f"
+        }
+      },
+      "proofSha256": "6f71cfa7c2cf216d409308ffe16d074e42776c665e0b9bdc08b179d65877af98",
+      "pairMeanRgbDifference": 2.98216
+    },
+    {
+      "id": "wheat-straw-star",
+      "title": "Wheat Straw Star",
+      "alt": "An eight-point straw-and-wheat star is tied with red thread and a complete hanging loop.",
+      "description": "An eight-point straw-and-wheat star is tied with red thread and a complete hanging loop. Use the complete hanging loop when arranging a personal seasonal ornament design.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_320/source/wheat-straw-star.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1304,
+      "height": 1206,
+      "pdfWidth": 900,
+      "pdfHeight": 832,
+      "sourceType": "raster",
+      "sourceSha256": "652ae7a1e1cf142930b7d744bfb648cb9ac990700e25d203c103adf1626e678b",
+      "inputSignature": "d72af22df81d17b0686b04efe4435c7d54e7cd8b489e74f8719517b0154eca5f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967559,
+        "weightedCmykRmse": 1.35535
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1266673,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1161762,
+          "weightedCmykRmse": 0.75541
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1108775,
+          "weightedCmykRmse": 0.893062
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1030749,
+          "weightedCmykRmse": 1.076728
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967559,
+          "weightedCmykRmse": 1.35535
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        100,
+        15,
+        1200,
+        1182
+      ],
+      "image": {
+        "width": 900,
+        "height": 832,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_320/exports/wheat-straw-star.pdf",
+          "bytes": 967559,
+          "sha256": "5f059392c5b8bf8f0357723346801f9e1720282ea496a80929472415d39a461b"
+        },
+        "webp": {
+          "path": "work/production/wave_320/exports/wheat-straw-star.webp",
+          "bytes": 996270,
+          "sha256": "c710fea54b0d38a8a602d1729dda0e8322b1d8a6359f5b2121fff0179c3d3b42"
+        },
+        "thumb": {
+          "path": "work/production/wave_320/exports/wheat-straw-star-thumb.webp",
+          "bytes": 71458,
+          "sha256": "345f49250b1fe164e95b19e84009b9837fa3279c3bb332d9ddc70b2fc661fe2f"
+        }
+      },
+      "proofSha256": "a9c14e88340582398fb10a78290f4019230441059dcca5f3fba501f0a0c74797",
+      "pairMeanRgbDifference": 2.98169
+    },
+    {
+      "id": "wheat-straw-hat-sprig",
+      "title": "Straw Hat with Wheat",
+      "alt": "A wide-brimmed woven straw hat has a navy ribbon band, a side bow and a golden wheat sprig tucked behind it.",
+      "description": "A wide-brimmed woven straw hat has a navy ribbon band, a side bow and a golden wheat sprig tucked behind it. The hat and tucked sprig suit a harvest invitation or a garden-journal cover.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_320/source/wheat-straw-hat-sprig.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "e2d79dfece9e726f313dacc59ac88ad3bfb8cdfa8d57df63e116de01b2709635",
+      "inputSignature": "86d148d23b6c04cfa8c0a67c9f3dc6587f503750031bead6d9476b696d0587f5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 961344,
+        "weightedCmykRmse": 0.742062
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1162043,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 961344,
+          "weightedCmykRmse": 0.742062
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        67,
+        43,
+        1472,
+        985
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_320/exports/wheat-straw-hat-sprig.pdf",
+          "bytes": 961344,
+          "sha256": "812ae651852be29aebb511702b13877d7126c587810f7ee0079690d44f2c719b"
+        },
+        "webp": {
+          "path": "work/production/wave_320/exports/wheat-straw-hat-sprig.webp",
+          "bytes": 1761162,
+          "sha256": "8dc095e598d91de5df810b4b88e84eaf9588f8998594d74116edfb3ddffc9e5f"
+        },
+        "thumb": {
+          "path": "work/production/wave_320/exports/wheat-straw-hat-sprig-thumb.webp",
+          "bytes": 60778,
+          "sha256": "94d0dedb6cd293cd14ae1fce70688b555cc23468261c9f85bac08f97fb619ec2"
+        }
+      },
+      "proofSha256": "87dd4c33a8d515a802df2fd18cdc5387b6050a005e7ad65e9fe38654b6985b16",
+      "pairMeanRgbDifference": 3.69199
+    },
+    {
+      "id": "wheat-straw-paper-sheet",
+      "title": "Straw Fiber Paper and Wheat",
+      "alt": "A blank cream deckle-edged paper sheet with visible straw fibers rests behind two golden wheat stalks.",
+      "description": "A blank cream deckle-edged paper sheet with visible straw fibers rests behind two golden wheat stalks. The blank paper offers room for a short personal caption or nature-journal note.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_320/source/wheat-straw-paper-sheet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "73bdbb01c7059893694f6b7b854978805bd334e1aa910f619bb1da738135de7f",
+      "inputSignature": "4147c3f0662529f24bae8a95273607d3288b20ff317eb56c72873cd38d15b198",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 878160,
+        "weightedCmykRmse": 0.783174
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1113576,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 878160,
+          "weightedCmykRmse": 0.783174
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        103,
+        18,
+        1212,
+        1180
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_320/exports/wheat-straw-paper-sheet.pdf",
+          "bytes": 878160,
+          "sha256": "e98fa435c7b5e83b372c559b6ee28d6b8199f3519229b612c8a87777e45acd4b"
+        },
+        "webp": {
+          "path": "work/production/wave_320/exports/wheat-straw-paper-sheet.webp",
+          "bytes": 1174938,
+          "sha256": "253cecfd514d969c43de2290dc7023095eaba7161e8c2c0c2496570f2ed10ae6"
+        },
+        "thumb": {
+          "path": "work/production/wave_320/exports/wheat-straw-paper-sheet-thumb.webp",
+          "bytes": 66550,
+          "sha256": "96bf2c6b19d1f4bf7e447660c8a53c711988902718535c63c67c07568b3144b6"
+        }
+      },
+      "proofSha256": "cd67186f860a6ca022eaa0399ec337583459f38e2afe9b1e8cc5836033754388",
+      "pairMeanRgbDifference": 1.95203
+    },
+    {
+      "id": "wheat-hollow-straw-segments",
+      "title": "Hollow Wheat Straw Segments",
+      "alt": "Five crossed dry wheat-straw segments show hollow cut ends and a wrapped stem node beside one ripe wheat head.",
+      "description": "Five crossed dry wheat-straw segments show hollow cut ends and a wrapped stem node beside one ripe wheat head. The hollow cut ends make this useful for a classroom discussion of straw as a material.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_320/source/wheat-hollow-straw-segments.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "ff70409d41675584daec2acf1003c31ec6e38257aa708e5eadd8fc33d120dc19",
+      "inputSignature": "2b7652168e4a2a9949b95f15788ca515b3eea610521c3550fffa76b4ed79d3ee",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 803866,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 803866,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        100,
+        54,
+        1513,
+        962
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_320/exports/wheat-hollow-straw-segments.pdf",
+          "bytes": 803866,
+          "sha256": "84e2b91e7cd29f9ca53a485c95c2b8de6707111cd79df9dcc30166e7bd763184"
+        },
+        "webp": {
+          "path": "work/production/wave_320/exports/wheat-hollow-straw-segments.webp",
+          "bytes": 1293992,
+          "sha256": "5a1fe7bd3f179fd7ce277bf5e8d2a23e569e076680f7086b386d73527143a3c7"
+        },
+        "thumb": {
+          "path": "work/production/wave_320/exports/wheat-hollow-straw-segments-thumb.webp",
+          "bytes": 49344,
+          "sha256": "9f07620499737c067872e8652866c21fdd5f27ab88b4c6a89dd6dd6926cc073f"
+        }
+      },
+      "proofSha256": "b5f93f0416fa543dcb60bc1ab05ebf826a081be5b42cd2daee455eaae6f337a8",
+      "pairMeanRgbDifference": 2.55603
+    },
+    {
+      "id": "wheat-open-wheat-wreath",
+      "title": "Open Wheat Wreath",
+      "alt": "An oval wreath of curved golden wheat stalks has an open center and a dusty blue bow at its base.",
+      "description": "An oval wreath of curved golden wheat stalks has an open center and a dusty blue bow at its base. Keep the clear center open for a short personal title or seasonal message.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_320/source/wheat-open-wheat-wreath.png",
+      "printMaxEdgePx": 770,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 770,
+      "pdfHeight": 704,
+      "sourceType": "raster",
+      "sourceSha256": "ee94bb32684da923e8e8b802b3caabc590f41efd4564ab3466b5c3464fbb42d1",
+      "inputSignature": "3f6f4cf31736ec9f2c80c6d2df45df3f96efa13fb5a975e14204887b3bf6f32c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 970994,
+        "weightedCmykRmse": 1.187734
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1254192,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1143429,
+          "weightedCmykRmse": 0.677506
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1098979,
+          "weightedCmykRmse": 0.812242
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038831,
+          "weightedCmykRmse": 0.993794
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 970994,
+          "weightedCmykRmse": 1.187734
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        24,
+        1307,
+        1183
+      ],
+      "image": {
+        "width": 770,
+        "height": 704,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_320/exports/wheat-open-wheat-wreath.pdf",
+          "bytes": 970994,
+          "sha256": "3e8e456475878362734de235a2040dd7e8872587e1c79d63be0f624e8b7b18ac"
+        },
+        "webp": {
+          "path": "work/production/wave_320/exports/wheat-open-wheat-wreath.webp",
+          "bytes": 1588316,
+          "sha256": "f04eca68f24612807d01be10e9256aa5f1efdb0ec36289029ce34ecd95917477"
+        },
+        "thumb": {
+          "path": "work/production/wave_320/exports/wheat-open-wheat-wreath-thumb.webp",
+          "bytes": 116488,
+          "sha256": "187294d2c560ad6ee365315e6c9a0bf8e11b3324aa37fd97225c5de94ee2d4eb"
+        }
+      },
+      "proofSha256": "6fe4853beee12c7ee3909eed25b268d971db85e7907c2651e7314b9834191eda",
+      "pairMeanRgbDifference": 2.47701
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:17:04.313265+00:00",
+  "screenReviewScope": "All six chosen native CMYK PDF renders inspected for full bounded composition, coherent tools/materials and crisp transparent contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:31:59.811Z"
+}

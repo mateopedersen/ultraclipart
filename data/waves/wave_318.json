@@ -1,0 +1,556 @@
+{
+  "wave": "wave_318",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-grain-sieve",
+      "title": "Wheat Grain in a Hand Sieve",
+      "alt": "A round wooden-handled mesh sieve holds golden wheat kernels and pale chaff, with a few loose grains below.",
+      "description": "A round wooden-handled mesh sieve holds golden wheat kernels and pale chaff, with a few loose grains below. The mesh, kernels and chaff suit an illustration of grain cleaning.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-grain-sieve.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "4194402cdecf8b14b2512c88f63534a01ce84c623340b32cef41bc3d407febe4",
+      "inputSignature": "70190cc38eb96df054e236558b3652395b9bb9f59358a42804e33fcdcf20ac7b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 921187,
+        "weightedCmykRmse": 1.139919
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1279312,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1055938,
+          "weightedCmykRmse": 0.787634
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 997429,
+          "weightedCmykRmse": 0.948635
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 921187,
+          "weightedCmykRmse": 1.139919
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        68,
+        84,
+        1307,
+        1063
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_318/exports/wheat-grain-sieve.pdf",
+          "bytes": 921187,
+          "sha256": "3aeae756fba810fe2a3ef33c7e87378f412d56e739f088fb5bbfee553f998bd3"
+        },
+        "webp": {
+          "path": "work/production/wave_318/exports/wheat-grain-sieve.webp",
+          "bytes": 1283904,
+          "sha256": "76c1d8aeff7589e8c4219814263178b8fc28de18eeea4565535f885b4e7b955d"
+        },
+        "thumb": {
+          "path": "work/production/wave_318/exports/wheat-grain-sieve-thumb.webp",
+          "bytes": 69946,
+          "sha256": "4b202fa75a545ab3fefa03e06d23dc8658e92b60343251649ecb4ac8936d467d"
+        }
+      },
+      "proofSha256": "3c8aaee27b2be7cab9890daa738daeee7da110c00817dd5a8f4c117be41bd34b",
+      "pairMeanRgbDifference": 3.74702
+    },
+    {
+      "id": "wheat-hand-crank-mill",
+      "title": "Hand-Crank Wheat Mill",
+      "alt": "A tabletop grain mill has a wooden wheat-filled hopper, a side crank and a low bowl collecting flour beneath its outlet.",
+      "description": "A tabletop grain mill has a wooden wheat-filled hopper, a side crank and a low bowl collecting flour beneath its outlet. Place this compact mill beside your own notes about turning grain into flour.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-hand-crank-mill.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "e1821bccd6002dba32e5bc69f0847a9bb04d7bfa7dbaa8d8de3543edd1b65bba",
+      "inputSignature": "6dab5fd5936b3ecf669b22255abc2b81906b0ed20eb48b9bb0cae5b268845258",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 996404,
+        "weightedCmykRmse": 1.387649
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1458072,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1228169,
+          "weightedCmykRmse": 0.778807
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1163168,
+          "weightedCmykRmse": 0.914882
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1069230,
+          "weightedCmykRmse": 1.109374
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 996404,
+          "weightedCmykRmse": 1.387649
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        83,
+        90,
+        1279,
+        1116
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_318/exports/wheat-hand-crank-mill.pdf",
+          "bytes": 996404,
+          "sha256": "35575469787355995f18c79f50089425be10035da48f2760ca7ee8b6581cf5bc"
+        },
+        "webp": {
+          "path": "work/production/wave_318/exports/wheat-hand-crank-mill.webp",
+          "bytes": 1245738,
+          "sha256": "88b09973be95fecfe6047a18f862099a951bc938999dac084f2db713f4c150b0"
+        },
+        "thumb": {
+          "path": "work/production/wave_318/exports/wheat-hand-crank-mill-thumb.webp",
+          "bytes": 71840,
+          "sha256": "49ef7669af90cac10b752ca4fe30e244d52cc2d137ec64e2cab10812dd7c273d"
+        }
+      },
+      "proofSha256": "fc88a82c8f7f7d1d33088b539c31d00513b5cabe7f0bb4f32bddadb6f21e8813",
+      "pairMeanRgbDifference": 2.98033
+    },
+    {
+      "id": "wheat-millstone-pair",
+      "title": "Millstones and Wheat Grain",
+      "alt": "Two circular grooved millstones sit beside ripe wheat heads, loose kernels and a small mound of flour.",
+      "description": "Two circular grooved millstones sit beside ripe wheat heads, loose kernels and a small mound of flour. The exposed grooves and central opening suit a historical grain-processing display.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-millstone-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6942326c3fa125a9f4312c3fdfaaad718e2dae23285ffb35a1de336b3bde12cc",
+      "inputSignature": "ae18ff22785e41f387cb8acb44ff07f58337da6b43fa1e54da5916d470ff45dc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 976490,
+        "weightedCmykRmse": 1.072174
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1266432,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1097323,
+          "weightedCmykRmse": 0.717272
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1049780,
+          "weightedCmykRmse": 0.873705
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 976490,
+          "weightedCmykRmse": 1.072174
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        87,
+        45,
+        1401,
+        973
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_318/exports/wheat-millstone-pair.pdf",
+          "bytes": 976490,
+          "sha256": "fc00cdb97d342a57f7a45c1c83b84af6dc778ddffa70986b25655c91238b76fe"
+        },
+        "webp": {
+          "path": "work/production/wave_318/exports/wheat-millstone-pair.webp",
+          "bytes": 1845542,
+          "sha256": "cb70eca4e10b530cf7d4c15ef11a8087fc220d5a530428bd6510d1615af88f58"
+        },
+        "thumb": {
+          "path": "work/production/wave_318/exports/wheat-millstone-pair-thumb.webp",
+          "bytes": 66394,
+          "sha256": "f18d0ec32ccd6da970aa3805e6f289aeaa8d0bbbbea930827d718e4d3f1f4696"
+        }
+      },
+      "proofSha256": "9121bcb898e2d924fa665b87238fbb1ba8ab39ebee0cbd02656ba81e5defd2fe",
+      "pairMeanRgbDifference": 3.69244
+    },
+    {
+      "id": "wheat-flour-wooden-scoop",
+      "title": "Wheat Flour in a Wooden Scoop",
+      "alt": "A broad wooden scoop holds pale wheat flour beside a small spill, two golden wheat heads and loose kernels.",
+      "description": "A broad wooden scoop holds pale wheat flour beside a small spill, two golden wheat heads and loose kernels. Add the scoop to a personal baking ingredient card without obscuring the flour detail.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-flour-wooden-scoop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "26b2d1257c365a788625de2cb0da8327629290449ae39bc19113bcc9bc1af223",
+      "inputSignature": "9d82c12c06517935979362296df8d3796e46227bbf1de57676829c36a2d2e456",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 944769,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 944769,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        75,
+        83,
+        1487,
+        926
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_318/exports/wheat-flour-wooden-scoop.pdf",
+          "bytes": 944769,
+          "sha256": "bfe522d4234df93fa34cf92d69a2e3475d16f0c9cf9676f1e16a4070ad4faa6e"
+        },
+        "webp": {
+          "path": "work/production/wave_318/exports/wheat-flour-wooden-scoop.webp",
+          "bytes": 1517752,
+          "sha256": "66d4c53a70c8a2f7149646095324c9f3d2cb698df78573f9844d3a2d8cb0a824"
+        },
+        "thumb": {
+          "path": "work/production/wave_318/exports/wheat-flour-wooden-scoop-thumb.webp",
+          "bytes": 55198,
+          "sha256": "b3f02549e10205cee27604343be2ae9fb8c274a01ec6ed443dc10bb229a2f9ae"
+        }
+      },
+      "proofSha256": "71d27140a1cd577e2e42fc5d7652761cbcf9460cf80482190131dad616f95ae8",
+      "pairMeanRgbDifference": 2.8359
+    },
+    {
+      "id": "wheat-bran-bowl",
+      "title": "Wheat Bran in a Bowl",
+      "alt": "A shallow cream ceramic bowl holds tan wheat bran flakes beside a wooden spoon and ripe wheat heads.",
+      "description": "A shallow cream ceramic bowl holds tan wheat bran flakes beside a wooden spoon and ripe wheat heads. Use the visible papery flakes when illustrating a grain-products vocabulary activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-bran-bowl.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "a0e847c09060e974c7be1296fcb8989d27b495dee2cecb3dd153a26350911374",
+      "inputSignature": "184ececd563ad2dfec5c5bf482ff6b07febe57b9b3579fcf312958b6615493c0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 970340,
+        "weightedCmykRmse": 0.749957
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1149625,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 970340,
+          "weightedCmykRmse": 0.749957
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        127,
+        37,
+        1519,
+        988
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_318/exports/wheat-bran-bowl.pdf",
+          "bytes": 970340,
+          "sha256": "791b60774d2458f12272326d14003f96df03bc740c1eca7f1402763b4fddb56f"
+        },
+        "webp": {
+          "path": "work/production/wave_318/exports/wheat-bran-bowl.webp",
+          "bytes": 1742632,
+          "sha256": "a46864d60df0d4ef1a67cb9fc3804ecd0dcaaa0d48131e09e406f6e946c6aadd"
+        },
+        "thumb": {
+          "path": "work/production/wave_318/exports/wheat-bran-bowl-thumb.webp",
+          "bytes": 69434,
+          "sha256": "9178af1ecd1cc32890f0ec72e55bfa712318e2e6f82234c69b5520f38138bafc"
+        }
+      },
+      "proofSha256": "360b2c1aaf8d61d31023698afb1b01cece7ff96312ad7391f2d3fbeb60025a59",
+      "pairMeanRgbDifference": 4.03329
+    },
+    {
+      "id": "wheat-cracked-grain-jar",
+      "title": "Cracked Wheat in a Glass Jar",
+      "alt": "An open glass jar holds coarse cracked wheat beside its wooden lid, a filled wooden spoon and one ripe wheat head.",
+      "description": "An open glass jar holds coarse cracked wheat beside its wooden lid, a filled wooden spoon and one ripe wheat head. The transparent jar and loose pieces suit a pantry ingredient card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-cracked-grain-jar.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "9d4e0d9985ce5d00e5741036ceac207babd7ffb48411afcd11511fb798561c38",
+      "inputSignature": "1867ad14ec5dab8248a0bda78678bd25e191f32d3e030769f292b52126262273",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 975137,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 975137,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        86,
+        92,
+        1476,
+        942
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_318/exports/wheat-cracked-grain-jar.pdf",
+          "bytes": 975137,
+          "sha256": "f2a09e30d0091f403da9deceb085bcf2f8be79181d1b4aeb9bfb4b9f1a2471a7"
+        },
+        "webp": {
+          "path": "work/production/wave_318/exports/wheat-cracked-grain-jar.webp",
+          "bytes": 1526306,
+          "sha256": "b48fd4bd0b2796f64a54f027503c765ddfffbb26a5a18b7ebfe0e36d69d8a4be"
+        },
+        "thumb": {
+          "path": "work/production/wave_318/exports/wheat-cracked-grain-jar-thumb.webp",
+          "bytes": 54654,
+          "sha256": "873a0ce54b5d8c00e40660656e27920c71188dce4a2acaad189bc33e02a99411"
+        }
+      },
+      "proofSha256": "53ada0509ef988fee5a56b7b63967d30ecf8fe81b289cd68be5626317a032171",
+      "pairMeanRgbDifference": 3.30506
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:00:59.525092+00:00",
+  "screenReviewScope": "All six selected native CMYK PDF renders visually inspected for bounded complete framing, coherent wheat structures and tools, independent composition and clean alpha contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:31:59.290Z"
+}

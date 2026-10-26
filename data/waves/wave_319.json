@@ -1,0 +1,549 @@
+{
+  "wave": "wave_319",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-rolled-flakes-dish",
+      "title": "Wheat Flakes in a Dish",
+      "alt": "A pale blue scalloped bowl holds golden rolled cereal flakes beside a silver spoon and ripe wheat heads.",
+      "description": "A pale blue scalloped bowl holds golden rolled cereal flakes beside a silver spoon and ripe wheat heads. Use this breakfast still life on a personal meal-planning page or cereal vocabulary sheet.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_319/source/wheat-rolled-flakes-dish.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "c04ffe830bcbb3a6d2fbb849952f82ba7df54fca97853aad98ba6042a0357d5e",
+      "inputSignature": "99019d5d45de3aaba0125b5c333b49abf86bbf77a1561a722341ecc0fde9cb7c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 751702,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 751702,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        118,
+        105,
+        1494,
+        891
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_319/exports/wheat-rolled-flakes-dish.pdf",
+          "bytes": 751702,
+          "sha256": "31d6c8cec539db0ccd5f9191fd40d4c36fcc590d28f25504cd6b954d3b0047e7"
+        },
+        "webp": {
+          "path": "work/production/wave_319/exports/wheat-rolled-flakes-dish.webp",
+          "bytes": 1377142,
+          "sha256": "245703939f3f49c97959a8ebc64b8da75f5045058edbbfcf96e92667aaf76f4e"
+        },
+        "thumb": {
+          "path": "work/production/wave_319/exports/wheat-rolled-flakes-dish-thumb.webp",
+          "bytes": 43590,
+          "sha256": "0af54d0424824d0c3093a055afc9ab940ebd736120b08908c450d4677ec0b215"
+        }
+      },
+      "proofSha256": "6f27c7ac7ad2f51c739dc96e9a5b31a1793bfeb2d70e44e369ef81df61ff9d73",
+      "pairMeanRgbDifference": 2.61229
+    },
+    {
+      "id": "wheat-sifting-flour",
+      "title": "Sifting Wheat Flour",
+      "alt": "Two hands with complete cream sleeve cuffs sift flour through a round wooden sieve into a clear mixing bowl beside a wheat head.",
+      "description": "Two hands with complete cream sleeve cuffs sift flour through a round wooden sieve into a clear mixing bowl beside a wheat head. The falling flour gives a personal baking-process layout a clear action.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_319/source/wheat-sifting-flour.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "20d3223dcfde57464b0cff63378b58d6e71ac5019684725610bbd073526c9ba0",
+      "inputSignature": "6bcaa563362d346edd7a32d1a552d51b571e24a8b854e8576af3b3995337b115",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 988620,
+        "weightedCmykRmse": 0.908922
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1272069,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1052057,
+          "weightedCmykRmse": 0.775353
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 988620,
+          "weightedCmykRmse": 0.908922
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        58,
+        79,
+        1248,
+        1147
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_319/exports/wheat-sifting-flour.pdf",
+          "bytes": 988620,
+          "sha256": "3b2419e0af2045aa9cedeb9373cb3915b585adfa3cb9aac0555c32fafa603168"
+        },
+        "webp": {
+          "path": "work/production/wave_319/exports/wheat-sifting-flour.webp",
+          "bytes": 1231484,
+          "sha256": "88754e1d222dec9790c4c6488a89f26b5dd056d55e04a46625dc133d56095dd6"
+        },
+        "thumb": {
+          "path": "work/production/wave_319/exports/wheat-sifting-flour-thumb.webp",
+          "bytes": 70432,
+          "sha256": "a440e11dce31442f122b86ade03584c42df6a4db983c1790aba9d54287dff8f6"
+        }
+      },
+      "proofSha256": "59b87b32517421b1d50b6ee324d083d940a8eeb53cbdd2b966d3f69f5d48ab1f",
+      "pairMeanRgbDifference": 1.97343
+    },
+    {
+      "id": "wheat-dough-mixing-bowl",
+      "title": "Mixing Wheat Dough",
+      "alt": "A deep brown mixing bowl holds rough dough and a wooden spoon, with flour on its rim and golden wheat heads beside it.",
+      "description": "A deep brown mixing bowl holds rough dough and a wooden spoon, with flour on its rim and golden wheat heads beside it. Leave space beside the bowl for your own mixing-stage notes.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_319/source/wheat-dough-mixing-bowl.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "95be447babc85eef72bb0838fb7c99c38110120d16d7fa4742c580128d446025",
+      "inputSignature": "426189ec4efe06857061b637811701cd7757f7a332f05dd028e1384d3606932d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 980628,
+        "weightedCmykRmse": 0.752132
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1156779,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 980628,
+          "weightedCmykRmse": 0.752132
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        34,
+        1507,
+        994
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_319/exports/wheat-dough-mixing-bowl.pdf",
+          "bytes": 980628,
+          "sha256": "f111fa29d7538b3861b2b3bfda46670ef4581320e9f85aefadf2ef94820dc92f"
+        },
+        "webp": {
+          "path": "work/production/wave_319/exports/wheat-dough-mixing-bowl.webp",
+          "bytes": 1733838,
+          "sha256": "2a0bbcd5ea4a8a8629f7cfb7d24037df9bf72fc79739eb3b754650eb94f1e119"
+        },
+        "thumb": {
+          "path": "work/production/wave_319/exports/wheat-dough-mixing-bowl-thumb.webp",
+          "bytes": 59638,
+          "sha256": "8332f3ff38565d60dad17eca15effc5ade6f22f70dcd736a2cba306ce3bc270b"
+        }
+      },
+      "proofSha256": "cddbc3c621054afb30c7abfff3ae4cc32666b01018c12561ce354d8c3fed6727",
+      "pairMeanRgbDifference": 4.13182
+    },
+    {
+      "id": "wheat-round-bread-ear",
+      "title": "Round Bread and Wheat",
+      "alt": "A round loaf with a single long score rests on a folded striped linen cloth beside two ripe wheat heads.",
+      "description": "A round loaf with a single long score rests on a folded striped linen cloth beside two ripe wheat heads. Use the complete loaf as a small centerpiece in a personal baking design.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_319/source/wheat-round-bread-ear.png",
+      "printMaxEdgePx": 860,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 860,
+      "pdfHeight": 786,
+      "sourceType": "raster",
+      "sourceSha256": "93c531cf7974b07d849568788dd412cc7420ddcd4b065f2b87c0429fff19bd5b",
+      "inputSignature": "103766986c9dd57c77e2d721a276e5d8a4d5ba186135a83c1d8d90b4fb89f97c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962159,
+        "weightedCmykRmse": 1.232297
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1358095,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1157447,
+          "weightedCmykRmse": 0.698474
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1108307,
+          "weightedCmykRmse": 0.833588
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1033708,
+          "weightedCmykRmse": 1.01796
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962159,
+          "weightedCmykRmse": 1.232297
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        45,
+        90,
+        1267,
+        1150
+      ],
+      "image": {
+        "width": 860,
+        "height": 786,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_319/exports/wheat-round-bread-ear.pdf",
+          "bytes": 962159,
+          "sha256": "93b6d2950d93df26cdcd61ac78bf66af9e3342dcac40e738e7941ff7ef88e5cf"
+        },
+        "webp": {
+          "path": "work/production/wave_319/exports/wheat-round-bread-ear.webp",
+          "bytes": 1765018,
+          "sha256": "298f3f756417ca6d68a19abb0996d84fe7a3a1cacfea486f331e2f9d64544235"
+        },
+        "thumb": {
+          "path": "work/production/wave_319/exports/wheat-round-bread-ear-thumb.webp",
+          "bytes": 89002,
+          "sha256": "6e69117a78f9cc97903f76e6d53876e7d001f0faa1752c6f73f5c049bf63f65c"
+        }
+      },
+      "proofSha256": "a2f5e71dc86d10c12d1dd3c8c6dab0aa200bb2fb55edf954a2a7c317b97d9761",
+      "pairMeanRgbDifference": 2.35677
+    },
+    {
+      "id": "wheat-sliced-loaf-grain",
+      "title": "Sliced Bread with Wheat Grain",
+      "alt": "A rectangular wheat loaf has two cut slices leaning against it beside loose kernels and a ripe wheat head.",
+      "description": "A rectangular wheat loaf has two cut slices leaning against it beside loose kernels and a ripe wheat head. The visible crumb and cut slices suit a bread vocabulary or meal-planning card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_319/source/wheat-sliced-loaf-grain.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "5f27e328ef874b677486437ae0fd1c9e0e48c2cfc4ba32eab6a93f1cf28587b4",
+      "inputSignature": "a7d6bd5d94f4bb273408ebea67e674da407dd12dcc003ad6229877e7cf833777",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 976642,
+        "weightedCmykRmse": 1.00316
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1301396,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1102418,
+          "weightedCmykRmse": 0.694086
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1049795,
+          "weightedCmykRmse": 0.825752
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 976642,
+          "weightedCmykRmse": 1.00316
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        62,
+        67,
+        1493,
+        955
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_319/exports/wheat-sliced-loaf-grain.pdf",
+          "bytes": 976642,
+          "sha256": "ef6e70f8a57959985e234bd0f85bb999ba36874ae0d8527c5eb7f9553437aa35"
+        },
+        "webp": {
+          "path": "work/production/wave_319/exports/wheat-sliced-loaf-grain.webp",
+          "bytes": 2044906,
+          "sha256": "dcaa51de90d6489015d75e94b2e6314d3a3b3bdfc625b5c1f56b734ce1002a69"
+        },
+        "thumb": {
+          "path": "work/production/wave_319/exports/wheat-sliced-loaf-grain-thumb.webp",
+          "bytes": 67340,
+          "sha256": "dcf90477fa3908b5ad0831b36c69d7f1d7b216ba0730341f37d890db6ebcb157"
+        }
+      },
+      "proofSha256": "dd99a1dd521b66858fc56db31374911223f4b4c94f9ca362a9214af1bf7ce987",
+      "pairMeanRgbDifference": 4.10518
+    },
+    {
+      "id": "wheat-pasta-nests-ear",
+      "title": "Pasta Nests and Wheat",
+      "alt": "Two dry ribbon pasta nests sit beside one golden wheat head and several loose kernels.",
+      "description": "Two dry ribbon pasta nests sit beside one golden wheat head and several loose kernels. Place the dry pasta beside your own notes about foods made from grain.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_319/source/wheat-pasta-nests-ear.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "b8756ce53c083e22dc85f14b6086350c690e80f6b667c47370996ecc8306f7ee",
+      "inputSignature": "aa6a6aa9723a9c18580347e2f8b2e7f2b2021685dae5c021db1f155197540881",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 927698,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 927698,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        111,
+        95,
+        1479,
+        962
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_319/exports/wheat-pasta-nests-ear.pdf",
+          "bytes": 927698,
+          "sha256": "fd448c18594763033b78de4eb73dafc80d6fa48238a6e84e614c45eea49d2c39"
+        },
+        "webp": {
+          "path": "work/production/wave_319/exports/wheat-pasta-nests-ear.webp",
+          "bytes": 1630952,
+          "sha256": "7fc39030e55b3d50a3cdff8b5e5534a87e3522d4ceb0add4e9ee5653b8a130ae"
+        },
+        "thumb": {
+          "path": "work/production/wave_319/exports/wheat-pasta-nests-ear-thumb.webp",
+          "bytes": 57040,
+          "sha256": "75d9171f358dab84b9883befcaac0f061b4b511e9cb249de2b4b7bc0ec8d7987"
+        }
+      },
+      "proofSha256": "8d5a8a7b41ae1fa209f8e1e2496e9e718852dba2343b4540f4575c3ab11532d4",
+      "pairMeanRgbDifference": 3.83609
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:17:04.312771+00:00",
+  "screenReviewScope": "All six chosen native CMYK PDF renders inspected for full bounded composition, coherent tools/materials and crisp transparent contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:31:59.544Z"
+}

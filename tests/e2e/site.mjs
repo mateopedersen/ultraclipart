@@ -82,7 +82,7 @@ const states = [
       await page.locator('[data-hex]').fill('#729bd6');
       await page.locator('[data-hex]').blur();
       await page.locator('[data-action=apply-color]').click();
-      assert.ok((await page.locator('.uc-canvas [fill="#729bd6"]').count()) > 0);
+      await expect(page.locator('.uc-canvas [fill="#729bd6" i]').first()).toBeVisible();
     },
   },
   {

@@ -1,0 +1,77 @@
+{
+  "wave": "wave_323",
+  "topic": "wheat",
+  "method": "builtin-image-generation",
+  "research": "data/research/wheat-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "wheat-wheat-biscuit-stamp",
+      "title": "Wheat Motif Biscuit Stamp",
+      "alt": "A wooden baking stamp with a carved wheat-ear motif rests beside a round biscuit with a matching impression and one wheat sprig.",
+      "description": "A wooden baking stamp with a carved wheat-ear motif rests beside a round biscuit with a matching impression and one wheat sprig. The matching motif links the stamp and biscuit in a personal baking-craft illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_323/source/wheat-wheat-biscuit-stamp.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-small-grain-windmill",
+      "title": "Grain Windmill with Wheat",
+      "alt": "A wooden post windmill has four lattice sails, a side ladder and a compact patch of ripe wheat at its base.",
+      "description": "A wooden post windmill has four lattice sails, a side ladder and a compact patch of ripe wheat at its base. Use the complete sails and building for a small historical grain-milling display.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_323/source/wheat-small-grain-windmill.png",
+      "printMaxEdgePx": 830,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-outline-binding-sheaf",
+      "title": "Binding Wheat Coloring Illustration",
+      "alt": "A kneeling farmer with a braided ponytail and tied headscarf binds a cut wheat bundle with twine, wearing a long apron and boots.",
+      "description": "A kneeling farmer with a braided ponytail and tied headscarf binds a cut wheat bundle with twine, wearing a long apron and boots. Color the headscarf, apron and tied bundle separately in a classroom harvest activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-binding-sheaf.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-outline-grain-scale",
+      "title": "Wheat Grain Scale Coloring Illustration",
+      "alt": "A tabletop grain scale supports a shallow tray of wheat kernels beneath a blank raised display, with one wheat head beside its base.",
+      "description": "A tabletop grain scale supports a shallow tray of wheat kernels beneath a blank raised display, with one wheat head beside its base. Add your own measurement prompt beside the blank display in a classroom worksheet.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-grain-scale.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-outline-pasta-rolling",
+      "title": "Rolling Pasta Dough Coloring Illustration",
+      "alt": "A curly-haired baker in a shirt and apron rolls a sheet of dough at a small table with wheat on its lower shelf.",
+      "description": "A curly-haired baker in a shirt and apron rolls a sheet of dough at a small table with wheat on its lower shelf. The full table and baker suit a food-process coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-pasta-rolling.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-outline-grain-silo",
+      "title": "Wheat Storage Coloring Illustration",
+      "alt": "A cylindrical grain silo with a conical roof, ladder and lower hopper stands beside a small wheat-filled grain trailer.",
+      "description": "A cylindrical grain silo with a conical roof, ladder and lower hopper stands beside a small wheat-filled grain trailer. Use the storage building and trailer in a farm-vocabulary coloring activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-grain-silo.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

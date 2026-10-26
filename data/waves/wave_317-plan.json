@@ -1,0 +1,77 @@
+{
+  "wave": "wave_317",
+  "topic": "wheat",
+  "method": "builtin-image-generation",
+  "research": "data/research/wheat-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "wheat-stem-node",
+      "title": "Wheat Stem Node and Leaf Sheath",
+      "alt": "A green wheat stem segment shows one enlarged node, a wrapped leaf sheath and one narrow parallel-veined leaf blade.",
+      "description": "A green wheat stem segment shows one enlarged node, a wrapped leaf sheath and one narrow parallel-veined leaf blade. Add your own labels around the node, sheath and narrow leaf when making a plant-parts worksheet.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_317/source/wheat-stem-node.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-emerging-head",
+      "title": "Wheat Head Emerging from Its Sheath",
+      "alt": "A young green wheat head rises from an open flag-leaf sheath above a short nodal stem.",
+      "description": "A young green wheat head rises from an open flag-leaf sheath above a short nodal stem. This close view suits a heading-stage observation card.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_317/source/wheat-emerging-head.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-flowering-head",
+      "title": "Flowering Wheat Head",
+      "alt": "A green wheat head with long fine awns has small pale yellow anthers hanging from its central florets.",
+      "description": "A green wheat head with long fine awns has small pale yellow anthers hanging from its central florets. Use the small hanging anthers to introduce cereal flowering without adding unrelated flower petals.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_317/source/wheat-flowering-head.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-ripe-rooted-plant",
+      "title": "Ripe Wheat Plant",
+      "alt": "A complete ripe wheat plant has three golden grain heads, dry narrow leaves and a fibrous root crown in a small soil mound.",
+      "description": "A complete ripe wheat plant has three golden grain heads, dry narrow leaves and a fibrous root crown in a small soil mound. The intact root crown makes this a useful whole-plant study for a crop display.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_317/source/wheat-ripe-rooted-plant.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-small-field-plot",
+      "title": "Small Wheat Field Plot",
+      "alt": "A compact square soil cutaway supports short rows of ripe golden wheat with naturally bending stems and narrow dry leaves.",
+      "description": "A compact square soil cutaway supports short rows of ripe golden wheat with naturally bending stems and narrow dry leaves. The bounded soil block suits a small agriculture scene or a classroom crop comparison.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_317/source/wheat-small-field-plot.png",
+      "printMaxEdgePx": 780,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-gloved-harvest-inspection",
+      "title": "Inspecting a Wheat Head",
+      "alt": "A tan work-gloved hand with a closed green sleeve cuff cradles a ripe wheat head on its gently bending stem.",
+      "description": "A tan work-gloved hand with a closed green sleeve cuff cradles a ripe wheat head on its gently bending stem. Use the hand-held head in a harvest observation card or a personal gardening page.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_317/source/wheat-gloved-harvest-inspection-framing-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

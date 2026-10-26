@@ -1,0 +1,77 @@
+{
+  "wave": "wave_318",
+  "topic": "wheat",
+  "method": "builtin-image-generation",
+  "research": "data/research/wheat-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "wheat-grain-sieve",
+      "title": "Wheat Grain in a Hand Sieve",
+      "alt": "A round wooden-handled mesh sieve holds golden wheat kernels and pale chaff, with a few loose grains below.",
+      "description": "A round wooden-handled mesh sieve holds golden wheat kernels and pale chaff, with a few loose grains below. The mesh, kernels and chaff suit an illustration of grain cleaning.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-grain-sieve.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-hand-crank-mill",
+      "title": "Hand-Crank Wheat Mill",
+      "alt": "A tabletop grain mill has a wooden wheat-filled hopper, a side crank and a low bowl collecting flour beneath its outlet.",
+      "description": "A tabletop grain mill has a wooden wheat-filled hopper, a side crank and a low bowl collecting flour beneath its outlet. Place this compact mill beside your own notes about turning grain into flour.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-hand-crank-mill.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-millstone-pair",
+      "title": "Millstones and Wheat Grain",
+      "alt": "Two circular grooved millstones sit beside ripe wheat heads, loose kernels and a small mound of flour.",
+      "description": "Two circular grooved millstones sit beside ripe wheat heads, loose kernels and a small mound of flour. The exposed grooves and central opening suit a historical grain-processing display.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-millstone-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-flour-wooden-scoop",
+      "title": "Wheat Flour in a Wooden Scoop",
+      "alt": "A broad wooden scoop holds pale wheat flour beside a small spill, two golden wheat heads and loose kernels.",
+      "description": "A broad wooden scoop holds pale wheat flour beside a small spill, two golden wheat heads and loose kernels. Add the scoop to a personal baking ingredient card without obscuring the flour detail.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-flour-wooden-scoop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-bran-bowl",
+      "title": "Wheat Bran in a Bowl",
+      "alt": "A shallow cream ceramic bowl holds tan wheat bran flakes beside a wooden spoon and ripe wheat heads.",
+      "description": "A shallow cream ceramic bowl holds tan wheat bran flakes beside a wooden spoon and ripe wheat heads. Use the visible papery flakes when illustrating a grain-products vocabulary activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-bran-bowl.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-cracked-grain-jar",
+      "title": "Cracked Wheat in a Glass Jar",
+      "alt": "An open glass jar holds coarse cracked wheat beside its wooden lid, a filled wooden spoon and one ripe wheat head.",
+      "description": "An open glass jar holds coarse cracked wheat beside its wooden lid, a filled wooden spoon and one ripe wheat head. The transparent jar and loose pieces suit a pantry ingredient card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_318/source/wheat-cracked-grain-jar.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

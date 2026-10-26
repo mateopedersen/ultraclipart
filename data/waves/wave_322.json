@@ -1,0 +1,549 @@
+{
+  "wave": "wave_322",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-harvest-shears",
+      "title": "Cut Wheat and Harvest Shears",
+      "alt": "A pair of open metal harvest shears rests beside two cut wheat stems and a small ball of binding twine.",
+      "description": "A pair of open metal harvest shears rests beside two cut wheat stems and a small ball of binding twine. Use the shears and twine in a harvest-tool vocabulary sheet.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_322/source/wheat-harvest-shears.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 930,
+      "pdfHeight": 850,
+      "sourceType": "raster",
+      "sourceSha256": "f7fe86bd07a26eb67169e05f8d49c400ac08730872d0dec9eda1a39752b20140",
+      "inputSignature": "f0111446d249d9e5dcb1b74ef3c79eac48f69718cf88ae61e9e7bdf6e2386017",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 989451,
+        "weightedCmykRmse": 1.457024
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1338654,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1185698,
+          "weightedCmykRmse": 0.776245
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1130105,
+          "weightedCmykRmse": 0.940867
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1052038,
+          "weightedCmykRmse": 1.119531
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 989451,
+          "weightedCmykRmse": 1.457024
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        49,
+        23,
+        1262,
+        1148
+      ],
+      "image": {
+        "width": 930,
+        "height": 850,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_322/exports/wheat-harvest-shears.pdf",
+          "bytes": 989451,
+          "sha256": "e259ab0f4cb42ca684ba2203e2fa47c0eeb9a20b9182eb701f05aacc8b42fdfa"
+        },
+        "webp": {
+          "path": "work/production/wave_322/exports/wheat-harvest-shears.webp",
+          "bytes": 1114852,
+          "sha256": "97ff1bdbe0401d70b6abeb932a9b28c534177e16ccb211a015b713639a933d32"
+        },
+        "thumb": {
+          "path": "work/production/wave_322/exports/wheat-harvest-shears-thumb.webp",
+          "bytes": 88644,
+          "sha256": "1d7a1553c6742428490436b8a7031e1ed88d85714918ead7cf4b9a5f85901feb"
+        }
+      },
+      "proofSha256": "b7e47f7dd84366c692bd4650e119502314811377e8a5fc8c990418e086193630",
+      "pairMeanRgbDifference": 4.74681
+    },
+    {
+      "id": "wheat-grain-sample-meter",
+      "title": "Grain Sample Meter and Wheat",
+      "alt": "A compact black-and-yellow grain-sample meter has a blank display and a wheat-filled metal cup beside its removable cap and a ripe wheat ear.",
+      "description": "A compact black-and-yellow grain-sample meter has a blank display and a wheat-filled metal cup beside its removable cap and a ripe wheat ear. The display is intentionally blank so a personal layout can add its own caption without implying a measured result.",
+      "color": "Black",
+      "style": "Color",
+      "source": "work/production/wave_322/source/wheat-grain-sample-meter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "56c2f4621a4d487525e927123a2cbda8a60f1af567432ad21a1f54e63c3925bf",
+      "inputSignature": "4097cde48e632739f70f0437b10eae8ea8aa44f431fbcba0ce638645d7b882de",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 950089,
+        "weightedCmykRmse": 0.948392
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1275538,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1013852,
+          "weightedCmykRmse": 0.818409
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 950089,
+          "weightedCmykRmse": 0.948392
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        51,
+        1280,
+        1139
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_322/exports/wheat-grain-sample-meter.pdf",
+          "bytes": 950089,
+          "sha256": "58a1559b1de10f446ec9a510a322ff4ca06dfb3caf9bc528b74bf6f90e0bb756"
+        },
+        "webp": {
+          "path": "work/production/wave_322/exports/wheat-grain-sample-meter.webp",
+          "bytes": 1107558,
+          "sha256": "17fcdbe118d7ff91db0b0f9b941519dc19e164d8b4edda79d3148b57a855f8f5"
+        },
+        "thumb": {
+          "path": "work/production/wave_322/exports/wheat-grain-sample-meter-thumb.webp",
+          "bytes": 67508,
+          "sha256": "f9fdeec1c25826bfc1fdc4f374d222134cc4e513d58196eef190953400c4fa0c"
+        }
+      },
+      "proofSha256": "8ec559baacf1f2b5b046ca49a7225935dc9d4e7102de8729db599d70fa0a5608",
+      "pairMeanRgbDifference": 2.95847
+    },
+    {
+      "id": "wheat-petri-germination",
+      "title": "Wheat Germination in a Petri Dish",
+      "alt": "A clear petri dish holds four separated sprouting wheat kernels on a pale pad, with its lid tilted behind.",
+      "description": "A clear petri dish holds four separated sprouting wheat kernels on a pale pad, with its lid tilted behind. The separated seedlings suit a classroom germination observation page.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_322/source/wheat-petri-germination.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "63192ac2117263b8cdc2393e924e6448553cdc15bd47d551eeae24c93abc1f49",
+      "inputSignature": "29b44ba4a2da6d31c2b12ee212b907ecf323d65df39fabe6f8325ab36521f621",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 765830,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 765830,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        127,
+        64,
+        1463,
+        941
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_322/exports/wheat-petri-germination.pdf",
+          "bytes": 765830,
+          "sha256": "301615c827e4691af8d1c1c7345c27aef9060da7aee6df4011af226555086dd0"
+        },
+        "webp": {
+          "path": "work/production/wave_322/exports/wheat-petri-germination.webp",
+          "bytes": 1413942,
+          "sha256": "f1b4f82d36968207d80876eb9fc317a63c8b1aa8b4b7aee5ce31f6aadd7aae2d"
+        },
+        "thumb": {
+          "path": "work/production/wave_322/exports/wheat-petri-germination-thumb.webp",
+          "bytes": 42366,
+          "sha256": "c64a04f7ea330a7256d6449dd40d865f479a932450c703937eb690c6873245fb"
+        }
+      },
+      "proofSha256": "b8992b44c37b555200ace35386a2a2d7747cdfacda69d8becff098cfb1307782",
+      "pairMeanRgbDifference": 2.51729
+    },
+    {
+      "id": "wheat-sowing-tray",
+      "title": "Sowing Wheat Seeds",
+      "alt": "A hand in a complete green gardening sleeve drops wheat kernels into furrows in a soil seed tray beside an open kraft seed envelope.",
+      "description": "A hand in a complete green gardening sleeve drops wheat kernels into furrows in a soil seed tray beside an open kraft seed envelope. The falling kernels show a sowing action for a personal gardening or classroom planting design.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_322/source/wheat-sowing-tray-cuff-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "2ffded646d354110516128ca1d48b76eaac8f0d66e993c358aa0822ff77da8c4",
+      "inputSignature": "f9eda7b7687422402f904a506addbee78afb4ce6f4c73de6b7da711e80ac6d33",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 906411,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 906411,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        54,
+        20,
+        1471,
+        975
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_322/exports/wheat-sowing-tray.pdf",
+          "bytes": 906411,
+          "sha256": "70d0d778d97bc094a71974c54f68c6be92f80d61d5e4d1f161b8330829995b8f"
+        },
+        "webp": {
+          "path": "work/production/wave_322/exports/wheat-sowing-tray.webp",
+          "bytes": 1458546,
+          "sha256": "e2921adeddeae2196b40cf517e62d8ea1f67ed5bac7cc0731c1a62f77527554a"
+        },
+        "thumb": {
+          "path": "work/production/wave_322/exports/wheat-sowing-tray-thumb.webp",
+          "bytes": 44176,
+          "sha256": "a723b25aff849de0c4ba39b4c911da882797446dd816764494479e58aab20eeb"
+        }
+      },
+      "proofSha256": "70e28bcace62b847af403ff64a191f1a82b2511ba4c48c906311c316a6d115ce",
+      "pairMeanRgbDifference": 3.07188
+    },
+    {
+      "id": "wheat-combine-harvest",
+      "title": "Combine Harvester and Wheat",
+      "alt": "A red combine harvester with a wide front cutting header stands behind a compact strip of ripe wheat.",
+      "description": "A red combine harvester with a wide front cutting header stands behind a compact strip of ripe wheat. Use the bounded machine and crop strip in a farm-machinery vocabulary activity.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_322/source/wheat-combine-harvest.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "9327bf281c216f3326d25c472d5157c1cc1bb4390b4bf0564a15ae78fb12bf0b",
+      "inputSignature": "b948925aa8b533e118a0a3afb1a69416081f0c1ae6d3a9d6128ee242d9484561",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 996077,
+        "weightedCmykRmse": 0.877797
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1252289,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1046411,
+          "weightedCmykRmse": 0.740156
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 996077,
+          "weightedCmykRmse": 0.877797
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        41,
+        79,
+        1508,
+        945
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_322/exports/wheat-combine-harvest.pdf",
+          "bytes": 996077,
+          "sha256": "02c0cd2934d6f597559cef6f5054762acaf3cd9c9ce9a1f5423337599f9e7606"
+        },
+        "webp": {
+          "path": "work/production/wave_322/exports/wheat-combine-harvest.webp",
+          "bytes": 1900278,
+          "sha256": "d19cdc54037ab0e51988fa0193ccb8c012b692b73490f0efa14499e7036ef34c"
+        },
+        "thumb": {
+          "path": "work/production/wave_322/exports/wheat-combine-harvest-thumb.webp",
+          "bytes": 65262,
+          "sha256": "1db6ad50fb9c8ff9c4808d818a723039545be82d56b6c3fc771f7d6fa67902af"
+        }
+      },
+      "proofSha256": "493bc257a6270945485fdf0f0ffba01e601be0857dc72bf64ca797d9ec023a7a",
+      "pairMeanRgbDifference": 5.10318
+    },
+    {
+      "id": "wheat-place-setting",
+      "title": "Wheat Napkin Place Setting",
+      "alt": "A folded cream linen napkin with two golden wheat heads is tied with a pale blue ribbon on a small ceramic plate.",
+      "description": "A folded cream linen napkin with two golden wheat heads is tied with a pale blue ribbon on a small ceramic plate. The tied napkin makes a useful isolated detail for a personal harvest-table layout.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_322/source/wheat-place-setting.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1214,
+      "height": 1295,
+      "pdfWidth": 937,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "d33a9083abc9c1a34e63090e8624e35f00025644e589c4f17ac0db73a163e81c",
+      "inputSignature": "5cb7bb39b2fd3db14700996b197eede0b6ceae5b20423d14eb902f9cb9c09273",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 986951,
+        "weightedCmykRmse": 0.863871
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1334222,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1055358,
+          "weightedCmykRmse": 0.739743
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 986951,
+          "weightedCmykRmse": 0.863871
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        80,
+        26,
+        1151,
+        1223
+      ],
+      "image": {
+        "width": 937,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_322/exports/wheat-place-setting.pdf",
+          "bytes": 986951,
+          "sha256": "4aa5e966057075471c23bb0d4e378023fe48e4c4d2d09827eaebc5331c86876f"
+        },
+        "webp": {
+          "path": "work/production/wave_322/exports/wheat-place-setting.webp",
+          "bytes": 1371882,
+          "sha256": "5523389143814bfc34e77804cd7dae271264c9c2c07232f390f935c9ce0ed1e9"
+        },
+        "thumb": {
+          "path": "work/production/wave_322/exports/wheat-place-setting-thumb.webp",
+          "bytes": 70544,
+          "sha256": "03446085716b1241ec05b0fa879ba13db18e74edc29a4b5b953cc053fadd451c"
+        }
+      },
+      "proofSha256": "8fa0cad43a59c0b3530455906a5f2407351a5e547567fd06a66b578cbcf2a21c",
+      "pairMeanRgbDifference": 2.79576
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:24:55.980264+00:00",
+  "screenReviewScope": "Every selected native CMYK PDF render inspected for coherent tools, complete people/hands, plant anatomy, legible clean lines and full bounded framing.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:32:00.366Z"
+}

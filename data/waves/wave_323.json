@@ -1,0 +1,577 @@
+{
+  "wave": "wave_323",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-wheat-biscuit-stamp",
+      "title": "Wheat Motif Biscuit Stamp",
+      "alt": "A wooden baking stamp with a carved wheat-ear motif rests beside a round biscuit with a matching impression and one wheat sprig.",
+      "description": "A wooden baking stamp with a carved wheat-ear motif rests beside a round biscuit with a matching impression and one wheat sprig. The matching motif links the stamp and biscuit in a personal baking-craft illustration.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_323/source/wheat-wheat-biscuit-stamp.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "cb5d7cd0c929c1ebc82310a95ff28cfbbe2196cb6234cbf04cba9fecd08e9eff",
+      "inputSignature": "d935af6e77ff189aa908f91bc5af5538223ffb2482308d88f8766eab98b58f7f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 962206,
+        "weightedCmykRmse": 0.776937
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1185714,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 962206,
+          "weightedCmykRmse": 0.776937
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        64,
+        96,
+        1315,
+        1059
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_323/exports/wheat-wheat-biscuit-stamp.pdf",
+          "bytes": 962206,
+          "sha256": "61c270a0a747ec31855cc14f8a14c9526a312938a58d3d26d85d064ecc78ca9c"
+        },
+        "webp": {
+          "path": "work/production/wave_323/exports/wheat-wheat-biscuit-stamp.webp",
+          "bytes": 1255268,
+          "sha256": "23a5814428b782672c7925cb147d7c00b64beb4b96c99b32f1c9d55dc6cedbf6"
+        },
+        "thumb": {
+          "path": "work/production/wave_323/exports/wheat-wheat-biscuit-stamp-thumb.webp",
+          "bytes": 65880,
+          "sha256": "86a497887cc880fff89c8b92f1fdc2fc9bf5cb9fd6025ac8a8d9f69ddf5c21cd"
+        }
+      },
+      "proofSha256": "cc3588c1743197655564d88a9742eec994c57429d73af6aca0df370f4ea0bd0f",
+      "pairMeanRgbDifference": 3.09623
+    },
+    {
+      "id": "wheat-small-grain-windmill",
+      "title": "Grain Windmill with Wheat",
+      "alt": "A wooden post windmill has four lattice sails, a side ladder and a compact patch of ripe wheat at its base.",
+      "description": "A wooden post windmill has four lattice sails, a side ladder and a compact patch of ripe wheat at its base. Use the complete sails and building for a small historical grain-milling display.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_323/source/wheat-small-grain-windmill.png",
+      "printMaxEdgePx": 830,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1226,
+      "height": 1283,
+      "pdfWidth": 793,
+      "pdfHeight": 830,
+      "sourceType": "raster",
+      "sourceSha256": "4ca67571b893732758aebe2bbf84eb1f28a0a517076f351ae49bae357b6f9fbe",
+      "inputSignature": "d10938501147a74ff1b2aa29d2bcaada06d6bd190dbc77993116c14a7b3ad71d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 963379,
+        "weightedCmykRmse": 1.302923
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1318312,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1146648,
+          "weightedCmykRmse": 0.736003
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1099483,
+          "weightedCmykRmse": 0.870544
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1027612,
+          "weightedCmykRmse": 1.057198
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 963379,
+          "weightedCmykRmse": 1.302923
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        19,
+        1181,
+        1263
+      ],
+      "image": {
+        "width": 793,
+        "height": 830,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_323/exports/wheat-small-grain-windmill.pdf",
+          "bytes": 963379,
+          "sha256": "64167e178038a78c90a01ca567666d7cd2ec7eb8c0f462aaa8129ffcbcedecb4"
+        },
+        "webp": {
+          "path": "work/production/wave_323/exports/wheat-small-grain-windmill.webp",
+          "bytes": 1563026,
+          "sha256": "e2666cd5bec7c49c0ec645c52d359bb7d6a0666630e073580598a2084b839c36"
+        },
+        "thumb": {
+          "path": "work/production/wave_323/exports/wheat-small-grain-windmill-thumb.webp",
+          "bytes": 102452,
+          "sha256": "1281b96686285eecb91b5e399508169b7a618c905705246ed7f2200025d6df92"
+        }
+      },
+      "proofSha256": "613c05b21dc36680687bfdda4cc804e666c88ab09b3a3070b1d199b97de24f41",
+      "pairMeanRgbDifference": 2.73141
+    },
+    {
+      "id": "wheat-outline-binding-sheaf",
+      "title": "Binding Wheat Coloring Illustration",
+      "alt": "A kneeling farmer with a braided ponytail and tied headscarf binds a cut wheat bundle with twine, wearing a long apron and boots.",
+      "description": "A kneeling farmer with a braided ponytail and tied headscarf binds a cut wheat bundle with twine, wearing a long apron and boots. Color the headscarf, apron and tied bundle separately in a classroom harvest activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-binding-sheaf.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 910,
+      "pdfHeight": 832,
+      "sourceType": "raster",
+      "sourceSha256": "cb335db1bd65d7666ff995854ca1d1308a49b7ea88a46b218f213ebd6fe8bc24",
+      "inputSignature": "15948afdd5338cbc2d959da5d8f20a4f2ca534a9d307c3d0f0a163b9e9619213",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 964317,
+        "weightedCmykRmse": 1.230207
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1418192,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1170517,
+          "weightedCmykRmse": 0.705573
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1115404,
+          "weightedCmykRmse": 0.820675
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1033012,
+          "weightedCmykRmse": 0.981035
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 964317,
+          "weightedCmykRmse": 1.230207
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        33,
+        5,
+        1248,
+        1188
+      ],
+      "image": {
+        "width": 910,
+        "height": 832,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_323/exports/wheat-outline-binding-sheaf.pdf",
+          "bytes": 964317,
+          "sha256": "8d251b325cc8cf1961932185b03135302a4a65a82a2043078b87a62944ef7483"
+        },
+        "webp": {
+          "path": "work/production/wave_323/exports/wheat-outline-binding-sheaf.webp",
+          "bytes": 1093210,
+          "sha256": "6cbe1d74b61cda84b99201bde3f43bc83d7de5ef4227a10cf2f14ab4544d50ed"
+        },
+        "thumb": {
+          "path": "work/production/wave_323/exports/wheat-outline-binding-sheaf-thumb.webp",
+          "bytes": 82896,
+          "sha256": "5e5e8ff7e21ec9256a75fd5b7b8d130100649f80bea7236d91726a7b8b1a1d10"
+        }
+      },
+      "proofSha256": "8ef841c2144e8e8e01e9edcb8696ae9edbda17f7e3ce11b5ff91e0bc9cef7a72",
+      "pairMeanRgbDifference": 3.75369
+    },
+    {
+      "id": "wheat-outline-grain-scale",
+      "title": "Wheat Grain Scale Coloring Illustration",
+      "alt": "A tabletop grain scale supports a shallow tray of wheat kernels beneath a blank raised display, with one wheat head beside its base.",
+      "description": "A tabletop grain scale supports a shallow tray of wheat kernels beneath a blank raised display, with one wheat head beside its base. Add your own measurement prompt beside the blank display in a classroom worksheet.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-grain-scale.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "673693abd7e71d361897db492557c67327995a89168a1b8973c74929c01788d5",
+      "inputSignature": "96ea65266a6c8703827b3e740d9a858d726fcf7573405e52be7bddf6f3cf3224",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 983795,
+        "weightedCmykRmse": 0.727756
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1274086,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 983795,
+          "weightedCmykRmse": 0.727756
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        6,
+        1303,
+        1185
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_323/exports/wheat-outline-grain-scale.pdf",
+          "bytes": 983795,
+          "sha256": "3dda55f5ca1065252fcbde2dc618f2ca3c7dc4c8fe141297929968b3d116d22c"
+        },
+        "webp": {
+          "path": "work/production/wave_323/exports/wheat-outline-grain-scale.webp",
+          "bytes": 810462,
+          "sha256": "f97537680b99d4f9a52f74edb0828f73908a198c5e87c8ba206b34e8c19c3310"
+        },
+        "thumb": {
+          "path": "work/production/wave_323/exports/wheat-outline-grain-scale-thumb.webp",
+          "bytes": 62280,
+          "sha256": "35c383fdf00e58d0149b8d1b9d21b91f42f5d0b3ad8df0112cd57aea10acfeaf"
+        }
+      },
+      "proofSha256": "feb43c9ff32d861d03e2ee30082043cdb836d70b5cbd30c25a025d35f790ffca",
+      "pairMeanRgbDifference": 6.45774
+    },
+    {
+      "id": "wheat-outline-pasta-rolling",
+      "title": "Rolling Pasta Dough Coloring Illustration",
+      "alt": "A curly-haired baker in a shirt and apron rolls a sheet of dough at a small table with wheat on its lower shelf.",
+      "description": "A curly-haired baker in a shirt and apron rolls a sheet of dough at a small table with wheat on its lower shelf. The full table and baker suit a food-process coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-pasta-rolling.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 951,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "24feeea51367d5fa429b21b65c245e69891fb589092877a8cc5eccdce042d2ed",
+      "inputSignature": "42321f5b59dc83b2aa7978b03abf2d0537c7586030bc85ebe4963befe9705bf2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 901254,
+        "weightedCmykRmse": 0.767843
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1205135,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 901254,
+          "weightedCmykRmse": 0.767843
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        45,
+        19,
+        1161,
+        1274
+      ],
+      "image": {
+        "width": 951,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_323/exports/wheat-outline-pasta-rolling.pdf",
+          "bytes": 901254,
+          "sha256": "d864c9ddd35853c7f5b9d69eee1114e3d1921c848a06a72afc85c83e9bb106d8"
+        },
+        "webp": {
+          "path": "work/production/wave_323/exports/wheat-outline-pasta-rolling.webp",
+          "bytes": 757446,
+          "sha256": "bd153b704812dd8d0e7d7b629a03d42516c8d14fa3a6e59389ec6574dc414d99"
+        },
+        "thumb": {
+          "path": "work/production/wave_323/exports/wheat-outline-pasta-rolling-thumb.webp",
+          "bytes": 60296,
+          "sha256": "443f216b7ddb5d73fc05d7e457ed0ccd62895020cad0c5ef037c56769a57617e"
+        }
+      },
+      "proofSha256": "9cee4ff91fefbb5699387df2ed7c3e8c80366c3aeb4e59b2702b8d1d59a70946",
+      "pairMeanRgbDifference": 7.40685
+    },
+    {
+      "id": "wheat-outline-grain-silo",
+      "title": "Wheat Storage Coloring Illustration",
+      "alt": "A cylindrical grain silo with a conical roof, ladder and lower hopper stands beside a small wheat-filled grain trailer.",
+      "description": "A cylindrical grain silo with a conical roof, ladder and lower hopper stands beside a small wheat-filled grain trailer. Use the storage building and trailer in a farm-vocabulary coloring activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_323/source/wheat-outline-grain-silo.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "c5abc41ee41c3d5527201c25cf1382d27fb7cf3174fd0dad5c0d4c5bc9ccfacd",
+      "inputSignature": "73e0c6a3e9b63e870342cd2eeebbae3b67ad79e59994049c69e21524bd05574d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 991493,
+        "weightedCmykRmse": 1.033296
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1426908,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1142545,
+          "weightedCmykRmse": 0.739363
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1077872,
+          "weightedCmykRmse": 0.853664
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 991493,
+          "weightedCmykRmse": 1.033296
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        34,
+        27,
+        1287,
+        1178
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_323/exports/wheat-outline-grain-silo.pdf",
+          "bytes": 991493,
+          "sha256": "10adf8799ba97675c8f4eb1b9e49bafcfae537976bd419fafaaebc1f0311002c"
+        },
+        "webp": {
+          "path": "work/production/wave_323/exports/wheat-outline-grain-silo.webp",
+          "bytes": 888744,
+          "sha256": "dd0af100c1460b0da15eb214e9d0867cacf2b8eb14a07cd3488b332195bf500d"
+        },
+        "thumb": {
+          "path": "work/production/wave_323/exports/wheat-outline-grain-silo-thumb.webp",
+          "bytes": 71298,
+          "sha256": "48ee1af62041d85c2405153a046466cc068f9d884f2892b6d78d77766b74290e"
+        }
+      },
+      "proofSha256": "3e4d966b760985465fa5b0d53d76cf6ded8ff33f598361f03382d1b165a4ca9e",
+      "pairMeanRgbDifference": 6.8319
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:24:55.980855+00:00",
+  "screenReviewScope": "Every selected native CMYK PDF render inspected for coherent tools, complete people/hands, plant anatomy, legible clean lines and full bounded framing.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:32:00.610Z"
+}

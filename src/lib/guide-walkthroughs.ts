@@ -110,7 +110,7 @@ export const guideLessons: GuideLesson[] = [
             title: 'Move or resize the selection',
             text: 'The selection frame shows the current object. Use the editor’s transform and alignment controls to change its position or size. Preserve proportions when resizing an illustration.',
             box: [117, 180, 477, 56],
-            pin: [643, 270],
+            pin: [495, 270],
             point: [594, 229],
           },
         ],

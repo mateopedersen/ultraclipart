@@ -123,7 +123,9 @@ try {
   await page.route('**/search-data/**', (route) => route.abort('failed'));
   await page.goto(`${base}/search/?q=arctic+fox`);
   await expect(page.locator('#search-error')).toBeVisible();
-  await expect(page.locator('#result-count')).toHaveText('Search is temporarily unavailable.');
+  await expect(page.locator('#result-count')).toHaveText(
+    'Search could not load. Your query and filters are kept.',
+  );
   await page.unroute('**/search-data/**');
   await page.click('#search-retry');
   await expect(cards()).toHaveCount(expected({ q: 'arctic fox' }).items.length);

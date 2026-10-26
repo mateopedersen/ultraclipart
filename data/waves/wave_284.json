@@ -1,6 +1,6 @@
 {
   "wave": "wave_284",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 1,
   "screenReview": "PASS",
@@ -524,5 +524,7 @@
   "screenReviewedAt": "2026-10-25T20:25:10.612495+00:00",
   "screenReviewScope": "All six actual CMYK PDF renders inspected against complete reviewed source compositions; natural metadata matched to visible forms and alpha framing checked.",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
-  "createdAt": "2026-10-25T20:45:35.432Z"
+  "createdAt": "2026-10-25T20:45:35.432Z",
+  "liveVerifiedAt": "2026-10-26T00:21:44.123444+00:00",
+  "liveRevision": "b792e3c5cbfc3342f92387285775c4ecd77d9021"
 }

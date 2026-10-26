@@ -1,0 +1,206 @@
+{
+  "wave": "wave_324",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 2,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-outline-embroidery-hoop",
+      "title": "Wheat Embroidery Coloring Illustration",
+      "alt": "Two hands with closed sleeve cuffs hold a round embroidery hoop with a stitched wheat-ear motif and guide a needle through its fabric.",
+      "description": "Two hands with closed sleeve cuffs hold a round embroidery hoop with a stitched wheat-ear motif and guide a needle through its fabric. The needle, hoop and closed cuffs suit a personal embroidery-themed coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_324/source/wheat-outline-embroidery-hoop-framing-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "d4fc87aa4713d889e6f1f1c8e69df1cc2394a236f2e649f5eb0c7b4d19c7b1cc",
+      "inputSignature": "5da451a3728e7bf16ca7bb196280175b70965f9653747418a5d9132d318c901a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 754725,
+        "weightedCmykRmse": 0.792184
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1016116,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 754725,
+          "weightedCmykRmse": 0.792184
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        136,
+        1307,
+        1126
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_324/exports/wheat-outline-embroidery-hoop.pdf",
+          "bytes": 754725,
+          "sha256": "dbb82c57c56183aa00e2890b5cee202a7293982567fed5b500a85c28c855b4eb"
+        },
+        "webp": {
+          "path": "work/production/wave_324/exports/wheat-outline-embroidery-hoop.webp",
+          "bytes": 719902,
+          "sha256": "22896c7dbdacd1c4dddf99fb7343a04dd68ff0596812b4201096d25feb399762"
+        },
+        "thumb": {
+          "path": "work/production/wave_324/exports/wheat-outline-embroidery-hoop-thumb.webp",
+          "bytes": 44532,
+          "sha256": "ab4c5d993119b8fb8229034584d6c7a579706de220104dc268d3d8c0a7456dbd"
+        }
+      },
+      "proofSha256": "b2a6ba129754d3785e750c3b304258d22ffc3923d8656ee150353303bd6acf0c",
+      "pairMeanRgbDifference": 5.00746
+    },
+    {
+      "id": "wheat-outline-growing-observation",
+      "title": "Observing Wheat Roots Coloring Illustration",
+      "alt": "Two young wheat plants grow in a clear rectangular container with visible roots along its wall, beside a complete magnifying glass.",
+      "description": "Two young wheat plants grow in a clear rectangular container with visible roots along its wall, beside a complete magnifying glass. The visible roots and magnifier suit a classroom plant-observation coloring activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_324/source/wheat-outline-growing-observation.png",
+      "printMaxEdgePx": 850,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 850,
+      "pdfHeight": 777,
+      "sourceType": "raster",
+      "sourceSha256": "f288d9e81c0f2c664de562bebbb7fb94395706083c3f814011207ef5c9fb8bd0",
+      "inputSignature": "df1cdb1a571f31994a083329f3af719869a2442dba71ec9f3cecdc6649f96695",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962441,
+        "weightedCmykRmse": 1.274764
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1283912,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1140943,
+          "weightedCmykRmse": 0.71105
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1093932,
+          "weightedCmykRmse": 0.853238
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1021613,
+          "weightedCmykRmse": 1.049265
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962441,
+          "weightedCmykRmse": 1.274764
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        5,
+        1288,
+        1190
+      ],
+      "image": {
+        "width": 850,
+        "height": 777,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_324/exports/wheat-outline-growing-observation.pdf",
+          "bytes": 962441,
+          "sha256": "ce6cabc652cbadf67b9259028a404279b4bee87aa0fee675eb4d7aee07375410"
+        },
+        "webp": {
+          "path": "work/production/wave_324/exports/wheat-outline-growing-observation.webp",
+          "bytes": 994844,
+          "sha256": "d879b9e17a1dc13679ccb5b08464821db757839c132a3a4a316a084bb3e58fe8"
+        },
+        "thumb": {
+          "path": "work/production/wave_324/exports/wheat-outline-growing-observation-thumb.webp",
+          "bytes": 84092,
+          "sha256": "1bdbfbce6a00fdc7759b5cc78ae732a13b5bbae48435284fcc3257168aefc3a8"
+        }
+      },
+      "proofSha256": "127203bc3eec55b055e6f2d20de04b0f0054a64096a09fab66a54b579fe1c9d2",
+      "pairMeanRgbDifference": 6.82359
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:22:11.210794+00:00",
+  "screenReviewScope": "All selected native CMYK PDF renders visually inspected for complete bounded shapes, hands/cuffs, logical objects and readable crisp details.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:32:00.842Z"
+}

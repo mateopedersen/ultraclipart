@@ -1,0 +1,500 @@
+{
+  "wave": "wave_316",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-awned-head",
+      "title": "Awned Wheat Head",
+      "alt": "A ripe golden wheat head with fine awns stands on a short straw stem beside one curled dry leaf.",
+      "description": "A ripe golden wheat head with fine awns stands on a short straw stem beside one curled dry leaf. Use the complete head and stem for a crop vocabulary card or a seasonal notebook heading.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-awned-head.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "2df93643279d86a33624f4a7d3a0b281cab3b30d477ddc0bdbb63110c78cbd8e",
+      "inputSignature": "c2e325d88679cd636991a2cf9e4846a97ee0d9240c602508fa529073a012c1a0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 572250,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 572250,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        302,
+        31,
+        814,
+        1495
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_316/exports/wheat-awned-head.pdf",
+          "bytes": 572250,
+          "sha256": "e8b1beff6c37ed961277045a1ec8e2ca7899a2f2c2fb3260fa5d1a3f6a3621f7"
+        },
+        "webp": {
+          "path": "work/production/wave_316/exports/wheat-awned-head.webp",
+          "bytes": 1049034,
+          "sha256": "913486f155d505de7a6d9dc17bffb28c6ddfa17badd3035fe207bd287a871f9b"
+        },
+        "thumb": {
+          "path": "work/production/wave_316/exports/wheat-awned-head-thumb.webp",
+          "bytes": 39742,
+          "sha256": "f7166a51df8558436638640ae6a6f3eec7c7f2e21fd3ee40e0e0b8696796f52d"
+        }
+      },
+      "proofSha256": "ab52aabcd9b95ef4c0c894a949c896f6a8cb1fe12cccf8506f2d4a11b18548e5",
+      "pairMeanRgbDifference": 1.67187
+    },
+    {
+      "id": "wheat-spikelet-study",
+      "title": "Wheat Spikelet Study",
+      "alt": "One detached wheat spikelet has three grain-bearing florets gathered above two outer glumes, with complete slender awns and two loose kernels beside it.",
+      "description": "One detached wheat spikelet has three grain-bearing florets gathered above two outer glumes, with complete slender awns and two loose kernels beside it. Place this detached structure beside a whole head when introducing spikelets and florets.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-spikelet-study-anatomy-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "15964f2a8f8f0c87c2126ae768bc7f6f2d024b52b3bca70c857d4d7c78d9b3f9",
+      "inputSignature": "7b658fa08b85c406a159ae5e1620fe885f2f75fa9f1cf063629d04c1583c08be",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 777364,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 777364,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        8,
+        1517,
+        987
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_316/exports/wheat-spikelet-study.pdf",
+          "bytes": 777364,
+          "sha256": "7963365267ef72aa39e03f701d9410e2994fed0f78763d5ebc62a2ec1339141f"
+        },
+        "webp": {
+          "path": "work/production/wave_316/exports/wheat-spikelet-study.webp",
+          "bytes": 1332330,
+          "sha256": "aabec1500bf9b49cf3d39099e8bc371c2912a4ecc123c1b4b8358dde784d823e"
+        },
+        "thumb": {
+          "path": "work/production/wave_316/exports/wheat-spikelet-study-thumb.webp",
+          "bytes": 43016,
+          "sha256": "839fcc7fb133754fe2bda4ac55e032e362c735175793ad010dd1b33f6c7bf32c"
+        }
+      },
+      "proofSha256": "dabce696ba1984593ff70ee4f0460bbbb35c1b543bd79df9eef1116b73b9c14d",
+      "pairMeanRgbDifference": 2.70553
+    },
+    {
+      "id": "wheat-kernel-crease",
+      "title": "Wheat Kernels with Visible Creases",
+      "alt": "Three amber wheat kernels show a lengthwise crease, a rounded back and a fine brush of hairs at one tip.",
+      "description": "Three amber wheat kernels show a lengthwise crease, a rounded back and a fine brush of hairs at one tip. The different seed views suit a classroom observation page about grain shape.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-kernel-crease.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "2cfcf355a7edfd5d4c1ad6cdc8c80cb972f1dd0c781c7681942a4f98a2e1abba",
+      "inputSignature": "7b39712b691aef65b2555fd941f3c59ff9f74a5d8973ded991dbf326e5fc1a7a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 888653,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 888653,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        86,
+        69,
+        1470,
+        925
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_316/exports/wheat-kernel-crease.pdf",
+          "bytes": 888653,
+          "sha256": "36d13fce9b9e378c34721131de4271e3446549a9e165aae11fc14b64100c6424"
+        },
+        "webp": {
+          "path": "work/production/wave_316/exports/wheat-kernel-crease.webp",
+          "bytes": 1604342,
+          "sha256": "2b0760d7ca51f659807d8b2d8f944ac3c1ac40ac11c6f7aede9804250d6f5d8d"
+        },
+        "thumb": {
+          "path": "work/production/wave_316/exports/wheat-kernel-crease-thumb.webp",
+          "bytes": 46994,
+          "sha256": "86a9b50e2303ca2927401b0bde146500c435ab26c1430b81a93b85602a01651d"
+        }
+      },
+      "proofSha256": "90ff323434ceadf1e19ded70be8b819c5ab00c3ff67ee190e7fb3e2a45d9f8ed",
+      "pairMeanRgbDifference": 3.03617
+    },
+    {
+      "id": "wheat-germinating-kernel",
+      "title": "Germinating Wheat Kernel",
+      "alt": "One wheat kernel has a pale green coleoptile curving upward and several white roots extending from its embryo end.",
+      "description": "One wheat kernel has a pale green coleoptile curving upward and several white roots extending from its embryo end. Leave space beside the emerging root and shoot for your own germination notes.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-germinating-kernel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "4dd13b37c81c847604b612add49eaed5ebecb716038a17acefd1ba0ffa2134d0",
+      "inputSignature": "7f642b5564ffdad039a483790a200527168ef37d6a17bc0fa81845ecd811d160",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 601042,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 601042,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        211,
+        29,
+        1205,
+        1104
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_316/exports/wheat-germinating-kernel.pdf",
+          "bytes": 601042,
+          "sha256": "de6b908b4b1bceb65e5b61839320cec26978276787c6a3f50cf516cad0ff2285"
+        },
+        "webp": {
+          "path": "work/production/wave_316/exports/wheat-germinating-kernel.webp",
+          "bytes": 647238,
+          "sha256": "089ece0f7961bcad1343308352f133f9b5f094eac13ca2a4cf26726201beae2e"
+        },
+        "thumb": {
+          "path": "work/production/wave_316/exports/wheat-germinating-kernel-thumb.webp",
+          "bytes": 39430,
+          "sha256": "a70cbdc8a2f73f6b1ac089b988d1ffacd8708494cb9ad17cf1d0f3e833f0b39a"
+        }
+      },
+      "proofSha256": "ffc7ab212f1c0b3d2b45172541312a6942f5038a63a2f387f49dca0c09975fbb",
+      "pairMeanRgbDifference": 1.08684
+    },
+    {
+      "id": "wheat-three-leaf-seedling",
+      "title": "Young Wheat Seedling with Roots",
+      "alt": "A young wheat seedling has three narrow green leaves, a visible kernel and branching fibrous roots in a small soil cutaway.",
+      "description": "A young wheat seedling has three narrow green leaves, a visible kernel and branching fibrous roots in a small soil cutaway. Use the visible roots and leaves in a personal plant-growth journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-three-leaf-seedling.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "973fb2e31ea61c29ea9db46c109169485dff04465245f0548c87ecaee694c288",
+      "inputSignature": "cbb6673bfc76e30c77616add90dfda43541cc9fc2ffdc37561380bbf0619593c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 980268,
+        "weightedCmykRmse": 0.870517
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1156266,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 980268,
+          "weightedCmykRmse": 0.870517
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        168,
+        10,
+        1092,
+        1291
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_316/exports/wheat-three-leaf-seedling.pdf",
+          "bytes": 980268,
+          "sha256": "471e3928fce105c9b7933eb90fbabcdf661b4eb2a1ff212c6e645134d5e750d9"
+        },
+        "webp": {
+          "path": "work/production/wave_316/exports/wheat-three-leaf-seedling.webp",
+          "bytes": 922868,
+          "sha256": "6a99fb9926fa628ac940150cc903024252eaa5fb5768fbc037312ff4e96063af"
+        },
+        "thumb": {
+          "path": "work/production/wave_316/exports/wheat-three-leaf-seedling-thumb.webp",
+          "bytes": 59012,
+          "sha256": "5878f3ff5f88332e289b6952cf50a2261154788587ab6effa67c5df3154616c8"
+        }
+      },
+      "proofSha256": "b38d9dcaba398591a2c098fcb194fbd4e8cd796eee93ee8ae584454015f6e1a0",
+      "pairMeanRgbDifference": 3.52745
+    },
+    {
+      "id": "wheat-tillering-clump",
+      "title": "Tillering Wheat Plant",
+      "alt": "A young wheat plant has a tall central leafy shoot and smaller side shoots joining at a fibrous root crown.",
+      "description": "A young wheat plant has a tall central leafy shoot and smaller side shoots joining at a fibrous root crown. The main shoot and side shoots can support a classroom discussion of tillering.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-tillering-clump.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "059623a184548bcab21049a9dc1def89a0f32ab4cd7d911dea5ad106100c7dfd",
+      "inputSignature": "e32af1ff4676e09f2f9720f85afdf55d2ec3ca7534399242eea92add760b569c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 949437,
+        "weightedCmykRmse": 1.074187
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1128494,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1012230,
+          "weightedCmykRmse": 0.874943
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 949437,
+          "weightedCmykRmse": 1.074187
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        84,
+        17,
+        1144,
+        1297
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_316/exports/wheat-tillering-clump.pdf",
+          "bytes": 949437,
+          "sha256": "33079e913bbc46c3d655902faa50737c79d113ea951ec0111379e5a18b215255"
+        },
+        "webp": {
+          "path": "work/production/wave_316/exports/wheat-tillering-clump.webp",
+          "bytes": 704380,
+          "sha256": "b2c59fdb182be5e3c4eab63adcc01526b2db71e93440282bde73fb72c0b2bc30"
+        },
+        "thumb": {
+          "path": "work/production/wave_316/exports/wheat-tillering-clump-thumb.webp",
+          "bytes": 62272,
+          "sha256": "2a93e220c6acf5d5eadf000b536a73b7620d8130706b2e4b19a7e4efbada1b89"
+        }
+      },
+      "proofSha256": "cc36a4499b9387a8664b96b49f3c9b453a039a1fac6465f44d5367019e1d3e39",
+      "pairMeanRgbDifference": 2.47458
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:00:59.523265+00:00",
+  "screenReviewScope": "All six selected native CMYK PDF renders visually inspected for bounded complete framing, coherent wheat structures and tools, independent composition and clean alpha contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:31:58.780Z"
+}

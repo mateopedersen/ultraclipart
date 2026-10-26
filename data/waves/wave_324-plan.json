@@ -1,0 +1,33 @@
+{
+  "wave": "wave_324",
+  "topic": "wheat",
+  "method": "builtin-image-generation",
+  "research": "data/research/wheat-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "wheat-outline-embroidery-hoop",
+      "title": "Wheat Embroidery Coloring Illustration",
+      "alt": "Two hands with closed sleeve cuffs hold a round embroidery hoop with a stitched wheat-ear motif and guide a needle through its fabric.",
+      "description": "Two hands with closed sleeve cuffs hold a round embroidery hoop with a stitched wheat-ear motif and guide a needle through its fabric. The needle, hoop and closed cuffs suit a personal embroidery-themed coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_324/source/wheat-outline-embroidery-hoop-framing-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-outline-growing-observation",
+      "title": "Observing Wheat Roots Coloring Illustration",
+      "alt": "Two young wheat plants grow in a clear rectangular container with visible roots along its wall, beside a complete magnifying glass.",
+      "description": "Two young wheat plants grow in a clear rectangular container with visible roots along its wall, beside a complete magnifying glass. The visible roots and magnifier suit a classroom plant-observation coloring activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_324/source/wheat-outline-growing-observation.png",
+      "printMaxEdgePx": 850,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

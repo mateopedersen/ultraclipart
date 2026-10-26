@@ -1,0 +1,570 @@
+{
+  "wave": "wave_321",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "wheat-corner-spray",
+      "title": "Wheat Corner Spray",
+      "alt": "Three golden wheat heads on curved stems form an open L-shaped corner with narrow dry leaves.",
+      "description": "Three golden wheat heads on curved stems form an open L-shaped corner with narrow dry leaves. Place this open corner at the edge of a personal card without covering the wheat tips.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_321/source/wheat-corner-spray.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1305,
+      "height": 1206,
+      "pdfWidth": 980,
+      "pdfHeight": 906,
+      "sourceType": "raster",
+      "sourceSha256": "afe54f0ef15ada715b5d63f88f8e3a0927e118823f6fd6d199a2cb6881755032",
+      "inputSignature": "3cb577fa63b33b152762c10485dd1361edbf07e0ae928d36f5ef975951e89cde",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 971769,
+        "weightedCmykRmse": 1.527929
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1334314,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1177504,
+          "weightedCmykRmse": 0.801096
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1115430,
+          "weightedCmykRmse": 0.958563
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1039640,
+          "weightedCmykRmse": 1.12288
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 971769,
+          "weightedCmykRmse": 1.527929
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        57,
+        20,
+        1285,
+        1182
+      ],
+      "image": {
+        "width": 980,
+        "height": 906,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_321/exports/wheat-corner-spray.pdf",
+          "bytes": 971769,
+          "sha256": "645d872bf29cab50ec0468d1e77651099ec5764bfd79958322f94884fc76bd92"
+        },
+        "webp": {
+          "path": "work/production/wave_321/exports/wheat-corner-spray.webp",
+          "bytes": 1029038,
+          "sha256": "5ec4c6e1e5c014d30efc2eefdbc44099b1a4665c6bb316e54dd34d8de03bfe08"
+        },
+        "thumb": {
+          "path": "work/production/wave_321/exports/wheat-corner-spray-thumb.webp",
+          "bytes": 85972,
+          "sha256": "ad13b33a73ef02111db7834cb3ce8a826932b56b27c91ae46d92eea8c9e821e2"
+        }
+      },
+      "proofSha256": "57c3571f34523d90385e5094dff6b8403b4a8cd335145d18d2ba537aa1282a5a",
+      "pairMeanRgbDifference": 1.91091
+    },
+    {
+      "id": "wheat-wax-seal",
+      "title": "Wheat Wax Seal",
+      "alt": "A burgundy wax seal has an impressed wheat-ear motif beside a brass seal stamp with a wooden handle and one ripe wheat head.",
+      "description": "A burgundy wax seal has an impressed wheat-ear motif beside a brass seal stamp with a wooden handle and one ripe wheat head. The impressed ear motif suits a personal stationery or sealing-wax layout.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_321/source/wheat-wax-seal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "25bce46996318352f34885d5bab9445af74e1674a37cbbecd11cd0c70c2ae82a",
+      "inputSignature": "1465594e18a141e4b6c49b0ebcda13bf1e9de963b00e592bcb8a3a352bf41fd1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 960028,
+        "weightedCmykRmse": 0.89716
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1179377,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1008830,
+          "weightedCmykRmse": 0.765679
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 960028,
+          "weightedCmykRmse": 0.89716
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        119,
+        36,
+        1456,
+        1007
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_321/exports/wheat-wax-seal.pdf",
+          "bytes": 960028,
+          "sha256": "652c727242653e15239c626c2594e43503c600bc40c44859932527e2e26acb00"
+        },
+        "webp": {
+          "path": "work/production/wave_321/exports/wheat-wax-seal.webp",
+          "bytes": 1654788,
+          "sha256": "7f268605135d50978369bfc5e91d83d167a6d1ca6bcb88e3ea583b8769f45138"
+        },
+        "thumb": {
+          "path": "work/production/wave_321/exports/wheat-wax-seal-thumb.webp",
+          "bytes": 62288,
+          "sha256": "b202f8486a22038c4df6c94eb61030641e104a940ce0196a79e4dca8ff9a0f61"
+        }
+      },
+      "proofSha256": "36795eff4fd2c36ae672987dd1ad92765e9eb5117e8c347bcb1f5fc4373a7890",
+      "pairMeanRgbDifference": 4.18995
+    },
+    {
+      "id": "wheat-wrapped-bouquet",
+      "title": "Wrapped Wheat and Lavender Bouquet",
+      "alt": "A small bouquet of golden wheat heads and lavender sprigs is wrapped in folded navy paper and tied with twine.",
+      "description": "A small bouquet of golden wheat heads and lavender sprigs is wrapped in folded navy paper and tied with twine. Use the compact wrapped flowers on a personal thank-you card or seasonal invitation.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_321/source/wheat-wrapped-bouquet.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 800,
+      "pdfHeight": 960,
+      "sourceType": "raster",
+      "sourceSha256": "ec411b7f0f9e708912fc43f1d7e3bcd3a1384452708269d87d5ac72dcd9a1d06",
+      "inputSignature": "3beb3a5d300ac9f31dc22982b60a95b3ba70760eee49c1b310a314d528d148a0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 978515,
+        "weightedCmykRmse": 1.371922
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1389730,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1178223,
+          "weightedCmykRmse": 0.763044
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1123636,
+          "weightedCmykRmse": 0.892808
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041181,
+          "weightedCmykRmse": 1.094352
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 978515,
+          "weightedCmykRmse": 1.371922
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        28,
+        1128,
+        1330
+      ],
+      "image": {
+        "width": 800,
+        "height": 960,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_321/exports/wheat-wrapped-bouquet.pdf",
+          "bytes": 978515,
+          "sha256": "f651bd7a5eb9f8f998a6d91bf77962b67a3a77519ad9f19f1f732d5fb7e91dd8"
+        },
+        "webp": {
+          "path": "work/production/wave_321/exports/wheat-wrapped-bouquet.webp",
+          "bytes": 1468394,
+          "sha256": "5aa6264389c167ad9456331fc7e783d438f905309971519141212b187b4a817b"
+        },
+        "thumb": {
+          "path": "work/production/wave_321/exports/wheat-wrapped-bouquet-thumb.webp",
+          "bytes": 85070,
+          "sha256": "2170261049d4d90405b6e5bfa5177890bffe65f348a061e5572e10aa20983997"
+        }
+      },
+      "proofSha256": "8e3ad524e4ac738ad71a17eb66095f381e9ecace46e856cd019e8afe0ad7a1c8",
+      "pairMeanRgbDifference": 4.71912
+    },
+    {
+      "id": "wheat-gift-parcel",
+      "title": "Gift Parcel with Wheat",
+      "alt": "A complete kraft-paper parcel has a rust-colored fabric bow with one wheat ear tucked into its knot.",
+      "description": "A complete kraft-paper parcel has a rust-colored fabric bow with one wheat ear tucked into its knot. The complete parcel works as an isolated detail in a personal gift-planning page.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_321/source/wheat-gift-parcel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "d7930b8f8bd54acdc61d43b04fc89998e4526d40a91bb0bf1450e520fab7a24c",
+      "inputSignature": "998af1198aad1439445893fa2ce9d60bb498577659665c11b0d77879e0c0058a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 957119,
+        "weightedCmykRmse": 0.962101
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1265074,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1021017,
+          "weightedCmykRmse": 0.806491
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 957119,
+          "weightedCmykRmse": 0.962101
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        83,
+        54,
+        1221,
+        1128
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_321/exports/wheat-gift-parcel.pdf",
+          "bytes": 957119,
+          "sha256": "f80f222f0d79686ebf5b49878b801ad754c4958bcdb5202cba9f2e49e93940d6"
+        },
+        "webp": {
+          "path": "work/production/wave_321/exports/wheat-gift-parcel.webp",
+          "bytes": 1223972,
+          "sha256": "01efae7aecf29d4bef609660bd4244e4c21bf291d20d725f0900a818600b9612"
+        },
+        "thumb": {
+          "path": "work/production/wave_321/exports/wheat-gift-parcel-thumb.webp",
+          "bytes": 62966,
+          "sha256": "54198baeba665d86613331f25640ee4e83412f78210af8c9e44771c51f22d621"
+        }
+      },
+      "proofSha256": "269a0de3c8c43d9c4294155d3dd97e1d1d9cac335fcd7411ee3ffdc379298dfd",
+      "pairMeanRgbDifference": 2.84295
+    },
+    {
+      "id": "wheat-felt-brooch",
+      "title": "Embroidered Wheat Brooch",
+      "alt": "An oval cream felt brooch with navy backing shows stitched golden wheat heads beside a separate navy felt oval with a closed pin.",
+      "description": "An oval cream felt brooch with navy backing shows stitched golden wheat heads beside a separate navy felt oval with a closed pin. The visible stitches and pin backing suit a small sewing-craft vocabulary card.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_321/source/wheat-felt-brooch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6ca770117f80bad651f1b6bfb1bc4b4bf1aada6d9afdef692d5c3befc3df063d",
+      "inputSignature": "abf3f11c4ba374f02f46b2243dcd26287fcf33fddb7db9fcdd6de95c0e0620c3",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 860025,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 860025,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        319,
+        58,
+        1402,
+        958
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_321/exports/wheat-felt-brooch.pdf",
+          "bytes": 860025,
+          "sha256": "fd19eb6b4a6dda8ceacf2a86f7c9a94ff81d4eac94b7cdfd9a232688f3625fb0"
+        },
+        "webp": {
+          "path": "work/production/wave_321/exports/wheat-felt-brooch.webp",
+          "bytes": 1461724,
+          "sha256": "f6b1704a159d70f1ac5c758a61272a3fb1e9143a3fb7ed1f909e2dd0a2744be3"
+        },
+        "thumb": {
+          "path": "work/production/wave_321/exports/wheat-felt-brooch-thumb.webp",
+          "bytes": 40368,
+          "sha256": "a8540488ef64df07a142f726d426046d56b53729952df6611c5d225de71166cd"
+        }
+      },
+      "proofSha256": "c194d4969396555fe534ea39c2f37ba3a840a2e39254293158492a9ca2b3f7d4",
+      "pairMeanRgbDifference": 3.88937
+    },
+    {
+      "id": "wheat-nature-journal",
+      "title": "Pressed Wheat in a Nature Journal",
+      "alt": "An open blank brown-bound notebook has one pressed wheat stalk attached by two cream paper strips, with a pencil beside it.",
+      "description": "An open blank brown-bound notebook has one pressed wheat stalk attached by two cream paper strips, with a pencil beside it. The blank facing page leaves room for a personal plant observation or caption.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_321/source/wheat-nature-journal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "wheat",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "4a6c0466acbd901e345b882ef45f0ce0d3b35a4dec1cce72e758913882ccafa1",
+      "inputSignature": "4ff9f3888990f586287aeb10d4ccfdc594f74f30ff1ec045add21141897aface",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 848302,
+        "weightedCmykRmse": 0.72392
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1161790,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 848302,
+          "weightedCmykRmse": 0.72392
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        57,
+        124,
+        1281,
+        1079
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_321/exports/wheat-nature-journal.pdf",
+          "bytes": 848302,
+          "sha256": "1693883cd68b1188a984c0789d5124c95482264cae8a536d24778da04c290019"
+        },
+        "webp": {
+          "path": "work/production/wave_321/exports/wheat-nature-journal.webp",
+          "bytes": 1380530,
+          "sha256": "6c10ba3ee0b8e3e55de32c77464d14f14cc643c8ef404e0fe46a07c70664daa0"
+        },
+        "thumb": {
+          "path": "work/production/wave_321/exports/wheat-nature-journal-thumb.webp",
+          "bytes": 47454,
+          "sha256": "f314a59330cdf621edbbcb7687a0df91ac50118b3dbb72ef787ce5fb30590ecc"
+        }
+      },
+      "proofSha256": "551eb181dbf14ab59e4f8491c88df6e9c43bbccd1b52d4201fe5e1fda2ee8956",
+      "pairMeanRgbDifference": 3.68856
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:22:11.210028+00:00",
+  "screenReviewScope": "All selected native CMYK PDF renders visually inspected for complete bounded shapes, hands/cuffs, logical objects and readable crisp details.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T00:32:00.100Z"
+}

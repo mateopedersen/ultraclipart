@@ -1,6 +1,6 @@
 {
   "wave": "wave_306",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 2,
   "resumed": 0,
   "screenReview": "PASS",
@@ -168,5 +168,7 @@
   "deferred": [],
   "screenReviewScope": "Both native WebP and independently rendered matching CMYK PDF compositions visually reviewed.",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
-  "createdAt": "2026-10-25T21:44:34.590Z"
+  "createdAt": "2026-10-25T21:44:34.590Z",
+  "liveVerifiedAt": "2026-10-26T00:21:44.123444+00:00",
+  "liveRevision": "b792e3c5cbfc3342f92387285775c4ecd77d9021"
 }

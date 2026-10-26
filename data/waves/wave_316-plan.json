@@ -1,0 +1,77 @@
+{
+  "wave": "wave_316",
+  "topic": "wheat",
+  "method": "builtin-image-generation",
+  "research": "data/research/wheat-2026-10-25.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "wheat-awned-head",
+      "title": "Awned Wheat Head",
+      "alt": "A ripe golden wheat head with fine awns stands on a short straw stem beside one curled dry leaf.",
+      "description": "A ripe golden wheat head with fine awns stands on a short straw stem beside one curled dry leaf. Use the complete head and stem for a crop vocabulary card or a seasonal notebook heading.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-awned-head.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-spikelet-study",
+      "title": "Wheat Spikelet Study",
+      "alt": "One detached wheat spikelet has three grain-bearing florets gathered above two outer glumes, with complete slender awns and two loose kernels beside it.",
+      "description": "One detached wheat spikelet has three grain-bearing florets gathered above two outer glumes, with complete slender awns and two loose kernels beside it. Place this detached structure beside a whole head when introducing spikelets and florets.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-spikelet-study-anatomy-v2.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-kernel-crease",
+      "title": "Wheat Kernels with Visible Creases",
+      "alt": "Three amber wheat kernels show a lengthwise crease, a rounded back and a fine brush of hairs at one tip.",
+      "description": "Three amber wheat kernels show a lengthwise crease, a rounded back and a fine brush of hairs at one tip. The different seed views suit a classroom observation page about grain shape.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-kernel-crease.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-germinating-kernel",
+      "title": "Germinating Wheat Kernel",
+      "alt": "One wheat kernel has a pale green coleoptile curving upward and several white roots extending from its embryo end.",
+      "description": "One wheat kernel has a pale green coleoptile curving upward and several white roots extending from its embryo end. Leave space beside the emerging root and shoot for your own germination notes.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-germinating-kernel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-three-leaf-seedling",
+      "title": "Young Wheat Seedling with Roots",
+      "alt": "A young wheat seedling has three narrow green leaves, a visible kernel and branching fibrous roots in a small soil cutaway.",
+      "description": "A young wheat seedling has three narrow green leaves, a visible kernel and branching fibrous roots in a small soil cutaway. Use the visible roots and leaves in a personal plant-growth journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-three-leaf-seedling.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "wheat-tillering-clump",
+      "title": "Tillering Wheat Plant",
+      "alt": "A young wheat plant has a tall central leafy shoot and smaller side shoots joining at a fibrous root crown.",
+      "description": "A young wheat plant has a tall central leafy shoot and smaller side shoots joining at a fibrous root crown. The main shoot and side shoots can support a classroom discussion of tillering.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_316/source/wheat-tillering-clump.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}
