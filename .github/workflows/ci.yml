@@ -47,6 +47,57 @@ jobs:
       - name: Select affected browser groups
         id: scope
         run: node scripts/ci-plan.mjs
+  # Node/source and production checks use the same pinned environment for every
+  # browser. Run them once and retain both as mandatory aggregate dependencies.
+  unit:
+    name: Node and source validation
+    needs: plan
+    if: ${{ needs.plan.outputs.run_browser == 'true' }}
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
+      options: --user 1001
+    timeout-minutes: 90
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm format:check
+      - run: pnpm check
+      - run: pnpm build
+      - run: pnpm test
+  production:
+    name: Production CDN mapping and headers
+    needs: plan
+    if: ${{ needs.plan.outputs.run_browser == 'true' }}
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
+      options: --user 1001
+    timeout-minutes: 90
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+      CF_PAGES: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.19.0'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: pnpm test:release
   browser:
     needs: plan
     if: ${{ needs.plan.outputs.run_browser == 'true' }}
@@ -76,10 +127,7 @@ jobs:
           node-version: '24.19.0'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm format:check
-      - run: pnpm check
       - run: pnpm build
-      - run: pnpm test
       - name: Desktop, tablet, mobile and accessibility
         run: |
           mkdir -p reports
@@ -166,7 +214,16 @@ jobs:
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 node tests/e2e/raster-editor.mjs
+            fi
+            if [ '${{ matrix.suite }}' = 'catalog-extra-3' ] || [ '${{ matrix.suite }}' = 'catalog-extra-4' ]; then
+              # Keep every subject and near-limit PDF; bound each browser's work.
+              export RASTER_SHARD_COUNT=2
+              if [ '${{ matrix.suite }}' = 'catalog-extra-3' ]; then
+                export RASTER_SHARD_INDEX=0
+              else
+                export RASTER_SHARD_INDEX=1
+              fi
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 EVIDENCE_DIR=reports/topic-representative-editor node tests/e2e/raster-editor.mjs
             fi
             if [ '${{ matrix.suite }}' = 'catalog-extra-2' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=camera ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/camera node tests/e2e/collection.mjs
@@ -210,10 +267,6 @@ jobs:
                 ;;
             esac
           done
-      - name: Validate production CDN mapping and headers
-        run: |
-          CF_PAGES=1 pnpm build
-          CF_PAGES=1 pnpm exec node --test tests/catalog.mjs tests/csp.mjs tests/publication.mjs
       - name: Keep browser evidence and preview log
         # Failed checks still upload evidence. Superseded cancelled candidates
         # must release their runner instead of scheduling cancellation cleanup.
@@ -225,7 +278,7 @@ jobs:
           retention-days: 14
   validate:
     name: validate (${{ matrix.engine }})
-    needs: [plan, browser]
+    needs: [plan, unit, production, browser]
     # Run after failed dependencies too, but do not hold the next candidate
     # behind queued finalizers for a deliberately cancelled older PR run.
     if: ${{ !cancelled() }}
@@ -239,11 +292,21 @@ jobs:
         env:
           PLAN_RESULT: ${{ needs.plan.result }}
           RUN_BROWSER: ${{ needs.plan.outputs.run_browser }}
+          UNIT_RESULT: ${{ needs.unit.result }}
+          PRODUCTION_RESULT: ${{ needs.production.result }}
           BROWSER_RESULT: ${{ needs.browser.result }}
         run: |
           test "$PLAN_RESULT" = success
           case "$RUN_BROWSER" in
-            true) test "$BROWSER_RESULT" = success ;;
-            false) test "$BROWSER_RESULT" = skipped ;;
+            true)
+              test "$UNIT_RESULT" = success
+              test "$PRODUCTION_RESULT" = success
+              test "$BROWSER_RESULT" = success
+              ;;
+            false)
+              test "$UNIT_RESULT" = skipped
+              test "$PRODUCTION_RESULT" = skipped
+              test "$BROWSER_RESULT" = skipped
+              ;;
             *) exit 1 ;;
           esac
