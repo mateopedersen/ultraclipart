@@ -8,6 +8,16 @@ from raster_source import inspect_cmyk_image, decoded_alpha
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def print_edition_binding(root, completion):
+    """A cached proof must expire when its separate print source or recipe changes."""
+    if not completion or not completion.get('printSource'): return None
+    source=(root/completion['printSource']).resolve()
+    assert source.is_relative_to(root/'print-source'), 'Print source escapes its reviewed directory'
+    actual=digest(source)
+    assert actual==completion['printSourceSha256'], 'Print source changed after export'
+    assert actual==completion['pdfExport']['sourceWebpSha256'], 'PDF export uses a different print source'
+    identity={key:completion[key] for key in ['printSource','printSourceSha256','printMaxPixels','printDimensions','printResampling']}
+    return hashlib.sha256(json.dumps(identity,sort_keys=True).encode()).hexdigest()
 def save(path, value):
     path.parent.mkdir(parents=True, exist_ok=True)
     temp = path.with_suffix('.tmp')
@@ -40,6 +50,7 @@ def main():
     held={r['id'] for r in json.loads((root/'repair-hold.json').read_text())['items']}
     expected_counts={r['folder']:r['pairs'] for r in json.loads((root/'topic-map.json').read_text())}
     manifest=json.loads((root/'extraction.json').read_text())
+    generated={r['id']:r for r in manifest.get('generated',[])}
     expected={r['path']:r for r in manifest['files']}
     dependencies=hashlib.sha256(pathlib.Path(__file__).read_bytes()+(ROOT/'scripts/raster_source.py').read_bytes()).hexdigest()
     folders=sorted(p for p in (root/'extracted').iterdir() if p.is_dir())
@@ -61,9 +72,11 @@ def main():
                 entry=expected[str(path.relative_to(root/'extracted'))]
                 assert hashes[kind]==entry['sha256'] and path.stat().st_size==entry['bytes']
             proof=stage/'proofs'/f'{art_id}.png'
+            completion=generated.get(art_id)
+            edition_binding=print_edition_binding(root, completion)
             if cache.exists() and proof.exists():
                 prior=json.loads(cache.read_text())
-                if prior.get('dependencies')==dependencies and prior.get('hashes')==hashes and prior.get('proofSha256')==digest(proof): return prior
+                if prior.get('dependencies')==dependencies and prior.get('hashes')==hashes and prior.get('proofSha256')==digest(proof) and prior.get('printEditionBinding')==edition_binding: return prior
             with Image.open(webp) as source:
                 source.load();assert source.format=='WEBP' and source.mode=='RGBA'
                 width,height=source.size;assert 0<width<=4096 and 0<height<=4096
@@ -71,10 +84,34 @@ def main():
                 rgbaSha=hashlib.sha256(source.tobytes()).hexdigest()
                 visible=alpha.point(lambda v:255 if v>=32 else 0).getbbox();assert visible
                 edge=visible[0]==0 or visible[1]==0 or visible[2]==width or visible[3]==height
+            print_width,print_height=width,height
+            print_alpha=alpha
+            print_source_sha=None
+            if completion and completion.get('printSource'):
+                # A completion's separate, explicitly recorded print edition may
+                # have a smaller physical size. Never apply this to supplied
+                # originals or silently alter the downloadable native WebP.
+                print_source=(root/completion['printSource']).resolve()
+                assert print_source.is_relative_to(root/'print-source')
+                print_source_sha=digest(print_source)
+                assert print_source_sha==completion['printSourceSha256']
+                assert completion['pdfExport']['sourceWebpSha256']==print_source_sha
+                with Image.open(webp)as original:
+                    expected_print=original.convert('RGBA')
+                    print_max=completion['printMaxPixels']
+                    assert print_max in (750,850)
+                    expected_print.thumbnail((print_max,print_max),Image.Resampling.LANCZOS)
+                with Image.open(print_source)as print_image:
+                    print_image=print_image.convert('RGBA')
+                    assert print_image.tobytes()==expected_print.tobytes()
+                    print_width,print_height=print_image.size
+                    assert list(print_image.size)==completion['printDimensions']
+                    assert 500<=min(print_image.size)<=max(print_image.size)<=850
+                    print_alpha=print_image.getchannel('A')
             reader=PdfReader(pdf,strict=True);assert len(reader.pages)==1 and pdf.stat().st_size<=1_000_000
             forbid_active_content(reader)
             page=reader.pages[0];pw,ph=map(float,(page.mediabox.width,page.mediabox.height))
-            assert pw>0 and ph>0 and abs(pw/ph-width/height)<.0001
+            assert pw>0 and ph>0 and abs(pw/ph-print_width/print_height)<.0001
             assert list(page.mediabox.lower_left)==[0,0] and list(page.cropbox)==list(page.mediabox)
             assert page.get('/Rotate',0)==0 and not page.get('/Annots')
             images=[];alphaEqual=[]
@@ -89,13 +126,14 @@ def main():
                                    'alphaMask':True,'profile':'Device CMYK (unprofiled, 1-bit channels)',
                                    'colorSpace':'Device CMYK','iccBytes':0,'iccSha256':None})
                 else:
-                    images.append(inspect_cmyk_image(obj,width,height,reader.trailer['/Root'].get('/OutputIntents')))
+                    images.append(inspect_cmyk_image(obj,print_width,print_height,reader.trailer['/Root'].get('/OutputIntents')))
                 assert '/SMask' in obj, 'Transparent source needs PDF alpha mask'
-                alphaEqual.append(decoded_alpha(obj['/SMask'].get_object())==alpha.tobytes())
+                alphaEqual.append(decoded_alpha(obj['/SMask'].get_object())==print_alpha.tobytes())
             assert len(images)==1 and all(alphaEqual), 'PDF/WebP alpha mismatch'
             subprocess.run([binary,'-f','1','-singlefile','-scale-to','692','-png',str(pdf),str(proof.with_suffix(''))],check=True,capture_output=True,timeout=90)
             info={str(k):str(v) for k,v in (reader.metadata or {}).items()}
-            record={'id':art_id,'topic':topic,'status':'FORMAT_PASSED','hashes':hashes,'dependencies':dependencies,'pdfBytes':pdf.stat().st_size,'webpBytes':webp.stat().st_size,'width':width,'height':height,'rgbaSha256':rgbaSha,'alphaRange':extrema,'visibleBounds':visible,'edgeReviewRequired':edge,'pagePoints':[pw,ph],'ppi':round(width/(pw/72)),'images':images,'pdfAlphaExact':True,'metadata':info,'proofSha256':digest(proof)}
+            record={'id':art_id,'topic':topic,'status':'FORMAT_PASSED','hashes':hashes,'dependencies':dependencies,'pdfBytes':pdf.stat().st_size,'webpBytes':webp.stat().st_size,'width':width,'height':height,'rgbaSha256':rgbaSha,'alphaRange':extrema,'visibleBounds':visible,'edgeReviewRequired':edge,'pagePoints':[pw,ph],'ppi':round(print_width/(pw/72)),'images':images,'pdfAlphaExact':print_source_sha is None,'pdfAlphaExactToPrintSource':True,'printSourceSha256':print_source_sha,'printDimensions':[print_width,print_height],'metadata':info,'proofSha256':digest(proof)}
+            record['printEditionBinding']=edition_binding
             save(cache,record);return record
         rows=[];errors=[]
         with concurrent.futures.ThreadPoolExecutor(max_workers=max(1,min(args.workers,8))) as pool:
