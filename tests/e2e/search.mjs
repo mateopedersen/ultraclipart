@@ -1,5 +1,6 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import { checkSearchSuggestions } from '../helpers/search-suggestions-browser.mjs';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -39,6 +40,7 @@ const report = { base, browser: engine, checks: [], accessibility: [], errors };
 const cards = () => page.locator('#search-results:not([hidden]) .art-card');
 const ready = () => expect(page.locator('#search-results')).toHaveAttribute('aria-busy', 'false');
 try {
+  report.checks.push(...(await checkSearchSuggestions(browser, base, engine)));
   await page.goto(`${base}/search/?q=classroom%20label&type=guide`);
   await expect(
     page.locator('#site-search-results a[href="/guides/make-a-classroom-label/"]'),

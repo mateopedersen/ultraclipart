@@ -104,6 +104,7 @@ form:has(> .search-suggestions) {
   z-index: 80;
   max-height: min(490px, 62dvh);
   overflow: auto;
+  overscroll-behavior: contain;
   border: 1px solid #bad0ec;
   border-radius: 12px;
   background: #fff;
@@ -116,14 +117,21 @@ form:has(> .search-suggestions) {
   align-items: center;
   gap: 11px;
   padding: 10px;
+  min-height: 48px;
+  touch-action: manipulation;
   border-radius: 7px;
   text-decoration: none;
   color: #24476f;
   font: 500 14px/1.4 var(--font-ui);
 }
 .search-suggestions a:hover,
+.search-suggestions a:focus-visible,
 .search-suggestions a[aria-selected='true'] {
   background: #edf5ff;
+}
+.search-suggestions a:focus-visible {
+  outline: 2px solid #245f9e;
+  outline-offset: -2px;
 }
 .search-suggestions img {
   width: 44px;
