@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { readPublication } from './scripts/publication-policy.mjs';
 import { releaseRevision } from './scripts/release-revision.mjs';
 import { aiPreviewNotice } from './scripts/ai-preview.mjs';
+import { productionPublicAssets } from './scripts/production-public-assets.mjs';
 
 // The checked release, rather than a mutable dashboard value, selects production media.
 const production = process.env.CF_PAGES === '1';
@@ -14,6 +15,7 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   devToolbar: { enabled: false },
+  integrations: [productionPublicAssets(production)],
   vite: {
     plugins: [aiPreviewNotice()],
     server: {
