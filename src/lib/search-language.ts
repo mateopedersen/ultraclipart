@@ -1,5 +1,5 @@
 /** Versioned together with the public index. No invented image labels or remote inference. */
-export const SEARCH_LANGUAGE_VERSION = '10-consistent-fuzzy-field-weights';
+export const SEARCH_LANGUAGE_VERSION = '11-natural-request-prefixes';
 const groups = [
   ['gift', 'present', 'presents', 'gifts'],
   ['leaf', 'leaves'],
@@ -200,7 +200,13 @@ export function queryTerms(query: string) {
     .normalize('NFKD')
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-    .replace(/ı/g, 'i');
+    .replace(/ı/g, 'i')
+    // Remove request framing only at the start. Subject words such as "help"
+    // stay searchable elsewhere; every remaining scene detail is still required.
+    .replace(
+      /^\s*(?:please\s+)?(?:i(?:\s+am|['’]m)\s+(?:searching|looking)\s+for|(?:can|could|would)\s+you\s+(?:please\s+)?(?:help\s+me\s+)?(?:find|show\s+me|get\s+me)|do\s+you\s+have|help\s+me\s+find)\s+/i,
+      ' ',
+    );
   const monochrome = /\b(?:black[\s-]*(?:and[\s-]*|&[\s-]*)?white|b\s*&\s*w|siyah\s+beyaz)\b/g;
   const outline =
     /\b(?:outline|line[\s-]*art|coloring(?:\s+pages?)?|colouring(?:\s+pages?)?|boyama)\b/g;
