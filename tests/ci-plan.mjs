@@ -113,6 +113,29 @@ test('mixed changes take the broadest scope regardless of ordering', () => {
   ])
     assert.deepEqual(selectSuites(modified(...paths)).suites, ALL_SUITES);
 });
+test('isolated Studio tests retain all three browser engines through the complete Studio group', () => {
+  for (const path of ['tests/e2e/studio-tools.mjs', 'tests/smart-selection.mjs']) {
+    assert.deepEqual(selectSuites(modified(path)).suites, ['studio']);
+    assert.deepEqual(selectSuites(modified(path), { forceFull: true }).suites, ALL_SUITES);
+    for (const status of ['D', 'T'])
+      assert.deepEqual(selectSuites([{ status, path }]).suites, ALL_SUITES);
+    for (const runtime of [
+      'src/editor/smart/pixels.ts',
+      'src/editor/smart/controller.ts',
+      'src/editor/editor.ts',
+      'data/art.json',
+      'tests/helpers/creator.mjs',
+    ])
+      assert.deepEqual(selectSuites(modified(path, runtime)).suites, ALL_SUITES);
+  }
+  assert.deepEqual(
+    selectSuites(modified('tests/e2e/studio-tools.mjs', 'src/styles/related.css')).suites,
+    ['interface-core', 'interface-artwork', 'interface-pages', 'studio'],
+  );
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  assert(workflow.includes('engine: [chromium, firefox, webkit]'));
+  assert(workflow.includes('needs: [plan, unit, production, browser]'));
+});
 test('missing, empty, invalid and manually forced plans fail open to full validation', () => {
   for (const changes of [
     null,
