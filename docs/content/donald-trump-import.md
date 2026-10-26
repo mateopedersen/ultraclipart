@@ -1,0 +1,21 @@
+# Donald Trump supplied collection — 2026-10-26
+
+This is a new owner-supplied package, separate from the completed 532-artwork release. The owner reviewed the local preview and explicitly authorized publication on 2026-10-26: “onayliyorum canliya al”. The current 100-artwork batch is authorized for upload, source merge and production deployment.
+
+- Original archive: `Donald-Trump-100-Clipart-WEBP-PDF.zip`.
+- Stage: `work/imports/donald-trump-100/`; the ZIP, extracted originals, SHA-256 records, PDF proofs and visual comparisons are retained.
+- 100 independent accepted scenes: 80 color illustrations and 20 monochrome line drawings. All 100 native WebPs and all 100 supplied PDFs remain byte-identical. No repair or new drawing was necessary.
+- Fourteen PDFs contain smaller supplied print images. Their alpha is an exact match to one or two successive 90-percent LANCZOS resamplings of the unchanged WebP. Every PDF has an actual image density of 300 PPI at its own listed page size. Do not describe the WebP dimensions as the PDF's embedded image dimensions.
+- Topic: `donald-trump`; primary category `Civic & Voting`, secondary `People & activities`. The copy describes imagined illustrations and caricatures, not documentary photographs, verified events, election results or endorsement.
+- Reviewed metadata: `data/identification/donald-trump-100.json`. Public figures have a separate `public-figure-illustration` review; do not misrepresent a real person as a manufacturer product identity. Official White House portraits were visually compared for Donald and Melania Trump. Costume activities are fictional. No aircraft, camera or vehicle model is claimed from filenames.
+- Preparation tools: `scripts/extract-trump-collection.py`, `scripts/verify-trump-collection.py`, `scripts/import-trump-collection.mjs`. The importer writes a staged catalog and two reviewed 50-artwork upload waves; it does not upload or publish. The prepared `scripts/publish-trump-collection.mjs` and `scripts/finalize-trump-collection.mjs` implement the authorized upload and promotion; they retain the 50-artwork wave limit and require real matching upload journals and CDN verification.
+- Review evidence: `data/donald-trump-collection-review.json`, with source hashes, exact duplicate checks against the 12,904-artwork baseline, all nine visually reviewed perceptual candidates and the 100 native PDF proof records.
+- Preview: isolated `work/trump-preview/` at `http://127.0.0.1:4434/clipart/donald-trump/`. The accepted repository catalog and production manifest are not replaced to make a local preview. The original development checkout and its server are preserved.
+
+For publication, fetch the latest main, compare any concurrently accepted sources, then upload the two 50-artwork waves through the existing guarded R2 ingestion and independently verify all 300 CDN objects. Preserve the accepted catalog and merge only these reviewed IDs and topic scope with `mergeReviewedContent`. Do not manufacture a CDN verification record. Run production build/release checks and actual live route/download checks; record the verified Pages deployment file count and warn at 85,000 actual deployment files.
+
+The prior Marvel backlog remains **134 missing drawings** (Avengers 39, Avengers: Doomsday 48, Doctor Doom 47). This import neither completes nor replaces those slots. Keep following `marvel-completion-backlog.md` and its source-bound pending plan when the owner resumes drawing work.
+
+Completed local verification: 398 repository tests passed in production-asset mode; Astro diagnostics reported zero errors, warnings and hints; 200 artwork/editor routes, 100 real gallery thumbnail decodes, 10 responsive artwork visits at 1440/390 pixels, six byte-verified original downloads and all 100 page/image sitemap entries passed. Evidence is retained under `work/trump-*-report.json` and `reports/trump-preview/`. These local checks are not evidence of a production deployment.
+
+Latest owner correction during publication: remove the repeated sentence “The scene is an imagined illustration.” from every artwork description. All 100 descriptions now contain only their own observed scene. Keep the ordinary collection-level context and accurate cartoon titles; never reinsert a boilerplate per-artwork disclaimer.

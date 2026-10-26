@@ -219,3 +219,9 @@ The owner requested publication of the ready individual drawings and deferred 13
 ## Preserve concurrent content releases
 
 Before publishing owner-supplied content, refresh the latest main branch and preserve every accepted artwork, verified media representation, topic and newer collection copy. Compare sources added by concurrent releases against the incoming sources before merging. `scripts/merge-reviewed-content.mjs` merges only the reviewed incoming scope and rejects duplicate artwork IDs or incomplete representations. Never replace a newer catalog or publication manifest with an earlier staging snapshot.
+
+## New supplied Donald Trump package — 2026-10-26
+
+The owner explicitly authorized live publication of the reviewed 100-artwork Donald Trump package on 2026-10-26 (“onayliyorum canliya al”). Publication may proceed without another approval. Read `docs/content/donald-trump-import.md` and `work/imports/donald-trump-100/local-state.json` before resuming it. Preserve the previous 134-drawing Marvel backlog. Do not confuse the local 13,004-artwork preview with the live catalog or treat staged media as CDN-verified. Refresh current main and current production before release; record the actual successful live revision and Pages file count.
+
+Latest Trump copy correction: the owner removed the repeated per-artwork sentence “The scene is an imagined illustration.” Keep scene-specific descriptions without this or equivalent repeated boilerplate. The collection-level context and factual character/costume identification remain.
