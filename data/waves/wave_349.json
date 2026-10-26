@@ -1,0 +1,576 @@
+{
+  "wave": "wave_349",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-oil-bottle",
+      "title": "Sunflower Oil Bottle",
+      "alt": "Clear corked glass cruet of golden oil beside a sunflower and a shallow dish of striped seeds.",
+      "description": "Clear corked glass cruet of golden oil beside a sunflower and a shallow dish of striped seeds. Use the ingredient image in a personal kitchen journal or a classroom discussion of seed products.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_349/source/sunflower-oil-bottle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f3dbc09ed150029d7227d628f2140df86f80294f4e00515e826d36abb7ecab92",
+      "inputSignature": "b71b6b85d5e8e06900acf17f9e3e45cfb3ea31abae703a79cf429952deba68a9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 951203,
+        "weightedCmykRmse": 0.915087
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1301782,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1015507,
+          "weightedCmykRmse": 0.776779
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 951203,
+          "weightedCmykRmse": 0.915087
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        23,
+        1296,
+        1167
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_349/exports/sunflower-oil-bottle.pdf",
+          "bytes": 951203,
+          "sha256": "798e880250999b8bc9761c67ca6134b6e08da199bae3c64e59d3158426fa966c"
+        },
+        "webp": {
+          "path": "work/production/wave_349/exports/sunflower-oil-bottle.webp",
+          "bytes": 1325408,
+          "sha256": "6ccf427f3434127e613ef5aa617ef38e7775878be44e5f54e42512f0257b91d8"
+        },
+        "thumb": {
+          "path": "work/production/wave_349/exports/sunflower-oil-bottle-thumb.webp",
+          "bytes": 76948,
+          "sha256": "b2b7ffac5273a3f2c0862f3ff5c12490ab7604e8d92dbcc6fd8d44c894645ee1"
+        }
+      },
+      "proofSha256": "c0684a8c5733bde81f1cd6c7a0f9a1af0ba4705e401c3e96238e4aa53c8fe5b8",
+      "pairMeanRgbDifference": 4.63424
+    },
+    {
+      "id": "sunflower-seeded-bread",
+      "title": "Sunflower Seed Bread",
+      "alt": "Rustic seed-topped loaf with two cut slices on dark linen beside a spoon of sunflower kernels.",
+      "description": "Rustic seed-topped loaf with two cut slices on dark linen beside a spoon of sunflower kernels. The sliced bread suits a personal baking page or a classroom comparison of seed uses.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_349/source/sunflower-seeded-bread.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "ea8e1e7eee668447f3d3342e7b5a3a32c44a55773497733a1b37f3aa050503a3",
+      "inputSignature": "4c69c30b87f16bc6129f22e776f9b8612c6dea314f8a2c6b7668583253c123c1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 955315,
+        "weightedCmykRmse": 1.277068
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1366533,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1150014,
+          "weightedCmykRmse": 0.71556
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1100540,
+          "weightedCmykRmse": 0.850344
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1027164,
+          "weightedCmykRmse": 1.033978
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 955315,
+          "weightedCmykRmse": 1.277068
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        74,
+        1524,
+        955
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_349/exports/sunflower-seeded-bread.pdf",
+          "bytes": 955315,
+          "sha256": "7f382b810883f8416a75aeacc1b6a689d621a227ee558800dd3de48402833ebb"
+        },
+        "webp": {
+          "path": "work/production/wave_349/exports/sunflower-seeded-bread.webp",
+          "bytes": 2078368,
+          "sha256": "2daa85dd50155e8d840556f18bf15c70de3954ce9b9322873f14bb267b65f6a6"
+        },
+        "thumb": {
+          "path": "work/production/wave_349/exports/sunflower-seeded-bread-thumb.webp",
+          "bytes": 62334,
+          "sha256": "fcbc8d8d9e24f9ea67c1d1f92134959e7c7be3c92494fa9e0b546f80fad79bd4"
+        }
+      },
+      "proofSha256": "afe645047ebd7837201b95eeeae984cdc62d40f3c3ab0ae14ec441e0ecf6a01c",
+      "pairMeanRgbDifference": 5.48532
+    },
+    {
+      "id": "sunflower-seed-spread",
+      "title": "Sunflower Seed Spread",
+      "alt": "Open jar of sunflower seed spread with a spoonful beside striped seeds, pale kernels and a flower.",
+      "description": "Open jar of sunflower seed spread with a spoonful beside striped seeds, pale kernels and a flower. Use this snack ingredient in a personal meal layout or a classroom food vocabulary activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_349/source/sunflower-seed-spread.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "b843beacd5653384d28445a86307dd269546b49950909fc46d5204ace8042b33",
+      "inputSignature": "be805d5682f77c76c45f459e95450aed64e168a30f35f5b6a339ab37ecbc0ff1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 961374,
+        "weightedCmykRmse": 1.313332
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1511986,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1209236,
+          "weightedCmykRmse": 0.73888
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1135823,
+          "weightedCmykRmse": 0.876911
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1040527,
+          "weightedCmykRmse": 1.049303
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 961374,
+          "weightedCmykRmse": 1.313332
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        28,
+        26,
+        1293,
+        1143
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_349/exports/sunflower-seed-spread.pdf",
+          "bytes": 961374,
+          "sha256": "62a69dadf3bfdd274e600c398800e77b20745ebce0165210fa3018cfbe7a1cfd"
+        },
+        "webp": {
+          "path": "work/production/wave_349/exports/sunflower-seed-spread.webp",
+          "bytes": 1513034,
+          "sha256": "88b2424ea984e0e588b1b633c15654debaf6996fadf72583e72b6b0b115bb0dc"
+        },
+        "thumb": {
+          "path": "work/production/wave_349/exports/sunflower-seed-spread-thumb.webp",
+          "bytes": 87624,
+          "sha256": "486503b33c614b3d3bbb20b1ddb836a7ee43bb0cc68319e7f057c706c4bf4b94"
+        }
+      },
+      "proofSha256": "f948d926025f9ab1921913c78372448cf30ed2bf0a008741ab7dc07ee2e5db84",
+      "pairMeanRgbDifference": 4.08606
+    },
+    {
+      "id": "sunflower-bird-feeder",
+      "title": "Sunflower Seed Bird Feeder",
+      "alt": "Wooden hanging bird feeder with a pitched roof and striped sunflower seeds in its shallow tray.",
+      "description": "Wooden hanging bird feeder with a pitched roof and striped sunflower seeds in its shallow tray. The complete feeder suits a classroom wildlife-garden activity or a personal outdoor checklist.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_349/source/sunflower-bird-feeder.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1310,
+      "height": 1200,
+      "pdfWidth": 1000,
+      "pdfHeight": 916,
+      "sourceType": "raster",
+      "sourceSha256": "7a0c6154d0899e61e33919d1ece64cdd9a5d79cc2361ad369aa35ca4336c8ca1",
+      "inputSignature": "5a2494fd5677fdc0a576ce3dadf2392222c3a323a6b014b1f222754b6a420601",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 939398,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 939398,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        172,
+        32,
+        1160,
+        1135
+      ],
+      "image": {
+        "width": 1000,
+        "height": 916,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_349/exports/sunflower-bird-feeder.pdf",
+          "bytes": 939398,
+          "sha256": "d71f14b26cbaba280849342779eb45b59f53db1d08e9c56de2dc3173831c98d4"
+        },
+        "webp": {
+          "path": "work/production/wave_349/exports/sunflower-bird-feeder.webp",
+          "bytes": 798804,
+          "sha256": "969f7d92c2ed03a42494c98364e2f060ec93d0889754d25e8b0655561d92e799"
+        },
+        "thumb": {
+          "path": "work/production/wave_349/exports/sunflower-bird-feeder-thumb.webp",
+          "bytes": 47004,
+          "sha256": "e4cc3cd5466795d162e4bce4a9701f4076a4b32d4a658aade5fcf0bea157ddf5"
+        }
+      },
+      "proofSha256": "cb5bf107b28d722644465518b7a5287df45bcba268ce96838f67fbc8f4565454",
+      "pairMeanRgbDifference": 2.31958
+    },
+    {
+      "id": "sunflower-flower-crate",
+      "title": "Sunflower Florist Crate",
+      "alt": "Low wooden crate holding cut sunflowers with visible stem ends wrapped in cloth and a blank hanging tag.",
+      "description": "Low wooden crate holding cut sunflowers with visible stem ends wrapped in cloth and a blank hanging tag. Use the flower-delivery arrangement in a personal gift layout or a classroom flower-shop activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_349/source/sunflower-flower-crate.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 910,
+      "pdfHeight": 832,
+      "sourceType": "raster",
+      "sourceSha256": "0e4b385a762a8cb31f99f09816c917492ece404254f947d69548873a70ac6d9a",
+      "inputSignature": "b4c1363d39a1e76b0ff40b0090470d3c45b7dd04e4ae0b4ef494cfe760ec489e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 995330,
+        "weightedCmykRmse": 1.21756
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1491619,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1226669,
+          "weightedCmykRmse": 0.691676
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1161600,
+          "weightedCmykRmse": 0.823963
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1078345,
+          "weightedCmykRmse": 0.989316
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 995330,
+          "weightedCmykRmse": 1.21756
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        17,
+        1300,
+        1193
+      ],
+      "image": {
+        "width": 910,
+        "height": 832,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_349/exports/sunflower-flower-crate.pdf",
+          "bytes": 995330,
+          "sha256": "16a0fdc7c2508fc77d955b90797b906bbde0d846ecb522b91fc0fa5cb8868628"
+        },
+        "webp": {
+          "path": "work/production/wave_349/exports/sunflower-flower-crate.webp",
+          "bytes": 1823608,
+          "sha256": "2f278e10ae753bb9e50f52572d953baf45859febf8bab82663601ca8392da2ba"
+        },
+        "thumb": {
+          "path": "work/production/wave_349/exports/sunflower-flower-crate-thumb.webp",
+          "bytes": 90354,
+          "sha256": "ff6208f4eb2253bebac3a9485224822a1b0963f38a2838311b9317e76f8eba63"
+        }
+      },
+      "proofSha256": "11bcc0f44cb42dc5f8cbbc5e1b44ed58cfc0cdb408b9acfa922f9582d00a500b",
+      "pairMeanRgbDifference": 3.27752
+    },
+    {
+      "id": "sunflower-bookmark",
+      "title": "Sunflower Bookmark",
+      "alt": "Long cream bookmark with a painted sunflower sprig and a burgundy cord tassel.",
+      "description": "Long cream bookmark with a painted sunflower sprig and a burgundy cord tassel. Add a personal reading message to the open upper area or use the bookmark in a classroom craft activity.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_349/source/sunflower-bookmark.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "bddce3b05cf0a3045252e8cf67ad44e1927b4439785e027173711de520a27ea3",
+      "inputSignature": "a7814b24493a0da1b385653b48e1df24aa3d49e4040224f7399a1d6d81a794ff",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 645137,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 645137,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        328,
+        56,
+        975,
+        1480
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_349/exports/sunflower-bookmark.pdf",
+          "bytes": 645137,
+          "sha256": "135a696fd5c74b83a91bd79edfb2b187cfd1c2fe5b195f9e80310db4a95e7e95"
+        },
+        "webp": {
+          "path": "work/production/wave_349/exports/sunflower-bookmark.webp",
+          "bytes": 1297464,
+          "sha256": "3665fc3d909ae2b6b003b75a91a3b9ff3777e0d0bfd6e6ebf893ba8de278ee56"
+        },
+        "thumb": {
+          "path": "work/production/wave_349/exports/sunflower-bookmark-thumb.webp",
+          "bytes": 32972,
+          "sha256": "cb26210af1129bf4989864fd29fe175169aacbe63dad51ab7cd7cc70d2909336"
+        }
+      },
+      "proofSha256": "f3cd3249cf10d268fcaf6e350c453dfb4f9559296607df9bb62afcd790563433",
+      "pairMeanRgbDifference": 2.47918
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP comparisons visually reviewed; full framing including repaired stamp card and feeder loop, coherent objects and independent scenes. Repairs remain the same artwork IDs.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:47.356Z"
+}

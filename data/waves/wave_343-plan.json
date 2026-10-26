@@ -1,0 +1,77 @@
+{
+  "wave": "wave_343",
+  "topic": "sunflower",
+  "method": "builtin-image-generation",
+  "research": "data/research/sunflower-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "sunflower-whole-flowering-plant",
+      "title": "Whole Flowering Sunflower",
+      "alt": "Whole flowering sunflower with a golden head, broad toothed leaves, a rough stem and a small exposed root base.",
+      "description": "Whole flowering sunflower with a golden head, broad toothed leaves, a rough stem and a small exposed root base. Use the complete plant in a classroom plant-parts activity or a personal garden journal.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-whole-flowering-plant.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "sunflower-front-flower-study",
+      "title": "Sunflower Head Study",
+      "alt": "Front-facing sunflower head with golden ray petals and a detailed dark central disc.",
+      "description": "Front-facing sunflower head with golden ray petals and a detailed dark central disc. This isolated head suits a classroom flower-structure card or a personal floral design.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-front-flower-study.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "sunflower-back-of-flower",
+      "title": "Back of a Sunflower",
+      "alt": "Back of a sunflower head with overlapping pointed green bracts, a short stem and a side leaf.",
+      "description": "Back of a sunflower head with overlapping pointed green bracts, a short stem and a side leaf. Use the less familiar rear view in a classroom observation task or a botanical journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-back-of-flower.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "sunflower-opening-flower-bud",
+      "title": "Opening Sunflower Bud",
+      "alt": "Opening sunflower bud with spreading green bracts, folded golden petals and a young green central disc.",
+      "description": "Opening sunflower bud with spreading green bracts, folded golden petals and a young green central disc. Place the bud in a classroom growing sequence or a personal nature journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-opening-flower-bud.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "sunflower-seedling-pot",
+      "title": "Sunflower Seedling in a Pot",
+      "alt": "Young sunflower seedling with oval seed leaves and toothed true leaves in a weathered terracotta pot.",
+      "description": "Young sunflower seedling with oval seed leaves and toothed true leaves in a weathered terracotta pot. Use the potted seedling in a classroom planting activity or a personal growing checklist.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-seedling-pot.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "sunflower-germinating-seed",
+      "title": "Germinating Sunflower Seed",
+      "alt": "Split striped sunflower hull surrounding a pale seed with a green shoot and fine white roots.",
+      "description": "Split striped sunflower hull surrounding a pale seed with a green shoot and fine white roots. The enlarged germinating seed suits a classroom life-cycle card or an observation worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-germinating-seed.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

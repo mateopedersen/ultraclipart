@@ -1,0 +1,33 @@
+{
+  "wave": "wave_351",
+  "topic": "sunflower",
+  "method": "builtin-image-generation",
+  "research": "data/research/sunflower-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "sunflower-outline-photographer",
+      "title": "Photographing a Sunflower",
+      "alt": "Black-and-white photographer in a knitted cap and vest aiming a tripod-mounted camera at a potted sunflower.",
+      "description": "Black-and-white photographer in a knitted cap and vest aiming a tripod-mounted camera at a potted sunflower. The complete observation scene suits a classroom nature activity or a personal coloring page.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_351/source/sunflower-outline-photographer.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "sunflower-outline-bookplate",
+      "title": "Sunflower Bookplate Frame",
+      "alt": "Black-and-white rounded bookplate frame with a sunflower at the lower left and two buds climbing the right side.",
+      "description": "Black-and-white rounded bookplate frame with a sunflower at the lower left and two buds climbing the right side. Add a personal book label inside the clear center or color the botanical border in a classroom activity.",
+      "color": "White",
+      "style": "Outline",
+      "source": "work/production/wave_351/source/sunflower-outline-bookplate.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

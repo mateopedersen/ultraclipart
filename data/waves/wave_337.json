@@ -1,0 +1,548 @@
+{
+  "wave": "wave_337",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-spinach-spiral-pie",
+      "title": "Spiral Spinach Pie",
+      "alt": "Coiled golden pastry pie with an open end showing dark green spinach filling on a round wooden board.",
+      "description": "Coiled golden pastry pie with an open end showing dark green spinach filling on a round wooden board. Use the spiral shape in a food-pattern lesson or a personal savory-baking journal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_337/source/pie-spinach-spiral-pie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "53c7beb6989c2b34dbf8a562576c4d3488818d7e1e0806723ad02701b15ba756",
+      "inputSignature": "412389b1b8d2de476d1184705b7a50d8887faf65fbf985fbe6b94ef12cecbcae",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 933252,
+        "weightedCmykRmse": 1.001243
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1292125,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1064449,
+          "weightedCmykRmse": 0.700416
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1006349,
+          "weightedCmykRmse": 0.833976
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 933252,
+          "weightedCmykRmse": 1.001243
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        57,
+        78,
+        1484,
+        965
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_337/exports/pie-spinach-spiral-pie.pdf",
+          "bytes": 933252,
+          "sha256": "2c62c5e3f712ce886b6d6c08f92fda1b362758e496baae3b8067ad8ec9f623d2"
+        },
+        "webp": {
+          "path": "work/production/wave_337/exports/pie-spinach-spiral-pie.webp",
+          "bytes": 2118986,
+          "sha256": "e1fdc33388df307d6d8df36340247680a8aa9ae14f775c83639c6af99d36f898"
+        },
+        "thumb": {
+          "path": "work/production/wave_337/exports/pie-spinach-spiral-pie-thumb.webp",
+          "bytes": 62250,
+          "sha256": "046cdce8f84aecb9ad6e6444308feb10026ba8565a6ea4cd3d53d4660c652711"
+        }
+      },
+      "proofSha256": "d6107210602bba764344d12ed63895115256406ec20b907a5c9ef1e06439ff6d",
+      "pairMeanRgbDifference": 4.99221
+    },
+    {
+      "id": "pie-mushroom-galette",
+      "title": "Mushroom Galette",
+      "alt": "Rustic folded mushroom galette with sliced mushrooms and herbs beside a wooden-handled metal server.",
+      "description": "Rustic folded mushroom galette with sliced mushrooms and herbs beside a wooden-handled metal server. This free-form savory pastry suits a classroom food card or a personal mushroom recipe cover.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_337/source/pie-mushroom-galette.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6f744c32834382805377b2dcbf8f9a55a1cad4b69ae7b1396eac205e61d63571",
+      "inputSignature": "d0ee63c144e960dea8d599311c619cbf8f90607358e6fe524a1374b839f0e443",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 982924,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 982924,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        194,
+        104,
+        1496,
+        930
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_337/exports/pie-mushroom-galette.pdf",
+          "bytes": 982924,
+          "sha256": "16f068fc8c833eb343ef85825bcfab29691f1906d4d4e2a915069fd95064ebde"
+        },
+        "webp": {
+          "path": "work/production/wave_337/exports/pie-mushroom-galette.webp",
+          "bytes": 1668246,
+          "sha256": "4bad6ceca55d500c0fce33968149d403c01a20e02b011ba00dc7fef396e87f1d"
+        },
+        "thumb": {
+          "path": "work/production/wave_337/exports/pie-mushroom-galette-thumb.webp",
+          "bytes": 51174,
+          "sha256": "4665cb82824855afbe944e122e5a7ee2e0326b92eafae4f910191217f3b4b335"
+        }
+      },
+      "proofSha256": "dbc344c68f5f64cb87869f602028c133286d4a2ef60d4c870cc590294246a397",
+      "pairMeanRgbDifference": 4.1285
+    },
+    {
+      "id": "pie-tomato-tart",
+      "title": "Long Tomato Tart",
+      "alt": "Long rectangular tomato tart with red and yellow slices and basil leaves in a dark fluted tin.",
+      "description": "Long rectangular tomato tart with red and yellow slices and basil leaves in a dark fluted tin. Its long shape leaves room for copy beside a personal menu or a classroom vegetable activity.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_337/source/pie-tomato-tart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "358b34238d5dd93abb862f75ad9c489eea9455d11ac1ec6dc880da6cbf05d65b",
+      "inputSignature": "458effa090c879668c1d5692142d9c748d4dda9d8a98e44c87d1dca0b123fd44",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 846934,
+        "weightedCmykRmse": 0.779722
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1026528,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 846934,
+          "weightedCmykRmse": 0.779722
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        39,
+        78,
+        1522,
+        972
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_337/exports/pie-tomato-tart.pdf",
+          "bytes": 846934,
+          "sha256": "39b92b300d6d3ab86328c2ff57115baba5fa2eb46a0e6a18579845a35bff5788"
+        },
+        "webp": {
+          "path": "work/production/wave_337/exports/pie-tomato-tart.webp",
+          "bytes": 1707066,
+          "sha256": "b94bae63b655f2a5de03a282caa595d1a12e8f9dd6fe540816e99d38655d3628"
+        },
+        "thumb": {
+          "path": "work/production/wave_337/exports/pie-tomato-tart-thumb.webp",
+          "bytes": 50416,
+          "sha256": "029255d172926b55cd37bf7e4bcc701cb53196cd5a03a985a57b2d6f9513ff8a"
+        }
+      },
+      "proofSha256": "cebc8551f435d265c5294f316c52df06d36883f7e4e299bec8bd5ee9f4c3bf82",
+      "pairMeanRgbDifference": 4.8037
+    },
+    {
+      "id": "pie-cornish-pasty",
+      "title": "Filled Pasty",
+      "alt": "Folded golden pasty with a thick crimped seam and an open end showing potato, carrot and minced filling.",
+      "description": "Folded golden pasty with a thick crimped seam and an open end showing potato, carrot and minced filling. Use the handheld savory pastry in a food vocabulary worksheet or a personal lunch layout.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_337/source/pie-cornish-pasty.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "3a3c91823819484063c50f4741dd8318afc0de2bb865591cdca247f7e7b12683",
+      "inputSignature": "58b85da21ba46e1126dcec5f41d295fe07d6fba4eecf26a9d3c85a84ac52ad73",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 985294,
+        "weightedCmykRmse": 0.849291
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1231173,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1039115,
+          "weightedCmykRmse": 0.71475
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 985294,
+          "weightedCmykRmse": 0.849291
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        96,
+        1489,
+        965
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_337/exports/pie-cornish-pasty.pdf",
+          "bytes": 985294,
+          "sha256": "9b62c0b64a608ef5da040de408870b35967bc4973eb8f95c38793f75bc748541"
+        },
+        "webp": {
+          "path": "work/production/wave_337/exports/pie-cornish-pasty.webp",
+          "bytes": 1910952,
+          "sha256": "72d96a231c663ba55e9ffbf0905f8364ee2b26d9d79b43e3f305468573397f05"
+        },
+        "thumb": {
+          "path": "work/production/wave_337/exports/pie-cornish-pasty-thumb.webp",
+          "bytes": 56904,
+          "sha256": "06caa9a7f8ac74f8fa0d148f9236277e47cf84d617b9264d5ac3e374b728a41d"
+        }
+      },
+      "proofSha256": "e20bb2f45e069e823223f18422982373abde1b5a47be1e8372a2eab5f50ed5bb",
+      "pairMeanRgbDifference": 4.36144
+    },
+    {
+      "id": "pie-vegetable-quiche",
+      "title": "Vegetable Quiche",
+      "alt": "Deep vegetable quiche with broccoli and red pepper pieces and a cut wedge placed beside it.",
+      "description": "Deep vegetable quiche with broccoli and red pepper pieces and a cut wedge placed beside it. The cut section suits a classroom ingredient observation task or a personal lunch-menu design.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_337/source/pie-vegetable-quiche.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "ea66ea0c01fe86d84973ebf699e97f924652cbdb83605d0d6325282eabc61ae4",
+      "inputSignature": "ca2f623a3418b9687ac41f56ccd9588ad6bdbf260defef97cfd22aa1fe4be806",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 927761,
+        "weightedCmykRmse": 1.311878
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1400685,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1154196,
+          "weightedCmykRmse": 0.736692
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1089965,
+          "weightedCmykRmse": 0.874384
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1001982,
+          "weightedCmykRmse": 1.056598
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 927761,
+          "weightedCmykRmse": 1.311878
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        48,
+        127,
+        1326,
+        1021
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_337/exports/pie-vegetable-quiche.pdf",
+          "bytes": 927761,
+          "sha256": "812d73bc9bfb3eed1971f8a52ffdd4ed3bb815c6914f8f32e9080a431d0843d0"
+        },
+        "webp": {
+          "path": "work/production/wave_337/exports/pie-vegetable-quiche.webp",
+          "bytes": 1584038,
+          "sha256": "d3e50dc34422fd6ec86a6172c3b3289b9710c25b6ef706c79c40e90dbb0965b1"
+        },
+        "thumb": {
+          "path": "work/production/wave_337/exports/pie-vegetable-quiche-thumb.webp",
+          "bytes": 73200,
+          "sha256": "856ee11f12536d585c98a6e15c8ce346bf1b40a0a68a2d35dfb973c0a3a632e3"
+        }
+      },
+      "proofSha256": "369684a04f05e3d12e468050b60810c95cc05e6b82be8eb39e826a1b06ebd68e",
+      "pairMeanRgbDifference": 4.48064
+    },
+    {
+      "id": "pie-mini-mince-pies",
+      "title": "Mini Fruit Mince Pies",
+      "alt": "Three small mince pies with open, star-topped and vented lids on a piece of parchment.",
+      "description": "Three small mince pies with open, star-topped and vented lids on a piece of parchment. Use these small dried-fruit pastries in a personal festive menu or a classroom counting activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_337/source/pie-mini-mince-pies.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "825acb98815d769e1824897d71d86d36514fb3d8f195fe7c423b6c318a27b0ca",
+      "inputSignature": "0c540b2b1e33cceee5ea2ed645fefe6195a413618d7d20304dd2f8f3f316bf49",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 970866,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 970866,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        47,
+        120,
+        1499,
+        931
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_337/exports/pie-mini-mince-pies.pdf",
+          "bytes": 970866,
+          "sha256": "abdbe903e83d432df1aeca24aa72fc253eb9e83116e315046ebbb98f34cdd1e5"
+        },
+        "webp": {
+          "path": "work/production/wave_337/exports/pie-mini-mince-pies.webp",
+          "bytes": 1647602,
+          "sha256": "bd1add38b305f2965d964a10b833a4588c614a0cd7754b5f70d0375625ae4e4a"
+        },
+        "thumb": {
+          "path": "work/production/wave_337/exports/pie-mini-mince-pies-thumb.webp",
+          "bytes": 50660,
+          "sha256": "7558f669185c64c4b7f69b70c58b42a8f607353b41c95f7a0b1c39afb05f85c7"
+        }
+      },
+      "proofSha256": "7d89b0b14a1c41bdebf04668c1ad91a56d1e4baa936f36ea2c143bad9b1283f0",
+      "pairMeanRgbDifference": 3.46955
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All six selected source and native PDF/WebP comparisons visually reviewed; correct filling, full framing and independent compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:21.517Z"
+}

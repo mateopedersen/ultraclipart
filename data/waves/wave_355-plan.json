@@ -1,0 +1,77 @@
+{
+  "wave": "wave_355",
+  "topic": "football",
+  "method": "builtin-image-generation",
+  "research": "data/research/football-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "football-kicker-follow-through",
+      "title": "Kicker Following Through",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_355/source/football-kicker-follow-through.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-punter-release",
+      "title": "Punter Releasing the Ball",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_355/source/football-punter-release.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-lineman-stance",
+      "title": "Lineman in a Three-Point Stance",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_355/source/football-lineman-stance.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-training-dummy",
+      "title": "Football Training Dummy",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_355/source/football-training-dummy.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-agility-ladder",
+      "title": "Football Agility Setup",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_355/source/football-agility-ladder.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "football-passing-target",
+      "title": "Football Passing Target Net",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_355/source/football-passing-target.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

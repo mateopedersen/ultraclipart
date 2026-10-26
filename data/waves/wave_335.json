@@ -1,0 +1,569 @@
+{
+  "wave": "wave_335",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "pie-chocolate-cream-slice",
+      "title": "Chocolate Cream Pie Slice",
+      "alt": "Chocolate cream pie slice with a dark crumb crust and a cream swirl on an orange plate beside a spoon.",
+      "description": "Chocolate cream pie slice with a dark crumb crust and a cream swirl on an orange plate beside a spoon. Add this individual serving to a personal dessert invitation or a classroom menu task.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_335/source/pie-chocolate-cream-slice.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "99ab0eac724c515f5ab8b08969e3618298637629b1259a122bfd37cfdc1ff14a",
+      "inputSignature": "ba3efba2544866c665417cce390b260ac611b64a6eeffc35604e4be300b99136",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 932758,
+        "weightedCmykRmse": 1.107225
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1380467,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1093784,
+          "weightedCmykRmse": 0.769549
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1024222,
+          "weightedCmykRmse": 0.910795
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 932758,
+          "weightedCmykRmse": 1.107225
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        51,
+        90,
+        1292,
+        1112
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_335/exports/pie-chocolate-cream-slice.pdf",
+          "bytes": 932758,
+          "sha256": "d873bf9eda382b834451225cea136434d30a588dc8798699fabe1c9aec0514ff"
+        },
+        "webp": {
+          "path": "work/production/wave_335/exports/pie-chocolate-cream-slice.webp",
+          "bytes": 1394952,
+          "sha256": "a6ae231279f8cf46e3c3d0de4a5bdd4ae0c68f9159951226c9253345c794f593"
+        },
+        "thumb": {
+          "path": "work/production/wave_335/exports/pie-chocolate-cream-slice-thumb.webp",
+          "bytes": 70100,
+          "sha256": "4308546cd174a9716c1d932d6c9717a731cd82609723fe770f192c4ba794989f"
+        }
+      },
+      "proofSha256": "41751255225c54928856cb7b98de7992bb97d09d393073bd4ef97916c933b808",
+      "pairMeanRgbDifference": 4.05725
+    },
+    {
+      "id": "pie-banana-cream-slab",
+      "title": "Banana Cream Slab Pie",
+      "alt": "Rectangular banana cream pie with banana rounds, piped cream and a cut serving beside the slab.",
+      "description": "Rectangular banana cream pie with banana rounds, piped cream and a cut serving beside the slab. Its rectangular shape suits a dessert table layout or a classroom discussion of serving portions.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_335/source/pie-banana-cream-slab.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4a3c11c24e59e1fed27735bf71374920f7f9ff032b103b1496ae08e141fce0e5",
+      "inputSignature": "f470ba32599c5737548d95a3d611572b4b58aed09c460117673a264f60a49436",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 955393,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 955393,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        46,
+        137,
+        1515,
+        925
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_335/exports/pie-banana-cream-slab.pdf",
+          "bytes": 955393,
+          "sha256": "b687fa1376ca7ef54002c264f80b7108a28f5489e08cdfbe4f9bf7a466a0e7eb"
+        },
+        "webp": {
+          "path": "work/production/wave_335/exports/pie-banana-cream-slab.webp",
+          "bytes": 1645156,
+          "sha256": "f213735a6802691fa802747725100b9566b1956f3e96b33905dfa6aa83c8d70a"
+        },
+        "thumb": {
+          "path": "work/production/wave_335/exports/pie-banana-cream-slab-thumb.webp",
+          "bytes": 54384,
+          "sha256": "2757d611554e3bd42672fc02ee2e86f0b4cdc9e392fe5d87305d8108133f0f2d"
+        }
+      },
+      "proofSha256": "fa4e826ab66d10c11cc45857129c2e93ded2d468cebc3d0ad118f28825dabb18",
+      "pairMeanRgbDifference": 4.07697
+    },
+    {
+      "id": "pie-coconut-glass-mini",
+      "title": "Oval Coconut Cream Tart",
+      "alt": "Oval coconut cream tart in a dark fluted tin with toasted flakes beside a coconut half and shaving.",
+      "description": "Oval coconut cream tart in a dark fluted tin with toasted flakes beside a coconut half and shaving. Use this low oval dessert in a personal baking page or a classroom ingredient-matching activity.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_335/source/pie-coconut-glass-mini.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "6a355075bc74f4a26e9d34b3ff8afe054b7ef4e602fda153e65b92a01e816b5b",
+      "inputSignature": "6998ff756e3f8847a06ad32623d2ec684eda77a85842d6ea3d3f3369f839b798",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 831738,
+        "weightedCmykRmse": 0.760368
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1018184,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 831738,
+          "weightedCmykRmse": 0.760368
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        73,
+        114,
+        1513,
+        894
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_335/exports/pie-coconut-glass-mini.pdf",
+          "bytes": 831738,
+          "sha256": "9fbc5bbb9bc958340a7f99a1b94f59134f5728ef6c4816cab57fe6396b2ec844"
+        },
+        "webp": {
+          "path": "work/production/wave_335/exports/pie-coconut-glass-mini.webp",
+          "bytes": 1672250,
+          "sha256": "75529dcfe84222f1099cf0a1500cd5e3ad75aa8d283bb4fe40a573a63b10bffb"
+        },
+        "thumb": {
+          "path": "work/production/wave_335/exports/pie-coconut-glass-mini-thumb.webp",
+          "bytes": 54208,
+          "sha256": "64fbbb4d311ab9a85c34d3dd08214ffb79b188c65d723e9052fc0a7cb145027c"
+        }
+      },
+      "proofSha256": "8f50ca4f794e8ace770f25037459f548409237b7fc803d87609126d75836ee34",
+      "pairMeanRgbDifference": 4.32433
+    },
+    {
+      "id": "pie-rhubarb-galette",
+      "title": "Rhubarb Galette",
+      "alt": "Rustic rhubarb galette with pink stalk pieces inside folded golden pastry on parchment.",
+      "description": "Rustic rhubarb galette with pink stalk pieces inside folded golden pastry on parchment. Use the free-form pastry in a seasonal baking journal or an ingredient vocabulary activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_335/source/pie-rhubarb-galette.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "4d02860c36a89712e09d894b185fe8667816cc3312f01b934b5e3df3c28a259e",
+      "inputSignature": "8986b9bbba761798ce997c171ddd96a2b72a9c02d8efc0a571976023f336748e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 994410,
+        "weightedCmykRmse": 1.248853
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1518083,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1236479,
+          "weightedCmykRmse": 0.704107
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1166875,
+          "weightedCmykRmse": 0.837475
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1076293,
+          "weightedCmykRmse": 1.008549
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 994410,
+          "weightedCmykRmse": 1.248853
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        45,
+        84,
+        1330,
+        1069
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_335/exports/pie-rhubarb-galette.pdf",
+          "bytes": 994410,
+          "sha256": "41b0c411bbc025416da7a886f45bd79a657d291bc532d2b4884b4325026257c4"
+        },
+        "webp": {
+          "path": "work/production/wave_335/exports/pie-rhubarb-galette.webp",
+          "bytes": 1815354,
+          "sha256": "8588408aa4bd5292c050d129cd8ea1ce0d80a39c8c6d4780f0963c7a6f7eeff9"
+        },
+        "thumb": {
+          "path": "work/production/wave_335/exports/pie-rhubarb-galette-thumb.webp",
+          "bytes": 81312,
+          "sha256": "04914f14b2eca537935e77fafd018deb28b06a4d1998a3e602f7f157e44b55e3"
+        }
+      },
+      "proofSha256": "881d1bdacdde7d8d5ec1975d1402f84400f15536d4b81a447ff6014b2890279d",
+      "pairMeanRgbDifference": 4.78573
+    },
+    {
+      "id": "pie-peach-crumble-slab",
+      "title": "Peach Crumble Slab Pie",
+      "alt": "Rectangular peach crumble pie in a handled metal pan with a serving lifted on a spatula.",
+      "description": "Rectangular peach crumble pie in a handled metal pan with a serving lifted on a spatula. The lifted portion suits a classroom serving-sequence card or a personal summer dessert page.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_335/source/pie-peach-crumble-slab.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "2e66a9210c2687d07a5323e0068b485f79fd50cd7dafba6ecebfbeb37ae2c424",
+      "inputSignature": "7127232a080452ca7675df3cc0b4b96dcdd5055318f3945d39be361aefaf10d4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 973309,
+        "weightedCmykRmse": 0.742289
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1161492,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 973309,
+          "weightedCmykRmse": 0.742289
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        88,
+        1531,
+        970
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_335/exports/pie-peach-crumble-slab.pdf",
+          "bytes": 973309,
+          "sha256": "86cfa372a8fb68d8ddb8279b4add99958a3ea36f8a0e18c68fade737f7353569"
+        },
+        "webp": {
+          "path": "work/production/wave_335/exports/pie-peach-crumble-slab.webp",
+          "bytes": 1854948,
+          "sha256": "f06952a0c24b76afc1e346e2ff0204326b72af988332a75e54900d50ec19735d"
+        },
+        "thumb": {
+          "path": "work/production/wave_335/exports/pie-peach-crumble-slab-thumb.webp",
+          "bytes": 58820,
+          "sha256": "3d5f0a33da21df7e58c0077f49875e0abae964d2230d633dea3fef6760113d19"
+        }
+      },
+      "proofSha256": "01fa459ee724dd67ff452d11a3efac49635818256b3e274aae1256f1b03e0e14",
+      "pairMeanRgbDifference": 4.76397
+    },
+    {
+      "id": "pie-strawberry-heart-tart",
+      "title": "Heart-Shaped Strawberry Tart",
+      "alt": "Heart-shaped strawberry tart with overlapping red slices on a clear scalloped platter.",
+      "description": "Heart-shaped strawberry tart with overlapping red slices on a clear scalloped platter. Add the heart-shaped dessert to a personal celebration invitation or a fruit-themed classroom design.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_335/source/pie-strawberry-heart-tart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "pie",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "7f9a094ecc2eebdf79e637d0de721cbabb64f4a0fc14c50e1e72fb86c1031f32",
+      "inputSignature": "5c1822a60830a8cefa13c16d11b50d909d2c52a4b22e1fbd3f2b583dfeff0e46",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 926828,
+        "weightedCmykRmse": 1.265426
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1479792,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1169493,
+          "weightedCmykRmse": 0.707052
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1098018,
+          "weightedCmykRmse": 0.838332
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1002722,
+          "weightedCmykRmse": 1.01273
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 926828,
+          "weightedCmykRmse": 1.265426
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        42,
+        94,
+        1275,
+        1085
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_335/exports/pie-strawberry-heart-tart.pdf",
+          "bytes": 926828,
+          "sha256": "22dd1a341d6219f60d57c11b649eb99cbfe4b41fb144d8398e76ed990d6952f8"
+        },
+        "webp": {
+          "path": "work/production/wave_335/exports/pie-strawberry-heart-tart.webp",
+          "bytes": 1710998,
+          "sha256": "fcbabc19f8caeff770a783b9b18a7b66e61dafcf311c92524311f19b61e83304"
+        },
+        "thumb": {
+          "path": "work/production/wave_335/exports/pie-strawberry-heart-tart-thumb.webp",
+          "bytes": 80892,
+          "sha256": "2217e5294c1841bcd64c6fdceed93a8cb3beff548afb7d1b80657cbed185402d"
+        }
+      },
+      "proofSha256": "e3884be2314e25e80c1a5e98507849072c641bcbbd6349f01429218bc93ad3f1",
+      "pairMeanRgbDifference": 5.29627
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All six selected source and native PDF/WebP comparisons visually reviewed; correct filling, full framing and independent compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T02:51:20.650Z"
+}

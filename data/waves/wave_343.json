@@ -1,0 +1,597 @@
+{
+  "wave": "wave_343",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-whole-flowering-plant",
+      "title": "Whole Flowering Sunflower",
+      "alt": "Whole flowering sunflower with a golden head, broad toothed leaves, a rough stem and a small exposed root base.",
+      "description": "Whole flowering sunflower with a golden head, broad toothed leaves, a rough stem and a small exposed root base. Use the complete plant in a classroom plant-parts activity or a personal garden journal.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-whole-flowering-plant.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "6658bbe81aa6f2b5babdf777179623198af5e72eae97c24648e525314aef6d20",
+      "inputSignature": "3ee5b39b8e1cdfff809efb15c76abb708016b9f098b88b2d0900cabd48242801",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 932535,
+        "weightedCmykRmse": 0.780346
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1089720,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 932535,
+          "weightedCmykRmse": 0.780346
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        74,
+        29,
+        963,
+        1514
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_343/exports/sunflower-whole-flowering-plant.pdf",
+          "bytes": 932535,
+          "sha256": "b6574332ae2a4c2184f614d0276f1e88885a70618ca0c6b02577dfcb6ce761ea"
+        },
+        "webp": {
+          "path": "work/production/wave_343/exports/sunflower-whole-flowering-plant.webp",
+          "bytes": 1621094,
+          "sha256": "0012bd791f17ebb8139d4843fe05bd88204120740147b23fc79506350b697422"
+        },
+        "thumb": {
+          "path": "work/production/wave_343/exports/sunflower-whole-flowering-plant-thumb.webp",
+          "bytes": 65318,
+          "sha256": "c04712fd9021eabc9c02b95a7a521c9d066f57e65036a7fbaeea4218cb52350f"
+        }
+      },
+      "proofSha256": "8ebaebc1bb4e5de670e143414ba817a67765df74df19f303227af86415b85ce0",
+      "pairMeanRgbDifference": 4.19919
+    },
+    {
+      "id": "sunflower-front-flower-study",
+      "title": "Sunflower Head Study",
+      "alt": "Front-facing sunflower head with golden ray petals and a detailed dark central disc.",
+      "description": "Front-facing sunflower head with golden ray petals and a detailed dark central disc. This isolated head suits a classroom flower-structure card or a personal floral design.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-front-flower-study.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1303,
+      "height": 1207,
+      "pdfWidth": 960,
+      "pdfHeight": 889,
+      "sourceType": "raster",
+      "sourceSha256": "88953acabf415de361ff25c0faa0cd73076049c92948b197d60f1b1f7d9d8142",
+      "inputSignature": "66df6eb953b489c3f90fe6cfb0931b231cb8bf4652334feccaa3820d37085e54",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 971543,
+        "weightedCmykRmse": 1.21067
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1541476,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1224987,
+          "weightedCmykRmse": 0.692337
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1152055,
+          "weightedCmykRmse": 0.826462
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1059328,
+          "weightedCmykRmse": 0.989225
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 971543,
+          "weightedCmykRmse": 1.21067
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        14,
+        10,
+        1290,
+        1191
+      ],
+      "image": {
+        "width": 960,
+        "height": 889,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_343/exports/sunflower-front-flower-study.pdf",
+          "bytes": 971543,
+          "sha256": "9f004ce3dd03d7c8d99a42689128568835b39eb70295c671a474f756d6643709"
+        },
+        "webp": {
+          "path": "work/production/wave_343/exports/sunflower-front-flower-study.webp",
+          "bytes": 1828834,
+          "sha256": "a9afc600b2990c577da3745ef8d58164b8dcf379c0d1def3c1c285319b35cfe1"
+        },
+        "thumb": {
+          "path": "work/production/wave_343/exports/sunflower-front-flower-study-thumb.webp",
+          "bytes": 99708,
+          "sha256": "6810203cec010c2817465fbda282b870e4968c1132ee3ffe2bf193cc7a4a7854"
+        }
+      },
+      "proofSha256": "6b3d324ef30ab71f33eb9628ec73904490bd58bea54dbf90996f315ca5c7fbd7",
+      "pairMeanRgbDifference": 3.31609
+    },
+    {
+      "id": "sunflower-back-of-flower",
+      "title": "Back of a Sunflower",
+      "alt": "Back of a sunflower head with overlapping pointed green bracts, a short stem and a side leaf.",
+      "description": "Back of a sunflower head with overlapping pointed green bracts, a short stem and a side leaf. Use the less familiar rear view in a classroom observation task or a botanical journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-back-of-flower.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1199,
+      "height": 1312,
+      "pdfWidth": 914,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "428d692ce13cdbd2f874926497bed2768fc6267efc124c4d0cfcfbb9637b78a5",
+      "inputSignature": "66a743be83658e3ddaec57b3bcd72013d9a64ed0aeddf84c0cb8ef501840d734",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 952044,
+        "weightedCmykRmse": 1.106747
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1372135,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1103127,
+          "weightedCmykRmse": 0.776453
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1038559,
+          "weightedCmykRmse": 0.926258
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 952044,
+          "weightedCmykRmse": 1.106747
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        95,
+        31,
+        1142,
+        1275
+      ],
+      "image": {
+        "width": 914,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_343/exports/sunflower-back-of-flower.pdf",
+          "bytes": 952044,
+          "sha256": "c6f022336ac17ad7c450ae550e0172d496e226487ae7fb60ba05cb2869843f86"
+        },
+        "webp": {
+          "path": "work/production/wave_343/exports/sunflower-back-of-flower.webp",
+          "bytes": 1363352,
+          "sha256": "2f06856e0b50b71a5bcb47b9248cd02ba137c82fed539d28be097b0c7605d806"
+        },
+        "thumb": {
+          "path": "work/production/wave_343/exports/sunflower-back-of-flower-thumb.webp",
+          "bytes": 74028,
+          "sha256": "0d06ea58dc28ce73b36d4934d72485d375250f55082b1fc9d02495ba60be001f"
+        }
+      },
+      "proofSha256": "4a196d762af1f4860eb76d0429d8794836148db64ee48f6ac26c6ade4eddcd41",
+      "pairMeanRgbDifference": 2.85796
+    },
+    {
+      "id": "sunflower-opening-flower-bud",
+      "title": "Opening Sunflower Bud",
+      "alt": "Opening sunflower bud with spreading green bracts, folded golden petals and a young green central disc.",
+      "description": "Opening sunflower bud with spreading green bracts, folded golden petals and a young green central disc. Place the bud in a classroom growing sequence or a personal nature journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-opening-flower-bud.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1283,
+      "height": 1226,
+      "pdfWidth": 980,
+      "pdfHeight": 936,
+      "sourceType": "raster",
+      "sourceSha256": "7e0dd8a958990f73510afddf537f064e5128ed01d9dda56b08fbad63e41db715",
+      "inputSignature": "599cf084bcff8b95ee176e12bb91b183c90b1b80976d9972d57e72c4671f1ca4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 972920,
+        "weightedCmykRmse": 1.443706
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1435994,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1192105,
+          "weightedCmykRmse": 0.779111
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1127773,
+          "weightedCmykRmse": 0.93235
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041370,
+          "weightedCmykRmse": 1.132392
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 972920,
+          "weightedCmykRmse": 1.443706
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        70,
+        19,
+        1226,
+        1213
+      ],
+      "image": {
+        "width": 980,
+        "height": 936,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_343/exports/sunflower-opening-flower-bud.pdf",
+          "bytes": 972920,
+          "sha256": "516f50dd85255cdfaf8e303e4eb98e0fc8a63bf70002bc3530eebaca6f30f448"
+        },
+        "webp": {
+          "path": "work/production/wave_343/exports/sunflower-opening-flower-bud.webp",
+          "bytes": 1413632,
+          "sha256": "cb8fb2a1587a39d6e18d784399bc219b7d14a7147528af5ca3eb55c4f4bf4137"
+        },
+        "thumb": {
+          "path": "work/production/wave_343/exports/sunflower-opening-flower-bud-thumb.webp",
+          "bytes": 81696,
+          "sha256": "1be7b86c1ef60218d9b488c22671eda1c94c1c66360fb1f0719d5513ff67929a"
+        }
+      },
+      "proofSha256": "6e2ec333924e9d93404f15f5d99e317fcb122d2758ca8b0c6ff080060b4a3c6b",
+      "pairMeanRgbDifference": 2.52717
+    },
+    {
+      "id": "sunflower-seedling-pot",
+      "title": "Sunflower Seedling in a Pot",
+      "alt": "Young sunflower seedling with oval seed leaves and toothed true leaves in a weathered terracotta pot.",
+      "description": "Young sunflower seedling with oval seed leaves and toothed true leaves in a weathered terracotta pot. Use the potted seedling in a classroom planting activity or a personal growing checklist.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-seedling-pot.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1226,
+      "height": 1283,
+      "pdfWidth": 956,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "360631b2b3c25536d89ddfc08bb6c2bd459be278c9edbd9c055804b0ddfe3594",
+      "inputSignature": "feea3d976bbd59145c8054807f76728ba1e5a04cf72f2a08a3e8a21d37046a59",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 956240,
+        "weightedCmykRmse": 0.850043
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1185382,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 956240,
+          "weightedCmykRmse": 0.850043
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        261,
+        72,
+        995,
+        1213
+      ],
+      "image": {
+        "width": 956,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_343/exports/sunflower-seedling-pot.pdf",
+          "bytes": 956240,
+          "sha256": "2f76811710870678279cb4e788c16a553dbf5858e1338ac4550e01d43887468e"
+        },
+        "webp": {
+          "path": "work/production/wave_343/exports/sunflower-seedling-pot.webp",
+          "bytes": 1035932,
+          "sha256": "911e33d6d9c2deadffe0fdcb3826e3b33babab0bceeeb2a1868f0bd701d2d166"
+        },
+        "thumb": {
+          "path": "work/production/wave_343/exports/sunflower-seedling-pot-thumb.webp",
+          "bytes": 63814,
+          "sha256": "01f1b8afdaa00e4eb85a81b581eeecc286087a874d894d14407b6d597c2f4b98"
+        }
+      },
+      "proofSha256": "ab7f4108b9c5ec65b720ca9c7bda412612c14c44310b6b602c520d8a5d024706",
+      "pairMeanRgbDifference": 2.90333
+    },
+    {
+      "id": "sunflower-germinating-seed",
+      "title": "Germinating Sunflower Seed",
+      "alt": "Split striped sunflower hull surrounding a pale seed with a green shoot and fine white roots.",
+      "description": "Split striped sunflower hull surrounding a pale seed with a green shoot and fine white roots. The enlarged germinating seed suits a classroom life-cycle card or an observation worksheet.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_343/source/sunflower-germinating-seed.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "04f21cd993a2c546b619f54f579cee7c3442fd8bc3b3fb47f03175ee939ba95a",
+      "inputSignature": "366c1d0a3729ed4c4d261f4a82549f03b0aa223f3acd375824071a74b03f94e8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 979461,
+        "weightedCmykRmse": 1.34379
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1438046,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1200054,
+          "weightedCmykRmse": 0.744643
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1139109,
+          "weightedCmykRmse": 0.888024
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1048274,
+          "weightedCmykRmse": 1.079923
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 979461,
+          "weightedCmykRmse": 1.34379
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        62,
+        50,
+        1260,
+        1163
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_343/exports/sunflower-germinating-seed.pdf",
+          "bytes": 979461,
+          "sha256": "7f0c995601b5f8f22d903ee11ec648aa1de1af565bb0aeecfe080942e4a49b63"
+        },
+        "webp": {
+          "path": "work/production/wave_343/exports/sunflower-germinating-seed.webp",
+          "bytes": 1393814,
+          "sha256": "13c3f9f0058a2c5364a6c34b80c763f2199899d19f345abaac3ed6191d62c771"
+        },
+        "thumb": {
+          "path": "work/production/wave_343/exports/sunflower-germinating-seed-thumb.webp",
+          "bytes": 76502,
+          "sha256": "630ed90f9226a5a3f844c1cf07f484ad120a9e7f78bfe7ad0d202f174be03e86"
+        }
+      },
+      "proofSha256": "1cb78f27b22cbf2bcaed61204c26840ce01e39950596fca57061de7502f994cc",
+      "pairMeanRgbDifference": 1.74303
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proof comparisons visually reviewed; accurate botanical structure, full framing and separate useful compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:42.575Z"
+}

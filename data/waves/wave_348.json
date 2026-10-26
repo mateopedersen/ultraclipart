@@ -1,0 +1,576 @@
+{
+  "wave": "wave_348",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-gardener-staking",
+      "title": "Gardener Supporting a Sunflower",
+      "alt": "Bearded gardener in a straw hat and green overalls tying a tall sunflower to a wooden support.",
+      "description": "Bearded gardener in a straw hat and green overalls tying a tall sunflower to a wooden support. Use the complete gardening scene in a classroom plant-care sequence or a personal garden journal.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_348/source/sunflower-gardener-staking.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 767,
+      "pdfHeight": 920,
+      "sourceType": "raster",
+      "sourceSha256": "3b80fc612193f13b6e37264ee7e879512d7e8ff9dd1f76db3fc23436a80499ab",
+      "inputSignature": "880771a951e539c50d464f599cb8bc3a514f7f45152804bd22608b6eecc6b391",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 987229,
+        "weightedCmykRmse": 1.321039
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1384498,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1183525,
+          "weightedCmykRmse": 0.744739
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1131699,
+          "weightedCmykRmse": 0.881837
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1054683,
+          "weightedCmykRmse": 1.062414
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 987229,
+          "weightedCmykRmse": 1.321039
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        103,
+        14,
+        1043,
+        1351
+      ],
+      "image": {
+        "width": 767,
+        "height": 920,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_348/exports/sunflower-gardener-staking.pdf",
+          "bytes": 987229,
+          "sha256": "e470066ddb2b66c84d9925473accc7ba2b55d1f28850f32cebf72d4df5111863"
+        },
+        "webp": {
+          "path": "work/production/wave_348/exports/sunflower-gardener-staking.webp",
+          "bytes": 1517250,
+          "sha256": "bc81df63acf31f118816487cf42e1ac1f2cc3a4fdfd6b6d0949aff19bd1c1d3c"
+        },
+        "thumb": {
+          "path": "work/production/wave_348/exports/sunflower-gardener-staking-thumb.webp",
+          "bytes": 89878,
+          "sha256": "2573b42f039ce88f0fcb1aa9419dcf1e176930696e763ffe70b378586dee4473"
+        }
+      },
+      "proofSha256": "2f95512a21199f9f7b52d84b9b562280260151279caa220b0448f108e3b24189",
+      "pairMeanRgbDifference": 2.85624
+    },
+    {
+      "id": "sunflower-child-measuring",
+      "title": "Child Measuring a Sunflower",
+      "alt": "Curly-haired child in a blue shirt, rust dungarees and yellow shoes holding a wooden measuring stick beside a sunflower.",
+      "description": "Curly-haired child in a blue shirt, rust dungarees and yellow shoes holding a wooden measuring stick beside a sunflower. The growth observation suits a classroom measurement discussion without assigning an exact height.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_348/source/sunflower-child-measuring.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "09d6d419139c3b7c2d8ce5d897845dfba4eecdb0becadafda06a0d1af854cc39",
+      "inputSignature": "a4638e3997ac288f91409106367caaeb1a9a95c12643fc648750c9e231c81cf7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 966359,
+        "weightedCmykRmse": 1.364769
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1415393,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1188359,
+          "weightedCmykRmse": 0.763546
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1124304,
+          "weightedCmykRmse": 0.899415
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1037179,
+          "weightedCmykRmse": 1.076454
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 966359,
+          "weightedCmykRmse": 1.364769
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        111,
+        17,
+        1082,
+        1326
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_348/exports/sunflower-child-measuring.pdf",
+          "bytes": 966359,
+          "sha256": "61dc542614c4301d7069b0f852a10f4f51edfbaef1bcef143e29d803c01220df"
+        },
+        "webp": {
+          "path": "work/production/wave_348/exports/sunflower-child-measuring.webp",
+          "bytes": 1378994,
+          "sha256": "18ff7e1411e644771ffd19564fc5cf4dfd753954cd67b562dc685363c4f8b625"
+        },
+        "thumb": {
+          "path": "work/production/wave_348/exports/sunflower-child-measuring-thumb.webp",
+          "bytes": 87044,
+          "sha256": "80988213ca3d3e41633dd228fc778a26014ad1a36c30af75781f8e17136b171f"
+        }
+      },
+      "proofSha256": "223d02744de1bb74354bf194333b869e55720725f1cb5c9d36d2b2db2eee2bb6",
+      "pairMeanRgbDifference": 4.23491
+    },
+    {
+      "id": "sunflower-cut-flower-harvest",
+      "title": "Gardener Cutting Sunflowers",
+      "alt": "Silver-haired gardener in glasses and a lavender vest holding a cut sunflower and pruning snips beside a red bucket.",
+      "description": "Silver-haired gardener in glasses and a lavender vest holding a cut sunflower and pruning snips beside a red bucket. Use the full gardening character in a classroom flower-care activity or a personal gardening page.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_348/source/sunflower-cut-flower-harvest.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "bc3003910be7908808d64ba60e37c9a4ae5d846e7f2306660f5ecd080dea1d1f",
+      "inputSignature": "e9fce51362fa76cea24d8e6d87125b05a50265010bed98ba567374b73fd6c22f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 991597,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 991597,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        148,
+        28,
+        969,
+        1473
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_348/exports/sunflower-cut-flower-harvest.pdf",
+          "bytes": 991597,
+          "sha256": "880d909b1a81d2875e8b3d000e48b5de7f55b17e5389aacba89f8b6dc2d40a31"
+        },
+        "webp": {
+          "path": "work/production/wave_348/exports/sunflower-cut-flower-harvest.webp",
+          "bytes": 1517350,
+          "sha256": "75fd1604922f0e55bf24d2891d1d5606239d0e715b041bbd90628aa18ec4da9f"
+        },
+        "thumb": {
+          "path": "work/production/wave_348/exports/sunflower-cut-flower-harvest-thumb.webp",
+          "bytes": 54098,
+          "sha256": "8915b3010a5a3650ace41ff13a37b3ba14b94f9c7ff257ce41afd0c3defe75a9"
+        }
+      },
+      "proofSha256": "3a1eca9e2072e9a219ce17b145dde215b46e7694c9836150c3e243a3f70ad7a0",
+      "pairMeanRgbDifference": 3.54049
+    },
+    {
+      "id": "sunflower-seed-sorting-hands",
+      "title": "Sorting Sunflower Seeds",
+      "alt": "Hands in ochre cuffs sorting striped sunflower hulls and pale kernels into a divided wooden tray beside a flower.",
+      "description": "Hands in ochre cuffs sorting striped sunflower hulls and pale kernels into a divided wooden tray beside a flower. The sorting action suits a classroom seed observation or a personal growing journal.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_348/source/sunflower-seed-sorting-hands.png",
+      "printMaxEdgePx": 940,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 940,
+      "pdfHeight": 859,
+      "sourceType": "raster",
+      "sourceSha256": "bd657bb0f3d779cd9c11a5061a8d0a2b17cf257e4a2cc6f9ef87aafb1683d6e8",
+      "inputSignature": "e9a14388889a52d2b85bb1c8a1113bd0851ca687f89d327b6d973686f94c4ea6",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 989792,
+        "weightedCmykRmse": 1.249638
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1500045,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1231397,
+          "weightedCmykRmse": 0.7098
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1160671,
+          "weightedCmykRmse": 0.844323
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1073779,
+          "weightedCmykRmse": 1.007858
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 989792,
+          "weightedCmykRmse": 1.249638
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        22,
+        49,
+        1282,
+        1152
+      ],
+      "image": {
+        "width": 940,
+        "height": 859,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_348/exports/sunflower-seed-sorting-hands.pdf",
+          "bytes": 989792,
+          "sha256": "98b70ac65cddb03940c8b203cb929695c6a8dd727aa4295748608a91c4e033f6"
+        },
+        "webp": {
+          "path": "work/production/wave_348/exports/sunflower-seed-sorting-hands.webp",
+          "bytes": 1671694,
+          "sha256": "e2f9771b912274a076eaffaf8648df57a8196dbc1af4910d3879942b795802a9"
+        },
+        "thumb": {
+          "path": "work/production/wave_348/exports/sunflower-seed-sorting-hands-thumb.webp",
+          "bytes": 89842,
+          "sha256": "19d3589ed3ea82ae2046c0ea11e904e5db7412bbcf15b77dd3ea66dafd6ce54b"
+        }
+      },
+      "proofSha256": "c26cd2615f0d8bfc6250699d02f927f6240fcaa04afc3fa05b18a873aeae2ff6",
+      "pairMeanRgbDifference": 2.85409
+    },
+    {
+      "id": "sunflower-seed-packet",
+      "title": "Sunflower Seed Packet",
+      "alt": "Open cream seed packet with a painted sunflower and striped seeds spilling beside it.",
+      "description": "Open cream seed packet with a painted sunflower and striped seeds spilling beside it. Use the packet in a classroom sowing sequence or add your own short label in a personal garden design.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_348/source/sunflower-seed-packet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "41e2aef1a102b6a2335f102b380732de560fec064cdafc3bf80b6ea549a9fca3",
+      "inputSignature": "8d945018be0fd167fa42069fce3ab5b395e2f9c28b53f91d4b8d64e8a60b1791",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 844419,
+        "weightedCmykRmse": 0.809571
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1095362,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 844419,
+          "weightedCmykRmse": 0.809571
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        25,
+        34,
+        1293,
+        1098
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_348/exports/sunflower-seed-packet.pdf",
+          "bytes": 844419,
+          "sha256": "2f65f7448204b35345c7d78dd54b012351965510365d27b995130d1025cb9d0b"
+        },
+        "webp": {
+          "path": "work/production/wave_348/exports/sunflower-seed-packet.webp",
+          "bytes": 1141536,
+          "sha256": "30639d6bf2df8af6d4a49569a0988b3b544bdc5eb01a65604fe81a45b36eb265"
+        },
+        "thumb": {
+          "path": "work/production/wave_348/exports/sunflower-seed-packet-thumb.webp",
+          "bytes": 61298,
+          "sha256": "9a4fd038ad1d7a128d2742a33306efd6e8e3ccbd7bc28f58c9269f7e0f2f7269"
+        }
+      },
+      "proofSha256": "3d3b14d34497857732f967dd161adf4630205bb9e3f4a13393703b5e65ad3e35",
+      "pairMeanRgbDifference": 2.88633
+    },
+    {
+      "id": "sunflower-kernel-bowl",
+      "title": "Shelled Sunflower Kernels",
+      "alt": "Pale sunflower kernels in a dark blue ceramic bowl beside a wooden scoop and striped hulls.",
+      "description": "Pale sunflower kernels in a dark blue ceramic bowl beside a wooden scoop and striped hulls. This ingredient arrangement suits a classroom food vocabulary card or a personal recipe journal.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_348/source/sunflower-kernel-bowl.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7b15e71e90e34591cf796af5c0350847e075d59a80f2baaebc112eb625f23d9e",
+      "inputSignature": "d7bf57ed9253449e99644cb0b57622d4ee52a935310ffd38e7f64e89cde44242",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 821646,
+        "weightedCmykRmse": 0.775628
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1010183,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 821646,
+          "weightedCmykRmse": 0.775628
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        113,
+        80,
+        1488,
+        946
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_348/exports/sunflower-kernel-bowl.pdf",
+          "bytes": 821646,
+          "sha256": "c3e6cb14333c685df3b1e251a3d075b1ecd6009ed686cc77fdcf2b64b3770e23"
+        },
+        "webp": {
+          "path": "work/production/wave_348/exports/sunflower-kernel-bowl.webp",
+          "bytes": 1572386,
+          "sha256": "6e9dae0e4d1ea2f241c477ffe0731e4ef2d48e99043867bc15359b6169b9ad61"
+        },
+        "thumb": {
+          "path": "work/production/wave_348/exports/sunflower-kernel-bowl-thumb.webp",
+          "bytes": 50540,
+          "sha256": "ffdb8d57d40a47535b16843bd433302357b2fb9b933a9caa27d12ad822f216f1"
+        }
+      },
+      "proofSha256": "31a57cc9b887bfe65eeda37feb3556bee307be33f0577eb44facd5555ef57520",
+      "pairMeanRgbDifference": 4.17255
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP comparisons visually reviewed; full framing including repaired stamp card and feeder loop, coherent objects and independent scenes. Repairs remain the same artwork IDs.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:46.744Z"
+}

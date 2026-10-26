@@ -1,0 +1,611 @@
+{
+  "wave": "wave_346",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "sunflower-pressed-specimen",
+      "title": "Pressed Sunflower Specimen",
+      "alt": "Pressed sunflower with dry leaves attached to a small cream specimen card by narrow paper strips.",
+      "description": "Pressed sunflower with dry leaves attached to a small cream specimen card by narrow paper strips. Use the flattened specimen in a classroom nature-journal activity or a personal botanical page.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_346/source/sunflower-pressed-specimen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "1d897f576bb1b4b8caf1a178423528d5d2c09a025afae2ae5de98cfae09a467f",
+      "inputSignature": "9f239ca285260c6915181636200bf04ad15983a0427f58528846cf50868f119d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 912168,
+        "weightedCmykRmse": 1.07464
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1325835,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1065509,
+          "weightedCmykRmse": 0.746298
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 999095,
+          "weightedCmykRmse": 0.888848
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 912168,
+          "weightedCmykRmse": 1.07464
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        261,
+        46,
+        1055,
+        1141
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_346/exports/sunflower-pressed-specimen.pdf",
+          "bytes": 912168,
+          "sha256": "8ba2b987593e25777966a373e12bf31ab09550929dd5fcf833d7f040259f92d0"
+        },
+        "webp": {
+          "path": "work/production/wave_346/exports/sunflower-pressed-specimen.webp",
+          "bytes": 1434190,
+          "sha256": "b1b73350b9029afb12504dcb9d83460036e87e87dad22614478b8eca107fa9fd"
+        },
+        "thumb": {
+          "path": "work/production/wave_346/exports/sunflower-pressed-specimen-thumb.webp",
+          "bytes": 62638,
+          "sha256": "a35ab729c33495cf44ea66dc3d85576776ca55216d1e1d8f20d3578ce530fb08"
+        }
+      },
+      "proofSha256": "70b94ef56ed016d9e9244662ce64601b044535bc50eefc6eb04a40cadbd82c23",
+      "pairMeanRgbDifference": 2.71762
+    },
+    {
+      "id": "sunflower-paper-flower-craft",
+      "title": "Folded Paper Sunflower",
+      "alt": "Folded paper sunflower with a coiled brown center, green paper leaves, blue scissors and a loose paper petal.",
+      "description": "Folded paper sunflower with a coiled brown center, green paper leaves, blue scissors and a loose paper petal. The visible folds suit a classroom paper-craft prompt or a personal craft notebook.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_346/source/sunflower-paper-flower-craft.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "a3af2f0a756dc9421219cd714ceff423675b762733ea27288222810303c4c658",
+      "inputSignature": "9125b139c69f60a200004ed159dbdb6a0fffebd039d5ab62e64305e0a6b3e453",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 846608,
+        "weightedCmykRmse": 0.838442
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1067057,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 846608,
+          "weightedCmykRmse": 0.838442
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        77,
+        41,
+        1281,
+        1154
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_346/exports/sunflower-paper-flower-craft.pdf",
+          "bytes": 846608,
+          "sha256": "7fcb994bcb6524fb9af859a67b05bfe42c904ea26db4a29dccbaa3619760018f"
+        },
+        "webp": {
+          "path": "work/production/wave_346/exports/sunflower-paper-flower-craft.webp",
+          "bytes": 993616,
+          "sha256": "7f81ebead2ddca0834a6edba54da73a6cab7b97212a203d458dfa45918a2e86e"
+        },
+        "thumb": {
+          "path": "work/production/wave_346/exports/sunflower-paper-flower-craft-thumb.webp",
+          "bytes": 63436,
+          "sha256": "005fb4b684d3a1acc406c1cc9f42b1dd14a5dbfaae8e4c3b07590d6f782d4c68"
+        }
+      },
+      "proofSha256": "a645b393649e1f8c303593028392281fcc7aa03657d59ca8957fd82b30023ab8",
+      "pairMeanRgbDifference": 3.53221
+    },
+    {
+      "id": "sunflower-felt-brooch",
+      "title": "Felt Sunflower Brooch",
+      "alt": "Stitched felt sunflower brooch with layered mustard petals, olive leaves and a visible metal pin catch.",
+      "description": "Stitched felt sunflower brooch with layered mustard petals, olive leaves and a visible metal pin catch. Use this small textile object in a classroom materials activity or a personal sewing journal.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_346/source/sunflower-felt-brooch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1278,
+      "height": 1230,
+      "pdfWidth": 1000,
+      "pdfHeight": 962,
+      "sourceType": "raster",
+      "sourceSha256": "f213d474e26f4f0af9377ee42cb08d509642e8ca0831dd0f1d9ea41476de9c93",
+      "inputSignature": "9d5de33eabd58a8526051f4f2ea38a11edd44f3cc33f46f9505a714224ff9038",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 943596,
+        "weightedCmykRmse": 1.110834
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1392972,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1100681,
+          "weightedCmykRmse": 0.773379
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1032832,
+          "weightedCmykRmse": 0.918842
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 943596,
+          "weightedCmykRmse": 1.110834
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        87,
+        1233,
+        1147
+      ],
+      "image": {
+        "width": 1000,
+        "height": 962,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_346/exports/sunflower-felt-brooch.pdf",
+          "bytes": 943596,
+          "sha256": "30196e0ef697673593d311887ac399d5c1887364540c57d67e2099ab6dd3787f"
+        },
+        "webp": {
+          "path": "work/production/wave_346/exports/sunflower-felt-brooch.webp",
+          "bytes": 1391110,
+          "sha256": "1fc97a30d886b96cb4fd192d809a3c78f30d52996d5664fcc79e368de3efb15f"
+        },
+        "thumb": {
+          "path": "work/production/wave_346/exports/sunflower-felt-brooch-thumb.webp",
+          "bytes": 71292,
+          "sha256": "1683f35192f3718299fc9a6a2784f37682b6a392f2f577151e88632f08f1ec5c"
+        }
+      },
+      "proofSha256": "acd9b45a51f3a09246aa0c3064cab92b543ded00a05c27294c67191032289a4b",
+      "pairMeanRgbDifference": 3.93732
+    },
+    {
+      "id": "sunflower-crocheted-flower",
+      "title": "Crocheted Sunflower",
+      "alt": "Crocheted sunflower with rounded golden yarn petals, a brown spiral center, a green leaf and a crochet hook.",
+      "description": "Crocheted sunflower with rounded golden yarn petals, a brown spiral center, a green leaf and a crochet hook. The thick yarn stitches suit a classroom texture comparison or a personal crochet project page.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_346/source/sunflower-crocheted-flower.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "6b2c64bb9c459f5ecbc7ef095c88f811ff0ab297d886505f2eed457c7ad0148a",
+      "inputSignature": "854284fe8c54f81e30cc938f58abb43ed5ec0da62845dfe9c6183cc577a36cec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 990093,
+        "weightedCmykRmse": 1.293484
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1512131,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1241612,
+          "weightedCmykRmse": 0.731253
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1170029,
+          "weightedCmykRmse": 0.869096
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1072530,
+          "weightedCmykRmse": 1.045536
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 990093,
+          "weightedCmykRmse": 1.293484
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        29,
+        25,
+        1289,
+        1175
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_346/exports/sunflower-crocheted-flower.pdf",
+          "bytes": 990093,
+          "sha256": "da6d37e52bd9e81366ca36dfcaa429f6f54218b2281c8833b63a9e1e5813968b"
+        },
+        "webp": {
+          "path": "work/production/wave_346/exports/sunflower-crocheted-flower.webp",
+          "bytes": 1494158,
+          "sha256": "940f1b5ce8da6be491838860e56faf25ef81cb318e0dc4220272daa147c77c75"
+        },
+        "thumb": {
+          "path": "work/production/wave_346/exports/sunflower-crocheted-flower-thumb.webp",
+          "bytes": 81782,
+          "sha256": "886a826c176c4c28c726e08182e2f97c6e984cac96388711db293dd64389fa82"
+        }
+      },
+      "proofSha256": "451fbca6f28bc81e9c17a6323ed4a0f1f82aef7c95e0657e6e098b8beec2a38f",
+      "pairMeanRgbDifference": 4.32302
+    },
+    {
+      "id": "sunflower-stained-glass-panel",
+      "title": "Sunflower Stained Glass",
+      "alt": "Square stained-glass panel with a golden sunflower, green leaves, pale blue glass and dark joining lines.",
+      "description": "Square stained-glass panel with a golden sunflower, green leaves, pale blue glass and dark joining lines. Place this complete decorative panel in a personal art journal or a classroom materials comparison.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_346/source/sunflower-stained-glass-panel.png",
+      "printMaxEdgePx": 830,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 830,
+      "pdfHeight": 830,
+      "sourceType": "raster",
+      "sourceSha256": "5a00763179a59fb85918edc100a5b7b50dbec0dda01261537c76f901f886baef",
+      "inputSignature": "4f880ba2e790ea472dd3de67ab97d26636f77e94e72b0c363809a4a677bdf5fa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967541,
+        "weightedCmykRmse": 1.14134
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1466173,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1203390,
+          "weightedCmykRmse": 0.659809
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1134779,
+          "weightedCmykRmse": 0.783158
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1058697,
+          "weightedCmykRmse": 0.93453
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967541,
+          "weightedCmykRmse": 1.14134
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        77,
+        79,
+        1176,
+        1174
+      ],
+      "image": {
+        "width": 830,
+        "height": 830,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_346/exports/sunflower-stained-glass-panel.pdf",
+          "bytes": 967541,
+          "sha256": "37678dd7c8835c04af94337633a998ac86ed56ce1d809dfa7ea4c1c20e4b5a99"
+        },
+        "webp": {
+          "path": "work/production/wave_346/exports/sunflower-stained-glass-panel.webp",
+          "bytes": 2088124,
+          "sha256": "be0bae357b2c8004e05a940d50ed1d8007b189153e54ebf1f33420cd9406f545"
+        },
+        "thumb": {
+          "path": "work/production/wave_346/exports/sunflower-stained-glass-panel-thumb.webp",
+          "bytes": 93240,
+          "sha256": "bc5543216f56da9a62d608dc73abcee6c85b782c0265ecc29268d902924516bd"
+        }
+      },
+      "proofSha256": "e8925e8334b3fa502ebbd72ebb328eae7ca172e4a028cf95ed527a4fbf58b415",
+      "pairMeanRgbDifference": 5.68071
+    },
+    {
+      "id": "sunflower-embroidery-hoop",
+      "title": "Sunflower Embroidery Hoop",
+      "alt": "Sunflower embroidered on navy linen in a wooden hoop beside a golden thread spool and a needle.",
+      "description": "Sunflower embroidered on navy linen in a wooden hoop beside a golden thread spool and a needle. Use the stitched flower in a personal embroidery journal or a classroom textile activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_346/source/sunflower-embroidery-hoop.png",
+      "printMaxEdgePx": 830,
+      "alphaCompression": "zopfli",
+      "topic": "sunflower",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 830,
+      "pdfHeight": 830,
+      "sourceType": "raster",
+      "sourceSha256": "5b769bed3f684e3e45889efe357de4921a763a96ac9db3057ade46ba8d92e341",
+      "inputSignature": "06270b637f2c01507e5a3c4dd8e12e84a4c23754089ccafb51cc792b5a910ac2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 977481,
+        "weightedCmykRmse": 1.28274
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1391970,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175889,
+          "weightedCmykRmse": 0.720076
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1125784,
+          "weightedCmykRmse": 0.858134
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1050293,
+          "weightedCmykRmse": 1.046064
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 977481,
+          "weightedCmykRmse": 1.28274
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        60,
+        27,
+        1199,
+        1213
+      ],
+      "image": {
+        "width": 830,
+        "height": 830,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_346/exports/sunflower-embroidery-hoop.pdf",
+          "bytes": 977481,
+          "sha256": "6803ae70f01b8f0be19855c12856f9ef1b1de30efe09ff5ee8a7e0e05e501d20"
+        },
+        "webp": {
+          "path": "work/production/wave_346/exports/sunflower-embroidery-hoop.webp",
+          "bytes": 1678684,
+          "sha256": "2d8f90b467991fc839fec564d17b38cc0c9f7f1ec03f40a40eca9ba40366ea5c"
+        },
+        "thumb": {
+          "path": "work/production/wave_346/exports/sunflower-embroidery-hoop-thumb.webp",
+          "bytes": 93442,
+          "sha256": "7b89e80082c4280bb0230b8be8e14ce2e43b810b38c2b8fb9b552b2751ace20b"
+        }
+      },
+      "proofSha256": "6b5a51f4f3cf321ae7860f69168c8b45f70a16575dec7d9531ef67ad5f048d4c",
+      "pairMeanRgbDifference": 2.64902
+    }
+  ],
+  "deferred": [],
+  "screenReviewNotes": "All selected source and native PDF/WebP proof comparisons visually reviewed; accurate botanical structure, full framing and separate useful compositions.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T03:55:45.529Z"
+}
