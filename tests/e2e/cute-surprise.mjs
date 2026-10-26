@@ -2,8 +2,9 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { chromium, expect } from '@playwright/test';
 import { loadTypescript } from '../helpers/typescript.mjs';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 const { cuteConfidence } = await loadTypescript('src/lib/cute-discovery.ts');
-const all = JSON.parse(await readFile('data/art.json', 'utf8'));
+const all = readEditorialCatalog();
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
 const browser = await chromium.launch();
 const context = await browser.newContext({

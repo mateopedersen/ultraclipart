@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import boilerplate from '../data/editorial/boilerplate.json' with { type: 'json' };
 import sentenceReplacements from '../data/editorial/sentence-replacements.json' with { type: 'json' };
+import subjectContexts from '../data/editorial/subject-contexts.json' with { type: 'json' };
 
 const removedSentences = new Set(boilerplate);
 const fields = ['title', 'alt', 'description'];
@@ -29,7 +30,7 @@ export function cleanLegacyCopy(item) {
   return { title: item.title, alt, description };
 }
 
-export function copyIssues(copy) {
+export function copyIssues(copy, { reviewed = false } = {}) {
   const issues = [];
   for (const key of fields) {
     if (typeof copy[key] !== 'string' || !copy[key].trim()) {
@@ -58,9 +59,44 @@ export function copyIssues(copy) {
     issues.push('description:generic-instruction');
   if (/\b(?:download|choose)\b[^.!?]*\b(?:image|pdf|transparent)\b/i.test(copy.description))
     issues.push('description:download-instruction');
-  if ((copy.description?.length ?? 0) < 55) issues.push('description:needs-detail-review');
+  // Short legacy captions need a human look, not padding to an arbitrary word count.
+  // An image-reviewed, specific sentence may legitimately be shorter than this.
+  if (!reviewed && (copy.description?.length ?? 0) < 55)
+    issues.push('description:needs-detail-review');
   if ((copy.alt?.length ?? 0) > 300) issues.push('alt:too-long');
   if ((copy.title?.length ?? 0) > 140) issues.push('title:too-long');
+  return issues;
+}
+
+/** Check claims in public-figure drawings without treating them as event evidence. */
+export function publicFigureCopyIssues(copy, depiction) {
+  if (!depiction) return [];
+  if (
+    depiction.kind !== 'public-figure-illustration' ||
+    depiction.sceneNature !== 'imagined-illustration' ||
+    typeof depiction.fictionalRole !== 'boolean' ||
+    !Array.isArray(depiction.people) ||
+    !depiction.people.length ||
+    depiction.people.some((name) => typeof name !== 'string' || !name.trim())
+  )
+    return ['depiction:invalid-context'];
+  const issues = [];
+  for (const name of depiction.people) {
+    const parts = name.toLowerCase().split(/\s+/);
+    if (fields.some((field) => parts.some((part) => !copy[field]?.toLowerCase().includes(part))))
+      issues.push('depiction:inconsistent-person');
+  }
+  if (
+    /\b(?:won|wins|election results?|official(?:ly)? endors(?:ed|ement)|signed into law|enacted|record-breaking|documentary photograph|actual photograph|historic photograph)\b/i.test(
+      fields.map((key) => copy[key]).join(' '),
+    )
+  )
+    issues.push('depiction:unsupported-event-claim');
+  if (
+    depiction.fictionalRole &&
+    !/\b(?:imagined|fictional|fantasy|cartoon|costume)\b/i.test(copy.description)
+  )
+    issues.push('depiction:unqualified-fictional-role');
   return issues;
 }
 
@@ -87,11 +123,25 @@ export function validateEditorialReview(item, record) {
   if (!record.inspectedImage || record.inspectedImage !== item.webp) fail('wrong inspected image');
   if (!Array.isArray(record.references))
     fail('references must be recorded (empty for ordinary subjects)');
+  const context = subjectContexts[item.topic];
+  if (
+    context &&
+    (record.depiction?.kind !== context.kind ||
+      record.depiction?.sceneNature !== context.sceneNature ||
+      !record.depiction?.people?.includes(context.requiredPerson) ||
+      record.depiction.people.some((person) => !context.allowedPeople.includes(person)))
+  )
+    fail('the registered subject context must be preserved');
+  if (record.depiction && !record.references.length)
+    fail('public-figure identity requires a primary reference');
   for (const ref of record.references) {
     if (!ref.publisher || !ref.reason || !/^https:\/\//.test(ref.url))
       fail('invalid factual reference');
   }
-  const issues = copyIssues(record.copy);
+  const issues = [
+    ...copyIssues(record.copy, { reviewed: true }),
+    ...publicFigureCopyIssues(record.copy, record.depiction),
+  ];
   if (issues.length) fail(issues.join(', '));
   if (!record.copy.alt || record.copy.alt === record.copy.title)
     fail('alt must describe the image');
@@ -155,7 +205,7 @@ export function verifyEditorialCatalog(catalog, baseline, registry) {
       id: item.id,
       topic: item.topic,
       status: review ? 'reviewed-from-image' : 'legacy-awaiting-image-review',
-      issues: copyIssues(copy),
+      issues: copyIssues(copy, { reviewed: Boolean(review) }),
       changed: fields.some((key) => copy[key] !== item[key]),
     };
   });

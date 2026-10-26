@@ -26,6 +26,8 @@ Use `npm run content:apply -- path/to/review.json` to validate a completed batch
 
 ## Search guidance
 
+Public-figure reviews record `depiction` with the named people, `sceneNature: imagined-illustration` and whether the picture assigns a fictional role. Validation checks identity consistency and rejects unqualified fictional roles and unsupported event/result claims. This text check complements actual pixel review; it is not automatic proof that every sentence is true. Use pixel-based color checks to catch a drawing labeled as line art when its original has colored elements. Keep any image-quality limitations in the internal review, not repeated disclaimer paragraphs on every public page.
+
 Topic pages use one concise introduction from `data/editorial/collections.json`. It describes the particular available drawings and helps choose between them. `collection-editorial.mjs` binds the introduction to its topic inventory and source-image examples; missing, duplicated or stale entries stop the build. Keep helpful technical guidance in the shared file guide and image facts, with compact links beside the gallery. Do not restore the removed multi-paragraph SEO sections. Catalog-grounded topic summaries and actual per-image visual reviews are different types of evidence; report each honestly.
 
 Useful original images, accurate nearby text and clear titles matter more than artificially lengthened paragraphs. E-E-A-T is not a reason to invent authors or credentials. No ranking or indexing guarantee is made. References checked for this policy:

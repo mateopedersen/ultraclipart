@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335';
 const engine = process.env.UC_BROWSER || 'chromium';
@@ -27,7 +28,7 @@ const readData = (name) =>
         : new URL(`../../data/${name}`, import.meta.url),
     ),
   );
-const all = readData('art.json');
+const all = readEditorialCatalog(process.env.RELEASE_DATA_DIR);
 const catalog = all.filter((a) => a.topic === topic);
 const publication = readData('publication.json');
 const expectedUrl = (a, kind) =>
