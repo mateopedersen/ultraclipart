@@ -8,12 +8,21 @@ for line in (root/'_headers').read_text().splitlines():
  if not line.strip() or line.lstrip().startswith('#'):continue
  if not line[0].isspace():rules.append((line.strip(),[]))
  elif rules:
-  key,value=line.strip().split(':',1);rules[-1][1].append((key,value.strip()))
+  if line.strip().startswith('! '):rules[-1][1].append((line.strip()[2:].strip(),None))
+  else:
+   key,value=line.strip().split(':',1);rules[-1][1].append((key,value.strip()))
 class Handler(http.server.SimpleHTTPRequestHandler):
  def end_headers(self):
+  selected={}
   for pattern,headers in rules:
    if fnmatch.fnmatch(self.path.split('?')[0],pattern):
-    for key,value in headers:self.send_header(key,value)
+    for key,value in headers:
+     if value is None:selected.pop(key.lower(),None)
+     else:selected[key.lower()]=(key,value)
+  for key,value in selected.values():self.send_header(key,value)
   super().end_headers()
  def log_message(self,*args):pass
-http.server.ThreadingHTTPServer(('127.0.0.1',port),functools.partial(Handler,directory=str(root))).serve_forever()
+class PreviewServer(http.server.ThreadingHTTPServer):
+ request_queue_size=64
+ daemon_threads=True
+PreviewServer(('127.0.0.1',port),functools.partial(Handler,directory=str(root))).serve_forever()
