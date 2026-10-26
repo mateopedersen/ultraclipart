@@ -1,3 +1,16 @@
+# Check existing content before every new production topic — 2026-10-26
+
+Latest explicit owner direction: do not draw a topic that already has content.
+Before starting each keyword, double-check the actual live topic/search results
+and the accepted local catalog, owner-supplied imports, staged sources and queued
+plans. Resolve topic aliases and inspect related results so a different spelling
+does not trigger duplicate production. When existing content fulfills the topic,
+skip new drawings and move to a genuinely missing topic. Apple is explicitly
+skipped: its existing live collection was verified; no new Apple drawing was made.
+Continue quality checks and publication of already-created approved artwork.
+Record skipped topics separately; owner-supplied designs and skipped slots must
+never be relabeled as newly generated originals toward the 5,500 count.
+
 # Local update workflow
 
 The project owner set this workflow on 2026-10-25:
