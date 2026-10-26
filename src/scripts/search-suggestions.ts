@@ -1,7 +1,8 @@
 import { defaults } from '../lib/search';
 import { SearchRepository } from '../lib/search-remote';
 import { LatestRequest } from '../lib/search-request';
-import { searchSiteEntries, searchKindLabels } from '../lib/site-search';
+import { searchSiteEntries } from '../lib/site-search';
+import { searchSuggestions, type SearchSuggestion } from '../lib/search-suggestions';
 export function initSearchSuggestions() {
   for (const form of document.querySelectorAll<HTMLFormElement>('form[action="/search/"]')) {
     if (form.id === 'catalog-search' || form.dataset.suggestionsReady) continue;
@@ -32,10 +33,43 @@ export function initSearchSuggestions() {
       clearTimeout(timer);
       requests.cancel();
       panel.hidden = true;
+      panel.setAttribute('aria-busy', 'false');
       active = -1;
       input.setAttribute('aria-expanded', 'false');
       input.removeAttribute('aria-activedescendant');
     };
+    function show(options: SearchSuggestion[]) {
+      panel.replaceChildren(
+        ...options.map((option, i) => {
+          const link = document.createElement('a');
+          link.id = `${panel.id}-${i}`;
+          link.href = option.href;
+          link.setAttribute('role', 'option');
+          link.setAttribute('aria-selected', 'false');
+          if (option.kind === 'Search') link.className = 'search-suggestion-all';
+          if (option.thumb) {
+            const image = document.createElement('img');
+            image.src = option.thumb;
+            image.alt = '';
+            image.width = image.height = 44;
+            link.append(image);
+          }
+          const text = document.createElement('span'),
+            label = document.createElement('span'),
+            kind = document.createElement('small');
+          label.textContent = option.title;
+          kind.textContent = option.kind;
+          text.append(label, kind);
+          link.append(text);
+          return link;
+        }),
+      );
+      panel.setAttribute('aria-busy', 'false');
+      active = -1;
+      panel.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+      input.removeAttribute('aria-activedescendant');
+    }
     function suggest() {
       clearTimeout(timer);
       requests.cancel();
@@ -62,64 +96,20 @@ export function initSearchSuggestions() {
         void requests.run(
           async (signal) => {
             const manifest = await repository.manifest(signal);
-            const [art, entries] = await Promise.all([
+            const [art, entries] = await Promise.allSettled([
               repository.search({ ...defaults, q: query, size: 8 }, signal),
               repository.siteEntries(manifest, signal),
             ]);
-            return { art, site: searchSiteEntries(entries, query) };
+            if (art.status === 'rejected' && entries.status === 'rejected') throw art.reason;
+            return {
+              artwork: art.status === 'fulfilled' ? art.value.items : [],
+              site: entries.status === 'fulfilled' ? searchSiteEntries(entries.value, query) : [],
+            };
           },
-          ({ art, site }) => {
-            panel.setAttribute('aria-busy', 'false');
-            const options: { title: string; href: string; kind: string; thumb?: string }[] = [
-              ...art.items.slice(0, 4).map((item) => ({
-                title: item.title,
-                href: `/art/${item.id}/`,
-                kind: 'Artwork',
-                thumb: item.thumb,
-              })),
-              ...site.slice(0, 3).map(({ entry }) => ({
-                title: entry.title,
-                href: entry.href,
-                kind: searchKindLabels[entry.kind],
-              })),
-              {
-                title: `See all results for “${query}”`,
-                href: `/search/?q=${encodeURIComponent(query)}`,
-                kind: 'Search',
-              },
-            ];
-            panel.replaceChildren(
-              ...options.map((option, i) => {
-                const link = document.createElement('a');
-                link.id = `${panel.id}-${i}`;
-                link.href = option.href;
-                link.setAttribute('role', 'option');
-                link.setAttribute('aria-selected', 'false');
-                if (i === options.length - 1) link.className = 'search-suggestion-all';
-                if (option.thumb) {
-                  const image = document.createElement('img');
-                  image.src = option.thumb;
-                  image.alt = '';
-                  image.width = image.height = 44;
-                  link.append(image);
-                }
-                const text = document.createElement('span'),
-                  label = document.createElement('span'),
-                  kind = document.createElement('small');
-                label.textContent = option.title;
-                kind.textContent = option.kind;
-                text.append(label, kind);
-                link.append(text);
-                return link;
-              }),
-            );
-            active = -1;
-            panel.hidden = false;
-            input.setAttribute('aria-expanded', 'true');
-            input.removeAttribute('aria-activedescendant');
-          },
+          ({ artwork, site }) => show(searchSuggestions(query, artwork, site)),
           () => {
-            close();
+            // Keep a usable native destination even if the suggestion data is offline.
+            show(searchSuggestions(query, [], []));
           },
         );
       }, 240);
@@ -162,7 +152,12 @@ export function initSearchSuggestions() {
     });
     form.addEventListener('submit', close);
     form.addEventListener('focusout', (event) => {
-      if (!form.contains(event.relatedTarget as Node)) close();
+      // Safari sends relatedTarget=null when a finger focuses a link. Hiding
+      // it here removes the target before the ensuing native click can navigate.
+      if (event.relatedTarget instanceof Node && !form.contains(event.relatedTarget)) close();
+    });
+    document.addEventListener('focusin', (event) => {
+      if (!form.contains(event.target as Node)) close();
     });
     document.addEventListener('pointerdown', (event) => {
       if (!form.contains(event.target as Node)) close();
