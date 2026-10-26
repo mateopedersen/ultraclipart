@@ -1,0 +1,33 @@
+{
+  "wave": "wave_333",
+  "topic": "corn",
+  "method": "builtin-image-generation",
+  "research": "data/research/corn-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "corn-outline-parts-tray",
+      "title": "Corn Parts Sorting Tray Coloring Illustration",
+      "alt": "A four-compartment wooden tray holds a short corn-cob section, detached husk leaves, fine silk strands and loose kernels.",
+      "description": "A four-compartment wooden tray holds a short corn-cob section, detached husk leaves, fine silk strands and loose kernels. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_333/source/corn-outline-parts-tray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "corn-outline-grain-wagon",
+      "title": "Corn Grain Wagon Coloring Illustration",
+      "alt": "A four-wheeled farm grain wagon has a raised hopper full of kernels, a closed lower chute and a complete tow bar, with a corn ear beside it.",
+      "description": "A four-wheeled farm grain wagon has a raised hopper full of kernels, a closed lower chute and a complete tow bar, with a corn ear beside it. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_333/source/corn-outline-grain-wagon.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

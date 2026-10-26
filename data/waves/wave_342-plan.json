@@ -1,0 +1,33 @@
+{
+  "wave": "wave_342",
+  "topic": "pie",
+  "method": "builtin-image-generation",
+  "research": "data/research/pie-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "pie-outline-bake-sale",
+      "title": "Pie Stall Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_342/source/pie-outline-bake-sale.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "pie-outline-fraction-puzzle",
+      "title": "Pie Fraction Puzzle Coloring Illustration",
+      "alt": "SOURCE_REVIEW_REQUIRED",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_342/source/pie-outline-fraction-puzzle.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}
