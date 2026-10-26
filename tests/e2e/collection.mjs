@@ -145,7 +145,9 @@ try {
     });
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
-  await expect(page.locator('#result-count')).toContainText(`${expected()} artworks`);
+  await expect(page.locator('#result-count')).toContainText(
+    `${expected().toLocaleString('en-US')} artworks`,
+  );
   await expect(page.locator('#result-count')).toContainText(`for “${topic}”`);
   await expect(page.locator('#search-results .card-actions').first()).toContainText('Edit');
   for (const style of ['watercolor', 'black & white']) {
