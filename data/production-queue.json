@@ -17,17 +17,17 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 1502,
+  "generatedArtworkCount": 1552,
   "suppliedArtworkCount": 10730,
-  "originalTopicArtworkCount": 1850,
+  "originalTopicArtworkCount": 1900,
   "supplementalArtworkCount": 11184,
-  "qualityApprovedArtworkCount": 1850,
+  "qualityApprovedArtworkCount": 1900,
   "supplementalApprovedArtworkCount": 11184,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 13034,
-  "remainingToDraw": 3998,
-  "nextAction": "Publish the reviewed Kwanzaa completion: 50 accepted drawings, 30 new original IDs. Hanukkah production is in progress; inspect actual source images, culturally accurate symbols, distinct characters and kippot, then export and publish only passing originals.",
+  "availableArtworkCount": 13084,
+  "remainingToDraw": 3948,
+  "nextAction": "Release the fully reviewed 50-artwork Hanukkah collection and verify it live together with the completed Kwanzaa series. Continue Veterans production from saved source manifests, including the owner-requested Thank You Veterans, Happy Veterans Day and accurate American-flag designs. Unreviewed drawings are not accepted or published.",
   "topics": [
     {
       "topic": "halloween",
@@ -593,13 +593,13 @@
       "keyword": "Hanukkah clipart",
       "wave": "W3",
       "target": 50,
-      "generated": 0,
+      "generated": 50,
       "supplied": 0,
-      "available": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "available": 50,
+      "approved": 50,
+      "remainingToDraw": 0,
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/hanukkah.json"
     },
     {
       "topic": "menorah",
@@ -144507,5 +144507,5 @@
     }
   ],
   "verifiedPublishedGeneratedArtworkCount": 1472,
-  "acceptedAwaitingRelease": 30
+  "acceptedAwaitingRelease": 80
 }

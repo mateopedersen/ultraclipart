@@ -1,0 +1,606 @@
+{
+  "wave": "wave_406",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 3,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "hanukkah-paper-lantern-making",
+      "title": "Making a Blue Star Lantern",
+      "alt": "A girl in mustard sleeves and denim dungarees folds a blue paper lantern with star cutouts at a craft table beside Hanukkah candles.",
+      "description": "The blue lantern takes shape between the seated maker’s hands. Loose strips, scissors and a glue bottle cover the worktable, while a gold candleholder and a patterned cup of tools stand farther back.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_406/source/hanukkah-paper-lantern-making.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "519a9b89c42fdb92e6cf38704d5551add8564775cac0db11a20492eb22268bb9",
+      "inputSignature": "a82f5a8639c3e886efcd974044646013872c481e1ae271a68ee72885e0e5a590",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 948212,
+        "weightedCmykRmse": 1.396172
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1420475,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1179653,
+          "weightedCmykRmse": 0.783586
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1113216,
+          "weightedCmykRmse": 0.91224
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1023771,
+          "weightedCmykRmse": 1.101889
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 948212,
+          "weightedCmykRmse": 1.396172
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        113,
+        7,
+        1306,
+        1183
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_406/exports/hanukkah-paper-lantern-making.pdf",
+          "bytes": 948212,
+          "sha256": "f462f2129a1b2f145e373a25bac692c9e42351c34fe7ee0b4deaf29e9cb776ea"
+        },
+        "webp": {
+          "path": "work/production/wave_406/exports/hanukkah-paper-lantern-making.webp",
+          "bytes": 1271190,
+          "sha256": "a7131ad2b401652eeb8210a6e3a1ef6cef9fd4643f462c598ee7ff80f83ec4e2"
+        },
+        "thumb": {
+          "path": "work/production/wave_406/exports/hanukkah-paper-lantern-making-thumb.webp",
+          "bytes": 80606,
+          "sha256": "0f43ae59babe89f29c8c7607c501b614e3ff4c76d9b4384a6c0fed7a855e046a"
+        }
+      },
+      "proofSha256": "0bec5a8d5ead73fdc8aeeb248951a0930e351310b7859c7503389f2afdf89d00",
+      "pairMeanRgbDifference": 5.30782
+    },
+    {
+      "id": "hanukkah-felt-dreidel-sewing",
+      "title": "Stitching a Felt Dreidel Ornament",
+      "alt": "A man with glasses and an embroidered kippah sews a blue felt dreidel at a wooden craft desk beside a star ornament and thread.",
+      "description": "Fine thread connects the needle to the blue felt ornament in the maker’s hand. His rust knitted vest contrasts with cream trousers, while a red pincushion and a separate star decoration rest on the desk.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_406/source/hanukkah-felt-dreidel-sewing.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 980,
+      "pdfHeight": 896,
+      "sourceType": "raster",
+      "sourceSha256": "3dc9d8a4c10ff6168998a9348556346fa0ad55f67be81e5f2b727cfecdb9632e",
+      "inputSignature": "6c3330a08076c6069967a3543ee19334c236648dc7e0053bbe4c108e8b47faa9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 978936,
+        "weightedCmykRmse": 1.355617
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1455310,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1213553,
+          "weightedCmykRmse": 0.761742
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1146773,
+          "weightedCmykRmse": 0.88948
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055196,
+          "weightedCmykRmse": 1.07603
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 978936,
+          "weightedCmykRmse": 1.355617
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        91,
+        8,
+        1292,
+        1191
+      ],
+      "image": {
+        "width": 980,
+        "height": 896,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_406/exports/hanukkah-felt-dreidel-sewing.pdf",
+          "bytes": 978936,
+          "sha256": "860e53bcd09398c69286d5539f238d5a5ea8be6de179310fb02b1bbf6aa164cf"
+        },
+        "webp": {
+          "path": "work/production/wave_406/exports/hanukkah-felt-dreidel-sewing.webp",
+          "bytes": 1335532,
+          "sha256": "f09220d07015f3403f602ea26d80645c9ebb30476781e3cf1fec5038c703d829"
+        },
+        "thumb": {
+          "path": "work/production/wave_406/exports/hanukkah-felt-dreidel-sewing-thumb.webp",
+          "bytes": 81954,
+          "sha256": "9a917f842b2ac66374c220534d3ad571ffe9cf47ddb3e1ef4611cbf8df407c42"
+        }
+      },
+      "proofSha256": "81f8f28196ec9686ef0a4dd9aab5437be4dce5cb696575e4643a4fa4b9eb78d7",
+      "pairMeanRgbDifference": 3.25888
+    },
+    {
+      "id": "hanukkah-clay-candleholder-making",
+      "title": "Shaping a Clay Hanukkiah",
+      "alt": "A woman in a navy apron smooths a clay candleholder with eight low holes and a raised helper holder on a wooden craft table.",
+      "description": "The unpainted clay lamp lies flat on the worktop as the maker smooths its edge with her fingers. A raised central holder rises above the row of small holes, with a clay block and sculpting tools nearby.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_406/source/hanukkah-clay-candleholder-making.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 980,
+      "pdfHeight": 896,
+      "sourceType": "raster",
+      "sourceSha256": "8905b1b8ccdd259e7ee154156887b0762ab7007464b9fdaa2d2a5ae481562987",
+      "inputSignature": "65042ecc285ae2da33eb10f19682924f69c651a52c6cf31e467646266093bf8b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 971481,
+        "weightedCmykRmse": 1.380123
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1442571,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1200209,
+          "weightedCmykRmse": 0.771443
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1135616,
+          "weightedCmykRmse": 0.907144
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1044104,
+          "weightedCmykRmse": 1.098334
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 971481,
+          "weightedCmykRmse": 1.380123
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        15,
+        8,
+        1302,
+        1181
+      ],
+      "image": {
+        "width": 980,
+        "height": 896,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_406/exports/hanukkah-clay-candleholder-making.pdf",
+          "bytes": 971481,
+          "sha256": "30e58686214fb68688a9d937239871d809df1fcf09ba39dd401aaccaa2e3bc14"
+        },
+        "webp": {
+          "path": "work/production/wave_406/exports/hanukkah-clay-candleholder-making.webp",
+          "bytes": 1309190,
+          "sha256": "a6f5c9ead7fd6c8127274b5fe5ae9651e80d0140c8c8846e43f54e914867114a"
+        },
+        "thumb": {
+          "path": "work/production/wave_406/exports/hanukkah-clay-candleholder-making-thumb.webp",
+          "bytes": 78946,
+          "sha256": "86efceab6f4a3c62473db07ed809b29cfbd95a848248a6882854390042c9eb47"
+        }
+      },
+      "proofSha256": "9d42c8baf2fc1ee78f9d3e6957ba6af76208f0349fc922187b0ea802a7739bc6",
+      "pairMeanRgbDifference": 2.39864
+    },
+    {
+      "id": "hanukkah-ribbon-gift-basket",
+      "title": "Books and Gelt in a Hanukkah Gift Basket",
+      "alt": "A woven basket lined with blue-and-silver cloth holds books, a blue gift box and a clear bag of gold chocolate coins.",
+      "description": "A blue bow sits high on the basket’s arched handle above the wrapped treats and blank-covered books. Pale patterned cloth folds over the rim, giving the woven basket a soft blue-and-silver lining.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_406/source/hanukkah-ribbon-gift-basket.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1357,
+      "height": 1159,
+      "pdfWidth": 920,
+      "pdfHeight": 786,
+      "sourceType": "raster",
+      "sourceSha256": "ed3946c0fddc628b742635d6fa4dd0bec67d2d517f9b244c9c13d48f375c9466",
+      "inputSignature": "7b5a4d4a1c3cc12ada984981bd398c2d6b990bb14a5477e35cde47bd0ae8ffac",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 988013,
+        "weightedCmykRmse": 1.235204
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1442542,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1205276,
+          "weightedCmykRmse": 0.698378
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1145819,
+          "weightedCmykRmse": 0.830027
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1066719,
+          "weightedCmykRmse": 0.996173
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 988013,
+          "weightedCmykRmse": 1.235204
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        13,
+        1335,
+        1145
+      ],
+      "image": {
+        "width": 920,
+        "height": 786,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_406/exports/hanukkah-ribbon-gift-basket.pdf",
+          "bytes": 988013,
+          "sha256": "ec2eceda0fa3c98fc9f30fcfc5dbebdb224d943ecfca631174aa922c4bab84e5"
+        },
+        "webp": {
+          "path": "work/production/wave_406/exports/hanukkah-ribbon-gift-basket.webp",
+          "bytes": 1821230,
+          "sha256": "374b6f49dacc68ade14b86726a74d9d9b968938523b1aa8ffb54597782cf3cc9"
+        },
+        "thumb": {
+          "path": "work/production/wave_406/exports/hanukkah-ribbon-gift-basket-thumb.webp",
+          "bytes": 85318,
+          "sha256": "4c93bb97a24dad931f114703f4678f4ed944480eadb7605c020847f40b0995ad"
+        }
+      },
+      "proofSha256": "8ca9a7f8447f556b48d40896a81ac42f40080b27156a7317650f0475019b057c",
+      "pairMeanRgbDifference": 4.53862
+    },
+    {
+      "id": "hanukkah-star-window-decoration",
+      "title": "Three Stars in a Hanging Hoop",
+      "alt": "Three colorful six-pointed stars hang inside a wooden hoop with translucent blue fabric, beads and a gold hanging loop.",
+      "description": "Blue, turquoise and red star ornaments hang at different heights inside the round wooden frame. Beaded strings and a gold loop connect the mobile above its translucent pale-blue fabric backing.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_406/source/hanukkah-star-window-decoration.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1295,
+      "height": 1214,
+      "pdfWidth": 1000,
+      "pdfHeight": 937,
+      "sourceType": "raster",
+      "sourceSha256": "f0cd3c5bb3bd8dee27071bc14a0b0d26f6470ae315fb0e334f94664aa8ca92f7",
+      "inputSignature": "c2902e38bd3391bae1a546b99bfaea901c4fda1c95da40bf720dea12d486e677",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 912493,
+        "weightedCmykRmse": 0.820996
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1128738,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 912493,
+          "weightedCmykRmse": 0.820996
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        162,
+        8,
+        1132,
+        1162
+      ],
+      "image": {
+        "width": 1000,
+        "height": 937,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_406/exports/hanukkah-star-window-decoration.pdf",
+          "bytes": 912493,
+          "sha256": "59c12318fff24ed00be0fc1d1c2e0d47546ba50ce6e79fc09844853954015a0c"
+        },
+        "webp": {
+          "path": "work/production/wave_406/exports/hanukkah-star-window-decoration.webp",
+          "bytes": 1102634,
+          "sha256": "b68bec57432084a1aee53548c7803985d9d0385e3e2294d9fe693ae541df1a13"
+        },
+        "thumb": {
+          "path": "work/production/wave_406/exports/hanukkah-star-window-decoration-thumb.webp",
+          "bytes": 61838,
+          "sha256": "8fe46da86ecf697885d8747ff968fb428aef0ad22a189bca3bd82fabd576d654"
+        }
+      },
+      "proofSha256": "b801bb0e2c38598ddacb222202a70bd12df444c6de1b6536335dc45808f5e790",
+      "pairMeanRgbDifference": 4.08478
+    },
+    {
+      "id": "hanukkah-dreidel-storage-pouch",
+      "title": "Dreidel and Gelt Beside a Velvet Pouch",
+      "alt": "A blue embroidered drawstring pouch lies open beside a wooden dreidel and scattered gold and silver chocolate coins.",
+      "description": "Golden cords trail from the open velvet pouch, whose surface carries leafy embroidery. A decorated wooden dreidel leans at its mouth above a small scatter of foil-wrapped coins.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_406/source/hanukkah-dreidel-storage-pouch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "08deb06ef4f8967afaabb277caf91b4b3fab81b087f154bed9df9c9fa11522cd",
+      "inputSignature": "4183db636b03dbe3201c7ed990d7875d6011c50bc0bf1877eaef8124b2791f37",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 905703,
+        "weightedCmykRmse": 0.747252
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1079064,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 905703,
+          "weightedCmykRmse": 0.747252
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        83,
+        106,
+        1487,
+        926
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_406/exports/hanukkah-dreidel-storage-pouch.pdf",
+          "bytes": 905703,
+          "sha256": "f6e154250750ed7eeb131cab659f67a009631b247046145033738ff26dd897a0"
+        },
+        "webp": {
+          "path": "work/production/wave_406/exports/hanukkah-dreidel-storage-pouch.webp",
+          "bytes": 1801090,
+          "sha256": "74a3e40f0e863f01259d7fe061e746da93877be427da772c321ce89e82608446"
+        },
+        "thumb": {
+          "path": "work/production/wave_406/exports/hanukkah-dreidel-storage-pouch-thumb.webp",
+          "bytes": 55726,
+          "sha256": "4c75b14598447217e53508eedc953a84b22dfa43c4943283f9bff08efce093e3"
+        }
+      },
+      "proofSha256": "de7de3fe9eab4f37f17f3ae8e613fe74248218ec630396cad325783fc2fec687",
+      "pairMeanRgbDifference": 5.70117
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T22:26:17.936067+00:00",
+  "screenReviewEvidence": "work/production/wave_406/native-proof-review.jpg",
+  "screenReviewNotes": "Actual six rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T22:27:15.565Z"
+}

@@ -1,0 +1,606 @@
+{
+  "wave": "wave_404",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "hanukkah-grandparent-reading",
+      "title": "Reading Beside the Hanukkah Candles",
+      "alt": "An older woman reads a blue illustrated book to a child in a kippah, with a nine-candle hanukkiah on a small side table.",
+      "description": "The woman’s long silver braid falls over a plum cardigan as she reads from a decorated blue book. A child listens from a separate footstool beside the green armchair, with candles and doughnuts on the side table.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_404/source/hanukkah-grandparent-reading.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 980,
+      "pdfHeight": 896,
+      "sourceType": "raster",
+      "sourceSha256": "17f51af14b00395f9bed69441f6065ef8ee788e86d6aaf0ba1b0bc88b7810199",
+      "inputSignature": "662d3860a2dcb336949904ba5b4aadda3c417bc2c1437897de2189446509851c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976241,
+        "weightedCmykRmse": 1.384834
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1470218,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1203643,
+          "weightedCmykRmse": 0.77146
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141051,
+          "weightedCmykRmse": 0.90857
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1048264,
+          "weightedCmykRmse": 1.102687
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976241,
+          "weightedCmykRmse": 1.384834
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        91,
+        93,
+        1249,
+        1118
+      ],
+      "image": {
+        "width": 980,
+        "height": 896,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_404/exports/hanukkah-grandparent-reading.pdf",
+          "bytes": 976241,
+          "sha256": "4b2715bc983f73b1f0212e82af67d26ed8003e658ecd2fb91a90c6da988d2fdd"
+        },
+        "webp": {
+          "path": "work/production/wave_404/exports/hanukkah-grandparent-reading.webp",
+          "bytes": 1442256,
+          "sha256": "4a080cd5c33be2f27a887dfd35e8dac92e7920f3c4462c72695f5aba99e4fe85"
+        },
+        "thumb": {
+          "path": "work/production/wave_404/exports/hanukkah-grandparent-reading-thumb.webp",
+          "bytes": 80536,
+          "sha256": "7a423cc922f8a53a9fd9f7bd737c4e5079e30f003d586c4cf3fcbbb72ae7aee6"
+        }
+      },
+      "proofSha256": "ac9c6284341abe6c9c68ba632c11cf5255c4ebd1152834ec2dc9fb103540c8f5",
+      "pairMeanRgbDifference": 3.41412
+    },
+    {
+      "id": "hanukkah-hanging-star-garland",
+      "title": "Hanging Stars Above a Hanukkah Table",
+      "alt": "A young person in teal dungarees fastens a garland of gold stars and blue circles above a cloth-covered table with candles and doughnuts.",
+      "description": "Raised hands secure the garland to a freestanding wooden frame. Below it, a blue runner crosses a pale patterned tablecloth beside a brass hanukkiah, a floral pitcher and plates of jelly doughnuts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_404/source/hanukkah-hanging-star-garland.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 960,
+      "pdfHeight": 800,
+      "sourceType": "raster",
+      "sourceSha256": "f93e97092a01e656e218e1fbde636301386b7af31e53413a28e001405631bb5b",
+      "inputSignature": "2e497ee00ff4bcd5e05c4d0d6fe52a235297e728ede3b52c2d25344b1fbf13fe",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 986198,
+        "weightedCmykRmse": 1.359917
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1381567,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1195758,
+          "weightedCmykRmse": 0.764529
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1138559,
+          "weightedCmykRmse": 0.89637
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055903,
+          "weightedCmykRmse": 1.076775
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 986198,
+          "weightedCmykRmse": 1.359917
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        73,
+        11,
+        1344,
+        1121
+      ],
+      "image": {
+        "width": 960,
+        "height": 800,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_404/exports/hanukkah-hanging-star-garland.pdf",
+          "bytes": 986198,
+          "sha256": "f452aa750142f53032d241f83293d709f0e9eae3c1ae8d45f6f35e81ae4dd8a4"
+        },
+        "webp": {
+          "path": "work/production/wave_404/exports/hanukkah-hanging-star-garland.webp",
+          "bytes": 1332022,
+          "sha256": "78f0710810bcaf3d6b7b88ac3c3b5b1e2d1d797dbb299d112078df8132cae4be"
+        },
+        "thumb": {
+          "path": "work/production/wave_404/exports/hanukkah-hanging-star-garland-thumb.webp",
+          "bytes": 83458,
+          "sha256": "b9df60e66b592c588487e133a50b0f5972922c347cb8e7ceeec20aacff0a9f18"
+        }
+      },
+      "proofSha256": "883010801a69d1a76d9929eca28c73410b97bccf5c32f0b6692d2e7fc103d0b6",
+      "pairMeanRgbDifference": 4.90302
+    },
+    {
+      "id": "hanukkah-wrapping-book-gift",
+      "title": "Gathering Around the Hanukkah Lights",
+      "alt": "Two adults and a child stand behind a table with a lit nine-candle hanukkiah, doughnuts, latkes and gelt; the man wears a blue kippah.",
+      "description": "A child holds an open blank booklet between two adults behind the candlelit table. Mustard, teal and burgundy clothing contrasts with the blue-patterned cloth and the golden branches of the hanukkiah.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_404/source/hanukkah-wrapping-book-gift.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 951,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "4b10dd769dd1d68c4da25d92d8dde1a0368c4ecab8280b63fce75710f9544b88",
+      "inputSignature": "eb89cca3ab71917bceecbfad86ce57c5d3fd678580112b60960b2f62233ef4ad",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 931364,
+        "weightedCmykRmse": 1.353714
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1502643,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1196163,
+          "weightedCmykRmse": 0.762536
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1116433,
+          "weightedCmykRmse": 0.899749
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1017896,
+          "weightedCmykRmse": 1.077673
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 931364,
+          "weightedCmykRmse": 1.353714
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        58,
+        16,
+        1162,
+        1260
+      ],
+      "image": {
+        "width": 951,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_404/exports/hanukkah-wrapping-book-gift.pdf",
+          "bytes": 931364,
+          "sha256": "13bcef898c13162420d65becfbe8bf894bfa0e90c864703b939e36ab527262b5"
+        },
+        "webp": {
+          "path": "work/production/wave_404/exports/hanukkah-wrapping-book-gift.webp",
+          "bytes": 1356024,
+          "sha256": "022ff4006631a4f4bf33138073c151fb95972c1d507da663028ad2cf707fda47"
+        },
+        "thumb": {
+          "path": "work/production/wave_404/exports/hanukkah-wrapping-book-gift-thumb.webp",
+          "bytes": 79800,
+          "sha256": "927029ee841a5fad6b912a975a49199ee2646a899df611dd89a66aa37667ae1f"
+        }
+      },
+      "proofSha256": "323a6b874436e8526699b0573ef0ac502b521e2bb2ed8e952e28271037dc2dcc",
+      "pairMeanRgbDifference": 4.80623
+    },
+    {
+      "id": "hanukkah-charity-coin-box",
+      "title": "Giving a Coin During Hanukkah",
+      "alt": "A child places a coin into a wooden giving box while a seated woman watches, beside a table of Hanukkah candles and treats.",
+      "description": "A small coin meets the slot in a plain wooden box raised on a stool. The child’s rust pinafore stands out beside the seated woman’s sage cardigan, with a candleholder and treats arranged on the nearby table.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_404/source/hanukkah-charity-coin-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1f4029fcf15e4e2d5095af51701a34c25db7837f33d62cbdfe338ee76fa01b5a",
+      "inputSignature": "52358a83fd371fcc8b6d9f8d6bbfb8bf633cbac05cf19a32381d8158f8a34eb1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 989262,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 989262,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        192,
+        56,
+        1492,
+        955
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_404/exports/hanukkah-charity-coin-box.pdf",
+          "bytes": 989262,
+          "sha256": "1e1e87d62788e5cc244af130f90a80e8acd7149a5f5ba0f10e0b07f8cc06a1bd"
+        },
+        "webp": {
+          "path": "work/production/wave_404/exports/hanukkah-charity-coin-box.webp",
+          "bytes": 1512170,
+          "sha256": "10a00e63222cc0e0f9ee1d3ccf7d16937cc67aeb81e9a7ca56636478a74bc15e"
+        },
+        "thumb": {
+          "path": "work/production/wave_404/exports/hanukkah-charity-coin-box-thumb.webp",
+          "bytes": 57450,
+          "sha256": "ac4722e8304730ca65581148fe6c2dc3b933c88255e22f0bb15a664bc6909d7a"
+        }
+      },
+      "proofSha256": "d331a5fa8f49a7f49e2dc49681e9dc71bc9e6bc8c19940493955244f9d1f34a7",
+      "pairMeanRgbDifference": 5.21038
+    },
+    {
+      "id": "hanukkah-community-food-bags",
+      "title": "Packing Food Bags Together",
+      "alt": "A man in a blue kippah and denim jacket and a woman in a burgundy blouse fill blue bags with food containers and produce.",
+      "description": "Two blue reusable bags stand open as the volunteers place closed containers and fresh produce inside. Apples, bananas, berries and greens spread across the packing table beneath their differently colored work clothes.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_404/source/hanukkah-community-food-bags.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "65834186eac26122680d3dbf6173a05431921047769ec4ee32bb7ea8b50f2e1b",
+      "inputSignature": "96ecff55d3a982b6d5fc2505c521da7ba69c2bd1906942cd569cb61f2e5a907c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 986710,
+        "weightedCmykRmse": 0.91263
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1358172,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1063182,
+          "weightedCmykRmse": 0.774143
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 986710,
+          "weightedCmykRmse": 0.91263
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        13,
+        14,
+        1298,
+        1183
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_404/exports/hanukkah-community-food-bags.pdf",
+          "bytes": 986710,
+          "sha256": "2809271f1de76f21970d8477564a8757ae85a8219fab9f65c01206f9d5b4bb7f"
+        },
+        "webp": {
+          "path": "work/production/wave_404/exports/hanukkah-community-food-bags.webp",
+          "bytes": 1178762,
+          "sha256": "09098e56189b852ca47d2d9cbfc74cba2b2f96d50fb9fe585bf669c1f93161ab"
+        },
+        "thumb": {
+          "path": "work/production/wave_404/exports/hanukkah-community-food-bags-thumb.webp",
+          "bytes": 68504,
+          "sha256": "4ee43ca3d8e237d4c0209ae66ea41142a5bebd579979d618163c8b3b48ae0dad"
+        }
+      },
+      "proofSha256": "90cb6959bd91928069cc079f0b47b5f21dd841c47fdfdff16edb05dc6be46a0c",
+      "pairMeanRgbDifference": 5.55544
+    },
+    {
+      "id": "hanukkah-celebration-violin",
+      "title": "Violin Music at a Hanukkah Gathering",
+      "alt": "A seated violinist in a flowing blue dress plays beside a music stand and a small table with Hanukkah candles and treats.",
+      "description": "Long braids fall over the violinist’s royal-blue dress as her bow crosses the strings. A small star garland trims the wooden music stand, and a round side table holds a hanukkiah, doughnuts and gelt.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_404/source/hanukkah-celebration-violin.png",
+      "printMaxEdgePx": 910,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1200,
+      "height": 1310,
+      "pdfWidth": 834,
+      "pdfHeight": 910,
+      "sourceType": "raster",
+      "sourceSha256": "a8d8f1293a4908d19a31f278b11bd4bda27ed30105e925c05e76c0e4cd0f9131",
+      "inputSignature": "eb37cc305454d9db369bd186d20db869e0557dbdb76d87fcd9fa533719c2b680",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967588,
+        "weightedCmykRmse": 1.301558
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1409022,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1181007,
+          "weightedCmykRmse": 0.734421
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1122464,
+          "weightedCmykRmse": 0.865481
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1040529,
+          "weightedCmykRmse": 1.034474
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967588,
+          "weightedCmykRmse": 1.301558
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        11,
+        1197,
+        1266
+      ],
+      "image": {
+        "width": 834,
+        "height": 910,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_404/exports/hanukkah-celebration-violin.pdf",
+          "bytes": 967588,
+          "sha256": "595f6002cae7b923256ae7828ebdab5f75cebcde231ad03d71674f4acfd934c4"
+        },
+        "webp": {
+          "path": "work/production/wave_404/exports/hanukkah-celebration-violin.webp",
+          "bytes": 1498288,
+          "sha256": "d18dd8d665bcc543b01d3f629703171d7b2b8e6ad209d3be7c479e8e8a41b2d5"
+        },
+        "thumb": {
+          "path": "work/production/wave_404/exports/hanukkah-celebration-violin-thumb.webp",
+          "bytes": 90946,
+          "sha256": "63d23b0e6a019b797dadab22f075788aa392a25f030b6ac13d90aa5305685651"
+        }
+      },
+      "proofSha256": "1351898c4b9a54b3551b7baa3a0b7f06ad815b18ec1064f30f1c77c271a7cc8c",
+      "pairMeanRgbDifference": 3.67776
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T22:26:17.911574+00:00",
+  "screenReviewEvidence": "work/production/wave_404/native-proof-review.jpg",
+  "screenReviewNotes": "Actual six rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T22:27:14.905Z"
+}
