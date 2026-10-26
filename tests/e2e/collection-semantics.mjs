@@ -1,7 +1,8 @@
 import { chromium, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
-import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
+import { readFileSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { resolveArtworkCopy } from '../../scripts/artwork-editorial.mjs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:4349';
 const topic = process.env.TOPIC;
@@ -18,8 +19,23 @@ const read = (name) =>
       'utf8',
     ),
   );
-const rows = read('art.json').filter((a) => a.topic === topic);
-const copy = read('collection-copy.json')[topic];
+const editorialPath = process.env.RELEASE_DATA_DIR
+  ? resolve(process.env.RELEASE_DATA_DIR, 'editorial/reviews.json')
+  : new URL('../../data/editorial/reviews.json', import.meta.url);
+const hasEditorial = existsSync(editorialPath);
+const editorial = new Map(
+  hasEditorial ? read('editorial/reviews.json').artworks.map((record) => [record.id, record]) : [],
+);
+const rows = read('art.json')
+  .filter((a) => a.topic === topic)
+  .map((item) =>
+    hasEditorial ? { ...item, ...resolveArtworkCopy(item, editorial.get(item.id)) } : item,
+  );
+const originalCopy = read('collection-copy.json')[topic];
+const introduction = hasEditorial
+  ? read('editorial/collections.json').topics[topic].intro
+  : originalCopy.intro;
+const description = hasEditorial ? introduction : originalCopy.description;
 const expectedCount = Number(process.env.EXPECTED_ARTWORK_COUNT || 50);
 assert.ok(Number.isSafeInteger(expectedCount) && expectedCount > 0);
 assert.equal(rows.length, expectedCount);
@@ -65,9 +81,9 @@ async function assertHead(path, description) {
 }
 try {
   await page.goto(base + '/clipart/' + topic + '/', { waitUntil: 'domcontentloaded' });
-  await assertHead('/clipart/' + topic + '/', copy.description);
+  await assertHead('/clipart/' + topic + '/', description);
   assert.equal(await page.locator('h1').count(), 1);
-  await expect(page.locator('.hero > p')).toHaveText(copy.intro);
+  await expect(page.locator('.hero > p')).toHaveText(introduction);
   const collection = (await schema()).find((s) => s['@type'] === 'CollectionPage');
   assert.equal(collection.mainEntity.numberOfItems, expectedCount);
   assert.deepEqual(
