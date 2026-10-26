@@ -336,10 +336,13 @@ try {
     await exposurePage.bringToFront();
     await exposurePage.evaluate(() => document.fonts.ready);
     const card = exposurePage.locator('.related-card').first();
-    await card
-      .locator('img')
-      .first()
-      .evaluate((image) => image.decode());
+    const image = card.locator('img').first();
+    // Load the real offscreen thumbnail before starting the visibility clock.
+    await image.evaluate((element) => (element.loading = 'eager'));
+    await expect
+      .poll(() => image.evaluate((element) => element.complete && element.naturalWidth > 0))
+      .toBe(true);
+    await image.evaluate((element) => element.decode());
     await card.evaluate((element) => {
       const box = element.getBoundingClientRect();
       scrollTo(0, scrollY + box.top - (innerHeight - box.height * 0.6));
