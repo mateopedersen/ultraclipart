@@ -1,0 +1,434 @@
+{
+  "checkedAt": "2026-10-26",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "sources": [
+    {
+      "url": "https://movies.disney.com/hexed",
+      "publisher": "Disney",
+      "kind": "official",
+      "supports": "Queen Celeste\u2019s broad purple hat, gray-white bob and patterned purple gown; Billie, Alice and Beef Roger character families. New pictured tasks are fan concepts."
+    },
+    {
+      "url": "https://movies.disney.com/avengers-doomsday",
+      "publisher": "Marvel / Disney",
+      "kind": "official",
+      "supports": "Current title, scheduled December 18, 2026 release and official character-family imagery. New illustrated interactions remain imagined concepts."
+    },
+    {
+      "url": "https://www.marvel.com/teams-and-groups/avengers/in-comics",
+      "publisher": "Marvel",
+      "kind": "official",
+      "supports": "Avengers character-family context. Primary search index content available; direct fetch returned 403."
+    }
+  ],
+  "officialImagesActuallyViewed": [
+    {
+      "path": "work/imports/marvel-hexed-4/references/billie-beef-roger.jpg",
+      "sha256": "8eefb9b8ae86b60d1ff0b274bf189fba0f0d1dadbfa60cd1bde36180bbb38ef8"
+    },
+    {
+      "path": "work/imports/marvel-hexed-4/references/hexed-group.jpg",
+      "sha256": "d39a3bd9d65eace2c3cca0b9491769ce046e61176f6e89402ccd7eb7183a108f"
+    },
+    {
+      "path": "work/imports/marvel-hexed-4/references/official-marvel-1.jpg",
+      "sha256": "3d7dacf33afe598282861d029b1a214e296171484e54ddf7679a62c1a1ef7529"
+    },
+    {
+      "path": "work/imports/marvel-hexed-4/references/official-marvel-2.jpg",
+      "sha256": "3a2273b1a36dc0396370b7465071986d5f11f7f3af2cbc0b6020609c30f13a7e"
+    },
+    {
+      "path": "work/imports/marvel-hexed-4/references/official-marvel-3.jpg",
+      "sha256": "48cc3dab401508af84bcd5e1cfabc88c722bbb8159b4a206de446267e6eb50c9"
+    },
+    {
+      "path": "work/imports/marvel-hexed-4/references/queen-celeste.jpg",
+      "sha256": "39cf28136acafb413d65887f76c93281520df6c7342717746ed13e09808a2de2"
+    }
+  ],
+  "preproductionLiveCheck": {
+    "checkedAt": "2026-10-26",
+    "live": [
+      {
+        "topic": "avengers",
+        "url": "https://ultraclipart.com/clipart/avengers/",
+        "status": 404,
+        "revision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33"
+      },
+      {
+        "topic": "avengers-doomsday",
+        "url": "https://ultraclipart.com/clipart/avengers-doomsday/",
+        "status": 404,
+        "revision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33"
+      },
+      {
+        "topic": "doctor-doom",
+        "url": "https://ultraclipart.com/clipart/doctor-doom/",
+        "status": 404,
+        "revision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33"
+      },
+      {
+        "topic": "hexed",
+        "url": "https://ultraclipart.com/clipart/hexed/",
+        "status": 200,
+        "revision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33"
+      }
+    ],
+    "acceptedCatalog": "12302 before parade release; no Avengers/Doctor Doom topics, Hexed already 100 plus two staged additions",
+    "queuedPlansSearched": true,
+    "officialVisualReferences": [
+      {
+        "url": "https://lumiere-a.akamaihd.net/v1/images/g_disneymovies_avengersdoomsday_dr_doom_6cc246af.jpeg?region=0%2C0%2C1300%2C730",
+        "path": "work/imports/marvel-hexed-4/references/official-marvel-1.jpg",
+        "sha256": "3d7dacf33afe598282861d029b1a214e296171484e54ddf7679a62c1a1ef7529"
+      },
+      {
+        "url": "https://lumiere-a.akamaihd.net/v1/images/g_disneymovies_avengers_doomsday_1_9269927f.jpeg?region=0%2C0%2C1300%2C730",
+        "path": "work/imports/marvel-hexed-4/references/official-marvel-2.jpg",
+        "sha256": "3a2273b1a36dc0396370b7465071986d5f11f7f3af2cbc0b6020609c30f13a7e"
+      },
+      {
+        "url": "https://lumiere-a.akamaihd.net/v1/images/g_disneymovies_avengers_doomsday_7_02a1ebff.jpeg?region=0%2C0%2C1300%2C730",
+        "path": "work/imports/marvel-hexed-4/references/official-marvel-3.jpg",
+        "sha256": "48cc3dab401508af84bcd5e1cfabc88c722bbb8159b4a206de446267e6eb50c9"
+      }
+    ],
+    "stats": {
+      "schema": 1,
+      "version": "4683e84c99d6b9de",
+      "totals": {
+        "artworks": 12302,
+        "subjects": 240,
+        "collections": 20,
+        "printable": 2228
+      },
+      "topics": {
+        "halloween": 50,
+        "pumpkin": 50,
+        "ghost": 50,
+        "witch": 50,
+        "skeleton": 50,
+        "vampire": 50,
+        "bat": 50,
+        "spider": 50,
+        "thanksgiving": 50,
+        "turkey": 50,
+        "cornucopia": 50,
+        "harvest": 50,
+        "autumn": 50,
+        "fall": 50,
+        "pilgrim": 50,
+        "acorn": 50,
+        "maple": 50,
+        "leaves": 100,
+        "scarecrow": 50,
+        "gourd": 50,
+        "wheat": 50,
+        "corn": 50,
+        "cranberry": 100,
+        "pie": 50,
+        "squirrel": 50,
+        "sunflower": 50,
+        "apple": 50,
+        "gratitude": 50,
+        "football": 50,
+        "cookie": 50,
+        "penguin": 50,
+        "winter": 50,
+        "heart": 50,
+        "volleyball": 50,
+        "baby": 50,
+        "baby-elephant": 50,
+        "bear": 50,
+        "bee": 50,
+        "butterfly": 50,
+        "camel": 50,
+        "cat": 50,
+        "chicken": 50,
+        "cow": 50,
+        "crab": 50,
+        "crocodile": 50,
+        "deer": 50,
+        "dog": 50,
+        "dolphin": 50,
+        "duck": 50,
+        "eagle": 50,
+        "elephant": 50,
+        "flamingo": 50,
+        "fox": 50,
+        "frog": 50,
+        "giraffe": 50,
+        "goat": 50,
+        "hedgehog": 50,
+        "hippo": 50,
+        "horse": 50,
+        "kangaroo": 50,
+        "kiwi": 50,
+        "koala": 50,
+        "lamb": 50,
+        "lion": 50,
+        "lobster": 50,
+        "monkey": 50,
+        "octopus": 50,
+        "owl": 50,
+        "panda": 50,
+        "parrot": 50,
+        "peacock": 50,
+        "pig": 50,
+        "rabbit": 50,
+        "raccoon": 50,
+        "rhino": 50,
+        "shark": 50,
+        "sheep": 50,
+        "snake": 50,
+        "tiger": 50,
+        "turtle": 50,
+        "whale": 50,
+        "wolf": 50,
+        "zebra": 50,
+        "banana": 50,
+        "orange": 50,
+        "strawberry": 50,
+        "raspberry": 50,
+        "blueberry": 50,
+        "avocado": 50,
+        "coconut": 50,
+        "kiwi-fruit": 50,
+        "mandarin": 50,
+        "tangerine": 50,
+        "headphones": 50,
+        "television": 50,
+        "laptop": 50,
+        "smartwatch": 50,
+        "earbuds": 50,
+        "printer": 50,
+        "keyboard": 50,
+        "scanner": 50,
+        "tablet": 51,
+        "speaker": 50,
+        "green-apple": 50,
+        "blackberry": 50,
+        "persimmon": 50,
+        "guava": 50,
+        "red-apple": 50,
+        "pineapple": 50,
+        "lychee": 50,
+        "nectarine": 50,
+        "dragon-fruit": 50,
+        "date": 50,
+        "pomegranate": 50,
+        "melon": 50,
+        "papaya": 50,
+        "blackcurrant": 50,
+        "plum": 50,
+        "passion-fruit": 50,
+        "apricot": 50,
+        "fig": 50,
+        "lemon": 50,
+        "cantaloupe": 50,
+        "cherry": 50,
+        "lime": 50,
+        "grapefruit": 50,
+        "mango": 50,
+        "grapes": 50,
+        "peach": 50,
+        "pear": 50,
+        "watermelon": 50,
+        "starfruit": 50,
+        "mulberry": 50,
+        "kumquat": 50,
+        "quince": 50,
+        "gooseberry": 50,
+        "fire": 50,
+        "school": 50,
+        "basketball": 50,
+        "book": 50,
+        "wifi-router": 50,
+        "robot": 50,
+        "camera": 50,
+        "webcam": 50,
+        "desktop-computer": 50,
+        "computer-mouse": 50,
+        "wireless-charger": 50,
+        "vr-headset": 50,
+        "money": 50,
+        "music": 50,
+        "beach": 50,
+        "boy": 50,
+        "girl": 50,
+        "pizza": 50,
+        "movie": 50,
+        "drone": 50,
+        "power-bank": 50,
+        "bluetooth-speaker": 50,
+        "electric-scooter": 50,
+        "external-hard-drive": 50,
+        "projector": 50,
+        "microphone": 50,
+        "game-controller": 50,
+        "usb-flash-drive": 50,
+        "modem": 50,
+        "smartphone": 50,
+        "computer-monitor": 50,
+        "game-console": 50,
+        "electric-car": 50,
+        "smart-refrigerator": 50,
+        "washing-machine": 50,
+        "earth": 50,
+        "question-mark": 50,
+        "hat": 50,
+        "dad": 50,
+        "security-camera": 51,
+        "air-conditioner": 50,
+        "microwave": 50,
+        "smart-doorbell": 50,
+        "3d-printer": 50,
+        "smart-speaker": 50,
+        "american-flag": 50,
+        "france-flag": 50,
+        "spain-flag": 50,
+        "mexico-flag": 50,
+        "france": 50,
+        "spain": 50,
+        "paris": 50,
+        "new-york": 50,
+        "chicago": 50,
+        "miami": 50,
+        "los-angeles": 50,
+        "clock": 50,
+        "airplane": 50,
+        "mars": 50,
+        "math": 50,
+        "glove": 50,
+        "mom": 50,
+        "wave": 50,
+        "thank-you": 50,
+        "thermometer": 50,
+        "iphone": 50,
+        "samsung": 50,
+        "moon": 50,
+        "grass": 50,
+        "tesla": 50,
+        "shoe": 50,
+        "exercise": 50,
+        "cheese": 50,
+        "train": 50,
+        "candy": 50,
+        "happy-birthday": 50,
+        "labubu": 50,
+        "gta-6-jason": 50,
+        "gta-6-map": 50,
+        "gta-6-lucia": 50,
+        "grand-theft-auto": 50,
+        "gta-6": 100,
+        "red-and-blue-states": 50,
+        "democrat-donkey": 50,
+        "republican-elephant": 50,
+        "political-debate": 50,
+        "godzilla": 50,
+        "giant-monster": 50,
+        "kaiju": 50,
+        "godzilla-minus-zero": 50,
+        "sunrise-on-the-reaping": 50,
+        "hunger-games": 50,
+        "game-awards": 50,
+        "magic-spell": 50,
+        "hexed": 100,
+        "mockingjay": 50,
+        "gaming-trophy": 50,
+        "smart-home": 50,
+        "smart-glasses": 50,
+        "sonic-4": 50,
+        "sonic-birthday": 50,
+        "sonic-the-hedgehog": 100,
+        "angry-birds-3": 50,
+        "angry-birds": 100
+      },
+      "collections": {
+        "halloween": {
+          "artworks": 400,
+          "subjects": 8
+        },
+        "thanksgiving-autumn": {
+          "artworks": 1150,
+          "subjects": 21
+        },
+        "nature-elements": {
+          "artworks": 350,
+          "subjects": 6
+        },
+        "food-drink": {
+          "artworks": 2500,
+          "subjects": 49
+        },
+        "civic-voting": {
+          "artworks": 200,
+          "subjects": 4
+        },
+        "christmas-winter": {
+          "artworks": 150,
+          "subjects": 3
+        },
+        "valentine-s-day": {
+          "artworks": 50,
+          "subjects": 1
+        },
+        "sports": {
+          "artworks": 150,
+          "subjects": 3
+        },
+        "family-celebrations": {
+          "artworks": 300,
+          "subjects": 6
+        },
+        "animals-nature": {
+          "artworks": 2400,
+          "subjects": 48
+        },
+        "technology-devices": {
+          "artworks": 2252,
+          "subjects": 45
+        },
+        "school-learning": {
+          "artworks": 350,
+          "subjects": 7
+        },
+        "business-money": {
+          "artworks": 50,
+          "subjects": 1
+        },
+        "arts-entertainment": {
+          "artworks": 1450,
+          "subjects": 25
+        },
+        "people-activities": {
+          "artworks": 250,
+          "subjects": 5
+        },
+        "transport-vehicles": {
+          "artworks": 200,
+          "subjects": 4
+        },
+        "space-science": {
+          "artworks": 150,
+          "subjects": 3
+        },
+        "clothing-accessories": {
+          "artworks": 150,
+          "subjects": 3
+        },
+        "flags-countries": {
+          "artworks": 200,
+          "subjects": 4
+        },
+        "places-travel": {
+          "artworks": 350,
+          "subjects": 7
+        }
+      }
+    }
+  },
+  "ownerScopeAfterToolLimit": "Publish all finished supplied individual sources; defer 134 missing drawings and retain the plan for the next session.",
+  "noExactActorOrArmorGenerationClaims": true
+}

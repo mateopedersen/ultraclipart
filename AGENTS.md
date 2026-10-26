@@ -211,3 +211,11 @@ Every keyword targets 50 independent, separately useful compositions. Apply the
 same identity-preserving variety review to objects and botanical subjects.
 
 The target is 50 independent cliparts, not 50 variants of a shared base. Vary the color palette together with clothing, silhouette, materials, face and composition where applicable. Each artwork must work independently and have its own visual concept. Apply this principle logically to objects, plants and future non-character keywords while keeping the subject accurate. Review all selected artwork together; repeated base silhouettes, outfits or merely alternate media/palettes require replacement before release.
+
+## Deferred owner-supplied Marvel completions — 2026-10-26
+
+The owner requested publication of the ready individual drawings and deferred 134 missing designs after the built-in image tool reached its daily limit. Read `docs/content/marvel-completion-backlog.md` and `design-assets/marvel-completion/pending-prompt-set.json` before continuing Avengers, Avengers: Doomsday, Doctor Doom or the latest Hexed package. Recheck current catalog counts and hashes; do not redraw published or newly supplied scenes. The three partial Marvel subjects are not complete 50-design sets.
+
+## Preserve concurrent content releases
+
+Before publishing owner-supplied content, refresh the latest main branch and preserve every accepted artwork, verified media representation, topic and newer collection copy. Compare sources added by concurrent releases against the incoming sources before merging. `scripts/merge-reviewed-content.mjs` merges only the reviewed incoming scope and rejects duplicate artwork IDs or incomplete representations. Never replace a newer catalog or publication manifest with an earlier staging snapshot.

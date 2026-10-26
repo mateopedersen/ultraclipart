@@ -1,0 +1,1669 @@
+{
+  "collection": "owner-brain-50-2026-10-26",
+  "count": 50,
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "physicalPrintProof": false,
+  "originalWebPsPreserved": 50,
+  "originalPdfsPreserved": 49,
+  "repairs": [
+    {
+      "id": "brain-and-hourglass-clipart",
+      "reason": "Original PDF alpha differed from the unchanged WebP. Rebuilt a separate 850px print edition with exact lossless alpha at the retained 2-inch page size (425 PPI), within a weighted CMYK error limit of 1.8. The downloadable native 1500px WebP remains byte-identical.",
+      "originalPdfSha256": "0523e98be621ccee64ab3de02ef4a31d5a37a288c11a9aa6f07ecba7daa8ef07",
+      "nativeWebpSha256": "4534e828e387f0687e2d89e397fd4a75960b8d61c4af478b7b1a2c543315922e",
+      "printSource": "print-source/brain-and-hourglass-clipart.webp",
+      "printSourceSha256": "d6810341ff2faa4809ef13bc90f53814db0b4b5a4c7d00db8c87edee17dffc2e",
+      "printMaxPixels": 850,
+      "printDimensions": [
+        850,
+        850
+      ],
+      "printResampling": "Pillow LANCZOS; supplied PDF repair, native WebP unchanged",
+      "pdfExport": {
+        "sha256": "50aaafa1a87c33e17af87e990870fbb89e578c46b8289c1f942e33b4c485fc93",
+        "selected": {
+          "qualityDb": 50,
+          "bytes": 948417,
+          "weightedCmykRmse": 1.1194367834860397
+        },
+        "trials": [
+          {
+            "qualityDb": null,
+            "bytes": 1259089,
+            "weightedCmykRmse": 0
+          },
+          {
+            "qualityDb": 54,
+            "bytes": 1074059,
+            "weightedCmykRmse": 0.7627157972410796
+          },
+          {
+            "qualityDb": 52,
+            "bytes": 1022996,
+            "weightedCmykRmse": 0.9231561311558091
+          },
+          {
+            "qualityDb": 50,
+            "bytes": 948417,
+            "weightedCmykRmse": 1.1194367834860397
+          }
+        ],
+        "sourceWebpSha256": "d6810341ff2faa4809ef13bc90f53814db0b4b5a4c7d00db8c87edee17dffc2e"
+      },
+      "sha256": "431a4db7f8556b0ff8e0d8b35cfd3090dbb23c18e51717034ee2e9449ee45731"
+    }
+  ],
+  "archives": [
+    {
+      "topic": "brain",
+      "source": "UltraClipart-Brain-50-PDF-WEBP.zip",
+      "bytes": 68806412,
+      "sha256": "30cc33bd2f8e6fb4cac47daefa1d02ff34f86c9b4ac7a48473def4f6d3d626f3",
+      "pairs": 50
+    }
+  ],
+  "baselineCatalogSha256": "6e0426b5256607322d6b0e3ab6c367ad2a288d733695558f4bf7ac309ab7b01e",
+  "sourceReview": {
+    "status": "PASS",
+    "sourceImages": 50,
+    "sheets": [
+      {
+        "path": "contact/source-1.jpg",
+        "sha256": "9aefa680233ced6c3edf1dd213e6dc6540bb31f1e4063261d32e1efcd596ad09"
+      },
+      {
+        "path": "contact/source-2.jpg",
+        "sha256": "ed8d951b3f34bbfc3bbb36f2cb6521cf5f4f93207c3c610b1829534056f63f23"
+      },
+      {
+        "path": "contact/source-3.jpg",
+        "sha256": "6831572bd3f771288a0a4508d6d507e3e0e241fa7dd5117524a6c3750e4b380c"
+      },
+      {
+        "path": "contact/source-4.jpg",
+        "sha256": "57084be96d3f07513c85c0bcb652b8cbedfc139303ab0217402d6c219aef35e1"
+      },
+      {
+        "path": "contact/source-5.jpg",
+        "sha256": "3cfbb21650bfa9ab9b6928613dc937230e13f912fce12038d60dd38725680e14"
+      }
+    ],
+    "pdfSheets": [
+      {
+        "path": "review/brain/pdf-contact-1.png",
+        "sha256": "080b856cdd5a176db47d56c6c97ddfbb0a85f1584bf04fbf120aadb16064e62f"
+      },
+      {
+        "path": "review/brain/pdf-contact-2.png",
+        "sha256": "6586830c6e91bbc2eb56a26f849de940cb32c0b1232413347a32f94449de75ab"
+      }
+    ]
+  },
+  "exactDuplicateReview": {
+    "status": "PASS",
+    "algorithm": "SHA-256 of file bytes and decoded RGBA with invisible RGB zeroed",
+    "baselineCatalogSha256": "6e0426b5256607322d6b0e3ab6c367ad2a288d733695558f4bf7ac309ab7b01e",
+    "baseline": 12854,
+    "new": 50,
+    "collisions": []
+  },
+  "perceptualReview": {
+    "status": "PASS",
+    "algorithm": "foreground-cropped 64-bit DCT pHash, Hamming distance <=10, nearest four; actual contact sheets also reviewed for concept repetition",
+    "decisions": [
+      {
+        "index": 0,
+        "a": "brain-anatomical-inferior-clipart",
+        "b": "mars-clipart-mars-porcelain-ornament",
+        "sourceSha256s": [
+          "ef77fead868cd8660cbd3903a7652c220ba956147bdc1d9cc1f4a48dde8b62de",
+          "8150b4dd7e27ae34f07dc39bf4df4c8032b4de6ee9a96acbc4f2086eb099ac3e"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Underside View Clipart versus Mars Porcelain Ornament Clipart."
+      },
+      {
+        "index": 1,
+        "a": "brain-anatomical-inferior-clipart",
+        "b": "brain-anatomical-superior-clipart",
+        "sourceSha256s": [
+          "ef77fead868cd8660cbd3903a7652c220ba956147bdc1d9cc1f4a48dde8b62de",
+          "d419656a2faa9c151ca3e866484411f52507f3d1b3277ede2be8c5bc876d5f1f"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Basal view with nerves and cerebellum differs from an upper view divided by a central groove."
+      },
+      {
+        "index": 2,
+        "a": "brain-anatomical-inferior-clipart",
+        "b": "paris-clipart-paris-haussmann-building",
+        "sourceSha256s": [
+          "ef77fead868cd8660cbd3903a7652c220ba956147bdc1d9cc1f4a48dde8b62de",
+          "c56bb52bffe4f2366a93c68e3cfbe9ea4cdf2fe09e18534c3d73bb9e81b40e7a"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Underside View Clipart versus Paris Haussmann Building Clipart."
+      },
+      {
+        "index": 3,
+        "a": "brain-anatomical-lateral-clipart",
+        "b": "brain-watercolor-florals-clipart",
+        "sourceSha256s": [
+          "de09dc34cb7b1405dc6a84db1997634ffcda187527a65557ac90577bf9d02e01",
+          "32f891749def275456878f5459cf7d16c67617af9339ac066530a42d84d11207"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "A plain side view differs from an asymmetrical floral composition with a large poppy and blue flowers."
+      },
+      {
+        "index": 4,
+        "a": "brain-anatomical-lateral-clipart",
+        "b": "brain-electric-sparks-clipart",
+        "sourceSha256s": [
+          "de09dc34cb7b1405dc6a84db1997634ffcda187527a65557ac90577bf9d02e01",
+          "58a47998ef938a1370a3b4134064d696022ca526f6f883da201be55a50a21c60"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Organic folded brain view differs from a violet brain crossed by a glowing electrical discharge."
+      },
+      {
+        "index": 5,
+        "a": "brain-anatomical-lateral-clipart",
+        "b": "brain-and-gears-clipart",
+        "sourceSha256s": [
+          "de09dc34cb7b1405dc6a84db1997634ffcda187527a65557ac90577bf9d02e01",
+          "c177f0b0c323ad305a5679d0e827d5a663d2d40e95fc8946da1c9eb69368e438"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "An intact brain surface differs from an open cutaway occupied by interlocking gears."
+      },
+      {
+        "index": 6,
+        "a": "brain-anatomical-lateral-clipart",
+        "b": "brain-surreal-origami-clipart",
+        "sourceSha256s": [
+          "de09dc34cb7b1405dc6a84db1997634ffcda187527a65557ac90577bf9d02e01",
+          "0c8571a217c938b18ac1cc5177d6cccff11f0c921f5610ca680ce4946d2b9387"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Rounded organic folds differ from angular folded-paper facets and their geometric silhouette."
+      },
+      {
+        "index": 7,
+        "a": "brain-anatomical-superior-clipart",
+        "b": "hat-clipart-rib-knit-beanie",
+        "sourceSha256s": [
+          "d419656a2faa9c151ca3e866484411f52507f3d1b3277ede2be8c5bc876d5f1f",
+          "3f71bf048717e70fe82b79a1f9d7b37dd9f3dfe8acf7eded7edd24cc80cdb4a7"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Top View Clipart versus Rib Knit Beanie Clipart."
+      },
+      {
+        "index": 8,
+        "a": "brain-and-compass-clipart",
+        "b": "watermelon-fruit-pair-ceramic-mosaic-clipart",
+        "sourceSha256s": [
+          "88873df3151a9799edcf3e1b0c32f5f75bda3050fdce90212050202db9a2dd7e",
+          "a8ca231a1be7a68ed58e5630ba3506cc5db3aea663a4ad1e41a06742922af282"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain and Brass Compass Clipart versus Watermelon Fruit Pair (Mosaic Illustration)."
+      },
+      {
+        "index": 9,
+        "a": "brain-and-compass-clipart",
+        "b": "thanksgiving-harvest-flower-basket",
+        "sourceSha256s": [
+          "88873df3151a9799edcf3e1b0c32f5f75bda3050fdce90212050202db9a2dd7e",
+          "71843aea327071a8114278d24927c19c2d04d16fdd4bc0b731644b1de5c164de"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain and Brass Compass Clipart versus Harvest Flower Basket."
+      },
+      {
+        "index": 10,
+        "a": "brain-and-gears-clipart",
+        "b": "brain-electric-sparks-clipart",
+        "sourceSha256s": [
+          "c177f0b0c323ad305a5679d0e827d5a663d2d40e95fc8946da1c9eb69368e438",
+          "58a47998ef938a1370a3b4134064d696022ca526f6f883da201be55a50a21c60"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "An open mechanical cutaway differs from electrical streaks across an intact brain."
+      },
+      {
+        "index": 11,
+        "a": "brain-and-gears-clipart",
+        "b": "grand-theft-auto-vice-city-stories-cassette-logo-clipart",
+        "sourceSha256s": [
+          "c177f0b0c323ad305a5679d0e827d5a663d2d40e95fc8946da1c9eb69368e438",
+          "8c44654819124981dfdb5b9bb2e9131173f3963301070358d3764e99c0677af6"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Cutaway with Golden Gears Clipart versus Vice City Stories Cassette Emblem — Grand Theft Auto Clipart."
+      },
+      {
+        "index": 12,
+        "a": "brain-and-gears-clipart",
+        "b": "pie-blue-pie-plate",
+        "sourceSha256s": [
+          "c177f0b0c323ad305a5679d0e827d5a663d2d40e95fc8946da1c9eb69368e438",
+          "6a203ced4aa4bbcb822bd0c64d0f210d8e871e6e3173d0dc3da48c7a1c0b77ca"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Cutaway with Golden Gears Clipart versus Blue Ceramic Pie Plate."
+      },
+      {
+        "index": 13,
+        "a": "brain-and-maze-clipart",
+        "b": "persimmon-parent-and-baby-plush-cartoon-clipart",
+        "sourceSha256s": [
+          "61c6d3ee12a0207afd94b5beb67d6612f5b4d658cb5bdc81071356095f4283f8",
+          "30e30333e7113370f10586d82d35550c059c3400a1511665c35c9a511af9ca8c"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain with Wooden Ball Maze Clipart versus Persimmon Parent and Baby (Plush Characters)."
+      },
+      {
+        "index": 14,
+        "a": "brain-and-maze-clipart",
+        "b": "watermelon-parent-and-baby-plush-cartoon-clipart",
+        "sourceSha256s": [
+          "61c6d3ee12a0207afd94b5beb67d6612f5b4d658cb5bdc81071356095f4283f8",
+          "4bac4dc0be8a6be37ca05c4a92b0b552ce2a8c68ecc7104658350f874cc41ed2"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain with Wooden Ball Maze Clipart versus Watermelon Parent and Baby (Plush Characters)."
+      },
+      {
+        "index": 15,
+        "a": "brain-cerebellum-study-clipart",
+        "b": "pomegranate-whole-fruit-and-aril-half-low-poly-clipart",
+        "sourceSha256s": [
+          "c25d961b79cdd97f9e0043addfec7c1ad62f1a6bc1f4dd8df943d4d7d2137ac0",
+          "57b12a1630b94dd5ee61742d21dd685f5084bbdb628e0344d05c53fde10dc44a"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Cutaway with Prominent Cerebellum Clipart versus Pomegranate Whole Fruit And Aril Half (Low-poly Illustration)."
+      },
+      {
+        "index": 16,
+        "a": "brain-cerebellum-study-clipart",
+        "b": "beach-seashell-and-pebbles-colored-engraving-clipart",
+        "sourceSha256s": [
+          "c25d961b79cdd97f9e0043addfec7c1ad62f1a6bc1f4dd8df943d4d7d2137ac0",
+          "ce990abe6adf89790d2b8b22ad4ccb4eda33d88997efb0958fdfda7a9d704304"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Cutaway with Prominent Cerebellum Clipart versus Seashell and Pebbles Clipart (Color Engraving)."
+      },
+      {
+        "index": 17,
+        "a": "brain-cerebellum-study-clipart",
+        "b": "hat-clipart-rib-knit-beanie",
+        "sourceSha256s": [
+          "c25d961b79cdd97f9e0043addfec7c1ad62f1a6bc1f4dd8df943d4d7d2137ac0",
+          "3f71bf048717e70fe82b79a1f9d7b37dd9f3dfe8acf7eded7edd24cc80cdb4a7"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Cutaway with Prominent Cerebellum Clipart versus Rib Knit Beanie Clipart."
+      },
+      {
+        "index": 18,
+        "a": "brain-electric-sparks-clipart",
+        "b": "brain-surreal-origami-clipart",
+        "sourceSha256s": [
+          "58a47998ef938a1370a3b4134064d696022ca526f6f883da201be55a50a21c60",
+          "0c8571a217c938b18ac1cc5177d6cccff11f0c921f5610ca680ce4946d2b9387"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Lightning crossing a rounded violet brain differs from angular folded-paper construction."
+      },
+      {
+        "index": 19,
+        "a": "brain-electric-sparks-clipart",
+        "b": "pie-blue-pie-plate",
+        "sourceSha256s": [
+          "58a47998ef938a1370a3b4134064d696022ca526f6f883da201be55a50a21c60",
+          "6a203ced4aa4bbcb822bd0c64d0f210d8e871e6e3173d0dc3da48c7a1c0b77ca"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Purple Brain with Electric Sparks Clipart versus Blue Ceramic Pie Plate."
+      },
+      {
+        "index": 20,
+        "a": "brain-neuron-synapse-clipart",
+        "b": "sonic-the-hedgehog-clipart-modern-rouge-gem-inspect",
+        "sourceSha256s": [
+          "44ee02d8d1934c32f01e00c3084df4c27d5a5825e0df85c9a166ceb315ae3bcb",
+          "c4ffd15436650c0e4ce0c7875aba7380bca88108d3b2bd97662935adac534bbb"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Golden Neuron with Segmented Axon Clipart versus Sonic Rouge Gem Inspect Clipart."
+      },
+      {
+        "index": 21,
+        "a": "brain-outline-coloring-cogwork-clipart",
+        "b": "bluetooth-speaker-rainbow-speaker-with-cables-and-shoulder-strap",
+        "sourceSha256s": [
+          "275194b527c02e75435d409276038bf7599e61737532c5a5a0ea9d8db581422f",
+          "d0fecf53d7fc6a129db9caa3ffce4d5e687fc61f97b512cca028fab7fda69032"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain Gear Cutaway Black and White Clipart versus Rainbow Speaker with Cables and Shoulder Strap."
+      },
+      {
+        "index": 22,
+        "a": "brain-outline-coloring-maze-clipart",
+        "b": "panda-dotwork-black-and-white-clipart",
+        "sourceSha256s": [
+          "fbb2b9e7e658b76d062ea3674c035d3d071b02f8382031561f0aea7a7997e52d",
+          "c6bc37e0f9094b9774fabcd4e80d3278d1f2586a3601d0a17e6e3fc832f1b0b5"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Brain with Maze and Compass Black and White Clipart versus Panda Dotwork (Black And White)."
+      },
+      {
+        "index": 23,
+        "a": "brain-stars-constellation-clipart",
+        "b": "diwali-diamond-sweets",
+        "sourceSha256s": [
+          "6783fae915e0e5dafef2562d3722fe6c1a3b80c05cd5c5d73cfd8d77067875a9",
+          "0fcd61b335bd74505f984569e1fc13e922cc29f027d222af9907276a1376652b"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Purple Brain with Moon Stars and Flowers Clipart versus Diamond Sweets on a Leaf Plate."
+      },
+      {
+        "index": 24,
+        "a": "brain-surreal-origami-clipart",
+        "b": "usb-flash-drive-wristband-usb-memory-stick",
+        "sourceSha256s": [
+          "0c8571a217c938b18ac1cc5177d6cccff11f0c921f5610ca680ce4946d2b9387",
+          "ebd9dc801c083d08aaf1012ead2a2c1a744d363877c432c3192bd194a3ba2a68"
+        ],
+        "status": "DISTINCT_COMPOSITION",
+        "reviewedFromActualPairSheet": true,
+        "reason": "Different depicted subjects and composition: Faceted Paper Brain Clipart versus Wristband USB Memory Stick."
+      }
+    ]
+  },
+  "identityRegistrySha256": "a3f07295cfcdb80ecd5e3edb9f1271965c5c092e7adbc6983035b8d94d463a94",
+  "rows": [
+    {
+      "id": "brain-anatomical-inferior-clipart",
+      "hashes": {
+        "pdf": "e1981a8eb568cbe4bbbf30acb6274d38f487eb5d17fbcc8d0dfa523d11aa539f",
+        "webp": "ef77fead868cd8660cbd3903a7652c220ba956147bdc1d9cc1f4a48dde8b62de"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "1310a15685c1fd467393722a78304984edf27a75609f997822142bdfb666ca89",
+      "pairedWebp": "brain-anatomical-inferior-clipart",
+      "meanRgbDifference": 5.094
+    },
+    {
+      "id": "brain-anatomical-lateral-clipart",
+      "hashes": {
+        "pdf": "54ec16e0776b42477eb248ab0dfb7faa667b2c4b62b5e0455437594864ae013e",
+        "webp": "de09dc34cb7b1405dc6a84db1997634ffcda187527a65557ac90577bf9d02e01"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "eb9c4febf5c5bcce459323d33823276f7a1f600117984cebf8eaa9b8eb9efda7",
+      "pairedWebp": "brain-anatomical-lateral-clipart",
+      "meanRgbDifference": 4.1797
+    },
+    {
+      "id": "brain-anatomical-superior-clipart",
+      "hashes": {
+        "pdf": "7bd700cefb5d66e4aaf4b6e03b42f95371d7968759d7cc1f3971f5f73411ff07",
+        "webp": "d419656a2faa9c151ca3e866484411f52507f3d1b3277ede2be8c5bc876d5f1f"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "936c11f42a6c0a552340d8a55fc0b1644128467d6434356effa9befc92e8e60f",
+      "pairedWebp": "brain-anatomical-superior-clipart",
+      "meanRgbDifference": 4.361
+    },
+    {
+      "id": "brain-and-abacus-clipart",
+      "hashes": {
+        "pdf": "a734402784a8b7a1f14f12c857d7d8441d01d79f405f96ffa54a2bddba4b3008",
+        "webp": "390517b522e0a0577bb815300b71af868b84fd228b225d0a0a16e533608dc71d"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "f537f5feea1bc766a1b72057d0b0a07b7d3158a0e148ebcab854ea88bb3acf97",
+      "pairedWebp": "brain-and-abacus-clipart",
+      "meanRgbDifference": 4.8488
+    },
+    {
+      "id": "brain-and-brushes-clipart",
+      "hashes": {
+        "pdf": "f092b50311e4fad2a891d189757c919c91db3af183e8643bd4adea3c620bd0e5",
+        "webp": "e57779f2ffcff86403706ed138cc202b74517b3b76a4fb12a6aa9b2987f9ae4a"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "6071240c7b8275ce3b725f2ec96c7dfc47552226ec1d168f6c0cddb794f9c242",
+      "pairedWebp": "brain-and-brushes-clipart",
+      "meanRgbDifference": 4.9571
+    },
+    {
+      "id": "brain-and-compass-clipart",
+      "hashes": {
+        "pdf": "9ac84580685916fadf8da8c17a65aee839c935d4d63befa071af20d66dc9bd18",
+        "webp": "88873df3151a9799edcf3e1b0c32f5f75bda3050fdce90212050202db9a2dd7e"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "aebf13fca23fadef3740cd5f048b2de9088386e9e3d2751f30f9080ee554182b",
+      "pairedWebp": "brain-and-compass-clipart",
+      "meanRgbDifference": 5.1786
+    },
+    {
+      "id": "brain-and-gears-clipart",
+      "hashes": {
+        "pdf": "674af825c4c8b7ca9f179739b78ce58a05f147ab32a49b66911daef54f5936a0",
+        "webp": "c177f0b0c323ad305a5679d0e827d5a663d2d40e95fc8946da1c9eb69368e438"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "607db476e54bb3e764426a01f68e782357c3eb73e6bec526a1bf76e21f8b0fdf",
+      "pairedWebp": "brain-and-gears-clipart",
+      "meanRgbDifference": 6.2816
+    },
+    {
+      "id": "brain-and-heart-balance-clipart",
+      "hashes": {
+        "pdf": "f4a8b81143b05d5d2b2940926842cb861cc4b6b73042edf8aa50bda6ab8c95a1",
+        "webp": "395b8dce91651ed6482536ae89dad717ee560dd4ab138353e8424cf711bea094"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "4b4fdd0c993c375e78553744e6cf64afbd2d9d5c886698487b2995fd0ec96641",
+      "pairedWebp": "brain-and-heart-balance-clipart",
+      "meanRgbDifference": 3.5918
+    },
+    {
+      "id": "brain-and-hourglass-clipart",
+      "hashes": {
+        "pdf": "431a4db7f8556b0ff8e0d8b35cfd3090dbb23c18e51717034ee2e9449ee45731",
+        "webp": "4534e828e387f0687e2d89e397fd4a75960b8d61c4af478b7b1a2c543315922e"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 425,
+      "printDimensions": [
+        850,
+        850
+      ],
+      "pdfAlphaExact": false,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "99f1d5d7c60b6bf929fd6cb039e93d95099a531eb394546d4b948fd4532d8ca0",
+      "pairedWebp": "brain-and-hourglass-clipart",
+      "meanRgbDifference": 5.9114
+    },
+    {
+      "id": "brain-and-key-clipart",
+      "hashes": {
+        "pdf": "add675ece8c4aa91283de2d6d40d342c4e98d168c1326e19632212104efcd649",
+        "webp": "3b492e4c2c313e2a43aecc14f5f4b399d6cff088f115c4726750c7a1b9fd7d64"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "740830e55fbd6341aa1517775e4eae197e48ff5ab2ec728c70b19268c59b34ca",
+      "pairedWebp": "brain-and-key-clipart",
+      "meanRgbDifference": 4.7856
+    },
+    {
+      "id": "brain-and-laptop-clipart",
+      "hashes": {
+        "pdf": "e17846fcc6d7d351d4092517ddf00fafac11e530f192c7798a31aaac642e8887",
+        "webp": "f4ba740ba2bffc43babd5a67272e01affb819648c359f852e51f34a3afbf4c78"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "fea2e454a4209b371db159b91bb7c456a5b79bb8ce245667de7641eaf2b99fd1",
+      "pairedWebp": "brain-and-laptop-clipart",
+      "meanRgbDifference": 3.5815
+    },
+    {
+      "id": "brain-and-lightbulb-clipart",
+      "hashes": {
+        "pdf": "ab14fa16f3528e874e97a74b6207487b479deee23cd2eed864bac4f76d94c314",
+        "webp": "23fdfd277f030c8ba8ab5591b52949dfcc0ac3322b56c0b00b4880d8e64f52e0"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "e35c648024e0b25f6f7e77940ba8d90c5482a8d6d6b9be7c5bd0c7aba650eace",
+      "pairedWebp": "brain-and-lightbulb-clipart",
+      "meanRgbDifference": 4.7981
+    },
+    {
+      "id": "brain-and-maze-clipart",
+      "hashes": {
+        "pdf": "e25c0c41f0199280b780b24c8e808c0585bca900dd14a9cf7ce8f5cba40db272",
+        "webp": "61c6d3ee12a0207afd94b5beb67d6612f5b4d658cb5bdc81071356095f4283f8"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "83c721169ecf5d4226791891ed70296fc2efb1a8bcb303df9c279f1df4abea8f",
+      "pairedWebp": "brain-and-maze-clipart",
+      "meanRgbDifference": 4.6928
+    },
+    {
+      "id": "brain-and-microscope-clipart",
+      "hashes": {
+        "pdf": "f1ac44d9d36999c75f15a838c306e60f6ec7f25f111883b9be90c4aa5bb6cd63",
+        "webp": "f799f9e8fa5c7bbff35a8d15266157a99d0070fad0f6723ef2db3a2c90b0e9eb"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "dae6f8e0429a41b252d3c696d18ce96641858eb09a7abe480d2323e45f518619",
+      "pairedWebp": "brain-and-microscope-clipart",
+      "meanRgbDifference": 5.1341
+    },
+    {
+      "id": "brain-and-open-journal-clipart",
+      "hashes": {
+        "pdf": "3a30c45459041ccde592c77e78d9a20d0bd81ca87752657b028ecfdb1050ccab",
+        "webp": "3347b68d953f41fd58a361eb2b76aa0ed4913a0386f9c2b4c85e2bd91da60b52"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "ead5e36db3c815c35ae352c94c38c9448b829e5bd61a32b35ad2e3f85f8d115b",
+      "pairedWebp": "brain-and-open-journal-clipart",
+      "meanRgbDifference": 4.2062
+    },
+    {
+      "id": "brain-and-spinal-cord-clipart",
+      "hashes": {
+        "pdf": "b7d42724e335b6790090c67fbe774ff59b2162f5f9121accca0f2a8aa880698e",
+        "webp": "e9055b1cf1d2a5a73c5b85506cb1c9f54e0c15c6c762ebbd1b7844e561aceca8"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "78cdd5fcb4a9c89b0dabff79ba4f90e87b046b99e69c8e3bd5177ade01f4d2b2",
+      "pairedWebp": "brain-and-spinal-cord-clipart",
+      "meanRgbDifference": 4.3194
+    },
+    {
+      "id": "brain-cerebellum-study-clipart",
+      "hashes": {
+        "pdf": "f7e7134771c233bbef4a7ca05f662cca8e9e197c803e4e4351b6405fce15f89c",
+        "webp": "c25d961b79cdd97f9e0043addfec7c1ad62f1a6bc1f4dd8df943d4d7d2137ac0"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "d055621670acc6a948e8cdc8c917e1f499e5c2ada6a94a65013673cb9a514c70",
+      "pairedWebp": "brain-cerebellum-study-clipart",
+      "meanRgbDifference": 5.7906
+    },
+    {
+      "id": "brain-connected-neurons-clipart",
+      "hashes": {
+        "pdf": "9fdc97cf9d3be743a054b379274ef8c790efd801d7efeae1940c6a394918cabc",
+        "webp": "201ec6014acb49932c92a088ff69445edbfa9ba03417211e0e67c0d84495a1a3"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "9980124ea7f16fa9b900fe8c40efec8cbcd8a5c0b902b6c0b30a40c7d7bdd4e7",
+      "pairedWebp": "brain-connected-neurons-clipart",
+      "meanRgbDifference": 3.0456
+    },
+    {
+      "id": "brain-creative-pencil-clipart",
+      "hashes": {
+        "pdf": "d1397e581b87dc2f20e440b461b13cb3e4acf0d595660446bef08afd84fa281c",
+        "webp": "bf23c15bf8cf609bd73bf6c97045b5c41597c316c90e6b4909e28821dbc87ae5"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "7377e6a9a26c2644176475a60a74e1f8b41dbf5413fcccb3d28313edb29d16b8",
+      "pairedWebp": "brain-creative-pencil-clipart",
+      "meanRgbDifference": 4.9564
+    },
+    {
+      "id": "brain-electric-sparks-clipart",
+      "hashes": {
+        "pdf": "f5fc32f3fb6e40e9eed63c7ff72bb3e360c5fc15599aa474dc0a3202cd545307",
+        "webp": "58a47998ef938a1370a3b4134064d696022ca526f6f883da201be55a50a21c60"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "c974075ca732cd3c25a076cb6fa422442a910d3386da2190421f77199beccf33",
+      "pairedWebp": "brain-electric-sparks-clipart",
+      "meanRgbDifference": 5.9173
+    },
+    {
+      "id": "brain-held-by-hands-clipart",
+      "hashes": {
+        "pdf": "3cc75dc59f7d75484a9e2a695bc16e4253e75367bb3ecd0fc553970a660496bd",
+        "webp": "bcc061ec8e7a86ddfd4285880f40d7d78c0536a1f8d9b3c6db5ce0c68dca7722"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "1c6d07df4434debb53fe57666da7a2af2a9da355d0bc540a661e2cd153d02156",
+      "pairedWebp": "brain-held-by-hands-clipart",
+      "meanRgbDifference": 4.7569
+    },
+    {
+      "id": "brain-in-glass-dome-clipart",
+      "hashes": {
+        "pdf": "10c1a8cf6c28cd67f36bb6ebcdb2ad9a20a19de6a370a4ca8f96d9b4f59aa7cd",
+        "webp": "2f4fa183a06112efcf10f99267c37777c28d93bd36d9c4fa9e096a27a207f209"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "913f8ed1a02007edbcc1b3e4ea455139f8262be1a7a4226394b3cea9ce02a4aa",
+      "pairedWebp": "brain-in-glass-dome-clipart",
+      "meanRgbDifference": 4.2061
+    },
+    {
+      "id": "brain-in-jar-study-clipart",
+      "hashes": {
+        "pdf": "24627c7118ad8d6de2d457d14928ea4f46677252aad648d8e8a30a27f0c9be83",
+        "webp": "82b517e7f36359cc1b4bc32280850f4a3428b34acb040fd3a8578cd53847bdd9"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "895b4c78ff28cec9945052c3e885e8d1da9b27597ff4c9bce9a10d6e928d982e",
+      "pairedWebp": "brain-in-jar-study-clipart",
+      "meanRgbDifference": 5.3459
+    },
+    {
+      "id": "brain-neuron-synapse-clipart",
+      "hashes": {
+        "pdf": "383de4a8743be75dba28f903b62dbe46803a08472ba142542d44e2cee2dacd17",
+        "webp": "44ee02d8d1934c32f01e00c3084df4c27d5a5825e0df85c9a166ceb315ae3bcb"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "177deb07ef88c678be2ef07a2cad09e0a9d89b3047ed62b0c54dc7f6690fb644",
+      "pairedWebp": "brain-neuron-synapse-clipart",
+      "meanRgbDifference": 1.9363
+    },
+    {
+      "id": "brain-on-anatomy-stand-clipart",
+      "hashes": {
+        "pdf": "22536f437fa7f78e8d5f9765e49cf4d11df7cce5fae0887e1f5bd875b770ec0c",
+        "webp": "9005fddfdeceef76e70c2052e467aebaff6910c7ee006cb95282da8eb433b5f2"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "874ffdc1c54a7c1b97bbba6f86119a5db299b18293af172e5ca2ec6a76c36ae7",
+      "pairedWebp": "brain-on-anatomy-stand-clipart",
+      "meanRgbDifference": 4.2211
+    },
+    {
+      "id": "brain-outline-coloring-cogwork-clipart",
+      "hashes": {
+        "pdf": "c735d34602146c2a0d700a6195f7d4141bb476616f7170872208e9679a392522",
+        "webp": "275194b527c02e75435d409276038bf7599e61737532c5a5a0ea9d8db581422f"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "0060679832be7d84b52c21ebffbb1ee599379efd513275f0ebeebdea4c1b151f",
+      "pairedWebp": "brain-outline-coloring-cogwork-clipart",
+      "meanRgbDifference": 6.4633
+    },
+    {
+      "id": "brain-outline-coloring-creative-clipart",
+      "hashes": {
+        "pdf": "01c7f1f340ed8dcb4d7e8354c3843be52b9c257798ab5fa1a8f1a092668a1acc",
+        "webp": "a367ce2c1277b4428aa61b969e29dec4b6fdf283190435d11417c1fd36df899e"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "5fdda2d8b0036a2a74fcfb3c9b65109cc474c15f94e94911a38db08a69013611",
+      "pairedWebp": "brain-outline-coloring-creative-clipart",
+      "meanRgbDifference": 5.5101
+    },
+    {
+      "id": "brain-outline-coloring-hands-clipart",
+      "hashes": {
+        "pdf": "92bd1b078194a7a5eedbc2f07e7ddbdf0f049e6b986d8576c7b33a0cda9c0aaa",
+        "webp": "54238bc70f494bfe1a6c0c955873b296d71ba7a5d6347ef697def876c7c424da"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "8d45d78204fed2a9a653c26d18a9e5d70c6ba11471195d4da651bc2ef9e98c14",
+      "pairedWebp": "brain-outline-coloring-hands-clipart",
+      "meanRgbDifference": 5.6281
+    },
+    {
+      "id": "brain-outline-coloring-lab-clipart",
+      "hashes": {
+        "pdf": "58e82ffddd4e0a56c864529736d5b65e46bdeed59270046b21a77534b7c8b864",
+        "webp": "f959163c6c43173b15feec35d0e28b47d99f53f78ef0037435ba85fcb9dba169"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "f7740b01cdd8a4ac20fdec6fe841011ffa640ea37154ec9cffab48084b125683",
+      "pairedWebp": "brain-outline-coloring-lab-clipart",
+      "meanRgbDifference": 5.6739
+    },
+    {
+      "id": "brain-outline-coloring-lateral-clipart",
+      "hashes": {
+        "pdf": "ceac18614c1d6e842f8bb373ed57dbd0786170847b58183e36694760b8999cd2",
+        "webp": "ec505f5035611d955b037b303d25a9508e903122e74595e4beb924daab66687d"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "cbda35bf812673e62238561799779b2165b9598e7588b263517936aedd49c6ce",
+      "pairedWebp": "brain-outline-coloring-lateral-clipart",
+      "meanRgbDifference": 4.7775
+    },
+    {
+      "id": "brain-outline-coloring-leaves-clipart",
+      "hashes": {
+        "pdf": "de331549a759e05185467b29289278916cea748d33d42ac6abceba907984f27e",
+        "webp": "468c58606a777f982b94a711abffe7d9537cd9ee6f5e2b038686e2261e8bc55a"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "88bc16a750fe3d0683eaf7bf75e70b7fbb14b9b977a46012647a63d016e2f71e",
+      "pairedWebp": "brain-outline-coloring-leaves-clipart",
+      "meanRgbDifference": 6.1895
+    },
+    {
+      "id": "brain-outline-coloring-maze-clipart",
+      "hashes": {
+        "pdf": "c735ba0db22c85dd1890c736846321868de82d9b3c7bf10bd9671c8066775b6e",
+        "webp": "fbb2b9e7e658b76d062ea3674c035d3d071b02f8382031561f0aea7a7997e52d"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "65ca584e780ec222cadf7ae76398ce9abe93c5d81e5fba419ac77e9de55dfe6f",
+      "pairedWebp": "brain-outline-coloring-maze-clipart",
+      "meanRgbDifference": 5.1889
+    },
+    {
+      "id": "brain-outline-coloring-neuron-clipart",
+      "hashes": {
+        "pdf": "11526c72e122ea6487a0a4e44efd637ceca53c47fa9087a0fdd2827d83abca0a",
+        "webp": "da470c8261e7c3805cdb9fb9f6fcb5af8124cfca3975036ec2ae9f5af95dd612"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "3a0387c645f9ce9320d0c47ae77d398d2a23294b41be614bad2340859f9ca50e",
+      "pairedWebp": "brain-outline-coloring-neuron-clipart",
+      "meanRgbDifference": 2.1804
+    },
+    {
+      "id": "brain-outline-coloring-section-clipart",
+      "hashes": {
+        "pdf": "0a1e56f62b59fb834592669bcf88d54859595f3d35103f7d915e8a51be2c9f15",
+        "webp": "3d0e5ae55a6417fe3bc64d2faa13e8213d00749ac2b1e66255ec765d55587834"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "0e49169acc6279b2227d9e7b81bc128932392a965e7c7b8cde92821fdf5c7ffb",
+      "pairedWebp": "brain-outline-coloring-section-clipart",
+      "meanRgbDifference": 4.3112
+    },
+    {
+      "id": "brain-outline-coloring-student-clipart",
+      "hashes": {
+        "pdf": "0125dae361a5557bbddf42474c34fb4ba5d8cbacd499e08f65512781fa7ffa63",
+        "webp": "03aed556ab7e5833d5495742f0e2bde5ad8248b433d14a7216c86a6828d21c30"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "cfd0329e07decaf1757fe5478e352051775bfb0db572fa7b9837b27de33accf2",
+      "pairedWebp": "brain-outline-coloring-student-clipart",
+      "meanRgbDifference": 6.3423
+    },
+    {
+      "id": "brain-puzzle-assembly-clipart",
+      "hashes": {
+        "pdf": "54c51e82c5e07a374f89da2939c9eb1abc20f6d5c3872c7c1a4b88f6ed3e460b",
+        "webp": "4518500cf95ecfc5052baad0e1c7687b358dc64ab44e9f3070b0e059175cc455"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "7ec229bcff11459fc98983b1c7f3b4bbefc9b3681a5ee439a4dcbfa68fe84f6b",
+      "pairedWebp": "brain-puzzle-assembly-clipart",
+      "meanRgbDifference": 4.3938
+    },
+    {
+      "id": "brain-rainbow-ribbons-clipart",
+      "hashes": {
+        "pdf": "d0822359242b4cc6ce5460dc10119fb96367c68c72e776d85d4ffd2b247e1e5b",
+        "webp": "e009eca79ff6ef4622fd0e90803911c2d215d3b14c0ba3da8226708167a15c1d"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "06c10e8368c10a6165940fede45ab1ba65f3a886038aa1f5570c37811e463978",
+      "pairedWebp": "brain-rainbow-ribbons-clipart",
+      "meanRgbDifference": 5.1966
+    },
+    {
+      "id": "brain-sagittal-section-clipart",
+      "hashes": {
+        "pdf": "929484bb41fc684c6ecd9cf15fec7ddc204c98eaff38a1d5752abb59deb1000d",
+        "webp": "0020c0633424e0dd1a12fdcb1baa5c72d0745f16843a391c4b93ea9a124b6df2"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "0bf37e607fde53ff4fc7a35c7a3f2c18a752df5e3f007af8e8e4abd7de817ecd",
+      "pairedWebp": "brain-sagittal-section-clipart",
+      "meanRgbDifference": 4.8088
+    },
+    {
+      "id": "brain-stars-constellation-clipart",
+      "hashes": {
+        "pdf": "7c5f6f2bcebaaf1786ebbe616a2edfb64f360727ed7eac0d4521d6b9a1917cf8",
+        "webp": "6783fae915e0e5dafef2562d3722fe6c1a3b80c05cd5c5d73cfd8d77067875a9"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "433ed1649812db8fb620835bc365d302fa46c4c07303416976d3b50023e08e38",
+      "pairedWebp": "brain-stars-constellation-clipart",
+      "meanRgbDifference": 3.9469
+    },
+    {
+      "id": "brain-surreal-origami-clipart",
+      "hashes": {
+        "pdf": "252646778676d0caf250b4cdd7ee23b3867a97b66d398686d406d35566ce3962",
+        "webp": "0c8571a217c938b18ac1cc5177d6cccff11f0c921f5610ca680ce4946d2b9387"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "4e8be6b1d96d5f29f2f78d58ea2d50a7ff9e1ca38a340af67613c18c447a18b4",
+      "pairedWebp": "brain-surreal-origami-clipart",
+      "meanRgbDifference": 5.1099
+    },
+    {
+      "id": "brain-tree-of-knowledge-clipart",
+      "hashes": {
+        "pdf": "0f5abce1cec7c42c49b28dbcaad9b934bce6d23daa0e177ae00b02368dcb4ead",
+        "webp": "f8edb304b1773e05eadf0867df3efb98c185cddec78029c92f25c0abeca5e24b"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "a1ee81275ea5c18eedf42a7b63d91d13e1e3fbed324886d53afe11ee07768d78",
+      "pairedWebp": "brain-tree-of-knowledge-clipart",
+      "meanRgbDifference": 5.4948
+    },
+    {
+      "id": "brain-two-hemispheres-clipart",
+      "hashes": {
+        "pdf": "7bf2fa321db2f1862f8b86673a86411705707c4f2ccbb0da25553e1711c73bbe",
+        "webp": "738a36073a7bc828120e579989ed25c1622dd55376f85fe7a5112e4052a6d995"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "01aac45ba2d5e1cdc261e5c971b7dc9516a1de8944304f08e235b9c29c6bfb22",
+      "pairedWebp": "brain-two-hemispheres-clipart",
+      "meanRgbDifference": 4.684
+    },
+    {
+      "id": "brain-under-magnifier-clipart",
+      "hashes": {
+        "pdf": "0a47d87ea4289a6b22223a9a78ba42019ad43f1c62945100638df6781e59c233",
+        "webp": "3fdeb33b211a55cda015114bc90981cc7e1a4e313e66c0d7a3e93115047f339a"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "b8b71a445853fa56a4bb856db9e29785def822e38854bf1ee22f9aec669d74d7",
+      "pairedWebp": "brain-under-magnifier-clipart",
+      "meanRgbDifference": 5.1392
+    },
+    {
+      "id": "brain-under-umbrella-clipart",
+      "hashes": {
+        "pdf": "d5b7010de5f2da5014d0c02348afccf3b1cc8f34faeef0afdec93db3eed1cf37",
+        "webp": "e8f7b76b7513be981b7770fdfcce2761715e9011d04cd5ab551bbe4fdd35e415"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "aa6e2d104a55596c98829e0717b2216e35fd68b7fd3a3279f5c19e1d3b6763c4",
+      "pairedWebp": "brain-under-umbrella-clipart",
+      "meanRgbDifference": 4.8734
+    },
+    {
+      "id": "brain-watercolor-florals-clipart",
+      "hashes": {
+        "pdf": "c9ea3274521a24f324599671ead12417ac0255af0ac4faa7a18f994cbea6d493",
+        "webp": "32f891749def275456878f5459cf7d16c67617af9339ac066530a42d84d11207"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "052bdfa6b1055d15998395f9f58caf3cb7e91c05df854032f7f8b24fd0edeb88",
+      "pairedWebp": "brain-watercolor-florals-clipart",
+      "meanRgbDifference": 5.0789
+    },
+    {
+      "id": "brain-with-chess-knight-clipart",
+      "hashes": {
+        "pdf": "d04215d70c5cee2952a77e12ce88b5e49a21c7990d01cb518381a368344a7597",
+        "webp": "4e6f1fff0d73e3153cfe00369eaadc57b54ea075df17376db80f4f8e32e859a5"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "0afcce5a0a6ceb77b17ff149be05e876fc32cd065df20c6c4beef68147e3a131",
+      "pairedWebp": "brain-with-chess-knight-clipart",
+      "meanRgbDifference": 5.3976
+    },
+    {
+      "id": "brain-with-graduation-cap-clipart",
+      "hashes": {
+        "pdf": "709539c6e2c3e40118de073078d74c0dbf412e263e0f762425efd341d0cd5135",
+        "webp": "9bdb8516d49d3a297184391583b173bb36c7433414f674db8a970c4a3cc03c41"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "7d1dc07adabbf54499842e7cb8a3b0bb3571cb184a3f8368d982fcc8c3b26b52",
+      "pairedWebp": "brain-with-graduation-cap-clipart",
+      "meanRgbDifference": 5.6132
+    },
+    {
+      "id": "brain-with-music-notes-clipart",
+      "hashes": {
+        "pdf": "5c0ba86d29ae00bdc93820cbfa77343a2400b9bb07300fe8cf8e75fdc7fd3e45",
+        "webp": "15d1510f3e152c7a26f285afebe2919c3d8f722ab096a34128caf674160a36d7"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "ef9162c2a5f505b21b0663c79e0e2b80cbfd383369eb560d2ee437b798098ec3",
+      "pairedWebp": "brain-with-music-notes-clipart",
+      "meanRgbDifference": 3.9629
+    },
+    {
+      "id": "brain-with-olive-branches-clipart",
+      "hashes": {
+        "pdf": "a0e4559e0d712a9982c4ea810b7b9c23159a22557a8eca1dd4f4d19cf940e881",
+        "webp": "3dddb5a0f9f6c61b090d8f3bbf4c169715f8ef0bfdf8b3d7b99e762f5db6709f"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "fdd0ce02ae2b78802cf4edcc82d63966a8d8dcc4f301690b8797f588b9a72c80",
+      "pairedWebp": "brain-with-olive-branches-clipart",
+      "meanRgbDifference": 5.5842
+    },
+    {
+      "id": "brain-with-open-book-clipart",
+      "hashes": {
+        "pdf": "dc2401d6d5b51e8c054831d8413053169a4ef4c1149f5f339a8ceda6aa866c02",
+        "webp": "2d90fb2d9f13822895be95bb72c91afbd738645165c85a9d7adb15306ff05306"
+      },
+      "dimensions": [
+        1500,
+        1500
+      ],
+      "pagePoints": [
+        144,
+        144
+      ],
+      "ppi": 750,
+      "printDimensions": [
+        1500,
+        1500
+      ],
+      "pdfAlphaExact": true,
+      "pdfAlphaExactToPrintSource": true,
+      "proofSha256": "477d354e3130e0c4b3654216f41f6f0bcf29ea1217cecb13e3c944a2c77f2815",
+      "pairedWebp": "brain-with-open-book-clipart",
+      "meanRgbDifference": 4.6125
+    }
+  ]
+}
