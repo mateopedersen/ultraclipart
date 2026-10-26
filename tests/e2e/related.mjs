@@ -290,8 +290,11 @@ try {
   await page.locator('[data-related-mode="best"]').click();
   await expect(page.locator('[data-related-mode="best"]')).toHaveAttribute('aria-pressed', 'true');
   await expect(root).not.toHaveAttribute('aria-busy', 'true');
+  await page.bringToFront();
   await page.locator('.related-card').first().scrollIntoViewIfNeeded();
-  await page.waitForTimeout(1200);
+  await expect
+    .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')))
+    .toBe(true);
   const events = await page.evaluate(() => window.relatedEvents);
   assert.ok(events.some((e) => e.event === 'impression'));
   assert.ok(!events.some((e) => e.event === 'download_success'));

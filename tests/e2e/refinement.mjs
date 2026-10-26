@@ -204,7 +204,7 @@ try {
   for (const [route, cap] of [
     ['/', 15],
     ['/new/', 32],
-    ['/black-and-white/', 32],
+    ['/black-and-white/', 24],
   ]) {
     await page.goto(base + route);
     await page.evaluate(async () => {
@@ -217,10 +217,14 @@ try {
         }),
       );
     });
-    assert.equal(await page.locator('.gallery > .art-card').count(), Math.min(art.length, cap));
+    assert.equal(
+      await page.locator('.gallery > .art-card').count(),
+      Math.min(art.length, cap),
+      `${route}: initial gallery count`,
+    );
   }
   report.checks.push(
-    'Homepage has complete responsive rows; home/browse galleries keep 15/32 bounds',
+    'Homepage has complete responsive rows; home/new/monochrome galleries keep 15/32/24 bounds',
   );
   report.status =
     report.states.some(

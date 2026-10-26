@@ -49,8 +49,6 @@ const categoryName = (id: string) => studioSceneCategories.find(([key]) => key =
         data-studio-scene={scene.id}
         data-scene-subject={scene.category}
         data-scene-search={`${scene.title} ${scene.caption} ${scene.description} ${categoryName(scene.category)} ${scene.items.map((item) => artworkById.get(item.id)?.title || '').join(' ')}`}
-        aria-label={`Open ${scene.title} in Studio`}
-        aria-describedby={`scene-description-${scene.id}`}
       >
         <span
           class="studio-scene-preview"

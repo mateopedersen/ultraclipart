@@ -1,6 +1,7 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import { defaults, searchArtwork } from '../../src/lib/search.ts';
-import { primaryClusterForTopic } from '../../src/lib/topic-clusters.ts';
+import { primaryClusterForTopic, clustersForTopic } from '../../src/lib/topic-clusters.ts';
+import { auditMonochrome } from '../../scripts/monochrome-catalog.mjs';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
@@ -120,13 +121,28 @@ try {
   }
   await page.goto(base + `/search/?q=${topic}`);
   const topics = [...readData('topics.json').topics, ...readData('extra-topics.json')];
-  const searchable = all.map((item) => ({
-    ...item,
-    cluster: (() => {
+  const monochrome = await auditMonochrome(all);
+  const searchable = all
+    .filter((item) => item.published && item.indexable)
+    .map((item) => {
       const entry = topics.find((entry) => entry.slug === item.topic);
-      return entry ? primaryClusterForTopic(entry) : '';
-    })(),
-  }));
+      return {
+        ...item,
+        cluster: entry ? primaryClusterForTopic(entry) : '',
+        topicLabel: entry?.keyword || item.topic,
+        keywords: entry ? [entry.keyword] : [],
+        collections: entry
+          ? clustersForTopic(entry).map((cluster) =>
+              cluster
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, ''),
+            )
+          : [],
+        monochrome: monochrome.get(item.id)?.monochrome === true,
+        monochromeKind: monochrome.get(item.id)?.kind ?? null,
+      };
+    });
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
   await expect(page.locator('#result-count')).toContainText(`${expected()} artworks`);

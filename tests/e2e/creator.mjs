@@ -181,13 +181,11 @@ try {
   checks.push('safe import keeps layers, canvas, viewBox origin, root transform and paint opacity');
   const arc =
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><path d="M100 100 A80 60 30 0 1 240 200" fill="none" stroke="#245a91" stroke-width="6"/></svg>';
-  await page
-    .locator('[data-import-svg]')
-    .setInputFiles({
-      name: 'elliptical-arc.svg',
-      mimeType: 'image/svg+xml',
-      buffer: Buffer.from(arc),
-    });
+  await page.locator('[data-import-svg]').setInputFiles({
+    name: 'elliptical-arc.svg',
+    mimeType: 'image/svg+xml',
+    buffer: Buffer.from(arc),
+  });
   await expect(page.locator('[data-status]')).toContainText('1 editable SVG layers imported');
   expect((await state()).layers[0].markup).toContain('A80 60 30 0 1 240 200');
   await exporting('pdf', 'elliptical-arc.pdf');
