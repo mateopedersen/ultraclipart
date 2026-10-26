@@ -113,6 +113,7 @@ try {
   expect((await state()).layers).toHaveLength(2);
   checks.push('separate parts preserves exact original-resolution export pixels and is reversible');
   await panel('text');
+  await page.locator('[data-text-style-search]').fill('Soft Editorial');
   await page.locator('[data-text-preset=editorial]').click();
   await page.locator('[data-text]').fill('Creative\nStudio');
   await page.locator('[data-text-decoration]').selectOption('underline');

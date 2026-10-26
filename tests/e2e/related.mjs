@@ -292,9 +292,29 @@ try {
   await expect(root).not.toHaveAttribute('aria-busy', 'true');
   await page.bringToFront();
   await page.locator('.related-card').first().scrollIntoViewIfNeeded();
-  await expect
-    .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')))
-    .toBe(true);
+  try {
+    await expect
+      .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')))
+      .toBe(true);
+  } catch (error) {
+    const view = await page.evaluate(() => ({
+      hidden: document.hidden,
+      viewport: { width: innerWidth, height: innerHeight },
+      events: window.relatedEvents,
+      cards: [...document.querySelectorAll('.related-card')].slice(0, 3).map((card) => {
+        const image = card.querySelector('img');
+        const box = card.getBoundingClientRect();
+        return {
+          id: card.getAttribute('data-related-id'),
+          box: { top: box.top, bottom: box.bottom, height: box.height },
+          image: { hidden: image.hidden, complete: image.complete, width: image.naturalWidth },
+        };
+      }),
+    }));
+    throw new Error(`Visible-duration impression missing: ${JSON.stringify(view)}`, {
+      cause: error,
+    });
+  }
   const events = await page.evaluate(() => window.relatedEvents);
   assert.ok(events.some((e) => e.event === 'impression'));
   assert.ok(!events.some((e) => e.event === 'download_success'));

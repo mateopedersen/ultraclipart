@@ -121,6 +121,7 @@ try {
           ...document.querySelectorAll('.card-actions .button,.formats a,.az-nav button'),
         ]
           .filter((control) => {
+            if (!control.getClientRects().length) return false;
             const r = control.getBoundingClientRect();
             return r.width < 43.5 || r.height < 43.5;
           })

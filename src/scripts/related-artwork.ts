@@ -113,6 +113,12 @@ export function initRelatedArtwork() {
     if (document.hidden) {
       for (const timer of timers.values()) clearTimeout(timer);
       timers.clear();
+    } else if (!stale && !results.hidden) {
+      // Returning to a tab does not necessarily change intersection geometry.
+      for (const card of root.querySelectorAll('.related-card')) {
+        observer?.unobserve(card);
+        observer?.observe(card);
+      }
     }
   });
   function syncFavorites() {
