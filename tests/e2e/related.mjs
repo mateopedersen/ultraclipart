@@ -282,6 +282,8 @@ try {
           .map(([, f]) => f.sha256),
       );
       assert.ok(matches.includes(createHash('sha256').update(body).digest('hex')));
+      await page.locator('[data-download-close]').first().click();
+      await expect(page.locator('#download-dialog')).toBeHidden();
     }
   }
   report.checks.push('T23 main and related WebP/PDF downloads return original SHA-256 bytes');

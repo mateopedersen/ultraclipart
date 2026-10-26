@@ -130,6 +130,9 @@ try {
     assert.ok(before.point);
     await chooseSelectionTool(page, i % 2 ? 'wand' : 'smart');
     if (i % 2) {
+      const matching = page.locator('[data-wand-controls] details');
+      if (!(await matching.evaluate((element) => element.open)))
+        await matching.locator('summary').click();
       await page.locator('[data-contiguous]').uncheck();
       await page.locator('[data-distance]').selectOption('rgb');
     }

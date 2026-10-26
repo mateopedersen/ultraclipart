@@ -58,13 +58,14 @@ try {
       if (route === '/create/')
         await page.waitForFunction(() => {
           const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
-          const match = count.match(/^(\d+) of ([\d,]+) artworks$/);
+          const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
           if (!match) return false;
-          const expected = Math.min(24, Number(match[2].replaceAll(',', '')));
+          const expected = Math.min(24, Number(match[3].replaceAll(',', '')));
           const cards = [...document.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
           return (
             expected > 0 &&
-            Number(match[1]) === expected &&
+            (!match[1] || Number(match[1]) === 1) &&
+            Number(match[2]) === expected &&
             cards.length === expected &&
             cards.every((card) => {
               const image = card.querySelector('img');
