@@ -282,7 +282,7 @@ try {
           .map(([, f]) => f.sha256),
       );
       assert.ok(matches.includes(createHash('sha256').update(body).digest('hex')));
-      await page.locator('[data-download-close]').first().click();
+      await page.getByRole('button', { name: 'Close download window', exact: true }).click();
       await expect(page.locator('#download-dialog')).toBeHidden();
     }
   }

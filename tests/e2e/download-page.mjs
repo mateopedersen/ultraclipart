@@ -102,7 +102,7 @@ try {
   await entry.click();
   await expect(page.locator('#download-dialog [data-final-download="webp"]')).toBeVisible();
   assert.equal(page.url(), originalUrl);
-  await page.locator('[data-download-close]').click();
+  await page.getByRole('button', { name: 'Close download window', exact: true }).click();
   await expect(page.locator('#download-dialog')).toHaveCount(0);
   await expect(entry).toBeFocused();
   assert.equal(page.url(), originalUrl);
