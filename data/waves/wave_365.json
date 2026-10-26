@@ -1,6 +1,6 @@
 {
   "wave": "wave_365",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 4,
   "screenReview": "PASS",
@@ -565,5 +565,7 @@
   "deferred": [],
   "screenReviewedAt": "2026-10-26T05:56:43.886387+00:00",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
-  "createdAt": "2026-10-26T05:59:26.789Z"
+  "createdAt": "2026-10-26T05:59:26.789Z",
+  "liveRevision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33",
+  "liveVerifiedAt": "2026-10-26T09:32:49.360114+00:00"
 }
