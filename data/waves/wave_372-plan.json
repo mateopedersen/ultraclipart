@@ -1,0 +1,78 @@
+{
+  "wave": "wave_372",
+  "topic": "gratitude",
+  "method": "builtin-image-generation",
+  "research": "data/research/gratitude-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gratitude-welcome-meal",
+      "title": "A Meal to Say Thank You",
+      "alt": "A Meal to Say Thank You.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-welcome-meal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-wheelchair-friend",
+      "title": "A Thank-You Between Friends",
+      "alt": "A Thank-You Between Friends.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-wheelchair-friend.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-pet-companion",
+      "title": "Thankful for a Pet Companion",
+      "alt": "Thankful for a Pet Companion.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-pet-companion.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-sibling-help",
+      "title": "Thankful for a Helpful Sister",
+      "alt": "Thankful for a Helpful Sister.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-sibling-help.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-team-clap",
+      "title": "Appreciating a Teammate",
+      "alt": "Appreciating a Teammate.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-team-clap.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-volunteer-handshake",
+      "title": "Thanking a Community Volunteer",
+      "alt": "Thanking a Community Volunteer.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-volunteer-handshake.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

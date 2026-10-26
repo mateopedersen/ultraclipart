@@ -1,0 +1,78 @@
+{
+  "wave": "wave_371",
+  "topic": "gratitude",
+  "method": "builtin-image-generation",
+  "research": "data/research/gratitude-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gratitude-librarian-books",
+      "title": "Thanking the Librarian",
+      "alt": "Thanking the Librarian.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_371/source/gratitude-librarian-books.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-custodian-flowers",
+      "title": "Appreciating the School Custodian",
+      "alt": "Appreciating the School Custodian.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_371/source/gratitude-custodian-flowers.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-cafeteria-thanks",
+      "title": "Thanks for a School Lunch",
+      "alt": "Thanks for a School Lunch.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_371/source/gratitude-cafeteria-thanks.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-crossing-helper",
+      "title": "Thanking a Crossing Helper",
+      "alt": "Thanking a Crossing Helper.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_371/source/gratitude-crossing-helper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-friend-pencil",
+      "title": "Grateful for a Shared Pencil",
+      "alt": "Grateful for a Shared Pencil.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_371/source/gratitude-friend-pencil.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-garden-helper",
+      "title": "Thanks for Help in the Garden",
+      "alt": "Thanks for Help in the Garden.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_371/source/gratitude-garden-helper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

@@ -1,0 +1,534 @@
+{
+  "wave": "wave_352",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "football-pebbled-ball",
+      "title": "Pebbled Leather Football",
+      "alt": "Brown pointed-oval football with pebbled leather, panel seams and one row of pale laces.",
+      "description": "Brown pointed-oval football with pebbled leather, panel seams and one row of pale laces. Use the isolated ball in a classroom sports vocabulary card or a personal football invitation.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_352/source/football-pebbled-ball.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "acf639b0e9672309b338d31e47c5f1ef6b74aa237627ed3b3609475fc0b74376",
+      "inputSignature": "0790b5ed87d152881ead29450e9321146be5184a2c7b2f3d89ac500948894df2",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 817452,
+        "weightedCmykRmse": 0.793081
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1013358,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 817452,
+          "weightedCmykRmse": 0.793081
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        178,
+        96,
+        1402,
+        928
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_352/exports/football-pebbled-ball.pdf",
+          "bytes": 817452,
+          "sha256": "64e459489ebb4f31635990471572f84796ee68a762d9376d9d9c4ded2d0f7a7d"
+        },
+        "webp": {
+          "path": "work/production/wave_352/exports/football-pebbled-ball.webp",
+          "bytes": 1578144,
+          "sha256": "5d1da777279699aee049f819c497be33afd61aa3805f625ae0a05e92ad5cec01"
+        },
+        "thumb": {
+          "path": "work/production/wave_352/exports/football-pebbled-ball-thumb.webp",
+          "bytes": 46008,
+          "sha256": "9d8e9f7cce6376de3e19657856dd2f586b3f8d566eb0dff0cc8176f3ccf24235"
+        }
+      },
+      "proofSha256": "95e6e97587a55d8a4f5f610698c50862cd4d0d226a37e993454ec0655cfe1c84",
+      "pairMeanRgbDifference": 3.38269
+    },
+    {
+      "id": "football-protective-helmet",
+      "title": "Football Helmet",
+      "alt": "Navy football helmet with a gray facemask, pale chin straps and visible dark interior padding.",
+      "description": "Navy football helmet with a gray facemask, pale chin straps and visible dark interior padding. The side view suits a classroom equipment-matching activity or a personal sports journal.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_352/source/football-protective-helmet.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 960,
+      "pdfHeight": 877,
+      "sourceType": "raster",
+      "sourceSha256": "497283ca619b58b18baa933e9a73088b579bf8abb109b2fa789a0c4242cdf680",
+      "inputSignature": "15dd1f67f04279d9f38440fb1f6c91382c4e809c0299d6684df86045422e5157",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 970248,
+        "weightedCmykRmse": 1.253563
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1535550,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1236197,
+          "weightedCmykRmse": 0.717758
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1152907,
+          "weightedCmykRmse": 0.853255
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1062741,
+          "weightedCmykRmse": 1.011203
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 970248,
+          "weightedCmykRmse": 1.253563
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        35,
+        1278,
+        1149
+      ],
+      "image": {
+        "width": 960,
+        "height": 877,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_352/exports/football-protective-helmet.pdf",
+          "bytes": 970248,
+          "sha256": "f1bd75b1b80b4d824cb1424c7e53a8f4a22eaf37574ccf3ab433e59b97315234"
+        },
+        "webp": {
+          "path": "work/production/wave_352/exports/football-protective-helmet.webp",
+          "bytes": 1448854,
+          "sha256": "dac361497b669e227bbc46326217e5b0e6cfd74a989269fc941bc180b9c8775b"
+        },
+        "thumb": {
+          "path": "work/production/wave_352/exports/football-protective-helmet-thumb.webp",
+          "bytes": 69498,
+          "sha256": "3ead121339f74ebedf53bea199287c2ee5b22987e12ffcaf3e28c8119f71258c"
+        }
+      },
+      "proofSha256": "278a58ea105a985fad03675c936a5844bb382fd5503fc8b0a33bdfcd3c76cb4a",
+      "pairMeanRgbDifference": 2.4464
+    },
+    {
+      "id": "football-shoulder-pads",
+      "title": "Football Shoulder Pads",
+      "alt": "White-and-charcoal football shoulder pads with separate outer panels, dark foam and adjustable chest straps.",
+      "description": "White-and-charcoal football shoulder pads with separate outer panels, dark foam and adjustable chest straps. Use the freestanding equipment in a classroom sports kit diagram or a personal practice checklist.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_352/source/football-shoulder-pads.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "cd896f46793197b7348cd330afee0a849e1f131159374becef2f7693c27fd506",
+      "inputSignature": "1b043b3c2c9587195f8ded1731dff454b0441dc76b41831c8b047cf3a6435180",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 995527,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 995527,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        36,
+        89,
+        1499,
+        932
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_352/exports/football-shoulder-pads.pdf",
+          "bytes": 995527,
+          "sha256": "ab0cad8c7ce581c0029bfe823d876258e1eaaac55205fa7e7d268ab524544f80"
+        },
+        "webp": {
+          "path": "work/production/wave_352/exports/football-shoulder-pads.webp",
+          "bytes": 1516298,
+          "sha256": "eef7d3a08348c65f936fc93506e300456a06878c9efb8ede1cf3e59a6f8243da"
+        },
+        "thumb": {
+          "path": "work/production/wave_352/exports/football-shoulder-pads-thumb.webp",
+          "bytes": 37156,
+          "sha256": "b56b00bf1f0e2174a1689b8b69b26d9ea29d2e70d9ea0f0ccfa57a81edf93dd8"
+        }
+      },
+      "proofSha256": "cc13110b66437d5fd4049c4897d0830a7b6ec286032a8f20c07cf4776bfedd29",
+      "pairMeanRgbDifference": 4.04309
+    },
+    {
+      "id": "football-cleat-pair",
+      "title": "Football Cleats",
+      "alt": "White and green football cleats with tied laces, one upright and the other showing its studded sole.",
+      "description": "White and green football cleats with tied laces, one upright and the other showing its studded sole. The two shoe views suit a classroom equipment description or a personal sports packing list.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_352/source/football-cleat-pair.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "b768cc4ee482fd8b0e107ba62b4377acc0425f5cf2b157d1ea176f2051f0bfd8",
+      "inputSignature": "dea2145cee6b24e6cf99b5d5564edd2a0e43f0440932c49196b7706c65adde6c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 987447,
+        "weightedCmykRmse": 0.778226
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1217195,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 987447,
+          "weightedCmykRmse": 0.778226
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        144,
+        1352,
+        1034
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_352/exports/football-cleat-pair.pdf",
+          "bytes": 987447,
+          "sha256": "405e25f41a0cc6031e26038ea649dc31311f786d1ffe8c0b3dbaa69e094cb680"
+        },
+        "webp": {
+          "path": "work/production/wave_352/exports/football-cleat-pair.webp",
+          "bytes": 1143524,
+          "sha256": "e6ab0ad7d955b4c2bc43697d66d0bf5e3f268d18a6789c6c32a56d8b32fce18e"
+        },
+        "thumb": {
+          "path": "work/production/wave_352/exports/football-cleat-pair-thumb.webp",
+          "bytes": 56464,
+          "sha256": "f8db681240e77822fc156cbaa99ff158ad4b2754afc4e8467a97233f6eb9e29c"
+        }
+      },
+      "proofSha256": "d16dce51be0e2a495f85d41fbce16eba7cdca476ecd419c7b31f8138316beb45",
+      "pairMeanRgbDifference": 3.4319
+    },
+    {
+      "id": "football-ball-on-tee",
+      "title": "Football on a Kicking Tee",
+      "alt": "Upright brown football resting in an orange kicking tee on a small patch of green turf.",
+      "description": "Upright brown football resting in an orange kicking tee on a small patch of green turf. Use the ball-and-tee arrangement in a classroom kicking vocabulary card or a personal practice layout.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_352/source/football-ball-on-tee.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3cc5dce7d002f7bdf313d2ba16a7d975cbc9be6cb0a14a8a8500d49a6f5ed149",
+      "inputSignature": "5deda4af471ea261eaa017138ee72c3226ea42107eaf1f1c44c9eb6f49adb004",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 949968,
+        "weightedCmykRmse": 0.991933
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1240497,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1013907,
+          "weightedCmykRmse": 0.818029
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 949968,
+          "weightedCmykRmse": 0.991933
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        132,
+        44,
+        1184,
+        1146
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_352/exports/football-ball-on-tee.pdf",
+          "bytes": 949968,
+          "sha256": "4bf19e5c0818717acdd185cb05472a88d4bf0fff9c50ebe8d4bc8ad4e560b73b"
+        },
+        "webp": {
+          "path": "work/production/wave_352/exports/football-ball-on-tee.webp",
+          "bytes": 1181826,
+          "sha256": "b7f92c5d188005b02a8fbc613e85bc6be8ade0a33cabca18e784cd41775fbbc6"
+        },
+        "thumb": {
+          "path": "work/production/wave_352/exports/football-ball-on-tee-thumb.webp",
+          "bytes": 61332,
+          "sha256": "13d1e606d9241fb2b10598113b404322596fb0f1360ee7e36a576cc18697d30a"
+        }
+      },
+      "proofSha256": "e46ab109014ad3b9b64a136dcc9dde8948b10ec1905d8281bbb4b7836e728db2",
+      "pairMeanRgbDifference": 3.38305
+    },
+    {
+      "id": "football-flag-belt",
+      "title": "Flag Football Belt",
+      "alt": "Unfastened black flag-football belt with a buckle and two long blue fabric flags.",
+      "description": "Unfastened black flag-football belt with a buckle and two long blue fabric flags. The complete belt suits a classroom flag-football equipment activity or a personal sports sheet.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_352/source/football-flag-belt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1d3aab6321512d613228f4adc3a378ff7286eeb3151850801b4cd0bd7d1cacad",
+      "inputSignature": "ab818291c64e6d7185db1748dcf1477b80afc89793e7771e1ab29164141784ed",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 638361,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 638361,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        144,
+        37,
+        1509,
+        983
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_352/exports/football-flag-belt.pdf",
+          "bytes": 638361,
+          "sha256": "0653f313efd1da9d2bd517d0b44069082da892b14c01658fac8d7d3a676db60d"
+        },
+        "webp": {
+          "path": "work/production/wave_352/exports/football-flag-belt.webp",
+          "bytes": 1179426,
+          "sha256": "ce76ed2bd629bf0394a329753faa28359233cfdad9f2a6a65fd9a8accb31c145"
+        },
+        "thumb": {
+          "path": "work/production/wave_352/exports/football-flag-belt-thumb.webp",
+          "bytes": 35250,
+          "sha256": "42bc9f43db19f3418b55f2aa28fe79ed43b60042ca521f338819c52ef7134ea9"
+        }
+      },
+      "proofSha256": "54836ba2c89afd1947d41a8e0e0ff00b161c066da483d8bb604e5daaac5d14e3",
+      "pairMeanRgbDifference": 5.06254
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T05:16:42.134409+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T05:16:42.350Z"
+}

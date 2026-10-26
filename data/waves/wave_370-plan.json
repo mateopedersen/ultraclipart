@@ -1,0 +1,78 @@
+{
+  "wave": "wave_370",
+  "topic": "gratitude",
+  "method": "builtin-image-generation",
+  "research": "data/research/gratitude-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gratitude-journal-writer",
+      "title": "Writing a Gratitude Journal",
+      "alt": "Writing a Gratitude Journal.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-journal-writer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-child-drawing-note",
+      "title": "Drawing a Thank-You Picture",
+      "alt": "Drawing a Thank-You Picture.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-child-drawing-note.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-thank-teacher",
+      "title": "A Thank-You for a Teacher",
+      "alt": "A Thank-You for a Teacher.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-thank-teacher.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-grandparent-hug",
+      "title": "A Grateful Hug for Grandpa",
+      "alt": "A Grateful Hug for Grandpa.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-grandparent-hug.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-neighbor-bread",
+      "title": "Thanking a Helpful Neighbor",
+      "alt": "Thanking a Helpful Neighbor.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-neighbor-bread.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-bus-driver-card",
+      "title": "Thanking the Bus Driver",
+      "alt": "Thanking the Bus Driver.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-bus-driver-card.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}
