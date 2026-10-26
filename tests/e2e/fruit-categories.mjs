@@ -89,8 +89,8 @@ try {
   const ids = await page
     .locator('.gallery .art-card')
     .evaluateAll((xs) => xs.map((x) => x.dataset.id));
-  assert.equal(ids.length, 12);
-  assert.equal(new Set(ids.map((id) => art.find((x) => x.id === id).topic)).size, 12);
+  assert.equal(ids.length, 15);
+  assert.equal(new Set(ids.map((id) => art.find((x) => x.id === id).topic)).size, ids.length);
   assert.ok(ids.every((id) => art.some((item) => item.id === id)));
   assert.ok(ids.every((id) => !id.includes('astronaut')));
   report.checks = [
@@ -99,7 +99,7 @@ try {
     'Fire and Leaves are discoverable in Nature & elements; Leaves keeps one canonical topic URL',
     'School & learning exposes school and book collections with canonical category URLs',
     'Sports includes the repaired basketball collection with one canonical category URL',
-    'Homepage introduces 12 different recently added subjects',
+    'Homepage introduces 15 different recently added subjects in complete desktop rows',
   ];
   assert.deepEqual(report.errors, []);
   report.status = 'passed';

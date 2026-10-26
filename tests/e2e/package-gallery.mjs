@@ -90,7 +90,9 @@ try {
       );
       for (const kind of ['webp', 'pdf'])
         assert.equal(
-          await card.locator(`a[data-download-format="${kind}"]`).getAttribute('href'),
+          await card
+            .locator(`a[data-download-format="${kind}"]`)
+            .evaluate((element) => element.href),
           url(art, kind),
         );
     }
@@ -167,7 +169,7 @@ try {
     for (const kind of ['webp', 'pdf']) {
       await page.goto(`${base}/art/${art.id}/`);
       const entry = page.locator(`.detail-actions a[data-download-format="${kind}"]`);
-      assert.equal(await entry.getAttribute('href'), url(art, kind));
+      assert.equal(await entry.evaluate((element) => element.href), url(art, kind));
       await entry.click();
       await expect(page.locator(`#download-dialog [data-final-download="${kind}"]`)).toBeVisible();
       assert.equal(page.url(), `${base}/art/${art.id}/`);
