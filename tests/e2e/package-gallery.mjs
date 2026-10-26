@@ -49,10 +49,11 @@ try {
     page = await context.newPage();
     page.on('pageerror', (error) => report.errors.push({ topic, error: error.message }));
     const expected = items.filter((art) => art.topic === topic);
+    const topicItems = catalog.filter((art) => art.topic === topic);
     const response = await page.goto(`${base}/clipart/${topic}/`);
     assert.equal(response.status(), 200);
     await expect(page.locator('main h1')).toHaveCount(1);
-    await expect(page.locator('.art-card')).toHaveCount(expected.length);
+    await expect(page.locator('.art-card')).toHaveCount(topicItems.length);
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       'href',
       `https://ultraclipart.com/clipart/${topic}/`,
@@ -63,8 +64,8 @@ try {
       .locator('script[type="application/ld+json"]')
       .evaluateAll((nodes) => nodes.map((node) => JSON.parse(node.textContent)));
     const collection = structured.flat().find((entry) => entry['@type'] === 'CollectionPage');
-    assert.equal(collection.mainEntity.numberOfItems, expected.length);
-    assert.equal(collection.mainEntity.itemListElement.length, expected.length);
+    assert.equal(collection.mainEntity.numberOfItems, topicItems.length);
+    assert.equal(collection.mainEntity.itemListElement.length, topicItems.length);
     if (topic === 'octopus') {
       await expect(page.locator('.chips a[href="/clipart/crab/"]')).toHaveCount(1);
       await expect(page.locator('.chips a[href="/clipart/lobster/"]')).toHaveCount(1);
