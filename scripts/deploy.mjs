@@ -10,6 +10,9 @@ const env = {
   ASTRO_TELEMETRY_DISABLED: '1',
   PAGES_WRANGLER_MAJOR_VERSION: '4',
 };
+// Keep a manual build's HTML and compiled assets in one Pages deployment.
+// R2 HTML offload is a separate migration and must not be inherited here.
+delete env.CATALOG_OFFLOAD_COLLECTION;
 function run(script, args = []) {
   const result = spawnSync(process.execPath, [script, ...args], {
     cwd: root,
@@ -24,12 +27,10 @@ function run(script, args = []) {
 // a previously generated local dist: it may contain stale or unverified media.
 run('scripts/restore-assets.mjs');
 readPublication(root);
+run('scripts/verify-social-images.mjs');
 run('node_modules/astro/bin/astro.mjs', ['check']);
 run('node_modules/astro/bin/astro.mjs', ['build']);
-// HTML leaves Pages only after each page is uploaded and read back from R2.
-const catalogCollection = 'owner-book-pack-2026-10-24';
-run('scripts/catalog-pages/upload.mjs', [catalogCollection, '50']);
-env.CATALOG_OFFLOAD_COLLECTION = catalogCollection;
+// Every artwork/editor HTML file remains with this build's asset bundle.
 run('scripts/security-headers.mjs');
 run(
   '--test',
