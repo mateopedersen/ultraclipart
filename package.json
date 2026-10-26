@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "astro dev --host 127.0.0.1",
-    "build": "node scripts/restore-assets.mjs && node scripts/build-social-images.mjs && astro build && node scripts/security-headers.mjs",
+    "build": "node scripts/restore-assets.mjs && node scripts/verify-social-images.mjs && astro build && node scripts/security-headers.mjs",
     "social:build": "node scripts/build-social-images.mjs",
+    "social:check": "node scripts/verify-social-images.mjs",
     "preview": "astro preview --host 127.0.0.1",
     "check": "node scripts/restore-assets.mjs && astro check",
     "test": "node --test tests/*.mjs",
