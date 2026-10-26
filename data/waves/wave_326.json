@@ -1,0 +1,563 @@
+{
+  "wave": "wave_326",
+  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "actualExportedDrawings": 6,
+  "resumed": 1,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "corn-silked-husk",
+      "title": "Corn Ear with Emerging Silks",
+      "alt": "A young corn ear is wrapped in green husks with a long tuft of reddish-brown silks and an attached arching leaf.",
+      "description": "A young corn ear is wrapped in green husks with a long tuft of reddish-brown silks and an attached arching leaf. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_326/source/corn-silked-husk.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "corn",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "cb697825687cbe62d319a9f2bc781170927e5c75c819912075fdc8472a8cae8b",
+      "inputSignature": "cb161a7daf1daba67d7ef4c14a9d977b3ed942662b50d7de6630fb4695151610",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 971502,
+        "weightedCmykRmse": 1.085609
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1364552,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1114857,
+          "weightedCmykRmse": 0.763208
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1055867,
+          "weightedCmykRmse": 0.901022
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 971502,
+          "weightedCmykRmse": 1.085609
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        132,
+        17,
+        1121,
+        1347
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_326/exports/corn-silked-husk.pdf",
+          "bytes": 971502,
+          "sha256": "a9efb73ed011bfd0a2b686d0538dcbdebe845c22326a1b872024f1db39319eba"
+        },
+        "webp": {
+          "path": "work/production/wave_326/exports/corn-silked-husk.webp",
+          "bytes": 1431560,
+          "sha256": "35cb38bb09d5077af4b0bf5b5137abb711c4022c9489487392f3467da7467858"
+        },
+        "thumb": {
+          "path": "work/production/wave_326/exports/corn-silked-husk-thumb.webp",
+          "bytes": 76552,
+          "sha256": "3585f4bf214e8ec2fff87c0fbcc8bd88ed5554c5585331813206d94cbf321f28"
+        }
+      },
+      "proofSha256": "146dd9ab8e33d593eca435a0eba4308e5757db4d69ef760faff166923b5856f0",
+      "pairMeanRgbDifference": 3.70788
+    },
+    {
+      "id": "corn-brace-root-study",
+      "title": "Corn Brace Roots",
+      "alt": "A lower corn stalk segment shows several nodes, angled brace roots and fine roots in a soil cutaway, with an attached ear and broad leaves.",
+      "description": "A lower corn stalk segment shows several nodes, angled brace roots and fine roots in a soil cutaway, with an attached ear and broad leaves. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_326/source/corn-brace-root-study.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "corn",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 775,
+      "pdfHeight": 930,
+      "sourceType": "raster",
+      "sourceSha256": "8df76a4331b7c03e56d733e03669e053536e9d9c4574793b0df88aca73cb7cac",
+      "inputSignature": "9385c68cdccb8c93ddefae088032352c380a7b052910f203a0d9980bb211c10f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 993460,
+        "weightedCmykRmse": 1.319036
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1375408,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1190188,
+          "weightedCmykRmse": 0.73602
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1138549,
+          "weightedCmykRmse": 0.878387
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1060175,
+          "weightedCmykRmse": 1.064251
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 993460,
+          "weightedCmykRmse": 1.319036
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        101,
+        10,
+        1096,
+        1363
+      ],
+      "image": {
+        "width": 775,
+        "height": 930,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_326/exports/corn-brace-root-study.pdf",
+          "bytes": 993460,
+          "sha256": "22776c67fc8208452be99458f6281fe54436fb5fad024fd4cc6772bd385c3d83"
+        },
+        "webp": {
+          "path": "work/production/wave_326/exports/corn-brace-root-study.webp",
+          "bytes": 1469480,
+          "sha256": "115ea0beff04891ab47678bcaf2de2a5a16f66328fb28ee9b6e5e8741d36c849"
+        },
+        "thumb": {
+          "path": "work/production/wave_326/exports/corn-brace-root-study-thumb.webp",
+          "bytes": 86346,
+          "sha256": "90816157bf27c40a78a6301fa6fc38743b76419f3f4d035fc8b97245a69e36e4"
+        }
+      },
+      "proofSha256": "e69dbf57b7aa1121de6565fb5412b9ac0c737bc7417200eb799b8d56199b4a30",
+      "pairMeanRgbDifference": 6.08599
+    },
+    {
+      "id": "corn-shelled-cob",
+      "title": "Shelled Corn Cob and Kernels",
+      "alt": "A mostly shelled dry corn cob shows orderly empty kernel sockets, a few golden kernels at one end and a loose pile beside it.",
+      "description": "A mostly shelled dry corn cob shows orderly empty kernel sockets, a few golden kernels at one end and a loose pile beside it. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_326/source/corn-shelled-cob.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "corn",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f12a4356cce24840cba2bd1d58ada7bc72c52488e09e6c570f5740ca4f22a034",
+      "inputSignature": "021c76a88d2137f7c503447109db526f674f802066dd0558db0d7e9b1fd3747a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 902403,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 902403,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        57,
+        83,
+        1497,
+        941
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_326/exports/corn-shelled-cob.pdf",
+          "bytes": 902403,
+          "sha256": "6354e238c670bd68ed00910faf6213ef016dcf29f3d82d4969dda294aea09612"
+        },
+        "webp": {
+          "path": "work/production/wave_326/exports/corn-shelled-cob.webp",
+          "bytes": 1599748,
+          "sha256": "2b3b5c1c5773dc253a71eb899560917f30594e1823f3ae8375dd21810929c816"
+        },
+        "thumb": {
+          "path": "work/production/wave_326/exports/corn-shelled-cob-thumb.webp",
+          "bytes": 52132,
+          "sha256": "7cd2ea7e43cfa155f68094756113c8984304fa9e73da4b578ba76ad9e05f12e2"
+        }
+      },
+      "proofSha256": "e452896265f8dbdaf7af9b10177ed3b1346b840e31e2bf3fc444ae74607315d4",
+      "pairMeanRgbDifference": 4.68117
+    },
+    {
+      "id": "corn-flint-harvest-decoration",
+      "title": "Decorative Flint Corn",
+      "alt": "Three dry multicolored corn ears with burgundy, ochre and cream kernels hang below tan husks tied with a rust-colored ribbon.",
+      "description": "Three dry multicolored corn ears with burgundy, ochre and cream kernels hang below tan husks tied with a rust-colored ribbon. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_326/source/corn-flint-harvest-decoration.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "corn",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "88d2b3cf59f85a713efca2ce38bca20bffb8bd9ae23c0b2791e2c1f0b7cd9ae3",
+      "inputSignature": "7d259935e646431b1adedd4fef85407541b3bfbc783fe79f12fa1e25475d3c8a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 935195,
+        "weightedCmykRmse": 0.752
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1115042,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 935195,
+          "weightedCmykRmse": 0.752
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        35,
+        984,
+        1501
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_326/exports/corn-flint-harvest-decoration.pdf",
+          "bytes": 935195,
+          "sha256": "00a234a1cb9741768593e4ffea9efd278f04140c31c4b912a1d54b5ac765376a"
+        },
+        "webp": {
+          "path": "work/production/wave_326/exports/corn-flint-harvest-decoration.webp",
+          "bytes": 1753594,
+          "sha256": "ff5c5f7d6620f20db1105da44a6340925f8982db5ca3b0ada10962c8de26cce9"
+        },
+        "thumb": {
+          "path": "work/production/wave_326/exports/corn-flint-harvest-decoration-thumb.webp",
+          "bytes": 64716,
+          "sha256": "7d5d35fe29cbc930c5ad6e8e4e313b6061c44677f803535c5ac0e3343db6c750"
+        }
+      },
+      "proofSha256": "b32daa91de9e1f5fd2f39b7e3f19b35b443e9b067de04a3851467cd7255bd7a7",
+      "pairMeanRgbDifference": 5.23541
+    },
+    {
+      "id": "corn-hand-sheller",
+      "title": "Hand-Crank Corn Sheller",
+      "alt": "A tabletop metal corn sheller supports a partly stripped corn ear above a tray of loose kernels, with a toothed wheel and a side hand crank.",
+      "description": "A tabletop metal corn sheller supports a partly stripped corn ear above a tray of loose kernels, with a toothed wheel and a side hand crank. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_326/source/corn-hand-sheller.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "corn",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "1beae94100f34f7a976ddabed4668e5394b0020fcf981037a0da983314deab3b",
+      "inputSignature": "9af9a033ef4a2693e64e0ec7076e83af3face985ee4712e52fea8450867c66ff",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 951414,
+        "weightedCmykRmse": 1.128755
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1324490,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1099118,
+          "weightedCmykRmse": 0.792784
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1035058,
+          "weightedCmykRmse": 0.943832
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 951414,
+          "weightedCmykRmse": 1.128755
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        58,
+        155,
+        1294,
+        1121
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_326/exports/corn-hand-sheller.pdf",
+          "bytes": 951414,
+          "sha256": "d306a6cbfac4df6945acd57351d4b113b33f31496329bc526496bc3b341ca9f0"
+        },
+        "webp": {
+          "path": "work/production/wave_326/exports/corn-hand-sheller.webp",
+          "bytes": 1185700,
+          "sha256": "8eb54a221a67d397c94716c736cef39a792d9b6a2e3374309f15156dfd67596b"
+        },
+        "thumb": {
+          "path": "work/production/wave_326/exports/corn-hand-sheller-thumb.webp",
+          "bytes": 67180,
+          "sha256": "054dd89b285ec4df1e003dfe5b615acb36584b656d1eaa21229e290b2fdebaa4"
+        }
+      },
+      "proofSha256": "797f6cb5e5ecd198aab40894dab17e213a60c1bd890fa14a532aa246a7ef9f67",
+      "pairMeanRgbDifference": 3.74791
+    },
+    {
+      "id": "corn-cornmeal-canister",
+      "title": "Cornmeal Canister and Measure",
+      "alt": "A cream enamel canister with blue handles and a separate lid holds golden cornmeal beside a filled metal measure and a short corn-cob section.",
+      "description": "A cream enamel canister with blue handles and a separate lid holds golden cornmeal beside a filled metal measure and a short corn-cob section. Use this isolated illustration in a personal corn-themed design or classroom vocabulary activity.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_326/source/corn-cornmeal-canister.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "corn",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "ab01822796655eaaffb9e4c41915c2283579a3f4917b7689955819a4c103b15f",
+      "inputSignature": "cae2a022e63189446ad5104b77e5fc91b6d6b7e07f507f995e3927d17209c2e0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 799645,
+        "weightedCmykRmse": 0.781406
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1066544,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 799645,
+          "weightedCmykRmse": 0.781406
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        53,
+        93,
+        1339,
+        1046
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_326/exports/corn-cornmeal-canister.pdf",
+          "bytes": 799645,
+          "sha256": "8925553ccc8ad9f709d2112588075000a12f9d148ce26c08b80c5b416f683f2f"
+        },
+        "webp": {
+          "path": "work/production/wave_326/exports/corn-cornmeal-canister.webp",
+          "bytes": 1231750,
+          "sha256": "9961ed37d8c6b2aa123966f6b35b75fa542952d1d27b087ebbb3c854b5ee36a2"
+        },
+        "thumb": {
+          "path": "work/production/wave_326/exports/corn-cornmeal-canister-thumb.webp",
+          "bytes": 58770,
+          "sha256": "71a6a33b8a06cd62070dee28b3e64557977a48555efccd009c00d9c1e163c7a9"
+        }
+      },
+      "proofSha256": "7ce82af6443374d432b53e72acc4d1cbe0ca49c85e7f61b970f727ffe8d17025",
+      "pairMeanRgbDifference": 3.29955
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T00:59:18.593838+00:00",
+  "screenReviewScope": "Every native PDF proof viewed for coherent kernels, maize leaves and roots, distinct composition, complete tool construction and bounded contours.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T01:33:07.386Z"
+}
