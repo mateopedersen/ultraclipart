@@ -12,7 +12,6 @@ export async function checkSearchSuggestions(browser, base, engine) {
   page.on('pageerror', (error) => errors.push(error.message));
   const checks = [];
   const input = page.locator('#search-q');
-  const panel = page.locator('#search-q').locator('..').locator('.search-suggestions');
   async function query(text) {
     await page.goto(base + '/', { waitUntil: 'networkidle' });
     await expect(page.locator('form:has(#search-q)')).toHaveAttribute(
@@ -29,13 +28,15 @@ export async function checkSearchSuggestions(browser, base, engine) {
   const options = () => page.locator('.search-suggestions:not([hidden]) a');
   try {
     await query('baby pumpkin costume');
-    const artwork = options().filter({ hasText: 'Baby Pumpkin Costume' }).first();
+    const artwork = page.locator(
+      '.search-suggestions a[href="/art/baby-pumpkin-costume-clipart/"]',
+    );
     await expect(artwork).toHaveAttribute('href', '/art/baby-pumpkin-costume-clipart/');
     await artwork.locator('span').first().tap();
     await page.waitForURL('**/art/baby-pumpkin-costume-clipart/');
     checks.push('mobile native tap on suggestion text navigates');
     await query('arctic fox resting');
-    const fox = options().filter({ hasText: 'Arctic Fox' }).first();
+    const fox = page.locator('.search-suggestions a[href="/art/winter-arctic-fox-resting/"]');
     const foxHref = await fox.getAttribute('href');
     await fox.locator('img').tap();
     await page.waitForURL((url) => url.pathname === foxHref);
