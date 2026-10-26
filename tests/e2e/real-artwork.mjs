@@ -159,12 +159,16 @@ try {
     responsive.push({ width, overflow, violations: issues.violations });
     expect(overflow).toBe(false);
     const headingFlow = await page.locator('.studio-learning-heading').evaluate((el) => {
-      const k = el.querySelector('.studio-kicker').getBoundingClientRect(),
-        h = el.querySelector('h2').getBoundingClientRect(),
+      const h = el.querySelector('h2').getBoundingClientRect(),
         p = el.querySelector('p:last-child').getBoundingClientRect();
-      return { ordered: k.bottom <= h.top + 1 && h.bottom <= p.top + 1, width: h.width };
+      return {
+        ordered: h.bottom <= p.top + 1,
+        aligned: Math.abs(h.left - p.left) <= 1,
+        width: h.width,
+      };
     });
     expect(headingFlow.ordered).toBe(true);
+    expect(headingFlow.aligned).toBe(true);
     expect(headingFlow.width).toBeGreaterThan(Math.min(600, width - 60));
     expect(issues.violations).toEqual([]);
     await page.screenshot({ path: path.join(out, `responsive-${width}.png`) });

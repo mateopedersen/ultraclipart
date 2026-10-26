@@ -77,9 +77,9 @@ export function initRelatedArtwork() {
                 entry.isIntersecting &&
                 entry.intersectionRatio >= 0.5 &&
                 !document.hidden &&
-                !impressions.has(id) &&
-                !timers.has(target)
+                !impressions.has(id)
               ) {
+                if (timers.has(target)) continue;
                 timers.set(
                   target,
                   setTimeout(() => {

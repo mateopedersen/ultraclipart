@@ -323,6 +323,51 @@ try {
   report.checks.push(
     'Consent-neutral event hooks; visible-duration impressions; no fabricated download successes',
   );
+  const exposurePage = await context.newPage();
+  try {
+    await exposurePage.setViewportSize({ width: 1440, height: 1000 });
+    await exposurePage.addInitScript(() => {
+      window.visibleEvents = [];
+      window.addEventListener('ultraclipart:related', (event) =>
+        window.visibleEvents.push(event.detail),
+      );
+    });
+    await exposurePage.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
+    await exposurePage.bringToFront();
+    await exposurePage.evaluate(() => document.fonts.ready);
+    const card = exposurePage.locator('.related-card').first();
+    await card
+      .locator('img')
+      .first()
+      .evaluate((image) => image.decode());
+    await card.evaluate((element) => {
+      const box = element.getBoundingClientRect();
+      scrollTo(0, scrollY + box.top - (innerHeight - box.height * 0.6));
+    });
+    await expect
+      .poll(() =>
+        card.evaluate((element) => {
+          const box = element.getBoundingClientRect();
+          const visible = Math.max(0, Math.min(box.bottom, innerHeight) - Math.max(box.top, 0));
+          return visible / box.height >= 0.5 && visible / box.height < 0.9;
+        }),
+      )
+      .toBe(true);
+    await exposurePage.waitForTimeout(200);
+    await card.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() =>
+        exposurePage.evaluate(() =>
+          window.visibleEvents.some((event) => event.event === 'impression'),
+        ),
+      )
+      .toBe(true);
+    report.checks.push(
+      'Scrolling a card from half visible to fully visible keeps continuous view timing',
+    );
+  } finally {
+    await exposurePage.close();
+  }
   await page.route('**/related-release.json', async (route) => {
     await new Promise((r) => setTimeout(r, 1000));
     await route.continue();
