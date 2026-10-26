@@ -1,0 +1,554 @@
+{
+  "wave": "wave_375",
+  "status": "AWAITING_CDN",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "gratitude-child-hand-on-heart",
+      "title": "A Thankful Hand on the Heart",
+      "alt": "Smiling boy in a purple knitted vest and rust trousers standing with one hand over his chest.",
+      "description": "Smiling boy in a purple knitted vest and rust trousers standing with one hand over his chest. Use the complete standing figure in a classroom appreciation prompt or a personal thank-you layout.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_375/source/gratitude-child-hand-on-heart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gratitude",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "309ebfca198b30a5e572e9fe7d841e2f8b5cc74c1e7eec73541cdfed93ba97fb",
+      "inputSignature": "5b3ec3d77b9ff64e898531357008c10a9448557c4cd1f2c716adb0abbe46dd38",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 606935,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 606935,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        286,
+        76,
+        782,
+        1473
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_375/exports/gratitude-child-hand-on-heart.pdf",
+          "bytes": 606935,
+          "sha256": "df9ef551f218bda2a4ad75778e9a3e7a06e2dd09c15303bea0b31cbc8b31fd71"
+        },
+        "webp": {
+          "path": "work/production/wave_375/exports/gratitude-child-hand-on-heart.webp",
+          "bytes": 1125982,
+          "sha256": "ea7c07d855dc94159b69a4def336ae6167df8a5a427659065f0402eeb59f8c3d"
+        },
+        "thumb": {
+          "path": "work/production/wave_375/exports/gratitude-child-hand-on-heart-thumb.webp",
+          "bytes": 30756,
+          "sha256": "d771d1f1c452819be4d3e7ba8061b6b7ca99d8690c50a1f279a6179156f2b555"
+        }
+      },
+      "proofSha256": "609ea417aeae091888e76ae5f1b12c47d18ed639930112be86db3c2a150cf736",
+      "pairMeanRgbDifference": 2.00546
+    },
+    {
+      "id": "gratitude-grateful-prayer",
+      "title": "A Quiet Moment of Thanks",
+      "alt": "Silver-haired woman in a sage cardigan and navy dress sitting quietly with closed eyes and folded hands on a complete wooden bench.",
+      "description": "Silver-haired woman in a sage cardigan and navy dress sitting quietly with closed eyes and folded hands on a complete wooden bench. The complete seated scene suits a personal reflection layout or a classroom discussion about quiet appreciation.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_375/source/gratitude-grateful-prayer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gratitude",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "54420e3e068ba3162fd260b9388d8a448173e53b98babdeadb3a573c1e2222e8",
+      "inputSignature": "da2eae015516506e4f25690155efe2402eed2de740b0cf2f84f4810dd78d3bcf",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 888995,
+        "weightedCmykRmse": 0.847429
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1123687,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 888995,
+          "weightedCmykRmse": 0.847429
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        104,
+        49,
+        1221,
+        1138
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_375/exports/gratitude-grateful-prayer.pdf",
+          "bytes": 888995,
+          "sha256": "1635b1bdb6f5878090c263baff5fdcaa023862c41f7ce5fead335b31e5312add"
+        },
+        "webp": {
+          "path": "work/production/wave_375/exports/gratitude-grateful-prayer.webp",
+          "bytes": 949664,
+          "sha256": "31013276fc51c3a1313498d7941a8d9947bb6ff838910c21890959df502b28a1"
+        },
+        "thumb": {
+          "path": "work/production/wave_375/exports/gratitude-grateful-prayer-thumb.webp",
+          "bytes": 50552,
+          "sha256": "0ce9d1b4ef386c9f6171f32a5a1d3ae50949fa58e7e4ff5b86c0ca3b9de3e22d"
+        }
+      },
+      "proofSha256": "48c4b5a1095c44b07f4d9317e725abbba6127bf9a20e39bf018290b4eaaf44be",
+      "pairMeanRgbDifference": 3.1324
+    },
+    {
+      "id": "gratitude-family-table-toast",
+      "title": "Sharing Thanks at the Table",
+      "alt": "Grandfather, woman and red-haired boy raising water glasses around a complete wooden table with bread.",
+      "description": "Grandfather, woman and red-haired boy raising water glasses around a complete wooden table with bread. Use the complete family gathering in a personal appreciation page or a classroom gratitude prompt.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_375/source/gratitude-family-table-toast.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "gratitude",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 900,
+      "pdfHeight": 822,
+      "sourceType": "raster",
+      "sourceSha256": "f3db2855a11f0dddaf01466b5e4fa545a8257f8a253f2e91c94666fc80b07bbc",
+      "inputSignature": "89aa2ff257699eeb2287b9f09ee1748cc2bc6ad15cacdb04a36debc9476bb096",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 967280,
+        "weightedCmykRmse": 1.273669
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1431045,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1198433,
+          "weightedCmykRmse": 0.725225
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1129371,
+          "weightedCmykRmse": 0.862829
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1049484,
+          "weightedCmykRmse": 1.01728
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 967280,
+          "weightedCmykRmse": 1.273669
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        55,
+        1284,
+        1138
+      ],
+      "image": {
+        "width": 900,
+        "height": 822,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_375/exports/gratitude-family-table-toast.pdf",
+          "bytes": 967280,
+          "sha256": "68b6c972817c6d98d4de67ccb277497f72dc49268fdd0d0a1477af84b7a61f86"
+        },
+        "webp": {
+          "path": "work/production/wave_375/exports/gratitude-family-table-toast.webp",
+          "bytes": 1496222,
+          "sha256": "edfce2053a8de48adaa4ff48e8c10201e35f36f4c9fe126ad6a31acb65996b35"
+        },
+        "thumb": {
+          "path": "work/production/wave_375/exports/gratitude-family-table-toast-thumb.webp",
+          "bytes": 89716,
+          "sha256": "2d44d0df6f2302396617be3205a59fa658a11b30eb1430cda12160f1dc1f96ce"
+        }
+      },
+      "proofSha256": "5637d6ee9511e59b8294f7fc8e414c6e5c14cb3afe98efe8e2d9094921f54bdf",
+      "pairMeanRgbDifference": 5.94095
+    },
+    {
+      "id": "gratitude-child-caregiver-drawing",
+      "title": "A Picture for a Caregiver",
+      "alt": "Girl in a teal dress and mustard leggings showing a heart, house and sun drawing to a kneeling woman in a cream cardigan.",
+      "description": "Girl in a teal dress and mustard leggings showing a heart, house and sun drawing to a kneeling woman in a cream cardigan. The complete shared moment suits a personal thank-you card or a classroom family-appreciation activity.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_375/source/gratitude-child-caregiver-drawing.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gratitude",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "e57e9e9bbd70c0873eacde2759851731914c05c78cbd9a031e171a88d43052a1",
+      "inputSignature": "5b9b1bb773da4493039a78257c51f6d9e539a30e376a94692edcc6d6ab7a565b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 990757,
+        "weightedCmykRmse": 0.909577
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1319663,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1062758,
+          "weightedCmykRmse": 0.772987
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 990757,
+          "weightedCmykRmse": 0.909577
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        70,
+        33,
+        1247,
+        1150
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_375/exports/gratitude-child-caregiver-drawing.pdf",
+          "bytes": 990757,
+          "sha256": "63f5c6041a8213be85b49ead89bccd55e431a75adc0f9acb3954bf7b7183b7a0"
+        },
+        "webp": {
+          "path": "work/production/wave_375/exports/gratitude-child-caregiver-drawing.webp",
+          "bytes": 1179066,
+          "sha256": "3390beb870a19661341070fede8c4a71b9a8f92ad3883f8010e39d4640a38d18"
+        },
+        "thumb": {
+          "path": "work/production/wave_375/exports/gratitude-child-caregiver-drawing-thumb.webp",
+          "bytes": 67728,
+          "sha256": "59ef308cbf075a87d262be940ed11bafcad4591d521e118d50fb4060639f4c4e"
+        }
+      },
+      "proofSha256": "395a7e32ece64723a88a7885966db756b022d1f8d077d4b55c41b523feac8a1d",
+      "pairMeanRgbDifference": 3.13742
+    },
+    {
+      "id": "gratitude-friend-umbrella",
+      "title": "Grateful for a Shared Umbrella",
+      "alt": "Woman in a cream raincoat sharing a green umbrella with a smiling girl in a coral coat and green skirt.",
+      "description": "Woman in a cream raincoat sharing a green umbrella with a smiling girl in a coral coat and green skirt. Use the complete umbrella-sharing action in a classroom kindness prompt or a personal friendship layout.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_375/source/gratitude-friend-umbrella.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gratitude",
+      "width": 1214,
+      "height": 1295,
+      "pdfWidth": 937,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "bd7c238f382920045713dabad03dc3dc7b64b421b179c76d7427970f29c4a1b0",
+      "inputSignature": "41eb1889d5c6c4ca4ad402b90d9cffb10d7f4bb6f3887eb6224bbf5e80f62b60",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 992185,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 992185,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        223,
+        10,
+        958,
+        1271
+      ],
+      "image": {
+        "width": 937,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_375/exports/gratitude-friend-umbrella.pdf",
+          "bytes": 992185,
+          "sha256": "9b0d6631cc6af275771a7efa98266f4f2d8e6fe75d6481d7405f9d1e812d0e55"
+        },
+        "webp": {
+          "path": "work/production/wave_375/exports/gratitude-friend-umbrella.webp",
+          "bytes": 888026,
+          "sha256": "99e1bdefd28145f719d71e007fd59d147254024012126c595c49434a250ed6e8"
+        },
+        "thumb": {
+          "path": "work/production/wave_375/exports/gratitude-friend-umbrella-thumb.webp",
+          "bytes": 48616,
+          "sha256": "21b2cc6f19298b334266a42a42c1bca0955d0e817a118019f64721fe420bb9da"
+        }
+      },
+      "proofSha256": "97716245250a98afa6439405bc07f5b1ab82ba699136131167f191789514873f",
+      "pairMeanRgbDifference": 2.14459
+    },
+    {
+      "id": "gratitude-family-photo-listening",
+      "title": "Listening to a Grateful Story",
+      "alt": "Older man in a mustard cardigan holding an open album while a boy in a sage hoodie listens beside his blue armchair.",
+      "description": "Older man in a mustard cardigan holding an open album while a boy in a sage hoodie listens beside his blue armchair. The complete seated pair suits a personal memory page or a classroom appreciation discussion.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_375/source/gratitude-family-photo-listening.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "gratitude",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "f5daf950c0176c94bf5c2ed8c226a5125c5491ffb3750547783c43752d19d3fc",
+      "inputSignature": "9525faa4b6fef8a3b5930721c05529930cf49efb3a8cbb1f4c63e95a41560292",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 965835,
+        "weightedCmykRmse": 1.350125
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1498318,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1215968,
+          "weightedCmykRmse": 0.757931
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141218,
+          "weightedCmykRmse": 0.897736
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1045400,
+          "weightedCmykRmse": 1.076564
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 965835,
+          "weightedCmykRmse": 1.350125
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        65,
+        118,
+        1257,
+        1111
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_375/exports/gratitude-family-photo-listening.pdf",
+          "bytes": 965835,
+          "sha256": "f7baa6a2a204601e4ba3bc844d835799dc559f625e1dae9ac2038381a007a557"
+        },
+        "webp": {
+          "path": "work/production/wave_375/exports/gratitude-family-photo-listening.webp",
+          "bytes": 1306012,
+          "sha256": "a5c8b51a80bc184e4ca1b051467a29ff153e330f25c49fc5a21e4a5ef38fc15e"
+        },
+        "thumb": {
+          "path": "work/production/wave_375/exports/gratitude-family-photo-listening-thumb.webp",
+          "bytes": 66526,
+          "sha256": "c9dd62e492ae9b26dbb7444d9549df5b3d931b53f1a435f6cf5fce2b305fd17a"
+        }
+      },
+      "proofSha256": "77e9a36e7096cbe663dd3ef04ec896a47d991e1b914778a3993437193cd5f199",
+      "pairMeanRgbDifference": 3.69715
+    }
+  ],
+  "deferred": [],
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T07:34:28.820Z"
+}

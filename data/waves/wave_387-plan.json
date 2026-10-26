@@ -1,0 +1,34 @@
+{
+  "wave": "wave_387",
+  "topic": "diwali",
+  "method": "builtin-image-generation",
+  "research": "data/research/diwali-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "diwali-outline-window-decoration",
+      "title": "Decorating a Window Coloring Scene",
+      "alt": "Decorating a Window Coloring Scene.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_387/source/diwali-outline-window-decoration.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "diwali-outline-packing-box",
+      "title": "Packing a Diwali Gift Coloring Scene",
+      "alt": "Packing a Diwali Gift Coloring Scene.",
+      "description": "SOURCE_REVIEW_REQUIRED",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_387/source/diwali-outline-packing-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}
