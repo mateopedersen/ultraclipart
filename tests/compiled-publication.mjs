@@ -3,10 +3,58 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
+import { spawnSync } from 'node:child_process';
 import { artwork, manifestFor, digest } from './fixtures/publication.mjs';
 import { validatePublication } from '../scripts/publication-policy.mjs';
 import { previewIdentity, previewUrls } from '../scripts/preview-assets.mjs';
-import { verifyCompiledPublication } from '../scripts/compiled-publication.mjs';
+import {
+  collectCompiledMediaReferences,
+  verifyCompiledPublication,
+} from '../scripts/compiled-publication.mjs';
+
+test('compiled references reject unverified CDN and local source URLs', () => {
+  const options = {
+    allowed: new Set(),
+    localPaths: new Set(['/catalog/private.webp']),
+    references: new Set(),
+    filename: 'page.html',
+  };
+  assert.throws(
+    () => collectCompiledMediaReferences('<img src="/catalog/private.webp">', options),
+    /local media/,
+  );
+  assert.throws(
+    () =>
+      collectCompiledMediaReferences(
+        '<img src="https://assets.ultraclipart.com/unverified.webp">',
+        options,
+      ),
+    /Unverified/,
+  );
+});
+
+test('large release scans do not retain complete HTML documents for short image URLs', () => {
+  const module = new URL('../scripts/compiled-publication.mjs', import.meta.url).href;
+  const result = spawnSync(
+    process.execPath,
+    [
+      '--max-old-space-size=128',
+      '--input-type=module',
+      '-e',
+      `
+    import { collectCompiledMediaReferences } from ${JSON.stringify(module)};
+    const options = { allowed: new Set(), localPaths: new Set(), references: new Set(), filename: 'sample.html' };
+    for (let i = 0; i < 120; i++) {
+      const url = '/previews/p1/' + i.toString(16).padStart(24, '0') + '-440.webp';
+      collectCompiledMediaReferences('<img src="' + url + '"><p>' + 'x'.repeat(2 * 1024 * 1024) + '</p>', options);
+    }
+    if (options.references.size !== 120) throw Error('Missing references');
+  `,
+    ],
+    { encoding: 'utf8', timeout: 30000, maxBuffer: 8192 },
+  );
+  assert.equal(result.status, 0, result.stderr);
+});
 
 function fixture() {
   const root = mkdtempSync(join(tmpdir(), 'uc-compiled-publication-'));

@@ -3,6 +3,26 @@ import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { previewIdentity, previewUrls, readPreviewIndex } from './preview-assets.mjs';
 
+export function collectCompiledMediaReferences(
+  text,
+  { allowed, localPaths, references, filename },
+) {
+  for (const match of text.matchAll(/["'](\/[A-Za-z0-9/._-]+)["']/g)) {
+    if (localPaths.has(match[1]))
+      throw Error(`Production still references local media: ${filename}`);
+  }
+  const remember = (value) => {
+    // RegExp matches may retain their entire multi-megabyte HTML source. Store
+    // an independent short string; keep the release check within normal memory.
+    if (!references.has(value)) references.add(Buffer.from(value).toString('utf8'));
+  };
+  for (const match of text.matchAll(/https:\/\/assets\.ultraclipart\.com\/[A-Za-z0-9/._-]+/g)) {
+    if (!allowed.has(match[0])) throw Error(`Unverified compiled CDN reference: ${match[0]}`);
+    remember(match[0]);
+  }
+  for (const match of text.matchAll(/\/previews\/p1\/[a-f0-9]{24}-\d+\.webp/g)) remember(match[0]);
+}
+
 /** Originals remain verified by readPublication. A screen thumbnail may use its
  * source-bound derivative, but downloadable representations must still appear. */
 export function verifyCompiledPublication({ publication, catalog, references, root, directory }) {

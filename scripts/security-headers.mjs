@@ -2,7 +2,10 @@ import { readFileSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join, resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
-import { verifyCompiledPublication } from './compiled-publication.mjs';
+import {
+  collectCompiledMediaReferences,
+  verifyCompiledPublication,
+} from './compiled-publication.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
 import { pruneVerifiedCatalogPages } from './catalog-pages/prune.mjs';
@@ -65,20 +68,18 @@ if (process.env.CF_PAGES === '1') {
   const allowed = new Set(publication.urls);
   const localPaths = new Set(publication.localPaths);
   const compiled = new Set();
+  let scanned = 0;
   // Every compiled media reference must belong to the verified release. Waves
   // may retain different immutable URLs instead of copying all earlier media.
   for (const file of files(dist).filter((path) => /\.(html|json|js)$/.test(path))) {
     const text = readFileSync(file, 'utf8');
-    for (const match of text.matchAll(/["'](\/[A-Za-z0-9/._-]+)["']/g)) {
-      if (localPaths.has(match[1]))
-        throw new Error(`Production still references local media: ${file}`);
-    }
-    for (const match of text.matchAll(/https:\/\/assets\.ultraclipart\.com\/[A-Za-z0-9/._-]+/g)) {
-      if (!allowed.has(match[0])) throw new Error(`Unverified compiled CDN reference: ${match[0]}`);
-      compiled.add(match[0]);
-    }
-    for (const match of text.matchAll(/\/previews\/p1\/[a-f0-9]{24}-\d+\.webp/g))
-      compiled.add(match[0]);
+    collectCompiledMediaReferences(text, {
+      allowed,
+      localPaths,
+      references: compiled,
+      filename: file,
+    });
+    if (++scanned % 5000 === 0) console.log(`Production media: ${scanned} files checked.`);
   }
   const presentation = verifyCompiledPublication({
     publication,
