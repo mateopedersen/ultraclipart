@@ -30,7 +30,10 @@ const artwork: Record<string, string> = {
   save: '<path d="M7 5h28l7 7v31H7Z" fill="#447bd0"/><path d="M13 5h19v13H13Z" fill="#bcd8ff"/><path d="M27 7h4v9h-4Z" fill="#456b9d"/><rect x="13" y="25" width="23" height="18" rx="2" fill="#fff"/><path d="M18 31h13M18 36h10" stroke="#b0c5df" stroke-width="2"/>',
 };
 // Local SVG paint servers add material depth without loading icon fonts or images.
-const uid = `studio-${crypto.randomUUID()}`;
+// IDs only need to be unique inside this document. Short, stable counters retain
+// every paint server while avoiding dozens of random UUIDs in each editor page.
+const local = Astro.locals as { studioIconSequence?: number };
+const uid = `si${(local.studioIconSequence = (local.studioIconSequence || 0) + 1)}`;
 const original = artwork[name] || artwork.elements;
 const colors = [...new Set([...original.matchAll(/fill="(#[a-f0-9]{6})"/gi)].map((m) => m[1]))];
 const shade = (hex: string, delta: number) =>

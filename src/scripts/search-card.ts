@@ -27,7 +27,12 @@ export function renderCard(item: SearchCard): HTMLElement {
     picture = link('', detail, 'art-picture'),
     image = document.createElement('img');
   image.src = item.thumb;
+  if (item.thumbSrcSet) {
+    image.srcset = item.thumbSrcSet;
+    image.sizes = '(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px';
+  }
   image.alt = item.alt;
+  image.title = item.title;
   image.width = 400;
   image.height = 400;
   image.loading = 'lazy';

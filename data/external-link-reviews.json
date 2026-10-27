@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "reviews": {
+    "https://policies.google.com/privacy": {
+      "checkedAt": "2026-10-26T18:58:14.724254+00:00",
+      "method": "official-source-web-read",
+      "title": "Google Privacy Policy",
+      "note": "Official policy content read through the web tool; direct HTTP 200 HTML title was outside the sampled prefix.",
+      "evidenceUrl": "https://policies.google.com/privacy"
+    },
+    "https://www.cloudflare.com/privacypolicy/": {
+      "checkedAt": "2026-10-26T18:58:14.724570+00:00",
+      "method": "official-source-web-read",
+      "title": "Cloudflare’s Privacy Policy",
+      "note": "Official policy content read through the web tool; direct HTTP 200 HTML title was outside the sampled prefix.",
+      "evidenceUrl": "https://www.cloudflare.com/privacypolicy/"
+    },
+    "https://www.cloudflare.com/service-specific-terms-application-services/": {
+      "checkedAt": "2026-10-26T18:58:14.724572+00:00",
+      "method": "official-source-web-read",
+      "title": "Service-Specific Terms — Cloudflare",
+      "note": "Official terms content read through the web tool; direct HTTP 200 HTML title was outside the sampled prefix.",
+      "evidenceUrl": "https://www.cloudflare.com/service-specific-terms-application-services/"
+    },
+    "https://oag.ca.gov/privacy/ccpa": {
+      "checkedAt": "2026-10-26T18:58:14.724572+00:00",
+      "method": "official-source-web-read",
+      "title": "California Consumer Privacy Act (CCPA) — California Attorney General",
+      "note": "Official public policy explanation read through the web tool; direct Node connection failed.",
+      "evidenceUrl": "https://oag.ca.gov/privacy/ccpa"
+    },
+    "https://educationendowmentfoundation.org.uk/education-evidence/evidence-reviews/cognitive-Science-approaches-in-the-classroom": {
+      "checkedAt": "2026-10-26T18:58:14.724573+00:00",
+      "method": "official-source-web-read",
+      "title": "Cognitive science approaches in the classroom — EEF",
+      "note": "Official report/download page read through the web tool; direct automated GET returned a 403 browser challenge.",
+      "evidenceUrl": "https://educationendowmentfoundation.org.uk/education-evidence/evidence-reviews/cognitive-Science-approaches-in-the-classroom"
+    }
+  }
+}

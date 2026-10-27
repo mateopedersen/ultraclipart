@@ -68,9 +68,15 @@ try {
     assert.equal(collection.mainEntity.numberOfItems, topicItems.length);
     assert.equal(collection.mainEntity.itemListElement.length, topicItems.length);
     if (topic === 'octopus') {
-      await expect(page.locator('.chips a[href="/clipart/crab/"]')).toHaveCount(1);
-      await expect(page.locator('.chips a[href="/clipart/lobster/"]')).toHaveCount(1);
-      await expect(page.locator('.chips a[href="/clipart/cow/"]')).toHaveCount(0);
+      await expect(page.locator('[data-related-collections] a[href="/clipart/crab/"]')).toHaveCount(
+        1,
+      );
+      await expect(
+        page.locator('[data-related-collections] a[href="/clipart/lobster/"]'),
+      ).toHaveCount(1);
+      await expect(page.locator('[data-related-collections] a[href="/clipart/cow/"]')).toHaveCount(
+        0,
+      );
     }
     await page.evaluate(async () => {
       await document.fonts.ready;

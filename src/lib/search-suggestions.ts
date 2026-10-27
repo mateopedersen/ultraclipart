@@ -7,6 +7,8 @@ export interface SearchSuggestion {
   href: string;
   kind: string;
   thumb?: string;
+  thumbSrcSet?: string;
+  alt?: string;
 }
 
 /** Promote deliberate subject/tool navigation, not incidental matches in page copy. */
@@ -41,6 +43,8 @@ export function searchSuggestions(
       href: `/art/${item.id}/`,
       kind: 'Artwork',
       thumb: item.thumb,
+      ...(item.thumbSrcSet ? { thumbSrcSet: item.thumbSrcSet } : {}),
+      alt: item.alt,
     })),
     ...matches.map(toSuggestion),
   ];

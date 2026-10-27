@@ -1,0 +1,35 @@
+ULTRACLIPART — YENİ 404 SAYFASI
+Tarih: 26 Ekim 2026
+Durum: Yalnızca yerel önizleme. Yayımlanmadı; üretim ve CDN değiştirilmedi.
+Önizleme: http://127.0.0.1:4326/__404-preview__/
+
+TASARIM
+Sayfa yeniden tasarlandı. Mavi dosya klasörü, 404 belgesi ve metalik büyüteçten oluşan özgün SVG kompozisyonu gerçek katalog eserleriyle birleştirildi. Açıklama ve arama mobilde görselden önce geliyor. Dört görselli konu bağlantısının yanında Favoriler, Clipart Studio, indirme/yazdırma rehberi ve bozuk bağlantı bildirim yolu bulunuyor. Konu kartları eşit yükseklikte; görseller kaynak oranları korunarak çerçevelere sığıyor.
+
+İŞLEV VE SEO
+Yerel derlenmiş sitede gerçek eksik ve iç içe adresler GET/HEAD isteklerine 404 döndürüyor. Noindex korunuyor; otomatik yönlendirme yok. Arama önerileri doğru esere gidiyor. JavaScript kapalıyken yerel GET formu ve kategori bağlantıları çalışıyor. Görsel alt/title değerleri ilgili eserin kendi katalog kaydından geliyor; dekoratif ikonlar boş alt ile bırakıldı. Yeni bir 404 JavaScript paketi eklenmedi.
+
+GERÇEKTEN ÇALIŞTIRILAN KONTROLLER
+- Astro denetimi: 458 dosya; 0 hata, 0 uyarı. Önceden mevcut 2 öneri (hint).
+- Gerçek şablonlarla yerel derleme: 24.589 sayfa başarılı.
+- Chromium ve WebKit: 320, 360, 390, 414, 600, 768, 1024, 1440 ve 1920 px. Toplam 18 görünüm geçti.
+- Yatay taşma, kesilen metin, çerçeveden kaçan öğe ve eşit kart yüksekliği kontrolleri geçti.
+- 404 içerik alanında her görünüm için otomatik WCAG 2 A/AA, 2.1 AA ve 2.2 AA taraması: 0 tespit. Bu sonuç tam erişilebilirlik sertifikası değildir.
+- Her motor için 5 işlev grubu; toplam 10 grup geçti:
+  1. Gerçek 404/noindex ve 12 farklı kurtarma adresinin 200 yanıtı.
+  2. Arama önerisinden doğru esere geçiş.
+  3. Ana sayfaya dönüş.
+  4. 390 px dokunma emülasyonunda öneri ve sahne eseri bağlantıları.
+  5. JavaScript kapalı form ve kategori akışları.
+- Testin son çalışması: 2026-10-26T16:11:57.447Z
+- İlgili kaynaklarda biçim denetimi ve git diff boşluk denetimi geçti.
+- Test kalıcı olarak tests/e2e/not-found.mjs dosyasına ve interface-pages CI grubuna eklendi. CI uzak sunucuda bu aşamada çalıştırılmadı.
+
+SINIRLAR
+Chromium/WebKit masaüstü ve mobil ekran/dokunma emülasyonu test edildi. Fiziksel iPhone/Android testi, canlı alan adı, CDN veya yeni PageSpeed ölçümü bu 404 çalışmasında yapılmadı. Bu rapor diğer bütün sayfaların yeniden tarandığı veya bütün skorların 100 olduğu anlamına gelmez.
+
+KANITLAR
+reports/not-found/final/report.json: yapılandırılmış sonuçlar
+reports/not-found/final/chromium-hero.png: masaüstü ana kompozisyon
+reports/not-found/final/webkit-390.png: mobil tam sayfa
+reports/not-found-typecheck.log ve reports/not-found-build.log: derleme kayıtları

@@ -1,0 +1,578 @@
+{
+  "wave": "wave_399",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "kwanzaa-folded-textiles",
+      "title": "Folded Woven Cloths with Striped Edges",
+      "alt": "Folded cream, mustard and navy woven cloths form a stack crossed by red, black and green fabric with fringed edges.",
+      "description": "Woven textures and short fringes distinguish the folded cloths in this compact stack. Cream, mustard and navy layers sit beneath a broad diagonal band of red, black and green fabric.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-folded-textiles.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 950,
+      "pdfHeight": 792,
+      "sourceType": "raster",
+      "sourceSha256": "02c5422fef64d26ac64a5421b8be51d238f8806ac48aa7f51e46a482dec0918b",
+      "inputSignature": "727b3f62bc549b6c5b982e5184d01cfce5aa6e8a62a752da8d50fed3a600bd3a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 982584,
+        "weightedCmykRmse": 1.302502
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1397138,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1188447,
+          "weightedCmykRmse": 0.723208
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1134881,
+          "weightedCmykRmse": 0.869203
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1052308,
+          "weightedCmykRmse": 1.061772
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 982584,
+          "weightedCmykRmse": 1.302502
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        58,
+        188,
+        1326,
+        974
+      ],
+      "image": {
+        "width": 950,
+        "height": 792,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_399/exports/kwanzaa-folded-textiles.pdf",
+          "bytes": 982584,
+          "sha256": "dbedde9085216f9689e60857e6eda693e8f6c4f50f9882bf06e9df3cebfe5ad4"
+        },
+        "webp": {
+          "path": "work/production/wave_399/exports/kwanzaa-folded-textiles.webp",
+          "bytes": 1577184,
+          "sha256": "b8137da7d33dff60fd008fce6416849c3557ec493b93e87003cf477f783016ba"
+        },
+        "thumb": {
+          "path": "work/production/wave_399/exports/kwanzaa-folded-textiles-thumb.webp",
+          "bytes": 71156,
+          "sha256": "8d416b80f2e778fa0e5d299629aa6ed8733b89dc173dbd44ac0db144c4a11854"
+        }
+      },
+      "proofSha256": "060563502e9540e3c16dbc1ad3ef4d565ce6ff3d7993e046ad8ab2e9b9cc1551",
+      "pairMeanRgbDifference": 4.00317
+    },
+    {
+      "id": "kwanzaa-family-welcome",
+      "title": "Greeting Visitors at a Ribbon-Decorated Door",
+      "alt": "A gray-haired man greets a woman in a sage coat and a child in navy dungarees beside an open wooden door.",
+      "description": "An open wooden door carries a small striped ribbon as three people exchange a greeting. The visitor\u2019s long sage coat and shoulder bag contrast with the older man\u2019s rust cardigan and the child\u2019s navy dungarees.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-family-welcome.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "6e91e511c7ba7e728b5ae42c6c3e225b8dce4ee2dd0a8d5a986ae638e7797adb",
+      "inputSignature": "4be098a2ad85b8d6d035d6ff9f22eba4fe25ab48dd47d04da9c42d8381ecb8c7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 985613,
+        "weightedCmykRmse": 0.81024
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1253238,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 985613,
+          "weightedCmykRmse": 0.81024
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        207,
+        11,
+        1116,
+        1119
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_399/exports/kwanzaa-family-welcome.pdf",
+          "bytes": 985613,
+          "sha256": "a30342ced6b8aa8e798396987ba5d19d7fc50f18f04df7c55528748771ca10a9"
+        },
+        "webp": {
+          "path": "work/production/wave_399/exports/kwanzaa-family-welcome.webp",
+          "bytes": 1087016,
+          "sha256": "6f49a0cd486588f82a8ab9be87c60f3afccc24f79a50eaac3fd280e097061777"
+        },
+        "thumb": {
+          "path": "work/production/wave_399/exports/kwanzaa-family-welcome-thumb.webp",
+          "bytes": 54750,
+          "sha256": "913e8f0e51a9da80fcd7ce29168a9af7daebbce997bd31ca08d42de223879eeb"
+        }
+      },
+      "proofSha256": "d83b9dd682a7c3c9592bb3887362950bca752ffa609342c8bcf5bb9332e1d558",
+      "pairMeanRgbDifference": 4.59024
+    },
+    {
+      "id": "kwanzaa-neighborhood-cleanup",
+      "title": "Working Together in a Community Garden",
+      "alt": "Two volunteers collect litter near a garden border, using a grabber and green bag beside a wooden notice frame.",
+      "description": "A silver-haired volunteer in blue work clothes holds a litter grabber beside a green bag. A second volunteer kneels to pick up paper near the planting border, with a plain wooden notice frame behind them.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-neighborhood-cleanup.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "2d259b87f1837ddb7cbb21f333fe29412891d7eab8a909900bb79b456cf427c7",
+      "inputSignature": "c4c54d40af4e528c80190f6e6451f32b891ace1d9b72b713964d6c408cf939ef",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 987181,
+        "weightedCmykRmse": 1.38875
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1495506,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1225137,
+          "weightedCmykRmse": 0.773291
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1157347,
+          "weightedCmykRmse": 0.912424
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1062216,
+          "weightedCmykRmse": 1.104094
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 987181,
+          "weightedCmykRmse": 1.38875
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        72,
+        35,
+        1249,
+        1107
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_399/exports/kwanzaa-neighborhood-cleanup.pdf",
+          "bytes": 987181,
+          "sha256": "71d56e103f0256725d2ed4b5707b72ef330689f21acac0395915e2a31b9a8d95"
+        },
+        "webp": {
+          "path": "work/production/wave_399/exports/kwanzaa-neighborhood-cleanup.webp",
+          "bytes": 1310980,
+          "sha256": "30040ad9401388f1df3cec852476b3fd21ad90997865db05653b9b88e3fb8dfa"
+        },
+        "thumb": {
+          "path": "work/production/wave_399/exports/kwanzaa-neighborhood-cleanup-thumb.webp",
+          "bytes": 73888,
+          "sha256": "31431fec218e5d0b723f01617b8b8c7fb1277db6fd329d5ce45d587dedfaa38f"
+        }
+      },
+      "proofSha256": "4a1d24b76c31b4e1e9bfeca2afb2eaf470c53f14bbcc4110901464bda818a00b",
+      "pairMeanRgbDifference": 4.00201
+    },
+    {
+      "id": "kwanzaa-basket-making",
+      "title": "Weaving a Basket with a Striped Rim",
+      "alt": "A seated woman with long braids weaves a basket with a red, black and green rim beside loose reeds and a finished basket.",
+      "description": "Long reeds extend from the basket taking shape in the weaver\u2019s lap. She sits on a wooden stool in a plum top and ochre trousers, with a reed bundle on one side and a finished basket on the other.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-basket-making.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3a61b5d9ffb23827910462afe9c7c47d59550bf8296a55c850bc0d77fe2837a6",
+      "inputSignature": "a0669897fde139c98928d7383ed336e9e490716e74860f3b789d0a0db1a797e5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 860562,
+        "weightedCmykRmse": 0.864461
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1088557,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 860562,
+          "weightedCmykRmse": 0.864461
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        54,
+        70,
+        1272,
+        1135
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_399/exports/kwanzaa-basket-making.pdf",
+          "bytes": 860562,
+          "sha256": "9e89e8b380a235b8a4e475edbce9ec4c3b4c213a4bc8ecf9b4228ecc7559b3c3"
+        },
+        "webp": {
+          "path": "work/production/wave_399/exports/kwanzaa-basket-making.webp",
+          "bytes": 932742,
+          "sha256": "ad7d9435475066f892268d1b0e7947a2ca98f77cd761a20b7ea08658ba9d2f04"
+        },
+        "thumb": {
+          "path": "work/production/wave_399/exports/kwanzaa-basket-making-thumb.webp",
+          "bytes": 57782,
+          "sha256": "0ae51b7e4cd4deea12ebb630f78731ac56bada7e789afdecfb733936e8dd6b13"
+        }
+      },
+      "proofSha256": "49408fd280b0deec02eb2abc0255db3c17ee3e88873be1c6ea954cd9c5e8ce3a",
+      "pairMeanRgbDifference": 3.04566
+    },
+    {
+      "id": "kwanzaa-repairing-community-bench",
+      "title": "Repairing a Wooden Park Bench Together",
+      "alt": "Two people support a wooden bench slat while an older man holds a screwdriver, with a striped tool roll beside the bench.",
+      "description": "A young helper in sage overalls supports a wooden backrest slat beside an older man with glasses and gray hair. His screwdriver is raised clear of the wood, and a red, black and green tool roll lies nearby.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-repairing-community-bench.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "a7af1b419cad2bef7e765f4a3603ff73496bad9fe25f0877ee3b326900673652",
+      "inputSignature": "1dd4887d84a16a3685180ff63227ac029491902cfb1e64e8da9b979bbc3d243e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 951574,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 951574,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        139,
+        90,
+        1519,
+        987
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_399/exports/kwanzaa-repairing-community-bench.pdf",
+          "bytes": 951574,
+          "sha256": "14637f5a6a773265b8fd6fdf2c6d78ba3b6634c4a2cc6a031ce46c11d69173a1"
+        },
+        "webp": {
+          "path": "work/production/wave_399/exports/kwanzaa-repairing-community-bench.webp",
+          "bytes": 1504992,
+          "sha256": "7aff23ebc5e1b88b44417ccc0f9b7a2fc5604d365eb60239bb342b9c80f71541"
+        },
+        "thumb": {
+          "path": "work/production/wave_399/exports/kwanzaa-repairing-community-bench-thumb.webp",
+          "bytes": 50646,
+          "sha256": "ebb7289ed7058e2ce74885dae9c894da20a612b6c88f3f95b4f089bc662b1275"
+        }
+      },
+      "proofSha256": "152e39a99e3b173cc50fd0dabc2ce94d53b2084586fc73daa042571408044d24",
+      "pairMeanRgbDifference": 4.15162
+    },
+    {
+      "id": "kwanzaa-heritage-interview",
+      "title": "Recording a Story at the Table",
+      "alt": "A silver-haired woman holds a handheld recorder while a girl listens across a round wooden table with an open notebook.",
+      "description": "The older storyteller gestures with one hand and holds a small recorder in the other. Across the round table, a girl in a mustard sweater listens with her chin resting on her hand beside a blank notebook.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-heritage-interview.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 950,
+      "pdfHeight": 868,
+      "sourceType": "raster",
+      "sourceSha256": "95fe225f2a0477a3c9a59b84e4207e266fd02e7156733f0ae985a91444bbe59a",
+      "inputSignature": "212c678388c39e128409f8b052ea042c78b18ef424adb7111f49e91a8548599d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 973712,
+        "weightedCmykRmse": 1.346445
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1452791,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1208694,
+          "weightedCmykRmse": 0.757844
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1140705,
+          "weightedCmykRmse": 0.896959
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1052650,
+          "weightedCmykRmse": 1.073922
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 973712,
+          "weightedCmykRmse": 1.346445
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        85,
+        75,
+        1228,
+        1139
+      ],
+      "image": {
+        "width": 950,
+        "height": 868,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_399/exports/kwanzaa-heritage-interview.pdf",
+          "bytes": 973712,
+          "sha256": "004d8db81537ed73e5996e7900cd5f30b91abb9e11eb272f996c39ff62bfd6e4"
+        },
+        "webp": {
+          "path": "work/production/wave_399/exports/kwanzaa-heritage-interview.webp",
+          "bytes": 1352200,
+          "sha256": "40a708c438c3a0d4d157e9e359c55e2ed25e69727d14ece0c72f6b4eec048e74"
+        },
+        "thumb": {
+          "path": "work/production/wave_399/exports/kwanzaa-heritage-interview-thumb.webp",
+          "bytes": 78834,
+          "sha256": "b267f5050c493e386c5fc7c11cbed9f6f9c5c4a6ed8d74b737a4454f689d3b7f"
+        }
+      },
+      "proofSha256": "7bdff9e0bfa320a3120fd2d30126ab65bb17cbccb0d21d24b95dc663e3200fdc",
+      "pairMeanRgbDifference": 4.89525
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T20:57:16.867780+00:00",
+  "screenReviewEvidence": "work/production/wave_399/native-proof-review.jpg",
+  "screenReviewNotes": "Actual six rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T20:58:03.127Z"
+}

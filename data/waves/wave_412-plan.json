@@ -1,0 +1,78 @@
+{
+  "wave": "wave_412",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-oral-history",
+      "title": "Recording a Conversation with a Veteran",
+      "alt": "An older bearded man holds a small recorder across a round table from a woman taking notes.",
+      "description": "A plain olive cap rests between the two speakers on the wooden tabletop. The man's blue shirt and gray vest contrast with the interviewer's green blouse, mustard trousers and spiral notebook.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-oral-history.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-homecoming-hug",
+      "title": "A Homecoming Hug",
+      "alt": "A red-haired woman in a tan field jacket lifts a smiling child in a red hoodie beside a packed duffel bag.",
+      "description": "The child wraps both arms around the woman's shoulders as she holds him close. Her olive trousers and lace-up boots stand beside the soft canvas bag, keeping the reunion scene compact and complete.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-homecoming-hug.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-community-meal",
+      "title": "Sharing a Community Meal",
+      "alt": "Three older adults smile over bowls of soup at a wooden table, with bread and water glasses between them.",
+      "description": "A man in a blue work shirt and olive cap sits opposite a rust-sweatered man, with a silver-haired woman in purple between them. The visible spoons and soup bowls capture a relaxed conversation over lunch.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-community-meal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-writing-a-letter",
+      "title": "Writing a Letter at a Wooden Desk",
+      "alt": "A woman with long braids writes at a wooden desk beside an olive cap, envelopes and a pencil cup.",
+      "description": "She leans over the paper in a textured green sweater, navy trousers and tan loafers. A single drawer and four slim legs keep the desk clearly defined beneath the scattered letter-writing supplies.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-writing-a-letter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-care-packages",
+      "title": "Packing Community Care Boxes",
+      "alt": "Two older volunteers pack cardboard care boxes at a folding table covered with towels, toiletries and wrapped supplies.",
+      "description": "The bearded man wears a denim shirt and plain olive cap, while the woman wears a red plaid shirt. Open boxes sit between neatly folded fabric and upright bottles, showing the practical packing activity clearly.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-care-packages.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-bike-mentoring",
+      "title": "Repairing a Bicycle Together",
+      "alt": "An older woman in denim overalls reaches for a wrench from a child beside a turquoise bicycle on a repair stand.",
+      "description": "The woman kneels near the raised rear wheel as the smiling child extends the tool across the handlebars. A blue maintenance stand supports the small bicycle, leaving its frame and pedals easy to see.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-bike-mentoring.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

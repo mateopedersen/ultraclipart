@@ -8,7 +8,7 @@ export class LatestRequest {
     this.controller?.abort();
   }
   async run<T>(
-    work: (signal: AbortSignal) => Promise<T>,
+    work: (signal: AbortSignal, emit: (value: T) => void) => Promise<T>,
     apply: (value: T) => void,
     fail: (error: unknown) => void,
   ) {
@@ -17,7 +17,10 @@ export class LatestRequest {
     const controller = new AbortController();
     this.controller = controller;
     try {
-      const result = await work(controller.signal);
+      const emit = (value: T) => {
+        if (sequence === this.sequence && !controller.signal.aborted) apply(value);
+      };
+      const result = await work(controller.signal, emit);
       if (sequence === this.sequence && !controller.signal.aborted) apply(result);
     } catch (error) {
       if (sequence === this.sequence && !controller.signal.aborted) fail(error);

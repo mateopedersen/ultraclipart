@@ -1,0 +1,180 @@
+---
+// A decorative writing-desk illustration, not a screenshot of the contact form.
+const p = (name: string) => `url(#contact-desk-${name})`;
+---
+
+<svg
+  class="contact-illustration"
+  viewBox="0 0 620 430"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <linearGradient
+      id="contact-desk-paper"
+      x1="210"
+      y1="30"
+      x2="420"
+      y2="320"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" />
+      <stop offset=".7" stop-color="#f8fbff" />
+      <stop offset="1" stop-color="#d8e7f7" />
+    </linearGradient>
+    <linearGradient
+      id="contact-desk-blue"
+      x1="150"
+      y1="210"
+      x2="400"
+      y2="405"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#83b9f0" />
+      <stop offset=".45" stop-color="#478bd1" />
+      <stop offset="1" stop-color="#225b9c" />
+    </linearGradient>
+    <linearGradient
+      id="contact-desk-flap"
+      x1="295"
+      y1="258"
+      x2="295"
+      y2="373"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#82b9ec" />
+      <stop offset="1" stop-color="#3577ba" />
+    </linearGradient>
+    <linearGradient
+      id="contact-desk-metal"
+      x1="446"
+      y1="100"
+      x2="480"
+      y2="260"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#eaf1f8" />
+      <stop offset=".3" stop-color="#a2b5ca" />
+      <stop offset=".48" stop-color="#fff" />
+      <stop offset=".7" stop-color="#7f98b5" />
+      <stop offset="1" stop-color="#d7e3ef" />
+    </linearGradient>
+    <linearGradient
+      id="contact-desk-pencil"
+      x1="441"
+      y1="151"
+      x2="462"
+      y2="151"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#f5cb73" />
+      <stop offset=".5" stop-color="#ffe6a6" />
+      <stop offset="1" stop-color="#cb963a" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="307" cy="391" rx="235" ry="21" fill="#224d7e" opacity=".07" />
+  <ellipse cx="302" cy="392" rx="164" ry="10" fill="#224d7e" opacity=".06" />
+  <g transform="rotate(9 448 236)">
+    <rect x="398" y="188" width="127" height="177" rx="14" fill="#a8c3df" />
+    <rect
+      x="393"
+      y="181"
+      width="127"
+      height="177"
+      rx="14"
+      fill={p('paper')}
+      stroke="#b4cbe3"
+      stroke-width="2"
+    />
+    <rect x="409" y="205" width="95" height="76" rx="7" fill="#e5f0fd" />
+    <path d="m420 264 19-23 16 16 12-13 27 30h-74Z" fill="#91b6dc" />
+    <circle cx="480" cy="224" r="9" fill="#efca7d" />
+    <path d="M412 303h75m-75 16h56" stroke="#b6cde5" stroke-width="5" stroke-linecap="round" />
+  </g>
+  <path
+    d="m118 237 152-111a22 22 0 0 1 26 0l155 111v124a19 19 0 0 1-19 19H136a18 18 0 0 1-18-18Z"
+    fill="#255589"
+  />
+  <path
+    d="m113 230 152-111a22 22 0 0 1 26 0l155 111v124a19 19 0 0 1-19 19H131a18 18 0 0 1-18-18Z"
+    fill="#bcd8f4"
+    stroke="#8db3da"
+    stroke-width="2"
+  />
+  <g transform="rotate(-7 280 194)">
+    <path d="M176 54h174l39 39v234H176Z" fill="#98b5d7" />
+    <path d="M171 48h174l39 39v234H171Z" fill={p('paper')} stroke="#a8c4e2" stroke-width="2" />
+    <path d="m345 48 39 39h-39Z" fill="#d0e2f5" stroke="#a8c4e2" />
+    <rect x="195" y="77" width="42" height="42" rx="11" fill="#dcecff" />
+    <path
+      d="M207 89v11a9 9 0 0 0 18 0V89"
+      stroke="#3979bc"
+      stroke-width="5"
+      stroke-linecap="round"
+    />
+    <path d="M253 90h68m-68 15h43" stroke="#94b5d9" stroke-width="5" stroke-linecap="round" />
+    <path
+      d="M196 153h155m-155 19h132m-132 19h148m-148 19h109"
+      stroke="#b3cce6"
+      stroke-width="5"
+      stroke-linecap="round"
+    />
+    <path
+      d="m199 255 14 10 26-27"
+      stroke="#3c7dbc"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path d="M257 254h72" stroke="#9abbdc" stroke-width="5" stroke-linecap="round" />
+  </g>
+  <path
+    d="m113 230 151 96a25 25 0 0 0 28 0l154-96v124a19 19 0 0 1-19 19H131a18 18 0 0 1-18-18Z"
+    fill={p('blue')}
+  />
+  <path d="m118 366 130-96a48 48 0 0 1 57 0l135 96" stroke="#306ba7" stroke-width="3" />
+  <path
+    d="m118 365 135-91a38 38 0 0 1 46 0l141 91a17 17 0 0 1-13 8H131a17 17 0 0 1-13-8Z"
+    fill={p('flap')}
+  />
+  <path
+    d="m120 234 144 91m174-91-145 91"
+    stroke="#d6eaff"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  <path d="M134 368h290" stroke="#90bee8" stroke-width="2" stroke-linecap="round" />
+  <g transform="rotate(22 461 192)">
+    <rect x="445" y="95" width="23" height="176" rx="7" fill={p('pencil')} stroke="#c99749" />
+    <rect x="445" y="91" width="23" height="25" rx="6" fill="#b1c5dc" />
+    <path d="M450 113v151" stroke="#fff0c1" stroke-width="3" />
+    <path d="m445 271 11.5 31 11.5-31Z" fill="#e8cca2" stroke="#b69b73" />
+    <path d="m452 292 4.5 12 4.5-12Z" fill="#294b6a" />
+    <path d="M450 95h13" stroke="#ecf5ff" stroke-width="3" stroke-linecap="round" />
+  </g>
+  <g transform="rotate(-13 98 159)">
+    <rect x="52" y="120" width="93" height="66" rx="17" fill="#a3c0df" />
+    <path
+      d="M49 127a17 17 0 0 1 17-17h56a17 17 0 0 1 17 17v29a17 17 0 0 1-17 17h-28l-21 15v-15h-7a17 17 0 0 1-17-17Z"
+      fill={p('paper')}
+      stroke="#a1bedf"
+      stroke-width="2"
+    />
+    <circle cx="74" cy="143" r="4" fill="#6494c5" />
+    <circle cx="94" cy="143" r="4" fill="#6494c5" />
+    <circle cx="114" cy="143" r="4" fill="#6494c5" />
+  </g>
+  <g transform="rotate(11 483 86)">
+    <circle cx="483" cy="84" r="37" fill="#c6d9ee" />
+    <circle cx="480" cy="80" r="37" fill={p('metal')} stroke="#a2bdd9" stroke-width="2" />
+    <circle cx="480" cy="80" r="28" fill="#e5f1ff" />
+    <path
+      d="m463 80 12 10 23-24"
+      stroke="#3679bb"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </g>
+</svg>

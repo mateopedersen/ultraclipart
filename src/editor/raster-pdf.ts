@@ -29,7 +29,7 @@ export async function exportRasterPdf(
   const output = await PDFDocument.create(),
     p = paperLayout(doc),
     page = output.addPage([p.pageWidth, p.pageHeight]);
-  output.setTitle('UltraClipart edited artwork');
+  output.setTitle(doc.title || 'UltraClipart edited artwork');
   output.setAuthor('UltraClipart');
   output.setCreator('UltraClipart editor');
   output.setProducer('UltraClipart');

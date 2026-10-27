@@ -1,0 +1,156 @@
+---
+import relations from '../../data/topic-relations.json';
+import copy from '../../data/collection-copy.json';
+import { availableTopics, publishedArt } from '../lib/catalog';
+import { relatedCollectionSlugs } from '../lib/related-collections';
+import { indexableTopics } from '../lib/sitemaps';
+import CatalogCount from './CatalogCount.astro';
+interface Props {
+  topic: string;
+}
+const { topic } = Astro.props;
+const groups = new Map<string, typeof publishedArt>();
+for (const item of publishedArt) {
+  const group = groups.get(item.topic) ?? [];
+  group.push(item);
+  groups.set(item.topic, group);
+}
+const eligible = new Set(indexableTopics(publishedArt, availableTopics).map((t) => t.slug));
+const related = relatedCollectionSlugs(topic, relations, eligible).flatMap((slug) => {
+  const subject = availableTopics.find((t) => t.slug === slug);
+  const items = groups.get(slug) ?? [];
+  const featured = copy[slug as keyof typeof copy]?.featured ?? [];
+  const image =
+    featured.map((id) => items.find((item) => item.id === id)).find(Boolean) ?? items[0];
+  return subject && image ? [{ subject, image }] : [];
+});
+---
+
+{related.length > 0 && (
+  <section
+    class="related-collections"
+    aria-labelledby="related-collections-heading"
+    data-related-collections
+  >
+    <h2 id="related-collections-heading">Related Clipart Collections</h2>
+    <div class="related-collection-grid">
+      {related.map(({ subject, image }) => (
+        <a class="related-collection-link" href={`/clipart/${subject.slug}/`}>
+          <span class="related-collection-image">
+            <img
+              src={image.thumb}
+              srcset={image.thumbSrcSet}
+              sizes="64px"
+              alt={image.alt}
+              title={image.title}
+              width="100"
+              height="100"
+              loading="lazy"
+              decoding="async"
+            />
+          </span>
+          <span class="related-collection-copy">
+            <strong>{subject.keyword.replace(/clipart/i, 'Clipart')}</strong>
+            <span>
+              <CatalogCount kind="topic" countKey={subject.slug} unit="illustration" />
+            </span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+<style>
+  .related-collections {
+    margin-block: 1.75rem 2rem;
+    min-width: 0;
+    container: related-collections / inline-size;
+  }
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin: 0 0 0.85rem;
+  }
+  .related-collection-grid {
+    --related-columns: 1;
+    --related-gap: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--related-gap);
+  }
+  .related-collection-link {
+    flex: 0 0
+      calc(
+        (100% - (var(--related-columns) - 1) * var(--related-gap)) / var(--related-columns) - 0.1px
+      );
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    min-width: 0;
+    padding: 0.75rem;
+    border: 1px solid #cdddf0;
+    border-radius: 16px;
+    color: #1c426e;
+    background: linear-gradient(150deg, #fff, #f3f8ff);
+    text-decoration: none;
+    box-shadow: 0 3px 0 #e2ecf8;
+  }
+  @container related-collections (min-width: 500px) {
+    .related-collection-grid {
+      --related-columns: 2;
+    }
+  }
+  @container related-collections (min-width: 760px) {
+    .related-collection-grid {
+      --related-columns: 3;
+    }
+    .related-collection-grid:has(> a:last-child:nth-child(4)) {
+      --related-columns: 2;
+    }
+  }
+  @container related-collections (min-width: 1000px) {
+    .related-collection-grid:has(> a:last-child:nth-child(4)) {
+      --related-columns: 4;
+    }
+  }
+  .related-collection-link:hover {
+    border-color: #609bdc;
+    background: #edf5ff;
+  }
+  .related-collection-link:focus-visible {
+    outline: 3px solid #1769d5;
+    outline-offset: 3px;
+  }
+  .related-collection-image {
+    display: grid;
+    place-items: center;
+    flex: 0 0 64px;
+    width: 64px;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    background: #fff;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .related-collection-copy {
+    display: grid;
+    gap: 0.3rem;
+    min-width: 0;
+  }
+  strong {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+  .related-collection-copy > span {
+    color: #526984;
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+</style>

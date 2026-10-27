@@ -16,14 +16,32 @@ export interface CutePick {
 }
 const mono =
   /black[\s&-]*(?:and[\s&-]*)?white|b\s*&\s*w|gr[ae]yscale|monochrome|outline|silhouette|coloring|charcoal|engraving|linocut|line[\s-]*art|dotwork|stipple/i;
+export const SURPRISE_INDEX_VERSION = 2;
 const unsuitable =
-  /halloween|horror|spooky|scary|frighten|vampire|skeleton|zombie|witch|angry|aggressive|growling|roaring|fierce|fangs|weapon|skull|crying/i;
-const signals: [RegExp, number][] = [
-  [/\b(kawaii|chibi|cute|adorable)\b/, 96],
-  [/\b(smiling|smile|cheerful|happy|joyful)\b/, 88],
-  [/\b(baby|newborn|nursery|calf|cub|chick|kitten|puppy|fawn|joey|owlet|eaglet)\b/, 82],
-  [/\b(plush|knitted|cuddling|hugging)\b/, 76],
-];
+  /\b(halloween|horror|spooky|scary|frighten(?:ed|ing)?|vampire|skeleton|zombie|witch|angry|aggressive|growling|roaring|fierce|fangs|weapon|skull|crying|sad|unhappy|grief|lonely|political|election|military|gun|sword|blood)\b/i;
+const animalTopics = new Set(
+  'baby-elephant bat bear bee butterfly camel cat chicken cow crab crocodile deer dog dolphin duck eagle elephant flamingo fox frog giraffe goat hedgehog hippo horse kangaroo kiwi koala lamb lion lobster monkey octopus owl panda parrot peacock penguin pig rabbit raccoon rhino shark sheep snake spider squirrel tiger turkey turtle whale wolf zebra'.split(
+    ' ',
+  ),
+);
+const familyTopics = new Set(['baby', 'boy', 'girl', 'mom', 'dad']);
+const playfulTopics = new Set(
+  'apple apricot avocado banana blackberry blackcurrant blueberry cantaloupe cherry coconut cranberry date dragon-fruit fig gooseberry grapefruit grapes green-apple guava heart kiwi-fruit kumquat lemon lime lychee mandarin mango melon mulberry nectarine orange papaya passion-fruit peach pear persimmon pineapple plum pomegranate pumpkin quince raspberry red-apple starfruit strawberry tangerine watermelon'.split(
+    ' ',
+  ),
+);
+const emotion =
+  /\b(smiling|smile|grinning|cheerful|happy|joyful|laughing|giggling|playful|waving|dancing|celebrating|delighted)\b/i;
+const affection =
+  /\b(cuddling|cuddle|hugging|hug|snuggling|snuggle|affectionate|tender|loving|cradling|reading together)\b/i;
+const juvenile =
+  /\b(baby|newborn|nursery|calf|cub|chick|kitten|puppy|fawn|joey|owlet|eaglet|toddler)\b/i;
+const cuteStyle = /\b(kawaii|chibi|cute|adorable)\b/i;
+const face = /\b(face|eyes|eyed|character|mascot|arms|legs|hands|feet)\b/i;
+const craftedObject =
+  /\b(knit|knitted|knitting|crochet|crocheted|amigurumi|embroidery|embroidered|felt|origami|papercut|paper cut)\b/i;
+const excludedTopics =
+  /^(?:.*-flag|political-.*|red-and-blue-states|democrat-donkey|republican-elephant|tesla|electric-car|iphone|samsung|.*monster|godzilla.*|kaiju|gta.*|grand-theft-auto|hunger-games|sunrise-on-the-reaping)$/;
 
 export function cuteConfidence(item: DiscoveryArtwork): number {
   if (!/^[a-z0-9-]+$/.test(item.id) || !/^[a-z0-9-]+$/.test(item.topic)) return 0;
@@ -34,23 +52,42 @@ export function cuteConfidence(item: DiscoveryArtwork): number {
     item.discovery?.cute === false
   )
     return 0;
-  const identity = `${item.id} ${item.title}`.toLowerCase().replace(/-/g, ' ');
-  if (mono.test(`${item.style} ${item.id} ${item.title}`) || unsuitable.test(identity)) return 0;
-  if (/\b(not cute|non cute|not smiling|unhappy)\b/.test(identity)) return 0;
   const tags = (Array.isArray(item.tags) ? item.tags : [])
-    .filter((x) => typeof x === 'string')
+    .filter((value) => typeof value === 'string')
     .join(' ');
-  const primary = `${identity} ${tags}`.toLowerCase();
-  const alt = (item.alt ?? '').toLowerCase().replace(/-/g, ' ');
-  if (/\b(angry|aggressive|growling|fierce|fangs|crying)\b/.test(alt)) return 0;
-  if (item.discovery?.cute === true) return 100;
-  // A real, positive subject cue is required. Medium/color alone never implies cute.
-  let score = 0;
-  for (const [pattern, weight] of signals) {
-    if (pattern.test(primary)) score = Math.max(score, weight);
-    else if (pattern.test(alt)) score = Math.max(score, weight - 8);
+  const text = `${item.id} ${item.title} ${item.alt ?? ''} ${tags}`
+    .toLowerCase()
+    .replace(/-/g, ' ');
+  if (
+    mono.test(`${item.style} ${text}`) ||
+    unsuitable.test(text) ||
+    excludedTopics.test(item.topic)
+  )
+    return 0;
+  if (/\b(not cute|non cute|not smiling)\b/.test(text)) return 0;
+  const animal = animalTopics.has(item.topic),
+    family = familyTopics.has(item.topic);
+  const animate = animal || family || item.topic === 'robot';
+  // A medium is never evidence of a happy subject. In particular, textile food
+  // and decorative objects do not become eligible because their material is soft.
+  if (!animate && craftedObject.test(text)) return 0;
+  if (animate) {
+    if (item.discovery?.cute === true) return 100;
+    if (affection.test(text)) return 96;
+    if (emotion.test(text)) return 90;
+    if ((animal || family) && juvenile.test(text)) return 86;
+    if (cuteStyle.test(text) && (animal || face.test(text))) return 80;
+    return 0;
   }
-  return score >= 68 ? score : 0;
+  // A cheerful anthropomorphic character can qualify; a still life, craft,
+  // color, style label or generic "cute" tag on its own cannot.
+  if (
+    (playfulTopics.has(item.topic) || item.discovery?.cute === true) &&
+    face.test(text) &&
+    emotion.test(text)
+  )
+    return item.discovery?.cute === true ? 96 : 78;
+  return 0;
 }
 
 function hash(value: string) {
@@ -144,8 +181,13 @@ export function pickCute(
   if (!available.length) available = currentSafe;
   if (!available.length) return null;
   const lastTopic = items.find((x) => x.id === recent[0])?.topic;
-  const varied = available.filter((x) => x.topic !== lastTopic);
+  const recentTopics = new Set(
+    recent.slice(0, 3).flatMap((id) => items.find((item) => item.id === id)?.topic ?? []),
+  );
+  const varied = available.filter((x) => !recentTopics.has(x.topic));
+  const differentLast = available.filter((x) => x.topic !== lastTopic);
   if (varied.length) available = varied;
+  else if (differentLast.length) available = differentLast;
   const groups = new Map<string, CutePick[]>();
   for (const item of available) {
     const group = groups.get(item.topic) ?? [];
@@ -154,5 +196,18 @@ export function pickCute(
   }
   const choose = <T>(pool: T[]) =>
     pool[Math.min(pool.length - 1, Math.max(0, Math.floor(random() * pool.length)))];
-  return choose(choose([...groups.values()]));
+  // Balance subjects rather than letting the number of fruit/material variants
+  // dominate discovery. Warm family scenes and expressive animals get priority.
+  const weighted = [...groups.entries()].map(([topic, picks]) => ({
+    picks,
+    weight: familyTopics.has(topic) ? 5 : animalTopics.has(topic) ? 4 : topic === 'robot' ? 2 : 1,
+  }));
+  let position =
+    Math.max(0, Math.min(0.9999999999999999, random())) *
+    weighted.reduce((total, group) => total + group.weight, 0);
+  for (const group of weighted) {
+    position -= group.weight;
+    if (position < 0) return choose(group.picks);
+  }
+  return choose(weighted[weighted.length - 1].picks);
 }

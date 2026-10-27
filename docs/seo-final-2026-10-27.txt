@@ -1,0 +1,93 @@
+ULTRACLIPART — SON YEREL TEKNİK SEO ÇALIŞMASI
+27 Ekim 2026
+
+Durum: YEREL. Canlıya yayın veya Search Console/Bing gönderimi yapılmadı.
+Derleme: build-1793071305644-45433
+Önizleme: http://127.0.0.1:4326/
+Türkçe rapor: http://127.0.0.1:4326/__seo-report/
+Site haritası: http://127.0.0.1:4326/sitemap.xml
+
+UYGULANAN DÜZENLEMELER
+
+1. Favicon
+Mevcut logo korunarak kare SVG, 96/192 piksel PNG, 16/32/48 piksel ICO ve
+180 piksel Apple simgesi üretildi. Sayfa başlığındaki simge bağlantıları
+yenilendi. Dosyalar her normal derlemede scripts/build-site-icons.mjs ile
+hazırlanır; isimleri sabittir. Kaynak logo değişmedi.
+
+2. Site ve sayfa kimliği
+Organization, WebSite ve WebPage aynı sabit kimliklerle bağlanır.
+Görsellerin Organization oluşturucusu da aynı kurum kimliğini kullanır.
+Kişisel projeler, arama sorguları ve kaydedilmiş kullanıcı verileri yapılandırılmış
+veriye yazılmaz. Sahte kişi yazarlığı, adres, ödül veya uzmanlık eklenmedi.
+
+3. Site haritaları
+sitemap.xml, sitemap-pages.xml ve sitemap-images.xml onaylı katalogdan üretilir.
+Mevcut ilk dosya adresleri korundu. Gelecekte 50.000 URL veya 50 MiB sınırına
+ulaşılırsa ek dosyalar otomatik oluşur ve ana dizine eklenir.
+Güvenilir değişiklik tarihi bulunmadığında sahte lastmod tarihi yazılmaz.
+
+4. Kalıcı kalite kapısı
+Normal Astro derlemesinde görsel ve bağlantı denetimlerinden sonra genel SEO
+denetimi de zorunlu çalışır. Başlık, açıklama, H1, dil, canonical, noindex,
+sosyal etiketler, JSON-LD, favicon ve sitemap üyeliği kontrol edilir.
+Hata bulunursa derleme başarısız olur; önceki yerel sürüm korunur.
+
+GERÇEKTEN ÇALIŞTIRILAN DOĞRULAMALAR
+
+- 24.589 derlenmiş HTML sayfasında teknik SEO denetimi: 0 hata.
+- 12.412 indekslenebilir sayfa; 12.177 bilinçli noindex sayfası.
+- İndekslenebilir sayfalarda aynı başlığı kullanan inceleme grubu: 0.
+- Sayfa haritasında 12.412 canonical URL.
+- Görsel haritasında 12.152 asıl görsel ve bunların açılış sayfaları.
+- Görsel SEO: 24.589 sayfa, 12.152 eser, 0 hata.
+- Bağlantı denetimi: 1.891.660 bağlantı, 0 hata, 0 yetim/erişilemeyen sayfa.
+- Birim kontrolleri: 20 geçti, 0 başarısız.
+- Chromium ve WebKit; mobil/masaüstü; JavaScript açık/kapalı: 64 kontrol geçti.
+- XML dosyaları ayrıca bağımsız XML okuyucuyla ve gerçek yerel HTTP yanıtlarıyla
+  doğrulandı. PNG/ICO dosya türleri ve kare boyutlar kontrol edildi.
+
+KANITLAR
+reports/seo-final/audit.json
+reports/seo-final/pages.json
+reports/seo-final/sayfalar.csv
+reports/seo-final/browser/report.json
+reports/seo-final/xml-http.json
+reports/seo-final/unit-results.json
+reports/seo-final/before/audit.json
+
+Önceki tam denetimde tek teknik eksik kare PNG favicon bağlantısıydı.
+Yeni derlemede bu eksik giderildi. Var olan doğru başlıklar, canonical adresler,
+lisanslar, görsel kimlikleri ve indeksleme politikası korunmuştur.
+
+KAPSAMIN SINIRLARI
+Bu çalışma teknik SEO yapılandırmasıdır. Tüm görsellerin yeni bir görsel
+incelemesi, fiziksel iPhone/Android testi veya Google sıralama garantisi değildir.
+Canlı Rich Results ve URL Inspection testi yapılmadı; yerel adresler Google'a
+gönderilmedi. Google değişiklikleri ancak yayın ve yeniden taramadan sonra görür.
+
+Canlı katalogda daha önce saptanan 752 yeni eser bu eski yerel katalogda yoktur.
+Kullanıcı uzak katalog eşleştirmesini erteledi. İleride yayın yapılmadan önce yeni
+canlı kayıtlar korunarak eşleştirme gerekir. Hazır assets robots.txt dosyası bu
+çalışmada R2'ye yüklenmedi. Kullanıcı projeleri ve tercihleri silinmedi.
+
+RESMÎ KAYNAKLAR
+https://developers.google.com/search/docs/appearance/favicon-in-search
+https://developers.google.com/search/docs/appearance/site-names
+https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap
+https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+https://developers.google.com/search/docs/appearance/title-link
+https://developers.google.com/search/docs/appearance/structured-data/image-license-metadata
+
+YENİDEN ÇALIŞTIRMA
+icons:build — kararlı favicon dosyalarını üretir.
+seo:core:audit — belirtilen derleme klasörünün teknik SEO denetimini yapar.
+seo:core:report — mevcut kanıttan Türkçe raporu oluşturur.
+test:e2e:seo-core — yerel derlemede tarayıcı doğrulamalarını çalıştırır.
+Normal build ayrıca zorunlu görsel, bağlantı ve genel SEO kapılarını çalıştırır.
+
+HIZ ÇALIŞMASI
+Kullanıcının isteğiyle hız taraması 177 adres / 354 ölçümde kapatıldı.
+İlk plandaki 578 ölçüm tamamlanmış gibi raporlanmadı. SEO değişikliklerinden
+sonra yeni Lighthouse taraması başlatılmadı. Deneysel kart boyutu değişiklikleri
+ürün koduna alınmadı; önceki başarılı performans düzenlemeleri korundu.

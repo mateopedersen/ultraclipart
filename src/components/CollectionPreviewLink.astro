@@ -1,0 +1,107 @@
+---
+import { collectionPreview } from '../lib/collection-preview';
+import CatalogCount from './CatalogCount.astro';
+import NavigationArrow from './NavigationArrow.astro';
+interface Props {
+  href: string;
+  label: string;
+  sourceId: string;
+}
+const { href, label, sourceId } = Astro.props;
+const topic = href.split('/').filter(Boolean)[1];
+const examples = collectionPreview(topic, sourceId);
+---
+
+<a class="collection-preview-link" href={href} data-related-end>
+  <span class="collection-preview-images" style={`--preview-count: ${examples.length}`}>
+    {examples.map((artwork) => (
+      <img
+        src={artwork.thumb}
+        srcset={artwork.thumbSrcSet}
+        sizes="(max-width: 650px) 72px, 80px"
+        alt={artwork.alt}
+        title={artwork.title}
+        width="100"
+        height="100"
+        loading="lazy"
+        decoding="async"
+        data-collection-preview-id={artwork.id}
+      />
+    ))}
+  </span>
+  <span class="collection-preview-copy">
+    <strong>{label}</strong>
+    <span>
+      <CatalogCount kind="topic" countKey={topic} unit="illustration" />
+    </span>
+  </span>
+  <NavigationArrow size={22} variant="collection" />
+</a>
+
+<style>
+  .collection-preview-link {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) 22px;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 18px 22px;
+    border: 1px solid #c7d9ee;
+    border-radius: 18px;
+    background: linear-gradient(125deg, #fff, #edf5ff);
+    box-shadow: 0 3px 0 #e1eaf6;
+    color: #214d7c;
+    text-decoration: none;
+  }
+  .collection-preview-link:hover {
+    border-color: #83a9d2;
+  }
+  .collection-preview-images {
+    display: grid;
+    grid-template-columns: repeat(var(--preview-count), minmax(0, 1fr));
+    width: calc(var(--preview-count) * 80px + (var(--preview-count) - 1) * 9px);
+    max-width: 100%;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+  }
+  .collection-preview-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    padding: 5px;
+    object-fit: contain;
+    border: 1px solid #d8e4f2;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 2px 0 #dce7f4;
+  }
+  .collection-preview-copy {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+  strong {
+    font-size: 17px;
+    font-weight: 650;
+    line-height: 1.4;
+  }
+  .collection-preview-copy > span {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #526987;
+    text-transform: capitalize;
+  }
+  @media (max-width: 650px) {
+    .collection-preview-link {
+      grid-template-columns: minmax(0, 1fr) 22px;
+      gap: 16px;
+      padding: 16px;
+    }
+    .collection-preview-images {
+      grid-column: 1 / -1;
+      width: calc(var(--preview-count) * 72px + (var(--preview-count) - 1) * 9px);
+    }
+  }
+</style>

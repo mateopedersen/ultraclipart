@@ -11,6 +11,7 @@ const links = [
     items: [
       ['All Topics', '/categories/'],
       ['Collections', '/collections/'],
+      ['Library Index', '/library-index/'],
       ['New Clipart', '/new/'],
       ['Black & White', '/black-and-white/'],
       ['Your Boards', '/favorites/'],
@@ -52,7 +53,7 @@ const links = [
       ['About UltraClipart', '/about/'],
       ['Contact Us', '/contact/'],
       ['Copyright & Corrections', '/copyright/'],
-      ['Our Creative Process', '/editorial-process/'],
+      ['Our Editorial Process', '/editorial-process/'],
     ],
   },
 ];
@@ -65,7 +66,8 @@ const showcase = [
   return item ? [item] : [];
 });
 const showInvitation = Astro.url.pathname !== '/';
-const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
+const sculpture = (name: string) =>
+  name === 'studio' ? '/illustrations/studio-compose-v3.svg' : `/illustrations/footer/${name}.svg`;
 ---
 
 <footer class="site-footer" aria-label="Site footer">
@@ -114,7 +116,16 @@ const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
           {showcase.map((item, i) => (
             <div class={`footer-art-card footer-art-card-${i}`}>
               <div class="footer-art-paper">
-                <img src={item.thumb} alt="" width="200" height="200" loading="lazy" />
+                <img
+                  title={item.title}
+                  src={item.thumb}
+                  srcset={item.thumbSrcSet}
+                  sizes="(max-width: 950px) 120px, (max-width: 1200px) 135px, 150px"
+                  alt={item.alt}
+                  width="200"
+                  height="200"
+                  loading="lazy"
+                />
               </div>
               <span>{['Fruit Illustrations', 'Animal Clipart', 'Hearts & Flowers'][i]}</span>
             </div>
@@ -180,21 +191,18 @@ const sculpture = (name: string) => `/illustrations/footer/${name}.svg`;
       ))}
     </div>
     <div class="footer-brand-row">
-      <a class="brand footer-brand" href="/">
-        <img src="/logo.svg" width="40" height="44" alt="" />
-        <span>UltraClipart</span>
-      </a>
-      <p>
-        <strong>Clipart and design tools</strong> for classroom materials, crafts and personal
-        projects.
+      <div class="footer-brand-lockup">
+        <a class="brand footer-brand" href="/">
+          <img src="/logo.svg" width="40" height="44" alt="" />
+          <span>UltraClipart</span>
+        </a>
+        <p class="footer-copyright">© {new Date().getFullYear()}</p>
+      </div>
+      <p class="footer-message">
+        <strong>
+          <span aria-hidden="true">🎨</span> Discover clipart for your next creative project.
+        </strong>
       </p>
-    </div>
-    <div class="footer-bottom">
-      <p>© {new Date().getFullYear()} UltraClipart</p>
-      <a href="/cookies/#cookie-preferences" data-cookie-settings>
-        Cookie Settings
-      </a>
-      <span class="footer-license-note">Artwork is free for personal and educational use.</span>
       <a class="footer-back-top" href="#page-top">
         Back To Top <NavigationArrow size={25} direction="up" light />
       </a>

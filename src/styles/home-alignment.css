@@ -1,3 +1,11 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--page-section-gap);
+}
+.home-page .home-recent .section-head {
+  margin-top: 0;
+}
 .home-page .section-head {
   flex-wrap: wrap;
   align-items: baseline;
@@ -67,6 +75,7 @@
   container-type: inline-size;
 }
 .home-recent .home-recent-grid {
+  display: grid;
   grid-template-columns: minmax(0, 1fr);
 }
 .home-recent-grid > :nth-child(n + 7) {

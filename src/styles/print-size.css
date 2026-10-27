@@ -345,8 +345,8 @@
 }
 .print-tool .print-eyebrow {
   margin: 0 0 5px;
-  font-size: 13px;
-  color: #5c6c80;
+  font-size: 14px;
+  color: var(--brand-accent);
   letter-spacing: 0;
   font-weight: 600;
 }

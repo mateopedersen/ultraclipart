@@ -61,7 +61,16 @@ const categories = [
     {categories.map((category) => (
       <a href={`/collection/${category.key}/`}>
         <span class="home-category-picture">
-          <img src={category.image.thumb} alt="" width="48" height="48" decoding="async" />
+          <img
+            title={category.image.title}
+            src={category.image.thumb}
+            srcset={category.image.thumbSrcSet}
+            sizes="48px"
+            alt={category.image.alt}
+            width="48"
+            height="48"
+            decoding="async"
+          />
         </span>
         <span class="home-category-copy">
           <strong>{category.label}</strong>

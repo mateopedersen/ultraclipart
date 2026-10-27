@@ -19,10 +19,12 @@ import { studioElements } from '../editor/elements';
     </button>
   </div>
   <div data-library-view="artwork">
-    <p class="uc-hint">
-      Start with {featuredStudioArt.length.toLocaleString('en-US')} featured artworks, or search the
-      full catalog. Select a thumbnail to add it to your canvas.
-    </p>
+    <nav class="wb-library-path" aria-label="Artwork category path">
+      <button data-library-home>Categories</button>
+      <button data-library-parent hidden></button>
+      <span data-library-current></span>
+    </nav>
+    <p class="uc-hint">Choose artwork to add to your canvas.</p>
     <label>
       Search artwork
       <input
@@ -40,36 +42,39 @@ import { studioElements } from '../editor/elements';
         All Artwork
       </button>
     </div>
-    <div class="uc-row">
-      <label>
-        Visual style
-        <select data-artwork-style>
-          <option value="">All styles</option>
-          <option value="realistic">Realistic</option>
-          <option value="Watercolor">Watercolor</option>
-          <option value="Color">Color illustration</option>
-          <option value="Outline">Line art</option>
-          <option value="Black &amp; White">Black &amp; white</option>
-        </select>
-      </label>
-      <label>
-        Subject
-        <select data-artwork-topic>
-          <option value="">All subjects</option>
-        </select>
-      </label>
-    </div>
-    <div class="uc-library-options">
-      <label>
-        Sort By
-        <select data-artwork-sort>
-          <option value="featured">Recommended</option>
-          <option value="title">Name A–Z</option>
-          <option value="newest">Newest</option>
-        </select>
-      </label>
-      <button data-artwork-clear>Clear Filters</button>
-    </div>
+    <details class="wb-library-filters">
+      <summary>Filter &amp; Sort Artwork</summary>
+      <div class="uc-row">
+        <label>
+          Visual style
+          <select data-artwork-style>
+            <option value="">All styles</option>
+            <option value="realistic">Realistic</option>
+            <option value="Watercolor">Watercolor</option>
+            <option value="Color">Color illustration</option>
+            <option value="Outline">Line art</option>
+            <option value="Black &amp; White">Black &amp; white</option>
+          </select>
+        </label>
+        <label>
+          Subject
+          <select data-artwork-topic>
+            <option value="">All subjects</option>
+          </select>
+        </label>
+      </div>
+      <div class="uc-library-options">
+        <label>
+          Sort By
+          <select data-artwork-sort>
+            <option value="featured">Recommended</option>
+            <option value="title">Name A–Z</option>
+            <option value="newest">Newest</option>
+          </select>
+        </label>
+        <button data-artwork-clear>Clear Filters</button>
+      </div>
+    </details>
     <p class="uc-hint" data-artwork-count aria-live="polite">
       Loading the artwork library…
     </p>
@@ -79,9 +84,14 @@ import { studioElements } from '../editor/elements';
         Previous
       </button>
       <span data-artwork-page></span>
+
       <button data-artwork-more hidden>
         Next
       </button>
+      <label class="wb-page-jump">
+        Go to
+        <input data-artwork-jump type="number" min="1" value="1" aria-label="Artwork page number" />
+      </label>
     </div>
     <button class="uc-upload-art" data-action="open-import">
       Import your own PNG / WebP
@@ -143,9 +153,14 @@ import { studioElements } from '../editor/elements';
         Previous
       </button>
       <span data-element-page></span>
+
       <button data-element-more hidden>
         Next
       </button>
+      <label class="wb-page-jump">
+        Go to
+        <input data-element-jump type="number" min="1" value="1" aria-label="Vector page number" />
+      </label>
     </div>
     <p class="uc-hint">
       Each element becomes an editable vector layer. Use Recolor for individual colors, or Separate

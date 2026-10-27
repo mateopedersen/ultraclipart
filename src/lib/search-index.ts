@@ -1,5 +1,6 @@
 import { normalizeQuery, artworkSearchFields, type SearchArtwork } from './search.ts';
 import { isMonochrome, type MonochromeDirectory } from './monochrome.ts';
+import { newestFirst } from './publication-order.ts';
 
 export interface DownloadDetails {
   width: number;
@@ -17,6 +18,7 @@ export interface SearchCard {
   title: string;
   alt: string;
   thumb: string;
+  thumbSrcSet?: string;
   webp: string;
   pdf?: string;
   editable?: boolean;
@@ -69,6 +71,7 @@ export function cardMetadata(item: SearchArtwork & SearchCard): SearchCard {
     title: item.title,
     alt: item.alt,
     thumb: item.thumb,
+    ...(item.thumbSrcSet ? { thumbSrcSet: item.thumbSrcSet } : {}),
     webp: item.webp,
     ...(item.pdf ? { pdf: item.pdf } : {}),
     ...(item.editable === false ? { editable: false } : {}),
@@ -83,7 +86,7 @@ export function buildSearchIndex(
   const byId = new Map<string, SearchArtwork & SearchCard>();
   for (const item of source) if (!byId.has(item.id)) byId.set(item.id, item);
   const unique = [...byId.values()];
-  const items = unique.sort((a, b) => a.title.localeCompare(b.title, 'en'));
+  const items = [...unique].sort((a, b) => a.title.localeCompare(b.title, 'en'));
   const files = new Map<string, unknown>();
   const buckets = new Map<string, Record<string, number[]>>();
   const lexicons = new Map<number, Set<string>>();
@@ -156,9 +159,8 @@ export function buildSearchIndex(
     files.set(`${version}/prefix/${initial}`, [...words].sort());
   for (const [name, ordinals] of facets) files.set(`${version}/facets/${name}`, ordinals);
   const titleOrder = items.map((_, i) => i);
-  const newestOrder = [...titleOrder].sort(
-    (a, b) => (items[b].createdAt ?? '').localeCompare(items[a].createdAt ?? '') || a - b,
-  );
+  const ordinalsById = new Map(items.map((item, index) => [item.id, index]));
+  const newestOrder = newestFirst(unique).map((item) => ordinalsById.get(item.id)!);
   for (const [sort, order] of [
     ['title', titleOrder],
     ['newest', newestOrder],

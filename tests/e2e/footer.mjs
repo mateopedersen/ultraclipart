@@ -27,6 +27,55 @@ try {
       await expect(footer).toHaveCount(1);
       await expect(footer).toHaveAttribute('data-ready', 'true');
       await footer.scrollIntoViewIfNeeded();
+      await expect(footer.locator('[data-cookie-settings]')).toHaveCount(0);
+      await expect(footer.locator('.footer-license-note')).toHaveCount(0);
+      await expect(footer.locator('.footer-copyright')).toHaveText(/^© \d{4}$/);
+      await expect(footer.locator('.footer-message strong')).toContainText(
+        'Discover clipart for your next creative project.',
+      );
+      const lockup = await footer.locator('.footer-brand-lockup').evaluate((element) => {
+        const logo = element.querySelector('.footer-brand').getBoundingClientRect();
+        const copyright = element.querySelector('.footer-copyright').getBoundingClientRect();
+        return {
+          below: copyright.top >= logo.bottom,
+          inside: copyright.left >= logo.left - 1 && copyright.right <= logo.right + 1,
+          weight: Number(getComputedStyle(element.querySelector('.footer-copyright')).fontWeight),
+          colorMatch:
+            getComputedStyle(element.querySelector('.footer-copyright')).color ===
+            getComputedStyle(element.querySelector('.footer-brand')).color,
+          fontMatch:
+            getComputedStyle(element.querySelector('.footer-copyright')).fontFamily ===
+            getComputedStyle(element.querySelector('.footer-brand')).fontFamily,
+        };
+      });
+      assert.ok(
+        lockup.below &&
+          lockup.inside &&
+          lockup.weight === 700 &&
+          lockup.colorMatch &&
+          lockup.fontMatch,
+        'Copyright belongs directly below the logo',
+      );
+      const centers = await footer.locator('.footer-brand-row').evaluate((row) => {
+        const bounds = (selector) => row.querySelector(selector).getBoundingClientRect();
+        const brand = bounds('.footer-brand-lockup');
+        const message = bounds('.footer-message');
+        const top = bounds('.footer-back-top');
+        return {
+          vertical: Math.max(
+            Math.abs(brand.top + brand.height / 2 - message.top - message.height / 2),
+            Math.abs(top.top + top.height / 2 - message.top - message.height / 2),
+          ),
+          horizontal: Math.max(
+            Math.abs(brand.left + brand.width / 2 - message.left - message.width / 2),
+            Math.abs(top.left + top.width / 2 - message.left - message.width / 2),
+          ),
+        };
+      });
+      if (width > 950)
+        assert.ok(centers.vertical < 1, 'Desktop footer items share a vertical center');
+      if (width <= 600)
+        assert.ok(centers.horizontal < 1, 'Mobile footer items share a horizontal center');
       await footer.locator('img').evaluateAll(async (images) =>
         Promise.all(
           images.map(async (img) => {

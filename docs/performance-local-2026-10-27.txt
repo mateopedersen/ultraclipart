@@ -1,0 +1,102 @@
+ULTRACLIPART — YEREL STUDIO VE PERFORMANS ÇALIŞMASI
+27 Ekim 2026
+
+YAYIN DURUMU
+Bu çalışma yereldir. GitHub yayını, Cloudflare dağıtımı veya canlı önbellek
+temizliği yapılmadı. Kullanıcının yeni bir yayın talimatı gerekiyor.
+
+Son derleme: build-1793064230997-27662
+Derlenmiş önizleme: http://127.0.0.1:4326/
+Studio: http://127.0.0.1:4326/create/
+Türkçe rapor: http://127.0.0.1:4326/__performance-report/
+4323 portu kaynak geliştirme önizlemesidir; 4326 tamamlanmış derlemeyi sunar.
+
+TAMAMLANAN ÜRÜN DÜZENLEMELERİ
+- Studio: Edit / Print & Create akışı, kategori ve sayfa tabanlı kütüphaneler,
+  100 yeni komut, mobil araç paneli, komut arama, pano ve kayıt noktaları.
+  100 komut, birbirinden bağımsız 100 ürün modülü olarak sayılmadı.
+- 18 ayrı katmanlı proje. Önizleme ve düzenleyici aynı katman planını kullanır.
+- Proje adı ve dosya adı; PNG, JPG, WebP, SVG, PDF ve gerçek .docx çıktısı.
+  Word çıktısı tasarımı birleşik görsel olarak taşır; ayrı Word katmanları yoktur.
+- Favorites: tüm kayıtların asıl Image veya PDF dosyalarıyla ZIP indirilmesi;
+  ilerleme, iptal, yeniden açma, yeniden deneme ve büyük arşivlerin bölünmesi.
+- Aynı kaynak doğrulaması, dosya boyutu, MIME ve SHA-256 kontrolleri korundu.
+  Favorites, panolar, projeler ve kullanıcı tercihleri silinmedi.
+
+ORTAK PERFORMANS ÇÖZÜMLERİ
+- Categories ilk görünümde 12 konu kartı oluşturur. Diğer konuların HTML
+  bağlantıları korunur; JavaScript kapalıysa tüm konular görünür.
+- Metin arama dizini ilk açılıştan ayrıldı. Yalnızca gerektiğinde indirilir,
+  ayrı bir iş parçacığında hazırlanır. Eski yanıt yeni sorguyu değiştiremez.
+- Bütün menü seçenekleri için peşin görsel indirme kaldırıldı. Kullanıcının
+  yöneldiği seçeneğin ilgili görselleri öncelik alır.
+- Konu kapaklarında kaynağa bağlı 320 piksel görüntüler ve mevcut responsive
+  adaylar kullanılır. Yalnızca gereken kapaklar üretildi; asıl dosyalar korunur.
+- Studio'nun 18 proje önizlemesi sürümlü, bağımsız SVG dosyalarıdır. Ekran
+  dışındaki önizlemeler doğal lazy loading ile yüklenir.
+- Büyük JSON-LD blokları sayfa gövdesinin sonuna taşınır. İçerikleri,
+  kimlikleri ve sıraları korunur; görünür ilk içerik daha önce işlenebilir.
+- Arayüzün mevcut fontu uygun metin sayfalarında öncelikli yüklenir.
+  Onaylanmış Avenir/Inter ve yalnızca Guides/Teachers Reader kapsamı korunur.
+- Çerez bildirimi büyük düzenleyici modülünün yüklenmesini beklemez.
+  Bölge kontrolünün süre sınırı ve kayıtlı tercihler korunur.
+- Düzenleyici ekran kopyasını önce gösterebilir; asıl dosya doğrulanmadan
+  düzenleme ve dışa aktarma açılmaz. Kalite ve doğrulama güvenliği düşürülmedi.
+- Yeni derleme ayrı bir klasörde hazırlanır. Görsel ve bağlantı kapıları
+  geçmeden önizleme adresi değiştirilmez. Yetersiz disk alanı önceden yakalanır.
+
+ÖLÇÜM KAPSAMI VE GERÇEK SONUÇ KAYITLARI
+Lighthouse 13.5.0: 289 ayrı adres; mobil ve masaüstü için toplam 578 ölçüm.
+Bu plan 238 konu sayfasının ve 20 koleksiyon sayfasının tamamını, ayrıca
+diğer önemli sayfa türlerini ve seçilmiş düzenleyici/görsel örneklerini içerir.
+Her görsel detay URL'sine tek tek Lighthouse çalıştırıldığı iddia edilmez.
+Her ölçüm yeni Chrome işlemiyle, aynı değişmeyen derlemede yapılır.
+
+Güncel tamamlanma ve puanlar:
+  reports/performance/catalog-final/progress.json
+  reports/performance/catalog-final/statistics.json
+  reports/performance/catalog-final/sayfa-sonuclari.csv
+  reports/performance/catalog-final/ozet.txt
+  reports/performance/catalog-final/summary.json
+Ham Lighthouse dosyaları aynı klasörde .json.gz biçimindedir.
+Ölçülmeyen veya çalıştırma hatası olan adres başarılı sayılmaz. Tüm adreslerde
+100 elde edilmediyse hedef karşılandı denmez. En yüksek tekrar seçilmez.
+
+AYRI DOĞRULAMALAR
+- Son derlemenin 24.589 HTML sayfasında statik denetim: 57.068 yerel görsel
+  adresinde eksik dosya yok; görsel SEO ve bağlantı kapılarında hata yok.
+- 1.891.660 bağlantı ve indekslenebilir sayfalardaki 335.761 katalog görseli
+  şeması denetlendi. Bu bir görselin içeriğinin yeniden gözle incelenmesi değildir.
+- Son derlemede 32 ortak etkileşim kontrolü, 12 Studio kütüphane ekran durumu,
+  4 kategori arama durumu ve 12 çerez/CSP durumu tamamlandı.
+- 100 komut kaynak geliştirme sürümünde Chromium ve WebKit ile çalıştırıldı.
+- 18 proje iki motorda açıldı ve gerçek PNG dosyaları indirildi.
+- Son derlemede iki motorda 6 dışa aktarma biçiminin gerçek dosyaları incelendi.
+- Kanıt dosyaları ve kapsamları: reports/studio-release/final-evidence-index.json
+
+SINIRLAR
+Lighthouse yerel laboratuvar ölçümüdür; canlı PageSpeed veya CrUX değildir.
+Chromium/WebKit testleri fiziksel iPhone Safari veya Android cihaz testi değildir.
+Kasıtlı noindex sayfaları SEO puanı için arama motorlarına açılmadı.
+Word dosya yapısı ve Quick Look görünümü kontrol edildi; Microsoft Word
+uygulaması veya fiziksel yazıcı testi yapılmadı.
+
+Gerçek ağ/işlemci yavaşlatması ayrıca kayıtlıdır:
+  reports/performance/throttled-editor-final/report.json
+LCP 0,75–0,86 sn, önizleme yanıt sonu 1,14–1,79 sn ve asıl dosya doğrulanıp
+düzenlemeye hazır olma 4,46–8,08 sn. LCP öğesi çerez metniydi; bu rakam asıl
+görselin 0,75 sn içinde tamamen indiği anlamına gelmez. Varsayılan Lighthouse
+simülasyonundaki düzenleyici puanları ayrı değerlendirilir.
+
+İLERİDEKİ YAYIN
+Bu eski yerel katalog canlıdaki 752 daha yeni kaydı içermiyor. Kullanıcı uzak
+katalog karşılaştırmasını erteledi. Yayın yetkisi verilse bile önce güncel
+envanterle eşleştirme yapılmalı; daha yeni canlı içerik üzerine yazılmamalı.
+Assets robots.txt planı ayrıca hazırlanmış yerel bir dosyadır; canlı R2
+nesnesinin yayımlandığı veya Google'ın taradığı iddia edilmez.
+
+KAPSAMIN KAPATILMASI
+Kullanıcı 27 Ekim 2026 tarihinde bu sayfa sayısının hız için yeterli olduğunu
+belirtti. Tarama 177 ayrı adreste 354 gerçek ölçümle kapatıldı. İlk plandaki
+578 ölçümün tamamı yürütülmüş gibi raporlanmadı. Deneysel auto sizes değişikliği
+ürün kaynaklarına alınmadı; deneme kanıtları ayrı klasörlerde korundu.

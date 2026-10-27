@@ -202,10 +202,10 @@ export const pages = [
   {
     key: 'creative-process',
     route: '/editorial-process/',
-    title: ['Finding &', 'Using Clipart'],
-    subtitle: ['Choose an image.', 'Edit it and save the file you need.'],
+    title: ['Our Editorial', 'Process'],
+    subtitle: ['Subject briefs, file checks', 'and corrections after release.'],
     layout: 'process',
-    alt: 'Finding and using clipart: illustrated Find, Edit and Download steps.',
+    alt: 'UltraClipart editorial process illustrated by a subject brief, review tools and a publication document.',
   },
   {
     key: 'not-found',

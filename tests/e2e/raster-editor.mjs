@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { chooseExportFormat } from '../helpers/export.mjs';
+import { bridgeLocalCdn } from '../helpers/local-cdn.mjs';
 import { originalRasterTargets, shardRasterTargets } from '../../scripts/ci-raster-shards.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
   engine = process.env.UC_BROWSER || 'chromium';
@@ -66,6 +67,7 @@ const context = await browser.newContext({
     viewport: { width: 1440, height: 1000 },
   }),
   page = await context.newPage();
+await bridgeLocalCdn(context, base);
 const report = { base, engine, status: 'running', checks: [], states: [], exports: [], errors: [] };
 page.on('pageerror', (e) => report.errors.push(e.message));
 async function commitInput(selector, value) {
@@ -133,7 +135,7 @@ try {
           i.src = img.getAttribute('href');
         }),
     );
-    await page.locator('[data-work-mode=advanced]').click();
+    await page.locator('[data-work-mode=edit]').click();
     await page.locator('[data-panel=transform]').click();
     await commitInput('[data-prop=scaleX]', 70);
     await commitInput('[data-prop=scaleY]', 70);

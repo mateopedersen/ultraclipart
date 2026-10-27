@@ -5,6 +5,7 @@ import { buildSearchIndex, type SearchBuild } from './search-index.ts';
 import { assertPagesFileCount } from './pages-limits';
 import { buildSiteSearch } from './site-search-build';
 import { SEARCH_LANGUAGE_VERSION } from './search-language';
+import { PUBLICATION_ORDER_VERSION } from './publication-order.ts';
 let cached: Promise<SearchBuild> | undefined;
 export function getSearchBuild(): Promise<SearchBuild> {
   if (cached) return cached;
@@ -25,7 +26,7 @@ export function getSearchBuild(): Promise<SearchBuild> {
     const digest = await crypto.subtle.digest(
       'SHA-256',
       new TextEncoder().encode(
-        `search-${SEARCH_LANGUAGE_VERSION}\n` +
+        `search-${SEARCH_LANGUAGE_VERSION}-publication-${PUBLICATION_ORDER_VERSION}\n` +
           JSON.stringify({ data, topics, monochrome: monochromeDirectory, site }),
       ),
     );

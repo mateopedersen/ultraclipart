@@ -46,7 +46,7 @@ try {
   checks.push(
     'Realistic library search loads verified original-resolution artwork onto a native-size canvas',
   );
-  await page.locator('button[data-work-mode=advanced]').click();
+  await page.locator('button[data-work-mode=edit]').click();
   await panel('create');
   await page.locator('[data-place-width]').fill('200');
   await page.locator('[data-place-angle]').fill('15');

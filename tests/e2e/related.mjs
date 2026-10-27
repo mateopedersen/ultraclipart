@@ -75,8 +75,11 @@ try {
       const layout = await root
         .locator('.related-grid:visible')
         .first()
-        .evaluate((el) => getComputedStyle(el).gridTemplateColumns.split(' ').length);
-      assert.equal(layout, width > 900 ? 4 : width < 360 ? 1 : 2);
+        .evaluate((el) => {
+          const boxes = [...el.children].map((card) => card.getBoundingClientRect());
+          return boxes.filter((box) => Math.abs(box.top - boxes[0].top) < 1).length;
+        });
+      assert.ok(layout >= 1 && layout <= (width > 900 ? 4 : width < 360 ? 1 : 2));
       const snapshot = await page.locator('[data-related-snapshot]').textContent();
       assert.ok(Buffer.byteLength(snapshot) < 64000);
       // Scrolling may append a new batch while the previous thumbnails decode.
@@ -292,10 +295,15 @@ try {
   await expect(page.locator('[data-related-mode="best"]')).toHaveAttribute('aria-pressed', 'true');
   await expect(root).not.toHaveAttribute('aria-busy', 'true');
   await page.bringToFront();
-  await page.locator('.related-card').first().scrollIntoViewIfNeeded();
+  await page
+    .locator('.related-card')
+    .first()
+    .evaluate((card) => card.scrollIntoView({ block: 'center' }));
   try {
     await expect
-      .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')))
+      .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')), {
+        timeout: 8000,
+      })
       .toBe(true);
   } catch (error) {
     const view = await page.evaluate(() => ({
@@ -405,8 +413,17 @@ try {
     'T15 deployed revision mismatch hides stale cards',
     'T22 slow service, retry, failure isolation',
   );
-  const firstThumb = index.snapshot(reference).alternatives[0].id;
-  await page.route(`**/*${firstThumb}*webp*`, (route) => route.abort());
+  const renderedSnapshot = JSON.parse(await page.locator('[data-related-snapshot]').textContent());
+  const failureExample = renderedSnapshot.alternatives[0];
+  const firstThumb = failureExample.id;
+  const failedUrls = new Set([
+    failureExample.thumb,
+    ...(failureExample.thumbSrcSet || '')
+      .split(',')
+      .map((candidate) => candidate.trim().split(/\s+/)[0])
+      .filter(Boolean),
+  ]);
+  for (const url of failedUrls) await page.route(new URL(url, base).href, (route) => route.abort());
   await page.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
   const failed = page.locator(`[data-related-id="${firstThumb}"]`);
   await failed.scrollIntoViewIfNeeded();

@@ -47,9 +47,9 @@ export async function withProcessor<T>(
     for (const wake of waiting.splice(0)) wake();
   }
 }
-export function processedPreview(layer: RasterLayer) {
-  if (!hasRasterEdits(layer)) return rasterPreview(layer);
-  return rendered.get(rasterKey(layer))?.url || rasterPreview(layer);
+export function processedPreview(layer: RasterLayer, screenScale = Infinity) {
+  if (!hasRasterEdits(layer)) return rasterPreview(layer, screenScale);
+  return rendered.get(rasterKey(layer))?.url || rasterPreview(layer, screenScale);
 }
 export async function prepareRaster(layer: RasterLayer): Promise<void> {
   if (!hasRasterEdits(layer)) return;

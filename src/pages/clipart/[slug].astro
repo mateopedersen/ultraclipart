@@ -1,31 +1,32 @@
 ---
+import { imageObject } from '../../lib/image-schema';
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import collectionCopy from '../../../data/collection-copy.json';
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../components/Card.astro';
-import CatalogCount from '../../components/CatalogCount.astro';
-import { collectionIntroduction } from '../../lib/collection-editorial';
-import { availableTopics, topicArt, slugify, clustersForTopic } from '../../lib/catalog';
+import CollectionGalleryHeading from '../../components/CollectionGalleryHeading.astro';
+import RelatedCollections from '../../components/RelatedCollections.astro';
+import {
+  availableTopics,
+  topicArt,
+  slugify,
+  clustersForTopic,
+  reviewedCollectionIntroductions,
+} from '../../lib/catalog';
 export function getStaticPaths() {
   return availableTopics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
 }
 const { topic } = Astro.props;
 const copy = collectionCopy[topic.slug as keyof typeof collectionCopy];
+const reviewedIntro = reviewedCollectionIntroductions.get(topic.slug);
 const featured = new Map(copy?.featured.map((id, index) => [id, index]));
 const items = topicArt(topic.slug).sort(
   (a, b) => (featured.get(a.id) ?? 999) - (featured.get(b.id) ?? 999),
 );
 const topicReady = items.length >= 50 && items.every((item) => item.indexable && item.published);
-const related = availableTopics
-  .filter(
-    (t) =>
-      t.slug !== topic.slug && (copy ? copy.related.includes(t.slug) : t.cluster === topic.cluster),
-  )
-  .sort((a, b) => (copy ? copy.related.indexOf(a.slug) - copy.related.indexOf(b.slug) : 0))
-  .slice(0, 8);
 const title = topic.keyword.replace('clipart', 'Clipart');
-const isVolleyball = topic.slug === 'volleyball';
-const description = collectionIntroduction(topic.slug);
+const description = reviewedIntro;
+if (!description) throw new Error(`Missing topic introduction: ${topic.slug}`);
 ---
 
 <Layout
@@ -48,7 +49,7 @@ const description = collectionIntroduction(topic.slug);
       ]),
     )}
   />
-  {items.length > 0 && (
+  {topicReady && items.length > 0 && (
     <script
       slot="head"
       type="application/ld+json"
@@ -66,19 +67,7 @@ const description = collectionIntroduction(topic.slug);
             position: index + 1,
             url: `https://ultraclipart.com/art/${item.id}/`,
             name: item.title,
-            item: {
-              '@type': 'ImageObject',
-              name: item.title,
-              description: item.alt,
-              contentUrl: new URL(item.webp, 'https://ultraclipart.com').href,
-              thumbnailUrl: new URL(item.thumb, 'https://ultraclipart.com').href,
-              encodingFormat: 'image/webp',
-              width: item.width,
-              height: item.height,
-              license: 'https://ultraclipart.com/license/',
-              acquireLicensePage: 'https://ultraclipart.com/license/',
-              creditText: 'UltraClipart',
-            },
+            item: imageObject(item),
           })),
         },
       })}
@@ -97,27 +86,9 @@ const description = collectionIntroduction(topic.slug);
         .map((cluster) => (
           <a href={`/collection/${slugify(cluster)}/`}>{cluster}</a>
         ))}
-      {copy?.chips.map((chip) => (
-        <a href={`/search/?q=${encodeURIComponent(chip.query)}`}>{chip.label}</a>
-      ))}
-      {isVolleyball && (
-        <>
-          <a href="/search/?q=volleyball+player">Players & teamwork</a>
-          <a href="/search/?q=beach+volleyball">Beach volleyball</a>
-          <a href="/search/?q=volleyball&color=black">Black & white</a>
-        </>
-      )}
-      {related.map((t) => (
-        <a href={`/clipart/${t.slug}/`}>{t.keyword}</a>
-      ))}
     </div>
   </section>
-  <div class="section-head">
-    <h2>
-      <CatalogCount kind="topic" countKey={topic.slug} unit="illustration" />
-    </h2>
-    <a href="/license/">Personal & educational use</a>
-  </div>
+  <CollectionGalleryHeading topic={topic.slug} />
   {items.length ? (
     <div class="gallery">
       {items.map((item) => (
@@ -133,6 +104,7 @@ const description = collectionIntroduction(topic.slug);
       </a>
     </div>
   )}
+  <RelatedCollections topic={topic.slug} />
   <nav class="collection-help" aria-label="Artwork help">
     <a href="/guides/webp-pdf-and-editable-projects/">Image &amp; PDF guide</a>
     <a href="/print-size/">Check print size</a>

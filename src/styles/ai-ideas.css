@@ -311,6 +311,9 @@
   border-color: #235faa;
   color: #fff;
 }
+.ai-idea-filters button[aria-pressed='true'] span {
+  opacity: 1;
+}
 .ai-idea-search-row {
   display: flex;
   align-items: center;

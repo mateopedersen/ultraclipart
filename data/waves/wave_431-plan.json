@@ -1,0 +1,77 @@
+{
+  "wave": "wave_431",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-open-back-jaw-mechanism",
+      "title": "Nutcracker Front and Open Back Views",
+      "alt": "Front and rear views of a blue wooden nutcracker, showing a long jaw lever beneath a removed back panel.",
+      "description": "Two views show the same blue toy's painted front and open wooden back. The rear view reveals a simple long lever, while the removed blue cover rests beside the boots.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_431/source/nutcracker-open-back-jaw-mechanism.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-mounted-rocking-soldier",
+      "title": "Nutcracker on a Rocking Horse",
+      "alt": "Green-jacketed nutcracker riding a chestnut wooden rocking horse with gold-trimmed curved rockers.",
+      "description": "A small red-capped nutcracker sits above a pale saddle blanket and holds the reins. The chestnut horse's raised legs and long curved rockers form one sweeping toy silhouette.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_431/source/nutcracker-mounted-rocking-soldier.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-woodland-mushroom-keeper",
+      "title": "Woodland Nutcracker with an Acorn Basket",
+      "alt": "Woodland nutcracker wearing a wide orange mushroom hat and leaf-trimmed green coat, carrying an acorn basket.",
+      "description": "A wide mushroom-shaped hat shades the woodland figure's dark painted face. Layered leaf trim, a bark-edged base and a basket of acorns give the toy a forest theme.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_431/source/nutcracker-woodland-mushroom-keeper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-sailor-with-coil",
+      "title": "Sailor Nutcracker on a Sea Chest",
+      "alt": "Blue-coated sailor nutcracker seated on a sea chest with a thick rope coil over one knee.",
+      "description": "The sailor sits squarely on a metal-trimmed wooden chest with both boots apart. A navy cap, double-breasted coat and heavy rope coil distinguish the seated figure.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_431/source/nutcracker-sailor-with-coil.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-squirrel-lever-tool",
+      "title": "Squirrel Lever Nutcracker",
+      "alt": "Bronze-colored squirrel nutcracker tool with a raised tail lever and walnut in its front cradle.",
+      "description": "A raised squirrel tail forms the tool's long lever above a visible side pivot. A walnut sits in the front cradle, with a loose nut and split shell beside the wooden base.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_431/source/nutcracker-squirrel-lever-tool.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-brass-screw-tool",
+      "title": "Brass Screw Nutcracker",
+      "alt": "Brass screw nutcracker pressing a walnut in a rounded cup, resting on a folded cream napkin.",
+      "description": "A threaded brass screw descends from a wide turning handle toward a walnut in a curved cup. Shell fragments and a small hazelnut rest on the folded napkin below.",
+      "color": "Gold",
+      "style": "Color",
+      "source": "work/production/wave_431/source/nutcracker-brass-screw-tool.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

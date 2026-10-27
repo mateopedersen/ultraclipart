@@ -1,4 +1,7 @@
 /* One scroll surface with persistent tool navigation and useful canvas actions. */
+.uc-editor .uc-properties {
+  container: studio-inspector / inline-size;
+}
 .uc-editor.uc-editor .uc-pro-intro {
   display: flex;
   align-items: center;
@@ -748,5 +751,15 @@
   .uc-editor .uc-inspector-body .uc-row:has(> .uc-color-control) > * {
     width: 100%;
     flex-basis: auto;
+  }
+}
+@container studio-inspector (max-width: 300px) {
+  /* Preserve readable selected values and room for the native-select arrow. */
+  .uc-editor.uc-editor .uc-inspector-body .uc-row:has(select),
+  .uc-editor .uc-library-options,
+  .uc-editor .uc-library-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
   }
 }

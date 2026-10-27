@@ -1,5 +1,5 @@
 /** Versioned together with the public index. No invented image labels or remote inference. */
-export const SEARCH_LANGUAGE_VERSION = '11-natural-request-prefixes';
+export const SEARCH_LANGUAGE_VERSION = '12-inflections-and-line-drawings';
 const groups = [
   ['gift', 'present', 'presents', 'gifts'],
   ['leaf', 'leaves'],
@@ -143,17 +143,18 @@ export function normalizeQuery(query: string): string[] {
     .trim()
     .split(/\s+/)
     .filter((word) => word && !stopWords.has(word))
-    .map(
-      (word) =>
-        aliases[word] ??
-        (word.length > 4 && /(?:ches|shes|xes|zes|sses)$/.test(word)
+    .map((word) => {
+      if (aliases[word]) return aliases[word];
+      const singular =
+        word.length > 4 && /(?:ches|shes|xes|zes|sses)$/.test(word)
           ? word.slice(0, -2)
           : word.length > 4 && word.endsWith('ies')
             ? word.slice(0, -3) + 'y'
             : word.length > 3 && /s$/.test(word) && !/(?:ss|us|is)$/.test(word)
               ? word.slice(0, -1)
-              : word),
-    );
+              : word;
+      return aliases[singular] ?? singular;
+    });
 }
 export function oneEditAway(a: string, b: string): boolean {
   if (a.length < 4 || Math.abs(a.length - b.length) > 1) return false;
@@ -209,7 +210,7 @@ export function queryTerms(query: string) {
     );
   const monochrome = /\b(?:black[\s-]*(?:and[\s-]*|&[\s-]*)?white|b\s*&\s*w|siyah\s+beyaz)\b/g;
   const outline =
-    /\b(?:outline|line[\s-]*art|coloring(?:\s+pages?)?|colouring(?:\s+pages?)?|boyama)\b/g;
+    /\b(?:outline|line[\s-]*(?:art|drawings?)|coloring(?:\s+pages?)?|colouring(?:\s+pages?)?|boyama)\b/g;
   const transparent =
     /\b(?:transparent(?:\s+background)?|clear\s+background|(?:without|no)\s+(?:a\s+)?background|background[\s-]*free|seffaf(?:\s+arka\s+plan)?)\b/g;
   const wantsMonochrome = monochrome.test(text) || /\b(?:coloring|colouring|boyama)\b/.test(text);

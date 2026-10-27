@@ -151,6 +151,10 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
         </div>
         <section id="site-search-section" hidden aria-labelledby="site-search-title">
           <h2 id="site-search-title">Pages, Tools &amp; Studio Elements</h2>
+          <p id="site-search-status" role="status" hidden></p>
+          <button type="button" id="site-search-retry" hidden>
+            Retry pages and tools
+          </button>
           <div class="site-search-list" id="site-search-results"></div>
           <button type="button" id="site-search-more">
             Show More Results
@@ -223,7 +227,8 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
 </Layout>
 <script>
   import { initSearch } from '../scripts/search-client';
-  initSearch();
+  import { afterInitialPaint } from '../lib/initial-paint';
+  void afterInitialPaint().then(initSearch);
 </script>
 <style>
   .notice a {
@@ -288,9 +293,7 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
     color: var(--muted);
   }
   :global(html[data-search-pending]) #search-results {
-    position: absolute;
-    inset: 0;
-    visibility: hidden;
+    display: none;
   }
   :global(html[data-search-pending]) #result-count {
     visibility: hidden;
@@ -322,9 +325,6 @@ const styles = [...new Set(art.map((item) => item.style))].sort();
     .pagination button {
       font-size: 12px;
       padding: 9px;
-    }
-    .filters {
-      grid-template-columns: 1fr 1fr;
     }
   }
 </style>

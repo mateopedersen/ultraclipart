@@ -15,12 +15,13 @@ test('published image checks bind the displayed file and schema to the selected 
     ]) {
       process.env.CF_PAGES = mode;
       const schema = `"contentUrl":"${new URL(source, 'https://ultraclipart.com').href}"`;
-      assert.doesNotThrow(() => assertPublishedImage(item, `<img src="${source}">${schema}`));
+      const preview = (src) => `<figure id="art-preview"><img src="${src}"></figure>`;
+      assert.doesNotThrow(() => assertPublishedImage(item, `${preview(source)}${schema}`));
       assert.throws(() =>
-        assertPublishedImage(item, `<img src="/wrong.webp">${schema} assets.ultraclipart.com`),
+        assertPublishedImage(item, `${preview('/wrong.webp')}${schema} assets.ultraclipart.com`),
       );
       assert.throws(() =>
-        assertPublishedImage(item, `<img src="${source}">"contentUrl":"https://wrong.example/"`),
+        assertPublishedImage(item, `${preview(source)}"contentUrl":"https://wrong.example/"`),
       );
     }
   } finally {

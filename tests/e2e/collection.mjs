@@ -8,6 +8,7 @@ import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
+import { bridgeLocalCdn } from '../helpers/local-cdn.mjs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335';
 const engine = process.env.UC_BROWSER || 'chromium';
@@ -32,7 +33,7 @@ const all = readEditorialCatalog(process.env.RELEASE_DATA_DIR);
 const catalog = all.filter((a) => a.topic === topic);
 const publication = readData('publication.json');
 const expectedUrl = (a, kind) =>
-  base.startsWith('https:')
+  base.startsWith('https:') || process.env.LOCAL_CDN_BRIDGE === '1'
     ? publication.files.find((f) => f.assetId === a.id && f.kind === kind).url
     : new URL(a[kind], base).href;
 mkdirSync(out, { recursive: true });
@@ -41,6 +42,7 @@ const browser = await { chromium, firefox, webkit }[engine].launch({
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
 });
 const context = await browser.newContext({ acceptDownloads: true });
+await bridgeLocalCdn(context, base);
 let page = await context.newPage();
 const report = {
   base,
@@ -64,6 +66,14 @@ try {
       );
     await expect(page.locator('.art-card')).toHaveCount(catalog.length);
     await page.evaluate(() => document.fonts.ready);
+    await expect
+      .poll(() =>
+        page
+          .locator('.card-actions > a')
+          .first()
+          .evaluate((node) => node.getBoundingClientRect().height),
+      )
+      .toBeGreaterThanOrEqual(44);
     const audit = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
       .analyze();

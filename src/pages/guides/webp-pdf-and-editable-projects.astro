@@ -1,4 +1,5 @@
 ---
+import ContentLink from '../../components/ContentLink.astro';
 import Guide from '../../layouts/Guide.astro';
 ---
 
@@ -53,8 +54,10 @@ import Guide from '../../layouts/Guide.astro';
     want a cutout. After downloading, place the image over a colored rectangle in your destination
     app to check the edges. If that app cannot import WebP, use another workflow it explicitly
     supports; renaming the extension to .png does not convert the file. Google's{' '}
-    <a href="https://developers.google.com/speed/webp/">WebP documentation</a> explains the format's
-    transparency support.
+    <ContentLink href="https://developers.google.com/speed/webp?hl=en">
+      WebP documentation
+    </ContentLink>{' '}
+    explains the format's transparency support.
   </p>
   <p>
     At four inches wide, a 2,048-pixel image has 512 pixels per inch. At eight inches, it has 256.
@@ -81,9 +84,9 @@ import Guide from '../../layouts/Guide.astro';
     Paper, ink, and printer settings affect the result. Bright screen colors can change in print,
     and CMYK does not mean every printer will produce an identical match. For a color-sensitive job,
     ask the printer about its requirements and request a proof. The{' '}
-    <a href="https://www.color.org/ICC_white_paper_23_RGB_Workflow.pdf">
+    <ContentLink href="https://archive.color.org/files/ICC_white_paper_23_RGB_Workflow.pdf">
       International Color Consortium's workflow guidance
-    </a>{' '}
+    </ContentLink>{' '}
     explains why output conditions and destination profiles matter.
   </p>
   <h2>Project files: keep the decisions, not just the appearance</h2>

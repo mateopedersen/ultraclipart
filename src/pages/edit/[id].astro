@@ -17,5 +17,34 @@ const { item } = Astro.props;
   imageWidth={item.width}
   imageHeight={item.height}
 >
+  <Fragment slot="head">
+    {item.sourceType === 'raster' && item.preview?.startsWith('/previews/') && (
+      <link rel="preload" as="image" href={item.preview} fetchpriority="high" />
+    )}
+    {item.sourceType === 'raster' && (
+      <script
+        id="editor-original-source"
+        type="application/json"
+        set:html={JSON.stringify({ url: item.webp, ...item.files.webp }).replaceAll('<', '\\u003c')}
+      />
+    )}
+    <script>
+      import { prefetchVerified } from '../../editor/verified-fetch';
+      import { editorPreviewReady } from '../../editor/preview-ready';
+      const record = document.getElementById('editor-original-source');
+      if (record?.textContent) {
+        try {
+          prefetchVerified(
+            JSON.parse(record.textContent),
+            'webp',
+            location.origin,
+            editorPreviewReady(),
+          );
+        } catch {
+          /* The editor repeats source validation and shows the error. */
+        }
+      }
+    </script>
+  </Fragment>
   <Editor art={item} />
 </Layout>

@@ -19,8 +19,8 @@
 }
 .related-eyebrow {
   margin: 0 0 9px;
-  color: #3564a0;
-  font-size: 12px;
+  color: var(--brand-accent);
+  font-size: 14px;
   font-weight: 750;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -58,6 +58,27 @@
     0 3px 0 #e9f0f9;
   min-height: 48px;
 }
+.related-collection-discovery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 24px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid #d5dfec;
+}
+.related-collection-discovery h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 650;
+  line-height: 1.35;
+}
+.related-collection-discovery .related-collection {
+  flex-shrink: 1;
+  min-width: 0;
+  max-width: 100%;
+}
 .related-filters {
   display: flex;
   flex-wrap: wrap;
@@ -94,9 +115,73 @@
   color: #273d5c;
 }
 .related-grid {
+  --related-grid-gap: 18px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
+  gap: var(--related-grid-gap);
+}
+/* Balance complete rows from the current DOM count, including cards appended
+   by Show more and filter changes. No artwork is hidden or duplicated. */
+@media (min-width: 901px) {
+  .related-group:not(.related-companions) > .related-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .related-group:not(.related-companions) > .related-grid > .related-card {
+    grid-column: span 3;
+  }
+  .related-group:not(.related-companions)
+    > .related-grid:where(:has(> .related-card:last-child:nth-child(4n + 1)))
+    > .related-card:where(:nth-last-child(-n + 9)),
+  .related-group:not(.related-companions)
+    > .related-grid:where(:has(> .related-card:last-child:nth-child(4n + 2)))
+    > .related-card:where(:nth-last-child(-n + 6)),
+  .related-group:not(.related-companions)
+    > .related-grid:where(:has(> .related-card:last-child:nth-child(4n + 3)))
+    > .related-card:where(:nth-last-child(-n + 3)) {
+    grid-column: span 4;
+  }
+  .related-group:not(.related-companions)
+    > .related-grid:has(> .related-card:nth-child(5):last-child)
+    > .related-card:nth-last-child(-n + 2),
+  .related-group:not(.related-companions)
+    > .related-grid:has(> .related-card:nth-child(2):last-child)
+    > .related-card {
+    grid-column: span 6;
+  }
+  .related-group:not(.related-companions) > .related-grid > .related-card:only-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-self: center;
+  }
+}
+@media (min-width: 601px) {
+  .related-group:not(.related-companions) > .related-grid > .related-card:only-child {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(180px, 28%) minmax(0, 1fr);
+  }
+  .related-group:not(.related-companions)
+    > .related-grid
+    > .related-card:only-child
+    .related-picture {
+    aspect-ratio: auto;
+    min-height: 220px;
+    max-height: 280px;
+  }
+  .related-group:not(.related-companions)
+    > .related-grid
+    > .related-card:only-child
+    .related-card-copy {
+    justify-content: center;
+    padding: 24px;
+  }
+  .related-group:not(.related-companions)
+    > .related-grid
+    > .related-card:only-child
+    .related-card-actions {
+    width: 100%;
+    max-width: 380px;
+  }
 }
 .related-card {
   container: artwork-card / inline-size;
@@ -278,6 +363,16 @@
   .related-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .related-grid:has(> .related-card:nth-child(3)) > .related-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: min(100%, 420px);
+    justify-self: center;
+  }
+  .related-group:not(.related-companions) > .related-grid > .related-card:only-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-self: center;
+  }
   .related-group-heading {
     flex-direction: column;
     gap: 7px;
@@ -293,7 +388,7 @@
     margin-top: 36px;
   }
   .related-grid {
-    gap: 12px;
+    --related-grid-gap: 12px;
   }
   .related-intro {
     font-size: 15px;
@@ -328,6 +423,9 @@
 @media (max-width: 359px) {
   .related-grid {
     grid-template-columns: 1fr;
+  }
+  .related-grid > .related-card {
+    width: 100%;
   }
   .related-card-title {
     font-size: 16px;

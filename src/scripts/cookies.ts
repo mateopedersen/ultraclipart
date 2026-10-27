@@ -4,36 +4,9 @@ import {
   COOKIE_POLICY_VERSION,
 } from '../lib/cookie-policy';
 
-type CookieChoice = { version: string; choice: 'accepted' | 'necessary'; at: number };
-
-function validChoice(value: unknown): value is CookieChoice {
-  if (!value || typeof value !== 'object') return false;
-  const entry = value as Partial<CookieChoice>;
-  return (
-    entry.version === COOKIE_POLICY_VERSION &&
-    (entry.choice === 'accepted' || entry.choice === 'necessary') &&
-    typeof entry.at === 'number' &&
-    Number.isFinite(entry.at) &&
-    entry.at <= Date.now() + 60000 &&
-    Date.now() - entry.at < COOKIE_CHOICE_SECONDS * 1000
-  );
-}
-
-function readChoice(): CookieChoice | undefined {
-  try {
-    const prefix = `${COOKIE_CHOICE_NAME}=`;
-    const raw = document.cookie
-      .split(';')
-      .map((value) => value.trim())
-      .find((value) => value.startsWith(prefix))
-      ?.slice(prefix.length);
-    if (!raw || raw.length > 1024) return;
-    const parsed: unknown = JSON.parse(decodeURIComponent(raw));
-    return validChoice(parsed) ? parsed : undefined;
-  } catch {
-    return;
-  }
-}
+import { readChoice, validChoice } from '../lib/cookie-choice';
+import { cookieRegion } from './cookie-region';
+import { nextPaint } from '../lib/initial-paint';
 
 export function initCookieNotice() {
   const strip = document.querySelector<HTMLElement>('#cookie-notice');
@@ -76,27 +49,7 @@ export function initCookieNotice() {
     }
     if (regionPending) return regionPending;
     regionPending = (async () => {
-      const controller = new AbortController();
-      const timer = window.setTimeout(() => controller.abort(), 2500);
-      try {
-        const response = await fetch('/api/cookie-region.json', {
-          credentials: 'omit',
-          cache: 'no-store',
-          redirect: 'error',
-          signal: controller.signal,
-        });
-        if (!response.ok || !response.headers.get('content-type')?.includes('application/json'))
-          throw new Error('Region unavailable');
-        const result: unknown = await response.json();
-        regionalNotice =
-          !result ||
-          typeof result !== 'object' ||
-          (result as { showNotice?: unknown }).showNotice !== false;
-      } catch {
-        regionalNotice = true;
-      } finally {
-        window.clearTimeout(timer);
-      }
+      regionalNotice = await cookieRegion();
       show(!readChoice() && !validChoice(remembered) && regionalNotice);
     })();
     await regionPending;
@@ -139,5 +92,22 @@ export function initCookieNotice() {
   window.addEventListener('focus', () => {
     void refresh();
   });
-  void refresh();
+  window.__ucCookieNoticeReady = refresh().then(async () => {
+    // Stabilize the first visible interface before a large editing original
+    // competes for bandwidth. A missing font cannot hold the editor indefinitely.
+    if (document.fonts) {
+      let timeout = 0;
+      try {
+        await Promise.race([
+          document.fonts.ready,
+          new Promise<void>((resolve) => {
+            timeout = window.setTimeout(resolve, 1000);
+          }),
+        ]);
+      } finally {
+        window.clearTimeout(timeout);
+      }
+    }
+    await nextPaint();
+  });
 }

@@ -1,0 +1,77 @@
+{
+  "wave": "wave_435",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-holiday-wreath",
+      "title": "Nutcracker Wreath with Dried Oranges",
+      "alt": "Evergreen wreath with pinecones, dried orange slices, burgundy ribbons and a cream-and-green nutcracker.",
+      "description": "Dried orange slices and copper-brown cones brighten the evergreen ring. A cream-and-green crowned toy sits at its lower edge beneath a large burgundy bow.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-holiday-wreath.png",
+      "printMaxEdgePx": 800,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-rocking-cradle-music-box",
+      "title": "Nutcracker in a Crescent Music Box",
+      "alt": "Seated plum nutcracker reading a small book inside a pale wooden crescent rocking music box.",
+      "description": "A pale crescent cradles the seated nutcracker as he holds a small open book. Carved gold stars, plum lining and a side winding key decorate the curved rocking base.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-rocking-cradle-music-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-ornament-presentation-box",
+      "title": "Nutcracker Ornament in a Blue Gift Box",
+      "alt": "Small orange-jacketed nutcracker ornament with a gold hanging loop inside a tissue-lined blue box.",
+      "description": "Pale tissue cushions the orange-jacketed ornament beneath its large hanging loop. The blue lid rests beside the open box, secured with a plain cream bow.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-ornament-presentation-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-carved-bookend",
+      "title": "Seated Nutcracker Bookend",
+      "alt": "Seated wooden nutcracker bookend in a green cap and red jacket supporting four plain clothbound books.",
+      "description": "The seated figure forms the upright side of a dark wooden bookend. Its green cap and red jacket sit beside four plain books with brown, red, ochre and cream spines.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-carved-bookend.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-paper-puppet-kit",
+      "title": "Articulated Paper Nutcracker Kit",
+      "alt": "Flat paper nutcracker with brass joints, a pull string, craft scissors and two spare fasteners.",
+      "description": "Brass fasteners connect the paper figure's shoulders and hips. A loose string, curled blue hat, long plum boots and small craft scissors give the puppet kit its flat diagonal layout.",
+      "color": "Multicolor",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-paper-puppet-kit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-snow-globe",
+      "title": "Drummer Nutcracker Snow Globe",
+      "alt": "Clear snow globe containing a green-jacketed drummer nutcracker above a dark red star-decorated base.",
+      "description": "White snow flecks surround the crowned drummer inside a round glass globe. Bright reflections trace the glass, while gold stars decorate the dark red wooden base.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-snow-globe.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

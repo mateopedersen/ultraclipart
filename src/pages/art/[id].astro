@@ -1,4 +1,5 @@
 ---
+import { imageObject } from '../../lib/image-schema';
 import { downloadDetails } from '../../lib/download-data';
 import { structuredData, breadcrumbs } from '../../lib/structured-data';
 import Layout from '../../layouts/Layout.astro';
@@ -21,6 +22,11 @@ const note = (
 )[item.id];
 if (item.layered && !note) throw new Error(`Missing source layers for ${item.id}`);
 const layers = note?.layers ?? [];
+const previewSrcSet = item.layered ? undefined : item.previewSrcSet;
+// The image is contained in 90% of a 1.15-ratio frame. Size the actual artwork,
+// including portrait letterboxing, rather than assuming the whole column is image.
+const visibleFraction = 0.9 * Math.min(1, item.width / item.height / 1.15);
+const previewSizes = `(max-width: 580px) calc((100vw - 34px) * ${visibleFraction}), (max-width: 1100px) 50vw, 600px`;
 const topic = topics.find((t) => t.slug === item.topic)!;
 const facts = artworkDetails(item);
 const downloadRecord = {
@@ -44,23 +50,20 @@ const downloadRecord = {
   imageHeight={item.height}
 >
   <Fragment slot="head">
+    {!item.layered && (
+      <link
+        rel="preload"
+        as="image"
+        href={item.preview}
+        imagesrcset={previewSrcSet}
+        imagesizes={previewSizes}
+        fetchpriority="high"
+      />
+    )}
     {item.published && item.indexable && (
       <script
         type="application/ld+json"
-        set:html={structuredData({
-          '@context': 'https://schema.org',
-          '@type': 'ImageObject',
-          name: item.title,
-          description: item.description,
-          contentUrl: new URL(item.webp, 'https://ultraclipart.com').href,
-          thumbnailUrl: new URL(item.thumb, 'https://ultraclipart.com').href,
-          encodingFormat: 'image/webp',
-          width: item.width,
-          height: item.height,
-          license: 'https://ultraclipart.com/license/',
-          acquireLicensePage: 'https://ultraclipart.com/license/',
-          creditText: 'UltraClipart',
-        })}
+        set:html={structuredData(imageObject(item, { context: true, primary: true }))}
       />
     )}
     <script
@@ -81,7 +84,10 @@ const downloadRecord = {
     <div>
       <div class="preview" id="art-preview">
         <img
-          src={item.layered ? item.svg! : item.webp}
+          title={item.title}
+          src={item.layered ? item.svg! : item.preview}
+          srcset={previewSrcSet}
+          sizes={previewSizes}
           alt={item.alt}
           width={item.width}
           height={item.height}
@@ -156,7 +162,7 @@ const downloadRecord = {
             <a class="art-collection-link" href={`/clipart/${item.topic}/`}>
               <span class="art-collection-name">{topic.keyword}</span>
               <span class="art-collection-arrow" aria-hidden="true">
-                <NavigationArrow size={36} dimensional />
+                <NavigationArrow size={22} variant="collection" />
               </span>
             </a>
             <small>More artwork on this subject</small>
@@ -287,6 +293,10 @@ const downloadRecord = {
       <p class="notice">
         Free for personal and educational use. No commercial use or resale as clipart.{' '}
         <a href="/license/">License details →</a>
+        <span class="art-image-credit">
+          Published by UltraClipart. Rights in protectable contributions reserved; third-party
+          rights remain with their owners.
+        </span>
       </p>
       {item.layered && (
         <p class="notice">

@@ -1,0 +1,505 @@
+{
+  "wave": "wave_436",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "nutcracker-theatre-marquee-lettering",
+      "title": "The Nutcracker Theatre Sign",
+      "alt": "Ornate navy theatre sign reading The Nutcracker, with copper trim, red tassels and a wooden toy at one side.",
+      "description": "Cream lettering fills the navy sign beneath a copper fan-shaped crest. Red tassels hang below, and a small red-jacketed nutcracker stands on the shared wooden base.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_436/source/nutcracker-theatre-marquee-lettering.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "7d149aed10fbb8156190f0558cbeadc79b9f0f4f3edec014f8e297dbd8fe57a3",
+      "inputSignature": "a9c864098dd5d608e3056ab7f93fa63fb2b65677240d1e1bb0ffc4667323514f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 942537,
+        "weightedCmykRmse": 0.949938
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1227353,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1001359,
+          "weightedCmykRmse": 0.797335
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 942537,
+          "weightedCmykRmse": 0.949938
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        152,
+        190,
+        1258,
+        1015
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_436/exports/nutcracker-theatre-marquee-lettering.pdf",
+          "bytes": 942537,
+          "sha256": "174f7df70829a15a425704c32582e638cb808dae5baeaa2f5052fcfbb65db155"
+        },
+        "webp": {
+          "path": "work/production/wave_436/exports/nutcracker-theatre-marquee-lettering.webp",
+          "bytes": 1231206,
+          "sha256": "293907b3fa3a1570e0b42079311546d75842ac7e079509ef5ecf4331b361191f"
+        },
+        "thumb": {
+          "path": "work/production/wave_436/exports/nutcracker-theatre-marquee-lettering-thumb.webp",
+          "bytes": 56248,
+          "sha256": "4457dcfe6b88b1a1afeefe78e750cb322f8b0315cf9b9da29ef5a87779216259"
+        }
+      },
+      "proofSha256": "682d742046b52425648dc73ef1de0f634bd9e362cd60c338682c366ffa0f3313",
+      "pairMeanRgbDifference": 5.53316
+    },
+    {
+      "id": "nutcracker-advent-drawer-cabinet",
+      "title": "Nutcracker Cabinet with Six Drawers",
+      "alt": "Crowned nutcracker cabinet with six cream drawers, green shoes and a red ribbon in one open drawer.",
+      "description": "Six small cream drawers fill the broad toy's jacket front. One lower drawer opens around a red ribbon, beneath a dark painted face, curled black hair and burgundy crown.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_436/source/nutcracker-advent-drawer-cabinet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "0da331e29fc46f46547422353a8cf20c0c640c3a423bd966deebdf8d7bb21f59",
+      "inputSignature": "bbb48ab5379eca9728cc5a83e1451d661cef0d5a2c4383cc6afd95f8eef57d80",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 774331,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 774331,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        213,
+        101,
+        811,
+        1432
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_436/exports/nutcracker-advent-drawer-cabinet.pdf",
+          "bytes": 774331,
+          "sha256": "34eb9088b7087622573b79a728ddc0447c502d838c30236f20692bb18992b787"
+        },
+        "webp": {
+          "path": "work/production/wave_436/exports/nutcracker-advent-drawer-cabinet.webp",
+          "bytes": 1308104,
+          "sha256": "d6cf41a62cd75e0b101ff23a3ac13aeee9fd7215f38f6415fccf4bc9ae6d6da5"
+        },
+        "thumb": {
+          "path": "work/production/wave_436/exports/nutcracker-advent-drawer-cabinet-thumb.webp",
+          "bytes": 31210,
+          "sha256": "86e4d5bb1d9be47168dd6429905e61d82c6cdc1dce2c5a7e3f5f926cfa75402a"
+        }
+      },
+      "proofSha256": "7a22b1c5bafefb3f6f13e2a093ac2fcdc913c38556d0ed2f3d2cbb7d41f3fcec",
+      "pairMeanRgbDifference": 3.58423
+    },
+    {
+      "id": "nutcracker-outline-woodcarver",
+      "title": "Carving a Nutcracker Outline",
+      "alt": "Black-and-white drawing of a curly-haired woodcarver shaping a nutcracker at a complete workbench.",
+      "description": "A curly-haired maker steadies the tall toy in a bench cradle while working near its boot. Curled shavings, chisels and a mallet spread across the sturdy wooden bench.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-woodcarver.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "profile-cmyk",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "305f7c178f41bc3431fcf7a172c5d49eeeef28b66fc59ceb2fae3b244824832b",
+      "inputSignature": "8a78ff4d6982f81e5ba69171eea637d16378d66fb70e30aa8fdb4e832f54262a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 923111,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 923111,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        204,
+        119,
+        1112,
+        1118
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-woodcarver.pdf",
+          "bytes": 923111,
+          "sha256": "3b54b04f4cc52f06ebc74bbd59e51b380a0db1cf409901cdbc785600e0587660"
+        },
+        "webp": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-woodcarver.webp",
+          "bytes": 641088,
+          "sha256": "b0870142c7cc0fa82e47ae57d11be9288ecaf8d885c70df349afd66f7204e30a"
+        },
+        "thumb": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-woodcarver-thumb.webp",
+          "bytes": 46836,
+          "sha256": "829d07c26262d5edfb55426554bfa888ee065672c4c237ef7747ef9e52b7818d"
+        }
+      },
+      "proofSha256": "ed2e759fa448eca9331d67e2ef9ec65c90b6dbe445286e5545ae795a19f914b0",
+      "pairMeanRgbDifference": 4.06688
+    },
+    {
+      "id": "nutcracker-outline-theatre-family",
+      "title": "Family Reading a Nutcracker Programme Outline",
+      "alt": "Outline of a girl with two braids showing a nutcracker programme to two adults seated beside her.",
+      "description": "The girl holds a folded programme with a small nutcracker drawing on its cover. A bearded man and headscarf-wearing woman lean closer from separate wooden chairs.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-theatre-family.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "nutcracker",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "ac47c0f3dd814b4b42a7b592cc8c7fa505a922c3f4cfcea82d462591f9db75ec",
+      "inputSignature": "da2395907bfcfb8bd88d51d02e1957772fc8768b12f466e18e89733972d3e00d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 365492,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 365492,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        129,
+        139,
+        1251,
+        1013
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-theatre-family.pdf",
+          "bytes": 365492,
+          "sha256": "55fa5503e77325ab3b2fe467c122376e15ea507e618793e28b38834f6079d650"
+        },
+        "webp": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-theatre-family.webp",
+          "bytes": 850040,
+          "sha256": "97459dc0101b2b8efb8a6a830ed8b142610407856108f876ffaa1d706bb1bb22"
+        },
+        "thumb": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-theatre-family-thumb.webp",
+          "bytes": 61420,
+          "sha256": "0a6e8a874fdf8b9d6ae03a1e526817084b14340afd5a82882f5c42fb83f164ce"
+        }
+      },
+      "proofSha256": "dc9d0c4ca83e3294df18ba26517ae90f2cea792d97c26c50f52d7c6d034dc967",
+      "pairMeanRgbDifference": 6.6666
+    },
+    {
+      "id": "nutcracker-outline-kitchen-tool",
+      "title": "Hands Using a Nutcracker Outline",
+      "alt": "Black-and-white close-up of two hands cracking a walnut above a bowl of kernels and folded tea towel.",
+      "description": "Two hands close the tool's handles around a walnut held between the jaws. A shallow bowl of kernels, folded checked towel and two whole walnuts sit beneath the action.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-kitchen-tool.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "nutcracker",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "969f89c4dcf0f981a33dfc21ad6a8f6c6785f2299b5712120342542695fa6762",
+      "inputSignature": "3abaf750f404785200a65a511dd28b6b4dcdedbae20c192da42326dbbce48916",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 216810,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 216810,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        92,
+        145,
+        1444,
+        931
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-kitchen-tool.pdf",
+          "bytes": 216810,
+          "sha256": "9c84df7ce0cd04b9fb792e40fc39ac35ba211c3bd32bc9efc0d02f7436870cb2"
+        },
+        "webp": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-kitchen-tool.webp",
+          "bytes": 981826,
+          "sha256": "3c19702c4a17d2f45f7925af8fe410664ecc458b94005894dfa8f10c80a76400"
+        },
+        "thumb": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-kitchen-tool-thumb.webp",
+          "bytes": 34848,
+          "sha256": "71348e8b9e87fe05262a831112eb0df803dd17a1d845a3620b1b9e5a544531e6"
+        }
+      },
+      "proofSha256": "4cf85c31cd0a04e3a0d955784ab9e2c1cab80892e9b1b12492ffc0b1ab1f7377",
+      "pairMeanRgbDifference": 4.61267
+    },
+    {
+      "id": "nutcracker-outline-paper-card",
+      "title": "Making a Nutcracker Card Outline",
+      "alt": "Curly-haired boy in a striped apron attaching a paper nutcracker to a folded card at a craft table.",
+      "description": "The boy steadies an upright card while working on its paper nutcracker decoration. Loose paper shapes and a small glue container remain on the table beside his hands.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-paper-card.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "profile-cmyk",
+      "topic": "nutcracker",
+      "width": 1267,
+      "height": 1241,
+      "pdfWidth": 1000,
+      "pdfHeight": 979,
+      "sourceType": "raster",
+      "sourceSha256": "c8ff15de2576c8fdfc9d0f0d93dc89a41fec0fa14d1b705437cb98c1cec18f52",
+      "inputSignature": "1f2dc4d55a6963d4b05bbb4b9624222added63bac4861f50f9f3645c6e52c09a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 812586,
+        "weightedCmykRmse": 0.810347
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1082236,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 812586,
+          "weightedCmykRmse": 0.810347
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        141,
+        39,
+        1169,
+        1200
+      ],
+      "image": {
+        "width": 1000,
+        "height": 979,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-paper-card.pdf",
+          "bytes": 812586,
+          "sha256": "dd9602418b2c2d1bd924251dad517d2fe73ea02a1c8fd00ea1cf6eb2fb7497ee"
+        },
+        "webp": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-paper-card.webp",
+          "bytes": 704728,
+          "sha256": "ea90d38446fb2e4d61813f0d6093568d6a20ca92b53cf1b7cc41c05c557c417d"
+        },
+        "thumb": {
+          "path": "work/production/wave_436/exports/nutcracker-outline-paper-card-thumb.webp",
+          "bytes": 56528,
+          "sha256": "8068292804781a01dd157297a3032fab02e7d65e8127440efb94a8313f83ee9f"
+        }
+      },
+      "proofSha256": "f62c59225cf638fa06952356c7a40a7409566f729658dcfaef392b8229932a25",
+      "pairMeanRgbDifference": 5.54618
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-27T02:52:56.904767+00:00",
+  "screenReviewEvidence": "work/production/wave_436/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-27T02:52:57.297Z"
+}

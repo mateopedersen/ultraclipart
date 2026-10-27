@@ -50,7 +50,12 @@ export function initSearchSuggestions() {
           if (option.thumb) {
             const image = document.createElement('img');
             image.src = option.thumb;
-            image.alt = '';
+            if (option.thumbSrcSet) {
+              image.srcset = option.thumbSrcSet;
+              image.sizes = '48px';
+            }
+            image.alt = option.alt || '';
+            image.title = option.title;
             image.width = image.height = 44;
             link.append(image);
           }

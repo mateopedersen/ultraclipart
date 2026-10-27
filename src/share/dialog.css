@@ -65,10 +65,10 @@
   background: linear-gradient(115deg, #f1f7ff, #fff 65%);
 }
 .uc-share-kicker {
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
-  color: #49648b;
+  color: var(--brand-accent);
 }
 .uc-share h2 {
   margin: 4px 0 0;

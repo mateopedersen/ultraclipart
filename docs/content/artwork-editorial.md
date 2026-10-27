@@ -35,3 +35,5 @@ Useful original images, accurate nearby text and clear titles matter more than a
 - [Google: helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
 - [Google: descriptive and concise title links](https://developers.google.com/search/docs/appearance/title-link)
 - [Google: image landing pages and useful alt text](https://developers.google.com/search/docs/appearance/google-images)
+
+Concurrent imports may keep their reviewed topic introductions in dedicated `*-collection.json` or `*-collections.json` files. The shared loader validates the combined registries and rejects conflicting duplicate topics. Refresh an inventory signature only after checking the changed metadata and verifying the source examples; replacement pixels or new visual claims require renewed image inspection.

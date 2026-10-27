@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { resolve } from 'node:path';
+import legacyBaseline from '../data/editorial/legacy-baseline.json' with { type: 'json' };
 
 export function collectionSourceSignature(items) {
   return createHash('sha256')
@@ -70,5 +71,55 @@ export function verifyCollectionEditorial(catalog, registry) {
 
 export function readCollectionAudit(root) {
   const read = (path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
-  return verifyCollectionEditorial(read('data/art.json'), read('data/editorial/collections.json'));
+  return verifyCollectionEditorial(read('data/art.json'), readCollectionRegistries(root));
+}
+
+/** Protect every new topic without rewriting unfinished legacy topic prose. */
+export function requiredCollectionIntroductions(catalog, registry) {
+  if (registry?.schema !== 1 || !registry.topics) throw Error('Invalid collection registry');
+  const legacyTopics = new Set(
+    catalog.filter((item) => legacyBaseline.records[item.id]).map((item) => item.topic),
+  );
+  const groups = new Map();
+  for (const item of catalog.filter((item) => item.published && item.indexable)) {
+    const group = groups.get(item.topic) ?? [];
+    group.push(item);
+    groups.set(item.topic, group);
+  }
+  const result = new Map(),
+    texts = new Set();
+  for (const [topic, items] of groups) {
+    const record = registry.topics[topic];
+    if (!record && legacyTopics.has(topic)) continue;
+    const text = validateCollectionCopy(topic, items, record);
+    if (texts.has(text.toLowerCase())) throw Error('Repeated collection introduction: ' + topic);
+    texts.add(text.toLowerCase());
+    result.set(topic, text);
+  }
+  for (const topic of Object.keys(registry.topics))
+    if (!groups.has(topic)) throw Error('Orphan collection review: ' + topic);
+  return result;
+}
+
+/** Read the committed per-collection records produced by concurrent importers. */
+export function readCollectionRegistries(root = process.cwd()) {
+  const directory = resolve(root, 'data/editorial'),
+    topics = {};
+  for (const name of readdirSync(directory)
+    .filter((name) => name === 'collections.json' || /-collections?\.json$/.test(name))
+    .sort()) {
+    const registry = JSON.parse(readFileSync(resolve(directory, name), 'utf8'));
+    if (registry.schema !== 1 || !registry.topics)
+      throw Error('Invalid collection review file: ' + name);
+    for (const [topic, record] of Object.entries(registry.topics)) {
+      if (topics[topic] && JSON.stringify(topics[topic]) !== JSON.stringify(record))
+        throw Error('Conflicting collection reviews: ' + topic);
+      topics[topic] = record;
+    }
+  }
+  return { schema: 1, topics };
+}
+
+export function readRequiredCollectionIntroductions(catalog, root = process.cwd()) {
+  return requiredCollectionIntroductions(catalog, readCollectionRegistries(root));
 }

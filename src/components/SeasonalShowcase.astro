@@ -75,9 +75,12 @@ const seasons = [
           <span class="seasonal-platform"></span>
           {season.images.map((image, i) => (
             <img
+              title={image.title}
               class={`seasonal-object seasonal-object-${i}`}
               src={image.thumb}
-              alt=""
+              srcset={image.thumbSrcSet}
+              sizes="(max-width: 540px) 34vw, 160px"
+              alt={image.alt}
               width="240"
               height="240"
               loading="lazy"
@@ -102,7 +105,7 @@ const seasons = [
 </section>
 <style>
   .seasonal-showcase {
-    margin: 58px 0 0;
+    margin: 0;
     color: #1b3557;
   }
   .seasonal-heading {
@@ -338,9 +341,6 @@ const seasons = [
     }
   }
   @media (max-width: 600px) {
-    .seasonal-showcase {
-      margin-top: 43px;
-    }
     .seasonal-heading {
       display: block;
     }

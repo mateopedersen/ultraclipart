@@ -85,6 +85,8 @@ export function mountChoicePickers(root: HTMLElement, isBusy: () => boolean) {
       entry.text.textContent = selected?.label.trim() || 'Choose an Option';
       const src = selected?.dataset.aiChoiceImage;
       entry.image.hidden = !src;
+      entry.image.alt = selected?.dataset.aiChoiceAlt || '';
+      entry.image.title = selected?.dataset.aiChoiceTitle || '';
       if (src && entry.image.getAttribute('src') !== src) entry.image.src = src;
       entry.trigger.setAttribute('aria-label', `${entry.title}: ${entry.text.textContent}`);
       entry.trigger.disabled = entry.select.disabled || isBusy();
@@ -130,7 +132,8 @@ export function mountChoicePickers(root: HTMLElement, isBusy: () => boolean) {
       if (option.dataset.aiChoiceImage) {
         const image = document.createElement('img');
         image.src = option.dataset.aiChoiceImage;
-        image.alt = '';
+        image.alt = option.dataset.aiChoiceAlt || '';
+        image.title = option.dataset.aiChoiceTitle || '';
         image.width = 72;
         image.height = 72;
         image.loading = 'lazy';

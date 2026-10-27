@@ -1,0 +1,77 @@
+{
+  "wave": "wave_433",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-child-drawing-toy",
+      "title": "Drawing a Nutcracker at the Table",
+      "alt": "Blond boy in a blue sweatshirt drawing a plum-jacketed nutcracker beside a tin of colored pencils.",
+      "description": "The boy studies a tall nutcracker standing beside his drawing. His pencil, open color tin and red trainers add small bright details around the plain wooden table.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-child-drawing-toy.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-collector-shelf",
+      "title": "Arranging a Nutcracker Display",
+      "alt": "Older man in a maroon cardigan placing a blue nutcracker above two different figures on a wooden shelf.",
+      "description": "The man steadies a blue toy on the upper shelf. A broad crowned king and a smaller red figure stand below, creating a display of three clearly different nutcrackers.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-collector-shelf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-family-hanging-garland",
+      "title": "Hanging a Paper Nutcracker Garland",
+      "alt": "Woman and boy tying a garland of three paper nutcrackers across a freestanding wooden frame.",
+      "description": "A red cord carries three differently dressed paper nutcrackers between wooden posts. The boy holds one side while the woman ties the other, with both frame feet fully visible.",
+      "color": "Multicolor",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-family-hanging-garland.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-miniature-story-stage",
+      "title": "Nutcracker and Mouse King Puppet Theatre",
+      "alt": "Small theatre with burgundy curtains, a blue nutcracker, crowned mouse and miniature Christmas tree.",
+      "description": "Burgundy curtains open around a tiny tree between the nutcracker and crowned mouse. Gold scrollwork and complete turned legs give the tabletop theatre an ornate frame.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-miniature-story-stage.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-prince-and-clara-waltz",
+      "title": "A Nutcracker Story Waltz",
+      "alt": "Two dancers in plum and ivory costumes waltzing beside a small nutcracker on a decorated chest.",
+      "description": "A plum skirt fans outward as the dancers turn together. Beside them, a small red nutcracker stands on a floral chest, linking the dance scene to the toy's story.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-prince-and-clara-waltz.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-clara-and-christmas-tree",
+      "title": "Girl with a Nutcracker beside the Tree",
+      "alt": "Girl in a cream nightdress kneeling with a wooden nutcracker beside a decorated potted Christmas tree.",
+      "description": "The girl gently steadies a tall toy on an oval rug. A potted fir tree, small wrapped parcel and red-and-gold ornaments surround the quiet Christmas scene.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-clara-and-christmas-tree.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

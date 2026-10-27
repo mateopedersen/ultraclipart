@@ -2,10 +2,15 @@ import { readFileSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join, resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
+import {
+  collectCompiledMediaReferences,
+  verifyCompiledPublication,
+} from './compiled-publication.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
 import { pruneVerifiedCatalogPages } from './catalog-pages/prune.mjs';
 import { releaseRevision } from './release-revision.mjs';
+import { contactContentSecurityPolicy } from './contact-security.mjs';
 import { assertPagesFileCount, PAGES_FILE_LIMIT } from '../src/lib/pages-limits.ts';
 import { build as bundleWorker } from 'esbuild';
 
@@ -42,12 +47,20 @@ const aiCsp =
     .replace("script-src 'self'", "script-src 'self' https://challenges.cloudflare.com")
     .replace("connect-src 'self'", "connect-src 'self' https://challenges.cloudflare.com") +
   "; frame-src https://challenges.cloudflare.com; worker-src 'self'";
+const contactCsp =
+  '  Content-Security-Policy: ' +
+  contactContentSecurityPolicy(
+    csp
+      .split('\n')
+      .find((line) => line.startsWith('  Content-Security-Policy:'))
+      .replace(/^\s*Content-Security-Policy:\s*/, ''),
+  );
 const searchVersion = JSON.parse(
   readFileSync(join(dist, 'search-data/manifest.json'), 'utf8'),
 ).version;
 writeFileSync(
   join(dist, '_headers'),
-  `${csp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n`,
+  `${csp}\n/contact/\n  ! Content-Security-Policy\n${contactCsp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n`,
 );
 
 if (process.env.CF_PAGES === '1') {
@@ -55,22 +68,27 @@ if (process.env.CF_PAGES === '1') {
   const allowed = new Set(publication.urls);
   const localPaths = new Set(publication.localPaths);
   const compiled = new Set();
+  let scanned = 0;
   // Every compiled media reference must belong to the verified release. Waves
   // may retain different immutable URLs instead of copying all earlier media.
   for (const file of files(dist).filter((path) => /\.(html|json|js)$/.test(path))) {
     const text = readFileSync(file, 'utf8');
-    for (const match of text.matchAll(/["'](\/[A-Za-z0-9/._-]+)["']/g)) {
-      if (localPaths.has(match[1]))
-        throw new Error(`Production still references local media: ${file}`);
-    }
-    for (const match of text.matchAll(/https:\/\/assets\.ultraclipart\.com\/[A-Za-z0-9/._-]+/g)) {
-      if (!allowed.has(match[0])) throw new Error(`Unverified compiled CDN reference: ${match[0]}`);
-      compiled.add(match[0]);
-    }
+    collectCompiledMediaReferences(text, {
+      allowed,
+      localPaths,
+      references: compiled,
+      filename: file,
+    });
+    if (++scanned % 5000 === 0) console.log(`Production media: ${scanned} files checked.`);
   }
-  for (const url of allowed)
-    if (!compiled.has(url))
-      throw new Error(`Verified media was omitted from compiled output: ${url}`);
+  const presentation = verifyCompiledPublication({
+    publication,
+    catalog: JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
+    references: compiled,
+    root,
+    directory: dist,
+  });
+  console.log(`Source-verified screen thumbnails: ${presentation.screenThumbnails}.`);
   if (process.env.CATALOG_OFFLOAD_COLLECTION) {
     const collection = process.env.CATALOG_OFFLOAD_COLLECTION;
     const revision = releaseRevision();

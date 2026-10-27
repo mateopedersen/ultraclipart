@@ -130,10 +130,14 @@ const selection = [
         <a class={`home-sample home-sample-${subject.key}`} href={subject.href}>
           <span class="home-sample-picture">
             <img
+              title={subject.image.title}
               src={subject.image.thumb}
-              alt=""
+              srcset={subject.image.thumbSrcSet}
+              sizes="(max-width: 540px) 26vw, (max-width: 900px) 200px, 160px"
+              alt={subject.image.alt}
               width={subject.image.width}
               height={subject.image.height}
+              loading={index === 0 ? 'eager' : 'lazy'}
               fetchpriority={index === 0 ? 'high' : 'auto'}
               decoding="async"
             />

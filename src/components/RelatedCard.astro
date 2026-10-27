@@ -14,7 +14,17 @@ const { card } = Astro.props;
   data-related-reason={card.reasonCode}
 >
   <a class="related-picture" href={card.href} data-related-detail>
-    <img src={card.thumb} alt={card.alt} width="400" height="400" loading="lazy" decoding="async" />
+    <img
+      title={card.title}
+      src={card.thumb}
+      srcset={card.thumbSrcSet}
+      sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+      alt={card.alt}
+      width="400"
+      height="400"
+      loading="lazy"
+      decoding="async"
+    />
     <span class="related-image-error" hidden>
       Preview unavailable · View artwork
     </span>

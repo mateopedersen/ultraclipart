@@ -1,0 +1,234 @@
+---
+import ContentLink from '../components/ContentLink.astro';
+import Layout from '../layouts/Layout.astro';
+import ContactIllustration from '../components/ContactIllustration.astro';
+import TeacherSymbol from '../components/TeacherSymbol.astro';
+import { contactEmail, contactTopics, contactFormLink } from '../lib/contact';
+import '../styles/contact.css';
+const first = contactTopics[0];
+---
+
+<Layout
+  title="Contact UltraClipart"
+  description="Contact UltraClipart about downloads, Clipart Studio, illustration licenses, corrections, accessibility, or a copyright concern."
+>
+  <article class="contact-page" data-contact-page>
+    <nav class="contact-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Contact us</span>
+    </nav>
+    <header class="contact-hero">
+      <div class="contact-hero-copy">
+        <h1>Contact UltraClipart</h1>
+        <p>
+          A question about an illustration? Need help with a download or a Studio project? Tell us
+          what happened and we can take a closer look.
+        </p>
+        <a class="contact-primary" href="#contact-message">
+          Write to us <span aria-hidden="true">↗</span>
+        </a>
+        <a class="contact-email" href={`mailto:${contactEmail}`}>
+          <img src="/illustrations/actions/contact.svg" width="43" height="38" alt="" />{' '}
+          {contactEmail}
+        </a>
+      </div>
+      <div class="contact-hero-visual">
+        <ContactIllustration />
+      </div>
+    </header>
+
+    <div class="contact-workspace">
+      <aside class="contact-help" aria-labelledby="contact-help-title">
+        <h2 id="contact-help-title">What can we help with?</h2>
+        <p class="contact-help-intro">
+          Choose a topic for useful details to include in your message.
+        </p>
+        <div class="contact-topics" aria-label="Message topics">
+          {contactTopics.map((topic, index) => (
+            <button
+              type="button"
+              class="contact-topic"
+              data-contact-topic={topic.id}
+              aria-pressed={index === 0 ? 'true' : 'false'}
+              aria-controls="contact-topic-details"
+            >
+              <TeacherSymbol kind={topic.icon} size={49} />
+              <span>
+                <strong>{topic.title}</strong>
+                <span>{topic.hint}</span>
+              </span>
+              <span class="contact-topic-check" aria-hidden="true">
+                ✓
+              </span>
+            </button>
+          ))}
+        </div>
+        <section
+          class="contact-topic-details"
+          id="contact-topic-details"
+          aria-labelledby="contact-details-title"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <h3 id="contact-details-title">What to include</h3>
+          <ul data-contact-details>
+            {first.details.map((detail) => (
+              <li>{detail}</li>
+            ))}
+          </ul>
+          <a data-contact-help-link href={first.href}>
+            {first.link}
+            <span aria-hidden="true"> →</span>
+          </a>
+        </section>
+      </aside>
+
+      <section
+        class="contact-compose"
+        id="contact-message"
+        aria-labelledby="contact-compose-title"
+        tabindex="-1"
+      >
+        <div class="contact-compose-heading">
+          <img src="/illustrations/actions/contact.svg" width="78" height="69" alt="" />
+          <div>
+            <h2 id="contact-compose-title">Write to us</h2>
+            <p>Your message goes to the UltraClipart team.</p>
+          </div>
+        </div>
+        <div class="contact-form-summary">
+          <span>Selected topic</span>
+          <strong data-contact-selected>{first.title}</strong>
+        </div>
+        <div class="contact-form-gateway" data-contact-gateway>
+          <div class="contact-form-paper" aria-hidden="true">
+            <img src="/illustrations/teachers/label.svg" width="144" height="128" alt="" />
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h3>Send your message here</h3>
+          <p>
+            Open our Google Form inside this page. Add your reply email, choose a topic, and
+            describe how we can help. You do not need a Google account.
+          </p>
+          <button type="button" class="contact-primary" data-contact-load hidden>
+            Open contact form <span aria-hidden="true">→</span>
+          </button>
+          <p class="contact-form-disclosure">
+            Opening the form connects to Google. Your submitted message is stored in UltraClipart’s
+            Google Forms. Read our <a href="/privacy/#providers">Privacy Policy</a> and{' '}
+            <ContentLink
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google’s Privacy Policy
+            </ContentLink>
+            .
+          </p>
+        </div>
+        <p class="contact-form-status" data-contact-status role="status" aria-live="polite"></p>
+        <div class="contact-frame-host" data-contact-frame-host hidden></div>
+        <div class="contact-form-fallback">
+          <p>Prefer a separate window, or having trouble loading?</p>
+          <a data-contact-direct href={contactFormLink()} target="_blank" rel="noopener noreferrer">
+            Open in Google Forms <span aria-hidden="true">↗</span>
+            <span class="sr-only"> (opens in a new tab)</span>
+          </a>
+        </div>
+        <noscript>
+          <p class="contact-no-script">
+            Use{' '}
+            <a href={contactFormLink()} target="_blank" rel="noopener noreferrer">
+              the Google Form
+            </a>{' '}
+            to send your message, or email <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.
+            The form opens in a new tab.
+          </p>
+        </noscript>
+      </section>
+    </div>
+
+    <section class="contact-expect" aria-labelledby="contact-expect-title">
+      <div>
+        <img src="/illustrations/teachers/steps.svg" width="94" height="84" alt="" loading="lazy" />
+        <h2 id="contact-expect-title">What happens next?</h2>
+        <p>A few details help us understand your message and check the right page.</p>
+      </div>
+      <ol>
+        <li>
+          <span>01</span>
+          <div>
+            <h3>Send the details</h3>
+            <p>
+              Include a page address and a clear description. There is no need to attach a private
+              project.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>02</span>
+          <div>
+            <h3>Keep the confirmation</h3>
+            <p>
+              Google Forms confirms when your response is recorded. Opening the form alone does not
+              send a message.
+            </p>
+          </div>
+        </li>
+        <li>
+          <span>03</span>
+          <div>
+            <h3>Check your reply email</h3>
+            <p>
+              We can use the email you provide if a reply or more information is needed. Response
+              times vary.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+    <section class="contact-answers" aria-labelledby="contact-answers-title">
+      <header>
+        <h2 id="contact-answers-title">Before you send</h2>
+        <p>Answers to a few practical questions.</p>
+      </header>
+      <div>
+        <details>
+          <summary>Can I email you instead?</summary>
+          <p>
+            Yes. Write to <a href={`mailto:${contactEmail}`}>{contactEmail}</a>. Messages sent by
+            email stay in our email inbox; they are not automatically added to Google Forms.
+          </p>
+        </details>
+        <details>
+          <summary>Can you see my Studio project or Favorites?</summary>
+          <p>
+            Your private projects and Favorites are stored in your browser and are not attached to
+            this contact form. Describe the issue and include the public artwork page if it helps.
+          </p>
+        </details>
+        <details>
+          <summary>What information should I leave out?</summary>
+          <p>
+            Do not send passwords, payment details, confidential files, private student information,
+            or identity documents. This form has no file upload field.
+          </p>
+        </details>
+        <details>
+          <summary>How do I report a rights concern?</summary>
+          <p>
+            Choose “A copyright concern” and include the relevant artwork address. Our{' '}
+            <a href="/copyright/">copyright page</a> explains what to include in a formal report.
+          </p>
+        </details>
+      </div>
+    </section>
+  </article>
+</Layout>
+<script>
+  import { initContact } from '../scripts/contact';
+  initContact();
+</script>

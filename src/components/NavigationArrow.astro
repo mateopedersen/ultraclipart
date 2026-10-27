@@ -4,22 +4,22 @@ interface Props {
   class?: string;
   light?: boolean;
   direction?: 'right' | 'up';
-  dimensional?: boolean;
+  variant?: 'default' | 'collection';
 }
 const {
   size = 32,
   class: className,
   light = false,
   direction = 'right',
-  dimensional = false,
+  variant = 'default',
 } = Astro.props;
 ---
 
 <img
   class:list={['navigation-arrow', { 'navigation-arrow-up': direction === 'up' }, className]}
   src={
-    dimensional
-      ? '/illustrations/actions/arrow-right-dimensional.svg'
+    variant === 'collection'
+      ? '/illustrations/actions/arrow-right-collection.svg'
       : light
         ? '/illustrations/actions/arrow-right-light.svg'
         : '/illustrations/actions/arrow-right.svg'

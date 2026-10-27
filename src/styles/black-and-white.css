@@ -143,8 +143,8 @@
   font-size: 14px;
 }
 .bw-gallery {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  --gallery-columns: 4;
+  --gallery-gap: 20px;
 }
 .bw-gallery .art-picture,
 .bw-gallery .art-card:nth-child(n) .art-picture {
@@ -248,10 +248,10 @@
 }
 @media (max-width: 1000px) {
   .bw-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --gallery-columns: 3;
   }
   .bw-filter-row {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   }
   .bw-intro-art {
     display: none;
@@ -304,8 +304,8 @@
     align-self: end;
   }
   .bw-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    --gallery-columns: 2;
+    --gallery-gap: 12px;
   }
   .bw-gallery .card-title {
     font-size: 14px;

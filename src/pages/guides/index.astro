@@ -1,4 +1,7 @@
 ---
+import { uiPreview } from '../../lib/ui-preview';
+import uiImage0Source from '../../../public/home-art/studio-real-workspace.webp';
+const uiImage0 = await uiPreview(uiImage0Source);
 import Layout from '../../layouts/Layout.astro';
 import GuideSymbol from '../../components/TeacherSymbol.astro';
 import GuideText from '../../components/TeacherText.astro';
@@ -58,7 +61,10 @@ const pageLinks: { href: string; label: string; icon: GuideSymbolKind }[] = [
       </div>
       <figure class="gm-header-screen">
         <img
-          src="/home-art/studio-real-workspace.webp"
+          title="UltraClipart Studio showing a lemon illustration, a text layer, and the editing controls beside the canvas."
+          src={uiImage0.src}
+          srcset={uiImage0.srcset}
+          sizes="(max-width: 700px) 90vw, 700px"
           alt="UltraClipart Studio showing a lemon illustration, a text layer, and the editing controls beside the canvas."
           width="1100"
           height="914"

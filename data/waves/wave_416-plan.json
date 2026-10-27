@@ -1,0 +1,78 @@
+{
+  "wave": "wave_416",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-bugle-and-music",
+      "title": "Brass Bugle with a Navy Cord",
+      "alt": "A polished brass bugle rests across an open blank book beside a coiled navy cord and tassel.",
+      "description": "The instrument's broad flared bell faces right while its mouthpiece extends to the left. Warm metal highlights contrast with the cream pages and the dark braided loop gathered into a long fabric tassel.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-bugle-and-music.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-blank-honor-plaque",
+      "title": "Thank You Veterans Recognition Plaque",
+      "alt": "A walnut-colored plaque carries Thank You Veterans lettering on a gold panel with a star, leaves and a navy bow.",
+      "description": "The three-line message fills the center of the freestanding decorative plaque. Curved golden branches flank its dark wooden edge above layered navy-and-burgundy ribbon folds and a stepped base.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-blank-honor-plaque.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-poppy-thank-you-card",
+      "title": "Happy Veterans Day Greeting Card",
+      "alt": "A Happy Veterans Day card with red poppies stands beside a small American flag, a brown envelope and a navy pen.",
+      "description": "Flowing navy calligraphy fills the upright cream card above two bright poppies. A brass desk stand supports the flag behind it, balancing the closed kraft envelope and gold-trimmed fountain pen.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-poppy-thank-you-card.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-star-rosette",
+      "title": "Veterans Day Appreciation Rosette",
+      "alt": "A navy-and-cream pleated rosette surrounds a gold center marked Veterans Day beneath a red star.",
+      "description": "Two burgundy ribbon tails hang below the layered fabric circle, each edged with fine gold trim. The decorative appreciation badge has no named award, service branch or rank.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-star-rosette.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-folded-blazer",
+      "title": "Veterans Day Stitched Lettering",
+      "alt": "Textured red and navy felt letters spell Veterans Day on a cream appliqu\u00e9 panel with poppies and ribbon tails.",
+      "description": "Small visible stitches follow the edges of the soft fabric letters and scalloped backing. Two red poppies overlap the lower corner, with pale ribbon ends extending beneath the word Day.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-folded-blazer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-volunteer-tool-belt",
+      "title": "Thank You Veterans with an American Flag",
+      "alt": "A navy ribbon bearing gold-edged Thank You Veterans letters stretches below a waving American flag.",
+      "description": "The wide ribbon curls outward beyond both sides of the flag, exposing its cream edging and deep blue folds. A gold finial tops the pole beside the blue canton and red-and-white stripes.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-volunteer-tool-belt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

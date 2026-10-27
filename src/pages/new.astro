@@ -3,6 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import CatalogCount from '../components/CatalogCount.astro';
 import { newestArt } from '../lib/catalog';
+import { getSearchBuild } from '../lib/search-build';
+import { cardMetadata } from '../lib/search-index';
+import { downloadDetails } from '../lib/download-data';
+const initial = newestArt.slice(0, 32);
+const seed = {
+  version: (await getSearchBuild()).manifest.version,
+  total: newestArt.length,
+  items: initial.map((item) => cardMetadata({ ...item, download: downloadDetails(item) })),
+};
 ---
 
 <Layout
@@ -17,11 +26,35 @@ import { newestArt } from '../lib/catalog';
       editing options.
     </p>
   </section>
-  <div class="gallery">
-    {newestArt.slice(0, 32).map((item) => (
-      <Card item={item} />
-    ))}
-  </div>
+  <section
+    data-new-artwork
+    data-catalog-version={seed.version}
+    aria-label="Latest published clipart"
+  >
+    <div class="latest-toolbar">
+      <p data-new-status aria-live="polite">
+        Showing {initial.length} of {newestArt.length.toLocaleString('en-US')} illustrations.
+      </p>
+      <button class="button" type="button" data-new-refresh hidden>
+        Refresh latest
+      </button>
+    </div>
+    <div class="gallery">
+      {initial.map((item) => (
+        <Card item={item} />
+      ))}
+    </div>
+    <div class="latest-more">
+      <button class="button primary" type="button" data-new-more hidden>
+        Show more clipart
+      </button>
+    </div>
+    <script
+      type="application/json"
+      data-new-seed
+      set:html={JSON.stringify(seed).replace(/</g, '\\u003c')}
+    />
+  </section>
   <div class="browse-more">
     <p>
       Browse all <CatalogCount kind="artworks" unit="illustration" /> using search.
@@ -31,3 +64,29 @@ import { newestArt } from '../lib/catalog';
     </a>
   </div>
 </Layout>
+<script>
+  import '../scripts/new-artwork';
+</script>
+<style>
+  .latest-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-block: 24px 18px;
+  }
+  .latest-toolbar p {
+    margin: 0;
+    color: #465f7c;
+    line-height: 1.5;
+  }
+  .latest-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .latest-more:has(> [hidden]) {
+    display: none;
+  }
+</style>

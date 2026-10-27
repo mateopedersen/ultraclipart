@@ -1,0 +1,35 @@
+{
+  "wave": "wave_419",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-outline-community-music",
+      "title": "Playing Music in a Community Trio",
+      "alt": "Black-and-white line art shows three seated adults playing an acoustic guitar, hand drum and recorder.",
+      "description": "The guitarist turns toward a smiling cap-wearing drummer while the bespectacled recorder player faces inward from the opposite side. Separate wooden chairs and clear instrument shapes keep the small ensemble easy to follow.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_419/source/veterans-outline-community-music.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "veterans-outline-keepsake-frame",
+      "title": "Making a Family Keepsake Frame",
+      "alt": "Black-and-white line art shows an older man and a braided child arranging portrait shapes in a wooden keepsake frame.",
+      "description": "The open frame lies across their table beside loose card pieces, glue and a large paper flower. The man wears a plain garrison cap and plaid shirt while the child leans toward the right-hand portrait opening.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_419/source/veterans-outline-keepsake-frame.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

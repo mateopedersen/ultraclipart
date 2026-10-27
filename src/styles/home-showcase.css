@@ -3,7 +3,7 @@
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   align-items: center;
   gap: 42px;
-  padding: 42px 0 38px;
+  padding: 42px 0 0;
   color: #173452;
 }
 .home-showcase-copy {
@@ -22,7 +22,7 @@
 }
 .home-showcase h1 > span {
   display: block;
-  color: #1464d4;
+  color: var(--brand-accent);
 }
 .home-showcase-lead {
   max-width: 490px;
@@ -508,7 +508,7 @@
 @media (max-width: 520px) {
   .home-showcase {
     gap: 27px;
-    padding: 22px 0 20px;
+    padding: 22px 0 0;
   }
   .home-showcase h1 {
     max-width: 410px;
@@ -548,6 +548,10 @@
   .home-collection-display {
     padding: 18px 16px 0;
     border-radius: 21px;
+  }
+  .home-collection-display::before {
+    /* Keep the tilted light layer inside narrow displays without clipping links. */
+    transform: rotate(-7deg);
   }
   .home-collection-heading h2 {
     font-size: 14px;

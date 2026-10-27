@@ -8,7 +8,16 @@ const { item } = Astro.props;
 <article class="art-card" data-id={item.id}>
   <ShareButton item={item} compact />
   <a class="art-picture" href={`/art/${item.id}/`}>
-    <img src={item.thumb} alt={item.alt} width="400" height="400" loading="lazy" />
+    <img
+      title={item.title}
+      src={item.thumb}
+      srcset={item.thumbSrcSet}
+      sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+      alt={item.alt}
+      width="400"
+      height="400"
+      loading="lazy"
+    />
   </a>
   <div class="card-body">
     <a class="card-title" href={`/art/${item.id}/`}>

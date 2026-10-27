@@ -7,9 +7,8 @@
   border: 1px solid #c8daf1;
   border-bottom: 4px solid #b9cfe9;
   border-radius: 26px;
-  background:
-    radial-gradient(ellipse at 92% 20%, #d9eaff 0%, transparent 55%),
-    linear-gradient(120deg, #fff 20%, #eaf3ff 100%);
+  /* One continuous backdrop avoids WebKit's layered-gradient color corruption. */
+  background: linear-gradient(120deg, #fff 20%, #eaf3ff 100%);
   box-shadow:
     0 4px 0 #fff inset,
     0 13px 28px #2954840d;

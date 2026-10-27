@@ -1,0 +1,410 @@
+---
+import ContentLink from './ContentLink.astro';
+import TrustIllustration from './TrustIllustration.astro';
+import { trustContact, trustNavigation, trustReviewed, type TrustPage } from '../lib/trust-pages';
+import '../styles/trust-pages.css';
+interface Props {
+  page: TrustPage;
+  slug: string;
+}
+const { page, slug } = Astro.props;
+const reviewed = new Intl.DateTimeFormat('en', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${trustReviewed}T12:00:00Z`));
+const questionCount = page.sections.reduce(
+  (total, section) => total + (section.questions?.length || 0),
+  0,
+);
+const flow = [
+  {
+    title: 'Edit & organize',
+    location: 'In this browser',
+    text: 'Projects, imports, Favorites and local recovery.',
+    icon: 'screen',
+  },
+  {
+    title: 'Generate',
+    location: 'Protected online processing',
+    text: 'Your description and settings reach Cloudflare when you choose Generate.',
+    icon: 'shield',
+  },
+  {
+    title: 'Publish a link',
+    location: 'Visible to anyone with the link',
+    text: 'Only your explicit publication uploads the finished image and title.',
+    icon: 'link',
+  },
+];
+const workflowSteps = [
+  ['purpose', 'Brief'],
+  ['composition', 'Composition'],
+  ['identification', 'Identify'],
+  ['visual-review', 'Review'],
+  ['files', 'Prepare files'],
+  ['corrections', 'Keep improving'],
+];
+---
+
+<article class="trust-page" data-trust-page={slug}>
+  <nav class="breadcrumb trust-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{page.title}</span>
+  </nav>
+  <header class="trust-hero">
+    <div class="trust-hero-copy">
+      <h1>{page.title}</h1>
+      <p class="trust-intro">{page.intro}</p>
+      <p class="trust-reviewed">
+        Last reviewed <time datetime={trustReviewed}>{reviewed}</time>
+      </p>
+    </div>
+    <div class="trust-hero-art">
+      <TrustIllustration kind={page.symbol} id={`trust-${slug}`} />
+    </div>
+  </header>
+  <ul class="trust-highlights" aria-label="At a glance">
+    {page.highlights.map((highlight) => (
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <path d="m7.5 12 3 3 6-6" />
+        </svg>
+        <span>{highlight}</span>
+      </li>
+    ))}
+  </ul>
+  {slug === 'privacy' && (
+    <section class="trust-flow" aria-label="Three different data journeys">
+      {flow.map((item, index) => (
+        <a class="trust-flow-item" href={['#local', '#builder', '#public-links'][index]}>
+          <span class="trust-flow-icon" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              {item.icon === 'screen' ? (
+                <>
+                  <rect x="5" y="7" width="30" height="22" rx="4" />
+                  <path d="M15 35h10m-5-6v6m-8-19 5 5 11-11" />
+                </>
+              ) : item.icon === 'shield' ? (
+                <>
+                  <path d="m20 4 13 5v11c0 8-7 13-13 17C14 33 7 28 7 20V9z" />
+                  <path d="m13 20 5 5 10-11" />
+                </>
+              ) : (
+                <>
+                  <path d="m16 25-3 3a8 8 0 0 1-11-11l8-8a8 8 0 0 1 11 0m3 6 3-3a8 8 0 0 1 11 11l-8 8a8 8 0 0 1-11 0M12 27l16-16" />
+                </>
+              )}
+            </svg>
+          </span>
+          <div>
+            <h2>{item.title}</h2>
+            <strong>{item.location}</strong>
+            <p>{item.text}</p>
+          </div>
+        </a>
+      ))}
+    </section>
+  )}
+  {slug === 'editorial-process' && (
+    <nav class="trust-process" aria-label="Editorial workflow">
+      <ol>
+        {workflowSteps.map(([id, title], i) => (
+          <li>
+            <a href={`#${id}`}>
+              <span>{String(i + 1).padStart(2, '0')}</span>
+              <strong>{title}</strong>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )}
+  {slug === 'faq' && (
+    <form
+      class="trust-faq-tools"
+      data-faq-tools
+      hidden
+      role="search"
+      aria-label="Find an answer on this page"
+    >
+      <label for="trust-faq-search">What would you like to know?</label>
+      <div class="trust-faq-input">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5" />
+        </svg>
+        <input
+          id="trust-faq-search"
+          type="search"
+          autocomplete="off"
+          maxlength="180"
+          placeholder="Try printing, commercial use or saved projects…"
+        />
+        <button type="button" data-faq-clear>
+          Clear
+        </button>
+      </div>
+      <div class="trust-faq-options">
+        <p data-faq-status role="status">
+          {questionCount} questions across {page.sections.length} topics
+        </p>
+        <div role="group" aria-label="Answer visibility">
+          <button type="button" data-faq-expand>
+            Expand answers
+          </button>
+          <button type="button" data-faq-collapse>
+            Collapse answers
+          </button>
+        </div>
+      </div>
+    </form>
+  )}
+  <details class="trust-mobile-toc">
+    <summary>
+      Jump to a section <span aria-hidden="true">↓</span>
+    </summary>
+    <nav aria-label="Sections on this page">
+      {page.sections.map((section) => (
+        <a href={`#${section.id}`}>{section.title}</a>
+      ))}
+    </nav>
+  </details>
+  <div class="trust-body">
+    <aside class="trust-sidebar">
+      <nav aria-label="Sections on this page">
+        <h2>On this page</h2>
+        <ol>
+          {page.sections.map((section, i) => (
+            <li>
+              <a href={`#${section.id}`}>
+                <span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                {section.title}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <div class="trust-sidebar-contact">
+        <img
+          src="/illustrations/actions/contact.svg"
+          alt=""
+          width="56"
+          height="56"
+          loading="lazy"
+        />
+        <h2>Need a specific answer?</h2>
+        <p>Include the page or artwork link so we can understand the question.</p>
+        <a href={`mailto:${trustContact}`}>
+          Email UltraClipart <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </aside>
+    <div class="trust-reading">
+      <p class="trust-faq-empty" data-faq-empty hidden>
+        No matching answer yet. Try a shorter phrase, clear the search, or email your question to{' '}
+        <a href={`mailto:${trustContact}`}>{trustContact}</a>.
+      </p>
+      {page.sections.map((section, index) => (
+        <section
+          class:list={['trust-section', { 'trust-question-group': !!section.questions }]}
+          id={section.id}
+          aria-labelledby={`heading-${section.id}`}
+          data-faq-group={section.questions ? '' : undefined}
+        >
+          <header class="trust-section-heading">
+            <span class="trust-section-number" aria-hidden="true">
+              {String(index + 1).padStart(2, '0')}
+            </span>
+            <h2 id={`heading-${section.id}`}>{section.title}</h2>
+          </header>
+          {section.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+          {section.bullets && (
+            <ul class="trust-checklist">
+              {section.bullets.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )}
+          {section.table && (
+            <div class="trust-table-wrap">
+              <table class="trust-table" role="table">
+                <caption class="sr-only">{section.title}</caption>
+                <thead role="rowgroup">
+                  <tr role="row">
+                    {section.table.headers.map((title) => (
+                      <th scope="col" role="columnheader">
+                        {title}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody role="rowgroup">
+                  {section.table.rows.map((row) => (
+                    <tr role="row">
+                      {row.map((cell, column) => (
+                        <td
+                          role="cell"
+                          data-label={section.table!.headers[column]}
+                          data-result={
+                            slug === 'license' && section.id === 'examples' && column === 1
+                              ? cell === 'Permitted'
+                                ? 'allowed'
+                                : cell === 'Not permitted'
+                                  ? 'restricted'
+                                  : 'check'
+                              : undefined
+                          }
+                        >
+                          <span>{cell}</span>
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          {section.questions && (
+            <div class="trust-questions">
+              {section.questions.map((question, qIndex) => (
+                <details
+                  class="trust-question"
+                  id={`question-${section.id}-${qIndex + 1}`}
+                  data-faq-question
+                >
+                  <summary>
+                    <span>{question.question}</span>
+                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M4 10h12" />
+                      <path class="trust-plus-vertical" d="M10 4v12" />
+                    </svg>
+                  </summary>
+                  <div class="trust-answer">
+                    {question.answer.map((paragraph) => (
+                      <p>{paragraph}</p>
+                    ))}
+                  </div>
+                </details>
+              ))}
+            </div>
+          )}
+          {section.links && (
+            <ul class="trust-section-links" aria-label={`Useful links: ${section.title}`}>
+              {section.links.map((link) => (
+                <li>
+                  <ContentLink href={link.href}>
+                    {link.label}
+                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="M3 10h13m-5-5 5 5-5 5" />
+                    </svg>
+                  </ContentLink>
+                </li>
+              ))}
+            </ul>
+          )}
+          {slug === 'privacy' && section.id === 'cookies' && (
+            <button class="trust-button" type="button" data-cookie-settings>
+              Review Cookie Settings
+            </button>
+          )}
+          {slug === 'copyright' && section.id === 'report' && (
+            <div class="trust-report-builder" data-rights-builder hidden>
+              <h3>Prepare a clear report</h3>
+              <p>
+                This helper prepares text on this device. It does not submit a report to us; you
+                choose what to send in your email app.
+              </p>
+              <div class="trust-report-fields">
+                <label for="rights-url">
+                  Affected page or artwork URL
+                  <input
+                    id="rights-url"
+                    type="url"
+                    autocomplete="off"
+                    placeholder="https://ultraclipart.com/art/…"
+                    maxlength="600"
+                  />
+                </label>
+                <label for="rights-kind">
+                  Type of concern
+                  <select id="rights-kind">
+                    <option>Copyright</option>
+                    <option>Trademark or affiliation</option>
+                    <option>Privacy or likeness</option>
+                    <option>Factual correction</option>
+                    <option>Technical or accessibility problem</option>
+                  </select>
+                </label>
+                <label class="trust-field-wide" for="rights-detail">
+                  What should we check?
+                  <textarea
+                    id="rights-detail"
+                    rows="4"
+                    maxlength="1800"
+                    autocomplete="off"
+                    placeholder="Explain the issue, your relationship to the work and the correction you request. Avoid private information or secret removal keys."
+                  ></textarea>
+                </label>
+              </div>
+              <label class="trust-draft-label" for="rights-draft">
+                Your report draft<textarea id="rights-draft" rows="7" readonly></textarea>
+              </label>
+              <div class="trust-report-actions">
+                <a
+                  class="trust-button"
+                  href={`mailto:${trustContact}?subject=Rights%20report`}
+                  data-rights-email
+                >
+                  Open draft in email
+                </a>
+                <button type="button" data-rights-copy>
+                  Copy report text
+                </button>
+              </div>
+              <p role="status" data-rights-status>
+                Your email app controls how its draft is handled. You can also copy the text and
+                send it yourself.
+              </p>
+            </div>
+          )}
+        </section>
+      ))}
+    </div>
+  </div>
+  <section class="trust-contact-band" aria-labelledby="trust-contact-title">
+    <img src="/illustrations/actions/contact.svg" width="104" height="104" alt="" loading="lazy" />
+    <div>
+      <h2 id="trust-contact-title">A question about your own situation?</h2>
+      <p>
+        Send the relevant page or artwork URL and explain what you need. Please leave out passwords,
+        secret keys and unnecessary personal information.
+      </p>
+      <a href={`mailto:${trustContact}`}>{trustContact}</a>
+    </div>
+  </section>
+  <nav class="trust-related" aria-label="Related policies and help">
+    <h2>Continue with the right information</h2>
+    <div>
+      {trustNavigation
+        .filter((link) => link.href !== `/${slug}/`)
+        .map((link) => (
+          <ContentLink href={link.href}>
+            <span>{link.label}</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 12h16m-6-6 6 6-6 6" />
+            </svg>
+          </ContentLink>
+        ))}
+    </div>
+  </nav>
+</article>
+<script>
+  import { initTrustTools } from '../scripts/trust-pages';
+  initTrustTools();
+</script>

@@ -1,0 +1,46 @@
+ULTRACLIPART — TAMAMEN YENİ 3D 404 SAYFASI
+26 Ekim 2026
+Durum: Yerel çalışma. GitHub’a gönderilmedi, canlı siteye dağıtılmadı.
+Önizleme: http://127.0.0.1:4326/__404-preview__/
+
+TAMAMLANAN TASARIM
+Sayfanın tamamı yeniden düzenlendi: merkezde boyutlu 404 sahnesi; kısa ve açık hata açıklaması; bağımsız arama ve dönüş paneli; Favoriler/Studio/indirme rehberi bağlantıları; dört gerçek görselli konu galerisi; bozuk bağlantı bildirim alanı. Mobilde kısa açıklama önce, ardından 3D sahne ve arama geliyor. Masaüstündeki yatay konu galerisi telefonda iki sütuna dönüşüyor. Eski klasör/tilki/eğrelti SVG kompozisyonu kaldırıldı.
+
+3D GÖRSELİN KAYNAĞI
+Bevel verilmiş mavi/beyaz rakamlar, fiziksel malzemeler, metal/cam büyüteç ve perspektifli görsel kartları gerçek 3D geometriyle yerelde modellendi. Three.js 0.180.0 resmi npm paketinin SHA-512 bütünlüğü doğrulandı. Sonuç önceden PNG’ye işlendi ve şeffaf, uygun boyutlu WebP sürümlerine dönüştürüldü. Ziyaretçilere Three.js veya WebGL yüklenmiyor.
+Imagegen ile ilk üretim denemesi kullanım kotası nedeniyle sonuç vermedi; CLI veya API anahtarı alternatifi kullanılmadı. Son görselin yöntemi yerel kodla 3D modelleme/render işlemidir.
+Tasarım tarifi: mavi-beyaz hacimli 404 rakamları, seramik platform, cam büyüteç, gerçek illüstrasyon kartları, belirgin derinlik ve yumuşak temas gölgesi. Lisanslar, model kaynağı, girdilerin ve çıktıların özet değerleri design-assets/not-found-3d/ içinde saklıdır. Kartlarda kullanılan kalp ve çilek kaynaklarının onaylı katalog hash değerleri doğrulandı; orijinaller değiştirilmedi.
+Son görselin kendi alt/title açıklamaları data/not-found-visual.json üzerinden geliyor. Diğer görsellerin kendi katalog açıklamaları korunuyor. Dosya adları içerik hash’i içerir; yeni sürüm eski görsel adresine yazılmaz.
+Son ölçülen dosyalar: 480 px = 34,740 bayt, 800 px = 70,484 bayt, 1200 px = 124,988 bayt.
+
+ORTAK ALT BÖLÜMDE BULUNAN VE GİDERİLEN KUSUR
+WebKit’te alt bölüm arka planında sarı nokta bozulması görüldü. Karşılaştırmalı yerel CSS deneyleri, sebebi üst üste kullanılan radial/linear arka plan katmanlarına daralttı. Kaynakta tek, sürekli mavi-beyaz geçiş bırakıldı; kartlar, gölgeler, yazılar ve bağlantılar korunuyor. Böylece ortak bileşeni kullanan diğer sayfalar da aynı düzeltmeyi alıyor.
+Nihai kanıt derlenmiş kaynak üzerinden alındı. 390 ve 1440 px’te her iki tarayıcı motorunda metin alanı renderı denetlendi. Gerçek illüstrasyonlardaki meşru sarı renkler maskeleme ile hariç tutuldu. Regresyon kontrolü tests/e2e/not-found.mjs içine eklendi.
+Karşılaştırma için kullanılan CSS enjeksiyonları yalnızca teşhis içindir; bunlar nihai derleme testi olarak raporlanmıyor.
+
+ÇALIŞTIRILAN KONTROLLER
+- Yerel derleme: gerçek şablonlarla 24.589 HTML sayfa başarıyla oluşturuldu. Bu sayı her sayfanın etkileşim testinden geçtiği anlamına gelmez.
+- Astro denetimi: 468 dosya, 0 hata ve 0 uyarı. Önceden mevcut iki öneri duruyor.
+- Chromium ve WebKit: 320/360/390/414/600/768/1024/1440/1920 px; 18 görünüm geçti. Yatay taşma, kesilmiş metin, alan dışına kaçan öğe ve eşit konu alanları kontrol edildi.
+- 18 görünümde 404 içerik alanının otomatik WCAG 2 A/AA, 2.1 AA ve 2.2 AA denetimlerinde 0 tespit. Bu, tam erişilebilirlik sertifikası değildir.
+- İki motor için toplam 12 kontrol grubu geçti: arka plan renk kontrolü, gerçek 404/HEAD/noindex ve hedef adresler, arama önerisinden doğru esere geçiş, ana sayfaya dönüş, 390 px dokunma emülasyonunda arama/konu bağlantıları ve JavaScript kapalı arama/kategori akışları.
+- Her motorda 10 farklı kurtarma adresi 200 yanıtı verdi; eksik ve iç içe adresler 404 vermeye devam etti. Otomatik yönlendirme eklenmedi.
+- Ortak alt bölüm için ayrıca her motorda 4 sayfa × 4 genişlik çalıştırıldı: 32 görünüm geçti. Menü açma/kapama, klavye, erişilebilirlik, JavaScript kapalı kullanım ve 23 hedef adres denetlendi.
+- Üç WebP dosyasının gerçek biçimi, alpha kanalı, boyutları ve hash değerleri; render PNG’sinin ve 3D sahne kaynağının hash değerleri doğrulandı.
+- İlgili kaynakların biçim ve boşluk denetimi geçti.
+- Son 404 tarayıcı turu: 2026-10-26T17:29:29.466Z
+
+KORUNANLAR VE SINIRLAR
+Önceki tüm bekleyen çalışmalar, kişisel veri depolama sözleşmeleri ve iletişim formu değişiklikleri korundu. Son kaynak yedeğiyle karşılaştırmada yalnızca bu görevin beklenen eski dosyaları değişti; beklenmeyen değişiklik yok. Orijinal indirmeler, katalog verileri, genel yazı tipi kapsamı ve teknik SEO davranışı değiştirilmedi.
+Fiziksel telefon testi, canlı Cloudflare kontrolü, yayın veya yeni PageSpeed ölçümü bu görevde yapılmadı. Tarayıcı motorları ve dar ekran/dokunma emülasyonları test edildi. Bütün site sayfalarının 100 puan aldığı iddia edilmiyor.
+
+KANIT VE YENİDEN ÜRETİM
+reports/not-found-3d/final/report.json ve ekran görüntüleri nihai kanıttır.
+reports/not-found-3d/previous-structure önceki ara tasarımın tarihli testini saklar.
+reports/not-found-3d/footer-investigation kaynak teşhis görselleridir.
+design-assets/not-found-3d/scene.mjs: 3D model ve ışıklar.
+design-assets/not-found-3d/render.mjs: yerel PNG oluşturma; render çıktısı render.png.
+design-assets/not-found-3d/publish.mjs: alpha sınırlarına göre çerçeveleme, WebP boyutları ve içerik hash’leri.
+data/not-found-visual.json: sayfanın kullandığı gerçek kaynaklar ve metadata.
+Normal site derlemesi hazırlanmış WebP dosyalarını kullanır; her ziyaret veya günlük yayın için 3D render yapmaz.
+Three.js resmi geometri/malzeme belgeleri: https://threejs.org/docs/

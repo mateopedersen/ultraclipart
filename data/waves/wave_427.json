@@ -1,0 +1,483 @@
+{
+  "wave": "wave_427",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "election-election-day-megaphone",
+      "title": "Election Day Announcement Megaphone",
+      "alt": "A cream-and-navy megaphone stands beside an Election Day placard and small gold stars.",
+      "description": "The burgundy hand grip angles beneath the wide horn, with a navy strap curling onto the surface beside it. A double-lined border frames the compact cream sign and its two-word message.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_427/source/election-election-day-megaphone.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "e73552d1a31ae4c1df751a6fe6401330da21a63faf4caf4f66100183ce882a67",
+      "inputSignature": "f504f522393f0d964510b77709a49d3b5095699f9517f2b3bf5871a34a4fef1c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 497124,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 497124,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        272,
+        163,
+        1286,
+        875
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_427/exports/election-election-day-megaphone.pdf",
+          "bytes": 497124,
+          "sha256": "7a691c9c7cb217156a9764e463b3ffe2180b170640888089712b622130388f58"
+        },
+        "webp": {
+          "path": "work/production/wave_427/exports/election-election-day-megaphone.webp",
+          "bytes": 982028,
+          "sha256": "573479e5fd18419e171d2744e49574fc20d54c05be1161d6f9e2ecfd0c38d92f"
+        },
+        "thumb": {
+          "path": "work/production/wave_427/exports/election-election-day-megaphone-thumb.webp",
+          "bytes": 26082,
+          "sha256": "d66b7a9d81044a7a5b11548995aba804f56628bf27919c5986844c418444dec7"
+        }
+      },
+      "proofSha256": "a5b79932248bb9403f2eb4d150d113888601332464c5c9a2f14fb1e8a4aba715",
+      "pairMeanRgbDifference": 3.19254
+    },
+    {
+      "id": "election-community-information-kiosk",
+      "title": "Community Voter Information Kiosk",
+      "alt": "A silver-haired volunteer stands beside a navy-and-cream kiosk marked Voter Info.",
+      "description": "The woman in a mustard jumpsuit rests one hand beside a small blank tablet on the counter. Clear pamphlet holders stand at either end beneath the tall navy header and its simple cream lettering.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_427/source/election-community-information-kiosk.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "41e645990ff1fb7acc426125bba0528081b4202f95a051c435a533c0bb19fc9b",
+      "inputSignature": "d5fb28380b12768247d5d9c4d4a4bef7c159be7c1b937cdd20ca1e6713f2538c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 507722,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 507722,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        456,
+        84,
+        1111,
+        923
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_427/exports/election-community-information-kiosk.pdf",
+          "bytes": 507722,
+          "sha256": "3e4b7282341befba805cbf05434de07bdf8502fa0c6226c76ecd78b7266ad748"
+        },
+        "webp": {
+          "path": "work/production/wave_427/exports/election-community-information-kiosk.webp",
+          "bytes": 903472,
+          "sha256": "33d3f813263e5af30da2895cbd42eef36754e2e60e014fa9e96d5fb25512bddd"
+        },
+        "thumb": {
+          "path": "work/production/wave_427/exports/election-community-information-kiosk-thumb.webp",
+          "bytes": 23476,
+          "sha256": "ea49571d490ee80380acc08c85f392672d8ff6071744629c72ad74f393d56f33"
+        }
+      },
+      "proofSha256": "ea51b20397af4b9583a803ad2be23770458ecab6f26ff8afe65f1fb248f23170",
+      "pairMeanRgbDifference": 2.37798
+    },
+    {
+      "id": "election-outline-equipment-training",
+      "title": "Equipment Practice at a Workbench",
+      "alt": "Black-and-white line art shows an instructor demonstrating a tablet cable beside a control panel while a young adult watches.",
+      "description": "The apron-wearing woman holds the small screen above the complete workbench as the hooded learner leans toward the controls. A closed equipment case and coiled lead provide additional practice props without a named device model.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-equipment-training.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "16cb222dd967d6353902f13a4ad9413673da70a4b5eb1ec27dec4465d543b276",
+      "inputSignature": "daa55ced52c315335aa3620f2da18a5a40413fcbcbaaf8120b52b52cfe694a36",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 797706,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 797706,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        212,
+        110,
+        1154,
+        1053
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_427/exports/election-outline-equipment-training.pdf",
+          "bytes": 797706,
+          "sha256": "cd97e3a87af2d5674a3121af781b39aed9d44022e7d7ffe3e0a07a0d59d27737"
+        },
+        "webp": {
+          "path": "work/production/wave_427/exports/election-outline-equipment-training.webp",
+          "bytes": 519354,
+          "sha256": "72fde99bab1df5283616a2de6bcb92a00fe67982328c0c0e7d67bd64b948050c"
+        },
+        "thumb": {
+          "path": "work/production/wave_427/exports/election-outline-equipment-training-thumb.webp",
+          "bytes": 41798,
+          "sha256": "5c3487a7a5cb3de9e4f270e4a7648f41c0421f28a00c12c8ffb18c367014050c"
+        }
+      },
+      "proofSha256": "dc6d717838e31d54a09aed0761f02f9ce1f6e1377434c62bf58614c825c41373",
+      "pairMeanRgbDifference": 4.55845
+    },
+    {
+      "id": "election-outline-hanging-day-banner",
+      "title": "Hanging an Election Day Banner",
+      "alt": "Two volunteers hang an Election Day fabric banner between freestanding posts in black-and-white line art.",
+      "description": "One person stands on a small folding stool to secure the right-hand rope while the other holds the opposite corner. The outlined cloth droops naturally between the posts above their wide braced bases.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-hanging-day-banner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d60d6bd6c28f51c9ea957baa9cf62922976fc94bf3df1932af36fa619698f2eb",
+      "inputSignature": "25767340327b6aa7db0500bd3e24d8b2d66636adabbafe2d87358807bddfbd9e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 229385,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 229385,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        221,
+        114,
+        1347,
+        909
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_427/exports/election-outline-hanging-day-banner.pdf",
+          "bytes": 229385,
+          "sha256": "8f6ceb8c142cef84b470d28b837367d7c8541a03885285eb039a7bbe3f8fd653"
+        },
+        "webp": {
+          "path": "work/production/wave_427/exports/election-outline-hanging-day-banner.webp",
+          "bytes": 993228,
+          "sha256": "0d895e4797a5e01f95b778f019656008a6f0b724b0f8086004cd16dea7612bbe"
+        },
+        "thumb": {
+          "path": "work/production/wave_427/exports/election-outline-hanging-day-banner-thumb.webp",
+          "bytes": 38186,
+          "sha256": "b85fdebae1314cef6f0ed3051a291f583f0d4473ee76f43348ca18913a2dbc2a"
+        }
+      },
+      "proofSha256": "02f9d5510b61128efc7b14c841eaf4380c0d32ae1d9d17cdb7743ba3eee8c94a",
+      "pairMeanRgbDifference": 5.86474
+    },
+    {
+      "id": "election-outline-large-print-ballot",
+      "title": "Reading a Large-Print Sample Sheet",
+      "alt": "Black-and-white line art shows an older woman using a magnifier to read a large Sample sheet at an adjustable desk.",
+      "description": "Round glasses and a patterned cardigan frame the woman's focused expression above the empty oval rows. The desk's broad crossbar and T-shaped feet remain visible beside her wheeled chair and shoes.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-large-print-ballot.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "election",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "6ae109f5102d9697b5a519de6b4fd6c000eeb166fbc19b52804bfb9dad453adf",
+      "inputSignature": "f68ce9ca0dfca1238ca2374cee2b9c75ae022cbf9b0a37398fed62010d5d847f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 265129,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 265129,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        289,
+        113,
+        1057,
+        1115
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_427/exports/election-outline-large-print-ballot.pdf",
+          "bytes": 265129,
+          "sha256": "065007687f6404f70fc91392cbb6ea402e06661bd230bb0bdb5ad6e843fa2033"
+        },
+        "webp": {
+          "path": "work/production/wave_427/exports/election-outline-large-print-ballot.webp",
+          "bytes": 531878,
+          "sha256": "7d15bd22cef732a28b2493c88dd900d27e6215db2eb6562db51dc3d079a3da92"
+        },
+        "thumb": {
+          "path": "work/production/wave_427/exports/election-outline-large-print-ballot-thumb.webp",
+          "bytes": 40972,
+          "sha256": "36b2ee711655dd935628e7b7619925ccbe12acfe8f07eb2c10f418eeb2ed8d14"
+        }
+      },
+      "proofSha256": "0d2898f7f1d4477c105e25289fcbd9ba3cbe642cf735edf57781ebbcdcfa45a2",
+      "pairMeanRgbDifference": 4.66075
+    },
+    {
+      "id": "election-outline-forum-audience",
+      "title": "A Question at a Community Forum",
+      "alt": "Black-and-white line art shows three seated adults and a standing facilitator beside a Community Forum sign.",
+      "description": "A man in a checked shirt raises his hand while a headscarf-wearing woman and a long-haired man listen from separate chairs. The facilitator holds a clipboard beneath the large two-line sign.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-forum-audience.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "548f3595fa95e6932ebab217de9950490e091a808de39817929468361cd07b31",
+      "inputSignature": "a8973fc6bb439df114ea7af237fb1808397a0559c236c6ecc3a37f6706fbfe6d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 207853,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 207853,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        244,
+        135,
+        1289,
+        857
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_427/exports/election-outline-forum-audience.pdf",
+          "bytes": 207853,
+          "sha256": "e2dedcfc13c59359af711992ea57644e154ef5291e1c607a6c212daf10c98372"
+        },
+        "webp": {
+          "path": "work/production/wave_427/exports/election-outline-forum-audience.webp",
+          "bytes": 935228,
+          "sha256": "fc5519306d47af2293b459b7ed17a5faad602fe1290863a335b5a8ed101b3415"
+        },
+        "thumb": {
+          "path": "work/production/wave_427/exports/election-outline-forum-audience-thumb.webp",
+          "bytes": 37584,
+          "sha256": "43d0cf6da370c1157b361626391b4f709c7a4eab3ae7ba4f3170c0224dde5b2f"
+        }
+      },
+      "proofSha256": "6011452c0a7675e4ea53f7de2569e0dcef5ad415aa1f176b7f7350a64ffb6190",
+      "pairMeanRgbDifference": 4.85078
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-27T01:22:53.594275+00:00",
+  "screenReviewEvidence": "work/production/wave_427/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-27T01:22:55.844Z"
+}

@@ -1,0 +1,81 @@
+{
+  "wave": "wave_418",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-poppy-planter",
+      "title": "Planting Red Poppies",
+      "alt": "A red-haired woman in a navy work jacket plants a red poppy in a terracotta window box.",
+      "description": "She kneels beside the long planter in a plain olive cap and tan work trousers, steadying the seedling's dark root ball with one hand. A trowel, pot and bag of compost complete the gardening supplies.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_418/source/veterans-poppy-planter.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-ceremony-microphone",
+      "title": "Speaking at a Veterans Day Gathering",
+      "alt": "An older man speaks at a wooden lectern labeled Thank You Veterans beside an American flag and red poppies.",
+      "description": "The speaker holds a cream note card below a slim microphone while wearing a navy blazer and plain garrison cap. A low arrangement of poppies, pale flowers and a striped bow sits against the front of the lectern.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_418/source/veterans-ceremony-microphone.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-outline-student-interview",
+      "title": "Cleaning a Service Keepsake Trunk",
+      "alt": "Black-and-white line art shows an older woman and a teenager brushing dust from an open wooden trunk of folded clothing.",
+      "description": "The woman sits on a low stool with a plain garrison cap and round glasses while the boy kneels at the trunk's opposite corner. Hinges, latches, wood grain and separate cleaning brushes define the restoration activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_418/source/veterans-outline-student-interview.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-outline-accessible-stage",
+      "title": "Greeting beside an Accessible Stage Ramp",
+      "alt": "Black-and-white line art shows a woman beside a small stage ramp as an older man waves from his wheelchair.",
+      "description": "Handrails run along both sides of the shallow wooden ramp beside the standing woman's hand. The man's plain cap, open palm and clearly drawn wheelchair make the welcoming moment readable without additional lettering.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_418/source/veterans-outline-accessible-stage.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "veterans-outline-poppy-cards",
+      "title": "Thank You Veterans Heart Wreath",
+      "alt": "Outlined Thank You Veterans letters sit inside a heart-shaped wreath of oak leaves, poppies and stars.",
+      "description": "The large hollow letters fill three centered lines within the leafy heart. Three poppy flowers and small five-pointed stars interrupt the foliage above a tied ribbon at the lower point.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_418/source/veterans-outline-poppy-cards.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "veterans-outline-workshop-bird-feeder",
+      "title": "Repairing a Radio Together",
+      "alt": "Black-and-white line art shows a woman and teenager examining an opened tabletop radio at an electronics workbench.",
+      "description": "The woman points into the radio with a screwdriver while the girl holds its slotted rear cover. A magnifying lamp, loose speaker, tools and small components spread across the fully visible workbench.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_418/source/veterans-outline-workshop-bird-feeder.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ],
+  "deferred": []
+}

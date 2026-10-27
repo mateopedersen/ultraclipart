@@ -1,4 +1,9 @@
-import { pickCute, validCuteIndex, type CutePick } from '../lib/cute-discovery';
+import {
+  pickCute,
+  validCuteIndex,
+  SURPRISE_INDEX_VERSION,
+  type CutePick,
+} from '../lib/cute-discovery';
 const key = 'ultraclipart-surprise-recent-v2';
 export function initCuteSurprise() {
   const link = document.querySelector<HTMLAnchorElement>('[data-surprise-art]');
@@ -41,10 +46,13 @@ export function initCuteSurprise() {
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 3000);
       try {
-        const response = await fetch(link.dataset.surpriseSource!, { signal: controller.signal });
+        const response = await fetch(link.dataset.surpriseSource!, {
+          signal: controller.signal,
+          cache: 'no-store',
+        });
         if (!response.ok) return;
         const data = await response.json();
-        if (data.version !== 1) return;
+        if (data.version !== SURPRISE_INDEX_VERSION) return;
         const loaded = validCuteIndex(data.items);
         if (loaded.length) pool = loaded;
       } catch {

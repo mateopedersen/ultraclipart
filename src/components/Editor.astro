@@ -1,6 +1,10 @@
 ---
 import Icon from './Icon.astro';
 import StudioIcon from './StudioIcon.astro';
+import ExportFormatIcon from './ExportFormatIcon.astro';
+import Workbench from './Workbench.astro';
+import WorkbenchDialogs from './WorkbenchDialogs.astro';
+import '../styles/studio-next.css';
 import ElementLibrary from './ElementLibrary.astro';
 import TextStudio from './TextStudio.astro';
 import '../styles/studio-workspace.css';
@@ -18,6 +22,10 @@ interface Props {
     height?: number;
     webp?: string;
     pdf?: string;
+    preview?: string;
+    previewWidth?: number;
+    previewHeight?: number;
+    alt?: string;
     files?: { webp: { bytes: number; sha256: string }; pdf: { bytes: number; sha256: string } };
     [key: string]: unknown;
   };
@@ -32,6 +40,13 @@ const rasterSource = raster
       height: art.height,
       webp: { url: art.webp, ...art.files!.webp },
       pdf: { url: art.pdf, ...art.files!.pdf },
+      screen: art.preview?.startsWith('/previews/p1/')
+        ? {
+            url: art.preview,
+            width: art.previewWidth,
+            height: art.previewHeight,
+          }
+        : undefined,
     }
   : undefined;
 const toolItems = [
@@ -43,7 +58,8 @@ const toolItems = [
       ]
     : []),
   ['region', 'select', 'Smart Select'],
-  ['studio', 'image', 'Studio Pro'],
+  ['studio', 'image', 'Effects'],
+  ['workbench', 'image', 'Actions'],
   ['transform', 'select', 'Transform'],
   ['color', 'color', 'Recolor'],
   ['background', 'background', 'Background'],
@@ -55,12 +71,13 @@ const toolItems = [
 ---
 
 <section
-  class="uc-editor"
+  class="uc-editor uc-next"
   data-art-id={art.id}
   data-source={art.svg ?? undefined}
   data-raster-source={rasterSource ? JSON.stringify(rasterSource) : undefined}
   data-composition={compositionTools ? 'true' : undefined}
   data-creator={creator ? 'true' : undefined}
+  data-work-mode="edit"
   aria-label={creator ? 'Clipart creation studio' : 'Clipart editor'}
   aria-busy="true"
 >
@@ -87,9 +104,21 @@ const toolItems = [
       <button data-action="redo" disabled>
         <Icon name="redo" size={18} /> Redo
       </button>
-      <button data-action="reset">Reset</button>
-      <button data-action="save">
-        <StudioIcon name="save" size={22} /> Save project
+      <details class="wb-file-menu">
+        <summary>File</summary>
+        <div>
+          <button data-action="save">
+            <StudioIcon name="save" size={22} /> Save Project
+          </button>
+          <button data-action="load">Open Project</button>
+          <button data-wb-run="rename-project">Rename Project</button>
+          <button data-wb-run="save-checkpoint">Save Checkpoint</button>
+          <button data-wb-run="restore-checkpoint">Restore Checkpoint</button>
+          <button data-action="reset">Reset Canvas</button>
+        </div>
+      </details>
+      <button data-wb-run="focus-mode" data-wb-back-page>
+        Back to Page
       </button>
       <button data-action="share" disabled aria-label="Share your edited artwork">
         <svg
@@ -117,16 +146,20 @@ const toolItems = [
       </button>
     </div>
   </div>
-  <div class="uc-modes" role="group" aria-label="Studio work mode">
-    <button data-work-mode="quick" aria-pressed="true">
-      Quick Edit
-    </button>
-    <button data-work-mode="advanced" aria-pressed="false">
-      Advanced Edit
+  <div class="uc-modes" role="group" aria-label="Studio work mode" inert>
+    <button data-work-mode="edit" aria-pressed="true">
+      Edit
     </button>
     <button data-work-mode="print" aria-pressed="false">
       Print &amp; Create
     </button>
+  </div>
+  <div class="wb-launchbar">
+    <button data-wb-run="command-search">
+      <StudioIcon name="select" size={23} />
+      Find a Tool <kbd>⌘ / Ctrl K</kbd>
+    </button>
+    <button data-wb-run="shortcut-guide">Shortcuts</button>
   </div>
   <div class="uc-notice" role="status" aria-live="polite" data-status>
     {creator
@@ -144,23 +177,60 @@ const toolItems = [
           aria-pressed={panel === (creator ? 'create' : 'transform')}
           aria-controls={`uc-pane-${panel}`}
         >
-          <StudioIcon name={panel} />
+          <StudioIcon name={panel === 'workbench' ? 'layers' : panel} />
           <span>{label}</span>
         </button>
       ))}
     </nav>
     <div class="uc-canvas-column">
+      <Workbench />
       <div
         class="uc-stage"
         tabindex="0"
         role="application"
         aria-label="Artwork canvas. Select layers with the Layers tool. Arrow keys move the selection. Shift plus arrow moves ten units. Delete removes selection. Control or Command Z undoes changes."
       >
-        <div class="uc-canvas"></div>
+        <div
+          class="uc-canvas"
+          style={`--initial-canvas-ratio:${art.width || 800}/${art.height || 800};--initial-canvas-scale:${(art.width || 800) / (art.height || 800)}`}
+        >
+          {rasterSource?.screen && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox={`0 0 ${art.width} ${art.height}`}
+              width={art.width}
+              height={art.height}
+              role="img"
+              aria-label={art.alt || art.title}
+              data-editor-preview
+            >
+              <g
+                data-layer="original-image"
+                transform="translate(0 0) rotate(0) scale(1 1)"
+                data-locked="false"
+              >
+                <image
+                  href={rasterSource.screen.url}
+                  x="0"
+                  y="0"
+                  width={art.width}
+                  height={art.height}
+                  preserveAspectRatio="none"
+                  opacity="1"
+                />
+              </g>
+            </svg>
+          )}
+        </div>
         {creator && (
           <div class="uc-empty-canvas" data-empty-canvas>
-            <strong>Your next great idea starts here.</strong>
-            <span>Build with elements, draw freely, or start with a template.</span>
+            <strong>Your canvas is ready</strong>
+            <span>Choose artwork, add text, or start drawing.</span>
+            <div class="wb-empty-actions">
+              <button data-open-panel="elements">Add Artwork</button>
+              <button data-open-panel="text">Add Text</button>
+              <button data-open-panel="create">Draw</button>
+            </div>
           </div>
         )}
       </div>
@@ -214,6 +284,27 @@ const toolItems = [
         </p>
       </header>
       <div class="uc-inspector-body" id={`uc-inspector-body-${art.id}`}>
+        <div
+          id="uc-pane-workbench"
+          data-pane="workbench"
+          role="region"
+          aria-labelledby="uc-tool-workbench"
+          hidden
+        >
+          <h3>Actions for Your Design</h3>
+          <p>Find tools for selecting, arranging, naming and exporting your work.</p>
+          <button data-wb-run="command-search" class="uc-primary">
+            Search All Tools
+          </button>
+          <div class="wb-action-groups">
+            <button data-wb-group="Arrange">Arrange Objects</button>
+            <button data-wb-group="Text">Text Tools</button>
+            <button data-wb-group="Layers">Manage Layers</button>
+            <button data-wb-group="Guides">Grid &amp; Guides</button>
+            <button data-wb-group="Export">Export Formats</button>
+            <button data-wb-group="Project">Project Tools</button>
+          </div>
+        </div>
         <StudioPanels />
         {compositionTools && <ElementLibrary />}
         {compositionTools && (
@@ -445,7 +536,7 @@ const toolItems = [
               Open Select &amp; Recolor
             </button>
           </div>
-          <div data-colors class="uc-swatches" aria-label="Layer colors"></div>
+          <div data-colors class="uc-swatches" role="group" aria-label="Layer colors"></div>
           <label>
             Color
             <input type="color" value="#2865d2" data-color />
@@ -734,85 +825,136 @@ const toolItems = [
       </footer>
     </aside>
   </div>
+  <WorkbenchDialogs />
   <dialog data-export-dialog aria-labelledby="uc-export-title">
     <div class="uc-modal-top">
-      <h2 id="uc-export-title">Export your clipart</h2>
+      <h2 id="uc-export-title">Download &amp; Print</h2>
       <button data-action="close-export" aria-label="Close export">
         ×
       </button>
     </div>
-    <p>Download your current artwork, including your edits.</p>
-    <div class="uc-export-layout">
-      <div data-export-preview class="uc-export-preview uc-checker"></div>
-      <div>
-        <fieldset class="uc-format-choices">
-          <legend>File format</legend>
-          <label>
-            <input type="radio" name="uc-format" data-format value="webp" checked />
-            <span>
-              <Icon name="image" />
-              <strong>Image</strong>
-              <small>Transparent image</small>
-            </span>
+    <div class="uc-export-content">
+      <p>Name your design, choose a format, then download or print.</p>
+      <label class="uc-export-name">
+        Project Name
+        <input data-filename value={art.title} maxlength="120" autocomplete="off" required />
+      </label>
+      <div class="uc-export-layout">
+        <div data-export-preview class="uc-export-preview uc-checker"></div>
+        <div>
+          <fieldset class="uc-format-choices">
+            <legend>File format</legend>
+            {[
+              ['png', 'PNG', 'Transparent image'],
+              ['jpg', 'JPG', 'White background'],
+              ['webp', 'WebP', 'Compact image'],
+              ['pdf', 'PDF', 'CMYK print'],
+              ['svg', 'SVG', 'Scalable artwork'],
+              ['docx', 'Word', 'DOCX document'],
+            ].map(([value, label, description]) => (
+              <label>
+                <input
+                  type="radio"
+                  name="uc-format"
+                  data-format
+                  value={value}
+                  checked={value === 'webp'}
+                />
+                <span>
+                  <ExportFormatIcon format={value} />
+                  <strong>{label}</strong>
+                  <small>{description}</small>
+                </span>
+              </label>
+            ))}
+          </fieldset>
+          <div data-webp-options>
+            <label>
+              Image width
+              <select data-size>
+                <option value="1024">1024 pixels</option>
+                <option value="2048" selected={!raster}>
+                  2048 pixels
+                </option>
+                <option value="original" selected={raster}>
+                  Original canvas width
+                </option>
+              </select>
+            </label>
+            <label data-quality-options>
+              Quality
+              <input data-quality type="range" min="80" max="100" value="95" />
+            </label>
+          </div>
+          <details data-pdf-options hidden>
+            <summary>PDF Details</summary>
+            <p>
+              Uses your Print setup: paper, orientation, margins and placement.{' '}
+              {raster
+                ? 'Unchanged images keep their original CMYK data and any source profile. Edited pixels, text and shapes use the GRACoL output condition (referenced, not embedded).'
+                : 'Colors are converted through the GRACoL print profile. The PDF references the GRACoL output condition; the full ICC profile is not embedded.'}{' '}
+              The default limit is 1,000,000 bytes. A larger lossless file requires the explicit
+              option below.
+            </p>
+          </details>
+          <label class="uc-check" data-large-pdf-options hidden>
+            <input data-allow-large-pdf type="checkbox" /> Allow PDF files larger than 1 MB
           </label>
-          <label>
-            <input type="radio" name="uc-format" data-format value="pdf" />
-            <span>
-              <Icon name="document" />
-              <strong>PDF</strong>
-              <small>CMYK print</small>
-            </span>
-          </label>
-        </fieldset>
-        <div data-webp-options>
-          <label>
-            Image width
-            <select data-size>
-              <option value="1024">1024 pixels</option>
-              <option value="2048" selected={!raster}>
-                2048 pixels
-              </option>
-              <option value="original" selected={raster}>
-                Original canvas width
-              </option>
-            </select>
-          </label>
-          <label>
-            Quality
-            <input data-quality type="range" min="80" max="100" value="95" />
-          </label>
+          <p class="uc-hint" data-format-help>
+            WebP keeps transparent areas and uses RGB colors.
+          </p>
+          <details class="uc-export-paper">
+            <summary>Paper &amp; Print Settings</summary>
+            <p class="uc-hint">Used for PDF, Word and printing.</p>
+            <div class="uc-row">
+              <label>
+                Paper
+                <select data-export-paper="paper">
+                  <option value="a4">A4</option>
+                  <option value="letter">US Letter</option>
+                </select>
+              </label>
+              <label>
+                Orientation
+                <select data-export-paper="orientation">
+                  <option value="portrait">Portrait</option>
+                  <option value="landscape">Landscape</option>
+                </select>
+              </label>
+            </div>
+            <div class="uc-row">
+              <label>
+                Margins (inches)
+                <input data-export-paper="margin" type="number" min="0" max="2" step="0.1" />
+              </label>
+              <label>
+                Placement
+                <select data-export-paper="scale">
+                  <option value="fit">Fit to Page</option>
+                  <option value="fill">Fill Page (Crops Edges)</option>
+                  <option value="actual">Actual Size (96 DPI)</option>
+                  <option value="native">Native Print Size (600 DPI)</option>
+                </select>
+              </label>
+            </div>
+          </details>
         </div>
-        <p data-pdf-options hidden>
-          Uses your Print setup: paper, orientation, margins and placement.{' '}
-          {raster
-            ? 'Unchanged images keep their original CMYK data and any source profile. Edited pixels, text and shapes use the GRACoL output condition (referenced, not embedded).'
-            : 'Colors are converted through the GRACoL print profile. The PDF references the GRACoL output condition; the full ICC profile is not embedded.'}{' '}
-          The default limit is 1,000,000 bytes. A larger lossless file requires the explicit option
-          below.
-        </p>
-        <label class="uc-check">
-          <input data-allow-large-pdf type="checkbox" /> Allow a larger lossless PDF if the 1 MB
-          limit is exceeded
-        </label>
-        <label>
-          Filename
-          <input data-filename value={art.id} maxlength="100" />
-        </label>
-        <p class="uc-hint">
-          WebP uses RGB. PDF uses process CMYK; transparent areas print as paper. All edits stay in
-          this browser.
-        </p>
       </div>
+      <p data-export-status role="status" aria-live="polite"></p>
     </div>
-    <p data-export-status role="status" aria-live="polite"></p>
-    <button class="uc-primary uc-download" data-action="download">
-      ↓ Download Image
-    </button>
+    <div class="uc-export-actions">
+      <button class="uc-primary uc-download" data-action="download">
+        Download WebP
+      </button>
+      <button data-action="print-design">
+        <StudioIcon name="print" size={22} /> Print Design
+      </button>
+    </div>
   </dialog>
 </section>
 <script>
-  import { initializeEditors } from '../editor/editor';
-  initializeEditors();
+  import { bootstrapEditors } from '../editor/bootstrap';
+  bootstrapEditors();
 </script>
 <style is:global>
   .uc-mobile-properties {
@@ -870,18 +1012,6 @@ const toolItems = [
     cursor: pointer;
     padding: 8px 0;
     font-weight: 600;
-  }
-  .uc-editor[data-work-mode='quick'] [data-panel='studio'],
-  .uc-editor[data-work-mode='quick'] [data-panel='create'],
-  .uc-editor[data-work-mode='quick'] [data-panel='canvas'],
-  .uc-editor[data-work-mode='quick'] [data-panel='layers'],
-  .uc-editor[data-work-mode='quick'] [data-panel='print'] {
-    display: none;
-  }
-  .uc-editor[data-work-mode='quick'] [data-wand-controls] .uc-row,
-  .uc-editor[data-work-mode='quick'] [data-wand-controls] .uc-check,
-  .uc-editor[data-work-mode='quick'] [data-advanced-selection] {
-    display: none;
   }
   @media (max-width: 700px) {
     .uc-editor button {
@@ -1025,6 +1155,7 @@ const toolItems = [
     min-width: 0;
   }
   .uc-stage {
+    container-type: size;
     position: relative;
     height: min(66vw, 670px);
     min-height: 360px;
@@ -1038,8 +1169,8 @@ const toolItems = [
     border-radius: 6px;
   }
   .uc-canvas {
-    width: 100%;
-    aspect-ratio: 1;
+    width: min(100%, calc(100cqh * var(--initial-canvas-scale, 1)));
+    aspect-ratio: var(--initial-canvas-ratio, 1);
     position: relative;
     flex-shrink: 0;
     background-color: #fff;
@@ -1265,6 +1396,33 @@ const toolItems = [
     background: #14233e88;
     backdrop-filter: blur(2px);
   }
+  .uc-editor dialog[data-export-dialog][open] {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: min(90dvh, 960px);
+  }
+  [data-export-dialog] .uc-modal-top {
+    flex-shrink: 0;
+  }
+  .uc-export-content {
+    overflow: auto;
+    min-height: 0;
+    padding-right: 3px;
+    overscroll-behavior: contain;
+  }
+  .uc-export-content > p:first-child {
+    margin-top: 10px;
+  }
+  .uc-export-content [data-pdf-options] {
+    margin-top: 12px;
+    font-size: 13px;
+  }
+  .uc-export-content [data-pdf-options] summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 6px 0;
+  }
   .uc-modal-top {
     display: flex;
     justify-content: space-between;
@@ -1284,9 +1442,35 @@ const toolItems = [
   }
   .uc-export-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
     gap: 24px;
     margin: 20px 0;
+  }
+  .uc-export-name {
+    display: grid;
+    gap: 8px;
+    margin: 18px 0;
+    font-weight: 600;
+  }
+  .uc-export-paper {
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid var(--uc-line);
+  }
+  .uc-export-paper summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 8px 0;
+  }
+  .uc-export-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 10px;
+    flex-shrink: 0;
+    margin-top: 14px;
+  }
+  .uc-export-actions button {
+    white-space: normal;
   }
   .uc-export-preview {
     display: flex;
@@ -1294,6 +1478,8 @@ const toolItems = [
     border-radius: 8px;
     overflow: hidden;
     min-width: 0;
+    align-self: start;
+    aspect-ratio: 4 / 3;
   }
   .uc-export-preview > svg {
     width: 100%;
@@ -1437,7 +1623,7 @@ const toolItems = [
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
   }
   .uc-format-choices legend {
@@ -1459,6 +1645,10 @@ const toolItems = [
     display: grid;
     justify-items: center;
     gap: 6px;
+    height: 100%;
+    box-sizing: border-box;
+    grid-template-rows: auto auto minmax(32px, auto);
+    align-content: start;
     padding: 14px 8px;
     border: 1px solid var(--uc-line);
     border-radius: 10px;
@@ -1471,8 +1661,48 @@ const toolItems = [
     font-size: 15px;
   }
   .uc-format-choices small {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 400;
+    line-height: 1.35;
+    text-align: center;
+    color: #496383;
+  }
+  .uc-format-choices .uc-export-format-icon {
+    display: block;
+  }
+  @media (max-width: 520px) {
+    .uc-editor dialog[data-export-dialog] {
+      padding: 18px;
+    }
+    .uc-format-choices {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .uc-format-choices label > span {
+      padding: 10px 6px;
+      gap: 4px;
+    }
+    .uc-format-choices .uc-export-format-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .uc-export-actions {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    [data-export-dialog] .uc-modal-top h2 {
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .uc-export-content > p:first-child {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .uc-export-preview {
+      max-height: 160px;
+    }
+    .uc-export-name {
+      margin: 12px 0;
+    }
   }
   .uc-format-choices input:checked + span {
     border-color: var(--uc-blue);
@@ -1643,11 +1873,11 @@ const toolItems = [
 
 <style is:global>
   .uc-editor[data-composition] .uc-notice {
-    min-height: 56px;
+    min-height: calc(3em + 22px);
   }
   @media (max-width: 800px) {
     .uc-editor[data-composition] .uc-notice {
-      min-height: 74px;
+      min-height: calc(6em + 22px);
     }
   }
 </style>

@@ -9,7 +9,7 @@ const { item, compact = false } = Astro.props;
   data-share-title={item.title}
   data-share-url={`https://ultraclipart.com/art/${item.id}/`}
   data-share-image={item.webp}
-  aria-label={`Share ${item.title}`}
+  aria-label={compact ? `Share ${item.title}` : `Share this clipart: ${item.title}`}
   title="Share this clipart"
 >
   <svg width="23" height="23" viewBox="0 0 28 28" fill="none" aria-hidden="true">

@@ -1,0 +1,529 @@
+{
+  "wave": "wave_400",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "kwanzaa-community-book-shelf",
+      "title": "Arranging a Shared Bookshelf",
+      "alt": "An adult in rust overalls arranges books while a child in a teal hoodie sorts another stack beside a wooden shelf.",
+      "description": "Books fill a freestanding wooden shelf topped by a trailing plant. An adult reaches toward its rows while a seated child sorts a stack below, beside a woven basket and a strip of colored fabric.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-community-book-shelf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3ff9689f04a5d1be3999286d71b23ba0d5aaef86e51db06838f3dca6892861fc",
+      "inputSignature": "5ad6dbc576f3a7d2e18e1ae75bcd4daa971bbb0ebb199fa7fc0a72dd37429e50",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 989795,
+        "weightedCmykRmse": 0.934257
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1323628,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1061191,
+          "weightedCmykRmse": 0.797085
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 989795,
+          "weightedCmykRmse": 0.934257
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        38,
+        1272,
+        1149
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_400/exports/kwanzaa-community-book-shelf.pdf",
+          "bytes": 989795,
+          "sha256": "07056ee70ce60f36ff8d1206189a4db79fb34936aa88489b60212d3725d14db4"
+        },
+        "webp": {
+          "path": "work/production/wave_400/exports/kwanzaa-community-book-shelf.webp",
+          "bytes": 1178686,
+          "sha256": "2553a2af56f9a92ddd44c726abc2f02900d85f3f903ba48ed90ce809c3ffd879"
+        },
+        "thumb": {
+          "path": "work/production/wave_400/exports/kwanzaa-community-book-shelf-thumb.webp",
+          "bytes": 65242,
+          "sha256": "6e909566feff3dfe10d16b5ce777902dad5fe1a53a73662fd1892ca148c4572d"
+        }
+      },
+      "proofSha256": "a7d1113f04960eb7c17a9b34a7075d0343481373e24dfa753da781cfa88b0743",
+      "pairMeanRgbDifference": 3.87325
+    },
+    {
+      "id": "kwanzaa-beaded-bookmark-craft",
+      "title": "Beaded Bookmark Beside a Closed Book",
+      "alt": "A green hardcover book sits beside a bowl of red, black and green beads, a cord spool and a partly beaded bookmark.",
+      "description": "A tasseled bookmark stretches across the foreground beside its remaining beads and cord. The closed green book adds a solid rectangular shape behind the small round beads and coiled spool.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-beaded-bookmark-craft.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "69be0e8685dd580ad6cfa2983751d3f238bc76478244d05db426ea32913a6423",
+      "inputSignature": "904a9ee569cfe6800ad2e720c0eba67093fcaea69df583c3e332164069bc3c61",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 961558,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 961558,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        107,
+        39,
+        1488,
+        1014
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_400/exports/kwanzaa-beaded-bookmark-craft.pdf",
+          "bytes": 961558,
+          "sha256": "c0879b6300d47184cf2bdc0c4cf909499251055ca67cadefae0e211862427e4d"
+        },
+        "webp": {
+          "path": "work/production/wave_400/exports/kwanzaa-beaded-bookmark-craft.webp",
+          "bytes": 1462880,
+          "sha256": "1639f1dcfa0f5043584c60b2a03322c30b90e819f5d0039f1938701ef1e13782"
+        },
+        "thumb": {
+          "path": "work/production/wave_400/exports/kwanzaa-beaded-bookmark-craft-thumb.webp",
+          "bytes": 44696,
+          "sha256": "a1d052f03a42924fbdd17fff5981c9c35d6adf2620888597a5722ce0d1ee46e1"
+        }
+      },
+      "proofSha256": "68cf23450f4580d520a0d277f3ff89cc2853c39bf4c969b9d3d2737ee88a3587",
+      "pairMeanRgbDifference": 3.55764
+    },
+    {
+      "id": "kwanzaa-paper-weaving-kit",
+      "title": "Paper-Weaving Mat and Craft Tools",
+      "alt": "A red, black, green and tan woven paper mat is surrounded by loose strips, a wooden ruler and red scissors.",
+      "description": "Alternating paper strips form a small rectangular woven mat. Spare lengths remain beside it, with a marked wooden ruler and red scissors arranged as a compact set of craft materials.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-paper-weaving-kit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "abf9953066b551af4f606e219573e4b750acfac5c2398ffb2785c3167f95aa6c",
+      "inputSignature": "88d21397059eeed02c9896b907285bf12bc8df9b096dd3bd33cd5af8590bdfff",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 947986,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 947986,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        47,
+        76,
+        1507,
+        929
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_400/exports/kwanzaa-paper-weaving-kit.pdf",
+          "bytes": 947986,
+          "sha256": "c61241bbc339a69d11ca2d6ec893807d227a27884c71fdea3ac624b8552e4dda"
+        },
+        "webp": {
+          "path": "work/production/wave_400/exports/kwanzaa-paper-weaving-kit.webp",
+          "bytes": 1562652,
+          "sha256": "8c9ce87599404c5f736a038fcfd214f883f891b95b36238a34d5c92acc047deb"
+        },
+        "thumb": {
+          "path": "work/production/wave_400/exports/kwanzaa-paper-weaving-kit-thumb.webp",
+          "bytes": 48292,
+          "sha256": "2a38fb1eca1e36c50475ea6cd98ff564cd9d3762619c64bc65746ed3438788e2"
+        }
+      },
+      "proofSha256": "0073fae0d574270bfb8f79bc3b9b9c6dc89d928a4b3f8a935bb70b2d621b2a5e",
+      "pairMeanRgbDifference": 3.63776
+    },
+    {
+      "id": "kwanzaa-celebration-wreath",
+      "title": "Cloth-Wrapped Wreath with an Open Book",
+      "alt": "A rope wreath wrapped in red, black and green fabric carries a small open book and bow at its lower edge.",
+      "description": "Natural rope remains visible between bands of striped and geometric fabric around the circular wreath. A miniature open book rests at the bottom above a tied bow, balancing the otherwise open center.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-celebration-wreath.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 1000,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "52af6ab4a291aa81596006d28618589ad1548850de2ecbb12ba5c4221604e453",
+      "inputSignature": "1fc21e9ea625d56243b48d239c14eac02be4ddd35f240d084938913803c7af7e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 975486,
+        "weightedCmykRmse": 1.419598
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1510002,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1218678,
+          "weightedCmykRmse": 0.773949
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1148514,
+          "weightedCmykRmse": 0.923495
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1052382,
+          "weightedCmykRmse": 1.122602
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 975486,
+          "weightedCmykRmse": 1.419598
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        62,
+        56,
+        1196,
+        1180
+      ],
+      "image": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_400/exports/kwanzaa-celebration-wreath.pdf",
+          "bytes": 975486,
+          "sha256": "cbfb685bfdb69c44ae677e8fb799d9e6455d250f5ac0056febf922c2fafd0509"
+        },
+        "webp": {
+          "path": "work/production/wave_400/exports/kwanzaa-celebration-wreath.webp",
+          "bytes": 1381082,
+          "sha256": "d49c8f70ec82f1a28fde0acfa45591690456615bcbe69c93b2d1458ce00a2fb8"
+        },
+        "thumb": {
+          "path": "work/production/wave_400/exports/kwanzaa-celebration-wreath-thumb.webp",
+          "bytes": 67562,
+          "sha256": "1658e263c16a0a09a2a8c8d3b11a249e64fedad6583c90d19f444458eb06832f"
+        }
+      },
+      "proofSha256": "78c7bf5d2e8ceee46df515a3ad7cc6ae189676cec2e0e30b98e8ce08c81e77b1",
+      "pairMeanRgbDifference": 5.55914
+    },
+    {
+      "id": "kwanzaa-blank-invitation",
+      "title": "Blank Invitation with Corn and a Wooden Cup",
+      "alt": "A cream invitation card with a red, black and green border shows corn and a wooden cup above an ochre envelope.",
+      "description": "A broad empty cream panel leaves the center of this invitation clear. Corn and a wooden cup decorate the lower corner, while an ochre envelope sits behind the card\u2019s striped border.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-blank-invitation.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4f079d0c2c601fa47f689293628855d608091c9f617e88a70e6bd581e0b006d0",
+      "inputSignature": "a47a88ceb866a8c6c0b0b9342f03715824220536c815c6064f57ba7af029b523",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 896747,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 896747,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        108,
+        60,
+        1474,
+        948
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_400/exports/kwanzaa-blank-invitation.pdf",
+          "bytes": 896747,
+          "sha256": "f6592f6aed8eabab2aa746e76b91fc1ac8e6dd4e2c9d4f72c88c47f5dc568873"
+        },
+        "webp": {
+          "path": "work/production/wave_400/exports/kwanzaa-blank-invitation.webp",
+          "bytes": 1626750,
+          "sha256": "da4406a34f2075ed90cefcb829bb73ea14b64c5c7b2c94e92ac44f90edc47a2a"
+        },
+        "thumb": {
+          "path": "work/production/wave_400/exports/kwanzaa-blank-invitation-thumb.webp",
+          "bytes": 30296,
+          "sha256": "26db0ea90754286e902a52303a07085ef3072a847140d52481f89b48caabd0a0"
+        }
+      },
+      "proofSha256": "377910c957c7679337168bda9c529a71c680c17d12bdb50315ba160da6e42326",
+      "pairMeanRgbDifference": 2.62902
+    },
+    {
+      "id": "kwanzaa-handmade-gift-tag",
+      "title": "Illustrated Gift Tags and Twine",
+      "alt": "Three kraft gift tags show books, a woven circle and corn beside a twine spool, pencil and colored paper.",
+      "description": "Small subject drawings distinguish the three kraft-colored tags: books, a woven circle and corn. Loose twine curves around the group, with a spool, pencil and red, black and green paper behind it.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-handmade-gift-tag.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "kwanzaa",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d46bd9ccec964db8611dcee6e8fce7e61b099e84641e5911c39495775a1a4ff8",
+      "inputSignature": "4a77defb220982bb1ee32ea112925da4e938c5602ea90f1bb1fc18368d7e779e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 933902,
+        "weightedCmykRmse": 0.7375
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1147966,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 933902,
+          "weightedCmykRmse": 0.7375
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        82,
+        68,
+        1459,
+        941
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_400/exports/kwanzaa-handmade-gift-tag.pdf",
+          "bytes": 933902,
+          "sha256": "272d8de2128750968a7b1f4cc7a0d93e930f09ff35a21d6a98c1148e62e7ac47"
+        },
+        "webp": {
+          "path": "work/production/wave_400/exports/kwanzaa-handmade-gift-tag.webp",
+          "bytes": 1799848,
+          "sha256": "16863f5d32e2a84f928a42b13a6592163c607032eff7554b6382e7b23e1131b6"
+        },
+        "thumb": {
+          "path": "work/production/wave_400/exports/kwanzaa-handmade-gift-tag-thumb.webp",
+          "bytes": 57990,
+          "sha256": "02a45903a37b04a76a2ea96a0b707d8d8e91c9367acaabc29b3ab5bdedc276b8"
+        }
+      },
+      "proofSha256": "44b7578549bf391a87d72bb88b4c2c60c013c96816d2ab9e100601c87cc3ea84",
+      "pairMeanRgbDifference": 5.05025
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T20:59:41.043032+00:00",
+  "screenReviewEvidence": "work/production/wave_400/native-proof-review.jpg",
+  "screenReviewNotes": "Actual six rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T20:59:41.262Z"
+}

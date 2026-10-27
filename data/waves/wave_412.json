@@ -1,0 +1,592 @@
+{
+  "wave": "wave_412",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "veterans-oral-history",
+      "title": "Recording a Conversation with a Veteran",
+      "alt": "An older bearded man holds a small recorder across a round table from a woman taking notes.",
+      "description": "A plain olive cap rests between the two speakers on the wooden tabletop. The man's blue shirt and gray vest contrast with the interviewer's green blouse, mustard trousers and spiral notebook.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-oral-history.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 960,
+      "pdfHeight": 877,
+      "sourceType": "raster",
+      "sourceSha256": "cd0f4df580dd3b29d3721c6e009ddd57f3618f8302eb0ff7b66cf4b8d1cec3a8",
+      "inputSignature": "6cad09dfb36d024c07bc89f886a1564d4c5bf434bbaef433937b9bd308007f37",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 974420,
+        "weightedCmykRmse": 1.321148
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1469697,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1221094,
+          "weightedCmykRmse": 0.74809
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1147537,
+          "weightedCmykRmse": 0.887015
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1058153,
+          "weightedCmykRmse": 1.053887
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 974420,
+          "weightedCmykRmse": 1.321148
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        57,
+        1300,
+        1138
+      ],
+      "image": {
+        "width": 960,
+        "height": 877,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_412/exports/veterans-oral-history.pdf",
+          "bytes": 974420,
+          "sha256": "8fdc9410dea7b1184d29c963f85e7d8dfdfec0d9a595d9e1b2d9cfb05339045d"
+        },
+        "webp": {
+          "path": "work/production/wave_412/exports/veterans-oral-history.webp",
+          "bytes": 1326932,
+          "sha256": "6530bfca4b4e96a5d1800a37b6c52e7535439bc6428ade3cac31ed716e01547f"
+        },
+        "thumb": {
+          "path": "work/production/wave_412/exports/veterans-oral-history-thumb.webp",
+          "bytes": 76002,
+          "sha256": "edf5fd67e634e50eb7efa62b89be28ca54db13289a91b6c18e3f2e0b262a69b1"
+        }
+      },
+      "proofSha256": "431d30fe8cb123f72e1bad6c348e6594ed8e1ddca6c8cf858da63da796df19de",
+      "pairMeanRgbDifference": 2.52724
+    },
+    {
+      "id": "veterans-homecoming-hug",
+      "title": "A Homecoming Hug",
+      "alt": "A red-haired woman in a tan field jacket lifts a smiling child in a red hoodie beside a packed duffel bag.",
+      "description": "The child wraps both arms around the woman's shoulders as she holds him close. Her olive trousers and lace-up boots stand beside the soft canvas bag, keeping the reunion scene compact and complete.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-homecoming-hug.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "48d46e57dda7a2d429d3fe10a383423d59578f5e0eba7228d19641502ae9aa54",
+      "inputSignature": "cf4e183d48bd801a888aecf76660a89cdf228d8d51dd4508b99b03edb8b40287",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 873294,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 873294,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        46,
+        22,
+        938,
+        1485
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_412/exports/veterans-homecoming-hug.pdf",
+          "bytes": 873294,
+          "sha256": "38c3926b086e5a7d889628edaebcaf2047e22631ed696029fd5a892795fad7ca"
+        },
+        "webp": {
+          "path": "work/production/wave_412/exports/veterans-homecoming-hug.webp",
+          "bytes": 1343372,
+          "sha256": "0cc40bd392d385957716dd47db0d7045c045fdabfc2feaacfbb0897bc8a5f115"
+        },
+        "thumb": {
+          "path": "work/production/wave_412/exports/veterans-homecoming-hug-thumb.webp",
+          "bytes": 41522,
+          "sha256": "7e385a5b37cc06d2682b8e4f6ad940c9e1b98b9c3984d7a232ad1cc361793957"
+        }
+      },
+      "proofSha256": "4d4a2bb196950c142d178f6351798b4315548d2b90b6558cbb8c3b4287bf5203",
+      "pairMeanRgbDifference": 3.29032
+    },
+    {
+      "id": "veterans-community-meal",
+      "title": "Sharing a Community Meal",
+      "alt": "Three older adults smile over bowls of soup at a wooden table, with bread and water glasses between them.",
+      "description": "A man in a blue work shirt and olive cap sits opposite a rust-sweatered man, with a silver-haired woman in purple between them. The visible spoons and soup bowls capture a relaxed conversation over lunch.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-community-meal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "bbed54f26637b6a0868b800478035b21d00d7c16938fb1b83163ea532b8fd5f5",
+      "inputSignature": "66837bd8140be319ff9cda1e4f2252b5ab0640a125e05d5a78f2caed535f09c7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 948275,
+        "weightedCmykRmse": 1.013354
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1290689,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1084821,
+          "weightedCmykRmse": 0.717658
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1020295,
+          "weightedCmykRmse": 0.85672
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 948275,
+          "weightedCmykRmse": 1.013354
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        28,
+        35,
+        1514,
+        991
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_412/exports/veterans-community-meal.pdf",
+          "bytes": 948275,
+          "sha256": "69c6234b87c46bd96899c3b333fbcce735b4881c2aab95fb59abc9ec46fa7431"
+        },
+        "webp": {
+          "path": "work/production/wave_412/exports/veterans-community-meal.webp",
+          "bytes": 1804134,
+          "sha256": "40147e1e5b9876de035eca9b0fe356465e9055a8cc81411eec183be044f370d3"
+        },
+        "thumb": {
+          "path": "work/production/wave_412/exports/veterans-community-meal-thumb.webp",
+          "bytes": 63956,
+          "sha256": "f8941ab5bd7dedad06c876bc756b6826ff44b7fa5785d3448f3d924aa61e61cd"
+        }
+      },
+      "proofSha256": "15286a53bc153e400ed483d2c54b91e991b432177bb1a041385865d34d962491",
+      "pairMeanRgbDifference": 5.58492
+    },
+    {
+      "id": "veterans-writing-a-letter",
+      "title": "Writing a Letter at a Wooden Desk",
+      "alt": "A woman with long braids writes at a wooden desk beside an olive cap, envelopes and a pencil cup.",
+      "description": "She leans over the paper in a textured green sweater, navy trousers and tan loafers. A single drawer and four slim legs keep the desk clearly defined beneath the scattered letter-writing supplies.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-writing-a-letter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "1d190eaceb5b0226d1cb84c71400f7aff54ea9ac9fdf3ff25ed707ab2950ad05",
+      "inputSignature": "fcdc680ef1fb9794b45bbba2fa807bec51bb5c852dc2b21443c173ce129c267d",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 979349,
+        "weightedCmykRmse": 0.816031
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1198045,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 979349,
+          "weightedCmykRmse": 0.816031
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        86,
+        10,
+        1087,
+        1325
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_412/exports/veterans-writing-a-letter.pdf",
+          "bytes": 979349,
+          "sha256": "d5707476b249f2337f5277dd528c5d7920672f0399bf6f192c1939cf39194544"
+        },
+        "webp": {
+          "path": "work/production/wave_412/exports/veterans-writing-a-letter.webp",
+          "bytes": 1042038,
+          "sha256": "b2e07b21c903e4b61407878ba87a28a9c1d30ce740fd5c9d0406fd1775bd9f60"
+        },
+        "thumb": {
+          "path": "work/production/wave_412/exports/veterans-writing-a-letter-thumb.webp",
+          "bytes": 57568,
+          "sha256": "d4e1cda52fcbb8a69a8df3071ad99891fa9fab2340752204e96b7f79e2ba50ea"
+        }
+      },
+      "proofSha256": "4db99ee19c7ddbf8866a56d827b12bf490e5f90332ae7327c9cd6ae2c1585fbc",
+      "pairMeanRgbDifference": 3.33219
+    },
+    {
+      "id": "veterans-care-packages",
+      "title": "Packing Community Care Boxes",
+      "alt": "Two older volunteers pack cardboard care boxes at a folding table covered with towels, toiletries and wrapped supplies.",
+      "description": "The bearded man wears a denim shirt and plain olive cap, while the woman wears a red plaid shirt. Open boxes sit between neatly folded fabric and upright bottles, showing the practical packing activity clearly.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-care-packages.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "4c7d48fca0586ff7be73365eb18a71f1cb23420ea85bfb3a3800cf5c31610832",
+      "inputSignature": "e454c3603e4a7fc84339be11d41bfdcbe0757d2215d5f46895b8fc140af64ddc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 952699,
+        "weightedCmykRmse": 1.388325
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1443783,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1193728,
+          "weightedCmykRmse": 0.779093
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1124035,
+          "weightedCmykRmse": 0.915968
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1029854,
+          "weightedCmykRmse": 1.104276
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 952699,
+          "weightedCmykRmse": 1.388325
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        14,
+        21,
+        1296,
+        1175
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_412/exports/veterans-care-packages.pdf",
+          "bytes": 952699,
+          "sha256": "efe59a350229f4a791d07f1ba408ee6040c63279f3ed83ab28b7ef5f65459510"
+        },
+        "webp": {
+          "path": "work/production/wave_412/exports/veterans-care-packages.webp",
+          "bytes": 1219786,
+          "sha256": "87eee7a0c286fce18f48deb753c601b0b438bff3172028c3fcd2831c07a35422"
+        },
+        "thumb": {
+          "path": "work/production/wave_412/exports/veterans-care-packages-thumb.webp",
+          "bytes": 70668,
+          "sha256": "ec7389cf54a2659641dcac43fd329942754bb8dfbc0b4ffc8f957ca543a5d20a"
+        }
+      },
+      "proofSha256": "229c8aa17a9b77dd62188d5b7de487a7c3de85c8410fdb76cef3b92222dc8ad8",
+      "pairMeanRgbDifference": 4.40204
+    },
+    {
+      "id": "veterans-bike-mentoring",
+      "title": "Repairing a Bicycle Together",
+      "alt": "An older woman in denim overalls reaches for a wrench from a child beside a turquoise bicycle on a repair stand.",
+      "description": "The woman kneels near the raised rear wheel as the smiling child extends the tool across the handlebars. A blue maintenance stand supports the small bicycle, leaving its frame and pedals easy to see.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_412/source/veterans-bike-mentoring.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 890,
+      "pdfHeight": 813,
+      "sourceType": "raster",
+      "sourceSha256": "dd44d716c457620cc4b374f74d3598b840b2e8b7962148fc443123058bac2e4b",
+      "inputSignature": "be882f0c4fc40441e20018d9aa79afc4c3287ba780b09eefaa21a39964ee8447",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 972041,
+        "weightedCmykRmse": 1.301586
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1401454,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1184574,
+          "weightedCmykRmse": 0.733668
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1124503,
+          "weightedCmykRmse": 0.871336
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1046154,
+          "weightedCmykRmse": 1.035857
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 972041,
+          "weightedCmykRmse": 1.301586
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        48,
+        14,
+        1299,
+        1153
+      ],
+      "image": {
+        "width": 890,
+        "height": 813,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_412/exports/veterans-bike-mentoring.pdf",
+          "bytes": 972041,
+          "sha256": "6b4c7f99d81c408ed2c9fdd1a679068c8ab349e5fcc312f254f6b7086b486908"
+        },
+        "webp": {
+          "path": "work/production/wave_412/exports/veterans-bike-mentoring.webp",
+          "bytes": 1470828,
+          "sha256": "756fd230f6b4d8b488a2bbe38c6e0e7df60f27ea6ea67386022f4bc176a68fa7"
+        },
+        "thumb": {
+          "path": "work/production/wave_412/exports/veterans-bike-mentoring-thumb.webp",
+          "bytes": 90498,
+          "sha256": "e5da533851d9b4e7bae82797821673a86f1695540f8d5b4608cb9428c6b0dc1f"
+        }
+      },
+      "proofSha256": "ed5b3240286a430fc23389a19e8a6aa13b3d03825e54370600cdc86301a09897",
+      "pairMeanRgbDifference": 2.87743
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T23:39:53.625083+00:00",
+  "screenReviewEvidence": "work/production/wave_412/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T23:45:22.823Z"
+}

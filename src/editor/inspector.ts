@@ -47,7 +47,7 @@ export function mountInspector(root: HTMLElement) {
     toggle.querySelector('span')!.textContent = closed ? 'Show' : 'Hide';
   };
   const reveal = () => {
-    if (!mobile.matches) return;
+    if (!mobile.matches || root.classList.contains('uc-next')) return;
     requestAnimationFrame(() => inspector.scrollIntoView({ block: 'start', behavior: 'instant' }));
   };
   picker.addEventListener('change', () =>

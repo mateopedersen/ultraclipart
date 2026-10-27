@@ -3,15 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import CatalogCount from '../components/CatalogCount.astro';
 import HeaderIllustration from '../components/HeaderIllustration.astro';
-import { blackAndWhiteArt } from '../lib/catalog';
+import { blackAndWhiteArt, newestArt } from '../lib/catalog';
 import { monochromeDirectory as directory } from '../lib/monochrome-library';
 import { getSearchBuild } from '../lib/search-build';
 import { cardMetadata } from '../lib/search-index';
 import '../styles/black-and-white.css';
 
-const initial = [...blackAndWhiteArt]
-  .sort((a, b) => b.createdAt.localeCompare(a.createdAt) || a.title.localeCompare(b.title, 'en'))
-  .slice(0, 24);
+const monochromeIds = new Set(blackAndWhiteArt.map((item) => item.id));
+const initial = newestArt.filter((item) => monochromeIds.has(item.id)).slice(0, 24);
 const version = (await getSearchBuild()).manifest.version;
 const seed = { version, directory, items: initial.map(cardMetadata) };
 const number = (value: number) => value.toLocaleString('en-US');

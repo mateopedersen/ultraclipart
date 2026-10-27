@@ -1,0 +1,166 @@
+{
+  "reviewed": "2026-10-26",
+  "status": "LOCAL DRAFT — publication is not authorized",
+  "scope": [
+    "/accessibility/",
+    "/privacy/",
+    "/terms/",
+    "/license/",
+    "/faq/",
+    "/editorial-process/",
+    "/copyright/"
+  ],
+  "ownerChoices": {
+    "contact": "ultraclipart@gmail.com",
+    "operatorIdentity": "The owner explicitly requested email only; no legal name, country or postal address was supplied.",
+    "publication": "Do not push, create publication PRs, merge or deploy this batch."
+  },
+  "contentBasis": [
+    {
+      "area": "Service and storage facts",
+      "evidence": [
+        "src/lib/cookie-policy.ts",
+        "src/ai/storage.ts",
+        "server/ai/handler.mjs",
+        "server/share/handler.mjs",
+        "src/editor/editor.ts",
+        "src/lib/favorites-storage.ts",
+        "docs/ai-operations.md",
+        "docs/cookies.md"
+      ],
+      "note": "Application facts are distinguished from provider retention and from policy commitments."
+    },
+    {
+      "area": "Editorial identity and process",
+      "evidence": [
+        "AGENTS.md",
+        "docs/content/product-identification.md",
+        "scripts/product-identity.mjs",
+        "src/pages/about.astro"
+      ],
+      "note": "No unsupported handmade/human-only provenance, exclusive ownership or completed universal visual-review claim is made."
+    },
+    {
+      "area": "Artwork permissions",
+      "evidence": [
+        "previous src/lib/info-pages.ts",
+        "public/licenses/tabler-icons-MIT.txt",
+        "docs/ai-models.md"
+      ],
+      "note": "The existing personal/noncommercial educational scope is retained; catalog, icons, imports and Builder outputs remain distinct."
+    }
+  ],
+  "sources": [
+    {
+      "title": "ICO — privacy information",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/the-right-to-be-informed/what-privacy-information-should-we-provide/",
+      "usedFor": "Transparency, retention criteria, rights and transfer information; ICO notes current guidance is under review following the Data (Use and Access) Act."
+    },
+    {
+      "title": "European Commission — lawful processing",
+      "url": "https://commission.europa.eu/law/law-topic/data-protection/information-business-and-organisations/legal-grounds-processing-data_en",
+      "usedFor": "Conditional, purpose-specific lawful-basis discussion."
+    },
+    {
+      "title": "California Attorney General — CCPA",
+      "url": "https://oag.ca.gov/privacy/ccpa",
+      "usedFor": "Rights and scope are described conditionally; applicability is not asserted without business facts."
+    },
+    {
+      "title": "KVKK — Personal Data Protection Law",
+      "url": "https://www.kvkk.gov.tr/Icerik/6649/Personal-Data-Protection-Law",
+      "usedFor": "Turkish data-subject rights and authority references; no conclusion about operator establishment."
+    },
+    {
+      "title": "European Commission — unfair contract terms",
+      "url": "https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/unfair-contract-terms-directive_en",
+      "usedFor": "Mandatory rights, plain terms and avoidance of blanket waivers."
+    },
+    {
+      "title": "U.S. Copyright Office — copyright basics",
+      "url": "https://www.copyright.gov/what-is-copyright/",
+      "usedFor": "Protection is limited to eligible contributions; a notice is not universal proof of ownership."
+    },
+    {
+      "title": "U.S. Copyright Office — AI and copyrightability",
+      "url": "https://www.copyright.gov/ai/",
+      "usedFor": "Do not claim all generated material is hand-drawn, exclusive or automatically protected. The January 2025 Part 2 report is distinguished from the pre-publication Part 3."
+    },
+    {
+      "title": "U.S. Copyright Office — Section 512",
+      "url": "https://www.copyright.gov/512/",
+      "usedFor": "An informal rights report is not misrepresented as a verified registered-agent/safe-harbor system or an invented mandatory counter-notice timeline."
+    },
+    {
+      "title": "FTC — COPPA compliance plan",
+      "url": "https://www.ftc.gov/business-guidance/resources/childrens-online-privacy-protection-rule-six-step-compliance-plan-your-business",
+      "usedFor": "No unsupported COPPA certification or assumption that a teacher/adult-use label resolves applicability."
+    },
+    {
+      "title": "W3C — accessibility statements",
+      "url": "https://www.w3.org/WAI/planning/statements/",
+      "usedFor": "Practical help, limitations, target and testing scope; no false full-site certification."
+    },
+    {
+      "title": "W3C — WCAG 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "usedFor": "Accessibility target and scoped checks."
+    },
+    {
+      "title": "Cloudflare — Workers AI data usage",
+      "url": "https://developers.cloudflare.com/workers-ai/platform/data-usage/",
+      "usedFor": "Standard inference, no-training commitment, operational metadata and qualified retention exceptions."
+    },
+    {
+      "title": "Cloudflare — Privacy Policy",
+      "url": "https://www.cloudflare.com/privacypolicy/",
+      "usedFor": "Provider processing is not conflated with application-ledger storage."
+    },
+    {
+      "title": "Cloudflare — Data Processing Addendum",
+      "url": "https://www.cloudflare.com/cloudflare-customer-dpa/",
+      "usedFor": "Published transfer mechanisms are described; actual applicable customer terms/safeguards are not invented."
+    },
+    {
+      "title": "Google — Privacy Policy",
+      "url": "https://policies.google.com/privacy",
+      "usedFor": "Gmail correspondence and independent provider processing; current policy page states effective October 16, 2026."
+    },
+    {
+      "title": "Black Forest Labs — FLUX.1 schnell license",
+      "url": "https://github.com/black-forest-labs/flux/blob/main/model_licenses/LICENSE-FLUX1-schnell",
+      "usedFor": "Model licensing is separated from rights in output."
+    },
+    {
+      "title": "Meta — Llama 3.1 Community License",
+      "url": "https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE",
+      "usedFor": "Preserves the model reference and Built with Llama attribution."
+    }
+  ],
+  "legalReviewOpenItems": [
+    "Before treating these pages as a jurisdiction-specific legal notice, confirm the actual operator identity, establishment and any required postal address, representative or other statutory contact details. The owner requested their omission from this draft.",
+    "Verify which data protection and consumer regimes actually apply, including any legitimate-interest assessment, exact transfer arrangements and provider/account retention settings. Generic public provider documents alone do not establish all customer arrangements.",
+    "Assess child-directed/mixed-audience service obligations and the design of online generation/publication controls; do not claim that the notice itself establishes COPPA, FERPA or school-contract compliance.",
+    "No U.S. statutory copyright-agent registration or eligibility for Section 512 safe harbors was verified; the page provides a clear informal reporting route without that claim.",
+    "These are researched, site-specific draft policies; they are not a certification of legal compliance or a substitute for review of the operator’s actual circumstances."
+  ],
+  "checks": {
+    "browserReportPaths": [
+      "reports/trust-pages/chromium/report.json",
+      "reports/trust-pages/webkit/report.json"
+    ],
+    "sourceDiagnostics": "reports/trust-pages/check.log",
+    "knownVisualFixes": [
+      "Accessibility section id no longer collides with global navigation.",
+      "Transparent radial hero background caused WebKit yellow raster noise; replaced with a compatible linear background and added a pixel regression check."
+    ],
+    "publication": "No production changes performed.",
+    "finalBrowserStatus": {
+      "chromium": "passed: 7 pages, 35 viewport checks, no automated accessibility violations",
+      "webkit": "passed: 7 pages, 14 viewport checks, no automated accessibility violations",
+      "interactions": "FAQ search/clear/expand/collapse/keyboard/no-script, local report/email encoding, and Cookie Settings passed",
+      "visualRegression": "All seven hero illustrations have zero bright-yellow corruption pixels in the blue/silver palette."
+    },
+    "socialCovers": "Only Editorial Process cover updated; all 26 cover file hashes verified; other cover bytes preserved."
+  }
+}

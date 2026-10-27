@@ -1,0 +1,32 @@
+---
+import StudioIcon from './StudioIcon.astro';
+---
+
+<Fragment>
+  <div class="wb-context" data-wb-context aria-label="Selection actions">
+    <span data-wb-selection>No object selected</span>
+    <button data-wb-run="selection-tool">
+      <StudioIcon name="create" size={20} />
+      Edit Object
+    </button>
+    <button data-wb-run="copy-selection">Copy</button>
+    <button data-wb-run="paste-selection">Paste</button>
+    <button data-wb-run="lock-selection">Lock</button>
+    <button data-wb-run="command-search">More Actions</button>
+  </div>
+  <div class="wb-statusbar">
+    <span data-wb-document-size></span>
+    <span data-wb-layer-count></span>
+    <span data-wb-measurement hidden></span>
+    <span data-wb-cursor hidden></span>
+    <button data-wb-run="show-grid" aria-pressed="false">
+      Grid
+    </button>
+    <button data-wb-run="show-rulers" aria-pressed="false">
+      Rulers
+    </button>
+    <button data-wb-run="focus-mode" aria-pressed="false">
+      Focus
+    </button>
+  </div>
+</Fragment>

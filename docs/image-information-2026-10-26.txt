@@ -1,0 +1,39 @@
+ULTRACLIPART — ORTAK GÖRSEL AÇIKLAMASI VE METADATA
+
+
+• Anlamlı görsellerin üzerinde beklenince görselin kendi başlığı ve alt metni gösterilir. Ortak Layout içindeki olay delegasyonu, sonradan eklenen kartları da kapsar; her resme ayrı kod eklenmez.
+• Başlık ve alt metin dosya adından tahmin edilmez. Katalogdaki gerçek görsel kaydı kullanılır. Dekoratif simgelerin boş alt alanları korunur.
+• Fare, klavye, Escape, açıklama üzerine geçiş, indirme penceresi ve mobil dokunma davranışları test edildi. Açıklama ek ağ isteği, izleme veya depolama temizliği yapmaz.
+• Orijinal HTML alt/title alanlarını içerir. Geliştirilmiş açıklama açıkken çift yerel balon oluşmaması için native title geçici olarak saklanır; kapanınca geri yüklenir. Alt metin değiştirilmez.
+• 57 orijinal görselin dosya özetleri doğrulandı ve görseller incelendi. Bunların başlık, alt ve açıklamaları görünür ayrıntılara göre düzeltildi. Dört yemek görselinin aynı olan başlıkları, görsel farklarını anlatacak şekilde ayrıldı. Diğer 53 kaydın mekanik başlıkları ve tekrarlanan açıklamaları yeniden yazıldı.
+• 12.152 katalog kaydında boş veya birebir aynı başlık/alt/açıklama yok. Bu, bütün görsellerin bu turda tek tek görsel olarak incelendiği anlamına gelmez; bu turdaki görsel inceleme 57 kayıttır.
+
+Kalıcı kontrol
+• Normal yayın derlemesi eksik veya başka kayıtla aynı title/alt/description alanını reddeder. Taslaklar yayımlanırken aynı kontrol devreye girer.
+• İncelenen 57 kaydın açıklamaları orijinal WebP SHA-256 değerine bağlıdır. Kaynak veya incelenmiş metin değişirse tekrar inceleme gerekir.
+• Derleme sonrası her uygun eser HTML'inde alt/title, H1, meta açıklaması ve ImageObject aynı katalog kaydıyla karşılaştırılır. Ayrıca bütün HTML'lerde eksik alt ve anlamlı görsellerde eksik title denetlenir.
+• Yeni içerik mevcut ortak şablonları ve bu yayın kontrollerini otomatik kullanır. Sistem incelemeden görsele yeni kimlik veya özellik uydurmaz.
+
+Yürütülen son kontroller
+• 24589 HTML sayfası; 516599 anlamlı görsel kullanımı: eksik alt/title 0. Bu sayı ayrı görsel dosyası veya görsel inceleme sayısı değildir.
+• 12152 eser HTML'inde kayıt/başlık/alt/şema eşleşmesi: hata 0.
+• Chromium + WebKit: 516 metadata sayfa kontrolü ve 14 dinamik akış, hata 0.
+• Ortak görsel açıklaması: 16 fare/klavye/mobil/dinamik/JavaScript kapalı kontrol, hata 0.
+• İlgili kaynak testleri: 19 başarılı. Derleme 24.589 sayfa. Son derleyici kontrolü 0 hata, 0 uyarı, önceki 2 ipucu.
+• Fiziksel iPhone/Android testi yapılmadı. Otomatik denetim görselin anlamsal doğruluğunu veya Google sıralamasını garanti etmez.
+
+Editorial Process
+• Özel sayfa, altı farklı SVG sahnesi, gerçek katalog örneği, 10 açıklayıcı bölüm ve düzeltme bildirim rehberi hazır.
+• Chromium/WebKit'te 320, 360, 390, 414, 600, 768, 1024, 1440 genişliklerinde 16 yerleşim/kontrast kontrolü başarılı.
+• Başlığın üstüne gelen çizim düzeltildi; menü ve ilgili sayfa bağlantıları eşitlendi. Dil ve terimler yeniden gözden geçirildi.
+• Yedi yardım/politika sayfasının ortak testleri iki tarayıcıda geçti. Geçici CSS denemeleri final derlenmiş testler olarak sayılmadı.
+
+
+Yeniden test:
+node --test tests/catalog-policy.mjs tests/collection-navigation.mjs tests/search-suggestions.mjs
+node tests/e2e/image-information.mjs
+BASE_URL=http://127.0.0.1:4326 node tests/e2e/image-metadata.mjs
+METADATA_BUILD_DIR=work/performance-build node scripts/seo/audit-image-metadata.mjs
+node tests/e2e/editorial-process.mjs
+
+Yayın henüz yetkili değildir. Güncel canlı katalog önce korunarak birleştirilmelidir.

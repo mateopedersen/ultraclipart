@@ -1,0 +1,341 @@
+---
+interface Props {
+  kind: 'brief' | 'composition' | 'identity' | 'review' | 'files' | 'publish';
+  id: string;
+}
+const { kind, id } = Astro.props;
+const paint = (name: string) => `url(#${id}-${name})`;
+---
+
+<svg
+  class="editorial-illustration"
+  viewBox="0 0 340 260"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+  data-editorial-illustration={kind}
+>
+  <defs>
+    <linearGradient
+      id={`${id}-paper`}
+      x1="90"
+      y1="30"
+      x2="248"
+      y2="230"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" />
+      <stop offset=".6" stop-color="#f9fcff" />
+      <stop offset="1" stop-color="#dfe9f5" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-blue`}
+      x1="85"
+      y1="35"
+      x2="248"
+      y2="236"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#93c9ff" />
+      <stop offset=".4" stop-color="#418ce0" />
+      <stop offset="1" stop-color="#194d91" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-navy`}
+      x1="90"
+      y1="35"
+      x2="255"
+      y2="230"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#37669d" />
+      <stop offset="1" stop-color="#102b50" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-metal`}
+      x1="115"
+      y1="25"
+      x2="197"
+      y2="101"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#f9fcff" />
+      <stop offset=".25" stop-color="#a5bad0" />
+      <stop offset=".5" stop-color="#f7fbff" />
+      <stop offset=".8" stop-color="#8ca5bf" />
+      <stop offset="1" stop-color="#d7e4f0" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-glass`}
+      x1="159"
+      y1="76"
+      x2="252"
+      y2="169"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fafdff" stop-opacity=".9" />
+      <stop offset="1" stop-color="#8bbff1" stop-opacity=".35" />
+    </linearGradient>
+    <pattern id={`${id}-checker`} width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 0h24v24H0Z" fill="#fff" />
+      <path d="M0 0h12v12H0Zm12 12h12v12H12Z" fill="#e3ebf5" />
+    </pattern>
+  </defs>
+  <ellipse cx="173" cy="238" rx="118" ry="13" fill="#284c76" opacity=".1" />
+  {kind === 'brief' && (
+    <>
+      <g transform="rotate(-7 162 134)">
+        <rect x="84" y="30" width="166" height="204" rx="16" fill="#527ba6" />
+        <rect
+          x="80"
+          y="24"
+          width="166"
+          height="204"
+          rx="16"
+          fill={paint('blue')}
+          stroke="#91b5de"
+        />
+        <rect x="91" y="35" width="143" height="181" rx="7" fill={paint('paper')} />
+        <path d="M129 29h64v14a8 8 0 0 1-8 8h-48a8 8 0 0 1-8-8Z" fill="#6583a3" />
+        <path
+          d="M126 24h66v14a8 8 0 0 1-8 8h-50a8 8 0 0 1-8-8Z"
+          fill={paint('metal')}
+          stroke="#94abc2"
+        />
+        <rect x="148" y="17" width="22" height="14" rx="7" fill={paint('metal')} stroke="#94abc2" />
+        <path d="M112 72h99" stroke="#244f84" stroke-width="7" stroke-linecap="round" />
+        <g stroke="#aac0d8" stroke-width="4" stroke-linecap="round">
+          <path d="M134 105h75M134 145h61M134 185h72" />
+        </g>
+        <g fill="#e7f1fe" stroke="#7da8d7" stroke-width="1.5">
+          <rect x="109" y="95" width="16" height="16" rx="4" />
+          <rect x="109" y="135" width="16" height="16" rx="4" />
+          <rect x="109" y="175" width="16" height="16" rx="4" />
+        </g>
+        <path
+          d="m112 102 4 4 7-8m-11 44 4 4 7-8"
+          stroke="#2369b4"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+      <g transform="rotate(24 256 147)">
+        <path d="M248 70h18v131l-9 22-9-22Z" fill="#9dc4ef" stroke="#5589bf" />
+        <path d="M248 70h7v129h-7Z" fill="#d8eaff" />
+        <path d="M248 201h18l-9 22Z" fill="#e6cfb8" />
+        <path d="m254 216 3 7 3-7Z" fill="#29425d" />
+        <rect x="248" y="55" width="18" height="20" rx="5" fill={paint('navy')} />
+        <path d="M248 76h18v9h-18Z" fill={paint('metal')} />
+      </g>
+    </>
+  )}
+  {kind === 'composition' && (
+    <>
+      <g transform="rotate(-13 116 136)">
+        <rect x="47" y="49" width="130" height="164" rx="13" fill="#afc6df" />
+        <rect
+          x="43"
+          y="43"
+          width="130"
+          height="164"
+          rx="13"
+          fill={paint('paper')}
+          stroke="#bccfe4"
+        />
+        <path d="M72 150q32-70 68 0v24H72Z" fill="#c0d8f4" />
+        <circle cx="109" cy="104" r="25" fill={paint('blue')} />
+        <path d="M65 188h85" stroke="#a6c0de" stroke-width="4" stroke-linecap="round" />
+      </g>
+      <g transform="rotate(12 236 139)">
+        <rect x="177" y="54" width="121" height="161" rx="13" fill="#b1c7df" />
+        <rect
+          x="173"
+          y="48"
+          width="121"
+          height="161"
+          rx="13"
+          fill={paint('paper')}
+          stroke="#bccfe4"
+        />
+        <path d="M200 157h67l-6-40h-54Z" fill="#82b7ef" />
+        <path d="M217 117v-14a16 16 0 0 1 32 0v14" stroke="#345f91" stroke-width="7" />
+        <path d="M194 190h78" stroke="#a6c0de" stroke-width="4" stroke-linecap="round" />
+      </g>
+      <rect x="107" y="25" width="132" height="190" rx="14" fill="#7ea7d2" />
+      <rect
+        x="102"
+        y="19"
+        width="132"
+        height="190"
+        rx="14"
+        fill={paint('paper')}
+        stroke="#a4c1e2"
+      />
+      <path d="M169 157V99" stroke="#2e6d9d" stroke-width="5" stroke-linecap="round" />
+      <path
+        d="M167 137c-28 2-34-19-33-34 20-1 35 11 33 34Zm5-18c0-25 17-32 33-33 2 19-9 34-33 33Z"
+        fill={paint('blue')}
+      />
+      <g fill="#adcff5" stroke="#6098d2" stroke-width="1.5">
+        <ellipse cx="168" cy="73" rx="14" ry="27" />
+        <ellipse cx="168" cy="73" rx="14" ry="27" transform="rotate(60 168 73)" />
+        <ellipse cx="168" cy="73" rx="14" ry="27" transform="rotate(120 168 73)" />
+      </g>
+      <circle cx="168" cy="73" r="12" fill={paint('navy')} />
+      <path d="M123 184h91" stroke="#a6c0de" stroke-width="4" stroke-linecap="round" />
+    </>
+  )}
+  {kind === 'identity' && (
+    <>
+      <g transform="rotate(-6 147 139)">
+        <path d="M73 40h130l28 29v151H73Z" fill="#b5cbe2" />
+        <path d="M68 34h130l28 29v151H68Z" fill={paint('paper')} stroke="#adc4df" />
+        <path d="m198 34 28 29h-28Z" fill="#c6d9ef" />
+        <rect x="88" y="62" width="77" height="59" rx="8" fill="#e5effc" />
+        <path d="m100 109 18-24 16 18 14-13 9 19Z" fill="#7baee7" />
+        <path
+          d="M91 145h111M91 164h83M91 183h98"
+          stroke="#9ab7d8"
+          stroke-width="5"
+          stroke-linecap="round"
+        />
+      </g>
+      <path
+        d="m235 160 45 47a13 13 0 0 1-19 18l-42-48Z"
+        fill={paint('navy')}
+        stroke="#224970"
+        stroke-width="2"
+      />
+      <path d="m241 177 30 32" stroke="#6b91bd" stroke-width="4" stroke-linecap="round" />
+      <circle cx="211" cy="125" r="53" fill="#355e8e" />
+      <circle cx="207" cy="119" r="52" fill={paint('metal')} stroke="#7e9fbe" stroke-width="2" />
+      <circle cx="207" cy="119" r="43" fill={paint('glass')} stroke="#527fae" stroke-width="3" />
+      <path
+        d="M182 100h46M182 116h32M182 132h39"
+        stroke="#346ba5"
+        stroke-width="4"
+        stroke-linecap="round"
+      />
+      <path d="M176 104a35 35 0 0 1 20-18" stroke="white" stroke-width="4" stroke-linecap="round" />
+    </>
+  )}
+  {kind === 'review' && (
+    <>
+      <rect x="54" y="37" width="226" height="182" rx="16" fill="#b0c7df" />
+      <rect x="49" y="31" width="226" height="182" rx="16" fill={paint('paper')} stroke="#9ebad9" />
+      <rect x="62" y="45" width="200" height="153" rx="9" fill={paint('checker')} />
+      <path d="M157 181v-73" stroke="#3a719f" stroke-width="5" stroke-linecap="round" />
+      <path
+        d="M155 163c-33 1-46-26-44-47 28 2 48 19 44 47Zm7-28c0-31 22-43 45-43 0 25-15 44-45 43Z"
+        fill={paint('blue')}
+        stroke="#6599c9"
+        stroke-width="1.5"
+      />
+      <path d="m154 155-28-24m39-7 26-20" stroke="#c9e3ff" stroke-width="2" />
+      <g stroke="#306fba" stroke-width="3" stroke-linecap="round">
+        <path d="M74 78V59h19M231 59h19v19M74 166v19h19M231 185h19v-19" />
+      </g>
+      <path d="m250 129 45 17v36c0 25-23 43-45 55-22-12-45-30-45-55v-36Z" fill="#9dbbe1" />
+      <path
+        d="m246 122 43 17v36c0 25-21 42-43 54-22-12-43-29-43-54v-36Z"
+        fill={paint('blue')}
+        stroke="#91b6e3"
+        stroke-width="2"
+      />
+      <path
+        d="m224 173 15 15 28-34"
+        stroke="white"
+        stroke-width="8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </>
+  )}
+  {kind === 'files' && (
+    <>
+      <g transform="rotate(-10 110 128)">
+        <path d="M51 41h99l29 31v139H51Z" fill="#9ab8d8" />
+        <path d="M47 35h99l29 31v139H47Z" fill={paint('paper')} stroke="#aac1dc" />
+        <path d="m146 35 29 31h-29Z" fill="#bad0ea" />
+        <rect x="65" y="82" width="91" height="78" rx="8" fill="#dceafb" />
+        <circle cx="91" cy="103" r="10" fill="#6d9ed6" />
+        <path d="m74 150 26-32 17 20 17-17 13 29Z" fill={paint('blue')} />
+        <path d="M68 181h78" stroke="#91afcf" stroke-width="5" stroke-linecap="round" />
+      </g>
+      <g transform="rotate(9 235 128)">
+        <path d="M181 41h92l28 30v140H181Z" fill="#9ab8d8" />
+        <path d="M177 35h92l28 30v140H177Z" fill={paint('paper')} stroke="#aac1dc" />
+        <path d="m269 35 28 30h-28Z" fill="#bad0ea" />
+        <rect x="192" y="84" width="88" height="24" rx="6" fill={paint('navy')} />
+        <path
+          d="M197 127h79M197 143h66M197 159h74M197 181h48"
+          stroke="#9ab6d6"
+          stroke-width="5"
+          stroke-linecap="round"
+        />
+      </g>
+      <path d="M121 205h99l12 19H110Z" fill="#9cb9d9" />
+      <path d="M110 224h122v13H110Z" fill={paint('navy')} />
+      <path
+        d="M170 155v53m-16-16 16 16 16-16"
+        stroke="#7ba9d9"
+        stroke-width="12"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+      <path
+        d="M168 151v53m-16-16 16 16 16-16"
+        stroke={paint('blue')}
+        stroke-width="10"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </>
+  )}
+  {kind === 'publish' && (
+    <>
+      <rect x="51" y="34" width="239" height="169" rx="14" fill="#7699be" />
+      <rect
+        x="46"
+        y="28"
+        width="239"
+        height="169"
+        rx="14"
+        fill={paint('navy')}
+        stroke="#6e99c9"
+        stroke-width="2"
+      />
+      <rect x="57" y="40" width="217" height="144" rx="5" fill="#f3f8ff" />
+      <path d="M57 45a5 5 0 0 1 5-5h207a5 5 0 0 1 5 5v24H57Z" fill="#dceafb" />
+      <circle cx="70" cy="54" r="4" fill="#3774b9" />
+      <path d="M83 54h47M195 54h64" stroke="#8eafd6" stroke-width="5" stroke-linecap="round" />
+      <g fill="white" stroke="#c1d3e8">
+        <rect x="69" y="80" width="56" height="84" rx="5" />
+        <rect x="137" y="80" width="56" height="84" rx="5" />
+        <rect x="205" y="80" width="56" height="84" rx="5" />
+      </g>
+      <circle cx="97" cy="109" r="15" fill={paint('blue')} />
+      <path d="M149 129V95h31v34Z" fill="#b2cfee" />
+      <path d="m214 128 12-29 14 29Z" fill="#7eaddd" />
+      <path
+        d="M80 149h33m35 0h33m35 0h33"
+        stroke="#acc3df"
+        stroke-width="4"
+        stroke-linecap="round"
+      />
+      <path d="M46 197h239l31 24H15Z" fill={paint('metal')} />
+      <path d="M15 221h301v6a7 7 0 0 1-7 7H22a7 7 0 0 1-7-7Z" fill="#7395ba" />
+      <path d="M139 202h53l8 10h-69Z" fill="#a4bad1" />
+      <circle cx="270" cy="180" r="37" fill="#abc6e4" />
+      <circle cx="267" cy="175" r="36" fill={paint('blue')} stroke="#9fc4ed" stroke-width="2" />
+      <path
+        d="m250 175 12 12 23-26"
+        stroke="white"
+        stroke-width="7"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </>
+  )}
+</svg>

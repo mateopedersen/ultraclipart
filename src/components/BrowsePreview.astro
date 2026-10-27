@@ -34,7 +34,17 @@ const artwork = choices.flatMap(([id, topic]) => {
   <div class="site-browse-preview-art" aria-hidden="true">
     {artwork.map((item) => (
       <span class="site-browse-preview-tile">
-        <img src={item.thumb} width="120" height="120" alt="" loading="lazy" decoding="async" />
+        <img
+          title={item.title}
+          src={item.thumb}
+          srcset={item.thumbSrcSet}
+          sizes="(max-width: 1100px) 80px, 120px"
+          width="120"
+          height="120"
+          alt={item.alt}
+          loading="lazy"
+          decoding="async"
+        />
       </span>
     ))}
   </div>

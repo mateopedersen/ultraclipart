@@ -3,7 +3,7 @@
   --studio-section-space: 40px;
   max-width: 1600px;
   margin: auto;
-  padding: 0 28px 40px;
+  padding: 0 28px 0;
   color: #14234d;
 }
 .studio-intro {
@@ -23,7 +23,7 @@
   margin: 0 0 22px;
 }
 .studio-intro h1 span {
-  color: #0e62de;
+  color: var(--brand-accent);
 }
 .studio-intro-copy > p:not(.studio-kicker) {
   font-size: 17px;
@@ -454,9 +454,14 @@
   font-size: 13px;
   margin-top: 12px;
 }
+@media (max-width: 1280px) {
+  .studio-starter-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 @media (max-width: 1100px) {
   .creator-page {
-    padding: 0 20px 30px;
+    padding: 0 20px 0;
   }
   .studio-intro {
     gap: 25px;
@@ -482,7 +487,7 @@
 }
 @media (max-width: 800px) {
   .creator-page {
-    padding: 0 14px 24px;
+    padding: 0 14px 0;
   }
   .studio-intro {
     padding: 28px 4px 18px;
@@ -560,7 +565,7 @@
 }
 @media (max-width: 400px) {
   .creator-page {
-    padding: 0 8px 24px;
+    padding: 0 8px 0;
   }
   .studio-intro h1 {
     font-size: 38px;
@@ -969,7 +974,7 @@
   margin: 12px 0 20px;
 }
 .studio-learning-heading h2 span {
-  color: #0e62de;
+  color: var(--brand-accent);
 }
 .studio-learning-heading > p:last-child {
   font-size: 18px;
@@ -1317,4 +1322,15 @@
   .studio-answers h2 {
     font-size: 30px;
   }
+}
+
+.studio-kicker {
+  color: var(--brand-accent);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.studio-basic-starters > summary {
+  min-height: 44px;
+  padding-block: 11px;
 }

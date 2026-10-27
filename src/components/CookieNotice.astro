@@ -1,5 +1,6 @@
 ---
 import '../styles/cookies.css';
+import { cookieMountScript } from '../../scripts/cookie-startup.mjs';
 ---
 
 <aside id="cookie-notice" class="cookie-notice" aria-labelledby="cookie-notice-title" hidden>
@@ -134,7 +135,4 @@ import '../styles/cookies.css';
   </div>
 </dialog>
 <p id="cookie-feedback" class="sr-only" role="status" aria-live="polite"></p>
-<script>
-  import { initCookieNotice } from '../scripts/cookies';
-  initCookieNotice();
-</script>
+<script is:inline set:html={cookieMountScript} />

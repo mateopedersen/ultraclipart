@@ -1,0 +1,46 @@
+ULTRACLIPART — YENİ İLETİŞİM SAYFASI VE GOOGLE FORMS
+26 Ekim 2026
+
+DURUM
+Web sitesi değişiklikleri yereldir; GitHub’a gönderilmedi ve canlı siteye dağıtılmadı. Kullanıcının istediği Google Forms bağlantısı için UltraClipart hesabında ayrı bir form oluşturuldu ve yanıt kabul etmesi açıldı. Bu, internet sitesinin yeni sürümünün yayımlandığı anlamına gelmez.
+Yerel önizleme: http://127.0.0.1:4326/contact/
+Yanıt paneli: https://docs.google.com/forms/d/1aKQ6eUo82a1UWAK3V-8rp5HrY1AwF4xJS6qFO-WBDRs/edit#responses
+
+TASARIM VE KULLANIM
+İletişim sayfası özel bir rotaya taşındı ve yeniden tasarlandı. Mavi zarf, mektup, kalem ve konuşma balonundan oluşan boyutlu SVG illüstrasyon eklendi. Yedi görselli konu seçimi ilgili yardım açıklamasını ve önceden doldurulmuş Google Form bağlantısını güncelliyor. Form açıldıktan sonra yardım konusu değişirse yazılmış mesajı silmemek için iframe yeniden yüklenmiyor; mesaj konusu formun içinden değiştirilebilir.
+İndirme/yazdırma, Studio, kullanım izni, düzeltmeler, erişilebilirlik, telif ve genel soru seçenekleri var. Doğrudan e-posta, ilgili rehberler, gönderim sonrası açıklama ve pratik sorular eklendi. Mobil görünümde alanlar tek sütuna geçiyor; üstteki Write to us bağlantısı doğrudan form alanına götürüyor.
+
+FORMS BAĞLANTISI
+Sahibi: ultraclipart@gmail.com. Form Google hesabına giriş yapmayı zorunlu tutmuyor. Yanıt e-postası, konu ve mesaj zorunlu; isim ve sayfa adresi isteğe bağlı. E-posta biçimi doğrulanıyor; bu kontrol adresin gerçekten o kişiye ait olduğunu doğrulamaz.
+Yanıt özeti ziyaretçilerle paylaşılmıyor. Yeni yanıtlar için sahibin e-posta bildirimi açık; ayarın açık olduğu Forms menüsünde yeniden görüldü. Gmail gelen kutusunda bildirimin teslimi ayrıca kontrol edilmedi.
+Form yalnızca ziyaretçi Open contact form düğmesine bastığında yükleniyor. İlk açılışta Google’a istek gitmediği denetlendi. Doğrudan Forms bağlantısı ve e-posta alternatifi var. JavaScript kapalıyken işlevsiz form açma düğmesi gizleniyor; kullanılabilir bağlantılar kalıyor.
+Siteden form ile gönderilen mesajlar Forms’a kaydedilir. Doğrudan e-posta gönderilen mesajlar Gmail’de kalır; Gmail iletilerini otomatik olarak Forms’a aktaran ayrı bir sistem kurulmadı.
+Google iframe yükleme olayı gönderim başarısı sayılmıyor. Gerçek kayıt onayını Google Forms gösteriyor. Google hizmeti veya ziyaretçinin bağlantısı engellenirse ayrı pencerede Forms ve e-posta seçenekleri kullanılabilir.
+
+GERÇEK GÖNDERİM KANITI
+İlk, açıkça işaretlenmiş test mesajı e-posta doğrulamasının eksik olduğunu ortaya çıkardı. Kural Text > Email olarak düzeltildi. Sonraki hatalı e-posta denemesi “Enter a valid reply email, such as name@example.com.” uyarısıyla engellendi.
+Ardından ultraclipart@gmail.com yanıt adresi, UltraClipart integration QA adı, https://ultraclipart.com/contact/ sayfa adresi ve açık test açıklamasıyla gerçek gönderim yapıldı. Google’ın kayıt onayı görüldü. Sahip hesabının Responses > Individual bölümünde ikinci kaydın tüm alanları tek tek doğrulandı (26 Ekim 2026, 19:36 İstanbul saati). İki adet açıkça işaretlenmiş test kaydı Forms’ta duruyor; müşteri verisi içermiyor. Kayıtlar silinmedi.
+
+ÇALIŞTIRILAN TESTLER
+- Gerçek şablonlarla yerel derleme: 24.589 sayfa başarılı.
+- Astro denetimi: 466 dosya; 0 hata, 0 uyarı, önceden mevcut 2 öneri.
+- Chromium ve WebKit: 320, 360, 390, 414, 600, 768, 1024, 1440, 1920 px; toplam 18 ilk görünüm geçti. Taşma, kesilmiş metin, dışarı kaçan öğe ve eşit konu kartları denetlendi.
+- Bu 18 görünümde Contact alanının otomatik WCAG 2 A/AA, 2.1 AA ve 2.2 AA taramasında 0 tespit. Bu bir tam erişilebilirlik sertifikası değildir.
+- İki tarayıcıda 8 işlev grubu geçti: konu/link eşleştirmeleri; gerçek anonim Google iframe, ön seçim, e-posta doğrulaması ve taslak koruma; güncel gizlilik sayfası; JavaScript kapalı alternatifler ve sayfa çalışması.
+- Gerçek Google iframe her motorda ayrıca 320/390/768/1440 px’te kontrol edildi; çerçeve içinde yatay taşma bulunmadı ve yazılmış metin korundu.
+- Gizlilik açıklaması her motorda dört genişlikte ve otomatik erişilebilirlik taramasıyla kontrol edildi.
+- İki kaynak testi geçti: form konu bağlantıları ve Contact’a özgü güvenlik politikası.
+- CI’de kullanılan iframe örneği ayrıca Chromium’da çalıştırıldı: 9 görünüm ve 4 grup geçti. Bu örnek gerçek gönderim kanıtı değildir; gerçek Google kontrolleri CONTACT_GOOGLE_LIVE=1 ile ayrı yürütüldü ve otomatik tarayıcı testi mesaj göndermedi.
+- Son gerçek Google tarayıcı turunun bitişi: 2026-10-26T16:44:10.258Z
+- İlgili kaynakların biçim/boşluk kontrolü geçti. Testler kalıcı olarak kaynakta ve interface-pages CI grubunda kayıtlı; uzak CI bu yerel çalışma için çalıştırılmadı.
+
+GÜVENLİK, GİZLİLİK VE KAPSAM
+Normal sürüm paketlemesi /contact/ için yalnızca docs.google.com iframe kaynağını açıyor. Diğer sayfaların script, bağlantı ve form kısıtları korunuyor. Yerel tarayıcı testinde aynı güvenlik politikası yardımcısıyla oluşturulan yanıt başlığı uygulandı. Canlı Cloudflare politikası bu aşamada değiştirilmedi.
+Privacy sayfasının sağlayıcı ve veri haritası açıklamalarına Google Forms eklendi. Diğer güven sayfalarının içeriği önceki kaynak yedeğiyle karşılaştırıldı ve değişmedi. Önceki yerel çalışmalar korundu; eski kaynaklarda bu görevin beklenen yedi dosyası dışında değişiklik bulunmadı.
+Fiziksel iPhone/Android testi, yeni PageSpeed ölçümü veya canlı site doğrulaması bu görevde yapılmadı. Önceki genel performans çalışmalarının bütün sayfalarda 100 puana ulaştığı iddia edilmiyor.
+
+BAKIM VE KAYNAKLAR
+Form URL’si ve konu alanı src/lib/contact.ts içinde tek yerde tutulur. Google Form soruları/konu seçenekleri değiştirilirse bu eşleme ve gerçek form testleri birlikte güncellenmelidir. Üçüncü taraf bir formun gelecekteki kullanılabilirliği garanti edilemez; alternatif bağlantıları koruyun.
+Google’ın resmi gömme/yayımlama rehberi: https://support.google.com/docs/answer/2839588
+Google’ın resmi yanıt ve bildirim rehberi: https://support.google.com/docs/answer/139706
+Google Privacy Policy: https://policies.google.com/privacy

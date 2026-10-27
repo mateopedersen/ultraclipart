@@ -13,6 +13,12 @@ const art = read('data/art.json');
 const editorialReviews = new Map(
   read('data/editorial/reviews.json').artworks.map((row) => [row.id, row]),
 );
+const localCorrections = new Map(
+  read('data/editorial/local-image-seo-corrections.json').records.map((record) => [
+    record.id,
+    record,
+  ]),
+);
 const verifiedFiles = new Map(
   read('data/publication.json').files.map((file) => [`${file.assetId}/${file.kind}`, file.url]),
 );
@@ -21,8 +27,11 @@ const topics = Object.keys(packageContexts);
 test('new greetings and ordinary objects do not enter cute discovery through keyword matches', () => {
   const approved = read('data/remaining-thirty-one-review.json').discoveryReview.cuteSelections;
   assert.equal(approved.length, 4);
+  // The stricter smile-oriented policy keeps reviewed expressive subjects, not
+  // every item formerly marked cute (plain gummy sweets have no expression).
+  const expressive = approved.filter((id) => id !== 'candy-clipart-gummy-bears');
   for (const item of items)
-    assert.equal(cuteConfidence(item) > 0, approved.includes(item.id), item.id);
+    assert.equal(cuteConfidence(item) > 0, expressive.includes(item.id), item.id);
 });
 test('31 supplied packs preserve 1,550 verified original PDF/WebP pairs', () => {
   const proof = read('data/remaining-thirty-one-review.json');
@@ -62,8 +71,15 @@ test('31 supplied packs preserve 1,550 verified original PDF/WebP pairs', () => 
     assert.ok(item.files.pdf.bytes <= 1_000_000);
     assert.equal(item.sourceType, 'raster');
     assert.equal(item.svg, null);
+    const correction = localCorrections.get(item.id);
+    if (correction)
+      assert.equal(
+        correction.sourceSha256,
+        item.files.webp.sha256,
+        'A changed source requires a new review',
+      );
     for (const key of ['title', 'alt', 'description', 'style', 'visualStyle'])
-      assert.equal(item[key], packageMetadata(item.topic, item.id)[key]);
+      assert.equal(item[key], correction?.after[key] ?? packageMetadata(item.topic, item.id)[key]);
     assert.deepEqual(
       item.productIdentity,
       packageMetadata(item.topic, item.id, item.files.webp.sha256).productIdentity,
@@ -94,7 +110,7 @@ test('all 31 subjects have accurate categories, unique metadata and searchable d
     assert.equal(taxonomy.filter((x) => x.slug === topic).length, 1);
     assert.equal(
       primaryClusterForTopic(taxonomy.find((x) => x.slug === topic)),
-      packageContexts[topic].cluster,
+      read('data/primary-topic-categories.json')[topic] ?? packageContexts[topic].cluster,
     );
     for (const key of ['title', 'alt', 'description'])
       assert.equal(new Set(group.map((x) => x[key])).size, 50);
@@ -140,8 +156,7 @@ test(
       const html = text(`clipart/${topic}/index.html`);
       assert.ok(html.includes(`https://ultraclipart.com/clipart/${topic}/`));
       assert.ok(html.includes('"numberOfItems":50'));
-      for (const chip of packageContexts[topic].chips)
-        assert.ok(html.includes(`/search/?q=${encodeURIComponent(chip)}`), chip);
+      assert.ok(!html.includes('/search/?q='), 'Collections link directly to related collections');
     }
     for (const item of items) {
       const html = text(`art/${item.id}/index.html`);

@@ -49,7 +49,7 @@ export class SmartController {
   private operations = 0;
   constructor(public host: EditorHost) {
     const { root, stage } = host;
-    root.dataset.workMode = 'quick';
+    root.dataset.workMode = 'edit';
     this.studio = new StudioTools(this);
     root.addEventListener('click', (event) => {
       const button = (event.target as Element).closest<HTMLButtonElement>('button');
@@ -63,9 +63,7 @@ export class SmartController {
           button.dataset.workMode === 'print'
             ? 'studio'
             : root.dataset.creator === 'true'
-              ? button.dataset.workMode === 'quick'
-                ? 'elements'
-                : 'create'
+              ? 'elements'
               : 'region',
         );
         return;

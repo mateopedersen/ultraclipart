@@ -1,18 +1,19 @@
 import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
-import { chromium, expect } from '@playwright/test';
+import { chromium, webkit, expect } from '@playwright/test';
 import { loadTypescript } from '../helpers/typescript.mjs';
 import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 const { cuteConfidence } = await loadTypescript('src/lib/cute-discovery.ts');
 const all = readEditorialCatalog();
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
-const browser = await chromium.launch();
+const engine = process.env.UC_BROWSER || 'chromium';
+const browser = await { chromium, webkit }[engine].launch();
 const context = await browser.newContext({
   viewport: { width: 1440, height: 1000 },
   hasTouch: true,
 });
 const page = await context.newPage();
-const report = { visited: [], fallback: false, noJavascript: false, errors: [] };
+const report = { engine, visited: [], fallback: false, noJavascript: false, errors: [] };
 page.on('pageerror', (e) => report.errors.push(e.message));
 await mkdir('reports/cute-surprise', { recursive: true });
 try {
@@ -20,6 +21,8 @@ try {
   const response = await page.request.get(base + '/surprise-picks.json');
   assert.equal(response.status(), 200);
   const index = await response.json();
+  assert.equal(index.version, 2);
+  assert.match(response.headers()['cache-control'], /no-store/);
   assert.ok(index.items.length > 100 && index.items.length <= 512);
   for (const pick of index.items)
     assert.ok(cuteConfidence(all.find((x) => x.id === pick.id)) >= 68, pick.id);
@@ -76,6 +79,6 @@ try {
   report.status = 'passed';
 } finally {
   await browser.close();
-  await writeFile('reports/cute-surprise/report.json', JSON.stringify(report, null, 2));
+  await writeFile(`reports/cute-surprise/${engine}-report.json`, JSON.stringify(report, null, 2));
 }
 console.log(JSON.stringify(report));

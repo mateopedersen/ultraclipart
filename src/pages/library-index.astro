@@ -1,0 +1,301 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CatalogCount from '../components/CatalogCount.astro';
+import TeacherSymbol from '../components/TeacherSymbol.astro';
+import { publishedArt, topics } from '../lib/catalog';
+import { directoryArtwork, indexableTopics } from '../lib/sitemaps';
+import { guides } from '../lib/guides';
+import { infoPages } from '../lib/info-pages';
+import { structuredData, breadcrumbs } from '../lib/structured-data';
+import '../styles/library-index.css';
+
+const subjects = indexableTopics(publishedArt, topics)
+  .map((topic) => ({ ...topic, label: topic.keyword.replace(/\s+clipart$/i, '') }))
+  .sort((a, b) => a.label.localeCompare(b.label, 'en', { numeric: true }));
+const groups = new Map<string, typeof subjects>();
+for (const topic of subjects) {
+  const first = topic.label.charAt(0).toUpperCase();
+  const letter = /[A-Z]/.test(first) ? first : '0–9';
+  const group = groups.get(letter) ?? [];
+  group.push(topic);
+  groups.set(letter, group);
+}
+const groupsByLetter = [...groups];
+const individualArtwork = directoryArtwork(publishedArt, topics);
+const highlights = [
+  'book-and-feather-quill-playful-clipart',
+  'floral-heart-roses-wreath-clipart',
+  'baby-fennec-fox-watercolor-clipart',
+].flatMap((id) => {
+  const image = publishedArt.find((item) => item.id === id);
+  return image ? [image] : [];
+});
+const tools = [
+  {
+    href: '/create/',
+    title: 'Clipart Studio',
+    description: 'Arrange artwork, add text and save an editable design.',
+    icon: 'edit' as const,
+  },
+  {
+    href: '/print-size/',
+    title: 'Print Size Calculator',
+    description: 'Check how large a raster image can print at your chosen resolution.',
+    icon: 'print' as const,
+  },
+  {
+    href: '/for-teachers/',
+    title: 'For Teachers',
+    description: 'Find practical ideas for worksheets, labels and classroom materials.',
+    icon: 'book' as const,
+  },
+  {
+    href: '/ai-clipart-generator/',
+    title: 'AI Clipart Builder',
+    description: 'Describe an image, explore a result and refine it in Studio.',
+    icon: 'botanical' as const,
+  },
+];
+const information = [
+  { href: '/about/', title: 'About UltraClipart' },
+  ...Object.entries(infoPages).map(([slug, page]) => ({ href: `/${slug}/`, title: page.title })),
+  { href: '/cookies/', title: 'Cookie Policy' },
+];
+---
+
+<Layout
+  title="Clipart Library Index — All Subjects, Tools & Guides"
+  description="Find every published UltraClipart subject in one A–Z index. Explore artwork collections, creative tools, practical guides and usage information."
+  image={highlights[0]?.webp}
+  imageAlt={highlights[0]?.alt}
+  imageWidth={highlights[0]?.width}
+  imageHeight={highlights[0]?.height}
+>
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={structuredData(
+      breadcrumbs([
+        { name: 'Home', path: '/' },
+        { name: 'Library Index', path: '/library-index/' },
+      ]),
+    )}
+  />
+  <div class="library-index">
+    <header class="library-index-hero">
+      <div>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true"> / </span>
+          <span>Library Index</span>
+        </nav>
+        <h1>Find your next illustration.</h1>
+        <p>
+          Every published subject, from everyday objects to celebrations and classroom ideas. Pick a
+          collection to explore its artwork and downloads.
+        </p>
+        <div class="library-index-totals">
+          <span>
+            <strong>
+              <CatalogCount kind="artworks" />
+            </strong>{' '}
+            illustrations
+          </span>
+          <span>
+            <strong>{subjects.length.toLocaleString('en-US')}</strong> subjects in this index
+          </span>
+        </div>
+        <nav class="library-index-jumps" aria-label="On this page">
+          <a href="#subjects">All subjects</a>
+          <a href="#creative-tools">Creative tools</a>
+          <a href="#project-guides">Project guides</a>
+          <a href="#site-information">Help & information</a>
+        </nav>
+      </div>
+      <div class="library-index-art" aria-hidden="true">
+        {highlights.map((image) => (
+          <div>
+            <img
+              src={image.thumb}
+              srcset={image.thumbSrcSet}
+              sizes="(max-width: 540px) 25vw, 240px"
+              alt={image.alt}
+              title={image.title}
+              width="260"
+              height="260"
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+    </header>
+
+    <section id="subjects" aria-labelledby="subject-heading">
+      <div class="library-section-heading">
+        <div>
+          <h2 id="subject-heading">All clipart subjects, A–Z</h2>
+          <p>Open a subject to see every published illustration in that collection.</p>
+        </div>
+        <a href="/categories/">Browse with pictures</a>
+      </div>
+      <div class="library-index-filter" data-index-filter hidden>
+        <label for="library-subject-search">Find a subject</label>
+        <div>
+          <input
+            id="library-subject-search"
+            type="search"
+            placeholder="Try baby, music or school"
+            autocomplete="off"
+            aria-controls="library-subjects"
+          />
+          <button type="button" data-index-clear>
+            Clear
+          </button>
+        </div>
+        <p role="status" aria-live="polite" data-index-status>
+          {subjects.length} subjects
+        </p>
+      </div>
+      <nav class="library-index-alphabet" aria-label="Jump to a letter">
+        {groupsByLetter.map(([letter]) => (
+          <a href={`#subjects-${letter === '0–9' ? 'numbers' : letter.toLowerCase()}`}>{letter}</a>
+        ))}
+      </nav>
+      <div id="library-subjects">
+        {groupsByLetter.map(([letter, entries]) => (
+          <section
+            class="library-letter-group"
+            data-index-group
+            id={`subjects-${letter === '0–9' ? 'numbers' : letter.toLowerCase()}`}
+            aria-labelledby={`letter-${letter}`}
+          >
+            <h3 id={`letter-${letter}`}>{letter}</h3>
+            <ul>
+              {entries.map((topic) => (
+                <li
+                  data-index-subject
+                  data-index-name={topic.label}
+                  data-index-keywords={`${topic.label} ${topic.slug} ${topic.cluster}`}
+                >
+                  <a href={`/clipart/${topic.slug}/`}>
+                    <span>{topic.label}</span>
+                    <small>
+                      <CatalogCount kind="topic" countKey={topic.slug} unit="illustration" />
+                    </small>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+      <p class="library-index-empty" data-index-empty hidden>
+        No subjects match. Try a shorter word or clear your search.
+      </p>
+    </section>
+
+    {individualArtwork.length > 0 && (
+      <section id="individual-artwork" aria-labelledby="individual-artwork-heading">
+        <div class="library-section-heading">
+          <div>
+            <h2 id="individual-artwork-heading">More Artwork to Explore</h2>
+            <p>Discover individual illustrations from our growing subjects.</p>
+          </div>
+        </div>
+        <ul class="library-individual-artwork">
+          {individualArtwork.map((item) => (
+            <li>
+              <a href={`/art/${item.id}/`} data-index-artwork>
+                <img
+                  src={item.thumb}
+                  srcset={item.thumbSrcSet}
+                  sizes="88px"
+                  alt={item.alt}
+                  title={item.title}
+                  width="88"
+                  height="88"
+                  loading="lazy"
+                />
+                <span>{item.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section id="creative-tools" aria-labelledby="tools-heading">
+      <div class="library-section-heading">
+        <div>
+          <h2 id="tools-heading">Make the artwork your own</h2>
+          <p>Useful tools for preparing a personal or classroom project.</p>
+        </div>
+      </div>
+      <div class="library-tool-grid">
+        {tools.map((tool) => (
+          <a href={tool.href}>
+            <TeacherSymbol kind={tool.icon} size={60} />
+            <div>
+              <h3>{tool.title}</h3>
+              <p>{tool.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section id="project-guides" aria-labelledby="guides-heading">
+      <div class="library-section-heading">
+        <div>
+          <h2 id="guides-heading">Project guides</h2>
+          <p>Follow a real workflow, from selecting a file to finishing a printable design.</p>
+        </div>
+        <a href="/guides/">All guides</a>
+      </div>
+      <div class="library-guide-grid">
+        {guides.map((guide) => (
+          <a href={`/guides/${guide.slug}/`}>
+            <h3>{guide.title}</h3>
+            <p>{guide.description}</p>
+            <span>
+              Read the guide <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section
+      id="site-information"
+      aria-labelledby="information-heading"
+      class="library-information"
+    >
+      <h2 id="information-heading">Help & information</h2>
+      <p>Read the usage license, find answers or get in touch.</p>
+      <ul>
+        {information.map((page) => (
+          <li>
+            <a href={page.href}>{page.title}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+    <div class="library-index-footnote">
+      <p>
+        Browse grouped subjects in <a href="/collections/">Collections</a>, or see the latest
+        additions in <a href="/new/">New Clipart</a>.
+      </p>
+      <details>
+        <summary>Machine-readable sitemaps</summary>
+        <p>
+          Search engines can discover published pages and original images through the{' '}
+          <a href="/sitemap.xml">sitemap index</a>, <a href="/sitemap-pages.xml">page sitemap</a>{' '}
+          and <a href="/sitemap-images.xml">image sitemap</a>.
+        </p>
+      </details>
+    </div>
+  </div>
+  <script>
+    import '../scripts/library-index';
+  </script>
+</Layout>
