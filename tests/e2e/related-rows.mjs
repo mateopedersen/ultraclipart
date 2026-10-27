@@ -90,6 +90,9 @@ for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
           const more = root.locator('[data-related-more]');
           for (let i = 0; i < 20 && (await more.isVisible()); i++) {
             const before = await root.locator('.related-card').count();
+            // Focusing the manual control suspends automatic scroll loading,
+            // so an in-flight automatic batch cannot move it during activation.
+            await more.focus();
             await more.click();
             await expect.poll(() => root.locator('.related-card').count()).toBeGreaterThan(before);
           }
