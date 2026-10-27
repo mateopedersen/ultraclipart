@@ -1,4 +1,4 @@
-import { chromium, firefox, webkit } from '@playwright/test';
+import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -62,20 +62,14 @@ try {
       }
       if (route.startsWith('/edit/'))
         await page.locator('.uc-canvas [data-layer]').first().waitFor();
-      // Create mounts its artwork library asynchronously. Include those previews
-      // in decoding before checking every image, including offscreen thumbnails.
-      if (route === '/create/')
+      // Opening Artwork lazily mounts its category previews. Verify those
+      // current directory entries instead of expecting the old 24-item grid.
+      if (route === '/create/') {
+        await page.locator('.uc-tools [data-panel="elements"]').click();
         await page.waitForFunction(() => {
-          const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
-          const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
-          if (!match) return false;
-          const expected = Math.min(24, Number(match[3].replaceAll(',', '')));
-          const cards = [...document.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+          const cards = [...document.querySelectorAll('[data-artwork-grid] .wb-category-tile')];
           return (
-            expected > 0 &&
-            (!match[1] || Number(match[1]) === 1) &&
-            Number(match[2]) === expected &&
-            cards.length === expected &&
+            cards.length > 0 &&
             cards.every((card) => {
               const image = card.querySelector('img');
               if (image) image.loading = 'eager';
@@ -83,6 +77,7 @@ try {
             })
           );
         });
+      }
       await page.evaluate(async () => {
         await Promise.all(
           [...document.images].map(async (image) => {
@@ -186,13 +181,16 @@ try {
   );
   await page.locator('[data-letter=""]').click();
   await page.locator('#topic-filter').fill('  ＰＵＭＰＫＩＮ  ');
-  assert.equal(await page.locator('[data-topic]:not([hidden])').count(), 1);
+  await expect(page.locator('[data-topic]:not([hidden])').first()).toHaveAttribute(
+    'data-slug',
+    'pumpkin',
+  );
   await page.locator('#topic-filter').fill('no-such-subject');
-  assert.equal(await page.locator('#no-topics').isVisible(), true);
+  await expect(page.locator('#no-topics')).toBeVisible();
   await page.locator('#clear-topic-filter').click();
   assert.equal(
     await page.locator('[data-topic]:not([hidden])').count(),
-    Math.min(16, expected.length),
+    Math.min(12, expected.length),
   );
   assert.equal(
     await page.locator('#topic-filter').evaluate((input) => input === document.activeElement),

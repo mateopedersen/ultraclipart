@@ -17,6 +17,12 @@ await preparePreviewAssets(
   JSON.parse(readFileSync(new URL('./data/art.json', import.meta.url), 'utf8')),
 );
 import { productionPublicAssets } from './scripts/production-public-assets.mjs';
+import { readEditorialAudit } from './scripts/artwork-editorial.mjs';
+import { readCollectionAudit } from './scripts/collection-editorial.mjs';
+
+// Run for dev, check and direct Astro builds, not only the npm publication command.
+readEditorialAudit(import.meta.dirname);
+readCollectionAudit(import.meta.dirname);
 
 // The checked release, rather than a mutable dashboard value, selects production media.
 const production = process.env.CF_PAGES === '1';

@@ -3,12 +3,16 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { validateIdentification } from '../scripts/identification-review.mjs';
+import { resolveArtworkCopy } from '../scripts/artwork-editorial.mjs';
 import { packageContexts, packageMetadata } from '../scripts/gta-six-copy.mjs';
 import { defaults, searchArtwork } from '../src/lib/search.ts';
 const read = (p) => JSON.parse(readFileSync(new URL('../' + p, import.meta.url)));
 const art = read('data/art.json'),
   rows = art.filter((x) => x.sourceCollection === 'owner-gta-six-2026-10-26');
 const identities = read('data/identification/gta-six.json').artworks;
+const editorialReviews = new Map(
+  read('data/editorial/reviews.json').artworks.map((row) => [row.id, row]),
+);
 test('six supplied GTA archives produce 300 reviewed, source-bound image/PDF pairs in five public subjects', () => {
   assert.equal(rows.length, 300);
   assert.equal(identities.length, 300);
@@ -87,7 +91,14 @@ test(
     for (const item of rows) {
       const html = text('art/' + item.id + '/index.html');
       assert.ok(html.includes('https://ultraclipart.com/art/' + item.id + '/'));
-      assert.ok(html.includes(JSON.stringify(item.description).slice(1, -1)));
+      assert.ok(
+        html.includes(
+          JSON.stringify(resolveArtworkCopy(item, editorialReviews.get(item.id)).description).slice(
+            1,
+            -1,
+          ),
+        ),
+      );
       assert.ok(sitemap.includes('/art/' + item.id + '/'));
       assert.ok(!html.includes('content="noindex'));
     }

@@ -4,10 +4,11 @@ import { createHash } from 'node:crypto';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { loadTypescript } from '../helpers/typescript.mjs';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4367';
 const engine = process.env.UC_BROWSER || 'chromium';
 const output = `reports/related/${engine}`;
-const catalog = JSON.parse(await readFile('data/art.json', 'utf8'));
+const catalog = readEditorialCatalog();
 const { RelatedIndex } = await loadTypescript('src/lib/related/engine.ts');
 const index = new RelatedIndex(catalog);
 const reference = 'apple-and-dried-rings-crayon-clipart';
@@ -198,7 +199,9 @@ try {
     'T21 WCAG AA automated checks',
   );
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
+  // The dried-ring source depicts only apples. Use a genuinely connected
+  // artwork for the companion-mode interaction instead of inventing citrus.
+  await page.goto(`${base}/art/apple-embroidered-clipart/`, { waitUntil: 'networkidle' });
   const root = page.locator('[data-related-root]');
   await page.locator('[data-related-mode="subject"]').click();
   await expect(page.locator('[data-related-mode="subject"]')).toHaveAttribute(
@@ -217,7 +220,7 @@ try {
   assert.equal(new Set(ids).size, ids.length);
   await page.locator('[data-related-mode="companions"]').click();
   await expect(page.locator('[data-related-alternatives]')).toBeHidden();
-  await expect(root).toContainText('Dried Orange Slices Crayon');
+  await expect(root).toContainText('Embroidered Orange with a Blossom and Leaves');
   await page.locator('[data-related-mode="companions"]').focus();
   // Safari on macOS uses Option+Tab to include buttons in keyboard navigation
   // when the system-wide full keyboard access setting is disabled.
@@ -412,6 +415,9 @@ try {
     'T15 deployed revision mismatch hides stale cards',
     'T22 slow service, retry, failure isolation',
   );
+  // Restore the reference page before choosing its thumbnail to fail; the
+  // companion-mode checks above deliberately use a different source image.
+  await page.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
   const renderedSnapshot = JSON.parse(await page.locator('[data-related-snapshot]').textContent());
   const failureExample = renderedSnapshot.alternatives[0];
   const firstThumb = failureExample.id;

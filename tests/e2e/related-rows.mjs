@@ -1,15 +1,14 @@
 import { chromium, webkit, expect } from '@playwright/test';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4326';
 const fixturesOnly = process.env.ROWS_FIXTURES_ONLY === '1';
 const output = 'reports/related-rows';
 mkdirSync(output, { recursive: true });
 const report = { fixtures: [], pages: [], errors: [] };
 const css = readFileSync('src/styles/related.css', 'utf8');
-const catalog = new Map(
-  JSON.parse(readFileSync('data/art.json', 'utf8')).map((item) => [item.id, item]),
-);
+const catalog = new Map(readEditorialCatalog().map((item) => [item.id, item]));
 for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
   const browser = await implementation.launch();
   try {
@@ -91,6 +90,9 @@ for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
           const more = root.locator('[data-related-more]');
           for (let i = 0; i < 20 && (await more.isVisible()); i++) {
             const before = await root.locator('.related-card').count();
+            // Focusing the manual control suspends automatic scroll loading,
+            // so an in-flight automatic batch cannot move it during activation.
+            await more.focus();
             await more.click();
             await expect.poll(() => root.locator('.related-card').count()).toBeGreaterThan(before);
           }

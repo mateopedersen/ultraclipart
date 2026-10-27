@@ -10,6 +10,19 @@ const removedSentences = new Set(boilerplate);
 const fields = ['title', 'alt', 'description'];
 const sha = (text) => createHash('sha256').update(text).digest('hex');
 export const metadataSignature = (item) => sha(JSON.stringify(fields.map((key) => item[key])));
+// Bind every review to the complete catalog entry. Sorting object keys avoids
+// invalidating reviews when an importer only changes JSON property ordering.
+const canonicalContext = (value) =>
+  Array.isArray(value)
+    ? value.map(canonicalContext)
+    : value && typeof value === 'object'
+      ? Object.fromEntries(
+          Object.keys(value)
+            .sort()
+            .map((key) => [key, canonicalContext(value[key])]),
+        )
+      : value;
+export const reviewContextSignature = (item) => sha(JSON.stringify(canonicalContext(item)));
 export const sourceSignature = (item) => item.files?.svg?.sha256 ?? item.files?.webp?.sha256;
 const segmenter = new Intl.Segmenter('en', { granularity: 'sentence' });
 const split = (text) => [...segmenter.segment(text)].map((s) => s.segment.trim());
@@ -111,7 +124,10 @@ export function validateEditorialReview(item, record) {
     record.imageSha256 !== item.files?.webp?.sha256
   )
     fail('image changed; inspect the replacement');
-  if (record.inputMetadataSha256 !== metadataSignature(item))
+  if (
+    record.inputMetadataSha256 !== metadataSignature(item) ||
+    record.inputContextSha256 !== reviewContextSignature(item)
+  )
     fail('source metadata changed; reconcile review');
   if (!Number.isFinite(Date.parse(record.reviewedAt))) fail('review date required');
   if (

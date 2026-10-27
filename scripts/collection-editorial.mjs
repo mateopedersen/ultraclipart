@@ -71,7 +71,7 @@ export function verifyCollectionEditorial(catalog, registry) {
 
 export function readCollectionAudit(root) {
   const read = (path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
-  return verifyCollectionEditorial(read('data/art.json'), read('data/editorial/collections.json'));
+  return verifyCollectionEditorial(read('data/art.json'), readCollectionRegistries(root));
 }
 
 /** Protect every new topic without rewriting unfinished legacy topic prose. */
@@ -102,7 +102,7 @@ export function requiredCollectionIntroductions(catalog, registry) {
 }
 
 /** Read the committed per-collection records produced by concurrent importers. */
-export function readRequiredCollectionIntroductions(catalog, root = process.cwd()) {
+export function readCollectionRegistries(root = process.cwd()) {
   const directory = resolve(root, 'data/editorial'),
     topics = {};
   for (const name of readdirSync(directory)
@@ -117,5 +117,9 @@ export function readRequiredCollectionIntroductions(catalog, root = process.cwd(
       topics[topic] = record;
     }
   }
-  return requiredCollectionIntroductions(catalog, { schema: 1, topics });
+  return { schema: 1, topics };
+}
+
+export function readRequiredCollectionIntroductions(catalog, root = process.cwd()) {
+  return requiredCollectionIntroductions(catalog, readCollectionRegistries(root));
 }

@@ -1,5 +1,5 @@
 /** Shared, server-side captions for current and future catalog additions. */
-export const AUTO_SUMMARY_VERSION = 'uc-artwork-caption-1';
+export const AUTO_SUMMARY_VERSION = 'uc-artwork-caption-2';
 export const CARD_SUMMARY_MAX_LENGTH = 125;
 
 type SummarySource = {

@@ -1,42 +1,39 @@
-# Source-bound artwork writing
+# Image-specific artwork copy
 
-Inspect the actual original pixels before writing a title/H1, alt or description.
-Name the visible subject, action and distinguishing composition in natural English.
-Do not expand filenames into facts, append repeated download/use paragraphs or
-invent product specifications, authorship, credentials or real events. Follow
-`product-identification.md` for branded subjects and concepts. Keep file actions
-labeled Image while retaining actual extensions, MIME, bytes and checksums.
+Owner direction, 2026-10-26. Applies to every current and future UltraClipart import.
 
-`data/editorial/reviews.json` is the shared array registry. Each completed review
-binds its copy and concrete observed details to the current original and rendered
-image hashes, incoming metadata signature, review date and necessary primary
-references. Replacement pixels or metadata invalidate the old review. The central
-catalog resolver supplies the same reviewed subject to headings, alt, descriptions,
-image schema, search and related cards.
+Start with the actual image. Write a clear title naming its subject and the detail that distinguishes this composition. Describe the visible scene in natural English: what the subject is doing, how its parts are arranged, and the details a visitor needs to distinguish it from another drawing. A simple object may need one sentence; a complex scene may need several. Do not force every image into the same sentence pattern, word count, or usage paragraph.
 
-Use `npm run content:review -- --topic <slug> --limit 25` to prepare numbered
-source-image sheets and a pending review batch. Open every sheet and the originals
-needed for small details. Fill the proposed copy and at least two actual visual
-observations; mark `reviewed-from-image` only after receiving the pixels. Preparation
-does not infer image contents or invoke paid inference.
+Do not turn a filename or drawing prompt into public prose. Do not invent visual details, historical facts, product specifications, expertise, human authorship or personal experience to make copy sound authoritative. Verify named landmarks and branded products against primary sources where needed; follow `product-identification.md` for product identities. Label imagined concepts accurately.
 
-Run `npm run content:apply -- path/to/review.json` to validate a completed batch,
-then add `--write` for atomic application. Invalid, duplicated, stale or pending
-records reject the entire batch; unrelated reviews remain intact. Run
-`npm run content:audit` and the normal release checks afterward.
+Alt text describes the image concisely. It is not a duplicate title, sales pitch, keyword list or download instruction. Title, H1, alt, image schema, search and related captions must refer to the same reviewed subject. Keep stable artwork IDs, URLs, file bytes and licenses.
 
-The unchanged 13,004-entry `legacy-baseline.json` is a finite migration fingerprint
-ledger, not a fresh visual review. Never add IDs or refresh changed fingerprints
-to bypass validation. All later or changed artwork in every topic needs a real
-source-bound review. This release preserves legacy public prose; it does not apply
-the separate catalog-audit checkout's unfinished cleanup. Report that backlog
-honestly rather than calling an automated pass a full-catalog visual review.
+File controls already explain downloads. Do not append generic Image/PDF instructions to every description. The user-facing download label is **Image**, not WebP. The actual `.webp` extension, MIME, format facts, file checksums and technical compatibility documentation remain accurate; do not rename a WebP file to another format.
 
-New topics require short, unique, inventory-bound introductions in
-`data/editorial/*-collection.json`, `*-collections.json` or the shared
-`collections.json` registry. Describe the actual available drawings without long
-repeated SEO, technical, licensing or editor paragraphs. Changed topic inventories
-invalidate those records. Existing accepted concurrent records must be preserved.
+## Review and automatic protection
 
-There is no promised Google ranking, preferred word count or invented expertise
-score. Useful original images, accurate nearby text and clear titles take priority.
+`data/editorial/reviews.json` holds image-specific copy and observed evidence. Each review binds the inspected source and rendered image hashes, a canonical fingerprint of the entire incoming catalog entry, review date and factual references. This fingerprint includes the topic and product identity as well as title, alt and description; JSON key order alone does not change it. A new image, changed source or changed metadata invalidates its prior review. When the context fingerprint was introduced, existing records were first validated against their existing source and text checks and then bound to the catalog as it stood; that migration did not add or assert any visual reviews. Do not calculate a missing context fingerprint for a new or changed record as a substitute for inspection. Record at least two real visual observations; do not populate observations without looking at the image. Set `status: reviewed-from-image` only after the visual check.
+
+`scripts/artwork-editorial.mjs` produces the single public copy used by the catalog. Its automatic cleanup removes the exact generic sentences listed in `data/editorial/boilerplate.json`, preserves necessary qualifications through the explicit `sentence-replacements.json` map, and removes a duplicated title prefix from alt text. It does not infer image contents, manufacture alternate wording or assert that a visual review occurred. The imported catalog remains the original audit trail; public copy is resolved centrally.
+
+New or modified entries without a source-matched review fail the normal build. Existing accepted entries are temporarily fingerprinted in `legacy-baseline.json`, explicitly marked **not visually re-reviewed**. This baseline is a migration ledger, not an approval list to extend for new imports. Never add a new ID or refresh a changed fingerprint to bypass the review requirement. Replace legacy entries with real image reviews as they are completed. `npm run content:audit -- --details` reports every remaining review and text issue. Do not claim a full catalog visual review merely because this automated audit passes.
+
+If the system can safely remove known boilerplate, it does. If a semantic correction needs image inspection, it blocks new publication until that review is supplied. It must not silently substitute a guess. Existing qualified concept/fan-art statements and license restrictions are not disposable filler.
+
+Run `npm run content:review -- --topic <slug> --limit 25` to prepare the next missing image reviews. The command checks original image hashes and creates a numbered contact sheet plus an empty review JSON in `work/editorial-review/`. Open every image; use the recorded original path for fine details. Fill `copy`, `observations`, `references` and `reviewedAt`, and set `status` to `reviewed-from-image` only after inspection. Merge the finished records into `data/editorial/reviews.json`, then run the audit and normal checks. Preparation never invents captions, auto-approves evidence or overwrites an existing reviewer draft.
+
+Use `npm run content:apply -- path/to/review.json` to validate a completed batch without writing, then append `--write` to apply it atomically. An invalid, duplicated, unknown, stale or still-pending entry rejects the whole batch. Unrelated reviews remain intact; original paths and sheet numbering are discarded. This is the reusable production workflow for large imports: prepare image evidence in batches, review the actual images and complete specific copy, validate/apply once, then run the normal build. A language or vision model can prepare proposed copy, but it must actually receive the images; filename-only text expansion is not a substitute for image evidence. No paid inference provider is invoked by these commands.
+
+## Search guidance
+
+Public-figure reviews record `depiction` with the named people, `sceneNature: imagined-illustration` and whether the picture assigns a fictional role. Validation checks identity consistency and rejects unqualified fictional roles and unsupported event/result claims. This text check complements actual pixel review; it is not automatic proof that every sentence is true. Use pixel-based color checks to catch a drawing labeled as line art when its original has colored elements. Keep any image-quality limitations in the internal review, not repeated disclaimer paragraphs on every public page.
+
+Topic pages use one concise introduction from `data/editorial/collections.json`. It describes the particular available drawings and helps choose between them. `collection-editorial.mjs` binds the introduction to its topic inventory and source-image examples; missing, duplicated or stale entries stop the build. Keep helpful technical guidance in the shared file guide and image facts, with compact links beside the gallery. Do not restore the removed multi-paragraph SEO sections. Catalog-grounded topic summaries and actual per-image visual reviews are different types of evidence; report each honestly.
+
+Useful original images, accurate nearby text and clear titles matter more than artificially lengthened paragraphs. E-E-A-T is not a reason to invent authors or credentials. No ranking or indexing guarantee is made. References checked for this policy:
+
+- [Google: helpful, reliable, people-first content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)
+- [Google: descriptive and concise title links](https://developers.google.com/search/docs/appearance/title-link)
+- [Google: image landing pages and useful alt text](https://developers.google.com/search/docs/appearance/google-images)
+
+Concurrent imports may keep their reviewed topic introductions in dedicated `*-collection.json` or `*-collections.json` files. The shared loader validates the combined registries and rejects conflicting duplicate topics. Refresh an inventory signature only after checking the changed metadata and verifying the source examples; replacement pixels or new visual claims require renewed image inspection.

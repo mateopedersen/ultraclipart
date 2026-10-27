@@ -13,6 +13,7 @@ import {
   deferLargeStructuredData,
 } from '../scripts/seo/image-seo.mjs';
 import { previewUrls, previewIdentity } from '../scripts/preview-assets.mjs';
+import { readReviewedImportCatalog } from '../scripts/reviewed-imports.mjs';
 
 const item = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url)))[0];
 const previewIndex = { [previewIdentity(item)]: { files: { 440: { width: 440, height: 440 } } } };
@@ -173,4 +174,23 @@ test('image format checks reject an HTML error body and a misleading PNG filenam
   } finally {
     rmSync(directory, { recursive: true, force: true });
   }
+});
+
+test('build-time image metadata uses the same source-verified editorial copy as artwork pages', () => {
+  const root = new URL('../', import.meta.url).pathname;
+  const source = JSON.parse(readFileSync(new URL('../data/art.json', import.meta.url)));
+  const registry = JSON.parse(
+    readFileSync(new URL('../data/editorial/reviews.json', import.meta.url)),
+  );
+  const reviewed = new Map(readReviewedImportCatalog(root).map((row) => [row.id, row]));
+  const changed = registry.artworks.find((r) => {
+    const original = source.find((row) => row.id === r.id);
+    return original && original.title !== r.copy.title;
+  });
+  assert.ok(changed, 'a changed reviewed example is required');
+  const item = reviewed.get(changed.id);
+  const schema = imageObject(item, { primary: true, context: true });
+  assert.equal(schema.name, changed.copy.title);
+  assert.equal(schema.caption, changed.copy.alt);
+  assert.equal(schema.description, changed.copy.description);
 });

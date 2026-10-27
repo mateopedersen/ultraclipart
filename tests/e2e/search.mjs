@@ -6,15 +6,34 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { tokenBucket } from '../../src/lib/search-index.ts';
 import { defaults, searchArtwork } from '../../src/lib/search.ts';
-const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
+import { primaryClusterForTopic, clustersForTopic } from '../../src/lib/topic-clusters.ts';
+import { auditMonochrome } from '../../scripts/monochrome-catalog.mjs';
+const catalog = readEditorialCatalog();
 const topics = [
   ...JSON.parse(readFileSync(new URL('../../data/topics.json', import.meta.url))).topics,
   ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
 ];
-const searchable = catalog.map((item) => ({
-  ...item,
-  cluster: topics.find((topic) => topic.slug === item.topic)?.cluster ?? '',
-}));
+const monochrome = await auditMonochrome(catalog);
+const searchable = catalog.map((item) => {
+  const topic = topics.find((topic) => topic.slug === item.topic);
+  return {
+    ...item,
+    cluster: topic ? primaryClusterForTopic(topic) : '',
+    topicLabel: topic?.keyword || item.topic,
+    keywords: topic ? [topic.keyword] : [],
+    collections: topic
+      ? clustersForTopic(topic).map((cluster) =>
+          cluster
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-|-$/g, ''),
+        )
+      : [],
+    monochrome: monochrome.get(item.id)?.monochrome === true,
+    monochromeKind: monochrome.get(item.id)?.kind ?? null,
+  };
+});
 // Semantic scoring has isolated unit fixtures. Here verify browser integration
 // against the current catalog, including pagination and future outline additions.
 const expected = (patch) => searchArtwork(searchable, { ...defaults, ...patch });

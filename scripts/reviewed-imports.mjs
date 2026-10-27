@@ -28,6 +28,11 @@ export function reviewedImportCatalog(catalog, registry) {
     return review ? { ...item, ...validateEditorialReview(item, review) } : item;
   });
 }
+// Build-time metadata and audits must use the same reviewed copy as page rendering.
+export function readReviewedImportCatalog(root) {
+  const read = (path) => JSON.parse(readFileSync(resolve(root, path), 'utf8'));
+  return reviewedImportCatalog(read('data/art.json'), read('data/editorial/reviews.json'));
+}
 export function reviewImportAudit(root) {
   const read = (p) => JSON.parse(readFileSync(resolve(root, p)));
   const catalog = read('data/art.json'),

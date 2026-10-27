@@ -4,12 +4,13 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 
 const base = process.env.BASE_URL ?? 'http://127.0.0.1:4335';
 const engine = process.env.UC_BROWSER ?? 'chromium';
 const output = resolve(process.env.EVIDENCE_DIR ?? 'reports/animal-gallery', engine);
 const read = (path) => JSON.parse(readFileSync(new URL(path, import.meta.url)));
-const catalog = read('../../data/art.json');
+const catalog = readEditorialCatalog();
 const collectionId = process.env.SOURCE_COLLECTION || 'owner-animal-2026-10-23';
 const collectionIds = new Set(
   process.env.SOURCE_COLLECTIONS?.split(',').filter(Boolean) || [collectionId],

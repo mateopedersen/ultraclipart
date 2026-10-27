@@ -3,13 +3,12 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { inspectLayout } from '../helpers/layout-audit.mjs';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:4326';
 if (!/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(base)) throw Error('Local only');
 const content = JSON.parse(readFileSync('data/trust-pages.json')).pages['editorial-process'];
-const artwork = JSON.parse(readFileSync('data/art.json')).find(
-  (a) => a.id === 'floral-heart-roses-wreath-clipart',
-);
+const artwork = readEditorialCatalog().find((a) => a.id === 'floral-heart-roses-wreath-clipart');
 const output = process.env.EVIDENCE_DIR || 'reports/editorial-process/final';
 mkdirSync(output, { recursive: true });
 const report = {

@@ -97,7 +97,7 @@ try {
     ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
   ];
   await expect(page.locator('.topic-planned')).toHaveCount(0);
-  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(16, topicCount));
+  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(12, topicCount));
   const plannedTopic = allTopics.find((topic) => !availableTopics.has(topic.slug));
   if (plannedTopic) {
     await page.locator('#topic-filter').fill(plannedTopic.keyword);
@@ -107,13 +107,15 @@ try {
   report.checks.push(
     'only populated topics link to public artwork; unpublished subjects do not create empty destinations',
   );
-  await page.goto(base + '/create/');
+  await page.goto(base + '/create/?view=page');
   await chooseVectorStarter(page, 'school-label');
   await page.locator('.uc-canvas [data-layer]').first().waitFor();
   await page.locator('[data-panel=text]').click();
   await page.locator('[data-text]').fill('Science');
   await page.locator('[data-action=text]').click();
   await expect(page.locator('.uc-canvas text').filter({ hasText: 'Science' })).toBeVisible();
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   const pending = page.waitForEvent('download');
   await page.locator('[data-action=save]').click();
   const project = await pending;

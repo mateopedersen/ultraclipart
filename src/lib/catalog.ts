@@ -26,8 +26,7 @@ type PublishedAssets = Record<string, Record<AssetKind, string>>;
 const publishedAssets = import.meta.env.PUBLIC_ASSET_URLS as PublishedAssets | null;
 const reviewedIllustrations = reviewedImportCatalog(illustrations, editorialReviews);
 const monochromeAudit = await auditMonochrome(reviewedIllustrations);
-export const reviewedCollectionIntroductions =
-  readRequiredCollectionIntroductions(reviewedIllustrations);
+export const reviewedCollectionIntroductions = readRequiredCollectionIntroductions(illustrations);
 await preparePreviewAssets(reviewedIllustrations);
 const previewIndex = readPreviewIndex();
 const screenImages = (item: (typeof illustrations)[number]) => {

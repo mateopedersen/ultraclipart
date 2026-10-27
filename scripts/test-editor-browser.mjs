@@ -38,6 +38,9 @@ const downloaded = async (format, name) => {
 };
 try {
   await page.goto(`${base}/create/`);
+  await page.evaluate(() => window.__ucCookieNoticeReady);
+  if (await page.locator('#cookie-notice').isVisible())
+    await page.locator('#cookie-notice [data-cookie-choice="necessary"]').click();
   await chooseVectorStarter(page, 'botanical-sprig');
   await expect(page.locator('[data-status]')).toContainText('editable starter layers loaded');
   await page.screenshot({ path: new URL('06-editor-desktop.png', out).pathname, fullPage: true });
@@ -96,11 +99,15 @@ try {
   await action('text').click();
   expect((await state()).layers.at(-1).text).toBe('My Leaf Study');
   passed.push('caption persisted into editable document');
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   const projectEvent = page.waitForEvent('download');
   await action('save').click();
   const project = await projectEvent;
   await project.saveAs(new URL('saved-project.json', out).pathname);
   const savedState = JSON.stringify(await state());
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   await action('reset').click();
   await panel('layers');
   await page.locator('[data-load]').setInputFiles(new URL('saved-project.json', out).pathname);

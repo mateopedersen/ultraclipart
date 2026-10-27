@@ -157,10 +157,12 @@ try {
   await expect(page.locator('#topic-directory')).toBeFocused();
   await page.locator('#topic-filter').fill('baby elephant');
   await expect(visible().first().locator('h3')).toHaveText('Baby Elephant');
+  await page.locator('#topic-filter').press('Tab');
   await page
     .locator('label')
     .filter({ has: page.locator('[name="collection-filter"][value=sports]') })
     .click();
+  await expect(page.locator('[name="collection-filter"][value=sports]')).toBeChecked();
   await expect(page.locator('#no-topics')).toBeVisible();
   await page.locator('#clear-topic-filter').click();
   await expect(page.locator('#topic-filter')).toBeFocused();

@@ -2,7 +2,11 @@ import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
 import sharp from 'sharp';
-import { metadataSignature, sourceSignature } from './artwork-editorial.mjs';
+import {
+  metadataSignature,
+  reviewContextSignature,
+  sourceSignature,
+} from './artwork-editorial.mjs';
 import { validateLocalAssetPath } from './publication-policy.mjs';
 
 // Prepare evidence and an EMPTY review. This command never approves or writes public copy.
@@ -38,14 +42,22 @@ const candidates = read('data/art.json').filter((item) => {
     !prior ||
     prior.sourceSha256 !== sourceSignature(item) ||
     prior.imageSha256 !== item.files.webp.sha256 ||
-    prior.inputMetadataSha256 !== metadataSignature(item)
+    prior.inputMetadataSha256 !== metadataSignature(item) ||
+    prior.inputContextSha256 !== reviewContextSignature(item)
   );
 });
 const items = candidates.slice(offset, offset + limit);
 if (!items.length) throw new Error('No pending images in this selection');
 const hash = (body) => createHash('sha256').update(body).digest('hex');
 const key = hash(
-  JSON.stringify(items.map((item) => [item.id, sourceSignature(item), metadataSignature(item)])),
+  JSON.stringify(
+    items.map((item) => [
+      item.id,
+      sourceSignature(item),
+      metadataSignature(item),
+      reviewContextSignature(item),
+    ]),
+  ),
 ).slice(0, 12);
 const directory = resolve(root, 'work/editorial-review', `${options.topic ?? 'pending'}-${key}`);
 mkdirSync(directory, { recursive: true });
@@ -90,6 +102,7 @@ for (let index = 0; index < items.length; index++) {
     sourceSha256: sourceSignature(item),
     imageSha256: item.files.webp.sha256,
     inputMetadataSha256: metadataSignature(item),
+    inputContextSha256: reviewContextSignature(item),
     inspectedImage: item.webp,
     originalPath: source,
     reviewedAt: null,

@@ -5,7 +5,11 @@ import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { validateBatch } from './r2/plan.mjs';
 import { reviewedProductMetadata } from './product-identity.mjs';
-import { metadataSignature, validateEditorialReview } from './artwork-editorial.mjs';
+import {
+  metadataSignature,
+  reviewContextSignature,
+  validateEditorialReview,
+} from './artwork-editorial.mjs';
 import { applyEditorialBatch } from './apply-editorial-review.mjs';
 import { collectionSourceSignature, validateCollectionCopy } from './collection-editorial.mjs';
 
@@ -330,6 +334,7 @@ for (const map of mapping) {
       sourceSha256: item.files.webp.sha256,
       imageSha256: item.files.webp.sha256,
       inputMetadataSha256: metadataSignature(item),
+      inputContextSha256: reviewContextSignature(item),
       inspectedImage: item.webp,
       reviewedAt: checkedAt,
       observations: [alt, detail],

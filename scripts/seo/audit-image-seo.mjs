@@ -17,6 +17,7 @@ import {
   decodeHtml,
 } from './image-seo.mjs';
 import { imageFileSignature } from './image-file-signature.mjs';
+import { readReviewedImportCatalog } from '../reviewed-imports.mjs';
 
 export function auditImageSeo({ root, directory, catalog, publishedAssets = null }) {
   const eligible = catalog.filter((a) => a.published && a.indexable);
@@ -256,7 +257,7 @@ export function auditImageSeo({ root, directory, catalog, publishedAssets = null
 }
 if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
   const root = resolve(import.meta.dirname, '../..');
-  const catalog = JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8'));
+  const catalog = readReviewedImportCatalog(root);
   let publishedAssets = null;
   if (process.env.CF_PAGES === '1') {
     const { readPublication } = await import('../publication-policy.mjs');
