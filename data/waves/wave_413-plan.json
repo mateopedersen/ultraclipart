@@ -1,0 +1,78 @@
+{
+  "wave": "wave_413",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-carpentry-workshop",
+      "title": "Sanding a Wooden Birdhouse",
+      "alt": "An older man and a woman in work aprons sand and steady a wooden birdhouse at a sturdy workbench.",
+      "description": "The man in a green apron works across the sloping roof while his partner supports the front panel. A vise, wood shavings, tools and timber offcuts fill the bench without hiding the small round entrance.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-carpentry-workshop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-community-quilt",
+      "title": "Stitching a Patchwork Quilt",
+      "alt": "A silver-haired woman stitches a red, blue, cream and olive patchwork quilt stretched over a wooden frame.",
+      "description": "She sits in a spindle-backed chair in a navy blouse and mustard skirt, guiding the needle above the colored squares. Her plain olive cap rests on a small stool beside the quilt frame.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-community-quilt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-raised-garden",
+      "title": "Watering a Raised Herb Garden",
+      "alt": "A man using a wheelchair pours water from a copper can into a waist-high wooden herb planter.",
+      "description": "Dense green herbs fill the rectangular box on its timber legs. The man's cream shirt, olive trousers and brown boots sit beside the warm copper curve of the watering can and its visible stream.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-raised-garden.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-ceremonial-bugler",
+      "title": "Woman Playing a Ceremonial Bugle",
+      "alt": "A woman in a plain navy dress uniform and white gloves plays a brass bugle while standing upright.",
+      "description": "She holds the curved instrument steadily at mouth height beneath a simple peaked cap. Matching navy trousers and black lace-up shoes finish the figure, with no visible rank or named service insignia.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-ceremonial-bugler.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-parade-drummer",
+      "title": "Marching with a Snare Drum",
+      "alt": "A smiling man in a navy waistcoat marches with a white snare drum and a pair of wooden drumsticks.",
+      "description": "A pale shoulder strap supports the drum in front of his cream shirt and dark trousers. One foot crosses forward as the raised sticks suggest a light parade rhythm.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-parade-drummer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-blank-community-banner",
+      "title": "Thank You Veterans Ribbon Lettering",
+      "alt": "A cream ribbon with burgundy folds carries navy Thank You Veterans lettering above three gold stars.",
+      "description": "The long fabric banner curls upward at both ends, exposing its dark red reverse and narrow gold edging. Tall serif letters follow the ribbon's curve above the three decorative stars.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-blank-community-banner.png",
+      "printMaxEdgePx": 1002,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

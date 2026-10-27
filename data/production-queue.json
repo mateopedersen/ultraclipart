@@ -17,17 +17,17 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 1552,
+  "generatedArtworkCount": 1602,
   "suppliedArtworkCount": 10730,
-  "originalTopicArtworkCount": 1900,
+  "originalTopicArtworkCount": 1950,
   "supplementalArtworkCount": 11184,
-  "qualityApprovedArtworkCount": 1900,
+  "qualityApprovedArtworkCount": 1950,
   "supplementalApprovedArtworkCount": 11184,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 13084,
-  "remainingToDraw": 3948,
-  "nextAction": "Release the fully reviewed 50-artwork Hanukkah collection and verify it live together with the completed Kwanzaa series. Continue Veterans production from saved source manifests, including the owner-requested Thank You Veterans, Happy Veterans Day and accurate American-flag designs. Unreviewed drawings are not accepted or published.",
+  "availableArtworkCount": 13134,
+  "remainingToDraw": 3898,
+  "nextAction": "Release and verify the fully reviewed Hanukkah and Veterans collections. Kwanzaa is complete and live-verified at 50. All 50 Veterans sources and proofs, source-bound metadata, full-catalog duplicates and 150 CDN representations passed. Run local and live gallery, SEO and editor download tests before marking Veterans live. Election research is saved separately; do not count research or repairs as new originals.",
   "topics": [
     {
       "topic": "halloween",
@@ -463,13 +463,13 @@
       "keyword": "Veterans clipart",
       "wave": "W4",
       "target": 50,
-      "generated": 0,
+      "generated": 50,
       "supplied": 0,
-      "available": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "available": 50,
+      "approved": 50,
+      "remainingToDraw": 0,
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/veterans.json"
     },
     {
       "topic": "patriotic",
@@ -144506,6 +144506,6 @@
       "sha256": "07ecbad0becb38ba54aede8540b527fd93e2b48d1926a085238bf6d1388d0de4"
     }
   ],
-  "verifiedPublishedGeneratedArtworkCount": 1472,
-  "acceptedAwaitingRelease": 80
+  "verifiedPublishedGeneratedArtworkCount": 1502,
+  "acceptedAwaitingRelease": 100
 }

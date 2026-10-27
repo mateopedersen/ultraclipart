@@ -1,0 +1,78 @@
+{
+  "wave": "wave_414",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-outdoor-walk",
+      "title": "Two Friends on a Rocky Trail",
+      "alt": "Two older friends with backpacks walk along a rocky path, one carrying a trekking pole and wearing an olive cap.",
+      "description": "The woman's braided hair and navy jacket contrast with the man's red plaid shirt and gray mustache. Low wild plants fill gaps between the stones beneath their fully visible walking boots.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-outdoor-walk.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-adaptive-basketball",
+      "title": "Passing a Basketball from a Sports Wheelchair",
+      "alt": "A man in a blue sleeveless shirt offers a basketball to a child beside his sports wheelchair.",
+      "description": "The girl reaches toward the orange ball with both hands while the man steadies it in his outstretched palm. Angled large wheels, a low seat and visible foot support define the sporting chair.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-adaptive-basketball.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-harnessed-dog-walk",
+      "title": "Walking a Golden Dog",
+      "alt": "An older woman in an olive cap and green jacket walks beside a golden dog wearing a red harness.",
+      "description": "She holds the loose red lead near the dog's shoulder while stepping forward in navy trousers and sturdy dark shoes. The dog's open mouth, floppy ears and lifted forepaw make the walking pose clear.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-harnessed-dog-walk.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-painting-workshop",
+      "title": "Painting a Red Poppy at an Easel",
+      "alt": "An older man in a paint-spattered apron paints a red poppy in a glass vase at a wooden easel.",
+      "description": "A real poppy in a small vase rests on a paint-marked stool beside the canvas. The seated painter balances a multicolored palette near the plain olive cap on his lap and lifts a thin brush toward the flower.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-painting-workshop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-garden-bouquet",
+      "title": "Presenting a Garden Bouquet",
+      "alt": "A young man offers a mixed flower bouquet to an older woman in a sage cardigan and plain olive cap.",
+      "description": "Sunflowers and purple and white blossoms fill the space between their hands. The man's cream sweater and rust trousers complement the woman's long navy skirt and low green shoes.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-garden-bouquet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-poppy-making",
+      "title": "Making Happy Veterans Day Cards",
+      "alt": "A teenager makes paper poppies while an older man holds up a Happy Veterans Day card at a craft table.",
+      "description": "The cream card displays navy handwriting above a red poppy decoration. Red paper petals, scissors and glue lie across the oval table between the girl's orange sweater and the man's green cardigan.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-poppy-making.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

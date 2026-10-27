@@ -1,0 +1,606 @@
+{
+  "wave": "wave_415",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "veterans-photo-display",
+      "title": "Arranging a Community Portrait Display",
+      "alt": "A silver-haired woman clips silhouette portrait cards to a wooden display board beside a stool with an olive cap.",
+      "description": "She reaches toward the top row while holding the edge of one cream card. The anonymous gray profile shapes avoid suggesting real named honorees, with her burgundy jacket providing the main color accent.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-photo-display.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "eaac56a53331fc6ce1743076bc3b3054e200ddab8a728fad9c657ac0270f3b3e",
+      "inputSignature": "c071943a88a9974d65e1c2d280535de8a8da7225eac4d798150b18d94f81c531",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 906559,
+        "weightedCmykRmse": 0.759262
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1099548,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 906559,
+          "weightedCmykRmse": 0.759262
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        30,
+        66,
+        1003,
+        1471
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_415/exports/veterans-photo-display.pdf",
+          "bytes": 906559,
+          "sha256": "a2f72740c303b6cd22117d65a3b6ffc35616c4510bf7a2225b9a0402da9c2999"
+        },
+        "webp": {
+          "path": "work/production/wave_415/exports/veterans-photo-display.webp",
+          "bytes": 1547644,
+          "sha256": "21e27f47862eaa3a7b498b47fbd0ed6a70013af78587787623345bd26cf0215f"
+        },
+        "thumb": {
+          "path": "work/production/wave_415/exports/veterans-photo-display-thumb.webp",
+          "bytes": 51900,
+          "sha256": "481a92d5472cd23fcda58560740cc6f73f53ce6690a8bc7ff1db7000b2b19439"
+        }
+      },
+      "proofSha256": "9e9bdc7cbc3df77fc3c3717deb86974962d0f44925272c5e151681aee5d64531",
+      "pairMeanRgbDifference": 4.472
+    },
+    {
+      "id": "veterans-poppy-lapel-hands",
+      "title": "Poppy on a Folded Navy Blazer",
+      "alt": "A folded navy blazer with a red poppy on its lapel rests behind a plain olive cap.",
+      "description": "The cream shirt collar rises above the folded jacket, framing the small fabric poppy at one side. Fine woven textures distinguish the navy wool, pale shirt and soft canvas cap in this compact clothing still life.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-poppy-lapel-hands.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 855,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "9a4c587f6598bf99a4ecff960c78d67b4e81e4b11bf37e28e1bb8c06bb19e1fb",
+      "inputSignature": "973913e13a7e56786e0c0de1b3245141aa2665403cf8928b0a3d19d362e891f7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976627,
+        "weightedCmykRmse": 1.2394
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1470416,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1213551,
+          "weightedCmykRmse": 0.702532
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1147081,
+          "weightedCmykRmse": 0.836245
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1063096,
+          "weightedCmykRmse": 1.004485
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976627,
+          "weightedCmykRmse": 1.2394
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        37,
+        73,
+        1198,
+        1232
+      ],
+      "image": {
+        "width": 855,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_415/exports/veterans-poppy-lapel-hands.pdf",
+          "bytes": 976627,
+          "sha256": "8a19a98ce68afaf073bc117db3584a13634feb0eafe9c41e0d3b0f6d0898c05f"
+        },
+        "webp": {
+          "path": "work/production/wave_415/exports/veterans-poppy-lapel-hands.webp",
+          "bytes": 1567958,
+          "sha256": "dc108e052b63ccc041498715288b5b7189e6cf8fec1c9a97f5fd3fcbd8d4046d"
+        },
+        "thumb": {
+          "path": "work/production/wave_415/exports/veterans-poppy-lapel-hands-thumb.webp",
+          "bytes": 60824,
+          "sha256": "6e0b4a9ab4e44abf7cf906f87e5e1d58277f2c785da7339f1462e429971e81f0"
+        }
+      },
+      "proofSha256": "29564fd13b52375253237531ca0f65bed6e077949628daeb825d13872443c5e7",
+      "pairMeanRgbDifference": 2.75008
+    },
+    {
+      "id": "veterans-identity-tags",
+      "title": "Thank You Veterans Keepsake Tags",
+      "alt": "Two decorative silver tags read Thank You and Veterans beside a red poppy on folded olive cloth.",
+      "description": "A looped metal ball chain links the gently overlapping tags above the textured fabric. The navy engraved-style lettering carries an appreciation message without personal identification numbers or military records.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-identity-tags.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "fed3b13fadc5001258ddba9f8f07fb1f3ea299497973873eff0ccd0599527d80",
+      "inputSignature": "b6ac8ef640d474baed5030c8e5c82716f642b064314cc05a6b551b643ec485fd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 951895,
+        "weightedCmykRmse": 1.247818
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1383417,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1157063,
+          "weightedCmykRmse": 0.706528
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1102594,
+          "weightedCmykRmse": 0.837666
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1029204,
+          "weightedCmykRmse": 1.01241
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 951895,
+          "weightedCmykRmse": 1.247818
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        49,
+        31,
+        1481,
+        983
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_415/exports/veterans-identity-tags.pdf",
+          "bytes": 951895,
+          "sha256": "1e4c412cdb8c53e07f2671ce3c46820fd01b9be9bf971d218ed2a8b8fc2367f4"
+        },
+        "webp": {
+          "path": "work/production/wave_415/exports/veterans-identity-tags.webp",
+          "bytes": 2019462,
+          "sha256": "0fcd6a1164771f53f3aac9fe6168a9a6c6e1a4c8eb2bbe9cdcd48acaed5a302c"
+        },
+        "thumb": {
+          "path": "work/production/wave_415/exports/veterans-identity-tags-thumb.webp",
+          "bytes": 62314,
+          "sha256": "5711e587f0a526fafeb3a79785a870e302e93798a6115b91025e26d6fde262c7"
+        }
+      },
+      "proofSha256": "01d85f52105b0b37e59802e0515a5bb993a9b5302a92ef410974718843af130e",
+      "pairMeanRgbDifference": 5.85016
+    },
+    {
+      "id": "veterans-service-cap-book",
+      "title": "Happy Veterans Day with an American Flag",
+      "alt": "Large navy-and-cream Happy Veterans Day letters stand in front of an American flag and a curling red ribbon.",
+      "description": "The three stacked words have raised cream edges and dark blue faces beneath the flag's blue star field. A gold-topped pole and long red ribbon frame the compact patriotic lettering composition.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-service-cap-book.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "4ecc2ec54f11e2ba783502d0156cedbf50cd9db5ec6654c9006e273bfe36dd2b",
+      "inputSignature": "c5fb0e030f9973d55f70dc4612fb735593b02174a028908c189d48a1e5d2475f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 919536,
+        "weightedCmykRmse": 1.281584
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1440238,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1163395,
+          "weightedCmykRmse": 0.725994
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1090567,
+          "weightedCmykRmse": 0.858714
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1002016,
+          "weightedCmykRmse": 1.027555
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 919536,
+          "weightedCmykRmse": 1.281584
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        59,
+        17,
+        1340,
+        1101
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_415/exports/veterans-service-cap-book.pdf",
+          "bytes": 919536,
+          "sha256": "99f63fc1c93144907085353b9648c5870d27ff99f0b84ec9f4603edc5650a16b"
+        },
+        "webp": {
+          "path": "work/production/wave_415/exports/veterans-service-cap-book.webp",
+          "bytes": 1521136,
+          "sha256": "03d33c2d3595cc57be7060cd461a5bcf2e4040553b03c814ea59bc7e7f62c481"
+        },
+        "thumb": {
+          "path": "work/production/wave_415/exports/veterans-service-cap-book-thumb.webp",
+          "bytes": 70860,
+          "sha256": "741f5f2677b51ac4e768189f7d9606a571e6a06c87679f9a9770ba334bbfbc28"
+        }
+      },
+      "proofSha256": "0baca0958529278fde0bc64897a2e994619450a99a96f73de3e89a112652c7ba",
+      "pairMeanRgbDifference": 7.81561
+    },
+    {
+      "id": "veterans-helmet-and-canteen",
+      "title": "Helmet and Canvas-Covered Canteen",
+      "alt": "An olive helmet rests beside a metal canteen in a canvas cover, with a pale folded cloth underneath.",
+      "description": "The rounded helmet exposes its dark interior and loose chin strap. A ribbed screw cap and khaki webbing distinguish the canteen, with no visible manufacturer marks or named unit insignia.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-helmet-and-canteen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "e28525cf3c6c3a03c0dd04ee563e401fd233384e86584dc5808bb701c4e5b554",
+      "inputSignature": "650d900879dfef373ca67ef32888ddafbfa62fcc32de17c9086f858830b7c6af",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 905028,
+        "weightedCmykRmse": 0.751447
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1110544,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 905028,
+          "weightedCmykRmse": 0.751447
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        124,
+        51,
+        1496,
+        985
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_415/exports/veterans-helmet-and-canteen.pdf",
+          "bytes": 905028,
+          "sha256": "ecb2c6c277bc1aa31a1f17536e5e258e367b58ad35d81fcf36ba1afacf0a06c1"
+        },
+        "webp": {
+          "path": "work/production/wave_415/exports/veterans-helmet-and-canteen.webp",
+          "bytes": 1657472,
+          "sha256": "56495ad084de047d55f41abb454bb4251896d6488979bc651643ce3c4fd8f14e"
+        },
+        "thumb": {
+          "path": "work/production/wave_415/exports/veterans-helmet-and-canteen-thumb.webp",
+          "bytes": 47928,
+          "sha256": "88c198d52289f928e3ac8aa8987d760f786ca4268f1abd743786f66d1cc76779"
+        }
+      },
+      "proofSha256": "4f19fc31330b07c79308e20f8803bba47d0f025b5dbb3d2e53bfd547cfab0970",
+      "pairMeanRgbDifference": 3.73371
+    },
+    {
+      "id": "veterans-poppy-wreath",
+      "title": "Veterans Day Lettering with Poppies",
+      "alt": "Navy Veterans Day script sits inside an open wreath of red poppies, buds and olive-green leaves.",
+      "description": "The long curved strokes weave between the flowers without hiding the two-word message. Large poppies anchor the lower left and upper right, while smaller blooms and pointed leaves complete the asymmetric outline.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-poppy-wreath.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 950,
+      "pdfHeight": 633,
+      "sourceType": "raster",
+      "sourceSha256": "f16d696af3b7cf25ceeb185b6446384182f529d711f57deee7cc068f8700a0d6",
+      "inputSignature": "2373492b2c49d52679766c7354d7be6313176eae68c437c8202ba31148513646",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 977352,
+        "weightedCmykRmse": 1.29888
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1300005,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1154312,
+          "weightedCmykRmse": 0.744138
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1107370,
+          "weightedCmykRmse": 0.867829
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041451,
+          "weightedCmykRmse": 1.024922
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 977352,
+          "weightedCmykRmse": 1.29888
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        54,
+        26,
+        1492,
+        995
+      ],
+      "image": {
+        "width": 950,
+        "height": 633,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_415/exports/veterans-poppy-wreath.pdf",
+          "bytes": 977352,
+          "sha256": "b301f59ea23ed2120403254f80716be720c5da5c61a73d6c10694796c5106b2d"
+        },
+        "webp": {
+          "path": "work/production/wave_415/exports/veterans-poppy-wreath.webp",
+          "bytes": 1701262,
+          "sha256": "f6ffe6ae14fb891705e3522ce2fd4e13010b5963e50ceaa48c8895298a3a84c0"
+        },
+        "thumb": {
+          "path": "work/production/wave_415/exports/veterans-poppy-wreath-thumb.webp",
+          "bytes": 84172,
+          "sha256": "2050e077a7e8a14d7333d17c6d38d79ace28ae47a46817b696ad0d00a7f6eb63"
+        }
+      },
+      "proofSha256": "e7eff13805439abe457efba50dc3210c3fd37fe5eece2c3d990e57ec97f48da0",
+      "pairMeanRgbDifference": 8.82419
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T23:40:52.702930+00:00",
+  "screenReviewEvidence": "work/production/wave_415/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T23:45:24.042Z"
+}

@@ -1,0 +1,543 @@
+{
+  "wave": "wave_413",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 2,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "veterans-carpentry-workshop",
+      "title": "Sanding a Wooden Birdhouse",
+      "alt": "An older man and a woman in work aprons sand and steady a wooden birdhouse at a sturdy workbench.",
+      "description": "The man in a green apron works across the sloping roof while his partner supports the front panel. A vise, wood shavings, tools and timber offcuts fill the bench without hiding the small round entrance.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-carpentry-workshop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "20e2de3011f5c74552ce7294ebd109c4758e9f2360b5fa510a522ba8bd9568e6",
+      "inputSignature": "fd198fea5d762d4a6721abbb325a5cc277df540b58a70a382dae08a739cd5f9f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 909230,
+        "weightedCmykRmse": 1.101527
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1357108,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1073301,
+          "weightedCmykRmse": 0.77287
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 999893,
+          "weightedCmykRmse": 0.909645
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 909230,
+          "weightedCmykRmse": 1.101527
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        40,
+        14,
+        1284,
+        1185
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_413/exports/veterans-carpentry-workshop.pdf",
+          "bytes": 909230,
+          "sha256": "0b7ddf3944f1af062e406b0e036f68f7a8cab6eb9a41f6e4251c21ee2a3d281b"
+        },
+        "webp": {
+          "path": "work/production/wave_413/exports/veterans-carpentry-workshop.webp",
+          "bytes": 1291286,
+          "sha256": "a46883e963bc12fa6a6f698ab8528b40ecc75b902ff10b2ed44dc2c2d1de8cdf"
+        },
+        "thumb": {
+          "path": "work/production/wave_413/exports/veterans-carpentry-workshop-thumb.webp",
+          "bytes": 71990,
+          "sha256": "44c3a66c57196a8cb20158ca40a1422ac8307b43af90a68f8d8d0d72bbd7e392"
+        }
+      },
+      "proofSha256": "a4299d5da048ab5ddbfc01cb65619f2bdbe2714233df8b0fb939966e0de043b8",
+      "pairMeanRgbDifference": 4.01714
+    },
+    {
+      "id": "veterans-community-quilt",
+      "title": "Stitching a Patchwork Quilt",
+      "alt": "A silver-haired woman stitches a red, blue, cream and olive patchwork quilt stretched over a wooden frame.",
+      "description": "She sits in a spindle-backed chair in a navy blouse and mustard skirt, guiding the needle above the colored squares. Her plain olive cap rests on a small stool beside the quilt frame.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-community-quilt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "e0af0d379174d80b0213bd44ac574be94032fb7010d1b29e828d7f299fb3c4d9",
+      "inputSignature": "a0c521402496b65beabd435b5b1a1181149a90f73a392efd599ba65ec3919fa1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 958997,
+        "weightedCmykRmse": 0.931329
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1252114,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1018277,
+          "weightedCmykRmse": 0.793021
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 958997,
+          "weightedCmykRmse": 0.931329
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        23,
+        32,
+        1132,
+        1349
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_413/exports/veterans-community-quilt.pdf",
+          "bytes": 958997,
+          "sha256": "4423c539ff364b2d9bb18f9fff3d2c28f5106a3c3922cbaf1aaa7934ed05afaa"
+        },
+        "webp": {
+          "path": "work/production/wave_413/exports/veterans-community-quilt.webp",
+          "bytes": 1235954,
+          "sha256": "3684244f1f252b28343eef5d9a9af477bdefc35e1962e5271bb700acf3057c0c"
+        },
+        "thumb": {
+          "path": "work/production/wave_413/exports/veterans-community-quilt-thumb.webp",
+          "bytes": 62802,
+          "sha256": "e3dbe385192e3472313ae1efa995e5f8c246bb6435a4be0e30d176623835d745"
+        }
+      },
+      "proofSha256": "e1503e574222674c09f20f9ce27390e6a23bed97dfed0e33de4a06654ca4ff42",
+      "pairMeanRgbDifference": 3.77406
+    },
+    {
+      "id": "veterans-raised-garden",
+      "title": "Watering a Raised Herb Garden",
+      "alt": "A man using a wheelchair pours water from a copper can into a waist-high wooden herb planter.",
+      "description": "Dense green herbs fill the rectangular box on its timber legs. The man's cream shirt, olive trousers and brown boots sit beside the warm copper curve of the watering can and its visible stream.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-raised-garden.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 950,
+      "pdfHeight": 868,
+      "sourceType": "raster",
+      "sourceSha256": "606e7c8c592f633ae75fa26d2d2e68b8019e78496c8a8c99b05d16faf75a00b0",
+      "inputSignature": "272948faa8b6b77d0710367d329286656bc1a38d7985e2f8101bb83a1973741a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 985012,
+        "weightedCmykRmse": 1.321471
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1487124,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1224748,
+          "weightedCmykRmse": 0.741728
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1154247,
+          "weightedCmykRmse": 0.878395
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1066449,
+          "weightedCmykRmse": 1.045642
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 985012,
+          "weightedCmykRmse": 1.321471
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        23,
+        1297,
+        1170
+      ],
+      "image": {
+        "width": 950,
+        "height": 868,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_413/exports/veterans-raised-garden.pdf",
+          "bytes": 985012,
+          "sha256": "02a962cc03adbe836b0036b03a892887f25c3369e3bb55c02e8dc9ca22308fbd"
+        },
+        "webp": {
+          "path": "work/production/wave_413/exports/veterans-raised-garden.webp",
+          "bytes": 1455232,
+          "sha256": "8e23b6038e34743e015ae6f4fff607f158fec06987e1f6680f32eaae24f2371a"
+        },
+        "thumb": {
+          "path": "work/production/wave_413/exports/veterans-raised-garden-thumb.webp",
+          "bytes": 85896,
+          "sha256": "3822cbc8b80ef9dd21daf158d7a94c9a078d02bfb445d52bea3f792ae70486c2"
+        }
+      },
+      "proofSha256": "41f603de20b59b8ccd11df5b8a68122b009da6d5acf156c7c8e0ea90a619d080",
+      "pairMeanRgbDifference": 4.98922
+    },
+    {
+      "id": "veterans-ceremonial-bugler",
+      "title": "Woman Playing a Ceremonial Bugle",
+      "alt": "A woman in a plain navy dress uniform and white gloves plays a brass bugle while standing upright.",
+      "description": "She holds the curved instrument steadily at mouth height beneath a simple peaked cap. Matching navy trousers and black lace-up shoes finish the figure, with no visible rank or named service insignia.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-ceremonial-bugler.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "75146bc1450fc8155a69bb6e19165f2403534a4f2c3fec79080cf4068f58edb8",
+      "inputSignature": "dedfabcebd99e79d0e220229485317ebb65c43ade4229e9a1c876848ef7b09f9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 590496,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 590496,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        288,
+        25,
+        888,
+        1483
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_413/exports/veterans-ceremonial-bugler.pdf",
+          "bytes": 590496,
+          "sha256": "44da2d5245e10910ca8e10f5e1e684247e053813c2d319de7a4a4c32d1edce29"
+        },
+        "webp": {
+          "path": "work/production/wave_413/exports/veterans-ceremonial-bugler.webp",
+          "bytes": 953410,
+          "sha256": "7d2bd00b5a3d354b5bfd492e702aa164aee9d2cd8ce919f2a026aff19aa4b49b"
+        },
+        "thumb": {
+          "path": "work/production/wave_413/exports/veterans-ceremonial-bugler-thumb.webp",
+          "bytes": 26108,
+          "sha256": "a140882a53250e860e3be455a00dde1ee504522aaaeb354aa918552911e7925a"
+        }
+      },
+      "proofSha256": "b22772a2527e704d1444adf07534bf8908c009ed6fb0fef0a3ee9a57fb084a91",
+      "pairMeanRgbDifference": 1.54221
+    },
+    {
+      "id": "veterans-parade-drummer",
+      "title": "Marching with a Snare Drum",
+      "alt": "A smiling man in a navy waistcoat marches with a white snare drum and a pair of wooden drumsticks.",
+      "description": "A pale shoulder strap supports the drum in front of his cream shirt and dark trousers. One foot crosses forward as the raised sticks suggest a light parade rhythm.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-parade-drummer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "4b1112dd01d02ea1a3a39f7e71e394b163662d89538a0a8c0c349637ca36f7ef",
+      "inputSignature": "b665fa1a0451d81c4b1c4051c1fd2126e8015efbc32cdbd207c4e2fc6f0a73a1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 612902,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 612902,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        167,
+        57,
+        877,
+        1482
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_413/exports/veterans-parade-drummer.pdf",
+          "bytes": 612902,
+          "sha256": "b7b3f4d543d0ffa92102523e03931a945725ec71cdec4fd2cd8fc400348882a2"
+        },
+        "webp": {
+          "path": "work/production/wave_413/exports/veterans-parade-drummer.webp",
+          "bytes": 1077150,
+          "sha256": "b77337495ecbe999d3f4cf1db5c9881cf52d8ae81b5fe4e643edb848e94f51e4"
+        },
+        "thumb": {
+          "path": "work/production/wave_413/exports/veterans-parade-drummer-thumb.webp",
+          "bytes": 30038,
+          "sha256": "c31ed8024bbe3ade9a52d67b6aed88e37f9467a37a75639219851ec53b9edbe7"
+        }
+      },
+      "proofSha256": "c4f6b00e8f292f3b1b1692eb4c4a26e436da6db0a36ad88e8472a48970e77c3c",
+      "pairMeanRgbDifference": 2.44462
+    },
+    {
+      "id": "veterans-blank-community-banner",
+      "title": "Thank You Veterans Ribbon Lettering",
+      "alt": "A cream ribbon with burgundy folds carries navy Thank You Veterans lettering above three gold stars.",
+      "description": "The long fabric banner curls upward at both ends, exposing its dark red reverse and narrow gold edging. Tall serif letters follow the ribbon's curve above the three decorative stars.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_413/source/veterans-blank-community-banner.png",
+      "printMaxEdgePx": 1002,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1774,
+      "height": 887,
+      "pdfWidth": 1002,
+      "pdfHeight": 501,
+      "sourceType": "raster",
+      "sourceSha256": "ebb8fc0174ab819dc42f8ab97988d139f31202aa70265fa86073a393bb5a9570",
+      "inputSignature": "f8487656923acabd523d4ddba29307e8dd0caa3fbc7b385ee3edb4a1a3bd5b33",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 623165,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 623165,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        28,
+        93,
+        1751,
+        804
+      ],
+      "image": {
+        "width": 1002,
+        "height": 501,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_413/exports/veterans-blank-community-banner.pdf",
+          "bytes": 623165,
+          "sha256": "ed2bcca3b64aabb8a26c0b414cf735b702b09e9f3ed23b39bd6ce6716cdef4e7"
+        },
+        "webp": {
+          "path": "work/production/wave_413/exports/veterans-blank-community-banner.webp",
+          "bytes": 1107106,
+          "sha256": "1717ff5000b5e4fc51c08b503fc75736142208a9581a11635c40d9382a91bb82"
+        },
+        "thumb": {
+          "path": "work/production/wave_413/exports/veterans-blank-community-banner-thumb.webp",
+          "bytes": 31964,
+          "sha256": "43d539259fec1bd55f6d4e13e9b8380b7cef4a8fc2b75a025c26b226a9dfb46b"
+        }
+      },
+      "proofSha256": "453a85e86eb4c530d08d0cd487e3d0dee01164763be129b082441c7d8da12c5a",
+      "pairMeanRgbDifference": 3.29857
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T23:39:53.636705+00:00",
+  "screenReviewEvidence": "work/production/wave_413/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T23:45:23.197Z"
+}

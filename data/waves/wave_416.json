@@ -1,0 +1,557 @@
+{
+  "wave": "wave_416",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "veterans-bugle-and-music",
+      "title": "Brass Bugle with a Navy Cord",
+      "alt": "A polished brass bugle rests across an open blank book beside a coiled navy cord and tassel.",
+      "description": "The instrument's broad flared bell faces right while its mouthpiece extends to the left. Warm metal highlights contrast with the cream pages and the dark braided loop gathered into a long fabric tassel.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-bugle-and-music.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "7cf198cd78cf4afe580e9bd6540289bec3213555e5236629badb59c2e8bd2310",
+      "inputSignature": "94237266f37de2b2a2db2b9e545dabc774ba765c26f810e562d20594d4707b74",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 941474,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 941474,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        26,
+        50,
+        1514,
+        980
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_416/exports/veterans-bugle-and-music.pdf",
+          "bytes": 941474,
+          "sha256": "0e9d5537681e6f99b8e87d9d11aa02aac7710c14f4265f81820274023bca9b47"
+        },
+        "webp": {
+          "path": "work/production/wave_416/exports/veterans-bugle-and-music.webp",
+          "bytes": 1489194,
+          "sha256": "15c677fcd55f92b615a967ec29346f6762351491f8a0b4e110d1c16e3fd02ef8"
+        },
+        "thumb": {
+          "path": "work/production/wave_416/exports/veterans-bugle-and-music-thumb.webp",
+          "bytes": 49138,
+          "sha256": "0150eede27ae85a934c18ba5db5a3ae32c2f1ae532d3c0689dda6d8293229bfa"
+        }
+      },
+      "proofSha256": "713132cca563295ddf0cbf367b96667bafaab9d3c6e89ab0ef8f74d22ac502b2",
+      "pairMeanRgbDifference": 4.26267
+    },
+    {
+      "id": "veterans-blank-honor-plaque",
+      "title": "Thank You Veterans Recognition Plaque",
+      "alt": "A walnut-colored plaque carries Thank You Veterans lettering on a gold panel with a star, leaves and a navy bow.",
+      "description": "The three-line message fills the center of the freestanding decorative plaque. Curved golden branches flank its dark wooden edge above layered navy-and-burgundy ribbon folds and a stepped base.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-blank-honor-plaque.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "47cb749a0e600e3ada96a711cde2ce651f30a761b2a9d7779ee3531060f886ac",
+      "inputSignature": "346e2212d3bb19297134f4c98fa5c23f8e79156057ba621862c551868c45c0ec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 927102,
+        "weightedCmykRmse": 1.300512
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1454703,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1175380,
+          "weightedCmykRmse": 0.734556
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1102451,
+          "weightedCmykRmse": 0.867913
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1013155,
+          "weightedCmykRmse": 1.039168
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 927102,
+          "weightedCmykRmse": 1.300512
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        30,
+        55,
+        1340,
+        1094
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_416/exports/veterans-blank-honor-plaque.pdf",
+          "bytes": 927102,
+          "sha256": "ee971eb659953c4d3f086b25b664341f2bb2a9d405cbdbab6fa79e14bb073a68"
+        },
+        "webp": {
+          "path": "work/production/wave_416/exports/veterans-blank-honor-plaque.webp",
+          "bytes": 1506448,
+          "sha256": "67ca0d41319ae3c74a3870a25567aeca6acfc495dc5430344029be0890b36bd4"
+        },
+        "thumb": {
+          "path": "work/production/wave_416/exports/veterans-blank-honor-plaque-thumb.webp",
+          "bytes": 61224,
+          "sha256": "ba8b9c28c4d40a543f052dd4882bfa45504a3eded695edacb9b19f4643baf7c6"
+        }
+      },
+      "proofSha256": "45ae77d449369d96c00773297c41b9041c115e70a1f956e7c602a891555f910d",
+      "pairMeanRgbDifference": 5.03009
+    },
+    {
+      "id": "veterans-poppy-thank-you-card",
+      "title": "Happy Veterans Day Greeting Card",
+      "alt": "A Happy Veterans Day card with red poppies stands beside a small American flag, a brown envelope and a navy pen.",
+      "description": "Flowing navy calligraphy fills the upright cream card above two bright poppies. A brass desk stand supports the flag behind it, balancing the closed kraft envelope and gold-trimmed fountain pen.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-poppy-thank-you-card.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "36bdab678bc07aa1fd55c8cb60daa1d8c06f21880170d2153b57fa538bbeb252",
+      "inputSignature": "cd330195558f530d6b09ab99c2e8cbd7724208ad41b72dd059578f4c4b5c913a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 810519,
+        "weightedCmykRmse": 0.736693
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1016033,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 810519,
+          "weightedCmykRmse": 0.736693
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        74,
+        23,
+        1497,
+        990
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_416/exports/veterans-poppy-thank-you-card.pdf",
+          "bytes": 810519,
+          "sha256": "24d938b97f2b70f9e7e13e750b39f164ead05eeabd8fb7fdeba062e05af9c33e"
+        },
+        "webp": {
+          "path": "work/production/wave_416/exports/veterans-poppy-thank-you-card.webp",
+          "bytes": 1706712,
+          "sha256": "db78749db43f89466211ad280c7bd2004d30e9c92b2e3e7df4ec9e8fbc37b5c5"
+        },
+        "thumb": {
+          "path": "work/production/wave_416/exports/veterans-poppy-thank-you-card-thumb.webp",
+          "bytes": 52140,
+          "sha256": "a984fc384e8daf9e213b9e89150a7f830d7d7c8ba9a69fe939020f57858b805c"
+        }
+      },
+      "proofSha256": "9d76e75cd0a5ed7aeaafa978381b4dc1992108137c7e7726c3af003b59c97466",
+      "pairMeanRgbDifference": 5.79809
+    },
+    {
+      "id": "veterans-star-rosette",
+      "title": "Veterans Day Appreciation Rosette",
+      "alt": "A navy-and-cream pleated rosette surrounds a gold center marked Veterans Day beneath a red star.",
+      "description": "Two burgundy ribbon tails hang below the layered fabric circle, each edged with fine gold trim. The decorative appreciation badge has no named award, service branch or rank.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-star-rosette.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1278,
+      "height": 1230,
+      "pdfWidth": 1000,
+      "pdfHeight": 962,
+      "sourceType": "raster",
+      "sourceSha256": "5b4ea265d1347235410501782d94f58d8aebe8c7d2649edfd16de4be71143cb6",
+      "inputSignature": "c8444670efeb587215091d96ad482ffe632bd71a50419add4467fbcc64c60c17",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 966159,
+        "weightedCmykRmse": 1.402931
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1482527,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1200189,
+          "weightedCmykRmse": 0.764063
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1132654,
+          "weightedCmykRmse": 0.912854
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1038274,
+          "weightedCmykRmse": 1.106986
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 966159,
+          "weightedCmykRmse": 1.402931
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        195,
+        18,
+        1083,
+        1212
+      ],
+      "image": {
+        "width": 1000,
+        "height": 962,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_416/exports/veterans-star-rosette.pdf",
+          "bytes": 966159,
+          "sha256": "ff2c19a24b1dd280b1c5a71aae33b435385745851e8b450fade4a104882ea537"
+        },
+        "webp": {
+          "path": "work/production/wave_416/exports/veterans-star-rosette.webp",
+          "bytes": 1395786,
+          "sha256": "9bdbd9f1ec2174e662c016b31fa790e5f8b3c130771a9a5a08e331a73995fe4e"
+        },
+        "thumb": {
+          "path": "work/production/wave_416/exports/veterans-star-rosette-thumb.webp",
+          "bytes": 68812,
+          "sha256": "094aa7d14fdc05e7634755a6e3d186c20408e46e4a507817c23f8ab500e425af"
+        }
+      },
+      "proofSha256": "c4e72b992640105da1c0d6821e358362eeef5d46d03bc0c0f242a8069dc58206",
+      "pairMeanRgbDifference": 4.91292
+    },
+    {
+      "id": "veterans-folded-blazer",
+      "title": "Veterans Day Stitched Lettering",
+      "alt": "Textured red and navy felt letters spell Veterans Day on a cream appliqué panel with poppies and ribbon tails.",
+      "description": "Small visible stitches follow the edges of the soft fabric letters and scalloped backing. Two red poppies overlap the lower corner, with pale ribbon ends extending beneath the word Day.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-folded-blazer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "26fa5083d5d0ad03ccecd7e9db02311756fd9eb2100714385c5fec76eb93a4e8",
+      "inputSignature": "44f62ad37cd1976ca51747a6b175239882facdd08398e4cc1ef51c79851ba305",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 854889,
+        "weightedCmykRmse": 0.746324
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1040009,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 854889,
+          "weightedCmykRmse": 0.746324
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        79,
+        122,
+        1475,
+        949
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_416/exports/veterans-folded-blazer.pdf",
+          "bytes": 854889,
+          "sha256": "873720e866d63ca74827fea1544a26c9247cf25f4482b6dbed4a63461f829487"
+        },
+        "webp": {
+          "path": "work/production/wave_416/exports/veterans-folded-blazer.webp",
+          "bytes": 1805726,
+          "sha256": "614bc562520503a90583b84e80945681ba3c5b3d20c5f4f3ec95f12fbf033c10"
+        },
+        "thumb": {
+          "path": "work/production/wave_416/exports/veterans-folded-blazer-thumb.webp",
+          "bytes": 52132,
+          "sha256": "b72b948a7676b5a1df4c66b0af4d0477fed6f5e5f4a7c9757bee2f6354fc0131"
+        }
+      },
+      "proofSha256": "5d95cd7f5b8bddaf277fa7af0c275feb597cc12be0b854021e0fefb4fcf1f1b5",
+      "pairMeanRgbDifference": 5.85598
+    },
+    {
+      "id": "veterans-volunteer-tool-belt",
+      "title": "Thank You Veterans with an American Flag",
+      "alt": "A navy ribbon bearing gold-edged Thank You Veterans letters stretches below a waving American flag.",
+      "description": "The wide ribbon curls outward beyond both sides of the flag, exposing its cream edging and deep blue folds. A gold finial tops the pole beside the blue canton and red-and-white stripes.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_416/source/veterans-volunteer-tool-belt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "cbaee90a3ed990aff70f7b1a7a4e8b73d8dcd9aa624592847da10bb0afb546ca",
+      "inputSignature": "9d2e209d627ee2775d0d9ae7b746e6200e6107619b95a58efaf287d2c4c3ccec",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 932704,
+        "weightedCmykRmse": 0.714891
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1143771,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 932704,
+          "weightedCmykRmse": 0.714891
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        17,
+        16,
+        1520,
+        981
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_416/exports/veterans-volunteer-tool-belt.pdf",
+          "bytes": 932704,
+          "sha256": "ac0f213033ab48786fadbab253570975845ddad55addc1e9cc8842e7c3d37b94"
+        },
+        "webp": {
+          "path": "work/production/wave_416/exports/veterans-volunteer-tool-belt.webp",
+          "bytes": 1897292,
+          "sha256": "34acf3103bba3022a4889d03b4fd1eefd8a1632bad7e7527a9bace46ad0bfa59"
+        },
+        "thumb": {
+          "path": "work/production/wave_416/exports/veterans-volunteer-tool-belt-thumb.webp",
+          "bytes": 52264,
+          "sha256": "977e0c6b6a40e547f96ccd7ae978a1432cd74f6aa9308cec2c5a99f1bf1a9b3e"
+        }
+      },
+      "proofSha256": "3c196033e99e869fa5680485baece8fd10e7975c61d08b88e1e195949cece115",
+      "pairMeanRgbDifference": 6.42067
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T23:40:52.716222+00:00",
+  "screenReviewEvidence": "work/production/wave_416/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T23:45:24.424Z"
+}
