@@ -1,12 +1,11 @@
 import { chromium, webkit, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import assert from 'node:assert/strict';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4323';
 if (!/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(base))
   throw new Error('Local preview only.');
-const art = JSON.parse(readFileSync('data/art.json', 'utf8')).filter(
-  (a) => a.published && a.indexable,
-);
+const art = readEditorialCatalog().filter((a) => a.published && a.indexable);
 const byId = new Map(art.map((a) => [a.id, a]));
 const out = 'reports/collection-seo/image-metadata';
 mkdirSync(out, { recursive: true });

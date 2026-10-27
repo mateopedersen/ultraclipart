@@ -1,6 +1,7 @@
 import { chromium, webkit, expect } from '@playwright/test';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
+import { readEditorialCatalog } from '../helpers/editorial-catalog.mjs';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4323';
 if (!/^http:\/\/(127\.0\.0\.1|localhost)(:\d+)?$/.test(base))
   throw new Error('This audit is local-only.');
@@ -9,7 +10,7 @@ const out = process.env.EVIDENCE_DIR || `reports/collection-seo/${engine}`;
 mkdirSync(out, { recursive: true });
 const json = (name) =>
   JSON.parse(readFileSync(new URL('../../data/' + name, import.meta.url), 'utf8'));
-const all = json('art.json').filter((item) => item.published && item.indexable);
+const all = readEditorialCatalog().filter((item) => item.published && item.indexable);
 const byId = new Map(all.map((item) => [item.id, item]));
 const relations = json('topic-relations.json');
 const eligible = new Set(
