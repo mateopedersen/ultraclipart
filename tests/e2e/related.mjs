@@ -199,7 +199,9 @@ try {
     'T21 WCAG AA automated checks',
   );
   await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
+  // The dried-ring source depicts only apples. Use a genuinely connected
+  // artwork for the companion-mode interaction instead of inventing citrus.
+  await page.goto(`${base}/art/apple-embroidered-clipart/`, { waitUntil: 'networkidle' });
   const root = page.locator('[data-related-root]');
   await page.locator('[data-related-mode="subject"]').click();
   await expect(page.locator('[data-related-mode="subject"]')).toHaveAttribute(
@@ -218,7 +220,7 @@ try {
   assert.equal(new Set(ids).size, ids.length);
   await page.locator('[data-related-mode="companions"]').click();
   await expect(page.locator('[data-related-alternatives]')).toBeHidden();
-  await expect(root).toContainText('Dried Orange Slices Crayon');
+  await expect(root).toContainText('Embroidered Orange with a Blossom and Leaves');
   await page.locator('[data-related-mode="companions"]').focus();
   // Safari on macOS uses Option+Tab to include buttons in keyboard navigation
   // when the system-wide full keyboard access setting is disabled.
