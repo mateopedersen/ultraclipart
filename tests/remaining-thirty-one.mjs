@@ -78,8 +78,28 @@ test('31 supplied packs preserve 1,550 verified original PDF/WebP pairs', () => 
         item.files.webp.sha256,
         'A changed source requires a new review',
       );
+    // This original import text predates a source-checked identity correction.
+    // The generator now emits the corrected description for future imports;
+    // preserve the historical source here and validate the public review below.
+    const originalIdentityCopy =
+      item.id === 'iphone-clipart-iphone-portrait-lock-outline'
+        ? {
+            alt: 'Front and rear views of an iPhone Pro handset, with a padlock and curved arrow symbol on the screen.',
+            description:
+              'Front and rear views of an iPhone Pro handset, with a padlock and curved arrow symbol on the screen. Pair the drawing with your own labels or use it as a coloring activity. Download the transparent WebP for a digital layout, or choose the matching PDF for printing.',
+          }
+        : {};
     for (const key of ['title', 'alt', 'description', 'style', 'visualStyle'])
-      assert.equal(item[key], correction?.after[key] ?? packageMetadata(item.topic, item.id)[key]);
+      assert.equal(
+        item[key],
+        correction?.after[key] ??
+          originalIdentityCopy[key] ??
+          packageMetadata(item.topic, item.id)[key],
+      );
+    if (Object.keys(originalIdentityCopy).length)
+      assert.ok(
+        resolveArtworkCopy(item, editorialReviews.get(item.id)).description.includes('iPhone'),
+      );
     assert.deepEqual(
       item.productIdentity,
       packageMetadata(item.topic, item.id, item.files.webp.sha256).productIdentity,

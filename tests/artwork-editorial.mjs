@@ -6,6 +6,7 @@ import {
   copyIssues,
   metadataSignature,
   readEditorialAudit,
+  reviewContextSignature,
   resolveArtworkCopy,
   sourceSignature,
   validateEditorialReview,
@@ -65,7 +66,8 @@ test('cleanup deletes reviewed filler without adding claims or removing concept 
 });
 
 test('new or changed artwork cannot inherit a legacy exemption', () => {
-  const item = catalog.find((row) => !reviews.has(row.id));
+  const item = catalog.find((row) => baseline.records[row.id]);
+  assert(item, 'a finite legacy fixture is required');
   const newItem = { ...item, id: 'new-unreviewed-picture' };
   assert.throws(
     () => verifyEditorialCatalog([newItem], baseline, { schema: 1, artworks: [] }),
@@ -93,6 +95,11 @@ test('reviews reject stale source pixels, metadata, missing evidence and generic
   const item = catalog.find((row) => row.id === record.id);
   assert.equal(sourceSignature(item), record.sourceSha256);
   assert.equal(metadataSignature(item), record.inputMetadataSha256);
+  assert.equal(reviewContextSignature(item), record.inputContextSha256);
+  assert.equal(
+    reviewContextSignature(item),
+    reviewContextSignature(Object.fromEntries(Object.entries(item).reverse())),
+  );
   assert.throws(
     () => validateEditorialReview(item, { ...record, sourceSha256: 'a'.repeat(64) }),
     /image changed/,
@@ -103,6 +110,24 @@ test('reviews reject stale source pixels, metadata, missing evidence and generic
   );
   assert.throws(
     () => validateEditorialReview({ ...item, title: 'Changed title' }, record),
+    /metadata changed/,
+  );
+  assert.throws(
+    () => validateEditorialReview({ ...item, topic: `${item.topic}-changed` }, record),
+    /metadata changed/,
+  );
+  assert.throws(
+    () =>
+      validateEditorialReview(
+        {
+          ...item,
+          productIdentity: {
+            ...(item.productIdentity || {}),
+            visibleFeatures: 'Unreviewed identity details',
+          },
+        },
+        record,
+      ),
     /metadata changed/,
   );
   assert.throws(
