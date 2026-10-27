@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join, resolve, relative } from 'node:path';
 import { createHash } from 'node:crypto';
 import { readPublication } from './publication-policy.mjs';
+import { verifyCompiledPublication } from './compiled-publication.mjs';
 import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
 import { pruneVerifiedCatalogPages } from './catalog-pages/prune.mjs';
@@ -76,10 +77,17 @@ if (process.env.CF_PAGES === '1') {
       if (!allowed.has(match[0])) throw new Error(`Unverified compiled CDN reference: ${match[0]}`);
       compiled.add(match[0]);
     }
+    for (const match of text.matchAll(/\/previews\/p1\/[a-f0-9]{24}-\d+\.webp/g))
+      compiled.add(match[0]);
   }
-  for (const url of allowed)
-    if (!compiled.has(url))
-      throw new Error(`Verified media was omitted from compiled output: ${url}`);
+  const presentation = verifyCompiledPublication({
+    publication,
+    catalog: JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')),
+    references: compiled,
+    root,
+    directory: dist,
+  });
+  console.log(`Source-verified screen thumbnails: ${presentation.screenThumbnails}.`);
   if (process.env.CATALOG_OFFLOAD_COLLECTION) {
     const collection = process.env.CATALOG_OFFLOAD_COLLECTION;
     const revision = releaseRevision();
