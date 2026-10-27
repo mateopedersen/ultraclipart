@@ -34,6 +34,7 @@ test('the complete catalog uses the same source-checked editorial resolver', () 
   assert(report.changed > 9000);
   const titles = new Set();
   const publishedTitles = new Map();
+  const reviewedDescriptions = new Map();
   for (const item of catalog) {
     const copy = resolveArtworkCopy(item, reviews.get(item.id));
     assert(copy.description.trim(), item.id);
@@ -50,7 +51,15 @@ test('the complete catalog uses the same source-checked editorial resolver', () 
       );
       publishedTitles.set(globalTitle, item.id);
     }
-    if (reviews.has(item.id)) assert.deepEqual(copyIssues(copy), [], item.id);
+    if (reviews.has(item.id)) {
+      assert.deepEqual(copyIssues(copy), [], item.id);
+      const description = copy.description.toLowerCase();
+      assert(
+        !reviewedDescriptions.has(description),
+        `Repeated reviewed description: ${reviewedDescriptions.get(description)} and ${item.id}`,
+      );
+      reviewedDescriptions.set(description, item.id);
+    }
   }
 });
 
