@@ -415,6 +415,9 @@ try {
     'T15 deployed revision mismatch hides stale cards',
     'T22 slow service, retry, failure isolation',
   );
+  // Restore the reference page before choosing its thumbnail to fail; the
+  // companion-mode checks above deliberately use a different source image.
+  await page.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
   const renderedSnapshot = JSON.parse(await page.locator('[data-related-snapshot]').textContent());
   const failureExample = renderedSnapshot.alternatives[0];
   const firstThumb = failureExample.id;
