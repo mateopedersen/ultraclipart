@@ -91,6 +91,10 @@ const records = catalog.map((item) => {
       : 'new-item',
     previous,
     current,
+    sourceTextBefore: old ? Object.fromEntries(keys.map((key) => [key, old[key]])) : null,
+    sourceTextCurrent: Object.fromEntries(keys.map((key) => [key, item[key]])),
+    productIdentityBefore: old?.productIdentity ?? null,
+    productIdentityCurrent: item.productIdentity ?? null,
     changed,
     observations: review?.observations ?? [],
     references: review?.references ?? [],
@@ -112,24 +116,38 @@ const report = {
   records,
 };
 writeFileSync(resolve(dir, 'editorial-details.json'), JSON.stringify(report, null, 2) + '\n');
+const labels = {
+  total: 'Toplam görsel',
+  reviewed: 'Kaynak görsel incelemesi kayıtlı',
+  awaiting: 'İnceleme bekleyen',
+  addedSinceBaseline: 'Karşılaştırılan sürümden sonra eklenen',
+  removedSinceBaseline: 'Karşılaştırılan sürümden sonra kaldırılan',
+  titleChanged: 'Başlığı değişen',
+  altChanged: 'Görsel alt metni değişen',
+  descriptionChanged: 'Açıklaması değişen',
+  anyCopyChanged: 'En az bir metni değişen eser',
+  sourceIdentityChanged: 'Kaynak ürün kimliği kaydı değişen',
+};
 const lines = [
-  `# UltraClipart editorial report`,
-  ``,
-  `Generated: ${report.generatedAt}`,
-  `Baseline: ${baseRevision}`,
-  `Current checked revision: ${currentRevision}`,
-  ``,
-  `This is a source comparison, not proof of deployment. Legacy baseline text is reconstructed using the current cleaner; the full per-image before/after, evidence, image checksums and references are in editorial-details.json.`,
-  ``,
-  ...Object.entries(counts).map(([key, value]) => `- ${key}: ${value}`),
-  ``,
-  `## By topic`,
-  ``,
+  '# UltraClipart içerik inceleme raporu',
+  '',
+  `Hazırlanma zamanı: ${report.generatedAt}`,
+  `Karşılaştırılan kaynak sürüm: ${baseRevision}`,
+  `İncelenen yerel sürüm: ${currentRevision}`,
+  '',
+  'Bu rapor iki kaynak sürümünü karşılaştırır; tek başına canlıya çıkıldığını göstermez. Önceki sürümde inceleme kaydı bulunmayan metinler, bugünkü onaylı temizleme kurallarıyla yeniden hesaplanmıştır; önceki canlı görünümün kesin kaydı değildir. Her eserin önceki ve yeni metni, görsel özeti, kaynak kimliği ve referansları editorial-details.json dosyasındadır.',
+  '',
+  ...Object.entries(counts).map(
+    ([key, value]) => `- ${labels[key]}: ${value.toLocaleString('tr-TR')}`,
+  ),
+  '',
+  '## Konulara göre',
+  '',
   ...Object.entries(topics)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(
       ([name, v]) =>
-        `- ${name}: ${v.total} images, ${v.reviewed} reviewed, ${v.anyCopyChanged} changed, ${v.addedSinceBaseline} added since baseline.`,
+        `- ${name}: ${v.total} görsel, ${v.reviewed} incelendi, ${v.anyCopyChanged} metni değişti, ${v.addedSinceBaseline} yeni.`,
     ),
 ];
 writeFileSync(resolve(dir, 'editorial-summary.md'), lines.join('\n') + '\n');
