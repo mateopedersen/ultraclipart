@@ -1,0 +1,77 @@
+{
+  "wave": "wave_425",
+  "topic": "election",
+  "method": "builtin-image-generation",
+  "research": "data/research/election-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "election-observer-with-notebook",
+      "title": "Observer with a Notebook",
+      "alt": "An auburn-haired woman with an Observer badge stands behind a blue rope barrier with a notebook and pencil.",
+      "description": "A blank privacy screen on a separate table sits behind the full-length figure. Her navy blazer, cream trousers and burgundy flats provide a restrained contrast to the polished metal barrier posts.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_425/source/election-observer-with-notebook.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-community-forum-speaker",
+      "title": "Speaking at a Community Forum",
+      "alt": "A man speaks at an oak lectern while a seated woman listens beside a Community Forum sign.",
+      "description": "The silver-haired speaker gestures in a teal blazer beside the curved wooden front. The moderator holds a pale notepad in a cream armchair, wearing a mustard blouse and burgundy skirt.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_425/source/election-community-forum-speaker.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-reading-voter-booklet",
+      "title": "Reading a Voter Information Booklet",
+      "alt": "A woman with braids and glasses reads a Voter Info booklet in a green armchair.",
+      "description": "Her rust-colored knit dress and navy ankle boots contrast with the pale booklet cover. A mug and leafy plant rest on a small side table beside the patterned cushion and upholstered chair.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_425/source/election-reading-voter-booklet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-family-election-calendar",
+      "title": "Making an Election Day Reminder",
+      "alt": "A father and daughter pin a decorated Election Day card to a wooden noticeboard.",
+      "description": "The child reaches toward the lower edge of the decorated cream card while her father holds it steady. Red, blue and yellow paper accents echo her orange sweater and navy skirt beside his checked green shirt.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_425/source/election-family-election-calendar.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-first-vote-sticker-portrait",
+      "title": "Holding an I Voted Sticker",
+      "alt": "A smiling woman in a mustard cardigan holds a small I Voted sticker at chest height.",
+      "description": "Short natural curls and a relaxed standing pose frame the pale round sticker near her raised hand. A white top, wide blue jeans and white sneakers complete the full-length portrait.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_425/source/election-first-vote-sticker-portrait.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-checking-accessible-entrance",
+      "title": "Measuring an Entrance Ramp",
+      "alt": "Two venue volunteers measure a portable entrance ramp beside an open blue door and folded screen.",
+      "description": "A silver-haired woman crouches with a yellow tape measure while a man steadies the tall closed panel at one side. Their plain Poll Worker badges and the small Open door sign distinguish the venue-setup scene.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_425/source/election-checking-accessible-entrance.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "wave": "wave_422",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "election-vote-floor-arrow",
+      "title": "Vote Direction Arrow",
+      "alt": "A navy arrow reading Vote points right from a red freestanding A-frame stand.",
+      "description": "Cream edging outlines the arrow and its large pale letters against the dark painted wood. Metal fasteners and black rubber feet finish the bright red support beneath the sign.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_422/source/election-vote-floor-arrow.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "d3b26d82d83d916f97fdffa095d7f0a7d139b3d178de3ad158762020d63a1a71",
+      "inputSignature": "d505f925f3d7a99f0fea6a2ad769235cdfd71fab0009d56e6616808da2cc1774",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 530224,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 530224,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        330,
+        102,
+        1302,
+        944
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_422/exports/election-vote-floor-arrow.pdf",
+          "bytes": 530224,
+          "sha256": "d5af3e2330a1b100cb6ba1af1362ea6f3238903f63daa1673b5c9bdf64018d32"
+        },
+        "webp": {
+          "path": "work/production/wave_422/exports/election-vote-floor-arrow.webp",
+          "bytes": 1120536,
+          "sha256": "00af6fdc9011706cfa925bb56cb9f678a4ad56e93ddd8ebd0019c87344c18982"
+        },
+        "thumb": {
+          "path": "work/production/wave_422/exports/election-vote-floor-arrow-thumb.webp",
+          "bytes": 25086,
+          "sha256": "3d3a3b1d442f879a4842b31e260c797fea35df0a9062b435b585abdbcfee56bb"
+        }
+      },
+      "proofSha256": "192f856c0be1a1142b42c7bd276b2c828589ebaed233e973e9115c530b63f0cc",
+      "pairMeanRgbDifference": 2.95027
+    },
+    {
+      "id": "election-privacy-folder-and-ballot",
+      "title": "Sample Ballot in a Folded Screen",
+      "alt": "An ochre three-panel paper screen surrounds an unmarked Sample sheet with empty oval rows.",
+      "description": "The warm yellow panels fold outward on either side of the pale paper. A narrow heading and simple blank rules keep the practice sheet visible without adding candidate names or completed choices.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_422/source/election-privacy-folder-and-ballot.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "32b2a0c66bb23b100562c416a0d9d9c0cd5dfe3c4d4fac6b9e6538d24f847fe0",
+      "inputSignature": "342ca2a827b73f1b831dac125bd6568da1ff197658a03f906537f94ab49d53e4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 461978,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 461978,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        324,
+        124,
+        1214,
+        908
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_422/exports/election-privacy-folder-and-ballot.pdf",
+          "bytes": 461978,
+          "sha256": "a224133e8e93753cee4ecb28a12b76b69ee6dce2ce7c4520a4b63be3bbc74166"
+        },
+        "webp": {
+          "path": "work/production/wave_422/exports/election-privacy-folder-and-ballot.webp",
+          "bytes": 1178904,
+          "sha256": "b16a5ae4b73cbee960a399ae948fafa66b845343b7d81bad310f359ba07c438d"
+        },
+        "thumb": {
+          "path": "work/production/wave_422/exports/election-privacy-folder-and-ballot-thumb.webp",
+          "bytes": 18202,
+          "sha256": "dc0885ed582005be4e4a131d0ae1998f57c1fdc2f13decc24400190324aaae90"
+        }
+      },
+      "proofSha256": "d53dcb7a02b6fa2ff5b9954003f9a8ac93d08f85a6fdf596800c439184d6b72a",
+      "pairMeanRgbDifference": 1.60835
+    },
+    {
+      "id": "election-queue-ticket-dispenser",
+      "title": "Queue Ticket Dispenser and Bell",
+      "alt": "A red desktop ticket dispenser stands beside a blue service bell and an empty clear tray.",
+      "description": "One blank cream slip extends from the dark opening in the rounded red housing. The bell's silver push button and the low transparent tray balance the compact reception-desk still life.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_422/source/election-queue-ticket-dispenser.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "caa7ec7ccdbac5af558285d5a033c50b6a9c6485518046588c9cdbaef6f90fcc",
+      "inputSignature": "dc98540de26f120bd7dadd1a28d14b7baedc1de358049d42dffba7bef5e3b720",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 360712,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 360712,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        248,
+        235,
+        1365,
+        790
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_422/exports/election-queue-ticket-dispenser.pdf",
+          "bytes": 360712,
+          "sha256": "edb4c867e17159f8502f3c3a795f23f5768fb177af5a7cd3af87aa6d4353e03b"
+        },
+        "webp": {
+          "path": "work/production/wave_422/exports/election-queue-ticket-dispenser.webp",
+          "bytes": 893842,
+          "sha256": "61916f0cfcf648278bc680ca9d175e5ad2dd866d0de979da62d2425bc4da9e98"
+        },
+        "thumb": {
+          "path": "work/production/wave_422/exports/election-queue-ticket-dispenser-thumb.webp",
+          "bytes": 18370,
+          "sha256": "9bdedfc90e02cf0245f77576b0576a84b266b9ca61b6051ce23b3b7840e90d32"
+        }
+      },
+      "proofSha256": "0c3f6ddb3c3957d6a922c26f2ee52ecfec5913a086519c30d31f0d944e03eba9",
+      "pairMeanRgbDifference": 1.74844
+    },
+    {
+      "id": "election-election-day-calendar",
+      "title": "Election Day Desk Calendar",
+      "alt": "An Election Day flip calendar with a blank grid stands beside a small brass clock.",
+      "description": "Navy binding rings curl over the cream calendar page above its walnut-colored base. Burgundy tabs edge the blank grid, while the separate round clock supplies the only numbered face in the arrangement.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_422/source/election-election-day-calendar.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f620684d76b942736f781a0cb37a45f5d035f5b45572813239f710091ba72453",
+      "inputSignature": "632efee8db2e630cf6b9934cf24f5364c6e9d463419dcea6876da46d99ff5b20",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 715004,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 715004,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        185,
+        87,
+        1349,
+        922
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_422/exports/election-election-day-calendar.pdf",
+          "bytes": 715004,
+          "sha256": "8aa811968a002161bb8a37d0ed0bbf1f62764b3dd4f5ec1760286232dd2d269b"
+        },
+        "webp": {
+          "path": "work/production/wave_422/exports/election-election-day-calendar.webp",
+          "bytes": 1279070,
+          "sha256": "54b0d71bce8c72b49bc39cc0f43319e0269921478581b1b1f217e8c5b3efa88e"
+        },
+        "thumb": {
+          "path": "work/production/wave_422/exports/election-election-day-calendar-thumb.webp",
+          "bytes": 34498,
+          "sha256": "1e999a1aef664b9e21a51806a163a3cf0bed6f9ae58f24288b56f1677200e7bf"
+        }
+      },
+      "proofSha256": "184330d6a14ac68bdfc42582f3e525e5ec51998df0b58566f398564fb19ca8a3",
+      "pairMeanRgbDifference": 3.99655
+    },
+    {
+      "id": "election-community-debate-lecterns",
+      "title": "Community Debate Lecterns",
+      "alt": "Two empty wooden lecterns with slim microphones stand on a low curved platform.",
+      "description": "A light oak lectern with a curved front faces a darker walnut lectern with square inset panels. Their different silhouettes and inward-facing microphones suggest a shared discussion space without named speakers.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_422/source/election-community-debate-lecterns.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f76bf23b124418bb467fc14406343b5fcda9e0564846ebb6e445d17318b68739",
+      "inputSignature": "a3fe25f27e6984e0fd8d2e317c8694e1a132d3bef37fa3b2d95e8139fdb0e110",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 412135,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 412135,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        177,
+        150,
+        1360,
+        915
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_422/exports/election-community-debate-lecterns.pdf",
+          "bytes": 412135,
+          "sha256": "c463ee0df627aa1f41cb2a811f6e56ab20f0300f0c3b6fbed9ca1dd8e4b95fbf"
+        },
+        "webp": {
+          "path": "work/production/wave_422/exports/election-community-debate-lecterns.webp",
+          "bytes": 943944,
+          "sha256": "4218f93400c8a1fa5685ff02dd0f954b19d03473b2d6bf90dae972ce478dc372"
+        },
+        "thumb": {
+          "path": "work/production/wave_422/exports/election-community-debate-lecterns-thumb.webp",
+          "bytes": 21130,
+          "sha256": "acd5ee564b4b9297d678d57067556ca7d52b9fe7d75e68aeb013eab7f9d8e634"
+        }
+      },
+      "proofSha256": "1f382888d487f492421ffc00e6e3c1f1f98bfa67827dc7061fa2cfd1f25364a7",
+      "pairMeanRgbDifference": 1.37873
+    },
+    {
+      "id": "election-voter-information-rack",
+      "title": "Voter Information Pamphlet Rack",
+      "alt": "A white freestanding rack labeled Voter Info holds burgundy, green and cream pamphlets in clear pockets.",
+      "description": "The navy header sits above three vertically stacked compartments, each showing a different paper color. Two slim feet extend from the metal base beneath the open-backed display.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_422/source/election-voter-information-rack.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "election",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "73ee4c38dc73d4cf548938068be16a0b615004e968ae4d56a8b0a46eab4c455d",
+      "inputSignature": "5e960459d46d0568bbee6ab5cd1383c9842aedf2120f9257852db67e6cf85c96",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 375341,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 375341,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        274,
+        105,
+        780,
+        1461
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_422/exports/election-voter-information-rack.pdf",
+          "bytes": 375341,
+          "sha256": "fc0497dc75eecbf31b1fc5eb26dbc123aebf38eea7e5c817aa490d76b18fdb91"
+        },
+        "webp": {
+          "path": "work/production/wave_422/exports/election-voter-information-rack.webp",
+          "bytes": 819224,
+          "sha256": "2c8106b1938bd19d0620d40c956d4cb4cd1b0147ce8698c48ab3c489bada21b0"
+        },
+        "thumb": {
+          "path": "work/production/wave_422/exports/election-voter-information-rack-thumb.webp",
+          "bytes": 18988,
+          "sha256": "0282d2d48e8d56fb90000bf1e1250d2fb849ac42795292debeb60edb547b76bb"
+        }
+      },
+      "proofSha256": "262b85a08cc6285dd07691e8016c477d301a0387587d37fcecc1c8be7b522067",
+      "pairMeanRgbDifference": 1.65737
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-27T01:20:25.421260+00:00",
+  "screenReviewEvidence": "work/production/wave_422/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-27T01:22:54.391Z"
+}

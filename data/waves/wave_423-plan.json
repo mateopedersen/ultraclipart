@@ -1,0 +1,77 @@
+{
+  "wave": "wave_423",
+  "topic": "election",
+  "method": "builtin-image-generation",
+  "research": "data/research/election-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "election-cable-cover-and-equipment-bag",
+      "title": "Polling Equipment Setup Kit",
+      "alt": "A navy equipment bag sits beside folded blue screen panels, coiled cables, a rubber cable cover and a rolled sheet.",
+      "description": "The open bag reveals its dark fabric interior in front of three hinged blue panels. Separate cable loops and the cut end of the gray floor protector show the individual setup supplies clearly.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_423/source/election-cable-cover-and-equipment-bag.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-folding-chairs-trolley",
+      "title": "Chairs for a Polling Place",
+      "alt": "A low wheeled trolley carries folded burgundy chairs with a pale folding table behind them.",
+      "description": "The stacked chair backs rise in front of the closed rectangular tabletop. A tall side handle, dark platform and four caster wheels define the compact venue-equipment cart.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_423/source/election-folding-chairs-trolley.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-worker-moving-screen",
+      "title": "Rolling a Polling Equipment Case",
+      "alt": "A short-haired woman in a cream jacket pulls a strapped navy equipment case on two wheels.",
+      "description": "The long soft-sided case tilts behind her as she walks in sage trousers and navy flats. Its silver handle and dark securing straps contrast with the plain blue lanyard at her collar.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_423/source/election-worker-moving-screen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-voter-help-desk",
+      "title": "A Conversation at a Voter Help Desk",
+      "alt": "An older woman speaks with a young man across a wooden desk marked Voter Info.",
+      "description": "The silver-haired woman gestures beside a dark laptop while the young man leans forward with his hands together. Separate navy chairs, a pencil cup and pale papers complete the small information-desk scene.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_423/source/election-voter-help-desk.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-community-voting-queue",
+      "title": "Waiting at a Community Polling Place",
+      "alt": "Three adults wait beside a red rope barrier, including an older man in a mustard coat and a man with a cane.",
+      "description": "The woman between them wears a cream top and plum wide-leg trousers, with long dark braids over one shoulder. A teal sweater vest, navy cane and varied winter layers distinguish the relaxed waiting figures.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_423/source/election-community-voting-queue.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-woman-at-privacy-booth",
+      "title": "Writing at a Privacy Booth",
+      "alt": "A red-haired woman in sage trousers writes behind the panels of a burgundy privacy booth.",
+      "description": "The three-quarter rear view shows her cream knit top and brown loafers beneath the portable booth. Its tall side panels hide the writing surface while the silver legs and black feet remain fully visible.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_423/source/election-woman-at-privacy-booth.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}
