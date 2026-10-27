@@ -127,12 +127,14 @@ try {
     report.destinations.push(path);
   }
   const sculptures = await page
-    .locator('.site-footer img[src^="/illustrations/footer/"]')
+    .locator(
+      '.site-footer img[src^="/illustrations/footer/"], .site-footer img[src="/illustrations/studio-compose-v3.svg"]',
+    )
     .evaluateAll((images) => [...new Set(images.map((image) => image.getAttribute('src')))]);
-  assert.deepEqual(
-    sculptures.sort(),
-    ['boards', 'explore', 'help', 'studio'].map((name) => `/illustrations/footer/${name}.svg`),
-  );
+  assert.deepEqual(sculptures.sort(), [
+    ...['boards', 'explore', 'help'].map((name) => `/illustrations/footer/${name}.svg`),
+    '/illustrations/studio-compose-v3.svg',
+  ]);
   for (const path of sculptures) {
     const response = await page.request.get(base + path);
     assert.equal(response.status(), 200, path);
