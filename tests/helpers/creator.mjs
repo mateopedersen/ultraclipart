@@ -1,6 +1,11 @@
 // Follow the same disclosure and template controls available to a visitor.
 export async function chooseVectorStarter(page, id) {
   const editor = page.locator('.uc-editor');
+  await editor.waitFor();
+  await page.waitForFunction(() => {
+    const root = document.querySelector('.uc-editor');
+    return root?.dataset.initialized === 'true' && root.getAttribute('aria-busy') !== 'true';
+  });
   if ((await editor.getAttribute('data-wb-focus')) === 'true')
     await editor.locator('[data-wb-back-page]').click();
   const starter = page.locator(`[data-creator-template="${id}"]`);
