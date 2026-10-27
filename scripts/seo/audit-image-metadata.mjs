@@ -1,10 +1,9 @@
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { resolve, join } from 'node:path';
+import { readReviewedImportCatalog } from '../reviewed-imports.mjs';
 const root = resolve(import.meta.dirname, '../..');
 const built = resolve(root, process.env.METADATA_BUILD_DIR || 'dist');
-const artwork = JSON.parse(readFileSync(join(root, 'data/art.json'), 'utf8')).filter(
-  (a) => a.published && a.indexable,
-);
+const artwork = readReviewedImportCatalog(root).filter((a) => a.published && a.indexable);
 const reviews = JSON.parse(
   readFileSync(join(root, 'data/image-metadata-reviews.json'), 'utf8'),
 ).artwork;
