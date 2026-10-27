@@ -6,6 +6,9 @@ import {
   pageSitemap,
   sitemapIndex,
   xmlEscape,
+  indexableTopics,
+  sitemapDocuments,
+  partitionSitemapEntries,
 } from '../src/lib/sitemaps.ts';
 
 const example = {
@@ -15,6 +18,53 @@ const example = {
   published: true,
   indexable: true,
 };
+
+test('growing catalogs split automatically while retaining the first sitemap URLs', () => {
+  const art = Array.from({ length: 50001 }, (_, index) => ({ ...example, id: `growing-${index}` }));
+  const documents = sitemapDocuments(art, []);
+  assert.deepEqual(
+    documents.map((document) => document.kind),
+    ['pages', 'pages-2', 'images', 'images-2'],
+  );
+  const pages = documents.filter((document) => document.kind.startsWith('pages'));
+  const images = documents.filter((document) => document.kind.startsWith('images'));
+  for (const document of documents) {
+    assert.ok([...document.xml.matchAll(/<url>/g)].length <= 50000);
+    assert.ok(Buffer.byteLength(document.xml) <= 50 * 1024 ** 2);
+  }
+  assert.equal(
+    images.reduce(
+      (count, document) => count + [...document.xml.matchAll(/<image:image>/g)].length,
+      0,
+    ),
+    art.length,
+  );
+  assert.equal(
+    [
+      ...pages
+        .map((document) => document.xml)
+        .join('')
+        .matchAll(/\/art\/growing-\d+\//g),
+    ].length,
+    art.length,
+  );
+  assert.ok(sitemapIndex(art).includes('/sitemap-images-2.xml'));
+});
+test('sitemap splitting respects UTF-8 bytes as well as URL counts', () => {
+  const entry = '<url><loc>https://ultraclipart.com/žiedas/</loc></url>';
+  const overhead =
+    Buffer.byteLength(partitionSitemapEntries([entry])[0]) - Buffer.byteLength(entry);
+  const parts = partitionSitemapEntries(
+    [entry, entry, entry],
+    false,
+    50000,
+    overhead + Buffer.byteLength(entry) * 2,
+  );
+  assert.equal(parts.length, 2);
+  assert.throws(() =>
+    partitionSitemapEntries([entry], false, 50000, overhead + Buffer.byteLength(entry) - 1),
+  );
+});
 
 test('unapproved and noindex assets never enter the image or page sitemap', () => {
   const draft = { ...example, id: 'draft', published: false };
@@ -28,6 +78,27 @@ test('unapproved and noindex assets never enter the image or page sitemap', () =
     assert.ok(!xml.includes('/art/draft/'));
     assert.ok(!xml.includes('/art/noindex/'));
   }
+});
+
+test('new approved subjects enter HTML/XML discovery and drafts do not hide an existing subject', () => {
+  const topic = { slug: 'new-subject', keyword: 'New subject clipart' };
+  const items = Array.from({ length: 50 }, (_, i) => ({
+    ...example,
+    id: `new-${i}`,
+    topic: topic.slug,
+  }));
+  const draft = { ...items[0], id: 'future-draft', published: false };
+  assert.deepEqual(indexableTopics([...items, draft], [topic]), [topic]);
+  assert.ok(pageSitemap([...items, draft], [topic]).includes('/clipart/new-subject/'));
+  assert.deepEqual(indexableTopics(items.slice(0, 49), [topic]), []);
+  assert.ok(!pageSitemap(items.slice(0, 49), [topic]).includes('/clipart/new-subject/'));
+  assert.deepEqual(
+    indexableTopics(
+      items.map((item) => ({ ...item, indexable: false })),
+      [topic],
+    ),
+    [],
+  );
 });
 
 test('the pilot index excludes an empty image sitemap; approval adds a real child', () => {

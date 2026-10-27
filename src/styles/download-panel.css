@@ -64,8 +64,8 @@
 }
 .download-panel-eyebrow {
   margin-bottom: 5px !important;
-  color: #527298;
-  font-size: 13px;
+  color: var(--brand-accent);
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -372,7 +372,6 @@
     gap: 10px;
   }
   .download-panel-formats button {
-    flex-basis: 115px;
     padding: 12px 10px;
     gap: 7px;
   }

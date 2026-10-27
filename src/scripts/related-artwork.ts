@@ -21,8 +21,7 @@ export function initRelatedArtwork() {
     more = find<HTMLButtonElement>('[data-related-more]');
   const controls = find('[data-related-controls]'),
     results = find('[data-related-results]');
-  const refresh = find<HTMLAnchorElement>('[data-related-refresh]'),
-    end = find('[data-related-end]');
+  const refresh = find<HTMLAnchorElement>('[data-related-refresh]');
   const sentinel = find('[data-related-sentinel]'),
     scrollHint = find('[data-related-scroll-hint]');
   let mode: Mode = 'best';
@@ -165,7 +164,10 @@ export function initRelatedArtwork() {
     node.querySelector('.related-reason')!.textContent = data.reason;
     const image = node.querySelector('img')!;
     image.src = data.thumb;
+    if (data.thumbSrcSet) image.srcset = data.thumbSrcSet;
+    else image.removeAttribute('srcset');
     image.alt = data.alt;
+    image.title = data.title;
     node.querySelectorAll<HTMLAnchorElement>('[data-related-download]').forEach((link) => {
       const format = link.dataset.relatedDownload as 'webp' | 'pdf',
         url = data[format];
@@ -242,7 +244,6 @@ export function initRelatedArtwork() {
       group.dataset.count = String(amount);
     });
     more.hidden = visible.length >= all.length;
-    end.hidden = !more.hidden;
     scrollHint.hidden = more.hidden || !scrollObserver;
     status.textContent = `${visible.length} relevant ${visible.length === 1 ? 'design' : 'designs'} shown${mode === 'monochrome' ? ' · black & white' : ''}.`;
     syncFavorites();
@@ -330,7 +331,6 @@ export function initRelatedArtwork() {
           results.hidden = true;
           controls.hidden = true;
           more.hidden = true;
-          end.hidden = true;
           refresh.hidden = false;
           observer?.disconnect();
           scrollObserver?.disconnect();
@@ -344,7 +344,6 @@ export function initRelatedArtwork() {
         results.hidden = true;
         scrollHint.hidden = true;
         more.hidden = true;
-        end.hidden = true;
         observer?.disconnect();
         for (const timer of timers.values()) clearTimeout(timer);
         timers.clear();

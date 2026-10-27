@@ -1,4 +1,5 @@
 ---
+import ContentLink from '../components/ContentLink.astro';
 import Layout from '../layouts/Layout.astro';
 import CatalogCount from '../components/CatalogCount.astro';
 import TeacherSymbol from '../components/TeacherSymbol.astro';
@@ -81,7 +82,10 @@ const checklist = [
               href={`/art/${item.id}/`}
             >
               <img
+                title={item.title}
                 src={item.thumb}
+                srcset={item.thumbSrcSet}
+                sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
                 alt={item.alt}
                 width={item.width}
                 height={item.height}
@@ -293,7 +297,10 @@ const checklist = [
                   {path.pictures.map((item) => (
                     <a href={`/art/${item.id}/`}>
                       <img
+                        title={item.title}
                         src={item.thumb}
+                        srcset={item.thumbSrcSet}
+                        sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
                         alt={item.alt}
                         width={item.width}
                         height={item.height}
@@ -354,7 +361,10 @@ const checklist = [
               <strong>What do you notice?</strong>
               <div class="tc-observe-row">
                 <img
+                  title={pictures.earth.title}
                   src={pictures.earth.thumb}
+                  srcset={pictures.earth.thumbSrcSet}
+                  sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
                   alt={pictures.earth.alt}
                   width={pictures.earth.width}
                   height={pictures.earth.height}
@@ -384,7 +394,10 @@ const checklist = [
           <div class="tc-example-stage tc-example-stage-label">
             <div class="tc-label-example">
               <img
+                title={pictures.reading.title}
                 src={pictures.reading.thumb}
+                srcset={pictures.reading.thumbSrcSet}
+                sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
                 alt={pictures.reading.alt}
                 width={pictures.reading.width}
                 height={pictures.reading.height}
@@ -415,7 +428,10 @@ const checklist = [
                 <p>What words would you use?</p>
               </div>
               <img
+                title={pictures.trumpet.title}
                 src={pictures.trumpet.thumb}
+                srcset={pictures.trumpet.thumbSrcSet}
+                sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
                 alt={pictures.trumpet.alt}
                 width={pictures.trumpet.width}
                 height={pictures.trumpet.height}
@@ -458,8 +474,11 @@ const checklist = [
           <a class="tc-collection" href={`/clipart/${collection.topic}/`}>
             <div class="tc-collection-picture">
               <img
+                title={collection.picture.title}
                 src={collection.picture.thumb}
-                alt=""
+                srcset={collection.picture.thumbSrcSet}
+                sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+                alt={collection.picture.alt}
                 width={collection.picture.width}
                 height={collection.picture.height}
                 loading="lazy"
@@ -617,21 +636,21 @@ const checklist = [
           <p>Guidance on choosing, explaining and adapting images for your students.</p>
           <ul>
             <li>
-              <a href="https://udlguidelines.cast.org/representation/">
+              <ContentLink href="https://udlguidelines.cast.org/representation/">
                 CAST: multiple ways to represent information
-              </a>{' '}
+              </ContentLink>{' '}
               — adaptable presentation, vocabulary and explanations.
             </li>
             <li>
-              <a href="https://www.w3.org/WAI/tutorials/images/">
+              <ContentLink href="https://www.w3.org/WAI/tutorials/images/">
                 W3C WAI: using images accessibly
-              </a>{' '}
+              </ContentLink>{' '}
               — meaningful alternatives and the role of images.
             </li>
             <li>
-              <a href="https://educationendowmentfoundation.org.uk/education-evidence/evidence-reviews/cognitive-Science-approaches-in-the-classroom">
+              <ContentLink href="https://educationendowmentfoundation.org.uk/education-evidence/evidence-reviews/cognitive-Science-approaches-in-the-classroom">
                 EEF: cognitive science approaches in the classroom
-              </a>{' '}
+              </ContentLink>{' '}
               — evidence and context for classroom approaches.
             </li>
           </ul>

@@ -2,6 +2,7 @@
 import '../styles/annotated-screens.css';
 import TeacherText from './TeacherText.astro';
 import type { GuideScreen } from '../lib/guide-walkthroughs';
+import { screenPreview } from '../lib/screen-preview';
 interface Props {
   screen: GuideScreen;
   emphasizeControls?: boolean;
@@ -10,6 +11,7 @@ const { screen, emphasizeControls = false } = Astro.props;
 const crop = screen.crop ?? [0, 0, screen.width, screen.height];
 const [left, top, width, height] = crop;
 const arrowId = `guide-arrow-${screen.id}`;
+const preview = await screenPreview(screen.src, crop);
 ---
 
 <section
@@ -21,13 +23,17 @@ const arrowId = `guide-arrow-${screen.id}`;
   <div class="gm-screen-column">
     <figure class="gm-screen-figure">
       <div class="gm-screen-stage" style={`aspect-ratio:${width}/${height};`}>
-        <svg
+        <img
           class="gm-screen-image"
-          viewBox={crop.join(' ')}
-          role="img"
-          aria-labelledby={`image-title-${screen.id}`}
-        >
-          <title id={`image-title-${screen.id}`}>{screen.alt}</title>
+          src={preview}
+          width={width}
+          height={height}
+          alt={screen.alt}
+          title={screen.title}
+          loading="lazy"
+          decoding="async"
+        />
+        <svg class="gm-screen-image" viewBox={crop.join(' ')} aria-hidden="true" focusable="false">
           <defs>
             <marker
               id={arrowId}
@@ -41,7 +47,6 @@ const arrowId = `guide-arrow-${screen.id}`;
               <path d="M0 0 8 4 0 8 2 4Z" fill="#b94c2e" />
             </marker>
           </defs>
-          <image href={screen.src} x="0" y="0" width={screen.width} height={screen.height} />
           {screen.steps.map((step, index) => {
             const [px, py] = step.pin,
               [tx, ty] = step.point;

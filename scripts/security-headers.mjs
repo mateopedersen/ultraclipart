@@ -6,6 +6,7 @@ import { retirementPolicy, createRetiredHandler } from './retired-routes.mjs';
 import { pruneCatalogOutput } from './prune-catalog-output.mjs';
 import { pruneVerifiedCatalogPages } from './catalog-pages/prune.mjs';
 import { releaseRevision } from './release-revision.mjs';
+import { contactContentSecurityPolicy } from './contact-security.mjs';
 import { assertPagesFileCount, PAGES_FILE_LIMIT } from '../src/lib/pages-limits.ts';
 import { build as bundleWorker } from 'esbuild';
 
@@ -42,12 +43,20 @@ const aiCsp =
     .replace("script-src 'self'", "script-src 'self' https://challenges.cloudflare.com")
     .replace("connect-src 'self'", "connect-src 'self' https://challenges.cloudflare.com") +
   "; frame-src https://challenges.cloudflare.com; worker-src 'self'";
+const contactCsp =
+  '  Content-Security-Policy: ' +
+  contactContentSecurityPolicy(
+    csp
+      .split('\n')
+      .find((line) => line.startsWith('  Content-Security-Policy:'))
+      .replace(/^\s*Content-Security-Policy:\s*/, ''),
+  );
 const searchVersion = JSON.parse(
   readFileSync(join(dist, 'search-data/manifest.json'), 'utf8'),
 ).version;
 writeFileSync(
   join(dist, '_headers'),
-  `${csp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n`,
+  `${csp}\n/contact/\n  ! Content-Security-Policy\n${contactCsp}\n${['/ai-clipart-generator/', '/create/', '/edit/*'].map((route) => `${route}\n  ! Content-Security-Policy\n${aiCsp}`).join('\n')}\n/search-data/${searchVersion}/*\n  Cache-Control: public, max-age=31536000, immutable\n`,
 );
 
 if (process.env.CF_PAGES === '1') {

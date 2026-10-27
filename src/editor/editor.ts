@@ -1,3 +1,4 @@
+import { reconcileCanvasSvg } from './screen-canvas';
 import {
   History,
   changeLayers,
@@ -19,12 +20,21 @@ import {
   layerColors,
   preset,
   recolor,
-  renderWebp,
+  renderBitmap,
   sanitizeSvg,
   strokeWidth,
   validateProjectMarkup,
 } from './svg';
 import { paperLayout, exportPdf } from './pdf';
+import { buildStudioComposition } from '../lib/studio-compositions';
+import {
+  exportFormats,
+  exportFilename,
+  portableSvg,
+  exportWord,
+  printDocument,
+  type ExportFormat,
+} from './export-document';
 import {
   openRaster,
   rasterCatalog,
@@ -59,6 +69,7 @@ import { mountInspector } from './inspector';
 import { textStyles, typographyDefaults } from './text-styles';
 import { mountTextStyles } from './text-style-library';
 import { fitNewText } from './smart/typography';
+import { Workbench } from './workbench/controller';
 
 type Bounds = { x: number; y: number; width: number; height: number };
 function init(root: HTMLElement) {
@@ -95,6 +106,7 @@ function init(root: HTMLElement) {
     if (!robots.parentNode) document.head.append(robots);
   }
   let smart: SmartController | undefined;
+  let workbench: Workbench | undefined;
   let rasterRenderKey = '';
   let persistTimer: ReturnType<typeof setTimeout> | undefined;
   let original: EditorDocument,
@@ -307,10 +319,16 @@ function init(root: HTMLElement) {
           }
         });
     }
-    const svg = printPreview ? paperSvg(d) : documentSvg(d);
+    const viewport = d.crop || d;
+    const screenWidth =
+      Math.min(stage.clientWidth, (stage.clientHeight * viewport.width) / viewport.height) * zoom;
+    const screenScale = (screenWidth * (window.devicePixelRatio || 1)) / viewport.width;
+    const svg = printPreview ? paperSvg(d) : documentSvg(d, screenScale);
     svg.setAttribute('aria-label', 'Editable layered artwork');
     svg.setAttribute('data-artwork-canvas', '');
-    canvas.replaceChildren(svg);
+    // Retain already painted artwork nodes while attaching editor behavior.
+    // Replacing identical SVG images would decode and repaint the initial art.
+    reconcileCanvasSvg(canvas, svg);
     const b = d.crop || d,
       p = paperLayout(d);
     canvas.style.aspectRatio = printPreview
@@ -319,7 +337,7 @@ function init(root: HTMLElement) {
     const ratio = printPreview ? p.pageWidth / p.pageHeight : b.width / b.height;
     canvas.style.width = `${Math.min(stage.clientWidth, stage.clientHeight * ratio) * zoom}px`;
     stage.classList.toggle('uc-paper-mode', printPreview);
-    for (const node of svg.querySelectorAll<SVGGElement>('[data-layer]')) {
+    for (const node of canvas.querySelectorAll<SVGGElement>('[data-layer]')) {
       const l = d.layers.find((l) => l.id === node.dataset.layer);
       node.setAttribute('data-locked', String(l?.locked || false));
     }
@@ -337,15 +355,15 @@ function init(root: HTMLElement) {
     overlay.setAttribute('aria-hidden', 'true');
     canvas.append(overlay);
     const { x, y, width, height } = selectedBounds;
-    const viewport = d.crop ?? { x: 0, y: 0, width: d.width, height: d.height };
+    const selectionViewport = d.crop ?? { x: 0, y: 0, width: d.width, height: d.height };
     const position = (element: HTMLElement, px: number, py: number) => {
-      element.style.left = `${((px - viewport.x) / viewport.width) * 100}%`;
-      element.style.top = `${((py - viewport.y) / viewport.height) * 100}%`;
+      element.style.left = `${((px - selectionViewport.x) / selectionViewport.width) * 100}%`;
+      element.style.top = `${((py - selectionViewport.y) / selectionViewport.height) * 100}%`;
     };
     const frame = document.createElement('div');
     position(frame, x, y);
-    frame.style.width = `${(width / viewport.width) * 100}%`;
-    frame.style.height = `${(height / viewport.height) * 100}%`;
+    frame.style.width = `${(width / selectionViewport.width) * 100}%`;
+    frame.style.height = `${(height / selectionViewport.height) * 100}%`;
     frame.className = 'uc-selection-box';
     overlay.append(frame);
     const positions = [
@@ -487,6 +505,7 @@ function init(root: HTMLElement) {
     } else q<HTMLButtonElement>('[data-action=text]').textContent = 'Add text to canvas';
     colorFields.sync();
     inspector.sync();
+    workbench?.render();
   }
   function select(id: string, add = false) {
     const layer = doc().layers.find((l) => l.id === id);
@@ -504,6 +523,18 @@ function init(root: HTMLElement) {
     matchedColor = undefined;
     render();
   }
+  function loadVectorLibrary() {
+    if (!compositionTools || libraryReady) return;
+    q('[data-element-count]').textContent = 'Loading vector shapes…';
+    libraryReady = import('./element-library')
+      .then((m) => m.mountElementLibrary(root, addElement))
+      .catch((error) => {
+        libraryReady = undefined;
+        q('[data-element-count]').textContent =
+          'Vector shapes could not load. Select Vector shapes to retry.';
+        status(error.message, true);
+      });
+  }
   function panel(name: string) {
     inspector.select(name);
     if (name === 'elements' && compositionTools && !artworkReady) {
@@ -520,17 +551,11 @@ function init(root: HTMLElement) {
           status(error.message, true);
         });
     }
-    if (name === 'elements' && compositionTools && !libraryReady) {
-      libraryReady = import('./element-library')
-        .then((m) => m.mountElementLibrary(root, addElement))
-        .catch((error) => {
-          libraryReady = undefined;
-          status(
-            `The element library could not load. Reopen Elements to retry. ${error.message}`,
-            true,
-          );
-        });
-    }
+    if (
+      name === 'elements' &&
+      q('[data-library-kind="vector"]').getAttribute('aria-pressed') === 'true'
+    )
+      loadVectorLibrary();
     if ((drawing || placing) && name !== 'create') {
       stopPlacing();
       setDrawing(false);
@@ -542,7 +567,8 @@ function init(root: HTMLElement) {
     q('[data-panel-title]').textContent = (
       {
         region: 'Select & Recolor',
-        studio: 'Studio Pro',
+        studio: 'Effects & Print',
+        workbench: 'Design Actions',
         create: 'Shapes & Drawing',
         elements: 'Artwork & Vectors',
         canvas: 'Canvas Size',
@@ -853,41 +879,34 @@ function init(root: HTMLElement) {
         status('Opening the original-resolution artwork…');
         try {
           const catalogue = await rasterCatalog();
-          const next = blankDocument(id, 1400, 1000);
-          next.background = scene.background;
-          for (const item of scene.items) {
+          const plan = buildStudioComposition(
+            scene,
+            new Map(catalogue.map((asset) => [asset.id, asset])),
+          );
+          const next = blankDocument(id, plan.width, plan.height);
+          next.title = scene.title;
+          next.background = plan.background;
+          for (const item of plan.layers) {
             if (request.signal.aborted) return;
-            const asset = catalogue.find((a) => a.id === item.id);
+            if (item.kind !== 'artwork') {
+              next.layers.push(clone(item));
+              continue;
+            }
+            const asset = catalogue.find((a) => a.id === item.artworkId);
             if (!asset)
               throw new Error('This artwork is unavailable. Your current canvas is preserved.');
             const source = await openRaster(asset);
             const layer = source.layers[0];
-            layer.id = `scene-${crypto.randomUUID()}`;
+            layer.id = item.id;
             layer.label = asset.id.replaceAll('-', ' ');
             layer.x = item.x;
             layer.y = item.y;
             layer.scaleX = layer.scaleY = item.width / asset.width;
             next.layers.push(layer);
           }
-          next.layers.push({
-            kind: 'text',
-            id: `text-${crypto.randomUUID()}`,
-            label: scene.caption,
-            visible: true,
-            locked: false,
-            opacity: 1,
-            ...identity(),
-            x: 700,
-            y: 150,
-            text: scene.caption,
-            size: 72,
-            color: scene.color,
-            bold: false,
-            align: 'middle',
-            typography: { ...typeDefaults, font: 'serif', italic: true },
-          });
           if (request.signal.aborted) return;
           templateRequest = undefined;
+          root.dataset.wbFocus = 'true';
           replaceCanvas(
             next,
             `${scene.title} opened. Every image and caption is editable. Undo restores your previous work.`,
@@ -1057,10 +1076,41 @@ function init(root: HTMLElement) {
       updateShareButton();
     }
   }
+  function updateExportFormat() {
+    const format = q<HTMLInputElement>('[data-format]:checked').value;
+    q('[data-webp-options]').hidden = !['webp', 'png', 'jpg'].includes(format);
+    q('[data-quality-options]').hidden = !['webp', 'jpg'].includes(format);
+    q('[data-pdf-options]').hidden = format !== 'pdf';
+    q('[data-large-pdf-options]').hidden = format !== 'pdf';
+    q('[data-action=download]').textContent =
+      `Download ${format === 'docx' ? 'Word (.docx)' : format === 'webp' ? 'WebP' : format.toUpperCase()}`;
+    q('[data-format-help]').textContent = (
+      {
+        png: 'PNG keeps transparent areas and uses lossless RGB pixels.',
+        jpg: 'JPG uses RGB pixels. Transparent areas become white.',
+        webp: 'WebP keeps transparent areas and uses RGB colors.',
+        pdf: 'PDF uses your paper settings. Transparent areas print as paper.',
+        svg: 'Shapes and text remain scalable. Included images are embedded; their pixel resolution does not increase.',
+        docx: 'Word opens a single-page document containing your design as one image. Individual layers are not editable in Word. The image uses RGB colors.',
+      } as Record<string, string>
+    )[format];
+  }
+  function applyExportName() {
+    const title = q<HTMLInputElement>('[data-filename]').value.trim().slice(0, 120);
+    if (!title) throw new Error('Enter a project name before downloading or printing.');
+    if (history.current.title !== title)
+      modify((d) => {
+        d.title = title;
+      });
+    return title;
+  }
   async function exportOpen() {
     cancelSource();
     exportGeneration++;
-    exportFocus = q<HTMLElement>('[data-action=export]');
+    exportFocus =
+      document.activeElement instanceof HTMLElement
+        ? document.activeElement
+        : q<HTMLElement>('[data-action=export]');
     await prepareDocument(history.current);
     q('[data-export-preview]').replaceChildren(documentSvg(history.current));
     const preferences = history.current.exportPreferences,
@@ -1087,22 +1137,40 @@ function init(root: HTMLElement) {
       q<HTMLInputElement>('[data-quality]').value = '95';
       q<HTMLInputElement>('[data-allow-large-pdf]').checked = false;
     }
+    q<HTMLInputElement>('[data-filename]').value =
+      history.current.title ||
+      q('.uc-command h2, .uc-command h1').textContent?.trim() ||
+      'My Clipart Project';
+    for (const input of qa<HTMLInputElement | HTMLSelectElement>('[data-export-paper]'))
+      input.value = String(
+        history.current.print[input.dataset.exportPaper as keyof EditorDocument['print']],
+      );
+    const format = preferences?.format || 'webp';
+    q<HTMLInputElement>(`[data-format][value="${format}"]`).checked = true;
+    updateExportFormat();
     q('[data-export-status]').textContent = '';
     dialog.showModal();
   }
-  async function saveExport() {
+  async function saveExport(mode: 'download' | 'print' = 'download') {
     if (busy) return;
     busy = true;
     updateShareButton();
     const generation = exportGeneration;
-    const button = q<HTMLButtonElement>('[data-action=download]');
-    button.disabled = true;
+    const button = q<HTMLButtonElement>(
+      mode === 'print' ? '[data-action=print-design]' : '[data-action=download]',
+    );
+    qa<HTMLButtonElement>('.uc-export-actions button').forEach((b) => {
+      b.disabled = true;
+    });
     button.setAttribute('aria-busy', 'true');
     q('[data-export-status]').textContent = 'Preparing your edited artwork…';
     try {
-      const format = q<HTMLInputElement>('[data-format]:checked').value;
+      const format = q<HTMLInputElement>('[data-format]:checked').value as ExportFormat;
+      if (!exportFormats.includes(format)) throw new Error('Choose a supported file format.');
+      const title = applyExportName();
       const savedExport = clone(history.current);
       savedExport.exportPreferences = {
+        format,
         width:
           Number(q<HTMLSelectElement>('[data-size]').value) ||
           savedExport.crop?.width ||
@@ -1113,24 +1181,32 @@ function init(root: HTMLElement) {
       };
       history.current.exportPreferences = savedExport.exportPreferences;
       persist();
-      const name =
-        q<HTMLInputElement>('[data-filename]')
-          .value.replace(/[^a-zA-Z0-9-_]+/g, '-')
-          .slice(0, 100) || id;
+      const name = exportFilename(title);
+      if (mode === 'print') {
+        await printDocument(savedExport, () => !dialog.open || generation !== exportGeneration);
+        if (dialog.open && generation === exportGeneration)
+          q('[data-export-status]').textContent =
+            'Print dialog opened. Choose your printer, or save as PDF. For exact paper size, use the settings selected above.';
+        return;
+      }
       let blob: Blob;
       if (format === 'pdf') blob = await exportPdf(savedExport);
+      else if (format === 'svg')
+        blob = new Blob([await portableSvg(savedExport)], { type: 'image/svg+xml' });
+      else if (format === 'docx') blob = await exportWord(savedExport);
       else {
         const requested = q<HTMLSelectElement>('[data-size]').value;
-        blob = await renderWebp(
-          history.current,
+        blob = await renderBitmap(
+          savedExport,
           requested === 'original'
-            ? history.current.crop?.width || history.current.width
+            ? savedExport.crop?.width || savedExport.width
             : Number(requested),
           Number(q<HTMLInputElement>('[data-quality]').value) / 100,
+          format === 'png' ? 'image/png' : format === 'jpg' ? 'image/jpeg' : 'image/webp',
         );
       }
       if (!dialog.open || generation !== exportGeneration) return;
-      download(blob, `${name}-edited.${format}`);
+      download(blob, `${name}.${format}`);
       q('[data-export-status]').textContent =
         `Your edited ${format.toUpperCase()} is ready (${blob.size.toLocaleString()} bytes).`;
     } catch (error) {
@@ -1140,7 +1216,9 @@ function init(root: HTMLElement) {
     } finally {
       if (generation === exportGeneration) {
         busy = false;
-        button.disabled = false;
+        qa<HTMLButtonElement>('.uc-export-actions button').forEach((b) => {
+          b.disabled = false;
+        });
         button.removeAttribute('aria-busy');
         updateShareButton();
       }
@@ -1500,7 +1578,7 @@ function init(root: HTMLElement) {
         new Blob([JSON.stringify(serializeProject(history.current), null, 2)], {
           type: 'application/json',
         }),
-        `${id}-project.json`,
+        `${exportFilename(history.current.title || id)}-project.json`,
       );
       status('Editable project saved. Open it from the Layers panel to continue.');
     },
@@ -1509,7 +1587,8 @@ function init(root: HTMLElement) {
     export: exportOpen,
     'export-inspector': exportOpen,
     'close-export': () => dialog.close(),
-    download: saveExport,
+    download: () => saveExport(),
+    'print-design': () => saveExport('print'),
   };
   root.addEventListener('click', (event) => {
     if (!history) return;
@@ -1517,6 +1596,7 @@ function init(root: HTMLElement) {
     if (!target) return;
     try {
       if (target.dataset.libraryKind) {
+        if (target.dataset.libraryKind === 'vector') loadVectorLibrary();
         qa('[data-library-view]').forEach(
           (view) => (view.hidden = view.dataset.libraryView !== target.dataset.libraryKind),
         );
@@ -1627,10 +1707,15 @@ function init(root: HTMLElement) {
             : 'Artwork view restored.',
         );
       } else if (target.matches('[data-format]')) {
-        const pdf = target.value === 'pdf';
-        q('[data-webp-options]').hidden = pdf;
-        q('[data-pdf-options]').hidden = !pdf;
-        q('[data-action=download]').textContent = `↓ Download ${pdf ? 'CMYK PDF' : 'Image'}`;
+        updateExportFormat();
+      } else if (target.matches('[data-filename]')) {
+        applyExportName();
+      } else if (target.hasAttribute('data-export-paper')) {
+        modify((d) => {
+          if (target.dataset.exportPaper === 'margin')
+            d.print.margin = clamp(Number(target.value), 0, 2);
+          else Object.assign(d.print, { [target.dataset.exportPaper!]: target.value });
+        });
       } else if (target.matches('[data-import-svg]')) {
         const file = target.files?.[0];
         target.value = '';
@@ -1806,14 +1891,19 @@ function init(root: HTMLElement) {
       return;
     }
     if (!drag) return;
-    const p = point(event),
-      dx = p.x - drag.start.x,
+    const p = point(event);
+    let dx = p.x - drag.start.x,
       dy = p.y - drag.start.y;
+    const snapped = drag.action === 'move' ? workbench?.snapMove(dx, dy, drag.bounds) : undefined;
+    if (snapped) {
+      dx = snapped.dx;
+      dy = snapped.dy;
+    }
     live = changeLayers(drag.before, selected, (l) => {
       const b = drag!.bounds,
         a = drag!.action;
       if (a === 'move') {
-        const snap = q<HTMLInputElement>('[data-snap]').checked;
+        const snap = !snapped?.custom && q<HTMLInputElement>('[data-snap]').checked;
         l.x += snap ? Math.round(dx / 5) * 5 : dx;
         l.y += snap ? Math.round(dy / 5) * 5 : dy;
       } else if (a === 'rotate') {
@@ -1851,6 +1941,7 @@ function init(root: HTMLElement) {
       }
     });
     renderCanvas();
+    workbench?.drawGuides();
   });
   const endDrag = () => {
     if (stroke) {
@@ -1957,8 +2048,10 @@ function init(root: HTMLElement) {
   dialog.addEventListener('close', () => {
     exportGeneration++;
     busy = false;
-    q<HTMLButtonElement>('[data-action=download]').disabled = false;
-    q('[data-action=download]').removeAttribute('aria-busy');
+    qa<HTMLButtonElement>('.uc-export-actions button').forEach((button) => {
+      button.disabled = false;
+      button.removeAttribute('aria-busy');
+    });
     updateShareButton();
     exportFocus?.focus();
   });
@@ -2137,13 +2230,50 @@ function init(root: HTMLElement) {
           renderCanvas();
         },
       });
+      workbench = new Workbench({
+        root,
+        stage,
+        canvas,
+        doc,
+        committed: () => history.current,
+        selected: () => selected,
+        setSelection: (ids) => {
+          selected = ids.filter((id) => doc().layers.some((layer) => layer.id === id));
+          render();
+        },
+        bounds,
+        commit,
+        preview: (next) => {
+          live = next;
+          rasterRenderKey = '';
+          renderCanvas();
+        },
+        select,
+        panel,
+        render,
+        status,
+        zoom: (factor) => {
+          zoom = clamp(zoom * factor, 0.25, 12);
+          render();
+        },
+        action: (name) => actions[name]?.(),
+        pan: () => panMode,
+      });
       await prepareDocument(history.current);
       render();
       if (creator) {
-        root.dataset.workMode = 'advanced';
+        root.dataset.workMode = 'edit';
         smart.render();
         panel('elements');
       } else if (rasterSource) panel('region');
+      if (
+        matchMedia('(max-width: 800px)').matches &&
+        !workspaceParams.has('editor-tool') &&
+        !workspaceParams.has('studio-tool')
+      ) {
+        root.dataset.propertiesCollapsed = 'true';
+        root.dispatchEvent(new CustomEvent('uc:inspector-collapse'));
+      }
       status(
         recovered
           ? 'Your last local editing session was restored. Changes stay on this device.'
@@ -2207,6 +2337,9 @@ function init(root: HTMLElement) {
         }
       }
     } catch (error) {
+      // A screen preview must not remain as an apparently usable canvas when
+      // the original source or the restored project fails verification.
+      canvas.replaceChildren();
       status(error instanceof Error ? error.message : 'The artwork could not be opened.', true);
       qa<HTMLButtonElement>('button').forEach((b) => (b.disabled = true));
       root.removeAttribute('aria-busy');

@@ -1,4 +1,5 @@
 import { isMonochrome } from './monochrome.ts';
+import { newestFirst } from './publication-order.ts';
 import {
   normalizeQuery,
   oneEditAway,
@@ -20,6 +21,8 @@ export interface SearchArtwork {
   formats?: string[];
   alpha?: boolean;
   createdAt?: string;
+  publishedAt?: string;
+  firstPublishedAt?: string;
   cluster?: string;
   published?: boolean;
   monochrome?: boolean;
@@ -196,12 +199,15 @@ export function searchArtwork<T extends SearchArtwork>(artwork: T[], state: Sear
     }
   }
   const ranked = exact.length ? exact : close;
+  const publicationRank =
+    state.sort === 'newest'
+      ? new Map(newestFirst(artwork).map((item, index) => [item.id, index]))
+      : new Map<string, number>();
   ranked.sort((a, b) =>
     state.sort === 'title'
       ? a.item.title.localeCompare(b.item.title, 'en')
       : state.sort === 'newest'
-        ? (b.item.createdAt || '').localeCompare(a.item.createdAt || '') ||
-          a.item.title.localeCompare(b.item.title, 'en')
+        ? publicationRank.get(a.item.id)! - publicationRank.get(b.item.id)!
         : b.score - a.score || a.item.title.localeCompare(b.item.title, 'en'),
   );
   const pages = Math.max(1, Math.ceil(ranked.length / state.size)),

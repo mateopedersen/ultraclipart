@@ -4,13 +4,15 @@ import CatalogCount from '../components/CatalogCount.astro';
 import { catalogStatistics } from '../lib/catalog-statistics';
 import DiscoveryIcon from '../components/DiscoveryIcon.astro';
 import { categoryCollections, categorySubjects } from '../lib/category-directory';
+import { categorySearchUrl } from '../lib/category-search-index';
 import { breadcrumbs, structuredData } from '../lib/structured-data';
 import '../styles/categories.css';
 const total = catalogStatistics.totals.artworks;
 const letters = [...new Set(categorySubjects.map((topic) => topic.name[0].toUpperCase()))].sort();
-const heroSubjects = ['fox', 'baby', 'butterfly', 'heart']
+const heroSubjects = ['fox', 'strawberry', 'school', 'butterfly']
   .map((slug) => categorySubjects.find((s) => s.slug === slug))
-  .filter((s) => s !== undefined);
+  .filter((s) => s !== undefined)
+  .slice(0, 4);
 const title = 'Clipart Categories: Animals, Holidays, Baby & More';
 const description = `Explore ${categorySubjects.length} clipart topics and ${total.toLocaleString('en-US')} illustrations. Browse visual collections, find a subject, and download images or printable PDFs.`;
 const pageUrl = 'https://ultraclipart.com/categories/';
@@ -45,185 +47,222 @@ const schema = {
     <nav class="discovery-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">/</span>
-      <span aria-current="page">Clipart categories</span>
+      <span aria-current="page">Categories</span>
     </nav>
-    <section class="discovery-hero" aria-labelledby="discovery-title">
-      <div class="discovery-intro">
-        <h1 id="discovery-title">
-          Browse Clipart
+    <header class="discovery-hero">
+      <div class="discovery-hero-copy">
+        <p class="discovery-eyebrow">
+          <img src="/illustrations/footer/explore.svg" width="44" height="44" alt="" />{' '}
+          <span>The Clipart Library</span>
+        </p>
+        <h1>
+          Explore clipart.
           <br />
-          <span>by Subject</span>
+          <span>Find your next idea.</span>
         </h1>
         <p class="discovery-lead">
-          Choose a subject or collection to see its illustrations. Use the search below to find a
-          topic by name.
+          From playful animals to everyday essentials, discover artwork for whatever you’re making.
         </p>
-        <form
-          class="discovery-search"
-          id="hero-topic-search"
-          role="search"
-          aria-label="Find clipart subjects"
-          action="/search/"
-        >
-          <label class="discovery-sr" for="hero-topic-query">
-            Search clipart subjects
-          </label>
-          <input
-            id="hero-topic-query"
-            name="q"
-            type="search"
-            placeholder="Find a subject…"
-            maxlength="160"
-          />
-          <button type="submit" aria-label="Search subjects" class="discovery-primary-control">
-            <span class="action-glyph">
-              <DiscoveryIcon name="find" size={24} />
-            </span>
-            <span>Search</span>
-            <kbd aria-hidden="true">↵</kbd>
-          </button>
-        </form>
-        <div class="discovery-shortcuts">
-          <a href="#topic-directory">
-            Browse all subjects <DiscoveryIcon name="arrow" size={22} />
+        <div class="discovery-hero-bottom">
+          <dl class="discovery-stats">
+            <div>
+              <dt>Subjects to explore</dt>
+              <dd>
+                <CatalogCount kind="subjects" />
+              </dd>
+            </div>
+            <div>
+              <dt>Illustrations</dt>
+              <dd>
+                <CatalogCount kind="artworks" />
+              </dd>
+            </div>
+          </dl>
+          <a class="discovery-collections-link" href="/collections/">
+            Explore collections <DiscoveryIcon name="arrow" size={21} />
           </a>
-          <a href="/new/">See what's new</a>
         </div>
-        <p class="discovery-stats">
-          <strong>
-            <CatalogCount kind="artworks" />
-          </strong>{' '}
-          illustrations <span aria-hidden="true">·</span>{' '}
-          <strong>
-            <CatalogCount kind="subjects" />
-          </strong>{' '}
-          subjects{' '}
-        </p>
       </div>
-      <div class="discovery-moodboard" aria-label="A few ideas to get you started">
+      <div class="discovery-moodboard" aria-label="A few ideas to explore">
+        <span class="discovery-scene-orbit" aria-hidden="true"></span>
         {heroSubjects.map((subject, index) => (
           <a
+            class={`discovery-scene-card discovery-scene-card-${index + 1}`}
             href={`/clipart/${subject.slug}/`}
-            class={`moodboard-piece moodboard-piece-${index + 1} tone-${subject.color}`}
-            aria-label={`Explore ${subject.keyword}`}
+            aria-label={`Explore ${subject.name}`}
           >
             <img
               src={subject.sample.thumb}
-              alt=""
-              width="240"
-              height="240"
-              loading={index === 0 ? 'eager' : 'lazy'}
-              fetchpriority={index === 0 ? 'high' : 'auto'}
+              srcset={subject.sample.thumbSrcSet}
+              sizes="(max-width: 700px) 100px, 155px"
+              alt={subject.sample.alt}
+              title={subject.sample.title}
+              width="155"
+              height="140"
               decoding="async"
             />
-            <span>
-              {subject.name}
-              <DiscoveryIcon name="arrow" size={22} />
-            </span>
+            <span>{subject.name}</span>
           </a>
         ))}
       </div>
-    </section>
+    </header>
 
-    <section class="discovery-collections" aria-labelledby="collections-title">
-      <div class="discovery-section-heading">
-        <div>
-          <h2 id="collections-title">Explore by collection</h2>
-        </div>
-        <a href="#topic-directory">
-          All <CatalogCount kind="subjects" unit="subject" />{' '}
-          <DiscoveryIcon name="library" size={24} />
-        </a>
-      </div>
-      <div class="discovery-collection-grid">
-        {categoryCollections.map((collection, index) => (
-          <a
-            class:list={[
-              'discovery-collection',
-              `tone-${collection.color}`,
-              { 'discovery-collection-wide': index === 0 },
-            ]}
-            href={`/collection/${collection.slug}/`}
-          >
-            <div class="collection-art" aria-hidden="true">
-              {collection.previews.map((item) => (
-                <img
-                  src={item.thumb}
-                  alt=""
-                  width="180"
-                  height="180"
-                  loading="lazy"
-                  decoding="async"
-                />
-              ))}
-            </div>
-            <div class="collection-label">
-              <div class="collection-heading">
-                <DiscoveryIcon name={collection.slug} size={36} />
-                <h3>{collection.title}</h3>
-              </div>
-              <p>
-                <CatalogCount
-                  kind="collection-subjects"
-                  countKey={collection.slug}
-                  unit="subject"
-                />{' '}
-                <span aria-hidden="true">·</span>{' '}
-                <CatalogCount
-                  kind="collection-artworks"
-                  countKey={collection.slug}
-                  unit="illustration"
-                />
-              </p>
-              <span class="collection-cta">
-                <span class="action-glyph">
-                  <DiscoveryIcon name="folder" size={25} />
-                </span>
-                <span>Explore collection</span>
+    <div class="discovery-layout">
+      <aside class="discovery-sidebar" aria-label="Subject filters">
+        <details id="discovery-controls" class="discovery-controls" open>
+          <summary>
+            <span class="filter-heading">
+              <span class="filter-heading-icon">
+                <img src="/illustrations/footer/explore.svg" width="38" height="38" alt="" />
               </span>
+              <span>
+                <small>Explore the library</small>
+                <strong>Find your inspiration</strong>
+              </span>
+            </span>
+            <span class="filter-toggle" aria-hidden="true">
+              ⌄
+            </span>
+          </summary>
+          <div class="discovery-filter-body">
+            <form
+              id="hero-topic-search"
+              class="directory-query"
+              action="/search/"
+              role="search"
+              aria-label="Find clipart subjects"
+            >
+              <label for="topic-filter">What would you like to create?</label>
+              <div class="directory-query-input">
+                <input
+                  id="topic-filter"
+                  name="q"
+                  type="search"
+                  placeholder="Animals, flowers…"
+                  maxlength="160"
+                  autocomplete="off"
+                  aria-controls="subject-grid"
+                />
+                <button class="discovery-search-submit" type="submit" aria-label="Search subjects">
+                  <DiscoveryIcon name="search" size={23} />
+                </button>
+              </div>
+            </form>
+            <div id="category-filters" hidden>
+              <fieldset class="collection-filter">
+                <legend>
+                  Browse by collection{' '}
+                  <span class="collection-total">{categoryCollections.length}</span>
+                </legend>
+                <input type="hidden" id="category-group" value="" />
+                <div class="collection-filter-options">
+                  <label class="collection-filter-option">
+                    <input
+                      type="radio"
+                      name="collection-filter"
+                      value=""
+                      checked
+                      aria-controls="subject-grid"
+                    />
+                    <span class="collection-filter-art all-collections-art">
+                      <img src="/illustrations/footer/explore.svg" width="38" height="38" alt="" />
+                    </span>
+                    <span class="collection-filter-copy">
+                      <span class="collection-filter-title">All collections</span>
+                      <span class="collection-filter-count">
+                        <CatalogCount kind="subjects" unit="subject" />
+                      </span>
+                    </span>
+                    <span class="collection-selection" aria-hidden="true">
+                      ✓
+                    </span>
+                  </label>
+                  {categoryCollections.map((collection) => (
+                    <label class="collection-filter-option">
+                      <input
+                        type="radio"
+                        name="collection-filter"
+                        value={collection.slug}
+                        aria-controls="subject-grid"
+                      />
+                      <span class={`collection-filter-art tone-${collection.color}`}>
+                        <img
+                          src={collection.previews[0].thumb}
+                          srcset={collection.previews[0].thumbSrcSet}
+                          sizes="52px"
+                          width="52"
+                          height="52"
+                          loading="lazy"
+                          decoding="async"
+                          alt=""
+                          title={collection.previews[0].title}
+                        />
+                      </span>
+                      <span class="collection-filter-copy">
+                        <span class="collection-filter-title">{collection.title}</span>
+                        <span class="collection-filter-count">
+                          {collection.subjects.length}{' '}
+                          {collection.subjects.length === 1 ? 'Subject' : 'Subjects'}
+                        </span>
+                      </span>
+                      <span class="collection-selection" aria-hidden="true">
+                        ✓
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
+              <details class="discovery-alphabet">
+                <summary>
+                  <span class="alphabet-symbol" aria-hidden="true">
+                    Aa
+                  </span>
+                  <span class="alphabet-copy">
+                    Browse A–Z<small>Jump to a first letter</small>
+                  </span>
+                  <span class="alphabet-chevron" aria-hidden="true">
+                    ⌄
+                  </span>
+                </summary>
+                <div
+                  class="discovery-letters"
+                  role="group"
+                  aria-label="Filter subjects by first letter"
+                >
+                  <button type="button" data-letter="" aria-pressed="true">
+                    All
+                  </button>
+                  {letters.map((letter) => (
+                    <button
+                      type="button"
+                      data-letter={letter}
+                      aria-pressed="false"
+                      aria-label={`Subjects beginning with ${letter}`}
+                    >
+                      {letter}
+                    </button>
+                  ))}
+                </div>
+              </details>
             </div>
-          </a>
-        ))}
-      </div>
-    </section>
+          </div>
+        </details>
+      </aside>
 
-    <section
-      id="topic-directory"
-      class="discovery-directory"
-      aria-labelledby="topic-directory-heading"
-      tabindex="-1"
-    >
-      <div class="discovery-section-heading">
-        <div>
-          <h2 id="topic-directory-heading">Browse all subjects</h2>
-        </div>
-        <p>Your next idea is a search away.</p>
-      </div>
-      <div class="discovery-controls" id="discovery-controls" hidden>
-        <div class="discovery-filter-row">
-          <div class="directory-query">
-            <label for="topic-filter">Search subjects</label>
-            <div>
-              <DiscoveryIcon name="search" size={26} />
-              <input
-                id="topic-filter"
-                type="search"
-                placeholder="Search animals, seasons and more…"
-                aria-controls="subject-grid"
-                maxlength="160"
-              />
-            </div>
-          </div>
+      <section
+        id="topic-directory"
+        class="discovery-directory"
+        aria-labelledby="topic-directory-heading"
+        tabindex="-1"
+      >
+        <div class="discovery-results-heading">
           <div>
-            <label for="category-group">Collection</label>
-            <select id="category-group" aria-controls="subject-grid">
-              <option value="">All collections</option>
-              {categoryCollections.map((collection) => (
-                <option value={collection.slug}>{collection.title}</option>
-              ))}
-            </select>
+            <h2 id="topic-directory-heading">Explore Clipart</h2>
+            <p id="topic-result-count" role="status" aria-live="polite">
+              {categorySubjects.length} subjects to explore
+            </p>
           </div>
-          <div>
+          <div class="directory-sort" data-directory-tools hidden>
             <label for="category-sort">Sort by</label>
             <select id="category-sort" aria-controls="subject-grid">
               <option value="name">Name: A–Z</option>
@@ -231,104 +270,79 @@ const schema = {
             </select>
           </div>
         </div>
-        <details class="discovery-alphabet">
-          <summary>
-            Browse by letter <span aria-hidden="true">A–Z</span>
-          </summary>
-          <div class="discovery-letters" role="group" aria-label="Filter topics by first letter">
-            <button data-letter="" aria-pressed="true">
-              All
-            </button>
-            {letters.map((letter) => (
-              <button
-                data-letter={letter}
-                aria-pressed="false"
-                aria-label={`Topics beginning with ${letter}`}
-              >
-                {letter}
-              </button>
-            ))}
-          </div>
-        </details>
-      </div>
-      <div class="discovery-result-row">
-        <p id="topic-result-count" role="status" aria-live="polite">
-          {categorySubjects.length} subjects to explore
-        </p>
-        <button id="reset-subjects" type="button" hidden>
-          Clear filters <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <ul class="discovery-subject-grid" id="subject-grid">
-        {categorySubjects.map((subject) => (
-          <li
-            class="discovery-subject"
-            data-topic={subject.keyword.toLowerCase()}
-            data-group={subject.group}
-            data-groups={subject.groups.join(' ')}
-            data-name={subject.name}
-            data-count={subject.count}
-            data-letter-value={subject.name[0].toUpperCase()}
-            data-keywords={`${subject.keyword} ${subject.cluster} ${subject.groups.join(' ')} ${subject.slug}`.toLowerCase()}
-          >
-            <a href={`/clipart/${subject.slug}/`}>
-              <div class={`subject-art tone-${subject.color}`}>
-                <img
-                  src={subject.sample.thumb}
-                  alt={`${subject.name} clipart preview`}
-                  width="240"
-                  height="200"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="subject-label">
-                <div>
-                  <h3>{subject.name}</h3>
-                  <span class="subject-count">
-                    <CatalogCount kind="topic" countKey={subject.slug} unit="illustration" />
-                  </span>
+        <div class="discovery-active-filters" id="active-topic-filters" hidden>
+          <p id="active-topic-summary"></p>
+          <button id="reset-subjects" type="button">
+            Clear filters <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <ul class="discovery-subject-grid" id="subject-grid" data-search-index={categorySearchUrl}>
+          {categorySubjects.map((subject, index) => (
+            <li
+              class="discovery-subject"
+              hidden={index >= 12}
+              data-topic={subject.keyword.toLowerCase()}
+              data-slug={subject.slug}
+              data-group={subject.group}
+              data-groups={subject.groups.join(' ')}
+              data-name={subject.name}
+              data-count={subject.count}
+              data-letter-value={subject.name[0].toUpperCase()}
+              data-keywords={`${subject.keyword} ${subject.cluster} ${subject.groups.join(' ')} ${subject.slug}`.toLowerCase()}
+            >
+              <a href={`/clipart/${subject.slug}/`}>
+                <div class={`subject-art tone-${subject.color}`}>
+                  <img
+                    title={subject.sample.title}
+                    src={subject.sample.thumb}
+                    srcset={subject.sample.thumbSrcSet}
+                    sizes="(max-width: 520px) 44vw, (max-width: 979px) 28vw, 240px"
+                    alt={subject.sample.alt}
+                    width="240"
+                    height="190"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
-                <DiscoveryIcon name="arrow" size={26} />
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
-      <div id="no-topics" class="discovery-empty" hidden>
-        <DiscoveryIcon name="search" size={48} />
-        <h3>No matching subjects</h3>
-        <p>No subjects match these filters. Try a shorter search or explore another collection.</p>
-        <button id="clear-topic-filter" type="button">
-          Show all subjects <DiscoveryIcon name="arrow" size={24} />
-        </button>
-      </div>
-      <div class="discovery-more" id="discovery-more" hidden>
-        <p id="subject-progress"></p>
-        <button id="show-more-subjects" type="button">
-          Show more subjects <DiscoveryIcon name="library" size={24} />
-        </button>
-      </div>
-      <noscript>
-        <p>All available subjects are listed above. Choose a preview to explore its artwork.</p>
-      </noscript>
-    </section>
-
-    <section class="discovery-create" aria-labelledby="discovery-create-title">
-      <div class="create-symbol">
-        <DiscoveryIcon name="studio" size={40} />
-      </div>
-      <div>
-        <h2 id="discovery-create-title">Edit Your Clipart in Studio</h2>
-        <p>
-          Choose a subject, personalize your artwork in the editor, then download an image or
-          printable PDF for your personal or classroom project.
-        </p>
-      </div>
-      <a href="/create/">
-        Open Clipart Studio <DiscoveryIcon name="arrow" size={24} />
-      </a>
-    </section>
+                <div class="subject-label">
+                  <div>
+                    <h3>{subject.name}</h3>
+                    <span class="subject-count">
+                      <CatalogCount kind="topic" countKey={subject.slug} unit="illustration" />
+                    </span>
+                  </div>
+                  <DiscoveryIcon name="arrow" size={22} />
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div id="no-topics" class="discovery-empty" hidden>
+          <DiscoveryIcon name="search" size={38} />
+          <h3>No matching subjects</h3>
+          <p>Try a shorter search or choose another collection.</p>
+          <button id="clear-topic-filter" type="button">
+            Show all subjects
+          </button>
+        </div>
+        <div class="discovery-more" id="discovery-more" hidden>
+          <p id="subject-progress"></p>
+          <button id="show-more-subjects" type="button">
+            Show more subjects <DiscoveryIcon name="library" size={22} />
+          </button>
+        </div>
+        <noscript>
+          <style>
+            #subject-grid > li[hidden] {
+              display: list-item !important;
+            }
+          </style>
+          <p class="directory-no-script">
+            All available subjects are listed here. The search opens the full clipart search.
+          </p>
+        </noscript>
+      </section>
+    </div>
   </div>
   <script>
     import '../scripts/category-directory';

@@ -1,0 +1,94 @@
+ULTRACLIPART — OTOMATİK KÜTÜPHANE DİZİNİ
+26 Ekim 2026 · Yalnızca yerel çalışma
+
+YENİ SAYFA
+http://127.0.0.1:4323/library-index/
+Yayınlandıktan sonraki adres: https://ultraclipart.com/library-index/
+
+A–Z konu dizini, konu filtresi, harf gezintisi, yaratıcı araçlar, rehberler ve
+kullanım bilgileri aynı sayfada toplandı. Gerçek katalog görselleri ve ortak
+site tasarımı kullanıldı. Footer'daki Browse bölümüne Library Index eklendi.
+Sayfa kendi kanonik adresini, indekslemeye açık meta bilgisini ve breadcrumb
+verisini kullanır. Arama sorgusu bağlantıları üretilmez.
+
+YENİ İÇERİK NASIL DAHİL OLUR?
+- Konu listesi elle tutulmaz: mevcut indeksleme ölçütünü sağlayan konular
+  ortak indexableTopics yordamından gelir. Mevcut ölçüt en az 50 yayımlanmış,
+  indekslenebilir görseldir; taslak/noindex kayıtlar bu sayıya dahil olmaz.
+- Uygun yeni konular sonraki üretimde hem HTML dizinine hem sayfa XML site
+  haritasına otomatik girer. İlgili koleksiyon kartları da aynı uygunluk
+  ölçütünü kullanır; ilişki kararları ayrıca editoryal olarak incelenir.
+- Yeni yayımlanan görseller mevcut görsel site haritasına otomatik girer.
+  robots.txt dosyasına her görsel veya konu için yeni satır yazılmaz.
+- Bir konuya taslak görsel eklemek, o konunun mevcut 50 yayımlanmış görselini
+  geçersiz kılmaz. Önceki site haritası mantığındaki bu durum düzeltildi ve
+  kalıcı bir testle korundu.
+- Başlık/alt bilgisi ve konu ilişkilerinin önceki katalog yayın kontrolü
+  korunur. Ürün kimlikleri bu çalışmada yeniden tahmin edilmedi.
+
+ROBOTS BAĞLANTISI
+Hazırlanan assets robots dosyası şu zinciri kullanır:
+assets.ultraclipart.com/robots.txt
+  → https://ultraclipart.com/sitemap.xml
+  → sitemap-pages.xml: Library Index ve uygun diğer sayfalar
+  → sitemap-images.xml: yayımlanan orijinal görseller
+
+HTML dizini robots.txt içindeki açıklama satırında belirtilir; bir HTML sayfası
+yanlışlıkla Sitemap direktifi olarak verilmez. Etkin kurallar User-agent: *,
+Allow: / ve ana XML site haritasıdır. Robots taramayı yönetir; bütün içeriklerin
+Google/Bing tarafından indeksleneceğini garanti eden bir etiket yoktur.
+
+Hazırlanan CDN robots dosyası:
+- Kaynak: config/assets/robots.txt
+- Yayın paketi: work/assets-indexing/robots.txt ve deployment-plan.json
+- Boyut: 271 byte
+- SHA256: 368b584846aea9f357c27612d9edd448bdb829afb8588ed5078c1eb031b5fa61
+- Nesne anahtarı: robots.txt
+- MIME: text/plain; charset=utf-8
+- Cache-Control: public, max-age=300, must-revalidate
+
+GERÇEKTEN ÇALIŞTIRILAN KONTROLLER
+- Chromium ve WebKit: 320, 390, 768 ve 1440 piksel genişlik; toplam 8 görünüm.
+- 238 konu bağlantısı; filtre, boş sonuç, temizleme, harf gezintisi ve gerçek
+  Baby koleksiyonuna geçiş kontrolü.
+- Sayfadaki 263 farklı iç bağlantı hedefi: HTTP 200.
+- JavaScript kapalıyken iki tarayıcıda da 238 konu bağlantısı erişilebilir.
+- Axe erişilebilirlik kontrolleri, taşma ölçümleri ve XML bağlantı zinciri.
+- 22 birim testi: robots politikası, site haritası, katalog ve koleksiyon
+  kuralları. Yeni taslak ekleme senaryosu dahil.
+- 15 sayfa türünün oluşturulan HTML'inde robots/canonical kontrolü geçti.
+  İlk denemede ana sayfa yerel sunucuda zaman aşımına uğradı; bu deneme geçmiş
+  sayılmadı. Tekrar çalıştırmada 15 yanıtın tamamı başarılıydı.
+- Astro: 419 dosya, 0 hata, 0 uyarı, 0 ipucu.
+- İlk erişilebilirlik turunda iki alt bilgi bağlantısının görsel ayrımı
+  yetersizdi; alt çizgiler eklendi. WebKit ekran görüntüsünde görülen başlık
+  arka planı çizim bozukluğu, katmanlı radyal geçiş sadeleştirilerek düzeltildi.
+
+Kanıtlar:
+reports/library-index/report.json
+reports/library-index/chromium-390.png
+reports/library-index/chromium-1440.png
+reports/library-index/webkit-390.png
+reports/library-index/webkit-1440.png
+reports/assets-indexing/local-meta.json
+tests/e2e/library-index.mjs (kalıcı tekrar çalıştırılabilir test)
+
+SINIRLAR VE YAYIN DURUMU
+Çalışma yereldedir. GitHub'a gönderim, site yayını, R2 yüklemesi, önbellek
+temizliği ve arama motoruna gönderim yapılmadı. Gerçek iPhone cihaz testi
+yapılmadı; otomatik WebKit motoru test edildi.
+
+Bu turda canlı https://assets.ultraclipart.com/robots.txt tekrar okundu ve
+HTTP 404 döndüğü kaydedildi. Yerel hazırlık, canlıda dosya varmış gibi
+raporlanmaz. Önceki yayına almama talimatı geçerlidir.
+
+Yayın izni geldiğinde CDN nesnesi ayrıca yüklenmeli, eski 404 yanıtı yalnızca
+bu URL için temizlenmeli ve gerçek alan adından tekrar doğrulanmalıdır.
+Ana site yayını güncel kaynakla birleştirilmelidir; canlı katalog önceki
+denetimde yerel katalogdan 150 görsel ilerideydi. Yeni canlı içerikler eski
+yerel katalogla ezilmemelidir. Ayrıntılar assets-indexing-2026-10-26.txt içinde.
+
+RESMÎ KAYNAKLAR
+https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec
+https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
+https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap

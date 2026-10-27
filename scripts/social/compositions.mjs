@@ -514,7 +514,7 @@ export async function compose(c, page, catalog) {
             118,
             137,
           );
-        await c.text(['1  Find', '2  Edit', '3  Save'][i], x + 86, 417, {
+        await c.text(['1  Brief', '2  Review', '3  Publish'][i], x + 86, 417, {
           size: 23,
           weight: 600,
           center: true,

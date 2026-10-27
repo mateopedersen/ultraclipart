@@ -50,6 +50,8 @@ const attrs = new Set([
   'stroke-linecap',
   'stroke-linejoin',
   'stroke-miterlimit',
+  'stroke-dasharray',
+  'stroke-dashoffset',
   'opacity',
   'transform',
   'd',
@@ -93,6 +95,21 @@ export function sanitizeSvg(source: string): SVGSVGElement {
           'This SVG has too many nested groups. Simplify its structure before importing.',
         );
     for (const attr of [...el.attributes]) {
+      if (attr.name === 'stroke-dasharray' && attr.value !== 'none') {
+        const values = attr.value.trim().split(/[ ,]+/).map(Number);
+        if (
+          !values.length ||
+          values.length > 20 ||
+          values.some((value) => !Number.isFinite(value) || value < 0 || value > 10000) ||
+          !values.some((value) => value > 0)
+        )
+          throw new Error('Invalid stroke dash pattern.');
+      }
+      if (
+        attr.name === 'stroke-dashoffset' &&
+        (!Number.isFinite(Number(attr.value)) || Math.abs(Number(attr.value)) > 10000)
+      )
+        throw new Error('Invalid stroke dash offset.');
       if (
         !attrs.has(attr.name) ||
         (/javascript:|data:|https?:|@import|expression\s*\(/i.test(attr.value) &&
@@ -128,6 +145,8 @@ export function fromSvg(source: string, artId: string): EditorDocument {
     'fill-opacity',
     'stroke-opacity',
     'stroke-miterlimit',
+    'stroke-dasharray',
+    'stroke-dashoffset',
     'transform',
   ]
     .map((a) =>
@@ -341,14 +360,14 @@ export function validateProjectMarkup(doc: EditorDocument): void {
       );
   }
 }
-export function nodeForLayer(layer: Layer): SVGGElement {
+export function nodeForLayer(layer: Layer, screenScale = Infinity): SVGGElement {
   const g = document.createElementNS(NS, 'g');
   g.setAttribute('data-layer', layer.id);
   g.setAttribute('transform', transformString(layer));
   if (layer.kind === 'vector') g.innerHTML = layer.markup;
   else if (layer.kind === 'raster') {
     const image = document.createElementNS(NS, 'image');
-    image.setAttribute('href', processedPreview(layer));
+    image.setAttribute('href', processedPreview(layer, screenScale));
     const bounds = processedBounds(layer);
     for (const key of ['x', 'y', 'width', 'height'] as const)
       image.setAttribute(key, String(bounds[key]));
@@ -365,7 +384,7 @@ export function nodeForLayer(layer: Layer): SVGGElement {
     );
   return g;
 }
-export function documentSvg(doc: EditorDocument): SVGSVGElement {
+export function documentSvg(doc: EditorDocument, screenScale = Infinity): SVGSVGElement {
   const svg = document.createElementNS(NS, 'svg');
   svg.setAttribute('xmlns', NS);
   const b = doc.crop || { x: 0, y: 0, width: doc.width, height: doc.height };
@@ -379,7 +398,7 @@ export function documentSvg(doc: EditorDocument): SVGSVGElement {
     rect.setAttribute('fill', doc.background);
     svg.append(rect);
   }
-  doc.layers.filter((l) => l.visible).forEach((l) => svg.append(nodeForLayer(l)));
+  doc.layers.filter((l) => l.visible).forEach((l) => svg.append(nodeForLayer(l, screenScale)));
   return svg;
 }
 export function colorHex(color: string): string | null {
@@ -500,6 +519,14 @@ export async function renderWebp(
   size: number,
   quality: number,
 ): Promise<Blob> {
+  return renderBitmap(doc, size, quality, 'image/webp');
+}
+export async function renderBitmap(
+  doc: EditorDocument,
+  size: number,
+  quality: number,
+  format: 'image/webp' | 'image/png' | 'image/jpeg',
+): Promise<Blob> {
   await prepareDocument(doc);
   const svg = documentSvg(doc);
   const box = doc.crop || doc;
@@ -521,11 +548,17 @@ export async function renderWebp(
     canvas.height = height;
     const context = canvas.getContext('2d');
     if (!context) throw new Error('Your browser could not create an image canvas.');
+    if (format === 'image/jpeg') {
+      context.fillStyle = '#ffffff';
+      context.fillRect(0, 0, width, height);
+    }
     context.drawImage(img, 0, 0, width, height);
     const blob = await new Promise<Blob | null>((resolve) =>
-      canvas.toBlob(resolve, 'image/webp', quality),
+      canvas.toBlob(resolve, format, quality),
     );
-    if (blob?.type === 'image/webp') return blob;
+    if (blob?.type === format) return blob;
+    if (format !== 'image/webp')
+      throw new Error('This browser could not encode the requested image format.');
     try {
       const { encodeWebp } = await import('./webp-fallback');
       return await encodeWebp(context.getImageData(0, 0, width, height), quality);

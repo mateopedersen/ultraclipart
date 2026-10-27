@@ -39,6 +39,24 @@ import '../styles/favorite-boards.css';
     </div>
   </section>
   <section class="boards-library" aria-label="Your creative boards">
+    <div class="favorites-overview" aria-label="Your collection at a glance">
+      <button type="button" data-smart-view="all">
+        <strong id="stat-all">0</strong>
+        <span>Saved Designs</span>
+      </button>
+      <button type="button" data-smart-view="pinned">
+        <strong id="stat-pinned">0</strong>
+        <span>Pinned</span>
+      </button>
+      <button type="button" data-smart-view="ready">
+        <strong id="stat-ready">0</strong>
+        <span>Ready to Use</span>
+      </button>
+      <button type="button" data-smart-view="notes">
+        <strong id="stat-notes">0</strong>
+        <span>With Notes</span>
+      </button>
+    </div>
     <div class="boards-section-heading">
       <div>
         <h2>Your boards</h2>
@@ -48,7 +66,27 @@ import '../styles/favorite-boards.css';
         <span aria-hidden="true">＋</span> Create board
       </button>
     </div>
+    <div class="boards-directory-tools">
+      <label>
+        Find a Board
+        <input id="board-search" type="search" placeholder="Search board names" maxlength="80" />
+      </label>
+      <label>
+        Board Order
+        <select id="board-sort">
+          <option value="recent">Recently Updated</option>
+          <option value="title">Name A–Z</option>
+          <option value="count">Most Designs</option>
+        </select>
+      </label>
+      <label class="favorites-checkbox">
+        <input id="board-archived" type="checkbox" /> Show Archived Boards
+      </label>
+    </div>
     <div id="board-list" class="board-list" role="group" aria-label="Choose a board"></div>
+    <p id="board-no-results" hidden>
+      No boards match your search. Try another name or show archived boards.
+    </p>
     <div class="boards-quick-start" id="boards-quick-start" hidden>
       <span>Start with an idea:</span>
       <button type="button" data-board-preset="For my child">
@@ -76,6 +114,15 @@ import '../styles/favorite-boards.css';
         <button type="button" data-board-delete>
           Delete board
         </button>
+        <button type="button" data-board-pin>
+          Pin Board
+        </button>
+        <button type="button" data-board-duplicate>
+          Duplicate Board
+        </button>
+        <button type="button" data-board-archive>
+          Archive Board
+        </button>
       </div>
     </div>
     <div class="boards-toolbar">
@@ -94,6 +141,9 @@ import '../styles/favorite-boards.css';
           <option value="newest">Recently saved</option>
           <option value="oldest">Saved first</option>
           <option value="title">Title A–Z</option>
+          <option value="title-desc">Title Z–A</option>
+          <option value="updated">Recently Organized</option>
+          <option value="pinned">Pinned First</option>
         </select>
       </label>
       <label>
@@ -107,6 +157,77 @@ import '../styles/favorite-boards.css';
       </label>
       <button type="button" id="favorites-select">
         Select designs
+      </button>
+    </div>
+    <details class="favorites-refine" id="favorites-refine">
+      <summary>
+        Refine Your Collection <span>Tags, project progress and display</span>
+      </summary>
+      <div class="favorites-refine-grid">
+        <label>
+          Project Stage
+          <select id="favorites-stage">
+            <option value="all">All Stages</option>
+            <option value="idea">Idea</option>
+            <option value="shortlist">Shortlisted</option>
+            <option value="ready">Ready to Use</option>
+            <option value="used">Used in a Project</option>
+          </select>
+        </label>
+        <label>
+          Tag
+          <select id="favorites-tag">
+            <option value="">All Tags</option>
+          </select>
+        </label>
+        <label>
+          Designs per Page
+          <select id="favorites-page-size">
+            <option value="8">8 Designs</option>
+            <option value="16">16 Designs</option>
+            <option value="32">32 Designs</option>
+          </select>
+        </label>
+        <label>
+          Display
+          <select id="favorites-density">
+            <option value="comfortable">Comfortable</option>
+            <option value="compact">Compact</option>
+          </select>
+        </label>
+        <label class="favorites-checkbox">
+          <input id="favorites-pinned" type="checkbox" /> Pinned Only
+        </label>
+        <label class="favorites-checkbox">
+          <input id="favorites-noted" type="checkbox" /> With Notes Only
+        </label>
+        <label class="favorites-checkbox">
+          <input id="favorites-show-notes" type="checkbox" checked /> Show Notes on Cards
+        </label>
+        <button id="favorites-reset" type="button">
+          Reset Filters
+        </button>
+      </div>
+      <p>
+        Search all words in any order. Use “quoted phrases” for an exact phrase or -word to exclude
+        a word.
+      </p>
+    </details>
+    <div class="favorites-output-tools" aria-label="Use your saved designs">
+      <button type="button" data-favorites-download="webp">
+        Download All Images
+      </button>
+      <button type="button" data-favorites-download="pdf">
+        Download All PDFs
+      </button>
+      <button type="button" id="favorites-copy-links">
+        Copy View Links
+      </button>
+      <button type="button" id="favorites-csv">
+        Export View as CSV
+      </button>
+      <button type="button" id="favorites-print">
+        Print This Page
       </button>
     </div>
     <div id="favorites-bulk" class="favorites-bulk" hidden>
@@ -125,6 +246,53 @@ import '../styles/favorite-boards.css';
       </button>
       <button type="button" id="favorites-bulk-delete">
         Remove favorites
+      </button>
+      <div class="favorites-selection-tools">
+        <button type="button" id="favorites-select-page">
+          Select This Page
+        </button>
+        <button type="button" id="favorites-select-all">
+          Select All Matches
+        </button>
+        <button type="button" id="favorites-invert">
+          Invert This Page
+        </button>
+        <button type="button" id="favorites-clear-selection">
+          Clear Selection
+        </button>
+      </div>
+      <button type="button" id="favorites-bulk-move">
+        Move to Board
+      </button>
+      <label>
+        Project Stage
+        <select id="favorites-bulk-stage">
+          <option value="idea">Idea</option>
+          <option value="shortlist">Shortlisted</option>
+          <option value="ready">Ready to Use</option>
+          <option value="used">Used in a Project</option>
+        </select>
+      </label>
+      <button type="button" id="favorites-apply-stage">
+        Apply Stage
+      </button>
+      <label>
+        Add Tags
+        <input
+          type="text"
+          id="favorites-bulk-tags"
+          maxlength="200"
+          placeholder="e.g. invitations, summer"
+        />
+      </label>
+      <button type="button" id="favorites-apply-tags">
+        Add Tags
+      </button>
+      <button type="button" id="favorites-copy-selected">
+        Copy Selected Links
+      </button>
+      <button type="button" id="favorites-csv-selected">
+        Export Selected CSV
       </button>
     </div>
     <p id="favorites-count" role="status" aria-live="polite" aria-atomic="true">
@@ -154,9 +322,15 @@ import '../styles/favorite-boards.css';
       <button id="favorites-previous" type="button">
         ← Previous
       </button>
+      <button id="favorites-first" type="button">
+        First
+      </button>
       <span id="favorites-position" aria-live="polite"></span>
       <button id="favorites-next" type="button">
         Next →
+      </button>
+      <button id="favorites-last" type="button">
+        Last
       </button>
     </nav>
   </section>
@@ -250,6 +424,26 @@ import '../styles/favorite-boards.css';
           placeholder="An idea, a name, a color, a reminder…"
         ></textarea>
       </label>
+      <label>
+        Tags
+        <input name="tags" maxlength="200" placeholder="invitations, summer, classroom" />
+        <small>Separate tags with commas. Up to 12 tags.</small>
+      </label>
+      <label>
+        Project Stage
+        <select name="stage">
+          <option value="idea">Idea</option>
+          <option value="shortlist">Shortlisted</option>
+          <option value="ready">Ready to Use</option>
+          <option value="used">Used in a Project</option>
+        </select>
+      </label>
+      <label class="favorites-checkbox">
+        <input type="checkbox" name="pinned" /> Pin This Design
+      </label>
+      <button type="button" id="favorite-set-cover" hidden>
+        Use as This Board’s Cover
+      </button>
       <p class="boards-form-error" role="alert" hidden></p>
       <div class="boards-dialog-actions">
         <button type="button" id="organize-remove">
@@ -261,6 +455,55 @@ import '../styles/favorite-boards.css';
       </div>
     </form>
   </dialog>
+  <dialog id="favorites-links-dialog" class="boards-dialog" aria-labelledby="favorites-links-title">
+    <div class="boards-dialog-heading">
+      <h2 id="favorites-links-title">Your Artwork Links</h2>
+      <button type="button" data-dialog-close aria-label="Close artwork links">
+        ×
+      </button>
+    </div>
+    <p>Copy these links. Board names, tags and private notes are not shared.</p>
+    <textarea id="favorites-links-text" readonly rows="8" aria-label="Artwork links"></textarea>
+    <button type="button" data-dialog-close>
+      Done
+    </button>
+  </dialog>
+  <dialog
+    id="favorites-download-dialog"
+    class="boards-dialog"
+    aria-labelledby="favorites-download-title"
+  >
+    <div class="boards-dialog-heading">
+      <h2 id="favorites-download-title">Download All Favorites</h2>
+      <button type="button" data-batch-close aria-label="Cancel and close downloads">
+        ×
+      </button>
+    </div>
+    <p>
+      Collect every saved design in its original format. Larger collections are split into ZIP parts
+      of up to 64 MB to keep your browser responsive.
+    </p>
+    <p data-batch-status role="status" aria-live="polite"></p>
+    <progress value="0" max="1" aria-label="Preparing verified files"></progress>
+    <details data-batch-missing hidden>
+      <summary>Unavailable Files</summary>
+      <ul data-batch-unavailable></ul>
+    </details>
+    <div class="boards-dialog-actions">
+      <a class="button" data-batch-download href="" download hidden>
+        Download ZIP
+      </a>
+      <button type="button" data-batch-next hidden>
+        Prepare Next Part
+      </button>
+      <button type="button" data-batch-retry hidden>
+        Retry This File
+      </button>
+      <button type="button" data-batch-restart hidden>
+        Retry Collection
+      </button>
+    </div>
+  </dialog>
   <noscript>
     <p class="notice">
       JavaScript is needed to open your private boards on this device. You can browse the{' '}
@@ -270,5 +513,7 @@ import '../styles/favorite-boards.css';
 </Layout>
 <script>
   import { initFavorites } from '../scripts/favorites-client';
+  import { mountFavoriteDownloads } from '../scripts/favorite-downloads';
   initFavorites();
+  mountFavoriteDownloads();
 </script>

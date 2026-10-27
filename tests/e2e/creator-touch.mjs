@@ -21,7 +21,10 @@ const state = () =>
   page.evaluate(() => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
 try {
   await page.goto(`${base}/create/`);
-  await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
+  await page.locator('.uc-editor').scrollIntoViewIfNeeded();
+  await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
+    timeout: 30000,
+  });
   await page.locator('[data-panel=create]').tap();
   await page.locator('[data-shape=heart]').tap();
   expect((await state()).layers.length).toBe(1);

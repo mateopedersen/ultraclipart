@@ -15,12 +15,15 @@ const topic = {
 const art = {
   id: 'baby-pumpkin-costume-clipart',
   title: 'Baby Pumpkin Costume',
+  alt: 'A baby wearing an orange pumpkin costume.',
   thumb: '/thumb.webp',
 };
 test('direct subjects precede artwork, without duplicate destinations', () => {
   const results = searchSuggestions('pumpkins', [art], [{ entry: topic, fuzzy: false }]);
   assert.equal(results[0].href, '/pumpkin/');
   assert.equal(results[1].href, `/art/${art.id}/`);
+  assert.equal(results[1].alt, art.alt);
+  assert.equal(results[1].title, art.title);
   assert.equal(new Set(results.map((x) => x.href)).size, results.length);
 });
 test('detailed scene and style queries never promote a broad subject', () => {

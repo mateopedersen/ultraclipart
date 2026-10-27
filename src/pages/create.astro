@@ -48,7 +48,7 @@ const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
         operatingSystem: 'Web browser',
         browserRequirements: 'Requires JavaScript and a modern browser.',
         description:
-          'A browser clipart maker with verified high-resolution artwork, editable vector elements, regional image editing, typography, and WebP or CMYK PDF export.',
+          'A browser clipart maker with verified high-resolution artwork, editable vector elements, regional image editing, typography, and PNG, JPG, WebP, SVG, PDF and Word export.',
         featureList: [
           'High-resolution clipart library',
           'Layered image and vector composition',
@@ -59,7 +59,8 @@ const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
           'Canvas fitting and export boundary review',
           'Curved text and typography',
           'Sticker and coloring page tools',
-          'WebP and CMYK PDF export',
+          'PNG, JPG, WebP, SVG and CMYK PDF export',
+          'Word document export and browser printing',
         ],
         inLanguage: 'en-US',
       })}
@@ -100,7 +101,15 @@ const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
             {heroArt.map((a, i) => (
               <figure>
                 <div>
-                  <img src={a.thumb} alt="" width={a.width} height={a.height} />
+                  <img
+                    title={a.title}
+                    src={a.thumb}
+                    srcset={a.thumbSrcSet}
+                    sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+                    alt={a.alt}
+                    width={a.width}
+                    height={a.height}
+                  />
                 </div>
                 <figcaption>{['Everyday Life', 'Imagination', 'Music'][i]}</figcaption>
               </figure>
@@ -111,14 +120,26 @@ const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
     </section>
     <nav class="studio-launch" aria-label="Start creating">
       <a href="#studio-workspace" data-studio-launch="elements">
-        <img src={heroArt[0].thumb} alt="" width="70" height="70" />
+        <img
+          title={heroArt[0].title}
+          src={heroArt[0].thumb}
+          alt={heroArt[0].alt}
+          width="70"
+          height="70"
+        />
         <span>
           <strong>Choose Artwork</strong>
           <small>Search the library and add a picture</small>
         </span>
       </a>
       <a href="#studio-workspace" data-studio-launch="create">
-        <img src={heroArt[1].thumb} alt="" width="70" height="70" />
+        <img
+          title={heroArt[1].title}
+          src={heroArt[1].thumb}
+          alt={heroArt[1].alt}
+          width="70"
+          height="70"
+        />
         <span>
           <strong>Draw & Add Shapes</strong>
           <small>Make something from a blank canvas</small>
@@ -183,10 +204,12 @@ const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
         <details>
           <summary>Which file should I download?</summary>
           <p>
-            Choose Image for a WebP file, PDF for CMYK printing, and Save project to keep layers
-            editable. PDF files over the standard 1 MB limit require an explicit larger-file choice.
-            Read the <a href="/guides/webp-pdf-and-editable-projects/">download format guide</a> for
-            details.
+            Choose PNG or WebP to keep transparent areas, or JPG for an image with a white
+            background. SVG preserves scalable shapes and text; included pictures keep their
+            original pixel resolution. PDF is prepared for CMYK printing. Word places your finished
+            design as one image in a DOCX document. Use Save Project to keep your individual layers
+            editable in Studio. Read the{' '}
+            <a href="/guides/webp-pdf-and-editable-projects/">download format guide</a> for details.
           </p>
         </details>
         <details>
@@ -231,10 +254,16 @@ const workspace = { id: 'my-clipart', title: 'My Clipart Project', svg: '' };
 </Layout>
 
 <script>
+  import { ensureEditors } from '../editor/bootstrap';
   document.querySelectorAll<HTMLAnchorElement>('[data-studio-launch]').forEach((link) =>
-    link.addEventListener('click', () => {
+    link.addEventListener('click', async () => {
+      try {
+        await ensureEditors();
+      } catch {
+        return;
+      }
       if (['create', 'text'].includes(link.dataset.studioLaunch || ''))
-        document.querySelector<HTMLButtonElement>('.uc-editor [data-work-mode=advanced]')?.click();
+        document.querySelector<HTMLButtonElement>('.uc-editor [data-work-mode=edit]')?.click();
       if (link.dataset.studioLaunch === 'studio')
         document
           .querySelector<HTMLButtonElement>('.uc-editor button[data-work-mode=print]')

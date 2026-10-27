@@ -1,0 +1,83 @@
+{
+  "reviewedAt": "2026-10-26T18:55:35.299716+00:00",
+  "scope": "Every current subject relationship inspected; these 13 explicit contextual edges were added. No automatic reciprocal link filling. Labubu remains discoverable through its indexable directory and artwork links; no unrelated peer is forced.",
+  "additions": [
+    {
+      "source": "horse",
+      "target": "camel",
+      "reason": "Riding and pack-animal illustration projects."
+    },
+    {
+      "source": "plum",
+      "target": "cherry",
+      "reason": "Closely related stone-fruit subjects for fruit projects."
+    },
+    {
+      "source": "wave",
+      "target": "fire",
+      "reason": "Contrasting water and fire illustration sets, without scientific claims."
+    },
+    {
+      "source": "blackcurrant",
+      "target": "gooseberry",
+      "reason": "Small garden-berry subjects for botanical and food layouts."
+    },
+    {
+      "source": "tangerine",
+      "target": "kumquat",
+      "reason": "Small citrus-fruit subjects for fruit comparison layouts."
+    },
+    {
+      "source": "banana",
+      "target": "monkey",
+      "reason": "Complementary monkey-and-banana themed classroom compositions; not a dietary claim."
+    },
+    {
+      "source": "blackberry",
+      "target": "mulberry",
+      "reason": "Related-looking berry subjects for food and botanical projects."
+    },
+    {
+      "source": "fall",
+      "target": "pilgrim",
+      "reason": "Thanksgiving-related historical and seasonal illustration projects."
+    },
+    {
+      "source": "pear",
+      "target": "quince",
+      "reason": "Orchard-fruit subjects for autumn food and botanical layouts."
+    },
+    {
+      "source": "fox",
+      "target": "raccoon",
+      "reason": "Woodland-animal illustration projects."
+    },
+    {
+      "source": "vr-headset",
+      "target": "smart-glasses",
+      "reason": "Wearable viewing devices, while keeping the product families distinct."
+    },
+    {
+      "source": "halloween",
+      "target": "spider",
+      "reason": "Spiders are a directly relevant Halloween illustration motif."
+    },
+    {
+      "source": "dragon-fruit",
+      "target": "starfruit",
+      "reason": "Tropical-fruit illustration sets."
+    }
+  ],
+  "externalReplacements": {
+    "https://www.edpb.europa.eu/about-edpb/about-edpb/members_en": "https://www.edpb.europa.eu/about-edpb/our-members_en",
+    "https://www.color.org/ICC_white_paper_23_RGB_Workflow.pdf": "https://archive.color.org/files/ICC_white_paper_23_RGB_Workflow.pdf",
+    "https://www.kvkk.gov.tr/Icerik/7353/Cerez-Uygulamalari-Hakkinda-Rehber": "https://www.kvkk.gov.tr/SharedFolderServer/CMSFiles/fb193dbb-b159-4221-8a7b-3addc083d33f.pdf",
+    "https://developers.google.com/speed/webp/": "https://developers.google.com/speed/webp?hl=en",
+    "https://publications.lexmark.com/publications/lexmark_hardware/Paper_and_Specialty_Media_Guide/html/en/GUID-3fcca8c6-5c8b-4d33-bb3a-c30908594b07-en.html": "https://www.w3.org/TR/css-page-3/#page-size-prop"
+  },
+  "removedExternalReference": {
+    "url": "https://support.hp.com/in-en/document/bpq04022",
+    "reason": "Redundant paper-size reference; direct Node fetch returned an unidentifiable HTML shell and web read was blocked. Retained verified Lexmark paper-size reference. Not labeled a confirmed 404."
+  },
+  "paperReferenceReason": "One directly readable W3C page-size section replaces two overlapping vendor references. Its draft status is explicit. No printer-specific support claim is made."
+}

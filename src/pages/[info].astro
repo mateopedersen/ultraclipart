@@ -1,96 +1,102 @@
 ---
+import ContentLink from '../components/ContentLink.astro';
 import Layout from '../layouts/Layout.astro';
 import { infoPages as pages } from '../lib/info-pages';
+import TrustPage from '../components/TrustPage.astro';
+import { trustPages } from '../lib/trust-pages';
 export function getStaticPaths() {
-  return [
-    'license',
-    'contact',
-    'privacy',
-    'terms',
-    'faq',
-    'accessibility',
-    'copyright',
-    'editorial-process',
-  ].map((info) => ({ params: { info } }));
+  return ['license', 'privacy', 'terms', 'faq', 'accessibility', 'copyright'].map((info) => ({
+    params: { info },
+  }));
 }
-const page = pages[Astro.params.info!];
+const slug = Astro.params.info!;
+const page = pages[slug];
+const trust = trustPages[slug];
 ---
 
 <Layout title={page.title} description={page.description}>
-  <article class="prose">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">{page.title}</span>
-    </nav>
-    <h1>{page.title}</h1>
-    {page.sections.map(([heading, body]) => (
-      <section
-        id={heading
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '-')
-          .replace(/-$/, '')}
-      >
-        <h2>{heading}</h2>
-        <p>{body}</p>
-      </section>
-    ))}
-    {Astro.params.info === 'faq' && (
-      <section>
-        <h2>Try a complete project</h2>
-        <p>
-          <a href="/guides/make-a-classroom-label/">Make a readable classroom label</a>,{' '}
-          <a href="/guides/turn-clipart-into-a-coloring-activity/">prepare a coloring activity</a>,
-          or <a href="/guides/webp-pdf-and-editable-projects/">compare download formats</a>. The{' '}
-          <a href="/print-size/">print size calculator</a> helps you choose image dimensions before
-          printing.
-        </p>
-      </section>
-    )}
-    {Astro.params.info === 'license' && (
-      <section>
-        <h2>Studio Vector Icons</h2>
-        <p>
-          The Studio vector library includes icons from Tabler Icons, distributed under the MIT
-          License. These icons retain their own license; the catalog artwork restrictions above do
-          not replace it. The original icon notices are preserved in the editable vector data.
-        </p>
-        <p>
-          <a href="/licenses/tabler-icons-MIT.txt">Read the Tabler Icons MIT License</a>
-        </p>
-      </section>
-    )}
-    {['privacy', 'terms', 'license'].includes(Astro.params.info!) && (
-      <section>
-        <h2>AI service references</h2>
-        <p>
-          Read{' '}
-          <a href="https://developers.cloudflare.com/workers-ai/models/flux-1-schnell/">
-            Cloudflare’s FLUX.1 schnell model documentation
-          </a>
-          , the{' '}
-          <a href="https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/LICENSE.md">
-            model license
-          </a>
-          , <a href="https://www.cloudflare.com/terms/">Cloudflare terms</a> and the{' '}
-          <a href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE">
-            Llama 3.1 license
-          </a>{' '}
-          and <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy policy</a>. See
-          the <a href="/ai-clipart-generator/">AI Clipart Builder</a> for current availability and
-          local editing options.
-        </p>
-      </section>
-    )}
-    <p>
-      <a href="mailto:ultraclipart@gmail.com">Email ultraclipart@gmail.com</a>
-    </p>
-    <div class="chips">
-      <a href="/license/">License</a>
-      <a href="/privacy/">Privacy</a>
-      <a href="/cookies/">Cookie Policy</a>
-      <a href="/contact/">Contact</a>
-      <a href="/editorial-process/">Our process</a>
-    </div>
-  </article>
+  {trust ? (
+    <TrustPage page={trust} slug={slug} />
+  ) : (
+    <article class="prose">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{page.title}</span>
+      </nav>
+      <h1>{page.title}</h1>
+      {page.sections.map(([heading, body]) => (
+        <section
+          id={heading
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/-$/, '')}
+        >
+          <h2>{heading}</h2>
+          <p>{body}</p>
+        </section>
+      ))}
+      {Astro.params.info === 'faq' && (
+        <section>
+          <h2>Try a complete project</h2>
+          <p>
+            <a href="/guides/make-a-classroom-label/">Make a readable classroom label</a>,{' '}
+            <a href="/guides/turn-clipart-into-a-coloring-activity/">prepare a coloring activity</a>
+            , or <a href="/guides/webp-pdf-and-editable-projects/">compare download formats</a>. The{' '}
+            <a href="/print-size/">print size calculator</a> helps you choose image dimensions
+            before printing.
+          </p>
+        </section>
+      )}
+      {Astro.params.info === 'license' && (
+        <section>
+          <h2>Studio Vector Icons</h2>
+          <p>
+            The Studio vector library includes icons from Tabler Icons, distributed under the MIT
+            License. These icons retain their own license; the catalog artwork restrictions above do
+            not replace it. The original icon notices are preserved in the editable vector data.
+          </p>
+          <p>
+            <a href="/licenses/tabler-icons-MIT.txt">Read the Tabler Icons MIT License</a>
+          </p>
+        </section>
+      )}
+      {['privacy', 'terms', 'license'].includes(Astro.params.info!) && (
+        <section>
+          <h2>AI service references</h2>
+          <p>
+            Read{' '}
+            <ContentLink href="https://developers.cloudflare.com/workers-ai/models/flux-1-schnell/">
+              Cloudflare’s FLUX.1 schnell model documentation
+            </ContentLink>
+            , the{' '}
+            <ContentLink href="https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/LICENSE.md">
+              model license
+            </ContentLink>
+            , <ContentLink href="https://www.cloudflare.com/terms/">Cloudflare terms</ContentLink>{' '}
+            and the{' '}
+            <ContentLink href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE">
+              Llama 3.1 license
+            </ContentLink>{' '}
+            and{' '}
+            <ContentLink href="https://www.cloudflare.com/privacypolicy/">
+              Cloudflare privacy policy
+            </ContentLink>
+            . See the <a href="/ai-clipart-generator/">AI Clipart Builder</a> for current
+            availability and local editing options.
+          </p>
+        </section>
+      )}
+      <p>
+        <a href="mailto:ultraclipart@gmail.com">Email ultraclipart@gmail.com</a>
+      </p>
+      <div class="chips">
+        <a href="/license/">License</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/cookies/">Cookie Policy</a>
+        <a href="/contact/">Contact</a>
+        <a href="/editorial-process/">Our process</a>
+      </div>
+    </article>
+  )}
 </Layout>

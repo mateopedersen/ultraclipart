@@ -9,6 +9,8 @@ const picture = (id: string, label: string) => {
   return {
     id: item.id,
     thumb: item.thumb,
+    thumbSrcSet: item.thumbSrcSet,
+    title: item.title,
     alt: item.alt,
     label,
     width: item.width,

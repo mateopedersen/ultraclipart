@@ -1,6 +1,7 @@
 ---
 import { art } from '../lib/catalog';
 import NavigationArrow from './NavigationArrow.astro';
+import StudioMark from './StudioMark.astro';
 const strawberry = art.find((item) => item.id === 'strawberry-fruit-trio-realistic-clipart')!;
 const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart')!;
 ---
@@ -23,17 +24,23 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
             picked.
           </strong>
           <img
+            title={apple.title}
             class="creative-paper-apple"
             src={apple.thumb}
-            alt=""
+            srcset={apple.thumbSrcSet}
+            sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+            alt={apple.alt}
             width="220"
             height="220"
             loading="lazy"
           />
           <img
+            title={strawberry.title}
             class="creative-paper-berry"
             src={strawberry.thumb}
-            alt=""
+            srcset={strawberry.thumbSrcSet}
+            sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+            alt={strawberry.alt}
             width="180"
             height="180"
             loading="lazy"
@@ -68,15 +75,7 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
         <h3>Arrange Clipart on Your Own Canvas</h3>
         <p>Combine illustrations, add a few words and arrange every detail on your own canvas.</p>
         <span class="creative-project-action">
-          <img
-            class="creative-project-action-icon"
-            src="/illustrations/footer/studio.svg"
-            alt=""
-            width="42"
-            height="42"
-            loading="lazy"
-            decoding="async"
-          />
+          <StudioMark size={42} loading="lazy" />
           <span class="creative-project-action-label">Start your design</span>
           <NavigationArrow class="creative-project-action-arrow" size={28} light />
         </span>
@@ -139,7 +138,7 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
 </section>
 <style>
   .creative-projects {
-    margin: 58px 0;
+    margin: 0;
     color: #183557;
   }
   .creative-projects-heading {
@@ -381,9 +380,9 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
   .creative-project-eyebrow {
     display: block;
     margin-bottom: 10px;
-    color: #46688c;
+    color: var(--brand-accent);
     font:
-      650 12px/1.4 'UltraClipart Sans',
+      650 14px/1.4 'UltraClipart Sans',
       Arial,
       sans-serif;
   }
@@ -671,7 +670,7 @@ const apple = art.find((item) => item.id === 'apple-and-wedge-watercolor-clipart
       font-size: 12px;
     }
     .creative-projects {
-      margin: 42px 0;
+      margin: 0;
     }
   }
   @media (max-width: 359px) {

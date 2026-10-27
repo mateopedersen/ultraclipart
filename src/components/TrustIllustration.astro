@@ -1,0 +1,481 @@
+---
+import type { TrustSymbol } from '../lib/trust-pages';
+interface Props {
+  kind: TrustSymbol;
+  id: string;
+}
+const { kind, id } = Astro.props;
+const paint = (name: string) => `url(#${id}-${name})`;
+---
+
+<svg
+  class="trust-illustration"
+  viewBox="0 0 360 286"
+  fill="none"
+  aria-hidden="true"
+  focusable="false"
+>
+  <defs>
+    <linearGradient
+      id={`${id}-paper`}
+      x1="100"
+      y1="38"
+      x2="282"
+      y2="240"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" />
+      <stop offset=".48" stop-color="#fbfdff" />
+      <stop offset="1" stop-color="#dbe8f9" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-blue`}
+      x1="110"
+      y1="42"
+      x2="264"
+      y2="230"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#87c0ff" />
+      <stop offset=".22" stop-color="#3e91ee" />
+      <stop offset=".6" stop-color="#1d64bc" />
+      <stop offset="1" stop-color="#0c2c61" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-edge`}
+      x1="120"
+      y1="75"
+      x2="244"
+      y2="246"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#4c7dbb" />
+      <stop offset=".4" stop-color="#123f7e" />
+      <stop offset="1" stop-color="#071a39" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-metal`}
+      x1="130"
+      y1="80"
+      x2="218"
+      y2="181"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#f8fcff" />
+      <stop offset=".2" stop-color="#96b3d3" />
+      <stop offset=".43" stop-color="#fff" />
+      <stop offset=".58" stop-color="#c2d7ed" />
+      <stop offset=".79" stop-color="#7794b6" />
+      <stop offset="1" stop-color="#e2eefb" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-rim`}
+      x1="99"
+      y1="58"
+      x2="246"
+      y2="222"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#d3ebff" />
+      <stop offset=".3" stop-color="#6aa8ed" />
+      <stop offset=".7" stop-color="#1e5597" />
+      <stop offset="1" stop-color="#8dbcf0" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-glass`}
+      x1="171"
+      y1="112"
+      x2="230"
+      y2="175"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" stop-opacity=".95" />
+      <stop offset=".35" stop-color="#d8edff" stop-opacity=".5" />
+      <stop offset="1" stop-color="#6ca7e9" stop-opacity=".4" />
+    </linearGradient>
+    <linearGradient
+      id={`${id}-shine`}
+      x1="129"
+      y1="48"
+      x2="196"
+      y2="164"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#fff" stop-opacity=".55" />
+      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+    </linearGradient>
+    <radialGradient id={`${id}-ground`}>
+      <stop stop-color="#173f77" stop-opacity=".22" />
+      <stop offset="1" stop-color="#235f9e" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <ellipse cx="184" cy="255" rx="143" ry="26" fill={paint('ground')} />
+  <g transform="rotate(-9 175 145)">
+    <rect x="72" y="45" width="211" height="194" rx="24" fill="#a7c4e6" />
+    <rect
+      x="72"
+      y="39"
+      width="211"
+      height="194"
+      rx="24"
+      fill={paint('paper')}
+      stroke="#b1ccec"
+      stroke-width="2"
+    />
+    <path d="M97 44h160c12 0 21 9 21 21" stroke="white" stroke-width="3" stroke-linecap="round" />
+    <path d="M79 210v-70" stroke="white" stroke-width="2" opacity=".8" />
+  </g>
+  <g>
+    {['terms', 'license', 'editorial'].includes(kind) && (
+      <>
+        <path d="M117 31h117l36 37v168H117z" fill="#8faed0" />
+        <path d="M114 28h117l36 37v168H114z" fill="#cedced" />
+        <path
+          d="M111 25h117l36 37v168H111z"
+          fill={paint('paper')}
+          stroke="#a7c2e2"
+          stroke-width="1.5"
+        />
+        <path d="M115 29h111M115 29v196" stroke="white" stroke-width="2" />
+        <path d="m228 25 36 37h-36z" fill="#c9daef" />
+        <path d="m228 25 2 35 34 2" stroke="#8eb1db" stroke-width="1.5" />
+        <path
+          d="M138 91h94M138 110h68M138 170h93M138 188h80M138 207h47"
+          stroke="#a8bdd8"
+          stroke-width="5"
+          stroke-linecap="round"
+        />
+        <path d="M138 98h76M138 117h48" stroke="#d4e1ef" stroke-width="2" stroke-linecap="round" />
+        <rect x="135" y="47" width="61" height="20" rx="5" fill="#154d92" />
+        <rect x="135" y="44" width="61" height="20" rx="5" fill={paint('blue')} />
+        <path d="M141 47h47" stroke="#99c9ff" stroke-width="1.5" stroke-linecap="round" />
+      </>
+    )}
+    {kind === 'terms' && (
+      <>
+        <path
+          d="M205 60V40a8 8 0 0 1 16 0v24a5 5 0 0 1-10 0V45"
+          stroke="#6e89aa"
+          stroke-width="5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M204 58V39a8 8 0 0 1 16 0v23a5 5 0 0 1-10 0V44"
+          stroke={paint('metal')}
+          stroke-width="3"
+          stroke-linecap="round"
+        />
+        <path d="m224 146 39-9 16 72-39 9z" fill={paint('edge')} />
+        <path
+          d="m217 140 39-9 16 72-39 9z"
+          fill={paint('blue')}
+          stroke="#8bbcf5"
+          stroke-width="1.5"
+        />
+        <path d="m222 143 31-7" stroke="#c0e0ff" stroke-width="2" />
+        <path
+          d="m229 169 11 8 16-26"
+          stroke="#0c376a"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="m228 167 11 8 16-26"
+          stroke="#f1f8ff"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M140 143c14-22 4 10 20-4 6-5 3 9 12 3"
+          stroke="#3b70b2"
+          stroke-width="2.8"
+          stroke-linecap="round"
+        />
+      </>
+    )}
+    {kind === 'privacy' && (
+      <>
+        <path d="m185 36 80 29v66c0 49-38 84-80 105-42-21-80-56-80-105V65z" fill={paint('edge')} />
+        <path d="m178 28 80 29v66c0 49-38 84-80 105-42-21-80-56-80-105V57z" fill={paint('rim')} />
+        <path d="m178 35 73 26v61c0 44-33 77-73 98-40-21-73-54-73-98V61z" fill={paint('blue')} />
+        <path d="m178 40-68 25v57c0 34 20 62 48 82-19-29-27-83 20-164" fill={paint('shine')} />
+        <path
+          d="m178 49 60 22v50c0 35-26 63-60 83-34-20-60-48-60-83V71z"
+          stroke="#add4ff"
+          stroke-width="1.5"
+          opacity=".65"
+        />
+        <path d="m177 30-75 28v60" stroke="#d2ebff" stroke-width="2" stroke-linecap="round" />
+        <g>
+          <path d="M158 122V98a20 20 0 0 1 40 0v24" stroke="#0c3975" stroke-width="15" />
+          <path d="M158 118V96a20 20 0 0 1 40 0v22" stroke={paint('metal')} stroke-width="12" />
+          <path
+            d="M156 103V95a22 22 0 0 1 15-21"
+            stroke="white"
+            stroke-width="2.2"
+            stroke-linecap="round"
+          />
+          <rect x="145" y="117" width="68" height="60" rx="13" fill="#789cbe" />
+          <rect
+            x="142"
+            y="112"
+            width="68"
+            height="60"
+            rx="13"
+            fill={paint('metal')}
+            stroke="#e2f2ff"
+            stroke-width="1.5"
+          />
+          <path d="M151 118h46" stroke="white" stroke-width="2.2" stroke-linecap="round" />
+          <path d="M148 159h55" stroke="#a2b8cf" stroke-width="1" />
+          <circle cx="176" cy="136" r="9" fill="#a4b9cd" />
+          <circle cx="176" cy="137" r="6.5" fill="#163b69" />
+          <path d="M176 141v14" stroke="#163b69" stroke-width="6" stroke-linecap="round" />
+          <path
+            d="M172 132a7 7 0 0 1 8 1"
+            stroke="#071c36"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+        </g>
+      </>
+    )}
+    {kind === 'copyright' && (
+      <>
+        <path
+          d="m119 191-15 48 39-12 18 20 12-55m46-1 14 53 19-21 37 10-17-49"
+          fill={paint('edge')}
+        />
+        <path
+          d="m113 183-16 49 39-13 18 21 13-55m44-1 15 53 19-21 37 10-17-50"
+          fill={paint('blue')}
+        />
+        <circle cx="185" cy="126" r="91" fill="#728fb2" />
+        <circle cx="179" cy="119" r="91" fill={paint('metal')} stroke="#c9dfff" stroke-width="2" />
+        <circle cx="179" cy="119" r="81" fill={paint('edge')} />
+        <circle cx="177" cy="116" r="76" fill={paint('blue')} stroke="#9ac9ff" stroke-width="2" />
+        <path
+          d="M109 112a69 69 0 0 1 102-55"
+          stroke="#d9edff"
+          stroke-width="3"
+          stroke-linecap="round"
+          opacity=".8"
+        />
+        <circle cx="177" cy="116" r="48" stroke="#0f3e79" stroke-width="7" />
+        <circle cx="175" cy="113" r="48" stroke={paint('metal')} stroke-width="6" />
+        <path
+          d="M190 93a27 27 0 1 0 0 42"
+          stroke="#10396c"
+          stroke-width="9"
+          stroke-linecap="round"
+        />
+        <path
+          d="M188 90a27 27 0 1 0 0 42"
+          stroke="#f3faff"
+          stroke-width="7"
+          stroke-linecap="round"
+        />
+        <path d="M147 180a74 74 0 0 0 67-2" stroke="#173c73" stroke-width="2" opacity=".5" />
+      </>
+    )}
+    {kind === 'license' && (
+      <>
+        <path d="m215 155-13 80 27-17 19 23 12-82" fill={paint('edge')} />
+        <path d="m219 157-10 64 20-13 15 19 11-68" fill={paint('blue')} />
+        <path d="m215 214 8-46m20 49 7-46" stroke="#83baff" stroke-width="1.5" />
+        <circle cx="236" cy="151" r="39" fill="#416caa" />
+        <circle cx="232" cy="145" r="39" fill={paint('metal')} />
+        <circle cx="232" cy="145" r="32" fill={paint('blue')} stroke="#b5d8ff" stroke-width="1.5" />
+        <path
+          d="m217 146 11 11 21-25"
+          stroke="#103c75"
+          stroke-width="8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="m216 143 11 11 21-25"
+          stroke="white"
+          stroke-width="6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M201 140a32 32 0 0 1 24-27"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          opacity=".8"
+        />
+      </>
+    )}
+    {kind === 'editorial' && (
+      <>
+        <path d="m226 169 34 35" stroke="#0a2248" stroke-width="19" stroke-linecap="round" />
+        <path d="m226 165 34 35" stroke={paint('edge')} stroke-width="17" stroke-linecap="round" />
+        <path d="m234 170 22 23" stroke="#7c9fc8" stroke-width="3" stroke-linecap="round" />
+        <circle cx="200" cy="144" r="39" fill="#648ab8" />
+        <circle cx="198" cy="139" r="39" fill={paint('metal')} />
+        <circle cx="198" cy="139" r="32" fill={paint('glass')} stroke="#366ba7" stroke-width="3" />
+        <path
+          d="M174 128a27 27 0 0 1 32-14"
+          stroke="white"
+          stroke-width="4"
+          stroke-linecap="round"
+          opacity=".9"
+        />
+        <path
+          d="m185 139 10 10 19-22"
+          stroke="#376fae"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path d="m84 205 45-96 17 8-45 96-21 17z" fill="#14437b" />
+        <path
+          d="m80 199 45-96 17 8-45 96-21 17z"
+          fill={paint('blue')}
+          stroke="#20588f"
+          stroke-width="1.5"
+        />
+        <path d="m125 103 5 2-45 96-5-2z" fill="#9acbff" />
+        <path d="m130 105 7 3-45 96-7-3z" fill="#3c8fe4" />
+        <path d="m76 224 4-25 17 8z" fill="#efd3ae" />
+        <path d="m76 224 2-11 8 4z" fill="#182c48" />
+        <path
+          d="m125 103 4-8a7 7 0 0 1 13 6l-4 10"
+          fill={paint('metal')}
+          stroke="#7d9cbe"
+          stroke-width="1"
+        />
+      </>
+    )}
+    {kind === 'faq' && (
+      <>
+        <path
+          d="M94 63h144a20 20 0 0 1 20 20v88a20 20 0 0 1-20 20h-61l-41 31v-31H94a20 20 0 0 1-20-20V83a20 20 0 0 1 20-20"
+          fill={paint('edge')}
+        />
+        <path
+          d="M89 55h144a20 20 0 0 1 20 20v88a20 20 0 0 1-20 20h-61l-41 31v-31H89a20 20 0 0 1-20-20V75a20 20 0 0 1 20-20"
+          fill={paint('blue')}
+          stroke="#78b5fa"
+          stroke-width="2"
+        />
+        <path
+          d="M88 61h142a17 17 0 0 1 17 17"
+          stroke="#c3e1ff"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+        <path d="M76 79v65" stroke="#85bdff" stroke-width="1.5" opacity=".8" />
+        <path
+          d="M144 100c2-24 41-26 43-1 1 15-23 19-23 34"
+          stroke="#103f7b"
+          stroke-width="10"
+          stroke-linecap="round"
+        />
+        <path
+          d="M142 96c2-24 41-26 43-1 1 15-23 19-23 34"
+          stroke="#f3f9ff"
+          stroke-width="8"
+          stroke-linecap="round"
+        />
+        <circle cx="162" cy="151" r="5" fill="#103f7b" />
+        <circle cx="160" cy="148" r="5" fill="white" />
+        <rect x="214" y="174" width="73" height="49" rx="15" fill="#8caed4" />
+        <rect
+          x="209"
+          y="168"
+          width="73"
+          height="49"
+          rx="15"
+          fill={paint('metal')}
+          stroke="#eff8ff"
+          stroke-width="1.5"
+        />
+        <path d="M219 174h51" stroke="white" stroke-width="1.5" stroke-linecap="round" />
+        <path
+          d="m229 193 10 9 21-22"
+          stroke="#1a518f"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </>
+    )}
+    {kind === 'accessibility' && (
+      <>
+        <rect x="85" y="51" width="192" height="116" rx="17" fill={paint('edge')} />
+        <rect
+          x="80"
+          y="43"
+          width="192"
+          height="116"
+          rx="17"
+          fill={paint('metal')}
+          stroke="#b5d6fa"
+          stroke-width="1.5"
+        />
+        <rect x="87" y="50" width="178" height="101" rx="12" fill="#16385e" />
+        <rect x="96" y="59" width="160" height="82" rx="7" fill={paint('paper')} />
+        <path d="m99 62 149 1-149 73z" fill="white" fill-opacity=".6" />
+        <rect
+          x="113"
+          y="77"
+          width="126"
+          height="46"
+          rx="7"
+          stroke="#266ac4"
+          stroke-width="3"
+          stroke-dasharray="5 4"
+        />
+        <path
+          d="M146 100h61m-17-13 17 13-17 13"
+          stroke="#225a9d"
+          stroke-width="5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path d="m166 160-5 15h34l-6-15" fill={paint('edge')} />
+        <path d="m91 180 163-4 24 50-196 5z" fill="#789dce" />
+        <path
+          d="m91 173 163-4 24 50-196 5z"
+          fill={paint('paper')}
+          stroke="#99b8e0"
+          stroke-width="1.5"
+        />
+        <path d="m90 213 177-4" stroke="white" stroke-width="2" />
+        <rect x="103" y="185" width="57" height="28" rx="6" fill="#0b3972" />
+        <rect
+          x="101"
+          y="180"
+          width="57"
+          height="28"
+          rx="6"
+          fill={paint('blue')}
+          stroke="#94c8ff"
+          stroke-width="1.3"
+        />
+        <path d="M108 183h43" stroke="#a8d4ff" stroke-width="1.5" stroke-linecap="round" />
+        <path
+          d="M115 194h29m-7-6 7 6-7 6m-22-12v12"
+          stroke="white"
+          stroke-width="2.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        {[170, 194, 218].map((x) => (
+          <>
+            <rect x={x} y="182" width="17" height="12" rx="3" fill="#9cb7d8" />
+            <rect x={x} y="180" width="17" height="11" rx="3" fill="#e4eefb" stroke="#aec7e6" />
+            <rect x={x + 4} y="199" width="17" height="12" rx="3" fill="#9cb7d8" />
+            <rect x={x + 4} y="197" width="17" height="11" rx="3" fill="#e4eefb" stroke="#aec7e6" />
+          </>
+        ))}
+      </>
+    )}
+  </g>
+</svg>

@@ -29,7 +29,7 @@ try {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
     timeout: 45000,
   });
-  await page.locator('button[data-work-mode=advanced]').tap();
+  await page.locator('button[data-work-mode=edit]').tap();
   await chooseSelectionTool(page, 'brush');
   await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
   const point = await page.locator('[data-layer="original-image"]').evaluate((g) => {
@@ -93,7 +93,7 @@ try {
   await expect(cpu.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
     timeout: 45000,
   });
-  await cpu.locator('button[data-work-mode=advanced]').click();
+  await cpu.locator('button[data-work-mode=edit]').click();
   await cpu.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await cpu.locator('[data-point-x]').fill('691');
   await cpu.locator('[data-point-y]').fill('691');

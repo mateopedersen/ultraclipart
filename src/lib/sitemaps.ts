@@ -20,14 +20,22 @@ export function xmlEscape(value: string): string {
 
 export const approvedArt = (art: Artwork[]) =>
   art.filter((item) => item.published && item.indexable);
+
+/** Use the same public subset for HTML directories and XML discovery. */
+export function indexableTopics<T extends Topic>(art: Artwork[], topics: T[]): T[] {
+  const counts = new Map<string, number>();
+  for (const item of approvedArt(art)) counts.set(item.topic, (counts.get(item.topic) ?? 0) + 1);
+  return topics.filter((topic) => (counts.get(topic.slug) ?? 0) >= 50);
+}
 const absolute = (path: string) => new URL(path, SITE).href;
 const artUrl = (item: Artwork) => absolute(`art/${encodeURIComponent(item.id)}/`);
 
-export function pageSitemap(art: Artwork[], topics: Topic[]): string {
+function pageEntries(art: Artwork[], topics: Topic[]): string[] {
   const routes = [
     '',
     'categories/',
     'collections/',
+    'library-index/',
     'create/',
     'ai-clipart-generator/',
     'guides/',
@@ -37,6 +45,7 @@ export function pageSitemap(art: Artwork[], topics: Topic[]): string {
     'license/',
     'contact/',
     'privacy/',
+    'cookies/',
     'terms/',
     'faq/',
     'for-teachers/',
@@ -46,15 +55,12 @@ export function pageSitemap(art: Artwork[], topics: Topic[]): string {
   ];
   const urls = routes.map(absolute);
   urls.push(...approvedArt(art).map(artUrl));
-  for (const topic of topics) {
-    const items = art.filter((item) => item.topic === topic.slug);
-    if (items.length >= 50 && items.every((item) => item.published && item.indexable))
-      urls.push(absolute(`clipart/${encodeURIComponent(topic.slug)}/`));
-  }
-  return `${XML}<urlset xmlns="${NS}">${urls.map((url) => `<url><loc>${xmlEscape(url)}</loc></url>`).join('')}</urlset>`;
+  for (const topic of indexableTopics(art, topics))
+    urls.push(absolute(`clipart/${encodeURIComponent(topic.slug)}/`));
+  return [...new Set(urls)].map((url) => `<url><loc>${xmlEscape(url)}</loc></url>`);
 }
 
-export function imageSitemap(art: Artwork[]): string {
+function imageEntries(art: Artwork[]): string[] {
   const items = approvedArt(art);
   if (!items.length)
     throw new Error('Do not publish an empty image sitemap. No artwork is approved for indexing.');
@@ -62,14 +68,58 @@ export function imageSitemap(art: Artwork[]): string {
     (item) =>
       `<url><loc>${xmlEscape(artUrl(item))}</loc><image:image><image:loc>${xmlEscape(absolute(item.webp))}</image:loc></image:image></url>`,
   );
-  return `${XML}<urlset xmlns="${NS}" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">${entries.join('')}</urlset>`;
+  return entries;
 }
 
-export function sitemapIndex(art: Artwork[]): string {
-  // The image child is generated only after a real, reviewed image is indexable.
-  const children = [
-    'sitemap-pages.xml',
-    ...(approvedArt(art).length ? ['sitemap-images.xml'] : []),
+const prefix = (images: boolean) =>
+  `${XML}<urlset xmlns="${NS}"${images ? ' xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"' : ''}>`;
+const suffix = '</urlset>';
+export function partitionSitemapEntries(
+  entries: string[],
+  images = false,
+  maxUrls = 50000,
+  maxBytes = 50 * 1024 ** 2,
+): string[] {
+  const start = prefix(images),
+    overhead = Buffer.byteLength(start + suffix),
+    parts: string[] = [];
+  let chunk: string[] = [],
+    bytes = overhead;
+  for (const entry of entries) {
+    const size = Buffer.byteLength(entry);
+    if (size + overhead > maxBytes) throw Error('One sitemap entry exceeds the XML byte limit');
+    if (chunk.length && (chunk.length >= maxUrls || bytes + size > maxBytes)) {
+      parts.push(start + chunk.join('') + suffix);
+      chunk = [];
+      bytes = overhead;
+    }
+    chunk.push(entry);
+    bytes += size;
+  }
+  if (chunk.length) parts.push(start + chunk.join('') + suffix);
+  return parts;
+}
+export function pageSitemap(art: Artwork[], topics: Topic[]): string {
+  return prefix(false) + pageEntries(art, topics).join('') + suffix;
+}
+export function imageSitemap(art: Artwork[]): string {
+  return prefix(true) + imageEntries(art).join('') + suffix;
+}
+export function sitemapDocuments(art: Artwork[], topics: Topic[] = []) {
+  return [
+    ...partitionSitemapEntries(pageEntries(art, topics)).map((xml, index) => ({
+      kind: index ? `pages-${index + 1}` : 'pages',
+      xml,
+    })),
+    ...(approvedArt(art).length
+      ? partitionSitemapEntries(imageEntries(art), true).map((xml, index) => ({
+          kind: index ? `images-${index + 1}` : 'images',
+          xml,
+        }))
+      : []),
   ];
+}
+export function sitemapIndex(art: Artwork[], topics: Topic[] = []): string {
+  const children = sitemapDocuments(art, topics).map((document) => `sitemap-${document.kind}.xml`);
   return `${XML}<sitemapindex xmlns="${NS}">${children.map((path) => `<sitemap><loc>${xmlEscape(absolute(path))}</loc></sitemap>`).join('')}</sitemapindex>`;
 }

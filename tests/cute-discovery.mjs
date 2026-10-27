@@ -10,6 +10,8 @@ const sample = {
   id: 'smiling-new-fruit',
   topic: 'new-fruit',
   title: 'Smiling new fruit',
+  alt: 'A smiling fruit character with bright eyes, small hands and feet.',
+  discovery: { cute: true },
   style: 'Color',
   published: true,
   indexable: true,
@@ -25,13 +27,50 @@ test('real catalog recognition includes fruit and animals, excludes monochrome a
     assert.ok(cuteConfidence(source) >= 68);
     assert.doesNotMatch(source.style, /Black|Outline|Silhouette/);
   }
-  assert.equal(cuteConfidence({ ...sample, id: 'plain-photo', title: 'A red apple' }), 0);
+  assert.equal(
+    cuteConfidence({
+      ...sample,
+      id: 'plain-photo',
+      title: 'A red apple',
+      alt: 'A plain red apple',
+      discovery: undefined,
+    }),
+    0,
+  );
   assert.ok(
     cuteConfidence({
       ...sample,
       id: 'happy-future-robot',
-      topic: 'future-robots',
+      topic: 'robot',
       title: 'Happy robot',
+    }) > 0,
+  );
+});
+test('decorative materials alone do not make ordinary objects cheerful subjects', () => {
+  for (const [id, title, alt, topic] of [
+    ['mandarin-knitted', 'Knitted mandarin', 'A mandarin made of orange yarn', 'mandarin'],
+    ['apple-crochet', 'Crochet apple', 'An apple made of red yarn with a green leaf', 'apple'],
+    ['pear-felt', 'Felt pear', 'A felt pear with a stitched leaf', 'pear'],
+    ['phone', 'Mobile phone', 'A mobile phone with a blank screen', 'mobile-phone'],
+  ]) {
+    assert.equal(cuteConfidence({ ...sample, id, title, alt, topic }), 0, id);
+  }
+  assert.ok(
+    cuteConfidence({
+      ...sample,
+      id: 'fox-waving',
+      topic: 'fox',
+      title: 'Waving fox in a knitted scarf',
+      alt: 'A cheerful fox waving while wearing a knitted scarf',
+    }) > 0,
+  );
+  assert.ok(
+    cuteConfidence({
+      ...sample,
+      id: 'mom-baby-hug',
+      topic: 'mom',
+      title: 'Mother hugging her baby',
+      alt: 'A mother cuddling her baby',
     }) > 0,
   );
 });
@@ -85,4 +124,20 @@ test('selection avoids recent IDs, the current page and consecutive subjects; sp
     [pool[0]],
   );
   assert.deepEqual(validCuteIndex(new Array(513).fill(pool[0])), []);
+});
+test('topic balancing favors expressive animals without removing cheerful fruit characters', () => {
+  const pool = [
+    { id: 'fox-wave', topic: 'fox' },
+    { id: 'apple-smile', topic: 'apple' },
+  ];
+  let animals = 0,
+    fruit = 0;
+  for (let i = 0; i < 100; i++) {
+    let call = 0;
+    const result = pickCute(pool, [], '', () => (call++ === 0 ? (i + 0.5) / 100 : 0));
+    if (result.topic === 'fox') animals++;
+    else fruit++;
+  }
+  assert.equal(animals, 80);
+  assert.equal(fruit, 20);
 });

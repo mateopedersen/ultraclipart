@@ -14,8 +14,8 @@
 }
 .art-detail .eyebrow {
   margin: 0;
-  font-size: 13px;
-  color: #48698e;
+  font-size: 14px;
+  color: var(--brand-accent);
 }
 .art-detail .preview {
   border: 1px solid #d8e3f1;
@@ -551,7 +551,7 @@
 .art-fact-subject .art-collection-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   min-height: 48px;
   max-width: 100%;
   color: inherit;
@@ -576,31 +576,35 @@
   display: inline-grid;
   place-items: center;
   flex-shrink: 0;
-  width: 46px;
-  height: 46px;
+  width: 40px;
+  height: 40px;
   align-self: center;
   border-radius: 50%;
-  border: 1px solid #b6cee9;
-  border-bottom: 3px solid #94b3db;
-  background: linear-gradient(145deg, #fff, #dcecff);
-  box-shadow:
-    inset 0 2px #fff,
-    0 3px 0 #e6eef9,
-    0 5px 10px #214e7f13;
+  border: 1px solid #c7d8eb;
+  background: #f0f6fd;
   line-height: 0;
-  transition: transform 0.16s ease;
+  transition:
+    background-color 0.16s ease,
+    border-color 0.16s ease;
 }
 .art-collection-link:is(:hover, :focus-visible) .art-collection-arrow {
-  transform: translateX(2px);
+  border-color: #6996c3;
+  background: #e3eefb;
 }
-.art-collection-link:active .art-collection-arrow {
-  transform: translateX(1px) scale(0.96);
+.art-collection-link:focus-visible {
+  outline: 2px solid #245d92;
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 @media (prefers-reduced-motion: reduce) {
   .art-collection-arrow {
     transition: none;
   }
-  .art-collection-link:is(:hover, :focus-visible, :active) .art-collection-arrow {
-    transform: none;
-  }
+}
+
+.art-image-credit {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.82em;
+  line-height: 1.55;
 }

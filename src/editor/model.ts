@@ -87,9 +87,11 @@ export interface RasterLayer extends LayerBase {
 }
 export type Layer = VectorLayer | TextLayer | RasterLayer;
 export interface EditorDocument {
+  title?: string;
   version: 1 | 2;
   selection?: { layerId: string; mask: import('./smart/types').MaskData };
   exportPreferences?: {
+    format?: 'png' | 'jpg' | 'webp' | 'pdf' | 'svg' | 'docx';
     width: number;
     quality: number;
     allowLargePdf: boolean;
@@ -184,8 +186,11 @@ export function validateDocument(value: unknown, artId: string): value is Editor
   const doc = value as EditorDocument;
   return (
     (doc.version === 1 || doc.version === 2) &&
+    (doc.title === undefined || (typeof doc.title === 'string' && doc.title.length <= 120)) &&
     (!doc.exportPreferences ||
-      (Number.isFinite(doc.exportPreferences.width) &&
+      ((!doc.exportPreferences.format ||
+        ['png', 'jpg', 'webp', 'pdf', 'svg', 'docx'].includes(doc.exportPreferences.format)) &&
+        Number.isFinite(doc.exportPreferences.width) &&
         doc.exportPreferences.width >= 1 &&
         doc.exportPreferences.width <= 10000 &&
         Number.isFinite(doc.exportPreferences.quality) &&

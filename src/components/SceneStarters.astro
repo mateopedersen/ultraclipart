@@ -1,19 +1,21 @@
 ---
 import { studioScenes, studioSceneCategories } from '../lib/studio-scenes';
+import { studioCompositionPreviews } from '../lib/studio-composition-previews';
 import { publishedArt } from '../lib/catalog';
 const artworkById = new Map(publishedArt.map((item) => [item.id, item]));
 const categoryName = (id: string) => studioSceneCategories.find(([key]) => key === id)?.[1] || id;
+const previews = new Map(studioCompositionPreviews.map((item) => [item.id, item]));
 ---
 
 <section class="studio-scenes" data-studio-scenes aria-labelledby="scene-title">
   <div class="studio-section-heading">
     <div>
-      <h2 id="scene-title">Choose a Starting Design</h2>
+      <h2 id="scene-title">Made in Clipart Studio</h2>
       <p class="studio-scene-intro">Technology, school, music, sport, celebrations and more.</p>
     </div>
     <p>
-      Open a layout, change its words and arrange the pictures. Each artwork is one image layer; the
-      heading is a separate text layer.
+      Open one of {studioScenes.length} editable projects. Pictures, headings, frames and layout
+      details stay on separate layers, ready for your own ideas.
     </p>
   </div>
   <div class="studio-scene-tools" data-scene-controls hidden>
@@ -49,38 +51,21 @@ const categoryName = (id: string) => studioSceneCategories.find(([key]) => key =
         data-studio-scene={scene.id}
         data-scene-subject={scene.category}
         data-scene-search={`${scene.title} ${scene.caption} ${scene.description} ${categoryName(scene.category)} ${scene.items.map((item) => artworkById.get(item.id)?.title || '').join(' ')}`}
-        aria-label={`Open ${scene.title} in Studio`}
-        aria-describedby={`scene-description-${scene.id}`}
       >
         <span
           class="studio-scene-preview"
           style={`background:${scene.background};color:${scene.color}`}
           aria-hidden="true"
         >
-          <b>{scene.caption}</b>
-          {scene.items.map((item) => {
-            const artwork = artworkById.get(item.id);
-            if (!artwork) throw new Error(`Starting design artwork is not published: ${item.id}`);
-            if (
-              item.x < 0 ||
-              item.y < 0 ||
-              item.width <= 0 ||
-              item.x + item.width > 1400 ||
-              item.y + (item.width * artwork.height) / artwork.width > 1000
-            )
-              throw new Error(`Starting design artwork exceeds the canvas: ${scene.id}/${item.id}`);
-            return (
-              <img
-                src={artwork.thumb}
-                alt=""
-                width={artwork.width}
-                height={artwork.height}
-                loading="lazy"
-                decoding="async"
-                style={`left:${item.x / 14}%;top:${item.y / 10}%;width:${item.width / 14}%;`}
-              />
-            );
-          })}
+          <img
+            src={previews.get(scene.id)!.src}
+            title={`${scene.title} — editable Studio project preview`}
+            alt={`${scene.title} — editable Studio project preview`}
+            width="1400"
+            height="1000"
+            loading="lazy"
+            decoding="async"
+          />
         </span>
         <span class="studio-scene-label">
           <span class="studio-scene-meta">
@@ -114,6 +99,11 @@ const categoryName = (id: string) => studioSceneCategories.find(([key]) => key =
 <style>
   .studio-scenes [hidden] {
     display: none !important;
+  }
+  .studio-scene-preview > img {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
   .studio-scenes {
     padding: 40px 0 24px;

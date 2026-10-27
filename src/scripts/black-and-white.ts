@@ -54,13 +54,20 @@ if (root) {
       collection: params.get('collection') || '',
       topic: params.get('topic') || '',
       kind: params.get('kind') || '',
-      sort: ['title', 'relevance'].includes(params.get('sort') || '')
+      sort: ['newest', 'title', 'relevance'].includes(params.get('sort') || '')
         ? params.get('sort')!
-        : 'newest',
+        : params.get('q')?.trim()
+          ? 'relevance'
+          : 'newest',
       page: Math.min(10000, Math.max(1, Math.floor(Number(params.get('page')) || 1))),
     };
   };
+  let explicitSort = new URLSearchParams(location.search).has('sort');
   let state = readState();
+  const syncQuerySort = () => {
+    if (!explicitSort) state.sort = state.q ? 'relevance' : 'newest';
+    sort.value = state.sort;
+  };
   const options = (
     select: HTMLSelectElement,
     all: string,
@@ -93,7 +100,8 @@ if (root) {
     const params = new URLSearchParams();
     for (const key of ['q', 'collection', 'topic', 'kind'] as const)
       if (state[key]) params.set(key, state[key]);
-    if (state.sort !== 'newest') params.set('sort', state.sort);
+    if (explicitSort || state.sort !== (state.q ? 'relevance' : 'newest'))
+      params.set('sort', state.sort);
     if (state.page > 1) params.set('page', String(state.page));
     const url = `${location.pathname}${params.size ? `?${params}` : ''}${location.hash}`;
     if (url !== location.pathname + location.search + location.hash)
@@ -146,7 +154,7 @@ if (root) {
       title.textContent =
         directory.topics.find((item) => item.slug === state.topic)?.label ||
         directory.collections.find((item) => item.slug === state.collection)?.label ||
-        'All Black & White Clipart';
+        (state.q ? `Results for “${state.q}”` : 'All Black & White Clipart');
       element<HTMLElement>('bw-close-matches').hidden = !found.hasFuzzyMatches;
       previous.disabled = found.page <= 1;
       next.disabled = found.page >= found.pages;
@@ -179,6 +187,7 @@ if (root) {
     }
   }
   function clear() {
+    explicitSort = false;
     state = { q: '', collection: '', topic: '', kind: '', sort: 'newest', page: 1 };
     syncControls();
     void run();
@@ -186,6 +195,7 @@ if (root) {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     state.q = query.value.trim().slice(0, 160);
+    syncQuerySort();
     state.page = 1;
     void run();
   });
@@ -193,11 +203,12 @@ if (root) {
     clearTimeout(timer);
     request?.abort();
     state.q = query.value.trim().slice(0, 160);
+    syncQuerySort();
     state.page = 1;
     timer = setTimeout(() => {
       timer = undefined;
       void run('replace');
-    }, 350);
+    }, 160);
   });
   for (const [select, key] of [
     [collection, 'collection'],
@@ -207,6 +218,7 @@ if (root) {
   ] as const)
     select.addEventListener('change', () => {
       state[key] = select.value;
+      if (key === 'sort') explicitSort = true;
       state.q = query.value.trim().slice(0, 160);
       state.page = 1;
       syncControls();
@@ -232,6 +244,7 @@ if (root) {
     void run('push', true);
   });
   window.addEventListener('popstate', () => {
+    explicitSort = new URLSearchParams(location.search).has('sort');
     state = readState();
     syncControls();
     void run('none');

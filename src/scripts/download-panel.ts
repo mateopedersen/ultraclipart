@@ -157,6 +157,7 @@ async function load(root: HTMLElement, id: string, format: Format) {
       location.origin,
     ).href;
     image.alt = item.alt;
+    image.title = item.title;
     image.addEventListener(
       'error',
       () => {

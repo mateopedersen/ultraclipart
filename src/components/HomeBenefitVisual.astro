@@ -1,4 +1,11 @@
 ---
+import { uiPreview } from '../lib/ui-preview';
+import uiImage0Source from '../../public/home-art/pineapple-print-preview.webp';
+const uiImage0 = await uiPreview(uiImage0Source);
+import uiImage1Source from '../../public/home-art/studio-real-workspace.webp';
+const uiImage1 = await uiPreview(uiImage1Source);
+import uiImage2Source from '../../public/home-art/kitchen-notes-project.webp';
+const uiImage2 = await uiPreview(uiImage2Source);
 import { art } from '../lib/catalog';
 interface Props {
   kind: 'license' | 'formats' | 'studio' | 'privacy';
@@ -12,7 +19,17 @@ const pineapple = art.find((a) => a.id === 'pineapple-whole-and-cut-fruit-realis
   {kind === 'license' && (
     <div class="benefit-greeting">
       <span>Thank You</span>
-      <img src={balloons.thumb} alt="" width="440" height="440" loading="lazy" decoding="async" />
+      <img
+        title={balloons.title}
+        src={balloons.thumb}
+        srcset={balloons.thumbSrcSet}
+        sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+        alt={balloons.alt}
+        width="440"
+        height="440"
+        loading="lazy"
+        decoding="async"
+      />
       <span class="greeting-signature">A card for you</span>
     </div>
   )}
@@ -20,8 +37,11 @@ const pineapple = art.find((a) => a.id === 'pineapple-whole-and-cut-fruit-realis
     <>
       <div class="benefit-image-file">
         <img
+          title={pineapple.title}
           src={pineapple.thumb}
-          alt=""
+          srcset={pineapple.thumbSrcSet}
+          sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+          alt={pineapple.alt}
           width="440"
           height="440"
           loading="lazy"
@@ -31,7 +51,9 @@ const pineapple = art.find((a) => a.id === 'pineapple-whole-and-cut-fruit-realis
       </div>
       <div class="benefit-print-file">
         <img
-          src="/home-art/pineapple-print-preview.webp"
+          src={uiImage0.src}
+          srcset={uiImage0.srcset}
+          sizes="(max-width: 600px) 80vw, (max-width: 1000px) 40vw, 280px"
           alt=""
           width="440"
           height="440"
@@ -45,7 +67,9 @@ const pineapple = art.find((a) => a.id === 'pineapple-whole-and-cut-fruit-realis
   {kind === 'studio' && (
     <div class="benefit-real-workspace">
       <img
-        src="/home-art/studio-real-workspace.webp"
+        src={uiImage1.src}
+        srcset={uiImage1.srcset}
+        sizes="(max-width: 600px) 80vw, (max-width: 1000px) 40vw, 280px"
         alt=""
         width="1100"
         height="914"
@@ -58,7 +82,9 @@ const pineapple = art.find((a) => a.id === 'pineapple-whole-and-cut-fruit-realis
   {kind === 'privacy' && (
     <div class="benefit-saved-project">
       <img
-        src="/home-art/kitchen-notes-project.webp"
+        src={uiImage2.src}
+        srcset={uiImage2.srcset}
+        sizes="(max-width: 600px) 80vw, (max-width: 1000px) 40vw, 280px"
         alt=""
         width="1000"
         height="860"

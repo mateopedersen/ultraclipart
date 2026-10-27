@@ -51,7 +51,10 @@ async function assertHead(path, description) {
     'https://ultraclipart.com' + path,
   );
   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content', description);
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'index,follow');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    'content',
+    'index,follow,max-image-preview:large',
+  );
   await expect(page.locator('meta[property="og:description"]')).toHaveAttribute(
     'content',
     description,

@@ -34,8 +34,15 @@ export const deviceRecords = [
   {
     name: 'Favorites and boards',
     technology: 'Local storage',
-    purpose: 'Artwork you save, your boards, notes and saved dates.',
+    purpose:
+      'Artwork you save, boards, private notes, tags, project stages, pins, board covers and saved dates.',
     duration: 'Until you remove them or clear this site’s storage',
+  },
+  {
+    name: 'Favorites display preferences',
+    technology: 'Local storage',
+    purpose: 'Remembers your preferred card density, page size and note visibility on this device.',
+    duration: 'Until you change these settings or clear this site’s storage',
   },
   {
     name: 'Studio projects and recovery',

@@ -1,0 +1,71 @@
+ULTRACLIPART — KOLEKSİYON VE GÖRSEL METADATA KURALI
+26 Ekim 2026 / Yerel çalışma, yayın yapılmadı.
+
+Amaç
+Yeni içeriklerde eksik görsel başlığı/alt metni, arama sonuçlarına giden
+koleksiyon etiketleri ve alakasız otomatik konu bağlantıları oluşmasını önlemek.
+
+Tek kaynak
+Her yayımlanmış görselin doğal, görsele özel title ve alt alanı data/art.json
+kaydında bulunur. Ortak Card, görsel detay, RelatedCard, arama kartı,
+indirme penceresi, Studio kütüphanesi ve referans seçiciler bu kaydı kullanır.
+Dosya adından ürün modeli veya açıklama uydurulmaz. Branded product incelemesi
+AGENTS.md ve docs/content/product-identification.md kurallarına tabidir.
+Görsel dosyaları ve mevcut ürün kimlikleri bu çalışmada değiştirilmedi.
+
+Koleksiyon ilişkileri
+Tek yetkili liste: data/topic-relations.json.
+Hedefler yalnızca konu slug'larıdır. Arama URL'si, kendine bağlantı,
+tekrarlanan hedef veya kayıt dışı konu kabul edilmez. En fazla altı ilişki vardır.
+İlişkiler görsel/konu anlamına göre editoryal olarak seçilir; rastgele ortak
+kelime veya geniş küme eşleşmesi kullanılmaz. İlgili koleksiyon bulunmuyorsa
+boş dizi [] açıkça tanımlanır; bölüm gösterilmez.
+RelatedCollections.astro yalnızca en az 50 yayımlanmış/indexlenebilir görseli
+bulunan hedefleri gösterir. Kaldırılan/eksilen hedef otomatik gizlenir; ilişkisi
+korunur, hedef yeniden hazır olduğunda gösterilebilir.
+Eski collection-copy.json chips/related alanları import geçmişiyle uyumluluk
+amacıyla yerinde kalır, koleksiyon gezinmesini oluşturmak için kullanılmaz.
+
+Yeni görsel
+Mevcut kayıtlı konuda yayımlanan, doğrulanmış title/alt içeren yeni kayıt
+ortak şablonlarda otomatik görünür; tek tek sayfa düzenlenmez. Sayılar mevcut
+CatalogCount sistemiyle güncellenir. Taslaklar yayımlanmış kataloğa dahil değildir.
+
+Yeni konu
+Konu kaydı, gerçek yayımlanmış görseller ve görsel metinleri hazırlanır.
+Konu indekslenebilir eşiğe geldiğinde topic-relations.json içinde uygun
+hedefler veya açık boş liste bulunmalıdır. Eksik karar yayın kontrolünde durur;
+bu insan anlam incelemesini yanlış bir otomatik tahminle ikame etmez.
+
+Yayın koruması
+scripts/seo/catalog-policy.mjs: veri kuralları.
+scripts/seo/check-catalog.mjs: kaynak kataloğun yerel salt okunur kontrolü.
+Normal build komutunun ilk adımında ve astro.config.mjs yüklenirken çalışır.
+Doğrudan astro build/check/dev çağrısı da kaynak denetimine girer.
+Eksik title/alt, yanlış konu, geçersiz/yinelenen görsel kimliği ve yanlış
+ilişki girdisi hata vererek yayını durdurur. Kontrol içerik veya kişisel veri silmez.
+
+Kalıcı testler
+node --test tests/catalog-policy.mjs tests/collection-navigation.mjs tests/search-suggestions.mjs
+node tests/e2e/collection-navigation.mjs
+UC_BROWSER=webkit node tests/e2e/collection-navigation.mjs
+node tests/e2e/image-metadata.mjs
+npm run seo:catalog:check
+Tarayıcı testleri varsayılan olarak http://127.0.0.1:4323 üzerinde çalışır.
+Üretim URL'sine yanlışlıkla yönlendirmeyi reddeder.
+
+Kanıt
+reports/collection-seo/rapor-tr.html Türkçe ayrıntılı rapordur.
+238 koleksiyon, 66 ilişki düzeltmesi, 790 doğrudan ilgili koleksiyon hedefi;
+Chromium+WebKit 952 koleksiyon/genişlik kontrolü; ek dar/tablet 16 kontrol;
+516 metadata sayfa kontrolü; 14 etkileşim; 12.152 görsel kaydı karşılaştırması.
+İlk başarısız test denemesi ayrıca saklanmıştır; final tekrar temizdir.
+17 unit/regresyon testi geçti. Astro 416 dosyada hata/uyarı/ipucu bildirmedi.
+Görsellerin tamamı bu işte yeniden ürün kimliği incelemesinden geçirilmedi.
+Tüm detay URL'leri yerine her konudan bir temsilci gerçek tarayıcıda açıldı.
+Fiziksel iPhone test edilmedi. SEO/indeksleme garantisi verilmez.
+
+Yerel yayın sınırı
+GitHub push/PR/merge, Cloudflare deploy veya canlı önbellek değişikliği yoktur.
+Canlı katalog yereldekinden ileride olabileceği için ileride yayın yapılırken
+son kaynakla birleştirme gerekir; eski katalogla yeni içeriğin üzerine yazılmaz.

@@ -30,6 +30,7 @@ export interface ArtworkInput {
   licenseStatus?: string;
   reviewStatus?: string;
   thumb?: string;
+  thumbSrcSet?: string;
   webp?: string;
   pdf?: string | null;
   canonicalArtworkId?: string;
@@ -129,6 +130,7 @@ export function safeAsset(value: unknown): value is string {
   if (typeof value !== 'string') return false;
   return (
     /^\/catalog\/[a-z0-9/_-]+\.(?:webp|pdf)$/.test(value) ||
+    /^\/previews\/p\d+\/[a-f0-9]{24}-(?:96|220|440|960)\.webp$/.test(value) ||
     /^https:\/\/assets\.ultraclipart\.com\/[a-zA-Z0-9/_.%-]+\.(?:webp|pdf)$/.test(value)
   );
 }

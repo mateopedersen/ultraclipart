@@ -313,3 +313,32 @@ test('failed fetches can be retried, aborted responses do not enter cache, and n
   await gated.search(defaults);
   assert.ok(calls > callsBefore + 1, 'aborted manifest must be fetched again');
 });
+
+test('progressive search updates obey cancellation and never overwrite a newer query', async () => {
+  const gate = new LatestRequest(),
+    applied = [];
+  let publishOld, finishOld;
+  const old = gate.run(
+    async (_signal, emit) => {
+      publishOld = emit;
+      emit('old-artwork');
+      return await new Promise((resolve) => {
+        finishOld = resolve;
+      });
+    },
+    (value) => applied.push(value),
+    () => applied.push('old-error'),
+  );
+  await gate.run(
+    async (_signal, emit) => {
+      emit('new-artwork');
+      return 'new-directory';
+    },
+    (value) => applied.push(value),
+    () => applied.push('new-error'),
+  );
+  publishOld('late-old-directory');
+  finishOld('old-final');
+  await old;
+  assert.deepEqual(applied, ['old-artwork', 'new-artwork', 'new-directory']);
+});

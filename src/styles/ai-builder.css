@@ -59,7 +59,7 @@
   font-weight: 700;
 }
 .ai-heading h1 span {
-  color: #0863e8;
+  color: var(--brand-accent);
 }
 .ai-heading p {
   font-size: clamp(16px, 1.35vw, 20px);
@@ -79,7 +79,7 @@
 }
 .ai-section-heading > span,
 .ai-board-heading h2 > span {
-  color: #0864ee;
+  color: var(--brand-accent);
   font-weight: 700;
 }
 .ai-field-label {

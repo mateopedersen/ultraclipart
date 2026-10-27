@@ -1,5 +1,5 @@
 import { defaults, normalizeQuery, parseState, stateParams, type SearchState } from '../lib/search';
-import { SearchRepository } from '../lib/search-remote';
+import { SearchRepository, type RemoteResults } from '../lib/search-remote';
 import { LatestRequest } from '../lib/search-request';
 import { searchSiteEntries, searchKindLabels, type SiteSearchEntry } from '../lib/site-search';
 import type { SearchCard } from '../lib/search-index';
@@ -35,6 +35,7 @@ export function initSearch() {
   let state: SearchState = parseState(new URLSearchParams(location.search)),
     timer: ReturnType<typeof setTimeout> | undefined,
     composing = false;
+  let renderedArtwork: RemoteResults | undefined;
   let siteLimit = 8,
     siteMatches: ReturnType<typeof searchSiteEntries> = [];
   function historyUrl(mode: 'push' | 'replace' | 'none') {
@@ -101,20 +102,31 @@ export function initSearch() {
     count.textContent = 'Searching UltraClipart…';
     document.documentElement.setAttribute('data-search-pending', '');
     siteLimit = 8;
-    void requests.run(
-      async (signal) => {
-        const sitePromise = (async () => {
-          if (!requested.q && ['all', 'artwork'].includes(requested.type)) return null;
-          const manifest = await repository.manifest(signal);
-          return repository.siteEntries(manifest, signal);
-        })();
-        const [result, entries] = await Promise.all([
-          repository.search(requested, signal),
-          sitePromise,
-        ]);
-        return { result, entries };
+    void requests.run<{
+      result: RemoteResults;
+      entries: SiteSearchEntry[] | null;
+      sitePending: boolean;
+      siteError: boolean;
+    }>(
+      async (signal, emit) => {
+        const loadSite = () =>
+          (async () => {
+            if (!requested.q && ['all', 'artwork'].includes(requested.type)) return null;
+            const manifest = await repository.manifest(signal);
+            return repository.siteEntries(manifest, signal);
+          })().then(
+            (entries) => ({ entries, siteError: false }),
+            () => ({ entries: null, siteError: true }),
+          );
+        const sitePromise = artMode ? undefined : loadSite();
+        const result = await repository.search(requested, signal);
+        // Artwork does not wait for the separate page/Studio directory. Both
+        // stages use the same cancellation guard, including cached responses.
+        if (artMode) emit({ result, entries: null, sitePending: !!requested.q, siteError: false });
+        const { entries, siteError } = await (sitePromise || loadSite());
+        return { result, entries, sitePending: false, siteError };
       },
-      ({ result, entries }) => {
+      ({ result, entries, sitePending, siteError }) => {
         document.documentElement.removeAttribute('data-search-pending');
         const allSite = entries ? searchSiteEntries(entries, requested.q) : [];
         siteMatches = allSite.filter(
@@ -125,7 +137,10 @@ export function initSearch() {
         const page = artMode ? result.page : Math.min(pages, Math.max(1, requested.page));
         state.page = page;
         if (page !== requested.page) historyUrl('replace');
-        gallery.replaceChildren(...(artMode ? result.items.map(renderCard) : []));
+        if (renderedArtwork !== result) {
+          gallery.replaceChildren(...(artMode ? result.items.map(renderCard) : []));
+          renderedArtwork = result;
+        }
         gallery.hidden = !artMode || !result.items.length;
         gallery.setAttribute('aria-busy', 'false');
         siteRows(
@@ -134,7 +149,16 @@ export function initSearch() {
             : siteMatches.slice((page - 1) * requested.size, page * requested.size)
           ).map((match) => match.entry),
         );
-        siteSection.hidden = requested.type === 'artwork' || !siteMatches.length;
+        siteSection.hidden =
+          requested.type === 'artwork' || (!siteMatches.length && !sitePending && !siteError);
+        const directoryStatus = q('#site-search-status');
+        directoryStatus.textContent = sitePending
+          ? 'Finding pages, tools and Studio elements…'
+          : siteError
+            ? 'Pages and tools could not load. Your artwork results are still available.'
+            : '';
+        directoryStatus.hidden = !sitePending && !siteError;
+        q('#site-search-retry').hidden = !siteError;
         q('#site-search-title').textContent =
           requested.type === 'all'
             ? 'Pages, Tools & Studio Elements'
@@ -159,7 +183,9 @@ export function initSearch() {
             ? `${result.total.toLocaleString('en-US')} artworks${allSite.length ? ` · ${allSite.length.toLocaleString('en-US')} pages, tools & Studio elements` : ''}${suffix}`
             : `${activeTotal.toLocaleString('en-US')} ${requested.type === 'artwork' ? 'artworks' : searchKindLabels[requested.type].toLowerCase()}${suffix}`;
         empty.hidden =
-          requested.type === 'all' ? result.total + siteMatches.length > 0 : activeTotal > 0;
+          sitePending ||
+          siteError ||
+          (requested.type === 'all' ? result.total + siteMatches.length > 0 : activeTotal > 0);
         q('#empty-description').textContent = requested.q
           ? 'No complete match for this description. Try fewer details, another word, or clear the filters.'
           : 'Choose another result type or clear the filters.';
@@ -312,10 +338,12 @@ export function initSearch() {
     render('push');
     query.focus();
   });
-  q('#search-retry').addEventListener('click', () => {
+  const retrySearch = () => {
     repository.clear();
     render();
-  });
+  };
+  q('#search-retry').addEventListener('click', retrySearch);
+  q('#site-search-retry').addEventListener('click', retrySearch);
   window.addEventListener('popstate', () => {
     clearTimeout(timer);
     timer = undefined;

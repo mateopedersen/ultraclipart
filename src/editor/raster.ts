@@ -1,11 +1,13 @@
 import { clone, identity, type EditorDocument, type RasterLayer } from './model';
-import { verifiedSourceUrl, type VerifiedRepresentation as Representation } from './source-policy';
+import type { VerifiedRepresentation as Representation } from './source-policy';
+import { readVerified } from './verified-fetch';
 export interface RasterAsset {
   id: string;
   width: number;
   height: number;
   webp: Representation;
   pdf: Representation;
+  screen?: { url: string; width: number; height: number };
 }
 export interface LocalSource {
   id: string;
@@ -22,46 +24,6 @@ interface LoadedAsset {
 // Projects contain compact, hash-bound references, never executable image URLs.
 // Only the current catalog page can register a source. Undo does not copy bitmap bytes.
 const assets = new Map<string, LoadedAsset>();
-async function readVerified(file: Representation, kind: 'webp' | 'pdf') {
-  const url = verifiedSourceUrl(file, kind, location.origin);
-  const response = await fetch(url, {
-    mode: 'cors',
-    credentials: 'omit',
-    cache: 'reload',
-    redirect: 'error',
-    signal: AbortSignal.timeout(30000),
-  });
-  const mime = kind === 'pdf' ? 'application/pdf' : 'image/webp';
-  if (
-    !response.ok ||
-    response.headers.get('content-type')?.split(';')[0] !== mime ||
-    !response.body
-  )
-    throw new Error('The artwork could not be loaded. Reconnect and refresh to retry.');
-  const buffer = new Uint8Array(file.bytes),
-    reader = response.body.getReader();
-  let offset = 0;
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      if (offset + value.byteLength > buffer.length) {
-        await reader.cancel();
-        throw new Error('Artwork source exceeds its verified size.');
-      }
-      buffer.set(value, offset);
-      offset += value.byteLength;
-    }
-  } finally {
-    reader.releaseLock();
-  }
-  const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', buffer))]
-    .map((v) => v.toString(16).padStart(2, '0'))
-    .join('');
-  if (offset !== file.bytes || hash !== file.sha256)
-    throw new Error('Artwork source verification failed. No edits or exports have been changed.');
-  return buffer;
-}
 export async function openRaster(asset: RasterAsset): Promise<EditorDocument> {
   if (
     !/^[a-z0-9-]+$/.test(asset.id) ||
@@ -80,7 +42,22 @@ export async function openRaster(asset: RasterAsset): Promise<EditorDocument> {
   await image.decode();
   if (image.naturalWidth !== asset.width || image.naturalHeight !== asset.height)
     throw new Error('Image dimensions differ from the verified catalog.');
-  assets.set(asset.id, { asset, preview, image });
+  let screen = asset.screen;
+  if (screen) {
+    try {
+      if (!/^\/previews\/p1\/[a-f0-9]{24}-960\.webp$/.test(screen.url))
+        throw Error('Invalid screen copy');
+      const display = new Image();
+      display.src = screen.url;
+      await display.decode();
+      if (display.naturalWidth !== screen.width || display.naturalHeight !== screen.height)
+        throw Error('Invalid screen dimensions');
+    } catch {
+      // A missing display derivative must not strand a verified original.
+      screen = undefined;
+    }
+  }
+  assets.set(asset.id, { asset: { ...asset, screen }, preview, image });
   return {
     version: 2,
     artId: asset.id,
@@ -117,8 +94,19 @@ export function requireRaster(layer: RasterLayer) {
     throw new Error('This project references an image that is not available for this artwork.');
   return loaded;
 }
-export function rasterPreview(layer: RasterLayer) {
-  return requireRaster(layer).preview;
+export function rasterPreview(layer: RasterLayer, screenScale = Infinity) {
+  const loaded = requireRaster(layer),
+    screen = loaded.asset.screen;
+  // Screen copies never enter pixel processing, project data or exports. The
+  // original is still verified before enabling editing; zoom uses its full detail.
+  if (
+    screen &&
+    /^\/previews\/p1\/[a-f0-9]{24}-960\.webp$/.test(screen.url) &&
+    screen.width >= layer.width * Math.abs(layer.scaleX) * screenScale &&
+    screen.height >= layer.height * Math.abs(layer.scaleY) * screenScale
+  )
+    return screen.url;
+  return loaded.preview;
 }
 export function rasterPixels(layer: RasterLayer) {
   const loaded = requireRaster(layer),
@@ -131,6 +119,36 @@ export function rasterPixels(layer: RasterLayer) {
   return context.getImageData(0, 0, layer.width, layer.height);
 }
 let catalog: Promise<RasterAsset[]> | undefined;
+export interface StudioCategory {
+  id: string;
+  title: string;
+  thumb: string;
+  topics: { id: string; title: string; count: number; thumb: string }[];
+}
+let featuredCatalog:
+  | Promise<{
+      items: RasterAsset[];
+      total: number;
+      topics: string[];
+      categories?: StudioCategory[];
+    }>
+  | undefined;
+export function featuredRasterCatalog() {
+  return (featuredCatalog ??= fetch('/studio-featured.json')
+    .then(async (response) => {
+      if (!response.ok) throw new Error('The featured library could not be loaded.');
+      return (await response.json()) as {
+        items: RasterAsset[];
+        total: number;
+        topics: string[];
+        categories?: StudioCategory[];
+      };
+    })
+    .catch((error) => {
+      featuredCatalog = undefined;
+      throw error;
+    }));
+}
 export function rasterCatalog() {
   return (catalog ??= fetch('/studio-catalog.json')
     .then(async (response) => {

@@ -1,0 +1,118 @@
+ULTRACLIPART — ASSETS TARAMA VE İNDEKSLEME İNCELEMESİ
+26 Ekim 2026 · Yalnızca yerel hazırlık
+
+SONUÇ
+assets.ultraclipart.com için geçerli bir robots.txt hazırlandı. Bu çalışmada
+R2'ye yükleme, GitHub'a gönderim, Cloudflare yayını, önbellek temizliği veya
+Search Console gönderimi yapılmadı. Canlı robots.txt hâlâ 404 dönüyor.
+
+CANLIDA GERÇEKTEN KONTROL EDİLENLER
+- https://assets.ultraclipart.com/robots.txt: HTTP 404, Content-Type text/html.
+  Normal istemci, Googlebot-Image ve Bingbot kullanıcı aracısı ile aynı durum.
+  Bu kullanıcı aracısı denemesi, doğrulanmış Googlebot ağı testi değildir.
+- Bu 404 yanıtında Cache-Control: max-age=14400 ve Cloudflare HIT gözlendi.
+- Ana alanın robots.txt ve iki sitemap yanıtı HTTP 200.
+- Canlı sitemap-images.xml: 12.302 farklı görsel URL'si; tamamı assets alanında.
+- Eski/orta/yeni kayıtlar ve canlıdaki ek kayıtlardan 12 dosya örneği:
+  HTTP 200, beklenen WebP/PDF MIME türü, kısıtlayıcı X-Robots-Tag yok.
+  12.302 dosyanın her birine ayrı HTTP isteği yapıldığı iddia edilmiyor.
+- Canlı katalog, bu çalışma klasöründeki 12.152 kayıttan 150 görsel ileride.
+  Bunlar indeksleme hatası olarak sınıflandırılmadı. Eski yerel katalog canlıdaki
+  yeni kayıtların üzerine yayımlanmamalı; sonraki site yayını güncel kaynakla
+  birleştirilmelidir. Assets robots dosyası katalog listesinden bağımsızdır.
+
+TEKNİK OLARAK DOĞRU POLİTİKA
+robots.txt içinde 'Index: /', 'index,follow' veya HTML meta etiketi kullanılmaz.
+Dosya taramayı yönetir, bir arama motoruna indeksleme garantisi vermez.
+Google, robots.txt için 404 yanıtını genel olarak tarama kısıtı yokmuş gibi
+kabul eder. Dolayısıyla eksik robots dosyası görsellerin kesin engellendiğinin
+kanıtı değildir; açık ve yönetilebilir tarama politikası ekleniyor.
+
+Hazırlanan dosyanın etkin kuralları:
+User-agent: *
+Allow: /
+Sitemap: https://ultraclipart.com/sitemap.xml
+
+Yıldız grubu Googlebot, Googlebot-Image, Bingbot ve kurala uyan diğer tarayıcıları
+kapsar. Tek tek bot grupları, desteklenmeyen Index/Noindex alanları ve yapay
+tarama gecikmeleri eklenmedi. Sitemap index mevcut görsel sitemap'ine bağlıdır;
+yeni yayımlanan görseller normal sitemap üretimine otomatik katılır.
+Robots dosyası tüm içeriği listelemediği için her yeni görselde değişmesi gerekmez.
+
+YEREL DEĞİŞİKLİKLER
+1. config/assets/robots.txt: CDN köküne ait bağımsız, UTF-8 robots dosyası.
+2. scripts/seo/prepare-assets-robots.mjs: yalnızca yerel yayın paketi üretir.
+   Hedef: https://assets.ultraclipart.com/robots.txt
+   Beklenen bucket: ultraclipart-media; yazmadan önce alan bağlantısı doğrulanır.
+   Object key: robots.txt
+   Content-Type: text/plain; charset=utf-8
+   Cache-Control: public, max-age=300, must-revalidate
+   Çıktılar: work/assets-indexing/robots.txt ve deployment-plan.json.
+   Her hazırlıkta byte sayısı ve SHA256 hesaplanır. Uzaktan yazma özelliği yoktur.
+3. src/layouts/Layout.astro: indekslenebilir sayfalara
+   index,follow,max-image-preview:large eklendi. Bu büyük görsel önizlemelerine
+   izin verir; gösterim ve indeksleme kararını Google verir. noindex sayfalar
+   noindex,follow olarak kaldı. Kanonik adresler değiştirilmedi.
+4. src/lib/sitemaps.ts: zaten indekslenebilir Cookie Policy sayfası sitemap'e
+   eklendi. Arama, favoriler, paylaşım ve düzenleyici adresleri eklenmedi.
+5. scripts/seo/audit-assets-indexing.mjs: kimlik bilgisi kullanmadan yalnızca
+   kamuya açık GET/HEAD istekleri yapar. Robots, sitemap, örnek dosya MIME ve
+   X-Robots-Tag değerlerini kaydeder. Yayınlama veya önbellek silme yapamaz.
+6. İlgili mevcut sayfa testleri yeni meta değerini bekleyecek şekilde güncellendi.
+
+ÇALIŞTIRILAN DOĞRULAMA
+- 8 otomatik test geçti: robots politikası, yanlış direktiflerin reddi,
+  sitemap XML kaçışları, taslak/noindex ayrımı ve tüm 12.152 yerel yayımlanmış
+  görselin doğrulanmış CDN orijinaliyle bire bir sitemap eşleşmesi.
+- Yerel sunucudan 14 sayfa türünün oluşturulmuş HTML yanıtları okundu:
+  büyük önizleme izni, noindex ayrımı, tek robots meta etiketi ve üretim
+  kanonik alanı doğrulandı. Hata yok.
+- Astro kontrolü: 408 dosya, 0 hata, 0 uyarı, 0 ipucu.
+- Canlı denetim başarılı yanıtları ayrı, eksik assets robots dosyasını ayrı
+  raporlar. Denetimin başarısız çıkış kodu bu henüz yayımlanmamış 404 içindir;
+  canlı robots kontrolü geçmiş olarak işaretlenmedi.
+
+YAYIN İZNİ VERİLDİKTEN SONRA UYGULANACAK ADIMLAR
+1. Assets özel alanının beklenen R2 bucket'a bağlı olduğunu doğrula. Ana site
+   public/robots.txt dosyası ile CDN robots dosyasını birbirine karıştırma.
+2. Hazırlanan robots.txt dosyasını bucket köküne belirtilen MIME ve cache
+   metadata'sıyla yükle. Normal Cloudflare Pages yayını bu R2 nesnesini yüklemez.
+3. Eski 404 CDN'de önbelleğe alındığı için yalnızca
+   https://assets.ultraclipart.com/robots.txt URL'sini temizle; tüm görsel
+   önbelleklerini veya ziyaretçilerin tarayıcı verilerini temizleme.
+4. Gerçek URL'den GET ile HTTP 200, UTF-8 düz metin, tam byte/SHA256 eşleşmesi,
+   izin kuralları ve güncel cache başlıklarını tekrar doğrula. Cloudflare kuralı
+   nesne metadata'sını geçersiz kılıyorsa yalnızca bu yol için düzelt.
+5. Site meta/sitemap değişikliklerini güncel ana kaynakla birleştirerek ayrı site
+   yayınına al; yerel eski katalogla canlıdaki 150 yeni görselin üzerine yazma.
+6. Search Console'da CDN alt alanını kapsayan sahiplik doğrulamasını kontrol et.
+   Görsel sitemap ana sitede kalabilir; Google farklı alanlardaki image:loc
+   adreslerini destekler. Google'ın yeniden tarama ve indeksleme süresi için
+   kesin tarih veya tüm görsellerin indekslenmesi garantisi verilmez.
+
+KAYNAKLAR (resmî belgeler, 26 Ekim 2026 tarihinde incelendi)
+- https://developers.google.com/crawling/docs/robots-txt/robots-txt-spec
+  robots kapsamı, 404 davranışı, desteklenen alanlar, önbellekleme.
+- https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps
+  farklı alanlardaki görseller ve sahiplik doğrulaması.
+- https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+  index/noindex, X-Robots-Tag ve max-image-preview:large.
+- https://developers.cloudflare.com/r2/buckets/public-buckets/
+  R2 özel alanı ve kamuya açık nesne sunumu.
+
+KANIT DOSYALARI
+reports/assets-indexing/live-audit.json
+reports/assets-indexing/live-sitemap-images.xml
+reports/assets-indexing/local-meta.json
+reports/assets-indexing/tests.log
+reports/assets-indexing/astro-check.log
+
+AYNI GÜN EK ÇALIŞMA — KÜTÜPHANE DİZİNİ
+/library-index/ sayfası, ortak uygunluk filtresi ve XML bağlantısı eklendi.
+Güncel yerel robots paketi 271 byte; SHA256:
+368b584846aea9f357c27612d9edd448bdb829afb8588ed5078c1eb031b5fa61
+Güncel test kapsamı 22 birim testi, 15 meta/canonical sayfa türü ve 419 dosyalık
+Astro kontrolüdür. 238 konulu yeni sayfanın 263 bağlantısı ve 8 tarayıcı/ekran
+birleşimi ayrıca kontrol edildi. Yukarıdaki 8/14/408 sayıları önceki turundur.
+Ayrıntılı güncel rapor: docs/library-index-2026-10-26.txt.
+Canlı assets robots bu ek turda da HTTP 404; henüz yayımlanmadı.

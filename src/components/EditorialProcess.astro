@@ -1,0 +1,304 @@
+---
+import EditorialIllustration from './EditorialIllustration.astro';
+import TeacherSymbol from './TeacherSymbol.astro';
+import { publishedArt } from '../lib/catalog';
+import { trustContact, trustReviewed, type TrustPage } from '../lib/trust-pages';
+import '../styles/editorial-process.css';
+
+interface Props {
+  page: TrustPage;
+}
+const { page } = Astro.props;
+const sections = new Map(page.sections.map((section) => [section.id, section]));
+const stages = [
+  { id: 'purpose', label: 'The brief', kind: 'brief' },
+  { id: 'composition', label: 'Composition', kind: 'composition' },
+  { id: 'identification', label: 'Identity', kind: 'identity' },
+  { id: 'visual-review', label: 'Visual review', kind: 'review' },
+  { id: 'files', label: 'Matching files', kind: 'files' },
+  { id: 'release', label: 'Publication', kind: 'publish' },
+] as const;
+const example = publishedArt.find((item) => item.id === 'floral-heart-roses-wreath-clipart');
+if (!example) throw new Error('The editorial example must be a published catalog artwork.');
+const reviewed = new Intl.DateTimeFormat('en', {
+  month: 'long',
+  day: 'numeric',
+  year: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(`${trustReviewed}T12:00:00Z`));
+---
+
+<article class="trust-page editorial-page" data-trust-page="editorial-process">
+  <nav class="breadcrumb ep-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span aria-hidden="true">/</span>
+    <span aria-current="page">{page.title}</span>
+  </nav>
+  <header class="trust-hero ep-hero">
+    <div class="ep-hero-copy">
+      <h1>{page.title}</h1>
+      <p class="ep-lead">{page.intro}</p>
+      <p>
+        Behind every catalog entry are choices about the subject, the image, and the way it reaches
+        your project. Here is what we look for, what our checks can tell us, and how a correction is
+        handled.
+      </p>
+      <div class="ep-actions">
+        <a class="ep-button" href="#process">
+          Explore the process <span aria-hidden="true">↓</span>
+        </a>
+        <a class="ep-text-link" href="/categories/">
+          Browse the library <span aria-hidden="true">→</span>
+        </a>
+      </div>
+      <p class="ep-reviewed">
+        Last reviewed <time datetime={trustReviewed}>{reviewed}</time>
+      </p>
+    </div>
+    <figure class="ep-hero-visual">
+      <div class="ep-paper ep-paper-back" aria-hidden="true"></div>
+      <div class="ep-paper ep-example-sheet">
+        <span class="ep-sheet-rule" aria-hidden="true"></span>
+        <img
+          src={example.thumb}
+          srcset={example.previewSrcSet}
+          sizes="(max-width: 760px) 250px, 300px"
+          alt={example.alt}
+          title={example.title}
+          width={example.width}
+          height={example.height}
+          fetchpriority="high"
+        />
+        <a href={`/art/${example.id}/`} data-editorial-example={example.id}>
+          {example.title} <span aria-hidden="true">↗</span>
+        </a>
+        <span class="ep-example-caption">An illustration from the UltraClipart library</span>
+      </div>
+      <div class="ep-hero-object" aria-hidden="true">
+        <EditorialIllustration kind="brief" id="ep-hero-brief" />
+      </div>
+      <figcaption>The same artwork, with a consistent title, preview, and set of files.</figcaption>
+    </figure>
+  </header>
+
+  <div class="ep-principles" aria-label="What guides our reviews">
+    {page.highlights.map((item, i) => (
+      <div>
+        <span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+        <p>{item}</p>
+      </div>
+    ))}
+  </div>
+
+  <div class="ep-process-intro" id="process">
+    <h2>From the first brief to a usable download</h2>
+    <p>
+      Creative review and technical validation do different jobs. These six parts of the process
+      bring them together.
+    </p>
+  </div>
+  <nav class="ep-workflow" aria-label="Editorial workflow">
+    <ol>
+      {stages.map((stage, i) => (
+        <li>
+          <a href={`#${stage.id}`}>
+            <span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            {stage.label}
+          </a>
+        </li>
+      ))}
+    </ol>
+  </nav>
+
+  <div class="ep-stages">
+    {stages.map((stage, i) => {
+      const section = sections.get(stage.id)!;
+      return (
+        <section
+          class:list={['trust-section', 'ep-stage', { 'ep-stage-reverse': i % 2 === 1 }]}
+          id={section.id}
+          aria-labelledby={`heading-${section.id}`}
+        >
+          <div class="ep-stage-art">
+            <EditorialIllustration kind={stage.kind} id={`ep-stage-${stage.id}`} />
+            <span class="ep-stage-index" aria-hidden="true">
+              {String(i + 1).padStart(2, '0')}
+            </span>
+          </div>
+          <div class="ep-stage-copy">
+            <h2 id={`heading-${section.id}`}>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+            {section.bullets && (
+              <ul class="ep-checks">
+                {section.bullets.map((item) => (
+                  <li>
+                    <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                      <path d="m4 10 4 4 8-9" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {section.id === 'files' && (
+              <div class="ep-file-pair" aria-label="Original artwork and print formats">
+                <div>
+                  <img
+                    src="/illustrations/actions/image.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                    loading="lazy"
+                  />
+                  <span>
+                    Image<strong>Original artwork</strong>
+                  </span>
+                </div>
+                <div>
+                  <img
+                    src="/illustrations/actions/document.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                    loading="lazy"
+                  />
+                  <span>
+                    PDF<strong>Print format</strong>
+                  </span>
+                </div>
+              </div>
+            )}
+            {section.links && (
+              <ul class="ep-links" aria-label={`Useful links: ${section.title}`}>
+                {section.links.map((link) => (
+                  <li>
+                    <a href={link.href}>
+                      {link.label}
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </section>
+      );
+    })}
+  </div>
+
+  {['catalog', 'responsibilities', 'rights'].map((id) => {
+    const section = sections.get(id)!;
+    return (
+      <section
+        class:list={['trust-section', 'ep-context', `ep-context-${id}`]}
+        id={id}
+        aria-labelledby={`heading-${id}`}
+      >
+        <div class="ep-context-heading">
+          <TeacherSymbol
+            kind={id === 'catalog' ? 'boards' : id === 'responsibilities' ? 'edit' : 'book'}
+            size={88}
+          />
+          <h2 id={`heading-${id}`}>{section.title}</h2>
+        </div>
+        <div class="ep-context-copy">
+          {section.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+          {id === 'responsibilities' && (
+            <div class="ep-roles">
+              <p>
+                <strong>Melih</strong>
+                <span>Design &amp; Creative Direction</span>
+              </p>
+              <p>
+                <strong>Mustafa</strong>
+                <span>Software &amp; Infrastructure</span>
+              </p>
+            </div>
+          )}
+          {section.links && (
+            <ul class="ep-links" aria-label={`Useful links: ${section.title}`}>
+              {section.links.map((link) => (
+                <li>
+                  <a href={link.href}>
+                    {link.label}
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </section>
+    );
+  })}
+
+  {(() => {
+    const section = sections.get('corrections')!;
+    return (
+      <section
+        class="trust-section ep-corrections"
+        id="corrections"
+        aria-labelledby="heading-corrections"
+      >
+        <div class="ep-correction-copy">
+          <img
+            src="/illustrations/actions/contact.svg"
+            alt=""
+            width="84"
+            height="84"
+            loading="lazy"
+          />
+          <h2 id="heading-corrections">{section.title}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </div>
+        <div class="ep-report-guide">
+          <h3>What to include</h3>
+          <ol>
+            {section.bullets?.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ol>
+          <a class="ep-button" href={section.links![0].href}>
+            Email an editorial correction <span aria-hidden="true">↗</span>
+          </a>
+          <a class="ep-contact-address" href={`mailto:${trustContact}`}>
+            {trustContact}
+          </a>
+          <a class="ep-text-link" href={section.links![1].href}>
+            {section.links![1].label}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+    );
+  })()}
+  <nav class="ep-related trust-related" aria-label="Related information">
+    <a href="/license/">
+      <TeacherSymbol kind="files" size={58} />
+      <span>
+        <strong>Artwork License</strong>Understand the permitted uses.
+      </span>
+      <span aria-hidden="true">→</span>
+    </a>
+    <a href="/faq/">
+      <TeacherSymbol kind="help" size={58} />
+      <span>
+        <strong>Questions &amp; Answers</strong>Get help with files and tools.
+      </span>
+      <span aria-hidden="true">→</span>
+    </a>
+    <a href="/about/">
+      <TeacherSymbol kind="book" size={58} />
+      <span>
+        <strong>About UltraClipart</strong>Meet the people behind the library.
+      </span>
+      <span aria-hidden="true">→</span>
+    </a>
+  </nav>
+</article>

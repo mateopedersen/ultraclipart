@@ -1,9 +1,11 @@
-import { rasterCatalog, type RasterAsset } from './raster';
+import { rasterCatalog, featuredRasterCatalog, type RasterAsset } from './raster';
 interface LibraryAsset extends RasterAsset {
   title: string;
+  alt?: string;
   topic: string;
   style: string;
   thumb: string;
+  thumbSrcSet?: string;
   featured?: boolean;
   createdAt?: string;
   monochrome?: boolean;
@@ -19,16 +21,39 @@ export async function mountArtworkLibrary(root: HTMLElement, add: (id: string) =
   const next = q<HTMLButtonElement>('[data-artwork-more]');
   const previous = q<HTMLButtonElement>('[data-artwork-previous]');
   const position = q<HTMLElement>('[data-artwork-page]');
-  const assets = (await rasterCatalog()) as LibraryAsset[];
+  const initial = await featuredRasterCatalog();
+  let assets = initial.items as LibraryAsset[];
+  let fullLoaded = false;
+  let filterRevision = 0;
+  let loadingFull: Promise<void> | undefined;
+  const ensureFull = () => {
+    if (fullLoaded) return Promise.resolve();
+    return (loadingFull ??= (async () => {
+      count.textContent = 'Loading the full artwork library…';
+      list.setAttribute('aria-busy', 'true');
+      try {
+        assets = (await rasterCatalog()) as LibraryAsset[];
+        fullLoaded = true;
+      } finally {
+        list.removeAttribute('aria-busy');
+        loadingFull = undefined;
+      }
+    })());
+  };
+  let browseMode: 'categories' | 'topics' | 'artwork' = initial.categories?.length
+    ? 'categories'
+    : 'artwork';
+  let categoryId = '';
+  const directory = initial.categories || [];
   let page = 1,
     scope = 'featured',
     busy = false;
-  const pageSize = 24;
+  const pageSize = window.innerHeight < 800 ? 4 : 6;
   const featured = assets.filter((item) => item.featured);
   q('[data-featured-count]').textContent = featured.length.toLocaleString('en-US');
   const all = q<HTMLButtonElement>('[data-artwork-scope="all"]');
-  all.textContent = `All Artwork (${assets.length.toLocaleString('en-US')})`;
-  for (const slug of [...new Set(assets.map((a) => a.topic))].sort()) {
+  all.textContent = `All Artwork (${initial.total.toLocaleString('en-US')})`;
+  for (const slug of initial.topics) {
     topic.append(
       new Option(
         slug.replaceAll('-', ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
@@ -36,11 +61,97 @@ export async function mountArtworkLibrary(root: HTMLElement, add: (id: string) =
       ),
     );
   }
+  function renderDirectory() {
+    const category = directory.find((item) => item.id === categoryId);
+    const entries =
+      browseMode === 'categories'
+        ? directory.map((item) => ({
+            id: item.id,
+            title: item.title,
+            thumb: item.thumb,
+            detail: `${item.topics.length} ${item.topics.length === 1 ? 'subject' : 'subjects'}`,
+          }))
+        : (category?.topics || []).map((item) => ({
+            ...item,
+            detail: `${item.count} ${item.count === 1 ? 'illustration' : 'illustrations'}`,
+          }));
+    const pages = Math.max(1, Math.ceil(entries.length / pageSize));
+    page = Math.max(1, Math.min(page, pages));
+    list.replaceChildren();
+    for (const entry of entries.slice((page - 1) * pageSize, page * pageSize)) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'wb-category-tile';
+      button.title = entry.title;
+      const image = document.createElement('img');
+      image.src = entry.thumb;
+      image.alt = '';
+      image.loading = 'lazy';
+      image.width = 96;
+      image.height = 72;
+      const title = document.createElement('strong');
+      title.textContent = entry.title;
+      const detail = document.createElement('small');
+      detail.textContent = entry.detail;
+      button.append(image, title, detail);
+      button.addEventListener('click', () => {
+        void (async () => {
+          const revision = ++filterRevision;
+          page = 1;
+          if (browseMode === 'categories') {
+            categoryId = entry.id;
+            browseMode = 'topics';
+            render();
+          } else {
+            topic.value = entry.id;
+            browseMode = 'artwork';
+            scope = 'all';
+            await ensureFull();
+            if (revision === filterRevision) render();
+          }
+        })().catch(() => {
+          count.textContent = 'This category could not load. Select it again to retry.';
+        });
+      });
+      list.append(button);
+    }
+    count.textContent =
+      browseMode === 'categories'
+        ? `${entries.length} categories — choose one to see its subjects`
+        : `${entries.length} ${entries.length === 1 ? 'subject' : 'subjects'} in ${category?.title || 'this category'}`;
+    previous.disabled = page <= 1;
+    next.disabled = page >= pages;
+    next.hidden = false;
+    position.textContent = `Page ${page} of ${pages}`;
+    const jump = q<HTMLInputElement>('[data-artwork-jump]');
+    jump.max = String(pages);
+    jump.value = String(page);
+  }
   function render() {
+    root.dataset.libraryBrowse = browseMode;
+    if (browseMode !== 'artwork')
+      for (const button of root.querySelectorAll('[data-artwork-scope]'))
+        button.setAttribute('aria-pressed', 'false');
+    const category = directory.find((item) => item.id === categoryId);
+    const parent = q<HTMLButtonElement>('[data-library-parent]');
+    parent.hidden = !category;
+    parent.textContent = category?.title || '';
+    q('[data-library-current]').textContent = topic.value
+      ? topic.selectedOptions[0]?.textContent || ''
+      : browseMode === 'categories'
+        ? 'Choose a Category'
+        : browseMode === 'topics'
+          ? 'Choose a Subject'
+          : '';
+    if (browseMode !== 'artwork' && !search.value.trim()) {
+      renderDirectory();
+      return;
+    }
     const words = search.value.trim().toLowerCase().split(/\s+/);
     const matched = (scope === 'featured' ? featured : assets).filter(
       (a) =>
         (!topic.value || topic.value === a.topic) &&
+        (!category || category.topics.some((subject) => subject.id === a.topic)) &&
         (!style.value ||
           (style.value === 'realistic'
             ? a.id.includes('realistic')
@@ -66,12 +177,18 @@ export async function mountArtworkLibrary(root: HTMLElement, add: (id: string) =
       button.className = 'uc-artwork-card';
       button.dataset.artwork = asset.id;
       button.disabled = busy;
+      button.title = asset.title;
       button.setAttribute('aria-label', `Add ${asset.title}`);
       const preview = document.createElement('span');
       preview.className = 'uc-artwork-preview';
       const img = document.createElement('img');
       img.src = asset.thumb;
-      img.alt = '';
+      if (asset.thumbSrcSet) {
+        img.srcset = asset.thumbSrcSet;
+        img.sizes = '160px';
+      }
+      img.alt = asset.alt || asset.title;
+      img.title = asset.title;
       img.loading = 'lazy';
       img.decoding = 'async';
       img.width = 256;
@@ -117,7 +234,10 @@ export async function mountArtworkLibrary(root: HTMLElement, add: (id: string) =
     previous.disabled = page <= 1;
     next.disabled = page >= pages;
     next.hidden = false;
-    position.textContent = `${page} / ${pages}`;
+    position.textContent = `Page ${page} of ${pages}`;
+    const jump = q<HTMLInputElement>('[data-artwork-jump]');
+    jump.max = String(pages);
+    jump.value = String(page);
     for (const button of root.querySelectorAll<HTMLButtonElement>('[data-artwork-scope]'))
       button.setAttribute('aria-pressed', String(button.dataset.artworkScope === scope));
   }
@@ -125,32 +245,83 @@ export async function mountArtworkLibrary(root: HTMLElement, add: (id: string) =
     page = 1;
     render();
   };
-  const filter = () => {
-    if (search.value.trim() || topic.value || style.value) scope = 'all';
-    reset();
+  const filter = async () => {
+    const revision = ++filterRevision;
+    try {
+      if (search.value.trim() || topic.value || style.value) await ensureFull();
+      if (revision !== filterRevision) return;
+      if (search.value.trim() || topic.value || style.value) {
+        scope = 'all';
+        browseMode = 'artwork';
+      }
+      reset();
+    } catch {
+      if (revision !== filterRevision) return;
+      count.textContent = 'The full library could not load. Change a filter to retry.';
+    }
   };
   search.addEventListener('input', filter);
   style.addEventListener('change', filter);
   topic.addEventListener('change', filter);
   sort.addEventListener('change', reset);
   q('[data-artwork-clear]').addEventListener('click', () => {
+    filterRevision++;
     search.value = '';
     style.value = '';
     topic.value = '';
     sort.value = 'featured';
     scope = 'featured';
+    browseMode = 'categories';
+    categoryId = '';
     reset();
   });
   for (const button of root.querySelectorAll<HTMLButtonElement>('[data-artwork-scope]'))
-    button.addEventListener('click', () => {
-      scope = button.dataset.artworkScope!;
-      reset();
+    button.addEventListener('click', async () => {
+      const revision = ++filterRevision;
+      try {
+        if (button.dataset.artworkScope === 'all') await ensureFull();
+        if (revision !== filterRevision) return;
+        scope = button.dataset.artworkScope!;
+        browseMode = 'artwork';
+        categoryId = '';
+        topic.value = '';
+        reset();
+      } catch {
+        if (revision !== filterRevision) return;
+        count.textContent = 'The full library could not load. Select All Artwork to retry.';
+      }
     });
+  q('[data-library-home]').addEventListener('click', () => {
+    filterRevision++;
+    browseMode = 'categories';
+    categoryId = '';
+    topic.value = '';
+    search.value = '';
+    page = 1;
+    render();
+  });
+  q('[data-library-parent]').addEventListener('click', () => {
+    filterRevision++;
+    browseMode = 'topics';
+    topic.value = '';
+    search.value = '';
+    page = 1;
+    render();
+  });
   const turn = (delta: number) => {
     page += delta;
     render();
-    list.scrollIntoView({ block: 'start', behavior: 'instant' });
+    list.scrollTop = 0;
   };
+  q<HTMLInputElement>('[data-artwork-jump]').addEventListener('change', (event) => {
+    const target = event.target as HTMLInputElement;
+    const requested = Number(target.value);
+    if (Number.isInteger(requested) && requested >= 1) {
+      page = requested;
+      render();
+      list.scrollTop = 0;
+    }
+  });
   next.addEventListener('click', () => turn(1));
   previous.addEventListener('click', () => turn(-1));
   render();

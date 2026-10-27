@@ -5,16 +5,19 @@ import DownloadPanel from '../components/DownloadPanel.astro';
 import CookieNotice from '../components/CookieNotice.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AiBuilderMark from '../components/AiBuilderMark.astro';
+import StudioMark from '../components/StudioMark.astro';
 import '../styles/site-header.css';
 import '../styles/site-display-restoration.css';
 import '../styles/site-search.css';
 import HeaderIllustration from '../components/HeaderIllustration.astro';
 import BrowsePreview from '../components/BrowsePreview.astro';
 import { cuteSurpriseIndex } from '../lib/surprise-catalog';
+import { SURPRISE_INDEX_VERSION } from '../lib/cute-discovery';
 import { structuredData } from '../lib/structured-data';
+import { pageGraph } from '../lib/page-seo';
 import { pageSocialImage } from '../lib/social-images';
-import regularFont from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
-import boldFont from '@fontsource/inter/files/inter-latin-700-normal.woff2?url';
+import { cookieStartupScript } from '../../scripts/cookie-startup.mjs';
+import '../styles/image-information.css';
 const {
   title = 'Clipart for Personal & Classroom Projects',
   description = 'Explore original seasonal clipart. Edit colors and layers, then download WebP and printable PDF files.',
@@ -36,6 +39,7 @@ const socialImage = pageSocialImage(socialPage, {
 const socialImageUrl = new URL(socialImage.src, 'https://ultraclipart.com').href;
 const readingFont =
   Astro.url.pathname === '/for-teachers/' || Astro.url.pathname.startsWith('/guides/');
+const preloadInterfaceFont = !/^\/(?:art|edit)\//.test(Astro.url.pathname);
 const surprisePicks = cuteSurpriseIndex.slice(0, 48);
 const browseLinks = [
   {
@@ -113,26 +117,34 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    {readingFont ? (
+    <script is:inline set:html={cookieStartupScript} />
+    {preloadInterfaceFont && (
       <link
         rel="preload"
-        href="/fonts/source-sans-3/SourceSans3-Upright.woff2"
+        href="/fonts/inter/inter-latin-wght-3100e775e861.woff2"
         as="font"
         type="font/woff2"
         crossorigin
       />
-    ) : (
-      <>
-        <link rel="preload" href={regularFont} as="font" type="font/woff2" crossorigin />
-        <link rel="preload" href={boldFont} as="font" type="font/woff2" crossorigin />
-      </>
+    )}
+    {readingFont && (
+      <link
+        rel="preload"
+        href="/fonts/source-sans-3/source-sans-3-latin-19143dca0759.woff2"
+        as="font"
+        type="font/woff2"
+        crossorigin
+      />
     )}
     <meta name="viewport" content="width=device-width" />
     <meta name="build-revision" content={releaseRevision} />
     <title>{title} | UltraClipart</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <meta name="robots" content={noindex ? 'noindex,follow' : 'index,follow'} />
+    <meta
+      name="robots"
+      content={noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'}
+    />
     <meta property="og:title" content={title + ' | UltraClipart'} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -151,16 +163,15 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     <meta name="twitter:image" content={socialImageUrl} />
     <meta name="twitter:image:alt" content={socialImage.alt} />
     <meta name="theme-color" content="#2865D2" />
-    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" href="/favicon-96.png" type="image/png" sizes="96x96" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <script
       type="application/ld+json"
-      set:html={structuredData({
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'UltraClipart',
-        url: 'https://ultraclipart.com/',
-        inLanguage: 'en-US',
-      })}
+      set:html={structuredData(
+        pageGraph({ canonical, title, description, noindex, primaryImage: image }),
+      )}
     />
     <slot name="head" />
   </head>
@@ -322,21 +333,7 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
           </div>
           <div class="site-navigation-actions">
             <a href="/create/" class="site-studio-link" aria-current={current('/create/')}>
-              <svg width="23" height="23" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-                <rect x="4" y="5" width="20" height="19" rx="4" fill="#eaf3ff" />
-                <path
-                  d="M12 6H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-5"
-                  stroke="#255f9f"
-                  stroke-width="1.6"
-                />
-                <path
-                  d="m11 17 1-5L21 3a2 2 0 0 1 4 4l-9 9-5 1Z"
-                  fill="#79b9ff"
-                  stroke="#174b84"
-                  stroke-width="1.45"
-                />
-                <path d="m19 5 4 4m-12 8 4-1-3-3-1 4Z" fill="#174b84" />
-              </svg>
+              <StudioMark size={34} />
               <span>Clipart Studio</span>
             </a>
             <a
@@ -375,12 +372,12 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
           class="site-surprise-link"
           href={`/art/${surprisePicks[0].id}/`}
           data-surprise-art={JSON.stringify(surprisePicks)}
-          data-surprise-source={`/surprise-picks.json?v=${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
+          data-surprise-source={`/surprise-picks.json?v=${SURPRISE_INDEX_VERSION}-${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
         >
           <HeaderIllustration kind="surprise" />
           <span>
             <strong>Surprise me</strong>
-            <span>Open a random illustration</span>
+            <span>A little reason to smile</span>
           </span>
         </a>
       </div>
@@ -489,7 +486,9 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
     <script>
       import '../scripts/downloads';
       import { initSearchSuggestions } from '../scripts/search-suggestions';
+      import { initImageInformation } from '../scripts/image-information';
       initSearchSuggestions();
+      initImageInformation();
     </script>
   </body>
 </html>

@@ -1,3 +1,5 @@
+import categoryPreviewPicks from '../../data/category-preview-picks.json';
+import { buildSubjectKeywords } from './category-search';
 import ownerCollectionContexts from '../../scripts/remaining-thirty-one-contexts.json';
 import {
   publishedArt as art,
@@ -5,7 +7,6 @@ import {
   availableClusters,
   slugify,
   clustersForTopic,
-  topicInCluster,
 } from './catalog';
 import { catalogStatistics } from './catalog-statistics';
 
@@ -129,16 +130,7 @@ const collectionStyle: Record<
   },
 };
 const preferred: Record<string, string> = {
-  fox: 'baby-fennec-fox-watercolor-clipart',
-  baby: 'baby-girl-with-pink-bow-clipart',
-  heart: 'floral-heart-roses-wreath-clipart',
-  volleyball: 'female-volleyball-spike-dynamic-clipart',
-  basketball: 'basketball-kids-playing-playful-clipart',
-  winter: 'winter-penguin-cocoa',
-  leaves: 'leaf-sugar-maple-five-lobed-autumn-watercolor-clipart',
-  fire: 'fire-crossed-logs-campfire-colored-pencil-clipart',
-  school: 'school-students-reading-in-library-classic-clipart',
-  book: 'book-children-reading-together-classic-clipart',
+  ...categoryPreviewPicks,
   ...Object.fromEntries(
     Object.entries(ownerCollectionContexts).map(([topic, context]) => [topic, context.cover]),
   ),
@@ -160,10 +152,14 @@ export const categorySubjects = availableTopics
     return {
       ...topic,
       name: name[0].toUpperCase() + name.slice(1),
+      searchKeywords: buildSubjectKeywords(
+        items.map((item) => `${item.title} ${item.alt} ${item.style}`),
+      ),
       count: catalogStatistics.topics[topic.slug] ?? 0,
       sample,
       group: slugify(topic.cluster),
-      groups: clustersForTopic(topic).map(slugify),
+      groups: [slugify(topic.cluster)],
+      relatedGroups: clustersForTopic(topic).map(slugify),
       color: collectionStyle[topic.cluster]?.color ?? 'sage',
     };
   })
@@ -172,7 +168,7 @@ export const categorySubjects = availableTopics
 const order = Object.keys(collectionStyle);
 export const categoryCollections = availableClusters
   .map((cluster) => {
-    const subjects = categorySubjects.filter((topic) => topicInCluster(topic, cluster));
+    const subjects = categorySubjects.filter((topic) => topic.cluster === cluster);
     const design = collectionStyle[cluster] ?? {
       title: cluster,
       description: 'Find a new starting point for your next project.',
@@ -199,6 +195,7 @@ export const categoryCollections = availableClusters
       count: catalogStatistics.collections[slugify(cluster)]?.artworks ?? 0,
     };
   })
+  .filter((collection) => collection.subjects.length > 0)
   .sort(
     (a, b) =>
       (order.indexOf(a.cluster) < 0 ? 999 : order.indexOf(a.cluster)) -

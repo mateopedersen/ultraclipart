@@ -12,6 +12,10 @@
   Cache-Control: public, max-age=31536000, immutable
 /related-release.json
   Cache-Control: no-store
+/surprise-picks.json
+  Cache-Control: no-store
+/collection-feed.json
+  Cache-Control: no-store
 /catalog-stats.json
   Cache-Control: no-store
 /api/cookie-region.json
@@ -20,3 +24,18 @@
   Cloudflare-CDN-Cache-Control: no-store
 /search-data/manifest.json
   Cache-Control: no-cache, must-revalidate
+/previews/*
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/inter/*
+  Cache-Control: public, max-age=31536000, immutable
+/fonts/source-sans-3/source-sans-3-latin-19143dca0759.woff2
+  Cache-Control: public, max-age=31536000, immutable
+/studio-catalog.json
+  Cache-Control: no-cache, must-revalidate
+/studio-featured.json
+  Cache-Control: no-cache, must-revalidate
+/studio-previews/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/category-search/*
+  Cache-Control: public, max-age=31536000, immutable

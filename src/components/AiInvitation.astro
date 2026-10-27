@@ -1,4 +1,11 @@
 ---
+import { uiPreview } from '../lib/ui-preview';
+import uiImage0Source from '../../public/ai-examples/garden-robot-1024.webp';
+const uiImage0 = await uiPreview(uiImage0Source);
+import uiImage1Source from '../../public/ai-examples/baby-rabbit-1024.webp';
+const uiImage1 = await uiPreview(uiImage1Source);
+import uiImage2Source from '../../public/ai-examples/floral-teacup-1024.webp';
+const uiImage2 = await uiPreview(uiImage2Source);
 import { invitationExamples as examples } from '../ai/presets';
 import AiBuilderMark from './AiBuilderMark.astro';
 ---
@@ -59,7 +66,16 @@ import AiBuilderMark from './AiBuilderMark.astro';
       <span>Try an Example:</span>
       {examples.slice(0, 3).map((e, i) => (
         <button type="button" data-home-ai-example={i}>
-          {'image' in e && <img src={e.image} alt="" width="32" height="32" loading="lazy" />}
+          {'image' in e && (
+            <img
+              src={e.image}
+              alt={e.label}
+              title={e.label}
+              width="32"
+              height="32"
+              loading="lazy"
+            />
+          )}
           <span>{e.label}</span>
         </button>
       ))}
@@ -133,7 +149,10 @@ import AiBuilderMark from './AiBuilderMark.astro';
         with a love for plants.”
       </p>
       <img
-        src="/ai-examples/garden-robot-1024.webp"
+        title="Silver and orange robot holding a potted plant"
+        src={uiImage0.src}
+        srcset={uiImage0.srcset}
+        sizes="(max-width: 600px) 80vw, (max-width: 1000px) 40vw, 280px"
         alt="Silver and orange robot holding a potted plant"
         width="640"
         height="640"
@@ -165,7 +184,10 @@ import AiBuilderMark from './AiBuilderMark.astro';
       aria-label="Try the baby rabbit idea"
     >
       <img
-        src="/ai-examples/baby-rabbit-1024.webp"
+        title="Baby rabbit holding a yellow daisy"
+        src={uiImage1.src}
+        srcset={uiImage1.srcset}
+        sizes="(max-width: 600px) 80vw, (max-width: 1000px) 40vw, 280px"
         alt="Baby rabbit holding a yellow daisy"
         width="320"
         height="320"
@@ -181,7 +203,10 @@ import AiBuilderMark from './AiBuilderMark.astro';
       aria-label="Try the floral teacup idea"
     >
       <img
-        src="/ai-examples/floral-teacup-1024.webp"
+        title="Flowers arranged in a pale green teacup"
+        src={uiImage2.src}
+        srcset={uiImage2.srcset}
+        sizes="(max-width: 600px) 80vw, (max-width: 1000px) 40vw, 280px"
         alt="Flowers arranged in a pale green teacup"
         width="320"
         height="320"
@@ -260,7 +285,7 @@ import AiBuilderMark from './AiBuilderMark.astro';
     align-items: center;
     gap: 11px;
     margin: 0 0 22px;
-    color: #1f4f8c;
+    color: var(--brand-accent);
     font:
       650 16px/1.4 'UltraClipart Sans',
       Arial,
@@ -301,7 +326,7 @@ import AiBuilderMark from './AiBuilderMark.astro';
     line-height: 1.14;
   }
   .ai-invitation h2 > span {
-    color: #1766ce;
+    color: var(--brand-accent);
   }
   .ai-invitation-description {
     max-width: 500px;

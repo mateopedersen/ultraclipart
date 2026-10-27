@@ -1,4 +1,5 @@
 ---
+import ContentLink from '../components/ContentLink.astro';
 import Layout from '../layouts/Layout.astro';
 import PrintDeskIcon from '../components/PrintDeskIcon.astro';
 import PrintArrow from '../components/PrintArrow.astro';
@@ -467,20 +468,19 @@ import '../styles/print-size.css';
           </p>
           <ul>
             <li>
-              <a href="https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/resize-adjust-resolution/image-size-resolution-and-resampling.html">
+              <ContentLink href="https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/resize-adjust-resolution/image-size-resolution-and-resampling.html">
                 Adobe: image size, resolution and resampling
-              </a>
+              </ContentLink>
             </li>
             <li>
-              <a href="https://www.nist.gov/pml/owm/si-units-length">NIST: SI units of length</a>
+              <ContentLink href="https://www.nist.gov/pml/owm/si-units-length">
+                NIST: SI units of length
+              </ContentLink>
             </li>
             <li>
-              <a href="https://support.hp.com/in-en/document/bpq04022">HP: paper dimensions</a>
-            </li>
-            <li>
-              <a href="https://publications.lexmark.com/publications/lexmark_hardware/Paper_and_Specialty_Media_Guide/html/en/GUID-3fcca8c6-5c8b-4d33-bb3a-c30908594b07-en.html">
-                Lexmark: supported paper sizes
-              </a>
+              <ContentLink href="https://www.w3.org/TR/css-page-3/#page-size-prop">
+                W3C draft: A4, Letter and page sizes
+              </ContentLink>
             </li>
           </ul>
         </div>

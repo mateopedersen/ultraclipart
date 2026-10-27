@@ -42,8 +42,11 @@ const subjects = [
       <a class="hsg-subject" href={`/clipart/${subject.slug}/`}>
         <span class="hsg-picture">
           <img
+            title={subject.image.title}
             src={subject.image.thumb}
-            alt=""
+            srcset={subject.image.thumbSrcSet}
+            sizes="(max-width: 540px) 45vw, (max-width: 1000px) 30vw, 240px"
+            alt={subject.image.alt}
             width={subject.image.width}
             height={subject.image.height}
             loading="lazy"

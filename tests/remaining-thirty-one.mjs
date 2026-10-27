@@ -17,8 +17,11 @@ const topics = Object.keys(packageContexts);
 test('new greetings and ordinary objects do not enter cute discovery through keyword matches', () => {
   const approved = read('data/remaining-thirty-one-review.json').discoveryReview.cuteSelections;
   assert.equal(approved.length, 4);
+  // The stricter smile-oriented policy keeps reviewed expressive subjects, not
+  // every item formerly marked cute (plain gummy sweets have no expression).
+  const expressive = approved.filter((id) => id !== 'candy-clipart-gummy-bears');
   for (const item of items)
-    assert.equal(cuteConfidence(item) > 0, approved.includes(item.id), item.id);
+    assert.equal(cuteConfidence(item) > 0, expressive.includes(item.id), item.id);
 });
 test('31 supplied packs preserve 1,550 verified original PDF/WebP pairs', () => {
   const proof = read('data/remaining-thirty-one-review.json');
@@ -90,7 +93,7 @@ test('all 31 subjects have accurate categories, unique metadata and searchable d
     assert.equal(taxonomy.filter((x) => x.slug === topic).length, 1);
     assert.equal(
       primaryClusterForTopic(taxonomy.find((x) => x.slug === topic)),
-      packageContexts[topic].cluster,
+      read('data/primary-topic-categories.json')[topic] ?? packageContexts[topic].cluster,
     );
     for (const key of ['title', 'alt', 'description'])
       assert.equal(new Set(group.map((x) => x[key])).size, 50);

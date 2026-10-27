@@ -46,7 +46,7 @@ test('all eight subjects have accurate categories, unique metadata and searchabl
     assert.equal(taxonomy.filter((x) => x.slug === topic).length, 1);
     assert.equal(
       primaryClusterForTopic(taxonomy.find((x) => x.slug === topic)),
-      activeContexts[topic].cluster,
+      read('data/primary-topic-categories.json')[topic] ?? activeContexts[topic].cluster,
     );
     for (const key of ['title', 'alt', 'description'])
       assert.equal(new Set(group.map((x) => x[key])).size, 50);

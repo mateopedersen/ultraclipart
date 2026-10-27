@@ -1,0 +1,40 @@
+{
+  "createdAt": "2026-10-26T17:14:33.083Z",
+  "method": "Local offline Three.js geometry renderer, not image generation",
+  "three": {
+    "version": "0.180.0",
+    "dist": {
+      "shasum": "b930cabfb524f6d36bf63e874b4d866888b50487",
+      "tarball": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
+      "fileCount": 1117,
+      "integrity": "sha512-o+qycAMZrh+TsE01GqWUxUIKR1AL0S8pq7zDkYOQw8GqfX8b8VoCKYUoHbhiX5j+7hr8XsuHDVU6+gkQJQKg9w==",
+      "signatures": [
+        {
+          "sig": "MEUCIQCxVBVq6WmxV5hwuaHp0323ClGM7IB6lkpyYOvozSpc6wIgIcbY0Mv2Swb5u/XMnLgo9PrVf19K0nIqlfd53/v9Y00=",
+          "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+        }
+      ],
+      "unpackedSize": 30764975
+    },
+    "license": "MIT"
+  },
+  "sourceArt": [
+    {
+      "id": "floral-heart-roses-wreath-clipart",
+      "sha256": "8869e2077c80647d37741cc29020f704cccdf17afc563c2ed9ea1425bc9a2e1e",
+      "usage": "Unmodified source texture placed on a modeled picture card; originals unchanged"
+    },
+    {
+      "id": "strawberry-fruit-trio-realistic-clipart",
+      "sha256": "6e2043766c90ad7d80d9ffcc8f9515d77283722dabb16a2a0053794e345c989c",
+      "usage": "Unmodified source texture placed on a modeled picture card; originals unchanged"
+    }
+  ],
+  "sceneSha256": "d21b131e7f754977d75d4e6ac64a7f1a6cc47bd5cab443693b532ef7cb16d07d",
+  "renderSha256": "80a859c6302428be19370325d3c5157f72dbd5c031e8d163cee0c051e8b60e45",
+  "dimensions": [
+    1600,
+    1280
+  ],
+  "note": "No runtime WebGL or Three.js dependency is shipped to visitors."
+}

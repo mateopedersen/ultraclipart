@@ -13,6 +13,7 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
   const sort = pane.querySelector<HTMLSelectElement>('[data-element-sort]')!;
   const favoriteFilter = pane.querySelector<HTMLButtonElement>('[data-element-favorites]')!;
   const key = 'ultraclipart:element-favorites:v1';
+  const pageSize = window.innerHeight < 800 ? 4 : 6;
   let favorites = new Set<string>(),
     onlyFavorites = false,
     page = 1;
@@ -57,15 +58,16 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
     if (sort.value === 'title') matched.sort((a, b) => a.name.localeCompare(b.name, 'en'));
     if (fromSearch)
       matched.sort((a, b) => Number(b.id === fromSearch.id) - Number(a.id === fromSearch.id));
-    const pages = Math.max(1, Math.ceil(matched.length / 24));
+    const pages = Math.max(1, Math.ceil(matched.length / pageSize));
     page = Math.min(page, pages);
     list.replaceChildren();
-    for (const element of matched.slice((page - 1) * 24, page * 24)) {
+    for (const element of matched.slice((page - 1) * pageSize, page * pageSize)) {
       const card = document.createElement('div');
       card.className = 'uc-element-card';
       if (element.id === fromSearch?.id) card.dataset.searchTarget = 'true';
       const button = document.createElement('button');
       button.type = 'button';
+      button.title = element.name;
       button.dataset.element = element.id;
       button.setAttribute('aria-label', `Add ${element.name}`);
       // Markup comes exclusively from the bundled, reviewed element catalogue.
@@ -98,12 +100,15 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
       list.append(card);
     }
     count.textContent = matched.length
-      ? `${(page - 1) * 24 + 1}–${Math.min(page * 24, matched.length)} of ${matched.length.toLocaleString('en-US')} elements`
+      ? `${(page - 1) * pageSize + 1}–${Math.min(page * pageSize, matched.length)} of ${matched.length.toLocaleString('en-US')} elements`
       : 'No matching elements. Try another word or collection.';
     more.hidden = false;
     more.disabled = page >= pages;
     previous.disabled = page <= 1;
-    position.textContent = `${page} / ${pages}`;
+    position.textContent = `Page ${page} of ${pages}`;
+    const jump = pane.querySelector<HTMLInputElement>('[data-element-jump]')!;
+    jump.max = String(pages);
+    jump.value = String(page);
     favoriteFilter.setAttribute('aria-pressed', String(onlyFavorites));
   }
   const reset = () => {
@@ -112,16 +117,26 @@ export function mountElementLibrary(root: HTMLElement, add: (element: StudioElem
   };
   search.addEventListener('input', reset);
   category.addEventListener('change', reset);
+  pane
+    .querySelector<HTMLInputElement>('[data-element-jump]')!
+    .addEventListener('change', (event) => {
+      const requested = Number((event.target as HTMLInputElement).value);
+      if (Number.isInteger(requested) && requested >= 1) {
+        page = requested;
+        render();
+        list.scrollTop = 0;
+      }
+    });
   more.addEventListener('click', () => {
     page++;
     render();
-    list.scrollIntoView({ block: 'start', behavior: 'instant' });
+    list.scrollTop = 0;
   });
   previous.addEventListener('click', () => {
     if (page > 1) {
       page--;
       render();
-      list.scrollIntoView({ block: 'start', behavior: 'instant' });
+      list.scrollTop = 0;
     }
   });
   sort.addEventListener('change', reset);

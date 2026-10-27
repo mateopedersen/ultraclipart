@@ -5,7 +5,7 @@
   --about-line: #d5e1ee;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 0 55px;
+  padding: 32px 0 0;
   color: var(--about-ink);
   font-family: inherit;
   font-size: 17px;
@@ -62,7 +62,7 @@
   align-items: center;
   gap: 11px;
   min-height: 27px;
-  color: #2b5d94;
+  color: var(--brand-accent);
   font-family: var(--font-ui);
   font-size: 18px;
   font-weight: 700;
@@ -83,7 +83,7 @@
   letter-spacing: -0.035em;
 }
 .about-hero h1 span {
-  color: #2467b0;
+  color: var(--brand-accent);
 }
 .about-page .about-intro {
   font-size: 21px;

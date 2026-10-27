@@ -65,6 +65,7 @@ async function scan(label) {
   if (await surprise.isVisible())
     await expect(surprise).toHaveAccessibleName(/Surprise me.*A little reason to smile/);
   const result = await new AxeBuilder({ page })
+    .setLegacyMode(name === 'webkit')
     .include('.site-header')
     .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
     .analyze();

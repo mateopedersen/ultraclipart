@@ -1,0 +1,10 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EditorialProcess from '../components/EditorialProcess.astro';
+import { trustPages } from '../lib/trust-pages';
+const page = trustPages['editorial-process'];
+---
+
+<Layout title={page.title} description={page.description}>
+  <EditorialProcess page={page} />
+</Layout>

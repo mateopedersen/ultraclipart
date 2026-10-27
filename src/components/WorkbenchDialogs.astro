@@ -1,0 +1,105 @@
+---
+import StudioIcon from './StudioIcon.astro';
+---
+
+<dialog class="wb-dialog wb-command-dialog" data-wb-palette aria-labelledby="wb-command-title">
+  <header>
+    <div>
+      <h2 id="wb-command-title">Find a Tool</h2>
+      <p>Search actions, or choose a category.</p>
+    </div>
+    <button data-wb-close aria-label="Close tool search">
+      ×
+    </button>
+  </header>
+  <label class="wb-search-label">
+    <StudioIcon name="select" size={24} />
+    <input
+      type="search"
+      data-wb-search
+      placeholder="Try: match width, text, PNG…"
+      autocomplete="off"
+      aria-label="Search Studio tools"
+    />
+  </label>
+  <div class="wb-palette-controls">
+    <label>
+      Category
+      <select data-wb-category>
+        <option value="all">All Tools</option>
+        <option>Workspace</option>
+        <option>Guides</option>
+        <option>Select</option>
+        <option>Arrange</option>
+        <option>Layers</option>
+        <option>Text</option>
+        <option>Appearance</option>
+        <option>Project</option>
+        <option>Export</option>
+      </select>
+    </label>
+    <button data-wb-list="all" aria-pressed="true">
+      All
+    </button>
+    <button data-wb-list="recent" aria-pressed="false">
+      Recent
+    </button>
+    <button data-wb-list="favorite" aria-pressed="false">
+      Favorites
+    </button>
+  </div>
+  <p data-wb-result-count role="status"></p>
+  <div class="wb-results" data-wb-results></div>
+  <nav class="wb-tool-pagination" aria-label="Tool pages">
+    <button data-wb-previous>Previous</button>
+    <span data-wb-page role="status"></span>
+    <button data-wb-more>Next</button>
+  </nav>
+  <p class="wb-footnote">
+    Changes to artwork support Undo. View preferences do not alter downloaded artwork.
+  </p>
+</dialog>
+<dialog class="wb-dialog" data-wb-parameter-dialog aria-labelledby="wb-parameter-title">
+  <form data-wb-form>
+    <header>
+      <h2 id="wb-parameter-title"></h2>
+      <button type="button" data-wb-close aria-label="Close tool options">
+        ×
+      </button>
+    </header>
+    <p data-wb-description></p>
+    <label data-wb-value-label>
+      <span data-wb-value-caption></span>
+      <input data-wb-value type="text" maxlength="500" />
+    </label>
+    <label data-wb-second-label hidden>
+      Replace With
+      <input data-wb-second type="text" maxlength="500" />
+    </label>
+    <label data-wb-checkpoint-label hidden>
+      Saved Checkpoint<select data-wb-checkpoint></select>
+    </label>
+    <p data-wb-form-error role="alert" hidden></p>
+    <footer>
+      <button type="button" data-wb-close>
+        Cancel
+      </button>
+      <button type="submit" class="uc-primary">
+        Apply
+      </button>
+    </footer>
+  </form>
+</dialog>
+<dialog class="wb-dialog" data-wb-output-dialog aria-labelledby="wb-output-title">
+  <header>
+    <h2 id="wb-output-title">Studio Information</h2>
+    <button data-wb-close aria-label="Close Studio information">
+      ×
+    </button>
+  </header>
+  <pre data-wb-output></pre>
+  <textarea data-wb-copy readonly rows="8" hidden aria-label="Copy this text"></textarea>
+  <footer>
+    <button data-wb-close>Done</button>
+  </footer>
+</dialog>

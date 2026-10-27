@@ -1,0 +1,218 @@
+.collection-directory {
+  padding: 24px 0 0;
+  color: #193552;
+}
+.collection-directory-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 36px 40px;
+  border: 1px solid #d0e0f1;
+  border-radius: 24px;
+  background: linear-gradient(125deg, #eff6ff, #fafcff);
+  margin-bottom: 36px;
+}
+.collection-directory-hero h1 {
+  font: 700 clamp(32px, 4vw, 50px)/1.13 inherit;
+  letter-spacing: -0.025em;
+  margin: 8px 0 18px;
+  color: #153151;
+}
+.collection-directory-hero h1 span {
+  color: var(--brand-accent);
+}
+.collection-directory-hero p {
+  max-width: 640px;
+  line-height: 1.65;
+  color: #496382;
+  margin: 0 0 16px;
+}
+.collection-directory-hero > img {
+  flex: 0 0 190px;
+}
+.collection-directory .collection-eyebrow {
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--brand-accent);
+  margin: 0 0 8px;
+}
+.collection-directory-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  color: #355c83;
+  font-weight: 600;
+  font-size: 14px;
+}
+.collection-section + .collection-section {
+  margin-top: 40px;
+}
+.collection-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+.collection-section-heading h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #193552;
+}
+.collection-section-heading > a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.subject-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.subject-collection-tile,
+.collection-group-tile {
+  display: block;
+  min-width: 0;
+  border: 1px solid #d3e1ef;
+  border-radius: 17px;
+  overflow: hidden;
+  background: #fff;
+  color: #234567;
+  text-decoration: none;
+  box-shadow: 0 3px 0 #e5eef7;
+}
+.subject-collection-tile:hover,
+.collection-group-tile:hover {
+  border-color: #72a6d6;
+  text-decoration: none;
+  box-shadow: 0 4px 0 #d6e6f5;
+}
+.subject-collection-art {
+  height: 185px;
+  background: radial-gradient(ellipse, #fff, #edf4fc);
+  padding: 12px;
+}
+.subject-collection-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.subject-collection-copy {
+  position: relative;
+  padding: 18px 42px 18px 18px;
+}
+.subject-collection-copy h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin: 0 0 6px;
+  text-transform: capitalize;
+}
+.subject-collection-copy p {
+  font-size: 13px;
+  font-weight: 550;
+  color: #4a6785;
+  margin: 0;
+}
+.subject-collection-copy > span {
+  position: absolute;
+  right: 18px;
+  top: 25px;
+}
+.collection-group-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.collection-group-tile {
+  padding: 20px;
+}
+.collection-group-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f4f8fd;
+  margin-bottom: 18px;
+}
+.collection-group-art img {
+  width: 26%;
+  height: 80px;
+  object-fit: contain;
+}
+.collection-group-tile h3 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  text-transform: capitalize;
+}
+.collection-group-tile p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #4a6785;
+  font-weight: 550;
+}
+@media (max-width: 1000px) {
+  .subject-collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .collection-group-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .collection-directory-hero > img {
+    width: 130px;
+    height: 130px;
+    flex-basis: 130px;
+  }
+}
+@media (max-width: 700px) {
+  .collection-directory-hero {
+    padding: 25px;
+    gap: 12px;
+  }
+  .collection-directory-hero > img {
+    display: none;
+  }
+  .subject-collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .collection-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .collection-section-heading h2 {
+    font-size: 23px;
+  }
+  .collection-group-tile {
+    padding: 15px;
+  }
+  .collection-group-art {
+    gap: 5px;
+    padding: 8px;
+  }
+  .collection-group-art img {
+    height: 65px;
+  }
+  .subject-collection-art {
+    height: 160px;
+  }
+  .subject-collection-copy {
+    padding: 14px;
+  }
+  .subject-collection-copy > span {
+    display: none;
+  }
+}
+@media (max-width: 380px) {
+  .subject-collection-grid,
+  .collection-group-grid {
+    grid-template-columns: 1fr;
+  }
+}

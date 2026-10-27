@@ -1,0 +1,31 @@
+ULTRACLIPART — BOŞLUK VE GALERİ DÜZENİ RAPORU
+
+Durum: yalnızca yerel. Canlıya yayın yapılmadı. Kontrol tamamlanma zamanı: 2026-10-26T18:34:13.767Z.
+
+Neden: içerik kabının alt dolgusu, son bölümün alt marjı ve footer’ın üst marjı üst üste ekleniyordu. New Clipart ve koleksiyon özetlerindeki 32 kart beş sütuna bölününce son satırda iki kart ve sağda geniş bir boşluk kalıyordu.
+
+Düzeltme: footer öncesi ortak dış boşluğu artık sayfa kuralı belirliyor (28–40 piksel). Footer ayrıca üst marj eklemiyor; son gerçek içerik bölümünün gereksiz son marjı sıfırlanıyor. Son düğüm script veya template olsa da bu kural çalışıyor. Tüm ölçülen sayfa geçişlerinde toplam aralık 28–60 piksel; ana örnekler 40 piksel.
+
+Ana sayfa: bölüm aralıkları tek bir ölçekle 32–48 piksel olarak yönetiliyor. Bölümlerin kendi tekrarlı dış marjları kaldırıldı. Mevcut içerikler, görseller, bağlantılar ve bölüm sırası korundu; ekstra içerik eklenmedi.
+
+Galeriler: kartlar ortak, duyarlı satır düzenine bağlı. 32 öğe geniş ekranda dört sütunla sekiz tam satır oluşturuyor. Diğer eksik satırlar eşit kart genişliği korunarak ortalanıyor. CSS yeni içerik/filtre sonuçları değiştiğinde kendiliğinden güncelleniyor; ek JavaScript veya boşluk dolduran sahte kart kullanılmıyor. Ana sayfanın kendi tam satırlı vitrin düzeni korunuyor.
+
+/ — 1440 px, Chromium: önce 162 px; sonra 40 px footer boşluğu. Kart sırası ve sayısı karşılaştırıldı, aynı kaldı.
+
+/new/ — 1440 px, Chromium: önce 142 px; sonra 40 px footer boşluğu. Kart sırası ve sayısı karşılaştırıldı, aynı kaldı.
+
+/black-and-white/ — 1440 px, Chromium: önce 142 px; sonra 40 px footer boşluğu. Kart sırası ve sayısı karşılaştırıldı, aynı kaldı.
+
+/collection/animals-nature/ — 1440 px, Chromium: önce 142 px; sonra 40 px footer boşluğu. Kart sırası ve sayısı karşılaştırıldı, aynı kaldı.
+
+Gerçek tarayıcı denetimi: 507 farklı yerel adres, toplam 1.334 görünüm durumu. Chromium bütün 238 konu sayfasını ve her konudan bir görsel sayfasını, ayrıca tüm farklı sayfa şablonlarını taradı. WebKit bütün farklı şablonlarda çalıştırıldı. Şablonlar 320/390/768/1024/1440/1920 px; konu ve örnek görsel sayfaları 390/1440 px ile kontrol edildi.
+
+Kontroller: footer öncesi boşluk; ana sayfa bölüm aralıkları; galeri son satır dengesi; kart genişlikleri; yatay taşma; metin kırpılması; sınır dışına çıkan öğeler. Son taramada bu ölçütlerde hata bulunmadı.
+
+Tüm sayfa kontrolü: 24.589 derlenmiş HTML adresinin ortak boşluk ve galeri CSS kurallarını taşıdığı doğrulandı; hata 0. Bu kaynak kontrolü, 24.589 adresin tamamının elle tek tek görsel olarak incelendiği anlamına gelmez.
+
+Tarayıcı ölçümleri kararlı statik düzeni doğrulamak için JavaScript kapalı yapıldı. Ayrıca JavaScript açık 32 footer görünümü; 64 görsel metadata görünümü ve 24 arama, orijinal dosya özeti, hover/focus ve mobil gezinme kontrolü başarıyla tamamlandı. WebKit testi fiziksel iPhone testi olarak sunulmaz.
+
+Görsel SEO çalışması, kişisel projeler, Favoriler, indirme dosyaları ve ziyaretçi tercihleri korundu. Güncel görsel SEO derleme denetimi de yeniden çalıştırıldı. Google/Bing’e gönderim, R2 yüklemesi veya önbellek temizliği yapılmadı.
+
+Kanıtlar: reports/spacing/before/ ve reports/spacing/after/ ekran görüntüleri; sayfa-olcumleri.csv; all-compiled-pages.json. İlk taramada bulunan ek alt marj hataları first-pass/report.json içinde saklandı; başarı iddiası yalnızca son tamamlanan taramaya aittir.

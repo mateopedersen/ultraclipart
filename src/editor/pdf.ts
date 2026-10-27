@@ -99,7 +99,7 @@ async function exportVectorPdf(doc: EditorDocument): Promise<Blob> {
     pdf as unknown as { __private__: { setPdfVersion: (version: string) => void } }
   ).__private__.setPdfVersion('1.7');
   pdf.setProperties({
-    title: 'UltraClipart edited artwork',
+    title: doc.title || 'UltraClipart edited artwork',
     subject: 'ICC-converted process CMYK vector artwork',
     creator: 'UltraClipart editor',
   });
@@ -184,6 +184,13 @@ async function exportVectorPdf(doc: EditorDocument): Promise<Blob> {
           style.strokeLinejoin === 'round' ? 1 : style.strokeLinejoin === 'bevel' ? 2 : 0,
         );
         pdf.setLineMiterLimit(parseFloat(style.strokeMiterlimit) || 4);
+        const dash =
+          style.strokeDasharray === 'none'
+            ? []
+            : style.strokeDasharray.split(/[ ,]+/).map((value) => parseFloat(value));
+        if (dash.some((value) => !Number.isFinite(value) || value < 0 || value > 10000))
+          throw new Error('Invalid stroke dash pattern.');
+        pdf.setLineDashPattern(dash, parseFloat(style.strokeDashoffset) || 0);
         pdf.setGState(
           pdf.GState({
             opacity: opacity * Number(style.fillOpacity),

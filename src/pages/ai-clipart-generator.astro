@@ -1,4 +1,5 @@
 ---
+import ContentLink from '../components/ContentLink.astro';
 import Layout from '../layouts/Layout.astro';
 import AiChoicePicker from '../components/AiChoicePicker.astro';
 import AiColorSwatches from '../components/AiColorSwatches.astro';
@@ -31,7 +32,17 @@ const ideaCards = Array.from(
     ideaCategories.flatMap(([category]) => {
       const example = examples.filter((item) => item.category === category)[round];
       const artwork = example && byId.get(example.artwork);
-      return artwork ? [{ ...example, image: artwork.thumb, alt: artwork.alt }] : [];
+      return artwork
+        ? [
+            {
+              ...example,
+              image: artwork.thumb,
+              imageSrcSet: artwork.thumbSrcSet,
+              alt: artwork.alt,
+              imageTitle: artwork.title,
+            },
+          ]
+        : [];
     }),
 ).flat();
 const starterCards = featuredIdeaIds.flatMap((id) => {
@@ -40,7 +51,17 @@ const starterCards = featuredIdeaIds.flatMap((id) => {
 });
 const styleCards = visualStyleReferences.flatMap((reference) => {
   const artwork = byId.get(reference.artwork);
-  return artwork ? [{ ...reference, image: artwork.thumb }] : [];
+  return artwork
+    ? [
+        {
+          ...reference,
+          image: artwork.thumb,
+          imageSrcSet: artwork.thumbSrcSet,
+          alt: artwork.alt,
+          imageTitle: artwork.title,
+        },
+      ]
+    : [];
 });
 const categoryLabel = (id: string) => ideaCategories.find(([key]) => key === id)?.[1] || id;
 const faq = [
@@ -189,6 +210,12 @@ const faq = [
                   data-ai-choice-image={
                     ideaCards.find((idea) => idea.id === featuredIngredientIds[0])?.image
                   }
+                  data-ai-choice-alt={
+                    ideaCards.find((idea) => idea.id === featuredIngredientIds[0])?.alt
+                  }
+                  data-ai-choice-title={
+                    ideaCards.find((idea) => idea.id === featuredIngredientIds[0])?.imageTitle
+                  }
                   data-ai-choice-detail="A Varied Selection to Get Started"
                 >
                   Suggested Details
@@ -197,6 +224,10 @@ const faq = [
                   <option
                     value={id}
                     data-ai-choice-image={ideaCards.find((idea) => idea.category === id)?.image}
+                    data-ai-choice-alt={ideaCards.find((idea) => idea.category === id)?.alt}
+                    data-ai-choice-title={
+                      ideaCards.find((idea) => idea.category === id)?.imageTitle
+                    }
                     data-ai-choice-detail={ideaCards
                       .filter((idea) => idea.category === id)
                       .slice(0, 2)
@@ -239,9 +270,12 @@ const faq = [
                   </span>
                   <img
                     src={example.image}
+                    srcset={example.imageSrcSet}
+                    sizes="(max-width: 540px) 40vw, 180px"
+                    title={example.imageTitle}
                     width="160"
                     height="140"
-                    alt=""
+                    alt={example.alt}
                     loading="lazy"
                     decoding="async"
                   />
@@ -318,9 +352,12 @@ const faq = [
                   </span>
                   <img
                     src={reference.image}
+                    srcset={reference.imageSrcSet}
+                    sizes="96px"
                     width="160"
                     height="140"
-                    alt=""
+                    alt={reference.alt}
+                    title={reference.imageTitle}
                     loading="lazy"
                     decoding="async"
                   />
@@ -484,14 +521,14 @@ const faq = [
               <p id="ai-quota" class="ai-quota">
                 Checking today’s free capacity…
               </p>
-              <a
+              <ContentLink
                 id="ai-live-builder"
                 class="button primary"
                 href="https://ultraclipart.com/ai-clipart-generator/"
                 hidden
               >
                 Continue on AI Clipart Builder
-              </a>
+              </ContentLink>
               <details id="ai-generation-settings" class="ai-options">
                 <summary>Fine-tune your idea & generation settings</summary>
                 <div class="ai-options-fields">
@@ -504,6 +541,14 @@ const faq = [
                         data-ai-choice-image={
                           styleCards.find((style) => style.id === value)?.image ??
                           ideaCards.find((idea) => idea.style === value)?.image
+                        }
+                        data-ai-choice-alt={
+                          styleCards.find((style) => style.id === value)?.alt ??
+                          ideaCards.find((idea) => idea.style === value)?.alt
+                        }
+                        data-ai-choice-title={
+                          styleCards.find((style) => style.id === value)?.imageTitle ??
+                          ideaCards.find((idea) => idea.style === value)?.imageTitle
                         }
                         data-ai-choice-detail={detail}
                       >
@@ -569,8 +614,7 @@ const faq = [
               </details>
               <p class="ai-privacy">
                 Your prompt is processed by Cloudflare AI. Images aren’t published.{' '}
-                <a href="/privacy/#ai-generation-and-protection">Privacy</a> ·{' '}
-                <a href="/terms/#ai-clipart-builder">AI terms</a>
+                <a href="/privacy/#builder">Privacy</a> · <a href="/terms/#builder">AI terms</a>
               </p>
             </div>
           </section>
@@ -653,13 +697,15 @@ const faq = [
                   class="ai-concept"
                   data-ai-example={example.id}
                   aria-pressed="false"
-                  aria-label={`Use example: ${example.label}`}
                 >
                   <img
                     src={example.image}
+                    srcset={example.imageSrcSet}
+                    sizes="(max-width: 540px) 40vw, 180px"
+                    title={example.imageTitle}
                     width="320"
                     height="320"
-                    alt=""
+                    alt={example.alt}
                     loading="lazy"
                     decoding="async"
                   />
@@ -686,6 +732,7 @@ const faq = [
                 hidden
               ></canvas>
               <img
+                title="Original generated image before local edits"
                 id="ai-before"
                 src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
                 width="1024"
@@ -960,9 +1007,9 @@ const faq = [
         </details>
         <p class="ai-model-note">
           Images by FLUX.1 schnell. Prompt assistance:{' '}
-          <a href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE">
+          <ContentLink href="https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/blob/main/LICENSE">
             Built with Llama
-          </a>
+          </ContentLink>
           . Local edits use no generation quota.
         </p>
       </section>
@@ -1031,7 +1078,10 @@ const faq = [
           >
             <div class="ai-idea-picture">
               <img
+                title={example.imageTitle}
                 src={example.image}
+                srcset={example.imageSrcSet}
+                sizes="(max-width: 540px) 40vw, 180px"
                 width="260"
                 height="210"
                 alt={example.alt}
@@ -1050,7 +1100,7 @@ const faq = [
                   type="button"
                   data-ai-example={example.id}
                   aria-pressed="false"
-                  aria-label={`Use example: ${example.label}`}
+                  aria-label={`Use This Idea: ${example.label}`}
                 >
                   Use This Idea
                 </button>

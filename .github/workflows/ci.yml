@@ -77,6 +77,15 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm format:check
+      - name: Restore source-bound screen previews
+        uses: actions/cache@v4
+        with:
+          path: |
+            public/previews
+            .astro/preview-assets.json
+          key: previews-${{ runner.os }}-${{ hashFiles('scripts/preview-assets.mjs', 'pnpm-lock.yaml') }}-${{ hashFiles('data/art.json') }}
+          restore-keys: |
+            previews-${{ runner.os }}-${{ hashFiles('scripts/preview-assets.mjs', 'pnpm-lock.yaml') }}-
       - run: pnpm check
       - run: pnpm build
       - run: pnpm test
@@ -101,10 +110,21 @@ jobs:
           fi
           for engine in ${{ matrix.engine }}; do
             if [ '${{ matrix.suite }}' = 'interface-core' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/image-information.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorite-boards.mjs
+              if [ "$engine" != 'firefox' ]; then
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorites-workspace.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/brand-accents.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/responsive-controls.mjs
+              fi
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/performance-regressions.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/performance-layout.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/cookie-startup.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/warm-editor-cache.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/mobile-performance.mjs
             fi
             if [ '${{ matrix.suite }}' = 'interface-artwork' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/artwork-details.mjs
@@ -113,6 +133,9 @@ jobs:
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/sharing.mjs
             fi
             if [ '${{ matrix.suite }}' = 'interface-pages' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/editorial-process.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/not-found.mjs
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/contact.mjs
               BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
               BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/content.mjs

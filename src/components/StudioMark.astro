@@ -1,0 +1,26 @@
+---
+interface Props {
+  size?: number;
+  loading?: 'eager' | 'lazy';
+}
+const { size = 34, loading = 'eager' } = Astro.props;
+---
+
+<img
+  class="studio-brand-mark"
+  src="/illustrations/studio-compose-v3.svg"
+  width={size}
+  height={size}
+  alt=""
+  aria-hidden="true"
+  decoding="async"
+  loading={loading}
+/>
+
+<style>
+  .studio-brand-mark {
+    display: block;
+    flex: none;
+    object-fit: contain;
+  }
+</style>

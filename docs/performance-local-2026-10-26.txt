@@ -1,0 +1,160 @@
+ULTRACLIPART — YEREL PERFORMANS ÇALIŞMASI
+26 Ekim 2026
+
+Yayın durumu
+Bu çalışma ve önceki bekleyen değişiklikler yereldedir. GitHub'a gönderilmedi,
+Cloudflare/R2 değiştirilmedi ve önbellek temizliği yapılmadı. Bu dosya yayın izni
+vermez. Yeni bir açık yayın talimatı gereklidir.
+
+Uygulama
+• 12.152 yayımlanabilir eser için 96, 220, 440 ve 960 sınırlarında, en-boy oranını
+  koruyan WebP önizlemeler üretilir. 960 boyutu 100.000 baytı aşan eserlerde
+  mobil aktarımı azaltmak için ayrıca 640 boyutu hazırlanır. Dosya adları doğrulanmış kaynak SHA-256
+  değerlerine ve dönüştürücü sürümüne bağlıdır. Kaynak değişince URL değişir.
+• Katalog kartları, arama, ilgili eserler, menü, detay ve Studio ekranları uygun
+  önizlemeyi srcset/sizes ile seçer. Asıl indirilebilir WebP/PDF kaynakları ve
+  dosya bütünlüğü denetimleri korunur; küçük önizleme indirilecek dosya yerine
+  geçmez. Eser kimlikleri, başlıklar, alternatif metinler değiştirilmez.
+• İlk Studio açılışı 500 seçilmiş kayıttan 24 önizleme gösterir. Tam kataloğun
+  aranması ve bütün vektörler korunur; büyük veriler ilgili işlemde yüklenir.
+• Ortak altbilginin sizes bildirimi, CSS ile küçülen gerçek görsel alanlarına
+  göre düzeltildi. Mobilde gereksiz 440 yerine uygun 220 önizleme seçilebilir;
+  yüksek yoğunluklu ekranlar daha büyük adayı seçmeye devam eder.
+• Inter ve yalnızca Guides/For Teachers'da kullanılan Source Sans 3, resmî
+  Fontsource paketlerinden doğrulanmış Latin font dosyalarını kullanır. Lisans
+  ve kaynak kayıtları public/fonts/ altında tutulur. Avenir önceliği korunur.
+• Gerçek rehber ekran görüntüleri mevcut kırpımlarıyla küçültülür. Yerel kopyalar
+  lazy img olarak yüklenir; numaralar ve SVG işaretçiler aynı koordinatları kullanır.
+  Tam ekran görüntüsü bağlantıları asıl dosyalara gitmeye devam eder.
+• Arama sonuç türü sayaçlarına önceden yer ayrılır; düzenleyici tuvalinin ilk
+  oranı kaynak boyutlarından gelir. Ana eser önizlemesi uygun srcset ile ön yüklenir.
+• Çerez bildiriminin mevcut bölge kontrolü, başka sayfa modüllerini beklemeden
+  başlayacak şekilde öne alındı; kayıtlı tercihler ve bölge kararı korunur.
+• Düzenleyici, asıl dosyayı HTTP önbelleğinden de boyut ve SHA-256 ile doğrular.
+  İçerik uyuşmazlığında bir kez reload yapar; ikinci uyuşmazlıkta düzenleme ve
+  çıktı engellenir. Kimlik bilgisi gönderilmez; köken, yönlendirme, boyut ve
+  zaman aşımı sınırları korunur. Sayfaya ait doğrulanmış indirme küçük bir head
+  modülüyle erken başlar; ana düzenleyici aynı isteği bir kez tüketir. Gerçek ölçümde Chromium tekrar aktarımı sıfır
+  bildirdi; yerel geçici WebKit bağlamı tekrar veri aktarımı bildirdi.
+• İçeriğe bağlı önizleme/font dosyaları uzun süre önbelleklenir. Değişebilen Studio
+  JSON verisi yeniden doğrulanır. localStorage/IndexedDB temizlenmez.
+
+Tekrarlanabilir yerel kontrol (Node 24.19.0 ve kilitli proje bağımlılıkları)
+pnpm performance:build
+pnpm performance:serve
+pnpm performance:audit
+pnpm test:performance
+pnpm test:performance:browser
+
+Lighthouse
+Araç üretim bağımlılığı değildir. Bu çalışmada Lighthouse 13.5.0 kullanıldı.
+İlk karşılaştırma turu 12.8.2 idi; farklı sürümlerin skorları eşdeğer sayılmaz.
+13.5.0 aracı ayrı bir yerel test klasörüne kurulmalıdır; proje kilit dosyasına
+geçici work klasörü importer kaydı eklenmemelidir. Bu çalışmadaki kurulum:
+  work/performance-tools/node_modules/lighthouse
+  work/performance-tools/resolved-toolchain-lock.yaml
+Çalıştırma:
+  LIGHTHOUSE_HOME=work/performance-tools/node_modules PERFORMANCE_SCOPE=templates \
+    PERFORMANCE_OUT=reports/performance/your-round pnpm performance:lighthouse
+İsteğe bağlı PERFORMANCE_ROUTES, PERFORMANCE_DEVICES=mobile,desktop ve BASE_URL
+kullanılabilir. Araç sadece localhost/127.0.0.1 hedeflerine izin verir.
+HTML raporları ve sıkıştırılmış tam JSON sonuçları saklanır. Başarısız bir ölçüm
+başarılı sayılmaz. Lighthouse puanı gerçek kullanıcı ölçümü veya tüm ziyaretlerde
+aynı puanın garantisi değildir.
+
+Sınırlar
+Yerel önizleme gerçek Astro sayfalarını üretir, 19 GB değiştirilmemiş kaynak
+kopyasını yeniden çoğaltmak yerine aynı public dosyalarını sunar. Cloudflare
+Pages Functions, Turnstile ve üretim güvenlik/önbellek başlıklarını taklit etmez.
+İstisna: çerez bölge uç noktası mevcut gerçek işleyiciyi çalıştırır; localhost
+üzerinde edge ülke bilgisi olmadığı için işleyicinin bilinmeyen ülke davranışı
+uygulanır. Bu gerçek bir IP konum tespiti testi değildir.
+AI Builder kota API'si bu sunucuda yoktur; 404 yanıtı gizlenmemiştir. Bu nedenle
+bu sayfanın yerel Best Practices puanı 96 olabilir. Canlı AI üretimi test edilmedi.
+Arama, Favorites, düzenleyici ve bazı keşif sayfalarının mevcut noindex kararı
+korunur. Bu sayfalarda SEO 69 görmek, sırf puan yükseltmek için kaldırılacak bir
+hata değildir. Fiziksel iPhone Safari veya gerçek Android cihaz testi yapılmadı;
+WebKit/Chromium testleri ayrı ve temiz tarayıcı bağlamlarında çalıştı.
+
+Kapsam
+all-pages.json: her oluşturulmuş HTML için statik görsel/kaynak kontrolü.
+32 temsilî adres: her ayrı şablon, hukuk/yardım sayfaları ve iki eser oranı için
+mobil/masaüstü Lighthouse. Bu 24.589 ayrı Lighthouse testi anlamına gelmez.
+performance-regressions.mjs: arama tıklaması, ilgili eserler, asıl indirme,
+Studio veri yükleme, arama yarış koşulu, vektörler ve kaydedilmiş proje.
+performance-layout.mjs: rehber sekmeleri, gerçek kırpımlar/işaretçiler, sayaç
+alanları ve düzenleyici oranı. CI bu testleri tarayıcı işleri içinde çalıştırır;
+yerelde çalıştırılmamış CI sonucu raporda başarılı ilan edilmez.
+
+Kaynaklar
+https://developer.chrome.com/docs/lighthouse/performance/performance-scoring
+https://web.dev/articles/optimize-lcp
+https://web.dev/articles/responsive-images
+https://github.com/GoogleChrome/lighthouse/releases
+
+Mobil arama ve düzenleyici ek çalışması
+• Sorgu sonuçları gelmeden ilgisiz başlangıç görselleri indirilmez. Eser sonuçları
+  ek sayfa/araç dizinini beklemez. Eski sorgunun ara ve son yanıtı yeni sorguyu
+  değiştiremez. Dizin hatası eserleri kaldırmaz; yeniden deneme görünürdür.
+• Düzenleyicide küçük ekran kopyası önce çizilir. Asıl dosyanın indirilmesi,
+  boyut/özet/boyutlar doğrulaması tamamlanana kadar araçlar kapalıdır. Ekran
+  kopyası ile tam düzenleme hazır olma süreleri aynı şey değildir. Görsel
+  düğümleri yerinde güncellenir. Yakınlaştırma ve çıktı asıl veriye döner.
+• Görünmeyen Studio araçları gerekince yüklenir. İlk araç bağlantısı, başlangıç
+  şablonu ve doğrudan araç adresi yüklemeyi başlatır. Hata/retry durumu görünürdür.
+• Yeni test: node tests/e2e/mobile-performance.mjs. Chromium/WebKit'te yavaş
+  orijinal, başarısız dizin ve geri dönüş, dokunma, tam SHA-256, kayıp ekran
+  kopyası, ilk araç tıklaması ve doğrudan araç bağlantısını sınar. Yapay ağ
+  koşulları yalnızca bu davranış testindedir; Lighthouse ölçümleri gerçek
+  yerel sunucu yanıtlarıyla alınır.
+• Güncel ölçüm dizini mobile-verified; ara mobile-focus-1..6 deneyleri
+  saklanmıştır. İlk turun derleme sırasında aldığı 404 başarısızdır. Font ön
+  yüklemesi eser düzenleyicilerinde gerilediği için o sayfalardan çıkarıldı.
+• Mevcut 75 birim testi, derleme ve gerçek tarayıcı kanıtları reports/performance
+  altında saklanır. Sonuçlar, kapsam ve kalan 100-altı puanlar rapor.html'dedir.
+
+Derin tarama — 26 Ekim, ek tur
+• Bütün 24.589 üretilmiş HTML adresi Chromium’da 320 ve 1440 pikselde açıldı:
+  49.178 yapısal yerleşim kontrolü. JavaScript bu tam envanter taramasında
+  kapalıdır; görsel/fontlar normal yüklenir. Yatay taşma, metin kesilmesi,
+  ekran dışına kaçan öğe, eksik main/H1 ve yinelenen kimlikler denetlenir.
+  Bu, her adresin bütün etkileşimlerinin veya Lighthouse skorunun ölçüldüğü
+  anlamına gelmez. Tam kanıt all-route-layout/pages.ndjson dosyasındadır.
+• Kesintideki bağlantı hataları ilk kayıtlarda korundu. Başarılı olmayan
+  adresler aynı derlemede yeniden açıldı; son kapsamda eksik adres bırakılmadı.
+  UC_RESUME=1 yalnızca HTML dosyaları değişmemişse tamamlanan adresleri korur.
+• JavaScript açık ek kapsam: önce 540 katalog/koleksiyon/eser adresi üç ekran
+  genişliğinde Chromium’da; sonra 34 farklı ekran beş genişlikte WebKit/Axe.
+  Etkileşim, kaynak doğrulama ve gerçek çıktı testleri ayrı kanıtlardır.
+• Tüm üretilmiş HTML’lerde iç navigasyon ve ortak dosya yolları ayrıca incelenir:
+  node scripts/performance/audit-links.mjs. Dış adresler, API davranışı ve
+  sayfa içi işaretçiler bu dosya denetiminde doğrulanmış sayılmaz. Noindex hata
+  belgesinin canonical kimliği, kullanıcı navigasyonundan ayrı raporlanır.
+• Erken çerez bölge kontrolü küçük bir inline paket ile başlar ve bildirimle
+  aynı Promise’i paylaşır. Geçerli kayıtlı tercih varsa istek yapılmaz. Mevcut
+  bölge/başarısızlık davranışı korunur. Editörlerde görsel önceliği için ek
+  inline başlangıç çalışmaz; mevcut bildirim modülü kararı alır. Normal release
+  CSP üreticisi aynı script baytlarını hash’ler; unsafe-inline eklenmez.
+• Studio ikonlarının uzun rastgele SVG kimlikleri belgeye ait kısa sayaçlarla
+  değiştirildi. Şekiller ve gölgeler korunur. Tam tarama tekrar eden kimliği
+  hata sayar. Yerel sunucunun sıkıştırılmış yanıt belleği 64 MiB ile sınırlıdır;
+  bulunmayan sayfalarda gerçek 404 tasarımı ve HTTP 404 gösterilir.
+• İlgili birim testleri 79 başarılı; son derleme 24.589 sayfa. Son Lighthouse
+  deep-final ve aynı derlemedeki ek mobil tekrar deep-repeat dizinindedir.
+  Başarısız/gerileyen ara deneyler silinmez. Rapor her ölçümün tarihini gösterir.
+
+Tam envanter taraması (yerel sunucu açıkken):
+  UC_WORKERS=4 node tests/e2e/all-route-layout.mjs
+Yalnızca değişmemiş derlemede kesintiden devam:
+  UC_WORKERS=2 UC_RESUME=1 node tests/e2e/all-route-layout.mjs
+Türkçe raporu üret:
+  node scripts/performance/report.mjs
+
+Gerçek yavaş ağ / CPU kontrolü:
+  node tests/e2e/throttled-editor.mjs
+Bu Chromium testi iki orijinal eserde 150 ms gecikme, 200.000 bayt/sn indirme ve
+4 kat CPU yavaşlatması uygular; ilk gerçek çizim ve araçların hazır olmasını ayrı
+kaydeder. Son koşu önizleme LCP değerleri 1,72 / 1,07 saniye; düzenleme hazır
+4,26 / 7,88 saniyedir. Lighthouse simülasyon puanı veya fiziksel telefon değildir.
+Aynı derlemede mobil arama 98 / 94, voleybol editörü 73 / 95 almıştır; iki ölçüm
+de saklanır, en iyi değer tek gerçekmiş gibi sunulmaz. 100 hedefi karşılanmadı.

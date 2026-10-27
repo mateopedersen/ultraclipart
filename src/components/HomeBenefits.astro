@@ -56,7 +56,7 @@ const benefits = [
 <style>
   .home-benefits {
     --benefit-gap: 24px;
-    margin: 64px auto 20px;
+    margin: 0;
     padding: var(--benefit-gap);
     padding-bottom: calc(var(--benefit-gap) + 5px);
     border: 1px solid #dce7f5;
@@ -74,8 +74,8 @@ const benefits = [
   }
   .home-benefits-eyebrow {
     margin: 0 0 9px;
-    color: #315b8c;
-    font-size: 13px;
+    color: var(--brand-accent);
+    font-size: 14px;
     font-weight: 700;
   }
   .home-benefits h2 {
@@ -209,7 +209,6 @@ const benefits = [
   @media (max-width: 600px) {
     .home-benefits {
       --benefit-gap: 16px;
-      margin-top: 42px;
       border-radius: 20px;
     }
     .home-benefits-heading > p {

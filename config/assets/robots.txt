@@ -1,0 +1,6 @@
+# Public UltraClipart media. Crawling is allowed for all user agents.
+# Discovery is maintained by the main site's page and image sitemaps.
+# Browse the library: https://ultraclipart.com/library-index/
+User-agent: *
+Allow: /
+Sitemap: https://ultraclipart.com/sitemap.xml

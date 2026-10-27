@@ -1,6 +1,8 @@
 export const BOARDS_KEY = 'ultraclipart-favorite-boards-v1';
 export const BOARD_COLORS = ['blue', 'rose', 'sage', 'gold', 'lavender'] as const;
 export type BoardColor = (typeof BOARD_COLORS)[number];
+export const FAVORITE_STAGES = ['idea', 'shortlist', 'ready', 'used'] as const;
+export type FavoriteStage = (typeof FAVORITE_STAGES)[number];
 export interface FavoriteBoard {
   id: string;
   title: string;
@@ -8,6 +10,9 @@ export interface FavoriteBoard {
   color: BoardColor;
   createdAt: string;
   updatedAt: string;
+  pinned?: boolean;
+  archived?: boolean;
+  coverId?: string;
 }
 export interface FavoriteEntry {
   savedAt?: string;
@@ -15,6 +20,10 @@ export interface FavoriteEntry {
   thumb?: string;
   note: string;
   boards: string[];
+  pinned?: boolean;
+  stage?: FavoriteStage;
+  tags?: string[];
+  updatedAt?: string;
 }
 export interface BoardState {
   schema: 1;
@@ -61,6 +70,9 @@ export function parseBoards(value: string | null): BoardState {
         color: BOARD_COLORS.includes(b.color) ? b.color : 'blue',
         createdAt: b.createdAt,
         updatedAt: b.updatedAt,
+        ...(b.pinned === true ? { pinned: true } : {}),
+        ...(b.archived === true ? { archived: true } : {}),
+        ...(identity(b.coverId) ? { coverId: b.coverId } : {}),
       });
     }
     for (const [id, e] of Object.entries(data.entries).slice(0, 10000)) {
@@ -77,6 +89,18 @@ export function parseBoards(value: string | null): BoardState {
         ...(text(entry.title, 200) ? { title: text(entry.title, 200) } : {}),
         ...(thumb ? { thumb } : {}),
         note: text(entry.note, 500),
+        ...(entry.pinned === true ? { pinned: true } : {}),
+        ...(FAVORITE_STAGES.includes(entry.stage as FavoriteStage)
+          ? { stage: entry.stage as FavoriteStage }
+          : {}),
+        ...(Array.isArray(entry.tags)
+          ? {
+              tags: normalizeFavoriteTags(
+                entry.tags.filter((tag): tag is string => typeof tag === 'string').join(','),
+              ),
+            }
+          : {}),
+        ...(date(entry.updatedAt) ? { updatedAt: entry.updatedAt } : {}),
         boards: Array.isArray(entry.boards)
           ? [
               ...new Set(
@@ -90,6 +114,77 @@ export function parseBoards(value: string | null): BoardState {
   } catch {
     return empty;
   }
+}
+export function normalizeFavoriteTags(value: string): string[] {
+  return [
+    ...new Set(
+      value
+        .split(',')
+        .map((tag) => tag.trim().toLocaleLowerCase('en-US').slice(0, 30))
+        .filter(Boolean),
+    ),
+  ].slice(0, 12);
+}
+export function matchesFavoriteQuery(id: string, entry: FavoriteEntry | undefined, query: string) {
+  const normalize = (value: string) =>
+    value
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLocaleLowerCase('en-US');
+  const haystack = normalize(
+    `${entry?.title || id.replaceAll('-', ' ')} ${entry?.note || ''} ${(entry?.tags || []).join(' ')}`,
+  );
+  const terms = [...normalize(query).matchAll(/(-?)"([^"]+)"|(-?)(\S+)/g)];
+  return terms.every((term) => {
+    const exclude = term[1] === '-' || term[3] === '-';
+    const value = term[2] || term[4];
+    return exclude ? !haystack.includes(value) : haystack.includes(value);
+  });
+}
+export function duplicateBoard(
+  state: BoardState,
+  sourceId: string,
+  now = new Date().toISOString(),
+) {
+  const source = state.boards.find((board) => board.id === sourceId);
+  if (!source) throw new Error('This board is no longer available.');
+  const board = createBoard(
+    state,
+    `${source.title.slice(0, 73)} (copy)`,
+    source.description,
+    source.color,
+    now,
+  );
+  if (source.coverId) board.coverId = source.coverId;
+  const members = Object.keys(state.entries).filter((id) =>
+    state.entries[id].boards.includes(sourceId),
+  );
+  assignBoard(state, members, board.id, false, now);
+  return board;
+}
+export function favoriteCsv(ids: string[], state: BoardState) {
+  const cell = (value: string) => {
+    // Spreadsheet formulas must remain inert when the user opens exported notes.
+    const safe = /^[\s]*[=+@-]/.test(value) ? `'${value}` : value;
+    return `"${safe.replaceAll('"', '""')}"`;
+  };
+  const rows = [['Title', 'Artwork URL', 'Stage', 'Tags', 'Note', 'Saved At', 'Boards']];
+  for (const id of ids.filter(identity)) {
+    const e = state.entries[id];
+    rows.push([
+      e?.title || id.replaceAll('-', ' '),
+      `https://ultraclipart.com/art/${id}/`,
+      e?.stage || 'idea',
+      (e?.tags || []).join(', '),
+      e?.note || '',
+      e?.savedAt || '',
+      state.boards
+        .filter((b) => e?.boards.includes(b.id))
+        .map((b) => b.title)
+        .join(', '),
+    ]);
+  }
+  return '\uFEFF' + rows.map((row) => row.map(cell).join(',')).join('\r\n');
 }
 export function readBoards(storage: BoardStorage) {
   return parseBoards(storage.getItem(BOARDS_KEY));

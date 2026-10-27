@@ -34,7 +34,9 @@ try {
   }
   await page.goto(base + '/collection/food-drink/');
   for (const t of expected)
-    await expect(page.locator(`.chips a[href="/clipart/${t.slug}/"]`)).toHaveCount(1);
+    await expect(
+      page.locator(`[data-related-collections] a[href="/clipart/${t.slug}/"]`),
+    ).toHaveCount(1);
   await page.goto(base + '/clipart/cranberry/');
   await expect(page.locator('.chips a[href="/collection/food-drink/"]')).toHaveCount(1);
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute(

@@ -48,7 +48,7 @@ try {
       );
       assert.equal(
         await page.locator('meta[name="robots"]').getAttribute('content'),
-        'index,follow',
+        'index,follow,max-image-preview:large',
       );
       const axe = await new AxeBuilder({ page })
         .setLegacyMode(engine === 'webkit')

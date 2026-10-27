@@ -102,7 +102,7 @@ try {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
     timeout: 45000,
   });
-  await page.locator('[data-work-mode=advanced]').click();
+  await page.locator('[data-work-mode=edit]').click();
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await settle();
   await page.locator('.uc-canvas').screenshot({ path: resolve(out, 'baby-before.png') });
@@ -260,7 +260,7 @@ try {
   await settle();
   assert.deepEqual(await imageBytes(), final);
   report.checks.push('Browser local recovery restores exact rendered pixels.');
-  await page.locator('[data-work-mode=advanced]').click();
+  await page.locator('[data-work-mode=edit]').click();
   await page.locator('[data-panel=layers]').click();
   await page.locator('[data-load]').setInputFiles(resolve(out, 'baby-edited-project.json'));
   await settle();

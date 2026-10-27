@@ -296,7 +296,7 @@
   align-self: start;
   flex-shrink: 0;
   padding-top: 5px;
-  color: #6b7b8e;
+  color: #53677f;
   font-size: 13px;
 }
 .print-paper-figure {
@@ -345,8 +345,8 @@
 }
 .print-tool .print-eyebrow {
   margin: 0 0 5px;
-  font-size: 13px;
-  color: #5c6c80;
+  font-size: 14px;
+  color: var(--brand-accent);
   letter-spacing: 0;
   font-weight: 600;
 }

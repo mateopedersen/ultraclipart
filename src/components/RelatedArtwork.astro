@@ -1,6 +1,6 @@
 ---
 import RelatedCard from './RelatedCard.astro';
-import NavigationArrow from './NavigationArrow.astro';
+import CollectionPreviewLink from './CollectionPreviewLink.astro';
 import { relatedIndex } from '../lib/related/service';
 import '../styles/related.css';
 interface Props {
@@ -26,9 +26,6 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
           : 'Explore the collection for more artwork and ideas.'}
       </p>
     </div>
-    <a class="related-collection" href={snapshot.category}>
-      <span>{snapshot.categoryLabel}</span> <NavigationArrow size={32} dimensional />
-    </a>
   </div>
   {hasCards && (
     <>
@@ -94,7 +91,7 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
           hidden={!collection.length}
         >
           <div class="related-group-heading">
-            <h3>Explore this collection</h3>
+            <h3>More from this collection</h3>
             <p>More reviewed designs from the same collection, ranked by style and composition.</p>
           </div>
           <div class="related-grid">
@@ -113,9 +110,6 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
           Keep scrolling to discover more, or use the button above.
         </p>
         <p class="related-status" role="status" aria-live="polite" data-related-status></p>
-        <a href={snapshot.category} data-related-end hidden>
-          <span>Continue exploring the collection</span> <NavigationArrow size={32} dimensional />
-        </a>
         <a href={`/art/${snapshot.sourceId}/`} data-related-refresh hidden>
           Refresh artwork recommendations <span aria-hidden="true">↻</span>
         </a>
@@ -130,6 +124,14 @@ const companionLabel = snapshot.companions.length ? 'Matching fruit' : 'Companio
       />
     </>
   )}
+  <div class="related-collection-discovery" data-collection-discovery>
+    <h3>Explore this collection</h3>
+    <CollectionPreviewLink
+      href={snapshot.category}
+      label={snapshot.categoryLabel}
+      sourceId={snapshot.sourceId}
+    />
+  </div>
 </section>
 <script>
   import { initRelatedArtwork } from '../scripts/related-artwork';

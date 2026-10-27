@@ -52,7 +52,7 @@ async function open(a) {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
     timeout: 45000,
   });
-  await page.locator('button[data-work-mode=advanced]').click();
+  await page.locator('button[data-work-mode=edit]').click();
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await settle();
 }
@@ -145,9 +145,8 @@ try {
     const saved = await state();
     assert.equal(saved.layers[0].regions.length, 1);
     assert.equal(saved.layers[0].width, a.width);
-    await page.locator('button[data-work-mode=quick]').click();
     await page.locator('button[data-work-mode=print]').click();
-    await page.locator('button[data-work-mode=advanced]').click();
+    await page.locator('button[data-work-mode=edit]').click();
     assert.equal((await pixelInfo()).hash, after.hash);
     report.sources.push({
       id: a.id,
@@ -167,7 +166,7 @@ try {
   // Keep only the source to make each tool's effect independently observable.
   await page.locator('[data-action=reset]').click();
   await settle();
-  await page.locator('button[data-work-mode=advanced]').click();
+  await page.locator('button[data-work-mode=edit]').click();
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await action('all');
   await change('[data-region-mode]', 'adjust');
@@ -280,7 +279,7 @@ try {
   await expect(page.locator('[data-status]')).toContainText('restored', { timeout: 60000 });
   await settle();
   assert.equal((await state()).layers.filter((l) => l.kind === 'raster').length, 3);
-  await page.locator('button[data-work-mode=advanced]').click();
+  await page.locator('button[data-work-mode=edit]').click();
   await panel('layers');
   await page.locator('[data-load]').setInputFiles(composerFile);
   await expect(page.locator('[data-status]')).toContainText('Saved project opened');
@@ -359,7 +358,7 @@ try {
   report.checks.push('Monochrome trace exports actual SVG paths and no embedded bitmap.');
   for (const width of [320, 390, 768, 1440]) {
     await page.setViewportSize({ width, height: 950 });
-    await page.locator('button[data-work-mode=advanced]').click();
+    await page.locator('button[data-work-mode=edit]').click();
     await panel('region');
     const audit = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])

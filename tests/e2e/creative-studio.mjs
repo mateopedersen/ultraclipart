@@ -175,7 +175,7 @@ try {
   expect((await state()).layers).toHaveLength(276);
   const loadMs = Date.now() - started;
   await page.locator('[data-work-mode=quick]').click();
-  await page.locator('[data-work-mode=advanced]').click();
+  await page.locator('[data-work-mode=edit]').click();
   expect((await state()).layers).toHaveLength(276);
   await panel('layers');
   await page.locator('[data-select=e-0]').click();

@@ -1,41 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import scene from '../../data/not-found-visual.json';
+import TeacherSymbol from '../components/TeacherSymbol.astro';
 import { publishedArt } from '../lib/catalog';
 import '../styles/not-found.css';
 
-// Resolve public artwork URLs so the error page also works at nested missing addresses.
 const picture = (id: string, topic: string) =>
   publishedArt.find((item) => item.id === id) ??
   publishedArt.find((item) => item.topic === topic && item.alpha && !item.monochrome);
-const fox = picture('baby-fennec-fox-watercolor-clipart', 'fox');
-const butterfly = picture('blue-morpho-butterfly-flying-illustration-clipart', 'butterfly');
-const fern = picture('leaf-arching-fern-frond-botanical-illustration-clipart', 'leaves');
-const book = picture('book-and-feather-quill-playful-clipart', 'book');
 const subjects = [
   {
-    title: 'Animal Clipart',
-    detail: 'Foxes, elephants and more',
+    title: 'Animals & Nature',
+    detail: 'Animals, plants, and outdoor subjects',
     href: '/collection/animals-nature/',
     id: 'baby-elephant-standing-realistic-clipart',
     topic: 'baby-elephant',
   },
   {
     title: 'Hearts & Flowers',
-    detail: 'Cards, wreaths and decorations',
+    detail: 'Wreaths, flowers, and card illustrations',
     href: '/clipart/heart/',
     id: 'floral-heart-roses-wreath-clipart',
     topic: 'heart',
   },
   {
     title: 'Food & Fruit',
-    detail: 'Fruit, pizza and other treats',
+    detail: 'Ingredients, meals, and colorful fruit',
     href: '/collection/food-drink/',
     id: 'strawberry-fruit-trio-realistic-clipart',
     topic: 'strawberry',
   },
   {
     title: 'School & Learning',
-    detail: 'Books and classroom pictures',
+    detail: 'Classroom objects and learning materials',
     href: '/collection/school-learning/',
     id: 'school-backpack-filled-with-pencils-classic-clipart',
     topic: 'school',
@@ -44,148 +41,130 @@ const subjects = [
   const image = picture(subject.id, subject.topic);
   return image ? [{ ...subject, image }] : [];
 });
+const routes = [
+  {
+    title: 'Your Favorites',
+    copy: 'Find illustrations you have saved in this browser.',
+    href: '/favorites/',
+    icon: 'boards',
+  },
+  {
+    title: 'Clipart Studio',
+    copy: 'Combine artwork, arrange a layout, or add your own text.',
+    href: '/create/',
+    icon: 'edit',
+  },
+  {
+    title: 'Download & Print Help',
+    copy: 'Choose a file format and prepare your illustration for printing.',
+    href: '/guides/webp-pdf-and-editable-projects/',
+    icon: 'files',
+  },
+] as const;
 ---
 
 <Layout
   title="Page Not Found"
-  description="This page is not available. Search UltraClipart or browse the clipart subjects to find an illustration."
+  description="This page could not be found. Search UltraClipart, explore a subject, or return to the homepage to find an illustration."
   noindex={true}
   socialPage="/404/"
 >
-  <div class="not-found">
+  <article class="not-found">
     <section class="nf-hero" aria-labelledby="nf-title">
       <div class="nf-copy">
         <p class="nf-error-code">
-          <span>404</span> Page Not Found
+          <span>404</span> Page not found
         </p>
-        <h1 id="nf-title">
-          We Can’t Find
-          <br />
-          <span>That Page</span>
-        </h1>
+        <h1 id="nf-title">That page is missing.</h1>
         <p class="nf-description">
-          The address may have changed, or this page is no longer available. You can search for an
-          illustration or browse the subjects below.
+          This may be an old link or a mistyped address. Search the library, return home, or choose
+          another place to start.
         </p>
-        <div class="nf-actions">
-          <a class="nf-home" href="/">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9" />
-            </svg>
-            Go to Homepage
-          </a>
-          <a class="nf-categories" href="/categories/">
-            Browse Categories
-          </a>
-        </div>
-        <form class="nf-search" action="/search/" role="search" aria-label="Search UltraClipart">
-          <label for="nf-query">Find the Clipart You Need</label>
+      </div>
+      <div class="nf-recovery">
+        <form
+          class="nf-search"
+          action="/search/"
+          method="get"
+          role="search"
+          aria-label="Search UltraClipart"
+        >
+          <label for="nf-query">Search for an illustration</label>
           <div class="nf-search-field">
-            <svg
-              width="21"
-              height="21"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              aria-hidden="true"
-            >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <circle cx="10.5" cy="10.5" r="6.5" />
-              <path d="m15.5 15.5 5 5" />
+              <path d="m16 16 5 5" />
             </svg>
             <input
               id="nf-query"
               name="q"
               type="search"
               maxlength="320"
-              placeholder="Try flowers, school or a sleeping fox"
+              placeholder="A subject, style, or scene…"
               autocomplete="off"
             />
-            <button type="submit">Search</button>
+            <button type="submit">
+              Find clipart<span aria-hidden="true"> →</span>
+            </button>
           </div>
         </form>
+        <div class="nf-actions">
+          <a class="nf-home" href="/">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9" />
+            </svg>
+            Go to the homepage
+          </a>
+          <a class="nf-browse" href="/categories/">
+            Browse all subjects<span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
-      <div class="nf-art" aria-hidden="true">
-        <svg class="nf-number-art" viewBox="0 0 680 480" fill="none" focusable="false">
-          <rect x="19" y="29" width="642" height="418" rx="28" fill="#f1f7ff" />
-          <path d="M44 367h590" stroke="#d2e3f8" stroke-width="2" stroke-linecap="round" />
-          <text
-            x="43"
-            y="330"
-            fill="#2d65a3"
-            font-family="Arial, sans-serif"
-            font-size="285"
-            font-weight="700"
-          >
-            4
-          </text>
-          <circle cx="339" cy="230" r="105" fill="white" stroke="#76a8de" stroke-width="13" />
-          <path d="m416 307 35 35" stroke="#2d65a3" stroke-width="19" stroke-linecap="round" />
-          <text
-            x="460"
-            y="330"
-            fill="#2d65a3"
-            font-family="Arial, sans-serif"
-            font-size="285"
-            font-weight="700"
-          >
-            4
-          </text>
-          <path
-            d="M56 57h35M56 57v35M624 418h-35m35 0v-35"
-            stroke="#a8c7eb"
-            stroke-width="2"
-            stroke-linecap="round"
-          />
-        </svg>
-        {fox && (
-          <img
-            class="nf-fox"
-            src={fox.thumb}
-            width="380"
-            height="380"
-            alt=""
-            decoding="async"
-            fetchpriority="high"
-          />
-        )}
-        {butterfly && (
-          <img
-            class="nf-butterfly"
-            src={butterfly.thumb}
-            width="180"
-            height="180"
-            alt=""
-            decoding="async"
-          />
-        )}
-        {fern && (
-          <img class="nf-fern" src={fern.thumb} width="210" height="210" alt="" decoding="async" />
-        )}
-        {book && (
-          <img class="nf-book" src={book.thumb} width="220" height="220" alt="" decoding="async" />
-        )}
-        <span class="nf-art-caption">Illustrations From the UltraClipart Library</span>
+      <figure class="nf-visual">
+        <img
+          class="nf-scene-image"
+          src={scene.src}
+          srcset={scene.srcset}
+          sizes="(max-width: 420px) calc(100vw - 32px), (max-width: 760px) 420px, 540px"
+          width={scene.width}
+          height={scene.height}
+          alt={scene.alt}
+          title={scene.title}
+          fetchpriority="high"
+          decoding="async"
+        />
+      </figure>
+    </section>
+
+    <section class="nf-shortcuts" aria-labelledby="nf-shortcuts-title">
+      <h2 id="nf-shortcuts-title">Choose where to go next</h2>
+      <p class="nf-section-intro">
+        Return to your saved illustrations, continue a design, or find help.
+      </p>
+      <div class="nf-shortcut-grid">
+        {routes.map((route) => (
+          <a href={route.href}>
+            <TeacherSymbol kind={route.icon} size={68} />
+            <span>
+              <strong>{route.title}</strong>
+              <span>{route.copy}</span>
+            </span>
+            <span class="nf-shortcut-arrow" aria-hidden="true">
+              →
+            </span>
+          </a>
+        ))}
       </div>
     </section>
     <section class="nf-subjects" aria-labelledby="nf-subjects-title">
-      <header>
+      <header class="nf-section-heading">
         <div>
-          <h2 id="nf-subjects-title">Browse a Subject Instead</h2>
-          <p>These collections are a good place to start.</p>
+          <h2 id="nf-subjects-title">Explore a subject</h2>
+          <p>Find an illustration for your next project.</p>
         </div>
-        <a href="/categories/">View All Subjects</a>
+        <a href="/categories/">
+          View all subjects<span aria-hidden="true">→</span>
+        </a>
       </header>
       <div class="nf-subject-grid">
         {subjects.map((subject) => (
@@ -193,9 +172,12 @@ const subjects = [
             <span class="nf-subject-picture">
               <img
                 src={subject.image.thumb}
-                width="220"
-                height="180"
-                alt=""
+                srcset={subject.image.thumbSrcSet}
+                sizes="(max-width: 600px) 90px, 120px"
+                alt={subject.image.alt}
+                title={subject.image.title}
+                width={subject.image.width}
+                height={subject.image.height}
                 loading="lazy"
                 decoding="async"
               />
@@ -204,26 +186,21 @@ const subjects = [
               <strong>{subject.title}</strong>
               <span>{subject.detail}</span>
             </span>
-            <svg
-              class="nf-subject-chevron"
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.7"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="m9 5 7 7-7 7" />
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 12h15m-6-6 6 6-6 6" />
             </svg>
           </a>
         ))}
       </div>
     </section>
-    <p class="nf-report">
-      A link on UltraClipart brought you here? <a href="/contact/">Let Us Know</a>
-    </p>
-  </div>
+
+    <div class="nf-report">
+      <img src="/illustrations/actions/contact.svg" width="46" height="46" alt="" loading="lazy" />
+      <p>
+        Found a broken link on UltraClipart?
+        <br />
+        <a href="/contact/">Send us the page address</a> so we can check it.
+      </p>
+    </div>
+  </article>
 </Layout>

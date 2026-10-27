@@ -2,35 +2,14 @@
 @import './card-media.css';
 
 /* Locally installed Avenir is used without shipping a proprietary font file.
-   The self-hosted, open-license Inter faces do not swap into an already laid-out
-   page on a slow connection. The adjusted local fallback keeps similar metrics. */
+   Show the adjusted local fallback immediately while the self-hosted, open-license
+   Inter face loads. Its matched metrics limit movement when the font becomes ready. */
 @font-face {
   font-family: 'UltraClipart Sans';
   font-style: normal;
-  font-weight: 400;
-  font-display: optional;
-  src: url('@fontsource/inter/files/inter-latin-400-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'UltraClipart Sans';
-  font-style: normal;
-  font-weight: 500;
-  font-display: optional;
-  src: url('@fontsource/inter/files/inter-latin-500-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'UltraClipart Sans';
-  font-style: normal;
-  font-weight: 600;
-  font-display: optional;
-  src: url('@fontsource/inter/files/inter-latin-600-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'UltraClipart Sans';
-  font-style: normal;
-  font-weight: 700;
-  font-display: optional;
-  src: url('@fontsource/inter/files/inter-latin-700-normal.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter/inter-latin-wght-3100e775e861.woff2') format('woff2');
 }
 @font-face {
   font-family: 'UltraClipart Fallback';
@@ -79,12 +58,15 @@
   background: #fff;
   font-synthesis: none;
   --ink: #101b43;
-  --blue: #0964df;
+  --blue: var(--brand-accent);
+  --brand-accent: #1464d4;
   --blue-hover: #084fba;
   --line: #dce5ef;
   --muted: #52617a;
   --sage: #f0f6f2;
   --ice: #edf5ff;
+  --page-footer-gap: clamp(28px, 3vw, 40px);
+  --page-section-gap: clamp(32px, 4vw, 48px);
 }
 * {
   box-sizing: border-box;
@@ -161,10 +143,18 @@ select {
 .container {
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 32px 70px;
+  padding: 0 32px var(--page-footer-gap);
 }
 .container.wide {
   max-width: 1600px;
+}
+/* The page owns the gap before the footer. A final component must not add its
+   own trailing margin, including pages whose final nodes are scripts/templates. */
+main.container
+  > :nth-last-child(
+    1 of :not(script, style, template, dialog, [hidden], .sr-only, .visually-hidden)
+  ) {
+  margin-block-end: 0;
 }
 h1,
 h2,
@@ -219,10 +209,10 @@ p {
 }
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
+  letter-spacing: 1px;
+  font-size: 14px;
   font-weight: 700;
-  color: #28558a;
+  color: var(--brand-accent);
   margin-bottom: 15px;
 }
 .searchbox {
@@ -347,9 +337,35 @@ p {
   margin-bottom: 8px;
 }
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 17px;
+  --gallery-columns: 5;
+  --gallery-gap: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: var(--gallery-gap);
+}
+.gallery:not(.home-recent-grid) > .art-card {
+  flex: 0 0
+    calc(
+      (100% - (var(--gallery-columns) - 1) * var(--gallery-gap)) / var(--gallery-columns) - 0.1px
+    );
+}
+/* Preserve card order and count. A 32-item gallery fits eight full four-card rows;
+   other incomplete rows stay centered with the same card width as the full rows. */
+@media (min-width: 1151px) {
+  .gallery:not(.home-recent-grid):has(> .art-card:last-child:nth-child(4n)):not(
+      :has(> .art-card:last-child:nth-child(5n))
+    ) {
+    --gallery-columns: 4;
+  }
+}
+@media (min-width: 581px) and (max-width: 900px) {
+  .gallery:not(.home-recent-grid):has(> .art-card:last-child:nth-child(2n)):not(
+      :has(> .art-card:last-child:nth-child(3n))
+    ) {
+    --gallery-columns: 2;
+  }
 }
 .art-card {
   container: artwork-card / inline-size;
@@ -584,7 +600,7 @@ footer small {
   gap: 24px;
 }
 .catalog-grid .gallery {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  --gallery-columns: 4;
 }
 .filters {
   border: 1px solid var(--line);
@@ -863,15 +879,15 @@ button[aria-pressed='true'] {
     font-size: 44px;
   }
   .gallery {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    --gallery-columns: 4;
   }
   .catalog-grid .gallery {
-    grid-template-columns: repeat(3, 1fr);
+    --gallery-columns: 3;
   }
 }
 @media (max-width: 900px) {
   .container {
-    padding: 0 24px 45px;
+    padding: 0 24px var(--page-footer-gap);
   }
   .home-hero {
     grid-template-columns: 1fr;
@@ -882,16 +898,29 @@ button[aria-pressed='true'] {
   .topic-row {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .gallery,
+  .gallery {
+    --gallery-columns: 3;
+  }
   .category-grid,
   .collection-grid {
     grid-template-columns: repeat(3, 1fr);
   }
   .catalog-grid {
-    grid-template-columns: 170px 1fr;
+    display: block;
+  }
+  .filters {
+    margin-bottom: 20px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+    gap: 0 12px;
+  }
+  .filters h2,
+  .filters button {
+    grid-column: 1 / -1;
   }
   .catalog-grid .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    --gallery-columns: 2;
   }
   .benefits,
   .footer-inner {
@@ -916,7 +945,7 @@ button[aria-pressed='true'] {
     width: 30px;
   }
   .container {
-    padding: 0 16px 35px;
+    padding: 0 16px var(--page-footer-gap);
   }
   .hero {
     padding: 28px 21px;
@@ -953,7 +982,10 @@ button[aria-pressed='true'] {
   .topic-symbol {
     height: 62px;
   }
-  .gallery,
+  .gallery {
+    --gallery-columns: 2;
+    --gallery-gap: 10px;
+  }
   .category-grid,
   .collection-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -986,20 +1018,6 @@ button[aria-pressed='true'] {
   .collection-card img {
     width: 60px;
     height: 60px;
-  }
-  .catalog-grid {
-    display: block;
-  }
-  .filters {
-    margin-bottom: 20px;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 12px;
-  }
-  .filters h2,
-  .filters button {
-    grid-column: span 2;
   }
   .filters h2 {
     font-size: 18px;
@@ -1646,4 +1664,17 @@ button[aria-busy='true'],
   font-size: 14px;
   line-height: 1.8;
   padding-left: 22px;
+}
+
+/* Text-entry controls stay legible on narrow and touch-first screens. Keep
+   component font families and larger reader text; never resize canvas artwork. */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  body
+    :is(input, textarea, select):not([type='hidden']):not([type='checkbox']):not(
+      [type='radio']
+    ):not([type='range']):not([type='color']):not([type='button']):not([type='submit']):not(
+      [type='reset']
+    ) {
+    font-size: max(16px, 1em) !important;
+  }
 }

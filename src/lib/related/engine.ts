@@ -2,7 +2,7 @@ import { artworkCardSummary, CARD_SUMMARY_VERSION } from './summaries';
 import { normalize, safeAsset, type ArtworkInput, type Profile } from './normalize';
 import { companionSubjects, REGISTERED_TOPICS, TAXONOMY_VERSION } from './taxonomy';
 import { CLASSIFIER_VERSION } from './normalize';
-export const ALGORITHM_VERSION = 'uc-related-4';
+export const ALGORITHM_VERSION = 'uc-related-5';
 export const CANDIDATE_LIMIT = 240;
 export const BUCKET_LIMIT = 96;
 export const ALTERNATIVE_LIMIT = 56;
@@ -13,6 +13,7 @@ export interface RelatedCard {
   title: string;
   alt: string;
   thumb: string;
+  thumbSrcSet?: string;
   webp: string;
   pdf?: string;
   href: string;
@@ -111,6 +112,7 @@ function card(result: Ranked, group: RelatedCard['group']): RelatedCard {
     title: item.title,
     alt: item.alt || item.title,
     thumb: item.thumb!,
+    ...(item.thumbSrcSet ? { thumbSrcSet: item.thumbSrcSet } : {}),
     webp: item.webp!,
     ...(safeAsset(item.pdf) && item.files?.pdf?.bytes && item.files.pdf.sha256
       ? { pdf: item.pdf }

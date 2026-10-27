@@ -1,3 +1,5 @@
+import { sceneUpgrades } from './studio-compositions';
+
 export const studioSceneCategories = [
   ['technology', 'Technology & Games'],
   ['school', 'School & Reading'],
@@ -19,7 +21,7 @@ export interface StudioScene {
   color: string;
   items: { id: string; x: number; y: number; width: number }[];
 }
-export const studioScenes: StudioScene[] = [
+const originalScenes: StudioScene[] = [
   {
     id: 'study-desk',
     title: 'Study Desk',
@@ -381,3 +383,8 @@ export const studioScenes: StudioScene[] = [
     ],
   },
 ];
+
+export const studioScenes: StudioScene[] = originalScenes.map((scene) => ({
+  ...scene,
+  ...sceneUpgrades[scene.id],
+}));
