@@ -17,17 +17,17 @@
     "PUBLISHED"
   ],
   "targetArtworkCount": 5500,
-  "generatedArtworkCount": 1652,
+  "generatedArtworkCount": 1702,
   "suppliedArtworkCount": 10730,
-  "originalTopicArtworkCount": 2000,
+  "originalTopicArtworkCount": 2050,
   "supplementalArtworkCount": 11184,
-  "qualityApprovedArtworkCount": 2000,
+  "qualityApprovedArtworkCount": 2050,
   "supplementalApprovedArtworkCount": 11184,
   "reviewerType": "AI_AGENT_NOT_HUMAN",
   "humanApprovedArtworkCount": 0,
-  "availableArtworkCount": 13184,
-  "remainingToDraw": 3848,
-  "nextAction": "Publish and live-verify the completed Election collection after local gallery, SEO and editor tests. Keep the distinct Hanukkah and Veterans release evidence. Check live, accepted, supplied, staged and queued work plus Google Images before planning the next missing original topic. Repairs and skipped topics never count as new originals.",
+  "availableArtworkCount": 13234,
+  "remainingToDraw": 3798,
+  "nextAction": "Publish and live-verify the completed Nutcracker collection after local gallery, SEO and editor tests. Keep the distinct Hanukkah and Veterans release evidence. Check live, accepted, supplied, staged and queued work plus Google Images before planning the next missing original topic. Repairs and skipped topics never count as new originals.",
   "topics": [
     {
       "topic": "halloween",
@@ -944,13 +944,13 @@
       "keyword": "Nutcracker clipart",
       "wave": "W2",
       "target": 50,
-      "generated": 0,
+      "generated": 50,
       "supplied": 0,
-      "available": 0,
-      "approved": 0,
-      "remainingToDraw": 50,
-      "briefStatus": "NOT_STARTED",
-      "briefPath": null
+      "available": 50,
+      "approved": 50,
+      "remainingToDraw": 0,
+      "briefStatus": "50_COMPOSITIONS_REVIEWED",
+      "briefPath": "data/briefs/nutcracker.json"
     },
     {
       "topic": "ornament",
@@ -144506,6 +144506,6 @@
       "sha256": "07ecbad0becb38ba54aede8540b527fd93e2b48d1926a085238bf6d1388d0de4"
     }
   ],
-  "verifiedPublishedGeneratedArtworkCount": 1602,
+  "verifiedPublishedGeneratedArtworkCount": 1652,
   "acceptedAwaitingRelease": 50
 }

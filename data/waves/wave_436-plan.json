@@ -1,0 +1,81 @@
+{
+  "wave": "wave_436",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-theatre-marquee-lettering",
+      "title": "The Nutcracker Theatre Sign",
+      "alt": "Ornate navy theatre sign reading The Nutcracker, with copper trim, red tassels and a wooden toy at one side.",
+      "description": "Cream lettering fills the navy sign beneath a copper fan-shaped crest. Red tassels hang below, and a small red-jacketed nutcracker stands on the shared wooden base.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_436/source/nutcracker-theatre-marquee-lettering.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-advent-drawer-cabinet",
+      "title": "Nutcracker Cabinet with Six Drawers",
+      "alt": "Crowned nutcracker cabinet with six cream drawers, green shoes and a red ribbon in one open drawer.",
+      "description": "Six small cream drawers fill the broad toy's jacket front. One lower drawer opens around a red ribbon, beneath a dark painted face, curled black hair and burgundy crown.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_436/source/nutcracker-advent-drawer-cabinet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-outline-woodcarver",
+      "title": "Carving a Nutcracker Outline",
+      "alt": "Black-and-white drawing of a curly-haired woodcarver shaping a nutcracker at a complete workbench.",
+      "description": "A curly-haired maker steadies the tall toy in a bench cradle while working near its boot. Curled shavings, chisels and a mallet spread across the sturdy wooden bench.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-woodcarver.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "profile-cmyk"
+    },
+    {
+      "id": "nutcracker-outline-theatre-family",
+      "title": "Family Reading a Nutcracker Programme Outline",
+      "alt": "Outline of a girl with two braids showing a nutcracker programme to two adults seated beside her.",
+      "description": "The girl holds a folded programme with a small nutcracker drawing on its cover. A bearded man and headscarf-wearing woman lean closer from separate wooden chairs.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-theatre-family.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "nutcracker-outline-kitchen-tool",
+      "title": "Hands Using a Nutcracker Outline",
+      "alt": "Black-and-white close-up of two hands cracking a walnut above a bowl of kernels and folded tea towel.",
+      "description": "Two hands close the tool's handles around a walnut held between the jaws. A shallow bowl of kernels, folded checked towel and two whole walnuts sit beneath the action.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-kitchen-tool.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "nutcracker-outline-paper-card",
+      "title": "Making a Nutcracker Card Outline",
+      "alt": "Curly-haired boy in a striped apron attaching a paper nutcracker to a folded card at a craft table.",
+      "description": "The boy steadies an upright card while working on its paper nutcracker decoration. Loose paper shapes and a small glue container remain on the table beside his hands.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_436/source/nutcracker-outline-paper-card.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "profile-cmyk"
+    }
+  ]
+}

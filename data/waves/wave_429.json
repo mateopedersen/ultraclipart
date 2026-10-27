@@ -1,0 +1,480 @@
+{
+  "wave": "wave_429",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "nutcracker-crowned-walnut-king",
+      "title": "Crowned Wooden King Nutcracker",
+      "alt": "Wooden king nutcracker with an open gold crown, burgundy cape, white beard and long staff.",
+      "description": "An open crown rises above a stern wooden face and curled white moustache. A burgundy cape, faceted boots and long staff frame the king's broad silhouette.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-crowned-walnut-king.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "b37c06dcb0c80d1ebbeba890fe81195ed0e4ac3ae94f6184084a5fff52bbb65c",
+      "inputSignature": "2a706b77965ab8d7f9ad0f0c290b4c14f895d514e34afaca71d00f99940cd87b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 822741,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 822741,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        222,
+        76,
+        796,
+        1456
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_429/exports/nutcracker-crowned-walnut-king.pdf",
+          "bytes": 822741,
+          "sha256": "dc05e76a43ebea46bd539d933eaf4bc76a90a6d1089a08b80ee8c8df295a4494"
+        },
+        "webp": {
+          "path": "work/production/wave_429/exports/nutcracker-crowned-walnut-king.webp",
+          "bytes": 1356858,
+          "sha256": "256f508836aaf173c37e3deb2d306bd0144896d0455f029baa136037018c99e6"
+        },
+        "thumb": {
+          "path": "work/production/wave_429/exports/nutcracker-crowned-walnut-king-thumb.webp",
+          "bytes": 38524,
+          "sha256": "dfd83aa43dd30501b2e7e900a70c22ec2e51c4ceb12b97e34a32b355d6273277"
+        }
+      },
+      "proofSha256": "e023a6ad4accf59e6f565ef2e3e327866bd1ee9afb097780560074bce46fec32",
+      "pairMeanRgbDifference": 3.36885
+    },
+    {
+      "id": "nutcracker-barrel-drummer",
+      "title": "Wooden Drummer Nutcracker",
+      "alt": "Green-jacketed drummer nutcracker with a blue cap, cream straps and a red drum.",
+      "description": "A red drum hangs from cream straps across the drummer's green jacket. Rounded cheeks, a curled black moustache and short black boots give the figure a compact shape.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-barrel-drummer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "d93effbeaf426686f72a0f54352a482753c050810f3b50ec9b707825816428d4",
+      "inputSignature": "c0995c25137ddc13f605a0126e4652a52b6c6218a40c45b16b1fac608e37adfa",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 517728,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 517728,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        266,
+        251,
+        766,
+        1350
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_429/exports/nutcracker-barrel-drummer.pdf",
+          "bytes": 517728,
+          "sha256": "caf8a5cbca8226eca3a86294c1ef8490d2553de357b0e255996d4f0170ae6c27"
+        },
+        "webp": {
+          "path": "work/production/wave_429/exports/nutcracker-barrel-drummer.webp",
+          "bytes": 1077040,
+          "sha256": "cfbb6529707a3de65db494a03fbc2fe96ae0e0f2aae670ee337337844b67b41a"
+        },
+        "thumb": {
+          "path": "work/production/wave_429/exports/nutcracker-barrel-drummer-thumb.webp",
+          "bytes": 25940,
+          "sha256": "e50b2fe38700cb66af777b79065590a167002e7bf0747d02f13837e68cc33e91"
+        }
+      },
+      "proofSha256": "4809e4657e5d2e0ee10a91e979bd3aa8ad586681a9a9ed17dd3f036b6d938e56",
+      "pairMeanRgbDifference": 2.60269
+    },
+    {
+      "id": "nutcracker-braided-winter-queen",
+      "title": "Braided Queen Nutcracker",
+      "alt": "Tall wooden queen nutcracker with silver braids, a fan-shaped crown and a teal-and-gold coat.",
+      "description": "Silver braids hang beside the queen's long painted face. A fan-shaped crown, narrow boots and an open gold skirt create a tall, tapered outline.",
+      "color": "Gold",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-braided-winter-queen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "931d38fa5e146965b78ce2a15886c286ab1f0c1653010811ed0e02ae6daf1cab",
+      "inputSignature": "6b0b13eccf0762df2e267b74d16bbe8cf8d8e506c281b5ff1810f9811d095589",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 517911,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 517911,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        304,
+        150,
+        726,
+        1380
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_429/exports/nutcracker-braided-winter-queen.pdf",
+          "bytes": 517911,
+          "sha256": "94861f151ceb80cc20ad90e436f94f5a385add4ab33d44281e527f7db0b16ce5"
+        },
+        "webp": {
+          "path": "work/production/wave_429/exports/nutcracker-braided-winter-queen.webp",
+          "bytes": 1042338,
+          "sha256": "e03d515e3b603d8f36610d0c25e4755d80458e1398cc55c8921613fefc9d1930"
+        },
+        "thumb": {
+          "path": "work/production/wave_429/exports/nutcracker-braided-winter-queen-thumb.webp",
+          "bytes": 26958,
+          "sha256": "2ba2b60615946fa30132cfe27a95bfc48cfdeec986874b7ebc76e485c862c3d7"
+        }
+      },
+      "proofSha256": "dce998ce8dbe151251aa39d722869aea44dfd7563a941504290681b8d7de5077",
+      "pairMeanRgbDifference": 2.10882
+    },
+    {
+      "id": "nutcracker-seated-harlequin",
+      "title": "Seated Harlequin Nutcracker",
+      "alt": "Plum-and-cream harlequin nutcracker seated on a wooden stool and holding a pale ball.",
+      "description": "The seated harlequin balances a pale ball on one raised hand. Diamond-patterned clothing, a two-point bell hat and long curled shoes spread the composition sideways.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-seated-harlequin.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1236,
+      "height": 1273,
+      "pdfWidth": 971,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "a0d0dddf53a3f5087af37de579197bee5ca0558a70c908c5c472f7d075a209eb",
+      "inputSignature": "937c604c0f57e58076f23ab3009300c554a2d146f2c84c4d8a9a3d0ab78d78f5",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 787112,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 787112,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        253,
+        95,
+        1079,
+        1162
+      ],
+      "image": {
+        "width": 971,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_429/exports/nutcracker-seated-harlequin.pdf",
+          "bytes": 787112,
+          "sha256": "c9ac721d9e2915b59804ab9fdf1c7006e4989ad496ffd8460bc6fa31bc928b5c"
+        },
+        "webp": {
+          "path": "work/production/wave_429/exports/nutcracker-seated-harlequin.webp",
+          "bytes": 627948,
+          "sha256": "4e5607faefb716c38a79893f12f5ca7492547c093167a8df0c2904e693217f36"
+        },
+        "thumb": {
+          "path": "work/production/wave_429/exports/nutcracker-seated-harlequin-thumb.webp",
+          "bytes": 45174,
+          "sha256": "a02b9b18d54df601fdfcf97f3607e6f961be2d1ab0b2bfc3d20614295495cd48"
+        }
+      },
+      "proofSha256": "35b3cea30cc076aeb1f1acfb0e444dcb2bff17e61bbf69dc5397598f11d878f6",
+      "pairMeanRgbDifference": 2.5058
+    },
+    {
+      "id": "nutcracker-baker-with-loaf",
+      "title": "Baker Nutcracker with Braided Bread",
+      "alt": "Wooden baker nutcracker in a tall chef hat and terracotta apron holding a braided loaf.",
+      "description": "A glossy braided loaf rests on the baker's oval board. The pleated chef hat, auburn beard and flour-marked apron distinguish this round-bodied wooden figure.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-baker-with-loaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "0350fbb83676b95453415e2bbdf34ca1c0bec4c11ba242f46e4c1ca63214800a",
+      "inputSignature": "53318cb94e481f7c122c8e493979333437ab9b2e878e04ca88e86ed2c1690f19",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 658089,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 658089,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        255,
+        149,
+        777,
+        1376
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_429/exports/nutcracker-baker-with-loaf.pdf",
+          "bytes": 658089,
+          "sha256": "6e1fff3fdfac12e37c83c1c0fe7e45b5dde1f60e70ceb30483c8b7317ad3b4ba"
+        },
+        "webp": {
+          "path": "work/production/wave_429/exports/nutcracker-baker-with-loaf.webp",
+          "bytes": 1209576,
+          "sha256": "38720aabe16fbf3d3a69d85954b0186d863747ab2aa63bf5c5e158c3421a60bf"
+        },
+        "thumb": {
+          "path": "work/production/wave_429/exports/nutcracker-baker-with-loaf-thumb.webp",
+          "bytes": 32622,
+          "sha256": "20f785989cdb4874fe764a6b5e558e863890272e05f527f8dcbb37c7851823f8"
+        }
+      },
+      "proofSha256": "e04089a4b9685a5b3a5026b410aa237138fbb72c0b47bde3317eebe0b1d0ffb9",
+      "pairMeanRgbDifference": 2.65734
+    },
+    {
+      "id": "nutcracker-lantern-miner",
+      "title": "Lantern Miner Nutcracker",
+      "alt": "Grey-jacketed miner nutcracker with an ochre helmet, lantern, walking stick and stone-shaped base.",
+      "description": "The miner leans forward beneath an ochre helmet with a round front lamp. A brass lantern, rough walking stick and uneven base reinforce the sturdy, weathered design.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-lantern-miner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1145,
+      "height": 1374,
+      "pdfWidth": 833,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "e53d9374a786cd10e408e5457539d96404641d939bae58f3f3b857b155d67a3b",
+      "inputSignature": "bc771b15e86b0afbf4d24ad60ca0884225d968f7ffa6dd4cc75766510f8a3ca9",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 865142,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 865142,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        314,
+        117,
+        910,
+        1256
+      ],
+      "image": {
+        "width": 833,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_429/exports/nutcracker-lantern-miner.pdf",
+          "bytes": 865142,
+          "sha256": "c4d5db2dfaf6b4701d53d5434435b7ca335cf1b7f6731912286de60cd63bfd92"
+        },
+        "webp": {
+          "path": "work/production/wave_429/exports/nutcracker-lantern-miner.webp",
+          "bytes": 832418,
+          "sha256": "afd5c9986cc794642d7098c1aee212d518fe24cca40c4ae62cda5f2b210ab779"
+        },
+        "thumb": {
+          "path": "work/production/wave_429/exports/nutcracker-lantern-miner-thumb.webp",
+          "bytes": 42974,
+          "sha256": "46e05c34d18cc6e951b77cf0c04881b8c956805a9000f952558c1a20e6e2f7dc"
+        }
+      },
+      "proofSha256": "25ef70b0f384ce2fe0d20b526163c133421796145b672aecd9534442cc22c74d",
+      "pairMeanRgbDifference": 2.55894
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-27T02:49:12.813277+00:00",
+  "screenReviewEvidence": "work/production/wave_429/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-27T02:49:12.991Z"
+}

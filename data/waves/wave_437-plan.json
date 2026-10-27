@@ -1,0 +1,35 @@
+{
+  "wave": "wave_437",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-outline-dance-lesson",
+      "title": "Nutcracker Dance Lesson Outline",
+      "alt": "Ballet teacher raising one arm beside a boy in a short decorative jacket holding a small nutcracker.",
+      "description": "The teacher demonstrates a curved raised arm while the boy watches with the toy held against his jacket. Their separate grounded poses and complete soft shoes keep the lesson scene clear.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_437/source/nutcracker-outline-dance-lesson.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "nutcracker-outline-toy-box",
+      "title": "Packing a Nutcracker Toy Box Outline",
+      "alt": "Older man placing a crowned nutcracker into an open wooden toy box beside a drum and wheeled horse.",
+      "description": "The kneeling maker lowers the crowned toy into a cloth-lined wooden chest. The open lid, side handle, small drum and wheeled horse create a detailed packing scene.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_437/source/nutcracker-outline-toy-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}
