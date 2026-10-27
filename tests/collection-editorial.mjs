@@ -65,7 +65,16 @@ test(
       ]
         .map((match) => JSON.parse(match[1]))
         .find((entry) => entry['@type'] === 'CollectionPage');
-      assert.equal(schema.description, record.intro, topic);
+      const published = catalog.filter(
+        (item) => item.topic === topic && item.published && item.indexable,
+      );
+      if (published.length >= 50) {
+        assert.ok(schema, `Missing collection schema: ${topic}`);
+        assert.equal(schema.description, record.intro, topic);
+      } else {
+        assert.equal(schema, undefined, `Incomplete collection must not expose schema: ${topic}`);
+        assert.match(html, /<meta name="robots" content="noindex/, topic);
+      }
       assert(html.includes('data-collection-summary'), topic);
       assert.doesNotMatch(
         html,
