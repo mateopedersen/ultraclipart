@@ -9,6 +9,12 @@ import { cuteConfidence } from '../src/lib/cute-discovery.ts';
 import { artworkDetails } from '../src/lib/artwork-details.ts';
 const read = (path) => JSON.parse(readFileSync(new URL('../' + path, import.meta.url)));
 const art = read('data/art.json');
+const localCorrections = new Map(
+  read('data/editorial/local-image-seo-corrections.json').records.map((record) => [
+    record.id,
+    record,
+  ]),
+);
 const verifiedFiles = new Map(
   read('data/publication.json').files.map((file) => [`${file.assetId}/${file.kind}`, file.url]),
 );
@@ -61,8 +67,15 @@ test('31 supplied packs preserve 1,550 verified original PDF/WebP pairs', () => 
     assert.ok(item.files.pdf.bytes <= 1_000_000);
     assert.equal(item.sourceType, 'raster');
     assert.equal(item.svg, null);
+    const correction = localCorrections.get(item.id);
+    if (correction)
+      assert.equal(
+        correction.sourceSha256,
+        item.files.webp.sha256,
+        'A changed source requires a new review',
+      );
     for (const key of ['title', 'alt', 'description', 'style', 'visualStyle'])
-      assert.equal(item[key], packageMetadata(item.topic, item.id)[key]);
+      assert.equal(item[key], correction?.after[key] ?? packageMetadata(item.topic, item.id)[key]);
     assert.deepEqual(
       item.productIdentity,
       packageMetadata(item.topic, item.id, item.files.webp.sha256).productIdentity,
@@ -139,8 +152,7 @@ test(
       const html = text(`clipart/${topic}/index.html`);
       assert.ok(html.includes(`https://ultraclipart.com/clipart/${topic}/`));
       assert.ok(html.includes('"numberOfItems":50'));
-      for (const chip of packageContexts[topic].chips)
-        assert.ok(html.includes(`/search/?q=${encodeURIComponent(chip)}`), chip);
+      assert.ok(!html.includes('/search/?q='), 'Collections link directly to related collections');
     }
     for (const item of items) {
       const html = text(`art/${item.id}/index.html`);

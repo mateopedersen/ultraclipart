@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
+import { previewIdentity, previewUrls, readPreviewIndex } from '../../scripts/preview-assets.mjs';
 
 const root = resolve(import.meta.dirname, '../..');
 const manifests = new Map();
@@ -42,6 +43,7 @@ export function readPublishedPage(item, kind) {
 
 /** Assert the actual catalog image, not an incidental CDN string in bundled code. */
 let publishedImages;
+let previewIndex;
 export function assertPublishedImage(item, html) {
   const production = process.env.CF_PAGES === '1';
   if (production)
@@ -52,7 +54,18 @@ export function assertPublishedImage(item, html) {
     );
   const source = production ? publishedImages.get(item.id) : item.webp;
   assert.ok(source, `Missing verified image for ${item.id}`);
-  assert.ok(html.includes(`src="${source}"`), `Wrong displayed image for ${item.id}`);
+  const detail = html.slice(html.indexOf('id="art-preview"'));
+  const displayed = detail.match(/<img\b[^>]*\bsrc="([^"]+)"/)?.[1];
+  const preview = previewUrls(item)[960];
+  assert.ok(displayed === source || displayed === preview, `Wrong displayed image for ${item.id}`);
+  if (displayed === preview) {
+    previewIndex ??= readPreviewIndex(root);
+    const metadata = previewIndex[previewIdentity(item)]?.files?.[960];
+    assert.ok(metadata, `Missing source-bound preview record: ${item.id}`);
+    const bytes = readFileSync(join(root, 'dist', preview));
+    assert.equal(bytes.length, metadata.bytes);
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), metadata.sha256);
+  }
   const canonicalSource = new URL(source, 'https://ultraclipart.com').href;
   assert.ok(
     html.includes(`"contentUrl":"${canonicalSource}"`),

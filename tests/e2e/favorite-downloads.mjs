@@ -39,6 +39,19 @@ await context.addInitScript((ids) => {
 }, ids);
 const page = await context.newPage(),
   report = { engine, downloads: [], errors: [], status: 'running' };
+const local = ['127.0.0.1', 'localhost'].includes(new URL(base).hostname);
+report.localProductionCorsFixture = local;
+if (local) {
+  // Production permits its real site origin. This local-only fixture retains
+  // actual CDN response bytes while allowing the localhost test document.
+  await context.route('https://assets.ultraclipart.com/**', async (route) => {
+    const response = await route.fetch();
+    await route.fulfill({
+      response,
+      headers: { ...response.headers(), 'access-control-allow-origin': new URL(base).origin },
+    });
+  });
+}
 page.on('pageerror', (e) => report.errors.push(e.message));
 try {
   await page.goto(base + '/favorites/');
@@ -74,10 +87,18 @@ try {
   await expect(page.locator('[data-batch-download]')).toHaveAttribute('download', /favorites-pdf/);
   await page.locator('[data-batch-close]').click();
   const requested = [];
-  await page.route('**/catalog/**/*.webp', (route) => {
-    requested.push(route.request().url());
-    return requested.length === 2 ? route.abort('failed') : route.continue();
-  });
+  const originals = new Set(
+    await page
+      .locator('#favorites [data-download-format=webp]')
+      .evaluateAll((links) => links.map((link) => link.href)),
+  );
+  await page.route(
+    (url) => originals.has(url.href),
+    (route) => {
+      requested.push(route.request().url());
+      return requested.length === 2 ? route.abort('failed') : route.fallback();
+    },
+  );
   await page.locator('[data-favorites-download=webp]').click();
   await expect(page.locator('[data-batch-retry]')).toBeVisible({ timeout: 30000 });
   await expect(page.locator('#favorites-download-dialog progress')).toHaveJSProperty('value', 1);

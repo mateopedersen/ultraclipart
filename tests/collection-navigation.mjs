@@ -64,7 +64,7 @@ test('all public artwork retains non-empty, plain-text source title and alt meta
   }
 });
 
-test('current and future catalog preview templates bind alt and title to the same artwork', () => {
+test('informative previews bind alt/title to their source; decorative previews retain empty alt', () => {
   const root = new URL('../src/', import.meta.url);
   let checked = 0;
   for (const file of readdirSync(root, { recursive: true }).filter((file) =>
@@ -74,7 +74,10 @@ test('current and future catalog preview templates bind alt and title to the sam
     for (const [tag] of source.matchAll(/<img\b[\s\S]*?\/>/g)) {
       const object = tag.match(/src=\{([\w.\[\]]+)\.thumb\}/)?.[1];
       if (!object) continue;
-      assert.ok(tag.includes(`alt={${object}.alt}`), `${file}: source-bound alt`);
+      assert.ok(
+        tag.includes(`alt={${object}.alt}`) || /\balt=(['"])\1/.test(tag),
+        `${file}: source-bound alt or explicitly decorative image`,
+      );
       assert.ok(tag.includes(`title={${object}.title}`), `${file}: source-bound title`);
       checked++;
     }
