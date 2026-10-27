@@ -3,6 +3,9 @@
   align-items: start;
   gap: 36px;
 }
+.art-detail > section {
+  container: artwork-copy / inline-size;
+}
 .art-detail h1 {
   font-family: var(--font-ui);
   margin: 10px 0 16px;
@@ -132,6 +135,7 @@
   gap: 6px;
 }
 .art-file-types > span:not(.art-file-plus) {
+  white-space: nowrap;
   padding: 3px 6px;
   background: #eef3f8;
   border: 1px solid #d9e3ed;
@@ -550,6 +554,7 @@
 
 .art-fact-subject .art-collection-link {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
   min-height: 48px;
@@ -562,7 +567,12 @@
   min-width: 0;
   font: inherit;
   letter-spacing: inherit;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+}
+@container artwork-copy (max-width: 350px) {
+  .art-detail-overview {
+    grid-template-columns: 1fr;
+  }
 }
 .art-fact-subject .art-collection-link:is(:hover, :focus-visible) {
   color: #103769;
