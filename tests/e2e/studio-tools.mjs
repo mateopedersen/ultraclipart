@@ -61,7 +61,10 @@ async function open(a) {
 async function pixelInfo(layer = 'original-image') {
   return page.locator(`.uc-canvas [data-layer="${layer}"] image`).evaluate(async (el) => {
     const image = new Image();
-    image.src = el.getAttribute('href');
+    const href = el.getAttribute('href');
+    image.src = href.startsWith('/previews/')
+      ? JSON.parse(el.closest('.uc-editor').dataset.rasterSource).webp.url
+      : href;
     await image.decode();
     const c = document.createElement('canvas');
     c.width = image.naturalWidth;
@@ -106,6 +109,11 @@ async function selectPoint(p) {
   await expect(page.locator('[data-status]')).toContainText('Selection ready', { timeout: 60000 });
 }
 async function downloadAction(selector, name) {
+  if (
+    selector === '[data-action=save]' &&
+    !(await page.locator('.wb-file-menu').evaluate((details) => details.open))
+  )
+    await page.locator('.wb-file-menu > summary').click();
   const p = page.waitForEvent('download', { timeout: 120000 });
   await page.locator(selector).click();
   const d = await p;
@@ -169,6 +177,8 @@ try {
   await open(a);
   const source = await pixelInfo();
   // Keep only the source to make each tool's effect independently observable.
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   await page.locator('[data-action=reset]').click();
   await settle();
   await page.locator('button[data-work-mode=edit]').click();
@@ -364,6 +374,8 @@ try {
     });
   });
   await open(art.find((a) => a.topic === 'volleyball' && a.style === 'Outline'));
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   await page.locator('[data-action=reset]').click();
   await settle();
   await page.locator('button[data-work-mode=print]').click();

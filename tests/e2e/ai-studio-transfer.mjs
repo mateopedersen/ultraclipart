@@ -52,6 +52,8 @@ const state = () =>
     );
   });
 const saved = async (name) => {
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   const p = page.waitForEvent('download');
   await page.locator('[data-action=save]').click();
   const file = path.join(out, name);

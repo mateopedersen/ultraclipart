@@ -26,6 +26,11 @@ const settle = async () => {
   });
 };
 const download = async (selector, name) => {
+  if (
+    selector === '[data-action=save]' &&
+    !(await page.locator('.wb-file-menu').evaluate((details) => details.open))
+  )
+    await page.locator('.wb-file-menu > summary').click();
   const promise = page.waitForEvent('download', { timeout: 120000 });
   await page.locator(selector).click();
   const file = await promise;
@@ -64,6 +69,9 @@ try {
   page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, acceptDownloads: true });
   track(page);
   await page.goto(base + '/create/');
+  await page.evaluate(() => window.__ucCookieNoticeReady);
+  if (await page.locator('#cookie-notice').isVisible())
+    await page.locator('#cookie-notice [data-cookie-choice="necessary"]').click();
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
   await page.locator('[data-panel=layers]').click();
   await page.locator('[data-load]').setInputFiles(project);
