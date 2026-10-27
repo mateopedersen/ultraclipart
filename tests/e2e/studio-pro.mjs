@@ -43,6 +43,8 @@ async function point(x, y, mode = 'replace') {
   await expect(page.locator('[data-status]')).not.toContainText('Finding');
 }
 async function saveProject(name) {
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   const pending = page.waitForEvent('download');
   await page.locator('[data-action=save]').click();
   const download = await pending;
@@ -71,7 +73,11 @@ async function imageBytes(normalizeSource = false) {
     .locator('.uc-canvas [data-layer="original-image"] image')
     .evaluate(async (image, normalizeSource) => {
       const loaded = new Image();
-      loaded.src = image.getAttribute('href');
+      // The unedited canvas may show a reduced, lossy screen preview. Compare
+      // against the original image used by the editor's pixel processor.
+      loaded.src = normalizeSource
+        ? JSON.parse(image.closest('.uc-editor').dataset.rasterSource).webp.url
+        : image.getAttribute('href');
       await loaded.decode();
       if (normalizeSource) {
         // Match the editor's readback/putImageData/PNG pipeline without applying edits.

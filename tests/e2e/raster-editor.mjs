@@ -179,6 +179,8 @@ try {
     await page.locator('[data-action=crop]').click();
     await page.locator('[data-panel=background]').click();
     await page.locator('[data-bg="#edf1e7"]').click();
+    if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+      await page.locator('.wb-file-menu > summary').click();
     const projectPending = page.waitForEvent('download');
     await page.locator('[data-action=save]').click();
     const project = await projectPending;
