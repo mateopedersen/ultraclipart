@@ -6,12 +6,19 @@ import Card from '../../components/Card.astro';
 import CatalogCount from '../../components/CatalogCount.astro';
 import CollectionCountCopy from '../../components/CollectionCountCopy.astro';
 import { resolveCollectionCountCopy } from '../../lib/collection-count-copy';
-import { availableTopics, topicArt, slugify, clustersForTopic } from '../../lib/catalog';
+import {
+  availableTopics,
+  topicArt,
+  slugify,
+  clustersForTopic,
+  reviewedCollectionIntroductions,
+} from '../../lib/catalog';
 export function getStaticPaths() {
   return availableTopics.map((t) => ({ params: { slug: t.slug }, props: { topic: t } }));
 }
 const { topic } = Astro.props;
 const copy = collectionCopy[topic.slug as keyof typeof collectionCopy];
+const reviewedIntro = reviewedCollectionIntroductions.get(topic.slug);
 const featured = new Map(copy?.featured.map((id, index) => [id, index]));
 const items = topicArt(topic.slug).sort(
   (a, b) => (featured.get(a.id) ?? 999) - (featured.get(b.id) ?? 999),
@@ -102,6 +109,7 @@ const description = resolveCollectionCountCopy(
       <CollectionCountCopy
         topic={topic.slug}
         text={
+          reviewedIntro ??
           copy?.intro ??
           (isVolleyball
             ? 'Explore volleyball illustrations, from beach-side rallies and player poses to cheerful mascots, trophies and black-and-white drawings. Choose a design for personal team journals, PE worksheets, classroom activities or sports-themed crafts.'
@@ -156,52 +164,54 @@ const description = resolveCollectionCountCopy(
       </a>
     </div>
   )}
-  <section class="prose">
-    {copy && copy.paragraphs.length > 0 && (
-      <>
-        <h2>{copy.heading}</h2>
-        {copy.paragraphs.map((paragraph) => (
-          <p>{paragraph}</p>
-        ))}
-      </>
-    )}
-    {isVolleyball && (
-      <>
-        <h2>Choose a volleyball illustration for your project</h2>
-        <p>
-          For a PE worksheet, start with a clear player pose: serving, setting, passing, blocking or
-          making a save. Leave room beside the player for a question or a practice goal. A simple
-          isolated volleyball works well on small labels, while a court or beach scene makes a more
-          detailed page header.
-        </p>
-        <p>
-          For personal cards and journals, try the floral wreath, folded heart, knitted ball or
-          watercolor design. Team huddles and high fives work well with messages about cooperation.
-          The open outline drawings offer more space for coloring than the shaded charcoal, stippled
-          and engraved designs.
-        </p>
-      </>
-    )}
-    <h2>From screen to paper</h2>
-    <p>
-      {copy?.print ??
-        (isVolleyball
-          ? 'Each design has a transparent 1,382 × 1,382 WebP for digital layouts and a matching CMYK PDF. Select View to see a larger preview, then choose the download format you need. The PDF page is approximately 4.61 inches square, giving the image 300 pixels per inch at its native size. Print at actual size for that scale, or use your printer’s placement settings to position it on a larger sheet.'
-          : 'Use WebP for transparent digital layouts. Layered illustrations can be opened in the editor to change colors, add a caption or make an outline version. Standard PDF downloads are prepared for printing. Review your printer’s settings and print at the intended paper size.')}
-    </p>
-    {(isVolleyball || copy) && (
+  {!reviewedIntro && (
+    <section class="prose">
+      {copy && copy.paragraphs.length > 0 && (
+        <>
+          <h2>{copy.heading}</h2>
+          {copy.paragraphs.map((paragraph) => (
+            <p>{paragraph}</p>
+          ))}
+        </>
+      )}
+      {isVolleyball && (
+        <>
+          <h2>Choose a volleyball illustration for your project</h2>
+          <p>
+            For a PE worksheet, start with a clear player pose: serving, setting, passing, blocking
+            or making a save. Leave room beside the player for a question or a practice goal. A
+            simple isolated volleyball works well on small labels, while a court or beach scene
+            makes a more detailed page header.
+          </p>
+          <p>
+            For personal cards and journals, try the floral wreath, folded heart, knitted ball or
+            watercolor design. Team huddles and high fives work well with messages about
+            cooperation. The open outline drawings offer more space for coloring than the shaded
+            charcoal, stippled and engraved designs.
+          </p>
+        </>
+      )}
+      <h2>From screen to paper</h2>
       <p>
-        Keep the transparent WebP over a light or colored background when arranging a digital page.
-        For printing, check the actual size and contrast before making multiple copies. Our{' '}
-        <a href="/print-size/">print size calculator</a> helps you choose a suitable raster size;
-        the <a href="/guides/webp-pdf-and-editable-projects/">file format guide</a> explains when to
-        use WebP or PDF.
+        {copy?.print ??
+          (isVolleyball
+            ? 'Each design has a transparent 1,382 × 1,382 WebP for digital layouts and a matching CMYK PDF. Select View to see a larger preview, then choose the download format you need. The PDF page is approximately 4.61 inches square, giving the image 300 pixels per inch at its native size. Print at actual size for that scale, or use your printer’s placement settings to position it on a larger sheet.'
+            : 'Use WebP for transparent digital layouts. Layered illustrations can be opened in the editor to change colors, add a caption or make an outline version. Standard PDF downloads are prepared for printing. Review your printer’s settings and print at the intended paper size.')}
       </p>
-    )}
-    <h2>Keep creating</h2>
-    <p>
-      Personal and educational projects are welcome. Commercial use and resale as clipart are not
-      permitted. <a href="/license/">Read the usage license</a>.
-    </p>
-  </section>
+      {(isVolleyball || copy) && (
+        <p>
+          Keep the transparent WebP over a light or colored background when arranging a digital
+          page. For printing, check the actual size and contrast before making multiple copies. Our{' '}
+          <a href="/print-size/">print size calculator</a> helps you choose a suitable raster size;
+          the <a href="/guides/webp-pdf-and-editable-projects/">file format guide</a> explains when
+          to use WebP or PDF.
+        </p>
+      )}
+      <h2>Keep creating</h2>
+      <p>
+        Personal and educational projects are welcome. Commercial use and resale as clipart are not
+        permitted. <a href="/license/">Read the usage license</a>.
+      </p>
+    </section>
+  )}
 </Layout>

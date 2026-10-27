@@ -1,0 +1,185 @@
+{
+  "schema": 1,
+  "topics": {
+    "cybercab": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "7c2250888ffefec7b9c9c036818243196f2792cbf8526607379f5bee0377236f",
+      "intro": "Gold-bodied Cybercab illustrations cover passenger journeys, open-door views, cabin details and display scenes. Mechanical studies and alternative configurations are labeled as concepts; they do not document production equipment or verified vehicle features.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "tesla-cybercab-automatic-wash-arch",
+          "imageSha256": "9cc642ba790b7ed33b6b2cda4f6aa70a564c260f207ec299f9e73d6202b967cb"
+        },
+        {
+          "id": "tesla-cybercab-butterfly-hinge-assembly",
+          "imageSha256": "393da3268af77a214fe4692bbceb750b15f96f1373a3d3152456cadfa5983a92"
+        },
+        {
+          "id": "tesla-cybercab-clipart-001-gouache-unveiling-turntable",
+          "imageSha256": "e83da2575251ecb69bac9919e526a4bc7ab5c509dca03443f0a2f1a9747ddc9c"
+        }
+      ]
+    },
+    "robotaxi": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "771d1da9b3705aa3f6dede72c64f8c33f43d2b9bae5fe21e6952b50822f71d04",
+      "intro": "These robotaxi scenes follow passengers through pickups, luggage loading and everyday journeys. Choose among airport arrivals, station stops, cabin cutaways and neighborhood encounters, with different vehicle shapes and both color and black-and-white compositions.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "robotaxi-airport-traveler-watercolor-clipart",
+          "imageSha256": "2b8a39aa2ab89e8d1fcc21e2960dfb98f681705dc4eff91cf66198d1e6f80e5b"
+        },
+        {
+          "id": "robotaxi-aquarium-family-arrival-clipart",
+          "imageSha256": "82dd0951cda549396349b2477138c53bbd63c0c41f7a839d5025deb9debf7828"
+        },
+        {
+          "id": "robotaxi-baby-seat-family-clay-clipart",
+          "imageSha256": "2e8ca5f9bd8679501f12457ea6c867570a03a61b0f1f10d71f92997a430f3bf6"
+        }
+      ]
+    },
+    "autonomous-taxi": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "94c2721d6d673e2898821ed92ffea63054db8a89bf3a88c125ba774ec5cea7c0",
+      "intro": "Explore illustrated autonomous-taxi concepts through sensor arrays, charging stops, service work and road situations. Sensing rings, exploded parts and projected routes are visual explanations within the drawings, rather than verified specifications for a named vehicle.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "autonomous-taxi-battery-cooling-cutaway-clipart",
+          "imageSha256": "9c0c266d36696934f1d1db4698e98c671198d59b5b987dedb0c5e6fffa7c2ed1"
+        },
+        {
+          "id": "autonomous-taxi-bidirectional-pod-clipart",
+          "imageSha256": "8b913108f95a760dfeb23373c3a41b56998ec2e092dd19e9d2864c3b1ff40fa4"
+        },
+        {
+          "id": "autonomous-taxi-bus-lane-separation-clipart",
+          "imageSha256": "94082d86ada79dd15a9f6c840f09decf4a95b72d7e99163a45bb4e3809c7e005"
+        }
+      ]
+    },
+    "tesla-optimus": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "07070689f3cdc0fc0fbe3be39e3746c5b5f5cfff629cf3bf39887fcdc3857fea",
+      "intro": "Optimus-inspired illustrations pair a black visor and pale articulated body with workshop tools, musical instruments, gardening and household scenes. These imagined activities are illustration subjects, not demonstrations of verified robot capabilities; no specific Optimus generation is assigned.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "tesla-optimus-clipart-01-optical-part-inspection",
+          "imageSha256": "4c59b50977d99308f842ef56b5c11ed54810da9e074bd608125b77d93fe6bdd9"
+        },
+        {
+          "id": "tesla-optimus-clipart-02-battery-tray-sorting",
+          "imageSha256": "fc12843ae9d71029b74c71bdeadca44f3dc11459fe5e8649054e843fc5187aaa"
+        },
+        {
+          "id": "tesla-optimus-clipart-03-torque-wrench-assembly",
+          "imageSha256": "59aed7b1d151ff263107dc434dc46cd5389d48d0e87c5b9c99307e574dec8f80"
+        }
+      ]
+    },
+    "robot-hand": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "dc9b0c2d154783706503495046281fbf2bff92fd5e78a3c7fc3fb60862123e05",
+      "intro": "Articulated robot hands grip fragile objects, thread a needle, turn a key and work with small tools. Close views emphasize finger joints, contact points and the objects being handled, ranging from decorative metal finishes to detailed black-and-white studies.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "robot-hand-clipart-01-delicate-egg-grip",
+          "imageSha256": "ecc9980aa65b4cb7147fbf6ce0265153d798c74a96082d88594c3bb7f5d362c2"
+        },
+        {
+          "id": "robot-hand-clipart-02-threading-needle",
+          "imageSha256": "3f056403cfb15b71fb42bb404165b90fbec50945bad97f8f8a1e9f381bf59076"
+        },
+        {
+          "id": "robot-hand-clipart-03-tiny-seed-pinch",
+          "imageSha256": "4de442c9746f0128490adb53406e341855d6fe657bf6594eef1edb021aa76acd"
+        }
+      ]
+    },
+    "black-friday": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "e1ea2d68ba34b6fdadb039301f04a76ac323100eafb41e076fef81fbac2e0a6f",
+      "intro": "Black Friday storefronts, shoppers and product displays sit alongside standalone sale lettering and percentage tags. Browse fabric rolls, luggage, jewelry, tools and other retail scenes, or choose a typographic sign without a shopping scene.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "black-friday-01-velvet-shopping-bag-burst",
+          "imageSha256": "4566a809a2ba072cab382d9b6211f93fe788b7695e62cefa30a074375084769c"
+        },
+        {
+          "id": "black-friday-02-rolling-door-first-shopper",
+          "imageSha256": "8db8c421c8ac50526f48c6084e979251b334552c1514e7620d1ce1d6c0221a45"
+        },
+        {
+          "id": "black-friday-06-stacked-hatboxes",
+          "imageSha256": "c9abd31a88065f2d2aa5d727e340222fa9d3886bcc13bec5c0cbc6c5788a58a0"
+        }
+      ]
+    },
+    "cyber-monday": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "1fc483bc41961caa0bc581127dbb011dc90dbe351a3b01db9cc91bd27c4b9ac9",
+      "intro": "Cyber Monday illustrations focus on electronics, unboxing and home technology, including microphones, projectors, routers and drawing tablets. Separate neon-style signs, keycaps, shopping bags and metallic lettering offer simpler headline compositions.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "cyber-monday-09-podcast-microphone-unboxing",
+          "imageSha256": "f8a1f5ab303d7828b8ce93682758cc19eca49a3685dd99617367a6c2b5eb494a"
+        },
+        {
+          "id": "cyber-monday-10-usb-cable-bow",
+          "imageSha256": "10981e25d5137ae0ec3cffc1380cb9052f35356b480774c080745b32c3c9387d"
+        },
+        {
+          "id": "cyber-monday-13-portable-projector-screen",
+          "imageSha256": "60052daebbe03bf5679a7f425b19cc97e89f6b6e003d07aec72e64c7d5c8144f"
+        }
+      ]
+    },
+    "online-sale": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "1e342cdd4f2b7cdc118e76fd89c51e89dea237219feaf00dd086d3e0212566e0",
+      "intro": "Online-sale symbols turn coupons, price comparisons, rewards and refunds into distinct illustrated objects. The collection includes phone-based offers, percentage flowers, a savings abacus and playful metaphors such as a discount compass and a frozen price tag.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "online-sale-01-percent-coupon-accordion",
+          "imageSha256": "a727eea513d2750bbd50edc30f124cb75b80a546563b7c5527c532f5a37dc66b"
+        },
+        {
+          "id": "online-sale-02-discount-slider-finger",
+          "imageSha256": "fa497835840b54e8fb9fdc662218bc0d16c22ab1cdbd7fde78d19b3656da65db"
+        },
+        {
+          "id": "online-sale-03-flash-sale-lightning-parcel",
+          "imageSha256": "166efa9c85458086615020d4a0ca868d7e6096dbf76ca508f5177a636cb19514"
+        }
+      ]
+    },
+    "online-shopping": {
+      "status": "checked-against-catalog",
+      "sourceSha256": "c20f84e3d16081c55dd00ec2e43eb1c98232af1a9773d9871f41314b2ceeb547",
+      "intro": "Follow online shopping from comparing products and choosing sizes to receiving parcels, assembling purchases and arranging returns. These scenes include shoppers of different ages, small sellers, collection counters and everyday items such as plants, books, groceries and clothing.",
+      "checkedAt": "2026-10-27T04:38:04.096Z",
+      "evidence": [
+        {
+          "id": "online-shopping-01-sofa-tablet-shoe-choice",
+          "imageSha256": "267a6c6381c2d847dbbea55eca47b59a8f8aa6b9ab222d912d2f30279c229b16"
+        },
+        {
+          "id": "online-shopping-02-kitchen-grocery-order",
+          "imageSha256": "39fc49e82cbd9ad959b584dd29dea146dfb5f2dd84462c54f0535d5a8ba1c66c"
+        },
+        {
+          "id": "online-shopping-03-balcony-plant-delivery",
+          "imageSha256": "cbdc3c3dc02f0d3fe6e13f15bfdd0c450a67b9fec1b948bd431023cf3f73c1b0"
+        }
+      ]
+    }
+  }
+}

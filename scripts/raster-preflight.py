@@ -2,7 +2,7 @@
 import hashlib, io
 from PIL import Image, ImageCms
 from pypdf import PdfReader
-from raster_source import inspect_cmyk_image
+from raster_source import inspect_cmyk_image, decoded_alpha
 
 def inspect_raster(art, files):
     checks={'sourceType':'raster','namedLayers':0}
@@ -31,11 +31,29 @@ def inspect_raster(art, files):
     assert pw>0 and ph>0 and abs(pw/ph-width/height)<.0001, 'PDF must match the image canvas aspect ratio'
     assert list(page.mediabox.lower_left)==[0,0] and list(page.cropbox)==list(page.mediabox)
     assert page.get('/Rotate',0)==0 and not page.get('/Annots') and not page.get('/AA')
+    print_info=art.get('pdfPrint')
+    print_width,print_height=width,height
+    if print_info:
+        print_width,print_height=print_info['width'],print_info['height']
+        assert all(isinstance(n,int) and n>0 for n in (print_width,print_height))
+        assert print_width<=width and print_height<=height
+        assert abs(pw/ph-print_width/print_height)<.0001
+        px,py=print_width/(pw/72),print_height/(ph/72)
+        assert 150<=px<=600 and abs(px-py)<.01
+        assert abs(px-print_info['ppi'])<.001
+        assert all(abs(a-b)<.001 for a,b in zip(print_info['pagePoints'],[pw,ph]))
+        with Image.open(files['webp']) as source:
+            source=source.convert('RGBA')
+            if source.size!=(print_width,print_height):source=source.resize((print_width,print_height),Image.Resampling.LANCZOS)
+            expected_alpha=source.getchannel('A').tobytes()
     images=[]
     for ref in page['/Resources'].get('/XObject',{}).values():
         image=ref.get_object()
         if image.get('/Subtype')!='/Image':continue
-        info=inspect_cmyk_image(image,width,height,root.get('/OutputIntents'))
+        info=inspect_cmyk_image(image,print_width,print_height,root.get('/OutputIntents'))
+        if print_info:
+            assert '/SMask' in image
+            assert decoded_alpha(image['/SMask'].get_object())==expected_alpha, 'PDF alpha differs from the actual supplied print edition'
         assert info['profile']==art['printProfile'] and info['colorSpace']==art['pdfColorSpace']
         images.append(info)
     assert images and files['pdf'].stat().st_size<=1_000_000
