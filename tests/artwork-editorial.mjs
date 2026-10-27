@@ -33,6 +33,7 @@ test('the complete catalog uses the same source-checked editorial resolver', () 
   assert.equal(report.reviewed, reviews.size);
   assert(report.changed > 9000);
   const titles = new Set();
+  const publishedTitles = new Map();
   for (const item of catalog) {
     const copy = resolveArtworkCopy(item, reviews.get(item.id));
     assert(copy.description.trim(), item.id);
@@ -41,6 +42,14 @@ test('the complete catalog uses the same source-checked editorial resolver', () 
     const key = `${item.topic}:${copy.title.toLowerCase()}`;
     assert(!titles.has(key), `Indistinguishable titles within topic: ${item.id}`);
     titles.add(key);
+    if (item.published && item.indexable) {
+      const globalTitle = copy.title.toLowerCase();
+      assert(
+        !publishedTitles.has(globalTitle),
+        `Repeated artwork title: ${publishedTitles.get(globalTitle)} and ${item.id}`,
+      );
+      publishedTitles.set(globalTitle, item.id);
+    }
     if (reviews.has(item.id)) assert.deepEqual(copyIssues(copy), [], item.id);
   }
 });
