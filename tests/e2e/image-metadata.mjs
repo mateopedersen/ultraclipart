@@ -146,9 +146,8 @@ for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
       timeout: 30000,
     });
     await page.locator('#uc-tool-elements').click();
-    // The library opens on category tiles with intentionally decorative images.
-    // Switch to artwork before checking image-specific title and alt text.
-    await page.locator('[data-artwork-scope="featured"]').click();
+    // Category tiles use decorative images; search to open real artwork cards.
+    await page.locator('[data-artwork-search]').fill('strawberry');
     await expect(page.locator('[data-artwork-grid] [data-artwork] img').first()).toHaveAttribute(
       'title',
       /.+/,
