@@ -6,6 +6,7 @@ type ArtworkFacts = {
   height: number;
   productionMethod?: string;
   layered?: boolean;
+  pdfPrint?: { width: number; height: number; ppi: number; pagePoints: number[] };
 };
 
 const techniques: [RegExp, string][] = [
@@ -58,8 +59,16 @@ export function artworkDetails(item: ArtworkFacts) {
     originDescription,
     orientation:
       item.width === item.height ? 'Square' : item.width > item.height ? 'Landscape' : 'Portrait',
-    printInches: `${inches(item.width)} × ${inches(item.height)} in`,
-    printCentimeters: `${centimeters(item.width)} × ${centimeters(item.height)} cm`,
+    printInches: item.pdfPrint
+      ? `${(item.pdfPrint.pagePoints[0] / 72).toFixed(2)} × ${(item.pdfPrint.pagePoints[1] / 72).toFixed(2)} in`
+      : `${inches(item.width)} × ${inches(item.height)} in`,
+    printCentimeters: item.pdfPrint
+      ? `${((item.pdfPrint.pagePoints[0] / 72) * 2.54).toFixed(1)} × ${((item.pdfPrint.pagePoints[1] / 72) * 2.54).toFixed(1)} cm`
+      : `${centimeters(item.width)} × ${centimeters(item.height)} cm`,
+    pdfPpi: item.pdfPrint?.ppi ?? null,
+    printPixels: item.pdfPrint
+      ? `${item.pdfPrint.width.toLocaleString('en-US')} × ${item.pdfPrint.height.toLocaleString('en-US')} px`
+      : null,
     editing: item.layered
       ? 'Edit the source’s individual vector layers, colors and shapes in Clipart Studio.'
       : 'Opens as one image layer. Resize, rotate, mask and recolor it, or add your own text and artwork. Objects inside the image are not separate vector layers.',

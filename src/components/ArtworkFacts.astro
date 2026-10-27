@@ -91,10 +91,17 @@ const facts = artworkDetails(item);
               <dd>{item.pdfPage}</dd>
             </div>
             <div>
-              <dt>At 300 pixels/inch</dt>
+              <dt>
+                {facts.pdfPpi
+                  ? `At ${facts.pdfPpi.toLocaleString('en-US', { maximumFractionDigits: 1 })} pixels/inch`
+                  : 'At 300 pixels/inch'}
+              </dt>
               <dd>
                 {facts.printInches}
-                <small>{facts.printCentimeters} · full image canvas</small>
+                <small>
+                  {facts.printCentimeters} ·{' '}
+                  {facts.printPixels ? `${facts.printPixels} print image` : 'full image canvas'}
+                </small>
               </dd>
             </div>
           </dl>

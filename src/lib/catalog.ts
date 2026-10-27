@@ -1,5 +1,8 @@
 import source from '../../data/topics.json';
 import illustrations from '../../data/art.json';
+import editorialReviews from '../../data/editorial/reviews.json';
+import { reviewedImportCatalog } from '../../scripts/reviewed-imports.mjs';
+import { readRequiredCollectionIntroductions } from '../../scripts/collection-editorial.mjs';
 import extraTopics from '../../data/extra-topics.json';
 import { validateEditorSource } from './artwork-source';
 import { auditMonochrome } from '../../scripts/monochrome-catalog.mjs';
@@ -21,8 +24,11 @@ export const topics = [...source.topics, ...extraTopics].map((topic) => ({
 type AssetKind = 'svg' | 'webp' | 'pdf' | 'thumb';
 type PublishedAssets = Record<string, Record<AssetKind, string>>;
 const publishedAssets = import.meta.env.PUBLIC_ASSET_URLS as PublishedAssets | null;
-const monochromeAudit = await auditMonochrome(illustrations);
-await preparePreviewAssets(illustrations);
+const reviewedIllustrations = reviewedImportCatalog(illustrations, editorialReviews);
+const monochromeAudit = await auditMonochrome(reviewedIllustrations);
+export const reviewedCollectionIntroductions =
+  readRequiredCollectionIntroductions(reviewedIllustrations);
+await preparePreviewAssets(reviewedIllustrations);
 const previewIndex = readPreviewIndex();
 const screenImages = (item: (typeof illustrations)[number]) => {
   if (!item.published || !item.indexable)
@@ -54,7 +60,7 @@ const screenImages = (item: (typeof illustrations)[number]) => {
       .join(', '),
   };
 };
-export const art = illustrations.map((item) => ({
+export const art = reviewedIllustrations.map((item) => ({
   ...item,
   monochrome: monochromeAudit.get(item.id)?.monochrome === true,
   monochromeKind: (monochromeAudit.get(item.id)?.kind ?? null) as MonochromeKind | null,

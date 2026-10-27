@@ -1,0 +1,74 @@
+{
+  "cybercab": {
+    "label": "Tesla Cybercab",
+    "cluster": "Transport & vehicles",
+    "secondary": ["Technology & devices"],
+    "intro": "Gold-bodied Cybercab illustrations cover passenger journeys, open-door views, cabin details and display scenes. Mechanical studies and alternative configurations are labeled as concepts; they do not document production equipment or verified vehicle features.",
+    "description": "Cybercab illustrations with passenger scenes, butterfly-door views, cabin details and clearly labeled design concepts.",
+    "related": ["robotaxi", "autonomous-taxi", "electric-car"]
+  },
+  "robotaxi": {
+    "label": "Robotaxi",
+    "cluster": "Transport & vehicles",
+    "secondary": ["Technology & devices", "People & activities"],
+    "intro": "These robotaxi scenes follow passengers through pickups, luggage loading and everyday journeys. Choose among airport arrivals, station stops, cabin cutaways and neighborhood encounters, with different vehicle shapes and both color and black-and-white compositions.",
+    "description": "Robotaxi passenger illustrations showing pickups, luggage, cabin cutaways, airport arrivals and everyday travel.",
+    "related": ["cybercab", "autonomous-taxi", "car"]
+  },
+  "autonomous-taxi": {
+    "label": "Autonomous Taxi",
+    "cluster": "Transport & vehicles",
+    "secondary": ["Technology & devices", "Space & science"],
+    "intro": "Explore illustrated autonomous-taxi concepts through sensor arrays, charging stops, service work and road situations. Sensing rings, exploded parts and projected routes are visual explanations within the drawings, rather than verified specifications for a named vehicle.",
+    "description": "Autonomous-taxi concepts featuring roof sensors, road situations, charging equipment and vehicle-service illustrations.",
+    "related": ["robotaxi", "cybercab", "robot-hand"]
+  },
+  "tesla-optimus": {
+    "label": "Tesla Optimus",
+    "cluster": "Technology & devices",
+    "secondary": ["People & activities"],
+    "intro": "Optimus-inspired illustrations pair a black visor and pale articulated body with workshop tools, musical instruments, gardening and household scenes. These imagined activities are illustration subjects, not demonstrations of verified robot capabilities; no specific Optimus generation is assigned.",
+    "description": "Tesla Optimus illustrations in workshop, music, gardening and household scenes, with no unverified generation or capability claims.",
+    "related": ["robot", "robot-hand", "cybercab"]
+  },
+  "robot-hand": {
+    "label": "Robot Hand",
+    "cluster": "Technology & devices",
+    "secondary": ["Space & science"],
+    "intro": "Articulated robot hands grip fragile objects, thread a needle, turn a key and work with small tools. Close views emphasize finger joints, contact points and the objects being handled, ranging from decorative metal finishes to detailed black-and-white studies.",
+    "description": "Robot-hand illustrations with articulated fingers, delicate object grips, craft tools and black-and-white mechanical studies.",
+    "related": ["robot", "tesla-optimus", "hand"]
+  },
+  "black-friday": {
+    "label": "Black Friday",
+    "cluster": "Business & money",
+    "secondary": [],
+    "intro": "Black Friday storefronts, shoppers and product displays sit alongside standalone sale lettering and percentage tags. Browse fabric rolls, luggage, jewelry, tools and other retail scenes, or choose a typographic sign without a shopping scene.",
+    "description": "Black Friday illustrations of storefronts, shoppers, product displays, percentage tags and standalone sale lettering.",
+    "related": ["cyber-monday", "online-sale", "online-shopping"]
+  },
+  "cyber-monday": {
+    "label": "Cyber Monday",
+    "cluster": "Business & money",
+    "secondary": ["Technology & devices"],
+    "intro": "Cyber Monday illustrations focus on electronics, unboxing and home technology, including microphones, projectors, routers and drawing tablets. Separate neon-style signs, keycaps, shopping bags and metallic lettering offer simpler headline compositions.",
+    "description": "Cyber Monday electronics, unboxing scenes, home technology and neon-style sale lettering illustrations.",
+    "related": ["black-friday", "online-sale", "online-shopping"]
+  },
+  "online-sale": {
+    "label": "Online Sale",
+    "cluster": "Business & money",
+    "secondary": ["Technology & devices"],
+    "intro": "Online-sale symbols turn coupons, price comparisons, rewards and refunds into distinct illustrated objects. The collection includes phone-based offers, percentage flowers, a savings abacus and playful metaphors such as a discount compass and a frozen price tag.",
+    "description": "Online-sale illustrations featuring coupons, percentage symbols, rewards, refunds, price comparisons and shopping offers.",
+    "related": ["online-shopping", "black-friday", "cyber-monday"]
+  },
+  "online-shopping": {
+    "label": "Online Shopping",
+    "cluster": "Business & money",
+    "secondary": ["People & activities", "Technology & devices"],
+    "intro": "Follow online shopping from comparing products and choosing sizes to receiving parcels, assembling purchases and arranging returns. These scenes include shoppers of different ages, small sellers, collection counters and everyday items such as plants, books, groceries and clothing.",
+    "description": "Online-shopping scenes of product comparisons, home deliveries, parcel collection, unboxing, sellers and returns.",
+    "related": ["online-sale", "cyber-monday", "black-friday"]
+  }
+}

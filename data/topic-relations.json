@@ -1,199 +1,1050 @@
 {
-  "3d-printer": ["printer", "scanner", "desktop-computer", "laptop", "robot", "tablet"],
-  "acorn": ["autumn", "fall", "harvest", "thanksgiving", "squirrel", "cornucopia"],
-  "air-conditioner": ["smart-refrigerator", "washing-machine", "microwave", "smart-home"],
-  "airplane": ["train", "electric-car", "earth"],
-  "american-flag": ["new-york", "chicago", "miami", "los-angeles"],
-  "angry-birds": ["angry-birds-3", "sonic-the-hedgehog", "game-controller"],
-  "angry-birds-3": ["angry-birds", "sonic-4", "movie"],
-  "apple": ["banana", "orange", "strawberry"],
-  "apricot": ["peach", "nectarine", "plum"],
-  "autumn": ["harvest", "cornucopia", "winter", "squirrel", "leaves"],
-  "avocado": ["banana", "kiwi-fruit", "coconut"],
-  "baby": ["mom", "dad", "baby-elephant", "heart"],
-  "baby-elephant": ["elephant", "baby", "giraffe"],
-  "banana": ["apple", "avocado", "coconut", "monkey"],
-  "basketball": ["volleyball", "school"],
-  "bat": ["halloween", "vampire", "ghost", "owl"],
-  "beach": ["wave", "dolphin", "turtle", "coconut"],
-  "bear": ["fox", "wolf", "panda"],
-  "bee": ["butterfly", "sunflower", "leaves"],
-  "blackberry": ["raspberry", "blackcurrant", "blueberry", "mulberry"],
-  "blackcurrant": ["blackberry", "blueberry", "cranberry", "gooseberry"],
-  "blueberry": ["raspberry", "strawberry", "banana"],
-  "bluetooth-speaker": ["speaker", "headphones", "earbuds", "microphone"],
-  "book": ["school", "math", "question-mark"],
-  "boy": ["girl", "school", "dad", "mom"],
-  "butterfly": ["bee", "sunflower", "leaves"],
-  "camel": ["giraffe", "elephant", "goat"],
-  "camera": ["webcam", "drone", "smartphone"],
-  "candy": ["cookie", "happy-birthday"],
-  "cantaloupe": ["melon", "watermelon", "papaya"],
-  "cat": ["dog", "rabbit", "tiger"],
-  "cheese": ["pizza", "grapes", "pear"],
-  "cherry": ["plum", "strawberry", "apricot"],
-  "chicago": ["american-flag", "new-york", "miami"],
-  "chicken": ["duck", "cow", "pig"],
-  "clock": ["math", "school", "thermometer"],
-  "coconut": ["banana", "kiwi-fruit", "avocado"],
-  "computer-monitor": ["desktop-computer", "laptop", "keyboard"],
-  "computer-mouse": ["keyboard", "desktop-computer", "laptop"],
-  "cookie": ["candy", "pie", "happy-birthday"],
-  "corn": ["wheat", "harvest", "gourd", "scarecrow", "thanksgiving", "autumn"],
-  "cornucopia": ["thanksgiving", "turkey", "harvest", "pumpkin"],
-  "cow": ["goat", "sheep", "pig"],
-  "crab": ["lobster", "octopus", "turtle"],
-  "cranberry": ["blackcurrant", "raspberry", "blueberry"],
-  "crocodile": ["snake", "turtle", "frog"],
-  "dad": ["baby", "boy", "girl", "heart"],
-  "date": ["fig", "apricot", "pomegranate"],
-  "deer": ["fox", "squirrel", "rabbit"],
-  "democrat-donkey": ["republican-elephant", "political-debate", "red-and-blue-states"],
-  "desktop-computer": ["laptop", "keyboard", "computer-mouse"],
-  "dog": ["cat", "wolf", "rabbit"],
-  "dolphin": ["whale", "shark", "turtle"],
-  "dragon-fruit": ["papaya", "guava", "lychee", "starfruit"],
-  "drone": ["camera", "robot", "vr-headset"],
-  "duck": ["chicken", "flamingo", "frog"],
-  "eagle": ["owl", "parrot", "peacock"],
-  "earbuds": ["headphones", "smartwatch", "laptop"],
-  "earth": ["mars", "moon", "grass", "wave"],
-  "electric-car": ["tesla", "electric-scooter", "train"],
-  "electric-scooter": ["electric-car", "tesla", "train"],
-  "elephant": ["baby-elephant", "giraffe", "rhino"],
-  "exercise": ["basketball", "volleyball", "shoe"],
-  "external-hard-drive": ["usb-flash-drive", "desktop-computer", "laptop"],
-  "fall": ["autumn", "harvest", "cornucopia", "thanksgiving", "school", "pilgrim"],
-  "fig": ["date", "pomegranate", "grapes"],
-  "fire": ["wave", "earth", "grass"],
-  "flamingo": ["peacock", "parrot", "duck"],
-  "fox": ["wolf", "squirrel", "deer", "raccoon"],
-  "france": ["paris", "france-flag", "spain"],
-  "france-flag": ["france", "paris", "spain-flag"],
-  "frog": ["turtle", "duck", "crocodile"],
-  "game-awards": ["gaming-trophy", "game-console", "game-controller"],
-  "game-console": ["game-controller", "television", "headphones", "computer-monitor"],
-  "game-controller": ["keyboard", "computer-mouse", "vr-headset"],
-  "gaming-trophy": ["game-awards", "sonic-birthday", "happy-birthday"],
-  "ghost": ["halloween", "witch", "skeleton", "vampire"],
-  "giant-monster": ["kaiju", "godzilla", "godzilla-minus-zero"],
-  "giraffe": ["elephant", "zebra", "baby-elephant"],
-  "girl": ["boy", "school", "mom", "dad"],
-  "glove": ["hat", "shoe", "winter"],
-  "goat": ["sheep", "cow", "lamb"],
-  "godzilla": ["godzilla-minus-zero", "kaiju", "giant-monster"],
-  "godzilla-minus-zero": ["godzilla", "kaiju", "giant-monster"],
-  "gooseberry": ["blackcurrant", "cranberry", "grapes"],
-  "gourd": ["harvest", "autumn", "fall", "scarecrow", "pumpkin", "cornucopia"],
-  "grand-theft-auto": ["gta-6", "gta-6-jason", "gta-6-lucia"],
-  "grapefruit": ["orange", "lemon", "lime"],
-  "grapes": ["fig", "blackberry", "pomegranate"],
-  "grass": ["leaves", "beach", "earth"],
-  "green-apple": ["red-apple", "apple", "pear"],
-  "gta-6": ["gta-6-jason", "gta-6-lucia", "gta-6-map", "grand-theft-auto"],
-  "gta-6-jason": ["gta-6-lucia", "gta-6", "gta-6-map"],
-  "gta-6-lucia": ["gta-6-jason", "gta-6", "gta-6-map"],
-  "gta-6-map": ["gta-6", "gta-6-jason", "gta-6-lucia"],
-  "guava": ["papaya", "passion-fruit", "mango"],
-  "halloween": ["ghost", "pumpkin", "witch", "bat", "spider"],
-  "happy-birthday": ["thank-you", "candy", "heart"],
-  "harvest": ["cornucopia", "thanksgiving", "pumpkin", "corn", "wheat"],
-  "hat": ["glove", "shoe", "winter"],
-  "headphones": ["earbuds", "speaker", "bluetooth-speaker", "microphone", "music"],
-  "heart": ["baby", "mom", "dad", "thank-you", "happy-birthday"],
-  "hedgehog": ["squirrel", "rabbit", "fox"],
-  "hexed": ["magic-spell", "witch"],
-  "hippo": ["rhino", "elephant", "crocodile"],
-  "horse": ["zebra", "goat", "cow", "camel"],
-  "hunger-games": ["sunrise-on-the-reaping", "mockingjay"],
-  "iphone": ["smartphone", "samsung", "tablet", "earbuds"],
-  "kaiju": ["giant-monster", "godzilla", "godzilla-minus-zero"],
-  "kangaroo": ["koala", "kiwi", "elephant"],
-  "keyboard": ["computer-mouse", "desktop-computer", "laptop", "tablet"],
-  "kiwi": ["koala", "kangaroo", "owl"],
-  "kiwi-fruit": ["avocado", "coconut", "strawberry"],
-  "koala": ["kangaroo", "kiwi", "panda"],
-  "kumquat": ["orange", "tangerine", "lime"],
-  "labubu": ["happy-birthday", "halloween", "winter"],
-  "lamb": ["sheep", "goat", "cow"],
-  "laptop": ["desktop-computer", "tablet", "computer-monitor", "keyboard"],
-  "leaves": ["maple", "acorn", "autumn", "butterfly", "harvest"],
-  "lemon": ["lime", "grapefruit", "orange"],
-  "lime": ["lemon", "grapefruit", "orange"],
-  "lion": ["tiger", "zebra", "giraffe"],
-  "lobster": ["crab", "octopus", "whale"],
-  "los-angeles": ["movie", "miami", "new-york", "american-flag"],
-  "lychee": ["guava", "dragon-fruit", "passion-fruit"],
-  "magic-spell": ["witch", "hexed", "halloween"],
-  "mandarin": ["tangerine", "orange", "apple"],
-  "mango": ["papaya", "pineapple", "guava"],
-  "maple": ["leaves", "acorn", "autumn", "fall", "harvest"],
-  "mars": ["earth", "moon", "school"],
-  "math": ["school", "book", "clock", "money"],
-  "melon": ["cantaloupe", "watermelon", "pear"],
-  "mexico-flag": ["american-flag", "spain-flag", "france-flag"],
-  "miami": ["beach", "los-angeles", "new-york"],
-  "microphone": ["headphones", "speaker", "camera"],
-  "microwave": ["smart-refrigerator", "washing-machine", "air-conditioner", "smart-home"],
-  "mockingjay": ["sunrise-on-the-reaping", "hunger-games"],
-  "modem": ["wifi-router", "laptop", "desktop-computer"],
-  "mom": ["dad", "baby", "boy", "girl"],
-  "money": ["math", "school", "book"],
-  "monkey": ["koala", "lion", "elephant"],
-  "moon": ["earth", "mars", "wave"],
-  "movie": ["projector", "television", "music", "game-awards"],
-  "mulberry": ["blackberry", "blackcurrant", "raspberry"],
-  "music": ["microphone", "headphones", "speaker"],
-  "nectarine": ["peach", "apricot", "plum"],
-  "new-york": ["american-flag", "chicago", "miami", "los-angeles"],
-  "octopus": ["crab", "lobster", "turtle"],
-  "orange": ["mandarin", "tangerine", "apple"],
-  "owl": ["eagle", "parrot", "fox"],
-  "panda": ["bear", "koala", "baby-elephant"],
-  "papaya": ["mango", "guava", "pineapple"],
-  "paris": ["france", "france-flag", "new-york"],
-  "parrot": ["peacock", "flamingo", "eagle"],
-  "passion-fruit": ["guava", "dragon-fruit", "papaya"],
-  "peach": ["nectarine", "apricot", "plum"],
-  "peacock": ["parrot", "flamingo", "butterfly"],
-  "pear": ["apple", "green-apple", "red-apple", "quince"],
-  "penguin": ["winter", "duck", "whale"],
-  "persimmon": ["apricot", "pomegranate", "orange"],
-  "pie": ["apple", "cranberry", "corn", "wheat", "harvest", "thanksgiving"],
-  "pig": ["cow", "sheep", "chicken"],
-  "pilgrim": ["thanksgiving", "harvest", "cornucopia", "turkey", "autumn", "fall"],
-  "pineapple": ["mango", "coconut", "papaya"],
-  "pizza": ["cheese", "pie", "cookie"],
-  "plum": ["nectarine", "peach", "apricot", "cherry"],
-  "political-debate": ["red-and-blue-states", "democrat-donkey", "republican-elephant"],
-  "pomegranate": ["persimmon", "fig", "grapes"],
-  "power-bank": ["wireless-charger", "smartphone", "tablet"],
-  "printer": ["laptop", "desktop-computer", "scanner"],
-  "projector": ["television", "laptop", "speaker"],
-  "pumpkin": ["halloween", "autumn", "harvest", "leaves"],
-  "question-mark": ["math", "book", "school"],
-  "quince": ["pear", "apple", "persimmon"],
-  "rabbit": ["hedgehog", "squirrel", "lamb"],
-  "raccoon": ["fox", "squirrel", "bear"],
-  "raspberry": ["strawberry", "blueberry", "orange"],
-  "red-and-blue-states": ["political-debate", "democrat-donkey", "republican-elephant"],
-  "red-apple": ["green-apple", "apple", "pear"],
-  "republican-elephant": ["democrat-donkey", "political-debate", "red-and-blue-states"],
-  "rhino": ["hippo", "elephant", "zebra"],
-  "robot": ["smart-home", "3d-printer", "drone"],
-  "samsung": ["smartphone", "iphone", "washing-machine", "computer-monitor"],
-  "scanner": ["printer", "desktop-computer", "laptop"],
-  "scarecrow": ["harvest", "autumn", "fall", "pumpkin", "leaves", "cornucopia"],
-  "school": ["book", "math", "clock", "question-mark"],
-  "security-camera": ["webcam", "smart-doorbell", "wifi-router", "smart-home"],
-  "shark": ["whale", "dolphin", "octopus"],
-  "sheep": ["lamb", "goat", "cow"],
-  "shoe": ["hat", "glove", "exercise"],
-  "skeleton": ["halloween", "ghost", "witch", "pumpkin"],
-  "smart-doorbell": ["security-camera", "smart-home", "smart-speaker", "wifi-router"],
-  "smart-glasses": ["vr-headset", "smartphone", "camera"],
-  "smart-home": ["smart-speaker", "smart-doorbell", "security-camera", "wifi-router"],
-  "smart-refrigerator": ["washing-machine", "microwave", "smart-speaker"],
+  "3d-printer": [
+    "printer",
+    "scanner",
+    "desktop-computer",
+    "laptop",
+    "robot",
+    "tablet"
+  ],
+  "acorn": [
+    "autumn",
+    "fall",
+    "harvest",
+    "thanksgiving",
+    "squirrel",
+    "cornucopia"
+  ],
+  "air-conditioner": [
+    "smart-refrigerator",
+    "washing-machine",
+    "microwave",
+    "smart-home"
+  ],
+  "airplane": [
+    "train",
+    "electric-car",
+    "earth"
+  ],
+  "american-flag": [
+    "new-york",
+    "chicago",
+    "miami",
+    "los-angeles"
+  ],
+  "angry-birds": [
+    "angry-birds-3",
+    "sonic-the-hedgehog",
+    "game-controller"
+  ],
+  "angry-birds-3": [
+    "angry-birds",
+    "sonic-4",
+    "movie"
+  ],
+  "apple": [
+    "banana",
+    "orange",
+    "strawberry"
+  ],
+  "apricot": [
+    "peach",
+    "nectarine",
+    "plum"
+  ],
+  "autumn": [
+    "harvest",
+    "cornucopia",
+    "winter",
+    "squirrel",
+    "leaves"
+  ],
+  "avocado": [
+    "banana",
+    "kiwi-fruit",
+    "coconut"
+  ],
+  "baby": [
+    "mom",
+    "dad",
+    "baby-elephant",
+    "heart"
+  ],
+  "baby-elephant": [
+    "elephant",
+    "baby",
+    "giraffe"
+  ],
+  "banana": [
+    "apple",
+    "avocado",
+    "coconut",
+    "monkey"
+  ],
+  "basketball": [
+    "volleyball",
+    "school"
+  ],
+  "bat": [
+    "halloween",
+    "vampire",
+    "ghost",
+    "owl"
+  ],
+  "beach": [
+    "wave",
+    "dolphin",
+    "turtle",
+    "coconut"
+  ],
+  "bear": [
+    "fox",
+    "wolf",
+    "panda"
+  ],
+  "bee": [
+    "butterfly",
+    "sunflower",
+    "leaves"
+  ],
+  "blackberry": [
+    "raspberry",
+    "blackcurrant",
+    "blueberry",
+    "mulberry"
+  ],
+  "blackcurrant": [
+    "blackberry",
+    "blueberry",
+    "cranberry",
+    "gooseberry"
+  ],
+  "blueberry": [
+    "raspberry",
+    "strawberry",
+    "banana"
+  ],
+  "bluetooth-speaker": [
+    "speaker",
+    "headphones",
+    "earbuds",
+    "microphone"
+  ],
+  "book": [
+    "school",
+    "math",
+    "question-mark"
+  ],
+  "boy": [
+    "girl",
+    "school",
+    "dad",
+    "mom"
+  ],
+  "butterfly": [
+    "bee",
+    "sunflower",
+    "leaves"
+  ],
+  "camel": [
+    "giraffe",
+    "elephant",
+    "goat"
+  ],
+  "camera": [
+    "webcam",
+    "drone",
+    "smartphone"
+  ],
+  "candy": [
+    "cookie",
+    "happy-birthday"
+  ],
+  "cantaloupe": [
+    "melon",
+    "watermelon",
+    "papaya"
+  ],
+  "cat": [
+    "dog",
+    "rabbit",
+    "tiger"
+  ],
+  "cheese": [
+    "pizza",
+    "grapes",
+    "pear"
+  ],
+  "cherry": [
+    "plum",
+    "strawberry",
+    "apricot"
+  ],
+  "chicago": [
+    "american-flag",
+    "new-york",
+    "miami"
+  ],
+  "chicken": [
+    "duck",
+    "cow",
+    "pig"
+  ],
+  "clock": [
+    "math",
+    "school",
+    "thermometer"
+  ],
+  "coconut": [
+    "banana",
+    "kiwi-fruit",
+    "avocado"
+  ],
+  "computer-monitor": [
+    "desktop-computer",
+    "laptop",
+    "keyboard"
+  ],
+  "computer-mouse": [
+    "keyboard",
+    "desktop-computer",
+    "laptop"
+  ],
+  "cookie": [
+    "candy",
+    "pie",
+    "happy-birthday"
+  ],
+  "corn": [
+    "wheat",
+    "harvest",
+    "gourd",
+    "scarecrow",
+    "thanksgiving",
+    "autumn"
+  ],
+  "cornucopia": [
+    "thanksgiving",
+    "turkey",
+    "harvest",
+    "pumpkin"
+  ],
+  "cow": [
+    "goat",
+    "sheep",
+    "pig"
+  ],
+  "crab": [
+    "lobster",
+    "octopus",
+    "turtle"
+  ],
+  "cranberry": [
+    "blackcurrant",
+    "raspberry",
+    "blueberry"
+  ],
+  "crocodile": [
+    "snake",
+    "turtle",
+    "frog"
+  ],
+  "dad": [
+    "baby",
+    "boy",
+    "girl",
+    "heart"
+  ],
+  "date": [
+    "fig",
+    "apricot",
+    "pomegranate"
+  ],
+  "deer": [
+    "fox",
+    "squirrel",
+    "rabbit"
+  ],
+  "democrat-donkey": [
+    "republican-elephant",
+    "political-debate",
+    "red-and-blue-states"
+  ],
+  "desktop-computer": [
+    "laptop",
+    "keyboard",
+    "computer-mouse"
+  ],
+  "dog": [
+    "cat",
+    "wolf",
+    "rabbit"
+  ],
+  "dolphin": [
+    "whale",
+    "shark",
+    "turtle"
+  ],
+  "dragon-fruit": [
+    "papaya",
+    "guava",
+    "lychee",
+    "starfruit"
+  ],
+  "drone": [
+    "camera",
+    "robot",
+    "vr-headset"
+  ],
+  "duck": [
+    "chicken",
+    "flamingo",
+    "frog"
+  ],
+  "eagle": [
+    "owl",
+    "parrot",
+    "peacock"
+  ],
+  "earbuds": [
+    "headphones",
+    "smartwatch",
+    "laptop"
+  ],
+  "earth": [
+    "mars",
+    "moon",
+    "grass",
+    "wave"
+  ],
+  "electric-car": [
+    "tesla",
+    "electric-scooter",
+    "train"
+  ],
+  "electric-scooter": [
+    "electric-car",
+    "tesla",
+    "train"
+  ],
+  "elephant": [
+    "baby-elephant",
+    "giraffe",
+    "rhino"
+  ],
+  "exercise": [
+    "basketball",
+    "volleyball",
+    "shoe"
+  ],
+  "external-hard-drive": [
+    "usb-flash-drive",
+    "desktop-computer",
+    "laptop"
+  ],
+  "fall": [
+    "autumn",
+    "harvest",
+    "cornucopia",
+    "thanksgiving",
+    "school",
+    "pilgrim"
+  ],
+  "fig": [
+    "date",
+    "pomegranate",
+    "grapes"
+  ],
+  "fire": [
+    "wave",
+    "earth",
+    "grass"
+  ],
+  "flamingo": [
+    "peacock",
+    "parrot",
+    "duck"
+  ],
+  "fox": [
+    "wolf",
+    "squirrel",
+    "deer",
+    "raccoon"
+  ],
+  "france": [
+    "paris",
+    "france-flag",
+    "spain"
+  ],
+  "france-flag": [
+    "france",
+    "paris",
+    "spain-flag"
+  ],
+  "frog": [
+    "turtle",
+    "duck",
+    "crocodile"
+  ],
+  "game-awards": [
+    "gaming-trophy",
+    "game-console",
+    "game-controller"
+  ],
+  "game-console": [
+    "game-controller",
+    "television",
+    "headphones",
+    "computer-monitor"
+  ],
+  "game-controller": [
+    "keyboard",
+    "computer-mouse",
+    "vr-headset"
+  ],
+  "gaming-trophy": [
+    "game-awards",
+    "sonic-birthday",
+    "happy-birthday"
+  ],
+  "ghost": [
+    "halloween",
+    "witch",
+    "skeleton",
+    "vampire"
+  ],
+  "giant-monster": [
+    "kaiju",
+    "godzilla",
+    "godzilla-minus-zero"
+  ],
+  "giraffe": [
+    "elephant",
+    "zebra",
+    "baby-elephant"
+  ],
+  "girl": [
+    "boy",
+    "school",
+    "mom",
+    "dad"
+  ],
+  "glove": [
+    "hat",
+    "shoe",
+    "winter"
+  ],
+  "goat": [
+    "sheep",
+    "cow",
+    "lamb"
+  ],
+  "godzilla": [
+    "godzilla-minus-zero",
+    "kaiju",
+    "giant-monster"
+  ],
+  "godzilla-minus-zero": [
+    "godzilla",
+    "kaiju",
+    "giant-monster"
+  ],
+  "gooseberry": [
+    "blackcurrant",
+    "cranberry",
+    "grapes"
+  ],
+  "gourd": [
+    "harvest",
+    "autumn",
+    "fall",
+    "scarecrow",
+    "pumpkin",
+    "cornucopia"
+  ],
+  "grand-theft-auto": [
+    "gta-6",
+    "gta-6-jason",
+    "gta-6-lucia"
+  ],
+  "grapefruit": [
+    "orange",
+    "lemon",
+    "lime"
+  ],
+  "grapes": [
+    "fig",
+    "blackberry",
+    "pomegranate"
+  ],
+  "grass": [
+    "leaves",
+    "beach",
+    "earth"
+  ],
+  "green-apple": [
+    "red-apple",
+    "apple",
+    "pear"
+  ],
+  "gta-6": [
+    "gta-6-jason",
+    "gta-6-lucia",
+    "gta-6-map",
+    "grand-theft-auto"
+  ],
+  "gta-6-jason": [
+    "gta-6-lucia",
+    "gta-6",
+    "gta-6-map"
+  ],
+  "gta-6-lucia": [
+    "gta-6-jason",
+    "gta-6",
+    "gta-6-map"
+  ],
+  "gta-6-map": [
+    "gta-6",
+    "gta-6-jason",
+    "gta-6-lucia"
+  ],
+  "guava": [
+    "papaya",
+    "passion-fruit",
+    "mango"
+  ],
+  "halloween": [
+    "ghost",
+    "pumpkin",
+    "witch",
+    "bat",
+    "spider"
+  ],
+  "happy-birthday": [
+    "thank-you",
+    "candy",
+    "heart"
+  ],
+  "harvest": [
+    "cornucopia",
+    "thanksgiving",
+    "pumpkin",
+    "corn",
+    "wheat"
+  ],
+  "hat": [
+    "glove",
+    "shoe",
+    "winter"
+  ],
+  "headphones": [
+    "earbuds",
+    "speaker",
+    "bluetooth-speaker",
+    "microphone",
+    "music"
+  ],
+  "heart": [
+    "baby",
+    "mom",
+    "dad",
+    "thank-you",
+    "happy-birthday"
+  ],
+  "hedgehog": [
+    "squirrel",
+    "rabbit",
+    "fox"
+  ],
+  "hexed": [
+    "magic-spell",
+    "witch"
+  ],
+  "hippo": [
+    "rhino",
+    "elephant",
+    "crocodile"
+  ],
+  "horse": [
+    "zebra",
+    "goat",
+    "cow",
+    "camel"
+  ],
+  "hunger-games": [
+    "sunrise-on-the-reaping",
+    "mockingjay"
+  ],
+  "iphone": [
+    "smartphone",
+    "samsung",
+    "tablet",
+    "earbuds"
+  ],
+  "kaiju": [
+    "giant-monster",
+    "godzilla",
+    "godzilla-minus-zero"
+  ],
+  "kangaroo": [
+    "koala",
+    "kiwi",
+    "elephant"
+  ],
+  "keyboard": [
+    "computer-mouse",
+    "desktop-computer",
+    "laptop",
+    "tablet"
+  ],
+  "kiwi": [
+    "koala",
+    "kangaroo",
+    "owl"
+  ],
+  "kiwi-fruit": [
+    "avocado",
+    "coconut",
+    "strawberry"
+  ],
+  "koala": [
+    "kangaroo",
+    "kiwi",
+    "panda"
+  ],
+  "kumquat": [
+    "orange",
+    "tangerine",
+    "lime"
+  ],
+  "labubu": [
+    "happy-birthday",
+    "halloween",
+    "winter"
+  ],
+  "lamb": [
+    "sheep",
+    "goat",
+    "cow"
+  ],
+  "laptop": [
+    "desktop-computer",
+    "tablet",
+    "computer-monitor",
+    "keyboard"
+  ],
+  "leaves": [
+    "maple",
+    "acorn",
+    "autumn",
+    "butterfly",
+    "harvest"
+  ],
+  "lemon": [
+    "lime",
+    "grapefruit",
+    "orange"
+  ],
+  "lime": [
+    "lemon",
+    "grapefruit",
+    "orange"
+  ],
+  "lion": [
+    "tiger",
+    "zebra",
+    "giraffe"
+  ],
+  "lobster": [
+    "crab",
+    "octopus",
+    "whale"
+  ],
+  "los-angeles": [
+    "movie",
+    "miami",
+    "new-york",
+    "american-flag"
+  ],
+  "lychee": [
+    "guava",
+    "dragon-fruit",
+    "passion-fruit"
+  ],
+  "magic-spell": [
+    "witch",
+    "hexed",
+    "halloween"
+  ],
+  "mandarin": [
+    "tangerine",
+    "orange",
+    "apple"
+  ],
+  "mango": [
+    "papaya",
+    "pineapple",
+    "guava"
+  ],
+  "maple": [
+    "leaves",
+    "acorn",
+    "autumn",
+    "fall",
+    "harvest"
+  ],
+  "mars": [
+    "earth",
+    "moon",
+    "school"
+  ],
+  "math": [
+    "school",
+    "book",
+    "clock",
+    "money"
+  ],
+  "melon": [
+    "cantaloupe",
+    "watermelon",
+    "pear"
+  ],
+  "mexico-flag": [
+    "american-flag",
+    "spain-flag",
+    "france-flag"
+  ],
+  "miami": [
+    "beach",
+    "los-angeles",
+    "new-york"
+  ],
+  "microphone": [
+    "headphones",
+    "speaker",
+    "camera"
+  ],
+  "microwave": [
+    "smart-refrigerator",
+    "washing-machine",
+    "air-conditioner",
+    "smart-home"
+  ],
+  "mockingjay": [
+    "sunrise-on-the-reaping",
+    "hunger-games"
+  ],
+  "modem": [
+    "wifi-router",
+    "laptop",
+    "desktop-computer"
+  ],
+  "mom": [
+    "dad",
+    "baby",
+    "boy",
+    "girl"
+  ],
+  "money": [
+    "math",
+    "school",
+    "book"
+  ],
+  "monkey": [
+    "koala",
+    "lion",
+    "elephant"
+  ],
+  "moon": [
+    "earth",
+    "mars",
+    "wave"
+  ],
+  "movie": [
+    "projector",
+    "television",
+    "music",
+    "game-awards"
+  ],
+  "mulberry": [
+    "blackberry",
+    "blackcurrant",
+    "raspberry"
+  ],
+  "music": [
+    "microphone",
+    "headphones",
+    "speaker"
+  ],
+  "nectarine": [
+    "peach",
+    "apricot",
+    "plum"
+  ],
+  "new-york": [
+    "american-flag",
+    "chicago",
+    "miami",
+    "los-angeles"
+  ],
+  "octopus": [
+    "crab",
+    "lobster",
+    "turtle"
+  ],
+  "orange": [
+    "mandarin",
+    "tangerine",
+    "apple"
+  ],
+  "owl": [
+    "eagle",
+    "parrot",
+    "fox"
+  ],
+  "panda": [
+    "bear",
+    "koala",
+    "baby-elephant"
+  ],
+  "papaya": [
+    "mango",
+    "guava",
+    "pineapple"
+  ],
+  "paris": [
+    "france",
+    "france-flag",
+    "new-york"
+  ],
+  "parrot": [
+    "peacock",
+    "flamingo",
+    "eagle"
+  ],
+  "passion-fruit": [
+    "guava",
+    "dragon-fruit",
+    "papaya"
+  ],
+  "peach": [
+    "nectarine",
+    "apricot",
+    "plum"
+  ],
+  "peacock": [
+    "parrot",
+    "flamingo",
+    "butterfly"
+  ],
+  "pear": [
+    "apple",
+    "green-apple",
+    "red-apple",
+    "quince"
+  ],
+  "penguin": [
+    "winter",
+    "duck",
+    "whale"
+  ],
+  "persimmon": [
+    "apricot",
+    "pomegranate",
+    "orange"
+  ],
+  "pie": [
+    "apple",
+    "cranberry",
+    "corn",
+    "wheat",
+    "harvest",
+    "thanksgiving"
+  ],
+  "pig": [
+    "cow",
+    "sheep",
+    "chicken"
+  ],
+  "pilgrim": [
+    "thanksgiving",
+    "harvest",
+    "cornucopia",
+    "turkey",
+    "autumn",
+    "fall"
+  ],
+  "pineapple": [
+    "mango",
+    "coconut",
+    "papaya"
+  ],
+  "pizza": [
+    "cheese",
+    "pie",
+    "cookie"
+  ],
+  "plum": [
+    "nectarine",
+    "peach",
+    "apricot",
+    "cherry"
+  ],
+  "political-debate": [
+    "red-and-blue-states",
+    "democrat-donkey",
+    "republican-elephant"
+  ],
+  "pomegranate": [
+    "persimmon",
+    "fig",
+    "grapes"
+  ],
+  "power-bank": [
+    "wireless-charger",
+    "smartphone",
+    "tablet"
+  ],
+  "printer": [
+    "laptop",
+    "desktop-computer",
+    "scanner"
+  ],
+  "projector": [
+    "television",
+    "laptop",
+    "speaker"
+  ],
+  "pumpkin": [
+    "halloween",
+    "autumn",
+    "harvest",
+    "leaves"
+  ],
+  "question-mark": [
+    "math",
+    "book",
+    "school"
+  ],
+  "quince": [
+    "pear",
+    "apple",
+    "persimmon"
+  ],
+  "rabbit": [
+    "hedgehog",
+    "squirrel",
+    "lamb"
+  ],
+  "raccoon": [
+    "fox",
+    "squirrel",
+    "bear"
+  ],
+  "raspberry": [
+    "strawberry",
+    "blueberry",
+    "orange"
+  ],
+  "red-and-blue-states": [
+    "political-debate",
+    "democrat-donkey",
+    "republican-elephant"
+  ],
+  "red-apple": [
+    "green-apple",
+    "apple",
+    "pear"
+  ],
+  "republican-elephant": [
+    "democrat-donkey",
+    "political-debate",
+    "red-and-blue-states"
+  ],
+  "rhino": [
+    "hippo",
+    "elephant",
+    "zebra"
+  ],
+  "robot": [
+    "smart-home",
+    "3d-printer",
+    "drone"
+  ],
+  "samsung": [
+    "smartphone",
+    "iphone",
+    "washing-machine",
+    "computer-monitor"
+  ],
+  "scanner": [
+    "printer",
+    "desktop-computer",
+    "laptop"
+  ],
+  "scarecrow": [
+    "harvest",
+    "autumn",
+    "fall",
+    "pumpkin",
+    "leaves",
+    "cornucopia"
+  ],
+  "school": [
+    "book",
+    "math",
+    "clock",
+    "question-mark"
+  ],
+  "security-camera": [
+    "webcam",
+    "smart-doorbell",
+    "wifi-router",
+    "smart-home"
+  ],
+  "shark": [
+    "whale",
+    "dolphin",
+    "octopus"
+  ],
+  "sheep": [
+    "lamb",
+    "goat",
+    "cow"
+  ],
+  "shoe": [
+    "hat",
+    "glove",
+    "exercise"
+  ],
+  "skeleton": [
+    "halloween",
+    "ghost",
+    "witch",
+    "pumpkin"
+  ],
+  "smart-doorbell": [
+    "security-camera",
+    "smart-home",
+    "smart-speaker",
+    "wifi-router"
+  ],
+  "smart-glasses": [
+    "vr-headset",
+    "smartphone",
+    "camera"
+  ],
+  "smart-home": [
+    "smart-speaker",
+    "smart-doorbell",
+    "security-camera",
+    "wifi-router"
+  ],
+  "smart-refrigerator": [
+    "washing-machine",
+    "microwave",
+    "smart-speaker"
+  ],
   "smart-speaker": [
     "speaker",
     "bluetooth-speaker",
@@ -202,65 +1053,372 @@
     "microphone",
     "wifi-router"
   ],
-  "smartphone": ["tablet", "wireless-charger", "power-bank"],
-  "smartwatch": ["smartphone", "wireless-charger", "earbuds"],
-  "snake": ["crocodile", "turtle", "frog"],
-  "sonic-4": ["sonic-the-hedgehog", "sonic-birthday", "gaming-trophy"],
-  "sonic-birthday": ["sonic-the-hedgehog", "sonic-4", "happy-birthday"],
-  "sonic-the-hedgehog": ["sonic-4", "sonic-birthday", "gaming-trophy"],
-  "spain": ["spain-flag", "france", "paris"],
-  "spain-flag": ["spain", "france-flag", "mexico-flag"],
-  "speaker": ["headphones", "earbuds", "television"],
-  "spider": ["halloween", "pumpkin", "bat", "butterfly"],
-  "squirrel": ["acorn", "fox", "hedgehog"],
-  "starfruit": ["pineapple", "dragon-fruit", "guava"],
-  "strawberry": ["raspberry", "blueberry", "apple"],
-  "sunflower": ["harvest", "autumn", "scarecrow", "wheat", "corn", "leaves"],
-  "sunrise-on-the-reaping": ["hunger-games", "mockingjay"],
-  "tablet": ["laptop", "keyboard", "headphones"],
-  "tangerine": ["mandarin", "orange", "banana", "kumquat"],
-  "television": ["projector", "computer-monitor", "game-console", "speaker"],
-  "tesla": ["electric-car", "electric-scooter", "train"],
-  "thank-you": ["heart", "mom", "happy-birthday", "dad"],
-  "thanksgiving": ["pumpkin", "harvest", "autumn", "pie"],
-  "thermometer": ["school", "math", "clock"],
-  "tiger": ["lion", "cat", "zebra"],
-  "train": ["airplane", "new-york", "chicago"],
-  "turkey": ["thanksgiving", "autumn", "harvest", "pumpkin"],
-  "turtle": ["frog", "crab", "dolphin"],
-  "usb-flash-drive": ["external-hard-drive", "laptop", "desktop-computer"],
-  "vampire": ["halloween", "ghost", "witch", "skeleton"],
-  "volleyball": ["basketball", "exercise", "school"],
-  "vr-headset": ["game-controller", "game-console", "computer-monitor", "smart-glasses"],
-  "washing-machine": ["smart-refrigerator", "microwave", "air-conditioner"],
-  "watermelon": ["melon", "cantaloupe", "strawberry"],
-  "wave": ["beach", "moon", "grass", "fire"],
-  "webcam": ["camera", "laptop", "microphone"],
-  "whale": ["dolphin", "shark", "penguin"],
-  "wheat": ["harvest", "cornucopia", "gourd", "scarecrow", "autumn", "fall"],
-  "wifi-router": ["modem", "smart-home", "security-camera"],
-  "winter": ["penguin", "glove", "hat"],
-  "wireless-charger": ["smartphone", "smartwatch", "earbuds"],
-  "witch": ["halloween", "ghost", "vampire", "skeleton"],
-  "wolf": ["fox", "bear", "dog"],
-  "zebra": ["horse", "giraffe", "lion"],
-  "football": ["basketball", "volleyball"],
-  "gratitude": ["thank-you", "thanksgiving"],
-  "diwali": ["candles", "fireworks"],
-  "kwanzaa": ["candles", "gratitude"],
-  "marching-band": ["music", "thanksgiving-parade", "parade-float"],
-  "parade-float": ["thanksgiving-parade", "parade-balloon", "marching-band"],
-  "parade-balloon": ["parade-float", "thanksgiving-parade"],
-  "thanksgiving-parade": ["thanksgiving", "parade-float", "parade-balloon", "marching-band"],
-  "desert-planet": ["dune", "sandworm", "dune-part-three"],
-  "sandworm": ["dune", "dune-part-three", "desert-planet"],
-  "dune-part-three": ["dune", "desert-planet", "sandworm"],
-  "dune": ["dune-part-three", "desert-planet", "sandworm"],
-  "superhero": ["avengers", "avengers-doomsday", "doctor-doom"],
-  "brain": ["skeleton"],
-  "donald-trump": ["election", "political-debate", "american-flag"],
-  "hanukkah": ["candles", "winter"],
-  "veterans": ["american-flag", "flag"],
-  "election": ["political-debate", "democrat-donkey", "republican-elephant", "american-flag"],
-  "nutcracker": ["christmas", "winter"]
+  "smartphone": [
+    "tablet",
+    "wireless-charger",
+    "power-bank"
+  ],
+  "smartwatch": [
+    "smartphone",
+    "wireless-charger",
+    "earbuds"
+  ],
+  "snake": [
+    "crocodile",
+    "turtle",
+    "frog"
+  ],
+  "sonic-4": [
+    "sonic-the-hedgehog",
+    "sonic-birthday",
+    "gaming-trophy"
+  ],
+  "sonic-birthday": [
+    "sonic-the-hedgehog",
+    "sonic-4",
+    "happy-birthday"
+  ],
+  "sonic-the-hedgehog": [
+    "sonic-4",
+    "sonic-birthday",
+    "gaming-trophy"
+  ],
+  "spain": [
+    "spain-flag",
+    "france",
+    "paris"
+  ],
+  "spain-flag": [
+    "spain",
+    "france-flag",
+    "mexico-flag"
+  ],
+  "speaker": [
+    "headphones",
+    "earbuds",
+    "television"
+  ],
+  "spider": [
+    "halloween",
+    "pumpkin",
+    "bat",
+    "butterfly"
+  ],
+  "squirrel": [
+    "acorn",
+    "fox",
+    "hedgehog"
+  ],
+  "starfruit": [
+    "pineapple",
+    "dragon-fruit",
+    "guava"
+  ],
+  "strawberry": [
+    "raspberry",
+    "blueberry",
+    "apple"
+  ],
+  "sunflower": [
+    "harvest",
+    "autumn",
+    "scarecrow",
+    "wheat",
+    "corn",
+    "leaves"
+  ],
+  "sunrise-on-the-reaping": [
+    "hunger-games",
+    "mockingjay"
+  ],
+  "tablet": [
+    "laptop",
+    "keyboard",
+    "headphones"
+  ],
+  "tangerine": [
+    "mandarin",
+    "orange",
+    "banana",
+    "kumquat"
+  ],
+  "television": [
+    "projector",
+    "computer-monitor",
+    "game-console",
+    "speaker"
+  ],
+  "tesla": [
+    "electric-car",
+    "electric-scooter",
+    "train"
+  ],
+  "thank-you": [
+    "heart",
+    "mom",
+    "happy-birthday",
+    "dad"
+  ],
+  "thanksgiving": [
+    "pumpkin",
+    "harvest",
+    "autumn",
+    "pie"
+  ],
+  "thermometer": [
+    "school",
+    "math",
+    "clock"
+  ],
+  "tiger": [
+    "lion",
+    "cat",
+    "zebra"
+  ],
+  "train": [
+    "airplane",
+    "new-york",
+    "chicago"
+  ],
+  "turkey": [
+    "thanksgiving",
+    "autumn",
+    "harvest",
+    "pumpkin"
+  ],
+  "turtle": [
+    "frog",
+    "crab",
+    "dolphin"
+  ],
+  "usb-flash-drive": [
+    "external-hard-drive",
+    "laptop",
+    "desktop-computer"
+  ],
+  "vampire": [
+    "halloween",
+    "ghost",
+    "witch",
+    "skeleton"
+  ],
+  "volleyball": [
+    "basketball",
+    "exercise",
+    "school"
+  ],
+  "vr-headset": [
+    "game-controller",
+    "game-console",
+    "computer-monitor",
+    "smart-glasses"
+  ],
+  "washing-machine": [
+    "smart-refrigerator",
+    "microwave",
+    "air-conditioner"
+  ],
+  "watermelon": [
+    "melon",
+    "cantaloupe",
+    "strawberry"
+  ],
+  "wave": [
+    "beach",
+    "moon",
+    "grass",
+    "fire"
+  ],
+  "webcam": [
+    "camera",
+    "laptop",
+    "microphone"
+  ],
+  "whale": [
+    "dolphin",
+    "shark",
+    "penguin"
+  ],
+  "wheat": [
+    "harvest",
+    "cornucopia",
+    "gourd",
+    "scarecrow",
+    "autumn",
+    "fall"
+  ],
+  "wifi-router": [
+    "modem",
+    "smart-home",
+    "security-camera"
+  ],
+  "winter": [
+    "penguin",
+    "glove",
+    "hat"
+  ],
+  "wireless-charger": [
+    "smartphone",
+    "smartwatch",
+    "earbuds"
+  ],
+  "witch": [
+    "halloween",
+    "ghost",
+    "vampire",
+    "skeleton"
+  ],
+  "wolf": [
+    "fox",
+    "bear",
+    "dog"
+  ],
+  "zebra": [
+    "horse",
+    "giraffe",
+    "lion"
+  ],
+  "football": [
+    "basketball",
+    "volleyball"
+  ],
+  "gratitude": [
+    "thank-you",
+    "thanksgiving"
+  ],
+  "diwali": [
+    "candles",
+    "fireworks"
+  ],
+  "kwanzaa": [
+    "candles",
+    "gratitude"
+  ],
+  "marching-band": [
+    "music",
+    "thanksgiving-parade",
+    "parade-float"
+  ],
+  "parade-float": [
+    "thanksgiving-parade",
+    "parade-balloon",
+    "marching-band"
+  ],
+  "parade-balloon": [
+    "parade-float",
+    "thanksgiving-parade"
+  ],
+  "thanksgiving-parade": [
+    "thanksgiving",
+    "parade-float",
+    "parade-balloon",
+    "marching-band"
+  ],
+  "desert-planet": [
+    "dune",
+    "sandworm",
+    "dune-part-three"
+  ],
+  "sandworm": [
+    "dune",
+    "dune-part-three",
+    "desert-planet"
+  ],
+  "dune-part-three": [
+    "dune",
+    "desert-planet",
+    "sandworm"
+  ],
+  "dune": [
+    "dune-part-three",
+    "desert-planet",
+    "sandworm"
+  ],
+  "superhero": [
+    "avengers",
+    "avengers-doomsday",
+    "doctor-doom"
+  ],
+  "brain": [
+    "skeleton"
+  ],
+  "donald-trump": [
+    "election",
+    "political-debate",
+    "american-flag"
+  ],
+  "hanukkah": [
+    "candles",
+    "winter"
+  ],
+  "veterans": [
+    "american-flag",
+    "flag"
+  ],
+  "election": [
+    "political-debate",
+    "democrat-donkey",
+    "republican-elephant",
+    "american-flag"
+  ],
+  "nutcracker": [
+    "christmas",
+    "winter"
+  ],
+  "cybercab": [
+    "tesla",
+    "robotaxi",
+    "autonomous-taxi",
+    "electric-car"
+  ],
+  "robotaxi": [
+    "autonomous-taxi",
+    "cybercab",
+    "electric-car",
+    "train"
+  ],
+  "autonomous-taxi": [
+    "robotaxi",
+    "cybercab",
+    "electric-car",
+    "tesla"
+  ],
+  "tesla-optimus": [
+    "robot",
+    "robot-hand",
+    "tesla",
+    "3d-printer"
+  ],
+  "robot-hand": [
+    "robot",
+    "tesla-optimus",
+    "3d-printer",
+    "smart-home"
+  ],
+  "black-friday": [
+    "cyber-monday",
+    "online-sale",
+    "online-shopping",
+    "money"
+  ],
+  "cyber-monday": [
+    "black-friday",
+    "online-sale",
+    "online-shopping",
+    "laptop",
+    "smartphone"
+  ],
+  "online-sale": [
+    "online-shopping",
+    "black-friday",
+    "cyber-monday",
+    "money"
+  ],
+  "online-shopping": [
+    "online-sale",
+    "black-friday",
+    "cyber-monday",
+    "desktop-computer",
+    "smartphone"
+  ]
 }
