@@ -6,6 +6,7 @@ import { resolve, join } from 'node:path';
 import { validateLocalAssetPath } from './publication-policy.mjs';
 import categoryPreviewPicks from '../data/category-preview-picks.json' with { type: 'json' };
 import ownerCollectionContexts from './remaining-thirty-one-contexts.json' with { type: 'json' };
+import { createPreviewCache } from './preview-cache.mjs';
 const VERSION = 'p1';
 const sha = (bytes) => createHash('sha256').update(bytes).digest('hex');
 export const PREVIEW_WIDTHS = [96, 220, 440, 960];
@@ -77,6 +78,16 @@ export function preparePreviewAssets(catalog, root = process.cwd()) {
     } catch {}
     const next = {};
     const stats = { generated: 0, reused: 0, bytes: 0 };
+    let publishedIndex = {};
+    const publishedIndexPath = join(root, 'data/preview-cache-index.json');
+    if (existsSync(publishedIndexPath))
+      publishedIndex = JSON.parse(readFileSync(publishedIndexPath, 'utf8'));
+    const remoteCache = createPreviewCache({
+      root,
+      index: publishedIndex,
+      enabled: process.env.CF_PAGES === '1',
+      report: (state) => console.log('Verified preview cache:', state),
+    });
     const unique = [
       ...new Map(
         catalog.filter((a) => a.published && a.indexable).map((a) => [previewIdentity(a), a]),
@@ -143,7 +154,18 @@ export function preparePreviewAssets(catalog, root = process.cwd()) {
               return `${s.size}:${s.mtimeMs}`;
             })
             .join('|');
-          const previous = cache[key];
+          let previous = cache[key];
+          if (
+            !previous ||
+            !PREVIEW_WIDTHS.every((width) => existsSync(join(root, 'public', urls[width])))
+          ) {
+            previous =
+              (await remoteCache.restore(key, [
+                ...PREVIEW_WIDTHS,
+                640,
+                ...(adaptiveKeys.has(key) ? [320] : []),
+              ])) || previous;
+          }
           if (
             previous &&
             PREVIEW_WIDTHS.every((w) => {
@@ -211,6 +233,8 @@ export function preparePreviewAssets(catalog, root = process.cwd()) {
     const tempCache = cachePath + `.${process.pid}.tmp`;
     writeFileSync(tempCache, JSON.stringify(next));
     renameSync(tempCache, cachePath);
+    if (process.env.CF_PAGES === '1')
+      console.log('Preview assets:', { ...stats, remote: remoteCache.stats });
     return stats;
   })();
   jobs.set(jobKey, pending);
