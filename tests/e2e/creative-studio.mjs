@@ -58,14 +58,14 @@ const download = async (format, name) => {
   return bytes;
 };
 try {
-  await page.goto(`${base}/create/`);
+  await page.goto(`${base}/create/?view=page`);
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
   await expect(page.locator('main h1')).toHaveCount(1);
   await page.screenshot({ path: path.join(out, 'page-desktop.png') });
   await page.locator('[data-studio-launch=elements]').first().click();
   await page.locator('[data-library-kind=vector]').click();
-  await expect(page.locator('[data-element-count]')).toHaveText('1–24 of 2,000 elements');
-  expect(await page.locator('[data-element]').count()).toBe(24);
+  await expect(page.locator('[data-element-count]')).toHaveText('1–6 of 2,000 elements');
+  expect(await page.locator('[data-element]').count()).toBe(6);
   await page.locator('[data-element-search]').fill('rainbow');
   await expect(page.locator('[data-element]').first()).toBeVisible();
   await page.locator('[data-element]').first().click();
@@ -178,7 +178,7 @@ try {
   await expect(page.locator('[data-status]')).toContainText('project opened');
   expect((await state()).layers).toHaveLength(276);
   const loadMs = Date.now() - started;
-  await page.locator('[data-work-mode=quick]').click();
+  await page.locator('button[data-work-mode=print]').click();
   await page.locator('button[data-work-mode=edit]').click();
   expect((await state()).layers).toHaveLength(276);
   await panel('layers');
@@ -195,6 +195,8 @@ try {
   expect((await state()).layers).toHaveLength(276);
   await action('undo').click();
   await action('undo').click();
+  if (!(await page.locator('.wb-file-menu').evaluate((details) => details.open)))
+    await page.locator('.wb-file-menu > summary').click();
   const wait = page.waitForEvent('download');
   await action('save').click();
   const saved = await wait;

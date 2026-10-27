@@ -43,7 +43,7 @@ try {
     '/print-size/',
   ]) {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(base + route);
+    await page.goto(base + (route === '/create/' ? '/create/?view=page' : route));
     await page.evaluate(() => document.fonts.ready);
     const consent = page.locator('#cookie-notice [data-cookie-choice=necessary]');
     if (await consent.isVisible()) await consent.tap();
