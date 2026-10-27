@@ -146,7 +146,13 @@ for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
       timeout: 30000,
     });
     await page.locator('#uc-tool-elements').click();
-    await expect(page.locator('[data-artwork-grid] img').first()).toHaveAttribute('title', /.+/);
+    // The library opens on category tiles with intentionally decorative images.
+    // Switch to artwork before checking image-specific title and alt text.
+    await page.locator('[data-artwork-scope="featured"]').click();
+    await expect(page.locator('[data-artwork-grid] [data-artwork] img').first()).toHaveAttribute(
+      'title',
+      /.+/,
+    );
     await cardMetadata('[data-artwork-grid] [data-artwork]', 'data-artwork');
     report.interactions.push({ engine, check: 'Studio artwork library metadata', passed: true });
     await go('/ai-clipart-generator/');
