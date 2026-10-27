@@ -181,6 +181,7 @@ jobs:
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/sharing.mjs
             fi
             if [ '${{ matrix.suite }}' = 'interface-pages' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-mobile-panel.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/editorial-process.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/not-found.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/contact.mjs

@@ -50,7 +50,7 @@ const report = {
   checks: [],
   pageErrors,
 };
-const editor = '/create/';
+const editor = '/create/?view=page';
 async function readyEditor() {
   if (!(await page.locator('.uc-canvas [data-layer]').count()))
     await chooseVectorStarter(page, 'botanical-sprig');
@@ -98,7 +98,7 @@ const states = [
   },
   {
     name: '09-black-white-print',
-    url: `${editor}?mode=outline`,
+    url: `${editor}&mode=outline`,
     prepare: async () => {
       await readyEditor();
       await page.locator('[data-panel=print]').click();
