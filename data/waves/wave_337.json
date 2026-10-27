@@ -1,6 +1,6 @@
 {
   "wave": "wave_337",
-  "status": "CDN_VERIFIED_AWAITING_PRODUCTION",
+  "status": "PUBLISHED",
   "actualExportedDrawings": 6,
   "resumed": 0,
   "screenReview": "PASS",
@@ -544,5 +544,7 @@
   "deferred": [],
   "screenReviewNotes": "All six selected source and native PDF/WebP comparisons visually reviewed; correct filling, full framing and independent compositions.",
   "reviewerType": "AI_AGENT_NOT_HUMAN",
-  "createdAt": "2026-10-26T02:51:21.517Z"
+  "createdAt": "2026-10-26T02:51:21.517Z",
+  "liveRevision": "b757249b41be3587b80e0b19bb3ccbac90409b94",
+  "liveVerifiedAt": "2026-10-26T05:30:46.500129+00:00"
 }

@@ -608,6 +608,10 @@
   .home-collection-display {
     padding-inline: 12px;
   }
+  .home-collection-display::before {
+    inset-inline: 18%;
+    transform: rotate(-8deg);
+  }
   .home-collection-shelf {
     gap: 14px 8px;
   }

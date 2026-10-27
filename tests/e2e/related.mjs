@@ -285,7 +285,7 @@ try {
           .map(([, f]) => f.sha256),
       );
       assert.ok(matches.includes(createHash('sha256').update(body).digest('hex')));
-      await page.keyboard.press('Escape');
+      await page.getByRole('button', { name: 'Close download window', exact: true }).click();
       await expect(page.locator('#download-dialog')).toBeHidden();
     }
   }
@@ -298,11 +298,31 @@ try {
     .locator('.related-card')
     .first()
     .evaluate((card) => card.scrollIntoView({ block: 'center' }));
-  await expect
-    .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')), {
-      timeout: 8000,
-    })
-    .toBe(true);
+  try {
+    await expect
+      .poll(() => page.evaluate(() => window.relatedEvents.some((e) => e.event === 'impression')), {
+        timeout: 8000,
+      })
+      .toBe(true);
+  } catch (error) {
+    const view = await page.evaluate(() => ({
+      hidden: document.hidden,
+      viewport: { width: innerWidth, height: innerHeight },
+      events: window.relatedEvents,
+      cards: [...document.querySelectorAll('.related-card')].slice(0, 3).map((card) => {
+        const image = card.querySelector('img');
+        const box = card.getBoundingClientRect();
+        return {
+          id: card.getAttribute('data-related-id'),
+          box: { top: box.top, bottom: box.bottom, height: box.height },
+          image: { hidden: image.hidden, complete: image.complete, width: image.naturalWidth },
+        };
+      }),
+    }));
+    throw new Error(`Visible-duration impression missing: ${JSON.stringify(view)}`, {
+      cause: error,
+    });
+  }
   const events = await page.evaluate(() => window.relatedEvents);
   assert.ok(events.some((e) => e.event === 'impression'));
   assert.ok(!events.some((e) => e.event === 'download_success'));
@@ -311,6 +331,54 @@ try {
   report.checks.push(
     'Consent-neutral event hooks; visible-duration impressions; no fabricated download successes',
   );
+  const exposurePage = await context.newPage();
+  try {
+    await exposurePage.setViewportSize({ width: 1440, height: 1000 });
+    await exposurePage.addInitScript(() => {
+      window.visibleEvents = [];
+      window.addEventListener('ultraclipart:related', (event) =>
+        window.visibleEvents.push(event.detail),
+      );
+    });
+    await exposurePage.goto(`${base}/art/${reference}/`, { waitUntil: 'networkidle' });
+    await exposurePage.bringToFront();
+    await exposurePage.evaluate(() => document.fonts.ready);
+    const card = exposurePage.locator('.related-card').first();
+    const image = card.locator('img').first();
+    // Load the real offscreen thumbnail before starting the visibility clock.
+    await image.evaluate((element) => (element.loading = 'eager'));
+    await expect
+      .poll(() => image.evaluate((element) => element.complete && element.naturalWidth > 0))
+      .toBe(true);
+    await image.evaluate((element) => element.decode());
+    await card.evaluate((element) => {
+      const box = element.getBoundingClientRect();
+      scrollTo(0, scrollY + box.top - (innerHeight - box.height * 0.6));
+    });
+    await expect
+      .poll(() =>
+        card.evaluate((element) => {
+          const box = element.getBoundingClientRect();
+          const visible = Math.max(0, Math.min(box.bottom, innerHeight) - Math.max(box.top, 0));
+          return visible / box.height >= 0.5 && visible / box.height < 0.9;
+        }),
+      )
+      .toBe(true);
+    await exposurePage.waitForTimeout(200);
+    await card.scrollIntoViewIfNeeded();
+    await expect
+      .poll(() =>
+        exposurePage.evaluate(() =>
+          window.visibleEvents.some((event) => event.event === 'impression'),
+        ),
+      )
+      .toBe(true);
+    report.checks.push(
+      'Scrolling a card from half visible to fully visible keeps continuous view timing',
+    );
+  } finally {
+    await exposurePage.close();
+  }
   await page.route('**/related-release.json', async (route) => {
     await new Promise((r) => setTimeout(r, 1000));
     await route.continue();

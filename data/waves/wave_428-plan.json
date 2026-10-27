@@ -1,0 +1,35 @@
+{
+  "wave": "wave_428",
+  "topic": "election",
+  "method": "builtin-image-generation",
+  "research": "data/research/election-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "election-outline-class-tally-lesson",
+      "title": "Counting a Class Vote",
+      "alt": "A teacher guides two children placing round counters into clear tubes beside a Class Vote sign, in black-and-white line art.",
+      "description": "Three tall cylinders stand on the classroom table beside a shallow bowl of counters. The children reach toward separate tubes as the bespectacled teacher watches from behind them.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_428/source/election-outline-class-tally-lesson.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "election-outline-election-reporter",
+      "title": "Reporting on Election Day",
+      "alt": "Black-and-white line art shows a reporter with a microphone beside a camera operator and an Election Day placard.",
+      "description": "The woman stands with both hands around a plain-cube microphone while the bearded operator steadies the large camera. All three tripod legs and the small freestanding sign remain clearly separated beneath the figures.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_428/source/election-outline-election-reporter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

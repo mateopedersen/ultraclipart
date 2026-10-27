@@ -1,0 +1,34 @@
+{
+  "wave": "wave_378",
+  "topic": "gratitude",
+  "method": "builtin-image-generation",
+  "research": "data/research/gratitude-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gratitude-outline-journal-picnic",
+      "title": "Reflecting on a Kind Day",
+      "alt": "Outline scene of a woman in a sunhat writing in a journal on a picnic blanket beside a basket and flask.",
+      "description": "Outline scene of a woman in a sunhat writing in a journal on a picnic blanket beside a basket and flask. The complete quiet reflection scene suits a personal coloring page or a classroom journal prompt.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_378/source/gratitude-outline-journal-picnic.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-outline-reading-partners",
+      "title": "Thankful for a Reading Partner",
+      "alt": "Outline scene of two children sharing an open heart-decorated book on a complete wooden bench.",
+      "description": "Outline scene of two children sharing an open heart-decorated book on a complete wooden bench. Use the complete friendship scene in a classroom reading-appreciation activity or a personal coloring page.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_378/source/gratitude-outline-reading-partners.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

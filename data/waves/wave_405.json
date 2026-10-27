@@ -1,0 +1,585 @@
+{
+  "wave": "wave_405",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "hanukkah-singing-together",
+      "title": "Singing from a Shared Songbook",
+      "alt": "Three singers share a blue songbook beneath a star-and-dreidel garland; the older man wears a blue kippah and green cardigan.",
+      "description": "An older man and two younger singers gather around one open blue booklet. Their green, cream and plum clothing separates the figures beneath a string of blue paper stars and dreidel shapes.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_405/source/hanukkah-singing-together.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1205,
+      "height": 1306,
+      "pdfWidth": 923,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "be73ee4504fe8f28030ad01fb116feab29fe009159b5e36217610b14fe4ae424",
+      "inputSignature": "740dc91ab211252d77ff5565ec39f8fa825ba2e87a66b20cb30e015e183bd8be",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 984996,
+        "weightedCmykRmse": 0.919627
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1354465,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1064339,
+          "weightedCmykRmse": 0.778917
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 984996,
+          "weightedCmykRmse": 0.919627
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        165,
+        37,
+        1048,
+        1252
+      ],
+      "image": {
+        "width": 923,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_405/exports/hanukkah-singing-together.pdf",
+          "bytes": 984996,
+          "sha256": "7569a909f1bcd6d6ee50b9e1954ca6dc6d0fdf644b55a24a19bf429d7944bede"
+        },
+        "webp": {
+          "path": "work/production/wave_405/exports/hanukkah-singing-together.webp",
+          "bytes": 1147738,
+          "sha256": "a5efe90bd20233ccd0b46326fcffd5ebd839736c1cc6c8bc87b50c4af49c5cb1"
+        },
+        "thumb": {
+          "path": "work/production/wave_405/exports/hanukkah-singing-together-thumb.webp",
+          "bytes": 62360,
+          "sha256": "978add3ae3439a963a64c4ff8fee6d30de1778d16a6282a1f4fe3e221ac86fd4"
+        }
+      },
+      "proofSha256": "af376ab364d7359b3c71705ca63c19554bbaab094112d8c7ee400b101e3b3a00",
+      "pairMeanRgbDifference": 3.18305
+    },
+    {
+      "id": "hanukkah-family-table",
+      "title": "Sharing Latkes and Sufganiyot",
+      "alt": "Two adults and a child share latkes and jelly doughnuts at a round table, with blue kippot on the man and boy.",
+      "description": "Forkfuls of latke lift above individual blue-rimmed plates as the three diners share a round wooden table. A large platter of crisp pancakes, a bowl of applesauce and sugar-dusted doughnuts fill the center.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_405/source/hanukkah-family-table.png",
+      "printMaxEdgePx": 890,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 890,
+      "pdfHeight": 813,
+      "sourceType": "raster",
+      "sourceSha256": "1ddc1919c192952534a5782df142a5588437f8576f758e8eb24f05d17ab3ae5d",
+      "inputSignature": "4fcc8e328d436f1b542266aaf0d3bbcf0d134acd8c07ba64063564e0ea21b524",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 963751,
+        "weightedCmykRmse": 1.235145
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1439341,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1195697,
+          "weightedCmykRmse": 0.704929
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1127948,
+          "weightedCmykRmse": 0.840202
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1049008,
+          "weightedCmykRmse": 0.997421
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 963751,
+          "weightedCmykRmse": 1.235145
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        7,
+        20,
+        1306,
+        1184
+      ],
+      "image": {
+        "width": 890,
+        "height": 813,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_405/exports/hanukkah-family-table.pdf",
+          "bytes": 963751,
+          "sha256": "9d58c7725c5bf8100fd100893a59b260fabc3f68f5e65383e414e316933ef944"
+        },
+        "webp": {
+          "path": "work/production/wave_405/exports/hanukkah-family-table.webp",
+          "bytes": 1602464,
+          "sha256": "f0de11cc52e8d299878b7743917d11eded4a24c8b12a580eb118ff208993968d"
+        },
+        "thumb": {
+          "path": "work/production/wave_405/exports/hanukkah-family-table-thumb.webp",
+          "bytes": 95164,
+          "sha256": "499c85dc166014e2fbfec480ab480bd1c8a2f26b70b14626597ee001efd96311"
+        }
+      },
+      "proofSha256": "89e137636f9b1fb71d5ee6ffc28e68532a638a4aaca14e0518318eaa283df83f",
+      "pairMeanRgbDifference": 4.31042
+    },
+    {
+      "id": "hanukkah-setting-festive-table",
+      "title": "Setting a Blue and White Hanukkah Table",
+      "alt": "A woman in a plum apron places a blue-patterned plate on a dining table set with napkins, a hanukkiah and a folded paper star.",
+      "description": "Blue and white plates and rolled cloth napkins surround an unlit nine-candle hanukkiah. The woman leans forward to place another plate between the wooden dining chairs, with a blue paper star near the runner.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_405/source/hanukkah-setting-festive-table.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "54da204ddb688a9f589b7ed7a75fab7290252f03b1b70292664aac2649725890",
+      "inputSignature": "63a3ae0f0f58f113d2a5794759905e05573c76583a7d69e97b5c8b2255dcfddd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 987880,
+        "weightedCmykRmse": 0.827947
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1209180,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 987880,
+          "weightedCmykRmse": 0.827947
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        113,
+        72,
+        1240,
+        1164
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_405/exports/hanukkah-setting-festive-table.pdf",
+          "bytes": 987880,
+          "sha256": "ff2a312afb249ab76c88859aec68eb6fd3fe97643fc3d8376bcf18b533c2fd28"
+        },
+        "webp": {
+          "path": "work/production/wave_405/exports/hanukkah-setting-festive-table.webp",
+          "bytes": 1035498,
+          "sha256": "8f8e841e18c5e46b070f4946dcc308ceb484660c088c4935332acad3a7e34a59"
+        },
+        "thumb": {
+          "path": "work/production/wave_405/exports/hanukkah-setting-festive-table-thumb.webp",
+          "bytes": 64206,
+          "sha256": "1094f76e6cd382fe7e478e28075f971b55fe059811b7dbfbe78c6ff661d32601"
+        }
+      },
+      "proofSha256": "16d7f52bcc8b8cf24e50c2df9d8d3dfa017a57d2711197a4a74436126791199c",
+      "pairMeanRgbDifference": 4.85736
+    },
+    {
+      "id": "hanukkah-copper-serving-tray",
+      "title": "Carrying Sufganiyot on a Copper Tray",
+      "alt": "An older man in a blue kippah and olive waistcoat holds a copper tray of jelly doughnuts beside a decorated Hanukkah table.",
+      "description": "Both hands support the shallow copper tray, whose handle carries a blue bow. The man\u2019s gray mustache and olive waistcoat distinguish him beside the candleholder, gelt bowl and small dreidels on the side table.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_405/source/hanukkah-copper-serving-tray.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "13481dc8a45c10dcc999bacc46b74d6b7bd797d6b71f2951849cef078d6ebf79",
+      "inputSignature": "53290137503172efe57d740ded73c5437d0c43513acc0bddb086f51415faa799",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 969908,
+        "weightedCmykRmse": 0.743197
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1161616,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 969908,
+          "weightedCmykRmse": 0.743197
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        16,
+        11,
+        1019,
+        1502
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_405/exports/hanukkah-copper-serving-tray.pdf",
+          "bytes": 969908,
+          "sha256": "baab1ad43ba078640b6909412bb9eafffef8e8564ea0d9ae8f95f2e7a69c4c60"
+        },
+        "webp": {
+          "path": "work/production/wave_405/exports/hanukkah-copper-serving-tray.webp",
+          "bytes": 1659312,
+          "sha256": "6c5f7683e85f10b648ada620bb09583bbbd96a8f69ce0babacf93cb6e4ef3b03"
+        },
+        "thumb": {
+          "path": "work/production/wave_405/exports/hanukkah-copper-serving-tray-thumb.webp",
+          "bytes": 61332,
+          "sha256": "a7aa8088bfc171ee99c7fcd4b197687023dfd5b09213b9668c7ae64a8b1b1b1f"
+        }
+      },
+      "proofSha256": "05ebec00c81c02fad6d8f71ab432dc0d110168cb0ad64b538ab4e7ff9a9da9fd",
+      "pairMeanRgbDifference": 4.90605
+    },
+    {
+      "id": "hanukkah-dreidel-spinning-hands",
+      "title": "Starting a Dreidel Spin",
+      "alt": "Hands in blue wool cuffs reach toward a wooden dreidel and gold coins on a painted round board, with Hanukkah candles behind.",
+      "description": "A decorated blue-and-gold dreidel turns above a round painted wooden board. One hand has just released its handle while the other waits nearby, with gold chocolate coins and a jeweled candleholder behind them.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_405/source/hanukkah-dreidel-spinning-hands.png",
+      "printMaxEdgePx": 960,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 960,
+      "pdfHeight": 877,
+      "sourceType": "raster",
+      "sourceSha256": "3f7a9ca58f22ef87240e95cb013e28a6d580b4fa3db59ec168660ee91a3ece4d",
+      "inputSignature": "9c6ed7c4abd133bfe142acf9c3a17afe3f34410ce508296b6ffdd689ff066d4a",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 983809,
+        "weightedCmykRmse": 1.322678
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1459088,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1207081,
+          "weightedCmykRmse": 0.742413
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1145316,
+          "weightedCmykRmse": 0.87967
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1055867,
+          "weightedCmykRmse": 1.057283
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 983809,
+          "weightedCmykRmse": 1.322678
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        8,
+        32,
+        1301,
+        1167
+      ],
+      "image": {
+        "width": 960,
+        "height": 877,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_405/exports/hanukkah-dreidel-spinning-hands.pdf",
+          "bytes": 983809,
+          "sha256": "26cd79a49b9e9084c1afc0293cb99037496a1d499e9ab8e21c8a60c6f525886f"
+        },
+        "webp": {
+          "path": "work/production/wave_405/exports/hanukkah-dreidel-spinning-hands.webp",
+          "bytes": 1578580,
+          "sha256": "bd657a7a90036562df759e838f807778f2e7cf7d3fba7e99950b92a1a0954757"
+        },
+        "thumb": {
+          "path": "work/production/wave_405/exports/hanukkah-dreidel-spinning-hands-thumb.webp",
+          "bytes": 90092,
+          "sha256": "b1ce98e26d4d39a54fdabd9ebd21bd73553560c3aaa51459e7cfe756e2043475"
+        }
+      },
+      "proofSha256": "6d50dedc6b3618b26ce465071743af1bff2dc9719bb27a65942fde519f6014c7",
+      "pairMeanRgbDifference": 3.50291
+    },
+    {
+      "id": "hanukkah-cookie-decorating",
+      "title": "Icing Star Cookies for Hanukkah",
+      "alt": "A young baker in a blue kippah and hoodie pipes white icing onto a six-pointed star cookie at a blue wooden table.",
+      "description": "The piping bag traces the edge of one star cookie on a lined wooden board. More cookies and a bowl of icing sit beside the baker, with an empty brass hanukkiah at the opposite end of the blue table.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_405/source/hanukkah-cookie-decorating.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1267,
+      "height": 1241,
+      "pdfWidth": 1000,
+      "pdfHeight": 979,
+      "sourceType": "raster",
+      "sourceSha256": "c0c744414fe69ffa7e02a918d7330a799d8c9ed31af23bf00149b8ff8c49f0f6",
+      "inputSignature": "4c424257cee1b949a0ae11dea9d20fc95f44013c8e119d7c9b581b1dbbd5a067",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 918862,
+        "weightedCmykRmse": 1.176278
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1328363,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1066580,
+          "weightedCmykRmse": 0.812919
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 998356,
+          "weightedCmykRmse": 0.95536
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 918862,
+          "weightedCmykRmse": 1.176278
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        78,
+        2,
+        1253,
+        1235
+      ],
+      "image": {
+        "width": 1000,
+        "height": 979,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_405/exports/hanukkah-cookie-decorating.pdf",
+          "bytes": 918862,
+          "sha256": "f2ee773d100ceb975a33daef3f8fc86e03e372fa5963856f734dd41b69bd2bfa"
+        },
+        "webp": {
+          "path": "work/production/wave_405/exports/hanukkah-cookie-decorating.webp",
+          "bytes": 1165326,
+          "sha256": "f6290c707efb13e36b190ea1b70e994b5a526331ffcdba31eaf9afbcf0a8a3fb"
+        },
+        "thumb": {
+          "path": "work/production/wave_405/exports/hanukkah-cookie-decorating-thumb.webp",
+          "bytes": 73924,
+          "sha256": "bbe91c43af04d0f8dc6c851ce1b45ecfe8dbae22a738eecfb9cff2230db4dfad"
+        }
+      },
+      "proofSha256": "4a55e32a3e66d680e9c35a36c261a79acd0de25c1f5a463f080b87ad97aa17b8",
+      "pairMeanRgbDifference": 4.89896
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T22:26:17.923734+00:00",
+  "screenReviewEvidence": "work/production/wave_405/native-proof-review.jpg",
+  "screenReviewNotes": "Actual six rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T22:27:15.213Z"
+}

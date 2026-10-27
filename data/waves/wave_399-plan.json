@@ -1,0 +1,78 @@
+{
+  "topic": "kwanzaa",
+  "method": "builtin-image-generation",
+  "research": "data/research/kwanzaa-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "wave": "wave_399",
+  "items": [
+    {
+      "id": "kwanzaa-folded-textiles",
+      "title": "Folded Woven Cloths with Striped Edges",
+      "alt": "Folded cream, mustard and navy woven cloths form a stack crossed by red, black and green fabric with fringed edges.",
+      "description": "Woven textures and short fringes distinguish the folded cloths in this compact stack. Cream, mustard and navy layers sit beneath a broad diagonal band of red, black and green fabric.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-folded-textiles.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-family-welcome",
+      "title": "Greeting Visitors at a Ribbon-Decorated Door",
+      "alt": "A gray-haired man greets a woman in a sage coat and a child in navy dungarees beside an open wooden door.",
+      "description": "An open wooden door carries a small striped ribbon as three people exchange a greeting. The visitor\u2019s long sage coat and shoulder bag contrast with the older man\u2019s rust cardigan and the child\u2019s navy dungarees.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-family-welcome.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-neighborhood-cleanup",
+      "title": "Working Together in a Community Garden",
+      "alt": "Two volunteers collect litter near a garden border, using a grabber and green bag beside a wooden notice frame.",
+      "description": "A silver-haired volunteer in blue work clothes holds a litter grabber beside a green bag. A second volunteer kneels to pick up paper near the planting border, with a plain wooden notice frame behind them.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-neighborhood-cleanup.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-basket-making",
+      "title": "Weaving a Basket with a Striped Rim",
+      "alt": "A seated woman with long braids weaves a basket with a red, black and green rim beside loose reeds and a finished basket.",
+      "description": "Long reeds extend from the basket taking shape in the weaver\u2019s lap. She sits on a wooden stool in a plum top and ochre trousers, with a reed bundle on one side and a finished basket on the other.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-basket-making.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-repairing-community-bench",
+      "title": "Repairing a Wooden Park Bench Together",
+      "alt": "Two people support a wooden bench slat while an older man holds a screwdriver, with a striped tool roll beside the bench.",
+      "description": "A young helper in sage overalls supports a wooden backrest slat beside an older man with glasses and gray hair. His screwdriver is raised clear of the wood, and a red, black and green tool roll lies nearby.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-repairing-community-bench.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-heritage-interview",
+      "title": "Recording a Story at the Table",
+      "alt": "A silver-haired woman holds a handheld recorder while a girl listens across a round wooden table with an open notebook.",
+      "description": "The older storyteller gestures with one hand and holds a small recorder in the other. Across the round table, a girl in a mustard sweater listens with her chin resting on her hand beside a blank notebook.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_399/source/kwanzaa-heritage-interview.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

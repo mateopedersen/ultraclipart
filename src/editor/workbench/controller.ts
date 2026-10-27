@@ -884,7 +884,8 @@ export class Workbench {
       selected = this.host.selected();
     this.q('[data-wb-document-size]').textContent =
       `${Math.round(doc.width)} × ${Math.round(doc.height)} px`;
-    this.q('[data-wb-layer-count]').textContent = `${doc.layers.length} ${doc.layers.length === 1 ? 'layer' : 'layers'}`;
+    this.q('[data-wb-layer-count]').textContent =
+      `${doc.layers.length} ${doc.layers.length === 1 ? 'layer' : 'layers'}`;
     this.q('[data-wb-selection]').textContent = selected.length
       ? `${selected.length} selected`
       : 'Select an object to edit it';

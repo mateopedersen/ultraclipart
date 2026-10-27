@@ -166,6 +166,10 @@ export function searchArtwork<T extends SearchArtwork>(artwork: T[], state: Sear
   for (const item of artwork) {
     if (seen.has(item.id) || !artworkMatchesFilters(item, state)) continue;
     seen.add(item.id);
+    if (!tokens.length && !excluded.length) {
+      exact.push({ item, score: 0, fuzzy: false });
+      continue;
+    }
     const { title, weights } = artworkSearchFields(item);
     if (excluded.some((token) => termVariants(token).some((word) => weights.has(word)))) continue;
     const matches: TermMatch[] = [];

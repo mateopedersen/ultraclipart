@@ -1,0 +1,95 @@
+{
+  "checkedAt": "2026-10-26",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "sources": [
+    {
+      "url": "https://www.dunemovie.com/",
+      "publisher": "Warner Bros. / Legendary",
+      "kind": "official",
+      "supports": "Current Dune: Part Three character imagery and future release context; fan scenes are concepts, not film stills."
+    },
+    {
+      "url": "https://www.legendary.com/film/dune-part-three/",
+      "publisher": "Legendary",
+      "kind": "official",
+      "supports": "Official title and scheduled December 18, 2026 release."
+    },
+    {
+      "url": "https://www.warnerbros.co.jp/home_entertainment/o5kdyecgb/",
+      "publisher": "Warner Bros. Japan",
+      "kind": "official",
+      "supports": "Earlier Dune film character-family reference."
+    },
+    {
+      "url": "https://movies.disney.com/hexed",
+      "publisher": "Disney",
+      "kind": "official",
+      "supports": "Billie, Alice and Beef Roger character families. Unverified magical-book name Elias omitted."
+    },
+    {
+      "url": "https://www.thehungergames.com/",
+      "publisher": "Scholastic",
+      "kind": "official",
+      "supports": "Fictional Hunger Games / Mockingjay family context, not a real biological species."
+    }
+  ],
+  "visualReferences": [
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-8.jpg",
+      "sha256": "c5e7550915d5c62d10c0fcf2b6afa4843a9fd630e784badd7266eb04dd169d3b"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-9.jpg",
+      "sha256": "2e8f7cf8100d3d72b744c95f2d99ed67eca10f73133d5d78d51a8b8927c4c5db"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-official-contact.jpg",
+      "sha256": "25e153d7353d2b14b93c23a0b491f6327e77a864d63f180626596e7fb7cbff19"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-2.jpg",
+      "sha256": "9e8220a4992eeed06842edac438261583000adb4b87bfdc97ea77edbb8b3fe33"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-3.jpg",
+      "sha256": "7650d8a5dd87ae4edd82e430d213c2b5af5fba77593b1a451fbffa13fcd03436"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-1.jpg",
+      "sha256": "fb683ddc3abafede0b3a53bb826333967332bae6c3dba6028f618040823bdffc"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-4.jpg",
+      "sha256": "f9348f971a9968139545773308d54c5d1604f8827bb98bbee6ec62c9c0dcbcea"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-5.jpg",
+      "sha256": "6cbac2c105865c7719e4a3a2eda23ed5a61d57662105be83c70d389301c29cf5"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-7.jpg",
+      "sha256": "475d1c05d968a4c4f9034331a526d33110c41f1a9d8c8b7dda9c99745cdcb9a3"
+    },
+    {
+      "path": "work/imports/parade-scifi-14/references/dune-three-6.jpg",
+      "sha256": "38ff3bc27be58d67cb45949bfbad500c51004511f864dd953d74a3c4e05192a1"
+    }
+  ],
+  "rejectedFilenameIdentities": [
+    {
+      "ids": [
+        "dune-part-three-farok-doorway-vigil-line-art",
+        "dune-part-three-farok-stilgar-quiet-council",
+        "dune-part-three-farok-stone-seat-reflection"
+      ],
+      "reason": "Depicted bearded character does not support Farok identity in official imagery. Broader Fremen fan-concept identity used."
+    },
+    {
+      "ids": [
+        "hexed-clipart-elias-quire-desk-bell"
+      ],
+      "reason": "Visible subject is an anthropomorphic spectacled book. No unsupported Elias identity assigned."
+    }
+  ],
+  "publicOriginLabelsOmitted": true
+}

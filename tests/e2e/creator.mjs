@@ -73,10 +73,7 @@ const draw = async (cancel = false) => {
 try {
   await page.goto(`${base}/create/`);
   await expect(page.locator('[data-status]')).toContainText('blank canvas is ready');
-  await expect(page.locator('button[data-work-mode=edit]')).toHaveAttribute(
-    'aria-pressed',
-    'true',
-  );
+  await expect(page.locator('button[data-work-mode=edit]')).toHaveAttribute('aria-pressed', 'true');
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('[data-empty-canvas]')).toBeVisible();
   await expect(page.locator('.uc-editor [inert]')).toHaveCount(0);
@@ -179,12 +176,25 @@ try {
   await exporting('pdf', 'imported.pdf');
   imported = await state();
   checks.push('safe import keeps layers, canvas, viewBox origin, root transform and paint opacity');
+  const arc =
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><path d="M100 100 A80 60 30 0 1 240 200" fill="none" stroke="#245a91" stroke-width="6"/></svg>';
+  await page.locator('[data-import-svg]').setInputFiles({
+    name: 'elliptical-arc.svg',
+    mimeType: 'image/svg+xml',
+    buffer: Buffer.from(arc),
+  });
+  await expect(page.locator('[data-status]')).toContainText('1 editable SVG layers imported');
+  expect((await state()).layers[0].markup).toContain('A80 60 30 0 1 240 200');
+  await exporting('pdf', 'elliptical-arc.pdf');
+  await action('undo').click();
+  expect(await state()).toEqual(imported);
+  checks.push('supported elliptical SVG arcs import, export as vector PDF and undo exactly');
   const malicious = [
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><script>alert(1)</script></svg>',
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" onload="alert(1)"><rect width="50" height="50"/></svg>',
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><image href="https://bad.example/x"/></svg>',
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><rect width="500" height="500" fill="url(https://bad.example)"/></svg>',
-    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><path d="M0 0 A20 20 0 0 1 100 100"/></svg>',
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><path d="M0 0 A20 20 0 2 1 100 100"/></svg>',
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99999 99999"><rect width="50" height="50"/></svg>',
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><rect width="Infinity" height="50"/></svg>',
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><g opacity="0.5"><rect width="50" height="50"/></g></svg>',

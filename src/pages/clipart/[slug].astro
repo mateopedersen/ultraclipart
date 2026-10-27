@@ -123,7 +123,7 @@ const description = resolveCollectionCountCopy(
   )}
   <RelatedCollections topic={topic.slug} />
   <section class="prose">
-    {copy && (
+    {copy && copy.paragraphs.length > 0 && (
       <>
         <h2>{copy.heading}</h2>
         {copy.paragraphs.map((paragraph) => (

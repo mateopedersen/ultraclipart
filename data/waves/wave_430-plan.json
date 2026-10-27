@@ -1,0 +1,77 @@
+{
+  "wave": "wave_430",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-conductor-ticket-punch",
+      "title": "Train Conductor Nutcracker",
+      "alt": "Slender conductor nutcracker with a navy cap, cream jacket, green waistcoat and ticket punch.",
+      "description": "A cream jacket opens over a green waistcoat and small watch chain. The conductor holds a blank ticket and metal punch beneath a long face with curled dark sideburns.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_430/source/nutcracker-conductor-ticket-punch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-garden-apron",
+      "title": "Gardener Nutcracker with Rosemary",
+      "alt": "Gardener nutcracker in a straw-textured hat and sage apron holding a rosemary pot and trowel.",
+      "description": "Rosemary rises from a terracotta pot in one rounded wooden hand. The other holds a trowel beside a pocketed sage apron and ochre lace-up boots.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_430/source/nutcracker-garden-apron.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-cross-country-skier",
+      "title": "Skier Nutcracker",
+      "alt": "Jointed wooden skier nutcracker in a patterned sweater, plum trousers and blue pom-pom cap.",
+      "description": "Bent wooden knees and two separate skis give this nutcracker a gliding pose. A patterned sweater, blue pom-pom hat and long ski poles complete the winter outfit.",
+      "color": "Multicolor",
+      "style": "Color",
+      "source": "work/production/wave_430/source/nutcracker-cross-country-skier.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-candy-shop-keeper",
+      "title": "Candy Shop Nutcracker",
+      "alt": "Candy-shop nutcracker with a striped cap, round glasses, mint coat and glass jar of sweets.",
+      "description": "The candy keeper clasps a glass jar filled with wrapped sweets. A striped domed cap, peppermint details, curled pale hair and purple boots create a playful shop display.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_430/source/nutcracker-candy-shop-keeper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-unfinished-carved-figure",
+      "title": "Unpainted Nutcracker with a Chisel",
+      "alt": "Unpainted wooden nutcracker with an exposed rear lever, curled shaving and chisel on a wood block.",
+      "description": "Faceted pale wood remains visible across the toy's cap, beard and angular face. A rear lever projects behind the figure, with a chisel and curled shaving beside its work block.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_430/source/nutcracker-unfinished-carved-figure.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-cloak-bell-ringer",
+      "title": "Bell-Ringer Nutcracker",
+      "alt": "Nutcracker with an ochre cloak, copper-colored helmet, bronze handbell and purple rope coil.",
+      "description": "An ochre cloak opens around striped breeches and a green jacket. The bell-ringer carries a broad handbell and purple rope beneath a copper-colored domed helmet.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_430/source/nutcracker-cloak-bell-ringer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

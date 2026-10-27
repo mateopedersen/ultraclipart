@@ -54,7 +54,9 @@ try {
     8,
     'initial HTML is capped at eight cards',
   );
-  await expect(page.locator('#result-count')).toContainText(`${pumpkinCount} artworks`);
+  await expect(page.locator('#result-count')).toContainText(
+    `${pumpkinCount.toLocaleString('en-US')} artworks`,
+  );
   await expect(page.locator('#result-count')).toContainText('for “pumpkin”');
   await expect(cards()).toHaveCount(pumpkin.items.length);
   assert.deepEqual(
@@ -156,7 +158,9 @@ try {
   ).toHaveCount(1);
   release();
   await page.unroute(slow);
-  await expect(page.locator('#result-count')).toContainText(`${cardinalCount} artworks`);
+  await expect(page.locator('#result-count')).toContainText(
+    `${cardinalCount.toLocaleString('en-US')} artworks`,
+  );
   await expect(page.locator('#result-count')).toContainText('for “cardinal”');
   report.checks.push('outdated request cannot overwrite newer results');
   // Favorites have no catalog cards in HTML. Small ID-location tables resolve

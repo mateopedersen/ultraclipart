@@ -1,0 +1,571 @@
+{
+  "wave": "wave_433",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "nutcracker-child-drawing-toy",
+      "title": "Drawing a Nutcracker at the Table",
+      "alt": "Blond boy in a blue sweatshirt drawing a plum-jacketed nutcracker beside a tin of colored pencils.",
+      "description": "The boy studies a tall nutcracker standing beside his drawing. His pencil, open color tin and red trainers add small bright details around the plain wooden table.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-child-drawing-toy.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1286,
+      "height": 1223,
+      "pdfWidth": 1000,
+      "pdfHeight": 951,
+      "sourceType": "raster",
+      "sourceSha256": "6756038951abf2d0c71323fb9210acd6bbadbe9a4c9d614aaef3c98461c2015f",
+      "inputSignature": "2b002cb4f76c1c21f8ed0601e16ffe9576522033ee379b622ded6907c7d313c1",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 877089,
+        "weightedCmykRmse": 0.858246
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1106180,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 877089,
+          "weightedCmykRmse": 0.858246
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        237,
+        82,
+        1090,
+        1165
+      ],
+      "image": {
+        "width": 1000,
+        "height": 951,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_433/exports/nutcracker-child-drawing-toy.pdf",
+          "bytes": 877089,
+          "sha256": "2db35c7bd15cddcb53f84b97490ab361b991e133bcc33ab18c020ed3d833e2be"
+        },
+        "webp": {
+          "path": "work/production/wave_433/exports/nutcracker-child-drawing-toy.webp",
+          "bytes": 965804,
+          "sha256": "e6bc4599a6a87a5fd6ce67897fd531d5fb7b04240ba6520bb1282d8729f22246"
+        },
+        "thumb": {
+          "path": "work/production/wave_433/exports/nutcracker-child-drawing-toy-thumb.webp",
+          "bytes": 58258,
+          "sha256": "0763670ce709283f734c0d7a073ceb421b7baec074c6e229eb33495479c25eda"
+        }
+      },
+      "proofSha256": "e49307345145a92fcc42e5e0a15c619a68f6fce50ff47946d6bff151ba1c39a3",
+      "pairMeanRgbDifference": 3.50254
+    },
+    {
+      "id": "nutcracker-collector-shelf",
+      "title": "Arranging a Nutcracker Display",
+      "alt": "Older man in a maroon cardigan placing a blue nutcracker above two different figures on a wooden shelf.",
+      "description": "The man steadies a blue toy on the upper shelf. A broad crowned king and a smaller red figure stand below, creating a display of three clearly different nutcrackers.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-collector-shelf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "1cd9c74aade2418ac1886e20ff983b39406c39a7a47f5aef582acbe4a61bc2e6",
+      "inputSignature": "118575008b83a4da61d8a684002cbb92eeb332955e5d17313e215a9b25fc2dee",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 810947,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 810947,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        320,
+        116,
+        1008,
+        1067
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_433/exports/nutcracker-collector-shelf.pdf",
+          "bytes": 810947,
+          "sha256": "2bcbebd76041267339d1d985f6bc674311d4727031ac02cdf7b2b9625fbe193d"
+        },
+        "webp": {
+          "path": "work/production/wave_433/exports/nutcracker-collector-shelf.webp",
+          "bytes": 656424,
+          "sha256": "344e457fa27218adbeb7d07813848ffb2bc044341eb3df010a0c20f5043d3e07"
+        },
+        "thumb": {
+          "path": "work/production/wave_433/exports/nutcracker-collector-shelf-thumb.webp",
+          "bytes": 42072,
+          "sha256": "b5612f60a11285f3cec5cf1dc58dcee8ad377733f9d84ac31e0e2de4bbc4c74d"
+        }
+      },
+      "proofSha256": "f80d8a96736e2b121f348f5c111123232f590c975a7d1fedbd348d1e3c031ffa",
+      "pairMeanRgbDifference": 2.88452
+    },
+    {
+      "id": "nutcracker-family-hanging-garland",
+      "title": "Hanging a Paper Nutcracker Garland",
+      "alt": "Woman and boy tying a garland of three paper nutcrackers across a freestanding wooden frame.",
+      "description": "A red cord carries three differently dressed paper nutcrackers between wooden posts. The boy holds one side while the woman ties the other, with both frame feet fully visible.",
+      "color": "Multicolor",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-family-hanging-garland.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3d5ac11f54ab86f53dd771a38fb553a138cadd90118ec8c6d0b6722fb889b66f",
+      "inputSignature": "0be691a680f002c723bfd1432be7d1754e6e1031f35cd2d3b6ae38e4386e5669",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 986066,
+        "weightedCmykRmse": 1.113731
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1328384,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1131317,
+          "weightedCmykRmse": 0.789483
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1067049,
+          "weightedCmykRmse": 0.932499
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 986066,
+          "weightedCmykRmse": 1.113731
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        88,
+        21,
+        1253,
+        1108
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_433/exports/nutcracker-family-hanging-garland.pdf",
+          "bytes": 986066,
+          "sha256": "2b14769c0630ef83fbd89de0f9e801b46d903518c1a6c99a4a63ef22cfa59fe2"
+        },
+        "webp": {
+          "path": "work/production/wave_433/exports/nutcracker-family-hanging-garland.webp",
+          "bytes": 1090398,
+          "sha256": "512bcb525487a6042985e2c80ba5869e507a98caede11f317cb1d153018fcbc9"
+        },
+        "thumb": {
+          "path": "work/production/wave_433/exports/nutcracker-family-hanging-garland-thumb.webp",
+          "bytes": 71818,
+          "sha256": "80fc27d8006b31a856df933e6a102265c5996eb9aa808485520be7f47ecfee03"
+        }
+      },
+      "proofSha256": "6de19ef247047e2ecd1469cb920f35329105a739e6686c7f940a0b20d7784881",
+      "pairMeanRgbDifference": 3.53694
+    },
+    {
+      "id": "nutcracker-miniature-story-stage",
+      "title": "Nutcracker and Mouse King Puppet Theatre",
+      "alt": "Small theatre with burgundy curtains, a blue nutcracker, crowned mouse and miniature Christmas tree.",
+      "description": "Burgundy curtains open around a tiny tree between the nutcracker and crowned mouse. Gold scrollwork and complete turned legs give the tabletop theatre an ornate frame.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-miniature-story-stage.png",
+      "printMaxEdgePx": 970,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 970,
+      "pdfHeight": 886,
+      "sourceType": "raster",
+      "sourceSha256": "648ce9fd7ca824ef9fb619bd1a90ce956a535a25ab3a5a661b33c1cbc0595abd",
+      "inputSignature": "8f286c57348f704f3be52d0bcaeb61938314029f16cf36af3f05cc8a90f25bfd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 971698,
+        "weightedCmykRmse": 1.378845
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1399683,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1192762,
+          "weightedCmykRmse": 0.770096
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1131503,
+          "weightedCmykRmse": 0.902146
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1041895,
+          "weightedCmykRmse": 1.095102
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 971698,
+          "weightedCmykRmse": 1.378845
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        161,
+        74,
+        1151,
+        1136
+      ],
+      "image": {
+        "width": 970,
+        "height": 886,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_433/exports/nutcracker-miniature-story-stage.pdf",
+          "bytes": 971698,
+          "sha256": "1c56dd3d3b0293410a2a6e3dab9b6188cfe4c48c04efa617ef328dc0aefcc6b0"
+        },
+        "webp": {
+          "path": "work/production/wave_433/exports/nutcracker-miniature-story-stage.webp",
+          "bytes": 1224308,
+          "sha256": "e3a2935bbc5983e843ea9e271f6ae7363e977e9bc685b932aecc11e9d7ad0c86"
+        },
+        "thumb": {
+          "path": "work/production/wave_433/exports/nutcracker-miniature-story-stage-thumb.webp",
+          "bytes": 71912,
+          "sha256": "de6b866b45d35d9e63c601f7198ed5470a17f22d4d1a64b08993f5108850e33c"
+        }
+      },
+      "proofSha256": "e41cf52556c15ed979388d9cf692d20a22e28bdcf8e8e4f323da99d9e7d14c52",
+      "pairMeanRgbDifference": 2.83116
+    },
+    {
+      "id": "nutcracker-prince-and-clara-waltz",
+      "title": "A Nutcracker Story Waltz",
+      "alt": "Two dancers in plum and ivory costumes waltzing beside a small nutcracker on a decorated chest.",
+      "description": "A plum skirt fans outward as the dancers turn together. Beside them, a small red nutcracker stands on a floral chest, linking the dance scene to the toy's story.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-prince-and-clara-waltz.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1284,
+      "height": 1225,
+      "pdfWidth": 1000,
+      "pdfHeight": 954,
+      "sourceType": "raster",
+      "sourceSha256": "1218446dee92530be9c632b6c61e803646b0a024cc8aebec16b1097e6189225c",
+      "inputSignature": "2d72b6321f07ae79befedeee1d5a6b680d5db4686173dd86b627f6d5601e84b0",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 895352,
+        "weightedCmykRmse": 0.873007
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1105288,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 895352,
+          "weightedCmykRmse": 0.873007
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        165,
+        82,
+        1179,
+        1128
+      ],
+      "image": {
+        "width": 1000,
+        "height": 954,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_433/exports/nutcracker-prince-and-clara-waltz.pdf",
+          "bytes": 895352,
+          "sha256": "1f5477ff162e9dced6a7e33fcb336d8466ee982fbf95e837f862e21de55ef47e"
+        },
+        "webp": {
+          "path": "work/production/wave_433/exports/nutcracker-prince-and-clara-waltz.webp",
+          "bytes": 913012,
+          "sha256": "64d7e7e523cc2d34a67305fad7147e1f3afd564f5ec833de27c482d28a5d47ff"
+        },
+        "thumb": {
+          "path": "work/production/wave_433/exports/nutcracker-prince-and-clara-waltz-thumb.webp",
+          "bytes": 56588,
+          "sha256": "6b090eb4fded9be5eabf2a1be27292a4f1a5066346c11377b91f438ff61a683e"
+        }
+      },
+      "proofSha256": "eaa786d11e02a251efc25a9dbbddc42859d051c2e37c90c349149172471b6fbe",
+      "pairMeanRgbDifference": 2.85191
+    },
+    {
+      "id": "nutcracker-clara-and-christmas-tree",
+      "title": "Girl with a Nutcracker beside the Tree",
+      "alt": "Girl in a cream nightdress kneeling with a wooden nutcracker beside a decorated potted Christmas tree.",
+      "description": "The girl gently steadies a tall toy on an oval rug. A potted fir tree, small wrapped parcel and red-and-gold ornaments surround the quiet Christmas scene.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_433/source/nutcracker-clara-and-christmas-tree.png",
+      "printMaxEdgePx": 930,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1240,
+      "height": 1268,
+      "pdfWidth": 909,
+      "pdfHeight": 930,
+      "sourceType": "raster",
+      "sourceSha256": "5eb577dc7a606297ebbce7cdd95e651aa1856365eca43872e83663ee2f037de7",
+      "inputSignature": "af630553fffe9305a12a12d1497665d14e4c51f1865ebd0e16b279a67edf5bf8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 992362,
+        "weightedCmykRmse": 1.37625
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1443932,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1209111,
+          "weightedCmykRmse": 0.758512
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1149210,
+          "weightedCmykRmse": 0.901902
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1059519,
+          "weightedCmykRmse": 1.09767
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 992362,
+          "weightedCmykRmse": 1.37625
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        81,
+        66,
+        1170,
+        1167
+      ],
+      "image": {
+        "width": 909,
+        "height": 930,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_433/exports/nutcracker-clara-and-christmas-tree.pdf",
+          "bytes": 992362,
+          "sha256": "e45285eec4c7327117ecf6a0febaa0c4b66a53be127e87c1df78bb5759fe7642"
+        },
+        "webp": {
+          "path": "work/production/wave_433/exports/nutcracker-clara-and-christmas-tree.webp",
+          "bytes": 1457280,
+          "sha256": "cfb30e8926d81be08f198c463701845b2b3bfc2cddf7f18b9d1c20a41bc02f81"
+        },
+        "thumb": {
+          "path": "work/production/wave_433/exports/nutcracker-clara-and-christmas-tree-thumb.webp",
+          "bytes": 85454,
+          "sha256": "46918e1b45c81528c5b74c75802a75b367c454ed4d5b9fdd49e333fa63424b71"
+        }
+      },
+      "proofSha256": "7a0398ecd765437ae3a89be18edd1e3c1d89871caa3b8372d8cc74dec722e4ae",
+      "pairMeanRgbDifference": 2.37239
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-27T02:51:26.819978+00:00",
+  "screenReviewEvidence": "work/production/wave_433/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-27T02:51:27.211Z"
+}

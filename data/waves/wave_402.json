@@ -1,0 +1,529 @@
+{
+  "wave": "wave_402",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "hanukkah-brass-hanukkiah",
+      "title": "Brass Hanukkiah with Nine Unlit Candles",
+      "alt": "A polished brass hanukkiah holds eight ivory candles in an even row and a taller central helper candle, all unlit.",
+      "description": "Curved brass branches rise from a broad oval foot to nine candle cups. Eight ivory tapers align across the sides, with the central helper candle standing higher above them.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-brass-hanukkiah.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1295,
+      "height": 1214,
+      "pdfWidth": 1000,
+      "pdfHeight": 937,
+      "sourceType": "raster",
+      "sourceSha256": "7ba2702efbb91ce39ec214af3ce126a3f56b3df99145d06ee71007bfce41ab94",
+      "inputSignature": "ba1d81492cdc5515beafe60c73394bea163bd0795418b5596ae3298c5f62c8b8",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 862915,
+        "weightedCmykRmse": 0.865831
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1079781,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 862915,
+          "weightedCmykRmse": 0.865831
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        23,
+        1259,
+        1192
+      ],
+      "image": {
+        "width": 1000,
+        "height": 937,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_402/exports/hanukkah-brass-hanukkiah.pdf",
+          "bytes": 862915,
+          "sha256": "77dc12a747b69dcd68b8a6886e240e8cb711616730a350e06b8bc3fad92a1df0"
+        },
+        "webp": {
+          "path": "work/production/wave_402/exports/hanukkah-brass-hanukkiah.webp",
+          "bytes": 899864,
+          "sha256": "f97f3c0117156c667edfe2fef68217b94069e5216c0174c90e38ff5ba190a9c9"
+        },
+        "thumb": {
+          "path": "work/production/wave_402/exports/hanukkah-brass-hanukkiah-thumb.webp",
+          "bytes": 73684,
+          "sha256": "8edc37ab6f8cf221f0e416e460c662a88d14f89eba1303a614bfc456c5245b9c"
+        }
+      },
+      "proofSha256": "1467e5cdf7bbf2e79b2c134587b61d4ad6b69f6c7ed9edec80d2a74e90c5b86e",
+      "pairMeanRgbDifference": 3.81446
+    },
+    {
+      "id": "hanukkah-dreidel-and-gelt",
+      "title": "Wooden Dreidel with Chocolate Gelt",
+      "alt": "A wooden dreidel marked with a blue Hebrew letter stands beside gold-wrapped chocolate coins, including one partly unwrapped coin.",
+      "description": "A blue letter contrasts with the natural wood grain on the dreidel\u2019s broad face. Gold foil coins gather beside its pointed base, with an opened wrapper revealing embossed chocolate.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-dreidel-and-gelt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "c14d8230d7d4e27c63da8e3875ce57f6f424e68faff26b6eca930ab735d0c0f2",
+      "inputSignature": "398a8fc923df732b6cbb74b6f0eeb38bf0da40381ede5d1bde601571aeaddc41",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 960558,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 960558,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        142,
+        58,
+        1303,
+        1064
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_402/exports/hanukkah-dreidel-and-gelt.pdf",
+          "bytes": 960558,
+          "sha256": "bc76e55c0ab3c94b92810ffb4a9dca5310b33eb0a5d7aae68b28a5a23f2883ef"
+        },
+        "webp": {
+          "path": "work/production/wave_402/exports/hanukkah-dreidel-and-gelt.webp",
+          "bytes": 1072498,
+          "sha256": "8bb8f7d1162fd7e51e2a9e237cb7d96924854f53fdfb3d6c967a31a45af5f1d0"
+        },
+        "thumb": {
+          "path": "work/production/wave_402/exports/hanukkah-dreidel-and-gelt-thumb.webp",
+          "bytes": 51258,
+          "sha256": "51c2dfeb3b1910d032eade801f426e90398df1c9ffd2ff7b07ac3439cde9944d"
+        }
+      },
+      "proofSha256": "e5d3b51fe474dff60c01c88ea56035311ea1c76bff6bda53766e14d5690d14c7",
+      "pairMeanRgbDifference": 2.7234
+    },
+    {
+      "id": "hanukkah-latkes-with-applesauce",
+      "title": "Crisp Latkes with Applesauce",
+      "alt": "Golden potato latkes fill a cream plate beside a blue-patterned bowl of applesauce, a spoon and a parsley sprig.",
+      "description": "Ragged strands of crisp potato give the latkes a textured golden edge. A small blue-patterned bowl of applesauce rests on the same plate beside a silver spoon and bright green parsley.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-latkes-with-applesauce.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "bc6724b9d71d98bb0aae2d68ac993b614d2576f1962144bcaf2e3c9dadd87815",
+      "inputSignature": "fd3a70b9870a99c2dc28da5ca438f7db5f54bac9cae0c8c3ce34be3acecffb3e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 856522,
+        "weightedCmykRmse": 0.738684
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1075484,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 856522,
+          "weightedCmykRmse": 0.738684
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        76,
+        78,
+        1461,
+        944
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_402/exports/hanukkah-latkes-with-applesauce.pdf",
+          "bytes": 856522,
+          "sha256": "96eced653140b28346808d5417eaa97cd02fb078a76bd3d30e88cd779d6c51e2"
+        },
+        "webp": {
+          "path": "work/production/wave_402/exports/hanukkah-latkes-with-applesauce.webp",
+          "bytes": 1901294,
+          "sha256": "3fb09fae93fd4dfa93a92002bdebc359a085722ee3de9fdde328e39eb596788b"
+        },
+        "thumb": {
+          "path": "work/production/wave_402/exports/hanukkah-latkes-with-applesauce-thumb.webp",
+          "bytes": 54058,
+          "sha256": "f3ea77c598c67c3a5345c192fb63b653525e520331503095784be54913316551"
+        }
+      },
+      "proofSha256": "206e14c8c4ccd9a919d6f6cf87456cc9526a93f9a7728bb01666791952c393ba",
+      "pairMeanRgbDifference": 4.35777
+    },
+    {
+      "id": "hanukkah-sufganiyot-platter",
+      "title": "Sufganiyot on a Blue Floral Platter",
+      "alt": "Sugar-dusted jelly doughnuts sit on a blue floral platter, with a split doughnut showing its red filling.",
+      "description": "Round doughnuts with red jam centers crowd a deep blue floral serving plate. A split piece at the front exposes the soft crumb and filling beneath its fine dusting of sugar.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-sufganiyot-platter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "fc501bcae7e055fcfa5cf5944ff2f2ec54254932a3f41d6d8deab3328ace9f79",
+      "inputSignature": "201144edb8bf95c82432c7062f86bf014bca0f8245556b0b70fac523e3569ea4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 52,
+        "losslessCmyk": false,
+        "bytes": 974521,
+        "weightedCmykRmse": 0.855431
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1226926,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1023407,
+          "weightedCmykRmse": 0.715738
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 974521,
+          "weightedCmykRmse": 0.855431
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        38,
+        137,
+        1501,
+        891
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_402/exports/hanukkah-sufganiyot-platter.pdf",
+          "bytes": 974521,
+          "sha256": "a1a142e8f694ed7fa6c6c33c2b34db7bdd4f083d79f1453aecb4e22ec18aab52"
+        },
+        "webp": {
+          "path": "work/production/wave_402/exports/hanukkah-sufganiyot-platter.webp",
+          "bytes": 2009104,
+          "sha256": "b8aa8d3833d9d8ffba27681309af1af945ce5b6c980b88d9099973cfa8cf2d36"
+        },
+        "thumb": {
+          "path": "work/production/wave_402/exports/hanukkah-sufganiyot-platter-thumb.webp",
+          "bytes": 60730,
+          "sha256": "6715833eea7735e86dabbd840e7fa01fcdbbd11c2f540fda85492dbda1d8b3e7"
+        }
+      },
+      "proofSha256": "80f9ec859203075244e6d3d5f4582ec0dc3db6ceaebcc6a5cf2a7f73ecf7e147",
+      "pairMeanRgbDifference": 5.68936
+    },
+    {
+      "id": "hanukkah-olive-oil-and-wicks",
+      "title": "Oil Cups and Wicks Ready for Hanukkah",
+      "alt": "A bottle of golden oil stands beside eight low glass cups and a raised helper cup on a brass tray, with cotton wicks in front.",
+      "description": "Clear glass cups line a low engraved brass tray, while a ninth cup sits higher on a separate support. A stoppered oil bottle and bundle of pale cotton wicks complete the preparation scene.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-olive-oil-and-wicks.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "0d3d8e5479ad02a10abab1efda45c1feb094dc8cad5999d706094a40b32cf6d4",
+      "inputSignature": "3df0488c94ff1aa1d18c55719e2f872f3921417951485a31523571537fdbc766",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 758497,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 758497,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        46,
+        177,
+        1503,
+        958
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_402/exports/hanukkah-olive-oil-and-wicks.pdf",
+          "bytes": 758497,
+          "sha256": "e2e23a7d6343a20e0e4bb9db4c47fcc5756cc9628ebf2b21e4e8003d930916e5"
+        },
+        "webp": {
+          "path": "work/production/wave_402/exports/hanukkah-olive-oil-and-wicks.webp",
+          "bytes": 1292108,
+          "sha256": "f45e877b1ab76a451af785bf33bde50f523e6e5d065099d973baf878b0020929"
+        },
+        "thumb": {
+          "path": "work/production/wave_402/exports/hanukkah-olive-oil-and-wicks-thumb.webp",
+          "bytes": 44134,
+          "sha256": "eb1c625e802d48fce597645796cee0b989ca46bdc275089fae166cfb2f65a7dc"
+        }
+      },
+      "proofSha256": "4779c3894d6bedb386680ad10171a12d3741e450aef8addd6946b3ceaa7de65c",
+      "pairMeanRgbDifference": 3.18349
+    },
+    {
+      "id": "hanukkah-candle-preparation-box",
+      "title": "Ivory Candles in a Blue-Lined Box",
+      "alt": "Bundles of ivory taper candles fill an open blue-lined wooden box tied with silver ribbon, with loose candles and a brass snuffer beside it.",
+      "description": "Deep blue lining surrounds neatly bundled ivory tapers in an open wooden case. A silver ribbon crosses the lid, and loose candles lie beside a small brass bell-shaped snuffer.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-candle-preparation-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "hanukkah",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "1c2be7c5780e3bb994fbfbacfc44ca909eadc7b274a3f16a6ca196fe7e585114",
+      "inputSignature": "ad3ba0030afc5db2fe00a11fe74ee5e17c88aff26006557b3957341229b244d7",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 938173,
+        "weightedCmykRmse": 1.072277
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1366809,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1092578,
+          "weightedCmykRmse": 0.751432
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1026616,
+          "weightedCmykRmse": 0.890695
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 938173,
+          "weightedCmykRmse": 1.072277
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        52,
+        31,
+        1354,
+        1123
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_402/exports/hanukkah-candle-preparation-box.pdf",
+          "bytes": 938173,
+          "sha256": "1da2fbcec1c2cd82291b3e91bbd54d11f8429bb5a70b56320aa1638114351424"
+        },
+        "webp": {
+          "path": "work/production/wave_402/exports/hanukkah-candle-preparation-box.webp",
+          "bytes": 1468100,
+          "sha256": "9b0e7e066c934f2ae06179a75c6e292efd16f4a6f841645eb3e7213c934097c9"
+        },
+        "thumb": {
+          "path": "work/production/wave_402/exports/hanukkah-candle-preparation-box-thumb.webp",
+          "bytes": 67672,
+          "sha256": "fce6246d2697cb2a164bf48e21722abc6e002d3797d8165c40f4ca6d30a2f102"
+        }
+      },
+      "proofSha256": "f97479c19919c63e82e70de102634affc67e4e6f997d3321fffb9a0fc86bc616",
+      "pairMeanRgbDifference": 4.12401
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T22:26:17.888561+00:00",
+  "screenReviewEvidence": "work/production/wave_402/native-proof-review.jpg",
+  "screenReviewNotes": "Actual six rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T22:27:14.253Z"
+}

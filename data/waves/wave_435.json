@@ -1,0 +1,515 @@
+{
+  "wave": "wave_435",
+  "status": "CDN_VERIFIED_AWAITING_RELEASE",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "nutcracker-holiday-wreath",
+      "title": "Nutcracker Wreath with Dried Oranges",
+      "alt": "Evergreen wreath with pinecones, dried orange slices, burgundy ribbons and a cream-and-green nutcracker.",
+      "description": "Dried orange slices and copper-brown cones brighten the evergreen ring. A cream-and-green crowned toy sits at its lower edge beneath a large burgundy bow.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-holiday-wreath.png",
+      "printMaxEdgePx": 800,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1274,
+      "height": 1235,
+      "pdfWidth": 800,
+      "pdfHeight": 776,
+      "sourceType": "raster",
+      "sourceSha256": "b09938ce679ea2c8a2f0eb22cbe530d3269423e603ab6b239af3401bdeffa58d",
+      "inputSignature": "05c0533aa791022710dc7b753a4beb10a9167dc6fcfef60bf6d52ae6a206409e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 976636,
+        "weightedCmykRmse": 1.293998
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1334615,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1155753,
+          "weightedCmykRmse": 0.724742
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1110286,
+          "weightedCmykRmse": 0.858488
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1042050,
+          "weightedCmykRmse": 1.043687
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 976636,
+          "weightedCmykRmse": 1.293998
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        104,
+        74,
+        1214,
+        1168
+      ],
+      "image": {
+        "width": 800,
+        "height": 776,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_435/exports/nutcracker-holiday-wreath.pdf",
+          "bytes": 976636,
+          "sha256": "f7423012bf41598ecf4d605daf2577e515dadb8d8d5f9c3ab8f6786568731906"
+        },
+        "webp": {
+          "path": "work/production/wave_435/exports/nutcracker-holiday-wreath.webp",
+          "bytes": 1700394,
+          "sha256": "93192cec614b874b6c0304b7e98680f9768a287625fa5593cc73473076a93e48"
+        },
+        "thumb": {
+          "path": "work/production/wave_435/exports/nutcracker-holiday-wreath-thumb.webp",
+          "bytes": 108094,
+          "sha256": "d51b04ff68f0474e5b2750f74df0a0be8712a4d25e8f6c30d5f4879843e29d70"
+        }
+      },
+      "proofSha256": "2ab45e26c9bd21c3d874230734edf30e2336eb7f8da9d4665837440f5236e4c9",
+      "pairMeanRgbDifference": 7.20378
+    },
+    {
+      "id": "nutcracker-rocking-cradle-music-box",
+      "title": "Nutcracker in a Crescent Music Box",
+      "alt": "Seated plum nutcracker reading a small book inside a pale wooden crescent rocking music box.",
+      "description": "A pale crescent cradles the seated nutcracker as he holds a small open book. Carved gold stars, plum lining and a side winding key decorate the curved rocking base.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-rocking-cradle-music-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1322,
+      "height": 1190,
+      "pdfWidth": 1000,
+      "pdfHeight": 900,
+      "sourceType": "raster",
+      "sourceSha256": "559d9b661bd53c7a9ea273675b3b6639dc8006798ba5f63dce22d007a99ed96a",
+      "inputSignature": "eb11384b044c1d76e2df8b3aba2d957568e62c53504f7a1c0535a24a548516ad",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 840000,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 840000,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        250,
+        124,
+        1080,
+        1115
+      ],
+      "image": {
+        "width": 1000,
+        "height": 900,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_435/exports/nutcracker-rocking-cradle-music-box.pdf",
+          "bytes": 840000,
+          "sha256": "9d73b7f4077f44ad71a64387caa132ba4f06ffd57c8fa86fd54b7a9c1a244b78"
+        },
+        "webp": {
+          "path": "work/production/wave_435/exports/nutcracker-rocking-cradle-music-box.webp",
+          "bytes": 822900,
+          "sha256": "beeabbef0d74358ed61f4a638b5385d6aa2dd421763b3cbb99fd3ada0f1e122d"
+        },
+        "thumb": {
+          "path": "work/production/wave_435/exports/nutcracker-rocking-cradle-music-box-thumb.webp",
+          "bytes": 38402,
+          "sha256": "cb4d65b0ab1d4bd4eaadb61d1ae3e4a351c65be2ba1f76af7718f7611155db46"
+        }
+      },
+      "proofSha256": "34e1ca6e217574921a94c52080990c8c913c2f3b3682996ac10cfd0d60300b2a",
+      "pairMeanRgbDifference": 3.42213
+    },
+    {
+      "id": "nutcracker-ornament-presentation-box",
+      "title": "Nutcracker Ornament in a Blue Gift Box",
+      "alt": "Small orange-jacketed nutcracker ornament with a gold hanging loop inside a tissue-lined blue box.",
+      "description": "Pale tissue cushions the orange-jacketed ornament beneath its large hanging loop. The blue lid rests beside the open box, secured with a plain cream bow.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-ornament-presentation-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "3098a45738f066cd46decb63840a0fbf1fb1b5c250c9b2fc3353fddd176f6367",
+      "inputSignature": "e113edf130302fb4aca42df24f4020b160bee1b24e95d42fa080a1fed14735cd",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 822859,
+        "weightedCmykRmse": 0.842338
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1057541,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 822859,
+          "weightedCmykRmse": 0.842338
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        233,
+        131,
+        1206,
+        1135
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_435/exports/nutcracker-ornament-presentation-box.pdf",
+          "bytes": 822859,
+          "sha256": "9f5f27bb246a0581444db5601e6af673c5482e99df0e48ac891715ab72a1cfba"
+        },
+        "webp": {
+          "path": "work/production/wave_435/exports/nutcracker-ornament-presentation-box.webp",
+          "bytes": 967348,
+          "sha256": "8727cf90a60d02b5c6df01b75d97adf35f8fb0d8a260c7e494782882bc9e4b72"
+        },
+        "thumb": {
+          "path": "work/production/wave_435/exports/nutcracker-ornament-presentation-box-thumb.webp",
+          "bytes": 45480,
+          "sha256": "0d525e0d60501fe82c811f95ca29b9555ae4a33184d6fe3c1c45e724c7e6cd70"
+        }
+      },
+      "proofSha256": "dac5741471612ba69ec1dd7c82d4ab9a5b7f6e7accd1589883f5c029a2494429",
+      "pairMeanRgbDifference": 3.4506
+    },
+    {
+      "id": "nutcracker-carved-bookend",
+      "title": "Seated Nutcracker Bookend",
+      "alt": "Seated wooden nutcracker bookend in a green cap and red jacket supporting four plain clothbound books.",
+      "description": "The seated figure forms the upright side of a dark wooden bookend. Its green cap and red jacket sit beside four plain books with brown, red, ochre and cream spines.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-carved-bookend.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "d12fac3b930bd51cbfaa90c5a3976daf6018bd046bc42aae651dd85481d5fe9b",
+      "inputSignature": "420f478d834356c28ed790d32050cebe03e16acba855635a15acee843b5e93af",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 954506,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 954506,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        241,
+        176,
+        1079,
+        1057
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_435/exports/nutcracker-carved-bookend.pdf",
+          "bytes": 954506,
+          "sha256": "f72d6aa529685560205b346bc16ca55cc7b332698a6c3c689bcb3a235f9b20fb"
+        },
+        "webp": {
+          "path": "work/production/wave_435/exports/nutcracker-carved-bookend.webp",
+          "bytes": 908170,
+          "sha256": "fd1ab915dbe4f452e9934d3215ce69f2bb4b88b5b2cfcdd8b565ed4b2c875a46"
+        },
+        "thumb": {
+          "path": "work/production/wave_435/exports/nutcracker-carved-bookend-thumb.webp",
+          "bytes": 32432,
+          "sha256": "6dc3e1d9ef5778758eef13e97c08665c7467042df62575453917b15e6fa2b72c"
+        }
+      },
+      "proofSha256": "9457f392b76d9e8600521b3b3f514a025694e44ea733571f77702a06b676d8d1",
+      "pairMeanRgbDifference": 2.31576
+    },
+    {
+      "id": "nutcracker-paper-puppet-kit",
+      "title": "Articulated Paper Nutcracker Kit",
+      "alt": "Flat paper nutcracker with brass joints, a pull string, craft scissors and two spare fasteners.",
+      "description": "Brass fasteners connect the paper figure's shoulders and hips. A loose string, curled blue hat, long plum boots and small craft scissors give the puppet kit its flat diagonal layout.",
+      "color": "Multicolor",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-paper-puppet-kit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "4362f8703692d2d3ea798c5a9f9abe2bc1d918da13693ac70fc7d8d0c03f802a",
+      "inputSignature": "f3e03f45caa895d7a822936f57907cab86994523dd3d88dcc1a6a584e62c0499",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 908184,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 908184,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        213,
+        71,
+        1127,
+        1149
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_435/exports/nutcracker-paper-puppet-kit.pdf",
+          "bytes": 908184,
+          "sha256": "871ce5a441cc45336023aefd7ec61a25d98294273e81d754da82dddeffff67cd"
+        },
+        "webp": {
+          "path": "work/production/wave_435/exports/nutcracker-paper-puppet-kit.webp",
+          "bytes": 735678,
+          "sha256": "6c923af15b644b1880839b27905c2a6e587b565960297eb3b573cce27e478ad5"
+        },
+        "thumb": {
+          "path": "work/production/wave_435/exports/nutcracker-paper-puppet-kit-thumb.webp",
+          "bytes": 49742,
+          "sha256": "5e73781a88a0fdd085b48190f04c9176c774469e6a5b8748c387b7e95fad9fa8"
+        }
+      },
+      "proofSha256": "eb56df551b0557ac72a203523b5c8ae2c92ff6d9c408afab093bb641154c2548",
+      "pairMeanRgbDifference": 2.42535
+    },
+    {
+      "id": "nutcracker-snow-globe",
+      "title": "Drummer Nutcracker Snow Globe",
+      "alt": "Clear snow globe containing a green-jacketed drummer nutcracker above a dark red star-decorated base.",
+      "description": "White snow flecks surround the crowned drummer inside a round glass globe. Bright reflections trace the glass, while gold stars decorate the dark red wooden base.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_435/source/nutcracker-snow-globe.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "nutcracker",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "7c840c9ce6368a12c4358d10821700c211eb9ab4a599b1b3a1f5967572c31573",
+      "inputSignature": "644029c9e0002e794bb72bb8d82b4bfa70a609d8d97bcf076a3f09f380f3ae09",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 936596,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 936596,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        267,
+        114,
+        1045,
+        1093
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_435/exports/nutcracker-snow-globe.pdf",
+          "bytes": 936596,
+          "sha256": "9e9c9c0ada50d0122886a81d95048b80701c8e7054f4e5da9c2d91f0465f0742"
+        },
+        "webp": {
+          "path": "work/production/wave_435/exports/nutcracker-snow-globe.webp",
+          "bytes": 937350,
+          "sha256": "20c7a736911b04df83dedabcd041a8be351a3384c619b959fc9b331622829963"
+        },
+        "thumb": {
+          "path": "work/production/wave_435/exports/nutcracker-snow-globe-thumb.webp",
+          "bytes": 47218,
+          "sha256": "e7415b32988b0564bcf72641a827eb0dad7db12cb4a5d24d495995b72bea9f50"
+        }
+      },
+      "proofSha256": "a20b145078c7b68e17debf85dcb388dd622ba6bd6eef959a2d2f3173b1899d75",
+      "pairMeanRgbDifference": 2.89088
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-27T02:52:56.898763+00:00",
+  "screenReviewEvidence": "work/production/wave_435/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-27T02:52:57.023Z"
+}

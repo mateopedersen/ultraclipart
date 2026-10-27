@@ -18,10 +18,22 @@ const matches = (pattern, path) =>
         .join('.*') +
       '$',
   ).test(path);
-test('only unavailable subjects get an edge policy within the Pages Free route limit', () => {
+test('the production catalog fits the Pages route limit and unsupported partitions fail closed', () => {
+  const current = retirementPolicy(topics, art);
+  assert.ok(current.routes.include.length + current.routes.exclude.length <= 100);
   for (let count = 0; count <= topics.length; count++) {
     const available = topics.slice(0, count).map((topic) => ({ topic: topic.slug }));
-    const policy = retirementPolicy(topics, available);
+    let policy;
+    try {
+      policy = retirementPolicy(topics, available);
+    } catch (error) {
+      // Arbitrary artificial partitions need not be expressible in 100 glob
+      // rules. The production catalog above must fit; unsupported hypothetical
+      // states must stop rather than route current content through Functions.
+      assert.equal(error.message, 'Pages function route limit exceeded');
+      assert.notEqual(count, topics.length);
+      continue;
+    }
     if (count === topics.length) assert.equal(policy, null);
     else {
       assert.ok(policy.routes.include.length + policy.routes.exclude.length <= 100);

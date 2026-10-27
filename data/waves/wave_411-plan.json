@@ -1,0 +1,78 @@
+{
+  "wave": "wave_411",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-woman-saluting",
+      "title": "Woman in an Olive Uniform Saluting",
+      "alt": "A woman in an olive uniform and plain garrison cap raises her right hand in a salute.",
+      "description": "Straight fingers meet the brim of her plain cap above a buttoned field shirt and belted trousers. Brown lace-up boots complete the full-length standing figure.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_411/source/veterans-woman-saluting.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-hand-over-heart",
+      "title": "Standing with a Hand over the Heart",
+      "alt": "A silver-haired man in a navy blazer stands with his right hand over his heart and an olive cap in his left hand.",
+      "description": "The older man looks slightly upward with an open, composed expression. Brass-colored blazer buttons contrast with his pale blue shirt, beige trousers and polished brown shoes.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_411/source/veterans-hand-over-heart.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-wheelchair-greeting",
+      "title": "Waving from a Wheelchair",
+      "alt": "An auburn-haired woman in a burgundy cardigan waves from a wheelchair with a plain olive cap on her lap.",
+      "description": "Her raised open hand and warm expression give the seated portrait a welcoming feel. A teal top, dark trousers and black shoes sit within the clearly drawn frame and wheels of her chair.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_411/source/veterans-wheelchair-greeting.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-intergenerational-handshake",
+      "title": "A Handshake Across Generations",
+      "alt": "An older man in a cream cardigan and olive cap shakes hands with a younger man in a sage shirt.",
+      "description": "The two smiling men face each other with their joined hands at waist height. The older man's textured cardigan and navy trousers contrast with the younger man's rolled sleeves, tan trousers and brown boots.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_411/source/veterans-intergenerational-handshake.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-school-questions",
+      "title": "Answering Questions at a School Visit",
+      "alt": "A silver-braided woman sits with two children beside a blank easel, holding an olive cap on her lap.",
+      "description": "The woman gestures toward the children as they listen from separate wooden seats. Her navy blazer and cream trousers balance a mustard sweater on one child and a teal pinafore on the other.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_411/source/veterans-school-questions.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-card-presentation",
+      "title": "A Child Presents a Thank You Veterans Card",
+      "alt": "A girl in an orange cardigan presents a poppy-decorated Thank You Veterans card to an older man in a plum sweater and service-style cap.",
+      "description": "Both people support the cream card between them beneath its three lines of navy lettering. Red poppies frame the message, with the girl's navy skirt and the man's beige trousers fully visible below.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_411/source/veterans-card-presentation.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

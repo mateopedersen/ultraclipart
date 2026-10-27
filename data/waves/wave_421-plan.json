@@ -1,0 +1,77 @@
+{
+  "wave": "wave_421",
+  "topic": "election",
+  "method": "builtin-image-generation",
+  "research": "data/research/election-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "election-folding-privacy-booth",
+      "title": "Folding Privacy Booth",
+      "alt": "An empty blue privacy booth has a pale writing shelf, silver folding legs and black rubber feet.",
+      "description": "Three upright blue panels surround the open-front shelf, with their hinged edges visible from the front corner. Slender metal supports and cross-bracing keep the portable structure clearly defined beneath it.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_421/source/election-folding-privacy-booth.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-accessible-marking-station",
+      "title": "Tablet and Headphones at a Low Table",
+      "alt": "A blank-screen tablet, headphones and a large button controller sit on a low open-front table.",
+      "description": "The angled screen faces the clear space beneath the light wooden tabletop. A headphone stand sits at the back corner, beside a dark controller with yellow, blue, red and green buttons.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_421/source/election-accessible-marking-station.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-paper-sorting-trays",
+      "title": "Election Paper Sorting Trays",
+      "alt": "Three clear document trays hold cream paper stacks beside small navy binder clips and a burgundy folder.",
+      "description": "The trays step down across the composition, exposing their transparent supports and pale label tabs. Separate paper edges, metal clip handles and the raised folder keep the sorting supplies easy to distinguish.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_421/source/election-paper-sorting-trays.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-poll-worker-desk-kit",
+      "title": "Poll Worker Desk Kit",
+      "alt": "A Poll Worker lanyard lies beside a burgundy notebook, a pencil cup and a coiled blue cord.",
+      "description": "The cream badge hangs from a loop of bright blue fabric in front of the closed notebook. Yellow pencils and dark pens rise from the wooden cup, balancing the cord secured with a black strap.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_421/source/election-poll-worker-desk-kit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-magnifier-reading-sheet",
+      "title": "Magnifier over a Sample Sheet",
+      "alt": "A rectangular reading magnifier enlarges empty oval rows on a Sample sheet beside a yellow pencil.",
+      "description": "The brass-edged lens tilts across the center of the cream paper, with a wooden handle extending to the right. Larger visible ovals beneath the glass contrast with the smaller rows above and below it.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_421/source/election-magnifier-reading-sheet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-practice-tally-board",
+      "title": "Class Vote Practice Tally Board",
+      "alt": "A wooden Class Vote board holds red, blue and yellow counters in three separate columns.",
+      "description": "Blank pale header panels sit above the colored counter groups beneath the small Class Vote heading. Loose counters rest along the base, making the object read as a classroom counting activity rather than a named election result.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_421/source/election-practice-tally-board.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

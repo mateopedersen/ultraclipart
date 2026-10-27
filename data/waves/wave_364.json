@@ -1,0 +1,536 @@
+{
+  "wave": "wave_364",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "cranberry-dried-paper-pouch",
+      "title": "Dried Cranberries",
+      "alt": "Tipped kraft paper pouch spilling wrinkled dark red dried cranberries beside a silver teaspoon.",
+      "description": "Tipped kraft paper pouch spilling wrinkled dark red dried cranberries beside a silver teaspoon. Use the dried ingredient in a classroom fresh-and-dried comparison or a personal snack menu.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_364/source/cranberry-dried-paper-pouch.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4714310bc96e3d37800b0a7515e32bf08af70964dfdfa31ba5cfc1e4f9240a9f",
+      "inputSignature": "a98cf1e8c1bfb1de96414f27f6882475e36bceeab83f012fddbac25cf798bc21",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 850319,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 850319,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        73,
+        84,
+        1474,
+        935
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_364/exports/cranberry-dried-paper-pouch.pdf",
+          "bytes": 850319,
+          "sha256": "8bd7937889d06f17da0747fa9a1c48b3fe67ff7f76ddd205097e5401fa06fe83"
+        },
+        "webp": {
+          "path": "work/production/wave_364/exports/cranberry-dried-paper-pouch.webp",
+          "bytes": 1392926,
+          "sha256": "4e3af37f115f988698e013637c208958c9f9e3db20e589630a77faf5e3fefa57"
+        },
+        "thumb": {
+          "path": "work/production/wave_364/exports/cranberry-dried-paper-pouch-thumb.webp",
+          "bytes": 41072,
+          "sha256": "bd0db8caa5842b1f59ca1a33e1420a089f78a1e8ab0873e02ceaf7b43fee7a48"
+        }
+      },
+      "proofSha256": "b85c69f1dcfd3edd9b30ca293ce63d3357a357d3d1033d08f13fd21cbcf9633f",
+      "pairMeanRgbDifference": 2.87714
+    },
+    {
+      "id": "cranberry-trail-mix-box",
+      "title": "Cranberry Trail Mix",
+      "alt": "Open metal lunchbox lined with paper and filled with dried cranberries, pecans, pumpkin seeds and oat clusters.",
+      "description": "Open metal lunchbox lined with paper and filled with dried cranberries, pecans, pumpkin seeds and oat clusters. The mixed snack suits a personal lunch menu or a classroom ingredient-identification activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_364/source/cranberry-trail-mix-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "903d41e9f0050ceaf5a75ac5961f61c9c586ba0dedab671de0eee9709b282d28",
+      "inputSignature": "a33124affb5d53941fb678fc1edc5f9c162df1e127cecb921aa5dc65d1b7a983",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 930740,
+        "weightedCmykRmse": 1.061234
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1402208,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1097104,
+          "weightedCmykRmse": 0.741007
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1021915,
+          "weightedCmykRmse": 0.880023
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 930740,
+          "weightedCmykRmse": 1.061234
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        94,
+        29,
+        1279,
+        1171
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_364/exports/cranberry-trail-mix-box.pdf",
+          "bytes": 930740,
+          "sha256": "370aea727fc45060e6a3f74ce0b247081d61bb9237798405f1d31060e2a3bc7c"
+        },
+        "webp": {
+          "path": "work/production/wave_364/exports/cranberry-trail-mix-box.webp",
+          "bytes": 1468996,
+          "sha256": "a331886df6583c46201dbfdad2e4aa8c1595424c18ad1ac75802506f57383c69"
+        },
+        "thumb": {
+          "path": "work/production/wave_364/exports/cranberry-trail-mix-box-thumb.webp",
+          "bytes": 68120,
+          "sha256": "d96f555b8140a4798baccf350928fbdeef94d32b913e3c208a45ab14e685d333"
+        }
+      },
+      "proofSha256": "54e957ee46555857ed8d56fd2841013a10d7552d19020647b58e1d4aa98ab1b7",
+      "pairMeanRgbDifference": 3.98766
+    },
+    {
+      "id": "cranberry-orange-scones",
+      "title": "Cranberry Orange Scones",
+      "alt": "Three triangular cranberry scones with pale icing drizzles on a dark rectangular baking tray.",
+      "description": "Three triangular cranberry scones with pale icing drizzles on a dark rectangular baking tray. Use the baked shapes in a personal menu or a classroom bakery vocabulary activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_364/source/cranberry-orange-scones.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "2e5d986667bafd8cac4d218b1d5928ee81f558d123398bcede5e3522089aa09f",
+      "inputSignature": "5ab5cc7ed70a96b04794538c909deb5ff6a53b09bc88819fa6790a8234324c01",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 931584,
+        "weightedCmykRmse": 1.023138
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1238820,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1061158,
+          "weightedCmykRmse": 0.714637
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1004067,
+          "weightedCmykRmse": 0.849695
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 931584,
+          "weightedCmykRmse": 1.023138
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        70,
+        122,
+        1520,
+        909
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_364/exports/cranberry-orange-scones.pdf",
+          "bytes": 931584,
+          "sha256": "82e31cbd7c03e40ddd6bf0595793e73bbbdc43a8b0017ac44806d2cfdf311140"
+        },
+        "webp": {
+          "path": "work/production/wave_364/exports/cranberry-orange-scones.webp",
+          "bytes": 1800900,
+          "sha256": "91d32889ef8f46eaf5e67c3415faf828d1d220aa6506336bf02b8fba0e0fe147"
+        },
+        "thumb": {
+          "path": "work/production/wave_364/exports/cranberry-orange-scones-thumb.webp",
+          "bytes": 53016,
+          "sha256": "c33e70f34bcb588ecb928d01bcc45457d38dc6927fd9cebdc301798a35ed9367"
+        }
+      },
+      "proofSha256": "8f9da0583945265163f8f44836551fd5ec64d94182f125ba0eb6858a87aa50f2",
+      "pairMeanRgbDifference": 4.91097
+    },
+    {
+      "id": "cranberry-muffins",
+      "title": "Cranberry Muffins",
+      "alt": "Golden cranberry muffins in pleated paper liners, one whole and one torn open to show red fruit in the crumb.",
+      "description": "Golden cranberry muffins in pleated paper liners, one whole and one torn open to show red fruit in the crumb. The two views suit a classroom food-description task or a personal bakery menu.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_364/source/cranberry-muffins.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1d24667e621a90b6c32eba667ca96741a8df033ee09e6a176fd6a086694dfc2d",
+      "inputSignature": "79fc3cd865dff87484e69df9668499c785dd6eb380cc9bb056bb641b5684bac4",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 873202,
+        "weightedCmykRmse": 0.752284
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1067209,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 873202,
+          "weightedCmykRmse": 0.752284
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        48,
+        140,
+        1493,
+        928
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_364/exports/cranberry-muffins.pdf",
+          "bytes": 873202,
+          "sha256": "def9fae87e784c51858620be0385bf86c6c58e99d5d78f2facbb5adb62b0e730"
+        },
+        "webp": {
+          "path": "work/production/wave_364/exports/cranberry-muffins.webp",
+          "bytes": 1829238,
+          "sha256": "1c79b9029bab3826b357d611ef85381a1e9eecc637bdbd08d1b84fb244f5d87e"
+        },
+        "thumb": {
+          "path": "work/production/wave_364/exports/cranberry-muffins-thumb.webp",
+          "bytes": 55470,
+          "sha256": "6ed0d3d96ac2d4df65d1c384938a48a7489873e3011d078480b9d9db846c9a37"
+        }
+      },
+      "proofSha256": "301cd3485ae5d4108d650b244150d220366fd4627f0ca9149f1efffd093862a4",
+      "pairMeanRgbDifference": 4.54547
+    },
+    {
+      "id": "cranberry-walnut-loaf",
+      "title": "Cranberry Quick Bread",
+      "alt": "Golden cranberry quick-bread loaf with two thick slices on a dark wooden board with a full handle.",
+      "description": "Golden cranberry quick-bread loaf with two thick slices on a dark wooden board with a full handle. Use the complete loaf arrangement in a personal baking page or a classroom bread vocabulary activity.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_364/source/cranberry-walnut-loaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "3cb9d8dbfafc7d71a9e9a61976894e6434401490a0a1728e974cc12e846c1284",
+      "inputSignature": "3394849c9779035c3589de0a46f865669d3f75eed3e178b7ffe7e6f7358eba7f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 912626,
+        "weightedCmykRmse": 0.755805
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1105631,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 912626,
+          "weightedCmykRmse": 0.755805
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        60,
+        74,
+        1495,
+        976
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_364/exports/cranberry-walnut-loaf.pdf",
+          "bytes": 912626,
+          "sha256": "d0985b96b5bed0ac7ca3c4b0a0f44f170f4b4373d52f956331ee28b289aefff7"
+        },
+        "webp": {
+          "path": "work/production/wave_364/exports/cranberry-walnut-loaf.webp",
+          "bytes": 1735086,
+          "sha256": "b0db7c9225e6f84b5a520c0f597086885fe55d7815100fd566e330ea5d768705"
+        },
+        "thumb": {
+          "path": "work/production/wave_364/exports/cranberry-walnut-loaf-thumb.webp",
+          "bytes": 53378,
+          "sha256": "3b2d3007e1a87facc730a07ea06b05730e32d965f81dbbd65ef69fbbc49de220"
+        }
+      },
+      "proofSha256": "b933fb3dfd3731d2e6fb4e14afe458665a7f3e87bfb59a501d8733d2a85ef04c",
+      "pairMeanRgbDifference": 4.36619
+    },
+    {
+      "id": "cranberry-cheesecake-slice",
+      "title": "Cranberry Cheesecake Slice",
+      "alt": "Ivory cheesecake wedge with a crumb base and ruby cranberry topping on a pale blue plate beside a gold fork.",
+      "description": "Ivory cheesecake wedge with a crumb base and ruby cranberry topping on a pale blue plate beside a gold fork. The dessert slice suits a personal menu or a classroom food-description prompt.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_364/source/cranberry-cheesecake-slice.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "4eeb5214c80ff1dbf5aba9694025bb5aee7ab1d825dc34f04201666e75d93f70",
+      "inputSignature": "95caaf4d7969d1c1f5c0c0d80106ea1fe39db3ceface4c5a4c496669d3eb981f",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 815842,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 815842,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        114,
+        68,
+        1476,
+        961
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_364/exports/cranberry-cheesecake-slice.pdf",
+          "bytes": 815842,
+          "sha256": "e865213c88be8015b1074845291cb31a010e5cc4a89f5b8fe0b41961bd58a3e1"
+        },
+        "webp": {
+          "path": "work/production/wave_364/exports/cranberry-cheesecake-slice.webp",
+          "bytes": 1462230,
+          "sha256": "b78bfdacf27c7089220e2e018698a64aca65f2fea6620dbbb3ff19571ecb2fcc"
+        },
+        "thumb": {
+          "path": "work/production/wave_364/exports/cranberry-cheesecake-slice-thumb.webp",
+          "bytes": 43928,
+          "sha256": "ed008e61058dcb0fd636954baa084510e01f633e3b6c5900258c434d4b003182"
+        }
+      },
+      "proofSha256": "089cbc3b83d23e712b2898d1f3e165fd8dabf073849e637d4ad173f0d800e63c",
+      "pairMeanRgbDifference": 3.84622
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T05:49:06.453836+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T05:59:26.447Z",
+  "liveRevision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33",
+  "liveVerifiedAt": "2026-10-26T09:32:49.360114+00:00"
+}

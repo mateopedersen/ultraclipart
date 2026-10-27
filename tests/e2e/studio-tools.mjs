@@ -4,6 +4,8 @@ import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { chooseSelectionTool } from '../helpers/creator.mjs';
+import { loadTypescript } from '../helpers/typescript.mjs';
+const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const engine = process.env.UC_BROWSER || 'chromium',
   base = process.env.BASE_URL || 'http://127.0.0.1:4351';
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/studio-tools', engine);
@@ -130,6 +132,9 @@ try {
     assert.ok(before.point);
     await chooseSelectionTool(page, i % 2 ? 'wand' : 'smart');
     if (i % 2) {
+      const matching = page.locator('[data-wand-controls] details');
+      if (!(await matching.evaluate((element) => element.open)))
+        await matching.locator('summary').click();
       await page.locator('[data-contiguous]').uncheck();
       await page.locator('[data-distance]').selectOption('rgb');
     }
@@ -231,10 +236,28 @@ try {
   await change('[data-brush-hardness]', 100);
   await clickNative(source.point);
   assert.equal((await state()).layers[0].regions.at(-1).stage, 'after-effects');
+  const erasedMask = decodeMask((await state()).layers[0].regions.at(-1).mask);
   assert.notEqual((await pixelInfo()).alpha, coloring.alpha);
   await chooseSelectionTool(page, 'restore');
+  // Native mouse coordinates can round differently after the inspector changes.
+  // Cover the entire eraser footprint rather than relying on identical subpixels.
+  await change('[data-brush-size]', 64);
   await clickNative(source.point);
-  assert.equal((await pixelInfo()).hash, coloring.hash);
+  const restoredRegion = (await state()).layers[0].regions.at(-1);
+  assert.equal(restoredRegion.operation, 'restore');
+  const restoredMask = decodeMask(restoredRegion.mask);
+  let erasedPixels = 0,
+    uncoveredPixels = 0;
+  for (let i = 0; i < erasedMask.length; i++)
+    if (erasedMask[i]) {
+      erasedPixels++;
+      if (restoredMask[i] !== 255) uncoveredPixels++;
+    }
+  report.brushRoundTrip = { erasedPixels, uncoveredPixels, restoreBrushSize: 64 };
+  assert(erasedPixels > 0);
+  assert.equal(uncoveredPixels, 0, 'The native restore stroke must cover every erased pixel');
+  await expect.poll(async () => (await pixelInfo()).hash, { timeout: 30000 }).toBe(coloring.hash);
+  await change('[data-brush-size]', 50);
   // Cloning/repair from a separate nearby source should change pixels, never the source bitmap.
   for (const brush of ['clone', 'repair']) {
     await chooseSelectionTool(page, brush);

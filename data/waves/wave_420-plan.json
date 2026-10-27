@@ -1,0 +1,77 @@
+{
+  "wave": "wave_420",
+  "topic": "election",
+  "method": "builtin-image-generation",
+  "research": "data/research/election-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "election-day-paper-lettering",
+      "title": "Election Day Paper Lettering",
+      "alt": "Cream and navy Election Day letters have folded burgundy paper corners and angular stars.",
+      "description": "The two stacked words combine deep blue side faces with pale textured fronts. Folded star shapes extend from the lower line, echoing the sharp triangular corners of the letters.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_420/source/election-day-paper-lettering.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-i-voted-peel-sticker",
+      "title": "I Voted Peel Sticker",
+      "alt": "A round cream I Voted sticker has a curled upper corner, a red arc and three gold stars.",
+      "description": "The peeled edge rolls forward to reveal the pale underside of the sticker. Bold navy lettering fills the center above three unevenly placed gold stars, with the red arc following the top curve.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_420/source/election-i-voted-peel-sticker.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-vote-matters-speech-sign",
+      "title": "Your Vote Matters Speech Sign",
+      "alt": "A teal speech-bubble sign reads Your Vote Matters above a small wooden tabletop base.",
+      "description": "Three centered lines of cream lettering fill the rounded teal shape. A narrow orange reverse edge follows its lower curve and pointed tail above the short walnut-colored support.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_420/source/election-vote-matters-speech-sign.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-wooden-vote-blocks",
+      "title": "Wooden Vote Blocks",
+      "alt": "Four textured wooden blocks in navy, burgundy, green and cream spell Vote.",
+      "description": "The taller burgundy O rises above the neighboring V, T and E blocks. Worn corners and visible wood grain give each separate letter block a solid, tactile appearance.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_420/source/election-wooden-vote-blocks.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-practice-ballot-writing-kit",
+      "title": "Practice Ballot Writing Kit",
+      "alt": "A fictional Sample sheet with three empty ovals rests on a green writing pad beside pens and an eraser.",
+      "description": "The cream practice sheet pairs each oval with a blank horizontal line beneath the heading Sample. A navy pen lies to the left, while a green-and-gold pen and a pale rectangular eraser sit near the opposite corner.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_420/source/election-practice-ballot-writing-kit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-ballot-envelope-still-life",
+      "title": "Ballot Envelopes and a Pen",
+      "alt": "A cream envelope labeled Ballot stands behind a smaller blank envelope and a navy-and-gold pen.",
+      "description": "A fine burgundy line traces the large envelope's flap and left edge. The smaller closed envelope overlaps its lower corner, leaving the bold navy word clearly visible above the pen.",
+      "color": "Beige",
+      "style": "Color",
+      "source": "work/production/wave_420/source/election-ballot-envelope-still-life.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

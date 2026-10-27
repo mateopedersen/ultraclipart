@@ -73,18 +73,18 @@ try {
   await expect(page.locator('[data-batch-download]')).toBeVisible({ timeout: 120000 });
   await expect(page.locator('[data-batch-download]')).toHaveAttribute('download', /favorites-pdf/);
   await page.locator('[data-batch-close]').click();
-  const requested=[];
-  await page.route('**/catalog/**/*.webp',route=>{
+  const requested = [];
+  await page.route('**/catalog/**/*.webp', (route) => {
     requested.push(route.request().url());
-    return requested.length===2?route.abort('failed'):route.continue();
+    return requested.length === 2 ? route.abort('failed') : route.continue();
   });
   await page.locator('[data-favorites-download=webp]').click();
-  await expect(page.locator('[data-batch-retry]')).toBeVisible({timeout:30000});
-  await expect(page.locator('#favorites-download-dialog progress')).toHaveJSProperty('value',1);
+  await expect(page.locator('[data-batch-retry]')).toBeVisible({ timeout: 30000 });
+  await expect(page.locator('#favorites-download-dialog progress')).toHaveJSProperty('value', 1);
   await page.locator('[data-batch-retry]').click();
-  await expect(page.locator('[data-batch-download]')).toBeVisible({timeout:120000});
-  assert.equal(requested.filter(url=>url===requested[0]).length,1);
-  report.recovery={cancelAndReopen:true,networkRetry:true,completedFileRetained:true};
+  await expect(page.locator('[data-batch-download]')).toBeVisible({ timeout: 120000 });
+  assert.equal(requested.filter((url) => url === requested[0]).length, 1);
+  report.recovery = { cancelAndReopen: true, networkRetry: true, completedFileRetained: true };
   await page.screenshot({ path: `${out}/mobile.png` });
   assert.deepEqual(report.errors, []);
   report.status = 'passed';

@@ -1,0 +1,571 @@
+{
+  "wave": "wave_414",
+  "status": "LIVE_VERIFIED",
+  "actualExportedDrawings": 6,
+  "resumed": 5,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "veterans-outdoor-walk",
+      "title": "Two Friends on a Rocky Trail",
+      "alt": "Two older friends with backpacks walk along a rocky path, one carrying a trekking pole and wearing an olive cap.",
+      "description": "The woman's braided hair and navy jacket contrast with the man's red plaid shirt and gray mustache. Low wild plants fill gaps between the stones beneath their fully visible walking boots.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-outdoor-walk.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1223,
+      "height": 1286,
+      "pdfWidth": 875,
+      "pdfHeight": 920,
+      "sourceType": "raster",
+      "sourceSha256": "b8bd7557d641b26841b8cf828c2e7ce1e48dae5b38882d90a87dbb47c5fb91b9",
+      "inputSignature": "c39ff406497f4cd994cdfbf1d0683e04152d3633eb27e9249902b31d00832466",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 993362,
+        "weightedCmykRmse": 1.329694
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1472427,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1221073,
+          "weightedCmykRmse": 0.744849
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1157551,
+          "weightedCmykRmse": 0.884596
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1070660,
+          "weightedCmykRmse": 1.063221
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 993362,
+          "weightedCmykRmse": 1.329694
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        30,
+        23,
+        1187,
+        1266
+      ],
+      "image": {
+        "width": 875,
+        "height": 920,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_414/exports/veterans-outdoor-walk.pdf",
+          "bytes": 993362,
+          "sha256": "3759e8708f6285c0b90deaa13feb3a199f6041cf7c87e23284d4bccce97c9360"
+        },
+        "webp": {
+          "path": "work/production/wave_414/exports/veterans-outdoor-walk.webp",
+          "bytes": 1511492,
+          "sha256": "707b4a8b7e7c9aaa2ea55d0552ef989d998e98d1bc9938fff3ba0cc37ac89579"
+        },
+        "thumb": {
+          "path": "work/production/wave_414/exports/veterans-outdoor-walk-thumb.webp",
+          "bytes": 88074,
+          "sha256": "d3b967fe0147ad737629e1604cc071adf745ad1b2c02ce9869845c74d4d10ebb"
+        }
+      },
+      "proofSha256": "834417de2218f8e03c22398b86b15301b56dd87becf1ec3d89b1602d89641fbb",
+      "pairMeanRgbDifference": 4.7327
+    },
+    {
+      "id": "veterans-adaptive-basketball",
+      "title": "Passing a Basketball from a Sports Wheelchair",
+      "alt": "A man in a blue sleeveless shirt offers a basketball to a child beside his sports wheelchair.",
+      "description": "The girl reaches toward the orange ball with both hands while the man steadies it in his outstretched palm. Angled large wheels, a low seat and visible foot support define the sporting chair.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-adaptive-basketball.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 1000,
+      "pdfHeight": 914,
+      "sourceType": "raster",
+      "sourceSha256": "ea7d58edd479ba2b0779f38dcc3690468c0acf280315d8f3807dbdbce6e12a48",
+      "inputSignature": "867a5e886352de0b1cfafe8f36a72f10f6313dacf1d43b4dc6ac0c75f76c967b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 962110,
+        "weightedCmykRmse": 1.412563
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1434856,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1189171,
+          "weightedCmykRmse": 0.786179
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1124248,
+          "weightedCmykRmse": 0.90993
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1036094,
+          "weightedCmykRmse": 1.098147
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 962110,
+          "weightedCmykRmse": 1.412563
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        36,
+        68,
+        1302,
+        1142
+      ],
+      "image": {
+        "width": 1000,
+        "height": 914,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_414/exports/veterans-adaptive-basketball.pdf",
+          "bytes": 962110,
+          "sha256": "6f5ffc465a4361311ebc595ee406773b0324146983abc94f0e37aeb4f7757a2b"
+        },
+        "webp": {
+          "path": "work/production/wave_414/exports/veterans-adaptive-basketball.webp",
+          "bytes": 1204228,
+          "sha256": "b465b7d26dd7a0fb8420099552e327054b7593b511726787a8073982592e58f2"
+        },
+        "thumb": {
+          "path": "work/production/wave_414/exports/veterans-adaptive-basketball-thumb.webp",
+          "bytes": 79118,
+          "sha256": "4de90e887b330af1646ead114f4ad0b58acfb90c7c23636f32c68fb313783ddb"
+        }
+      },
+      "proofSha256": "aa27daf6b69669662f798a4ba171882836b7f8c15b947890e516fb373925b1b4",
+      "pairMeanRgbDifference": 5.06737
+    },
+    {
+      "id": "veterans-harnessed-dog-walk",
+      "title": "Walking a Golden Dog",
+      "alt": "An older woman in an olive cap and green jacket walks beside a golden dog wearing a red harness.",
+      "description": "She holds the loose red lead near the dog's shoulder while stepping forward in navy trousers and sturdy dark shoes. The dog's open mouth, floppy ears and lifted forepaw make the walking pose clear.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-harnessed-dog-walk.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "a02ff3209007aa6632dc308d1a0084960981ae62bc0198f56c576716e939ab4f",
+      "inputSignature": "ca1fcc39d5477060acaf74b40f88a1b8baf11405b9aab2c2e3d472468f623f3c",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 837659,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 837659,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        50,
+        33,
+        960,
+        1448
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_414/exports/veterans-harnessed-dog-walk.pdf",
+          "bytes": 837659,
+          "sha256": "e620648d721bd068a4459c431f0b9b7802a6988d5210813da91ab2a698c35d81"
+        },
+        "webp": {
+          "path": "work/production/wave_414/exports/veterans-harnessed-dog-walk.webp",
+          "bytes": 1321918,
+          "sha256": "0e57ae221d71b7ab212be307d48479fbedfb834a216dd385d1eff436eeaf8c24"
+        },
+        "thumb": {
+          "path": "work/production/wave_414/exports/veterans-harnessed-dog-walk-thumb.webp",
+          "bytes": 41120,
+          "sha256": "5a4c77d21e2ba62351269db3a2ffc97d0cde681d7c9609fba379119c0a766676"
+        }
+      },
+      "proofSha256": "9200f9bd53b1c9ed8949134482314f7661db14174b44382987832e49c8153329",
+      "pairMeanRgbDifference": 2.17895
+    },
+    {
+      "id": "veterans-painting-workshop",
+      "title": "Painting a Red Poppy at an Easel",
+      "alt": "An older man in a paint-spattered apron paints a red poppy in a glass vase at a wooden easel.",
+      "description": "A real poppy in a small vase rests on a paint-marked stool beside the canvas. The seated painter balances a multicolored palette near the plain olive cap on his lap and lifts a thin brush toward the flower.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-painting-workshop.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "37c0208701ebe3ea4b7a7e3ed2f5224c4f995e6984418f8f6e61d5b506621a0c",
+      "inputSignature": "965bbea726a1d885149d0deeeb47f62e4d831f4670c5f9589d1bdb872b7e9296",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 840677,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 840677,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        114,
+        214,
+        950,
+        1309
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_414/exports/veterans-painting-workshop.pdf",
+          "bytes": 840677,
+          "sha256": "37cc66c6684a432d8cbb096a34fd38f6c93815a12e2c42ed32de74a9b9684be2"
+        },
+        "webp": {
+          "path": "work/production/wave_414/exports/veterans-painting-workshop.webp",
+          "bytes": 1421938,
+          "sha256": "8a623a82dd1e66059e1e1b78d5e1ddfa864b3ef43ea265dccac1f518d21ca76e"
+        },
+        "thumb": {
+          "path": "work/production/wave_414/exports/veterans-painting-workshop-thumb.webp",
+          "bytes": 49268,
+          "sha256": "83086b9c9d25d5883f1ae6b47d54cf17181af102cd934c73ed867354cc7c5aa0"
+        }
+      },
+      "proofSha256": "73439fd0e58e7c79253de61e97f3a7e6d7e07b3c33a65ed42cd9bf1e3a8adf7f",
+      "pairMeanRgbDifference": 4.03888
+    },
+    {
+      "id": "veterans-garden-bouquet",
+      "title": "Presenting a Garden Bouquet",
+      "alt": "A young man offers a mixed flower bouquet to an older woman in a sage cardigan and plain olive cap.",
+      "description": "Sunflowers and purple and white blossoms fill the space between their hands. The man's cream sweater and rust trousers complement the woman's long navy skirt and low green shoes.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-garden-bouquet.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "11d17b914e1c31699ca177a87b1cb6e3853ba37550072d02d5f3fbe63b9737e6",
+      "inputSignature": "c340d25da38fc28f3c82f7ddcee2122993ebfab8c7a7db4ae95a4257020c5358",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 831575,
+        "weightedCmykRmse": 0.768937
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1011267,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 831575,
+          "weightedCmykRmse": 0.768937
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        101,
+        26,
+        963,
+        1492
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_414/exports/veterans-garden-bouquet.pdf",
+          "bytes": 831575,
+          "sha256": "453bb606125b6f23a9d95b36df8ac986a89590c46ea7f9a53b3f5a85f99f9b91"
+        },
+        "webp": {
+          "path": "work/production/wave_414/exports/veterans-garden-bouquet.webp",
+          "bytes": 1504566,
+          "sha256": "ba7932e591607fb898ba72e0dacebfabb282fb92a3ab75ee1f77c098032c22f1"
+        },
+        "thumb": {
+          "path": "work/production/wave_414/exports/veterans-garden-bouquet-thumb.webp",
+          "bytes": 48966,
+          "sha256": "aee800f46c455bfca6abb776442ca44a4802c4f422d3db5027a2c72fa4afbb2b"
+        }
+      },
+      "proofSha256": "3cccfc1c1c481bf3a0d1e89f89141100facc40596f70fe1bb741a08307b6dd47",
+      "pairMeanRgbDifference": 2.90191
+    },
+    {
+      "id": "veterans-poppy-making",
+      "title": "Making Happy Veterans Day Cards",
+      "alt": "A teenager makes paper poppies while an older man holds up a Happy Veterans Day card at a craft table.",
+      "description": "The cream card displays navy handwriting above a red poppy decoration. Red paper petals, scissors and glue lie across the oval table between the girl's orange sweater and the man's green cardigan.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_414/source/veterans-poppy-making.png",
+      "printMaxEdgePx": 920,
+      "alphaCompression": "zopfli",
+      "topic": "veterans",
+      "width": 1296,
+      "height": 1213,
+      "pdfWidth": 920,
+      "pdfHeight": 861,
+      "sourceType": "raster",
+      "sourceSha256": "d2eb4e24be48ed6549bf830a80684f5fb40fe761698878de40ba331dd1f51f42",
+      "inputSignature": "7f67776e2878711d84f6877fb884db3872f87a71852103bc8235504bb70f6eba",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 995063,
+        "weightedCmykRmse": 1.250558
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1501538,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1255264,
+          "weightedCmykRmse": 0.717524
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1174530,
+          "weightedCmykRmse": 0.856462
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1088847,
+          "weightedCmykRmse": 1.007602
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 995063,
+          "weightedCmykRmse": 1.250558
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        20,
+        8,
+        1279,
+        1188
+      ],
+      "image": {
+        "width": 920,
+        "height": 861,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_414/exports/veterans-poppy-making.pdf",
+          "bytes": 995063,
+          "sha256": "ae06af1b22f1d05062bfcc565c4ae69ce2a0732657fff3920e41271e4446911d"
+        },
+        "webp": {
+          "path": "work/production/wave_414/exports/veterans-poppy-making.webp",
+          "bytes": 1490576,
+          "sha256": "cc536a7795fa1fccc5dc2893a4646cf72e216e2bd72ab56fdfaaeada5a4e4ab0"
+        },
+        "thumb": {
+          "path": "work/production/wave_414/exports/veterans-poppy-making-thumb.webp",
+          "bytes": 85446,
+          "sha256": "01201cd221d27068ecb236230d54bfe47c2a7e8c825e661912b4a81a22e72b0e"
+        }
+      },
+      "proofSha256": "9dfffd8802f3d0f1db49d9a34fe6a229c304d4f614792ddf96a507d824e52ffa",
+      "pairMeanRgbDifference": 3.09908
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T23:40:52.688692+00:00",
+  "screenReviewEvidence": "work/production/wave_414/native-proof-review.jpg",
+  "screenReviewNotes": "Actual rendered CMYK proofs inspected; complete composition, coherent visible details, no clipping or unintended backdrop, matching specific metadata. Physical print proof not claimed.",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T23:45:23.603Z"
+}

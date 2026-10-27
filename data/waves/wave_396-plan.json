@@ -1,0 +1,22 @@
+{
+  "wave": "wave_396",
+  "topic": "kwanzaa",
+  "method": "builtin-image-generation",
+  "research": "data/research/kwanzaa-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [],
+  "deferred": [
+    {
+      "id": "kwanzaa-outline-poetry-listening",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
+    },
+    {
+      "id": "kwanzaa-outline-basket-garden",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
+    }
+  ]
+}

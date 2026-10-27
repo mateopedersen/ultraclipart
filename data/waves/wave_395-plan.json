@@ -1,0 +1,42 @@
+{
+  "wave": "wave_395",
+  "topic": "kwanzaa",
+  "method": "builtin-image-generation",
+  "research": "data/research/kwanzaa-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [],
+  "deferred": [
+    {
+      "id": "kwanzaa-blank-invitation",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_400"
+    },
+    {
+      "id": "kwanzaa-handmade-gift-tag",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_400"
+    },
+    {
+      "id": "kwanzaa-outline-mat-lesson",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
+    },
+    {
+      "id": "kwanzaa-outline-community-meal",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
+    },
+    {
+      "id": "kwanzaa-outline-memory-tree",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
+    },
+    {
+      "id": "kwanzaa-outline-gift-reading",
+      "reason": "Same artwork ID moved to resumed export wave; not another original.",
+      "resumedWave": "wave_401"
+    }
+  ]
+}

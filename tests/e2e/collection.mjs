@@ -1,11 +1,13 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import { defaults, searchArtwork } from '../../src/lib/search.ts';
-import { primaryClusterForTopic } from '../../src/lib/topic-clusters.ts';
+import { primaryClusterForTopic, clustersForTopic } from '../../src/lib/topic-clusters.ts';
+import { auditMonochrome } from '../../scripts/monochrome-catalog.mjs';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { bridgeLocalCdn } from '../helpers/local-cdn.mjs';
 
 const base = process.env.BASE_URL || 'http://127.0.0.1:4335';
 const engine = process.env.UC_BROWSER || 'chromium';
@@ -30,7 +32,7 @@ const all = readData('art.json');
 const catalog = all.filter((a) => a.topic === topic);
 const publication = readData('publication.json');
 const expectedUrl = (a, kind) =>
-  base.startsWith('https:')
+  base.startsWith('https:') || process.env.LOCAL_CDN_BRIDGE === '1'
     ? publication.files.find((f) => f.assetId === a.id && f.kind === kind).url
     : new URL(a[kind], base).href;
 mkdirSync(out, { recursive: true });
@@ -39,6 +41,7 @@ const browser = await { chromium, firefox, webkit }[engine].launch({
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
 });
 const context = await browser.newContext({ acceptDownloads: true });
+await bridgeLocalCdn(context, base);
 let page = await context.newPage();
 const report = {
   base,
@@ -62,6 +65,14 @@ try {
       );
     await expect(page.locator('.art-card')).toHaveCount(catalog.length);
     await page.evaluate(() => document.fonts.ready);
+    await expect
+      .poll(() =>
+        page
+          .locator('.card-actions > a')
+          .first()
+          .evaluate((node) => node.getBoundingClientRect().height),
+      )
+      .toBeGreaterThanOrEqual(44);
     const audit = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
       .analyze();
@@ -120,16 +131,33 @@ try {
   }
   await page.goto(base + `/search/?q=${topic}`);
   const topics = [...readData('topics.json').topics, ...readData('extra-topics.json')];
-  const searchable = all.map((item) => ({
-    ...item,
-    cluster: (() => {
+  const monochrome = await auditMonochrome(all);
+  const searchable = all
+    .filter((item) => item.published && item.indexable)
+    .map((item) => {
       const entry = topics.find((entry) => entry.slug === item.topic);
-      return entry ? primaryClusterForTopic(entry) : '';
-    })(),
-  }));
+      return {
+        ...item,
+        cluster: entry ? primaryClusterForTopic(entry) : '',
+        topicLabel: entry?.keyword || item.topic,
+        keywords: entry ? [entry.keyword] : [],
+        collections: entry
+          ? clustersForTopic(entry).map((cluster) =>
+              cluster
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-|-$/g, ''),
+            )
+          : [],
+        monochrome: monochrome.get(item.id)?.monochrome === true,
+        monochromeKind: monochrome.get(item.id)?.kind ?? null,
+      };
+    });
   const expected = (style = '') =>
     searchArtwork(searchable, { ...defaults, q: topic, style }).total;
-  await expect(page.locator('#result-count')).toContainText(`${expected()} artworks`);
+  await expect(page.locator('#result-count')).toContainText(
+    `${expected().toLocaleString('en-US')} artworks`,
+  );
   await expect(page.locator('#result-count')).toContainText(`for “${topic}”`);
   await expect(page.locator('#search-results .card-actions').first()).toContainText('Edit');
   for (const style of ['watercolor', 'black & white']) {

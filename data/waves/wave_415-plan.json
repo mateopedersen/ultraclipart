@@ -1,0 +1,78 @@
+{
+  "wave": "wave_415",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-photo-display",
+      "title": "Arranging a Community Portrait Display",
+      "alt": "A silver-haired woman clips silhouette portrait cards to a wooden display board beside a stool with an olive cap.",
+      "description": "She reaches toward the top row while holding the edge of one cream card. The anonymous gray profile shapes avoid suggesting real named honorees, with her burgundy jacket providing the main color accent.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-photo-display.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-poppy-lapel-hands",
+      "title": "Poppy on a Folded Navy Blazer",
+      "alt": "A folded navy blazer with a red poppy on its lapel rests behind a plain olive cap.",
+      "description": "The cream shirt collar rises above the folded jacket, framing the small fabric poppy at one side. Fine woven textures distinguish the navy wool, pale shirt and soft canvas cap in this compact clothing still life.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-poppy-lapel-hands.png",
+      "printMaxEdgePx": 900,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-identity-tags",
+      "title": "Thank You Veterans Keepsake Tags",
+      "alt": "Two decorative silver tags read Thank You and Veterans beside a red poppy on folded olive cloth.",
+      "description": "A looped metal ball chain links the gently overlapping tags above the textured fabric. The navy engraved-style lettering carries an appreciation message without personal identification numbers or military records.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-identity-tags.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-service-cap-book",
+      "title": "Happy Veterans Day with an American Flag",
+      "alt": "Large navy-and-cream Happy Veterans Day letters stand in front of an American flag and a curling red ribbon.",
+      "description": "The three stacked words have raised cream edges and dark blue faces beneath the flag's blue star field. A gold-topped pole and long red ribbon frame the compact patriotic lettering composition.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-service-cap-book.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-helmet-and-canteen",
+      "title": "Helmet and Canvas-Covered Canteen",
+      "alt": "An olive helmet rests beside a metal canteen in a canvas cover, with a pale folded cloth underneath.",
+      "description": "The rounded helmet exposes its dark interior and loose chin strap. A ribbed screw cap and khaki webbing distinguish the canteen, with no visible manufacturer marks or named unit insignia.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-helmet-and-canteen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-poppy-wreath",
+      "title": "Veterans Day Lettering with Poppies",
+      "alt": "Navy Veterans Day script sits inside an open wreath of red poppies, buds and olive-green leaves.",
+      "description": "The long curved strokes weave between the flowers without hiding the two-word message. Large poppies anchor the lower left and upper right, while smaller blooms and pointed leaves complete the asymmetric outline.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_415/source/veterans-poppy-wreath.png",
+      "printMaxEdgePx": 950,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

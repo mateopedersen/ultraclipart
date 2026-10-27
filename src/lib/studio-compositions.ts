@@ -212,7 +212,9 @@ export function buildStudioComposition(
       x,
       y,
       size,
-      color: /^#[0-9a-f]{3}$/i.test(color) ? '#' + [...color.slice(1)].map(c => c+c).join('') : color,
+      color: /^#[0-9a-f]{3}$/i.test(color)
+        ? '#' + [...color.slice(1)].map((c) => c + c).join('')
+        : color,
       bold,
       align,
       typography: { ...typographyDefaults, font, layout: 'straight', lineHeight: 1.1 },
@@ -456,7 +458,17 @@ export function buildStudioComposition(
         'serif',
         'middle',
       );
-      text('Personal note', 'A little something,\njust for you.', 1075, 352, 28, '#6c4e50', false, 'serif', 'middle');
+      text(
+        'Personal note',
+        'A little something,\njust for you.',
+        1075,
+        352,
+        28,
+        '#6c4e50',
+        false,
+        'serif',
+        'middle',
+      );
       for (let i = 0; i < 4; i++)
         line('Message line', 910, 330 + i * 65, 1250, 330 + i * 65, '#dbc9c0');
       art(1, 990, 610, 235, 270);
@@ -489,7 +501,17 @@ export function buildStudioComposition(
         circle('Constellation dot', x, y, r, '#a5bca8');
       text('Heading', 'A little\nadventure', 610, 210, 95, '#536d64', false, 'serif', 'middle');
       art(0, 75, 450, 720, 390);
-      text('Personal subtitle', 'A story of our own', 610, 420, 30, '#536d64', false, 'serif', 'middle');
+      text(
+        'Personal subtitle',
+        'A story of our own',
+        610,
+        420,
+        30,
+        '#536d64',
+        false,
+        'serif',
+        'middle',
+      );
       art(1, 855, 300, 390, 545);
       rect('Keepsake band', 65, 870, 1270, 85, '#dce6d8', 12);
       text(
@@ -523,7 +545,17 @@ export function buildStudioComposition(
       text('Greeting', 'Welcome,\nlittle one.', 700, 340, 77, '#58634c', false, 'serif', 'middle');
       art(0, 150, 495, 480, 330);
       art(1, 860, 530, 300, 250);
-      text('Personal dedication', 'A new story begins.', 700, 625, 31, '#697358', false, 'serif', 'middle');
+      text(
+        'Personal dedication',
+        'A new story begins.',
+        700,
+        625,
+        31,
+        '#697358',
+        false,
+        'serif',
+        'middle',
+      );
       text('Dedication', 'WITH ALL OUR LOVE', 700, 914, 25, '#697358', true, 'sans', 'middle');
       break;
     case 'citrus-notes':

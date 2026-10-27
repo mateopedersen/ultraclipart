@@ -1,0 +1,36 @@
+{
+  "wave": "wave_410",
+  "topic": "hanukkah",
+  "method": "builtin-image-generation",
+  "research": "data/research/hanukkah-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "hanukkah-outline-star-mobile",
+      "title": "Holding Up a Star Mobile",
+      "alt": "A woman holds a hanging mobile of six-pointed stars while a child in a kippah works at a craft table, in black-and-white line art.",
+      "description": "The completed stars hang at staggered heights below a circular mobile frame. Beside the standing woman, the child threads another star above a tabletop scattered with beads, thread and spare shapes.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_410/source/hanukkah-outline-star-mobile.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "hanukkah-outline-gift-shelf",
+      "title": "Sharing Hanukkah Gelt with a Child",
+      "alt": "An older woman offers a patterned pouch of chocolate coins to a child in a kippah beside a stool with a dreidel and candles, in line art.",
+      "description": "The seated woman supports the small pouch while lifting a coin from its opening. The child holds both hands out toward her, with a dreidel and nine-candle holder on a separate wooden stool.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_410/source/hanukkah-outline-gift-shelf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ],
+  "deferred": []
+}

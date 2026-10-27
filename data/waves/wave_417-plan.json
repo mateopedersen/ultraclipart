@@ -1,0 +1,78 @@
+{
+  "wave": "wave_417",
+  "topic": "veterans",
+  "method": "builtin-image-generation",
+  "research": "data/research/veterans-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "veterans-library-volunteering",
+      "title": "Sharing a Book beside a Library Cart",
+      "alt": "An older man in a tan jacket leans on a library cart while a smiling child holds an open blue book.",
+      "description": "Rows of red, green and cream book spines fill the two-tier rolling trolley. The man's plain olive cap and the child's plum sweater and mustard trousers create a warm, relaxed reading scene.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_417/source/veterans-library-volunteering.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-community-breakfast",
+      "title": "Serving Pancakes at a Community Breakfast",
+      "alt": "An older woman in a rust apron serves a pancake to a young man beside a griddle on a folding table.",
+      "description": "Several golden pancakes cook on the rectangular hotplate near a metal mixing bowl and stacked plates. The woman's plain cap and the man's teal sweater distinguish the two figures as the spatula meets his plate.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_417/source/veterans-community-breakfast.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-reunion-greeting",
+      "title": "A Warm Greeting between Old Friends",
+      "alt": "Two older women smile together, one resting a hand on the other's arm and wearing a plain olive cap.",
+      "description": "An olive jacket and long blue skirt contrast with a cream cardigan and rust trousers. Their silver and auburn hair, separate hats and relaxed hand gesture give each friend a distinct appearance.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_417/source/veterans-reunion-greeting.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-community-picnic",
+      "title": "Sharing Sandwiches at a Picnic Table",
+      "alt": "An older man using a wheelchair and a red-haired child eat sandwiches together at a picnic table.",
+      "description": "Red apples rest on separate plates beneath the food in their hands. The man's blue plaid shirt and plain olive cap complement the child's mustard sweater, while the open end of the table accommodates his chair.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_417/source/veterans-community-picnic.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-family-story-album",
+      "title": "Looking through a Family Album",
+      "alt": "A woman and child share an open portrait album on a blue sofa while an older man watches from a green armchair.",
+      "description": "Anonymous profile shapes fill the cream album pages beneath the woman's pointing hand. The child leans into the book in burgundy overalls, with the older man seated separately in an olive cap and teal sweater.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_417/source/veterans-family-story-album.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "veterans-packing-duffel",
+      "title": "Packing a Canvas Duffel",
+      "alt": "A gray-haired man sits on a wooden bench, packing an olive garment into a tan canvas duffel bag.",
+      "description": "The open bag stands between his brown boots with its long handles folded outward. A navy cap and two closed books rest on the bench beside his denim shirt and olive trousers.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_417/source/veterans-packing-duffel.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

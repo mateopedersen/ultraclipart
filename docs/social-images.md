@@ -1,6 +1,6 @@
 # Page-specific social images
 
-Local update, 2026-10-25. This batch is not published.
+Approved artwork and rendering workflow, updated 2026-10-26.
 
 ## Design
 
@@ -13,34 +13,34 @@ No claim of handmade artwork is added.
 The overview is [design-assets/social/overview.png](../design-assets/social/overview.png).
 The complete route/image/alt mapping is [data/social-images.json](../data/social-images.json).
 
-| Destination             | Visual content                                                         |
-| ----------------------- | ---------------------------------------------------------------------- |
-| Homepage                | Fox, floral heart, strawberries and blue butterfly                     |
-| Clipart Studio          | Strawberry poster example, text tile and selection handles             |
-| AI Clipart Builder      | Gardening robot, floral teacup and rabbit examples                     |
-| Categories              | Animals, plants, food, school, music and nature                        |
-| Collections             | Halloween, Winter and Hearts covers                                    |
-| Black & White           | Original monochrome fern, book and violin illustrations                |
-| For Teachers            | Example Earth worksheet and Reading Corner design                      |
-| Guides                  | Actual Studio screenshot with download/edit/print guide labels         |
-| Print Size Calculator   | Image-to-paper diagram and measuring rulers                            |
-| About                   | Blue U emblem, layered heart/fern/lemon art cards, palette and pencil   |
-| New Clipart             | Latest published subjects, selected at build time                      |
-| Favorites               | Clearly labeled example boards, with no visitor data                   |
-| Search                  | Search field illustration and varied subject previews                  |
-| Contact                 | Envelope, feedback/questions labels and public email                   |
-| FAQ                     | Question mark and image/PDF/editing topics                             |
-| Classroom Label guide   | Reading Corner example using the real Learning label starter           |
-| Coloring Activity guide | Same editable sprig in color and outline                               |
-| Download Formats guide  | Separate WebP, PDF and Project illustrations                           |
-| License                 | Personal/educational-use document and catalog examples                 |
-| Privacy                 | Lock and distinct browser/AI-service/saved-file labels                 |
-| Cookie Policy           | Cookie, security shield and privacy-setting labels                     |
-| Terms                   | Site-branded terms document                                            |
-| Copyright               | Copyright symbol, document and contact envelope                        |
-| Accessibility           | Keyboard keys and visible-focus example, without a certification claim |
-| Finding & Using Clipart | Find, edit and save steps                                              |
-| 404                     | Blue 404, fox, butterfly and search symbol                             |
+| Destination             | Visual content                                                            |
+| ----------------------- | ------------------------------------------------------------------------- |
+| Homepage                | Floral heart, pizza, school backpack, guitar, volleyball and seasonal art |
+| Clipart Studio          | Strawberry poster example, text tile and selection handles                |
+| AI Clipart Builder      | Gardening robot, floral teacup and rabbit examples                        |
+| Categories              | Animals, plants, food, school, music and nature                           |
+| Collections             | Halloween, Winter and Hearts covers                                       |
+| Black & White           | Original monochrome fern, book and violin illustrations                   |
+| For Teachers            | Example Earth worksheet and Reading Corner design                         |
+| Guides                  | Actual Studio screenshot with download/edit/print guide labels            |
+| Print Size Calculator   | Image-to-paper diagram and measuring rulers                               |
+| About                   | Blue U emblem, layered heart/fern/lemon art cards, palette and pencil     |
+| New Clipart             | Latest published subjects, selected when the cover is regenerated         |
+| Favorites               | Clearly labeled example boards, with no visitor data                      |
+| Search                  | Search field illustration and varied subject previews                     |
+| Contact                 | Envelope, feedback/questions labels and public email                      |
+| FAQ                     | Question mark and image/PDF/editing topics                                |
+| Classroom Label guide   | Reading Corner example using the real Learning label starter              |
+| Coloring Activity guide | Same editable sprig in color and outline                                  |
+| Download Formats guide  | Separate WebP, PDF and Project illustrations                              |
+| License                 | Personal/educational-use document and catalog examples                    |
+| Privacy                 | Lock and distinct browser/AI-service/saved-file labels                    |
+| Cookie Policy           | Cookie, security shield and privacy-setting labels                        |
+| Terms                   | Site-branded terms document                                               |
+| Copyright               | Copyright symbol, document and contact envelope                           |
+| Accessibility           | Keyboard keys and visible-focus example, without a certification claim    |
+| Finding & Using Clipart | Find, edit and save steps                                                 |
+| 404                     | Blue 404, fox, butterfly and search symbol                                |
 
 Compositions are graphics explaining the page, not invented product screenshots.
 The label, worksheet, poster and boards are examples. Existing catalog titles,
@@ -58,9 +58,17 @@ About page team section. The other 25 cover images retain their approved bytes.
 - `scripts/social/render.mjs` renders SVG compositions and text through Sharp.
   A private Fontconfig configuration uses only the project's self-hosted Inter
   400/600/700 files and a writable local cache. It does not scan system fonts.
-- `scripts/build-social-images.mjs` renders images before Astro in the normal
-  `build` command, after the verified asset-restoration step. `social:build`
-  regenerates just the covers and overview when local assets are present.
+- Normal `build` runs `scripts/verify-social-images.mjs` after asset restoration.
+  It publishes the exact reviewed PNG bytes instead of re-rendering text on the
+  build host. The Linux host's font stack previously produced missing glyphs
+  despite successful rendering. The check requires current renderer, font,
+  source and output checksums, complete page coverage and usable text bounds.
+  It does not load Sharp or system fonts and never modifies approved images.
+- `social:build` explicitly regenerates covers and the overview for review when
+  their input artwork or composition changes. Commit the PNGs, manifest and
+  provenance together after inspecting their actual lettering. `social:check`
+  verifies these records. Stale inputs stop a release instead of silently
+  replacing approved covers on a different operating system.
 - Inputs must belong to the project. Catalog sources must be published/indexable;
   their original WebP SHA-256 is checked against the catalog file record. Missing
   subjects or altered originals stop generation. New Clipart selects six recent
@@ -90,8 +98,9 @@ homepage cover. The 404 template explicitly selects its own cover even when it
 is rendered at a missing nested address. Canonical URLs, indexing rules, page
 schema, font scope and page appearance remain owned by their existing templates.
 
-The URLs are prepared for the next authorized release. No live crawler refresh,
-social-platform cache invalidation or production publication was performed.
+Release verification compares the deployed OG/Twitter URLs with the reviewed
+manifest and checks the actual image files. A live crawler refresh or a
+social-platform cache invalidation is a separate operation.
 
 ## Local evidence
 

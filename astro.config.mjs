@@ -16,6 +16,7 @@ await buildSiteIcons();
 await preparePreviewAssets(
   JSON.parse(readFileSync(new URL('./data/art.json', import.meta.url), 'utf8')),
 );
+import { productionPublicAssets } from './scripts/production-public-assets.mjs';
 
 // The checked release, rather than a mutable dashboard value, selects production media.
 const production = process.env.CF_PAGES === '1';
@@ -28,6 +29,7 @@ export default defineConfig({
   devToolbar: { enabled: false },
   build: { inlineStylesheets: 'always' },
   integrations: [
+    productionPublicAssets(production),
     {
       name: 'ultraclipart-site-icons',
       hooks: {

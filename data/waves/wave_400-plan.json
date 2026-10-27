@@ -1,0 +1,78 @@
+{
+  "topic": "kwanzaa",
+  "method": "builtin-image-generation",
+  "research": "data/research/kwanzaa-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "wave": "wave_400",
+  "items": [
+    {
+      "id": "kwanzaa-community-book-shelf",
+      "title": "Arranging a Shared Bookshelf",
+      "alt": "An adult in rust overalls arranges books while a child in a teal hoodie sorts another stack beside a wooden shelf.",
+      "description": "Books fill a freestanding wooden shelf topped by a trailing plant. An adult reaches toward its rows while a seated child sorts a stack below, beside a woven basket and a strip of colored fabric.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-community-book-shelf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-beaded-bookmark-craft",
+      "title": "Beaded Bookmark Beside a Closed Book",
+      "alt": "A green hardcover book sits beside a bowl of red, black and green beads, a cord spool and a partly beaded bookmark.",
+      "description": "A tasseled bookmark stretches across the foreground beside its remaining beads and cord. The closed green book adds a solid rectangular shape behind the small round beads and coiled spool.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-beaded-bookmark-craft.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-paper-weaving-kit",
+      "title": "Paper-Weaving Mat and Craft Tools",
+      "alt": "A red, black, green and tan woven paper mat is surrounded by loose strips, a wooden ruler and red scissors.",
+      "description": "Alternating paper strips form a small rectangular woven mat. Spare lengths remain beside it, with a marked wooden ruler and red scissors arranged as a compact set of craft materials.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-paper-weaving-kit.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-celebration-wreath",
+      "title": "Cloth-Wrapped Wreath with an Open Book",
+      "alt": "A rope wreath wrapped in red, black and green fabric carries a small open book and bow at its lower edge.",
+      "description": "Natural rope remains visible between bands of striped and geometric fabric around the circular wreath. A miniature open book rests at the bottom above a tied bow, balancing the otherwise open center.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-celebration-wreath.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-blank-invitation",
+      "title": "Blank Invitation with Corn and a Wooden Cup",
+      "alt": "A cream invitation card with a red, black and green border shows corn and a wooden cup above an ochre envelope.",
+      "description": "A broad empty cream panel leaves the center of this invitation clear. Corn and a wooden cup decorate the lower corner, while an ochre envelope sits behind the card\u2019s striped border.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-blank-invitation.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "kwanzaa-handmade-gift-tag",
+      "title": "Illustrated Gift Tags and Twine",
+      "alt": "Three kraft gift tags show books, a woven circle and corn beside a twine spool, pencil and colored paper.",
+      "description": "Small subject drawings distinguish the three kraft-colored tags: books, a woven circle and corn. Loose twine curves around the group, with a spool, pencil and red, black and green paper behind it.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_400/source/kwanzaa-handmade-gift-tag.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

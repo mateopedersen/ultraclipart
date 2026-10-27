@@ -1,0 +1,179 @@
+{
+  "wave": "wave_360",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 2,
+  "resumed": 0,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "football-outline-invitation-frame",
+      "title": "Football Invitation Frame",
+      "alt": "Black-and-white rounded invitation border with a football at the upper left, a pylon and grass at the lower right, and short yard-line marks below.",
+      "description": "Black-and-white rounded invitation border with a football at the upper left, a pylon and grass at the lower right, and short yard-line marks below. Add your own wording in the blank center for a personal invitation or a classroom sports activity.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_360/source/football-outline-invitation-frame.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1024,
+      "height": 1536,
+      "pdfWidth": 667,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "0a7e51be23327822f417fbd113a239473c68a92a4fa3f82f5904b0f94f5c0e74",
+      "inputSignature": "ce7f16591b0e04ea29695031249b0a1bd7bc4b92b2b5682cfafc74e49860b543",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 180686,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 180686,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        48,
+        56,
+        981,
+        1439
+      ],
+      "image": {
+        "width": 667,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_360/exports/football-outline-invitation-frame.pdf",
+          "bytes": 180686,
+          "sha256": "2b25708fe0090cec309a7d2e680e9919ad6688c116f95527bc1f3f84f4dc33c9"
+        },
+        "webp": {
+          "path": "work/production/wave_360/exports/football-outline-invitation-frame.webp",
+          "bytes": 389974,
+          "sha256": "4809c2de9c4c554f1febdd98a36b21b77b9d616bbdbef27627ff3be60d87c273"
+        },
+        "thumb": {
+          "path": "work/production/wave_360/exports/football-outline-invitation-frame-thumb.webp",
+          "bytes": 8678,
+          "sha256": "c56765ad3a2c520b152e54df7d70216cff32cda2c553c3070e128fd1c891e3fc"
+        }
+      },
+      "proofSha256": "b854dfbdd9079ff6d74af699d592b1ed0011fe0cb1f1f10cca0eb3f5f0c91bbd",
+      "pairMeanRgbDifference": 2.4655
+    },
+    {
+      "id": "football-outline-groundkeeper",
+      "title": "Marking a Football Field",
+      "alt": "Black-and-white mustached groundskeeper in a bucket hat and overalls pushing a line-marking machine beside a pylon.",
+      "description": "Black-and-white mustached groundskeeper in a bucket hat and overalls pushing a line-marking machine beside a pylon. The complete field-care scene suits a classroom coloring activity or an occupation vocabulary sheet.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_360/source/football-outline-groundkeeper.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "football",
+      "width": 1222,
+      "height": 1287,
+      "pdfWidth": 949,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "cd929f67f4a49b17e59245dede80e45ad16398f0b3ca17504650d2f89b4152dd",
+      "inputSignature": "4ab1bacede8426eded8b7592cb7cea17be22608d5f3777401d27669aec12248b",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 971348,
+        "weightedCmykRmse": 0.791828
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1226367,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 971348,
+          "weightedCmykRmse": 0.791828
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        29,
+        14,
+        1204,
+        1274
+      ],
+      "image": {
+        "width": 949,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_360/exports/football-outline-groundkeeper.pdf",
+          "bytes": 971348,
+          "sha256": "bd9687694126da78deea3aa4a3fd5057f2490e90a32abc1fcfbbeb24e99d008b"
+        },
+        "webp": {
+          "path": "work/production/wave_360/exports/football-outline-groundkeeper.webp",
+          "bytes": 764612,
+          "sha256": "4d3b321fac4eff9d93b68b2917f8239f678edac8c90abeaffc0d3276874cac39"
+        },
+        "thumb": {
+          "path": "work/production/wave_360/exports/football-outline-groundkeeper-thumb.webp",
+          "bytes": 62326,
+          "sha256": "04365bb74b4a8859eefe382359028051d9ded52de5c905e59a111c943f233863"
+        }
+      },
+      "proofSha256": "0fca7a1b33a13c36e88d46b175dee02dd1c29209a94d1626bce88b3064f89beb",
+      "pairMeanRgbDifference": 5.82155
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T05:16:42.138486+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T05:16:45.225Z",
+  "liveRevision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33",
+  "liveVerifiedAt": "2026-10-26T09:32:49.360114+00:00"
+}

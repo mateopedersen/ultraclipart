@@ -170,6 +170,17 @@ test('pagination clamps invalid pages and never duplicates result identities', (
   assert.equal(new Set(all.map((item) => item.id)).size, data.length);
   assert.equal(searchArtwork([...data, ...data], defaults).total, data.length);
 });
+test('facet-only and exclusion-only queries keep their filters without search words', () => {
+  assert.deepEqual(identities(fixtureSearch({ q: 'black and white' })), [
+    'pumpkin-botanical-outline',
+  ]);
+  assert.deepEqual(identities(fixtureSearch({ q: 'without pumpkin' })), [
+    'gift-kraft-parcel-twine',
+    'gift-ribbon-keepsake',
+    'spider-thread-and-bow',
+  ]);
+  assert.deepEqual(identities(fixtureSearch({ color: 'red' })), ['gift-ribbon-keepsake']);
+});
 test('sorting is deterministic and URL parameters roundtrip with validation', () => {
   const result = search({ sort: 'title', size: 16 });
   assert.deepEqual(

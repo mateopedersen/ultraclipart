@@ -45,14 +45,17 @@ try {
         })),
       };
       report.states.push(state);
-      assert.equal(state.overflow, false, JSON.stringify(state));
-      assert.equal(state.violations.length, 0, JSON.stringify(state));
       await page.screenshot({
         path: resolve(out, `${route.replaceAll('/', '-')}-${width}.png`),
         fullPage: true,
       });
     }
   }
+  assert.deepEqual(
+    report.states.filter((state) => state.overflow || state.violations.length),
+    [],
+    'Every route and viewport must have no horizontal overflow or accessibility violations',
+  );
   await page.goto(base + '/print-size/');
   const form = page.locator('#print-calculator-form'),
     result = page.locator('#print-result');

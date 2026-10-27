@@ -1,0 +1,78 @@
+{
+  "wave": "wave_402",
+  "topic": "hanukkah",
+  "method": "builtin-image-generation",
+  "research": "data/research/hanukkah-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "hanukkah-brass-hanukkiah",
+      "title": "Brass Hanukkiah with Nine Unlit Candles",
+      "alt": "A polished brass hanukkiah holds eight ivory candles in an even row and a taller central helper candle, all unlit.",
+      "description": "Curved brass branches rise from a broad oval foot to nine candle cups. Eight ivory tapers align across the sides, with the central helper candle standing higher above them.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-brass-hanukkiah.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "hanukkah-dreidel-and-gelt",
+      "title": "Wooden Dreidel with Chocolate Gelt",
+      "alt": "A wooden dreidel marked with a blue Hebrew letter stands beside gold-wrapped chocolate coins, including one partly unwrapped coin.",
+      "description": "A blue letter contrasts with the natural wood grain on the dreidel’s broad face. Gold foil coins gather beside its pointed base, with an opened wrapper revealing embossed chocolate.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-dreidel-and-gelt.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "hanukkah-latkes-with-applesauce",
+      "title": "Crisp Latkes with Applesauce",
+      "alt": "Golden potato latkes fill a cream plate beside a blue-patterned bowl of applesauce, a spoon and a parsley sprig.",
+      "description": "Ragged strands of crisp potato give the latkes a textured golden edge. A small blue-patterned bowl of applesauce rests on the same plate beside a silver spoon and bright green parsley.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-latkes-with-applesauce.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "hanukkah-sufganiyot-platter",
+      "title": "Sufganiyot on a Blue Floral Platter",
+      "alt": "Sugar-dusted jelly doughnuts sit on a blue floral platter, with a split doughnut showing its red filling.",
+      "description": "Round doughnuts with red jam centers crowd a deep blue floral serving plate. A split piece at the front exposes the soft crumb and filling beneath its fine dusting of sugar.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-sufganiyot-platter.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "hanukkah-olive-oil-and-wicks",
+      "title": "Oil Cups and Wicks Ready for Hanukkah",
+      "alt": "A bottle of golden oil stands beside eight low glass cups and a raised helper cup on a brass tray, with cotton wicks in front.",
+      "description": "Clear glass cups line a low engraved brass tray, while a ninth cup sits higher on a separate support. A stoppered oil bottle and bundle of pale cotton wicks complete the preparation scene.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-olive-oil-and-wicks.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "hanukkah-candle-preparation-box",
+      "title": "Ivory Candles in a Blue-Lined Box",
+      "alt": "Bundles of ivory taper candles fill an open blue-lined wooden box tied with silver ribbon, with loose candles and a brass snuffer beside it.",
+      "description": "Deep blue lining surrounds neatly bundled ivory tapers in an open wooden case. A silver ribbon crosses the lid, and loose candles lie beside a small brass bell-shaped snuffer.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_402/source/hanukkah-candle-preparation-box.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

@@ -71,7 +71,12 @@ test('fruit categories are separate, searchable and have descriptive metadata an
       if (/-black-and-white-/.test(item.id))
         assert.ok(['Outline', 'Black & White'].includes(item.style));
     }
-    for (const id of copy[topic].featured) assert.ok(group.some((x) => x.id === id));
+    const collection = art.filter((x) => x.topic === topic);
+    for (const id of copy[topic].featured)
+      assert.ok(
+        collection.some((x) => x.id === id),
+        `${topic}: missing featured ${id}`,
+      );
     for (const neighbor of copy[topic].related) assert.ok(art.some((x) => x.topic === neighbor));
     assert.ok(
       group.some((x) => cuteConfidence(x) >= 68),
@@ -113,7 +118,11 @@ test(
     for (const topic of topics) {
       const collection = text(`clipart/${topic}/index.html`);
       assert.ok(collection.includes(`https://ultraclipart.com/clipart/${topic}/`));
-      assert.ok(collection.includes('"numberOfItems":50'));
+      const count = art.filter((item) => item.topic === topic).length;
+      assert.ok(
+        collection.includes(`"numberOfItems":${count}`),
+        `${topic}: expected all ${count} accepted designs, including the preserved owner pack`,
+      );
       assert.doesNotMatch(collection, /content="noindex/);
       for (const item of items.filter((x) => x.topic === topic)) {
         const detail = text(`art/${item.id}/index.html`);

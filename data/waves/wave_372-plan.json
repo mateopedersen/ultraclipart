@@ -1,0 +1,78 @@
+{
+  "wave": "wave_372",
+  "topic": "gratitude",
+  "method": "builtin-image-generation",
+  "research": "data/research/gratitude-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gratitude-welcome-meal",
+      "title": "A Meal to Say Thank You",
+      "alt": "Older man in a teal sweater vest giving a covered casserole to a smiling woman in a mustard hoodie.",
+      "description": "Older man in a teal sweater vest giving a covered casserole to a smiling woman in a mustard hoodie. Use the complete meal exchange in a classroom kindness discussion or a personal neighbor thank-you card.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-welcome-meal.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-wheelchair-friend",
+      "title": "A Thank-You Between Friends",
+      "alt": "Girl in a sage jacket and coral skirt giving a blue wrapped parcel to a smiling friend seated in a wheelchair.",
+      "description": "Girl in a sage jacket and coral skirt giving a blue wrapped parcel to a smiling friend seated in a wheelchair. The complete friendship scene suits a personal appreciation card or a classroom discussion prompt.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-wheelchair-friend.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-pet-companion",
+      "title": "Thankful for a Pet Companion",
+      "alt": "Child in blue checked overalls sitting cross-legged and gently hugging a golden dog with a plain green collar.",
+      "description": "Child in blue checked overalls sitting cross-legged and gently hugging a golden dog with a plain green collar. Use the complete companion scene in a personal gratitude journal or a classroom writing prompt.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-pet-companion.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-sibling-help",
+      "title": "Thankful for a Helpful Sister",
+      "alt": "Red-braided girl in a plum pinafore kneeling to tie the shoe of a smiling boy in a teal sweater and mustard trousers.",
+      "description": "Red-braided girl in a plum pinafore kneeling to tie the shoe of a smiling boy in a teal sweater and mustard trousers. The complete helping action suits a classroom family-kindness activity or a personal appreciation page.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-sibling-help.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-team-clap",
+      "title": "Appreciating a Teammate",
+      "alt": "Three teenagers in teal, rust and lavender clothing, two clapping for a smiling friend holding a blank notebook.",
+      "description": "Three teenagers in teal, rust and lavender clothing, two clapping for a smiling friend holding a blank notebook. Use the complete group in a classroom teamwork-appreciation prompt or a personal encouragement layout.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-team-clap.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-volunteer-handshake",
+      "title": "Thanking a Community Volunteer",
+      "alt": "Silver-haired woman in a rust vest shaking hands with a volunteer in a teal apron beside a box of folded blankets.",
+      "description": "Silver-haired woman in a rust vest shaking hands with a volunteer in a teal apron beside a box of folded blankets. The complete handshake scene suits a classroom community-helper activity or a personal appreciation page.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_372/source/gratitude-volunteer-handshake.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

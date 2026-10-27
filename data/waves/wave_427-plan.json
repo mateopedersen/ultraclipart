@@ -1,0 +1,80 @@
+{
+  "wave": "wave_427",
+  "topic": "election",
+  "method": "builtin-image-generation",
+  "research": "data/research/election-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "election-election-day-megaphone",
+      "title": "Election Day Announcement Megaphone",
+      "alt": "A cream-and-navy megaphone stands beside an Election Day placard and small gold stars.",
+      "description": "The burgundy hand grip angles beneath the wide horn, with a navy strap curling onto the surface beside it. A double-lined border frames the compact cream sign and its two-word message.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_427/source/election-election-day-megaphone.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-community-information-kiosk",
+      "title": "Community Voter Information Kiosk",
+      "alt": "A silver-haired volunteer stands beside a navy-and-cream kiosk marked Voter Info.",
+      "description": "The woman in a mustard jumpsuit rests one hand beside a small blank tablet on the counter. Clear pamphlet holders stand at either end beneath the tall navy header and its simple cream lettering.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_427/source/election-community-information-kiosk.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-outline-equipment-training",
+      "title": "Equipment Practice at a Workbench",
+      "alt": "Black-and-white line art shows an instructor demonstrating a tablet cable beside a control panel while a young adult watches.",
+      "description": "The apron-wearing woman holds the small screen above the complete workbench as the hooded learner leans toward the controls. A closed equipment case and coiled lead provide additional practice props without a named device model.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-equipment-training.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "election-outline-hanging-day-banner",
+      "title": "Hanging an Election Day Banner",
+      "alt": "Two volunteers hang an Election Day fabric banner between freestanding posts in black-and-white line art.",
+      "description": "One person stands on a small folding stool to secure the right-hand rope while the other holds the opposite corner. The outlined cloth droops naturally between the posts above their wide braced bases.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-hanging-day-banner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "election-outline-large-print-ballot",
+      "title": "Reading a Large-Print Sample Sheet",
+      "alt": "Black-and-white line art shows an older woman using a magnifier to read a large Sample sheet at an adjustable desk.",
+      "description": "Round glasses and a patterned cardigan frame the woman's focused expression above the empty oval rows. The desk's broad crossbar and T-shaped feet remain visible beside her wheeled chair and shoes.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-large-print-ballot.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    },
+    {
+      "id": "election-outline-forum-audience",
+      "title": "A Question at a Community Forum",
+      "alt": "Black-and-white line art shows three seated adults and a standing facilitator beside a Community Forum sign.",
+      "description": "A man in a checked shirt raises his hand while a headscarf-wearing woman and a long-haired man listen from separate chairs. The facilitator holds a clipboard beneath the large two-line sign.",
+      "color": "Black",
+      "style": "Outline",
+      "source": "work/production/wave_427/source/election-outline-forum-audience.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "printSeparation": "black-only"
+    }
+  ]
+}

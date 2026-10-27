@@ -13,7 +13,9 @@ const plan = existsSync(directory + '/plan.json')
 const original = out + '/rapor.html';
 if (existsSync(original) && !existsSync(out + '/rapor-2026-10-26.html'))
   writeFileSync(out + '/rapor-2026-10-26.html', readFileSync(original));
-const closed = existsSync(directory + "/closed.json") ? JSON.parse(readFileSync(directory + "/closed.json")) : null;
+const closed = existsSync(directory + '/closed.json')
+  ? JSON.parse(readFileSync(directory + '/closed.json'))
+  : null;
 const config = JSON.stringify({ evidence, plan, closed });
 const readEvidence = (file) => {
   const path = resolve(root, file);
@@ -22,8 +24,11 @@ const readEvidence = (file) => {
 const staticAudit = readEvidence('reports/performance/all-pages-summary.json');
 const imageAudit = readEvidence('reports/image-seo/audit.json');
 const linkAudit = readEvidence('reports/linking/audit.json');
-const staticMatches = plan && staticAudit?.release === plan.release &&
-  imageAudit?.buildDirectory === plan.release && linkAudit?.buildDirectory === plan.release;
+const staticMatches =
+  plan &&
+  staticAudit?.release === plan.release &&
+  imageAudit?.buildDirectory === plan.release &&
+  linkAudit?.buildDirectory === plan.release;
 const trNumber = (number) => Number(number).toLocaleString('tr-TR');
 const staticText = staticMatches
   ? `${trNumber(staticAudit.pages)} HTML sayfası, ${trNumber(staticAudit.distinctLocalImages)} yerel görsel adresi ve ${trNumber(linkAudit.anchors)} bağlantı otomatik denetimden geçti. Görsel ve bağlantı hata sayısı: ${imageAudit.errors.length + linkAudit.errors.length + staticAudit.missing.length}. İndekslenebilir sayfalardaki ${trNumber(imageAudit.indexableCatalogImages)} katalog görselinin şeması kontrol edildi.`

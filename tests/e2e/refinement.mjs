@@ -51,6 +51,15 @@ try {
       if (base.includes('127.0.0.1') || base.includes('localhost'))
         await page.addStyleTag({ content: 'astro-dev-toolbar{display:none!important}' });
       await page.evaluate(() => document.fonts.ready);
+      if (route === '/') {
+        const recent = await page.locator('.home-recent-grid').evaluate((grid) => ({
+          columns: getComputedStyle(grid).gridTemplateColumns.split(' ').length,
+          visible: [...grid.children].filter((card) => getComputedStyle(card).display !== 'none')
+            .length,
+        }));
+        assert.ok(recent.visible > 0, 'Recently Added has visible artwork');
+        assert.equal(recent.visible % recent.columns, 0, 'Recently Added has complete rows');
+      }
       if (route.startsWith('/edit/'))
         await page.locator('.uc-canvas [data-layer]').first().waitFor();
       // Create mounts its artwork library asynchronously. Include those previews
@@ -58,13 +67,14 @@ try {
       if (route === '/create/')
         await page.waitForFunction(() => {
           const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
-          const match = count.match(/^(\d+) of ([\d,]+) artworks$/);
+          const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
           if (!match) return false;
-          const expected = Math.min(24, Number(match[2].replaceAll(',', '')));
+          const expected = Math.min(24, Number(match[3].replaceAll(',', '')));
           const cards = [...document.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
           return (
             expected > 0 &&
-            Number(match[1]) === expected &&
+            (!match[1] || Number(match[1]) === 1) &&
+            Number(match[2]) === expected &&
             cards.length === expected &&
             cards.every((card) => {
               const image = card.querySelector('img');
@@ -111,6 +121,7 @@ try {
           ...document.querySelectorAll('.card-actions .button,.formats a,.az-nav button'),
         ]
           .filter((control) => {
+            if (!control.getClientRects().length) return false;
             const r = control.getBoundingClientRect();
             return r.width < 43.5 || r.height < 43.5;
           })
@@ -192,9 +203,9 @@ try {
   );
   const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url), 'utf8'));
   for (const [route, cap] of [
-    ['/', 12],
+    ['/', 15],
     ['/new/', 32],
-    ['/black-and-white/', 32],
+    ['/black-and-white/', 24],
   ]) {
     await page.goto(base + route);
     await page.evaluate(async () => {
@@ -207,9 +218,15 @@ try {
         }),
       );
     });
-    assert.equal(await page.locator('.gallery > .art-card').count(), Math.min(art.length, cap));
+    assert.equal(
+      await page.locator('.gallery > .art-card').count(),
+      Math.min(art.length, cap),
+      `${route}: initial gallery count`,
+    );
   }
-  report.checks.push('Home and browse galleries enforce their 12/32 card bounds');
+  report.checks.push(
+    'Homepage has complete responsive rows; home/new/monochrome galleries keep 15/32/24 bounds',
+  );
   report.status =
     report.states.some(
       (state) =>

@@ -1,3 +1,16 @@
+# Check existing content before every new production topic — 2026-10-26
+
+Latest explicit owner direction: do not draw a topic that already has content.
+Before starting each keyword, double-check the actual live topic/search results
+and the accepted local catalog, owner-supplied imports, staged sources and queued
+plans. Resolve topic aliases and inspect related results so a different spelling
+does not trigger duplicate production. When existing content fulfills the topic,
+skip new drawings and move to a genuinely missing topic. Apple is explicitly
+skipped: its existing live collection was verified; no new Apple drawing was made.
+Continue quality checks and publication of already-created approved artwork.
+Record skipped topics separately; owner-supplied designs and skipped slots must
+never be relabeled as newly generated originals toward the 5,500 count.
+
 # Local update workflow
 
 The project owner set this workflow on 2026-10-25:
@@ -289,3 +302,21 @@ layout changes; source-CSS-injection experiments are not final compiled evidence
 - Run `node scripts/performance/build.mjs` (package script `performance:build`) for the local release preview. It builds into a separate release directory, runs the normal SEO/link gates and only then atomically switches `work/performance-build`. Never rebuild directly into the directory served by an open preview. The ordinary production build remains unchanged. Preserve failed-build diagnostics and the previous usable preview.
 - The footer bottom row contains the logo with © year underneath, the single centered sentence “Discover clipart for your next creative project.” with its palette emoji, and Back To Top. Do not restore the removed secondary slogan or usage line. The copyright uses the wordmark's navy color and 700 weight. Keep desktop centers aligned and the mobile stack centered.
 - The bottom Cookie Settings link was removed at the owner's request; Cookie Policy remains in Help and contains the working settings button. Keep consent choices, privacy access and user storage intact.
+
+## Deferred owner-supplied Marvel completions — 2026-10-26
+
+The owner requested publication of the ready individual drawings and deferred 134 missing designs after the built-in image tool reached its daily limit. Read `docs/content/marvel-completion-backlog.md` and `design-assets/marvel-completion/pending-prompt-set.json` before continuing Avengers, Avengers: Doomsday, Doctor Doom or the latest Hexed package. Recheck current catalog counts and hashes; do not redraw published or newly supplied scenes. The three partial Marvel subjects are not complete 50-design sets.
+
+## Preserve concurrent content releases
+
+Before publishing owner-supplied content, refresh the latest main branch and preserve every accepted artwork, verified media representation, topic and newer collection copy. Compare sources added by concurrent releases against the incoming sources before merging. `scripts/merge-reviewed-content.mjs` merges only the reviewed incoming scope and rejects duplicate artwork IDs or incomplete representations. Never replace a newer catalog or publication manifest with an earlier staging snapshot.
+
+## New supplied Donald Trump package — 2026-10-26
+
+The owner explicitly authorized live publication of the reviewed 100-artwork Donald Trump package on 2026-10-26 (“onayliyorum canliya al”). Publication may proceed without another approval. Read `docs/content/donald-trump-import.md` and `work/imports/donald-trump-100/local-state.json` before resuming it. Preserve the previous 134-drawing Marvel backlog. Do not confuse the local 13,004-artwork preview with the live catalog or treat staged media as CDN-verified. Refresh current main and current production before release; record the actual successful live revision and Pages file count.
+
+Latest Trump copy correction: the owner removed the repeated per-artwork sentence “The scene is an imagined illustration.” Keep scene-specific descriptions without this or equivalent repeated boilerplate. The collection-level context and factual character/costume identification remain.
+
+## Current full release authorization — 2026-10-27
+
+The owner explicitly authorized publication of all accumulated changes and preservation of newer main-branch content. Do not submit to Search Console until the owner asks. This authorization supersedes earlier local-only restrictions for this batch. Preserve user data and all accepted artwork.

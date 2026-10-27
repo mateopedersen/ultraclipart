@@ -1,0 +1,77 @@
+{
+  "wave": "wave_429",
+  "topic": "nutcracker",
+  "method": "builtin-image-generation",
+  "research": "data/research/nutcracker-2026-10-27.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "nutcracker-crowned-walnut-king",
+      "title": "Crowned Wooden King Nutcracker",
+      "alt": "Wooden king nutcracker with an open gold crown, burgundy cape, white beard and long staff.",
+      "description": "An open crown rises above a stern wooden face and curled white moustache. A burgundy cape, faceted boots and long staff frame the king's broad silhouette.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-crowned-walnut-king.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-barrel-drummer",
+      "title": "Wooden Drummer Nutcracker",
+      "alt": "Green-jacketed drummer nutcracker with a blue cap, cream straps and a red drum.",
+      "description": "A red drum hangs from cream straps across the drummer's green jacket. Rounded cheeks, a curled black moustache and short black boots give the figure a compact shape.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-barrel-drummer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-braided-winter-queen",
+      "title": "Braided Queen Nutcracker",
+      "alt": "Tall wooden queen nutcracker with silver braids, a fan-shaped crown and a teal-and-gold coat.",
+      "description": "Silver braids hang beside the queen's long painted face. A fan-shaped crown, narrow boots and an open gold skirt create a tall, tapered outline.",
+      "color": "Gold",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-braided-winter-queen.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-seated-harlequin",
+      "title": "Seated Harlequin Nutcracker",
+      "alt": "Plum-and-cream harlequin nutcracker seated on a wooden stool and holding a pale ball.",
+      "description": "The seated harlequin balances a pale ball on one raised hand. Diamond-patterned clothing, a two-point bell hat and long curled shoes spread the composition sideways.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-seated-harlequin.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-baker-with-loaf",
+      "title": "Baker Nutcracker with Braided Bread",
+      "alt": "Wooden baker nutcracker in a tall chef hat and terracotta apron holding a braided loaf.",
+      "description": "A glossy braided loaf rests on the baker's oval board. The pleated chef hat, auburn beard and flour-marked apron distinguish this round-bodied wooden figure.",
+      "color": "Orange",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-baker-with-loaf.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "nutcracker-lantern-miner",
+      "title": "Lantern Miner Nutcracker",
+      "alt": "Grey-jacketed miner nutcracker with an ochre helmet, lantern, walking stick and stone-shaped base.",
+      "description": "The miner leans forward beneath an ochre helmet with a round front lamp. A brass lantern, rough walking stick and uneven base reinforce the sturdy, weathered design.",
+      "color": "Gray",
+      "style": "Color",
+      "source": "work/production/wave_429/source/nutcracker-lantern-miner.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ]
+}

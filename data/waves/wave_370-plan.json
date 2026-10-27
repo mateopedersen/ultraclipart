@@ -1,0 +1,78 @@
+{
+  "wave": "wave_370",
+  "topic": "gratitude",
+  "method": "builtin-image-generation",
+  "research": "data/research/gratitude-2026-10-26.json",
+  "maxPdfBytes": 997000,
+  "minimumJpxQualityDb": 48,
+  "maximumWeightedCmykRmse": 1.8,
+  "items": [
+    {
+      "id": "gratitude-journal-writer",
+      "title": "Writing a Gratitude Journal",
+      "alt": "Woman in a rust jumpsuit writing in an open journal at a round table with a mug and small leafy plant.",
+      "description": "Woman in a rust jumpsuit writing in an open journal at a round table with a mug and small leafy plant. Use the complete seated scene in a personal reflection page or a classroom journal-writing prompt.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-journal-writer.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-child-drawing-note",
+      "title": "Drawing a Thank-You Picture",
+      "alt": "Red-haired boy in a mustard sweater kneeling at a green craft table and drawing a heart on a folded card.",
+      "description": "Red-haired boy in a mustard sweater kneeling at a green craft table and drawing a heart on a folded card. The complete craft scene suits a classroom thank-you activity or a personal appreciation page.",
+      "color": "Yellow",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-child-drawing-note.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-thank-teacher",
+      "title": "A Thank-You for a Teacher",
+      "alt": "Girl in a mint pinafore handing a heart-decorated card to a smiling teacher in a teal cardigan and tan trousers.",
+      "description": "Girl in a mint pinafore handing a heart-decorated card to a smiling teacher in a teal cardigan and tan trousers. Use the two-person exchange in a classroom teacher-appreciation activity or personal card.",
+      "color": "Green",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-thank-teacher.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-grandparent-hug",
+      "title": "A Grateful Hug for Grandpa",
+      "alt": "Boy in sage overalls hugging a smiling gray-bearded grandfather in a plaid shirt beside a complete wooden bench.",
+      "description": "Boy in sage overalls hugging a smiling gray-bearded grandfather in a plaid shirt beside a complete wooden bench. The family scene suits a personal appreciation message or a classroom discussion about people who help us.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-grandparent-hug.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-neighbor-bread",
+      "title": "Thanking a Helpful Neighbor",
+      "alt": "Silver-haired woman in a plum cardigan offering cloth-wrapped bread to an older neighbor in a green vest.",
+      "description": "Silver-haired woman in a plum cardigan offering cloth-wrapped bread to an older neighbor in a green vest. Use the complete neighbor exchange in a classroom kindness prompt or a personal thank-you layout.",
+      "color": "Purple",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-neighbor-bread.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    },
+    {
+      "id": "gratitude-bus-driver-card",
+      "title": "Thanking the Bus Driver",
+      "alt": "Boy in a red raincoat offering a heart card to a smiling uniformed bus driver with keys and one hand over her chest.",
+      "description": "Boy in a red raincoat offering a heart card to a smiling uniformed bus driver with keys and one hand over her chest. The complete appreciation scene suits a classroom community-helper activity or a personal card.",
+      "color": "Blue",
+      "style": "Color",
+      "source": "work/production/wave_370/source/gratitude-bus-driver-card.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli"
+    }
+  ],
+  "deferred": []
+}

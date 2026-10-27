@@ -1,0 +1,571 @@
+{
+  "wave": "wave_365",
+  "status": "PUBLISHED",
+  "actualExportedDrawings": 6,
+  "resumed": 4,
+  "screenReview": "PASS",
+  "physicalPrintProof": false,
+  "profileSha256": "7f822b354f3f4081e3b1dadd381c9f16d583257d1574e583be7d0e3433a6b45b",
+  "profileEmbedded": false,
+  "artworks": [
+    {
+      "id": "cranberry-upside-down-cake",
+      "title": "Cranberry Upside-Down Cake",
+      "alt": "Round golden cranberry upside-down cake with a red fruit top and a cut wedge on a complete cream footed stand.",
+      "description": "Round golden cranberry upside-down cake with a red fruit top and a cut wedge on a complete cream footed stand. Use the cake and cut surface in a personal dessert menu or a classroom food-description activity.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_365/source/cranberry-upside-down-cake.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 1000,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "acbd0b61eaff6a10657ea90cf9dfda2726a44ddae897a6e6a8f84b5a7acaac04",
+      "inputSignature": "c7dfd7fc63f0ffa8a7d2b9a0444af49580e9402c09fc5b81f7ad2b7866bf8842",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 925314,
+        "weightedCmykRmse": 1.382622
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1460746,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1170600,
+          "weightedCmykRmse": 0.766465
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1100008,
+          "weightedCmykRmse": 0.908482
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1004556,
+          "weightedCmykRmse": 1.098308
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 925314,
+          "weightedCmykRmse": 1.382622
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        35,
+        161,
+        1219,
+        1141
+      ],
+      "image": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_365/exports/cranberry-upside-down-cake.pdf",
+          "bytes": 925314,
+          "sha256": "2c6c0d414380fa4fbe1d80f742c6acce2cf6d75881930db7075c17739ac1c0da"
+        },
+        "webp": {
+          "path": "work/production/wave_365/exports/cranberry-upside-down-cake.webp",
+          "bytes": 1387174,
+          "sha256": "ea2ad6018abdaba03d1ff259f78d86a9ea58f21f169d20ec80a05b7003c480d7"
+        },
+        "thumb": {
+          "path": "work/production/wave_365/exports/cranberry-upside-down-cake-thumb.webp",
+          "bytes": 75636,
+          "sha256": "c1e1f4c9cbe52b6404cf1beee092da6aeb7599d6bc902726323df4160d9b9a15"
+        }
+      },
+      "proofSha256": "784ed4350b24971231350dc32bec94593b3de6b84b6db3b4f4d8369cc5976817",
+      "pairMeanRgbDifference": 5.11608
+    },
+    {
+      "id": "cranberry-pistachio-biscotti",
+      "title": "Cranberry Pistachio Biscotti",
+      "alt": "Long cranberry-pistachio biscotti with red fruit and green nut pieces leaning beside a white tea cup and saucer.",
+      "description": "Long cranberry-pistachio biscotti with red fruit and green nut pieces leaning beside a white tea cup and saucer. The distinct baked slices suit a personal snack menu or a classroom bakery vocabulary card.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_365/source/cranberry-pistachio-biscotti.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "1640a6c6240d1597c0973dab61e0807dab1780c4edd5104fee98ee3f6d8d0a3b",
+      "inputSignature": "01aa8c3d275ca9a1c2e8cac7fc1069784cb5dfc3dc7a4ba62b4152f0b3db83da",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 843537,
+        "weightedCmykRmse": 0.744178
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1054951,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 843537,
+          "weightedCmykRmse": 0.744178
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        33,
+        80,
+        1503,
+        954
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_365/exports/cranberry-pistachio-biscotti.pdf",
+          "bytes": 843537,
+          "sha256": "15c77b88f06f00976853021e24275a83392a47c41bd12bc4ff4e974a04cc90f6"
+        },
+        "webp": {
+          "path": "work/production/wave_365/exports/cranberry-pistachio-biscotti.webp",
+          "bytes": 1752336,
+          "sha256": "f88a89a8378fe0a07c8aead08ece540cc383438e9a843220fee6a85822415fb5"
+        },
+        "thumb": {
+          "path": "work/production/wave_365/exports/cranberry-pistachio-biscotti-thumb.webp",
+          "bytes": 57916,
+          "sha256": "6c978d0e4df18c23ff8f0d848a54f6a4508de975ac2bd7bfba662ee7145d9c0a"
+        }
+      },
+      "proofSha256": "fc70e2b41d90b443e3fb4e60b898a40fc99e3d95b0e913f82542bd86f75b1ade",
+      "pairMeanRgbDifference": 4.88669
+    },
+    {
+      "id": "cranberry-cheese-crostini",
+      "title": "Cranberry Cheese Crostini",
+      "alt": "Three toasted baguette rounds with soft white cheese, red cranberry relish and small herb sprigs on a slate board.",
+      "description": "Three toasted baguette rounds with soft white cheese, red cranberry relish and small herb sprigs on a slate board. Use the complete appetizer arrangement in a personal menu or a classroom ingredient-description task.",
+      "color": "Red",
+      "style": "Color",
+      "source": "work/production/wave_365/source/cranberry-cheese-crostini.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1536,
+      "height": 1024,
+      "pdfWidth": 1000,
+      "pdfHeight": 667,
+      "sourceType": "raster",
+      "sourceSha256": "f7a4a2b35502e0b8797e37235746716afc45bedc332d2a00a2e5e0df03d520dc",
+      "inputSignature": "eb22a6789bfb110a20260b40a70d6049453026f4332b8890c494ba18e0675ddc",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": null,
+        "losslessCmyk": true,
+        "bytes": 987138,
+        "weightedCmykRmse": 0
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 987138,
+          "weightedCmykRmse": 0
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        43,
+        98,
+        1501,
+        985
+      ],
+      "image": {
+        "width": 1000,
+        "height": 667,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_365/exports/cranberry-cheese-crostini.pdf",
+          "bytes": 987138,
+          "sha256": "d827f0a2d892ae3eeae91d8530613a26d0311358c9f43977c824a7c86a24f66a"
+        },
+        "webp": {
+          "path": "work/production/wave_365/exports/cranberry-cheese-crostini.webp",
+          "bytes": 1544828,
+          "sha256": "b0a65dc2dc68647558b969c1fba6ebe16d24d011585e2f413142015b547531b2"
+        },
+        "thumb": {
+          "path": "work/production/wave_365/exports/cranberry-cheese-crostini-thumb.webp",
+          "bytes": 47156,
+          "sha256": "2f2c89582f7d5f31ff24f63f818e1167dc8187e978fa5c29d725fd6f72a4babe"
+        }
+      },
+      "proofSha256": "8b8d54ea6e989a6af72eed1ba2823babc3070611257a8fbaa2b01e373404da1c",
+      "pairMeanRgbDifference": 3.93941
+    },
+    {
+      "id": "cranberry-baked-brie",
+      "title": "Baked Brie with Cranberries",
+      "alt": "Soft brie wheel with a cut wedge, cranberry topping and chopped nuts beside crackers on a round wooden board.",
+      "description": "Soft brie wheel with a cut wedge, cranberry topping and chopped nuts beside crackers on a round wooden board. The visible cheese and topping suit a personal holiday menu or a classroom food-description prompt.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_365/source/cranberry-baked-brie.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1374,
+      "height": 1145,
+      "pdfWidth": 1000,
+      "pdfHeight": 833,
+      "sourceType": "raster",
+      "sourceSha256": "2a64b351a1176b1fb631b275dd997276e7ccfcf7cdd8cf67f27ec26460317a5d",
+      "inputSignature": "40a2c170b8d1a2d1c4ab063ae94a8950b82cf79991ecf4201457bfb3bd791c12",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 50,
+        "losslessCmyk": false,
+        "bytes": 941155,
+        "weightedCmykRmse": 1.065652
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1352997,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1092590,
+          "weightedCmykRmse": 0.742648
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1028113,
+          "weightedCmykRmse": 0.879346
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 941155,
+          "weightedCmykRmse": 1.065652
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        63,
+        109,
+        1319,
+        1069
+      ],
+      "image": {
+        "width": 1000,
+        "height": 833,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_365/exports/cranberry-baked-brie.pdf",
+          "bytes": 941155,
+          "sha256": "2b93b6cc74d8bf258a27df59337eb13186d8bd67d7766426ced5e655913fbb70"
+        },
+        "webp": {
+          "path": "work/production/wave_365/exports/cranberry-baked-brie.webp",
+          "bytes": 1490344,
+          "sha256": "ef5d511f7704cab021323e649e4f971870641d6ed0ed61a84300ef800855bc7d"
+        },
+        "thumb": {
+          "path": "work/production/wave_365/exports/cranberry-baked-brie-thumb.webp",
+          "bytes": 68582,
+          "sha256": "688cea0145418f64531fec79132eefaf721c5848b9730bae21d222158ee784e3"
+        }
+      },
+      "proofSha256": "a7ccb5f8a0c346f6c886edb1e6bffdd5ca8bd74f624231666f5b8edd71a9f551",
+      "pairMeanRgbDifference": 4.78431
+    },
+    {
+      "id": "cranberry-oat-granola",
+      "title": "Cranberry Oat Granola",
+      "alt": "Open hinged glass jar of oat granola, dried cranberries and pale kernels beside a wooden scoop of the mixture.",
+      "description": "Open hinged glass jar of oat granola, dried cranberries and pale kernels beside a wooden scoop of the mixture. Use the complete dry-ingredient arrangement in a personal breakfast menu or a classroom storage vocabulary task.",
+      "color": "Brown",
+      "style": "Color",
+      "source": "work/production/wave_365/source/cranberry-oat-granola.png",
+      "printMaxEdgePx": 980,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1312,
+      "height": 1199,
+      "pdfWidth": 980,
+      "pdfHeight": 896,
+      "sourceType": "raster",
+      "sourceSha256": "f4f17d729949467593edaeb91ff08ac879dc67024498494bc98178d8011648d4",
+      "inputSignature": "329eea4b073b516c6a5eb8f99e45ba7bb69ff9a7f51dfd9f4a62c287ca40353e",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 48,
+        "losslessCmyk": false,
+        "bytes": 978725,
+        "weightedCmykRmse": 1.369217
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1477135,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 1204141,
+          "weightedCmykRmse": 0.760539
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 52,
+          "losslessCmyk": false,
+          "bytes": 1141630,
+          "weightedCmykRmse": 0.90055
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 50,
+          "losslessCmyk": false,
+          "bytes": 1048463,
+          "weightedCmykRmse": 1.093815
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 48,
+          "losslessCmyk": false,
+          "bytes": 978725,
+          "weightedCmykRmse": 1.369217
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        61,
+        80,
+        1240,
+        1127
+      ],
+      "image": {
+        "width": 980,
+        "height": 896,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_365/exports/cranberry-oat-granola.pdf",
+          "bytes": 978725,
+          "sha256": "e0aa5c1407a2b812eee604e16236a496d03966e933c6b756a79f2c208724c447"
+        },
+        "webp": {
+          "path": "work/production/wave_365/exports/cranberry-oat-granola.webp",
+          "bytes": 1423566,
+          "sha256": "f00a2a910fd8c565491efa8edb62a2f72d286c2bd1d182f14eba9d6eb3f38924"
+        },
+        "thumb": {
+          "path": "work/production/wave_365/exports/cranberry-oat-granola-thumb.webp",
+          "bytes": 83426,
+          "sha256": "e5f703fbf1ff9998e00922edea5eebd8100fec86565857e0c72184e43a750788"
+        }
+      },
+      "proofSha256": "3ea158881b52ef39e038f563f92224d3ecac356617d588ed132d9c41ba209bf8",
+      "pairMeanRgbDifference": 2.96847
+    },
+    {
+      "id": "cranberry-yogurt-parfait",
+      "title": "Cranberry Yogurt Parfait",
+      "alt": "Clear footed glass with ivory yogurt, red cranberry compote and golden granola layers beside a silver spoon.",
+      "description": "Clear footed glass with ivory yogurt, red cranberry compote and golden granola layers beside a silver spoon. The layered dessert suits a personal breakfast menu or a classroom sequence-description activity.",
+      "color": "White",
+      "style": "Color",
+      "source": "work/production/wave_365/source/cranberry-yogurt-parfait.png",
+      "printMaxEdgePx": 1000,
+      "alphaCompression": "zopfli",
+      "topic": "cranberry",
+      "width": 1254,
+      "height": 1254,
+      "pdfWidth": 1000,
+      "pdfHeight": 1000,
+      "sourceType": "raster",
+      "sourceSha256": "61bcb8494127352aa78ec8e30446f8390e46efc8527824daebdf20ea5d8f53a6",
+      "inputSignature": "8593d7100aa0ce07da2deb6f473c38c6f94845abc66d59516cfea324fce178da",
+      "state": "FORMAT_PREFLIGHT_PASSED",
+      "selectedEncoding": {
+        "numResolutions": 6,
+        "qualityDb": 54,
+        "losslessCmyk": false,
+        "bytes": 810986,
+        "weightedCmykRmse": 0.858476
+      },
+      "trials": [
+        {
+          "numResolutions": 6,
+          "qualityDb": null,
+          "losslessCmyk": true,
+          "bytes": 1050601,
+          "weightedCmykRmse": 0
+        },
+        {
+          "numResolutions": 6,
+          "qualityDb": 54,
+          "losslessCmyk": false,
+          "bytes": 810986,
+          "weightedCmykRmse": 0.858476
+        }
+      ],
+      "webpExactRgba": true,
+      "pdfAlphaExact": true,
+      "nativeResolutionPreserved": false,
+      "webpNativeResolutionPreserved": true,
+      "pdfAt300Ppi": true,
+      "visibleBounds": [
+        242,
+        77,
+        1157,
+        1181
+      ],
+      "image": {
+        "width": 1000,
+        "height": 1000,
+        "components": 4,
+        "alphaMask": true,
+        "profile": "GRACoL2006_Coated1v2 (registered output intent)",
+        "colorSpace": "Device CMYK",
+        "iccBytes": 0,
+        "iccSha256": null,
+        "registeredCondition": "CGATS TR 006"
+      },
+      "files": {
+        "pdf": {
+          "path": "work/production/wave_365/exports/cranberry-yogurt-parfait.pdf",
+          "bytes": 810986,
+          "sha256": "09cf1c6f233098618aff77d83c697bb4f74899cc5647ce8baf2eed504f1f2e2a"
+        },
+        "webp": {
+          "path": "work/production/wave_365/exports/cranberry-yogurt-parfait.webp",
+          "bytes": 964540,
+          "sha256": "354d2165178db501b183aeb36c5ad3d39e742dc46220035f18cb61c7f6ec0cfc"
+        },
+        "thumb": {
+          "path": "work/production/wave_365/exports/cranberry-yogurt-parfait-thumb.webp",
+          "bytes": 59198,
+          "sha256": "562e57fe5a646d20e7f24a36afcc5a2f0a378052c2711267f6800046fdd88c51"
+        }
+      },
+      "proofSha256": "e0f4ef9990079689681ad2991dfac93c399144370b6a8e11215978aa146360ef",
+      "pairMeanRgbDifference": 3.89239
+    }
+  ],
+  "deferred": [],
+  "screenReviewedAt": "2026-10-26T05:56:43.886387+00:00",
+  "reviewerType": "AI_AGENT_NOT_HUMAN",
+  "createdAt": "2026-10-26T05:59:26.789Z",
+  "liveRevision": "e87b98c63e0bbca7aa5af2e8da495ceac5787b33",
+  "liveVerifiedAt": "2026-10-26T09:32:49.360114+00:00"
+}

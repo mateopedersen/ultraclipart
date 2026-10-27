@@ -20,14 +20,12 @@ try {
   });
   const cookie = page.locator('[data-cookie-choice=necessary]:visible');
   if (await cookie.count()) await cookie.first().click();
-  const cards = await page
-    .locator('[data-studio-scene]')
-    .evaluateAll((nodes) =>
-      nodes.map((n) => ({
-        id: n.dataset.studioScene,
-        title: n.querySelector('.studio-scene-label strong').textContent,
-      })),
-    );
+  const cards = await page.locator('[data-studio-scene]').evaluateAll((nodes) =>
+    nodes.map((n) => ({
+      id: n.dataset.studioScene,
+      title: n.querySelector('.studio-scene-label strong').textContent,
+    })),
+  );
   assert.equal(cards.length, 18);
   while (await page.locator('[data-scene-more]').isVisible())
     await page.locator('[data-scene-more]').click();
