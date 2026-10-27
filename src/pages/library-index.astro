@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import CatalogCount from '../components/CatalogCount.astro';
 import TeacherSymbol from '../components/TeacherSymbol.astro';
 import { publishedArt, topics } from '../lib/catalog';
-import { indexableTopics } from '../lib/sitemaps';
+import { directoryArtwork, indexableTopics } from '../lib/sitemaps';
 import { guides } from '../lib/guides';
 import { infoPages } from '../lib/info-pages';
 import { structuredData, breadcrumbs } from '../lib/structured-data';
@@ -21,6 +21,7 @@ for (const topic of subjects) {
   groups.set(letter, group);
 }
 const groupsByLetter = [...groups];
+const individualArtwork = directoryArtwork(publishedArt, topics);
 const highlights = [
   'book-and-feather-quill-playful-clipart',
   'floral-heart-roses-wreath-clipart',
@@ -192,6 +193,36 @@ const information = [
         No subjects match. Try a shorter word or clear your search.
       </p>
     </section>
+
+    {individualArtwork.length > 0 && (
+      <section id="individual-artwork" aria-labelledby="individual-artwork-heading">
+        <div class="library-section-heading">
+          <div>
+            <h2 id="individual-artwork-heading">More Artwork to Explore</h2>
+            <p>Discover individual illustrations from our growing subjects.</p>
+          </div>
+        </div>
+        <ul class="library-individual-artwork">
+          {individualArtwork.map((item) => (
+            <li>
+              <a href={`/art/${item.id}/`} data-index-artwork>
+                <img
+                  src={item.thumb}
+                  srcset={item.thumbSrcSet}
+                  sizes="88px"
+                  alt={item.alt}
+                  title={item.title}
+                  width="88"
+                  height="88"
+                  loading="lazy"
+                />
+                <span>{item.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
 
     <section id="creative-tools" aria-labelledby="tools-heading">
       <div class="library-section-heading">

@@ -224,6 +224,39 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
 }
+.library-individual-artwork {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.library-individual-artwork li {
+  min-width: 0;
+}
+.library-individual-artwork a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  padding: 12px;
+  border: 1px solid #cbddf2;
+  border-radius: 14px;
+  background: #f7faff;
+  color: #244d7f;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+.library-individual-artwork img {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+}
 .library-tool-grid > a {
   display: flex;
   align-items: center;
@@ -352,6 +385,7 @@
     gap: 12px;
   }
   .library-letter-group ul,
+  .library-individual-artwork,
   .library-tool-grid,
   .library-guide-grid,
   .library-information ul {

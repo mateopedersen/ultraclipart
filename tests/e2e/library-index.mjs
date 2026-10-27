@@ -2,7 +2,7 @@ import { chromium, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert/strict';
-import { indexableTopics } from '../../src/lib/sitemaps.ts';
+import { directoryArtwork, indexableTopics } from '../../src/lib/sitemaps.ts';
 const base = process.env.BASE_URL || 'http://127.0.0.1:4323';
 if (!/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(base)) throw new Error('Local preview only');
 const json = (name) => JSON.parse(readFileSync(`data/${name}`, 'utf8'));
@@ -11,6 +11,12 @@ const subjects = indexableTopics(json('art.json'), [
   ...json('extra-topics.json'),
 ]);
 const expected = subjects.map((s) => `/clipart/${s.slug}/`).sort();
+const individualTargets = directoryArtwork(json('art.json'), [
+  ...json('topics.json').topics,
+  ...json('extra-topics.json'),
+])
+  .map((item) => `/art/${item.id}/`)
+  .sort();
 const out = 'reports/library-index';
 mkdirSync(out, { recursive: true });
 const report = {
@@ -46,6 +52,12 @@ for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
         .locator('[data-index-subject] a')
         .evaluateAll((links) => links.map((link) => link.getAttribute('href')).sort());
       assert.deepEqual(targets, expected);
+      assert.deepEqual(
+        await page
+          .locator('[data-index-artwork]')
+          .evaluateAll((links) => links.map((link) => link.getAttribute('href')).sort()),
+        individualTargets,
+      );
       assert.equal(await page.locator('main a[href^="/search/"]').count(), 0);
       const bounds = await page.locator('.library-index').evaluate((root) => {
         const problems = [];
@@ -112,6 +124,7 @@ for (const [engine, implementation] of Object.entries({ chromium, webkit })) {
     const crawler = await nojs.newPage();
     await crawler.goto(`${base}/library-index/`);
     assert.equal(await crawler.locator('[data-index-subject] a').count(), subjects.length);
+    assert.equal(await crawler.locator('[data-index-artwork]').count(), individualTargets.length);
     assert.equal(await crawler.locator('[data-index-subject]:visible').count(), subjects.length);
     await expect(crawler.locator('[data-index-filter]')).toBeHidden();
     report.noJavaScript.push({ engine, subjects: subjects.length, allLinksVisible: true });

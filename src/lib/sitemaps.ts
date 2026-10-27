@@ -27,6 +27,13 @@ export function indexableTopics<T extends Topic>(art: Artwork[], topics: T[]): T
   for (const item of approvedArt(art)) counts.set(item.topic, (counts.get(item.topic) ?? 0) + 1);
   return topics.filter((topic) => (counts.get(topic.slug) ?? 0) >= 50);
 }
+
+/** Published individual works still need an HTML discovery path while their
+ * subject is below the collection threshold. Never expose drafts as a bridge. */
+export function directoryArtwork<T extends Artwork>(art: T[], topics: Topic[]): T[] {
+  const indexed = new Set(indexableTopics(art, topics).map((topic) => topic.slug));
+  return art.filter((item) => item.published && item.indexable && !indexed.has(item.topic));
+}
 const absolute = (path: string) => new URL(path, SITE).href;
 const artUrl = (item: Artwork) => absolute(`art/${encodeURIComponent(item.id)}/`);
 

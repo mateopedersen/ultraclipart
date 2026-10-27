@@ -7,6 +7,7 @@ import {
   sitemapIndex,
   xmlEscape,
   indexableTopics,
+  directoryArtwork,
   sitemapDocuments,
   partitionSitemapEntries,
 } from '../src/lib/sitemaps.ts';
@@ -18,6 +19,17 @@ const example = {
   published: true,
   indexable: true,
 };
+
+test('published works remain discoverable before their subject is a complete collection', () => {
+  const complete = Array.from({ length: 50 }, (_, i) => ({ ...example, id: `full-${i}` }));
+  const growing = { ...example, id: 'first-new-work', topic: 'new-subject' };
+  const draft = { ...growing, id: 'draft', published: false };
+  const noindex = { ...growing, id: 'private', indexable: false };
+  const topics = [{ slug: 'pumpkin' }, { slug: 'new-subject' }];
+  assert.deepEqual(directoryArtwork([...complete, growing, draft, noindex], topics), [growing]);
+  const completed = Array.from({ length: 50 }, (_, i) => ({ ...growing, id: `new-${i}` }));
+  assert.deepEqual(directoryArtwork([...complete, ...completed], topics), []);
+});
 
 test('growing catalogs split automatically while retaining the first sitemap URLs', () => {
   const art = Array.from({ length: 50001 }, (_, index) => ({ ...example, id: `growing-${index}` }));
