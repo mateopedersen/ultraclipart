@@ -49,7 +49,7 @@ jobs:
             const response = await page.goto(process.env.BASE_URL + '/create/', { waitUntil: 'domcontentloaded', timeout: 30000 });
             assert.equal(response.status(), 200);
             assert((await response.text()).includes('/__ssr-client/' + process.env.RELEASE_REVISION + '/'));
-            await page.locator('[data-studio-launch="studio"]').click();
+            await page.getByRole('link', { name: /^Open Studio Pro/ }).click();
             await page.locator('.uc-editor:not([aria-busy=true])').waitFor({ state: 'visible', timeout: 30000 });
             await page.locator('[data-panel=studio]').click();
             await page.locator('[data-studio-tool]').selectOption('composer');
