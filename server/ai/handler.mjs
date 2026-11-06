@@ -13,7 +13,8 @@ const COOKIE = '__Host-uc_ai';
 const encoder = new TextEncoder();
 // A short failure cooldown must never override a longer budget shutdown.
 const extendCircuit = (db, until) =>
-  db.prepare('UPDATE ai_control SET blocked_until=MAX(blocked_until,?1) WHERE id=1')
+  db
+    .prepare('UPDATE ai_control SET blocked_until=MAX(blocked_until,?1) WHERE id=1')
     .bind(until)
     .run();
 export class ApiError extends Error {
@@ -459,8 +460,7 @@ export async function handleAi(request, env, context) {
     )
       .bind(job, actual)
       .run();
-    if (actual > RESERVATION)
-      await extendCircuit(env.AI_DB, Date.parse(resetAt));
+    if (actual > RESERVATION) await extendCircuit(env.AI_DB, Date.parse(resetAt));
     context?.waitUntil(
       env.AI_DB.prepare('DELETE FROM ai_jobs WHERE created<?1')
         .bind(now - 7 * 86400000)

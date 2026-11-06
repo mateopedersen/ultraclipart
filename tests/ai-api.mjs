@@ -336,10 +336,15 @@ test('an admitted failed request cannot shorten a longer budget shutdown', async
     for (let i = 1; i <= 2; i++) {
       const who = { day: '2000-01-01', visitor: 'old-' + i, network: 'old-' + i };
       await reserve(h.d, who, settings({}), Date.now(), 'old-' + i);
-      h.d.raw.prepare("UPDATE ai_jobs SET status='failed',error_code='service_unavailable' WHERE id=?").run('old-' + i);
+      h.d.raw
+        .prepare("UPDATE ai_jobs SET status='failed',error_code='service_unavailable' WHERE id=?")
+        .run('old-' + i);
     }
     assert.equal((await handleAi(h.request(), h.env)).status, 503);
-    assert.equal(h.d.raw.prepare('SELECT blocked_until FROM ai_control').get().blocked_until, dayEnd);
+    assert.equal(
+      h.d.raw.prepare('SELECT blocked_until FROM ai_control').get().blocked_until,
+      dayEnd,
+    );
   } finally {
     globalThis.fetch = saved;
   }
@@ -349,12 +354,14 @@ test('ordinary moderation declines retain reservations without closing the circu
   const saved = globalThis.fetch;
   globalThis.fetch = async () => turnstileSuccess();
   try {
-    const h = await harness(
-      () => Response.json({ response: { allowed: false } }),
-      { MAX_GENERATIONS_PER_VISITOR: '10' },
-    );
+    const h = await harness(() => Response.json({ response: { allowed: false } }), {
+      MAX_GENERATIONS_PER_VISITOR: '10',
+    });
     for (let i = 1; i <= 3; i++) {
-      const result = await handleAi(h.request(valid, { 'CF-Connecting-IP': '192.0.2.' + i }), h.env);
+      const result = await handleAi(
+        h.request(valid, { 'CF-Connecting-IP': '192.0.2.' + i }),
+        h.env,
+      );
       assert.equal(result.status, 422);
     }
     assert.equal(h.d.raw.prepare('SELECT SUM(reserved) AS total FROM ai_jobs').get().total, 750);
