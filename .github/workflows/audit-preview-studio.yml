@@ -1,0 +1,60 @@
+name: Verify Studio on the isolated Pages preview
+on:
+  push:
+    branches: [codex/november-studio-preview-20261106]
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
+      options: --user 1001
+    timeout-minutes: 10
+    env:
+      BASE_URL: https://65eccf99.ultraclipart.pages.dev
+      RELEASE_REVISION: bb8bd12b3100ea7e4f8416d46c2103992fa50d2b
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 24.19.0
+      - run: pnpm install --frozen-lockfile
+      - name: Verify the preview and one published fixture
+        run: |
+          curl --fail --silent --show-error --max-time 25 "$BASE_URL/delivery-release.json" --output /tmp/preview-release.json
+          node --input-type=module -e 'import fs from "node:fs";import assert from "node:assert/strict";const x=JSON.parse(fs.readFileSync("/tmp/preview-release.json"));assert.equal(x.controlRevision,process.env.RELEASE_REVISION);assert.equal(x.verifiedRoot,"3bfb66bdc4312b6be9b4d4a91c3948ed21879cc45dc1b7c058f018449f2fdd4f")'
+          fixture=public/catalog/volleyball/classic-white-volleyball-realistic-clipart.webp
+          mkdir -p "$(dirname "$fixture")"
+          curl --fail --silent --show-error --max-time 25 --max-filesize 1500000 "https://assets.ultraclipart.com/volleyball/classic-white-volleyball-realistic-clipart.webp.9af79b417e7f375e.webp" --output "$fixture"
+          printf '%s  %s\n' 9af79b417e7f375e361e544899c7b480e314e314914f84b1ba2d01f1c1f2bd77 "$fixture" | sha256sum --check
+      - name: Run Studio upload, saved project, export and SVG regression
+        run: node tests/e2e/studio-upload.mjs
+      - name: Verify the same revision opens Studio in WebKit
+        run: |
+          node --input-type=module <<'JS'
+          import assert from 'node:assert/strict';
+          import { webkit } from '@playwright/test';
+          const browser = await webkit.launch();
+          try {
+            const page = await browser.newPage({ viewport: { width: 390, height: 920 } });
+            await page.route('**/*', (r) => r.request().method() === 'POST' ? r.abort() : r.continue());
+            const errors = [];
+            page.on('pageerror', (error) => errors.push(error.message));
+            const response = await page.goto(process.env.BASE_URL + '/create/', { waitUntil: 'domcontentloaded', timeout: 30000 });
+            assert.equal(response.status(), 200);
+            assert((await response.text()).includes('/__ssr-client/' + process.env.RELEASE_REVISION + '/'));
+            await page.locator('.uc-editor:not([aria-busy=true])').waitFor({ state: 'visible', timeout: 30000 });
+            await page.locator('[data-panel=studio]').click();
+            await page.locator('[data-studio-tool]').selectOption('composer');
+            assert.deepEqual(errors, []);
+            console.log('WebKit opened Studio composer on the reviewed preview.');
+          } finally {
+            await browser.close();
+          }
+          JS
