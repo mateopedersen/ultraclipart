@@ -26,9 +26,16 @@ const settle = async () => {
   });
 };
 const download = async (selector, name) => {
-  const promise = page.waitForEvent('download', { timeout: 120000 });
-  await page.locator(selector).click();
-  const file = await promise;
+  const button = page.locator(selector);
+  const fileMenu = page.locator('details.wb-file-menu');
+  if (selector === '[data-action=save]' && (await fileMenu.count()) &&
+      !(await fileMenu.evaluate((menu) => menu.open))) {
+    await fileMenu.locator('summary').click();
+  }
+  const [file] = await Promise.all([
+    page.waitForEvent('download', { timeout: 120000 }),
+    button.click(),
+  ]);
   const path = resolve(out, name);
   await file.saveAs(path);
   return path;
