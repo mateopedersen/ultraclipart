@@ -62,29 +62,52 @@ try {
       }
       if (route.startsWith('/edit/'))
         await page.locator('.uc-canvas [data-layer]').first().waitFor();
-      // Create mounts its artwork library asynchronously when the editor approaches
-      // the viewport. Trigger that real lazy initialization on narrow screens before
-      // waiting for the library and its previews to populate.
+      // Create initializes the editor and its library near the viewport. Verify the
+      // initial category previews, then use the real control to load artwork cards.
       if (route === '/create/') {
         await page.locator('.uc-editor').scrollIntoViewIfNeeded();
         await page.waitForFunction(() => {
-          const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
-          const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
-          if (!match) return false;
-          const expected = Math.min(24, Number(match[3].replaceAll(',', '')));
-          const cards = [...document.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+          const root = document.querySelector('.uc-editor');
+          const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+          const match = count.match(/^(\d+) categories — choose one to see its subjects$/);
+          if (!root || root.getAttribute('aria-busy') === 'true' || !match) return false;
+          const tiles = [...root.querySelectorAll('[data-artwork-grid] .wb-category-tile')];
+          const expected = Math.min(innerHeight < 800 ? 4 : 6, Number(match[1]));
           return (
             expected > 0 &&
-            (!match[1] || Number(match[1]) === 1) &&
-            Number(match[2]) === expected &&
-            cards.length === expected &&
-            cards.every((card) => {
-              const image = card.querySelector('img');
+            tiles.length === expected &&
+            tiles.every((tile) => {
+              const image = tile.querySelector('img');
               if (image) image.loading = 'eager';
               return image?.complete && image.naturalWidth > 0;
             })
           );
         });
+        await page.locator('.uc-editor [data-artwork-scope="all"]').click();
+        await page.waitForFunction(
+          () => {
+            const root = document.querySelector('.uc-editor');
+            const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+            const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
+            if (!root || !match) return false;
+            const total = Number(match[3].replaceAll(',', ''));
+            const expected = Math.min(innerHeight < 800 ? 4 : 6, total);
+            const cards = [...root.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+            return (
+              expected > 0 &&
+              (!match[1] || Number(match[1]) === 1) &&
+              Number(match[2]) === expected &&
+              cards.length === expected &&
+              cards.every((card) => {
+                const image = card.querySelector('img');
+                if (image) image.loading = 'eager';
+                return image?.complete && image.naturalWidth > 0;
+              })
+            );
+          },
+          null,
+          { timeout: 60_000 },
+        );
       }
       await page.evaluate(async () => {
         await Promise.all(
