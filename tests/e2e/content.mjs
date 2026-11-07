@@ -97,7 +97,7 @@ try {
     ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
   ];
   await expect(page.locator('.topic-planned')).toHaveCount(0);
-  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(16, topicCount));
+  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(12, topicCount));
   const plannedTopic = allTopics.find((topic) => !availableTopics.has(topic.slug));
   if (plannedTopic) {
     await page.locator('#topic-filter').fill(plannedTopic.keyword);
