@@ -123,9 +123,10 @@ try {
     [project] = await Promise.all([
       page.waitForEvent('download', { timeout: 35000 }),
       saveButton.click({ timeout: 30000 }),
-      expect(saveStatus).toHaveText('Editable project saved. Open it from the Layers panel to continue.', {
-        timeout: 30000,
-      }),
+      expect(saveStatus).toHaveText(
+        'Editable project saved. Open it from the Layers panel to continue.',
+        { timeout: 30000 },
+      ),
     ]);
   } catch (error) {
     report.saveDiagnostics = {
