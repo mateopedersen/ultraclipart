@@ -1,9 +1,19 @@
 // Follow the same disclosure and template controls available to a visitor.
 export async function chooseVectorStarter(page, id) {
   const starter = page.locator(`[data-creator-template="${id}"]`);
-  const editor = page.locator('.uc-editor');
-  if ((await editor.getAttribute('data-wb-focus')) === 'true')
-    await page.locator('[data-wb-back-page]').click();
+  await page.waitForFunction(() => {
+    const root = document.querySelector('.uc-editor');
+    return root && !root.hasAttribute('aria-busy');
+  });
+  const backToPage = page.locator('[data-wb-back-page]');
+  if ((await backToPage.getAttribute('aria-pressed')) === 'true') {
+    await backToPage.click();
+    await backToPage.waitFor({ state: 'visible' });
+    await page.waitForFunction(
+      () =>
+        document.querySelector('[data-wb-back-page]')?.getAttribute('aria-pressed') === 'false',
+    );
+  }
   if (!(await starter.isVisible())) await page.locator('.studio-basic-starters > summary').click();
   await starter.click();
 }

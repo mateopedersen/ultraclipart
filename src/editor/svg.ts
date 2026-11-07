@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 5003)
+Total output lines: 588
+
 import {
   clamp,
   identity,
@@ -272,103 +275,7 @@ export function fromCreationSvg(source: string, artId: string): EditorDocument {
         throw new Error(`Use finite artwork units for ${attr.name}.`);
       if (
         ['opacity', 'fill-opacity', 'stroke-opacity'].includes(attr.name) &&
-        (Number(attr.value) < 0 || Number(attr.value) > 1)
-      )
-        throw new Error('Opacity must be between zero and one.');
-      if (['fill', 'stroke'].includes(attr.name) && attr.value !== 'none' && !colorHex(attr.value))
-        throw new Error(
-          'Import supports hex or RGB solid colors. Convert named colors and paint effects first.',
-        );
-      if (
-        ['width', 'height', 'rx', 'ry', 'r', 'stroke-width'].includes(attr.name) &&
-        Number(attr.value) < 0
-      )
-        throw new Error('Shape dimensions cannot be negative.');
-    }
-    if (el.hasAttribute('transform')) {
-      const transform = el.getAttribute('transform')!;
-      const parts = [
-        ...transform.matchAll(/(matrix|translate|scale|rotate|skewX|skewY)\s*\(([^)]*)\)/g),
-      ];
-      if (
-        !parts.length ||
-        transform.replace(/(matrix|translate|scale|rotate|skewX|skewY)\s*\([^)]*\)/g, '').trim()
-      )
-        throw new Error('The SVG contains an invalid transform.');
-      for (const part of parts) {
-        const values = part[2].trim().split(/[ ,]+/).map(Number);
-        const counts: Record<string, number[]> = {
-          matrix: [6],
-          translate: [1, 2],
-          scale: [1, 2],
-          rotate: [1, 3],
-          skewX: [1],
-          skewY: [1],
-        };
-        if (
-          !counts[part[1]].includes(values.length) ||
-          values.some((v) => !Number.isFinite(v) || Math.abs(v) > 10000)
-        )
-          throw new Error('The SVG contains an invalid transform.');
-      }
-    }
-    if (el.localName === 'path') {
-      const d = el.getAttribute('d') || '';
-      if (/[^\s,0-9a-z.+-]/i.test(d)) throw new Error('The SVG contains an invalid path.');
-      const ops = parsePath(d);
-      if (
-        !ops.length ||
-        ops[0].op !== 'm' ||
-        ops.some((o) => o.c.some((v) => !Number.isFinite(v) || Math.abs(v) > 10000))
-      )
-        throw new Error('The SVG contains an invalid or oversized path.');
-    }
-    if (['polyline', 'polygon'].includes(el.localName)) {
-      const points = (el.getAttribute('points') || '').trim().split(/[ ,]+/).map(Number);
-      if (
-        points.length < 4 ||
-        points.length % 2 ||
-        points.some((v) => !Number.isFinite(v) || Math.abs(v) > 10000)
-      )
-        throw new Error('The SVG contains an invalid polygon.');
-    }
-  }
-  const doc = fromSvg(new XMLSerializer().serializeToString(svg), artId);
-  if (doc.width < 64 || doc.height < 64 || doc.width > 4096 || doc.height > 4096)
-    throw new Error('Imported canvas dimensions must be between 64 and 4,096.');
-  if (!doc.layers.length || doc.layers.length > 500)
-    throw new Error('Import an SVG with 1 to 500 top-level layers.');
-  if (!svg.querySelector('path,rect,circle,ellipse,line,polyline,polygon'))
-    throw new Error('This SVG contains no supported shapes.');
-  return doc;
-}
-export function validateProjectMarkup(doc: EditorDocument): void {
-  let nodes = 0;
-  for (const layer of doc.layers) {
-    if (layer.kind === 'raster') {
-      requireRaster(layer);
-      continue;
-    }
-    if (layer.kind !== 'vector') continue;
-    const svg = sanitizeSvg(`<svg xmlns="${NS}">${layer.markup}</svg>`);
-    nodes += svg.querySelectorAll('*').length;
-    // Reuse the same finite geometry and supported-paint contract for saved projects.
-    fromCreationSvg(`<svg xmlns="${NS}" viewBox="0 0 800 800">${layer.markup}</svg>`, doc.artId);
-    if (nodes > 10000)
-      throw new Error(
-        'This project has more than 10,000 vector elements. Simplify its layers before opening it.',
-      );
-  }
-}
-export function nodeForLayer(layer: Layer, screenScale = Infinity): SVGGElement {
-  const g = document.createElementNS(NS, 'g');
-  g.setAttribute('data-layer', layer.id);
-  g.setAttribute('transform', transformString(layer));
-  if (layer.kind === 'vector') g.innerHTML = layer.markup;
-  else if (layer.kind === 'raster') {
-    const image = document.createElementNS(NS, 'image');
-    image.setAttribute('href', processedPreview(layer, screenScale));
-    const bounds = processedBounds(layer);
+        (Number(attr.value) < 0 || Number(at…1003 tokens truncated…rocessedBounds(layer);
     for (const key of ['x', 'y', 'width', 'height'] as const)
       image.setAttribute(key, String(bounds[key]));
     image.setAttribute('preserveAspectRatio', 'none');
@@ -580,7 +487,9 @@ export function download(blob: Blob, name: string) {
   try {
     link.click();
   } finally {
-    link.remove();
+    // Browsers dispatch the download after the click task has unwound. Keep
+    // the temporary anchor attached until that navigation has been observed.
+    setTimeout(() => link.remove(), 1000);
     setTimeout(() => URL.revokeObjectURL(url), 30000);
   }
 }
