@@ -300,11 +300,8 @@ try {
       const result = document.querySelector('#topic-result-count')?.textContent;
       const visible = document.querySelectorAll('[data-topic]:not([hidden])').length;
       const noTopics = document.querySelector('#no-topics');
-      const pressedLetters = [
-        ...document.querySelectorAll('[data-letter][aria-pressed="true"]'),
-      ];
-      const expectedResult =
-        `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
+      const pressedLetters = [...document.querySelectorAll('[data-letter][aria-pressed="true"]')];
+      const expectedResult = `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
       return (
         input?.value === '' &&
         group?.value === '' &&
@@ -318,10 +315,7 @@ try {
     },
     { visibleCount: restoredCount, totalCount: expected.length },
   );
-  assert.equal(
-    await page.locator('[data-topic]:not([hidden])').count(),
-    restoredCount,
-  );
+  assert.equal(await page.locator('[data-topic]:not([hidden])').count(), restoredCount);
   assert.equal(
     await page.locator('#topic-filter').evaluate((input) => input === document.activeElement),
     true,
