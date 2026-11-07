@@ -265,13 +265,14 @@ try {
   );
   await page.locator('[data-letter=""]').click();
   const visibleTopicSlugs = () =>
-    page.locator('[data-topic]:not([hidden])').evaluateAll((cards) =>
-      cards.map((card) => card.dataset.slug).sort(),
-    );
+    page
+      .locator('[data-topic]:not([hidden])')
+      .evaluateAll((cards) => cards.map((card) => card.dataset.slug).sort());
   const waitForTopicSearch = () =>
-    page.waitForFunction(() =>
-      document.querySelector('#topic-result-count')?.textContent?.startsWith('Showing ') === true,
-    );
+    page.waitForFunction(() => {
+      const result = document.querySelector('#topic-result-count')?.textContent;
+      return result?.startsWith('Showing ');
+    });
   await page.locator('#topic-filter').fill('  ＰＵＭＰＫＩＮ  ');
   await waitForTopicSearch();
   const normalizedPumpkinResults = await visibleTopicSlugs();
