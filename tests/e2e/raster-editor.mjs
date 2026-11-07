@@ -179,9 +179,13 @@ try {
     await page.locator('[data-action=crop]').click();
     await page.locator('[data-panel=background]').click();
     await page.locator('[data-bg="#edf1e7"]').click();
+    const fileMenu = page.locator('.wb-file-menu');
+    await fileMenu.locator('summary').click();
+    const saveProject = fileMenu.locator('[data-action=save]');
+    await expect(saveProject).toBeVisible();
     const [project] = await Promise.all([
       page.waitForEvent('download'),
-      page.locator('[data-action=save]').click(),
+      saveProject.click(),
     ]);
     await expect(page.locator('[data-status]')).toContainText('Editable project saved.');
     await project.saveAs(resolve(out, `${a.id}-project.json`));

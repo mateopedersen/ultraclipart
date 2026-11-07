@@ -1,10 +1,6 @@
 // Follow the same disclosure and template controls available to a visitor.
 export async function chooseVectorStarter(page, id) {
   const starter = page.locator(`[data-creator-template="${id}"]`);
-  await page.waitForFunction(() => {
-    const root = document.querySelector('.uc-editor');
-    return root && !root.hasAttribute('aria-busy');
-  });
   const backToPage = page.locator('[data-wb-back-page]');
   if ((await backToPage.getAttribute('aria-pressed')) === 'true') {
     await backToPage.click();
@@ -15,6 +11,10 @@ export async function chooseVectorStarter(page, id) {
   }
   if (!(await starter.isVisible())) await page.locator('.studio-basic-starters > summary').click();
   await starter.click();
+  await page.waitForFunction(() => {
+    const root = document.querySelector('.uc-editor');
+    return root && !root.hasAttribute('aria-busy');
+  });
 }
 
 export async function chooseSelectionTool(page, value) {
