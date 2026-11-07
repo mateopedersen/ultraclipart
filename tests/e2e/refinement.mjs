@@ -264,8 +264,28 @@ try {
     ).every((text) => text.toLowerCase().startsWith('k')),
   );
   await page.locator('[data-letter=""]').click();
+  const visibleTopicSlugs = () =>
+    page.locator('[data-topic]:not([hidden])').evaluateAll((cards) =>
+      cards.map((card) => card.dataset.slug).sort(),
+    );
+  const waitForTopicSearch = () =>
+    page.waitForFunction(() =>
+      document.querySelector('#topic-result-count')?.textContent?.startsWith('Showing ') === true,
+    );
   await page.locator('#topic-filter').fill('  ＰＵＭＰＫＩＮ  ');
-  assert.equal(await page.locator('[data-topic]:not([hidden])').count(), 1);
+  await waitForTopicSearch();
+  const normalizedPumpkinResults = await visibleTopicSlugs();
+  assert.ok(
+    normalizedPumpkinResults.includes('pumpkin'),
+    'Full-width pumpkin query includes the Pumpkin topic',
+  );
+  await page.locator('#topic-filter').fill('  pumpkin  ');
+  await waitForTopicSearch();
+  assert.deepEqual(
+    await visibleTopicSlugs(),
+    normalizedPumpkinResults,
+    'Full-width Unicode and ASCII pumpkin queries return the same subjects',
+  );
   await page.locator('#topic-filter').fill('no-such-subject');
   assert.equal(await page.locator('#no-topics').isVisible(), true);
   await page.locator('#clear-topic-filter').click();
