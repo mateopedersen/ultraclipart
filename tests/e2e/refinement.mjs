@@ -291,9 +291,33 @@ try {
   await page.locator('#no-topics').waitFor({ state: 'visible' });
   assert.equal(await page.locator('#no-topics').isVisible(), true);
   await page.locator('#clear-topic-filter').click();
+  const restoredCount = Math.min(12, expected.length);
+  await page.waitForFunction(
+    ({ visibleCount, totalCount }) => {
+      const input = document.querySelector('#topic-filter');
+      const group = document.querySelector('#category-group');
+      const sort = document.querySelector('#category-sort');
+      const result = document.querySelector('#topic-result-count')?.textContent;
+      const visible = document.querySelectorAll('[data-topic]:not([hidden])').length;
+      const noTopics = document.querySelector('#no-topics');
+      const expectedResult = `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
+      return (
+        input?.value === '' &&
+        group?.value === '' &&
+        sort?.value === 'name' &&
+        [...document.querySelectorAll('[data-letter]')].every(
+          (button) => button.getAttribute('aria-pressed') === 'false',
+        ) &&
+        result === expectedResult &&
+        visible === visibleCount &&
+        noTopics?.hidden === true
+      );
+    },
+    { visibleCount: restoredCount, totalCount: expected.length },
+  );
   assert.equal(
     await page.locator('[data-topic]:not([hidden])').count(),
-    Math.min(16, expected.length),
+    restoredCount,
   );
   assert.equal(
     await page.locator('#topic-filter').evaluate((input) => input === document.activeElement),
