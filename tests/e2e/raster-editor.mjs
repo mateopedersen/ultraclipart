@@ -183,10 +183,7 @@ try {
     await fileMenu.locator('summary').click();
     const saveProject = fileMenu.locator('[data-action=save]');
     await expect(saveProject).toBeVisible();
-    const [project] = await Promise.all([
-      page.waitForEvent('download'),
-      saveProject.click(),
-    ]);
+    const [project] = await Promise.all([page.waitForEvent('download'), saveProject.click()]);
     await expect(page.locator('[data-status]')).toContainText('Editable project saved.');
     await project.saveAs(resolve(out, `${a.id}-project.json`));
     const data = JSON.parse(readFileSync(resolve(out, `${a.id}-project.json`)));
