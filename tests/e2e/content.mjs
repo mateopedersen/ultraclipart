@@ -114,9 +114,29 @@ try {
   await page.locator('[data-text]').fill('Science');
   await page.locator('[data-action=text]').click();
   await expect(page.locator('.uc-canvas text').filter({ hasText: 'Science' })).toBeVisible();
-  const pending = page.waitForEvent('download');
-  await page.locator('[data-action=save]').click();
-  const project = await pending;
+  const saveButton = page.locator('[data-action=save]');
+  await expect(saveButton).toBeVisible();
+  await expect(saveButton).toBeEnabled();
+  let project;
+  try {
+    [project] = await Promise.all([
+      page.waitForEvent('download', { timeout: 35000 }),
+      saveButton.click({ timeout: 30000 }),
+      expect(page.locator('.uc-editor [data-status]')).toHaveText(
+        'Editable project saved. Open it from the Layers panel to continue.',
+        { timeout: 30000 },
+      ),
+    ]);
+  } catch (error) {
+    report.saveDiagnostics = {
+      buttonCount: await saveButton.count().catch(() => null),
+      visible: await saveButton.isVisible().catch(() => null),
+      enabled: await saveButton.isEnabled().catch(() => null),
+      status: await page.locator('.uc-editor [data-status]').textContent().catch(() => null),
+      url: page.url(),
+    };
+    throw error;
+  }
   await project.saveAs(resolve(out, 'classroom-label.json'));
   report.checks.push(
     'guide workflow: actual Learning label starter, editable Science caption, downloaded project',

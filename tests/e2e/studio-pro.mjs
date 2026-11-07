@@ -43,9 +43,32 @@ async function point(x, y, mode = 'replace') {
   await expect(page.locator('[data-status]')).not.toContainText('Finding');
 }
 async function saveProject(name) {
-  const pending = page.waitForEvent('download');
-  await page.locator('[data-action=save]').click();
-  const download = await pending;
+  const saveButton = page.locator('[data-action=save]');
+  const saveStatus = page.locator('.uc-editor [data-status]');
+  await expect(saveButton).toBeVisible();
+  await expect(saveButton).toBeEnabled();
+  let download;
+  try {
+    [download] = await Promise.all([
+      page.waitForEvent('download', { timeout: 35000 }),
+      saveButton.click({ timeout: 30000 }),
+      expect(saveStatus).toHaveText(
+        'Editable project saved. Open it from the Layers panel to continue.',
+        { timeout: 30000 },
+      ),
+    ]);
+  } catch (error) {
+    report.saveDiagnostics = report.saveDiagnostics || [];
+    report.saveDiagnostics.push({
+      name,
+      buttonCount: await saveButton.count().catch(() => null),
+      visible: await saveButton.isVisible().catch(() => null),
+      enabled: await saveButton.isEnabled().catch(() => null),
+      status: await saveStatus.textContent().catch(() => null),
+      url: page.url(),
+    });
+    throw error;
+  }
   const path = resolve(out, `${name}.json`);
   await download.saveAs(path);
   return JSON.parse(readFileSync(path));
