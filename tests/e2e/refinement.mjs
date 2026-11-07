@@ -303,7 +303,8 @@ try {
       const pressedLetters = [
         ...document.querySelectorAll('[data-letter][aria-pressed="true"]'),
       ];
-      const expectedResult = `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
+      const expectedResult =
+        `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
       return (
         input?.value === '' &&
         group?.value === '' &&
