@@ -10,8 +10,7 @@ export async function chooseVectorStarter(page, id) {
     await backToPage.click();
     await backToPage.waitFor({ state: 'visible' });
     await page.waitForFunction(
-      () =>
-        document.querySelector('[data-wb-back-page]')?.getAttribute('aria-pressed') === 'false',
+      () => document.querySelector('[data-wb-back-page]')?.getAttribute('aria-pressed') === 'false',
     );
   }
   if (!(await starter.isVisible())) await page.locator('.studio-basic-starters > summary').click();
