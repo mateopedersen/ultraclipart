@@ -300,14 +300,16 @@ try {
       const result = document.querySelector('#topic-result-count')?.textContent;
       const visible = document.querySelectorAll('[data-topic]:not([hidden])').length;
       const noTopics = document.querySelector('#no-topics');
+      const pressedLetters = [
+        ...document.querySelectorAll('[data-letter][aria-pressed="true"]'),
+      ];
       const expectedResult = `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
       return (
         input?.value === '' &&
         group?.value === '' &&
         sort?.value === 'name' &&
-        [...document.querySelectorAll('[data-letter]')].every(
-          (button) => button.getAttribute('aria-pressed') === 'false',
-        ) &&
+        pressedLetters.length === 1 &&
+        pressedLetters[0].dataset.letter === '' &&
         result === expectedResult &&
         visible === visibleCount &&
         noTopics?.hidden === true
