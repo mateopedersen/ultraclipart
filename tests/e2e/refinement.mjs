@@ -83,6 +83,53 @@ try {
             })
           );
         });
+        // Browse through the real directory flow. Scope controls stay hidden until
+        // a visitor chooses a category and then a subject.
+        await page.locator('.uc-editor [data-artwork-grid] .wb-category-tile').first().click();
+        await page.waitForFunction(() => {
+          const root = document.querySelector('.uc-editor');
+          const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+          const match = count.match(/^(\\d+) subjects in /);
+          if (!root || !match) return false;
+          const tiles = [...root.querySelectorAll('[data-artwork-grid] .wb-category-tile')];
+          const expected = Math.min(innerHeight < 800 ? 4 : 6, Number(match[1]));
+          return (
+            expected > 0 &&
+            tiles.length === expected &&
+            tiles.every((tile) => {
+              const image = tile.querySelector('img');
+              if (image) image.loading = 'eager';
+              return image?.complete && image.naturalWidth > 0;
+            })
+          );
+        });
+        await page.locator('.uc-editor [data-artwork-grid] .wb-category-tile').first().click();
+        const waitForArtworkPreviews = () =>
+          page.waitForFunction(
+            () => {
+              const root = document.querySelector('.uc-editor');
+              const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+              const match = count.match(/^(?:(\\d+)[–-])?(\\d+) of ([\\d,]+) artworks$/);
+              if (!root || !match) return false;
+              const total = Number(match[3].replaceAll(',', ''));
+              const expected = Math.min(innerHeight < 800 ? 4 : 6, total);
+              const cards = [...root.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+              return (
+                expected > 0 &&
+                (!match[1] || Number(match[1]) === 1) &&
+                Number(match[2]) === expected &&
+                cards.length === expected &&
+                cards.every((card) => {
+                  const image = card.querySelector('img');
+                  if (image) image.loading = 'eager';
+                  return image?.complete && image.naturalWidth > 0;
+                })
+              );
+            },
+            null,
+            { timeout: 60_000 },
+          );
+        await waitForArtworkPreviews();
         await page.locator('.uc-editor [data-artwork-scope="all"]').click();
         await page.waitForFunction(
           () => {
