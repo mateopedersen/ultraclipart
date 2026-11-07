@@ -66,6 +66,12 @@ try {
       // initial category previews, then use the real control to load artwork cards.
       if (route === '/create/') {
         await page.locator('.uc-editor').scrollIntoViewIfNeeded();
+        // Create opens in Draw mode; explicitly select the real Elements panel before
+        // checking its lazily mounted artwork category directory.
+        const elementsPanel = page.locator('.uc-editor [data-panel="elements"]');
+        await elementsPanel.waitFor({ state: 'visible' });
+        await elementsPanel.click();
+        await page.locator('.uc-editor [data-library-view="artwork"]:not([hidden])').waitFor();
         await page.waitForFunction(() => {
           const root = document.querySelector('.uc-editor');
           const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
