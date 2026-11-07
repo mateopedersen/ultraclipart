@@ -115,6 +115,7 @@ try {
   await page.locator('[data-action=text]').click();
   await expect(page.locator('.uc-canvas text').filter({ hasText: 'Science' })).toBeVisible();
   const saveButton = page.locator('[data-action=save]');
+  const saveStatus = page.locator('.uc-editor [data-status]');
   await expect(saveButton).toBeVisible();
   await expect(saveButton).toBeEnabled();
   let project;
@@ -122,17 +123,16 @@ try {
     [project] = await Promise.all([
       page.waitForEvent('download', { timeout: 35000 }),
       saveButton.click({ timeout: 30000 }),
-      expect(page.locator('.uc-editor [data-status]')).toHaveText(
-        'Editable project saved. Open it from the Layers panel to continue.',
-        { timeout: 30000 },
-      ),
+      expect(saveStatus).toHaveText('Editable project saved. Open it from the Layers panel to continue.', {
+        timeout: 30000,
+      }),
     ]);
   } catch (error) {
     report.saveDiagnostics = {
       buttonCount: await saveButton.count().catch(() => null),
       visible: await saveButton.isVisible().catch(() => null),
       enabled: await saveButton.isEnabled().catch(() => null),
-      status: await page.locator('.uc-editor [data-status]').textContent().catch(() => null),
+      status: await saveStatus.textContent().catch(() => null),
       url: page.url(),
     };
     throw error;
