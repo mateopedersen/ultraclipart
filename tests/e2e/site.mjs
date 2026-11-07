@@ -171,6 +171,9 @@ try {
     .click();
   assert.ok(page.url().includes('/categories/'));
   report.checks.push('mobile navigation');
+  const categoryControls = page.locator('#discovery-controls');
+  await categoryControls.locator(':scope > summary').click();
+  assert.equal(await categoryControls.evaluate((element) => element.open), true);
   await page.locator('.discovery-alphabet summary').click();
   await page.locator('[data-letter=K]').click();
   assert.equal(await page.locator('[data-letter=K]').getAttribute('aria-pressed'), 'true');
