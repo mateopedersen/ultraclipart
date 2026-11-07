@@ -62,9 +62,11 @@ try {
       }
       if (route.startsWith('/edit/'))
         await page.locator('.uc-canvas [data-layer]').first().waitFor();
-      // Create mounts its artwork library asynchronously. Include those previews
-      // in decoding before checking every image, including offscreen thumbnails.
-      if (route === '/create/')
+      // Create mounts its artwork library asynchronously when the editor approaches
+      // the viewport. Trigger that real lazy initialization on narrow screens before
+      // waiting for the library and its previews to populate.
+      if (route === '/create/') {
+        await page.locator('.uc-editor').scrollIntoViewIfNeeded();
         await page.waitForFunction(() => {
           const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
           const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
@@ -83,6 +85,7 @@ try {
             })
           );
         });
+      }
       await page.evaluate(async () => {
         await Promise.all(
           [...document.images].map(async (image) => {
