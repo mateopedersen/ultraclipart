@@ -292,14 +292,14 @@ jobs:
             esac
           done
       - name: Keep browser evidence and preview log
-        # Failed checks still upload evidence. Superseded cancelled candidates
-        # must release their runner instead of scheduling cancellation cleanup.
-        if: ${{ !cancelled() }}
+        # Preserve large browser evidence only for failed checks; successful run logs remain on GitHub.
+        # Superseded cancelled candidates must release their runner without artifact cleanup.
+        if: ${{ failure() && !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
           name: browser-evidence-${{ matrix.engine }}-${{ matrix.suite }}
           path: reports/
-          retention-days: 14
+          retention-days: 3
   validate:
     name: validate (${{ matrix.engine }})
     needs: [plan, unit, production, browser]
