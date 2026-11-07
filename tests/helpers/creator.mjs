@@ -2,6 +2,10 @@
 export async function chooseVectorStarter(page, id) {
   const starter = page.locator(`[data-creator-template="${id}"]`);
   const backToPage = page.locator('[data-wb-back-page]');
+  // The editor is intentionally initialized when it nears the viewport. On narrow
+  // screens the page copy can push it below the observer margin, so bring it into
+  // view before waiting for its controls to become ready.
+  await page.locator('.uc-editor').scrollIntoViewIfNeeded();
   // The creator initially opens the editor over the page. Wait for the editor
   // controller to finish loading and publish the actual focus state before
   // deciding whether to leave that workspace; otherwise a fast browser can
