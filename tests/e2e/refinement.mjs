@@ -288,6 +288,7 @@ try {
     'Full-width Unicode and ASCII pumpkin queries return the same subjects',
   );
   await page.locator('#topic-filter').fill('no-such-subject');
+  await page.locator('#no-topics').waitFor({ state: 'visible' });
   assert.equal(await page.locator('#no-topics').isVisible(), true);
   await page.locator('#clear-topic-filter').click();
   assert.equal(
