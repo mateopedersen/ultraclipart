@@ -1,6 +1,9 @@
 // Follow the same disclosure and template controls available to a visitor.
 export async function chooseVectorStarter(page, id) {
   const starter = page.locator(`[data-creator-template="${id}"]`);
+  const editor = page.locator('.uc-editor');
+  if ((await editor.getAttribute('data-wb-focus')) === 'true')
+    await page.locator('[data-wb-back-page]').click();
   if (!(await starter.isVisible())) await page.locator('.studio-basic-starters > summary').click();
   await starter.click();
 }
