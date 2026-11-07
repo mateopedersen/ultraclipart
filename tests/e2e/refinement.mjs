@@ -89,7 +89,7 @@ try {
         await page.waitForFunction(() => {
           const root = document.querySelector('.uc-editor');
           const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
-          const match = count.match(/^(\\d+) subjects in /);
+          const match = count.match(/^(\d+) subjects in /);
           if (!root || !match) return false;
           const tiles = [...root.querySelectorAll('[data-artwork-grid] .wb-category-tile')];
           const expected = Math.min(innerHeight < 800 ? 4 : 6, Number(match[1]));
@@ -109,7 +109,7 @@ try {
             () => {
               const root = document.querySelector('.uc-editor');
               const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
-              const match = count.match(/^(?:(\\d+)[–-])?(\\d+) of ([\\d,]+) artworks$/);
+              const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
               if (!root || !match) return false;
               const total = Number(match[3].replaceAll(',', ''));
               const expected = Math.min(innerHeight < 800 ? 4 : 6, total);
