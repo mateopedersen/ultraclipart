@@ -104,6 +104,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      max-parallel: 8
       matrix:
         engine: [chromium, firefox, webkit]
         suite: ${{ fromJSON(needs.plan.outputs.browser_suites) }}
