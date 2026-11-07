@@ -28,7 +28,7 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.22.1'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Verify conservative scope policy
@@ -67,7 +67,7 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.22.1'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm format:check
@@ -93,7 +93,7 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.22.1'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
@@ -125,7 +125,7 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.22.1'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Restore source-bound screen previews
