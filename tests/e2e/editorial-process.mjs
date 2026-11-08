@@ -37,7 +37,9 @@ async function decodeLoadedImage(image, engine) {
         naturalWidth: node.naturalWidth,
         naturalHeight: node.naturalHeight,
       }));
-      throw new Error(`${engine}: image load timed out: ${JSON.stringify(state)}; ${error.message}`);
+      throw new Error(
+        `${engine}: image load timed out: ${JSON.stringify(state)}; ${error.message}`,
+      );
     }
     const loaded = await image.evaluate((node) => ({
       source: node.currentSrc || node.src,
@@ -47,7 +49,9 @@ async function decodeLoadedImage(image, engine) {
     }));
     if (loaded.source !== requestedSource) {
       if (attempt < 2) continue;
-      throw new Error(`${engine}: image source kept changing before decode: ${JSON.stringify(loaded)}`);
+      throw new Error(
+        `${engine}: image source kept changing before decode: ${JSON.stringify(loaded)}`,
+      );
     }
     if (!loaded.complete || loaded.naturalWidth <= 0) {
       throw new Error(`${engine}: image request failed: ${JSON.stringify(loaded)}`);
@@ -72,10 +76,14 @@ async function decodeLoadedImage(image, engine) {
     }));
     if (decoded.source !== requestedSource) {
       if (attempt < 2) continue;
-      throw new Error(`${engine}: image source kept changing during decode: ${JSON.stringify(decoded)}`);
+      throw new Error(
+        `${engine}: image source kept changing during decode: ${JSON.stringify(decoded)}`,
+      );
     }
     if (!decoded.complete || decoded.naturalWidth <= 0) {
-      throw new Error(`${engine}: decoded image has invalid dimensions: ${JSON.stringify(decoded)}`);
+      throw new Error(
+        `${engine}: decoded image has invalid dimensions: ${JSON.stringify(decoded)}`,
+      );
     }
     return;
   }
