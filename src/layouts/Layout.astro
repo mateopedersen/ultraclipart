@@ -370,14 +370,13 @@ const releaseRevision = /^[a-f0-9]{40}$/.test(import.meta.env.PUBLIC_RELEASE_REV
         </nav>
         <a
           class="site-surprise-link"
-          aria-label="Surprise me. A little reason to smile. Open a random illustration"
           href={`/art/${surprisePicks[0].id}/`}
           data-surprise-art={JSON.stringify(surprisePicks)}
           data-surprise-source={`/surprise-picks.json?v=${SURPRISE_INDEX_VERSION}-${import.meta.env.PUBLIC_RELEASE_REVISION || 'local'}`}
         >
           <HeaderIllustration kind="surprise" />
           <span>
-            <strong>Surprise me</strong>
+            <strong>Surprise me</strong>{' '}
             <span>A little reason to smile</span>
           </span>
         </a>
