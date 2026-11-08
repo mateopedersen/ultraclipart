@@ -158,9 +158,23 @@ async function selectPoint(p) {
   await action('select-point');
   await expect(page.locator('[data-status]')).toContainText('Selection ready', { timeout: 60000 });
 }
+async function fileAction(name) {
+  const menu = page.locator('.wb-file-menu');
+  const summary = menu.locator('summary');
+  if (!(await menu.evaluate((element) => element.open))) await summary.click();
+  try {
+    const control = menu.locator(`[data-action="${name}"]`);
+    await expect(control).toBeVisible();
+    await expect(control).toBeEnabled();
+    await control.click();
+  } finally {
+    if (await menu.evaluate((element) => element.open)) await summary.click();
+  }
+}
 async function downloadAction(selector, name) {
   const p = page.waitForEvent('download', { timeout: 120000 });
-  await page.locator(selector).click();
+  if (selector === '[data-action=save]') await fileAction('save');
+  else await page.locator(selector).click();
   const d = await p;
   const file = resolve(out, name);
   await d.saveAs(file);
@@ -224,7 +238,7 @@ try {
   await open(a);
   const source = await pixelInfo('original-image', true);
   // Keep only the source to make each tool's effect independently observable.
-  await page.locator('[data-action=reset]').click();
+  await fileAction('reset');
   await settle();
   await page.locator('button[data-work-mode=edit]').click();
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
@@ -419,7 +433,7 @@ try {
     });
   });
   await open(art.find((a) => a.topic === 'volleyball' && a.style === 'Outline'));
-  await page.locator('[data-action=reset]').click();
+  await fileAction('reset');
   await settle();
   await page.locator('button[data-work-mode=print]').click();
   await tool('variants');
