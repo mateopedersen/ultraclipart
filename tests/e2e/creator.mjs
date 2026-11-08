@@ -290,7 +290,8 @@ try {
       if (actionName === 'new-shape') {
         await panel('create');
         await page.locator('[data-shape="heart"]').click();
-      } else await action(actionName).click();
+      } else if (actionName === 'reset') await clickFileAction(page, 'reset');
+      else await action(actionName).click();
       chosen = await state();
     } finally {
       releasePendingStarter();
