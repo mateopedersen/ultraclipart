@@ -106,6 +106,33 @@ try {
   });
   await expect(page.locator('[data-status]')).toContainText('Your clipart is ready');
   await expect(page.locator('.uc-canvas [data-layer] image')).toHaveCount(2);
+  delete data.localSources;
+  data.layers = [
+    {
+      id: 'audit-vector',
+      label: 'Fixture rectangle',
+      kind: 'vector',
+      visible: true,
+      locked: false,
+      x: 0,
+      y: 0,
+      scaleX: 1,
+      scaleY: 1,
+      angle: 0,
+      opacity: 1,
+      markup:
+        '<rect width="20" height="20" fill="#333333"/><?fixture > <circle id="audit-marker" r="10"/> ?>',
+    },
+  ];
+  delete data.selection;
+  await page.locator('[data-load]').setInputFiles({
+    name: 'vector-project.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify(data)),
+  });
+  await expect(page.locator('[data-status]')).toContainText('Saved project opened');
+  await expect(page.locator('.uc-canvas [data-layer=audit-vector] rect')).toHaveCount(1);
+  await expect(page.locator('.uc-canvas #audit-marker')).toHaveCount(0);
   assert.deepEqual(errors, []);
   assert.deepEqual(posts, []);
   writeFileSync(
