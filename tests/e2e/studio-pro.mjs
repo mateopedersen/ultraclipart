@@ -43,6 +43,11 @@ async function point(x, y, mode = 'replace') {
   await expect(page.locator('[data-status]')).not.toContainText('Finding');
 }
 async function saveProject(name) {
+  const fileMenu = page.locator('.wb-file-menu');
+  if (!(await fileMenu.evaluate((menu) => menu.open))) {
+    await fileMenu.locator('summary').click();
+  }
+  assert.equal(await fileMenu.evaluate((menu) => menu.open), true);
   const saveButton = page.locator('[data-action=save]');
   const saveStatus = page.locator('.uc-editor [data-status]');
   await expect(saveButton).toBeVisible();
