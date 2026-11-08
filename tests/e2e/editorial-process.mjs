@@ -20,6 +20,67 @@ const report = {
   checks: [],
   failures: [],
 };
+async function decodeLoadedImage(image, engine) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const requestedSource = await image.evaluate((node) => node.currentSrc || node.src);
+    try {
+      await expect
+        .poll(() => image.evaluate((node) => node.complete), {
+          timeout: 20000,
+          message: `${engine}: image request did not complete`,
+        })
+        .toBe(true);
+    } catch (error) {
+      const state = await image.evaluate((node) => ({
+        source: node.currentSrc || node.src,
+        complete: node.complete,
+        naturalWidth: node.naturalWidth,
+        naturalHeight: node.naturalHeight,
+      }));
+      throw new Error(`${engine}: image load timed out: ${JSON.stringify(state)}; ${error.message}`);
+    }
+    const loaded = await image.evaluate((node) => ({
+      source: node.currentSrc || node.src,
+      complete: node.complete,
+      naturalWidth: node.naturalWidth,
+      naturalHeight: node.naturalHeight,
+    }));
+    if (loaded.source !== requestedSource) {
+      if (attempt < 2) continue;
+      throw new Error(`${engine}: image source kept changing before decode: ${JSON.stringify(loaded)}`);
+    }
+    if (!loaded.complete || loaded.naturalWidth <= 0) {
+      throw new Error(`${engine}: image request failed: ${JSON.stringify(loaded)}`);
+    }
+    try {
+      await image.evaluate((node) => node.decode());
+    } catch (error) {
+      const state = await image.evaluate((node) => ({
+        source: node.currentSrc || node.src,
+        complete: node.complete,
+        naturalWidth: node.naturalWidth,
+        naturalHeight: node.naturalHeight,
+      }));
+      if (state.source !== requestedSource && attempt < 2) continue;
+      throw new Error(`${engine}: image decode failed: ${JSON.stringify(state)}; ${error.message}`);
+    }
+    const decoded = await image.evaluate((node) => ({
+      source: node.currentSrc || node.src,
+      complete: node.complete,
+      naturalWidth: node.naturalWidth,
+      naturalHeight: node.naturalHeight,
+    }));
+    if (decoded.source !== requestedSource) {
+      if (attempt < 2) continue;
+      throw new Error(`${engine}: image source kept changing during decode: ${JSON.stringify(decoded)}`);
+    }
+    if (!decoded.complete || decoded.naturalWidth <= 0) {
+      throw new Error(`${engine}: decoded image has invalid dimensions: ${JSON.stringify(decoded)}`);
+    }
+    return;
+  }
+}
+
 const engines = process.env.UC_BROWSER
   ? { [process.env.UC_BROWSER]: { chromium, webkit, firefox }[process.env.UC_BROWSER] }
   : { chromium, webkit };
@@ -48,7 +109,7 @@ for (const [engine, launcher] of Object.entries(engines)) {
     for (const img of await page.locator('.editorial-page img').all()) {
       await img.scrollIntoViewIfNeeded();
       await expect(img).toBeVisible();
-      await img.evaluate((node) => node.decode());
+      await decodeLoadedImage(img, engine);
     }
     const ids = await page.locator('[id]').evaluateAll((nodes) => nodes.map((node) => node.id));
     assert.equal(ids.length, new Set(ids).size, 'SVG/HTML IDs must be unique');

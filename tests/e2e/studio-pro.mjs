@@ -160,7 +160,7 @@ try {
   report.checks.push(
     'Hair bow: multi-click color selection plus manual polygon refinement; original face and dress retained.',
   );
-  const bow = await imageBytes();
+  const bow = await imageBytes(true);
   const bowMask = decodeMask(project.layers[0].regions[0].mask);
   report.browserColorDelta = 0;
   for (const [x, y] of [
