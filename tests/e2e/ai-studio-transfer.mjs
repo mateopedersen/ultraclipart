@@ -1,3 +1,4 @@
+import { clickFileAction } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -53,7 +54,7 @@ const state = () =>
   });
 const saved = async (name) => {
   const p = page.waitForEvent('download');
-  await page.locator('[data-action=save]').click();
+  await clickFileAction(page, 'save');
   const file = path.join(out, name);
   await (await p).saveAs(file);
   return JSON.parse(await fs.readFile(file, 'utf8'));

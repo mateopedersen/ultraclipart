@@ -1,3 +1,4 @@
+import { clickFileAction } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
@@ -37,7 +38,7 @@ const change = async (selector, value) => {
 };
 const saved = async (name) => {
   const p = page.waitForEvent('download');
-  await action('save').click();
+  await clickFileAction(page, 'save');
   const d = await p;
   const file = path.join(out, name);
   await d.saveAs(file);

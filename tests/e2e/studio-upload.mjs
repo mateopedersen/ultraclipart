@@ -1,3 +1,4 @@
+import { clickFileAction } from '../helpers/creator.mjs';
 import { chromium, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -27,7 +28,8 @@ const settle = async () => {
 };
 const download = async (selector, name) => {
   const promise = page.waitForEvent('download', { timeout: 120000 });
-  await page.locator(selector).click();
+  if (selector === '[data-action=save]') await clickFileAction(page, 'save');
+  else await page.locator(selector).click();
   const file = await promise;
   const path = resolve(out, name);
   await file.saveAs(path);

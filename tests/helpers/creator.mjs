@@ -1,3 +1,5 @@
+import { expect } from '@playwright/test';
+
 // Follow the same disclosure and template controls available to a visitor.
 export async function chooseVectorStarter(page, id) {
   const starter = page.locator(`[data-creator-template="${id}"]`);
@@ -55,4 +57,18 @@ export async function chooseScene(page, id) {
     await more.click();
   }
   await card.click();
+}
+
+export async function clickFileAction(page, name) {
+  const menu = page.locator('.wb-file-menu');
+  const summary = menu.locator('summary');
+  if (!(await menu.evaluate((element) => element.open))) await summary.click();
+  try {
+    const control = menu.locator(`[data-action="${name}"]`);
+    await expect(control).toBeVisible();
+    await expect(control).toBeEnabled();
+    await control.click();
+  } finally {
+    if (await menu.evaluate((element) => element.open)) await summary.click();
+  }
 }

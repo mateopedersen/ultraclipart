@@ -1,3 +1,4 @@
+import { clickFileAction } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
@@ -196,7 +197,7 @@ try {
   await action('undo').click();
   await action('undo').click();
   const wait = page.waitForEvent('download');
-  await action('save').click();
+  await clickFileAction(page, 'save');
   const saved = await wait;
   await saved.saveAs(path.join(out, '276-elements-project.json'));
   await page.reload();

@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { PDFDocument } from 'pdf-lib';
-import { chooseScene } from '../helpers/creator.mjs';
+import { chooseScene, clickFileAction } from '../helpers/creator.mjs';
 const engine = process.env.UC_BROWSER || 'chromium',
   base = process.env.BASE_URL || 'http://127.0.0.1:4353',
   out = path.resolve(process.env.EVIDENCE_DIR || 'reports/real-artwork', engine);
@@ -110,7 +110,7 @@ try {
     await route.continue();
   });
   await chooseScene(page, 'fresh-strawberries');
-  await action('reset').click();
+  await clickFileAction(page, 'reset');
   await page.waitForTimeout(1300);
   expect((await state()).layers.length).toBe(0);
   await page.unroute('**/strawberry-fruit-trio-realistic-clipart.webp');
@@ -118,7 +118,7 @@ try {
   await chooseScene(page, 'woodland-welcome');
   await expect(page.locator('[data-status]')).toContainText('Every image and caption is editable');
   const saved = page.waitForEvent('download');
-  await action('save').click();
+  await clickFileAction(page, 'save');
   await (await saved).saveAs(path.join(out, 'woodland-project.json'));
   await page.reload();
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
