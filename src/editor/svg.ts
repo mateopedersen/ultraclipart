@@ -364,8 +364,12 @@ export function nodeForLayer(layer: Layer, screenScale = Infinity): SVGGElement 
   const g = document.createElementNS(NS, 'g');
   g.setAttribute('data-layer', layer.id);
   g.setAttribute('transform', transformString(layer));
-  if (layer.kind === 'vector') g.innerHTML = layer.markup;
-  else if (layer.kind === 'raster') {
+  if (layer.kind === 'vector') {
+    // Render the same XML nodes checked by the SVG allowlist. HTML fragment
+    // parsing can reinterpret XML comments or processing instructions.
+    const vector = sanitizeSvg(`<svg xmlns="${NS}">${layer.markup}</svg>`);
+    g.append(...vector.children);
+  } else if (layer.kind === 'raster') {
     const image = document.createElementNS(NS, 'image');
     image.setAttribute('href', processedPreview(layer, screenScale));
     const bounds = processedBounds(layer);
