@@ -1,4 +1,4 @@
-import { clickFileAction } from '../helpers/creator.mjs';
+import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
@@ -21,6 +21,7 @@ const errors = [],
   violations = [],
   checks = [],
   exports = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 await page.addInitScript(() => {
   window.__csp = [];

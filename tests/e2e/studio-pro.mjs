@@ -4,7 +4,7 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadTypescript } from '../helpers/typescript.mjs';
 import { chooseExportFormat } from '../helpers/export.mjs';
-import { chooseSelectionTool } from '../helpers/creator.mjs';
+import { chooseSelectionTool, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const base = process.env.BASE_URL || 'http://127.0.0.1:4350',
   engine = process.env.UC_BROWSER || 'chromium',
@@ -19,6 +19,7 @@ const browser = await { chromium, firefox, webkit }[engine].launch({
   }),
   page = await context.newPage();
 const report = { engine, base, checks: [], errors: [], exports: [] };
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (error) => report.errors.push(error.message));
 const id = 'baby-girl-with-pink-bow-clipart';
 const settle = async () => {

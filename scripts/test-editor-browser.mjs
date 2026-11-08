@@ -1,6 +1,10 @@
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
-import { chooseVectorStarter, clickFileAction } from '../tests/helpers/creator.mjs';
+import {
+  chooseVectorStarter,
+  clickFileAction,
+  installNecessaryCookieHandler,
+} from '../tests/helpers/creator.mjs';
 const browserName = process.env.UC_BROWSER || 'chromium',
   base = process.env.UC_BASE_URL || 'http://127.0.0.1:4321';
 const out = new URL(
@@ -18,6 +22,7 @@ const page = await browser.newPage({
 });
 const errors = [];
 const passed = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const action = (name) => page.locator(`[data-action="${name}"]`).filter({ visible: true }).first();
 const panel = (name) => page.locator(`[data-panel="${name}"]`).click();

@@ -1,4 +1,4 @@
-import { clickFileAction } from '../helpers/creator.mjs';
+import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { chromium, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -14,13 +14,14 @@ let page = await browser.newPage({
 });
 const errors = [],
   posts = [];
-const track = (page) => {
+const track = async (page) => {
+  await installNecessaryCookieHandler(page);
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('request', (r) => {
     if (r.method() === 'POST') posts.push(r.url());
   });
 };
-track(page);
+await track(page);
 const settle = async () => {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('data-processing', 'true', {
     timeout: 60000,
@@ -64,7 +65,7 @@ try {
   const before = await page.locator('.uc-canvas [data-layer] image').getAttribute('href');
   await page.close();
   page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, acceptDownloads: true });
-  track(page);
+  await track(page);
   await page.goto(base + '/create/');
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
   await page.locator('[data-panel=layers]').click();

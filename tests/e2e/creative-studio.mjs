@@ -1,4 +1,4 @@
-import { clickFileAction } from '../helpers/creator.mjs';
+import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
@@ -34,6 +34,7 @@ const page = await context.newPage(),
   errors = [],
   checks = [],
   exports = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const state = () =>
   page.evaluate(() => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:my-clipart')));

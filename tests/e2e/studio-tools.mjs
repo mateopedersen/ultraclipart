@@ -3,7 +3,7 @@ import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { chooseSelectionTool } from '../helpers/creator.mjs';
+import { chooseSelectionTool, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { loadTypescript } from '../helpers/typescript.mjs';
 const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const engine = process.env.UC_BROWSER || 'chromium',
@@ -17,6 +17,7 @@ const context = await browser.newContext({
 });
 const page = await context.newPage();
 const report = { engine, base, checks: [], sources: [], errors: [], states: [], status: 'running' };
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => report.errors.push(e.message));
 const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
 let current;

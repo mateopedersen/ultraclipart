@@ -3,7 +3,11 @@ import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { PDFDocument } from 'pdf-lib';
-import { chooseScene, clickFileAction } from '../helpers/creator.mjs';
+import {
+  chooseScene,
+  clickFileAction,
+  installNecessaryCookieHandler,
+} from '../helpers/creator.mjs';
 const engine = process.env.UC_BROWSER || 'chromium',
   base = process.env.BASE_URL || 'http://127.0.0.1:4353',
   out = path.resolve(process.env.EVIDENCE_DIR || 'reports/real-artwork', engine);
@@ -18,6 +22,7 @@ const page = await context.newPage(),
   errors = [],
   checks = [],
   exports = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const state = () =>
   page.evaluate(() => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:my-clipart')));

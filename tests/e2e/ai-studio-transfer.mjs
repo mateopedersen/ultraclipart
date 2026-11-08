@@ -1,4 +1,4 @@
-import { clickFileAction } from '../helpers/creator.mjs';
+import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -41,6 +41,7 @@ await context.route('**/@vite/client', (route) =>
 const page = await context.newPage(),
   errors = [],
   checks = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const ready = () =>
   expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', { timeout: 60000 });

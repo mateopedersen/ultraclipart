@@ -72,3 +72,17 @@ export async function clickFileAction(page, name) {
     if (await menu.evaluate((element) => element.open)) await summary.click();
   }
 }
+
+const necessaryCookieHandlerPages = new WeakSet();
+export async function installNecessaryCookieHandler(page) {
+  if (necessaryCookieHandlerPages.has(page)) return;
+  const notice = page.locator('#cookie-notice');
+  await page.addLocatorHandler(notice, async () => {
+    const necessary = notice.locator('[data-cookie-choice="necessary"]');
+    await expect(necessary).toBeVisible();
+    await expect(necessary).toBeEnabled();
+    await necessary.click();
+    await expect(notice).toBeHidden();
+  });
+  necessaryCookieHandlerPages.add(page);
+}
