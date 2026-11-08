@@ -10,7 +10,9 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4350',
   engine = process.env.UC_BROWSER || 'chromium',
   out = resolve(process.env.EVIDENCE_DIR || 'reports/studio-pro', engine);
 mkdirSync(out, { recursive: true });
-const browser = await { chromium, firefox, webkit }[engine].launch({ headless: true }),
+const browser = await { chromium, firefox, webkit }[engine].launch({
+    headless: true,
+  }),
   context = await browser.newContext({
     viewport: { width: 1500, height: 1100 },
     acceptDownloads: true,
@@ -98,28 +100,71 @@ async function imageBytes(normalizeSource = false) {
   return await page
     .locator('.uc-canvas [data-layer="original-image"] image')
     .evaluate(async (image, normalizeSource) => {
+      const source = JSON.parse(
+        image.closest('.uc-editor').getAttribute('data-raster-source') || 'null',
+      );
+      if (
+        !source ||
+        !Number.isInteger(source.width) ||
+        !Number.isInteger(source.height) ||
+        !source.webp ||
+        !Number.isSafeInteger(source.webp.bytes) ||
+        !/^[a-f0-9]{64}$/.test(source.webp.sha256)
+      )
+        throw new Error('The editor must expose its verified original raster source.');
       const loaded = new Image();
-      loaded.src = image.getAttribute('href');
-      await loaded.decode();
+      if (normalizeSource) {
+        // The displayed unedited image may be a 960px screen copy. Pixel tests
+        // must use the same checksum-bound full original as rasterPixels().
+        const response = await fetch(source.webp.url, {
+          credentials: 'omit',
+          redirect: 'error',
+        });
+        if (!response.ok) throw new Error('The verified original could not be read.');
+        const bytes = await response.arrayBuffer();
+        if (bytes.byteLength !== source.webp.bytes)
+          throw new Error('The original byte count differs from the editor source.');
+        const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
+          .map((value) => value.toString(16).padStart(2, '0'))
+          .join('');
+        if (hash !== source.webp.sha256)
+          throw new Error('The original checksum differs from the editor source.');
+        const url = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));
+        try {
+          loaded.src = url;
+          await loaded.decode();
+        } finally {
+          URL.revokeObjectURL(url);
+        }
+      } else {
+        loaded.src = image.getAttribute('href');
+        await loaded.decode();
+      }
+      if (loaded.naturalWidth !== source.width || loaded.naturalHeight !== source.height)
+        throw new Error('Pixel checks require the full original raster dimensions.');
       if (normalizeSource) {
         // Match the editor's readback/putImageData/PNG pipeline without applying edits.
         // This isolates actual mask spill from browser premultiplied-alpha quantization.
-        const source = document.createElement('canvas');
-        source.width = loaded.naturalWidth;
-        source.height = loaded.naturalHeight;
-        const sourceContext = source.getContext('2d', { willReadFrequently: true });
+        const input = document.createElement('canvas');
+        input.width = source.width;
+        input.height = source.height;
+        const sourceContext = input.getContext('2d', {
+          willReadFrequently: true,
+        });
         sourceContext.drawImage(loaded, 0, 0);
-        const pixels = sourceContext.getImageData(0, 0, source.width, source.height);
+        const pixels = sourceContext.getImageData(0, 0, input.width, input.height);
         const output = document.createElement('canvas');
-        output.width = source.width;
-        output.height = source.height;
+        output.width = input.width;
+        output.height = input.height;
         output.getContext('2d').putImageData(pixels, 0, 0);
         loaded.src = output.toDataURL('image/png');
         await loaded.decode();
       }
+      if (loaded.naturalWidth !== source.width || loaded.naturalHeight !== source.height)
+        throw new Error('PNG readback changed the original raster dimensions.');
       const canvas = document.createElement('canvas');
-      canvas.width = loaded.naturalWidth;
-      canvas.height = loaded.naturalHeight;
+      canvas.width = source.width;
+      canvas.height = source.height;
       const ctx = canvas.getContext('2d');
       ctx.drawImage(loaded, 0, 0);
       return Array.from(ctx.getImageData(0, 0, canvas.width, canvas.height).data);
