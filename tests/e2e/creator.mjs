@@ -1,4 +1,8 @@
-import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
+import {
+  chooseVectorStarter,
+  clickFileAction,
+  installNecessaryCookieHandler,
+} from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
@@ -23,6 +27,9 @@ const errors = [],
   exports = [];
 await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
+const settledStarterRequests = new WeakSet();
+page.on('requestfinished', (request) => settledStarterRequests.add(request));
+page.on('requestfailed', (request) => settledStarterRequests.add(request));
 await page.addInitScript(() => {
   window.__csp = [];
   document.addEventListener('securitypolicyviolation', (e) =>
@@ -223,7 +230,7 @@ try {
     ['rainbow-arch', 10],
     ['little-postcard', 11],
   ]) {
-    await page.locator(`[data-creator-template="${id}"]`).click();
+    await chooseVectorStarter(page, id);
     await expect(page.locator('[data-status]')).toContainText(
       `${count} editable starter layers loaded`,
     );
@@ -234,29 +241,63 @@ try {
     await exporting('pdf', `${id}.pdf`);
   }
   checks.push('six independent starter compositions load and export both formats');
-  // A late starter must not replace a newer selection.
+  // Hold the old request until the newer selection has actually completed.
+  // Readiness/scroll work must not consume the stale-response window.
+  let releaseLateStarter, lateStarterRequest;
+  let lateStarterStarted = false;
+  const lateStarterGate = new Promise((resolve) => {
+    releaseLateStarter = resolve;
+  });
   await page.route('**/studio/sunny-badge.svg', async (route) => {
+    lateStarterRequest = route.request();
+    lateStarterStarted = true;
+    await lateStarterGate;
     await new Promise((r) => setTimeout(r, 700));
     await route.continue().catch(() => {});
   });
-  await page.locator('[data-creator-template="sunny-badge"]').click();
-  await page.locator('[data-creator-template="rainbow-arch"]').click();
-  await expect(page.locator('[data-status]')).toContainText('10 editable starter layers loaded');
+  try {
+    await chooseVectorStarter(page, 'sunny-badge');
+    await expect.poll(() => lateStarterStarted).toBe(true);
+    await chooseVectorStarter(page, 'rainbow-arch');
+    await expect(page.locator('[data-status]')).toContainText('10 editable starter layers loaded');
+  } finally {
+    releaseLateStarter();
+  }
+  await expect
+    .poll(() => lateStarterRequest && settledStarterRequests.has(lateStarterRequest))
+    .toBe(true);
   await page.waitForTimeout(800);
   expect((await state()).layers.length).toBe(10);
   await page.unroute('**/studio/sunny-badge.svg');
   checks.push('stale asynchronous starter response cannot replace latest selection');
   for (const actionName of ['reset', 'undo', 'new-shape']) {
+    let releasePendingStarter, pendingStarterRequest;
+    let pendingStarterStarted = false;
+    const pendingStarterGate = new Promise((resolve) => {
+      releasePendingStarter = resolve;
+    });
     await page.route('**/studio/sunny-badge.svg', async (route) => {
+      pendingStarterRequest = route.request();
+      pendingStarterStarted = true;
+      await pendingStarterGate;
       await new Promise((r) => setTimeout(r, 700));
       await route.continue().catch(() => {});
     });
-    await page.locator('[data-creator-template="sunny-badge"]').click();
-    if (actionName === 'new-shape') {
-      await panel('create');
-      await page.locator('[data-shape="heart"]').click();
-    } else await action(actionName).click();
-    const chosen = await state();
+    let chosen;
+    try {
+      await chooseVectorStarter(page, 'sunny-badge');
+      await expect.poll(() => pendingStarterStarted).toBe(true);
+      if (actionName === 'new-shape') {
+        await panel('create');
+        await page.locator('[data-shape="heart"]').click();
+      } else await action(actionName).click();
+      chosen = await state();
+    } finally {
+      releasePendingStarter();
+    }
+    await expect
+      .poll(() => pendingStarterRequest && settledStarterRequests.has(pendingStarterRequest))
+      .toBe(true);
     await page.waitForTimeout(850);
     expect(await state()).toEqual(chosen);
     await page.unroute('**/studio/sunny-badge.svg');
