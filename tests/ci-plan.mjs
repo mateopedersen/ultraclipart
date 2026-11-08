@@ -250,30 +250,30 @@ test('required check accepts skips only after a successful explicit no-browser p
         for (const unitResult of ['success', 'failure', 'cancelled', 'skipped'])
           for (const productionResult of ['success', 'failure', 'cancelled', 'skipped'])
             for (const artResult of ['success', 'failure', 'cancelled', 'skipped']) {
-            const passed =
-              spawnSync('bash', ['-e', '-c', gate], {
-                env: {
-                  ...process.env,
-                  PLAN_RESULT: planResult,
-                  RUN_BROWSER: runBrowser,
-                  UNIT_RESULT: unitResult,
-                  PRODUCTION_RESULT: productionResult,
-                  BROWSER_RESULT: browserResult,
-                  ART_RESULT: artResult,
-                },
-              }).status === 0;
-            const expected = runBrowser === 'true' ? 'success' : 'skipped';
-            assert.equal(
-              passed,
-              artResult === 'success' &&
-                planResult === 'success' &&
-                ['true', 'false'].includes(runBrowser) &&
-                [browserResult, unitResult, productionResult].every(
-                  (result) => result === expected,
-                ),
-              `${planResult}/${runBrowser}/${browserResult}/${unitResult}/${productionResult}/${artResult}`,
-            );
-          }
+              const passed =
+                spawnSync('bash', ['-e', '-c', gate], {
+                  env: {
+                    ...process.env,
+                    PLAN_RESULT: planResult,
+                    RUN_BROWSER: runBrowser,
+                    UNIT_RESULT: unitResult,
+                    PRODUCTION_RESULT: productionResult,
+                    BROWSER_RESULT: browserResult,
+                    ART_RESULT: artResult,
+                  },
+                }).status === 0;
+              const expected = runBrowser === 'true' ? 'success' : 'skipped';
+              assert.equal(
+                passed,
+                artResult === 'success' &&
+                  planResult === 'success' &&
+                  ['true', 'false'].includes(runBrowser) &&
+                  [browserResult, unitResult, productionResult].every(
+                    (result) => result === expected,
+                  ),
+                `${planResult}/${runBrowser}/${browserResult}/${unitResult}/${productionResult}/${artResult}`,
+              );
+            }
       }
 });
 
