@@ -36,11 +36,15 @@ jobs:
       - name: Validate workflow and planner formatting
         run: pnpm exec prettier --check .github/workflows/ci.yml scripts/ci-plan.mjs tests/ci-plan.mjs scripts/ci-raster-shards.mjs tests/ci-raster-shards.mjs
       - name: Lint workflow expressions and job dependencies
+        timeout-minutes: 3
         run: |
           mkdir -p "$RUNNER_TEMP/uc-actionlint"
-          curl --fail --location --retry 2 --max-time 60 \
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
+            --max-redirs 5 --retry 2 --max-time 60 --max-filesize 2353908 \
+            -H 'Accept: application/octet-stream' \
             -o "$RUNNER_TEMP/uc-actionlint/archive.tar.gz" \
-            https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz
+            https://api.github.com/repos/rhysd/actionlint/releases/assets/384924896
+          test "$(wc -c < "$RUNNER_TEMP/uc-actionlint/archive.tar.gz")" -eq 2353908
           echo '8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  '"$RUNNER_TEMP/uc-actionlint/archive.tar.gz" | sha256sum --check
           tar -xzf "$RUNNER_TEMP/uc-actionlint/archive.tar.gz" -C "$RUNNER_TEMP/uc-actionlint" actionlint
           "$RUNNER_TEMP/uc-actionlint/actionlint" -shellcheck= .github/workflows/ci.yml
