@@ -114,6 +114,11 @@ try {
   await page.locator('[data-text]').fill('Science');
   await page.locator('[data-action=text]').click();
   await expect(page.locator('.uc-canvas text').filter({ hasText: 'Science' })).toBeVisible();
+  const fileMenu = page.locator('.wb-file-menu');
+  if (!(await fileMenu.evaluate((menu) => menu.open))) {
+    await fileMenu.locator('summary').click();
+  }
+  assert.equal(await fileMenu.evaluate((menu) => menu.open), true);
   const saveButton = page.locator('[data-action=save]');
   const saveStatus = page.locator('.uc-editor [data-status]');
   await expect(saveButton).toBeVisible();
