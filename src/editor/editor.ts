@@ -26,6 +26,7 @@ import {
   validateProjectMarkup,
 } from './svg';
 import { paperLayout, exportPdf } from './pdf';
+import { shouldPersistExportName } from './export-name';
 import { buildStudioComposition } from '../lib/studio-compositions';
 import {
   exportFormats,
@@ -121,6 +122,7 @@ function init(root: HTMLElement) {
     busy = false,
     sharing = false,
     exportGeneration = 0,
+    exportFallbackName = '',
     exportFocus: HTMLElement | null = null;
   let drag:
     | { start: DOMPoint; before: EditorDocument; bounds: Bounds; action: string; pointer: number }
@@ -1098,7 +1100,7 @@ function init(root: HTMLElement) {
   function applyExportName() {
     const title = q<HTMLInputElement>('[data-filename]').value.trim().slice(0, 120);
     if (!title) throw new Error('Enter a project name before downloading or printing.');
-    if (history.current.title !== title)
+    if (shouldPersistExportName(history.current.title, exportFallbackName, title))
       modify((d) => {
         d.title = title;
       });
@@ -1137,10 +1139,9 @@ function init(root: HTMLElement) {
       q<HTMLInputElement>('[data-quality]').value = '95';
       q<HTMLInputElement>('[data-allow-large-pdf]').checked = false;
     }
-    q<HTMLInputElement>('[data-filename]').value =
-      history.current.title ||
-      q('.uc-command h2, .uc-command h1').textContent?.trim() ||
-      'My Clipart Project';
+    exportFallbackName =
+      q('.uc-command h2, .uc-command h1').textContent?.trim() || 'My Clipart Project';
+    q<HTMLInputElement>('[data-filename]').value = history.current.title || exportFallbackName;
     for (const input of qa<HTMLInputElement | HTMLSelectElement>('[data-export-paper]'))
       input.value = String(
         history.current.print[input.dataset.exportPaper as keyof EditorDocument['print']],
