@@ -58,37 +58,90 @@ async function open(a) {
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await settle();
 }
-async function pixelInfo(layer = 'original-image') {
-  return page.locator(`.uc-canvas [data-layer="${layer}"] image`).evaluate(async (el) => {
-    const image = new Image();
-    image.src = el.getAttribute('href');
-    await image.decode();
-    const c = document.createElement('canvas');
-    c.width = image.naturalWidth;
-    c.height = image.naturalHeight;
-    const ctx = c.getContext('2d');
-    ctx.drawImage(image, 0, 0);
-    const d = ctx.getImageData(0, 0, c.width, c.height).data;
-    let hash = 2166136261,
-      alpha = 2166136261,
-      point,
-      distance = Infinity;
-    for (let i = 0; i < d.length; i++) {
-      hash = Math.imul(hash ^ d[i], 16777619) >>> 0;
-      if (i % 4 === 3) {
-        alpha = Math.imul(alpha ^ d[i], 16777619) >>> 0;
-        const n = (i - 3) / 4,
-          x = n % c.width,
-          y = Math.floor(n / c.width);
-        const dist = ((x - c.width / 2) / c.width) ** 2 + ((y - c.height / 2) / c.height) ** 2;
-        if (d[i] > 200 && dist < distance) {
-          distance = dist;
-          point = { x, y };
+async function pixelInfo(layer = 'original-image', normalizeSource = false) {
+  return page
+    .locator(`.uc-canvas [data-layer="${layer}"] image`)
+    .evaluate(async (el, normalizeSource) => {
+      let image = new Image();
+      if (normalizeSource) {
+        // Selection coordinates and alpha comparisons must use the verified full source,
+        // not the smaller screen image that an unedited layer can display.
+        const source = JSON.parse(
+          el.closest('.uc-editor').getAttribute('data-raster-source') || 'null',
+        );
+        if (
+          !source ||
+          !Number.isInteger(source.width) ||
+          !Number.isInteger(source.height) ||
+          !source.webp ||
+          !Number.isSafeInteger(source.webp.bytes) ||
+          !/^[a-f0-9]{64}$/.test(source.webp.sha256)
+        )
+          throw new Error('The editor must expose its verified original raster source.');
+        const response = await fetch(source.webp.url, { credentials: 'omit', redirect: 'error' });
+        if (!response.ok) throw new Error('The verified original could not be read.');
+        const bytes = await response.arrayBuffer();
+        if (bytes.byteLength !== source.webp.bytes)
+          throw new Error('The original byte count differs from the editor source.');
+        const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
+          .map((value) => value.toString(16).padStart(2, '0'))
+          .join('');
+        if (hash !== source.webp.sha256)
+          throw new Error('The original checksum differs from the editor source.');
+        const url = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));
+        try {
+          image.src = url;
+          await image.decode();
+        } finally {
+          URL.revokeObjectURL(url);
+        }
+        if (image.naturalWidth !== source.width || image.naturalHeight !== source.height)
+          throw new Error('Pixel checks require the full original raster dimensions.');
+        const input = document.createElement('canvas');
+        input.width = source.width;
+        input.height = source.height;
+        const ctx = input.getContext('2d', { willReadFrequently: true });
+        ctx.drawImage(image, 0, 0);
+        const pixels = ctx.getImageData(0, 0, input.width, input.height);
+        const output = document.createElement('canvas');
+        output.width = input.width;
+        output.height = input.height;
+        output.getContext('2d').putImageData(pixels, 0, 0);
+        // Decode the renderer PNG in a fresh image, matching edited-state reads.
+        const normalized = new Image();
+        normalized.src = output.toDataURL('image/png');
+        await normalized.decode();
+        image = normalized;
+      } else {
+        image.src = el.getAttribute('href');
+        await image.decode();
+      }
+      const c = document.createElement('canvas');
+      c.width = image.naturalWidth;
+      c.height = image.naturalHeight;
+      const ctx = c.getContext('2d');
+      ctx.drawImage(image, 0, 0);
+      const d = ctx.getImageData(0, 0, c.width, c.height).data;
+      let hash = 2166136261,
+        alpha = 2166136261,
+        point,
+        distance = Infinity;
+      for (let i = 0; i < d.length; i++) {
+        hash = Math.imul(hash ^ d[i], 16777619) >>> 0;
+        if (i % 4 === 3) {
+          alpha = Math.imul(alpha ^ d[i], 16777619) >>> 0;
+          const n = (i - 3) / 4,
+            x = n % c.width,
+            y = Math.floor(n / c.width);
+          const dist = ((x - c.width / 2) / c.width) ** 2 + ((y - c.height / 2) / c.height) ** 2;
+          if (d[i] > 200 && dist < distance) {
+            distance = dist;
+            point = { x, y };
+          }
         }
       }
-    }
-    return { hash, alpha, point, width: c.width, height: c.height };
-  });
+      return { hash, alpha, point, width: c.width, height: c.height };
+    }, normalizeSource);
 }
 async function clickNative(point, layer = 'original-image') {
   await page.locator('.uc-canvas').scrollIntoViewIfNeeded();
@@ -128,7 +181,7 @@ try {
   assert.equal(targets.length, 8);
   for (const [i, a] of targets.entries()) {
     await open(a);
-    const before = await pixelInfo();
+    const before = await pixelInfo('original-image', true);
     assert.ok(before.point);
     await chooseSelectionTool(page, i % 2 ? 'wand' : 'smart');
     if (i % 2) {
@@ -145,6 +198,8 @@ try {
     await expect(page.locator('[data-status]')).toContainText('Mask refined');
     await change('[data-region-color]', '#537cc4');
     const after = await pixelInfo();
+    assert.equal(after.width, before.width);
+    assert.equal(after.height, before.height);
     assert.notEqual(after.hash, before.hash);
     assert.equal(after.alpha, before.alpha);
     const saved = await state();
@@ -167,7 +222,7 @@ try {
   }
   const a = art.find((a) => a.topic === 'volleyball' && a.style === 'Outline');
   await open(a);
-  const source = await pixelInfo();
+  const source = await pixelInfo('original-image', true);
   // Keep only the source to make each tool's effect independently observable.
   await page.locator('[data-action=reset]').click();
   await settle();
