@@ -94,9 +94,11 @@ export class Workbench {
   constructor(private host: WorkbenchHost) {
     const root = host.root;
     this.initialTitle = root.querySelector('.uc-command h2')?.textContent || 'My Clipart Project';
+    // The regular Studio URL keeps its welcome page and document scrolling.
+    // Full-window editing is an explicit command (or explicit deep link).
     if (
       root.dataset.creator === 'true' &&
-      new URLSearchParams(location.search).get('view') !== 'page'
+      new URLSearchParams(location.search).get('view') === 'workspace'
     )
       root.dataset.wbFocus = 'true';
     window.addEventListener('resize', () => this.scheduleResize());
