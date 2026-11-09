@@ -62,14 +62,43 @@ const browser = await { chromium, firefox, webkit }[engine].launch({
   headless: true,
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
 });
-const context = await browser.newContext({
+const browserType = { chromium, firefox, webkit }[engine],
+  launchOptions = {
+    headless: true,
+    ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
+  },
+  contextOptions = {
     acceptDownloads: true,
     viewport: { width: 1440, height: 1000 },
-  }),
+  };
+let activeBrowser = browser,
+  context = await activeBrowser.newContext(contextOptions),
   page = await context.newPage();
 await bridgeLocalCdn(context, base);
-const report = { base, engine, status: 'running', checks: [], states: [], exports: [], errors: [] };
-page.on('pageerror', (e) => report.errors.push(e.message));
+const report = {
+  base,
+  engine,
+  status: 'running',
+  checks: [],
+  states: [],
+  exports: [],
+  errors: [],
+  browserResets: 0,
+};
+function capturePageErrors(target) {
+  target.on('pageerror', (e) => report.errors.push(e.message));
+}
+capturePageErrors(page);
+async function resetWebKitSession() {
+  await context.close();
+  await activeBrowser.close();
+  activeBrowser = await browserType.launch(launchOptions);
+  context = await activeBrowser.newContext(contextOptions);
+  await bridgeLocalCdn(context, base);
+  page = await context.newPage();
+  capturePageErrors(page);
+  report.browserResets += 1;
+}
 async function commitInput(selector, value) {
   await page.locator(selector).fill(String(value));
   await page.locator(selector).press('Tab');
@@ -121,6 +150,11 @@ async function save(kind, id) {
 }
 try {
   for (const [index, a] of targets.entries()) {
+    // WebKit can retain canvas, decoded-image and export state during a
+    // complete-catalog sweep. End the browser process between small, fully
+    // completed batches so that one image's verification never inherits a
+    // resource-starved renderer from hundreds of earlier editor/export cycles.
+    if (engine === 'webkit' && index > 0 && index % 16 === 0) await resetWebKitSession();
     await page.goto(base + `/edit/${a.id}/`);
     await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
       timeout: 30000,
@@ -250,5 +284,5 @@ try {
 } finally {
   writeFileSync(resolve(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({ ...report, exports: report.exports.length }));
-  await browser.close();
+  await activeBrowser.close();
 }
