@@ -153,7 +153,8 @@ jobs:
       # GitHub owns mounted workspace/home directories as uid 1001. Firefox
       # rejects a root process whose profile home belongs to another user.
       options: --user 1001
-    timeout-minutes: 90
+    # Seasonal shards retain every export; the observed cold build plus full shard exceeded90 minutes.
+    timeout-minutes: ${{ startsWith(matrix.suite, 'catalog-seasonal-') && 150 || 90 }}
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
@@ -199,6 +200,7 @@ jobs:
             if [ '${{ matrix.suite }}' = 'interface-core' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/image-information.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
+              UC_BROWSER="$engine" EVIDENCE_DIR=reports/search-suggestions-escape node tests/e2e/search-suggestions-escape.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorite-boards.mjs
@@ -302,6 +304,10 @@ jobs:
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/creative-studio.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/real-artwork.mjs
+              if [ "$engine" != 'firefox' ]; then
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" EVIDENCE_DIR=reports/editor-recovery-storage node tests/e2e/editor-recovery-storage.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" EVIDENCE_DIR=reports/editor-recovery-quota node tests/e2e/editor-recovery-quota.mjs
+              fi
               BASE_URL=http://127.0.0.1:4321 BROWSER="$engine" node tests/e2e/ai-builder.mjs
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/ai-studio-transfer.mjs
               if [ '${{ matrix.engine }}' = chromium ]; then
@@ -330,13 +336,19 @@ jobs:
             esac
           done
       - name: Keep browser evidence and preview log
-        # Preserve large browser evidence only for failed checks; successful run logs remain on GitHub.
-        # Superseded cancelled candidates must release their runner without artifact cleanup.
+        # Keep structured reports and visual diagnostics when checks fail.
+        # All PDF/WebP export assertions still run; their temporary binaries are not uploaded.
+        # Superseded cancelled candidates release their runner without artifact cleanup.
         if: ${{ failure() && !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
           name: browser-evidence-${{ matrix.engine }}-${{ matrix.suite }}
-          path: reports/
+          path: |
+            reports/**/*.json
+            reports/**/*.log
+            reports/**/*.txt
+            reports/**/*.png
+            reports/**/*.html
           retention-days: 3
   validate:
     name: validate (${{ matrix.engine }})

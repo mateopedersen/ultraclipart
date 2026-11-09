@@ -157,6 +157,10 @@ try {
   await expect(page.locator('#topic-directory')).toBeFocused();
   await page.locator('#topic-filter').fill('baby elephant');
   await expect(visible().first().locator('h3')).toHaveText('Baby Elephant');
+  // Dismiss the intentionally overlapping search suggestions before using a collection filter.
+  await page.locator('#topic-filter').press('Escape');
+  await expect(page.locator('#topic-filter')).toHaveAttribute('aria-expanded', 'false');
+  await expect(page.locator('#topic-filter')).toHaveValue('baby elephant');
   await page
     .locator('label')
     .filter({ has: page.locator('[name="collection-filter"][value=sports]') })

@@ -25,7 +25,15 @@ try {
       .evaluateAll((xs) => xs.map((x) => x.getAttribute('href')).sort());
     assert.deepEqual(links, expected.map((t) => `/clipart/${t.slug}/`).sort());
     assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
-    await page.locator('#category-group').selectOption('thanksgiving-autumn');
+    const filters = page.locator('#discovery-controls');
+    if (!(await filters.evaluate((element) => element.open)))
+      await filters.locator(':scope > summary').click();
+    const autumn = page.locator('[name="collection-filter"][value="thanksgiving-autumn"]');
+    const autumnLabel = page.locator('label').filter({ has: autumn });
+    await expect(autumnLabel).toBeVisible();
+    await autumnLabel.click();
+    await expect(autumn).toBeChecked();
+    await expect(page.locator('#category-group')).toHaveValue('thanksgiving-autumn');
     await page.locator('#topic-filter').fill('cranberry');
     await expect(page.locator('[data-topic]:not([hidden]) a')).toHaveAttribute(
       'href',
@@ -96,7 +104,7 @@ try {
   assert.ok(ids.every((id) => art.some((item) => item.id === id)));
   assert.ok(ids.every((id) => !id.includes('astronaut')));
   report.checks = [
-    'Food dropdown shows all fruit topics without duplicate links',
+    'Food collection filter shows all fruit topics without duplicate links',
     'Cranberry is discoverable from both Food and Autumn with one canonical topic URL',
     'Fire and Leaves are discoverable in Nature & elements; Leaves keeps one canonical topic URL',
     'School & learning exposes school and book collections with canonical category URLs',
