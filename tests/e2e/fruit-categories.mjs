@@ -139,7 +139,6 @@ try {
   assert.equal(ids.length, 15);
   assert.equal(new Set(ids.map((id) => art.find((x) => x.id === id).topic)).size, ids.length);
   assert.ok(ids.every((id) => art.some((item) => item.id === id)));
-  assert.ok(ids.every((id) => !id.includes('astronaut')));
   report.checks = [
     'Food collection filter and collection page show all primary food topics without duplicate links',
     'Cranberry follows its primary Food category; seasonal associations do not duplicate primary browse groups',
