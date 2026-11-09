@@ -66,8 +66,30 @@ try {
   await page.screenshot({ path: path.join(out, 'page-desktop.png') });
   await page.locator('[data-studio-launch=elements]').first().click();
   await page.locator('[data-library-kind=vector]').click();
-  await expect(page.locator('[data-element-count]')).toHaveText('1–24 of 2,000 elements');
-  expect(await page.locator('[data-element]').count()).toBe(24);
+  const elementIds = () =>
+    page
+      .locator('[data-element]')
+      .evaluateAll((items) => items.map((item) => item.getAttribute('data-element')));
+  await expect(page.locator('[data-element-count]')).toHaveText('1–6 of 2,000 elements');
+  await expect(page.locator('[data-element]')).toHaveCount(6);
+  const firstPageIds = await elementIds();
+  await page.locator('[data-element-more]').click();
+  await expect(page.locator('[data-element-count]')).toHaveText('7–12 of 2,000 elements');
+  await expect(page.locator('[data-element]')).toHaveCount(6);
+  expect(new Set([...firstPageIds, ...(await elementIds())]).size).toBe(12);
+  await page.locator('[data-element-previous]').click();
+  await expect(page.locator('[data-element-count]')).toHaveText('1–6 of 2,000 elements');
+  expect(await elementIds()).toEqual(firstPageIds);
+  await page.locator('[data-element-jump]').fill('334');
+  await page.locator('[data-element-jump]').press('Tab');
+  await expect(page.locator('[data-element-count]')).toHaveText('1999–2000 of 2,000 elements');
+  await expect(page.locator('[data-element]')).toHaveCount(2);
+  await expect(page.locator('[data-element-more]')).toBeDisabled();
+  await expect(page.locator('[data-element-previous]')).toBeEnabled();
+  await page.locator('[data-element-jump]').fill('1');
+  await page.locator('[data-element-jump]').press('Tab');
+  await expect(page.locator('[data-element-count]')).toHaveText('1–6 of 2,000 elements');
+  expect(await elementIds()).toEqual(firstPageIds);
   await page.locator('[data-element-search]').fill('rainbow');
   await expect(page.locator('[data-element]').first()).toBeVisible();
   await page.locator('[data-element]').first().click();
@@ -79,6 +101,8 @@ try {
   await page.reload();
   await panel('elements');
   await page.locator('[data-library-kind=vector]').click();
+  await expect(page.locator('[data-element-count]')).toHaveText('1–6 of 2,000 elements');
+  await expect(page.locator('[data-element]')).toHaveCount(6);
   await page.locator('[data-element-favorites]').click();
   await expect(page.locator('[data-element]')).toHaveCount(1);
   await page.locator('[data-element-favorites]').click();
@@ -180,8 +204,11 @@ try {
   await expect(page.locator('[data-status]')).toContainText('project opened');
   expect((await state()).layers).toHaveLength(276);
   const loadMs = Date.now() - started;
-  await page.locator('[data-work-mode=quick]').click();
+  await page.locator('button[data-work-mode=print]').click();
+  await expect(page.locator('.uc-editor')).toHaveAttribute('data-work-mode', 'print');
+  expect((await state()).layers).toHaveLength(276);
   await page.locator('button[data-work-mode=edit]').click();
+  await expect(page.locator('.uc-editor')).toHaveAttribute('data-work-mode', 'edit');
   expect((await state()).layers).toHaveLength(276);
   await panel('layers');
   await page.locator('[data-select=e-0]').click();
