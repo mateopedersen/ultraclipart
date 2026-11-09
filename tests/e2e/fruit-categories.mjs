@@ -41,6 +41,14 @@ try {
       page.locator('#subject-grid [data-topic]:not([hidden]) a[href="/clipart/cranberry/"]'),
     ).toHaveCount(1);
     await expect(visibleTopics.first()).toHaveAttribute('href', '/clipart/cranberry/');
+    // Finish the autocomplete interaction before choosing a filter behind its panel.
+    const topicFilter = page.locator('#topic-filter');
+    await expect(topicFilter).toHaveAttribute('aria-expanded', 'true');
+    await topicFilter.press('Escape');
+    await expect(topicFilter).toHaveAttribute('aria-expanded', 'false');
+    await expect(topicFilter).toHaveValue('cranberry');
+    if (!(await filters.evaluate((element) => element.open)))
+      await filters.locator(':scope > summary').click();
     const autumn = page.locator('[name="collection-filter"][value="thanksgiving-autumn"]');
     const autumnLabel = page.locator('label').filter({ has: autumn });
     await expect(autumnLabel).toBeVisible();
