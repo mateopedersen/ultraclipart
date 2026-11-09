@@ -50,6 +50,21 @@ export async function chooseSelectionTool(page, value) {
 }
 
 export async function chooseScene(page, id) {
+  const backToPage = page.locator('[data-wb-back-page]');
+  await page.waitForFunction(() => {
+    const root = document.querySelector('.uc-editor');
+    const back = root?.querySelector('[data-wb-back-page]');
+    return (
+      root &&
+      root.getAttribute('aria-busy') !== 'true' &&
+      back &&
+      back.getAttribute('aria-pressed') !== null
+    );
+  });
+  if ((await backToPage.getAttribute('aria-pressed')) === 'true') {
+    await backToPage.click();
+    await expect(backToPage).toHaveAttribute('aria-pressed', 'false');
+  }
   const card = page.locator(`[data-studio-scene="${id}"]`);
   for (let batch = 0; batch < 6 && !(await card.isVisible()); batch++) {
     const more = page.locator('[data-scene-more]');
