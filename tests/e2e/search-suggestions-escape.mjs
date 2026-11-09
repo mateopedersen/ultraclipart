@@ -37,7 +37,7 @@ const server = createServer((req, res) =>
         .end(
           '<!doctype html><meta name="catalog-snapshot" content="' +
             'a'.repeat(64) +
-            '"><form action="/search/"><input name="q"></form><script type="module" src="/controller.js"></script>',
+            '"><form action="/search/"><input type="search" name="q"></form><h1 id="outside">Results</h1><input id="native-search" type="search"><script type="module" src="/controller.js"></script>',
         ),
 );
 await new Promise((r) => server.listen(0, '127.0.0.1', r));
@@ -70,6 +70,8 @@ try {
           'pending-reply',
           'open-panel',
           'composing-closed',
+          'closed-native-escape',
+          'outside-pointer',
         ]) {
           const page = await browser.newPage();
           const row = { engine, round, scenario, passed: false };
@@ -77,12 +79,26 @@ try {
           try {
             await page.goto('http://127.0.0.1:' + server.address().port);
             await expect(page.locator('form')).toHaveAttribute('data-suggestions-ready', 'true');
-            const input = page.locator('input'),
+            const input = page.locator('form input[name=q]'),
               panel = page.locator('.search-suggestions');
             await page.evaluate((hold) => {
               window.holdArtwork = hold;
             }, scenario === 'pending-reply');
-            if (scenario === 'pending-debounce' || scenario === 'composing-closed') {
+            if (scenario === 'closed-native-escape') {
+              const native = page.locator('#native-search');
+              await native.fill('x');
+              await native.press('Escape');
+              row.nativeControlValue = await native.inputValue();
+              await input.fill('x');
+              await expect(panel).toBeHidden();
+              await input.press('Escape');
+              await expect(input).toHaveValue(row.nativeControlValue);
+            } else if (scenario === 'outside-pointer') {
+              await input.fill('camera');
+              await expect(panel).toBeVisible();
+              await page.locator('#outside').click();
+              await expect(input).toHaveValue('camera');
+            } else if (scenario === 'pending-debounce' || scenario === 'composing-closed') {
               const cancelled = await input.evaluate((el, composing) => {
                 if (composing)
                   el.dispatchEvent(
@@ -114,16 +130,21 @@ try {
                 await expect(page.locator('a[href="/clipart/camera/"]')).toBeVisible();
                 await input.press('ArrowDown');
               }
-              const cancelled = await input.evaluate((el) => {
-                const event = new KeyboardEvent('keydown', {
-                  key: 'Escape',
-                  bubbles: true,
-                  cancelable: true,
+              if (scenario === 'open-panel') {
+                await input.press('Escape');
+                await expect(input).toHaveValue('camera');
+              } else {
+                const cancelled = await input.evaluate((el) => {
+                  const event = new KeyboardEvent('keydown', {
+                    key: 'Escape',
+                    bubbles: true,
+                    cancelable: true,
+                  });
+                  el.dispatchEvent(event);
+                  return event.defaultPrevented;
                 });
-                el.dispatchEvent(event);
-                return event.defaultPrevented;
-              });
-              assert.equal(cancelled, true, 'Open panel consumes Escape');
+                assert.equal(cancelled, true, 'Open panel consumes Escape');
+              }
             }
             await page.evaluate(() => {
               window.releaseDirectory?.();
