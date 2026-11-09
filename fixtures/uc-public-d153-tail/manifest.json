@@ -1,0 +1,66 @@
+{
+  "publicSource": "d153c5b5e811f5cc367e193adfa843fbf1af9c18",
+  "publicTree": "e1f3f61910b37afbe68a9b0ba3d54253e88507be",
+  "scope": "Four public-source test-only overlays plus an explicit private-fixture copy-storage adapter. Already-public D153 source, own generic test orchestration only; no private operator code, credentials, owner media upload or deployment. Full41352 originals and all normal build/SEO/link/header gates retained. Actual tests external-network-none.",
+  "files": [
+    {
+      "path": "tests/e2e/cute-surprise.mjs",
+      "bytes": 4044,
+      "sha256": "9e783e1cad865c6b28485484613d57537a7e9817c536120027e8332913d85986",
+      "beforeSHA256": "492aad46cd5e57ef2b1e8f5c2e2c3e53b8f43935ab4918ef9c9b37811229bbfd"
+    },
+    {
+      "path": "tests/helpers/index-cache-policy.mjs",
+      "bytes": 2291,
+      "sha256": "724f18c1cb455345daf04359280f93ce63468fb57c6660f456462e27d708e0df",
+      "beforeSHA256": null
+    },
+    {
+      "path": "tests/index-cache-policy.mjs",
+      "bytes": 2538,
+      "sha256": "2050e04acbff6377e9df31ff27d5c563570f6ca1e0138548eff97c92666e9830",
+      "beforeSHA256": null
+    },
+    {
+      "path": "tests/e2e/categories.mjs",
+      "bytes": 11806,
+      "sha256": "40c43acd62435cde7c0e0c56e1c58c0ecb37f2d187f47d36ab593b229bbc1f1c",
+      "beforeSHA256": "f2b7008c76bfdb264925abf92e9afc51aff1bacbd9a812b1fac036c51f489e5e"
+    }
+  ],
+  "buildAdapter": {
+    "path": "astro.config.mjs",
+    "beforeSHA256": "67327933d6b6582d5cf1e78a029358c35dbe436834ab670d211c646194901dc7",
+    "afterSHA256": "63227992a90ca970a2c88db7d34abbe0502bc825c21f03a0ae3e0b6e537bf6f7",
+    "bytes": 3681,
+    "reason": "Private fixture only: share immutable source/output media inodes to avoid a second 23.85GB physical copy; not an independent backup. All normal gates remain enabled."
+  },
+  "expectedRounds": 2,
+  "expectedCaseScriptsPerRound": [
+    "cache-policy",
+    "cute-surprise",
+    "fruit-categories",
+    "animal-gallery",
+    "fruit-gallery",
+    "fruit-expansion",
+    "fruit-five",
+    "fire-leaf",
+    "school",
+    "basketball",
+    "book",
+    "creator-touch",
+    "studio-input",
+    "studio-upload",
+    "webkit-categories",
+    "webkit-header",
+    "webkit-favorite-boards",
+    "webkit-favorites-workspace",
+    "webkit-brand-accents",
+    "webkit-responsive-controls",
+    "webkit-performance-regressions",
+    "webkit-performance-layout",
+    "webkit-cookie-startup",
+    "webkit-warm-editor-cache",
+    "webkit-mobile-performance"
+  ]
+}

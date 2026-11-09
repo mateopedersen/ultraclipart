@@ -1,376 +1,41 @@
-name: Validate UltraClipart
+name: Exact public D153 tail and WebKit preflight twice offline
 on:
-  push:
-    branches: [main]
-  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
-concurrency:
-  group: validate-${{ github.ref }}
-  # New PR commits supersede older candidates. Main artwork waves still finish
-  # their complete browser matrices, so a busy publisher cannot starve production.
-  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
-  plan:
-    name: Select and verify affected checks
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    outputs:
-      run_browser: ${{ steps.scope.outputs.run_browser }}
-      browser_suites: ${{ steps.scope.outputs.browser_suites }}
+  public-studio:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          fetch-depth: 0
-      - uses: pnpm/action-setup@v4
+          persist-credentials: false
+      - name: Checkout immutable public source without retained credentials
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
-          version: 11.25.0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24.22.2'
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Verify conservative scope policy
-        run: node --test tests/ci-plan.mjs tests/ci-raster-shards.mjs
-      - name: Validate workflow and planner formatting
-        run: pnpm exec prettier --check .github/workflows/ci.yml scripts/ci-plan.mjs tests/ci-plan.mjs scripts/ci-raster-shards.mjs tests/ci-raster-shards.mjs
-      - name: Restore checksum-pinned workflow linter archive
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
-        with:
-          path: ${{ runner.temp }}/uc-actionlint/archive.tar.gz
-          key: actionlint-${{ runner.os }}-1.7.12-8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8
-      - name: Lint workflow expressions and job dependencies
-        timeout-minutes: 5
+          repository: mateopedersen/ultraclipart
+          ref: d153c5b5e811f5cc367e193adfa843fbf1af9c18
+          path: public-source
+          persist-credentials: false
+      - name: Prepare verified dependencies and build exact public-source fixture
+        shell: bash
+        run: bash fixtures/uc-public-d153-tail/prepare.sh
+      - name: All remaining Studio cases twice with external network disabled
+        shell: bash
         run: |
           set -euo pipefail
-          mkdir -p "$RUNNER_TEMP/uc-actionlint"
-          archive="$RUNNER_TEMP/uc-actionlint/archive.tar.gz"
-          verified_archive() {
-            test -f "$1" &&
-              test "$(wc -c < "$1")" -eq 2353908 &&
-              echo '8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  '"$1" | sha256sum --check --status
-          }
-          if ! verified_archive "$archive"; then
-            rm -f "$archive" "$archive.part"
-            for asset_url in \
-              https://api.github.com/repos/rhysd/actionlint/releases/assets/384924896 \
-              https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz; do
-              if curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
-                --max-redirs 5 --retry 1 --retry-max-time 95 --max-time 45 --max-filesize 2353908 \
-                -H 'Accept: application/octet-stream' -o "$archive.part" "$asset_url" &&
-                verified_archive "$archive.part"; then
-                mv "$archive.part" "$archive"
-                break
-              fi
-              rm -f "$archive.part"
-            done
-          fi
-          verified_archive "$archive"
-          tar -xzf "$archive" -C "$RUNNER_TEMP/uc-actionlint" actionlint
-          "$RUNNER_TEMP/uc-actionlint/actionlint" -shellcheck= .github/workflows/ci.yml
-      - name: Select affected browser groups
-        id: scope
-        run: node scripts/ci-plan.mjs
-  # Node/source and production checks use the same pinned environment for every
-  # browser. Run them once and retain both as mandatory aggregate dependencies.
-  unit:
-    name: Node and source validation
-    needs: plan
-    if: ${{ needs.plan.outputs.run_browser == 'true' }}
-    runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
-      options: --user 1001
-    timeout-minutes: 90
-    env:
-      ASTRO_TELEMETRY_DISABLED: '1'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11.25.0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24.22.2'
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm format:check
-      - run: pnpm check
-      - run: pnpm build
-      - run: pnpm test
-  art:
-    name: Python 3.12 art and PDF checks
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
-        with:
-          python-version: '3.12'
-      - name: Install pinned art dependencies
-        run: python -m pip install --disable-pip-version-check --requirement scripts/requirements-art.txt
-      - name: Test PDF, image and source-bound export contracts
-        run: python -m unittest discover -s tests -p 'test_*.py'
-  production:
-    name: Production CDN mapping and headers
-    needs: plan
-    if: ${{ needs.plan.outputs.run_browser == 'true' }}
-    runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
-      options: --user 1001
-    timeout-minutes: 90
-    env:
-      ASTRO_TELEMETRY_DISABLED: '1'
-      CF_PAGES: '1'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11.25.0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24.22.2'
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - run: pnpm test:release
-  browser:
-    needs: plan
-    if: ${{ needs.plan.outputs.run_browser == 'true' }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      max-parallel: 8
-      matrix:
-        engine: [chromium, firefox, webkit]
-        suite: ${{ fromJSON(needs.plan.outputs.browser_suites) }}
-    # Match @playwright/test; browsers and OS libraries are already installed.
-    # Pin the official image digest so a registry tag cannot change the runner.
-    container:
-      image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:47b510dd9230bf0b9bfc9b20102241e577ea7a99334ab4c3ca19f19770e9b8ea
-      # GitHub owns mounted workspace/home directories as uid 1001. Firefox
-      # rejects a root process whose profile home belongs to another user.
-      options: --user 1001
-    timeout-minutes: 90
-    env:
-      ASTRO_TELEMETRY_DISABLED: '1'
-    steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 11.25.0
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '24.22.2'
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Restore source-bound screen previews
-        uses: actions/cache@v4
-        with:
-          path: |
-            public/previews
-            .astro/preview-assets.json
-          key: previews-${{ runner.os }}-${{ hashFiles('scripts/preview-assets.mjs', 'pnpm-lock.yaml') }}-${{ hashFiles('data/art.json') }}
-          restore-keys: |
-            previews-${{ runner.os }}-${{ hashFiles('scripts/preview-assets.mjs', 'pnpm-lock.yaml') }}-
-      - run: pnpm build
-      - name: Desktop, tablet, mobile and accessibility
-        run: |
-          mkdir -p reports
-          pnpm exec astro preview --host 127.0.0.1 --port 4321 --ignore-lock > reports/preview.log 2>&1 &
-          PREVIEW_PID=$!
-          trap 'kill "$PREVIEW_PID" 2>/dev/null || true' EXIT
-          PREVIEW_READY=0
-          for attempt in $(seq 1 30); do
-            if curl --fail --silent http://127.0.0.1:4321/ > /dev/null; then
-              PREVIEW_READY=1
-              break
-            fi
-            if ! kill -0 "$PREVIEW_PID" 2>/dev/null; then break; fi
-            sleep 1
-          done
-          if [ "$PREVIEW_READY" -ne 1 ]; then
-            cat reports/preview.log
-            exit 1
-          fi
-          for engine in ${{ matrix.engine }}; do
-            if [ '${{ matrix.suite }}' = 'interface-core' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/image-information.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorite-boards.mjs
-              if [ "$engine" != 'firefox' ]; then
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorites-workspace.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/brand-accents.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/responsive-controls.mjs
-              fi
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/performance-regressions.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/performance-layout.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/cookie-startup.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/warm-editor-cache.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/mobile-performance.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'interface-artwork' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/artwork-details.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/related.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/download-page.mjs
-              UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/sharing.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'interface-pages' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/editorial-process.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/not-found.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/contact.mjs
-              BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/site.mjs
-              BASE_URL=http://127.0.0.1:4321 TEST_BROWSER="$engine" node tests/e2e/refinement.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/content.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/footer.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'catalog' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/volleyball.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=baby node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=heart node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=winter node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=halloween node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=pumpkin node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=ghost node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=witch node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=skeleton node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=vampire node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=bat node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=spider node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=thanksgiving node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=turkey node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=headphones node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=headphones ALL_RASTER=1 EVIDENCE_DIR=reports/headphones-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=television node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=television ALL_RASTER=1 EVIDENCE_DIR=reports/television-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=laptop node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=laptop ALL_RASTER=1 EVIDENCE_DIR=reports/laptop-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=smartwatch node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=smartwatch ALL_RASTER=1 EVIDENCE_DIR=reports/smartwatch-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=earbuds node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=printer node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=keyboard node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=scanner node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=tablet node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=speaker node tests/e2e/collection.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'catalog-extra-0' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=earbuds ALL_RASTER=1 EVIDENCE_DIR=reports/earbuds-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=printer ALL_RASTER=1 EVIDENCE_DIR=reports/printer-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=keyboard ALL_RASTER=1 EVIDENCE_DIR=reports/keyboard-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=scanner ALL_RASTER=1 EVIDENCE_DIR=reports/scanner-editor node tests/e2e/raster-editor.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'catalog-extra-1' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=labubu ALL_RASTER=1 EVIDENCE_DIR=reports/labubu-editor node tests/e2e/raster-editor.mjs
-              if [ "$engine" = 'chromium' ]; then
-                BASE_URL=http://127.0.0.1:4321 TOPIC=labubu EVIDENCE_DIR=reports/labubu-semantics node tests/e2e/collection-semantics.mjs
-                BASE_URL=http://127.0.0.1:4321 TOPIC=maple EVIDENCE_DIR=reports/maple-semantics node tests/e2e/collection-semantics.mjs
-                BASE_URL=http://127.0.0.1:4321 TOPIC=leaves EXPECTED_ARTWORK_COUNT=100 EVIDENCE_DIR=reports/leaves-semantics node tests/e2e/collection-semantics.mjs
-                BASE_URL=http://127.0.0.1:4321 TOPIC=scarecrow EVIDENCE_DIR=reports/scarecrow-semantics node tests/e2e/collection-semantics.mjs
-                BASE_URL=http://127.0.0.1:4321 TOPIC=gourd EVIDENCE_DIR=reports/gourd-semantics node tests/e2e/collection-semantics.mjs
-              fi
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=tablet ALL_RASTER=1 EVIDENCE_DIR=reports/tablet-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=speaker ALL_RASTER=1 EVIDENCE_DIR=reports/speaker-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_REPLACEMENTS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/replacement-editor node tests/e2e/raster-editor.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'catalog-extra-3' ] || [ '${{ matrix.suite }}' = 'catalog-extra-4' ]; then
-              # Keep every subject and near-limit PDF; bound each browser's work.
-              export RASTER_SHARD_COUNT=2
-              if [ '${{ matrix.suite }}' = 'catalog-extra-3' ]; then
-                export RASTER_SHARD_INDEX=0
-              else
-                export RASTER_SHARD_INDEX=1
-              fi
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_PER_TOPIC=1 EVIDENCE_DIR=reports/topic-representative-editor node tests/e2e/raster-editor.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'catalog-extra-2' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=camera ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/camera node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=camera ALL_RASTER=1 EVIDENCE_DIR=reports/camera-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=wifi-router ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/wifi-router node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=wifi-router ALL_RASTER=1 EVIDENCE_DIR=reports/wifi-router-editor node tests/e2e/raster-editor.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" TOPIC=robot ALL_DOWNLOADS=1 EVIDENCE_DIR=reports/robot node tests/e2e/collection.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_TOPICS=robot ALL_RASTER=1 EVIDENCE_DIR=reports/robot-editor node tests/e2e/raster-editor.mjs
-            fi
-            if [ '${{ matrix.suite }}' = 'studio' ]; then
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-pro.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/studio-tools.mjs
-              UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/editor node scripts/test-editor-browser.mjs
-              UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/creative-studio.mjs
-              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/real-artwork.mjs
-              BASE_URL=http://127.0.0.1:4321 BROWSER="$engine" node tests/e2e/ai-builder.mjs
-              UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/ai-studio-transfer.mjs
-              if [ '${{ matrix.engine }}' = chromium ]; then
-                BASE_URL=http://127.0.0.1:4321 node tests/e2e/cute-surprise.mjs
-                BASE_URL=http://127.0.0.1:4321 node tests/e2e/fruit-categories.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-2026-10-24 EXPECTED_ARTWORKS=550 EXPECTED_TOPICS=11 EVIDENCE_DIR=reports/fruit-gallery node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-expansion-2026-10-24 EXPECTED_ARTWORKS=1450 EXPECTED_TOPICS=29 EVIDENCE_DIR=reports/fruit-expansion node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fruit-five-packs-2026-10-24 EXPECTED_ARTWORKS=250 EXPECTED_TOPICS=5 EVIDENCE_DIR=reports/fruit-five node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-fire-leaf-two-packs-2026-10-24 EXPECTED_ARTWORKS=100 EXPECTED_TOPICS=2 EVIDENCE_DIR=reports/fire-leaf node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-school-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/school node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-basketball-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/basketball node tests/e2e/package-gallery.mjs
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER=chromium SOURCE_COLLECTION=owner-book-pack-2026-10-24 EXPECTED_ARTWORKS=50 EXPECTED_TOPICS=1 EVIDENCE_DIR=reports/book node tests/e2e/package-gallery.mjs
-                UC_BASE_URL=http://127.0.0.1:4321 UC_EVIDENCE_DIR=reports/creator-touch node tests/e2e/creator-touch.mjs
-                BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
-                BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
-              fi
-            fi
-            case '${{ matrix.suite }}' in
-              catalog-seasonal-0|catalog-seasonal-1|catalog-seasonal-2)
-                UC_CI_SUITE='${{ matrix.suite }}'
-                export RASTER_SHARD_COUNT=3
-                export RASTER_SHARD_INDEX="${UC_CI_SUITE##*-}"
-                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_ORIGINAL_TOPICS=1 ALL_RASTER=1 EVIDENCE_DIR=reports/generated-editor node tests/e2e/raster-editor.mjs
-                ;;
-            esac
-          done
-      - name: Keep browser evidence and preview log
-        # Preserve large browser evidence only for failed checks; successful run logs remain on GitHub.
-        # Superseded cancelled candidates must release their runner without artifact cleanup.
+          target="$GITHUB_WORKSPACE/public-source"
+          packet="$GITHUB_WORKSPACE/fixtures/uc-public-d153-tail"
+          timeout --kill-after=15s 7200s docker run --rm --init --network none --read-only --ipc private --shm-size=1g --cpus 4 --memory 6g --memory-swap 6g --pids-limit 512 --cap-drop ALL --security-opt no-new-privileges --tmpfs /scratch:rw,nosuid,nodev,exec,size=1073741824,mode=1777 --mount "type=bind,src=$target,dst=/work" --mount "type=bind,src=$packet,dst=/harness,readonly" --user "$(id -u):$(id -g)" --entrypoint /usr/bin/env security-public-d153-tail -i PATH=/opt/node24/bin:/manager/node_modules/.bin:/usr/local/bin:/usr/bin:/bin HOME=/scratch/home TMPDIR=/scratch/tmp XDG_CACHE_HOME=/scratch/cache ASTRO_TELEMETRY_DISABLED=1 CI=true LANG=C.UTF-8 TZ=UTC NODE_OPTIONS=--max-old-space-size=4500 /bin/bash /harness/run-offline.sh
+      - name: Preserve diagnostic screenshots only when application checks fail
         if: ${{ failure() && !cancelled() }}
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: browser-evidence-${{ matrix.engine }}-${{ matrix.suite }}
-          path: reports/
+          name: public-d153-offline-preflight-failure
+          path: public-source/reports/
           retention-days: 3
-  validate:
-    name: validate (${{ matrix.engine }})
-    needs: [plan, unit, production, browser, art]
-    # Run after failed dependencies too, but do not hold the next candidate
-    # behind queued finalizers for a deliberately cancelled older PR run.
-    if: ${{ !cancelled() }}
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        engine: [chromium, firefox, webkit]
-    steps:
-      - name: Require the selected checks to succeed
-        env:
-          PLAN_RESULT: ${{ needs.plan.result }}
-          RUN_BROWSER: ${{ needs.plan.outputs.run_browser }}
-          UNIT_RESULT: ${{ needs.unit.result }}
-          PRODUCTION_RESULT: ${{ needs.production.result }}
-          BROWSER_RESULT: ${{ needs.browser.result }}
-          ART_RESULT: ${{ needs.art.result }}
-        run: |
-          test "$PLAN_RESULT" = success
-          test "$ART_RESULT" = success
-          case "$RUN_BROWSER" in
-            true)
-              test "$UNIT_RESULT" = success
-              test "$PRODUCTION_RESULT" = success
-              test "$BROWSER_RESULT" = success
-              ;;
-            false)
-              test "$UNIT_RESULT" = skipped
-              test "$PRODUCTION_RESULT" = skipped
-              test "$BROWSER_RESULT" = skipped
-              ;;
-            *) exit 1 ;;
-          esac
+      - name: Emit byte-verifiable diagnostic reports without artifact storage
+        if: ${{ always() && !cancelled() }}
+        shell: bash
+        run: python3 fixtures/uc-public-d153-tail/emit-reports.py
