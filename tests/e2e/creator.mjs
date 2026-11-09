@@ -1,3 +1,4 @@
+import { readStoredEditorDocument } from '../helpers/editor-document.mjs';
 import {
   chooseVectorStarter,
   clickFileAction,
@@ -38,8 +39,7 @@ await page.addInitScript(() => {
 });
 const action = (name) => page.locator(`[data-action="${name}"]`).filter({ visible: true }).first();
 const panel = async (name) => page.locator(`[data-panel="${name}"]`).click();
-const state = () =>
-  page.evaluate(() => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
+const state = () => readStoredEditorDocument(page);
 const change = async (selector, value) => {
   await page.locator(selector).fill(String(value));
   await page.locator(selector).press('Tab');

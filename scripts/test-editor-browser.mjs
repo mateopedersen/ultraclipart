@@ -1,3 +1,4 @@
+import { readStoredEditorDocument } from '../tests/helpers/editor-document.mjs';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
 import {
@@ -30,8 +31,7 @@ const change = async (selector, value) => {
   await page.locator(selector).fill(String(value));
   await page.locator(selector).press('Tab');
 };
-const state = async () =>
-  JSON.parse(await page.evaluate(() => localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
+const state = () => readStoredEditorDocument(page);
 const downloaded = async (format, name) => {
   await page.locator(`[data-format][value="${format}"]`).locator('..').click();
   await expect(page.locator(`[data-format][value="${format}"]`)).toBeChecked();

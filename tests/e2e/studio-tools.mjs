@@ -1,3 +1,4 @@
+import { readStoredEditorDocument } from '../helpers/editor-document.mjs';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import assert from 'node:assert/strict';
@@ -21,8 +22,7 @@ await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => report.errors.push(e.message));
 const art = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
 let current;
-const state = () =>
-  page.evaluate((id) => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:' + id)), current);
+const state = () => readStoredEditorDocument(page, current);
 const settle = async () => {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('data-operation-busy', 'true', {
     timeout: 120000,

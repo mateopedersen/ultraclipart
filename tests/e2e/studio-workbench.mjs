@@ -1,3 +1,4 @@
+import { readStoredEditorDocument } from '../helpers/editor-document.mjs';
 import { chromium, webkit, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -158,8 +159,7 @@ await context.addInitScript(() => {
 const page = await context.newPage(),
   report = { engine, base, checks: [], errors: [], exports: [], layouts: [], status: 'running' };
 page.on('pageerror', (e) => report.errors.push(e.message));
-const state = () =>
-  page.evaluate(() => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
+const state = () => readStoredEditorDocument(page);
 async function closeDialogs() {
   for (const d of await page.locator('.uc-editor dialog[open]').all()) {
     const close = d.locator('[data-wb-close]').first();

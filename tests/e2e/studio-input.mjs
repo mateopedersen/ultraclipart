@@ -1,3 +1,4 @@
+import { readStoredEditorDocument } from '../helpers/editor-document.mjs';
 import { chromium, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -17,8 +18,7 @@ const page = await context.newPage(),
   errors = [],
   checks = [];
 page.on('pageerror', (e) => errors.push(e.message));
-const state = () =>
-  page.evaluate((id) => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:' + id)), id);
+const state = () => readStoredEditorDocument(page, id);
 const settle = async () => {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('data-processing', 'true', {
     timeout: 45000,
