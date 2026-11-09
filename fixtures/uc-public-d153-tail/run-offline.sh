@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd /work
+test "${PLAYWRIGHT_BROWSERS_PATH:-}" = /ms-playwright
+test -d /ms-playwright
 mkdir -p /scratch/home /scratch/tmp /scratch/cache reports/private-tail
 python3 /harness/verify-overlay.py /work /harness --verify-only
 ./node_modules/.bin/astro preview --host 127.0.0.1 --port 4321 --ignore-lock > reports/private-tail/preview.log 2>&1 &
