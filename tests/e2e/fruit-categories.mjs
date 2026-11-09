@@ -83,7 +83,7 @@ try {
       page.locator(`[aria-label="Topics in this collection"] a[href="/clipart/${t.slug}/"]`),
     ).toHaveCount(1);
   await page.goto(base + '/clipart/cranberry/');
-  await expect(page.locator('.chips a[href="/collection/food-drink/"]')).toHaveCount(1);
+  await expect(page.locator('.breadcrumb a[href="/collection/food-drink/"]')).toHaveCount(1);
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
     'href',
     'https://ultraclipart.com/clipart/cranberry/',
@@ -97,7 +97,7 @@ try {
       page.locator(`[data-topic]:not([hidden]) a[href="/clipart/${topic}/"]`),
     ).toHaveCount(1);
   await page.goto(base + '/clipart/leaves/');
-  await expect(page.locator('.chips a[href="/collection/nature-elements/"]')).toHaveCount(1);
+  await expect(page.locator('.breadcrumb a[href="/collection/nature-elements/"]')).toHaveCount(1);
   await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
     'href',
     'https://ultraclipart.com/clipart/leaves/',
