@@ -978,3 +978,17 @@
   margin: 0;
   padding: 0;
 }
+
+/* Keep the creator page's mobile inspector in document flow so it cannot cover starter cards. */
+@media (max-width: 800px) {
+  .uc-editor.uc-next[data-work-mode][data-creator] .uc-properties {
+    position: relative;
+    z-index: auto;
+    inset: auto;
+    grid-area: auto;
+    width: 100%;
+    height: min(70dvh, 620px);
+    max-height: min(70dvh, 620px);
+    box-shadow: 0 5px 18px #25456808;
+  }
+}

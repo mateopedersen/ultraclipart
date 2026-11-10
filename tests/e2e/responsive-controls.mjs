@@ -53,6 +53,15 @@ try {
       await expect(page.locator('.uc-workspace')).not.toHaveAttribute('inert', '', {
         timeout: 30000,
       });
+      await page.waitForFunction(() => {
+        const root = document.querySelector('.uc-editor');
+        return root && !root.hasAttribute('aria-busy');
+      });
+      const backToPage = page.locator('[data-wb-back-page]');
+      if ((await backToPage.getAttribute('aria-pressed')) === 'true') {
+        await backToPage.tap();
+        await expect(backToPage).toHaveAttribute('aria-pressed', 'false');
+      }
     }
     const measure = await page.evaluate(() => {
       const visible = (e) => {

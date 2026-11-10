@@ -1,3 +1,4 @@
+import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { chromium, webkit, firefox, expect } from '@playwright/test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
@@ -40,6 +41,7 @@ await context.route('**/@vite/client', (route) =>
 const page = await context.newPage(),
   errors = [],
   checks = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const ready = () =>
   expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', { timeout: 60000 });
@@ -53,7 +55,7 @@ const state = () =>
   });
 const saved = async (name) => {
   const p = page.waitForEvent('download');
-  await page.locator('[data-action=save]').click();
+  await clickFileAction(page, 'save');
   const file = path.join(out, name);
   await (await p).saveAs(file);
   return JSON.parse(await fs.readFile(file, 'utf8'));

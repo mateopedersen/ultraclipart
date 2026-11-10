@@ -11,6 +11,7 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
 mkdirSync(out, { recursive: true });
 const requestedIds = new Set((process.env.RASTER_IDS || '').split(',').filter(Boolean));
+const resetRecovery = process.env.RASTER_RESET_RECOVERY === '1';
 const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
 const selection =
   process.env.RASTER_ORIGINAL_TOPICS === '1'
@@ -34,23 +35,25 @@ if (requestedIds.size)
   );
 const targets = shardRasterTargets([
   ...new Map(
-    (process.env.ALL_RASTER === '1' || requestedIds.size
-      ? art
-      : process.env.RASTER_PER_TOPIC === '1'
-        ? [
-            ...[...new Set(art.map((a) => a.topic))].map((topic) =>
-              art.find((a) => a.topic === topic),
-            ),
-            // A smaller source can have a less compressible alpha mask than
-            // the largest PDF. Exercise every file with under 5 KB headroom.
-            ...art.filter((a) => a.files.pdf.bytes > 995_000),
-            [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
-          ]
-        : [
-            art[0],
-            art.find((a) => a.style === 'Watercolor'),
-            [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
-          ]
+    (resetRecovery
+      ? art.slice(0, 17)
+      : process.env.ALL_RASTER === '1' || requestedIds.size
+        ? art
+        : process.env.RASTER_PER_TOPIC === '1'
+          ? [
+              ...[...new Set(art.map((a) => a.topic))].map((topic) =>
+                art.find((a) => a.topic === topic),
+              ),
+              // A smaller source can have a less compressible alpha mask than
+              // the largest PDF. Exercise every file with under 5 KB headroom.
+              ...art.filter((a) => a.files.pdf.bytes > 995_000),
+              [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+            ]
+          : [
+              art[0],
+              art.find((a) => a.style === 'Watercolor'),
+              [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+            ]
     )
       .filter(Boolean)
       .map((a) => [a.id, a]),
@@ -62,14 +65,47 @@ const browser = await { chromium, firefox, webkit }[engine].launch({
   headless: true,
   ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
 });
-const context = await browser.newContext({
+const browserType = { chromium, firefox, webkit }[engine],
+  launchOptions = {
+    headless: true,
+    ...(process.env.BROWSER_BIN ? { executablePath: process.env.BROWSER_BIN } : {}),
+  },
+  contextOptions = {
     acceptDownloads: true,
     viewport: { width: 1440, height: 1000 },
-  }),
+  };
+let activeBrowser = browser,
+  context = await activeBrowser.newContext(contextOptions),
   page = await context.newPage();
 await bridgeLocalCdn(context, base);
-const report = { base, engine, status: 'running', checks: [], states: [], exports: [], errors: [] };
-page.on('pageerror', (e) => report.errors.push(e.message));
+const report = {
+  base,
+  engine,
+  status: 'running',
+  checks: [],
+  states: [],
+  exports: [],
+  errors: [],
+  browserResets: 0,
+};
+function capturePageErrors(target) {
+  target.on('pageerror', (e) => report.errors.push(e.message));
+}
+capturePageErrors(page);
+async function resetBrowserSession() {
+  // Recycle WebKit's renderer without discarding the editor's persisted
+  // recovery document. This also makes the final recovery assertion exercise
+  // the same localStorage/IndexedDB state that a fresh browser process sees.
+  const storageState = await context.storageState({ indexedDB: true });
+  await context.close();
+  await activeBrowser.close();
+  activeBrowser = await browserType.launch(launchOptions);
+  context = await activeBrowser.newContext({ ...contextOptions, storageState });
+  await bridgeLocalCdn(context, base);
+  page = await context.newPage();
+  capturePageErrors(page);
+  report.browserResets += 1;
+}
 async function commitInput(selector, value) {
   await page.locator(selector).fill(String(value));
   await page.locator(selector).press('Tab');
@@ -121,6 +157,12 @@ async function save(kind, id) {
 }
 try {
   for (const [index, a] of targets.entries()) {
+    // WebKit can retain canvas, decoded-image and export state during a
+    // complete-catalog sweep. End the browser process between small, fully
+    // completed batches so that one image's verification never inherits a
+    // resource-starved renderer from hundreds of earlier editor/export cycles.
+    if ((engine === 'webkit' || resetRecovery) && index > 0 && index % 16 === 0)
+      await resetBrowserSession();
     await page.goto(base + `/edit/${a.id}/`);
     await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
       timeout: 30000,
@@ -135,7 +177,7 @@ try {
           i.src = img.getAttribute('href');
         }),
     );
-    await page.locator('[data-work-mode=edit]').click();
+    await page.locator('button[data-work-mode=edit]').click();
     await page.locator('[data-panel=transform]').click();
     await commitInput('[data-prop=scaleX]', 70);
     await commitInput('[data-prop=scaleY]', 70);
@@ -179,9 +221,12 @@ try {
     await page.locator('[data-action=crop]').click();
     await page.locator('[data-panel=background]').click();
     await page.locator('[data-bg="#edf1e7"]').click();
-    const projectPending = page.waitForEvent('download');
-    await page.locator('[data-action=save]').click();
-    const project = await projectPending;
+    const fileMenu = page.locator('.wb-file-menu');
+    await fileMenu.locator('summary').click();
+    const saveProject = fileMenu.locator('[data-action=save]');
+    await expect(saveProject).toBeVisible();
+    const [project] = await Promise.all([page.waitForEvent('download'), saveProject.click()]);
+    await expect(page.locator('[data-status]')).toContainText('Editable project saved.');
     await project.saveAs(resolve(out, `${a.id}-project.json`));
     const data = JSON.parse(readFileSync(resolve(out, `${a.id}-project.json`)));
     assert.equal(data.layers.filter((l) => l.kind === 'raster').length, imageCount);
@@ -237,6 +282,8 @@ try {
     if (width === 390)
       await page.screenshot({ path: resolve(out, 'edited-mobile.png'), fullPage: false });
   }
+  if (resetRecovery)
+    assert.equal(report.browserResets, 1, 'The recovery probe must cross one WebKit restart');
   assert.deepEqual(report.errors, []);
   report.status = 'passed';
 } catch (error) {
@@ -247,5 +294,5 @@ try {
 } finally {
   writeFileSync(resolve(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(JSON.stringify({ ...report, exports: report.exports.length }));
-  await browser.close();
+  await activeBrowser.close();
 }

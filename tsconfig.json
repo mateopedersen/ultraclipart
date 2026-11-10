@@ -1,1 +1,1 @@
-{"extends":"astro/tsconfigs/strict","include":[".astro/types.d.ts","**/*"],"exclude":["dist","work","reports",".venv-art","node_modules"]}
+{"extends":"astro/tsconfigs/strict","compilerOptions":{"types":["node","astro/client"]},"include":[".astro/types.d.ts","**/*"],"exclude":["dist","work","reports",".venv-art","node_modules"]}

@@ -19,6 +19,7 @@ jobs:
     outputs:
       run_browser: ${{ steps.scope.outputs.run_browser }}
       browser_suites: ${{ steps.scope.outputs.browser_suites }}
+      browser_engines: ${{ steps.scope.outputs.browser_engines }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,21 +29,46 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.19.0'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Verify conservative scope policy
         run: node --test tests/ci-plan.mjs tests/ci-raster-shards.mjs
       - name: Validate workflow and planner formatting
         run: pnpm exec prettier --check .github/workflows/ci.yml scripts/ci-plan.mjs tests/ci-plan.mjs scripts/ci-raster-shards.mjs tests/ci-raster-shards.mjs
+      - name: Restore checksum-pinned workflow linter archive
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830
+        with:
+          path: ${{ runner.temp }}/uc-actionlint/archive.tar.gz
+          key: actionlint-${{ runner.os }}-1.7.12-8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8
       - name: Lint workflow expressions and job dependencies
+        timeout-minutes: 5
         run: |
+          set -euo pipefail
           mkdir -p "$RUNNER_TEMP/uc-actionlint"
-          curl --fail --location --retry 2 --max-time 60 \
-            -o "$RUNNER_TEMP/uc-actionlint/archive.tar.gz" \
-            https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz
-          echo '8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  '"$RUNNER_TEMP/uc-actionlint/archive.tar.gz" | sha256sum --check
-          tar -xzf "$RUNNER_TEMP/uc-actionlint/archive.tar.gz" -C "$RUNNER_TEMP/uc-actionlint" actionlint
+          archive="$RUNNER_TEMP/uc-actionlint/archive.tar.gz"
+          verified_archive() {
+            test -f "$1" &&
+              test "$(wc -c < "$1")" -eq 2353908 &&
+              echo '8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8  '"$1" | sha256sum --check --status
+          }
+          if ! verified_archive "$archive"; then
+            rm -f "$archive" "$archive.part"
+            for asset_url in \
+              https://api.github.com/repos/rhysd/actionlint/releases/assets/384924896 \
+              https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz; do
+              if curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' \
+                --max-redirs 5 --retry 1 --retry-max-time 95 --max-time 45 --max-filesize 2353908 \
+                -H 'Accept: application/octet-stream' -o "$archive.part" "$asset_url" &&
+                verified_archive "$archive.part"; then
+                mv "$archive.part" "$archive"
+                break
+              fi
+              rm -f "$archive.part"
+            done
+          fi
+          verified_archive "$archive"
+          tar -xzf "$archive" -C "$RUNNER_TEMP/uc-actionlint" actionlint
           "$RUNNER_TEMP/uc-actionlint/actionlint" -shellcheck= .github/workflows/ci.yml
       - name: Select affected browser groups
         id: scope
@@ -67,13 +93,26 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.19.0'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm format:check
       - run: pnpm check
       - run: pnpm build
       - run: pnpm test
+  art:
+    name: Python 3.12 art and PDF checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@e797f83bcb11b83ae66e0230d6156d7c80228e7c
+        with:
+          python-version: '3.12'
+      - name: Install pinned art dependencies
+        run: python -m pip install --disable-pip-version-check --requirement scripts/requirements-art.txt
+      - name: Test PDF, image and source-bound export contracts
+        run: python -m unittest discover -s tests -p 'test_*.py'
   production:
     name: Production CDN mapping and headers
     needs: plan
@@ -93,7 +132,7 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.19.0'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
@@ -104,8 +143,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      max-parallel: 8
       matrix:
-        engine: [chromium, firefox, webkit]
+        engine: ${{ fromJSON(needs.plan.outputs.browser_engines) }}
         suite: ${{ fromJSON(needs.plan.outputs.browser_suites) }}
     # Match @playwright/test; browsers and OS libraries are already installed.
     # Pin the official image digest so a registry tag cannot change the runner.
@@ -114,7 +154,8 @@ jobs:
       # GitHub owns mounted workspace/home directories as uid 1001. Firefox
       # rejects a root process whose profile home belongs to another user.
       options: --user 1001
-    timeout-minutes: 90
+    # Seasonal shards retain every export; the observed cold build plus full shard exceeded90 minutes.
+    timeout-minutes: ${{ startsWith(matrix.suite, 'catalog-seasonal-') && 150 || 90 }}
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     steps:
@@ -124,7 +165,7 @@ jobs:
           version: 11.25.0
       - uses: actions/setup-node@v4
         with:
-          node-version: '24.19.0'
+          node-version: '24.22.2'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - name: Restore source-bound screen previews
@@ -160,6 +201,7 @@ jobs:
             if [ '${{ matrix.suite }}' = 'interface-core' ]; then
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/image-information.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/search.mjs
+              UC_BROWSER="$engine" EVIDENCE_DIR=reports/search-suggestions-escape node tests/e2e/search-suggestions-escape.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/categories.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/header.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/favorite-boards.mjs
@@ -263,6 +305,10 @@ jobs:
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" UC_EVIDENCE_DIR=reports/creator node tests/e2e/creator.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/creative-studio.mjs
               BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/real-artwork.mjs
+              if [ "$engine" != 'firefox' ]; then
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" EVIDENCE_DIR=reports/editor-recovery-storage node tests/e2e/editor-recovery-storage.mjs
+                BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" EVIDENCE_DIR=reports/editor-recovery-quota node tests/e2e/editor-recovery-quota.mjs
+              fi
               BASE_URL=http://127.0.0.1:4321 BROWSER="$engine" node tests/e2e/ai-builder.mjs
               UC_BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" node tests/e2e/ai-studio-transfer.mjs
               if [ '${{ matrix.engine }}' = chromium ]; then
@@ -281,6 +327,9 @@ jobs:
                 BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
               fi
             fi
+            if [ '${{ matrix.suite }}' = 'raster-recovery' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_RESET_RECOVERY=1 EVIDENCE_DIR=reports/raster-recovery node tests/e2e/raster-editor.mjs
+            fi
             case '${{ matrix.suite }}' in
               catalog-seasonal-0|catalog-seasonal-1|catalog-seasonal-2)
                 UC_CI_SUITE='${{ matrix.suite }}'
@@ -291,17 +340,23 @@ jobs:
             esac
           done
       - name: Keep browser evidence and preview log
-        # Failed checks still upload evidence. Superseded cancelled candidates
-        # must release their runner instead of scheduling cancellation cleanup.
-        if: ${{ !cancelled() }}
+        # Keep structured reports and visual diagnostics when checks fail.
+        # All PDF/WebP export assertions still run; their temporary binaries are not uploaded.
+        # Superseded cancelled candidates release their runner without artifact cleanup.
+        if: ${{ failure() && !cancelled() }}
         uses: actions/upload-artifact@v4
         with:
           name: browser-evidence-${{ matrix.engine }}-${{ matrix.suite }}
-          path: reports/
-          retention-days: 14
+          path: |
+            reports/**/*.json
+            reports/**/*.log
+            reports/**/*.txt
+            reports/**/*.png
+            reports/**/*.html
+          retention-days: 3
   validate:
     name: validate (${{ matrix.engine }})
-    needs: [plan, unit, production, browser]
+    needs: [plan, unit, production, browser, art]
     # Run after failed dependencies too, but do not hold the next candidate
     # behind queued finalizers for a deliberately cancelled older PR run.
     if: ${{ !cancelled() }}
@@ -318,8 +373,10 @@ jobs:
           UNIT_RESULT: ${{ needs.unit.result }}
           PRODUCTION_RESULT: ${{ needs.production.result }}
           BROWSER_RESULT: ${{ needs.browser.result }}
+          ART_RESULT: ${{ needs.art.result }}
         run: |
           test "$PLAN_RESULT" = success
+          test "$ART_RESULT" = success
           case "$RUN_BROWSER" in
             true)
               test "$UNIT_RESULT" = success

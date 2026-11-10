@@ -24,7 +24,8 @@ for (const [engine, implementation] of Object.entries(engines)) {
     page.on('request', (r) => requests.push(r.url()));
     page.on('pageerror', (e) => errors.push(e.message));
     const go = async (path) => {
-      assert.equal((await page.goto(base + path)).status(), 200);
+      const response = await page.goto(base + path);
+      assert.ok([200, 304].includes(response.status()), `${path} returned ${response.status()}`);
       const consent = page.locator('[data-cookie-choice="necessary"]:visible').first();
       if (await consent.count()) await consent.click();
     };

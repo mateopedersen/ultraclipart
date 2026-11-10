@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import {
   ALL_SUITES,
   selectSuites,
+  selectEngines,
   parseDiff,
   eventRange,
   planForEvent,
@@ -99,12 +100,30 @@ test('global, editor, catalog, security, dependencies and unknown files always g
     'server/auth.mjs',
     'scripts/security-headers.mjs',
     'tests/helpers/creator.mjs',
-    'tests/e2e/raster-editor.mjs',
     'docs/runtime.js',
     '.github/workflows/release.yml',
     'unexpected.txt',
   ])
     assert.deepEqual(selectSuites(modified(path)).suites, ALL_SUITES, path);
+});
+test('isolated raster-editor recovery changes run only their focused WebKit probe', () => {
+  const paths = modified('tests/e2e/raster-editor.mjs');
+  assert.deepEqual(selectSuites(paths).suites, ['raster-recovery']);
+  assert.deepEqual(selectEngines(paths), ['webkit']);
+  assert.deepEqual(selectSuites(paths, { forceFull: true }).suites, ALL_SUITES);
+  assert.deepEqual(selectEngines(paths, { forceFull: true }), ['chromium', 'firefox', 'webkit']);
+  assert.deepEqual(
+    selectSuites(modified('tests/e2e/raster-editor.mjs', 'src/editor/editor.ts')).suites,
+    ALL_SUITES,
+  );
+  assert.deepEqual(selectEngines(modified('tests/e2e/raster-editor.mjs', 'src/editor/editor.ts')), [
+    'chromium',
+    'firefox',
+    'webkit',
+  ]);
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /engine: \$\{\{ fromJSON\(needs\.plan\.outputs\.browser_engines\) \}\}/);
+  assert.ok(workflow.includes('RASTER_RESET_RECOVERY=1'));
 });
 test('mixed changes take the broadest scope regardless of ordering', () => {
   for (const paths of [
@@ -133,8 +152,8 @@ test('isolated Studio tests retain all three browser engines through the complet
     ['interface-core', 'interface-artwork', 'interface-pages', 'studio'],
   );
   const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
-  assert(workflow.includes('engine: [chromium, firefox, webkit]'));
-  assert(workflow.includes('needs: [plan, unit, production, browser]'));
+  assert(workflow.includes('browser_engines: ${{ steps.scope.outputs.browser_engines }}'));
+  assert(workflow.includes('needs: [plan, unit, production, browser, art]'));
 });
 test('missing, empty, invalid and manually forced plans fail open to full validation', () => {
   for (const changes of [
@@ -248,29 +267,32 @@ test('required check accepts skips only after a successful explicit no-browser p
     for (const runBrowser of ['true', 'false', ''])
       for (const browserResult of ['success', 'failure', 'cancelled', 'skipped']) {
         for (const unitResult of ['success', 'failure', 'cancelled', 'skipped'])
-          for (const productionResult of ['success', 'failure', 'cancelled', 'skipped']) {
-            const passed =
-              spawnSync('bash', ['-e', '-c', gate], {
-                env: {
-                  ...process.env,
-                  PLAN_RESULT: planResult,
-                  RUN_BROWSER: runBrowser,
-                  UNIT_RESULT: unitResult,
-                  PRODUCTION_RESULT: productionResult,
-                  BROWSER_RESULT: browserResult,
-                },
-              }).status === 0;
-            const expected = runBrowser === 'true' ? 'success' : 'skipped';
-            assert.equal(
-              passed,
-              planResult === 'success' &&
-                ['true', 'false'].includes(runBrowser) &&
-                [browserResult, unitResult, productionResult].every(
-                  (result) => result === expected,
-                ),
-              `${planResult}/${runBrowser}/${browserResult}/${unitResult}/${productionResult}`,
-            );
-          }
+          for (const productionResult of ['success', 'failure', 'cancelled', 'skipped'])
+            for (const artResult of ['success', 'failure', 'cancelled', 'skipped']) {
+              const passed =
+                spawnSync('bash', ['-e', '-c', gate], {
+                  env: {
+                    ...process.env,
+                    PLAN_RESULT: planResult,
+                    RUN_BROWSER: runBrowser,
+                    UNIT_RESULT: unitResult,
+                    PRODUCTION_RESULT: productionResult,
+                    BROWSER_RESULT: browserResult,
+                    ART_RESULT: artResult,
+                  },
+                }).status === 0;
+              const expected = runBrowser === 'true' ? 'success' : 'skipped';
+              assert.equal(
+                passed,
+                artResult === 'success' &&
+                  planResult === 'success' &&
+                  ['true', 'false'].includes(runBrowser) &&
+                  [browserResult, unitResult, productionResult].every(
+                    (result) => result === expected,
+                  ),
+                `${planResult}/${runBrowser}/${browserResult}/${unitResult}/${productionResult}/${artResult}`,
+              );
+            }
       }
 });
 
@@ -288,7 +310,7 @@ test('shared source and production checks stay mandatory without repeating insid
   assert.ok(production.includes('- run: pnpm test:release'));
   assert.doesNotMatch(browser, /- run: pnpm (?:test|check|format:check)/);
   assert.doesNotMatch(browser, /CF_PAGES=1/);
-  assert.match(workflow, /needs: \[plan, unit, production, browser\]/);
+  assert.match(workflow, /needs: \[plan, unit, production, browser, art\]/);
   assert.equal(workflow.split('- run: pnpm test\n').length - 1, 1);
 });
 

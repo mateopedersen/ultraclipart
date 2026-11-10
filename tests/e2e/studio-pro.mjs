@@ -4,19 +4,22 @@ import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { loadTypescript } from '../helpers/typescript.mjs';
 import { chooseExportFormat } from '../helpers/export.mjs';
-import { chooseSelectionTool } from '../helpers/creator.mjs';
+import { chooseSelectionTool, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 const { decodeMask } = await loadTypescript('src/editor/smart/pixels.ts');
 const base = process.env.BASE_URL || 'http://127.0.0.1:4350',
   engine = process.env.UC_BROWSER || 'chromium',
   out = resolve(process.env.EVIDENCE_DIR || 'reports/studio-pro', engine);
 mkdirSync(out, { recursive: true });
-const browser = await { chromium, firefox, webkit }[engine].launch({ headless: true }),
+const browser = await { chromium, firefox, webkit }[engine].launch({
+    headless: true,
+  }),
   context = await browser.newContext({
     viewport: { width: 1500, height: 1100 },
     acceptDownloads: true,
   }),
   page = await context.newPage();
 const report = { engine, base, checks: [], errors: [], exports: [] };
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (error) => report.errors.push(error.message));
 const id = 'baby-girl-with-pink-bow-clipart';
 const settle = async () => {
@@ -43,9 +46,37 @@ async function point(x, y, mode = 'replace') {
   await expect(page.locator('[data-status]')).not.toContainText('Finding');
 }
 async function saveProject(name) {
-  const pending = page.waitForEvent('download');
-  await page.locator('[data-action=save]').click();
-  const download = await pending;
+  const fileMenu = page.locator('.wb-file-menu');
+  if (!(await fileMenu.evaluate((menu) => menu.open))) {
+    await fileMenu.locator('summary').click();
+  }
+  assert.equal(await fileMenu.evaluate((menu) => menu.open), true);
+  const saveButton = page.locator('[data-action=save]');
+  const saveStatus = page.locator('.uc-editor [data-status]');
+  await expect(saveButton).toBeVisible();
+  await expect(saveButton).toBeEnabled();
+  let download;
+  try {
+    [download] = await Promise.all([
+      page.waitForEvent('download', { timeout: 35000 }),
+      saveButton.click({ timeout: 30000 }),
+      expect(saveStatus).toHaveText(
+        'Editable project saved. Open it from the Layers panel to continue.',
+        { timeout: 30000 },
+      ),
+    ]);
+  } catch (error) {
+    report.saveDiagnostics = report.saveDiagnostics || [];
+    report.saveDiagnostics.push({
+      name,
+      buttonCount: await saveButton.count().catch(() => null),
+      visible: await saveButton.isVisible().catch(() => null),
+      enabled: await saveButton.isEnabled().catch(() => null),
+      status: await saveStatus.textContent().catch(() => null),
+      url: page.url(),
+    });
+    throw error;
+  }
   const path = resolve(out, `${name}.json`);
   await download.saveAs(path);
   return JSON.parse(readFileSync(path));
@@ -70,28 +101,71 @@ async function imageBytes(normalizeSource = false) {
   return await page
     .locator('.uc-canvas [data-layer="original-image"] image')
     .evaluate(async (image, normalizeSource) => {
+      const source = JSON.parse(
+        image.closest('.uc-editor').getAttribute('data-raster-source') || 'null',
+      );
+      if (
+        !source ||
+        !Number.isInteger(source.width) ||
+        !Number.isInteger(source.height) ||
+        !source.webp ||
+        !Number.isSafeInteger(source.webp.bytes) ||
+        !/^[a-f0-9]{64}$/.test(source.webp.sha256)
+      )
+        throw new Error('The editor must expose its verified original raster source.');
       const loaded = new Image();
-      loaded.src = image.getAttribute('href');
-      await loaded.decode();
+      if (normalizeSource) {
+        // The displayed unedited image may be a 960px screen copy. Pixel tests
+        // must use the same checksum-bound full original as rasterPixels().
+        const response = await fetch(source.webp.url, {
+          credentials: 'omit',
+          redirect: 'error',
+        });
+        if (!response.ok) throw new Error('The verified original could not be read.');
+        const bytes = await response.arrayBuffer();
+        if (bytes.byteLength !== source.webp.bytes)
+          throw new Error('The original byte count differs from the editor source.');
+        const hash = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)))
+          .map((value) => value.toString(16).padStart(2, '0'))
+          .join('');
+        if (hash !== source.webp.sha256)
+          throw new Error('The original checksum differs from the editor source.');
+        const url = URL.createObjectURL(new Blob([bytes], { type: 'image/webp' }));
+        try {
+          loaded.src = url;
+          await loaded.decode();
+        } finally {
+          URL.revokeObjectURL(url);
+        }
+      } else {
+        loaded.src = image.getAttribute('href');
+        await loaded.decode();
+      }
+      if (loaded.naturalWidth !== source.width || loaded.naturalHeight !== source.height)
+        throw new Error('Pixel checks require the full original raster dimensions.');
       if (normalizeSource) {
         // Match the editor's readback/putImageData/PNG pipeline without applying edits.
         // This isolates actual mask spill from browser premultiplied-alpha quantization.
-        const source = document.createElement('canvas');
-        source.width = loaded.naturalWidth;
-        source.height = loaded.naturalHeight;
-        const sourceContext = source.getContext('2d', { willReadFrequently: true });
+        const input = document.createElement('canvas');
+        input.width = source.width;
+        input.height = source.height;
+        const sourceContext = input.getContext('2d', {
+          willReadFrequently: true,
+        });
         sourceContext.drawImage(loaded, 0, 0);
-        const pixels = sourceContext.getImageData(0, 0, source.width, source.height);
+        const pixels = sourceContext.getImageData(0, 0, input.width, input.height);
         const output = document.createElement('canvas');
-        output.width = source.width;
-        output.height = source.height;
+        output.width = input.width;
+        output.height = input.height;
         output.getContext('2d').putImageData(pixels, 0, 0);
         loaded.src = output.toDataURL('image/png');
         await loaded.decode();
       }
+      if (loaded.naturalWidth !== source.width || loaded.naturalHeight !== source.height)
+        throw new Error('PNG readback changed the original raster dimensions.');
       const canvas = document.createElement('canvas');
-      canvas.width = loaded.naturalWidth;
-      canvas.height = loaded.naturalHeight;
+      canvas.width = source.width;
+      canvas.height = source.height;
       const ctx = canvas.getContext('2d');
       ctx.drawImage(loaded, 0, 0);
       return Array.from(ctx.getImageData(0, 0, canvas.width, canvas.height).data);
@@ -102,7 +176,7 @@ try {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
     timeout: 45000,
   });
-  await page.locator('[data-work-mode=edit]').click();
+  await page.locator('button[data-work-mode=edit]').click();
   await page.locator('[data-advanced-selection]').evaluate((e) => (e.open = true));
   await settle();
   await page.locator('.uc-canvas').screenshot({ path: resolve(out, 'baby-before.png') });
@@ -132,6 +206,8 @@ try {
   report.checks.push(
     'Hair bow: multi-click color selection plus manual polygon refinement; original face and dress retained.',
   );
+  // The editor already serialized these exact worker pixels as PNG. Avoid a second
+  // canvas round-trip here, which can quantize semi-transparent RGB by another step.
   const bow = await imageBytes();
   const bowMask = decodeMask(project.layers[0].regions[0].mask);
   report.browserColorDelta = 0;
@@ -260,7 +336,7 @@ try {
   await settle();
   assert.deepEqual(await imageBytes(), final);
   report.checks.push('Browser local recovery restores exact rendered pixels.');
-  await page.locator('[data-work-mode=edit]').click();
+  await page.locator('button[data-work-mode=edit]').click();
   await page.locator('[data-panel=layers]').click();
   await page.locator('[data-load]').setInputFiles(resolve(out, 'baby-edited-project.json'));
   await settle();

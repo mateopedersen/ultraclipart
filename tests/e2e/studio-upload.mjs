@@ -1,3 +1,4 @@
+import { clickFileAction, installNecessaryCookieHandler } from '../helpers/creator.mjs';
 import { chromium, expect } from '@playwright/test';
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -13,13 +14,14 @@ let page = await browser.newPage({
 });
 const errors = [],
   posts = [];
-const track = (page) => {
+const track = async (page) => {
+  await installNecessaryCookieHandler(page);
   page.on('pageerror', (e) => errors.push(e.message));
   page.on('request', (r) => {
     if (r.method() === 'POST') posts.push(r.url());
   });
 };
-track(page);
+await track(page);
 const settle = async () => {
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('data-processing', 'true', {
     timeout: 60000,
@@ -27,7 +29,8 @@ const settle = async () => {
 };
 const download = async (selector, name) => {
   const promise = page.waitForEvent('download', { timeout: 120000 });
-  await page.locator(selector).click();
+  if (selector === '[data-action=save]') await clickFileAction(page, 'save');
+  else await page.locator(selector).click();
   const file = await promise;
   const path = resolve(out, name);
   await file.saveAs(path);
@@ -62,7 +65,7 @@ try {
   const before = await page.locator('.uc-canvas [data-layer] image').getAttribute('href');
   await page.close();
   page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, acceptDownloads: true });
-  track(page);
+  await track(page);
   await page.goto(base + '/create/');
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
   await page.locator('[data-panel=layers]').click();
@@ -106,6 +109,33 @@ try {
   });
   await expect(page.locator('[data-status]')).toContainText('Your clipart is ready');
   await expect(page.locator('.uc-canvas [data-layer] image')).toHaveCount(2);
+  delete data.localSources;
+  data.layers = [
+    {
+      id: 'audit-vector',
+      label: 'Fixture rectangle',
+      kind: 'vector',
+      visible: true,
+      locked: false,
+      x: 0,
+      y: 0,
+      scaleX: 1,
+      scaleY: 1,
+      angle: 0,
+      opacity: 1,
+      markup:
+        '<rect width="20" height="20" fill="#333333"/><?fixture > <circle id="audit-marker" r="10"/> ?>',
+    },
+  ];
+  delete data.selection;
+  await page.locator('[data-load]').setInputFiles({
+    name: 'vector-project.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from(JSON.stringify(data)),
+  });
+  await expect(page.locator('[data-status]')).toContainText('Saved project opened');
+  await expect(page.locator('.uc-canvas [data-layer=audit-vector] rect')).toHaveCount(1);
+  await expect(page.locator('.uc-canvas #audit-marker')).toHaveCount(0);
   assert.deepEqual(errors, []);
   assert.deepEqual(posts, []);
   writeFileSync(

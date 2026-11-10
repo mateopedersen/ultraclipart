@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22.23.4"
+    "node": ">=24.22.2 <25"
   },
   "scripts": {
     "content:audit": "node scripts/reviewed-imports.mjs",
@@ -16,11 +16,11 @@
     "social:check": "node scripts/verify-social-images.mjs",
     "preview": "astro preview --host 127.0.0.1",
     "check": "node scripts/restore-assets.mjs && astro check",
-    "test": "node --test tests/*.mjs",
+    "test": "node --test tests/*.mjs && npm run test:editor:recovery:unit",
     "test:release": "node --test --test-concurrency=2 tests/catalog.mjs tests/csp.mjs tests/publication.mjs tests/retired-routes.mjs",
     "deploy": "node scripts/deploy.mjs",
-    "format": "prettier --write \"src/**/*.{astro,ts,css}\" \"tests/**/*.mjs\" \"scripts/**/*.mjs\" \"server/**/*.mjs\" astro.config.mjs",
-    "format:check": "prettier --check \"src/**/*.{astro,ts,css}\" \"tests/**/*.mjs\" \"scripts/**/*.mjs\" \"server/**/*.mjs\" astro.config.mjs",
+    "format": "prettier --write \"src/**/*.{astro,ts,css}\" \"tests/**/*.{mjs,ts}\" \"scripts/**/*.mjs\" \"server/**/*.mjs\" astro.config.mjs",
+    "format:check": "prettier --check \"src/**/*.{astro,ts,css}\" \"tests/**/*.{mjs,ts}\" \"scripts/**/*.mjs\" \"server/**/*.mjs\" astro.config.mjs",
     "test:layout": "node tests/e2e/layout-audit.mjs",
     "test:layout:states": "node tests/e2e/layout-states.mjs",
     "test:layout:regressions": "node tests/e2e/layout-regressions.mjs",
@@ -61,7 +61,11 @@
     "icons:build": "node scripts/build-site-icons.mjs",
     "seo:core:audit": "node scripts/seo/audit-core-seo.mjs",
     "seo:core:report": "node scripts/seo/report-core-seo.mjs",
-    "test:e2e:seo-core": "node tests/e2e/core-seo.mjs"
+    "test:e2e:seo-core": "node tests/e2e/core-seo.mjs",
+    "test:editor:recovery:unit": "node --experimental-transform-types --import ./tests/helpers/register-ts.mjs --test tests/unit/editor-recovery.test.ts",
+    "test:editor:recovery:storage": "node tests/e2e/editor-recovery-storage.mjs",
+    "test:editor:recovery:ui": "node tests/e2e/editor-recovery-quota.mjs",
+    "test:e2e:search-escape": "node tests/e2e/search-suggestions-escape.mjs"
   },
   "dependencies": {
     "@fontsource/inter": "5.2.8",
@@ -75,6 +79,7 @@
     "@astrojs/check": "0.9.12",
     "@axe-core/playwright": "4.14.0",
     "@playwright/test": "1.64.1",
+    "@types/node": "24.19.2",
     "@types/pako": "2.0.4",
     "esbuild": "0.28.2",
     "prettier": "3.9.10",

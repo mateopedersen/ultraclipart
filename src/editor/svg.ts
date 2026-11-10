@@ -364,8 +364,12 @@ export function nodeForLayer(layer: Layer, screenScale = Infinity): SVGGElement 
   const g = document.createElementNS(NS, 'g');
   g.setAttribute('data-layer', layer.id);
   g.setAttribute('transform', transformString(layer));
-  if (layer.kind === 'vector') g.innerHTML = layer.markup;
-  else if (layer.kind === 'raster') {
+  if (layer.kind === 'vector') {
+    // Render the same XML nodes checked by the SVG allowlist. HTML fragment
+    // parsing can reinterpret XML comments or processing instructions.
+    const vector = sanitizeSvg(`<svg xmlns="${NS}">${layer.markup}</svg>`);
+    g.append(...vector.children);
+  } else if (layer.kind === 'raster') {
     const image = document.createElementNS(NS, 'image');
     image.setAttribute('href', processedPreview(layer, screenScale));
     const bounds = processedBounds(layer);
@@ -576,6 +580,14 @@ export function download(blob: Blob, name: string) {
   const link = document.createElement('a');
   link.href = url;
   link.download = name;
-  link.click();
-  setTimeout(() => URL.revokeObjectURL(url), 30000);
+  link.hidden = true;
+  document.body.append(link);
+  try {
+    link.click();
+  } finally {
+    // Browsers dispatch the download after the click task has unwound. Keep
+    // the temporary anchor attached until that navigation has been observed.
+    setTimeout(() => link.remove(), 1000);
+    setTimeout(() => URL.revokeObjectURL(url), 30000);
+  }
 }

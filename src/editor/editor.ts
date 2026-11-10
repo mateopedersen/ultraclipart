@@ -26,6 +26,7 @@ import {
   validateProjectMarkup,
 } from './svg';
 import { paperLayout, exportPdf } from './pdf';
+import { shouldPersistExportName } from './export-name';
 import { buildStudioComposition } from '../lib/studio-compositions';
 import {
   exportFormats,
@@ -46,7 +47,7 @@ import {
 } from './raster';
 import { SmartController } from './smart/controller';
 import { prepareDocument, rasterKey } from './smart/render';
-import { saveLocal, loadLocal, deleteLocal } from './smart/storage';
+import { createProjectRecovery, withoutRecoveryMetadata } from './recovery';
 import {
   blankDocument,
   shapeMarkup,
@@ -108,7 +109,6 @@ function init(root: HTMLElement) {
   let smart: SmartController | undefined;
   let workbench: Workbench | undefined;
   let rasterRenderKey = '';
-  let persistTimer: ReturnType<typeof setTimeout> | undefined;
   let original: EditorDocument,
     history: History<EditorDocument>,
     selected: string[] = [],
@@ -121,6 +121,7 @@ function init(root: HTMLElement) {
     busy = false,
     sharing = false,
     exportGeneration = 0,
+    exportFallbackName = '',
     exportFocus: HTMLElement | null = null;
   let drag:
     | { start: DOMPoint; before: EditorDocument; bounds: Bounds; action: string; pointer: number }
@@ -145,29 +146,17 @@ function init(root: HTMLElement) {
   };
   const doc = () => live || history.current;
   const currentLayer = () => doc().layers.find((l) => selected.includes(l.id));
+  const recovery = createProjectRecovery({
+    key: storageKey,
+    artId: id,
+    unavailable: () =>
+      status(
+        'These edits could not be confirmed in browser recovery. Save a project file to keep them.',
+        true,
+      ),
+  });
   function persist() {
-    clearTimeout(persistTimer);
-    try {
-      const raw = JSON.stringify(serializeProject(history.current));
-      if (raw.length <= 2000000) localStorage.setItem(storageKey, raw);
-      else localStorage.removeItem(storageKey);
-    } catch {}
-    persistTimer = setTimeout(() => {
-      const saved = serializeProject(history.current);
-      void saveLocal(storageKey, saved).catch(() =>
-        status(
-          'Browser recovery storage is full or unavailable. Save a project file to keep these edits.',
-          true,
-        ),
-      );
-      try {
-        const json = JSON.stringify(saved);
-        if (json.length <= 2000000) localStorage.setItem(storageKey, json);
-        else localStorage.removeItem(storageKey);
-      } catch {
-        /* IndexedDB is the primary store for mask projects. */
-      }
-    }, 150);
+    recovery.schedule(serializeProject(history.current));
   }
   function cancelSource() {
     if (templateRequest) {
@@ -1098,7 +1087,7 @@ function init(root: HTMLElement) {
   function applyExportName() {
     const title = q<HTMLInputElement>('[data-filename]').value.trim().slice(0, 120);
     if (!title) throw new Error('Enter a project name before downloading or printing.');
-    if (history.current.title !== title)
+    if (shouldPersistExportName(history.current.title, exportFallbackName, title))
       modify((d) => {
         d.title = title;
       });
@@ -1137,10 +1126,9 @@ function init(root: HTMLElement) {
       q<HTMLInputElement>('[data-quality]').value = '95';
       q<HTMLInputElement>('[data-allow-large-pdf]').checked = false;
     }
-    q<HTMLInputElement>('[data-filename]').value =
-      history.current.title ||
-      q('.uc-command h2, .uc-command h1').textContent?.trim() ||
-      'My Clipart Project';
+    exportFallbackName =
+      q('.uc-command h2, .uc-command h1').textContent?.trim() || 'My Clipart Project';
+    q<HTMLInputElement>('[data-filename]').value = history.current.title || exportFallbackName;
     for (const input of qa<HTMLInputElement | HTMLSelectElement>('[data-export-paper]'))
       input.value = String(
         history.current.print[input.dataset.exportPaper as keyof EditorDocument['print']],
@@ -1566,21 +1554,32 @@ function init(root: HTMLElement) {
       }, 'Fill and stroke applied to the selected vector layers.');
     },
     'delete-recovery': async () => {
-      clearTimeout(persistTimer);
-      await deleteLocal(storageKey);
-      localStorage.removeItem(storageKey);
+      await recovery.clear();
       status(
         'Local recovery copy deleted. Your open canvas is unchanged; the next edit creates a new recovery copy.',
       );
     },
-    save: () => {
+    save: async () => {
+      const project = withoutRecoveryMetadata(serializeProject(history.current));
+      status('Preparing your editable project file…');
+      let saved = { local: false, indexedDB: false };
+      try {
+        saved = await recovery.flush(project);
+      } catch {
+        /* A recovery failure must never block the portable project file. */
+      }
       download(
-        new Blob([JSON.stringify(serializeProject(history.current), null, 2)], {
+        new Blob([JSON.stringify(project, null, 2)], {
           type: 'application/json',
         }),
-        `${exportFilename(history.current.title || id)}-project.json`,
+        `${exportFilename(project.title || id)}-project.json`,
       );
-      status('Editable project saved. Open it from the Layers panel to continue.');
+      status(
+        saved.local || saved.indexedDB
+          ? 'Editable project saved. Open it from the Layers panel to continue.'
+          : 'Editable project file downloaded. Browser recovery is unavailable; keep the downloaded file.',
+        !saved.local && !saved.indexedDB,
+      );
     },
     load: () => q<HTMLInputElement>('[data-load]').click(),
     share: shareArtwork,
@@ -2124,7 +2123,8 @@ function init(root: HTMLElement) {
       selected = [layer.id];
       // Persist before consuming. A reload can recognize transferId even if the final acknowledgement fails.
       try {
-        await saveLocal(storageKey, serializeProject(history.current));
+        const saved = await recovery.flush(serializeProject(history.current));
+        if (!saved.indexedDB) throw new Error('Browser recovery could not be confirmed');
       } catch {
         clearLink();
         render();
@@ -2179,21 +2179,10 @@ function init(root: HTMLElement) {
       let recovered = false;
       try {
         let saved: unknown;
-        const readRecovery = async (key: string) => {
-          try {
-            const raw = localStorage.getItem(key);
-            if (raw) return JSON.parse(raw);
-          } catch {}
-          try {
-            return await loadLocal(key);
-          } catch {
-            return undefined;
-          }
-        };
-        saved = await readRecovery(storageKey);
+        saved = await recovery.load();
         // Each AI handoff owns its recovery slot. A new one starts with a copy of the main canvas.
         if (!saved && workspaceParams.has('import') && storageKey !== baseStorageKey)
-          saved = await readRecovery(baseStorageKey);
+          saved = await recovery.load(baseStorageKey);
         if (saved) {
           if (validateDocument(saved, id)) {
             await prepareProjectSources(saved);

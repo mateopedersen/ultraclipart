@@ -46,3 +46,45 @@ export async function deleteLocal(key: string) {
     db.close();
   }
 }
+
+// The comparison and mutation share one transaction, including across tabs.
+// Plain workbench checkpoints keep the existing saveLocal/deleteLocal API.
+async function mutateLocalWhen(
+  key: string,
+  accept: (current: unknown) => boolean,
+  doc?: EditorDocument,
+) {
+  const db = await open();
+  try {
+    return await new Promise<boolean>((resolve, reject) => {
+      const tx = db.transaction('projects', 'readwrite');
+      const store = tx.objectStore('projects');
+      let changed = false;
+      const request = store.get(key);
+      request.onsuccess = () => {
+        try {
+          if (accept(request.result)) {
+            if (doc) store.put(doc, key);
+            else store.delete(key);
+            changed = true;
+          }
+        } catch (error) {
+          tx.abort();
+          reject(error);
+        }
+      };
+      tx.oncomplete = () => resolve(changed);
+      tx.onerror = () => reject(tx.error);
+      tx.onabort = () => reject(tx.error || new Error('Recovery transaction aborted'));
+    });
+  } finally {
+    db.close();
+  }
+}
+export const saveLocalWhen = (
+  key: string,
+  doc: EditorDocument,
+  accept: (current: unknown) => boolean,
+) => mutateLocalWhen(key, accept, doc);
+export const deleteLocalWhen = (key: string, accept: (current: unknown) => boolean) =>
+  mutateLocalWhen(key, accept);

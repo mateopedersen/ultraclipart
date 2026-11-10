@@ -97,7 +97,7 @@ try {
     ...JSON.parse(readFileSync(new URL('../../data/extra-topics.json', import.meta.url))),
   ];
   await expect(page.locator('.topic-planned')).toHaveCount(0);
-  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(16, topicCount));
+  await expect(page.locator('[data-topic]:not([hidden])')).toHaveCount(Math.min(12, topicCount));
   const plannedTopic = allTopics.find((topic) => !availableTopics.has(topic.slug));
   if (plannedTopic) {
     await page.locator('#topic-filter').fill(plannedTopic.keyword);
@@ -114,9 +114,35 @@ try {
   await page.locator('[data-text]').fill('Science');
   await page.locator('[data-action=text]').click();
   await expect(page.locator('.uc-canvas text').filter({ hasText: 'Science' })).toBeVisible();
-  const pending = page.waitForEvent('download');
-  await page.locator('[data-action=save]').click();
-  const project = await pending;
+  const fileMenu = page.locator('.wb-file-menu');
+  if (!(await fileMenu.evaluate((menu) => menu.open))) {
+    await fileMenu.locator('summary').click();
+  }
+  assert.equal(await fileMenu.evaluate((menu) => menu.open), true);
+  const saveButton = page.locator('[data-action=save]');
+  const saveStatus = page.locator('.uc-editor [data-status]');
+  await expect(saveButton).toBeVisible();
+  await expect(saveButton).toBeEnabled();
+  let project;
+  try {
+    [project] = await Promise.all([
+      page.waitForEvent('download', { timeout: 35000 }),
+      saveButton.click({ timeout: 30000 }),
+      expect(saveStatus).toHaveText(
+        'Editable project saved. Open it from the Layers panel to continue.',
+        { timeout: 30000 },
+      ),
+    ]);
+  } catch (error) {
+    report.saveDiagnostics = {
+      buttonCount: await saveButton.count().catch(() => null),
+      visible: await saveButton.isVisible().catch(() => null),
+      enabled: await saveButton.isEnabled().catch(() => null),
+      status: await saveStatus.textContent().catch(() => null),
+      url: page.url(),
+    };
+    throw error;
+  }
   await project.saveAs(resolve(out, 'classroom-label.json'));
   report.checks.push(
     'guide workflow: actual Learning label starter, editable Science caption, downloaded project',

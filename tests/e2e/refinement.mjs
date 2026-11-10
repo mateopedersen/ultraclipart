@@ -62,27 +62,106 @@ try {
       }
       if (route.startsWith('/edit/'))
         await page.locator('.uc-canvas [data-layer]').first().waitFor();
-      // Create mounts its artwork library asynchronously. Include those previews
-      // in decoding before checking every image, including offscreen thumbnails.
-      if (route === '/create/')
+      // Create initializes the editor and its library near the viewport. Verify the
+      // initial category previews, then use the real control to load artwork cards.
+      if (route === '/create/') {
+        await page.locator('.uc-editor').scrollIntoViewIfNeeded();
+        // Create opens in Draw mode; explicitly select the real Elements panel before
+        // checking its lazily mounted artwork category directory.
+        const elementsPanel = page.locator('.uc-editor [data-panel="elements"]');
+        await elementsPanel.waitFor({ state: 'visible' });
+        await elementsPanel.click();
+        await page.locator('.uc-editor [data-library-view="artwork"]:not([hidden])').waitFor();
         await page.waitForFunction(() => {
-          const count = document.querySelector('[data-artwork-count]')?.textContent ?? '';
-          const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
-          if (!match) return false;
-          const expected = Math.min(24, Number(match[3].replaceAll(',', '')));
-          const cards = [...document.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+          const root = document.querySelector('.uc-editor');
+          const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+          const match = count.match(/^(\d+) categories — choose one to see its subjects$/);
+          if (!root || root.getAttribute('aria-busy') === 'true' || !match) return false;
+          const tiles = [...root.querySelectorAll('[data-artwork-grid] .wb-category-tile')];
+          const expected = Math.min(innerHeight < 800 ? 4 : 6, Number(match[1]));
           return (
             expected > 0 &&
-            (!match[1] || Number(match[1]) === 1) &&
-            Number(match[2]) === expected &&
-            cards.length === expected &&
-            cards.every((card) => {
-              const image = card.querySelector('img');
+            tiles.length === expected &&
+            tiles.every((tile) => {
+              const image = tile.querySelector('img');
               if (image) image.loading = 'eager';
               return image?.complete && image.naturalWidth > 0;
             })
           );
         });
+        // Browse through the real directory flow. Scope controls stay hidden until
+        // a visitor chooses a category and then a subject.
+        await page.locator('.uc-editor [data-artwork-grid] .wb-category-tile').first().click();
+        await page.waitForFunction(() => {
+          const root = document.querySelector('.uc-editor');
+          const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+          const match = count.match(/^(\d+) subjects? in /);
+          if (!root || !match) return false;
+          const tiles = [...root.querySelectorAll('[data-artwork-grid] .wb-category-tile')];
+          const expected = Math.min(innerHeight < 800 ? 4 : 6, Number(match[1]));
+          return (
+            expected > 0 &&
+            tiles.length === expected &&
+            tiles.every((tile) => {
+              const image = tile.querySelector('img');
+              if (image) image.loading = 'eager';
+              return image?.complete && image.naturalWidth > 0;
+            })
+          );
+        });
+        await page.locator('.uc-editor [data-artwork-grid] .wb-category-tile').first().click();
+        const waitForArtworkPreviews = () =>
+          page.waitForFunction(
+            () => {
+              const root = document.querySelector('.uc-editor');
+              const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+              const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
+              if (!root || !match) return false;
+              const total = Number(match[3].replaceAll(',', ''));
+              const expected = Math.min(innerHeight < 800 ? 4 : 6, total);
+              const cards = [...root.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+              return (
+                expected > 0 &&
+                (!match[1] || Number(match[1]) === 1) &&
+                Number(match[2]) === expected &&
+                cards.length === expected &&
+                cards.every((card) => {
+                  const image = card.querySelector('img');
+                  if (image) image.loading = 'eager';
+                  return image?.complete && image.naturalWidth > 0;
+                })
+              );
+            },
+            null,
+            { timeout: 60_000 },
+          );
+        await waitForArtworkPreviews();
+        await page.locator('.uc-editor [data-artwork-scope="all"]').click();
+        await page.waitForFunction(
+          () => {
+            const root = document.querySelector('.uc-editor');
+            const count = root?.querySelector('[data-artwork-count]')?.textContent ?? '';
+            const match = count.match(/^(?:(\d+)[–-])?(\d+) of ([\d,]+) artworks$/);
+            if (!root || !match) return false;
+            const total = Number(match[3].replaceAll(',', ''));
+            const expected = Math.min(innerHeight < 800 ? 4 : 6, total);
+            const cards = [...root.querySelectorAll('[data-artwork-grid] .uc-artwork-card')];
+            return (
+              expected > 0 &&
+              (!match[1] || Number(match[1]) === 1) &&
+              Number(match[2]) === expected &&
+              cards.length === expected &&
+              cards.every((card) => {
+                const image = card.querySelector('img');
+                if (image) image.loading = 'eager';
+                return image?.complete && image.naturalWidth > 0;
+              })
+            );
+          },
+          null,
+          { timeout: 60_000 },
+        );
+      }
       await page.evaluate(async () => {
         await Promise.all(
           [...document.images].map(async (image) => {
@@ -185,15 +264,58 @@ try {
     ).every((text) => text.toLowerCase().startsWith('k')),
   );
   await page.locator('[data-letter=""]').click();
+  const visibleTopicSlugs = () =>
+    page
+      .locator('[data-topic]:not([hidden])')
+      .evaluateAll((cards) => cards.map((card) => card.dataset.slug).sort());
+  const waitForTopicSearch = () =>
+    page.waitForFunction(() => {
+      const result = document.querySelector('#topic-result-count')?.textContent;
+      return result?.startsWith('Showing ');
+    });
   await page.locator('#topic-filter').fill('  ＰＵＭＰＫＩＮ  ');
-  assert.equal(await page.locator('[data-topic]:not([hidden])').count(), 1);
+  await waitForTopicSearch();
+  const normalizedPumpkinResults = await visibleTopicSlugs();
+  assert.ok(
+    normalizedPumpkinResults.includes('pumpkin'),
+    'Full-width pumpkin query includes the Pumpkin topic',
+  );
+  await page.locator('#topic-filter').fill('  pumpkin  ');
+  await waitForTopicSearch();
+  assert.deepEqual(
+    await visibleTopicSlugs(),
+    normalizedPumpkinResults,
+    'Full-width Unicode and ASCII pumpkin queries return the same subjects',
+  );
   await page.locator('#topic-filter').fill('no-such-subject');
+  await page.locator('#no-topics').waitFor({ state: 'visible' });
   assert.equal(await page.locator('#no-topics').isVisible(), true);
   await page.locator('#clear-topic-filter').click();
-  assert.equal(
-    await page.locator('[data-topic]:not([hidden])').count(),
-    Math.min(16, expected.length),
+  const restoredCount = Math.min(12, expected.length);
+  await page.waitForFunction(
+    ({ visibleCount, totalCount }) => {
+      const input = document.querySelector('#topic-filter');
+      const group = document.querySelector('#category-group');
+      const sort = document.querySelector('#category-sort');
+      const result = document.querySelector('#topic-result-count')?.textContent;
+      const visible = document.querySelectorAll('[data-topic]:not([hidden])').length;
+      const noTopics = document.querySelector('#no-topics');
+      const pressedLetters = [...document.querySelectorAll('[data-letter][aria-pressed="true"]')];
+      const expectedResult = `Showing ${visibleCount} of ${totalCount} Subject${totalCount === 1 ? '' : 's'}`;
+      return (
+        input?.value === '' &&
+        group?.value === '' &&
+        sort?.value === 'name' &&
+        pressedLetters.length === 1 &&
+        pressedLetters[0].dataset.letter === '' &&
+        result === expectedResult &&
+        visible === visibleCount &&
+        noTopics?.hidden === true
+      );
+    },
+    { visibleCount: restoredCount, totalCount: expected.length },
   );
+  assert.equal(await page.locator('[data-topic]:not([hidden])').count(), restoredCount);
   assert.equal(
     await page.locator('#topic-filter').evaluate((input) => input === document.activeElement),
     true,

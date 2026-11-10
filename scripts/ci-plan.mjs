@@ -17,7 +17,9 @@ export const ALL_SUITES = [
   'catalog-seasonal-0',
   'catalog-seasonal-1',
   'catalog-seasonal-2',
+  'raster-recovery',
 ];
+export const ALL_ENGINES = ['chromium', 'firefox', 'webkit'];
 
 // An allowlist, not an exclusion list: unknown runtime dependencies get the full suite.
 const interfaceFiles = new Set([
@@ -51,6 +53,7 @@ const interfaceTests = new Set(
 // These tests change no shipped editor code; retain the complete Studio group
 // in every browser plus the mandatory shared unit and production checks.
 const studioTests = new Set(['tests/e2e/studio-tools.mjs', 'tests/smart-selection.mjs']);
+const rasterEditorTest = 'tests/e2e/raster-editor.mjs';
 const policyFiles = new Set([
   '.github/workflows/ci.yml',
   'scripts/ci-plan.mjs',
@@ -66,7 +69,8 @@ export function selectSuites(changes, { forceFull = false } = {}) {
   if (!Array.isArray(changes) || changes.length === 0)
     return full('Empty or unavailable change list: full validation');
   let interfaceChanged = false,
-    studioTestsChanged = false;
+    studioTestsChanged = false,
+    rasterEditorTestChanged = false;
   for (const change of changes) {
     const { path, status } = change ?? {};
     if (typeof path !== 'string' || !/^[AMDT]$/.test(status ?? ''))
@@ -78,6 +82,10 @@ export function selectSuites(changes, { forceFull = false } = {}) {
       studioTestsChanged = true;
       continue;
     }
+    if (path === rasterEditorTest) {
+      rasterEditorTestChanged = true;
+      continue;
+    }
     if (
       interfaceFiles.has(path) ||
       interfaceTests.has(path) ||
@@ -87,6 +95,14 @@ export function selectSuites(changes, { forceFull = false } = {}) {
       continue;
     }
     return full(`Shared, catalog, editor or unclassified change: ${path}`);
+  }
+  if (rasterEditorTestChanged) {
+    if (interfaceChanged || studioTestsChanged)
+      return full('Mixed browser harness changes: full validation');
+    return {
+      suites: ['raster-recovery'],
+      reason: 'Isolated raster-editor recovery harness: focused restart/recovery browser checks',
+    };
   }
   if (studioTestsChanged)
     return {
@@ -102,6 +118,19 @@ export function selectSuites(changes, { forceFull = false } = {}) {
         reason: 'Isolated page presentation: all three interface groups in every browser engine',
       }
     : { suites: [], reason: 'Documentation or CI policy only: planner and workflow checks' };
+}
+
+export function selectEngines(changes, { forceFull = false } = {}) {
+  if (forceFull || !Array.isArray(changes) || changes.length === 0) return [...ALL_ENGINES];
+  let rasterEditorTestChanged = false;
+  for (const change of changes) {
+    const { path, status } = change ?? {};
+    if (typeof path !== 'string' || !/^[AMDT]$/.test(status ?? '')) return [...ALL_ENGINES];
+    if (policyFiles.has(path) || documentation(path)) continue;
+    if (path !== rasterEditorTest || status !== 'M') return [...ALL_ENGINES];
+    rasterEditorTestChanged = true;
+  }
+  return rasterEditorTestChanged ? ['webkit'] : [...ALL_ENGINES];
 }
 
 export function parseDiff(output) {
@@ -140,11 +169,19 @@ export function planForEvent(
     }),
 ) {
   const range = eventRange(name, event);
-  if (!range) return selectSuites(null, { forceFull: true });
+  if (!range)
+    return {
+      ...selectSuites(null, { forceFull: true }),
+      engines: selectEngines(null, { forceFull: true }),
+    };
   try {
-    return selectSuites(parseDiff(diff(range.base, range.head)));
+    const changes = parseDiff(diff(range.base, range.head));
+    return { ...selectSuites(changes), engines: selectEngines(changes) };
   } catch {
-    return selectSuites(null, { forceFull: true });
+    return {
+      ...selectSuites(null, { forceFull: true }),
+      engines: selectEngines(null, { forceFull: true }),
+    };
   }
 }
 
@@ -156,17 +193,20 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
       JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8')),
     );
   } catch {
-    plan = selectSuites(null, { forceFull: true });
+    plan = {
+      ...selectSuites(null, { forceFull: true }),
+      engines: selectEngines(null, { forceFull: true }),
+    };
   }
   console.log(JSON.stringify(plan, null, 2));
   if (process.env.GITHUB_OUTPUT)
     appendFileSync(
       process.env.GITHUB_OUTPUT,
-      `run_browser=${plan.suites.length > 0}\nbrowser_suites=${JSON.stringify(plan.suites.length ? plan.suites : ['interface-core'])}\n`,
+      `run_browser=${plan.suites.length > 0}\nbrowser_suites=${JSON.stringify(plan.suites.length ? plan.suites : ['interface-core'])}\nbrowser_engines=${JSON.stringify(plan.engines ?? ALL_ENGINES)}\n`,
     );
   if (process.env.GITHUB_STEP_SUMMARY)
     appendFileSync(
       process.env.GITHUB_STEP_SUMMARY,
-      `### Validation scope\n\n${plan.reason}\n\nBrowser groups: ${plan.suites.join(', ') || 'none (no product changes)'}\n`,
+      `### Validation scope\n\n${plan.reason}\n\nBrowser groups: ${plan.suites.join(', ') || 'none (no product changes)'}\n\nBrowser engines: ${(plan.engines ?? ALL_ENGINES).join(', ')}\n`,
     );
 }

@@ -11,6 +11,12 @@ import {
 } from './provider.mjs';
 const COOKIE = '__Host-uc_ai';
 const encoder = new TextEncoder();
+// A short failure cooldown must never override a longer budget shutdown.
+const extendCircuit = (db, until) =>
+  db
+    .prepare('UPDATE ai_control SET blocked_until=MAX(blocked_until,?1) WHERE id=1')
+    .bind(until)
+    .run();
 export class ApiError extends Error {
   constructor(code, status = 400) {
     super(code);
@@ -398,9 +404,7 @@ export async function handleAi(request, env, context) {
           .run();
         // An unexpected model price closes the circuit before a second call is allowed.
         if (value.neurons !== null && value.neurons > reserved) {
-          await env.AI_DB.prepare('UPDATE ai_control SET blocked_until=?1 WHERE id=1')
-            .bind(Date.parse(resetAt))
-            .run();
+          await extendCircuit(env.AI_DB, Date.parse(resetAt));
           throw new ApiError('capacity_exhausted', 429);
         }
         return value;
@@ -456,10 +460,7 @@ export async function handleAi(request, env, context) {
     )
       .bind(job, actual)
       .run();
-    if (actual > RESERVATION)
-      await env.AI_DB.prepare('UPDATE ai_control SET blocked_until=?1 WHERE id=1')
-        .bind(Date.parse(resetAt))
-        .run();
+    if (actual > RESERVATION) await extendCircuit(env.AI_DB, Date.parse(resetAt));
     context?.waitUntil(
       env.AI_DB.prepare('DELETE FROM ai_jobs WHERE created<?1')
         .bind(now - 7 * 86400000)
@@ -491,15 +492,18 @@ export async function handleAi(request, env, context) {
           )
             .bind(job, code)
             .run();
-        const count = await env.AI_DB.prepare(
-          "SELECT COUNT(*) AS failures FROM ai_jobs WHERE status IN ('failed','uncertain') AND created>?1",
-        )
-          .bind(now - 300000)
-          .first();
-        if (count.failures >= 3 || code === 'capacity_exhausted')
-          await env.AI_DB.prepare('UPDATE ai_control SET blocked_until=?1 WHERE id=1')
-            .bind(code === 'capacity_exhausted' ? Date.parse(resetAt) : now + 300000)
-            .run();
+        if (code === 'capacity_exhausted') {
+          await extendCircuit(env.AI_DB, Date.parse(resetAt));
+        } else if (status >= 500) {
+          const count = await env.AI_DB.prepare(
+            `SELECT COUNT(*) AS failures FROM ai_jobs
+             WHERE status IN ('failed','uncertain') AND created>?1
+             AND (error_code IS NULL OR error_code NOT IN ('content_blocked','invalid_prompt','prompt_too_detailed'))`,
+          )
+            .bind(now - 300000)
+            .first();
+          if (count.failures >= 3) await extendCircuit(env.AI_DB, now + 300000);
+        }
       } catch {}
     }
     return response({ error: code, resetAt }, status);

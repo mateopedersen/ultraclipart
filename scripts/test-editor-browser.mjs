@@ -1,6 +1,11 @@
+import { readStoredEditorDocument } from '../tests/helpers/editor-document.mjs';
 import { chromium, firefox, webkit, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
-import { chooseVectorStarter } from '../tests/helpers/creator.mjs';
+import {
+  chooseVectorStarter,
+  clickFileAction,
+  installNecessaryCookieHandler,
+} from '../tests/helpers/creator.mjs';
 const browserName = process.env.UC_BROWSER || 'chromium',
   base = process.env.UC_BASE_URL || 'http://127.0.0.1:4321';
 const out = new URL(
@@ -18,6 +23,7 @@ const page = await browser.newPage({
 });
 const errors = [];
 const passed = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const action = (name) => page.locator(`[data-action="${name}"]`).filter({ visible: true }).first();
 const panel = (name) => page.locator(`[data-panel="${name}"]`).click();
@@ -25,8 +31,7 @@ const change = async (selector, value) => {
   await page.locator(selector).fill(String(value));
   await page.locator(selector).press('Tab');
 };
-const state = async () =>
-  JSON.parse(await page.evaluate(() => localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
+const state = () => readStoredEditorDocument(page);
 const downloaded = async (format, name) => {
   await page.locator(`[data-format][value="${format}"]`).locator('..').click();
   await expect(page.locator(`[data-format][value="${format}"]`)).toBeChecked();
@@ -97,11 +102,11 @@ try {
   expect((await state()).layers.at(-1).text).toBe('My Leaf Study');
   passed.push('caption persisted into editable document');
   const projectEvent = page.waitForEvent('download');
-  await action('save').click();
+  await clickFileAction(page, 'save');
   const project = await projectEvent;
   await project.saveAs(new URL('saved-project.json', out).pathname);
   const savedState = JSON.stringify(await state());
-  await action('reset').click();
+  await clickFileAction(page, 'reset');
   await panel('layers');
   await page.locator('[data-load]').setInputFiles(new URL('saved-project.json', out).pathname);
   await expect(page.locator('[data-status]')).toContainText('Saved project opened');

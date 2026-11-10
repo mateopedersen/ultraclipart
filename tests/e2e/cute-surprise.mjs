@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { chromium, webkit, expect } from '@playwright/test';
 import { loadTypescript } from '../helpers/typescript.mjs';
+import { assertIndexCachePolicy } from '../helpers/index-cache-policy.mjs';
 const { cuteConfidence } = await loadTypescript('src/lib/cute-discovery.ts');
 const all = JSON.parse(await readFile('data/art.json', 'utf8'));
 const base = process.env.BASE_URL || 'http://127.0.0.1:4353';
@@ -21,7 +22,7 @@ try {
   assert.equal(response.status(), 200);
   const index = await response.json();
   assert.equal(index.version, 2);
-  assert.match(response.headers()['cache-control'], /no-store/);
+  report.cachePolicy = await assertIndexCachePolicy(response, base, '/surprise-picks.json');
   assert.ok(index.items.length > 100 && index.items.length <= 512);
   for (const pick of index.items)
     assert.ok(cuteConfidence(all.find((x) => x.id === pick.id)) >= 68, pick.id);

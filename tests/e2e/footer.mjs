@@ -126,14 +126,16 @@ try {
     assert.equal(response.status(), 200, path);
     report.destinations.push(path);
   }
-  const sculptures = await page
-    .locator('.site-footer img[src^="/illustrations/footer/"]')
+  const footerIcons = await page
+    .locator('.site-footer .footer-nav-object')
     .evaluateAll((images) => [...new Set(images.map((image) => image.getAttribute('src')))]);
-  assert.deepEqual(
-    sculptures.sort(),
-    ['boards', 'explore', 'help', 'studio'].map((name) => `/illustrations/footer/${name}.svg`),
-  );
-  for (const path of sculptures) {
+  assert.deepEqual(footerIcons.sort(), [
+    '/illustrations/footer/boards.svg',
+    '/illustrations/footer/explore.svg',
+    '/illustrations/footer/help.svg',
+    '/illustrations/studio-compose-v3.svg',
+  ]);
+  for (const path of footerIcons) {
     const response = await page.request.get(base + path);
     assert.equal(response.status(), 200, path);
     assert.match(response.headers()['content-type'], /^image\/svg\+xml/);

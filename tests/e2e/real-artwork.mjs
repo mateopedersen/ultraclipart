@@ -3,7 +3,11 @@ import AxeBuilder from '@axe-core/playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { PDFDocument } from 'pdf-lib';
-import { chooseScene } from '../helpers/creator.mjs';
+import {
+  chooseScene,
+  clickFileAction,
+  installNecessaryCookieHandler,
+} from '../helpers/creator.mjs';
 const engine = process.env.UC_BROWSER || 'chromium',
   base = process.env.BASE_URL || 'http://127.0.0.1:4353',
   out = path.resolve(process.env.EVIDENCE_DIR || 'reports/real-artwork', engine);
@@ -18,6 +22,7 @@ const page = await context.newPage(),
   errors = [],
   checks = [],
   exports = [];
+await installNecessaryCookieHandler(page);
 page.on('pageerror', (e) => errors.push(e.message));
 const state = () =>
   page.evaluate(() => JSON.parse(localStorage.getItem('ultraclipart:editor:v1:my-clipart')));
@@ -32,9 +37,59 @@ try {
   );
   const featuredCount = studioCatalog.filter((item) => item.featured).length;
   expect(featuredCount).toBe(500);
+  const featuredManifest = JSON.parse(
+    await fs.readFile(path.resolve('dist/studio-featured.json'), 'utf8'),
+  );
+  const categories = featuredManifest.categories;
+  expect(categories.length).toBeGreaterThan(0);
   await panel('elements');
   await expect(page.locator('[data-artwork-count]')).toHaveText(
-    `1–${Math.min(24, featuredCount)} of ${featuredCount.toLocaleString()} artworks`,
+    `${categories.length} categories — choose one to see its subjects`,
+  );
+  await expect(page.locator('.wb-category-tile')).toHaveCount(Math.min(6, categories.length));
+  const category = categories[0];
+  await page.locator('.wb-category-tile').first().click();
+  await expect(page.locator('[data-artwork-count]')).toHaveText(
+    `${category.topics.length} ${category.topics.length === 1 ? 'subject' : 'subjects'} in ${category.title}`,
+  );
+  await expect(page.locator('.wb-category-tile')).toHaveCount(Math.min(6, category.topics.length));
+  const subject = category.topics[0];
+  const subjectArtwork = studioCatalog.filter((item) => item.topic === subject.id);
+  expect(subjectArtwork.length).toBe(subject.count);
+  await page.locator('.wb-category-tile').first().click();
+  await expect(page.locator('[data-artwork-topic]')).toHaveValue(subject.id);
+  await expect(page.locator('[data-artwork-count]')).toHaveText(
+    `1–${Math.min(6, subject.count)} of ${subject.count.toLocaleString('en-US')} artworks`,
+  );
+  await expect(page.locator('[data-artwork]')).toHaveCount(Math.min(6, subject.count));
+  await page.locator('[data-artwork-scope=featured]').click();
+  await expect(page.locator('[data-artwork-count]')).toHaveText(
+    `1–6 of ${featuredCount.toLocaleString('en-US')} artworks`,
+  );
+  await expect(page.locator('[data-artwork]')).toHaveCount(6);
+  const firstPageIds = await page
+    .locator('[data-artwork]')
+    .evaluateAll((items) => items.map((item) => item.getAttribute('data-artwork')));
+  await page.locator('[data-artwork-more]').click();
+  await expect(page.locator('[data-artwork-count]')).toHaveText(
+    `7–12 of ${featuredCount.toLocaleString('en-US')} artworks`,
+  );
+  await expect(page.locator('[data-artwork]')).toHaveCount(6);
+  const secondPageIds = await page
+    .locator('[data-artwork]')
+    .evaluateAll((items) => items.map((item) => item.getAttribute('data-artwork')));
+  expect(new Set([...firstPageIds, ...secondPageIds]).size).toBe(12);
+  await page.locator('[data-artwork-previous]').click();
+  await expect(page.locator('[data-artwork-count]')).toHaveText(
+    `1–6 of ${featuredCount.toLocaleString('en-US')} artworks`,
+  );
+  expect(
+    await page
+      .locator('[data-artwork]')
+      .evaluateAll((items) => items.map((item) => item.getAttribute('data-artwork'))),
+  ).toEqual(firstPageIds);
+  checks.push(
+    'Category, subject and featured artwork navigation uses exact manifest counts and independent paginated cards',
   );
   await page.locator('[data-artwork-search]').fill('Strawberry Fruit Trio Realistic');
   await page.locator('[data-artwork="strawberry-fruit-trio-realistic-clipart"]').click();
@@ -81,13 +136,13 @@ try {
   checks.push(
     'Repeated image layout with alternate rows creates independent editable copies in one undo step',
   );
-  for (const [id, count] of [
-    ['fresh-strawberries', 2],
-    ['little-explorer', 3],
-    ['woodland-welcome', 3],
-    ['citrus-notes', 3],
-    ['wildlife-collection', 4],
-    ['best-friends', 3],
+  for (const [id, counts] of [
+    ['fresh-strawberries', { total: 17, raster: 1, text: 7, vector: 9 }],
+    ['little-explorer', { total: 13, raster: 2, text: 3, vector: 8 }],
+    ['woodland-welcome', { total: 10, raster: 2, text: 3, vector: 5 }],
+    ['citrus-notes', { total: 12, raster: 2, text: 5, vector: 5 }],
+    ['wildlife-collection', { total: 19, raster: 3, text: 9, vector: 7 }],
+    ['best-friends', { total: 44, raster: 2, text: 12, vector: 30 }],
   ]) {
     await chooseScene(page, id);
     await expect(page.locator('[data-status]')).toContainText(
@@ -95,34 +150,58 @@ try {
       { timeout: 60000 },
     );
     d = await state();
-    expect(d.layers.length).toBe(count);
-    expect(d.layers.at(-1).kind).toBe('text');
-    expect(
-      d.layers.filter((l) => l.kind === 'raster').every((l) => l.sourceSha256.length === 64),
-    ).toBeTruthy();
+    expect(d.width).toBe(1400);
+    expect(d.height).toBe(1000);
+    expect(d.layers).toHaveLength(counts.total);
+    expect(new Set(d.layers.map((layer) => layer.id)).size).toBe(counts.total);
+    for (const kind of ['raster', 'text', 'vector'])
+      expect(d.layers.filter((layer) => layer.kind === kind)).toHaveLength(counts[kind]);
+    for (const layer of d.layers.filter((item) => item.kind === 'raster')) {
+      const source = studioCatalog.find((item) => item.id === layer.assetId);
+      expect(source).toBeDefined();
+      expect(layer.sourceSha256).toBe(source.webp.sha256);
+    }
   }
   checks.push(
     'All six real-artwork compositions load independently editable verified images and text',
   );
   // A new edit must win over an earlier pending scene request.
-  await page.route('**/strawberry-fruit-trio-realistic-clipart.webp', async (route) => {
-    await new Promise((r) => setTimeout(r, 900));
+  const strawberry = studioCatalog.find(
+    (item) => item.id === 'strawberry-fruit-trio-realistic-clipart',
+  );
+  expect(strawberry).toBeDefined();
+  const delayedUrl = new URL(strawberry.webp.url, base).href;
+  let sourceStarted = false;
+  let releaseSource;
+  const sourceGate = new Promise((resolve) => {
+    releaseSource = resolve;
+  });
+  await page.route(delayedUrl, async (route) => {
+    sourceStarted = true;
+    await sourceGate;
     await route.continue();
   });
   await chooseScene(page, 'fresh-strawberries');
-  await action('reset').click();
-  await page.waitForTimeout(1300);
-  expect((await state()).layers.length).toBe(0);
-  await page.unroute('**/strawberry-fruit-trio-realistic-clipart.webp');
+  await expect.poll(() => sourceStarted).toBe(true);
+  await clickFileAction(page, 'reset');
+  expect((await state()).layers).toHaveLength(0);
+  releaseSource();
+  await expect(page.locator('[data-studio-scene=fresh-strawberries]')).not.toHaveAttribute(
+    'aria-busy',
+    'true',
+  );
+  expect((await state()).layers).toHaveLength(0);
+  await page.unroute(delayedUrl);
   checks.push('Reset cancels a pending scene load without replacing newer work');
   await chooseScene(page, 'woodland-welcome');
   await expect(page.locator('[data-status]')).toContainText('Every image and caption is editable');
   const saved = page.waitForEvent('download');
-  await action('save').click();
+  await clickFileAction(page, 'save');
   await (await saved).saveAs(path.join(out, 'woodland-project.json'));
   await page.reload();
+  await page.locator('.uc-editor').scrollIntoViewIfNeeded();
   await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true');
-  expect((await state()).layers.length).toBe(3);
+  expect((await state()).layers).toHaveLength(10);
   for (const format of ['webp', 'pdf']) {
     await action('export').click();
     await page.locator(`[data-format][value="${format}"]`).locator('..').click();
