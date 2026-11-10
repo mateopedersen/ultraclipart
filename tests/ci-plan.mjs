@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import {
   ALL_SUITES,
   selectSuites,
+  selectEngines,
   parseDiff,
   eventRange,
   planForEvent,
@@ -99,12 +100,30 @@ test('global, editor, catalog, security, dependencies and unknown files always g
     'server/auth.mjs',
     'scripts/security-headers.mjs',
     'tests/helpers/creator.mjs',
-    'tests/e2e/raster-editor.mjs',
     'docs/runtime.js',
     '.github/workflows/release.yml',
     'unexpected.txt',
   ])
     assert.deepEqual(selectSuites(modified(path)).suites, ALL_SUITES, path);
+});
+test('isolated raster-editor recovery changes run only their focused WebKit probe', () => {
+  const paths = modified('tests/e2e/raster-editor.mjs');
+  assert.deepEqual(selectSuites(paths).suites, ['raster-recovery']);
+  assert.deepEqual(selectEngines(paths), ['webkit']);
+  assert.deepEqual(selectSuites(paths, { forceFull: true }).suites, ALL_SUITES);
+  assert.deepEqual(selectEngines(paths, { forceFull: true }), ['chromium', 'firefox', 'webkit']);
+  assert.deepEqual(
+    selectSuites(modified('tests/e2e/raster-editor.mjs', 'src/editor/editor.ts')).suites,
+    ALL_SUITES,
+  );
+  assert.deepEqual(selectEngines(modified('tests/e2e/raster-editor.mjs', 'src/editor/editor.ts')), [
+    'chromium',
+    'firefox',
+    'webkit',
+  ]);
+  const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
+  assert.match(workflow, /engine: \$\{\{ fromJSON\(needs\.plan\.outputs\.browser_engines\) \}\}/);
+  assert.ok(workflow.includes('RASTER_RESET_RECOVERY=1'));
 });
 test('mixed changes take the broadest scope regardless of ordering', () => {
   for (const paths of [
@@ -133,7 +152,7 @@ test('isolated Studio tests retain all three browser engines through the complet
     ['interface-core', 'interface-artwork', 'interface-pages', 'studio'],
   );
   const workflow = readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8');
-  assert(workflow.includes('engine: [chromium, firefox, webkit]'));
+  assert(workflow.includes('browser_engines: ${{ steps.scope.outputs.browser_engines }}'));
   assert(workflow.includes('needs: [plan, unit, production, browser, art]'));
 });
 test('missing, empty, invalid and manually forced plans fail open to full validation', () => {

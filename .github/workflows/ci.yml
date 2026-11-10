@@ -19,6 +19,7 @@ jobs:
     outputs:
       run_browser: ${{ steps.scope.outputs.run_browser }}
       browser_suites: ${{ steps.scope.outputs.browser_suites }}
+      browser_engines: ${{ steps.scope.outputs.browser_engines }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -144,7 +145,7 @@ jobs:
       fail-fast: false
       max-parallel: 8
       matrix:
-        engine: [chromium, firefox, webkit]
+        engine: ${{ fromJSON(needs.plan.outputs.browser_engines) }}
         suite: ${{ fromJSON(needs.plan.outputs.browser_suites) }}
     # Match @playwright/test; browsers and OS libraries are already installed.
     # Pin the official image digest so a registry tag cannot change the runner.
@@ -325,6 +326,9 @@ jobs:
                 BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-input.mjs
                 BASE_URL=http://127.0.0.1:4321 node tests/e2e/studio-upload.mjs
               fi
+            fi
+            if [ '${{ matrix.suite }}' = 'raster-recovery' ]; then
+              BASE_URL=http://127.0.0.1:4321 UC_BROWSER="$engine" RASTER_RESET_RECOVERY=1 EVIDENCE_DIR=reports/raster-recovery node tests/e2e/raster-editor.mjs
             fi
             case '${{ matrix.suite }}' in
               catalog-seasonal-0|catalog-seasonal-1|catalog-seasonal-2)

@@ -11,6 +11,7 @@ const base = process.env.BASE_URL || 'http://127.0.0.1:4335',
 const out = resolve(process.env.EVIDENCE_DIR || 'reports/raster-editor', engine);
 mkdirSync(out, { recursive: true });
 const requestedIds = new Set((process.env.RASTER_IDS || '').split(',').filter(Boolean));
+const resetRecovery = process.env.RASTER_RESET_RECOVERY === '1';
 const catalog = JSON.parse(readFileSync(new URL('../../data/art.json', import.meta.url)));
 const selection =
   process.env.RASTER_ORIGINAL_TOPICS === '1'
@@ -34,23 +35,25 @@ if (requestedIds.size)
   );
 const targets = shardRasterTargets([
   ...new Map(
-    (process.env.ALL_RASTER === '1' || requestedIds.size
-      ? art
-      : process.env.RASTER_PER_TOPIC === '1'
-        ? [
-            ...[...new Set(art.map((a) => a.topic))].map((topic) =>
-              art.find((a) => a.topic === topic),
-            ),
-            // A smaller source can have a less compressible alpha mask than
-            // the largest PDF. Exercise every file with under 5 KB headroom.
-            ...art.filter((a) => a.files.pdf.bytes > 995_000),
-            [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
-          ]
-        : [
-            art[0],
-            art.find((a) => a.style === 'Watercolor'),
-            [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
-          ]
+    (resetRecovery
+      ? art.slice(0, 17)
+      : process.env.ALL_RASTER === '1' || requestedIds.size
+        ? art
+        : process.env.RASTER_PER_TOPIC === '1'
+          ? [
+              ...[...new Set(art.map((a) => a.topic))].map((topic) =>
+                art.find((a) => a.topic === topic),
+              ),
+              // A smaller source can have a less compressible alpha mask than
+              // the largest PDF. Exercise every file with under 5 KB headroom.
+              ...art.filter((a) => a.files.pdf.bytes > 995_000),
+              [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+            ]
+          : [
+              art[0],
+              art.find((a) => a.style === 'Watercolor'),
+              [...art].sort((a, b) => b.files.pdf.bytes - a.files.pdf.bytes)[0],
+            ]
     )
       .filter(Boolean)
       .map((a) => [a.id, a]),
@@ -89,11 +92,15 @@ function capturePageErrors(target) {
   target.on('pageerror', (e) => report.errors.push(e.message));
 }
 capturePageErrors(page);
-async function resetWebKitSession() {
+async function resetBrowserSession() {
+  // Recycle WebKit's renderer without discarding the editor's persisted
+  // recovery document. This also makes the final recovery assertion exercise
+  // the same localStorage/IndexedDB state that a fresh browser process sees.
+  const storageState = await context.storageState({ indexedDB: true });
   await context.close();
   await activeBrowser.close();
   activeBrowser = await browserType.launch(launchOptions);
-  context = await activeBrowser.newContext(contextOptions);
+  context = await activeBrowser.newContext({ ...contextOptions, storageState });
   await bridgeLocalCdn(context, base);
   page = await context.newPage();
   capturePageErrors(page);
@@ -154,7 +161,8 @@ try {
     // complete-catalog sweep. End the browser process between small, fully
     // completed batches so that one image's verification never inherits a
     // resource-starved renderer from hundreds of earlier editor/export cycles.
-    if (engine === 'webkit' && index > 0 && index % 16 === 0) await resetWebKitSession();
+    if ((engine === 'webkit' || resetRecovery) && index > 0 && index % 16 === 0)
+      await resetBrowserSession();
     await page.goto(base + `/edit/${a.id}/`);
     await expect(page.locator('.uc-editor')).not.toHaveAttribute('aria-busy', 'true', {
       timeout: 30000,
@@ -274,6 +282,8 @@ try {
     if (width === 390)
       await page.screenshot({ path: resolve(out, 'edited-mobile.png'), fullPage: false });
   }
+  if (resetRecovery)
+    assert.equal(report.browserResets, 1, 'The recovery probe must cross one WebKit restart');
   assert.deepEqual(report.errors, []);
   report.status = 'passed';
 } catch (error) {
